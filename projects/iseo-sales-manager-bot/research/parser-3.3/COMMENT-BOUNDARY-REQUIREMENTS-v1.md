@@ -1,6 +1,6 @@
 # COMMENT BOUNDARY REQUIREMENTS v1
 
-**NOT IMPLEMENTED — Parser 3.3 backlog.**
+**IMPLEMENTED — Phase 3E.1.** See architecture specs under `architecture/` and evidence `evidence/phase3e1/`.
 
 1. Начало комментария задаётся распознанным label, окончание — только следующим валидным top-level label.
 2. Слова «телефон», «сайт», «email» внутри естественного текста не завершают комментарий без синтаксического label-pattern.

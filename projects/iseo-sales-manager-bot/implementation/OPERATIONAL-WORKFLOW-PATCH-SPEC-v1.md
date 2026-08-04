@@ -353,3 +353,15 @@ Visible pending-card captions only (same workflow ID `xSnXPy8cEHoZw6xG`):
 ## Phase 3D.8.1 note — LEAD_DELIVERIES durability
 
 Operational claim/append nodes require an existing `LEAD_DELIVERIES` tab with header columns matching the appendOrUpdate schema. A missing tab presents as continueOnFail error items and breaks Admin multi-copy sync while Telegram sends may still succeed. Do not create new workflows to fix this; ensure the tab in the CLEAN workbook.
+
+## Phase 3E.1 addendum — Parser 3.3 / Format sm-msg-v2.3
+
+Same workflow ID `xSnXPy8cEHoZw6xG` (no copy):
+
+- **Parse Lead** → `sm-parser-v3.3` + Lead Semantic Model v1 (website states, intent precedence, comment boundary, quality, first-reply draft). Lib sync target: `implementation/parser-fixtures/parse-lead-lib.mjs` (+ processor/formatter under `runtime-libs/`).
+- **Deterministic Lead Processor** → AI OFF pass-through of semantic fields; `processing_mode=ai_off`.
+- **Format Telegram Lead Card** → `message_format_version=sm-msg-v2.3`; site/reply consistency; keep short pending labels and button payload bridge from 3D.8.x.
+- CONFIG stamps: `parser_version=sm-parser-v3.3`, `message_format_version=sm-msg-v2.3`, `ai_enabled=false`.
+- Do **not** change callbacks, ACCESS_CONTROL, or create workflows.
+- Harness: `implementation/harness/phase3e1-harness.mjs` — **46/46 PASS**.
+

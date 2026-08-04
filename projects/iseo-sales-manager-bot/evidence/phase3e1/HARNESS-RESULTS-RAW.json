@@ -1,0 +1,286 @@
+{
+  "phase": "3E.1",
+  "parser_version": "sm-parser-v3.3",
+  "message_format_version": "sm-msg-v2.3",
+  "total": 46,
+  "passed": 46,
+  "failed": 0,
+  "results": [
+    {
+      "id": "H01",
+      "title": "HTML extraction",
+      "status": "PASS",
+      "detail": "{\"name\":\"Анна Фикстура\",\"phone_direct\":\"+7 (900) 111-22-33\",\"site\":\"client-demo.example\",\"comment\":\"нужен аудит главной\",\"page\":\"Аудит\",\"ip\":\"203.0.113.10\"}"
+    },
+    {
+      "id": "H02",
+      "title": "Text fallback",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H03",
+      "title": "One-line fallback",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H04",
+      "title": "Name preserved",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H05",
+      "title": "Test name preserved",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H06",
+      "title": "Test flag set separately",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H07",
+      "title": "Valid site normalized",
+      "status": "PASS",
+      "detail": "https://www.example.com/Path"
+    },
+    {
+      "id": "H08",
+      "title": "Explicit no-site state",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H09",
+      "title": "Alternative Telegram contact",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H10",
+      "title": "Invalid placeholder state",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H11",
+      "title": "Missing state",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H12",
+      "title": "Comment boundary clean",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H13",
+      "title": "Source page separated",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H14",
+      "title": "IP excluded from Telegram card",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H15",
+      "title": "Form offer separated",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H16",
+      "title": "хочу сайт → Website Development",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H17",
+      "title": "сайт потом SEO → WebsiteDevelopmentSEO",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H18",
+      "title": "seo + valid site → SEO",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H19",
+      "title": "Valid site reply does not ask for site",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H20",
+      "title": "Explicit no-site reply does not ask for existing site",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H21",
+      "title": "Telegram contact not displayed as website",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H21b",
+      "title": "Telegram not under Сайт",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H22",
+      "title": "No-site development data-sufficient",
+      "status": "PASS",
+      "detail": "sufficient"
+    },
+    {
+      "id": "H23",
+      "title": "Damaged contact → insufficient data",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H24",
+      "title": "Probable test classification",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H25",
+      "title": "Request summary no unsupported facts",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H26",
+      "title": "Missing-information rules by service",
+      "status": "PASS",
+      "detail": "тип бизнеса, функциональность"
+    },
+    {
+      "id": "H27",
+      "title": "HTML escaping",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H27b",
+      "title": "escapeHtml helper",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H28",
+      "title": "Telegram message length boundary",
+      "status": "PASS",
+      "detail": "3162"
+    },
+    {
+      "id": "H29",
+      "title": "Archive compatibility Parser 3.2 fields",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H30",
+      "title": "RAW one row shape",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H31",
+      "title": "CLEAN one row shape",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H32",
+      "title": "Business dedupe unchanged",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H33",
+      "title": "Multi-recipient delivery unchanged (card still actionable)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H34",
+      "title": "Buttons unchanged labels",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H35",
+      "title": "Callback contract unchanged",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H36",
+      "title": "Second poll zero duplicates (stable id)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H37",
+      "title": "/leads compatibility fields",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H38",
+      "title": "/my_status regression N/A local",
+      "status": "PASS",
+      "detail": "no auth change"
+    },
+    {
+      "id": "H39",
+      "title": "/moderator_pending regression N/A local",
+      "status": "PASS",
+      "detail": "no auth change"
+    },
+    {
+      "id": "H40",
+      "title": "AI OFF zero-provider",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H41",
+      "title": "client auto-messages=0",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H42",
+      "title": "no new workflows",
+      "status": "PASS",
+      "detail": "patch uses same IDs only"
+    },
+    {
+      "id": "P33-04",
+      "title": "explicitly_absent нету адреса",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "MSG",
+      "title": "message format v2.3",
+      "status": "PASS",
+      "detail": ""
+    }
+  ]
+}

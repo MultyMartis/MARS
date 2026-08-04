@@ -257,3 +257,17 @@ See `evidence/phase3d5/` for ACCESS_CONTROL / ACCESS_EVENTS, public auth routing
 ## Phase 3D.7 — LEAD_DELIVERIES tab
 
 New immutable tab in CLEAN workbook. Upsert key: `delivery_key`. See `evidence/phase3d7/LEAD-DELIVERIES-DATA-MODEL-v1.md`.
+
+## Phase 3E.1 — additive semantic columns (plan)
+
+**Do not** invent workbook IDs in git. Until headers are applied live:
+
+- Pack extended semantic/quality notes into existing **`quality_comment`** (interim).
+- Keep writing Parser 3.2-compatible fields (`client_name`, `site`, `summary`, `quality_status`, …).
+
+**Planned additive CLEAN/RAW headers** (append-only; empty on historical rows):
+
+`website_state`, `resolved_intent`, `intent_conflict`, `intent_evidence_source`, `semantic_model_version`, `reply_consistency_status`, optional structured `missing_fields_json`.
+
+Evidence: `evidence/phase3e1/STORAGE-MIGRATION-v1.md`. No bulk historical rewrite in 3E.1.
+

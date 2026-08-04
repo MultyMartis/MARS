@@ -1,0 +1,116 @@
+[
+  {
+    "key": "A",
+    "website_state": "provided",
+    "resolved_service": "Audit",
+    "resolved_service_label": "Аудит",
+    "comment_normalized": "vague audit task",
+    "form_offer": "Бесплатный аудит",
+    "request_summary": "Запрошен аудит сайта; конкретная задача не указана.",
+    "lead_quality_label": "Тестовая заявка",
+    "is_probable_test": true,
+    "reply_omitted": true,
+    "first_reply_preview": "",
+    "card_has_test_badge": true,
+    "site_not_asked_in_reply": true,
+    "buttons": [
+      "✅ Обработано",
+      "🚫 Спам"
+    ]
+  },
+  {
+    "key": "B",
+    "website_state": "explicitly_absent",
+    "resolved_service": "WebsiteDevelopment",
+    "resolved_service_label": "Разработка сайта",
+    "comment_normalized": "хочу сайт",
+    "form_offer": "Бесплатный аудит",
+    "request_summary": "Нужен новый сайт.",
+    "lead_quality_label": "Тестовая заявка",
+    "is_probable_test": true,
+    "reply_omitted": true,
+    "first_reply_preview": "",
+    "card_has_test_badge": true,
+    "site_not_asked_in_reply": true,
+    "buttons": [
+      "✅ Обработано",
+      "🚫 Спам"
+    ]
+  },
+  {
+    "key": "C",
+    "website_state": "explicitly_absent",
+    "resolved_service": "WebsiteDevelopmentSEO",
+    "resolved_service_label": "Разработка сайта + SEO",
+    "comment_normalized": "надо сделать сайт а потом его продвигать",
+    "form_offer": "",
+    "request_summary": "Нужен новый сайт с последующим SEO-продвижением.",
+    "lead_quality_label": "Тестовая заявка",
+    "is_probable_test": true,
+    "reply_omitted": true,
+    "first_reply_preview": "",
+    "card_has_test_badge": true,
+    "site_not_asked_in_reply": true,
+    "buttons": [
+      "✅ Обработано",
+      "🚫 Спам"
+    ]
+  },
+  {
+    "key": "D",
+    "website_state": "alternative_contact",
+    "resolved_service": "NeedsClarification",
+    "resolved_service_label": "Требует уточнения",
+    "comment_normalized": "в тг",
+    "form_offer": "",
+    "request_summary": "Контакт через Telegram; задача требует уточнения.",
+    "lead_quality_label": "Тестовая заявка",
+    "is_probable_test": true,
+    "reply_omitted": true,
+    "first_reply_preview": "",
+    "card_has_test_badge": true,
+    "site_not_asked_in_reply": true,
+    "buttons": [
+      "✅ Обработано",
+      "🚫 Спам"
+    ]
+  },
+  {
+    "key": "E",
+    "website_state": "provided",
+    "resolved_service": "NeedsClarification",
+    "resolved_service_label": "Требует уточнения",
+    "comment_normalized": "тест бота",
+    "form_offer": "",
+    "request_summary": "Задача требует уточнения.",
+    "lead_quality_label": "Тестовая заявка",
+    "is_probable_test": true,
+    "reply_omitted": true,
+    "first_reply_preview": "",
+    "card_has_test_badge": true,
+    "site_not_asked_in_reply": true,
+    "buttons": [
+      "✅ Обработано",
+      "🚫 Спам"
+    ]
+  },
+  {
+    "key": "F",
+    "website_state": "provided",
+    "resolved_service": "SEO",
+    "resolved_service_label": "SEO",
+    "comment_normalized": "seo",
+    "form_offer": "Бесплатный аудит",
+    "request_summary": "Требуется SEO-продвижение существующего сайта.",
+    "lead_quality_label": "Тестовая заявка",
+    "is_probable_test": true,
+    "reply_omitted": true,
+    "first_reply_preview": "",
+    "card_has_test_badge": true,
+    "site_not_asked_in_reply": true,
+    "buttons": [
+      "✅ Обработано",
+      "🚫 Спам"
+    ]
+  }
+]

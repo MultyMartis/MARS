@@ -11,16 +11,18 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | **PHASE 3D.8.3 COMPLETE — ACTION BUTTON LABELS UPDATED** (3D.8.2 actor attribution COMPLETE) |
-| **Active stage** | Pending lead buttons: `✅ Обработано` / `🚫 Спам`; final state remains `✅ Обработан`; Parser 3.3 backlog (**not implemented**) |
-| **Runtime** | External n8n — Operational.dev **active** (sole Gmail intake, **45** nodes, claim-before-send + ACCESS_CONTROL fan-out + short action labels); Admin.dev **active** (registry auth, **59** nodes, actor attribution + revoked list); Sales-Manager-v2 **inactive** |
+| **Status** | **PHASE 3E.1 — PARSER 3.3 + LEAD SEMANTIC MODEL** (local harness COMPLETE; live semantic PENDING) |
+| **Active stage** | `sm-parser-v3.3` / `sm-msg-v2.3` / AI OFF; pending buttons `✅ Обработано` / `🚫 Спам`; final `✅ Обработан` |
+| **Runtime** | External n8n — Operational.dev **active** (`xSnXPy8cEHoZw6xG`, **45** nodes, Parser 3.3); Admin.dev **active** (`wLrLp4WQHm1VJmxz`, **59** nodes); Sales-Manager-v2 **inactive** (`h8I2Tl2yl4uzhUnB`) |
 | **Live parity vs Sales-Manager-v2** | **CUT OVER** — Operational.dev replaced v2 for intake; v2 preserved inactive; filter \`labelIds\` parity confirmed |
 | **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C–3D.3 evidence under `evidence/phase3*` |
 | **Registry** | status **planned** unchanged — promotion to active requires **separate governance gate** (`REGISTRY_STATUS_PROMOTION_PENDING`) |
 | **ATLAS** | Recommendation only — ORG-0003 / PER-0001 / PER-0010 / PER-0011; **no** new IDs |
-| **Next** | Later PHASE 3E AI ON only with separate charter; Parser 3.3 research remains backlog |
-| **AI** | **OFF** - `ai_enabled=false`; no AI ON claim in Phase 3D.8.3 |
+| **Next** | Live semantic acceptance closeout; later AI ON / reminders only with separate charter |
+| **AI** | **OFF** — `ai_enabled=false`; no AI ON claim in Phase 3E.1 |
 | **Product layer** | [product/](product/) |
+| **Evidence 3E.1** | [evidence/phase3e1/](evidence/phase3e1/) · [PHASE3E1-ACCEPTANCE-RECEIPT-v1.md](evidence/phase3e1/PHASE3E1-ACCEPTANCE-RECEIPT-v1.md) |
+| **Architecture 3E.1** | [LEAD-SEMANTIC-MODEL-v1.md](architecture/LEAD-SEMANTIC-MODEL-v1.md) · [PARSER-3.3-CONTRACT-v1.md](architecture/PARSER-3.3-CONTRACT-v1.md) · [FIRST-REPLY-RULES-v1.md](architecture/FIRST-REPLY-RULES-v1.md) |
 | **Evidence 3D.8.3** | [evidence/phase3d8-3/](evidence/phase3d8-3/) · [reports/REPORT-iseo-sales-manager-bot-phase3d8-3-button-label-polish-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3d8-3-button-label-polish-v1.md) |
 | **Evidence 3D.8.2** | [evidence/phase3d8-2/](evidence/phase3d8-2/) · [reports/REPORT-iseo-sales-manager-bot-phase3d8-2-actor-attribution-and-revoked-moderators-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3d8-2-actor-attribution-and-revoked-moderators-v1.md) |
 | **Evidence 3D.8.1** | [evidence/phase3d8-1/](evidence/phase3d8-1/) · [reports/REPORT-iseo-sales-manager-bot-phase3d8-1-live-callback-repair-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3d8-1-live-callback-repair-v1.md) |
@@ -63,6 +65,9 @@
 | 7 | [architecture/HEALTHCHECK-CONTRACT-v1.md](architecture/HEALTHCHECK-CONTRACT-v1.md) | Phase 2 (+ 3C.1 live query wording) |
 | 7a | [architecture/GMAIL-INTAKE-FILTER-CONTRACT-v1.md](architecture/GMAIL-INTAKE-FILTER-CONTRACT-v1.md) | Phase 3C.2 |
 | 8 | [architecture/AI-OFF-ON-CONTRACT-v1.md](architecture/AI-OFF-ON-CONTRACT-v1.md) | Phase 2 |
+| 8a | [architecture/LEAD-SEMANTIC-MODEL-v1.md](architecture/LEAD-SEMANTIC-MODEL-v1.md) | Phase 3E.1 |
+| 8b | [architecture/PARSER-3.3-CONTRACT-v1.md](architecture/PARSER-3.3-CONTRACT-v1.md) | Phase 3E.1 |
+| 8c | [architecture/FIRST-REPLY-RULES-v1.md](architecture/FIRST-REPLY-RULES-v1.md) | Phase 3E.1 |
 
 ## Core Run — plans
 
@@ -179,7 +184,9 @@
 | **Phase 3D.3.1** | `/leads` multi-card + Sheets phone RAW safety | **DONE** |
 | **Phase 3D.4** | Olya manager enrollment, sm-parser-v3.2 / sm-msg-v2.1, form registry | **DONE** — Olya live Telegram **pending** |
 | **Phase 3D.6** | `/my_status`, role notifications, 3d6b Code-mode hotfix, live non-Admin status acceptance | **COMPLETE — personal status ready; notification delivery SAFE UNKNOWN** |
-| **Phase 3D.8** | Product baseline, recovery receipts, button forensic/repair contract, Parser 3.3 research | **DOCUMENTED — live button acceptance PENDING; Parser 3.3 NOT IMPLEMENTED** |
+| **Phase 3D.8** | Product baseline, recovery receipts, button forensic/repair contract, Parser 3.3 research | **COMPLETE** (buttons/attribution/labels); research superseded by 3E.1 |
+| **Phase 3D.8.1–3** | Live callbacks, actor attribution, short button labels | **COMPLETE** |
+| **Phase 3E.1** | Parser 3.3 + Lead Semantic Model + `sm-msg-v2.3` | **HARNESS COMPLETE (46/46); live semantic PENDING** |
 | Next form iteration | Per `MULTI-FORM-TEST-PLAN-v1` | **not opened** |
 | Live rename | After clean-lead acceptance | **deferred** |
 | Registry promotion | Separate governance charter | **not opened** |
@@ -209,7 +216,7 @@
 
 ---
 
-*Last updated: 2026-08-03 — Phase 3D.4 manager enrollment, parser/formatter semantics, website form registry.*
+*Last updated: 2026-08-05 — Phase 3E.1 Parser 3.3 / Lead Semantic Model / sm-msg-v2.3.*
 
 
 ## Phase 3D.5.1 — Access registry population and SoT repair

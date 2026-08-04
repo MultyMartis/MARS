@@ -1,6 +1,6 @@
 # REAL EMAIL OBSERVATIONS v1
 
-**Статус: REDACTED RESEARCH BACKLOG — NOT IMPLEMENTED в Phase 3D.8.** Никакие реальные имена, контакты, домены, идентификаторы или screenshots здесь не сохранены.
+**Статус: REDACTED RESEARCH — classes informed Phase 3E.1 implementation.** Authority: [PARSER-3.3-CONTRACT-v1.md](../../architecture/PARSER-3.3-CONTRACT-v1.md). Никакие реальные имена, контакты, домены, идентификаторы или screenshots здесь не сохранены.
 
 ## Наблюдаемые классы
 

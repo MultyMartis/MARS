@@ -1,6 +1,6 @@
 # FIRST REPLY CONSISTENCY RULES v1
 
-**NOT IMPLEMENTED — Parser 3.3 backlog.**
+**IMPLEMENTED — Phase 3E.1.** Architecture: [FIRST-REPLY-RULES-v1.md](../../architecture/FIRST-REPLY-RULES-v1.md). See also evidence `evidence/phase3e1/FIRST-REPLY-CONSISTENCY-v1.md`.
 
 - Reply использует resolved intent по утверждённому precedence.
 - Не упоминает site, name, budget, deadline, channel или услугу, которых нет в semantic model.

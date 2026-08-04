@@ -1,6 +1,6 @@
 # PARSER 3.3 REGRESSION FIXTURE CATALOG v1
 
-**NOT IMPLEMENTED — catalog/backlog only.** Все fixtures synthetic и используют reserved example values.
+**IMPLEMENTED — Phase 3E.1.** Executable catalog: [P33-FIXTURE-CATALOG-v1.md](../../implementation/parser-fixtures/P33-FIXTURE-CATALOG-v1.md). Все fixtures synthetic и используют reserved example values.
 
 | ID | Класс | Ожидание |
 |---|---|---|

@@ -1,6 +1,6 @@
 # SITE FIELD STATE MODEL v1
 
-**NOT IMPLEMENTED — Parser 3.3 backlog.**
+**IMPLEMENTED — Phase 3E.1.** Architecture notes also in [LEAD-SEMANTIC-MODEL-v1.md](../../architecture/LEAD-SEMANTIC-MODEL-v1.md); evidence `evidence/phase3e1/WEBSITE-STATE-MODEL-v1.md`.
 
 | State | Значение | Пример без реальных данных |
 |---|---|---|

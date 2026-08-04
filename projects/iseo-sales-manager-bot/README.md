@@ -4,7 +4,7 @@
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
-**Status:** Phase 3D.8.3 — pending action button labels polished; 3D.8.2 COMPLETE (actor attribution); 3D.8.1 COMPLETE; `sm-parser-v3.2`, `sm-msg-v2.2`; ACCESS_CONTROL SoT; AI OFF
+**Status:** Phase 3E.1 — Parser **`sm-parser-v3.3`** + Lead Semantic Model v1; formatter **`sm-msg-v2.3`**; harness 46/46 PASS; live semantic acceptance PENDING; ACCESS_CONTROL SoT; AI OFF
 
 ---
 
@@ -49,7 +49,9 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 |------|------|
 | Operational index | [OPERATIONAL-INDEX.md](OPERATIONAL-INDEX.md) |
 | Product manual layer | [product/](product/) |
-| Parser 3.3 research backlog | [research/parser-3.3/](research/parser-3.3/) |
+| Parser 3.3 architecture | [architecture/PARSER-3.3-CONTRACT-v1.md](architecture/PARSER-3.3-CONTRACT-v1.md) · [LEAD-SEMANTIC-MODEL-v1.md](architecture/LEAD-SEMANTIC-MODEL-v1.md) · [FIRST-REPLY-RULES-v1.md](architecture/FIRST-REPLY-RULES-v1.md) |
+| Parser 3.3 research (implemented) | [research/parser-3.3/](research/parser-3.3/) |
+| Phase 3E.1 evidence | [evidence/phase3e1/](evidence/phase3e1/) |
 | Phase 3D.8 evidence | [evidence/phase3d8/](evidence/phase3d8/) |
 | Phase 3D.8.1 evidence | [evidence/phase3d8-1/](evidence/phase3d8-1/) |
 | Phase 3D.8.2 evidence | [evidence/phase3d8-2/](evidence/phase3d8-2/) |
@@ -91,7 +93,8 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 **Resolved in Phase 3D.3:** manager UX upgraded to `sm-msg-v2` (emoji lead/lifecycle indicators, copy-friendly `<code>` contact fields, single `<pre>` client-reply block); inline lifecycle buttons with idempotent + conflict-safe callback handling; `/leads 3|5|10` (admin allowlist only); CLEAN 65 headers with lifecycle columns.  
 **Resolved in Phase 3D.4:** Olya enrolled in `ACCESS_CONTROL moderator (legacy CONFIG fallback retained) (hash **E6714550214106BA**, not admin); role-aware manager `/start`/`/help`; parser **`sm-parser-v3.2`** (messenger/site split, contact inference, comment «в тг», source page normalization); formatter **`sm-msg-v2.1`** (reduced emoji density); `knowledge/WEBSITE-FORM-FORMATS-v1.md` with free-audit record; synthetic callback acceptance PASS — **live Olya `/start`/`/help` pending**.
 **Resolved in Phase 3D.6 / 3D.6.1:** `/my_status` for public/pending/moderator/Admin/revoked/blocked; grant/revoke Telegram notification branch with ACCESS_EVENTS delivery events and non-rollback failure boundary. Live hotfix `3d6b-my-status-code-mode` fixed Code-node mode (`runOnceForAllItems`). Real non-Admin `/my_status` accepted by operator. Direct grant/revoke notification delivery remains SAFE UNKNOWN without independent visual proof. Harness **31/31 PASS**.
-**Phase 3D.8:** product/recovery baseline and Parser 3.3 backlog documented. Button defect is a Format-output mismatch (`telegram_has_buttons` and callback fields absent); Format-only repair is specified, but harness and live two-recipient acceptance remain pending. Parser 3.3, reminders, AI ON pilot and reusable fleet deployment are **not implemented**.
+**Phase 3D.8.x:** product/recovery baseline; action buttons + actor attribution + short labels COMPLETE.  
+**Phase 3E.1:** Parser **3.3** + Lead Semantic Model + first-reply consistency **implemented** (`sm-parser-v3.3` / `sm-msg-v2.3`); local harness **46/46 PASS**; live semantic acceptance **PENDING**. Reminders, AI ON pilot and reusable fleet deployment remain **not implemented**.
 
 ---
 

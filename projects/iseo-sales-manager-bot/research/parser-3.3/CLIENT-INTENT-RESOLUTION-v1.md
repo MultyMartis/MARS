@@ -1,6 +1,6 @@
 # CLIENT INTENT RESOLUTION v1
 
-**NOT IMPLEMENTED — Parser 3.3 backlog.**
+**IMPLEMENTED — Phase 3E.1.** See architecture specs under `architecture/` and evidence `evidence/phase3e1/`.
 
 ## Precedence
 

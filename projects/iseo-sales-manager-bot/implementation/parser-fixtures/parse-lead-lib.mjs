@@ -1,20 +1,46 @@
 /**
- * sm-parser-v3.1 — real website form field extraction.
- * Pure JS module for local harness; Operational.dev Code node embeds the same logic.
- * No require/crypto.
+ * Phase 3E.1 — sm-parser-v3.3 + Lead Semantic Model v1 (pure module).
+ * Local harness + n8n SYNC target. No $input — import-only.
+ * AI OFF. Deterministic extraction / intent / reply facts only.
  */
 
-export const PARSER_VERSION = 'sm-parser-v3.1';
+export const PARSER_VERSION = 'sm-parser-v3.3';
+export const SEMANTIC_MODEL_VERSION = 'lead-semantic-v1';
+export const MESSAGE_FORMAT_VERSION_DEFAULT = 'sm-msg-v2.3';
 
 const INVALID = new Set([
   '44', '#error!', 'unknown', 'telegram', 'whatsapp', 'viber',
   'телефон', 'email', 'e-mail', 'почта', 'сайт', 'n/a', 'na', '-', '—', '–',
   'null', 'undefined', 'phone', 'messenger', 'contact', 'контакт', 'нет', 'no',
-  'имя', 'name', 'test',
+  'имя', 'name',
 ]);
 
-/** Ordered label definitions: value ends at the next known label or form-title boundary. */
-const LABEL_DEFS = [
+const NAME_PLACEHOLDERS = new Set(['имя', 'name', 'n/a', 'na', '-', '—', '–', 'null', 'undefined']);
+
+const SITE_PLACEHOLDERS = new Set([
+  'нет', 'отсутствует', '—', '–', '-', 'не указан', 'потом', 'не знаю', 'unknown',
+  '123', 'n/a', 'na', 'null', 'undefined', '#error!',
+]);
+
+/** Explicit no-site / need-a-site phrases (website_state=explicitly_absent). */
+const EXPLICIT_ABSENT_RE = [
+  /нет\s+сайта/i,
+  /сайта\s+нет/i,
+  /нету\s+сайта/i,
+  /нет\s+адреса/i,
+  /нету\s+адреса/i,
+  /пока\s+нет\s+сайта/i,
+  /сайта\s+пока\s+нет/i,
+  /сайт\s+ещ[её]\s+не\s+сделали/i,
+  /сайт\s+ещ[её]\s+не\s+готов/i,
+  /сайта\s+ещ[её]\s+нет/i,
+  /нужен\s+сайт/i,
+  /хочу\s+сайт/i,
+  /нет\s+своего\s+сайта/i,
+  /своего\s+сайта\s+нет/i,
+];
+
+export const LABEL_DEFS = [
   { key: 'name', re: /(?:От\s*кого|Имя)\s*[:：]/gi },
   { key: 'contact_method', re: /Способ\s*связи\s*[:：]/gi },
   { key: 'contact', re: /Контакт\s*[:：]/gi },
@@ -22,14 +48,52 @@ const LABEL_DEFS = [
   { key: 'email_direct', re: /(?:E[\u2011\u2010\-]?mail|Email|Почта)\s*[:：]/gi },
   { key: 'site', re: /(?:Адрес\s*сайта|Сайт)\s*[:：]/gi },
   { key: 'comment', re: /(?:Комментарий|Сообщение)\s*[:：]/gi },
-  { key: 'page', re: /Отправлено\s+со\s+страницы\s*[:：]/gi },
+  { key: 'page', re: /Отправлено\s+со\s+страницы\s*[:：]?/gi },
+  { key: 'ip', re: /\bIP\s*[:：]/gi },
 ];
 
-/** Non-capturing boundaries that end a previous field value. */
 const BOUNDARY_DEFS = [
   { key: '__audit_title', re: /Заявка\s+на\s+бесплатный\s+аудит/gi },
   { key: '__forward', re: /^-{2,}\s*Forwarded\s*-{2,}/gim },
+  { key: '__footer', re: /^-{2,}\s*Original\s+Message\s*-{2,}/gim },
 ];
+
+const COMM_PREF_ONLY = [
+  /^в\s*тг\.?$/i,
+  /^пишите\s+в\s*тг\.?$/i,
+  /^связь\s+в\s*телеграм\.?$/i,
+  /^пишите\s+в\s*telegram\.?$/i,
+  /^звонить\.?$/i,
+  /^лучше\s+whatsapp\.?$/i,
+  /^лучше\s+ватсап\.?$/i,
+  /^по\s*телефону\.?$/i,
+  /^whatsapp\.?$/i,
+  /^telegram\.?$/i,
+  /^телеграм\.?$/i,
+];
+
+const SERVICE_TAXONOMY = {
+  Audit: { machine: 'Audit', label: 'Аудит' },
+  SEO: { machine: 'SEO', label: 'SEO' },
+  WebsiteDevelopment: { machine: 'WebsiteDevelopment', label: 'Разработка сайта' },
+  WebsiteDevelopmentSEO: { machine: 'WebsiteDevelopmentSEO', label: 'Разработка сайта + SEO' },
+  AISearch: { machine: 'AISearch', label: 'AI Search / GEO' },
+  Direct: { machine: 'Direct', label: 'Яндекс Директ / PPC' },
+  Other: { machine: 'Other', label: 'Другое' },
+  NeedsClarification: { machine: 'NeedsClarification', label: 'Требует уточнения' },
+};
+
+/** Compat map for older processor/service fields. */
+export const SERVICE_COMPAT = {
+  Audit: 'Audit',
+  SEO: 'SEO',
+  WebsiteDevelopment: 'Site',
+  WebsiteDevelopmentSEO: 'Site',
+  AISearch: 'Other',
+  Direct: 'Direct',
+  Other: 'Other',
+  NeedsClarification: 'Other',
+};
 
 export function normalizeSpaces(raw) {
   return String(raw ?? '')
@@ -42,6 +106,36 @@ export function normalizeSpaces(raw) {
 function isInvalidToken(v) {
   const s = String(v || '').trim().toLowerCase();
   return !s || INVALID.has(s);
+}
+
+function isNamePlaceholder(v) {
+  const s = String(v || '').trim().toLowerCase();
+  return !s || NAME_PLACEHOLDERS.has(s);
+}
+
+function isSitePlaceholder(raw) {
+  const s = String(raw || '').trim().toLowerCase();
+  return !s || SITE_PLACEHOLDERS.has(s);
+}
+
+export function htmlToPlainText(html) {
+  let s = String(html ?? '');
+  if (!/<[a-z][\s\S]*>/i.test(s)) return normalizeSpaces(s);
+  s = s.replace(/<\s*br\s*\/?\s*>/gi, '\n');
+  s = s.replace(/<\/\s*(p|div|tr|li|h[1-6])\s*>/gi, '\n');
+  s = s.replace(/<\s*(p|div|tr|li|h[1-6])[^>]*>/gi, '\n');
+  s = s.replace(/<\/\s*td\s*>/gi, '\t');
+  s = s.replace(/<\s*td[^>]*>/gi, ' ');
+  // Prefer href for links that wrap empty/short anchors
+  s = s.replace(/<a[^>]+href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi, (_, href, text) => {
+    const t = String(text).replace(/<[^>]+>/g, '').trim();
+    if (t && t.length >= 3) return t;
+    return href;
+  });
+  s = s.replace(/<[^>]+>/g, ' ');
+  s = s.replace(/&nbsp;/gi, ' ').replace(/&amp;/gi, '&').replace(/&lt;/gi, '<').replace(/&gt;/gi, '>')
+    .replace(/&quot;/gi, '"').replace(/&#39;/gi, "'");
+  return normalizeSpaces(s);
 }
 
 export function extractLabeledFields(raw) {
@@ -68,11 +162,10 @@ export function extractLabeledFields(raw) {
   for (let i = 0; i < hits.length; i++) {
     const h = hits[i];
     if (h.boundary) continue;
-    if (fields[h.key] != null) continue; // first wins
+    if (fields[h.key] != null) continue;
     const valueEnd = i + 1 < hits.length ? hits[i + 1].start : text.length;
     let val = text.slice(h.end, valueEnd).trim();
     val = val.replace(/^[\s:：\-–—|]+/, '').replace(/\s+/g, ' ').trim();
-    // Do not allow value to still contain a known label header
     for (const def of LABEL_DEFS) {
       const probe = new RegExp(def.re.source, 'i');
       if (probe.test(val)) {
@@ -80,10 +173,15 @@ export function extractLabeledFields(raw) {
         if (cut > 0) val = val.slice(0, cut).trim();
       }
     }
+    // Strip form-title bleed but keep as separate form_offer elsewhere
     val = val.replace(/\s*Заявка\s+на\s+бесплатный\s+аудит\s*/gi, ' ').replace(/\s+/g, ' ').trim();
+    // Prevent partial "Отправлено со" leakage into comment
+    if (h.key === 'comment') {
+      val = val.replace(/\s*Отправлено\s+со\s*(страницы)?\s*$/i, '').trim();
+    }
     fields[h.key] = val;
   }
-  return { fields, text };
+  return { fields, text, hits };
 }
 
 export function digits(p) {
@@ -104,13 +202,44 @@ export function looksLikeEmail(e) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]{2,24}$/.test(v);
 }
 
+function normalizeMessengerDisplay(raw) {
+  let v = String(raw || '').trim();
+  if (!v) return '';
+  if (/^@[a-zA-Z0-9_]{4,32}$/.test(v)) return v;
+  if (/^t\.me\//i.test(v)) return v.replace(/\s+/g, '');
+  if (/^telegram\.me\//i.test(v)) return v.replace(/\s+/g, '');
+  if (/^https?:\/\/(t\.me|telegram\.me)\//i.test(v)) return v.replace(/\s+/g, '');
+  if (/^https?:\/\/(wa\.me|api\.whatsapp\.com)\//i.test(v)) return v.replace(/\s+/g, '');
+  if (/^(wa\.me|api\.whatsapp\.com)\//i.test(v)) return v.replace(/\s+/g, '');
+  return v.replace(/\s+/g, ' ').trim();
+}
+
+export function classifyMessengerUrl(raw) {
+  const v = String(raw || '').trim();
+  if (!v || isInvalidToken(v)) return null;
+  const lower = v.toLowerCase();
+  if (/^@[a-zA-Z0-9_]{4,32}$/.test(v)
+    || /^(https?:\/\/)?(t\.me|telegram\.me)\//i.test(v)
+    || /^t\.me\//i.test(v)
+    || /^telegram\.me\//i.test(v)) {
+    return { channel: 'telegram', value: normalizeMessengerDisplay(v) };
+  }
+  if (/^(https?:\/\/)?(wa\.me|api\.whatsapp\.com)\//i.test(v)
+    || /^wa\.me\//i.test(v)
+    || /^api\.whatsapp\.com\//i.test(v)) {
+    return { channel: 'whatsapp', value: normalizeMessengerDisplay(v) };
+  }
+  if (lower === 'telegram' || lower === 'телеграм') {
+    return { channel: 'telegram', value: '' };
+  }
+  if (lower === 'whatsapp' || lower === 'ватсап' || lower === 'вацап') {
+    return { channel: 'whatsapp', value: '' };
+  }
+  return null;
+}
+
 export function looksLikeMessenger(m) {
-  const v = String(m || '').trim();
-  if (!v || isInvalidToken(v)) return false;
-  if (/^@[a-zA-Z0-9_]{4,32}$/.test(v)) return true;
-  if (/^(t\.me\/|https?:\/\/t\.me\/)[a-zA-Z0-9_]{4,}/i.test(v)) return true;
-  // bare username only when method is telegram
-  return false;
+  return classifyMessengerUrl(m) != null;
 }
 
 export function normalizePhoneDisplay(raw) {
@@ -119,17 +248,214 @@ export function normalizePhoneDisplay(raw) {
   return src.replace(/\s+/g, ' ').trim();
 }
 
+export function looksLikePlausibleSite(raw) {
+  let s = String(raw || '').trim();
+  if (!s || isSitePlaceholder(s) || isInvalidToken(s)) return false;
+  if (classifyMessengerUrl(s)) return false;
+  s = s.replace(/^[\s"'«»(<[{]+/, '').replace(/[\s"'«».,;:!?)\]}>]+$/g, '').trim();
+  if (!s || isSitePlaceholder(s)) return false;
+  // Reject obvious system/service hosts
+  if (/(^|\.)(googleapis|googleusercontent|gstatic|mail\.google|n8n\.|localhost)\b/i.test(s)) return false;
+  if (/^https?:\/\//i.test(s)) return true;
+  if (/^www\./i.test(s)) return true;
+  if (/^[a-z0-9][\w.-]*\.[a-z0-9][\w.-]*(?:\/\S*)?$/i.test(s)) return true;
+  return false;
+}
+
 export function normalizeSite(raw) {
   let s = String(raw || '').trim();
-  if (!s || isInvalidToken(s)) return '';
+  if (!looksLikePlausibleSite(s)) return '';
   s = s.replace(/^[\s"'«»(<[{]+/, '').replace(/[\s"'«».,;:!?)\]}>]+$/g, '').trim();
-  if (!s || isInvalidToken(s)) return '';
-  // Accept with or without scheme; keep path; do not DNS-check.
-  if (/^https?:\/\//i.test(s)) return s.replace(/\s+/g, '');
-  if (/^www\./i.test(s)) return s.replace(/\s+/g, '');
-  // host.tld or host.tld/path — including .example operator tests
-  if (/^[a-z0-9][\w.-]*\.[a-z0-9][\w.-]*(?:\/\S*)?$/i.test(s)) return s.replace(/\s+/g, '');
+  s = s.replace(/\s+/g, '');
+  // Lowercase host only; keep path case
+  try {
+    if (/^https?:\/\//i.test(s)) {
+      const u = new URL(s);
+      u.hostname = u.hostname.toLowerCase();
+      return u.toString().replace(/\/$/, '') === (u.origin + u.pathname.replace(/\/$/, '') + u.search + u.hash)
+        ? u.toString().replace(/\/$/, '') || u.origin
+        : u.toString();
+    }
+  } catch {
+    // fall through
+  }
+  if (/^www\./i.test(s)) return s.toLowerCase();
+  const slash = s.indexOf('/');
+  if (slash === -1) return s.toLowerCase();
+  return s.slice(0, slash).toLowerCase() + s.slice(slash);
+}
+
+export function isExplicitAbsentPhrase(raw) {
+  const s = String(raw || '').trim();
+  if (!s) return false;
+  return EXPLICIT_ABSENT_RE.some((re) => re.test(s));
+}
+
+/**
+ * Website state model with required precedence:
+ * provided > explicitly_absent > alternative_contact > invalid_or_placeholder > missing
+ */
+export function classifyWebsiteField(siteRaw, commentRaw = '') {
+  const raw = String(siteRaw || '').trim();
+  const warnings = [];
+  const comment = String(commentRaw || '').trim();
+
+  if (raw && looksLikePlausibleSite(raw)) {
+    return {
+      website_raw: raw,
+      website_normalized: normalizeSite(raw),
+      website_state: 'provided',
+      alternative_contact_type: '',
+      alternative_contact_value: '',
+      warnings,
+    };
+  }
+
+  const absentFromSite = raw && isExplicitAbsentPhrase(raw);
+  const absentFromComment = !raw && isExplicitAbsentPhrase(comment);
+  // "хочу сайт" / "нужен сайт" in comment with empty site = explicitly_absent
+  if (absentFromSite || absentFromComment || (raw && isExplicitAbsentPhrase(raw))) {
+    return {
+      website_raw: raw,
+      website_normalized: '',
+      website_state: 'explicitly_absent',
+      alternative_contact_type: '',
+      alternative_contact_value: '',
+      warnings,
+    };
+  }
+  // Also: empty site + comment expresses need-for-site
+  if (!raw && /(?:хочу|нужен|нужна|сделать|создать)\s+сайт/i.test(comment)) {
+    return {
+      website_raw: '',
+      website_normalized: '',
+      website_state: 'explicitly_absent',
+      alternative_contact_type: '',
+      alternative_contact_value: '',
+      warnings,
+    };
+  }
+
+  const alt = classifyMessengerUrl(raw);
+  if (raw && alt) {
+    warnings.push('site_field_was_messenger');
+    return {
+      website_raw: raw,
+      website_normalized: '',
+      website_state: 'alternative_contact',
+      alternative_contact_type: alt.channel,
+      alternative_contact_value: alt.value || raw,
+      warnings,
+    };
+  }
+
+  if (raw && (isSitePlaceholder(raw) || isInvalidToken(raw) || /^(test|тест)$/i.test(raw) || !looksLikePlausibleSite(raw))) {
+    if (raw) warnings.push('site_invalid_or_placeholder');
+    return {
+      website_raw: raw,
+      website_normalized: '',
+      website_state: raw ? 'invalid_or_placeholder' : 'missing',
+      alternative_contact_type: '',
+      alternative_contact_value: '',
+      warnings,
+    };
+  }
+
+  return {
+    website_raw: raw,
+    website_normalized: '',
+    website_state: 'missing',
+    alternative_contact_type: '',
+    alternative_contact_value: '',
+    warnings,
+  };
+}
+
+/** Strict recovery of a site from comment only (not sender/source/i-SEO). */
+export function recoverSiteFromComment(comment) {
+  const c = String(comment || '');
+  const m = c.match(/(?:https?:\/\/)?(?:www\.)?[a-z0-9][\w.-]*\.[a-z]{2,24}(?:\/[\w./?#&=%-]*)?/i);
+  if (!m) return null;
+  const candidate = m[0];
+  if (classifyMessengerUrl(candidate)) return null;
+  if (/i-?seo\.(ru|example)/i.test(candidate)) return null;
+  if (!looksLikePlausibleSite(candidate)) return null;
+  return {
+    website_raw: candidate,
+    website_normalized: normalizeSite(candidate),
+    website_state: 'provided',
+    recovery_source: 'comment',
+  };
+}
+
+export function inferCommPreference(text) {
+  const t = String(text || '').trim().toLowerCase();
+  if (!t) return null;
+  if (/^(в\s*тг|пишите\s+в\s*тг|связь\s+в\s*телеграм|пишите\s+в\s*telegram|telegram|телеграм)/.test(t)) {
+    return 'telegram';
+  }
+  if (/^(звонить|по\s*телефону|лучше\s+звонить)/.test(t)) return 'phone';
+  if (/^(лучше\s+whatsapp|whatsapp|ватсап|вацап)/.test(t)) return 'whatsapp';
+  if (/^(по\s*email|пишите\s+на\s*почту|email|почта)/.test(t)) return 'email';
+  return null;
+}
+
+export function isCommPreferenceOnly(text) {
+  const t = String(text || '').trim();
+  if (!t) return false;
+  if (COMM_PREF_ONLY.some((re) => re.test(t))) return true;
+  return inferCommPreference(t) != null && t.length <= 48;
+}
+
+export function normalizeSourcePage(page) {
+  let s = String(page || '').trim();
+  if (!s) return '';
+  s = s.replace(/[\s|—–\-]+$/g, '').trim();
+  s = s.replace(/\s*[|—–\-]\s*i[\-\.]?seo\.(ru|example)(\/.*)?$/i, '').trim();
+  s = s.replace(/\s*[|—–\-]\s*https?:\/\/[^\s|—–\-]+$/i, '').trim();
+  s = s.replace(/[\s|—–\-]+$/g, '').trim();
+  const bareUrlOnly = /^https?:\/\/\S+$/i.test(s) && !/\s/.test(s.trim());
+  if (bareUrlOnly) return s;
+  if (/seo/i.test(s) && /(ai|нейросет|нейро)/i.test(s)) {
+    if (/продвижен/i.test(s)) return 'SEO-продвижение в AI и нейросетях';
+  }
+  return s;
+}
+
+export function classifySourceTopic(page, subject = '', formOffer = '') {
+  const blob = [page, subject, formOffer].join(' ').toLowerCase();
+  if (/иностран|foreign|зарубеж/.test(blob)) return 'foreign_seo';
+  if (/бесплатн.*аудит|free\s*audit|\/audit/.test(blob)) return 'free_audit';
+  if (/москв/.test(blob) && /seo|продвиж/.test(blob)) return 'moscow_seo';
+  if (/ai\s*search|гео|geo|нейросет|ai\s*visibility/.test(blob)) return 'ai_search';
+  if (/нов(ый|ого)\s+сайт|new.?site/.test(blob) && /seo|продвиж/.test(blob)) return 'new_site_seo';
+  if (/директ|контекст|ppc|яндекс\s*директ/.test(blob)) return 'contextual_ads';
+  if (/разработк|создани[ея]\s+сайт|website\s*dev/.test(blob)) return 'website_development';
+  if (/seo|продвиж/.test(blob)) return 'seo';
+  if (/аудит|audit/.test(blob)) return 'audit';
   return '';
+}
+
+function inferContactMethodFromSignals({ methodRaw, contact, phone, email, messenger, commentPref }) {
+  const method = String(methodRaw || '').trim().toLowerCase();
+  if (/telegram|телеграм/i.test(method)) return 'telegram';
+  if (/whats\s*app|ватсап|вацап/i.test(method)) return 'whatsapp';
+  if (/телефон|phone|звон/i.test(method)) return 'phone';
+  if (/e[\u2011\u2010\-]?mail|email|почта|mail/i.test(method)) return 'email';
+
+  if (messenger) {
+    const cls = classifyMessengerUrl(messenger);
+    if (cls?.channel === 'telegram') return 'telegram';
+    if (cls?.channel === 'whatsapp') return 'whatsapp';
+    return 'messenger';
+  }
+  if (commentPref === 'telegram') return 'telegram';
+  if (commentPref === 'whatsapp') return 'whatsapp';
+  if (commentPref === 'phone' && phone) return 'phone';
+  if (commentPref === 'email' && email) return 'email';
+  if (phone && !email && !messenger) return 'phone';
+  if (email && !phone && !messenger) return 'email';
+  return 'unknown';
 }
 
 export function interpretContactMethod(methodRaw, contactRaw, extras = {}) {
@@ -137,7 +463,7 @@ export function interpretContactMethod(methodRaw, contactRaw, extras = {}) {
   const contact = String(contactRaw || '').trim();
   let phone = String(extras.phone_direct || '').trim();
   let email = String(extras.email_direct || '').trim();
-  let messenger = '';
+  let messenger = String(extras.messenger_extra || '').trim();
 
   const methodPhone = /телефон|phone|звон/i.test(method);
   const methodEmail = /e[\u2011\u2010\-]?mail|email|почта|mail/i.test(method);
@@ -150,32 +476,37 @@ export function interpretContactMethod(methodRaw, contactRaw, extras = {}) {
     if (looksLikeEmail(contact)) email = email || contact;
     else if (looksLikeEmail(contact.replace(/\s+/g, ''))) email = email || contact.replace(/\s+/g, '');
   } else if (methodTg) {
-    if (looksLikeMessenger(contact) || /^@[a-zA-Z0-9_]{4,32}$/.test(contact) || /^[a-zA-Z0-9_]{5,32}$/.test(contact)) {
-      messenger = contact.startsWith('@') || /t\.me/i.test(contact) ? contact : '@' + contact.replace(/^@/, '');
-      if (!looksLikeMessenger(messenger) && !/^@[a-zA-Z0-9_]{5,32}$/.test(messenger)) messenger = contact;
-    } else if (looksLikePhone(contact)) {
-      phone = phone || contact;
-    }
+    const cls = classifyMessengerUrl(contact);
+    if (cls) messenger = messenger || cls.value || contact;
+    else if (/^[a-zA-Z0-9_]{5,32}$/.test(contact)) messenger = messenger || ('@' + contact.replace(/^@/, ''));
+    else if (looksLikePhone(contact)) phone = phone || contact;
   } else if (methodWa) {
-    if (looksLikePhone(contact)) phone = phone || contact;
-    else if (contact) messenger = contact;
+    const cls = classifyMessengerUrl(contact);
+    if (cls) messenger = messenger || cls.value || contact;
+    else if (looksLikePhone(contact)) phone = phone || contact;
+    else if (contact) messenger = messenger || contact;
   } else if (contact) {
-    // unknown method — infer
     if (looksLikePhone(contact)) phone = phone || contact;
     else if (looksLikeEmail(contact)) email = email || contact;
-    else if (looksLikeMessenger(contact) || /^@[a-zA-Z0-9_]{4,32}$/.test(contact)) messenger = contact;
+    else {
+      const cls = classifyMessengerUrl(contact);
+      if (cls) messenger = messenger || cls.value || contact;
+      else if (/^@[a-zA-Z0-9_]{4,32}$/.test(contact)) messenger = messenger || contact;
+    }
   }
 
   if (phone && !looksLikePhone(phone)) phone = '';
   if (email && !looksLikeEmail(email)) email = '';
-  if (messenger && isInvalidToken(messenger)) messenger = '';
+  if (messenger && isInvalidToken(messenger) && !classifyMessengerUrl(messenger)) messenger = '';
 
-  let contact_method = 'unknown';
-  if (methodPhone || (phone && !email && !messenger)) contact_method = 'phone';
-  else if (methodEmail || (email && !phone && !messenger)) contact_method = 'email';
-  else if (methodTg) contact_method = 'telegram';
-  else if (methodWa) contact_method = 'whatsapp';
-  else if (messenger) contact_method = 'messenger';
+  const contact_method = inferContactMethodFromSignals({
+    methodRaw: method,
+    contact,
+    phone,
+    email,
+    messenger,
+    commentPref: extras.comment_preference || null,
+  });
 
   return {
     contact_method,
@@ -189,10 +520,16 @@ export function detectAuditForm(raw) {
   return /Заявка\s+на\s+бесплатный\s+аудит/i.test(String(raw || ''));
 }
 
+export function detectFormOffer(raw, subject = '') {
+  if (detectAuditForm(raw) || /бесплатн.*аудит/i.test(subject)) return 'Бесплатный аудит';
+  if (/яндекс\s*директ|контекстн/i.test(raw + ' ' + subject)) return 'Яндекс Директ';
+  if (/создани[ея]\s+сайт|разработк/i.test(raw + ' ' + subject)) return 'Разработка сайта';
+  return '';
+}
+
 export function stripLabeledPayload(raw) {
   const text = normalizeSpaces(raw);
   const { fields } = extractLabeledFields(text);
-  // Build a free-text residual: remove known "label: value" spans
   let residual = text;
   const labelUnion = LABEL_DEFS.map((d) => d.re.source).join('|');
   residual = residual.replace(new RegExp('(?:' + labelUnion + ')\\s*[^]*?(?=(?:' + labelUnion + ')|$)', 'gi'), ' ');
@@ -200,10 +537,344 @@ export function stripLabeledPayload(raw) {
   return { fields, residual };
 }
 
+export function classifyProbableTest({ name, comment, site, phone, email, marker, phase_marker }) {
+  const reasons = [];
+  const n = String(name || '');
+  const c = String(comment || '');
+  const s = String(site || '');
+  if (/\btest\b/i.test(n) || /тест/i.test(n)) reasons.push('name_test');
+  if (/тест\s*бота/i.test(c) || /\btest\b/i.test(c) || /тест/i.test(c)) reasons.push('comment_test');
+  if (/synthetic|parser|stabilization|phase\s*3/i.test(c)) reasons.push('comment_internal');
+  if (/\.(test|example)(\b|\/|$)/i.test(s)) reasons.push('synthetic_domain');
+  if (/SYNTHETIC_TEST|PHASE_3E1|PHASE_3D/i.test(String(marker || '') + ' ' + String(phase_marker || ''))) {
+    reasons.push('phase_marker');
+  }
+  if (/900\s*111\s*22\s*33|lead\.test@example\.com/i.test([phone, email].join(' '))) {
+    reasons.push('synthetic_contact');
+  }
+  return { is_probable_test: reasons.length > 0, test_reason_codes: reasons };
+}
+
 /**
- * Parse a Gmail-like or synthetic lead item into Parse Lead output fields.
- * @param {object} j input json
+ * Intent precedence:
+ * 1 explicit comment → 2 structured fields → 3 form selection → 4 source page → 5 subject/form title
  */
+export function resolveIntent({
+  comment_normalized,
+  website_state,
+  form_offer,
+  source_topic,
+  email_subject,
+  communication_preference,
+  is_probable_test,
+}) {
+  const comment = String(comment_normalized || '').trim();
+  const lower = comment.toLowerCase();
+  let resolved_service = 'NeedsClarification';
+  let secondary_service = '';
+  let explicit_client_intent = '';
+  let intent_evidence_source = 'none';
+  let intent_conflict = false;
+  let parser_confidence = 'medium';
+
+  const wantsSite = /(?:хочу|нужен|нужна|сделать|создать|разработ)\w*\s+сайт/i.test(comment)
+    || /сайт\s+(?:под\s+ключ|с\s+нуля)/i.test(comment);
+  const wantsSeo = /\bseo\b|продвиж|продвиг|поисков/i.test(lower);
+  const wantsAudit = /аудит|audit|провер/i.test(lower);
+  const wantsDirect = /директ|контекст|\bppc\b|реклам/i.test(lower);
+  const wantsAi = /ai\s*search|гео\b|geo\b|нейросет|ai\s*visibility/i.test(lower);
+  const siteThenSeo = /сайт.{0,60}(?:потом|затем|после).{0,40}(?:продвиж|продвиг|seo)/i.test(comment)
+    || /сделать\s+сайт.{0,60}(?:продвиж|продвиг|seo)/i.test(comment)
+    || /сайт.{0,40}и\s+(?:потом\s+)?(?:его\s+)?(?:продвиж|продвиг)/i.test(comment);
+
+  if (comment && !isCommPreferenceOnly(comment)) {
+    explicit_client_intent = comment.slice(0, 280);
+    intent_evidence_source = 'client_comment';
+    parser_confidence = 'high';
+    if (siteThenSeo || (wantsSite && wantsSeo)) {
+      resolved_service = 'WebsiteDevelopmentSEO';
+    } else if (wantsSite) {
+      resolved_service = 'WebsiteDevelopment';
+    } else if (wantsAi) {
+      resolved_service = 'AISearch';
+    } else if (wantsDirect) {
+      resolved_service = 'Direct';
+    } else if (wantsSeo && !wantsAudit) {
+      resolved_service = website_state === 'provided' ? 'SEO' : 'NeedsClarification';
+    } else if (wantsAudit) {
+      resolved_service = 'Audit';
+    } else if (/^seo\.?$/i.test(comment.trim()) && website_state === 'provided') {
+      resolved_service = 'SEO';
+      parser_confidence = 'medium';
+    } else {
+      resolved_service = 'NeedsClarification';
+      parser_confidence = 'low';
+    }
+  } else if (form_offer) {
+    intent_evidence_source = 'form_offer';
+    if (/аудит/i.test(form_offer)) resolved_service = 'Audit';
+    else if (/директ/i.test(form_offer)) resolved_service = 'Direct';
+    else if (/сайт/i.test(form_offer)) resolved_service = 'WebsiteDevelopment';
+    else resolved_service = 'NeedsClarification';
+    parser_confidence = 'low';
+  } else if (source_topic) {
+    intent_evidence_source = 'source_page';
+    const map = {
+      free_audit: 'Audit',
+      audit: 'Audit',
+      seo: 'SEO',
+      moscow_seo: 'SEO',
+      foreign_seo: 'SEO',
+      new_site_seo: 'WebsiteDevelopmentSEO',
+      website_development: 'WebsiteDevelopment',
+      ai_search: 'AISearch',
+      contextual_ads: 'Direct',
+    };
+    resolved_service = map[source_topic] || 'NeedsClarification';
+    parser_confidence = 'low';
+  } else if (/аудит/i.test(email_subject || '')) {
+    intent_evidence_source = 'email_subject';
+    resolved_service = 'Audit';
+    parser_confidence = 'low';
+  }
+
+  // Weak form title must not override strong comment (already handled by order).
+  // Flag conflict when form says Audit but comment wants development.
+  if (intent_evidence_source === 'client_comment'
+    && /аудит/i.test(form_offer || '')
+    && (resolved_service === 'WebsiteDevelopment' || resolved_service === 'WebsiteDevelopmentSEO')) {
+    intent_conflict = true;
+  }
+
+  if (communication_preference && resolved_service === 'NeedsClarification' && !comment) {
+    explicit_client_intent = '';
+  }
+
+  if (is_probable_test && (!comment || /тест/i.test(comment))) {
+    // Keep form context but mark clarification/test — do not invent business task
+    if (!explicit_client_intent || /тест/i.test(explicit_client_intent)) {
+      if (/аудит/i.test(form_offer || '') || source_topic === 'free_audit') {
+        // retain Audit as form context but confidence low
+        if (resolved_service === 'NeedsClarification') resolved_service = 'Audit';
+      }
+    }
+  }
+
+  const tax = SERVICE_TAXONOMY[resolved_service] || SERVICE_TAXONOMY.NeedsClarification;
+  return {
+    explicit_client_intent,
+    resolved_service: tax.machine,
+    resolved_service_label: tax.label,
+    secondary_service,
+    intent_evidence_source,
+    intent_conflict,
+    parser_confidence,
+    service_compat: SERVICE_COMPAT[tax.machine] || 'Other',
+  };
+}
+
+export function buildRequestSummary({ resolved_service, website_state, comment_normalized, communication_preference }) {
+  const svc = resolved_service;
+  if (svc === 'WebsiteDevelopmentSEO') return 'Нужен новый сайт с последующим SEO-продвижением.';
+  if (svc === 'WebsiteDevelopment') return 'Нужен новый сайт.';
+  if (svc === 'SEO' && website_state === 'provided') return 'Требуется SEO-продвижение существующего сайта.';
+  if (svc === 'SEO') return 'Требуется SEO-продвижение; нужны уточнения.';
+  if (svc === 'Audit' && website_state === 'provided' && comment_normalized && !isCommPreferenceOnly(comment_normalized) && comment_normalized.length > 20) {
+    return 'Запрошен аудит сайта с описанной задачей.';
+  }
+  if (svc === 'Audit') return 'Запрошен аудит сайта; конкретная задача не указана.';
+  if (svc === 'AISearch') return 'Интерес к AI Search / GEO / видимости в нейросетях.';
+  if (svc === 'Direct') return 'Интерес к контекстной рекламе / Яндекс Директ.';
+  if (communication_preference === 'telegram') return 'Контакт через Telegram; задача требует уточнения.';
+  if (svc === 'NeedsClarification') return 'Задача требует уточнения.';
+  return 'Заявка получена; требуется уточнение задачи.';
+}
+
+export function assessLeadQuality({
+  hasContact,
+  website_state,
+  resolved_service,
+  comment_normalized,
+  is_probable_test,
+  parse_status,
+  name,
+}) {
+  if (is_probable_test) {
+    return { lead_quality: 'test', lead_quality_label: 'Тестовая заявка', quality_status: 'ok' };
+  }
+  if (!hasContact || parse_status === 'failed') {
+    return { lead_quality: 'insufficient', lead_quality_label: 'Недостаточно данных', quality_status: 'bad' };
+  }
+  const meaningfulComment = comment_normalized && !isCommPreferenceOnly(comment_normalized) && comment_normalized.length >= 3;
+  const siteOkForSvc = (
+    resolved_service === 'WebsiteDevelopment'
+    || resolved_service === 'WebsiteDevelopmentSEO'
+  )
+    ? (website_state === 'explicitly_absent' || website_state === 'provided' || website_state === 'missing')
+    : (website_state === 'provided' || website_state === 'explicitly_absent');
+
+  const taskClear = resolved_service !== 'NeedsClarification' && (
+    meaningfulComment
+    || resolved_service === 'WebsiteDevelopment'
+    || resolved_service === 'WebsiteDevelopmentSEO'
+  );
+
+  // Website development with no site can still be data-sufficient
+  if (hasContact && taskClear && (
+    website_state === 'provided'
+    || ((resolved_service === 'WebsiteDevelopment' || resolved_service === 'WebsiteDevelopmentSEO')
+      && (website_state === 'explicitly_absent' || website_state === 'missing'))
+  )) {
+    return { lead_quality: 'sufficient', lead_quality_label: 'Данных достаточно', quality_status: 'ok' };
+  }
+
+  if (hasContact && (!taskClear || !siteOkForSvc || !name)) {
+    return { lead_quality: 'needs_clarification', lead_quality_label: 'Нужны уточнения', quality_status: 'needs_data' };
+  }
+
+  return { lead_quality: 'needs_clarification', lead_quality_label: 'Нужны уточнения', quality_status: 'needs_data' };
+}
+
+export function computeMissingInformation({
+  resolved_service,
+  website_state,
+  hasContact,
+  name,
+  comment_normalized,
+}) {
+  const missing = [];
+  if (!hasContact) missing.push('контакт');
+  if (!name) missing.push('имя');
+
+  const needsExistingSite = ['Audit', 'SEO'].includes(resolved_service);
+  if (needsExistingSite && website_state !== 'provided') {
+    if (website_state !== 'explicitly_absent') missing.push('сайт');
+  }
+
+  if (resolved_service === 'WebsiteDevelopment' || resolved_service === 'WebsiteDevelopmentSEO') {
+    if (!comment_normalized || comment_normalized.length < 12) {
+      missing.push('тип бизнеса');
+      missing.push('функциональность');
+    } else {
+      if (!/бизнес|ниша|отрасл|магазин|услуг|компани/i.test(comment_normalized)) missing.push('тип бизнеса');
+      if (!/функц|каталог|форм|оплат|интегр/i.test(comment_normalized)) missing.push('функциональность');
+    }
+    if (resolved_service === 'WebsiteDevelopmentSEO') {
+      if (!/регион|город|москв|росси|цель/i.test(comment_normalized || '')) missing.push('регион/цели продвижения');
+    }
+  } else if (resolved_service === 'NeedsClarification' || !comment_normalized || isCommPreferenceOnly(comment_normalized)) {
+    missing.push('задача');
+  } else if (resolved_service === 'Audit' && (!comment_normalized || comment_normalized.length < 20)) {
+    missing.push('задача');
+  }
+
+  // Never ask for site again when provided or explicitly absent for development
+  return missing.filter((m, i, arr) => arr.indexOf(m) === i);
+}
+
+export function buildFirstReplyDraft(ctx) {
+  const {
+    client_name,
+    website_state,
+    website_normalized,
+    resolved_service,
+    comment_normalized,
+    missing_information,
+    hasContact,
+    is_probable_test,
+    alternative_contact_value,
+    communication_preference,
+  } = ctx;
+
+  if (is_probable_test) {
+    return {
+      first_reply_text: '',
+      first_reply_source: 'test_omitted',
+      reply_omitted_reason: 'probable_test',
+    };
+  }
+  if (!hasContact) {
+    return { first_reply_text: '', first_reply_source: 'none', reply_omitted_reason: 'missing_contact' };
+  }
+
+  const name = String(client_name || '').trim();
+  const greet = name ? ('Здравствуйте, ' + name + '!') : 'Здравствуйте!';
+  const miss = Array.isArray(missing_information) ? missing_information : String(missing_information || '').split(',').map((s) => s.trim()).filter(Boolean);
+
+  const askSite = miss.includes('сайт') && website_state !== 'provided' && website_state !== 'explicitly_absent';
+  // Invariant: never ask for site address when provided or explicitly absent
+  const lines = [greet, ''];
+
+  if (resolved_service === 'WebsiteDevelopmentSEO') {
+    lines.push('Спасибо за обращение. Поняли задачу: нужен новый сайт и затем SEO-продвижение.');
+    lines.push('');
+    lines.push('Чтобы подготовить предложение, уточните, пожалуйста:');
+    lines.push('1) Чем занимается бизнес и какая аудитория?');
+    lines.push('2) Какие разделы/функции нужны на сайте?');
+    lines.push('3) Есть ли примеры сайтов, которые нравятся?');
+    lines.push('4) По какому региону и целям планируете продвижение?');
+  } else if (resolved_service === 'WebsiteDevelopment') {
+    lines.push('Спасибо за обращение. Поняли, что нужен новый сайт.');
+    lines.push('');
+    lines.push('Чтобы подготовить предложение, уточните, пожалуйста:');
+    lines.push('1) Чем занимается бизнес?');
+    lines.push('2) Какие разделы и функции нужны?');
+    lines.push('3) Есть ли примеры сайтов, которые вам нравятся?');
+    lines.push('4) Есть ли желаемые сроки?');
+  } else if (resolved_service === 'SEO' && website_state === 'provided') {
+    lines.push('Спасибо за заявку по SEO.');
+    lines.push('');
+    lines.push('Сайт ' + website_normalized + ' уже указан — повторно присылать адрес не нужно.');
+    lines.push('');
+    if (!comment_normalized || comment_normalized.length < 12 || /^seo\.?$/i.test(comment_normalized)) {
+      lines.push('Уточните, пожалуйста:');
+      lines.push('1) Какой результат хотите получить?');
+      lines.push('2) Есть ли приоритетные услуги/регионы?');
+    } else {
+      lines.push('Мы учли ваш комментарий и свяжемся, чтобы уточнить план работ.');
+    }
+  } else if (resolved_service === 'Audit' && website_state === 'provided') {
+    lines.push('Спасибо за заявку на аудит.');
+    lines.push('');
+    lines.push('Сайт ' + website_normalized + ' уже указан — повторно присылать адрес не нужно.');
+    lines.push('');
+    if (!comment_normalized || comment_normalized.length < 20 || isCommPreferenceOnly(comment_normalized)) {
+      lines.push('Кратко напишите, что именно требуется проверить или улучшить.');
+    } else {
+      lines.push('Мы учли вашу задачу и подготовим следующие шаги.');
+    }
+  } else if (resolved_service === 'AISearch') {
+    lines.push('Спасибо за интерес к AI Search / GEO.');
+    lines.push('');
+    lines.push('Уточните, пожалуйста, какие системы поиска и какой результат для вас приоритетны.');
+  } else if (resolved_service === 'Direct') {
+    lines.push('Спасибо за интерес к контекстной рекламе.');
+    lines.push('');
+    lines.push('Уточните, пожалуйста, регион, услуги для рекламы и текущий сайт (если есть).');
+  } else if (website_state === 'alternative_contact' || communication_preference === 'telegram' || alternative_contact_value) {
+    lines.push('Спасибо, ваша заявка получена.');
+    lines.push('');
+    lines.push('Уточните, пожалуйста, какая задача для вас сейчас главная: аудит, SEO, разработка сайта или реклама.');
+  } else {
+    lines.push('Спасибо, ваша заявка получена.');
+    lines.push('');
+    if (askSite) lines.push('Если есть сайт — пришлите, пожалуйста, его адрес.');
+    lines.push('Кратко опишите, какая задача для вас сейчас главная.');
+  }
+
+  // Safety: strip any accidental "пришлите адрес сайта" when site is known/absent
+  let text = lines.join('\n');
+  if (website_state === 'provided' || website_state === 'explicitly_absent') {
+    text = text
+      .replace(/Пришлите,?\s*пожалуйста,?\s*адрес сайта[^.]*\./gi, '')
+      .replace(/Укажите адрес сайта[^.]*\./gi, '')
+      .replace(/\n{3,}/g, '\n\n');
+  }
+
+  text = (text + '\n\nС уважением,\nкоманда i-SEO').replace(/\n{3,}/g, '\n\n').trim();
+  return { first_reply_text: text, first_reply_source: 'template', reply_omitted_reason: '' };
+}
+
 export function parseLeadItem(j = {}) {
   const now = new Date().toISOString();
   const isSynth = Boolean(j.synthetic_fixture || j.fixture_id || j.__synthetic);
@@ -217,7 +888,6 @@ export function parseLeadItem(j = {}) {
   if (!gmail_message_id) {
     if (isSynth) gmail_message_id = 'msg_synth_' + String(j.fixture_id || 'X');
     else {
-      // stable hash without crypto (fnv+djb2) — mirrored in Code node
       const raw = [thread, received, sender, subject, String(j.request_text || j.snippet || '').slice(0, 120)]
         .map((p) => String(p ?? '').trim().toLowerCase()).join('|');
       let h1 = 0x811c9dc5;
@@ -229,51 +899,176 @@ export function parseLeadItem(j = {}) {
   }
   const lead_id = String(j.lead_id || ('lead_' + gmail_message_id));
 
-  const rawBody = String(j.request_text || j.text || j.textPlain || j.snippet || j.body || j.raw_text || '');
-  const normalizedBody = normalizeSpaces(rawBody);
+  const rawBodyInput = String(j.request_text || j.text || j.textPlain || j.html || j.snippet || j.body || j.raw_text || '');
+  const usedHtml = /<[a-z][\s\S]*>/i.test(rawBodyInput) && !j.textPlain;
+  const normalizedBody = usedHtml ? htmlToPlainText(rawBodyInput) : normalizeSpaces(rawBodyInput);
+  const extraction_path = usedHtml ? 'html_structure' : 'normalized_text';
   const { fields } = extractLabeledFields(normalizedBody);
 
-  // Prefer explicit pre-parsed synthetic fields when provided
-  const extractedName = (!isInvalidToken(fields.name) ? String(fields.name || '').trim() : '');
-  const site = normalizeSite(fields.site || '');
-  const page = String(fields.page || '').trim();
-  const comment = String(fields.comment || '').trim();
+  // RAW name preservation: never destroy "test"
+  const client_name_raw = String(fields.name || j.parsed_name || j.client_name || j.name || '').trim();
+  const client_name_normalized = isNamePlaceholder(client_name_raw) ? '' : client_name_raw;
 
-  const interpreted = interpretContactMethod(fields.contact_method, fields.contact, {
+  const contact_method_raw = String(fields.contact_method || '').trim();
+  const contact_raw = String(fields.contact || '').trim();
+  const comment_raw_full = String(fields.comment || '').trim();
+  let comment_raw = comment_raw_full.replace(/\s*Отправлено\s+со\s*(страницы)?\s*$/i, '').trim();
+  comment_raw = comment_raw.replace(/\s*IP\s*[:：].*$/i, '').trim();
+  const comment_normalized = comment_raw.replace(/\s+/g, ' ').trim();
+
+  let website = classifyWebsiteField(fields.site || '', comment_normalized);
+  // Cross-field recovery only when missing/invalid
+  if ((website.website_state === 'missing' || website.website_state === 'invalid_or_placeholder') && comment_normalized) {
+    const recovered = recoverSiteFromComment(comment_normalized);
+    if (recovered) {
+      website = {
+        website_raw: website.website_raw || recovered.website_raw,
+        website_normalized: recovered.website_normalized,
+        website_state: 'provided',
+        alternative_contact_type: '',
+        alternative_contact_value: '',
+        warnings: [...(website.warnings || []), 'site_recovered_from_comment'],
+      };
+      // Remove recovered URL from normalized comment display (keep raw)
+      // do not mutate comment_raw
+    }
+  }
+
+  // Explicit absent phrases that look like site values
+  if (website.website_state === 'invalid_or_placeholder' && isExplicitAbsentPhrase(website.website_raw)) {
+    website.website_state = 'explicitly_absent';
+    website.website_normalized = '';
+  }
+
+  const commentPref = isCommPreferenceOnly(comment_normalized) ? inferCommPreference(comment_normalized) : null;
+  const interpreted = interpretContactMethod(contact_method_raw, contact_raw, {
     phone_direct: fields.phone_direct,
     email_direct: fields.email_direct,
+    messenger_extra: website.website_state === 'alternative_contact' ? website.alternative_contact_value : '',
+    comment_preference: commentPref,
   });
 
-  const parsed_name = String(j.parsed_name || j.client_name || j.name || extractedName || '').trim();
-  const parsed_phone = String(j.parsed_phone || j.phone || interpreted.phone || '').trim();
-  const parsed_email = String(j.parsed_email || j.email || interpreted.email || '').trim();
-  const parsed_messenger = String(j.parsed_messenger || j.messenger || interpreted.messenger || '').trim();
-  const parsed_site = String(j.parsed_site || j.site || site || '').trim();
+  // Pull telegram username from comment if present
+  let telegram_from_comment = '';
+  const tgInComment = comment_normalized.match(/@[a-zA-Z0-9_]{4,32}/);
+  if (tgInComment) telegram_from_comment = tgInComment[0];
 
-  const isAudit = detectAuditForm(normalizedBody) || /\/audit/i.test(page) || /аудит/i.test(subject);
-  const form_name = String(j.form_name || (isAudit ? 'Заявка на бесплатный аудит' : '')).trim();
+  const phone_normalized = String(j.parsed_phone || j.phone || interpreted.phone || '').trim();
+  const email_normalized = String(j.parsed_email || j.email || interpreted.email || '').trim();
+  let telegram_contact_normalized = String(j.parsed_messenger || j.messenger || interpreted.messenger || '').trim();
+  if (!telegram_contact_normalized && website.alternative_contact_type === 'telegram') {
+    telegram_contact_normalized = website.alternative_contact_value;
+  }
+  if (!telegram_contact_normalized && telegram_from_comment) {
+    telegram_contact_normalized = telegram_from_comment;
+  }
 
-  // Clean request text: prefer comment; else residual without labels; keep enough signal for service detection
-  let request_text = comment;
-  if (!request_text) {
+  let contact_method = interpreted.contact_method;
+  if (contact_method === 'unknown' && commentPref) contact_method = commentPref;
+  if (contact_method === 'unknown' && website.alternative_contact_type) contact_method = website.alternative_contact_type;
+
+  const form_offer_raw = detectFormOffer(normalizedBody, subject) || String(j.form_name || '').trim();
+  const form_offer = form_offer_raw;
+  const form_name = form_offer || String(j.form_name || '').trim();
+
+  const pageRaw = String(fields.page || '').trim();
+  const source_page_title = normalizeSourcePage(pageRaw);
+  const source_page_url = /^https?:\/\//i.test(pageRaw) ? pageRaw.split(/\s+/)[0] : '';
+  const source_topic = classifySourceTopic(source_page_title, subject, form_offer);
+
+  const testInfo = classifyProbableTest({
+    name: client_name_normalized || client_name_raw,
+    comment: comment_normalized,
+    site: website.website_normalized || website.website_raw,
+    phone: phone_normalized,
+    email: email_normalized,
+    marker: j.marker,
+    phase_marker: j.phase_marker,
+  });
+
+  const intent = resolveIntent({
+    comment_normalized,
+    website_state: website.website_state,
+    form_offer,
+    source_topic,
+    email_subject: subject,
+    communication_preference: commentPref || '',
+    is_probable_test: testInfo.is_probable_test,
+  });
+
+  const request_summary = buildRequestSummary({
+    resolved_service: intent.resolved_service,
+    website_state: website.website_state,
+    comment_normalized,
+    communication_preference: commentPref || '',
+  });
+
+  // Compat request_text: real comment only (do NOT concatenate form offer)
+  let request_text = comment_normalized;
+  let request_insufficient = false;
+  if (commentPref && !comment_normalized) request_insufficient = true;
+  if (commentPref && isCommPreferenceOnly(comment_normalized)) {
+    request_insufficient = true;
+    request_text = '';
+  }
+  if (!request_text && !commentPref) {
     const { residual } = stripLabeledPayload(normalizedBody);
-    request_text = residual || normalizedBody;
+    const cleaned = residual.replace(/Заявка\s+на\s+бесплатный\s+аудит/gi, ' ').replace(/\s+/g, ' ').trim();
+    if (cleaned && cleaned.length > 12) request_text = cleaned;
   }
-  if (isAudit && request_text && !/аудит/i.test(request_text)) {
-    request_text = ('Заявка на бесплатный аудит. ' + request_text).trim();
-  } else if (isAudit && !request_text) {
-    request_text = 'Заявка на бесплатный аудит';
-  }
-  request_text = request_text.slice(0, 4000);
+  if (!request_text || request_text.length < 3) request_insufficient = true;
+  request_text = String(request_text || '').slice(0, 4000);
 
-  const hasContact = Boolean(parsed_phone || parsed_email || parsed_messenger);
-  const parse_status = hasContact || request_text
-    ? (parsed_name || parsed_site || request_text.length > 10 ? 'ok' : 'partial')
+  const hasContact = Boolean(phone_normalized || email_normalized || telegram_contact_normalized);
+  const parse_status = hasContact || request_text || comment_normalized
+    ? ((client_name_normalized || client_name_raw || website.website_normalized || comment_normalized) ? 'ok' : 'partial')
     : 'failed';
 
-  const warnings = [];
+  const quality = assessLeadQuality({
+    hasContact,
+    website_state: website.website_state,
+    resolved_service: intent.resolved_service,
+    comment_normalized,
+    is_probable_test: testInfo.is_probable_test,
+    parse_status,
+    name: client_name_normalized || client_name_raw,
+  });
+
+  const missing_information = computeMissingInformation({
+    resolved_service: intent.resolved_service,
+    website_state: website.website_state,
+    hasContact,
+    name: client_name_normalized || client_name_raw,
+    comment_normalized,
+  });
+
+  const reply = buildFirstReplyDraft({
+    client_name: client_name_normalized || client_name_raw,
+    website_state: website.website_state,
+    website_normalized: website.website_normalized,
+    resolved_service: intent.resolved_service,
+    comment_normalized,
+    missing_information,
+    hasContact,
+    is_probable_test: testInfo.is_probable_test,
+    alternative_contact_value: website.alternative_contact_value,
+    communication_preference: commentPref || '',
+  });
+
+  const warnings = [
+    ...(website.warnings || []),
+  ];
   if (fields.contact && !hasContact) warnings.push('contact_unrecognized');
-  if (fields.site && !parsed_site) warnings.push('site_rejected');
+  if (commentPref) warnings.push('comment_is_preference_only');
+  if (intent.intent_conflict) warnings.push('intent_conflict_form_vs_comment');
+  if (extraction_path === 'html_structure') warnings.push('html_extraction');
+
+  // Compat aliases used by existing processor/sheets
+  const parsed_name = client_name_normalized || client_name_raw;
+  const parsed_site = website.website_state === 'provided' ? website.website_normalized : '';
+  const parsed_messenger = telegram_contact_normalized;
+  const parsed_phone = phone_normalized;
+  const parsed_email = email_normalized;
 
   return {
     ...j,
@@ -284,32 +1079,90 @@ export function parseLeadItem(j = {}) {
     source: j.source || (isSynth ? 'synthetic' : 'gmail'),
     email_subject: subject,
     sender_email: sender,
-    request_page: j.request_page || page || '',
+    request_page: j.request_page || source_page_title || '',
     form_name,
+    form_offer,
+    form_offer_raw,
     utm_source: j.utm_source || '',
     utm_medium: j.utm_medium || '',
     utm_campaign: j.utm_campaign || '',
     utm_term: j.utm_term || '',
     utm_content: j.utm_content || '',
+
+    // Semantic raw/normalized
+    client_name_raw,
+    client_name_normalized: client_name_normalized || client_name_raw,
+    contact_method_raw,
+    contact_method_normalized: contact_method,
+    contact_raw,
+    phone_normalized,
+    email_normalized,
+    telegram_contact_normalized,
+    website_raw: website.website_raw,
+    website_normalized: website.website_normalized,
+    website_state: website.website_state,
+    alternative_contact_type: website.alternative_contact_type,
+    alternative_contact_value: website.alternative_contact_value,
+    comment_raw,
+    comment_normalized,
+    source_page_title,
+    source_page_url,
+    source_topic,
+    explicit_client_intent: intent.explicit_client_intent,
+    resolved_service: intent.resolved_service,
+    resolved_service_label: intent.resolved_service_label,
+    secondary_service: intent.secondary_service,
+    request_summary,
+    lead_quality: quality.lead_quality,
+    lead_quality_label: quality.lead_quality_label,
+    is_probable_test: testInfo.is_probable_test,
+    test_reason_codes: testInfo.test_reason_codes.join(','),
+    parser_confidence: intent.parser_confidence,
+    missing_information: missing_information.join(', '),
+    intent_evidence_source: intent.intent_evidence_source,
+    intent_conflict: intent.intent_conflict,
+    extraction_path,
+    semantic_model_version: SEMANTIC_MODEL_VERSION,
+
+    // Compat fields
     parsed_name,
     parsed_phone,
     parsed_email,
     parsed_messenger,
     parsed_site,
-    contact_method: interpreted.contact_method,
+    contact_method,
+    communication_preference: commentPref || '',
+    request_insufficient,
     request_text,
+    service: intent.service_compat,
+    service_machine: intent.resolved_service,
+    service_label: intent.resolved_service_label,
+    summary: request_summary,
+    quality_status: quality.quality_status,
+    missing_fields: missing_information.join(', '),
+    first_reply_text: reply.first_reply_text,
+    first_reply_source: reply.first_reply_source,
+    client_name: parsed_name,
+    phone: parsed_phone,
+    email: parsed_email,
+    messenger: parsed_messenger,
+    site: parsed_site,
+
     calc_detected: String(j.calc_detected || 'false'),
     calc_data: j.calc_data || '',
-    ip: j.ip || '',
+    ip: j.ip || fields.ip || '',
     parser_version: PARSER_VERSION,
     parse_status,
-    parse_warnings: warnings.join(',') || j.parse_warnings || '',
-    workflow_version: 'operational.dev.phase3d1',
+    parse_warnings: warnings.filter(Boolean).join(',') || j.parse_warnings || '',
+    parser_warnings: warnings.filter(Boolean).join(','),
+    workflow_version: 'operational.dev.phase3e1',
+    message_format_version: j.message_format_version || MESSAGE_FORMAT_VERSION_DEFAULT,
     raw_logged_at: now,
     raw_text: String(j.raw_text || normalizedBody).slice(0, 8000),
     __synthetic: isSynth,
     fixture_id: j.fixture_id || null,
     marker: j.marker || (isSynth ? 'SYNTHETIC_TEST' : ''),
-    phase_marker: j.phase_marker || (isSynth ? 'PHASE_3D1' : ''),
+    phase_marker: j.phase_marker || (isSynth ? 'PHASE_3E1' : ''),
+    exclude_from_prod_stats: testInfo.is_probable_test || isSynth,
   };
 }

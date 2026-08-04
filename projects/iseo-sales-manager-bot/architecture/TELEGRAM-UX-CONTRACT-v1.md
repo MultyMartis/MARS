@@ -361,3 +361,13 @@ For an actionable pending card, Format must emit `telegram_has_buttons=true`, `t
 - Optional combined form: `Display Name · @username` when concise and non-duplicative.
 - Snapshot at apply time is stored in LEAD_EVENTS `detail` and shown identically on all synchronized card copies.
 - Callback profile names must not override ACCESS_CONTROL attribution.
+
+## Phase 3E.1 — `sm-msg-v2.3` + semantic site/reply
+
+**CONFIG `message_format_version` = `sm-msg-v2.3`** (paired with `sm-parser-v3.3`).
+
+- **Сайт** block reflects `website_state`: provided / explicitly absent / alternative contact / invalid / missing — messenger handles never under Сайт.
+- First-reply block follows [FIRST-REPLY-RULES-v1.md](FIRST-REPLY-RULES-v1.md) (no unsupported facts; no auto-send).
+- Pending buttons remain **`✅ Обработано`** / **`🚫 Спам`**; callbacks unchanged.
+- Authority: [PARSER-3.3-CONTRACT-v1.md](PARSER-3.3-CONTRACT-v1.md) · [LEAD-SEMANTIC-MODEL-v1.md](LEAD-SEMANTIC-MODEL-v1.md).
+

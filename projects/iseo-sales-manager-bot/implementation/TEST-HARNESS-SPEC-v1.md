@@ -282,3 +282,8 @@ Required: Admin/moderator display resolution; username + generic fallbacks; call
 ## Phase 3D.8.3 button label polish — 30 cases
 
 Required: pending labels `✅ Обработано` / `🚫 Спам`; callback `sm:p:`/`sm:s:` unchanged; order processed→spam; admin+moderator copies both have buttons; archive buttonless; final card `✅ Обработан` (not button caption); spam final `🚫 Спам`; feedback strings unchanged; actor attribution block unchanged; `/moderator_pending` + `/moderators` active-only regressions; AI OFF; client auto-messages=0; workflows created=0; old long labels absent. Local runner: `implementation/harness/phase3d83-harness.mjs` — required **30/30 PASS**.
+
+## Phase 3E.1 Parser 3.3 + semantic model — 46 cases
+
+Required: HTML + text + one-line extraction; name/test flags; five website states; comment/page/IP/form boundary; intent precedence; first-reply consistency; quality / missing-info; HTML escape + length; Parser 3.2 field compat; RAW/CLEAN shape; buttons/callbacks unchanged; delivery/dedupe stubs; admin command field stubs; AI OFF; client auto-messages=0; no new workflows; `sm-msg-v2.3`. Local runner: `implementation/harness/phase3e1-harness.mjs` — required **46/46 PASS**. Evidence: `evidence/phase3e1/HARNESS-RESULTS-v1.md`. Fixture catalog: `implementation/parser-fixtures/P33-FIXTURE-CATALOG-v1.md`.
+

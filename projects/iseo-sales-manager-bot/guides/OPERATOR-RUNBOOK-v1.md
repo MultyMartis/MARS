@@ -45,3 +45,13 @@ If a new pending card has no buttons, inspect Format output before changing Admi
 2. Final processed card still reads **✅ Обработан**; spam final still **🚫 Спам**.
 3. Callbacks remain `sm:p:` / `sm:s:` — do not diagnose by button text alone.
 4. Durable feedback strings unchanged (`Лид отмечен как обработанный.` / `Лид отмечен как спам.`).
+
+## Phase 3E.1 — Parser 3.3 / semantic cards
+
+1. CONFIG should show `parser_version=sm-parser-v3.3`, `message_format_version=sm-msg-v2.3`, `ai_enabled=false`.
+2. Card **Сайт**: valid URL vs «сайта нет» / messenger-as-contact — messenger never as website.
+3. First reply must not re-ask known site or invent facts; copy only — never auto-send.
+4. Local check: from project root run `node implementation/harness/phase3e1-harness.mjs` → expect **46/46 PASS**.
+5. Live semantic acceptance may still be PENDING — see `evidence/phase3e1/LIVE-SEMANTIC-ACCEPTANCE-v1.md`.
+6. Do not activate Sales-Manager-v2 (`h8I2Tl2yl4uzhUnB`) without charter; Ops `xSnXPy8cEHoZw6xG` / Admin `wLrLp4WQHm1VJmxz` remain the active pair.
+

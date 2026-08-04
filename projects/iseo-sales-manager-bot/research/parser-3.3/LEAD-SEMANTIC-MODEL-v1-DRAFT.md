@@ -1,6 +1,6 @@
 # LEAD SEMANTIC MODEL v1 — DRAFT
 
-**DRAFT / NOT IMPLEMENTED в Phase 3D.8.**
+**IMPLEMENTED — Phase 3E.1.** Authority: [architecture/LEAD-SEMANTIC-MODEL-v1.md](../../architecture/LEAD-SEMANTIC-MODEL-v1.md). This file remains historical research notes.
 
 ## Required semantic fields
 
