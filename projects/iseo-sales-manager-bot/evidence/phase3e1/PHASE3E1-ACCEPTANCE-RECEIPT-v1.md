@@ -17,6 +17,6 @@
 | Sheets rate-limit during paced B–F | none |
 | Operator visual acceptance B–F | **PENDING** |
 | Commit/push (parser wave) | PASS — `8cf81b41` |
-| Commit/push (B–F evidence wave) | pending this receipt update |
+| Commit/push (B–F evidence wave) | PASS — `47cda75c` on `origin/mars/canonical-post-recovery` |
 
 Safety: AI calls=0; client auto-messages=0; workflows created=0; access changes=0; bulk reparse=0; Fixture A not resent; buttons not pressed by harness.

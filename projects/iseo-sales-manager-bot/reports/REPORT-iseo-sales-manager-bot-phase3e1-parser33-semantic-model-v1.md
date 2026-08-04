@@ -184,12 +184,12 @@ No credentials, Telegram IDs, workbook IDs, raw emails, or unsanitized exports c
 
 ## 40. Commit
 
-`feat(iseo-sales-manager-bot): add parser 3.3 semantic lead model`  
-Commit: `8cf81b4142c2767e0ac650697e09e738c951ebd8`
+`feat(iseo-sales-manager-bot): add parser 3.3 semantic lead model` — `8cf81b41`  
+`test(iseo-sales-manager-bot): complete parser 3.3 live fixtures` — `47cda75c`
 
 ## 41. Push
 
-Pushed non-force to `origin/mars/canonical-post-recovery` (`b69291e5..8cf81b41`).
+Pushed non-force to `origin/mars/canonical-post-recovery` (`a33ccac3..47cda75c` for B–F evidence wave; prior parser wave `b69291e5..8cf81b41`).
 
 ## 42. Risks
 
