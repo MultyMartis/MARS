@@ -14,6 +14,6 @@
 | Live semantic parse A–F | PASS |
 | Live card/delivery sample | PASS (A delivered ×2; B card formatted) |
 | Operator visual acceptance | PENDING |
-| Commit/push | PENDING at receipt authoring; see report §§40–41 |
+| Commit/push | PASS — `8cf81b41` on `origin/mars/canonical-post-recovery` |
 
 Safety: AI calls=0; client auto-messages=0; workflows created=0; access changes=0; bulk reparse=0.
