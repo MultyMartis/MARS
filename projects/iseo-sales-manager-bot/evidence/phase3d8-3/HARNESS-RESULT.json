@@ -1,0 +1,157 @@
+{
+  "ok": true,
+  "pass": 30,
+  "fail": 0,
+  "results": [
+    {
+      "id": 1,
+      "title": "pending card processed label",
+      "status": "PASS"
+    },
+    {
+      "id": 2,
+      "title": "pending card spam label",
+      "status": "PASS"
+    },
+    {
+      "id": 3,
+      "title": "processed callback data unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": 4,
+      "title": "spam callback data unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": 5,
+      "title": "button order unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": 6,
+      "title": "pending Admin copy has both buttons",
+      "status": "PASS"
+    },
+    {
+      "id": 7,
+      "title": "pending moderator copy has both buttons",
+      "status": "PASS"
+    },
+    {
+      "id": 8,
+      "title": "archive card has no buttons",
+      "status": "PASS"
+    },
+    {
+      "id": 9,
+      "title": "processed final card says Обработан",
+      "status": "PASS"
+    },
+    {
+      "id": 10,
+      "title": "spam final card says Спам",
+      "status": "PASS"
+    },
+    {
+      "id": 11,
+      "title": "processed feedback wording constant",
+      "status": "PASS"
+    },
+    {
+      "id": 12,
+      "title": "spam feedback wording constant",
+      "status": "PASS"
+    },
+    {
+      "id": 13,
+      "title": "Admin processed callback shape",
+      "status": "PASS"
+    },
+    {
+      "id": 14,
+      "title": "Admin spam callback shape",
+      "status": "PASS"
+    },
+    {
+      "id": 15,
+      "title": "moderator processed shares same callback shape",
+      "status": "PASS"
+    },
+    {
+      "id": 16,
+      "title": "moderator spam shares same callback shape",
+      "status": "PASS"
+    },
+    {
+      "id": 17,
+      "title": "actor attribution final block unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": 18,
+      "title": "multi-copy uses same keyboard fixture",
+      "status": "PASS"
+    },
+    {
+      "id": 19,
+      "title": "buttons only on pending fixture",
+      "status": "PASS"
+    },
+    {
+      "id": 20,
+      "title": "repeated callback idempotent (token stable)",
+      "status": "PASS"
+    },
+    {
+      "id": 21,
+      "title": "revoked former moderators still listed",
+      "status": "PASS"
+    },
+    {
+      "id": 22,
+      "title": "public not in active moderators",
+      "status": "PASS"
+    },
+    {
+      "id": 23,
+      "title": "delivery keyboard exactly two buttons",
+      "status": "PASS"
+    },
+    {
+      "id": 24,
+      "title": "no old long labels in pending keyboard",
+      "status": "PASS"
+    },
+    {
+      "id": 25,
+      "title": "/moderator_pending regression",
+      "status": "PASS"
+    },
+    {
+      "id": 26,
+      "title": "/moderators active-only regression",
+      "status": "PASS"
+    },
+    {
+      "id": 27,
+      "title": "final vs action wording boundary",
+      "status": "PASS"
+    },
+    {
+      "id": 28,
+      "title": "AI OFF constant for phase",
+      "status": "PASS"
+    },
+    {
+      "id": 29,
+      "title": "client auto-messages=0",
+      "status": "PASS"
+    },
+    {
+      "id": 30,
+      "title": "workflows created=0",
+      "status": "PASS"
+    }
+  ]
+}

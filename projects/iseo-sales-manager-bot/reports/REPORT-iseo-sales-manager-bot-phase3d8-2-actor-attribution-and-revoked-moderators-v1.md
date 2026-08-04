@@ -6,8 +6,9 @@
 
 ## 1. Verdict
 
-**COMPLETE — PATCH READY; LIVE ATTRIBUTION CONFIRMATION PENDING**
+**PHASE 3D.8.2 COMPLETE — ACTOR ATTRIBUTION AND REVOKED MODERATOR VISIBILITY READY**
 
+Operator-confirmed live actor-attribution acceptance closed in Phase 3D.8.3 packet (`evidence/phase3d8-3/PHASE3D8-2-LIVE-CLOSEOUT-v1.md`). Cross-role evidence: Admin→spam; moderator→processed.
 ## 2. Operator-approved scope
 
 Operator explicitly approved Phase 3D.8.2: close 3D.8.1 with live Admin/moderator actions; replace generic `Кем: сотрудник` with ACCESS_CONTROL safe actor label; enhance `/moderator_pending` to show revoked former moderators with stable reactivation codes. Do not restore Olya/Nikita.

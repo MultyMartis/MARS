@@ -342,6 +342,14 @@ Observed defect: Format emitted `telegram_reply_markup` and `telegram_action_tok
 
 Repair only Format in workflow `xSnXPy8cEHoZw6xG`: set `telegram_has_buttons` for actionable pending cards; set `telegram_callback_processed=sm:p:<token12>` and `telegram_callback_spam=sm:s:<token12>`; keep `telegram_reply_markup`. Do not change Parser 3.2. Preserve these fields through Expand/Restore. Archive/service/non-pending cards must remain buttonless.
 
+## Phase 3D.8.3 addendum — pending button label polish
+
+Visible pending-card captions only (same workflow ID `xSnXPy8cEHoZw6xG`):
+
+- Format `buildReplyMarkup` + Send With Buttons `inlineKeyboard` texts → **`✅ Обработано`** / **`🚫 Спам`**
+- Do **not** change callback prefixes, token algorithm, `telegram_has_buttons` routing, Parser 3.2, or final lifecycle headings (**`✅ Обработан`** remains the completed-state line)
+- Admin.dev callback logic: no change required for this polish
+
 ## Phase 3D.8.1 note — LEAD_DELIVERIES durability
 
 Operational claim/append nodes require an existing `LEAD_DELIVERIES` tab with header columns matching the appendOrUpdate schema. A missing tab presents as continueOnFail error items and breaks Admin multi-copy sync while Telegram sends may still succeed. Do not create new workflows to fix this; ensure the tab in the CLEAN workbook.

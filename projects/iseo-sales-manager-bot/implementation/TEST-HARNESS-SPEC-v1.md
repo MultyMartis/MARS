@@ -278,3 +278,7 @@ Required: early ack; processed/spam parse; FNV resolve + mismatch; admin/moderat
 ## Phase 3D.8.2 actor attribution + revoked list — 49 cases
 
 Required: Admin/moderator display resolution; username + generic fallbacks; callback profile cannot override ACCESS_CONTROL; revoked/public denied; snapshot once; processed/spam cards; multi-copy same label; HTML escape; no raw IDs/hashes on card; LEAD_EVENTS snapshot; name-change immutability; idempotent/conflict non-overwrite; pending+revoked empty-state matrix; public/blocked/Admin/active exclusions; stable code; `/moderators` active-only; one reply; Admin-only; underscores; regressions 35–49. Local runner: `implementation/harness/phase3d82-harness.mjs` — required **49/49 PASS**.
+
+## Phase 3D.8.3 button label polish — 30 cases
+
+Required: pending labels `✅ Обработано` / `🚫 Спам`; callback `sm:p:`/`sm:s:` unchanged; order processed→spam; admin+moderator copies both have buttons; archive buttonless; final card `✅ Обработан` (not button caption); spam final `🚫 Спам`; feedback strings unchanged; actor attribution block unchanged; `/moderator_pending` + `/moderators` active-only regressions; AI OFF; client auto-messages=0; workflows created=0; old long labels absent. Local runner: `implementation/harness/phase3d83-harness.mjs` — required **30/30 PASS**.

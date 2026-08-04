@@ -2,7 +2,7 @@
 
 ## Verdict
 
-`COMPLETE — PATCH READY; LIVE ATTRIBUTION CONFIRMATION PENDING`
+`PHASE 3D.8.2 COMPLETE — ACTOR ATTRIBUTION AND REVOKED MODERATOR VISIBILITY READY`
 
 ## Completed
 
@@ -16,8 +16,12 @@
 - [x] Harness 49/49 PASS
 - [x] Admin.dev live patch same ID
 - [x] Live ACCESS revoked-list simulation PASS
-- [ ] Operator Telegram /moderator_pending visual confirm (recommended)
-- [ ] Operator post-patch attribution clicks on new pending fixtures (pending)
+- [x] Operator `/moderator_pending` revoked section live PASS (Оля + Никита + stable codes)
+- [x] Operator post-patch attribution clicks (Admin→spam; moderator→processed)
+
+## Honesty — multi-copy
+
+Acted-card attribution and feedback confirmed by operator for both fixtures. Independent second-copy runtime re-export for these specific fixtures was not separately attached; multi-copy sync contract unchanged from 3D.8.1.
 
 ## Counters
 

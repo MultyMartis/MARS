@@ -37,4 +37,11 @@ If a new pending card has no buttons, inspect Format output before changing Admi
 2. `/moderator_pending` lists pending requests and **Права временно отозваны** with stable codes (Olya/Nikita intentionally remain revoked).
 3. `/moderators` stays active-only.
 4. Do not run `/moderator_add` during revoked-list acceptance.
-5. Optional post-patch attribution clicks: use ≤2 new synthetic pending fixtures if needed.
+5. **COMPLETE** — operator confirmed Admin→spam and moderator→processed attribution on live fixtures.
+
+## Phase 3D.8.3 — shorter pending action buttons
+
+1. Pending cards show **✅ Обработано** and **🚫 Спам** (not the older long «Отметить…» captions).
+2. Final processed card still reads **✅ Обработан**; spam final still **🚫 Спам**.
+3. Callbacks remain `sm:p:` / `sm:s:` — do not diagnose by button text alone.
+4. Durable feedback strings unchanged (`Лид отмечен как обработанный.` / `Лид отмечен как спам.`).

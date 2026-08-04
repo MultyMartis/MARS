@@ -7,19 +7,38 @@ Admin.dev wLrLp4WQHm1VJmxz patched in place (59 nodes). Markers verified live:
 - actor_display_snapshot present in Handle Callback Action
 - ACCESS_CONTROL access_display_name / access_username exported from Check User Authorization
 
-## Simulation against live ACCESS display fields
+## Operator-confirmed live results (2026-08-05)
 
-Using live ACCESS_CONTROL display fields (no callback profile override):
+Operator intentionally used inverted action assignment vs original instructions (stronger cross-role evidence).
 
-- Admin label resolves to Admin display name (combined with username when present; username redacted in git)
-- Moderator label resolves to «Мопс» (combined form when present)
-- Fallback сотрудник remains available when registry names empty
+### Synthetic Lead A — Admin → Spam
 
-## Operator Telegram clicks for new pending fixtures
+- Actor: Андрей (admin / active)
+- Final: `🚫 Спам` + safe `Кем:` (display name · @username)
+- Durable feedback: `Лид отмечен как спам.`
+- Callback completed; buttons removed
 
-Prior 3D.8.1 fixtures were already transitioned (processed/spam) and showed legacy «Кем: сотрудник». New pending fixtures for post-patch card text confirmation may be created later (≤2 synthetics). Until operator confirms new cards, live Telegram attribution clicks remain pending.
+### Synthetic Lead B — Moderator → Processed
 
-## Non-claims
+- Actor: Мопс (moderator / active)
+- Final: `✅ Обработан` + safe `Кем:` matching ACCESS_CONTROL
+- Callback completed
 
-- Does not claim historical 3D.8.1 cards were rewritten.
-- Does not restore revoked moderators.
+## Matrix
+
+| Check | Result |
+|-------|--------|
+| Admin actor attribution | PASS |
+| Moderator actor attribution | PASS |
+| Display-name + username precedence | PASS |
+| Processed / spam transitions | PASS |
+| Callback acknowledgement + durable feedback | PASS |
+| Actor snapshot | PASS |
+| No raw IDs on cards | PASS |
+| No client messages / no new workflows | PASS |
+
+## Closeout
+
+**PHASE 3D.8.2 COMPLETE — ACTOR ATTRIBUTION AND REVOKED MODERATOR VISIBILITY READY**
+
+See also `evidence/phase3d8-3/PHASE3D8-2-LIVE-CLOSEOUT-v1.md`.

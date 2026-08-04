@@ -259,7 +259,7 @@ Primary indicator sits in the card title only; avoid stacking multiple emoji per
 
 ### 8.3 Inline lifecycle buttons (lead cards only)
 
-Actionable **pending** lead cards carry two inline buttons: **✅ Отметить обработанным** and **🚫 Отметить как спам**. Callback data is an opaque per-lead token (`sm:p:<token12>` / `sm:s:<token12>`) — no PII, no raw `lead_id` in the visible button. Archive, admin, and service cards carry **no** lifecycle buttons. After a successful action the source card message is edited (buttons cleared) rather than a new message sent; see [ADMIN-COMMAND-CONTRACT-v1.md](ADMIN-COMMAND-CONTRACT-v1.md) §7 for callback routing and idempotency.
+Actionable **pending** lead cards carry two inline buttons: **✅ Обработано** and **🚫 Спам** (Phase 3D.8.3 label polish; previously `✅ Отметить обработанным` / `🚫 Отметить как спам`). Callback data is an opaque per-lead token (`sm:p:<token12>` / `sm:s:<token12>`) — no PII, no raw `lead_id` in the visible button. Visible captions and callback actions are separate contracts. Completed-card headings remain **✅ Обработан** / **🚫 Спам** (do not rename the processed final state to the button caption). Archive, admin, and service cards carry **no** lifecycle buttons. After a successful action the source card message is edited (buttons cleared) rather than a new message sent; see [ADMIN-COMMAND-CONTRACT-v1.md](ADMIN-COMMAND-CONTRACT-v1.md) §7 for callback routing and idempotency.
 
 ### 8.4 Forbidden (unchanged, reasserted for 3D.3)
 

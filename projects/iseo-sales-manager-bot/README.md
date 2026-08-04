@@ -4,7 +4,7 @@
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
-**Status:** Phase 3D.8.2 — actor attribution + revoked moderator visibility; 3D.8.1 COMPLETE; `sm-parser-v3.2`, `sm-msg-v2.2`; ACCESS_CONTROL SoT; AI OFF
+**Status:** Phase 3D.8.3 — pending action button labels polished; 3D.8.2 COMPLETE (actor attribution); 3D.8.1 COMPLETE; `sm-parser-v3.2`, `sm-msg-v2.2`; ACCESS_CONTROL SoT; AI OFF
 
 ---
 
@@ -52,6 +52,8 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 | Parser 3.3 research backlog | [research/parser-3.3/](research/parser-3.3/) |
 | Phase 3D.8 evidence | [evidence/phase3d8/](evidence/phase3d8/) |
 | Phase 3D.8.1 evidence | [evidence/phase3d8-1/](evidence/phase3d8-1/) |
+| Phase 3D.8.2 evidence | [evidence/phase3d8-2/](evidence/phase3d8-2/) |
+| Phase 3D.8.3 evidence | [evidence/phase3d8-3/](evidence/phase3d8-3/) |
 | Architecture | [architecture/](architecture/) |
 | Plans | [plans/](plans/) |
 | Baselines / sanitized sources | [baselines/](baselines/) |
