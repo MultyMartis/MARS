@@ -110,18 +110,36 @@ P33 catalog + harness cases covering operator patterns 1–10 and required seman
 
 ## 25–30. Live fixtures A–F
 
+### Initial rapid / sequential wave (Phase 3E.1)
+
 | Key | website_state | resolved_service | Live notes |
 |---|---|---|---|
 | A | provided | Audit | Card + delivery to 2 recipients |
-| B | explicitly_absent | WebsiteDevelopment | Card formatted (`Сайт: отсутствует`) |
+| B | explicitly_absent | WebsiteDevelopment | Card formatted; Sheets rate-limit interrupted full path |
 | C | explicitly_absent | WebsiteDevelopmentSEO | Parse OK; Sheets rate-limit on rapid seq |
 | D | alternative_contact | NeedsClarification | Parse OK |
 | E | provided | NeedsClarification (test) | Parse OK |
 | F | provided | SEO | Parse OK |
 
+### Paced B–F wave (Phase 3E.1.1)
+
+| Key | Marker | website_state | resolved_service | RAW/CLEAN/DELIV | sendOk | dup |
+|---|---|---|---|---|---|---|
+| A | (prior) | provided | Audit | — | 2 | 0 — **operator visual PASS**; not resent |
+| B | `PHASE_3E1_B_NO_SITE_WEBSITE_DEVELOPMENT` | explicitly_absent | WebsiteDevelopment (`Разработка сайта`) | 1/1/2 | 2 | 0 |
+| C | `PHASE_3E1_C_WEBSITE_THEN_SEO` | explicitly_absent | WebsiteDevelopmentSEO (`Разработка сайта + SEO`) | 1/1/2 | 2 | 0 |
+| D | `PHASE_3E1_D_TELEGRAM_ALTERNATIVE_CONTACT` | alternative_contact (`telegram`) | NeedsClarification | 1/1/2 | 2 | 0 |
+| E | `PHASE_3E1_E_TEST_NAME_PRESERVATION` | provided | Audit (form-context fallback); name `test` preserved; test badge | 1/1/2 | 2 | 0 |
+| F | `PHASE_3E1_F_ONE_LINE_FALLBACK` | provided | SEO; comment `нужно SEO-продвижение` (no source bleed) | 1/1/2 | 2 | 0 |
+
+Sheets pacing: ≥55s between fixtures; **no rate-limit** during B–F paced wave. Evidence: `evidence/phase3e1/LIVE-SEMANTIC-ACCEPTANCE-B-F-v1.md`.
+
 ## 31. Operator semantic acceptance
 
-**PENDING** — comparison package prepared; operator must confirm Telegram cards / replies.
+- Fixture A: **PASS** (operator visual)
+- Fixtures B–F: **runtime/storage PASS**; **operator visual PENDING**
+
+Verdict remains: `COMPLETE — PARSER READY; OPERATOR SEMANTIC ACCEPTANCE PENDING` until B–F Telegram cards confirmed.
 
 ## 32. Delivery regression
 
@@ -175,22 +193,27 @@ Pushed non-force to `origin/mars/canonical-post-recovery` (`b69291e5..8cf81b41`)
 
 ## 42. Risks
 
-- Sheets rate-limit under rapid sequential synthetic injects
+- Sheets rate-limit under rapid sequential synthetic injects — **mitigated** for B–F by paced one-at-a-time inject (≥55s)
 - Multi-item webhook inject collapses after Parse Lead (graph design); sequential inject required for N cards
 - Full additive Sheets columns not yet applied live (packed `quality_comment` interim)
 - Synthetic Gmail label ops fail by design
 
 ## 43. SAFE UNKNOWN
 
-Whether operator Telegram visual acceptance of all six cards is confirmed — pending human review.
+Whether operator Telegram visual acceptance of fixtures B–F is confirmed — pending human review. (Fixture A already PASS.) Optional spot-check of `/leads`, `/my_status`, `/moderator_pending` after B–F cards (Admin untouched this wave).
 
-## 44. Remaining operator actions
+## 44. Remaining operator visual actions
 
-1. Visual-check Telegram cards (Андрей / Мопс)
-2. Confirm site/comment/service/reply/test-badge
-3. Approve additive Sheets column wave if persistent semantic columns required
-4. Decide next charter after acceptance
+Exact checks (do not press lifecycle buttons unless intentional):
+
+**B:** `Сайт: отсутствует`; interest `Разработка сайта`; reply/next step does not ask for current site.  
+**C:** interest `Разработка сайта + SEO`; both stages acknowledged.  
+**D:** Telegram shown as contact, not under `Сайт`.  
+**E:** client name `test` visible; `🧪 Тестовая заявка` badge.  
+**F:** fields separated from one-line body; interest `SEO`; comment without source-label contamination.
+
+Also confirm: exactly one card per recipient (Андрей + Мопс) per fixture; no duplicates after polls.
 
 ## 45. Stop condition
 
-Parser 3.3 implemented; semantic model implemented; storage plan applied (non-destructive); harness PASS; controlled live fixtures executed; operator comparison prepared; canonical commit/push; this report. **STOP** for operator visual acceptance before claiming full COMPLETE.
+Parser 3.3 implemented; semantic model implemented; harness PASS; Fixture A visual PASS; paced B–F delivered once each with RAW/CLEAN/LEAD_DELIVERIES complete; acceptance packet prepared; this report updated. **STOP** for operator visual confirmation of B–F before claiming `PHASE 3E.1 COMPLETE — PARSER 3.3 AND LEAD SEMANTIC MODEL READY`.

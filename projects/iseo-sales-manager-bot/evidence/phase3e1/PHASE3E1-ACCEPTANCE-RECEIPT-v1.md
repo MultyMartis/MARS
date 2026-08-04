@@ -12,8 +12,11 @@
 | Sales-Manager-v2 inactive | PASS |
 | Access roles unchanged | PASS |
 | Live semantic parse A–F | PASS |
-| Live card/delivery sample | PASS (A delivered ×2; B card formatted) |
-| Operator visual acceptance | PENDING |
-| Commit/push | PASS — `8cf81b41` on `origin/mars/canonical-post-recovery` |
+| Fixture A operator visual | **PASS** |
+| Paced B–F delivery (RAW/CLEAN/LEAD_DELIVERIES × each) | **PASS** — see LIVE-SEMANTIC-ACCEPTANCE-B-F-v1.md |
+| Sheets rate-limit during paced B–F | none |
+| Operator visual acceptance B–F | **PENDING** |
+| Commit/push (parser wave) | PASS — `8cf81b41` |
+| Commit/push (B–F evidence wave) | pending this receipt update |
 
-Safety: AI calls=0; client auto-messages=0; workflows created=0; access changes=0; bulk reparse=0.
+Safety: AI calls=0; client auto-messages=0; workflows created=0; access changes=0; bulk reparse=0; Fixture A not resent; buttons not pressed by harness.

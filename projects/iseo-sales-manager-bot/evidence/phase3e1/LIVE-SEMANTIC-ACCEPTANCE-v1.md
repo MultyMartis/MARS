@@ -1,6 +1,6 @@
 # LIVE SEMANTIC ACCEPTANCE v1 — Phase 3E.1
 
-**Status:** parser/semantic live evidence collected; **operator visual acceptance PENDING**.
+**Status:** parser/semantic live evidence collected; Fixture A **operator visual PASS**; B–F paced delivery complete — see [LIVE-SEMANTIC-ACCEPTANCE-B-F-v1.md](LIVE-SEMANTIC-ACCEPTANCE-B-F-v1.md). **Full operator visual acceptance still PENDING** for B–F.
 
 ## Contour
 
@@ -25,11 +25,15 @@ All six fixtures parsed live with expected semantics:
 
 Note: multi-item inject collapses after Parse Lead in current graph (Normalize CONFIG path). Sequential inject used for card/delivery proof.
 
-## Sequential inject
+## Sequential inject (initial rapid wave)
 
-- A: formatted sm-msg-v2.3 card + delivered to 2 eligible recipients (`sendOk=2`), buttons `✅ Обработано` / `🚫 Спам`
+- A: formatted sm-msg-v2.3 card + delivered to 2 eligible recipients (`sendOk=2`), buttons `✅ Обработано` / `🚫 Спам` — later **operator visual PASS**
 - B: formatted card with `Сайт: отсутствует`, interest `Разработка сайта`, comment `хочу сайт` (Telegram send interrupted by Sheets rate-limit/error path)
 - C–F: semantic parse confirmed; Sheets API rate-limit (`too many requests`) blocked full append/send under rapid sequential inject
+
+## Paced B–F wave (Phase 3E.1.1)
+
+Re-delivered B–F one-at-a-time with ≥55s pauses and unique markers. Each fixture: RAW=1, CLEAN=1, LEAD_DELIVERIES=2, sendOk=2, duplicates=0, no Sheets rate-limit. Full packet: [LIVE-SEMANTIC-ACCEPTANCE-B-F-v1.md](LIVE-SEMANTIC-ACCEPTANCE-B-F-v1.md).
 
 Synthetic Gmail label ops may fail (`Add Gmail PROCESSED` bad request) — expected for non-Gmail synthetic ids; not a parser defect.
 
