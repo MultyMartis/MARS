@@ -126,7 +126,7 @@ No credentials, Telegram IDs, chat IDs, real usernames, phones, emails, workbook
 
 ## 21. Push
 
-`origin/mars/canonical-post-recovery` @ `2da22ea6` (no force). Tip-hash alignment commit may follow.
+`origin/mars/canonical-post-recovery` @ `33f7da1a` (no force).
 ## 22. Risks
 
 - Historical docs/guides outside this allowlist may still show long button captions until separately updated.
@@ -152,3 +152,4 @@ Phase 3D.8.2 closeout recorded · visible labels updated · callback contract un
 - scope lock honored: yes (`projects/iseo-sales-manager-bot/**`)
 - destructive ops: none
 - protected zone touch: none
+
