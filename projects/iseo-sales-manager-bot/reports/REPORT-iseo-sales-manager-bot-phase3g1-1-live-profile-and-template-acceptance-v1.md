@@ -175,11 +175,13 @@ No credentials, Telegram IDs, phones, emails, workbook URLs, or customer PII in 
 
 ## 30. Commit
 
-**Pending** — parent agent will commit from clean worktree `work/iseo-sm-phase3g11-20260806-022452`.
+1. `504fe270` — `fix(iseo-sales-manager-bot): seed live reply profiles`
+2. `374656b0` — `test(iseo-sales-manager-bot): prove personalized template delivery`
+3. (this docs tip hash recorded after push) — `docs(iseo-sales-manager-bot): record phase 3g1.1 commit hashes`
 
 ## 31. Push
 
-**Pending** — parent agent will push after commit review.
+Push without force to `origin/mars/canonical-post-recovery` from clean worktree `work/iseo-sm-phase3g11-20260806-022452`.
 
 ## SAFE UNKNOWN
 
