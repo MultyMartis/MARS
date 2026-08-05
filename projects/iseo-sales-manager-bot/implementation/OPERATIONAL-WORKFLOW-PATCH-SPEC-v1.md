@@ -405,3 +405,7 @@ Admin contour and access state unchanged; AI OFF; rollback workflow inactive. Li
 ## 3F.2.1
 
 Emit `source_display=Сайт i-seo.su` for website-form leads alongside `source_channel`. Do not alter parser 3.3 semantics.
+
+### Phase 3G.1 patch note
+
+Target: wire Approved Template Router/Renderer + recipient profile resolution into Operational Format/Expand path. Shared metadata → LEADS; personalized drafts → recipient store. Keep AI OFF; no client auto-send; preserve fail-closed delivery. **Live patch status: pending or in progress.** Libs: `runtime-libs/approved-template-*.mjs`, `reply-profile-lib.mjs`. Rollback stamp: `sm-reply-v2.1`.

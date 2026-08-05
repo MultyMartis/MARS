@@ -22,3 +22,7 @@ Harness, real-lead recount, quiet window, exactly-once proof, five-poll zero res
 ### 3F.1 acceptance order
 
 Pending source forensic, view contract, command implementation, reminder schedule/idempotency, command authorization and a controlled live acceptance window are complete. The remaining gate before production reminders send automatically is an explicit operator activation decision (`pending_reminders_enabled=true`).
+
+### Phase 3G.1 — INTLSEO first-contact standard
+
+**In progress / package ready:** approved template corpus + recipient personalization + manager assist contract. Offline harness **100/100 PASS**. Live patch and operator visual acceptance remain the gate before claiming production cutover. AI ON pilot remains a later separate charter (item 7).

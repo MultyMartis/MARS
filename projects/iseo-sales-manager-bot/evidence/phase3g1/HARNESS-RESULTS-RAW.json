@@ -1,0 +1,622 @@
+{
+  "summary": {
+    "total": 100,
+    "passed": 100,
+    "failed": 0,
+    "counters": {
+      "aiCalls": 0,
+      "clientMsgs": 0,
+      "workflowsCreated": 0,
+      "accessRoleChanges": 0,
+      "andreyDrafts": 1,
+      "mikhailDrafts": 1,
+      "mopsInClientCopy": 0,
+      "telegramDisplayFallbacks": 0,
+      "usernameFallbacks": 0,
+      "missingNameUnsafeDrafts": 0
+    },
+    "verdict": "PASS"
+  },
+  "results": [
+    {
+      "id": "V01",
+      "title": "reply_standard_version",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "V02",
+      "title": "reply_template_version",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "V03",
+      "title": "reply_policy_version",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "V04",
+      "title": "manager_assist_version",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "V05",
+      "title": "recipient_personalization_version",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "V06",
+      "title": "legacy reply stamp retained",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "V07",
+      "title": "message format",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R01",
+      "title": "T1 valid site generic SEO",
+      "status": "PASS",
+      "detail": "T1_EXISTING_SITE_GROWTH"
+    },
+    {
+      "id": "R02",
+      "title": "T1 GEO/AI clause supported",
+      "status": "PASS",
+      "detail": "{\"id\":\"T1_EXISTING_SITE_GROWTH\",\"geo\":true}"
+    },
+    {
+      "id": "R03",
+      "title": "T1 GEO/AI absent when unsupported",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R04",
+      "title": "T2 empty site",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R05",
+      "title": "T2 email in website",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R06",
+      "title": "T2 Telegram in website",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R07",
+      "title": "T3 traffic decline",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R08",
+      "title": "T3 conversion",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R09",
+      "title": "T3 AI visibility",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R10",
+      "title": "T4 no site",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R11",
+      "title": "T4 future site",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R12",
+      "title": "T4 development request",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R13",
+      "title": "T5 special/legal",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R14",
+      "title": "T5 materials project",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R15",
+      "title": "Precedence T5 over T3",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R16",
+      "title": "Precedence T4 over T2",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R17",
+      "title": "T3 over T1 with meaningful comment",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R18",
+      "title": "Ambiguous fallback safe",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R19",
+      "title": "Prompt-injection does not override policy",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "T19",
+      "title": "Starts with Добрый день",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "T20",
+      "title": "Approved name sentence exact",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "T21",
+      "title": "INTLSEO exact",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "T22",
+      "title": "CTA T1",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "T27",
+      "title": "Audit video explanation",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "T28",
+      "title": "Materials handoff",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "T30",
+      "title": "No guarantee language",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "T31",
+      "title": "No tariff-first",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "T34",
+      "title": "Length safe",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "T23",
+      "title": "CTA T2",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "T24",
+      "title": "CTA T3",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "T24b",
+      "title": "T3 summary controlled",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "T25",
+      "title": "CTA T4 no audit",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "T29",
+      "title": "No audit for nonexistent site",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "T33",
+      "title": "No repeated known question when confirmed absent",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "T26",
+      "title": "CTA T5 materials",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "T32",
+      "title": "No unsupported findings",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "P35",
+      "title": "Андрей → Андрей",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "P36",
+      "title": "Мопс → Михаил",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "P37",
+      "title": "No nickname fallback",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "P38",
+      "title": "No username fallback",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "P39",
+      "title": "No surname auto-shorten",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "P40",
+      "title": "Missing approved name blocks copy",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "P41",
+      "title": "Revoked users not recipients (model)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "P42",
+      "title": "Name snapshot immutable concept",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "P43",
+      "title": "Profile mutation Admin helper ok",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "P44",
+      "title": "Moderator self-view allowed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "P45",
+      "title": "Moderator mutation denied text",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "S76",
+      "title": "Shared metadata in processed lead",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "RP46",
+      "title": "One business lead",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "RP47",
+      "title": "Two recipient replies",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "RP48",
+      "title": "Андрей personalization",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "RP49",
+      "title": "Михаил text uses Михаил",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "RP50",
+      "title": "No Мопс in client copy",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "RP51",
+      "title": "One lifecycle",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "RP52",
+      "title": "Statistics count once (model)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "RP53",
+      "title": "Reporting count once (model)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "S78",
+      "title": "No duplicate business row",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "MG54",
+      "title": "Guidance separate from client copy",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "MG55",
+      "title": "Template rationale natural",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "MG56",
+      "title": "Goal stated",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "MG57",
+      "title": "No internal codes",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "MG59",
+      "title": "No customer auto-send",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "UX01",
+      "title": "Copy heading updated",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "UX02",
+      "title": "Guidance outside pre",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "AI60",
+      "title": "Provider calls=0",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "AI61",
+      "title": "Deterministic summary dict",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "AI63",
+      "title": "Valid copy AI OFF",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "AI62",
+      "title": "Deterministic guidance",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "AI64",
+      "title": "Template selected before AI",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "AI64b",
+      "title": "System prompt locks template",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "AI65",
+      "title": "Structured output only accepted",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "AI66",
+      "title": "Sender name immutable reject",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "AI67",
+      "title": "Company immutable reject",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "AI68",
+      "title": "CTA/full message immutable",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "AI69",
+      "title": "Guarantee rejected",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "AI70",
+      "title": "Price rejected",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "AI71",
+      "title": "Unsupported analysis rejected",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "AI72",
+      "title": "Invalid JSON fallback",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "AI73",
+      "title": "Injection rejected",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "AI74",
+      "title": "Deterministic fallback works",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "AI75",
+      "title": "AI restored OFF default",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "S77",
+      "title": "Personalized data recipient-level (contract)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H93",
+      "title": "Help admin lines include reply profiles",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H93b",
+      "title": "Help moderator has my_reply_profile only",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "P40b",
+      "title": "Missing name warning on card",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "P40c",
+      "title": "Missing name not delivery failure",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "RG84",
+      "title": "Exactly-once delivery unchanged (policy)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "RG97",
+      "title": "workflows created=0",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "RG98",
+      "title": "automatic client messages=0",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "RG99",
+      "title": "access-role changes=0",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "RG100",
+      "title": "real leads lost=0",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "LIST",
+      "title": "list profiles",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "ENABLE",
+      "title": "enable patch requires name",
+      "status": "PASS",
+      "detail": ""
+    }
+  ]
+}

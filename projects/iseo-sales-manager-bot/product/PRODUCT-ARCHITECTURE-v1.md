@@ -31,3 +31,11 @@
 ## Планируемая граница
 
 Целевой reusable core отделяет общую логику от client config, bot/secrets, sources, storage и staff registry. Это архитектурное направление, а не существующий fleet runtime.
+
+## Phase 3G.1 — Approved first-contact layer
+
+- Router/renderer libs select one of five INTLSEO templates (precedence T5>T4>T3>T1>T2).
+- Recipient personalization via ACCESS_CONTROL reply profiles; drafts stored per recipient; shared metadata on LEADS.
+- Manager guidance separated from customer copy; no auto-send; AI OFF default.
+- Authority docs: `architecture/INTLSEO-FIRST-CONTACT-STANDARD-v1.md`, `RECIPIENT-PERSONALIZED-REPLIES-v1.md`, `AI-MANAGER-ASSIST-v1.md`, `REPLY-PROFILE-CONTRACT-v1.md`.
+- Live n8n wiring: pending or in progress.

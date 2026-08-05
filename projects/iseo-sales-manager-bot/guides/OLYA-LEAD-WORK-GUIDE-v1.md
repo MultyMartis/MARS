@@ -32,3 +32,7 @@ A new read-only overview (`/pending_count`, `/pending_leads`) and an optional da
 ## Phase 3F.2.2 note
 
 В `/help` для модератора доступны `/leads`, `/lead_history`, `/pending_count`, `/pending_leads`, `/reminder_status`. Настройки ИИ и напоминаний — только у администратора. История лида показывает человеческие формулировки событий (без машинных кодов).
+
+## Phase 3G.1 note
+
+First-contact drafts become INTLSEO approved templates with the manager's approved client-facing name. Still: copy manually, never assume auto-send. Guidance under the tip block is for you, not the client. Access remains revoked for this guide's intended recipient unless separately restored — this phase does not restore access.

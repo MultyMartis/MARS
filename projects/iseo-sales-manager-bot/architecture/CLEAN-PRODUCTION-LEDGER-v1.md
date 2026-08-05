@@ -30,3 +30,7 @@ Human display start: **05.08.2026**. Exact ledger boundary: authoritative Gmail 
 ## 3F.2.1 note
 
 Human-facing list/history adapters must read LEADS field names (`lifecycle_status`, `resolved_service_label`, `client_comment`, `source_display`). Do not assume legacy CLEAN `manager_status`/`service`/`summary` alone.
+
+## Phase 3G.1 ledger note
+
+LEADS remains one-row-per-business-lead. Personalized reply texts belong in `RECIPIENT_REPLIES` or extended `LEAD_DELIVERIES`, not duplicated LEADS rows. Reporting workbook keeps shared template id only. Stats counting invariant unchanged.

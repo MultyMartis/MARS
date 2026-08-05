@@ -1,3 +1,17 @@
+<!-- Phase 3G.1 first-contact standard 2026-08-06; harness PASS; live patch pending -->
+
+## Phase 3G.1 — INTLSEO first-contact + personalized manager assist
+
+**Status:** offline libs + harness **100/100 PASS**; live patch / operator visual acceptance: **pending or in progress**.
+
+- Standard `iseo-first-contact-v1.0` · templates `iseo-template-set-v1.0` · policy `iseo-sales-policy-v1.0` · assist `iseo-manager-assist-v1.0` · personalization `iseo-recipient-name-v1.0`
+- Five templates; precedence **T5 > T4 > T3 > T1 > T2**; legacy `sm-reply-v2.1` rollback stamp only
+- One business lead → multiple personalized drafts (ADMIN_A→Андрей, MOD_A→Михаил; Мопс never in client copy)
+- AI OFF default; constrained AI assist contract not globally enabled; **no auto-send** to customers
+- Prefer `RECIPIENT_REPLIES` or `LEAD_DELIVERIES` extension; reporting = shared template id only
+- Contour baseline: Ops 45 active · Admin 82 active · Sales-Manager-v2 inactive · reminders OFF · stats 1/1/0/0 epoch 05.08.2026
+- Evidence: [evidence/phase3g1/](evidence/phase3g1/) · Architecture: [INTLSEO-FIRST-CONTACT-STANDARD-v1.md](architecture/INTLSEO-FIRST-CONTACT-STANDARD-v1.md)
+
 # i-SEO Sales Manager Bot
 
 **project_id:** `iseo-sales-manager-bot`  
@@ -54,6 +68,8 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 | Delivery fail-closed (3E.2.1) | [architecture/DELIVERY-FAIL-CLOSED-RECONCILIATION-v1.md](architecture/DELIVERY-FAIL-CLOSED-RECONCILIATION-v1.md) |
 | Sheets budget / concurrency (3E.2.3) | [architecture/SHEETS-CALL-BUDGET-v1.md](architecture/SHEETS-CALL-BUDGET-v1.md) · [architecture/OPERATIONAL-SINGLE-FLIGHT-v1.md](architecture/OPERATIONAL-SINGLE-FLIGHT-v1.md) · [architecture/SHEETS-BACKOFF-POLICY-v1.md](architecture/SHEETS-BACKOFF-POLICY-v1.md) |
 | Pending leads view + reminders (3F.1) | [architecture/PENDING-LEADS-VIEW-v1.md](architecture/PENDING-LEADS-VIEW-v1.md) · [architecture/PENDING-REMINDER-v1.md](architecture/PENDING-REMINDER-v1.md) · [architecture/REMINDER-DELIVERY-IDEMPOTENCY-v1.md](architecture/REMINDER-DELIVERY-IDEMPOTENCY-v1.md) |
+| Phase 3G.1 INTLSEO first-contact | [architecture/INTLSEO-FIRST-CONTACT-STANDARD-v1.md](architecture/INTLSEO-FIRST-CONTACT-STANDARD-v1.md) · [architecture/RECIPIENT-PERSONALIZED-REPLIES-v1.md](architecture/RECIPIENT-PERSONALIZED-REPLIES-v1.md) · [architecture/AI-MANAGER-ASSIST-v1.md](architecture/AI-MANAGER-ASSIST-v1.md) · [architecture/REPLY-PROFILE-CONTRACT-v1.md](architecture/REPLY-PROFILE-CONTRACT-v1.md) |
+| Phase 3G.1 evidence | [evidence/phase3g1/](evidence/phase3g1/) — harness 100/100 PASS; live patch pending |
 | Parser 3.3 research (implemented) | [research/parser-3.3/](research/parser-3.3/) |
 | Phase 3F.1 evidence | [evidence/phase3f1/](evidence/phase3f1/) |
 | Phase 3E.2 evidence | [evidence/phase3e2/](evidence/phase3e2/) |
@@ -175,3 +191,7 @@ Evidence: `evidence/phase3f2-2/`. Report: `reports/REPORT-iseo-sales-manager-bot
 ## Phase 3F.2.1 (view & reporting repair)
 
 Repaired `/leads` LEADS field mapping, connected `/lead_history`, keyed reporting mapper, human source `Сайт i-seo.su`. See `reports/REPORT-iseo-sales-manager-bot-phase3f2-1-view-and-reporting-repair-v1.md`.
+
+## Phase 3G.1 — INTLSEO first-contact standard (additive)
+
+Approved five-template corpus + recipient personalization + manager assist contract. Offline harness **100/100 PASS**. AI OFF; no auto-send; Мопс never in client copy (Михаил for MOD_A). Live n8n patch / operator visual acceptance: pending or in progress. Evidence: `evidence/phase3g1/`.

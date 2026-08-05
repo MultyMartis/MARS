@@ -69,3 +69,9 @@ Admin nodes include lead history path. Human source display active. Reporting sc
 - /lead_history human map includes 	elegram_sent; unknown → техническое событие.
 - Operational.dev unchanged (45 nodes). Reminders OFF. AI OFF. Access unchanged.
 - Phase 3F.2 closeout prepared; operator visual /help + /lead_history 1 pending.
+
+## Phase 3G.1 additive baseline note
+
+Pre-patch contour unchanged until live acceptance filled: Ops active 45 · Admin active 82 · Sales-Manager-v2 inactive · AI OFF · reminders OFF · stats 1/1/0/0 epoch 05.08.2026.
+
+Target reply versions (package ready): `iseo-first-contact-v1.0` / `iseo-template-set-v1.0` / `iseo-sales-policy-v1.0` / `iseo-manager-assist-v1.0` / `iseo-recipient-name-v1.0`. Live CONFIG cutover: **pending or in progress**. Legacy `sm-reply-v2.1` remains rollback reference. Harness 100/100 PASS. See `evidence/phase3g1/FINAL-WORKFLOW-STATE-v1.md`.

@@ -395,3 +395,12 @@ These are **command replies**, not lead cards — no lifecycle buttons, no `<pre
 
 See `implementation/PENDING-COMMANDS-v1.md`, `implementation/REMINDER-CONFIG-COMMANDS-v1.md`, and `evidence/phase3f1/` for full acceptance detail.
 
+
+## Phase 3G.1 UX
+
+- Copy heading remains copy-to-clipboard customer block only.
+- Manager guidance (`💡 Подсказка менеджеру`) **outside** `<pre>`.
+- Per-recipient intro uses approved first name (ADMIN_A→Андрей, MOD_A→Михаил).
+- Missing name: warning on card; no unsafe draft; not a delivery failure.
+- Admin reply-profile commands; moderator `/my_reply_profile` view-only.
+- No auto-send. Live UX acceptance: pending or in progress.

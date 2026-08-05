@@ -36,3 +36,10 @@ Live call counts, safe real-lead recount, final two-recipient proof and five-pol
 
 - Human event labels and Admin/moderator help rebuild are live on Admin.dev; operator visual `/help` + `/lead_history 1` after polish deploy remains the final Telegram confirmation step.
 - Reminders remain OFF; no activation in this polish.
+
+## Phase 3G.1 limitations
+
+- Live Operational/Admin patch and operator visual acceptance are **not** asserted complete (pending or in progress).
+- AI assist contract is documented/tested offline but **not** globally enabled; production remains AI OFF.
+- Оля/Никита may have prepared reply names but remain revoked/ineligible recipients.
+- Reporting must not gain per-recipient rows; storage preference (`RECIPIENT_REPLIES` vs `LEAD_DELIVERIES` extension) awaits live apply confirmation.

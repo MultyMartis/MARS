@@ -1,3 +1,16 @@
+<!-- Phase 3G.1 INTLSEO first-contact 2026-08-06 -->
+## Phase 3G.1 (current additive)
+
+| Field | Value |
+|-------|-------|
+| **Phase** | 3G.1 — INTLSEO approved first-contact + personalized manager assist |
+| **Harness** | `phase3g1-harness.mjs` **100/100 PASS** |
+| **Reply standard** | `iseo-first-contact-v1.0` (live cutover pending) |
+| **AI** | OFF; assist contract exists, not globally enabled |
+| **Evidence** | [evidence/phase3g1/](evidence/phase3g1/) |
+| **Architecture** | [INTLSEO-FIRST-CONTACT-STANDARD-v1.md](architecture/INTLSEO-FIRST-CONTACT-STANDARD-v1.md) · [RECIPIENT-PERSONALIZED-REPLIES-v1.md](architecture/RECIPIENT-PERSONALIZED-REPLIES-v1.md) · [AI-MANAGER-ASSIST-v1.md](architecture/AI-MANAGER-ASSIST-v1.md) · [REPLY-PROFILE-CONTRACT-v1.md](architecture/REPLY-PROFILE-CONTRACT-v1.md) |
+| **Live patch** | pending or in progress |
+
 <!-- Phase 3F.2 clean ledger active 2026-08-05; reminders OFF; reporting private -->
 # i-SEO Sales Manager Bot — Operational Index
 

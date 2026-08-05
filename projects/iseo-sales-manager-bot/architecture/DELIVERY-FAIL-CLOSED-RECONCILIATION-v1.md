@@ -174,3 +174,7 @@ The daily pending-lead reminder (Admin.dev, `sm-pending-reminder-v1.0`) is a **s
 - A controlled live exercise reached the ACCESS_CONTROL read step and correctly failed closed under a Sheets quota condition (zero sends).
 
 Full contract: `architecture/REMINDER-DELIVERY-IDEMPOTENCY-v1.md`. This document's lead-card contract is otherwise **unchanged** by Phase 3F.1.
+
+## Phase 3G.1
+
+Exactly-once delivery and fail-closed claim/send rules are **unchanged**. Personalization/rendering failures must not authorize resend. Missing reply name blocks copy only, not Telegram staff delivery. Harness RG84 PASS (policy).

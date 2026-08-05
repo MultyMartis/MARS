@@ -112,3 +112,12 @@ As Admin: `/leads`, `/lead_history 1`, `/pending_count`, `/pending_leads`, `/rem
 ## 3F.2.2 polish acceptance
 
 As Admin after deploy: `/lead_history 1` (no `telegram_sent`; human delivery phrase), `/help` (intact `/ai_on`, `/lead_history <номер>`, pending + reminder_status). As moderator: `/help` without config/AI/reminder-config commands. Do **not** enable reminders.
+
+## Phase 3G.1 — first-contact + reply profiles
+
+1. Offline gate: `node implementation/harness/phase3g1-harness.mjs` → 100/100 PASS.
+2. Approved names: ADMIN_A→Андрей; MOD_A→Михаил (never Мопс in client copy). Prepared Оля/Никита stay revoked/ineligible.
+3. Admin commands for names: `/reply_profiles`, `/reply_name_set`, enable/disable; moderators use `/my_reply_profile` only.
+4. AI stays OFF; reminders OFF; Sales-Manager-v2 inactive; no customer auto-send.
+5. Live patch / operator visual acceptance: **pending or in progress** — do not close 3G.1 cutover until FINAL-WORKFLOW-STATE and visual packet are filled.
+6. Evidence: `evidence/phase3g1/`.

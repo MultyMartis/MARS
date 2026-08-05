@@ -67,3 +67,7 @@ Compat aliases from Parser 3.2 (`parsed_*`, `site`, `summary`, …) remain popul
 - Runtime orchestration inside MARS.
 - AI ON in production.
 - Automatic client send.
+
+## Phase 3G.1 note
+
+Semantic model remains the routing input for approved templates. Website/intent/comment signals feed `routeApprovedTemplate`; first-contact standard does not replace Parser 3.3. Personalized drafts are a delivery/render concern, not a second business lead.

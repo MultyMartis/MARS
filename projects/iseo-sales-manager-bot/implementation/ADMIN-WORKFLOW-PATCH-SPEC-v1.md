@@ -268,3 +268,7 @@ Patch same Admin ID only (`wLrLp4WQHm1VJmxz`):
 2. **Help** — rebuild Admin + moderator `helpReply` templates ([ADMIN-HELP-BUILDER-v1.md](ADMIN-HELP-BUILDER-v1.md)); include pending + `/reminder_status`; Admin-only reminder config subsection.
 3. Do not touch Operational.dev, reminder schedule CONFIG defaults, callback tokens, or Sheets schemas.
 
+
+### Phase 3G.1 Admin patch note
+
+Add reply-profile commands (`/reply_profiles`, `/reply_profile`, `/reply_name_set`, `/reply_name_enable`, `/reply_name_disable`, `/my_reply_profile`). Mutations Admin-only; moderator view-only. Help lines per role. **Live patch / visual acceptance: pending or in progress.** Lib: `reply-profile-commands-v1.mjs`.

@@ -330,3 +330,7 @@ Checks cover archive adapter, history command, keyed reporting mapper, source di
 ## 3F.2.2 harness band
 
 Event-label map (including `telegram_sent` / unknown fallback) + Admin/moderator help builders (no corrupted `/ai_on`, pending + reminder_status listed). Evidence: `evidence/phase3f2-2/HARNESS-RESULTS-v1.md` (**33/33 PASS**).
+
+### Phase 3G.1 harness
+
+`node implementation/harness/phase3g1-harness.mjs` — approved templates, personalization, AI-off/assist validation, regressions → **100/100 PASS** (`evidence/phase3g1/HARNESS-RESULTS-v1.md`).
