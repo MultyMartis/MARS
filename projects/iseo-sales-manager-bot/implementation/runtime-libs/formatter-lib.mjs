@@ -85,14 +85,12 @@ export function fmtRuDate(v) {
   return pad(d.getDate()) + '.' + pad(d.getMonth() + 1) + '.' + d.getFullYear() + ' ' + pad(d.getHours()) + ':' + pad(d.getMinutes());
 }
 
+/**
+ * Canonical opaque lead callback token (Phase 3F.2).
+ * Always dual-FNV fnvToken — never Node crypto — so harness and n8n match.
+ */
 export function computeActionToken(leadId) {
-  const s = String(leadId || '');
-  try {
-    const crypto = nodeRequire('crypto');
-    return crypto.createHash('sha256').update(s).digest('hex').slice(0, 12);
-  } catch (e) {
-    return fnvToken(s);
-  }
+  return fnvToken(String(leadId || ''));
 }
 
 function fnvToken(s) {
