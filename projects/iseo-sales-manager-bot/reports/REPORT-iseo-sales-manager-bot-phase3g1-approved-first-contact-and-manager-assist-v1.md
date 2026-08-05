@@ -229,11 +229,13 @@ No credentials, Telegram IDs, phones, emails, workbook URLs, raw exports, or cus
 
 ## 44. Commit
 
-(filled after git wave)
+- `5af715d4` feat(iseo-sales-manager-bot): add approved first-contact templates
+- `dc980e8f` feat(iseo-sales-manager-bot): personalize replies by recipient profile
+- `8ec02e6f` feat(iseo-sales-manager-bot): add constrained manager assist
 
 ## 45. Push
 
-(filled after git wave)
+Pending immediate push to `origin/mars/canonical-post-recovery` (no force).
 
 ## 46. Risks
 
