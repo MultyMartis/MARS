@@ -150,12 +150,13 @@ No PII, Telegram IDs, chat IDs, usernames, workbook IDs, credentials, raw update
 
 ## 28. Commit
 
-`fix(iseo-sales-manager-bot): restore help start and config responses`  
-(optional docs may share the same commit under selective staging)
+`7d1ce8b8` — `fix(iseo-sales-manager-bot): restore help start and config responses`
+
+Canonical ancestry includes `51b633c6`, `fd7f0522`, `129fffd2`, tip `7d1ce8b8`.
 
 ## 29. Push
 
-Non-force push of branch commits to `origin` (see closeout).
+Non-force FF push: `129fffd2..7d1ce8b8` → `origin/mars/canonical-post-recovery`.
 
 ## 30. Remaining operator actions
 
