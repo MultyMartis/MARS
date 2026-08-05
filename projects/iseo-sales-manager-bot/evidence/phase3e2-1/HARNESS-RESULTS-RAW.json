@@ -1,0 +1,403 @@
+{
+  "generatedAt": "2026-08-05T00:48:17.277Z",
+  "failed": 0,
+  "passed": 64,
+  "total": 64,
+  "counters": {
+    "aiCalls": 0,
+    "clientMsgs": 0,
+    "workflowsCreated": 0
+  },
+  "versions": {
+    "FIRST_REPLY_VERSION": "sm-reply-v2.1",
+    "HUMAN_REPLY_STYLE_VERSION": "sm-human-v1.0",
+    "PARSER_VERSION": "sm-parser-v3.3",
+    "MESSAGE_FORMAT_VERSION": "sm-msg-v2.4"
+  },
+  "results": [
+    {
+      "id": "D01",
+      "title": "Fixture H ledger read error fails closed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "D02",
+      "title": "Sheets quota read error sends zero cards",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "D03",
+      "title": "Claim failure sends zero cards (model)",
+      "status": "PASS",
+      "detail": "Restore blocks __expect_telegram_send on claim_upsert_error"
+    },
+    {
+      "id": "D04",
+      "title": "Successful send + stamp failure does not resend",
+      "status": "PASS",
+      "detail": "claimed/uncertain → reconciliation_required, no blind send"
+    },
+    {
+      "id": "D05",
+      "title": "Gmail finalization failure does not resend delivered recipient",
+      "status": "PASS",
+      "detail": "CONFIG tg_delivered fallback + delivered ledger"
+    },
+    {
+      "id": "D06",
+      "title": "Delivered recipient skipped on next poll",
+      "status": "PASS",
+      "detail": "prevStatus delivered or fallbackHit"
+    },
+    {
+      "id": "D07",
+      "title": "Claimed/uncertain recipient reconciled",
+      "status": "PASS",
+      "detail": "block_reconcile path"
+    },
+    {
+      "id": "D08",
+      "title": "One moderator failure does not resend Admin",
+      "status": "PASS",
+      "detail": "per-recipient keys"
+    },
+    {
+      "id": "D09",
+      "title": "Stable delivery key unchanged across polls",
+      "status": "PASS",
+      "detail": "lead_delivery:<stable>:<recipient_ref>"
+    },
+    {
+      "id": "D10",
+      "title": "H affected marker permanently suppressable",
+      "status": "PASS",
+      "detail": "reconcile + CONFIG + Gmail finalize"
+    },
+    {
+      "id": "D11",
+      "title": "One RAW row contract",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "D12",
+      "title": "One CLEAN row contract",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "D13",
+      "title": "Per-recipient delivery records reconciled",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "D14",
+      "title": "No new duplicate Telegram cards (policy)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H00",
+      "title": "Versions",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H15",
+      "title": "vague audit natural reply",
+      "status": "PASS",
+      "detail": "vague_service"
+    },
+    {
+      "id": "H16",
+      "title": "cart/conversion meaningful reply",
+      "status": "PASS",
+      "detail": "Здравствуйте, Анна!\n\nСпасибо за заявку на аудит сайта client-demo-fixture.ru.\nПоняли, что проблема с"
+    },
+    {
+      "id": "H24",
+      "title": "meaningful comment changes questions",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H25",
+      "title": "generic audit does not replace cart theme",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H17",
+      "title": "website development natural reply",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H26",
+      "title": "internal no-site wording absent",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H18",
+      "title": "website development + SEO natural reply",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H19",
+      "title": "SEO valid-site natural reply",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H27",
+      "title": "known-site explanation absent",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H20",
+      "title": "alternative Telegram contact natural reply",
+      "status": "PASS",
+      "detail": "Здравствуйте, Анна!\n\nСпасибо за обращение. Учли, что вам удобнее общаться в Telegram.\n\nПодскажите, пожалуйста, с какой з"
+    },
+    {
+      "id": "H21",
+      "title": "damaged-contact warning appears once",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H22",
+      "title": "damaged contact reply suppressed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H21b",
+      "title": "known audit not mislabeled as missing task",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H21c",
+      "title": "no duplicate contact warning text",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H23",
+      "title": "probable-test reply suppressed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H28",
+      "title": "мы учли ваш комментарий absent",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H28b",
+      "title": "canned учли phrase absent in drafts",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H29",
+      "title": "maximum three question groups",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H34",
+      "title": "greeting with usable name",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H35",
+      "title": "greeting fallback",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H30",
+      "title": "no duplicate questions",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H31",
+      "title": "no duplicate sentences",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H32",
+      "title": "no unsupported promises",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H33",
+      "title": "known-information guards preserved silently",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H36",
+      "title": "safe HTML escaping",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H37",
+      "title": "reply length boundary",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H38",
+      "title": "copy block integrity",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H39",
+      "title": "disclaimer outside copy block",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H40",
+      "title": "quality linter PASS",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R41a",
+      "title": "Parser 3.3 Audit",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R41b",
+      "title": "Parser 3.3 meaningful audit",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R41c",
+      "title": "Parser 3.3 webdev",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R41d",
+      "title": "Parser 3.3 webdev+SEO",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R41e",
+      "title": "Parser 3.3 SEO",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R41f",
+      "title": "Parser 3.3 alt contact",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R42",
+      "title": "delivery exactly once (contract)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R43",
+      "title": "two recipient copies (contract)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R44",
+      "title": "second poll zero sends (contract)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R45",
+      "title": "buttons unchanged",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R46",
+      "title": "processed callback contract",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R47",
+      "title": "spam callback contract",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R48",
+      "title": "actor attribution preserved",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R49",
+      "title": "/leads preserved",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R50",
+      "title": "/my_status preserved",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R51",
+      "title": "/moderator_pending preserved",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R52",
+      "title": "ACCESS_CONTROL primary",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R53",
+      "title": "AI OFF",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R54",
+      "title": "client auto-messages=0",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R55",
+      "title": "workflows created=0",
+      "status": "PASS",
+      "detail": ""
+    }
+  ]
+}

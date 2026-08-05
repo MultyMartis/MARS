@@ -1,10 +1,12 @@
 /**
- * First Reply Engine v2 — deterministic, context-aware, manager-ready drafts.
- * AI OFF. Never auto-sends to customers. Uses Lead Semantic Model v1 fields.
- * Version: sm-reply-v2.0
+ * First Reply Engine v2.1 — Human Reply Style v1.
+ * Deterministic, context-aware, manager-ready drafts for Оля.
+ * AI OFF. Never auto-sends to customers. Known-info guards are silent.
+ * Versions: first_reply=sm-reply-v2.1, human_reply_style=sm-human-v1.0
  */
 
-export const FIRST_REPLY_VERSION = 'sm-reply-v2.0';
+export const FIRST_REPLY_VERSION = 'sm-reply-v2.1';
+export const HUMAN_REPLY_STYLE_VERSION = 'sm-human-v1.0';
 export const FIRST_REPLY_MAX_CHARS = 900;
 export const FIRST_REPLY_TARGET_MAX = 700;
 export const FIRST_REPLY_MAX_QUESTION_GROUPS = 3;
@@ -14,6 +16,26 @@ const PLACEHOLDER_NAMES = new Set([
   'asdf', 'qwerty', 'xxx', 'n/a', 'na', 'none', 'null', 'undefined',
   '-', '—', '.', '..', '...',
 ]);
+
+export const FORBIDDEN_PHRASE_PATTERNS = [
+  /адрес\s+сайта\s+уже\s+указан/i,
+  /повторно\s+присылать\s+(его\s+)?не\s+нужно/i,
+  /повторно\s+присылать\s+адрес/i,
+  /текущий\s+сайт\s+не\s+указан/i,
+  /это\s+ожидаемо\s+для\s+задачи/i,
+  /адрес\s+существующего\s+сайта\s+не\s+нужен/i,
+  /мы\s+учли\s+ваш\s+комментарий/i,
+  /по\s+данным\s+формы/i,
+  /система\s+определила/i,
+  /поле\s+отсутствует/i,
+  /\bwebsite_state\b/i,
+  /\bresolved_service\b/i,
+  /\bparser\b/i,
+  /недостающие\s+поля/i,
+  /контакт\s+нормализован/i,
+  /сайт\s+\S+\s+уже\s+указан/i,
+  /не\s+нужно\s+повторно\s+присылать/i,
+];
 
 const PROMISE_PATTERNS = [
   /гарантир/i,
@@ -25,11 +47,6 @@ const PROMISE_PATTERNS = [
   /бесплатно\s+выведем/i,
 ];
 
-/**
- * Usable client name for greeting (safe, non-placeholder).
- * Probable-test names like "test" are intentionally NOT used for customer drafts
- * because the whole reply is suppressed; this helper still classifies them.
- */
 export function isUsableClientName(raw) {
   const name = String(raw || '').trim();
   if (!name) return false;
@@ -37,7 +54,6 @@ export function isUsableClientName(raw) {
   if (/^[\d\s\-_.@]+$/.test(name)) return false;
   if (/^[^a-zA-Zа-яА-ЯёЁ]+$/.test(name)) return false;
   if (PLACEHOLDER_NAMES.has(name.toLowerCase())) return false;
-  // Form garbage / spreadsheet formulas
   if (/^[=#]/.test(name)) return false;
   if (/^#error/i.test(name)) return false;
   return true;
@@ -52,10 +68,7 @@ export function buildGreeting(clientName) {
 
 function asList(v) {
   if (Array.isArray(v)) return v.map((s) => String(s || '').trim()).filter(Boolean);
-  return String(v || '')
-    .split(/[;,\n]/)
-    .map((s) => s.trim())
-    .filter(Boolean);
+  return String(v || '').split(/[;,\n]/).map((s) => s.trim()).filter(Boolean);
 }
 
 function hasMeaningfulComment(comment) {
@@ -70,16 +83,37 @@ function hasMeaningfulComment(comment) {
 function isVagueTask(comment, resolvedService) {
   const c = String(comment || '').trim();
   if (!c) return true;
-  if (/^(seo|audit|аудит|директ|сайт|хочу сайт)\.?$/i.test(c)) return true;
-  if (resolvedService === 'Audit' && c.length < 20) return true;
+  if (/^(seo|audit|аудит|директ|сайт|хочу сайт|нужно проверить(\s+сайт)?|нужен аудит|нужна проверка|проверить сайт)\.?$/i.test(c)) return true;
+  if (/^(нужно|надо)\s+проверить(\s+сайт)?\.?$/i.test(c)) return true;
+  if (resolvedService === 'Audit' && c.length < 28 && !/конверси|корзин|трафик|позиц|ошибк|индекс/i.test(c)) return true;
   if (resolvedService === 'SEO' && (c.length < 12 || /^seo\.?$/i.test(c))) return true;
   return !hasMeaningfulComment(c);
 }
 
 /**
- * Known-information guard — suppress questions for data already present.
- * Returns { allowedQuestions, suppressedCodes }.
+ * Detect a safe problem/theme class from the customer comment.
+ * Deterministic keyword rules only — no AI/NLP.
  */
+export function detectMeaningfulTheme(comment, resolvedService) {
+  const c = String(comment || '').trim();
+  const service = String(resolvedService || '');
+
+  if (/конверси/i.test(c) && /корзин|checkout|оформлен/i.test(c)) return 'conversion_cart';
+  if (/конверси/i.test(c)) return 'conversion_cart';
+  if (/пада(ет|ют)?\s+трафик|снижен(ие|ия)\s+трафик|трафик\s+(падает|упал|снизил)/i.test(c)) return 'traffic_decline';
+  if (/позици|видимост|ранжир|выдач/i.test(c)) return 'rankings_visibility';
+  if (/ошибк|не\s+работает|баг|слом|\b404\b|\b500\b/i.test(c)) return 'technical_errors';
+  if (/индекс/i.test(c)) return 'indexing';
+  if (/редизайн|миграц|переезд/i.test(c)) return 'site_redesign_migration';
+  if (/(реклам|директ).{0,40}(нет|не\s+(да|принос))|(нет|не\s+да).{0,40}(заяв|лид|обращ)/i.test(c)) return 'ads_no_leads';
+  if (service === 'WebsiteDevelopmentSEO' || (/сайт/i.test(c) && /seo|продвиж/i.test(c))) return 'website_plus_seo';
+  if (service === 'WebsiteDevelopment' || /новый\s+сайт|хочу\s+сайт|нужен\s+сайт|разработ/i.test(c)) return 'need_new_website';
+  if (/\bai\b|гео|geo|нейросет|chatgpt/i.test(c)) return 'ai_geo_visibility';
+  if (!c || isVagueTask(c, service)) return 'vague_service';
+  if (hasMeaningfulComment(c)) return 'unclear_request';
+  return 'vague_service';
+}
+
 export function applyKnownInformationGuard(ctx, candidateQuestions) {
   const suppressed = [];
   const website_state = String(ctx.website_state || '');
@@ -90,6 +124,7 @@ export function applyKnownInformationGuard(ctx, candidateQuestions) {
   const comment = String(ctx.comment_normalized || '').trim();
   const resolved = String(ctx.resolved_service || '');
   const regionKnown = /регион|город|москв|спб|питер|росси/i.test(comment);
+  const theme = detectMeaningfulTheme(comment, resolved);
 
   const out = [];
   for (const q of candidateQuestions) {
@@ -110,8 +145,9 @@ export function applyKnownInformationGuard(ctx, candidateQuestions) {
     } else if (/что\s+вам\s+требуется|какая\s+услуга\s+нужна|какой\s+сервис\s+нужен/i.test(text)
       && resolved && resolved !== 'NeedsClarification' && resolved !== 'Other') {
       suppress = 'suppress_ask_service_known';
-    } else if (/что\s+вам\s+требуется/i.test(text) && hasMeaningfulComment(comment)) {
-      suppress = 'suppress_ask_generic_task_known';
+    } else if (/приоритетн(ые|ых)\s+страниц|какой\s+результат\s+аудита|главный\s+результат/i.test(text)
+      && theme === 'conversion_cart') {
+      suppress = 'suppress_generic_audit_for_cart_theme';
     } else if (/по\s+какому\s+региону/i.test(text) && regionKnown) {
       suppress = 'suppress_ask_region_known';
     }
@@ -129,12 +165,13 @@ export function applyKnownInformationGuard(ctx, candidateQuestions) {
   };
 }
 
-function formatQuestions(questions) {
+function formatQuestions(questions, leadIn) {
   if (!questions.length) return [];
   if (questions.length === 1) {
     return ['', questions[0].text];
   }
-  const lines = ['', 'Уточните, пожалуйста:'];
+  const header = leadIn || 'Подскажите, пожалуйста:';
+  const lines = ['', header];
   questions.forEach((q, i) => {
     lines.push(`${i + 1}) ${q.text}`);
   });
@@ -148,7 +185,6 @@ function closingBlock() {
 function trimToSafeLength(text) {
   let t = String(text || '').replace(/\n{3,}/g, '\n\n').trim();
   if (t.length <= FIRST_REPLY_MAX_CHARS) return t;
-  // Prefer cutting before closing if possible
   const closeIdx = t.lastIndexOf('С уважением,');
   if (closeIdx > 200) {
     const head = t.slice(0, Math.min(closeIdx, FIRST_REPLY_MAX_CHARS - 40)).trim();
@@ -158,207 +194,6 @@ function trimToSafeLength(text) {
     t = `${t.slice(0, FIRST_REPLY_MAX_CHARS - 1).trim()}…`;
   }
   return t;
-}
-
-function assertNoUnsupportedPromises(text, warnings) {
-  for (const re of PROMISE_PATTERNS) {
-    if (re.test(text)) warnings.push('unsupported_promise_detected');
-  }
-}
-
-/**
- * Service-specific candidate question sets (pre-guard).
- */
-function candidateQuestionsFor(ctx) {
-  const {
-    resolved_service: service,
-    website_state: siteState,
-    comment_normalized: comment,
-    secondary_service: secondary,
-  } = ctx;
-  const vague = isVagueTask(comment, service);
-  const meaningful = hasMeaningfulComment(comment);
-  const qs = [];
-
-  if (service === 'Audit') {
-    if (siteState === 'provided') {
-      if (vague) {
-        qs.push({ id: 'audit_focus', text: 'Что для вас сейчас важнее всего проверить: техническое состояние, видимость в поиске, трафик, конверсию или конкретную проблему на сайте?' });
-      } else {
-        qs.push({ id: 'audit_detail', text: 'Есть ли приоритетные страницы или разделы, на которых стоит сфокусировать аудит?' });
-        if (!/регион|город/i.test(comment)) {
-          qs.push({ id: 'audit_goal', text: 'Какой результат аудита для вас главный?' });
-        }
-      }
-    } else if (siteState === 'explicitly_absent' || siteState === 'missing' || siteState === 'invalid_or_placeholder') {
-      qs.push({ id: 'audit_site_exists', text: 'Сайт уже существует, или его ещё только предстоит создать?' });
-      qs.push({ id: 'audit_goal_alt', text: 'Если сайт есть — пришлите, пожалуйста, его адрес и кратко опишите, что хотите проверить.' });
-    }
-    return qs;
-  }
-
-  if (service === 'SEO') {
-    if (siteState === 'provided') {
-      if (vague) {
-        qs.push({ id: 'seo_region', text: 'По какому региону нужно продвижение?' });
-        qs.push({ id: 'seo_priority', text: 'Какие услуги или товары сейчас в приоритете?' });
-      } else {
-        if (!/регион|город|москв|спб/i.test(comment)) {
-          qs.push({ id: 'seo_region', text: 'По какому региону нужно продвижение?' });
-        }
-        qs.push({ id: 'seo_history', text: 'Продвижение уже велось раньше, или начинаем с нуля?' });
-        qs.push({ id: 'seo_goal', text: 'Какая главная цель: заявки, трафик или видимость?' });
-      }
-    } else if (siteState === 'explicitly_absent') {
-      qs.push({ id: 'seo_or_dev', text: 'Нужно сначала создать сайт, а затем заняться SEO, или сайт уже есть под другим адресом?' });
-    } else {
-      qs.push({ id: 'seo_site', text: 'Подтвердите, пожалуйста, адрес сайта для SEO.' });
-      qs.push({ id: 'seo_region', text: 'По какому региону нужно продвижение?' });
-    }
-    return qs;
-  }
-
-  if (service === 'WebsiteDevelopment') {
-    qs.push({ id: 'dev_business', text: 'Чем занимается бизнес и какая основная аудитория?' });
-    qs.push({ id: 'dev_features', text: 'Какой тип сайта и какие функции нужны в первую очередь?' });
-    qs.push({ id: 'dev_examples', text: 'Есть ли примеры сайтов, которые вам нравятся?' });
-    return qs;
-  }
-
-  if (service === 'WebsiteDevelopmentSEO' || (service === 'WebsiteDevelopment' && secondary === 'SEO')) {
-    qs.push({ id: 'combo_business', text: 'Чем занимается бизнес и какие услуги/товары нужно представить на сайте?' });
-    qs.push({ id: 'combo_features', text: 'Какие функции сайта обязательны на старте?' });
-    qs.push({ id: 'combo_region', text: 'По какому региону планируете продвижение после запуска?' });
-    return qs;
-  }
-
-  if (service === 'AISearch') {
-    if (siteState === 'provided') {
-      qs.push({ id: 'ai_audience', text: 'Какие регионы или аудитории для вас приоритетны?' });
-      qs.push({ id: 'ai_focus', text: 'Что важнее сейчас: видимость в AI-ответах, классический поиск или оба направления?' });
-    } else {
-      qs.push({ id: 'ai_what', text: 'Какой бизнес или сайт нужно продвигать в AI-поиске?' });
-      qs.push({ id: 'ai_audience', text: 'Какие регионы или аудитории приоритетны?' });
-    }
-    return qs;
-  }
-
-  if (service === 'Direct') {
-    if (siteState === 'provided') {
-      qs.push({ id: 'ppc_products', text: 'Какие услуги или товары нужно рекламировать?' });
-      qs.push({ id: 'ppc_region', text: 'По какому региону запускать рекламу?' });
-      qs.push({ id: 'ppc_history', text: 'Кампании уже были, или запускаем впервые?' });
-    } else {
-      qs.push({ id: 'ppc_site', text: 'Есть ли сайт или посадочная страница для рекламы?' });
-      qs.push({ id: 'ppc_products', text: 'Какие услуги или товары нужно рекламировать?' });
-      qs.push({ id: 'ppc_region', text: 'По какому региону запускать рекламу?' });
-    }
-    return qs;
-  }
-
-  if (service === 'NeedsClarification' || service === 'Other') {
-    if (ctx.alternative_contact_type || ctx.communication_preference === 'telegram') {
-      qs.push({ id: 'nc_task', text: 'Какая задача для вас сейчас главная: аудит, SEO, разработка сайта или реклама?' });
-    } else if (meaningful) {
-      qs.push({ id: 'nc_confirm', text: 'Верно ли мы понимаем задачу? Если нужно — уточните один главный приоритет.' });
-    } else {
-      qs.push({ id: 'nc_task', text: 'Кратко напишите, какая задача для вас сейчас главная.' });
-    }
-    return qs;
-  }
-
-  qs.push({ id: 'generic_task', text: 'Кратко опишите, какая задача для вас сейчас главная.' });
-  return qs;
-}
-
-function acknowledgeLines(ctx) {
-  const service = String(ctx.resolved_service || '');
-  const siteState = String(ctx.website_state || '');
-  const site = String(ctx.website_normalized || '').trim();
-  const comment = String(ctx.comment_normalized || '').trim();
-  const altType = String(ctx.alternative_contact_type || '').toLowerCase();
-  const lines = [];
-
-  if (service === 'Audit') {
-    if (siteState === 'provided' && site) {
-      lines.push(`Спасибо за заявку на аудит сайта ${site}.`);
-      if (hasMeaningfulComment(comment) && !isVagueTask(comment, service)) {
-        lines.push('Мы учли ваш комментарий и уточним детали, чтобы сфокусировать проверку.');
-      }
-    } else {
-      lines.push('Спасибо за обращение по аудиту.');
-      lines.push('Для аудита обычно нужен адрес существующего сайта — без него полноценную проверку начать нельзя.');
-    }
-    return lines;
-  }
-
-  if (service === 'SEO') {
-    if (siteState === 'provided' && site) {
-      lines.push(`Спасибо за заявку по SEO для сайта ${site}.`);
-      lines.push('Адрес сайта уже указан — повторно присылать его не нужно.');
-      if (/^seo\.?$/i.test(comment) || isVagueTask(comment, service)) {
-        lines.push('Поняли, что интересует продвижение в поиске.');
-      } else if (hasMeaningfulComment(comment)) {
-        lines.push('Мы учли ваш комментарий и подготовим уточняющие вопросы по задаче.');
-      }
-    } else if (siteState === 'explicitly_absent') {
-      lines.push('Спасибо за интерес к SEO.');
-      lines.push('Вы указали, что сайта сейчас нет — уточним, нужен ли сначала новый сайт.');
-    } else {
-      lines.push('Спасибо за интерес к SEO.');
-    }
-    return lines;
-  }
-
-  if (service === 'WebsiteDevelopment') {
-    lines.push('Спасибо за обращение.');
-    lines.push('Поняли, что вам требуется новый сайт.');
-    if (siteState === 'explicitly_absent') {
-      lines.push('Текущий сайт не указан — это ожидаемо для задачи на разработку.');
-    }
-    return lines;
-  }
-
-  if (service === 'WebsiteDevelopmentSEO') {
-    lines.push('Спасибо за обращение.');
-    lines.push('Поняли задачу: сначала создать сайт, подготовить его к продвижению, а затем начать SEO.');
-    if (siteState === 'explicitly_absent') {
-      lines.push('Текущий сайт отсутствует — адрес существующего сайта не нужен.');
-    }
-    return lines;
-  }
-
-  if (service === 'AISearch') {
-    lines.push('Спасибо за интерес к видимости в AI-ответах и современном поиске.');
-    if (siteState === 'provided' && site) {
-      lines.push(`Сайт ${site} уже указан.`);
-    }
-    lines.push('Мы не обещаем автоматическое появление в ответах нейросетей — обсудим реалистичный план.');
-    return lines;
-  }
-
-  if (service === 'Direct') {
-    lines.push('Спасибо за интерес к контекстной рекламе.');
-    if (siteState === 'provided' && site) {
-      lines.push(`Сайт ${site} уже указан — повторно присылать адрес не нужно.`);
-    }
-    return lines;
-  }
-
-  if (altType === 'telegram' || ctx.communication_preference === 'telegram') {
-    lines.push('Спасибо, заявка получена.');
-    lines.push('Учли, что вам удобнее общаться в Telegram.');
-    return lines;
-  }
-
-  if (hasMeaningfulComment(comment)) {
-    lines.push('Спасибо, ваша заявка получена.');
-    lines.push('Мы учли ваш комментарий и уточним один главный приоритет.');
-    return lines;
-  }
-
-  lines.push('Спасибо, ваша заявка получена.');
-  return lines;
 }
 
 function subjectFor(ctx) {
@@ -376,9 +211,197 @@ function subjectFor(ctx) {
   return map[service] || 'Обращение';
 }
 
+function siteLabel(ctx) {
+  return String(ctx.website_normalized || ctx.site || '').trim();
+}
+
 /**
- * Generate First Reply v2 draft from Lead Semantic Model fields.
+ * Build natural acknowledgement + questions for the case.
+ * Never narrates parser/guard internals.
  */
+function composeHumanDraft(ctx) {
+  const service = String(ctx.resolved_service || '');
+  const siteState = String(ctx.website_state || '');
+  const site = siteLabel(ctx);
+  const comment = String(ctx.comment_normalized || '').trim();
+  const altType = String(ctx.alternative_contact_type || '').toLowerCase();
+  const theme = detectMeaningfulTheme(comment, service);
+  const greeting = buildGreeting(ctx.client_name || ctx.client_name_normalized);
+  const questions = [];
+  const ack = [];
+
+  // Telegram preference (HITL-safe wording)
+  if (altType === 'telegram' || ctx.communication_preference === 'telegram') {
+    ack.push('Спасибо за обращение. Учли, что вам удобнее общаться в Telegram.');
+    if (service === 'NeedsClarification' || service === 'Other' || !service) {
+      questions.push({ id: 'nc_task', text: 'Подскажите, пожалуйста, с какой задачей нужна помощь: аудит сайта, SEO-продвижение, разработка или реклама?' });
+    }
+  }
+
+  if (service === 'Audit') {
+    if (siteState === 'provided' && site) {
+      ack.push(`Спасибо за заявку на аудит сайта ${site}.`);
+      if (theme === 'conversion_cart') {
+        ack.push('Поняли, что проблема связана со снижением конверсии в корзине.');
+        questions.push({ id: 'cart_when', text: 'Когда вы заметили снижение?' });
+        questions.push({ id: 'cart_changes', text: 'Были ли перед этим изменения на сайте, в рекламе или в процессе оформления заказа?' });
+        questions.push({ id: 'cart_analytics', text: 'Есть ли доступ к Метрике или другой аналитике, где видно изменение показателей?' });
+      } else if (theme === 'traffic_decline') {
+        ack.push('Поняли, что вас беспокоит снижение трафика.');
+        questions.push({ id: 'tr_when', text: 'Когда вы заметили падение трафика?' });
+        questions.push({ id: 'tr_changes', text: 'Были ли перед этим изменения на сайте или в рекламе?' });
+        questions.push({ id: 'tr_analytics', text: 'Есть ли доступ к Метрике или другой аналитике?' });
+      } else if (theme === 'rankings_visibility') {
+        ack.push('Поняли, что важны позиции и видимость в поиске.');
+        questions.push({ id: 'rk_queries', text: 'По каким запросам или разделам заметили изменения?' });
+        questions.push({ id: 'rk_when', text: 'Когда это стало заметно?' });
+      } else if (theme === 'technical_errors') {
+        ack.push('Поняли, что нужно разобраться с техническими проблемами.');
+        questions.push({ id: 'te_what', text: 'Какие ошибки или сбои вы замечаете чаще всего?' });
+        questions.push({ id: 'te_where', text: 'На каких страницах или этапах это проявляется?' });
+      } else if (isVagueTask(comment, service) || theme === 'vague_service') {
+        questions.push({
+          id: 'audit_focus_natural',
+          text: 'Подскажите, пожалуйста, что сейчас беспокоит больше всего: технические ошибки, позиции в поиске, снижение трафика или работа отдельных страниц? Это поможет сделать проверку более полезной именно для вашей задачи.',
+        });
+      } else {
+        ack.push('Поняли вашу задачу по аудиту.');
+        questions.push({ id: 'audit_when', text: 'Когда проблема стала заметной?' });
+        questions.push({ id: 'audit_analytics', text: 'Есть ли доступ к Метрике или Вебмастеру?' });
+      }
+    } else {
+      ack.push('Спасибо за обращение по аудиту.');
+      questions.push({ id: 'audit_site_exists', text: 'Сайт уже существует, или его ещё только предстоит создать?' });
+      questions.push({ id: 'audit_goal_alt', text: 'Если сайт есть — пришлите, пожалуйста, его адрес и кратко опишите, что хотите проверить.' });
+    }
+  } else if (service === 'SEO') {
+    if (siteState === 'provided' && site) {
+      ack.push(`Спасибо за заявку по SEO для сайта ${site}.`);
+      if (!isVagueTask(comment, service) && theme !== 'vague_service') {
+        if (theme === 'traffic_decline') ack.push('Поняли, что вас беспокоит снижение трафика.');
+        else if (theme === 'rankings_visibility') ack.push('Поняли, что важны позиции в поиске.');
+        else ack.push('Поняли вашу задачу по продвижению.');
+      }
+      if (!/регион|город|москв|спб/i.test(comment)) {
+        questions.push({ id: 'seo_region', text: 'По какому региону планируется продвижение?' });
+      }
+      questions.push({ id: 'seo_priority', text: 'Какие услуги или товары сейчас в приоритете?' });
+    } else if (siteState === 'explicitly_absent') {
+      ack.push('Спасибо за интерес к SEO.');
+      questions.push({ id: 'seo_or_dev', text: 'Нужно сначала создать сайт, а затем заняться SEO, или сайт уже есть под другим адресом?' });
+    } else {
+      ack.push('Спасибо за интерес к SEO.');
+      questions.push({ id: 'seo_site', text: 'Подтвердите, пожалуйста, адрес сайта для SEO.' });
+      questions.push({ id: 'seo_region', text: 'По какому региону нужно продвижение?' });
+    }
+  } else if (service === 'WebsiteDevelopment') {
+    if (!ack.length) ack.push('Спасибо за обращение. Поняли, что вам нужен новый сайт.');
+    else ack.push('Поняли, что вам нужен новый сайт.');
+    questions.push({ id: 'dev_business', text: 'Чем занимается компания и для кого будет сайт?' });
+    questions.push({ id: 'dev_features', text: 'Какие задачи он должен решать: представлять услуги, принимать заявки, продавать товары или что-то другое?' });
+    questions.push({ id: 'dev_examples', text: 'Есть ли примеры сайтов, которые вам нравятся?' });
+  } else if (service === 'WebsiteDevelopmentSEO') {
+    if (!ack.length) {
+      ack.push('Спасибо за обращение. Поняли задачу: нужно разработать новый сайт и затем продвигать его в поиске.');
+    } else {
+      ack.push('Поняли задачу: нужно разработать новый сайт и затем продвигать его в поиске.');
+    }
+    questions.push({ id: 'combo_business', text: 'Чем занимается компания и какие услуги или товары нужно представить?' });
+    questions.push({ id: 'combo_features', text: 'Какие функции понадобятся на сайте?' });
+    questions.push({ id: 'combo_region', text: 'В каком регионе планируете продвижение?' });
+  } else if (service === 'AISearch') {
+    if (!ack.length) ack.push('Спасибо за интерес к видимости в AI-ответах и современном поиске.');
+    if (siteState === 'provided' && site) {
+      questions.push({ id: 'ai_audience', text: 'Какие регионы или аудитории для вас приоритетны?' });
+      questions.push({ id: 'ai_focus', text: 'Что важнее сейчас: видимость в AI-ответах, классический поиск или оба направления?' });
+    } else {
+      questions.push({ id: 'ai_what', text: 'Какой бизнес или сайт нужно продвигать в AI-поиске?' });
+      questions.push({ id: 'ai_audience', text: 'Какие регионы или аудитории приоритетны?' });
+    }
+  } else if (service === 'Direct') {
+    if (!ack.length) ack.push('Спасибо за интерес к контекстной рекламе.');
+    if (siteState === 'provided' && site) {
+      questions.push({ id: 'ppc_products', text: 'Какие услуги или товары нужно рекламировать?' });
+      questions.push({ id: 'ppc_region', text: 'По какому региону запускать рекламу?' });
+      questions.push({ id: 'ppc_history', text: 'Кампании уже были, или запускаем впервые?' });
+    } else {
+      questions.push({ id: 'ppc_site', text: 'Есть ли сайт или посадочная страница для рекламы?' });
+      questions.push({ id: 'ppc_products', text: 'Какие услуги или товары нужно рекламировать?' });
+    }
+  } else if (!questions.length) {
+    if (!ack.length) ack.push('Спасибо за обращение.');
+    questions.push({ id: 'nc_task', text: 'Подскажите, пожалуйста, с какой задачей нужна помощь: аудит сайта, SEO-продвижение, разработка или реклама?' });
+  }
+
+  // Deduplicate ack lines and drop empty
+  const ackUnique = [...new Set(ack.map((s) => String(s).trim()).filter(Boolean))];
+  const leadIn = service === 'WebsiteDevelopment' || service === 'WebsiteDevelopmentSEO'
+    ? 'Расскажите, пожалуйста:'
+    : 'Подскажите, пожалуйста:';
+
+  return { greeting, ack: ackUnique, questions, theme, leadIn };
+}
+
+export function lintFirstReply(text, ctx = {}, meta = {}) {
+  const warnings = [];
+  const failures = [];
+  const value = String(text || '');
+  const theme = String(meta.theme || detectMeaningfulTheme(ctx.comment_normalized, ctx.resolved_service));
+
+  if (!value.trim() && meta.requireText !== false) failures.push('empty_reply');
+
+  for (const pattern of FORBIDDEN_PHRASE_PATTERNS) {
+    if (pattern.test(value)) failures.push(`forbidden_phrase:${pattern.source.slice(0, 40)}`);
+  }
+
+  if (value.length > FIRST_REPLY_MAX_CHARS) failures.push('max_chars_exceeded');
+  else if (value.length > FIRST_REPLY_TARGET_MAX) warnings.push('reply_longer_than_target');
+
+  const numbered = value.match(/(?:^|\n)\s*\d+\)/g);
+  const groups = numbered ? numbered.length : (value.match(/\?/g) || []).length;
+  if (groups > FIRST_REPLY_MAX_QUESTION_GROUPS) failures.push('too_many_question_groups');
+
+  if (value.trim() && !/С уважением,/.test(value)) failures.push('missing_closing');
+
+  for (const re of PROMISE_PATTERNS) {
+    if (re.test(value) && !/не\s+обещаем|без\s+гарант/i.test(value)) {
+      failures.push('unsupported_promise');
+      break;
+    }
+  }
+
+  if (/напишем\s+вам\s+в\s+telegram/i.test(value)) failures.push('telegram_auto_promise');
+
+  // Duplicate sentence check (naive)
+  const sentences = value.split(/\n+/).map((s) => s.trim()).filter((s) => s.length > 20);
+  const seen = new Set();
+  for (const s of sentences) {
+    const key = s.toLowerCase();
+    if (seen.has(key)) failures.push('duplicated_sentence');
+    seen.add(key);
+  }
+
+  if (theme === 'conversion_cart' && value && !/конверси|корзин/i.test(value)) {
+    failures.push('cart_theme_not_acknowledged');
+  }
+  if (theme === 'conversion_cart' && /приоритетн(ые|ых)\s+страниц|какой\s+результат\s+аудита/i.test(value)) {
+    failures.push('generic_audit_used_for_cart_theme');
+  }
+
+  const siteState = String(ctx.website_state || '');
+  if (siteState === 'provided' && /пришлите[^\n]{0,40}сайт|укажите[^\n]{0,40}адрес\s+сайт/i.test(value)) {
+    failures.push('asks_known_website');
+  }
+  if (siteState === 'explicitly_absent' && /пришлите[^\n]{0,40}сайт|адрес\s+существующ/i.test(value)
+    && (ctx.resolved_service === 'WebsiteDevelopment' || ctx.resolved_service === 'WebsiteDevelopmentSEO')) {
+    failures.push('asks_absent_website');
+  }
+
+  if (meta.marker && value.includes(String(meta.marker))) failures.push('internal_marker_in_draft');
+
+  return { ok: failures.length === 0, warnings, failures };
+}
+
 export function generateFirstReplyV2(ctx = {}) {
   const warnings = [];
   const isTest = ctx.is_probable_test === true || ctx.is_probable_test === 'true';
@@ -391,8 +414,11 @@ export function generateFirstReplyV2(ctx = {}) {
       || ctx.hasContact === true,
     );
 
+  const theme = detectMeaningfulTheme(ctx.comment_normalized, ctx.resolved_service);
+
   const base = {
     first_reply_version: FIRST_REPLY_VERSION,
+    human_reply_style_version: HUMAN_REPLY_STYLE_VERSION,
     first_reply_mode: 'normal',
     first_reply_subject: subjectFor(ctx),
     first_reply_text: '',
@@ -401,7 +427,9 @@ export function generateFirstReplyV2(ctx = {}) {
     first_reply_omitted_reason: '',
     first_reply_ready: false,
     first_reply_warnings: [],
-    // Compat with sm-reply-v1 / processor
+    meaningful_theme: theme,
+    quality_linter_ok: false,
+    quality_linter_failures: [],
     first_reply_source: 'template',
     reply_template_version: FIRST_REPLY_VERSION,
     reply_omitted_reason: '',
@@ -416,6 +444,7 @@ export function generateFirstReplyV2(ctx = {}) {
       first_reply_source: 'test_omitted',
       reply_omitted_reason: 'probable_test',
       first_reply_reason_codes: ['omit_probable_test'],
+      quality_linter_ok: true,
     };
   }
 
@@ -429,50 +458,40 @@ export function generateFirstReplyV2(ctx = {}) {
       reply_omitted_reason: 'missing_contact',
       first_reply_reason_codes: ['omit_missing_contact'],
       first_reply_warnings: ['contact_requires_manager_check'],
+      quality_linter_ok: true,
     };
   }
 
-  const greeting = buildGreeting(ctx.client_name || ctx.client_name_normalized);
-  const ack = acknowledgeLines(ctx);
-  const candidates = candidateQuestionsFor(ctx);
-  const { allowedQuestions, suppressedCodes } = applyKnownInformationGuard(ctx, candidates);
-
-  // Extra hard strip: never ask for known site URL
-  const siteState = String(ctx.website_state || '');
-  if (siteState === 'provided' || siteState === 'explicitly_absent') {
-    for (let i = allowedQuestions.length - 1; i >= 0; i -= 1) {
-      if (/адрес\s+сайт|пришлите.*сайт|url/i.test(allowedQuestions[i].text) && siteState === 'provided') {
-        suppressedCodes.push('suppress_ask_website_provided');
-        allowedQuestions.splice(i, 1);
-      }
-      if (/адрес\s+существующ|пришлите.*сайт/i.test(allowedQuestions[i]?.text || '') && siteState === 'explicitly_absent') {
-        // Keep "does site exist" for Audit missing-site, but not "send current URL" for development
-        if (ctx.resolved_service === 'WebsiteDevelopment' || ctx.resolved_service === 'WebsiteDevelopmentSEO') {
-          suppressedCodes.push('suppress_ask_website_absent');
-          allowedQuestions.splice(i, 1);
-        }
-      }
-    }
-  }
-
+  const draft = composeHumanDraft(ctx);
+  const { allowedQuestions, suppressedCodes } = applyKnownInformationGuard(ctx, draft.questions);
   const qLimited = allowedQuestions.slice(0, FIRST_REPLY_MAX_QUESTION_GROUPS);
-  const lines = [greeting, '', ...ack, ...formatQuestions(qLimited), ...closingBlock()];
+  const lines = [
+    draft.greeting,
+    '',
+    ...draft.ack,
+    ...formatQuestions(qLimited, draft.leadIn),
+    ...closingBlock(),
+  ];
   let text = trimToSafeLength(lines.join('\n'));
 
-  // Safety scrub residual known-info asks
-  if (siteState === 'provided' || siteState === 'explicitly_absent') {
-    text = text
-      .replace(/Пришлите,?\s*пожалуйста,?\s*адрес сайта[^.]*\./gi, '')
-      .replace(/Укажите адрес сайта[^.]*\./gi, '')
-      .replace(/повторно присылать адрес не нужно\.[^\n]*пришлите[^\n]*сайт[^\n]*/gi, (m) => m.split('.')[0] + '.')
-      .replace(/\n{3,}/g, '\n\n')
-      .trim();
-  }
+  const lint = lintFirstReply(text, ctx, { theme: draft.theme, requireText: true });
+  warnings.push(...lint.warnings);
 
-  assertNoUnsupportedPromises(text, warnings);
-
-  if (text.length > FIRST_REPLY_TARGET_MAX) {
-    warnings.push('reply_longer_than_target');
+  if (!lint.ok) {
+    return {
+      ...base,
+      first_reply_mode: 'lint_blocked',
+      first_reply_text: '',
+      first_reply_questions: qLimited.map((q) => q.text),
+      first_reply_reason_codes: [...new Set([...suppressedCodes, ...lint.failures.map((f) => `lint:${f}`)])],
+      first_reply_omitted_reason: 'quality_linter_failed',
+      reply_omitted_reason: 'quality_linter_failed',
+      first_reply_ready: false,
+      first_reply_warnings: warnings,
+      meaningful_theme: draft.theme,
+      quality_linter_ok: false,
+      quality_linter_failures: lint.failures,
+    };
   }
 
   return {
@@ -484,13 +503,15 @@ export function generateFirstReplyV2(ctx = {}) {
     first_reply_omitted_reason: '',
     first_reply_ready: true,
     first_reply_warnings: warnings,
+    meaningful_theme: draft.theme,
+    quality_linter_ok: true,
+    quality_linter_failures: [],
     first_reply_source: 'template',
     reply_template_version: FIRST_REPLY_VERSION,
     reply_omitted_reason: '',
   };
 }
 
-/** Compatibility wrapper used by parse-lead-lib / processor. */
 export function buildFirstReplyDraftV2(ctx) {
   const r = generateFirstReplyV2(ctx);
   return {
@@ -498,6 +519,7 @@ export function buildFirstReplyDraftV2(ctx) {
     first_reply_source: r.first_reply_source,
     reply_omitted_reason: r.reply_omitted_reason || r.first_reply_omitted_reason,
     first_reply_version: r.first_reply_version,
+    human_reply_style_version: r.human_reply_style_version,
     first_reply_mode: r.first_reply_mode,
     first_reply_subject: r.first_reply_subject,
     first_reply_questions: r.first_reply_questions,
@@ -505,6 +527,9 @@ export function buildFirstReplyDraftV2(ctx) {
     first_reply_omitted_reason: r.first_reply_omitted_reason,
     first_reply_ready: r.first_reply_ready,
     first_reply_warnings: r.first_reply_warnings,
+    meaningful_theme: r.meaningful_theme,
+    quality_linter_ok: r.quality_linter_ok,
+    quality_linter_failures: r.quality_linter_failures,
     reply_template_version: r.reply_template_version,
   };
 }

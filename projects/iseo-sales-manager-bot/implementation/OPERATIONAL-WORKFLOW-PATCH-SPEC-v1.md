@@ -6,6 +6,10 @@
 **JSON baseline:** **PRESENT** (Phase 3A.1)  
 **Inter-workflow:** no Execute Workflow / webhook to Admin.dev
 
+### Phase 3E.2.1 live patch note (2026-08-05)
+
+Same Operational.dev ID patched in place (no workflow copy): fail-closed Expand ledger read; claim upsert fail-before-send; Restore blocks unpersisted claims; CONFIG `tg_delivered:*` secondary guard; Human Reply Style v1 code bodies (`sm-reply-v2.1` / `sm-human-v1.0`). See [DELIVERY-FAIL-CLOSED-RECONCILIATION-v1.md](../architecture/DELIVERY-FAIL-CLOSED-RECONCILIATION-v1.md) and `evidence/phase3e2-1/`.
+
 ### Source node name map (v2 → Operational.dev stable names)
 
 | v2 exact name | Operational.dev stable name (spec) | Disposition |

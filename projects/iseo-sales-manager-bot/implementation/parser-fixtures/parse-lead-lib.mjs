@@ -555,8 +555,15 @@ export function classifyProbableTest({ name, comment, site, phone, email, marker
   if (/тест\s*бота/i.test(c) || /\btest\b/i.test(c) || hasRuTestToken(c)) reasons.push('comment_test');
   if (/synthetic|parser|stabilization|phase\s*3/i.test(c)) reasons.push('comment_internal');
   if (/\.(test|example)(\b|\/|$)/i.test(s)) reasons.push('synthetic_domain');
-  if (/SYNTHETIC_TEST|PHASE_3E1|PHASE_3E2|PHASE_3D/i.test(String(marker || '') + ' ' + String(phase_marker || ''))) {
-    reasons.push('phase_marker');
+  {
+    const markerBlob = String(marker || '') + ' ' + String(phase_marker || '');
+    // Phase 3E.2.1 human-copy acceptance markers must produce customer drafts.
+    // Keep suppression for explicit TEST / PROBABLE_TEST markers (fixture H).
+    const humanAcceptance = /PHASE_3E2_1_[BCDG]_[A-Z0-9_]+_HUMAN\b/i.test(markerBlob)
+      && !(/_TEST_|PROBABLE_TEST/i.test(markerBlob));
+    if (!humanAcceptance && /SYNTHETIC_TEST|PHASE_3E1|PHASE_3E2|PHASE_3D/i.test(markerBlob)) {
+      reasons.push('phase_marker');
+    }
   }
   if (/900\s*111\s*22\s*33|lead\.test@example\.com/i.test([phone, email].join(' '))) {
     reasons.push('synthetic_contact');
@@ -586,8 +593,7 @@ export function resolveIntent({
   let intent_conflict = false;
   let parser_confidence = 'medium';
 
-  const wantsSite = /(?:хочу|нужен|нужна|сделать|создать|разработ)\w*\s+сайт/i.test(comment)
-    || /сайт\s+(?:под\s+ключ|с\s+нуля)/i.test(comment);
+  const wantsSite = /(?:хочу|нужен|нужна).{0,24}сайт|(?:сделать|создать|разработ)\w*.{0,16}сайт|сайт\s+(?:под\s+ключ|с\s+нуля)/i.test(comment);
   const wantsSeo = /\bseo\b|продвиж|продвиг|поисков/i.test(lower);
   const wantsAudit = /аудит|audit|провер/i.test(lower);
   const wantsDirect = /директ|контекст|\bppc\b|реклам/i.test(lower);
@@ -751,33 +757,45 @@ export function computeMissingInformation({
   name,
   comment_normalized,
 }) {
+  // Human-readable manager labels (not machine reason codes).
+  // Service-level intent already known must NOT be labeled as a missing "задача".
   const missing = [];
   if (!hasContact) missing.push('контакт');
   if (!name) missing.push('имя');
 
+  const comment = String(comment_normalized || '').trim();
   const needsExistingSite = ['Audit', 'SEO'].includes(resolved_service);
   if (needsExistingSite && website_state !== 'provided') {
     if (website_state !== 'explicitly_absent') missing.push('сайт');
   }
 
   if (resolved_service === 'WebsiteDevelopment' || resolved_service === 'WebsiteDevelopmentSEO') {
-    if (!comment_normalized || comment_normalized.length < 12) {
+    if (!comment || comment.length < 12) {
       missing.push('тип бизнеса');
       missing.push('функциональность');
     } else {
-      if (!/бизнес|ниша|отрасл|магазин|услуг|компани/i.test(comment_normalized)) missing.push('тип бизнеса');
-      if (!/функц|каталог|форм|оплат|интегр/i.test(comment_normalized)) missing.push('функциональность');
+      if (!/бизнес|ниша|отрасл|магазин|услуг|компани/i.test(comment)) missing.push('тип бизнеса');
+      if (!/функц|каталог|форм|оплат|интегр/i.test(comment)) missing.push('функциональность');
     }
     if (resolved_service === 'WebsiteDevelopmentSEO') {
-      if (!/регион|город|москв|росси|цель/i.test(comment_normalized || '')) missing.push('регион/цели продвижения');
+      if (!/регион|город|москв|росси|цель/i.test(comment || '')) missing.push('регион продвижения');
     }
-  } else if (resolved_service === 'NeedsClarification' || !comment_normalized || isCommPreferenceOnly(comment_normalized)) {
-    missing.push('задача');
-  } else if (resolved_service === 'Audit' && (!comment_normalized || comment_normalized.length < 20)) {
+  } else if (resolved_service === 'SEO') {
+    if (!/регион|город|москв|спб|росси/i.test(comment)) missing.push('регион');
+    if (!comment || comment.length < 12 || /^seo\.?$/i.test(comment)) missing.push('приоритеты продвижения');
+  } else if (resolved_service === 'Audit') {
+    // "нужен аудит" / short audit intent = service known; only focus details may be missing
+    if (!comment || /^(аудит|нужен аудит|нужна проверка|нужно проверить(\s+сайт)?)\.?$/i.test(comment) || comment.length < 20) {
+      if (!/конверси|корзин|трафик|позиц|ошибк|индекс|технич/i.test(comment)) {
+        missing.push('фокус аудита');
+      }
+    }
+  } else if (resolved_service === 'NeedsClarification' || resolved_service === 'Other') {
+    if (!comment || isCommPreferenceOnly(comment)) missing.push('задача');
+  } else if (!resolved_service && (!comment || isCommPreferenceOnly(comment))) {
     missing.push('задача');
   }
 
-  // Never ask for site again when provided or explicitly absent for development
   return missing.filter((m, i, arr) => arr.indexOf(m) === i);
 }
 

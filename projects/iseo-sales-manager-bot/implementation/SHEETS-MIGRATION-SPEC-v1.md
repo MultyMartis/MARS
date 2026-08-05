@@ -6,6 +6,10 @@
 **Phase 3A / 3A.1 action:** **do not** create tabs or modify Sheets  
 **Historical evidence (Phase 3A.1):** RAW sheet `lead-base` (20 headers, 19 rows); CLEAN sheet `lead-base-processed` (14 headers, 19 rows) — see baselines schema docs.
 
+### Phase 3E.2.1 additive note
+
+Preserve existing First Reply v2 fields; store `human_reply_style_version`, meaningful theme, quality-linter outcome, safe reason codes. No destructive schema changes; no historical reply regeneration. `LEAD_DELIVERIES` remains primary audit ledger; CONFIG `tg_delivered:*` is secondary per-recipient guard only. Protect schema backup before any column migration apply.
+
 ---
 
 ## 1. Workbook layout

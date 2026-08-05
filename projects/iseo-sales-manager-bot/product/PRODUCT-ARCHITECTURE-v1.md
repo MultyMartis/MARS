@@ -2,7 +2,7 @@
 
 ## Исполняемая архитектура сейчас
 
-1. Operational.dev — единственный Gmail intake; **Parser `sm-parser-v3.3`** + Lead Semantic Model v1; **First Reply Engine `sm-reply-v2.0`**; CLEAN/RAW; Format **`sm-msg-v2.4`**; recipient expansion; claim-before-send; Telegram delivery и Gmail finalization.
+1. Operational.dev — единственный Gmail intake; **Parser `sm-parser-v3.3`** + Lead Semantic Model v1; **First Reply `sm-reply-v2.1`** + **Human Reply Style `sm-human-v1.0`**; CLEAN/RAW; Format **`sm-msg-v2.4`**; recipient expansion; claim-before-send; **fail-closed ledger read**; Telegram delivery и Gmail finalization.
 2. Admin.dev — единая Telegram ingress-точка для `message` и `callback_query`; ACCESS_CONTROL, команды, lifecycle transitions, синхронизация копий карточек и архив (stored reply drafts).
 3. Sheets — durable state и журналы; Telegram — операторский интерфейс; Gmail — источник и label lifecycle.
 4. Sales-Manager-v2 — неактивный rollback baseline.
@@ -18,7 +18,7 @@
 
 ## Semantic + reply layer (Phase 3E.1 / 3E.2)
 
-- Authority: [LEAD-SEMANTIC-MODEL-v1.md](../architecture/LEAD-SEMANTIC-MODEL-v1.md), [PARSER-3.3-CONTRACT-v1.md](../architecture/PARSER-3.3-CONTRACT-v1.md), [FIRST-REPLY-ENGINE-v2.md](../architecture/FIRST-REPLY-ENGINE-v2.md), [KNOWN-INFORMATION-GUARD-v1.md](../architecture/KNOWN-INFORMATION-GUARD-v1.md), [MANAGER-CARD-v2.4-CONTRACT-v1.md](../architecture/MANAGER-CARD-v2.4-CONTRACT-v1.md).
+- Authority: [LEAD-SEMANTIC-MODEL-v1.md](../architecture/LEAD-SEMANTIC-MODEL-v1.md), [PARSER-3.3-CONTRACT-v1.md](../architecture/PARSER-3.3-CONTRACT-v1.md), [FIRST-REPLY-ENGINE-v2.md](../architecture/FIRST-REPLY-ENGINE-v2.md), [HUMAN-REPLY-STYLE-v1.md](../architecture/HUMAN-REPLY-STYLE-v1.md), [KNOWN-INFORMATION-GUARD-v1.md](../architecture/KNOWN-INFORMATION-GUARD-v1.md), [DELIVERY-FAIL-CLOSED-RECONCILIATION-v1.md](../architecture/DELIVERY-FAIL-CLOSED-RECONCILIATION-v1.md), [MANAGER-CARD-v2.4-CONTRACT-v1.md](../architecture/MANAGER-CARD-v2.4-CONTRACT-v1.md).
 - Website states, intent precedence, comment boundary, quality и context-aware first reply — deterministic AI OFF path.
 
 ## Планируемая граница

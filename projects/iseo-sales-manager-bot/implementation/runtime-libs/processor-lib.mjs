@@ -94,6 +94,10 @@ export function processLeadDeterministic(j = {}) {
   let first_reply_omitted_reason = String(j.first_reply_omitted_reason || '').trim();
   let first_reply_ready = j.first_reply_ready === true;
   let first_reply_warnings = String(j.first_reply_warnings || '').trim();
+  let human_reply_style_version = String(j.human_reply_style_version || '').trim();
+  let meaningful_theme = String(j.meaningful_theme || '').trim();
+  let quality_linter_ok = j.quality_linter_ok;
+  let quality_linter_failures = String(j.quality_linter_failures || '').trim();
 
   if (!lead_quality) {
     const q = assessLeadQuality({
@@ -121,9 +125,14 @@ export function processLeadDeterministic(j = {}) {
   }
 
   const existingVersion = String(j.first_reply_version || '').trim();
-  const legacyReply = !existingVersion || /^sm-reply-v1/i.test(existingVersion);
+  // Rebuild v1 and v2.0 drafts into Human Reply Style v1 (sm-reply-v2.1)
+  const legacyReply = !existingVersion
+    || /^sm-reply-v1/i.test(existingVersion)
+    || /^sm-reply-v2\.0/i.test(existingVersion);
   const shouldBuild = legacyReply
-    || (!first_reply_text && first_reply_source !== 'none' && first_reply_source !== 'test_omitted');
+    || (!first_reply_text && first_reply_source !== 'none' && first_reply_source !== 'test_omitted')
+    || !human_reply_style_version
+    || human_reply_style_version !== 'sm-human-v1.0';
 
   if (shouldBuild) {
     const reply = buildFirstReplyDraft({
@@ -149,6 +158,7 @@ export function processLeadDeterministic(j = {}) {
     first_reply_text = reply.first_reply_text;
     first_reply_source = reply.first_reply_source;
     first_reply_version = reply.first_reply_version || FIRST_REPLY_VERSION;
+    human_reply_style_version = reply.human_reply_style_version || human_reply_style_version;
     first_reply_mode = reply.first_reply_mode || '';
     first_reply_subject = reply.first_reply_subject || '';
     first_reply_questions = Array.isArray(reply.first_reply_questions)
@@ -162,6 +172,11 @@ export function processLeadDeterministic(j = {}) {
     first_reply_warnings = Array.isArray(reply.first_reply_warnings)
       ? reply.first_reply_warnings.join(',')
       : (reply.first_reply_warnings || '');
+    meaningful_theme = reply.meaningful_theme || meaningful_theme;
+    quality_linter_ok = reply.quality_linter_ok;
+    quality_linter_failures = Array.isArray(reply.quality_linter_failures)
+      ? reply.quality_linter_failures.join(',')
+      : (reply.quality_linter_failures || '');
   } else {
     first_reply_version = existingVersion || FIRST_REPLY_VERSION;
     first_reply_ready = j.first_reply_ready === true || Boolean(first_reply_text);
@@ -177,6 +192,14 @@ export function processLeadDeterministic(j = {}) {
     first_reply_ready = false;
     first_reply_omitted_reason = 'missing_contact';
     first_reply_version = first_reply_version || FIRST_REPLY_VERSION;
+    // Recompute missing labels: contact + optional audit focus — not generic "контакт, задача"
+    missing_fields = computeMissingInformation({
+      resolved_service: service_machine,
+      website_state,
+      hasContact: false,
+      name,
+      comment_normalized,
+    }).join(', ');
   }
 
   if (is_probable_test) {
@@ -194,20 +217,28 @@ export function processLeadDeterministic(j = {}) {
   if (quality_status === 'bad' || is_probable_test) priority = 'low';
 
   let manager_recommendation;
+  let next_step = '';
   if (contact_missing) {
-    manager_recommendation = 'Контактные данные требуют проверки.';
+    manager_recommendation = 'Проверить контактные данные.';
+    next_step = 'Проверить контактные данные.';
   } else if (is_probable_test) {
     manager_recommendation = 'Тестовая заявка — не учитывать в боевой статистике.';
+    next_step = 'Не обрабатывать как боевую заявку.';
   } else if (service_machine === 'WebsiteDevelopment' || service_machine === 'WebsiteDevelopmentSEO') {
     manager_recommendation = 'Уточнить требования к сайту и связаться с клиентом.';
+    next_step = 'Связаться с клиентом и уточнить требования к сайту.';
   } else if (missing_fields) {
     manager_recommendation = 'Уточнить: ' + missing_fields + '.';
+    next_step = 'Уточнить: ' + missing_fields + '.';
   } else if (service_machine === 'Audit') {
     manager_recommendation = 'Связаться с клиентом и уточнить детали аудита.';
+    next_step = 'Связаться с клиентом по аудиту.';
   } else if (service_machine === 'SEO') {
     manager_recommendation = 'Связаться с клиентом и уточнить задачи по продвижению.';
+    next_step = 'Связаться с клиентом по SEO.';
   } else {
     manager_recommendation = 'Связаться с клиентом и уточнить задачу.';
+    next_step = 'Связаться с клиентом.';
   }
 
   const clarification_questions = missing_fields
@@ -261,9 +292,11 @@ export function processLeadDeterministic(j = {}) {
     missing_information: missing_fields,
     clarification_questions,
     manager_recommendation,
+    next_step,
     first_reply_text,
     first_reply_source,
     first_reply_version: first_reply_version || FIRST_REPLY_VERSION,
+    human_reply_style_version: human_reply_style_version || 'sm-human-v1.0',
     first_reply_mode,
     first_reply_subject,
     first_reply_questions,
@@ -271,6 +304,9 @@ export function processLeadDeterministic(j = {}) {
     first_reply_omitted_reason,
     first_reply_ready,
     first_reply_warnings,
+    meaningful_theme: meaningful_theme || '',
+    quality_linter_ok: quality_linter_ok !== false,
+    quality_linter_failures,
     is_probable_test,
     exclude_from_prod_stats: j.exclude_from_prod_stats === true || is_probable_test || Boolean(j.__synthetic),
     processing_mode: 'ai_off',

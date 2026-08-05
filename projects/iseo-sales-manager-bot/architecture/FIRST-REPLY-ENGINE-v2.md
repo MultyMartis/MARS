@@ -1,8 +1,8 @@
 # FIRST REPLY ENGINE v2
 
 **Product:** i-SEO Sales Manager Bot  
-**Version:** `sm-reply-v2.0`  
-**Status:** IMPLEMENTED (Phase 3E.2)  
+**Version:** `sm-reply-v2.1` (Human Reply Style **`sm-human-v1.0`** layered in Phase 3E.2.1)  
+**Status:** IMPLEMENTED (Phase 3E.2 + 3E.2.1); operator copy acceptance **ATTENTION**  
 **Runtime lib:** `implementation/runtime-libs/first-reply-engine-v2.mjs`  
 **AI:** OFF — deterministic templates only  
 **Delivery:** manager draft for manual copy — never auto-sent to customer
@@ -26,7 +26,11 @@ Produce a concise, natural, service-aware first reply from Lead Semantic Model v
 
 | Field | Meaning |
 |-------|---------|
-| `first_reply_version` | `sm-reply-v2.0` |
+| `first_reply_version` | `sm-reply-v2.1` |
+| `human_reply_style_version` | `sm-human-v1.0` |
+| `meaningful_theme` | theme code — see [MEANINGFUL-COMMENT-BRANCHING-v1.md](MEANINGFUL-COMMENT-BRANCHING-v1.md) |
+| `quality_linter_ok` | boolean — see [FIRST-REPLY-QUALITY-LINTER-v1.md](FIRST-REPLY-QUALITY-LINTER-v1.md) |
+| `quality_linter_failures` | linter failure codes when blocked |
 | `first_reply_mode` | `normal` / `test_suppressed` / `contact_suppressed` |
 | `first_reply_subject` | short topic label |
 | `first_reply_text` | copy-ready draft |
@@ -53,8 +57,22 @@ Produce a concise, natural, service-aware first reply from Lead Semantic Model v
 - `is_probable_test` → `test_suppressed`, no customer draft
 - Missing/damaged critical contact → `contact_suppressed`, manager warning
 
+## v2.1 / Human Reply Style (Phase 3E.2.1)
+
+v2.1 keeps v2.0 invariants but adds:
+
+- **Human Reply Style v1** — natural Оля voice; no system narration ([HUMAN-REPLY-STYLE-v1.md](HUMAN-REPLY-STYLE-v1.md))
+- **Meaningful comment branching** — deterministic theme codes change ack/questions ([MEANINGFUL-COMMENT-BRANCHING-v1.md](MEANINGFUL-COMMENT-BRANCHING-v1.md))
+- **Quality linter** — fail → `first_reply_ready=false` ([FIRST-REPLY-QUALITY-LINTER-v1.md](FIRST-REPLY-QUALITY-LINTER-v1.md))
+- **Silent known-info guard** — suppress questions without telling the customer ([KNOWN-INFORMATION-GUARD-v1.md](KNOWN-INFORMATION-GUARD-v1.md))
+
+Harness: `evidence/phase3e2-1/` — 64/64 PASS (includes reply + delivery fail-closed models).
+
 ## Related
 
+- [HUMAN-REPLY-STYLE-v1.md](HUMAN-REPLY-STYLE-v1.md)
+- [MEANINGFUL-COMMENT-BRANCHING-v1.md](MEANINGFUL-COMMENT-BRANCHING-v1.md)
+- [FIRST-REPLY-QUALITY-LINTER-v1.md](FIRST-REPLY-QUALITY-LINTER-v1.md)
 - [KNOWN-INFORMATION-GUARD-v1.md](KNOWN-INFORMATION-GUARD-v1.md)
 - [MANAGER-CARD-v2.4-CONTRACT-v1.md](MANAGER-CARD-v2.4-CONTRACT-v1.md)
 - [FIRST-REPLY-RULES-v1.md](FIRST-REPLY-RULES-v1.md) (extended by this engine)

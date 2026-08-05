@@ -11,18 +11,20 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | **PHASE 3E.2 — FIRST REPLY ENGINE V2** (3E.1 COMPLETE; harness 59/59; live reply fixtures paced; operator copy acceptance pending) |
-| **Active stage** | `sm-parser-v3.3` / `sm-reply-v2.0` / `sm-msg-v2.4` / AI OFF; pending buttons `✅ Обработано` / `🚫 Спам` |
-| **Runtime** | External n8n — Operational.dev **active** (`xSnXPy8cEHoZw6xG`, **45** nodes, Parser 3.3 + Reply v2); Admin.dev **active** (`wLrLp4WQHm1VJmxz`, **59** nodes); Sales-Manager-v2 **inactive** (`h8I2Tl2yl4uzhUnB`) |
+| **Status** | **PHASE 3E.2.1 — HUMAN REPLY STYLE + DELIVERY FAIL-CLOSED** (3E.2 + 3E.1 COMPLETE; harness 64/64; operator copy acceptance **ATTENTION**) |
+| **Active stage** | `sm-parser-v3.3` / `sm-reply-v2.1` / `sm-human-v1.0` / `sm-msg-v2.4` / AI OFF; delivery fail-closed reconciliation |
+| **Runtime** | External n8n — Operational.dev **active** (`xSnXPy8cEHoZw6xG`, **45** nodes, Parser 3.3 + Reply v2.1); Admin.dev **active** (`wLrLp4WQHm1VJmxz`, **59** nodes); Sales-Manager-v2 **inactive** (`h8I2Tl2yl4uzhUnB`) |
 | **Live parity vs Sales-Manager-v2** | **CUT OVER** — Operational.dev replaced v2 for intake; v2 preserved inactive; filter \`labelIds\` parity confirmed |
 | **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C–3D.3 evidence under `evidence/phase3*` |
 | **Registry** | status **planned** unchanged — promotion to active requires **separate governance gate** (`REGISTRY_STATUS_PROMOTION_PENDING`) |
 | **ATLAS** | Recommendation only — ORG-0003 / PER-0001 / PER-0010 / PER-0011; **no** new IDs |
-| **Next** | Operator visual copy acceptance for First Reply v2; then pending-lead reminders (separate charter) |
-| **AI** | **OFF** — `ai_enabled=false`; no AI ON claim in Phase 3E.2 |
+| **Next** | Operator visual copy acceptance for Human Reply Style v1; then pending-lead reminders (separate charter) |
+| **AI** | **OFF** — `ai_enabled=false`; no AI ON claim in Phase 3E.2.1 |
 | **Product layer** | [product/](product/) |
+| **Evidence 3E.2.1** | [evidence/phase3e2-1/](evidence/phase3e2-1/) |
 | **Evidence 3E.2** | [evidence/phase3e2/](evidence/phase3e2/) |
 | **Evidence 3E.1** | [evidence/phase3e1/](evidence/phase3e1/) · closed — operator visual A–F PASS |
+| **Architecture 3E.2.1** | [HUMAN-REPLY-STYLE-v1.md](architecture/HUMAN-REPLY-STYLE-v1.md) · [MEANINGFUL-COMMENT-BRANCHING-v1.md](architecture/MEANINGFUL-COMMENT-BRANCHING-v1.md) · [FIRST-REPLY-QUALITY-LINTER-v1.md](architecture/FIRST-REPLY-QUALITY-LINTER-v1.md) · [DELIVERY-FAIL-CLOSED-RECONCILIATION-v1.md](architecture/DELIVERY-FAIL-CLOSED-RECONCILIATION-v1.md) |
 | **Architecture 3E.2** | [FIRST-REPLY-ENGINE-v2.md](architecture/FIRST-REPLY-ENGINE-v2.md) · [KNOWN-INFORMATION-GUARD-v1.md](architecture/KNOWN-INFORMATION-GUARD-v1.md) · [MANAGER-CARD-v2.4-CONTRACT-v1.md](architecture/MANAGER-CARD-v2.4-CONTRACT-v1.md) |
 | **Architecture 3E.1** | [LEAD-SEMANTIC-MODEL-v1.md](architecture/LEAD-SEMANTIC-MODEL-v1.md) · [PARSER-3.3-CONTRACT-v1.md](architecture/PARSER-3.3-CONTRACT-v1.md) · [FIRST-REPLY-RULES-v1.md](architecture/FIRST-REPLY-RULES-v1.md) |
 | **Evidence 3D.8.3** | [evidence/phase3d8-3/](evidence/phase3d8-3/) · [reports/REPORT-iseo-sales-manager-bot-phase3d8-3-button-label-polish-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3d8-3-button-label-polish-v1.md) |
@@ -189,6 +191,8 @@
 | **Phase 3D.8** | Product baseline, recovery receipts, button forensic/repair contract, Parser 3.3 research | **COMPLETE** (buttons/attribution/labels); research superseded by 3E.1 |
 | **Phase 3D.8.1–3** | Live callbacks, actor attribution, short button labels | **COMPLETE** |
 | **Phase 3E.1** | Parser 3.3 + Lead Semantic Model + `sm-msg-v2.3` | **HARNESS COMPLETE (46/46); live semantic PENDING** |
+| **Phase 3E.2** | First Reply Engine v2 (`sm-reply-v2.0`) | **COMPLETE** (superseded by 3E.2.1 reply version) |
+| **Phase 3E.2.1** | Human Reply Style v1 + meaningful comment branching + quality linter + delivery fail-closed reconciliation | **HARNESS COMPLETE (64/64); operator copy acceptance ATTENTION** |
 | Next form iteration | Per `MULTI-FORM-TEST-PLAN-v1` | **not opened** |
 | Live rename | After clean-lead acceptance | **deferred** |
 | Registry promotion | Separate governance charter | **not opened** |
@@ -218,7 +222,7 @@
 
 ---
 
-*Last updated: 2026-08-05 — Phase 3E.1 Parser 3.3 / Lead Semantic Model / sm-msg-v2.3.*
+*Last updated: 2026-08-05 — Phase 3E.2.1 Human Reply Style v1 / delivery fail-closed / sm-reply-v2.1.*
 
 
 ## Phase 3D.5.1 — Access registry population and SoT repair

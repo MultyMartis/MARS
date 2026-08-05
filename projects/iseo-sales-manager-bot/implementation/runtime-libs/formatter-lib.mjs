@@ -256,7 +256,7 @@ export function buildCardText(j) {
     .map((s) => s.trim())
     .filter(Boolean)
     .join(', ');
-  const nextStep = String(j.manager_recommendation || '').trim();
+  const nextStep = String(j.next_step || j.manager_recommendation || '').trim();
   const interest = resolveInterestLabel(j);
   const qualityLabel = resolveQualityLabel(j);
   const altValue = String(j.alternative_contact_value || '').trim();
@@ -352,11 +352,11 @@ export function buildCardText(j) {
     || (!replyText && !replyReady);
 
   if (replyOmittedForTest) {
-    lines.push('Черновик ответа не сформирован: тестовая заявка.');
+    lines.push('⚠️ Готовый ответ не сформирован: тестовая заявка.');
     lines.push('Ответ клиенту автоматически не отправляется.');
   } else if (noContact) {
-    lines.push('Контактные данные требуют проверки.');
-    lines.push('⚠️ Готовый ответ не сформирован: нет надёжных контактных данных для связи.');
+    // Warning once only — next_step already covers "Проверить контактные данные."
+    lines.push('⚠️ Готовый ответ не сформирован: нет надёжного способа связи.');
     lines.push('Ответ клиенту автоматически не отправляется.');
   } else if (replyText) {
     lines.push('✉️ Ответ клиенту — нажмите, чтобы скопировать');

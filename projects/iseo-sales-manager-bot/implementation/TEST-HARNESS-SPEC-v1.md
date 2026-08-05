@@ -1,9 +1,13 @@
 # TEST HARNESS SPEC v1
 
 **Product:** i-SEO Sales Manager Bot  
-**Phase:** 3A  
+**Phase:** 3A (+ later harnesses under `implementation/harness/`)  
 **Source fixtures:** SANDBOX-TEST-PLAN-v1 F01–F21  
 **Rule:** synthetic only — no real unread Gmail, no real clients, no production labels
+
+### Phase 3E.2.1 harness
+
+`node implementation/harness/phase3e21-harness.mjs` — delivery fail-closed + Human Reply Style + regressions → **64/64 PASS** (see `evidence/phase3e2-1/HARNESS-RESULTS-v1.md`).
 
 ---
 

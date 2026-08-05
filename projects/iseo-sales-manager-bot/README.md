@@ -4,7 +4,7 @@
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
-**Status:** Phase 3E.2 — First Reply Engine **`sm-reply-v2.0`** + manager card **`sm-msg-v2.4`**; Parser **`sm-parser-v3.3`** (3E.1 COMPLETE); harness 59/59 PASS; AI OFF; drafts are manager-copy only
+**Status:** Phase 3E.2.1 — First Reply Engine **`sm-reply-v2.1`** + Human Reply Style **`sm-human-v1.0`** + manager card **`sm-msg-v2.4`**; Parser **`sm-parser-v3.3`** (3E.1 COMPLETE); harness 64/64 PASS; AI OFF; drafts are manager-copy only; operator copy acceptance **ATTENTION**
 
 ---
 
@@ -50,9 +50,11 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 | Operational index | [OPERATIONAL-INDEX.md](OPERATIONAL-INDEX.md) |
 | Product manual layer | [product/](product/) |
 | Parser 3.3 architecture | [architecture/PARSER-3.3-CONTRACT-v1.md](architecture/PARSER-3.3-CONTRACT-v1.md) · [LEAD-SEMANTIC-MODEL-v1.md](architecture/LEAD-SEMANTIC-MODEL-v1.md) · [FIRST-REPLY-RULES-v1.md](architecture/FIRST-REPLY-RULES-v1.md) |
-| First Reply Engine v2 | [architecture/FIRST-REPLY-ENGINE-v2.md](architecture/FIRST-REPLY-ENGINE-v2.md) · [KNOWN-INFORMATION-GUARD-v1.md](architecture/KNOWN-INFORMATION-GUARD-v1.md) · [MANAGER-CARD-v2.4-CONTRACT-v1.md](architecture/MANAGER-CARD-v2.4-CONTRACT-v1.md) |
+| First Reply Engine v2.1 + Human Reply Style v1 | [architecture/FIRST-REPLY-ENGINE-v2.md](architecture/FIRST-REPLY-ENGINE-v2.md) · [architecture/HUMAN-REPLY-STYLE-v1.md](architecture/HUMAN-REPLY-STYLE-v1.md) · [architecture/MEANINGFUL-COMMENT-BRANCHING-v1.md](architecture/MEANINGFUL-COMMENT-BRANCHING-v1.md) · [architecture/FIRST-REPLY-QUALITY-LINTER-v1.md](architecture/FIRST-REPLY-QUALITY-LINTER-v1.md) · [architecture/KNOWN-INFORMATION-GUARD-v1.md](architecture/KNOWN-INFORMATION-GUARD-v1.md) · [architecture/MANAGER-CARD-v2.4-CONTRACT-v1.md](architecture/MANAGER-CARD-v2.4-CONTRACT-v1.md) |
+| Delivery fail-closed (3E.2.1) | [architecture/DELIVERY-FAIL-CLOSED-RECONCILIATION-v1.md](architecture/DELIVERY-FAIL-CLOSED-RECONCILIATION-v1.md) |
 | Parser 3.3 research (implemented) | [research/parser-3.3/](research/parser-3.3/) |
 | Phase 3E.2 evidence | [evidence/phase3e2/](evidence/phase3e2/) |
+| Phase 3E.2.1 evidence | [evidence/phase3e2-1/](evidence/phase3e2-1/) |
 | Phase 3E.1 evidence | [evidence/phase3e1/](evidence/phase3e1/) |
 | Phase 3D.8 evidence | [evidence/phase3d8/](evidence/phase3d8/) |
 | Phase 3D.8.1 evidence | [evidence/phase3d8-1/](evidence/phase3d8-1/) |
@@ -96,7 +98,7 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 **Resolved in Phase 3D.4:** Olya enrolled in `ACCESS_CONTROL moderator (legacy CONFIG fallback retained) (hash **E6714550214106BA**, not admin); role-aware manager `/start`/`/help`; parser **`sm-parser-v3.2`** (messenger/site split, contact inference, comment «в тг», source page normalization); formatter **`sm-msg-v2.1`** (reduced emoji density); `knowledge/WEBSITE-FORM-FORMATS-v1.md` with free-audit record; synthetic callback acceptance PASS — **live Olya `/start`/`/help` pending**.
 **Resolved in Phase 3D.6 / 3D.6.1:** `/my_status` for public/pending/moderator/Admin/revoked/blocked; grant/revoke Telegram notification branch with ACCESS_EVENTS delivery events and non-rollback failure boundary. Live hotfix `3d6b-my-status-code-mode` fixed Code-node mode (`runOnceForAllItems`). Real non-Admin `/my_status` accepted by operator. Direct grant/revoke notification delivery remains SAFE UNKNOWN without independent visual proof. Harness **31/31 PASS**.
 **Phase 3D.8.x:** product/recovery baseline; action buttons + actor attribution + short labels COMPLETE.  
-**Phase 3E.1:** Parser **3.3** + Lead Semantic Model + first-reply consistency **implemented** (`sm-parser-v3.3` / `sm-msg-v2.3`); local harness **46/46 PASS**; live semantic acceptance **PENDING**. Reminders, AI ON pilot and reusable fleet deployment remain **not implemented**.
+**Phase 3E.2 / 3E.2.1:** First Reply Engine **v2.1** + **Human Reply Style v1** (`sm-human-v1.0`) — natural Оля drafts, silent known-info guard, meaningful comment branching, quality linter; delivery fail-closed reconciliation; local harness **64/64 PASS**; operator copy acceptance **ATTENTION**. Reminders, AI ON pilot and reusable fleet deployment remain **not implemented**.
 
 ---
 

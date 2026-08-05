@@ -62,3 +62,13 @@ If a new pending card has no buttons, inspect Format output before changing Admi
 6. Operator copy acceptance may still be PENDING — see `evidence/phase3e2/LIVE-FIRST-REPLY-ACCEPTANCE-v1.md`.
 7. Pending-lead reminders are **not** in this phase.
 
+## Phase 3E.2.1 — delivery fail-closed + Human Reply Style v1
+
+1. If managers receive **identical** cards repeatedly for one lead: deactivate Operational.dev immediately; keep Admin active; keep v2 inactive; do **not** treat Sheets quota as permission to resend.
+2. Post-patch: ledger read error / claim failure → **zero** Telegram sends; CONFIG secondary `tg_delivered:*` guards exist.
+3. Versions: `sm-reply-v2.1` + `sm-human-v1.0`; drafts must not narrate parser/guard logic.
+4. Local: `node implementation/harness/phase3e21-harness.mjs` → **64/64 PASS**.
+5. Evidence: `evidence/phase3e2-1/`; operator human-copy acceptance packet — **PENDING** visual OK.
+6. Under Sheets quota, claim path correctly blocks send; wait for API recovery before re-proving dual-card live delivery.
+7. Do not restore Olya/Nikita; do not enable AI; do not create workflows; do not implement reminders in this phase.
+
