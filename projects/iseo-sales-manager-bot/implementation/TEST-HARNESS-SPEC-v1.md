@@ -334,3 +334,7 @@ Event-label map (including `telegram_sent` / unknown fallback) + Admin/moderator
 ### Phase 3G.1 harness
 
 `node implementation/harness/phase3g1-harness.mjs` — approved templates, personalization, AI-off/assist validation, regressions → **100/100 PASS** (`evidence/phase3g1/HARNESS-RESULTS-v1.md`).
+
+### Phase 3G.1.1 harness band
+
+Fail-closed personalization subset verifying live profile seed repair: **9/9 PASS** — missing name, invalid `@` name, disabled flag, no display-name/nickname/username fallbacks, ready ADMIN_A/MOD_A profile render. Live T1/T3 acceptance inject complements offline band. Evidence: `evidence/phase3g1-1/HARNESS-RESULTS-v1.md`.

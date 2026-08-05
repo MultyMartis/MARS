@@ -20,4 +20,4 @@ One business lead lifecycle; multiple delivery/recipient drafts do not multiply 
 
 ## Live apply
 
-Storage schema apply / live patch: pending or in progress until operator evidence filled.
+Storage schema applied. Phase 3G.1.1 acceptance used **TEST_LEADS** sanitized mirror rows (2 fixtures) — not production LEADS business rows. See `evidence/phase3g1-1/TEST-DELIVERY-IDEMPOTENCY-v1.md`.
