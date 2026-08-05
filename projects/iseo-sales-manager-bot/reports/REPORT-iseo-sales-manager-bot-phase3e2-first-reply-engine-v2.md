@@ -169,11 +169,11 @@ No PII/secrets/Telegram IDs/workbook IDs/raw emails committed. Live private tool
 
 ## 45. Commit
 
-`feat(iseo-sales-manager-bot): add context-aware first reply engine` (this wave)
+`01a65015` — `feat(iseo-sales-manager-bot): add context-aware first reply engine`
 
 ## 46. Push
 
-To `origin/mars/canonical-post-recovery` without force (this wave)
+Pushed without force to `origin/mars/canonical-post-recovery` (`301e7970..01a65015`).
 
 ## 47. Risks
 
