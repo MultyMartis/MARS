@@ -159,3 +159,9 @@ Empty polls have live proof of zero Sheets writes. Final schedule is `minutesInt
 ## Phase 3F.1 — Pending leads commands + daily reminder engine
 
 Admin.dev (same ID, 59→79 nodes) gained a read-only pending-lead view (`/pending_count`, `/pending_leads`, `/pending_leads_test`) and a daily reminder engine (`/reminder_status`, `/reminder_on`, `/reminder_off`, `/reminder_time`, `/reminder_timezone`, `/reminder_min`; internal 15-minute schedule trigger). Pending resolution is `manager_status` primary / `lifecycle_status` secondary / legacy-defaults-to-pending. `REMINDER_DELIVERIES` is a new additive Sheets tab. Offline harness 73/73 PASS; live command acceptance PASS across admin/moderator/revoked; a controlled reminder live exercise reached ACCESS_CONTROL and failed closed under Sheets quota (zero sends, correct behavior). Production reminders remain `enabled=false`. Operational.dev, access state, and AI OFF are unchanged. See `evidence/phase3f1/` and `reports/REPORT-iseo-sales-manager-bot-phase3f1-pending-leads-and-reminders-v1.md`.
+
+
+## Phase 3F.2
+
+Clean production ledger (`LEADS`), immutable lead events, stats epoch 05.08.2026, callback lookup v2, private external reporting workbook. Reminders remain OFF until explicit operator activation.
+

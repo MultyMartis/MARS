@@ -1,3 +1,4 @@
+<!-- Phase 3F.2 clean ledger active 2026-08-05; reminders OFF; reporting private -->
 # i-SEO Sales Manager Bot — Operational Index
 
 **project_id:** `iseo-sales-manager-bot`  
@@ -14,6 +15,7 @@
 | **Status** | **COMPLETE — COMMANDS AND REMINDER ENGINE READY; OPERATOR ACTIVATION PENDING** (Phase 3F.1); Phase 3E.2 closed `COMPLETE — HUMAN FIRST REPLY ENGINE READY` |
 | **Active stage** | `sm-parser-v3.3` / `sm-reply-v2.1` / `sm-human-v1.0` / `sm-msg-v2.4` / `sm-pending-reminder-v1.0` / AI OFF |
 | **Runtime** | External n8n — Operational.dev **active, unchanged** (45 nodes, `minutesInterval=2`); Admin.dev **active, 59→79 nodes** (pending commands + reminder engine); rollback workflow inactive |
+| **Phase 3F.2** | Clean production ledger + reporting workbook; callbacks v2; reminders OFF |
 | **Live parity vs Sales-Manager-v2** | **CUT OVER** — Operational.dev replaced v2 for intake; v2 preserved inactive; filter \`labelIds\` parity confirmed |
 | **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C–3D.3 evidence under `evidence/phase3*` |
 | **Registry** | status **planned** unchanged — promotion to active requires **separate governance gate** (`REGISTRY_STATUS_PROMOTION_PENDING`) |
@@ -271,3 +273,4 @@
 - Architecture: `architecture/PENDING-LEADS-VIEW-v1.md` · `architecture/PENDING-REMINDER-v1.md` · `architecture/REMINDER-DELIVERY-IDEMPOTENCY-v1.md`.
 - Implementation: `implementation/PENDING-COMMANDS-v1.md` · `implementation/REMINDER-CONFIG-COMMANDS-v1.md`.
 - Evidence: `evidence/phase3f1/` · Report: `reports/REPORT-iseo-sales-manager-bot-phase3f1-pending-leads-and-reminders-v1.md`.
+

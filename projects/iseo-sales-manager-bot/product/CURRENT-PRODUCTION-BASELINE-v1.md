@@ -1,12 +1,21 @@
 # CURRENT PRODUCTION BASELINE v1
 
-**Срез:** Phase 3F.1, 2026-08-05. **Статус:** `COMPLETE — COMMANDS AND REMINDER ENGINE READY; OPERATOR ACTIVATION PENDING`. Phase 3E.2 закрыт операторским подтверждением (`PHASE 3E.2 COMPLETE — HUMAN FIRST REPLY ENGINE READY`); pending-команды и reminder-движок реализованы; reminders выключены по умолчанию; AI OFF.
+**Срез:** Phase 3F.2, 2026-08-05. **Статус:** `COMPLETE — CLEAN LEDGER READY; OPERATOR REPORTING ACCEPTANCE PENDING`.
 
 | Контур | Workflow ID | Active | Nodes | Роль |
 |---|---|---:|---:|---|
 | Sales-Manager-v2 | `h8I2Tl2yl4uzhUnB` | false | — | rollback; не активировать без отдельного решения |
 | i-SEO Sales Manager - Operational.dev | `[external]` | true | 45 | unchanged in 3F.1; `minutesInterval=2`; single-flight 4m; bounded ledger/access/claim retries; AI OFF |
 | i-SEO Sales Manager - Admin.dev | `wLrLp4WQHm1VJmxz` | true | 79 (было 59) | `message` + `callback_query`, ACCESS_CONTROL, actor attribution, archive commands, pending-lead view (3F.1), daily reminder engine (3F.1) |
+
+
+## Phase 3F.2 — Clean production ledger
+
+- Production stats epoch display **05.08.2026**; exact epoch = first real lead Gmail `internalDate` (Europe/Moscow).
+- Authoritative table `LEADS` (generation v2); legacy mixed corpus archived/excluded.
+- Callback lookup contract v2: canonical dual-FNV token; token persisted before CLEAN write.
+- External reporting workbook «i-SEO — Учёт лидов и статистика» (private); backend remains SoT.
+- Reminders remain OFF; AI OFF; Sales-Manager-v2 inactive.
 
 ## CONFIG
 
@@ -46,3 +55,4 @@ Empty poll BEFORE: one CONFIG write every 30 seconds (about 120/hour). AFTER liv
 - Offline harness `73/73 PASS` (`evidence/phase3f1/HARNESS-RESULTS-v1.md`).
 - Controlled reminder live exercise reached ACCESS_CONTROL and correctly failed closed under a Sheets quota condition — zero sends; production reminders remain `enabled=false`.
 - Access unchanged: active admin (Андрей), active moderator (Мопс); Оля/Никита remain revoked.
+
