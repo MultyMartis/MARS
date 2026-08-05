@@ -1,14 +1,16 @@
 /**
- * Reply Profile Contract v1 — approved client-facing sender names.
- * Version: recipient_personalization_version=iseo-recipient-name-v1.0
+ * Reply Profile Contract v1.1 — numbered profiles + approved client-facing names.
+ * Version: recipient_personalization_version=iseo-recipient-name-v1.1
  * Never derive client-facing names from Telegram display/username/actor/role.
+ * reply_profile_number is immutable after assignment; independent of row order / Telegram ID.
  */
 
-export const RECIPIENT_PERSONALIZATION_VERSION = 'iseo-recipient-name-v1.0';
-export const REPLY_PROFILE_VERSION = 'iseo-recipient-name-v1.0';
+export const RECIPIENT_PERSONALIZATION_VERSION = 'iseo-recipient-name-v1.1';
+export const REPLY_PROFILE_VERSION = 'iseo-recipient-name-v1.1';
 export const DEFAULT_REPLY_COMPANY_NAME = 'INTLSEO';
 export const REPLY_SENDER_NAME_MAX_LEN = 32;
 export const REPLY_SENDER_NAME_MIN_LEN = 2;
+export const REPLY_PROFILES_PAGE_SIZE = 10;
 
 /** Approved initial mapping (internal display label → client-facing first name). */
 export const APPROVED_INITIAL_SENDER_NAMES = Object.freeze({
@@ -17,6 +19,14 @@ export const APPROVED_INITIAL_SENDER_NAMES = Object.freeze({
   'Оля': 'Оля',
   'Никита': 'Никита',
 });
+
+/** Stable initial profile numbers — never renumber. */
+export const APPROVED_INITIAL_PROFILE_NUMBERS = Object.freeze([
+  { profile_number: 1, match: 'andrej', reply_sender_name: 'Андрей', label: 'ADMIN_A' },
+  { profile_number: 2, match: 'ola', reply_sender_name: 'Оля', label: 'MOD_B_REVOKED' },
+  { profile_number: 3, match: 'mops', reply_sender_name: 'Михаил', label: 'MOD_A' },
+  { profile_number: 4, match: 'nikita', reply_sender_name: 'Никита', label: 'MOD_C_REVOKED' },
+]);
 
 const ROLE_LABELS = new Set([
   'admin', 'administrator', 'moderator', 'модератор', 'админ', 'администратор',
@@ -27,17 +37,68 @@ const COMPANY_TOKENS = new Set([
   'intlseo', 'i-seo', 'iseo', 'seo', 'компания', 'company', 'агентство',
 ]);
 
+export function roleLabelRu(role) {
+  const r = String(role || '').trim().toLowerCase();
+  if (r === 'admin') return 'Администратор';
+  if (r === 'moderator') return 'Модератор';
+  if (r === 'public') return 'Публичный';
+  if (r === 'blocked') return 'Заблокирован';
+  return r ? String(role) : '—';
+}
+
+export function statusLabelRu(status) {
+  const s = String(status || '').trim().toLowerCase();
+  if (s === 'active') return 'Активен';
+  if (s === 'revoked') return 'Отозван';
+  if (s === 'pending') return 'Ожидает';
+  if (s === 'blocked') return 'Заблокирован';
+  return s ? String(status) : '—';
+}
+
+export function accessLabelRu(status) {
+  const s = String(status || '').trim().toLowerCase();
+  if (s === 'active') return 'Активен';
+  if (s === 'revoked') return 'Доступ отозван';
+  if (s === 'pending') return 'Ожидает';
+  if (s === 'blocked') return 'Заблокирован';
+  return s ? String(status) : '—';
+}
+
+export function parseProfileNumber(raw) {
+  const s = String(raw ?? '').trim();
+  if (!/^\d+$/.test(s)) return { ok: false, reason: 'not_integer', value: null };
+  const n = Number(s);
+  if (!Number.isInteger(n) || n < 1) return { ok: false, reason: 'not_positive', value: null };
+  return { ok: true, reason: 'ok', value: n };
+}
+
+export function getProfileNumber(row = {}) {
+  const raw = row.reply_profile_number ?? row.profile_number;
+  const parsed = parseProfileNumber(raw);
+  return parsed.ok ? parsed.value : null;
+}
+
+export function matchApprovedSeedKey(displayName) {
+  const s = String(displayName || '').trim();
+  if (/андрей/i.test(s)) return 'andrej';
+  if (s === 'Мопс' || /^мопс$/i.test(s)) return 'mops';
+  if (/ola4seo/i.test(s) || s === 'Оля' || /^оля$/i.test(s)) return 'ola';
+  if (/никита/i.test(s)) return 'nikita';
+  return null;
+}
+
 /**
  * Validate an approved client-facing first name.
- * Requires a normal human first name (letters, optional hyphen/apostrophe/space for compound given names).
- * Rejects @, URLs, phones, emoji, role labels, company names, surnames-as-full-names are NOT auto-shortened —
- * multi-token names fail unless explicitly a known compound given name form with <=2 tokens of letters.
+ * One token only. Rejects @, URLs, phones, emoji, role labels, company names, multi-token full names.
  */
 export function validateReplySenderName(raw) {
   const warnings = [];
   const name = String(raw ?? '').trim().replace(/\s+/g, ' ');
   if (!name) {
     return { ok: false, reason: 'empty', normalized: '', warnings };
+  }
+  if (/\r|\n/.test(String(raw ?? ''))) {
+    return { ok: false, reason: 'line_break', normalized: name, warnings };
   }
   if (name.length < REPLY_SENDER_NAME_MIN_LEN) {
     return { ok: false, reason: 'too_short', normalized: name, warnings };
@@ -57,11 +118,10 @@ export function validateReplySenderName(raw) {
   if (/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}]/u.test(name)) {
     return { ok: false, reason: 'contains_emoji', normalized: name, warnings };
   }
-  if (/[<>{}[\]\\|^=+#*$%~`]/.test(name)) {
+  if (/[<>{}[\]\\|^=+#*$%~`.,;:!?]/.test(name)) {
     return { ok: false, reason: 'forbidden_punctuation', normalized: name, warnings };
   }
-  // Allow letters (Latin/Cyrillic), hyphen, apostrophe, single internal spaces
-  if (!/^[A-Za-zА-Яа-яЁё]+(?:[\-'][A-Za-zА-Яа-яЁё]+)?(?:\s[A-Za-zА-Яа-яЁё]+(?:[\-'][A-Za-zА-Яа-яЁё]+)?)?$/.test(name)) {
+  if (!/^[A-Za-zА-Яа-яЁё]+(?:[\-'][A-Za-zА-Яа-яЁё]+)?$/.test(name)) {
     return { ok: false, reason: 'invalid_charset', normalized: name, warnings };
   }
   const lower = name.toLowerCase();
@@ -72,13 +132,7 @@ export function validateReplySenderName(raw) {
     return { ok: false, reason: 'company_name', normalized: name, warnings };
   }
   const tokens = name.split(/\s+/);
-  // Full name (3+ tokens) or Surname+Given without Admin correction → reject (do not auto-shorten)
-  if (tokens.length >= 3) {
-    return { ok: false, reason: 'looks_like_full_name', normalized: name, warnings };
-  }
-  // Two-token: allow only if both look like given-name forms (short, no typical surname endings required —
-  // but require Admin intent: treat 2-token as full name requiring correction unless hyphenated single token)
-  if (tokens.length === 2) {
+  if (tokens.length >= 2) {
     return { ok: false, reason: 'looks_like_full_name', normalized: name, warnings };
   }
   return { ok: true, reason: 'ok', normalized: name, warnings };
@@ -95,6 +149,12 @@ export function parseBoolFlag(v, defaultValue = false) {
   return defaultValue;
 }
 
+export function isCardRecipient(row = {}) {
+  const role = String(row.role || '').trim().toLowerCase();
+  const status = String(row.status || '').trim().toLowerCase();
+  return (role === 'admin' || role === 'moderator') && status === 'active';
+}
+
 /**
  * Resolve recipient reply profile from an ACCESS_CONTROL-like row.
  * Never falls back to display_name / username / actor.
@@ -106,6 +166,7 @@ export function resolveRecipientReplyProfile(row = {}) {
   const hasValidName = validation.ok;
   const enabled = hasValidName && enabledFlag;
   return {
+    reply_profile_number: getProfileNumber(row),
     reply_sender_name: hasValidName ? validation.normalized : '',
     reply_sender_enabled: enabled,
     reply_company_name: company,
@@ -130,11 +191,9 @@ export function missingSenderNameWarning() {
   return '⚠️ Не задано имя для ответа клиенту. Обратитесь к администратору.';
 }
 
-/**
- * Build additive ACCESS_CONTROL field defaults for migration.
- */
 export function replyProfileFieldDefaults() {
   return {
+    reply_profile_number: '',
     reply_sender_name: '',
     reply_sender_enabled: false,
     reply_company_name: DEFAULT_REPLY_COMPANY_NAME,
@@ -144,41 +203,60 @@ export function replyProfileFieldDefaults() {
   };
 }
 
-/**
- * Seed plan for approved initial names (does not restore revoked users).
- * Matching is by internal display_name only when operator-approved.
- */
 export function approvedSeedPlan() {
-  return [
-    { internal_display_name: 'Андрей', reply_sender_name: 'Андрей', reply_sender_enabled: true },
-    { internal_display_name: 'Мопс', reply_sender_name: 'Михаил', reply_sender_enabled: true },
-    { internal_display_name: 'Оля', reply_sender_name: 'Оля', reply_sender_enabled: true, note: 'revoked_remain_ineligible' },
-    { internal_display_name: 'Никита', reply_sender_name: 'Никита', reply_sender_enabled: true, note: 'revoked_remain_ineligible' },
-  ];
+  return APPROVED_INITIAL_PROFILE_NUMBERS.map((p) => ({
+    profile_number: p.profile_number,
+    match: p.match,
+    label: p.label,
+    reply_sender_name: p.reply_sender_name,
+    reply_sender_enabled: p.match === 'andrej' || p.match === 'mops',
+    note: (p.match === 'ola' || p.match === 'nikita') ? 'revoked_remain_ineligible' : undefined,
+  }));
+}
+
+export function nextProfileNumber(rows) {
+  let max = 0;
+  for (const r of (Array.isArray(rows) ? rows : [])) {
+    const n = getProfileNumber(r);
+    if (n != null && n > max) max = n;
+  }
+  return max + 1;
 }
 
 export function formatReplyProfileCard(row, opts = {}) {
   const profile = resolveRecipientReplyProfile(row);
   const display = String(row.display_name || opts.internal_display_name || '—').trim() || '—';
-  const role = String(row.role || '').trim().toLowerCase();
-  const status = String(row.status || '').trim().toLowerCase();
-  const roleRu = role === 'admin' ? 'Админ' : (role === 'moderator' ? 'Модератор' : (role || '—'));
-  const statusRu = status === 'active' ? 'Активен'
-    : (status === 'revoked' ? 'Отозван'
-      : (status === 'pending' ? 'Ожидает' : (status || '—')));
-  const eligible = role === 'admin' || role === 'moderator'
-    ? (status === 'active' ? 'да' : 'нет (не активен)')
-    : 'нет';
-  const lines = [
+  const num = profile.reply_profile_number;
+  const lines = [];
+  if (opts.withNumberHeader && num != null) {
+    lines.push(`👤 Профиль ответа клиенту №${num}`, '');
+  }
+  lines.push(
     `Пользователь: ${display}`,
-    `Имя для клиента: ${profile.reply_sender_name || '—'}`,
+    `Имя в ответе: ${profile.reply_sender_name || '—'}`,
     `Персональный ответ: ${profile.reply_sender_enabled ? 'включён' : 'выключен'}`,
-    `Роль: ${roleRu}`,
-    `Статус доступа: ${statusRu}`,
-    `Получатель карточек: ${eligible}`,
-  ];
+    `Роль: ${roleLabelRu(row.role)}`,
+    `Доступ: ${accessLabelRu(row.status)}`,
+    `Получает карточки: ${isCardRecipient(row) ? 'да' : 'нет'}`,
+  );
+  if (opts.withExample && profile.reply_sender_name) {
+    lines.push('', 'Пример представления:', `"${introSentence(profile.reply_sender_name, profile.reply_company_name)}"`);
+  }
   if (!profile.validation.ok && String(row.reply_sender_name || '').trim()) {
-    lines.push(`Проверка имени: отклонено (${profile.validation.reason})`);
+    lines.push('Проверка имени: отклонено');
   }
   return lines.join('\n');
+}
+
+export function nameValidationErrorText(exampleNumber = 3) {
+  return [
+    'Укажите только имя, которое будет использоваться в сообщениях клиенту.',
+    '',
+    'Пример:',
+    `/reply_name_set ${exampleNumber} Михаил`,
+  ].join('\n');
+}
+
+export function adminOnlyCommandText() {
+  return 'Эта команда доступна только администратору.';
 }
