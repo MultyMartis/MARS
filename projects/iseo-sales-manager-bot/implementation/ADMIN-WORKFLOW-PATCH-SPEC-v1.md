@@ -254,3 +254,8 @@ Same workflow ID `wLrLp4WQHm1VJmxz` (Admin.dev only). Node count **59 → 79** (
 4. Authorization reuses the existing `Read Authorization Config` / ACCESS_CONTROL read already in the Admin graph — no second authorization read added for the new commands.
 5. No change to the callback graph (§Phase 3D.3/3D.8.x), lifecycle mutation, or archive (`/leads`) commands.
 6. Safe patch: deactivate Admin → PUT same ID → reactivate; keep Operational.dev unchanged (45 nodes); keep Sales-Manager-v2 inactive; keep `pending_reminders_enabled=false`.
+
+
+## 3F.2.1
+
+Patch same Admin ID: canonical `/leads` adapter, `/lead_history` route+handler+help, staff auth for archive/history, reporting lifecycle labels when Admin syncs.

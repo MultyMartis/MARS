@@ -165,3 +165,8 @@ Admin.dev (same ID, 59→79 nodes) gained a read-only pending-lead view (`/pendi
 
 Clean production ledger (`LEADS`), immutable lead events, stats epoch 05.08.2026, callback lookup v2, private external reporting workbook. Reminders remain OFF until explicit operator activation.
 
+
+
+## Phase 3F.2.1 (view & reporting repair)
+
+Repaired `/leads` LEADS field mapping, connected `/lead_history`, keyed reporting mapper, human source `Сайт i-seo.su`. See `reports/REPORT-iseo-sales-manager-bot-phase3f2-1-view-and-reporting-repair-v1.md`.

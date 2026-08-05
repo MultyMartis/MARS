@@ -14,3 +14,8 @@ Append-only immutable history for production leads.
 
 - `/lead_history <n>` — recent 10 events, no internal IDs/tokens/workbook refs.
 - Reporting workbook tab `История изменений` — employee-facing mirror (backend remains SoT).
+
+
+## 3F.2.1
+
+`/lead_history <n>` is wired on Admin.dev. Human labels required on Telegram + reporting mirrors.

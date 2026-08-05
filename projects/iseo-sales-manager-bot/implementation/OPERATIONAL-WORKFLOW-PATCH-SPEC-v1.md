@@ -400,3 +400,8 @@ Same Operational.dev patched in place, held inactive for the quiet window, then 
 - Proof exemption: `PHASE_3E2_3_FINAL_EXACTLY_ONCE_PROOF` + `final-proof.example`.
 
 Admin contour and access state unchanged; AI OFF; rollback workflow inactive. Live exactly-once proof PASS: claims=2, sendOk=2, stamps=2, five-poll resends=0. Gmail finalization now continues regular output after synthetic fake-ID failure; two CONFIG guards were reconciled without resend.
+
+
+## 3F.2.1
+
+Emit `source_display=Сайт i-seo.su` for website-form leads alongside `source_channel`. Do not alter parser 3.3 semantics.

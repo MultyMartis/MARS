@@ -274,3 +274,9 @@
 - Implementation: `implementation/PENDING-COMMANDS-v1.md` · `implementation/REMINDER-CONFIG-COMMANDS-v1.md`.
 - Evidence: `evidence/phase3f1/` · Report: `reports/REPORT-iseo-sales-manager-bot-phase3f1-pending-leads-and-reminders-v1.md`.
 
+
+
+### Phase 3F.2.1
+- Status: view/reporting repair applied; operator acceptance pending
+- Evidence: `evidence/phase3f2-1/`
+- Report: `reports/REPORT-iseo-sales-manager-bot-phase3f2-1-view-and-reporting-repair-v1.md`

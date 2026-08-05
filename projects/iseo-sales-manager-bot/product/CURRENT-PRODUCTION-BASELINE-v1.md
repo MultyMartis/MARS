@@ -56,3 +56,8 @@ Empty poll BEFORE: one CONFIG write every 30 seconds (about 120/hour). AFTER liv
 - Controlled reminder live exercise reached ACCESS_CONTROL and correctly failed closed under a Sheets quota condition — zero sends; production reminders remain `enabled=false`.
 - Access unchanged: active admin (Андрей), active moderator (Мопс); Оля/Никита remain revoked.
 
+
+
+## 3F.2.1 baseline delta
+
+Admin nodes include lead history path. Human source display active. Reporting schema reporting-v1.1 (readiness column additive). Operator acceptance pending for Telegram visuals.

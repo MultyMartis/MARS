@@ -321,3 +321,8 @@ Coverage groups:
 Business pending in the fixture snapshot: **4** (2 fresh leads + 1 legacy-compatible + 1 missing-timestamp); with tests included: **5**. Evidence: `evidence/phase3f1/HARNESS-RESULTS-v1.md`, `evidence/phase3f1/HARNESS-RESULTS-RAW.json`.
 
 Live command acceptance (separate from the offline harness): admin/moderator/revoked paths for `/pending_count`, `/pending_leads`, `/reminder_status`; invalid `/reminder_time` rejection; moderator denial on a config-class command. A controlled reminder schedule exercise reached the ACCESS_CONTROL read and failed closed under a live Sheets quota condition (zero sends) — see `evidence/phase3f1/CONTROLLED-REMINDER-LIVE-ACCEPTANCE-v1.md`.
+
+
+## 3F.2.1 harness band
+
+Checks cover archive adapter, history command, keyed reporting mapper, source display, callback token identity, pending/reminder regression. Evidence: `evidence/phase3f2-1/HARNESS-RESULTS-v1.md`.

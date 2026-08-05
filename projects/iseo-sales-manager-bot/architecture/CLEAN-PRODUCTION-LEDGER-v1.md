@@ -25,3 +25,8 @@ Required invariants for production rows: `is_real_lead=true`, `is_probable_test=
 ## Epoch boundary
 
 Human display start: **05.08.2026**. Exact ledger boundary: authoritative Gmail `internalDate` of the first real lead (Клиент A). See PRODUCTION-STATS-EPOCH-v1.
+
+
+## 3F.2.1 note
+
+Human-facing list/history adapters must read LEADS field names (`lifecycle_status`, `resolved_service_label`, `client_comment`, `source_display`). Do not assume legacy CLEAN `manager_status`/`service`/`summary` alone.

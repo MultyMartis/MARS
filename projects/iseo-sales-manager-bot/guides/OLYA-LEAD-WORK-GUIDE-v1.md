@@ -21,3 +21,10 @@ Human Reply Style is already operator-accepted and is not being redesigned. Duri
 ## Phase 3F.1 note
 
 A new read-only overview (`/pending_count`, `/pending_leads`) and an optional daily reminder now exist for active moderators/Admin. These do not change how you process a card — you still copy the reply and press **✅ Обработано** / **🚫 Спам** as before. Reminders are currently **switched off** in production; this guide will be updated separately if/when reminders are activated and if access is ever restored.
+
+
+## Архив и история (3F.2.1)
+
+- `/leads` — архивные карточки (без кнопок статуса)
+- `/lead_history <номер>` — история по номеру из `/leads`
+- Источник для форм сайта отображается как «Сайт i-seo.su»

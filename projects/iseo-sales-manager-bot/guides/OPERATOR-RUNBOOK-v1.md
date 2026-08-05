@@ -103,3 +103,8 @@ If a new pending card has no buttons, inspect Format output before changing Admi
 8. Offline harness: `node implementation/harness/phase3f1-harness.mjs` → **73/73 PASS**.
 9. Do not restore Оля/Никита, enable AI, or activate the rollback workflow as part of this phase.
 10. Current stop verdict: `COMPLETE — COMMANDS AND REMINDER ENGINE READY; OPERATOR ACTIVATION PENDING`.
+
+
+## 3F.2.1 acceptance commands
+
+As Admin: `/leads`, `/lead_history 1`, `/pending_count`, `/pending_leads`, `/reminder_status`, `/help`. Confirm source display, processed status, actor, reply text, reminders OFF.

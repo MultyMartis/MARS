@@ -21,3 +21,8 @@ User messages (no technical detail to moderators):
 - storage: `Не удалось проверить заявку. Попробуйте ещё раз через минуту.`
 - archived: `Эта карточка относится к архивному периоду и больше не изменяет рабочую статистику.`
 - missing: `Заявка не найдена в рабочем реестре. Обратитесь к администратору.`
+
+
+## 3F.2.1
+
+Callback contract unchanged; regression harness only. Do not reintroduce divergent FNV.

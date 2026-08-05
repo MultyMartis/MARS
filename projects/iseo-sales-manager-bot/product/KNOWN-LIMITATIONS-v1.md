@@ -24,3 +24,10 @@ Live call counts, safe real-lead recount, final two-recipient proof and five-pol
 - The controlled live acceptance window reached ACCESS_CONTROL and hit the same Sheets quota class documented since Phase 3E.2.2, correctly producing zero sends rather than a partial delivery. A full non-quota dual-recipient live send remains outstanding for a future operator-authorized activation window.
 - Fixture harness counters (business pending=4, tests excluded=1) reflect the offline fixture set, not the live production pending count at any given moment — see `evidence/phase3f1/PENDING-COUNT-ACCEPTANCE-v1.md`.
 - `REMINDER_DELIVERIES` is a new, currently empty production tab — no historical reminder data exists to migrate.
+
+
+## 3F.2.1
+
+- Continuous automatic reporting sync on every new lead remains partial; targeted keyed resync proven for CLIENT_A.
+- Operational dual-write CLEAN vs LEADS unification remains a known follow-up (not redesigned in 3F.2.1).
+- Operator live Telegram acceptance still required.
