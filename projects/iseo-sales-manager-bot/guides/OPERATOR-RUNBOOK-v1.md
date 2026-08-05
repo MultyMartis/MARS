@@ -119,5 +119,24 @@ As Admin after deploy: `/lead_history 1` (no `telegram_sent`; human delivery phr
 2. Approved names: ADMIN_A→Андрей; MOD_A→Михаил (never Мопс in client copy). Prepared Оля/Никита stay revoked/ineligible.
 3. Admin commands for names: `/reply_profiles`, `/reply_name_set`, enable/disable; moderators use `/my_reply_profile` only.
 4. AI stays OFF; reminders OFF; Sales-Manager-v2 inactive; no customer auto-send.
-5. Live patch / operator visual acceptance: **pending or in progress** — do not close 3G.1 cutover until FINAL-WORKFLOW-STATE and visual packet are filled.
-6. Evidence: `evidence/phase3g1/`.
+5. Live patch applied (3G.1); profile seed repair complete (3G.1.1). Operator **T1/T3 visual acceptance pending** — see Phase 3G.1.1 below.
+6. Evidence: `evidence/phase3g1/` · `evidence/phase3g1-1/`.
+
+## Phase 3G.1.1 — operator visual template acceptance
+
+**Verdict target:** `COMPLETE — LIVE PROFILES SEEDED; OPERATOR TEMPLATE ACCEPTANCE PENDING`
+
+### Checklist (do not press lifecycle buttons)
+
+1. Locate **latest** acceptance-set cards (not earlier empty-copy exploratory batches).
+2. **T1** as ADMIN_A — confirm `Меня зовут Андрей, компания INTLSEO` + site line + audit CTA; guidance outside `<pre>`.
+3. **T1** as MOD_A — confirm `Меня зовут Михаил, компания INTLSEO`; **`Мопс` must not appear** in client copy.
+4. **T3** as ADMIN_A — traffic-decline task summary + Андрей intro.
+5. **T3** as MOD_A — traffic-decline task summary + Михаил intro; **`Мопс`=0**.
+6. Admin: `/reply_profiles` — ADMIN_A/MOD_A enabled; revoked rows disabled.
+7. `/my_reply_profile` as ADMIN_A and MOD_A — names match seeded values.
+8. `/ai_status` — **OFF**.
+9. Do **not** press Обработано/Спам buttons on acceptance cards.
+10. Do **not** clean TEST_LEADS fixtures until visual sign-off recorded.
+
+Evidence: `evidence/phase3g1-1/` · Report: `reports/REPORT-iseo-sales-manager-bot-phase3g1-1-live-profile-and-template-acceptance-v1.md`.

@@ -1,16 +1,27 @@
-<!-- Phase 3G.1 first-contact standard 2026-08-06; harness PASS; live patch pending -->
+<!-- Phase 3G.1.1 live profile seed 2026-08-06; profiles seeded; operator template acceptance pending -->
+
+## Phase 3G.1.1 — Live reply profile seed + T1/T3 template acceptance
+
+**Status:** **LIVE PROFILES SEEDED**; **OPERATOR TEMPLATE ACCEPTANCE PENDING**; Admin **84** nodes; profiles seeded on ACCESS_CONTROL Q–V.
+
+- Defect closed: sidecar ok but columns missing → headers + 24 cells seeded; Admin Upsert schema aligned
+- Live readback: ADMIN_A→Андрей enabled; MOD_A→Михаил enabled; revoked prepared disabled
+- T1/T3 acceptance inject: 4 Telegram successes; 0 duplicates; `Мопс`=0 in client copy
+- Fail-closed harness band: **9/9 PASS**; Phase 3G.1 baseline **100/100 PASS** retained
+- AI OFF; reminders OFF; Ops 45 active; Sales-Manager-v2 inactive
+- Evidence: [evidence/phase3g1-1/](evidence/phase3g1-1/) · Report: [REPORT-iseo-sales-manager-bot-phase3g1-1-live-profile-and-template-acceptance-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3g1-1-live-profile-and-template-acceptance-v1.md)
 
 ## Phase 3G.1 — INTLSEO first-contact + personalized manager assist
 
-**Status:** offline libs + harness **100/100 PASS**; live patch / operator visual acceptance: **pending or in progress**.
+**Status:** offline libs + harness **100/100 PASS**; live workflow patch **applied**; profile seed repair in **3G.1.1**.
 
 - Standard `iseo-first-contact-v1.0` · templates `iseo-template-set-v1.0` · policy `iseo-sales-policy-v1.0` · assist `iseo-manager-assist-v1.0` · personalization `iseo-recipient-name-v1.0`
 - Five templates; precedence **T5 > T4 > T3 > T1 > T2**; legacy `sm-reply-v2.1` rollback stamp only
 - One business lead → multiple personalized drafts (ADMIN_A→Андрей, MOD_A→Михаил; Мопс never in client copy)
 - AI OFF default; constrained AI assist contract not globally enabled; **no auto-send** to customers
 - Prefer `RECIPIENT_REPLIES` or `LEAD_DELIVERIES` extension; reporting = shared template id only
-- Contour baseline: Ops 45 active · Admin 82 active · Sales-Manager-v2 inactive · reminders OFF · stats 1/1/0/0 epoch 05.08.2026
-- Evidence: [evidence/phase3g1/](evidence/phase3g1/) · Architecture: [INTLSEO-FIRST-CONTACT-STANDARD-v1.md](architecture/INTLSEO-FIRST-CONTACT-STANDARD-v1.md)
+- Contour baseline: Ops 45 active · Admin **84** active · Sales-Manager-v2 inactive · reminders OFF · stats 1/1/0/0 epoch 05.08.2026
+- Evidence: [evidence/phase3g1/](evidence/phase3g1/) · [evidence/phase3g1-1/](evidence/phase3g1-1/) · Architecture: [INTLSEO-FIRST-CONTACT-STANDARD-v1.md](architecture/INTLSEO-FIRST-CONTACT-STANDARD-v1.md)
 
 # i-SEO Sales Manager Bot
 
@@ -69,7 +80,8 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 | Sheets budget / concurrency (3E.2.3) | [architecture/SHEETS-CALL-BUDGET-v1.md](architecture/SHEETS-CALL-BUDGET-v1.md) · [architecture/OPERATIONAL-SINGLE-FLIGHT-v1.md](architecture/OPERATIONAL-SINGLE-FLIGHT-v1.md) · [architecture/SHEETS-BACKOFF-POLICY-v1.md](architecture/SHEETS-BACKOFF-POLICY-v1.md) |
 | Pending leads view + reminders (3F.1) | [architecture/PENDING-LEADS-VIEW-v1.md](architecture/PENDING-LEADS-VIEW-v1.md) · [architecture/PENDING-REMINDER-v1.md](architecture/PENDING-REMINDER-v1.md) · [architecture/REMINDER-DELIVERY-IDEMPOTENCY-v1.md](architecture/REMINDER-DELIVERY-IDEMPOTENCY-v1.md) |
 | Phase 3G.1 INTLSEO first-contact | [architecture/INTLSEO-FIRST-CONTACT-STANDARD-v1.md](architecture/INTLSEO-FIRST-CONTACT-STANDARD-v1.md) · [architecture/RECIPIENT-PERSONALIZED-REPLIES-v1.md](architecture/RECIPIENT-PERSONALIZED-REPLIES-v1.md) · [architecture/AI-MANAGER-ASSIST-v1.md](architecture/AI-MANAGER-ASSIST-v1.md) · [architecture/REPLY-PROFILE-CONTRACT-v1.md](architecture/REPLY-PROFILE-CONTRACT-v1.md) |
-| Phase 3G.1 evidence | [evidence/phase3g1/](evidence/phase3g1/) — harness 100/100 PASS; live patch pending |
+| Phase 3G.1 evidence | [evidence/phase3g1/](evidence/phase3g1/) — harness 100/100 PASS |
+| Phase 3G.1.1 evidence | [evidence/phase3g1-1/](evidence/phase3g1-1/) — live profiles seeded; operator template acceptance pending |
 | Parser 3.3 research (implemented) | [research/parser-3.3/](research/parser-3.3/) |
 | Phase 3F.1 evidence | [evidence/phase3f1/](evidence/phase3f1/) |
 | Phase 3E.2 evidence | [evidence/phase3e2/](evidence/phase3e2/) |
@@ -194,4 +206,8 @@ Repaired `/leads` LEADS field mapping, connected `/lead_history`, keyed reportin
 
 ## Phase 3G.1 — INTLSEO first-contact standard (additive)
 
-Approved five-template corpus + recipient personalization + manager assist contract. Offline harness **100/100 PASS**. AI OFF; no auto-send; Мопс never in client copy (Михаил for MOD_A). Live n8n patch / operator visual acceptance: pending or in progress. Evidence: `evidence/phase3g1/`.
+Approved five-template corpus + recipient personalization + manager assist contract. Offline harness **100/100 PASS**. AI OFF; no auto-send; Мопс never in client copy (Михаил for MOD_A). Live n8n patch applied. Profile seed repair: **Phase 3G.1.1** — LIVE PROFILES SEEDED; operator T1/T3 visual acceptance pending. Evidence: `evidence/phase3g1/` · `evidence/phase3g1-1/`.
+
+## Phase 3G.1.1 — Live reply profile seed (additive)
+
+ACCESS_CONTROL columns Q–V created and seeded. T1/T3 acceptance inject 4/4 Telegram; fail-closed harness 9/9 PASS. Admin 84 active. Report: `reports/REPORT-iseo-sales-manager-bot-phase3g1-1-live-profile-and-template-acceptance-v1.md`.

@@ -21,4 +21,4 @@ Admin help includes reply-profile command block; moderator help includes only `/
 
 ## Live Admin wiring
 
-Command routes in Admin.dev: live patch / operator visual acceptance pending or in progress.
+Command routes in Admin.dev: **live** (84 nodes). Phase 3G.1.1 readback matches contract — see `evidence/phase3g1-1/LIVE-PROFILE-READBACK-v1.md`.

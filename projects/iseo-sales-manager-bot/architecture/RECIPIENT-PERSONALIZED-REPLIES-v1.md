@@ -2,7 +2,7 @@
 
 **Phase:** 3G.1  
 **Version:** `recipient_personalization_version` = `iseo-recipient-name-v1.0`  
-**Status:** contract + harness PASS; live patch pending or in progress
+**Status:** contract + harness PASS; **live personalization proven** for ADMIN_A/MOD_A on T1/T3 (Phase 3G.1.1)
 
 ## Model
 
@@ -43,3 +43,4 @@
 - [REPLY-PROFILE-CONTRACT-v1.md](REPLY-PROFILE-CONTRACT-v1.md)
 - [implementation/RECIPIENT-REPLY-STORAGE-v1.md](../implementation/RECIPIENT-REPLY-STORAGE-v1.md)
 - Evidence: `ONE-LEAD-MULTIPLE-DRAFTS-v1.md`, `REPORTING-COUNT-INVARIANT-v1.md`
+- Phase 3G.1.1: `evidence/phase3g1-1/T1-PERSONALIZED-ACCEPTANCE-v1.md`, `T3-PERSONALIZED-ACCEPTANCE-v1.md`

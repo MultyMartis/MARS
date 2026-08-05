@@ -38,3 +38,10 @@
 
 - Runtime: `implementation/runtime-libs/reply-profile-lib.mjs`
 - Commands: `implementation/runtime-libs/reply-profile-commands-v1.mjs`
+
+## Phase 3G.1.1 live state
+
+- ACCESS_CONTROL columns **Q–V** (`reply_sender_name` … `reply_profile_updated_by`) **live and seeded**
+- ADMIN_A → Андрей, enabled; MOD_A → Михаил, enabled
+- MOD_B_REVOKED / MOD_C_REVOKED: prepared names **disabled**; access remains revoked
+- Live Admin readback matches contract — see `evidence/phase3g1-1/LIVE-PROFILE-READBACK-v1.md`

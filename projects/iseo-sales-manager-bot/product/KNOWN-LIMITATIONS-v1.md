@@ -39,7 +39,14 @@ Live call counts, safe real-lead recount, final two-recipient proof and five-pol
 
 ## Phase 3G.1 limitations
 
-- Live Operational/Admin patch and operator visual acceptance are **not** asserted complete (pending or in progress).
+- ~~Live Operational/Admin patch and operator visual acceptance are **not** asserted complete~~ → live patch applied; profile seed defect **closed in 3G.1.1**
 - AI assist contract is documented/tested offline but **not** globally enabled; production remains AI OFF.
 - Оля/Никита may have prepared reply names but remain revoked/ineligible recipients.
-- Reporting must not gain per-recipient rows; storage preference (`RECIPIENT_REPLIES` vs `LEAD_DELIVERIES` extension) awaits live apply confirmation.
+- Reporting must not gain per-recipient rows; `RECIPIENT_REPLIES` / `LEAD_DELIVERIES` extension live per 3G.1 patch.
+
+## Phase 3G.1.1 limitations
+
+- **Seed defect closed** — ACCESS_CONTROL Q–V columns live; Admin readback matches contract.
+- **Operator visual acceptance pending** for latest T1/T3 personalized cards (Андрей / Михаил).
+- Earlier exploratory inject batches may exist in Telegram history with **empty client copy** (pre-repair); do not treat as regression.
+- Do not clean acceptance fixtures until operator records visual sign-off.

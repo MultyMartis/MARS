@@ -1,5 +1,20 @@
+<!-- Phase 3G.1.1 live profile seed 2026-08-06 -->
+## Phase 3G.1.1 (current additive)
+
+| Field | Value |
+|-------|-------|
+| **Phase** | 3G.1.1 — Live reply profile seed + T1/T3 personalized template acceptance |
+| **Verdict** | `COMPLETE — LIVE PROFILES SEEDED; OPERATOR TEMPLATE ACCEPTANCE PENDING` |
+| **Profiles** | ACCESS_CONTROL Q–V seeded; ADMIN_A→Андрей; MOD_A→Михаил; revoked prepared disabled |
+| **Acceptance inject** | T1 + T3 · 4 Telegram successes · 0 duplicates · `Мопс`=0 |
+| **Harness** | Fail-closed band **9/9 PASS**; Phase 3G.1 baseline 100/100 retained |
+| **Runtime** | Ops 45 active · Admin **84** active · v2 inactive · AI OFF · reminders OFF |
+| **Evidence** | [evidence/phase3g1-1/](evidence/phase3g1-1/) |
+| **Report** | [REPORT-iseo-sales-manager-bot-phase3g1-1-live-profile-and-template-acceptance-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3g1-1-live-profile-and-template-acceptance-v1.md) |
+| **Operator gate** | Visual accept latest T1/T3 cards; ignore earlier empty-copy exploratory batches |
+
 <!-- Phase 3G.1 INTLSEO first-contact 2026-08-06 -->
-## Phase 3G.1 (current additive)
+## Phase 3G.1 (additive)
 
 | Field | Value |
 |-------|-------|
@@ -9,7 +24,7 @@
 | **AI** | OFF; assist contract exists, not globally enabled |
 | **Evidence** | [evidence/phase3g1/](evidence/phase3g1/) |
 | **Architecture** | [INTLSEO-FIRST-CONTACT-STANDARD-v1.md](architecture/INTLSEO-FIRST-CONTACT-STANDARD-v1.md) · [RECIPIENT-PERSONALIZED-REPLIES-v1.md](architecture/RECIPIENT-PERSONALIZED-REPLIES-v1.md) · [AI-MANAGER-ASSIST-v1.md](architecture/AI-MANAGER-ASSIST-v1.md) · [REPLY-PROFILE-CONTRACT-v1.md](architecture/REPLY-PROFILE-CONTRACT-v1.md) |
-| **Live patch** | pending or in progress |
+| **Live patch** | applied (3G.1); profile seed repair **3G.1.1 complete** |
 
 <!-- Phase 3F.2 clean ledger active 2026-08-05; reminders OFF; reporting private -->
 # i-SEO Sales Manager Bot — Operational Index

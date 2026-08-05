@@ -6,7 +6,7 @@
 |---|---|---:|---:|---|
 | Sales-Manager-v2 | `h8I2Tl2yl4uzhUnB` | false | — | rollback; не активировать без отдельного решения |
 | i-SEO Sales Manager - Operational.dev | `[external]` | true | 45 | unchanged in 3F.1; `minutesInterval=2`; single-flight 4m; bounded ledger/access/claim retries; AI OFF |
-| i-SEO Sales Manager - Admin.dev | `wLrLp4WQHm1VJmxz` | true | 82 | Help + lead-history human labels (3F.2.2); pending/reminder; callbacks; reminders OFF |
+| i-SEO Sales Manager - Admin.dev | `wLrLp4WQHm1VJmxz` | true | 84 | Reply profiles live (3G.1.1); Help + lead-history; pending/reminder; callbacks; reminders OFF |
 
 
 ## Phase 3F.2 — Clean production ledger
@@ -74,4 +74,8 @@ Admin nodes include lead history path. Human source display active. Reporting sc
 
 Pre-patch contour unchanged until live acceptance filled: Ops active 45 · Admin active 82 · Sales-Manager-v2 inactive · AI OFF · reminders OFF · stats 1/1/0/0 epoch 05.08.2026.
 
-Target reply versions (package ready): `iseo-first-contact-v1.0` / `iseo-template-set-v1.0` / `iseo-sales-policy-v1.0` / `iseo-manager-assist-v1.0` / `iseo-recipient-name-v1.0`. Live CONFIG cutover: **pending or in progress**. Legacy `sm-reply-v2.1` remains rollback reference. Harness 100/100 PASS. See `evidence/phase3g1/FINAL-WORKFLOW-STATE-v1.md`.
+Target reply versions (live): `iseo-first-contact-v1.0` / `iseo-template-set-v1.0` / `iseo-sales-policy-v1.0` / `iseo-manager-assist-v1.0` / `iseo-recipient-name-v1.0`. Reply profiles **seeded** on ACCESS_CONTROL Q–V (Phase 3G.1.1). AI **OFF**. Reminders **OFF**. Admin **84** nodes. Harness 100/100 PASS + 3G.1.1 fail-closed 9/9 PASS. See `evidence/phase3g1/FINAL-WORKFLOW-STATE-v1.md` and `evidence/phase3g1-1/FINAL-WORKFLOW-STATE-v1.md`.
+
+## Phase 3G.1.1 additive baseline note
+
+Live profile columns repaired and seeded. T1/T3 acceptance inject delivered 4 personalized Telegram cards. Operator visual template acceptance pending. Ops 45 · Admin 84 · v2 inactive · AI OFF · reminders OFF.
