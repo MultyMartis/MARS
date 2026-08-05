@@ -47,6 +47,8 @@ The deterministic Lead Processor is specified to compute and embed `telegram_act
 | Admin Handle Callback verifier alignment | **IMPLEMENTED** (contract-level per forensic facts; live n8n workflow, not tracked in this git diff) |
 | Outcome-message vocabulary | **IMPLEMENTED** (contract-level) |
 | Token-before-append ordering | **IMPLEMENTED** (contract-level, deterministic Lead Processor path) |
-| Live re-click confirmation on Клиент A's actual card | **PENDING OPERATOR** — see [CALLBACK-LIVE-ACCEPTANCE-v1.md](CALLBACK-LIVE-ACCEPTANCE-v1.md); not claimed as PASS in this pass |
+| Live code repair (OPS Format + Admin Handle + token persist) | **PASS** |
+| Lifecycle reconciliation write for Клиент A | **PASS** — see [EVGENIY-LIFECYCLE-RECONCILIATION-v1.md](EVGENIY-LIFECYCLE-RECONCILIATION-v1.md) |
+| Live re-click confirmation on Клиент A's actual card | **PENDING OPERATOR** — see [CALLBACK-LIVE-ACCEPTANCE-v1.md](CALLBACK-LIVE-ACCEPTANCE-v1.md); code-level fix confirmed, manual re-click not claimed as PASS |
 
 *Related: [CALLBACK-NOT-FOUND-ROOT-CAUSE-v1.md](CALLBACK-NOT-FOUND-ROOT-CAUSE-v1.md), [EVGENIY-LIFECYCLE-RECONCILIATION-v1.md](EVGENIY-LIFECYCLE-RECONCILIATION-v1.md).*

@@ -2,32 +2,30 @@
 
 ## Purpose
 
-Map which CLEAN/RAW tabs are **current** (`v2`, in scope for real-production stats and reconciliation) versus **legacy/archive** (preserved, read-compatible, but excluded from the [PRODUCTION-STATS-EPOCH-v1.md](PRODUCTION-STATS-EPOCH-v1.md) `archive_excluded` filter).
+Separate mixed pre-epoch corpus from the clean production ledger (`LEADS`, generation v2).
 
-## Tab map (per architecture/LEAD-DATA-MODEL-v1.md §1)
+## Live archive tabs created
 
-| Workbook | Tab | Classification | Stats scope |
-|---|---|---|---|
-| RAW | `lead-base` | **Legacy** — historical, preserved, not mutated | Excluded |
-| RAW | `lead_raw_v2` | **Current** | Included |
-| CLEAN | `lead-base-processed` | **Legacy** — historical, preserved, not mutated | Excluded |
-| CLEAN | `lead_clean_v2` | **Current** | Included |
-| CLEAN | `CONFIG`, `LEAD_EVENTS`, `ERRORS`, `DEDUP_INDEX` | **Current, supporting** | Not lead-count rows; not in scope for the lead-count stats but relevant for [LEAD-EVENT-HISTORY-v1.md](LEAD-EVENT-HISTORY-v1.md) |
+| Tab | Role |
+|---|---|
+| `ARCHIVE_CLEAN_PRE_2026-08-05` | Archive of mixed CLEAN corpus |
+| `ARCHIVE_LEAD_EVENTS_PRE_2026-08-05` | Archive placeholder / events archive |
+| `ARCHIVE_LEAD_DELIVERIES_PRE_2026-08-05` | Archive placeholder |
+| `ARCHIVE_REMINDER_DELIVERIES_PRE_2026-08-05` | Archive placeholder |
+| `ARCHIVE_DEDUP_PRE_2026-08-05` | Archive placeholder |
+| `LEADS` | Authoritative production leads (v2) |
+| `TEST_LEADS` / `TEST_LEAD_EVENTS` | Fixture-only |
+| `SYNC_STATE` / `RAW_CURRENT` / `CLEAN_CURRENT` | Supporting |
 
-## Legacy compatibility rule
-
-Legacy tabs are **read-compatible only** for the pending-view fallback described in [../phase3f1/PENDING-SOURCE-FORENSIC-v1.md](../phase3f1/PENDING-SOURCE-FORENSIC-v1.md) (rows with no `manager_status`/`lifecycle_status`/`close_reason` populated default to "pending" rather than being silently dropped). They are **not** rewritten, migrated in place, or merged into `v2` tabs — per the operator-approved "keep separate, do not consolidate" decision already recorded in [architecture/LEAD-DATA-MODEL-v1.md](../../architecture/LEAD-DATA-MODEL-v1.md) §1.
-
-## Full archive tab copy (backup completeness)
-
-A full sheet-level copy of the legacy tabs into the backup baseline (`X:\AI MARS STORAGE\backups\iseo-sales-manager-bot\2026-08-05-clean-ledger-baseline\sheets\`) has **not** been performed — that folder is currently empty (see [LEGACY-BACKUP-VALIDATION-v1.md](LEGACY-BACKUP-VALIDATION-v1.md)).
+Original operational tabs (`lead_clean_v2`, `CONFIG`, `ACCESS_CONTROL`, existing `LEAD_EVENTS`, etc.) were **not** deleted.
 
 ## Status
 
 | Item | Status |
 |---|---|
-| Tab classification map (this document) | **IMPLEMENTED** — documentation-level, grounded in the existing architecture spec |
-| Full archive tab copy into backup baseline | **PENDING OPERATOR** — not performed in this pass; do not treat as done |
-| Enforcement of `archive_excluded` in a live query | **PENDING OPERATOR** — see [REPORTING-WORKBOOK-CREATION-v1.md](REPORTING-WORKBOOK-CREATION-v1.md) |
+| Archive / canonical tabs created in backend workbook | **PASS** |
+| Full CLEAN → `ARCHIVE_CLEAN_PRE_2026-08-05` row copy | **PARTIAL** — follow-up hit Sheets quota; originals retained |
+| Production `/leads` / pending source = `LEADS` | **PASS** (Admin retarget) |
+| Archive rows entering production stats | **0** by source design |
 
-*Related: [CLEAN-BACKEND-SCHEMA-v1.md](CLEAN-BACKEND-SCHEMA-v1.md), [PRODUCTION-STATS-EPOCH-v1.md](PRODUCTION-STATS-EPOCH-v1.md).*
+*Related: [LEGACY-BACKUP-VALIDATION-v1.md](LEGACY-BACKUP-VALIDATION-v1.md), [CLEAN-BACKEND-SCHEMA-v1.md](CLEAN-BACKEND-SCHEMA-v1.md).*

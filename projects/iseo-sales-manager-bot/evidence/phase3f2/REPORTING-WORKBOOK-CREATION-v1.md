@@ -2,23 +2,22 @@
 
 ## Intent
 
-A separate reporting workbook (distinct from RAW/CLEAN) is the intended home for aggregate, real-only production statistics — scoped by [PRODUCTION-STATS-EPOCH-v1.md](PRODUCTION-STATS-EPOCH-v1.md) and excluding legacy/archive tabs per [LEGACY-ARCHIVE-MAP-v1.md](LEGACY-ARCHIVE-MAP-v1.md) and test rows per [TEST-DATA-SEPARATION-v1.md](TEST-DATA-SEPARATION-v1.md). This mirrors the existing project decision to keep RAW and CLEAN as separate workbooks rather than proliferating tabs inside CLEAN (`STATS_DAILY` was already flagged as optional/deferred in [architecture/LEAD-DATA-MODEL-v1.md](../../architecture/LEAD-DATA-MODEL-v1.md) §4).
+A separate Google Spreadsheet file (not a tab inside the technical backend workbook) for human viewing and reporting: **«i-SEO — Учёт лидов и статистика»**.
 
-## What this evidence pass does and does not claim
-
-- No workbook ID or URL is recorded anywhere in Phase 3F.2 evidence, by charter — regardless of whether one exists yet.
-- This document does **not** assert that a reporting workbook has been created, populated, or connected to a live sync in production.
-
-## Status
+## Live outcome (Phase 3F.2)
 
 | Item | Status |
 |---|---|
-| Reporting workbook purpose/contract (this document + linked epoch/archive/test-separation docs) | **IMPLEMENTED** (design-level) |
-| Actual workbook creation | **PENDING OPERATOR** |
-| Tab layout inside the workbook | **PENDING OPERATOR** — depends on operator's chosen reporting tool/destination |
+| Separate Spreadsheet file created | **PASS** (via authorized Google credential; temporary Admin in-place runner, then restored) |
+| Tabs `Лиды`, `История изменений`, `Статистика`, `Справка` | **PASS** (created + seeded) |
+| Клиент A baseline row once | **PASS** |
+| File ID / URL in Git | **FORBIDDEN** — stored only in private CONFIG `reporting_workbook_ref` and Storage private contour |
+| Public / anyone-with-link access | **Not set** — private by default |
+| Automatic employee/client share | **Not performed** — requires separate operator instruction |
 
-## SAFE UNKNOWN
+## Notes
 
-- Whether a reporting workbook already exists outside this repository's tracked evidence (e.g. created manually by an operator). Not verifiable from this evidence pass without a workbook identifier, which is intentionally excluded.
+- Backend workbook remains source of truth.
+- Continuous Operational/Admin sync beyond the baseline seed is documented separately — see [REPORTING-SYNC-v1.md](REPORTING-SYNC-v1.md).
 
-*Related: [REPORTING-WORKBOOK-PRIVACY-v1.md](REPORTING-WORKBOOK-PRIVACY-v1.md), [REPORTING-SYNC-v1.md](REPORTING-SYNC-v1.md).*
+*Related: [REPORTING-WORKBOOK-PRIVACY-v1.md](REPORTING-WORKBOOK-PRIVACY-v1.md), [REPORTING-SYNC-v1.md](REPORTING-SYNC-v1.md), [PHASE3F2-ACCEPTANCE-RECEIPT-v1.md](PHASE3F2-ACCEPTANCE-RECEIPT-v1.md).*

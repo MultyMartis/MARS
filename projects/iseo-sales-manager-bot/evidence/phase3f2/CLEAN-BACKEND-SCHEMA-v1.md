@@ -24,7 +24,7 @@ The full target `lead_clean_v2` column list is documented in [architecture/LEAD-
 | Item | Status |
 |---|---|
 | `telegram_action_token` presence in schema mapping | **CONFIRMED** (column exists, mapping exists) |
-| `telegram_action_token` populated at append time for new rows | **PARTIAL** — deterministic Lead Processor contract calls for pre-append population (see [CALLBACK-LOOKUP-REPAIR-v1.md](CALLBACK-LOOKUP-REPAIR-v1.md)); live coverage across all intake paths not independently re-verified in this pass |
+| `telegram_action_token` populated at append time for new rows | **PASS** (live) — Deterministic Lead Processor now emits canonical `fnvToken(lead_id)` before CLEAN write; see [CALLBACK-LOOKUP-REPAIR-v1.md](CALLBACK-LOOKUP-REPAIR-v1.md) |
 | `parser_version`/`message_format` mapping-lag anomaly | **SAFE UNKNOWN** root cause; **not fixed** |
 
 *Related: [LEAD-EVENT-HISTORY-v1.md](LEAD-EVENT-HISTORY-v1.md), [architecture/LEAD-DATA-MODEL-v1.md](../../architecture/LEAD-DATA-MODEL-v1.md).*

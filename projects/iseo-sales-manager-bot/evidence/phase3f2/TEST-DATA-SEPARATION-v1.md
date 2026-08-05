@@ -22,7 +22,7 @@ The volume of test/synthetic rows in CLEAN is large relative to real business vo
 | Item | Status |
 |---|---|
 | Detection logic correctness (read-time filter) | **CONFIRMED working** — reused from Phase 3E.2.2/3F.1, no regression |
-| Physical separation of test rows out of `lead_clean_v2` | **NOT DONE** — filter-only today |
-| Cleanup/removal of accumulated test rows | **PENDING OPERATOR** — see [TEST-CLEANUP-ACCEPTANCE-v1.md](TEST-CLEANUP-ACCEPTANCE-v1.md); no rows were deleted or moved as part of Phase 3F.2 |
+| Physical separation of test rows out of `lead_clean_v2` | **PARTIAL** — new fixtures must use `TEST_LEADS` / `TEST_LEAD_EVENTS`; historical mixed rows remain in archive/legacy CLEAN and are excluded from production `LEADS` source |
+| Cleanup/removal of accumulated historical test rows from legacy CLEAN | **PENDING OPERATOR** — see [TEST-CLEANUP-ACCEPTANCE-v1.md](TEST-CLEANUP-ACCEPTANCE-v1.md); no broad delete performed in Phase 3F.2 |
 
 *Related: [CURRENT-REAL-LEAD-SAFETY-v1.md](CURRENT-REAL-LEAD-SAFETY-v1.md), [TEST-CLEANUP-ACCEPTANCE-v1.md](TEST-CLEANUP-ACCEPTANCE-v1.md).*

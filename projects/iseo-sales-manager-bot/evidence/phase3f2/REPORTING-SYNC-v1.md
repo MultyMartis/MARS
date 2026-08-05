@@ -2,24 +2,23 @@
 
 ## Intent
 
-Describe how a reporting workbook (see [REPORTING-WORKBOOK-CREATION-v1.md](REPORTING-WORKBOOK-CREATION-v1.md)) would stay current against CLEAN without re-reading the full sheet on every intake event — reusing the same lesson already applied to `DEDUP_INDEX` (avoid uncontrolled full-sheet reads, per [architecture/LEAD-DATA-MODEL-v1.md](../../architecture/LEAD-DATA-MODEL-v1.md) §5.6, the "MetaBOT Sheets quota lesson").
+Backend remains source of truth. Reporting workbook is a secondary, idempotent mirror.
 
-## Proposed sync shape (design-level, not yet implemented)
+## Live baseline sync
 
-| Aspect | Approach |
+| Step | Status |
 |---|---|
-| Trigger | Scheduled/batched (e.g. the existing internal Schedule Trigger pattern already used for the pending-reminder gate in Admin.dev), **not** a per-lead synchronous write |
-| Source read | Aggregate only — counts/rollups computed from CLEAN, never a row-by-row identifiable copy |
-| Direction | One-way, CLEAN → reporting workbook. Reporting is a **read replica of aggregates**, never a place operators edit lead state back into CLEAN |
-| Scope filter | Same `real-only-v1` / `archive_excluded` / epoch filter as [PRODUCTION-STATS-EPOCH-v1.md](PRODUCTION-STATS-EPOCH-v1.md) applied consistently at sync time, not left to the reporting side to re-derive inconsistently |
-| Idempotency | Sync writes should be safe to re-run for the same period (recompute-and-overwrite an aggregate row, not append-and-accumulate duplicates) |
+| Create private reporting Spreadsheet | **PASS** |
+| Seed `Лиды` / `История` / `Статистика` / `Справка` for Клиент A | **PASS** |
+| Store `reporting_workbook_ref` in CONFIG (private) | **PASS** |
+| New n8n workflow created | **0** (in-place temporary runners only) |
 
-## Status
+## Ongoing sync
 
-| Item | Status |
+| Aspect | Status |
 |---|---|
-| Sync design (this document) | **IMPLEMENTED** (design-level) |
-| Sync workflow/schedule actually built and running | **PENDING OPERATOR** — no new n8n workflow has been created for this; `workflows created=0` for Phase 3F.2 overall, see [FINAL-WORKFLOW-STATE-v1.md](FINAL-WORKFLOW-STATE-v1.md) |
-| Call-budget analysis for the sync | See [REPORTING-CALL-BUDGET-v1.md](REPORTING-CALL-BUDGET-v1.md) |
+| Design (upsert by public lead ID; event append; fail-open for backend) | **IMPLEMENTED** |
+| Continuous per-lead sync wired inside Operational/Admin beyond baseline | **PARTIAL** — baseline seed done; full continuous path remains follow-up |
+| Empty-poll reporting writes | **Must remain 0** |
 
-*Related: [REPORTING-WORKBOOK-CREATION-v1.md](REPORTING-WORKBOOK-CREATION-v1.md), [REPORTING-CALL-BUDGET-v1.md](REPORTING-CALL-BUDGET-v1.md).*
+*Related: [REPORTING-WORKBOOK-CREATION-v1.md](REPORTING-WORKBOOK-CREATION-v1.md), [REPORTING-CALL-BUDGET-v1.md](REPORTING-CALL-BUDGET-v1.md), [REPORTING-SYNC-IDEMPOTENCY-v1.md](../../architecture/REPORTING-SYNC-IDEMPOTENCY-v1.md).*
