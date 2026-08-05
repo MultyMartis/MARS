@@ -177,7 +177,7 @@ No credentials, Telegram IDs, phones, emails, workbook URLs, or customer PII in 
 
 1. `504fe270` — `fix(iseo-sales-manager-bot): seed live reply profiles`
 2. `374656b0` — `test(iseo-sales-manager-bot): prove personalized template delivery`
-3. (this docs tip hash recorded after push) — `docs(iseo-sales-manager-bot): record phase 3g1.1 commit hashes`
+3. `d605ddc0` — `docs(iseo-sales-manager-bot): record phase 3g1.1 commit hashes`
 
 ## 31. Push
 
