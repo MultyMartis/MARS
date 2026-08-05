@@ -44,7 +44,9 @@
 
 - [REPLY-PROFILE-CONTRACT-v1.md](REPLY-PROFILE-CONTRACT-v1.md)
 - [REPLY-PROFILE-NUMBERING-v1.md](REPLY-PROFILE-NUMBERING-v1.md)
+- [UNIFIED-REPLY-PROFILE-RESOLVER-v1.md](UNIFIED-REPLY-PROFILE-RESOLVER-v1.md) — Phase 3G.2.2 resolver contract consumed by Operational recipient expansion
 - [implementation/RECIPIENT-REPLY-STORAGE-v1.md](../implementation/RECIPIENT-REPLY-STORAGE-v1.md)
 - Evidence: `ONE-LEAD-MULTIPLE-DRAFTS-v1.md`, `REPORTING-COUNT-INVARIANT-v1.md`
 - Phase 3G.1.1: `evidence/phase3g1-1/T1-PERSONALIZED-ACCEPTANCE-v1.md`, `T3-PERSONALIZED-ACCEPTANCE-v1.md`
 - Phase 3G.2 stubs: `evidence/phase3g2/`
+- Phase 3G.2.2: Operational.dev personalization regression-checked unaffected by the Admin.dev resolver unification — `evidence/phase3g2-2/OPERATIONAL-PERSONALIZATION-REGRESSION-v1.md`

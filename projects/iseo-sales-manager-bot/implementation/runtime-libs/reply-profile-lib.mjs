@@ -7,6 +7,8 @@
 
 export const RECIPIENT_PERSONALIZATION_VERSION = 'iseo-recipient-name-v1.1';
 export const REPLY_PROFILE_VERSION = 'iseo-recipient-name-v1.1';
+/** Alias kept for Operational / Admin dual embedding; authoritative resolver id. */
+export const REPLY_PROFILE_RESOLVER_VERSION = 'iseo-reply-profile-resolver-v1.0';
 export const DEFAULT_REPLY_COMPANY_NAME = 'INTLSEO';
 export const REPLY_SENDER_NAME_MAX_LEN = 32;
 export const REPLY_SENDER_NAME_MIN_LEN = 2;
@@ -158,6 +160,7 @@ export function isCardRecipient(row = {}) {
 /**
  * Resolve recipient reply profile from an ACCESS_CONTROL-like row.
  * Never falls back to display_name / username / actor.
+ * Field contract aligned with iseo-reply-profile-resolver-v1.0.
  */
 export function resolveRecipientReplyProfile(row = {}) {
   const validation = validateReplySenderName(row.reply_sender_name);
@@ -165,14 +168,29 @@ export function resolveRecipientReplyProfile(row = {}) {
   const enabledFlag = parseBoolFlag(row.reply_sender_enabled, false);
   const hasValidName = validation.ok;
   const enabled = hasValidName && enabledFlag;
+  const profile_number = getProfileNumber(row);
+  const warnings = [];
+  if (profile_number == null) warnings.push('missing_profile_number');
+  if (!hasValidName) warnings.push(validation.reason || 'invalid_or_missing_sender_name');
+  if (hasValidName && !enabledFlag) warnings.push('sender_disabled');
   return {
-    reply_profile_number: getProfileNumber(row),
+    resolver_version: REPLY_PROFILE_RESOLVER_VERSION,
+    profile_number,
+    reply_profile_number: profile_number,
+    stable_user_ref: String(row.telegram_user_id || '').trim(),
+    display_name: String(row.display_name || '').trim(),
+    role: String(row.role || '').trim().toLowerCase(),
+    access_state: String(row.status || '').trim().toLowerCase(),
+    recipient_eligible: isCardRecipient(row),
     reply_sender_name: hasValidName ? validation.normalized : '',
     reply_sender_enabled: enabled,
     reply_company_name: company,
+    profile_version: String(row.reply_profile_version || REPLY_PROFILE_VERSION).trim() || REPLY_PROFILE_VERSION,
     reply_profile_version: String(row.reply_profile_version || REPLY_PROFILE_VERSION).trim() || REPLY_PROFILE_VERSION,
     reply_profile_updated_at: String(row.reply_profile_updated_at || '').trim(),
     reply_profile_updated_by: String(row.reply_profile_updated_by || '').trim(),
+    profile_valid: profile_number != null && hasValidName,
+    validation_warnings: warnings,
     validation,
     recipient_reply_state: enabled
       ? 'ready'

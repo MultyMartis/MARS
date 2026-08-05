@@ -62,3 +62,10 @@ Live call counts, safe real-lead recount, final two-recipient proof and five-pol
 - Phase 3G.2 Help/Start/Config Code-node syntax defects caused **silent** Telegram failures; repaired in-place on Admin.dev (85 nodes).
 - Offline silent-command harness **PASS**; **operator visual Telegram acceptance** for `/help` `/start` `/config` (Admin + moderator) remains **pending** (webhook secret blocks agent-side inject).
 - No-silent recognized-command guard is live (builder try/catch + Capture fallback); does not replace operator visual confirmation.
+
+## Phase 3G.2.2 limitations
+
+- Root cause was a **write-side wipe**, not a display bug: routine `/start`/`/my_status` traffic rewrote ACCESS_CONTROL without carrying `reply_profile_*` fields forward. Any authenticated actor's own row could be affected the next time they send `/start`/`/my_status` before the rehydrate patch runs against it.
+- **Storage restore for ADMIN_A/MOD_A is fire-on-next-command, not yet operator-confirmed live** — the agent has no direct Google Sheets API credential from the n8n management API in this session, and a Telegram webhook inject attempt returned 404. The correct values are re-derived deterministically from the approved seed the first time either actor sends a rehydrate-covered command.
+- CONFIG parser-version display had drifted stale (`sm-parser-v3.2`) versus the live `Parse Lead` stamp (`sm-parser-v3.3`) since Phase 3E.1; no automatic re-sync exists for this CONFIG cell — corrected on display in this phase, but the underlying manual-sync gap for this specific cell is not eliminated as a class of risk for future parser-version bumps.
+- Operator live Telegram acceptance for ADMIN_A and MOD_A restored profiles, and for the corrected `/config` output, remains **pending**.

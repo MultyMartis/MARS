@@ -138,6 +138,11 @@ Callbacks: `sm:p:<token12>` / `sm:s:<token12>`. Immediate ack `Обрабаты�
 
 - [TELEGRAM-TEXT-CONTRACT-v2.md](../architecture/TELEGRAM-TEXT-CONTRACT-v2.md)
 - [REPLY-PROFILE-NUMBERING-v1.md](../architecture/REPLY-PROFILE-NUMBERING-v1.md)
+- [UNIFIED-REPLY-PROFILE-RESOLVER-v1.md](../architecture/UNIFIED-REPLY-PROFILE-RESOLVER-v1.md) — Phase 3G.2.2
 - [REPLY-PROFILE-ADMIN-COMMANDS-v2.md](../implementation/REPLY-PROFILE-ADMIN-COMMANDS-v2.md)
 - [ROLE-AWARE-HELP-BUILDER-v2.md](../implementation/ROLE-AWARE-HELP-BUILDER-v2.md)
-- Evidence stubs: `evidence/phase3g2/`
+- Evidence stubs: `evidence/phase3g2/` · `evidence/phase3g2-2/`
+
+## Phase 3G.2.2 note
+
+`/reply_profiles`, `/reply_profile <N>`, `/my_reply_profile`, and the `/start` reply-name line now auto-rehydrate a previously wiped row before responding — see `evidence/phase3g2-2/`. `/config` displays the live parser version and an added resolver-version line; reporting-sync state is shown honestly rather than omitted.

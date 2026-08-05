@@ -53,3 +53,8 @@
 ## Related evidence (stubs)
 
 `evidence/phase3g2/USER-VISIBLE-TEXT-INVENTORY-v1.md` · `STALE-TEXT-AUDIT-v1.md` · `TEXT-CONTRACT-COVERAGE-v1.md`
+
+## Phase 3G.2.2 addendum
+
+- S06 (`/config`) now sources parser version from the live `Parse Lead` stamp instead of a stale CONFIG key, and adds a resolver-version line + honest reporting-sync state — see `evidence/phase3g2-2/CONFIG-HUMAN-DISPLAY-v1.md`.
+- S02 (`/start` moderator), S16–S18 (reply profile surfaces) now resolve through the unified contract with auto-rehydrate; a previously wiped row self-corrects on the next command instead of displaying stale blanks.

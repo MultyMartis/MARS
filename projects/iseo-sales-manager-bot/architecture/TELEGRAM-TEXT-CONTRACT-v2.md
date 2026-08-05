@@ -101,8 +101,9 @@ Access role/status **must not** change as a side effect of reply-name commands.
 ## 8. Stats / config / reminders (wording posture)
 
 - Stats: human Russian counts; epoch display **05.08.2026** (Europe/Moscow); authoritative table `LEADS`; events in `LEAD_EVENTS`.
-- Config (Admin): contour; stats start date; source display; parser version; template standard version; personalization version; AI state; reminder state; reporting synchronization state; active recipient count. Unavailable → `не задано`. Never workbook IDs, Telegram IDs, credentials, raw CONFIG secrets.
+- Config (Admin): contour; stats start date; source display; parser version; template standard version; personalization version; **resolver version**; AI state; reminder state; reporting synchronization state; active recipient count. Unavailable → `не задано`. Never workbook IDs, Telegram IDs, credentials, raw CONFIG secrets.
 - Reminder status: clearly show enabled/disabled; production default **выключены**.
+- **Phase 3G.2.2:** `/config` must display the **live** parser version (source: `Parse Lead` stamp), not a stale cached CONFIG key; reporting-sync state must be stated honestly (e.g. «выключена») rather than omitted when no sync node is active. See `evidence/phase3g2-2/CONFIG-TRUTH-FORENSIC-v1.md` / `CONFIG-HUMAN-DISPLAY-v1.md`.
 
 ---
 
@@ -110,4 +111,5 @@ Access role/status **must not** change as a side effect of reply-name commands.
 
 - [USER-VISIBLE-TEXT-REGISTRY-v1.md](../implementation/USER-VISIBLE-TEXT-REGISTRY-v1.md)
 - [REPLY-PROFILE-NUMBERING-v1.md](REPLY-PROFILE-NUMBERING-v1.md)
-- Evidence: `evidence/phase3g2/TEXT-CONTRACT-COVERAGE-v1.md` (stub)
+- [UNIFIED-REPLY-PROFILE-RESOLVER-v1.md](UNIFIED-REPLY-PROFILE-RESOLVER-v1.md) — Phase 3G.2.2
+- Evidence: `evidence/phase3g2/TEXT-CONTRACT-COVERAGE-v1.md` (stub) · `evidence/phase3g2-2/CONFIG-HUMAN-DISPLAY-v1.md`

@@ -1,6 +1,6 @@
 # CURRENT PRODUCTION BASELINE v1
 
-**Срез:** Phase 3G.2.1, 2026-08-06. **Статус:** silent `/help`/`/start`/`/config` repaired; numbered reply profiles retained; AI OFF; reminders OFF; operator visual acceptance pending.
+**Срез:** Phase 3G.2.2, 2026-08-06. **Статус:** unified reply-profile resolver + config truth repair deployed; ADMIN_A/MOD_A profile wipe root-caused and auto-rehydrate patch live; AI OFF; reminders OFF; operator Telegram acceptance pending.
 
 | Контур | Workflow ID | Active | Nodes | Роль |
 |---|---|---:|---:|---|
@@ -89,3 +89,12 @@ Live profile columns repaired and seeded. T1/T3 acceptance inject delivered 4 pe
 - Authoritative data: Parser **3.3**; table **`LEADS`**; events **`LEAD_EVENTS`**; stats epoch **05.08.2026** Europe/Moscow.
 - Contour: Ops **45** active · Admin **~84+** after patch · Sales-Manager-v2 inactive · AI OFF · reminders OFF · no customer auto-send.
 - Evidence stubs: `evidence/phase3g2/`.
+
+## Phase 3G.2.2 additive baseline note
+
+- Root cause: `/start`/`/my_status` last-seen upsert wrote ACCESS_CONTROL without `reply_profile_*` fields (upstream `Check User Authorization` projection had stripped them), wiping ADMIN_A and MOD_A profile columns on routine authenticated traffic. No row loss, no duplication, no renumbering — 4 authoritative profile rows, 0 duplicates confirmed.
+- Fix: anti-wipe projection allowlist (`REPLY_PROFILE_ACCESS_FIELDS`) + auto-rehydrate (`buildProfileRehydratePatch` / `mergeRehydrateIntoUpsert`) deployed on the same Admin.dev workflow. Unified resolver `iseo-reply-profile-resolver-v1.0` now backs all 8 profile read paths (0 divergent paths remaining).
+- CONFIG truth corrected: stale `sm-parser-v3.2` key → live `sm-parser-v3.3`; reporting sync display corrected to honest «выключена»; resolver version + active-recipient count (2) added to `/config`.
+- Offline harness `phase3g22-harness.mjs` **53/53 PASS**; regression `phase3g2-harness.mjs` **42/42 PASS**. Contour unchanged: Ops 45 active · Admin 85 active · v2 inactive · AI OFF · reminders OFF · workflows created=0.
+- Storage restore of ADMIN_A/MOD_A fires on the next live Telegram command from each actor that hits a rehydrate-covered path; direct Sheets API restore and Telegram webhook inject were not available to the agent this session — see `evidence/phase3g2-2/ADMIN-A-RESTORE-v1.md`.
+- Evidence: `evidence/phase3g2-2/`. Architecture: `architecture/UNIFIED-REPLY-PROFILE-RESOLVER-v1.md`.

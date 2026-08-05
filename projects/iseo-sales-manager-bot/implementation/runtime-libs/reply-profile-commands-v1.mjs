@@ -20,6 +20,20 @@ import {
   nameValidationErrorText,
   adminOnlyCommandText,
 } from './reply-profile-lib.mjs';
+import {
+  REPLY_PROFILE_RESOLVER_VERSION,
+  resolveReplyProfile,
+  formatMyReplyProfile,
+  buildProfileRehydratePatch,
+  mergeRehydrateIntoUpsert,
+} from './reply-profile-resolver-v1.mjs';
+
+export {
+  REPLY_PROFILE_RESOLVER_VERSION,
+  resolveReplyProfile,
+  buildProfileRehydratePatch,
+  mergeRehydrateIntoUpsert,
+};
 
 export const REPLY_PROFILE_COMMANDS = Object.freeze({
   LIST: '/reply_profiles',
@@ -117,17 +131,7 @@ export function listReplyProfiles(rows, page = 1, pageSize = REPLY_PROFILES_PAGE
 }
 
 export function handleMyReplyProfile(actorRow) {
-  if (!actorRow) return 'Профиль ответа не найден. Обратитесь к администратору.';
-  const p = resolveRecipientReplyProfile(actorRow);
-  const lines = [
-    '👤 Мой профиль ответа клиенту',
-    '',
-    formatReplyProfileCard(actorRow),
-  ];
-  if (p.reply_sender_name) {
-    lines.push('', 'Пример представления:', `"${introSentence(p.reply_sender_name, p.reply_company_name)}"`);
-  }
-  return lines.join('\n');
+  return formatMyReplyProfile(actorRow);
 }
 
 export function handleReplyProfileGet(rows, numberRaw) {

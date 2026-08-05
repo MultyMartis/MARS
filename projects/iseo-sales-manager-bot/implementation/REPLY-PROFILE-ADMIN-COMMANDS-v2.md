@@ -60,3 +60,7 @@ Fail-closed: length 2–32; Latin/Cyrillic; optional hyphen/apostrophe; single t
 ## 6. Seed reference (sanitized)
 
 1 ADMIN_A Андрей enabled · 2 MOD_B_REVOKED Оля disabled · 3 MOD_A Михаил enabled · 4 MOD_C_REVOKED Никита disabled.
+
+## 7. Phase 3G.2.2 — resolver unification
+
+`/reply_profiles`, `/reply_profile N`, and `/my_reply_profile` now resolve through the unified contract (`resolveReplyProfile`, `iseo-reply-profile-resolver-v1.0`) with auto-rehydrate applied before formatting, so a previously wiped row (see `evidence/phase3g2-2/`) self-corrects on the next command rather than displaying stale blanks. Mutation commands (`/reply_name_set`, `/reply_name_enable`, `/reply_name_disable`) are unchanged. See [REPLY-PROFILE-READ-PATH-UNIFICATION-v1.md](REPLY-PROFILE-READ-PATH-UNIFICATION-v1.md).

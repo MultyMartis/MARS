@@ -161,3 +161,15 @@ Evidence: `evidence/phase3g1-1/` · Report: `reports/REPORT-iseo-sales-manager-b
 5. Do **not** re-run disable/enable on profile 3 unless necessary; keep Михаил enabled.
 6. AI stays OFF; reminders stay OFF; do not activate Sales-Manager-v2.
 7. Evidence: `evidence/phase3g2-1/` · Report: `reports/REPORT-iseo-sales-manager-bot-phase3g2-1-silent-command-repair-v1.md`.
+
+## Phase 3G.2.2 — unified profile resolver + config truth repair
+
+1. Root cause: routine `/start`/`/my_status` traffic from ADMIN_A or MOD_A wiped their own reply-profile columns (name/enabled/company/version), because the authorization projection stripped those fields and the last-seen upsert wrote the row back without them. `reply_profile_number` was never affected.
+2. Fix deployed on the same Admin.dev workflow: anti-wipe projection allowlist + auto-rehydrate on `/reply_profiles`, `/reply_profile N`, `/my_reply_profile`, and `/start`/`/my_status`. A wiped row self-corrects the next time the actor runs one of these commands — no manual Sheets edit performed by the agent.
+3. As ADMIN_A: send `/start` then `/my_reply_profile` — confirm name «Андрей», «Персональный ответ: включён».
+4. As MOD_A: send `/start` then `/my_reply_profile` — confirm name «Михаил», «Персональный ответ: включён», and confirm «Мопс» does not appear anywhere in the reply.
+5. As Admin: send `/config` — confirm parser version shows `sm-parser-v3.3` (not `sm-parser-v3.2`), a resolver-version line is present, and reporting-sync state is shown explicitly (expected: «выключена»).
+6. Do not manually restore ADMIN_A/MOD_A profile cells via direct Sheets edit — the rehydrate patch is the intended restore path and re-derives from the same approved seed every time.
+7. Offline gate: `node implementation/harness/phase3g22-harness.mjs` → 53/53 PASS; regression `node implementation/harness/phase3g2-harness.mjs` → 42/42 PASS.
+8. AI stays OFF; reminders stay OFF; do not activate Sales-Manager-v2; do not change access roles.
+9. Evidence: `evidence/phase3g2-2/` · Report: `reports/REPORT-iseo-sales-manager-bot-phase3g2-2-profile-resolver-and-config-truth-v1.md`.

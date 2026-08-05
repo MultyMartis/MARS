@@ -1,3 +1,17 @@
+<!-- Phase 3G.2.2 unified resolver + config truth repair 2026-08-06 -->
+
+## Phase 3G.2.2 — Unified reply profile resolver + config truth repair (current)
+
+**Status:** `COMPLETE — PROFILE RESOLVER UNIFIED; OPERATOR ACCEPTANCE PENDING`
+
+- Root cause: routine `/start`/`/my_status` last-seen upsert wrote ACCESS_CONTROL without reply-profile fields, wiping ADMIN_A and MOD_A profile columns; `Check User Authorization` projection had stripped those fields upstream. No row loss, no duplication, no renumbering.
+- Fix: anti-wipe projection + auto-rehydrate deployed on the same Admin.dev workflow; unified resolver contract `iseo-reply-profile-resolver-v1.0` now backs all 8 profile read paths.
+- Config truth: stale CONFIG parser-version key (`sm-parser-v3.2`) corrected to live `sm-parser-v3.3`; reporting-sync display corrected to honest «выключена»; resolver version and active-recipient count added to `/config`.
+- Offline harness `phase3g22-harness.mjs` **53/53 PASS**; regression `phase3g2-harness.mjs` **42/42 PASS**.
+- Contour: Ops 45 active · Admin 85 active · Sales-Manager-v2 inactive · AI OFF · reminders OFF · workflows created=0.
+- Architecture: [architecture/UNIFIED-REPLY-PROFILE-RESOLVER-v1.md](architecture/UNIFIED-REPLY-PROFILE-RESOLVER-v1.md) · Implementation: [implementation/REPLY-PROFILE-READ-PATH-UNIFICATION-v1.md](implementation/REPLY-PROFILE-READ-PATH-UNIFICATION-v1.md) · Evidence: [evidence/phase3g2-2/](evidence/phase3g2-2/) · Report: [reports/REPORT-iseo-sales-manager-bot-phase3g2-2-profile-resolver-and-config-truth-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3g2-2-profile-resolver-and-config-truth-v1.md)
+- Operator gate: live Telegram confirmation from ADMIN_A and MOD_A that their restored profile displays correctly, and `/config` shows corrected values.
+
 <!-- Phase 3G.2 documentation + number-based reply profiles 2026-08-06 -->
 
 ## Phase 3G.2 — Reply profile numbers + Telegram text contract
@@ -41,7 +55,7 @@
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
-**Status:** Phase 3F.2.2 — COMPLETE — FINAL ADMIN POLISH READY; OPERATOR CONFIRMATION PENDING; AI OFF; reminders OFF
+**Status:** Phase 3G.2.2 — COMPLETE — PROFILE RESOLVER UNIFIED; OPERATOR ACCEPTANCE PENDING; AI OFF; reminders OFF
 
 ---
 
@@ -93,9 +107,11 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 | Pending leads view + reminders (3F.1) | [architecture/PENDING-LEADS-VIEW-v1.md](architecture/PENDING-LEADS-VIEW-v1.md) · [architecture/PENDING-REMINDER-v1.md](architecture/PENDING-REMINDER-v1.md) · [architecture/REMINDER-DELIVERY-IDEMPOTENCY-v1.md](architecture/REMINDER-DELIVERY-IDEMPOTENCY-v1.md) |
 | Phase 3G.1 INTLSEO first-contact | [architecture/INTLSEO-FIRST-CONTACT-STANDARD-v1.md](architecture/INTLSEO-FIRST-CONTACT-STANDARD-v1.md) · [architecture/RECIPIENT-PERSONALIZED-REPLIES-v1.md](architecture/RECIPIENT-PERSONALIZED-REPLIES-v1.md) · [architecture/AI-MANAGER-ASSIST-v1.md](architecture/AI-MANAGER-ASSIST-v1.md) · [architecture/REPLY-PROFILE-CONTRACT-v1.md](architecture/REPLY-PROFILE-CONTRACT-v1.md) |
 | Phase 3G.2 text + numbers | [architecture/TELEGRAM-TEXT-CONTRACT-v2.md](architecture/TELEGRAM-TEXT-CONTRACT-v2.md) · [architecture/REPLY-PROFILE-NUMBERING-v1.md](architecture/REPLY-PROFILE-NUMBERING-v1.md) · [guides/TELEGRAM-COMMAND-REFERENCE-v1.md](guides/TELEGRAM-COMMAND-REFERENCE-v1.md) · [implementation/REPLY-PROFILE-ADMIN-COMMANDS-v2.md](implementation/REPLY-PROFILE-ADMIN-COMMANDS-v2.md) · [implementation/ROLE-AWARE-HELP-BUILDER-v2.md](implementation/ROLE-AWARE-HELP-BUILDER-v2.md) · [implementation/USER-VISIBLE-TEXT-REGISTRY-v1.md](implementation/USER-VISIBLE-TEXT-REGISTRY-v1.md) |
+| Phase 3G.2.2 unified resolver + config truth | [architecture/UNIFIED-REPLY-PROFILE-RESOLVER-v1.md](architecture/UNIFIED-REPLY-PROFILE-RESOLVER-v1.md) · [implementation/REPLY-PROFILE-READ-PATH-UNIFICATION-v1.md](implementation/REPLY-PROFILE-READ-PATH-UNIFICATION-v1.md) |
 | Phase 3G.1 evidence | [evidence/phase3g1/](evidence/phase3g1/) — harness 100/100 PASS |
 | Phase 3G.1.1 evidence | [evidence/phase3g1-1/](evidence/phase3g1-1/) — live profiles seeded; operator template acceptance pending |
 | Phase 3G.2 evidence | [evidence/phase3g2/](evidence/phase3g2/) — stubs for acceptance fill |
+| Phase 3G.2.2 evidence | [evidence/phase3g2-2/](evidence/phase3g2-2/) — unified resolver + config truth forensic and acceptance |
 | Parser 3.3 research (implemented) | [research/parser-3.3/](research/parser-3.3/) |
 | Phase 3F.1 evidence | [evidence/phase3f1/](evidence/phase3f1/) |
 | Phase 3E.2 evidence | [evidence/phase3e2/](evidence/phase3e2/) |

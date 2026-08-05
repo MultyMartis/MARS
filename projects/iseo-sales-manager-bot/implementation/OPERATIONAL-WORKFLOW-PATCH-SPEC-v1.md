@@ -413,3 +413,7 @@ Target: wire Approved Template Router/Renderer + recipient profile resolution in
 ### Phase 3G.2 Operational note
 
 Operational.dev remains **45** nodes active — no structural expansion required for numbering. Consumer of profiles must resolve `reply_sender_name` + `reply_profile_number` from ACCESS_CONTROL; never Telegram display/username. Nickname «Мопс» never in customer copy (use Михаил for MOD_A). Contour: AI OFF · reminders OFF · Sales-Manager-v2 inactive · `LEADS` / `LEAD_EVENTS` · stats epoch 05.08.2026 Europe/Moscow.
+
+### Phase 3G.2.2 Operational note
+
+Operational.dev remains **45** nodes active — the ADMIN_A/MOD_A profile-wipe defect was isolated to Admin.dev's authorization/upsert path and did not affect Operational.dev's recipient personalization (regression-checked, `evidence/phase3g2-2/OPERATIONAL-PERSONALIZATION-REGRESSION-v1.md`). `Expand Delivery Recipients` gains a `resolver_version=iseo-reply-profile-resolver-v1.0` label field for traceability — no structural change. Contour unchanged: AI OFF · reminders OFF · Sales-Manager-v2 inactive.

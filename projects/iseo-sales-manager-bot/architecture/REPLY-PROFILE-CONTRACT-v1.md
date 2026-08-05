@@ -63,3 +63,10 @@ Name/enable commands **must not** mutate ACCESS_CONTROL role or access status.
 | 2 | MOD_B_REVOKED | Оля | no | revoked |
 | 3 | MOD_A | Михаил | yes | active |
 | 4 | MOD_C_REVOKED | Никита | no | revoked |
+
+## Phase 3G.2.2 unified resolver + anti-wipe
+
+- Root cause proven: the routine `/start`/`/my_status` last-seen upsert wrote ACCESS_CONTROL without `reply_profile_*` fields (the upstream authorization projection had stripped them), wiping ADMIN_A and MOD_A columns on ordinary authenticated traffic — not a mutation-command defect.
+- All resolution now goes through one contract, `iseo-reply-profile-resolver-v1.0` — see [UNIFIED-REPLY-PROFILE-RESOLVER-v1.md](UNIFIED-REPLY-PROFILE-RESOLVER-v1.md).
+- Anti-wipe allowlist (`REPLY_PROFILE_ACCESS_FIELDS`) and auto-rehydrate (`buildProfileRehydratePatch`) deployed on the same Admin.dev workflow; fail-closed guarantees (§ above) reaffirmed and proven under wipe conditions — harness `phase3g22-harness.mjs` **53/53 PASS**.
+- Evidence: `evidence/phase3g2-2/`.

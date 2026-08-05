@@ -1,5 +1,22 @@
+<!-- Phase 3G.2.2 unified resolver + config truth repair 2026-08-06 -->
+## Phase 3G.2.2 (current additive)
+
+| Field | Value |
+|-------|-------|
+| **Phase** | 3G.2.2 — Unified reply profile resolver + config truth repair |
+| **Verdict** | `COMPLETE — PROFILE RESOLVER UNIFIED; OPERATOR ACCEPTANCE PENDING` |
+| **Root cause** | `Check User Authorization` `rowFromSheet()` stripped `reply_profile_*` fields; `/start`/`/my_status` last-seen upsert wrote ACCESS_CONTROL without those fields, wiping ADMIN_A and MOD_A on routine authenticated traffic |
+| **Fix** | Anti-wipe projection allowlist + auto-rehydrate on same Admin.dev workflow; unified resolver `iseo-reply-profile-resolver-v1.0` backs all 8 profile read paths |
+| **Storage** | Single authoritative `ACCESS_CONTROL` store confirmed; 4 profile rows, 0 duplicates, 0 renumbering |
+| **Config truth** | Stale `sm-parser-v3.2` CONFIG key corrected to live `sm-parser-v3.3`; reporting sync display corrected to honest «выключена»; resolver version + active-recipient count (2) added to `/config` |
+| **Runtime** | Ops **45** active · Admin **85** active · v2 inactive · AI OFF · reminders OFF |
+| **Harness** | `phase3g22-harness.mjs` **53/53 PASS**; regression `phase3g2-harness.mjs` **42/42 PASS** |
+| **Evidence** | [evidence/phase3g2-2/](evidence/phase3g2-2/) |
+| **Report** | [REPORT-iseo-sales-manager-bot-phase3g2-2-profile-resolver-and-config-truth-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3g2-2-profile-resolver-and-config-truth-v1.md) |
+| **Operator gate** | Live Telegram confirmation from ADMIN_A and MOD_A that restored profile displays correctly; visual confirm corrected `/config` |
+
 <!-- Phase 3G.2.1 silent help/start/config repair 2026-08-06 -->
-## Phase 3G.2.1 (current additive)
+## Phase 3G.2.1 (additive; historical)
 
 | Field | Value |
 |-------|-------|
@@ -68,9 +85,9 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | **Phase 3G.2.1** — silent `/help`/`/start`/`/config` repaired; operator Telegram visual acceptance pending |
-| **Active stage** | `sm-parser-v3.3` / INTLSEO first-contact + `iseo-recipient-name-v1.1` / `sm-msg-v2.4` / AI OFF / reminders OFF |
-| **Runtime** | External n8n — Operational.dev **active** (45 nodes); Admin.dev **active (85 nodes after 3G.2.1)**; Sales-Manager-v2 inactive |
+| **Status** | **Phase 3G.2.2** — unified reply profile resolver + config truth repair; operator Telegram acceptance pending |
+| **Active stage** | `sm-parser-v3.3` / INTLSEO first-contact + `iseo-recipient-name-v1.1` / `sm-msg-v2.4` / `iseo-reply-profile-resolver-v1.0` / AI OFF / reminders OFF |
+| **Runtime** | External n8n — Operational.dev **active** (45 nodes); Admin.dev **active (85 nodes, same workflow patched in 3G.2.2)**; Sales-Manager-v2 inactive |
 | **Phase 3F.2** | Clean production ledger + reporting workbook; callbacks v2; reminders OFF |
 | **Live parity vs Sales-Manager-v2** | **CUT OVER** — Operational.dev replaced v2 for intake; v2 preserved inactive; filter \`labelIds\` parity confirmed |
 | **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C–3D.3 evidence under `evidence/phase3*` |
@@ -259,6 +276,7 @@
 | **Phase 3E.2.2** | Quota diagnosis and acceptance preparation | **ATTENTION; superseded by 3E.2.3 optimization gate** |
 | **Phase 3E.2.3** | Sheets call-budget, bounded reads/retries, single-flight, final exactly-once proof | **COMPLETE — proof delivered; operator visual confirmation pending** |
 | **Phase 3F.1** | Pending-lead commands (`/pending_count`, `/pending_leads`, `/pending_leads_test`) + daily reminder engine (`sm-pending-reminder-v1.0`) | **COMPLETE — COMMANDS AND REMINDER ENGINE READY; OPERATOR ACTIVATION PENDING** |
+| **Phase 3G.2.2** | Unified reply profile resolver (anti-wipe + auto-rehydrate) + config truth repair | **COMPLETE — PROFILE RESOLVER UNIFIED; OPERATOR ACCEPTANCE PENDING** |
 | Next form iteration | Per `MULTI-FORM-TEST-PLAN-v1` | **not opened** |
 | Live rename | After clean-lead acceptance | **deferred** |
 | Registry promotion | Separate governance charter | **not opened** |

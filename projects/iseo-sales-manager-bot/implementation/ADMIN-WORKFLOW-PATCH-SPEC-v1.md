@@ -294,3 +294,14 @@ Same Admin ID only (`wLrLp4WQHm1VJmxz`); **85** nodes retained (no new workflow)
 4. Moderator `/start` shows `Имя в ответах:` from ACCESS_CONTROL `reply_sender_name`.
 5. Do **not** touch Reply Profile Commands (hash must stay `961F84B02AA928CE`), Operational.dev, AI, reminders, profile numbers/names.
 6. Evidence: `evidence/phase3g2-1/`. Validate Code-node parse before every text deploy.
+
+### Phase 3G.2.2 Admin patch note
+
+Same Admin workflow (85 nodes retained, no new workflow):
+
+1. **Root cause:** `Check User Authorization` row projection stripped `reply_profile_*` fields; the `/start`/`/my_status` last-seen upsert then wrote ACCESS_CONTROL without those fields, wiping ADMIN_A/MOD_A profile columns on routine authenticated traffic. See `evidence/phase3g2-2/ADMIN-A-PROFILE-LOSS-ROOT-CAUSE-v1.md` and `MOD-A-SELF-PROFILE-ROOT-CAUSE-v1.md`.
+2. Patch nodes: **Check User Authorization** (anti-wipe allowlist `REPLY_PROFILE_ACCESS_FIELDS`), **last-seen upsert** (write mapping sourced from top-level Prepare output via `mergeRehydrateIntoUpsert`), **Reply Profile Commands** (auto-rehydrate before formatting), **Start** (fail-closed reply-name line, rehydrate applied), **Config Summary** (Moscow timestamp, live parser-version truth, resolver-version line, reporting-sync honesty, active-recipient count).
+3. Unified resolver contract: `reply-profile-resolver-v1.mjs` (new), version `iseo-reply-profile-resolver-v1.0` — see [architecture/UNIFIED-REPLY-PROFILE-RESOLVER-v1.md](../architecture/UNIFIED-REPLY-PROFILE-RESOLVER-v1.md).
+4. Do not change ACCESS_CONTROL schema, access roles/status, or profile numbers; do not enable AI or reminders; do not activate Sales-Manager-v2.
+5. Offline harness `phase3g22-harness.mjs` **53/53 PASS**; regression `phase3g2-harness.mjs` **42/42 PASS**.
+6. Evidence: `evidence/phase3g2-2/`.
