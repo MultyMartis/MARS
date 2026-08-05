@@ -4,7 +4,7 @@
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
-**Status:** Phase 3E.2.1 — First Reply Engine **`sm-reply-v2.1`** + Human Reply Style **`sm-human-v1.0`** + manager card **`sm-msg-v2.4`**; Parser **`sm-parser-v3.3`** (3E.1 COMPLETE); harness 64/64 PASS; AI OFF; drafts are manager-copy only; operator copy acceptance **ATTENTION**
+**Status:** Phase 3E.2.2 — Human Reply Style drafts ready; ACCESS_CONTROL fail-closed harden; isolated Sheets probes healthy; **full dual-card path still Sheets rate-limited** (`ATTENTION`); harness 59/59 PASS; AI OFF; operator copy acceptance **PENDING**
 
 ---
 

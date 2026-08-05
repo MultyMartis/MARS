@@ -57,7 +57,9 @@ Manager card should show lint-blocked state — operator copies manually only wh
 
 ---
 
-## Harness anchors (Phase 3E.2.1)
+## Harness anchors (Phase 3E.2.1 / 3E.2.2)
+
+Phase 3E.2.2 harness H35 requires linter `ok:true` with empty failures for SEO traffic-decline and related human-copy cases.
 
 | ID | Assertion |
 |----|-----------|

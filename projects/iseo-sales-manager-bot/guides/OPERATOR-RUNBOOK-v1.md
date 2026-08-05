@@ -72,3 +72,12 @@ If a new pending card has no buttons, inspect Format output before changing Admi
 6. Under Sheets quota, claim path correctly blocks send; wait for API recovery before re-proving dual-card live delivery.
 7. Do not restore Olya/Nikita; do not enable AI; do not create workflows; do not implement reminders in this phase.
 
+## Phase 3E.2.2 — Sheets recovery / dual-card proof / human copy packet
+
+1. Isolated Sheets probes may report healthy while the **full** delivery path still fails on ACCESS_CONTROL/claim under quota — treat full-path claim failure as fail-closed (zero cards), not as permission to bypass ledger.
+2. Marker `PHASE_3E2_2_DUAL_CARD_DELIVERY_PROOF` is an internal acceptance fixture (drafts allowed; excluded from prod stats).
+3. Local: `node implementation/harness/phase3e22-harness.mjs` → **59/59 PASS**.
+4. Evidence: `evidence/phase3e2-2/`; report: `reports/REPORT-iseo-sales-manager-bot-phase3e2-2-final-acceptance-v1.md`.
+5. Until dual-card `sendOk=2` is proved after Sheets recovery, status remains **`ATTENTION — SHEETS DELIVERY PATH STILL RATE-LIMITED`**.
+6. Operator must visually accept human drafts before final COMPLETE.
+

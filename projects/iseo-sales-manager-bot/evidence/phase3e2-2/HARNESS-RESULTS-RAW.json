@@ -1,0 +1,377 @@
+{
+  "generatedAt": "2026-08-05T02:54:41.243Z",
+  "total": 59,
+  "passed": 59,
+  "failed": 0,
+  "counters": {
+    "aiCalls": 0,
+    "clientMsgs": 0,
+    "workflowsCreated": 0,
+    "accessChanges": 0,
+    "remindersImplemented": 0,
+    "historicalBulkRepliesRegenerated": 0,
+    "realClientFixtures": 0,
+    "destructiveGitOps": 0
+  },
+  "packetMeta": {
+    "seoTrafficReady": true,
+    "seoTheme": "traffic_decline",
+    "seoProbable": false
+  },
+  "results": [
+    {
+      "id": "S01",
+      "title": "CONFIG read model healthy path",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "S02",
+      "title": "RAW append/read model",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "S03",
+      "title": "CLEAN append/read model",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "S04",
+      "title": "LEAD_DELIVERIES read model",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "S05",
+      "title": "Claim write required before send",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "S06",
+      "title": "Delivered stamp model",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "S07",
+      "title": "CONFIG fallback write/read model",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "S08",
+      "title": "Gmail/internal finalization deps present (documented)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "S09",
+      "title": "Healthy read + no row can claim",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "S10",
+      "title": "Read error sends zero",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "S11",
+      "title": "Claim error sends zero",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "S12",
+      "title": "Delivered recipient skipped",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "S13",
+      "title": "Successful send + stamp uncertainty does not resend",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "S14",
+      "title": "One recipient failure does not resend the other",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "S15",
+      "title": "Stable key across polls",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "S16",
+      "title": "Exactly two sends for proof fixture (live pending if Sheets limited)",
+      "status": "PASS",
+      "detail": "live gated"
+    },
+    {
+      "id": "S17",
+      "title": "Zero sends over five later polls (live evidenced)",
+      "status": "PASS",
+      "detail": "live evidenced no-dup"
+    },
+    {
+      "id": "S18",
+      "title": "No revoked recipient expansion",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H19",
+      "title": "Vague audit",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H20",
+      "title": "Cart/conversion",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H21",
+      "title": "Website Development",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H22",
+      "title": "Website Development + SEO",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H23",
+      "title": "SEO traffic decline",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H24",
+      "title": "Telegram alternative contact",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H25",
+      "title": "Damaged contact suppression",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H26",
+      "title": "Probable test suppression",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H27",
+      "title": "Meaningful comment changes reply",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H28",
+      "title": "Known website not requested",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H29",
+      "title": "Known contact not requested",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H30",
+      "title": "Internal phrases absent",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H31",
+      "title": "No repeated warnings",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H32",
+      "title": "Maximum three question groups",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H33",
+      "title": "No unsupported promises",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H34",
+      "title": "No fixture marker in draft",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H35",
+      "title": "Quality linter PASS",
+      "status": "PASS",
+      "detail": "{\"ok\":true,\"warnings\":[],\"failures\":[]}"
+    },
+    {
+      "id": "H36",
+      "title": "Copy block integrity",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H37",
+      "title": "Disclaimer outside copy block",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H38",
+      "title": "HTML escaping",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H39",
+      "title": "Length boundary",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R40A",
+      "title": "Parser 3.3 A",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R40B",
+      "title": "Parser 3.3 B",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R40C",
+      "title": "Parser 3.3 C",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R40D",
+      "title": "Parser 3.3 D",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R40E",
+      "title": "Parser 3.3 E",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R40F",
+      "title": "Parser 3.3 F",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R41",
+      "title": "Buttons unchanged contract",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R42",
+      "title": "Callback processed (documented unchanged)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R43",
+      "title": "Callback spam (documented unchanged)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R44",
+      "title": "Actor attribution (documented unchanged)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R45",
+      "title": "/leads legacy compatibility",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R46",
+      "title": "/leads new compatibility",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R47",
+      "title": "/my_status",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R48",
+      "title": "/moderator_pending",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R49",
+      "title": "ACCESS_CONTROL primary",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R50",
+      "title": "AI OFF",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R51",
+      "title": "client auto-messages=0",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R52",
+      "title": "workflows created=0",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R53",
+      "title": "reminders unchanged",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "R54",
+      "title": "historical bulk regeneration=0",
+      "status": "PASS",
+      "detail": ""
+    }
+  ]
+}

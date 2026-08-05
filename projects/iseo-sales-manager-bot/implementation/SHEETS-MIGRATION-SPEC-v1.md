@@ -10,6 +10,10 @@
 
 Preserve existing First Reply v2 fields; store `human_reply_style_version`, meaningful theme, quality-linter outcome, safe reason codes. No destructive schema changes; no historical reply regeneration. `LEAD_DELIVERIES` remains primary audit ledger; CONFIG `tg_delivered:*` is secondary per-recipient guard only. Protect schema backup before any column migration apply.
 
+### Phase 3E.2.2 additive note
+
+Dedicated CLEAN headers for `first_reply_version` / mode / ready / omitted_reason / `meaningful_theme` / `human_reply_style_version` / linter outcome remain **planned**. **Not applied live in 3E.2.2** while Sheets full-path quota recovers — continue `first_reply_text` + `quality_comment` carrier. See `evidence/phase3e2-2/CLEAN-HEADER-MIGRATION-v1.md`.
+
 ---
 
 ## 1. Workbook layout

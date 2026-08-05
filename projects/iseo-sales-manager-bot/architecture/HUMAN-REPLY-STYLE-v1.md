@@ -2,8 +2,8 @@
 
 **Product:** i-SEO Sales Manager Bot  
 **Version:** `sm-human-v1.0`  
-**Layered on:** First Reply Engine **`sm-reply-v2.1`** (Phase 3E.2.1)  
-**Status:** IMPLEMENTED (local harness); operator copy acceptance **ATTENTION**  
+**Layered on:** First Reply Engine **`sm-reply-v2.1`** (Phase 3E.2.2)  
+**Status:** IMPLEMENTED (harness + live drafts); dual-card live delivery **ATTENTION** (Sheets); operator copy acceptance **PENDING**  
 **Runtime lib:** `implementation/runtime-libs/first-reply-engine-v2.mjs`  
 **AI:** OFF — deterministic templates only  
 **Delivery:** manager draft for Оля (PER-0010) — **never** auto-sent to customer

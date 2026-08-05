@@ -1,9 +1,9 @@
 # DELIVERY FAIL-CLOSED RECONCILIATION v1
 
 **Product:** i-SEO Sales Manager Bot  
-**Phase:** 3E.2.1  
+**Phase:** 3E.2.2  
 **Scope:** Operational.dev multi-recipient Telegram delivery + Gmail finalization boundary  
-**Status:** IMPLEMENTED (harness models D01–D14 PASS); live patch acceptance **ATTENTION**
+**Status:** IMPLEMENTED + ACCESS_CONTROL fail-closed harden; full dual-card live proof **ATTENTION** (Sheets quota)
 
 ---
 

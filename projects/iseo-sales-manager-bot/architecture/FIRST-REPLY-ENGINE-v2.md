@@ -2,7 +2,7 @@
 
 **Product:** i-SEO Sales Manager Bot  
 **Version:** `sm-reply-v2.1` (Human Reply Style **`sm-human-v1.0`** layered in Phase 3E.2.1)  
-**Status:** IMPLEMENTED (Phase 3E.2 + 3E.2.1); operator copy acceptance **ATTENTION**  
+**Status:** IMPLEMENTED (Phase 3E.2 + 3E.2.1 + 3E.2.2); dual-card live proof **ATTENTION** (Sheets); operator copy acceptance **PENDING**  
 **Runtime lib:** `implementation/runtime-libs/first-reply-engine-v2.mjs`  
 **AI:** OFF — deterministic templates only  
 **Delivery:** manager draft for manual copy — never auto-sent to customer

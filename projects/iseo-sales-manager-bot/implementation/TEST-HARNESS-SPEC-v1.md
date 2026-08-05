@@ -9,6 +9,10 @@
 
 `node implementation/harness/phase3e21-harness.mjs` — delivery fail-closed + Human Reply Style + regressions → **64/64 PASS** (see `evidence/phase3e2-1/HARNESS-RESULTS-v1.md`).
 
+### Phase 3E.2.2 harness
+
+`node implementation/harness/phase3e22-harness.mjs` — Sheets/delivery safety models + human-copy packet cases + regressions → **59/59 PASS** (see `evidence/phase3e2-2/HARNESS-RESULTS-v1.md`).
+
 ---
 
 ## 1. MetaBOT Programmer validation gates

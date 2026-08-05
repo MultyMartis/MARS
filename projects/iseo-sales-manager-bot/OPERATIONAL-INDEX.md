@@ -11,16 +11,17 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | **PHASE 3E.2.1 — HUMAN REPLY STYLE + DELIVERY FAIL-CLOSED** (3E.2 + 3E.1 COMPLETE; harness 64/64; operator copy acceptance **ATTENTION**) |
-| **Active stage** | `sm-parser-v3.3` / `sm-reply-v2.1` / `sm-human-v1.0` / `sm-msg-v2.4` / AI OFF; delivery fail-closed reconciliation |
+| **Status** | **PHASE 3E.2.2 — ATTENTION — SHEETS DELIVERY PATH STILL RATE-LIMITED** (human copy packet ready; dual-card live sendOk=2 blocked by quota; harness 59/59) |
+| **Active stage** | `sm-parser-v3.3` / `sm-reply-v2.1` / `sm-human-v1.0` / `sm-msg-v2.4` / AI OFF; delivery fail-closed + ACCESS_CONTROL fail-closed |
 | **Runtime** | External n8n — Operational.dev **active** (`xSnXPy8cEHoZw6xG`, **45** nodes, Parser 3.3 + Reply v2.1); Admin.dev **active** (`wLrLp4WQHm1VJmxz`, **59** nodes); Sales-Manager-v2 **inactive** (`h8I2Tl2yl4uzhUnB`) |
 | **Live parity vs Sales-Manager-v2** | **CUT OVER** — Operational.dev replaced v2 for intake; v2 preserved inactive; filter \`labelIds\` parity confirmed |
 | **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C–3D.3 evidence under `evidence/phase3*` |
 | **Registry** | status **planned** unchanged — promotion to active requires **separate governance gate** (`REGISTRY_STATUS_PROMOTION_PENDING`) |
 | **ATLAS** | Recommendation only — ORG-0003 / PER-0001 / PER-0010 / PER-0011; **no** new IDs |
-| **Next** | Operator visual copy acceptance for Human Reply Style v1; then pending-lead reminders (separate charter) |
-| **AI** | **OFF** — `ai_enabled=false`; no AI ON claim in Phase 3E.2.1 |
+| **Next** | Wait for Sheets quota recovery → re-prove dual-card sendOk=2; operator visual copy acceptance; then reminders (separate charter) |
+| **AI** | **OFF** — `ai_enabled=false`; no AI ON claim in Phase 3E.2.2 |
 | **Product layer** | [product/](product/) |
+| **Evidence 3E.2.2** | [evidence/phase3e2-2/](evidence/phase3e2-2/) · [reports/REPORT-iseo-sales-manager-bot-phase3e2-2-final-acceptance-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3e2-2-final-acceptance-v1.md) |
 | **Evidence 3E.2.1** | [evidence/phase3e2-1/](evidence/phase3e2-1/) |
 | **Evidence 3E.2** | [evidence/phase3e2/](evidence/phase3e2/) |
 | **Evidence 3E.1** | [evidence/phase3e1/](evidence/phase3e1/) · closed — operator visual A–F PASS |

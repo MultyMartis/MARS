@@ -554,13 +554,18 @@ export function classifyProbableTest({ name, comment, site, phone, email, marker
   if (/\btest\b/i.test(n) || hasRuTestToken(n)) reasons.push('name_test');
   if (/тест\s*бота/i.test(c) || /\btest\b/i.test(c) || hasRuTestToken(c)) reasons.push('comment_test');
   if (/synthetic|parser|stabilization|phase\s*3/i.test(c)) reasons.push('comment_internal');
-  if (/\.(test|example)(\b|\/|$)/i.test(s)) reasons.push('synthetic_domain');
   {
     const markerBlob = String(marker || '') + ' ' + String(phase_marker || '');
-    // Phase 3E.2.1 human-copy acceptance markers must produce customer drafts.
+    // Phase 3E.2.1 human-copy + Phase 3E.2.2 dual-card acceptance markers must produce customer drafts.
     // Keep suppression for explicit TEST / PROBABLE_TEST markers (fixture H).
-    const humanAcceptance = /PHASE_3E2_1_[BCDG]_[A-Z0-9_]+_HUMAN\b/i.test(markerBlob)
-      && !(/_TEST_|PROBABLE_TEST/i.test(markerBlob));
+    const humanAcceptance = (
+      /PHASE_3E2_1_[BCDG]_[A-Z0-9_]+_HUMAN\b/i.test(markerBlob)
+      || /PHASE_3E2_2_DUAL_CARD_DELIVERY_PROOF\b/i.test(markerBlob)
+    ) && !(/_TEST_|PROBABLE_TEST/i.test(markerBlob));
+    if (/\.(test|example)(\b|\/|$)/i.test(s)) {
+      const allowProofExample = humanAcceptance && /human-proof\.example/i.test(s);
+      if (!allowProofExample) reasons.push('synthetic_domain');
+    }
     if (!humanAcceptance && /SYNTHETIC_TEST|PHASE_3E1|PHASE_3E2|PHASE_3D/i.test(markerBlob)) {
       reasons.push('phase_marker');
     }

@@ -100,7 +100,7 @@ export function detectMeaningfulTheme(comment, resolvedService) {
 
   if (/конверси/i.test(c) && /корзин|checkout|оформлен/i.test(c)) return 'conversion_cart';
   if (/конверси/i.test(c)) return 'conversion_cart';
-  if (/пада(ет|ют)?\s+трафик|снижен(ие|ия)\s+трафик|трафик\s+(падает|упал|снизил)/i.test(c)) return 'traffic_decline';
+  if (/пада(ет|ют)?\s+трафик|снижен(ие|ия)\s+трафик|трафик\s+(падает|упал|снизил)|снизил(?:ся|ось|ись)?\s+(?:поисковый\s+)?трафик|(?:после\s+изменен\w*).{0,48}трафик|трафик.{0,48}(?:после\s+изменен)/i.test(c)) return 'traffic_decline';
   if (/позици|видимост|ранжир|выдач/i.test(c)) return 'rankings_visibility';
   if (/ошибк|не\s+работает|баг|слом|\b404\b|\b500\b/i.test(c)) return 'technical_errors';
   if (/индекс/i.test(c)) return 'indexing';
@@ -277,15 +277,25 @@ function composeHumanDraft(ctx) {
   } else if (service === 'SEO') {
     if (siteState === 'provided' && site) {
       ack.push(`Спасибо за заявку по SEO для сайта ${site}.`);
-      if (!isVagueTask(comment, service) && theme !== 'vague_service') {
-        if (theme === 'traffic_decline') ack.push('Поняли, что вас беспокоит снижение трафика.');
-        else if (theme === 'rankings_visibility') ack.push('Поняли, что важны позиции в поиске.');
-        else ack.push('Поняли вашу задачу по продвижению.');
+      if (theme === 'traffic_decline') {
+        if (/после\s+изменен/i.test(comment)) {
+          ack.push('Поняли, что после изменений на сайте снизился поисковый трафик.');
+        } else {
+          ack.push('Поняли, что вас беспокоит снижение поискового трафика.');
+        }
+        questions.push({ id: 'seo_tr_changes', text: 'Когда вносились изменения и что именно обновляли?' });
+        questions.push({ id: 'seo_tr_sections', text: 'Какие разделы или направления потеряли больше всего трафика?' });
+        questions.push({ id: 'seo_tr_analytics', text: 'Есть ли доступ к Метрике и Search Console, чтобы сравнить показатели до и после изменений?' });
+      } else {
+        if (!isVagueTask(comment, service) && theme !== 'vague_service') {
+          if (theme === 'rankings_visibility') ack.push('Поняли, что важны позиции в поиске.');
+          else ack.push('Поняли вашу задачу по продвижению.');
+        }
+        if (!/регион|город|москв|спб/i.test(comment)) {
+          questions.push({ id: 'seo_region', text: 'По какому региону планируется продвижение?' });
+        }
+        questions.push({ id: 'seo_priority', text: 'Какие услуги или товары сейчас в приоритете?' });
       }
-      if (!/регион|город|москв|спб/i.test(comment)) {
-        questions.push({ id: 'seo_region', text: 'По какому региону планируется продвижение?' });
-      }
-      questions.push({ id: 'seo_priority', text: 'Какие услуги или товары сейчас в приоритете?' });
     } else if (siteState === 'explicitly_absent') {
       ack.push('Спасибо за интерес к SEO.');
       questions.push({ id: 'seo_or_dev', text: 'Нужно сначала создать сайт, а затем заняться SEO, или сайт уже есть под другим адресом?' });
