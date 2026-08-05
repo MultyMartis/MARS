@@ -167,11 +167,13 @@ No secrets, Telegram IDs, workbook IDs, raw emails, screenshots, or unsanitized 
 
 ## 33. Commit
 
-See git tip after selective staging from clean worktree (message: `fix(iseo-sales-manager-bot): complete reply delivery acceptance`).
+`b069cc35` — `fix(iseo-sales-manager-bot): complete reply delivery acceptance`
+
+Ancestors verified: `6364b5fc`, `42eb8436`, `01a65015`.
 
 ## 34. Push
 
-Pushed to `origin/mars/canonical-post-recovery` without force (when commit succeeds).
+Pushed without force to `origin/mars/canonical-post-recovery` (`42eb8436..b069cc35`).
 
 ## 35. Risks
 
