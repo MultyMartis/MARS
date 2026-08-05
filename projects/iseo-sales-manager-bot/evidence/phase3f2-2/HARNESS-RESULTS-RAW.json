@@ -1,0 +1,174 @@
+{
+  "total": 33,
+  "passed": 33,
+  "failed": 0,
+  "checks": [
+    {
+      "id": 1,
+      "ok": true,
+      "detail": "заявка передана сотрудникам"
+    },
+    {
+      "id": 2,
+      "ok": true,
+      "detail": "заявка передана сотрудникам"
+    },
+    {
+      "id": 3,
+      "ok": true,
+      "detail": "статус восстановлен после технической ошибки"
+    },
+    {
+      "id": 4,
+      "ok": true,
+      "detail": "заявка получена"
+    },
+    {
+      "id": 5,
+      "ok": true,
+      "detail": "подготовлен черновик ответа"
+    },
+    {
+      "id": 6,
+      "ok": true,
+      "detail": "unknown"
+    },
+    {
+      "id": 7,
+      "ok": true,
+      "detail": "missing timestamp remains explicit in formatter"
+    },
+    {
+      "id": 8,
+      "ok": true,
+      "detail": "actor regex still matches"
+    },
+    {
+      "id": 9,
+      "ok": true,
+      "detail": "no fabricated timestamps"
+    },
+    {
+      "id": 10,
+      "ok": true,
+      "detail": "event order unchanged (handler sort preserved)"
+    },
+    {
+      "id": "lc_processed",
+      "ok": true,
+      "detail": "статус изменён: обработан"
+    },
+    {
+      "id": "lc_spam",
+      "ok": true,
+      "detail": "статус изменён: спам"
+    },
+    {
+      "id": "delivery_failed",
+      "ok": true,
+      "detail": "не удалось передать заявку сотруднику"
+    },
+    {
+      "id": "archive",
+      "ok": true,
+      "detail": "заявка перенесена в рабочий реестр"
+    },
+    {
+      "id": "manual",
+      "ok": true,
+      "detail": "данные исправлены администратором"
+    },
+    {
+      "id": 11,
+      "ok": true,
+      "detail": "/help recognized (template)"
+    },
+    {
+      "id": 12,
+      "ok": true,
+      "detail": "admin template"
+    },
+    {
+      "id": 13,
+      "ok": true,
+      "detail": "moderator template"
+    },
+    {
+      "id": 14,
+      "ok": true,
+      "detail": "lead_history placeholder HTML-safe"
+    },
+    {
+      "id": 15,
+      "ok": true,
+      "detail": "ai_on intact"
+    },
+    {
+      "id": 16,
+      "ok": true,
+      "detail": "ai_off own line order"
+    },
+    {
+      "id": 17,
+      "ok": true,
+      "detail": "entity renders to <номер>, not double-escaped"
+    },
+    {
+      "id": 18,
+      "ok": true,
+      "detail": "no accidental n separator"
+    },
+    {
+      "id": 19,
+      "ok": true,
+      "detail": "pending commands"
+    },
+    {
+      "id": 20,
+      "ok": true,
+      "detail": "reminder status"
+    },
+    {
+      "id": 21,
+      "ok": true,
+      "detail": "status commands"
+    },
+    {
+      "id": 22,
+      "ok": true,
+      "detail": "user commands"
+    },
+    {
+      "id": 23,
+      "ok": true,
+      "detail": "admin-only labelled"
+    },
+    {
+      "id": 24,
+      "ok": true,
+      "detail": "moderator no unauthorized"
+    },
+    {
+      "id": 25,
+      "ok": true,
+      "detail": "message length ok 1746/740"
+    },
+    {
+      "id": 26,
+      "ok": true,
+      "detail": "balanced code tags admin"
+    },
+    {
+      "id": 27,
+      "ok": true,
+      "detail": "no duplicate sections"
+    },
+    {
+      "id": "13b",
+      "ok": true,
+      "detail": "moderator staff cmds"
+    }
+  ],
+  "adminLen": 1746,
+  "modLen": 740
+}

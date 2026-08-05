@@ -12,17 +12,18 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | **COMPLETE — COMMANDS AND REMINDER ENGINE READY; OPERATOR ACTIVATION PENDING** (Phase 3F.1); Phase 3E.2 closed `COMPLETE — HUMAN FIRST REPLY ENGINE READY` |
+| **Status** | **COMPLETE — FINAL ADMIN POLISH READY; OPERATOR CONFIRMATION PENDING** (Phase 3F.2.2); Phase 3F.2 clean ledger prepared for closeout |
 | **Active stage** | `sm-parser-v3.3` / `sm-reply-v2.1` / `sm-human-v1.0` / `sm-msg-v2.4` / `sm-pending-reminder-v1.0` / AI OFF |
-| **Runtime** | External n8n — Operational.dev **active, unchanged** (45 nodes, `minutesInterval=2`); Admin.dev **active, 59→79 nodes** (pending commands + reminder engine); rollback workflow inactive |
+| **Runtime** | External n8n — Operational.dev **active, unchanged** (45 nodes, `minutesInterval=2`); Admin.dev **active, 82 nodes** (3F.2.2 help/history polish; pending+reminder); rollback workflow inactive |
 | **Phase 3F.2** | Clean production ledger + reporting workbook; callbacks v2; reminders OFF |
 | **Live parity vs Sales-Manager-v2** | **CUT OVER** — Operational.dev replaced v2 for intake; v2 preserved inactive; filter \`labelIds\` parity confirmed |
 | **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C–3D.3 evidence under `evidence/phase3*` |
 | **Registry** | status **planned** unchanged — promotion to active requires **separate governance gate** (`REGISTRY_STATUS_PROMOTION_PENDING`) |
 | **ATLAS** | Recommendation only — ORG-0003 / PER-0001 / PER-0010 / PER-0011; **no** new IDs |
-| **Next** | Operator explicitly activates `pending_reminders_enabled=true` when ready; commit/push remain parent-agent pending |
+| **Next** | Operator visual confirm /help + /lead_history 1 after 3F.2.2; reminders stay OFF until explicit activation |
 | **AI** | **OFF** — `ai_enabled=false`; no AI ON claim in Phase 3F.1 |
 | **Product layer** | [product/](product/) |
+| **Evidence 3F.2.2** | [evidence/phase3f2-2/](evidence/phase3f2-2/) — human event labels + Admin help rebuild |
 | **Evidence 3F.1** | [evidence/phase3f1/](evidence/phase3f1/) — pending commands + reminder engine, harness 73/73 PASS |
 | **Evidence 3E.2.3** | [evidence/phase3e2-3/](evidence/phase3e2-3/) — exactly-once + five-poll live proof PASS |
 | **Evidence 3E.2.2** | [evidence/phase3e2-2/](evidence/phase3e2-2/) · [reports/REPORT-iseo-sales-manager-bot-phase3e2-2-final-acceptance-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3e2-2-final-acceptance-v1.md) |

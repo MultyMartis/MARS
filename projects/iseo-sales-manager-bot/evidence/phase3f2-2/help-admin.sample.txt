@@ -1,0 +1,45 @@
+📖 Команды Sales Manager Admin
+
+🚀 Начало
+<code>/start</code> — открыть панель бота
+<code>/my_status</code> — ваш текущий статус доступа
+
+📋 Работа с заявками
+<code>/leads</code> 3 — последние 3 карточки лидов
+<code>/leads</code> 5 — последние 5 карточек лидов
+<code>/leads</code> 10 — последние 10 карточек лидов
+<code>/lead_history</code> &lt;номер&gt; — история выбранного лида
+<code>/pending_count</code> — количество необработанных заявок
+<code>/pending_leads</code> — список необработанных заявок
+<code>/reminder_status</code> — состояние ежедневных напоминаний
+
+📊 Состояние системы
+<code>/status</code> — состояние процессов
+<code>/health</code> — проверка зависимостей
+<code>/stats</code> — статистика за 7 дней
+<code>/last_error</code> — последняя ошибка
+<code>/delivery_status</code> — состояние доставки лидов
+<code>/delivery_users</code> — получатели лидов
+
+🤖 ИИ
+<code>/ai_status</code> — текущий режим
+<code>/ai_on</code> — включить ИИ
+<code>/ai_off</code> — выключить ИИ
+
+👥 Пользователи
+<code>/moderators</code> — активные модераторы
+<code>/moderator_pending</code> — новые заявки и временно отозванные модераторы
+<code>/moderator_info</code> — информация о пользователе
+<code>/moderator_add</code> — выдать права модератора
+<code>/moderator_remove</code> — отозвать права модератора
+
+⚙️ Настройки
+<code>/config</code> — безопасная сводка
+<code>/help</code> — список команд
+
+Только для администратора
+<code>/reminder_on</code> — включить ежедневные напоминания
+<code>/reminder_off</code> — выключить ежедневные напоминания
+<code>/reminder_time</code> ЧЧ:ММ — время напоминания
+<code>/reminder_timezone</code> &lt;часовой пояс&gt; — часовой пояс напоминаний
+<code>/reminder_min</code> &lt;число&gt; — минимум необработанных заявок

@@ -76,6 +76,7 @@ Empty values → `—` (not `UNKNOWN`, not blank multi-newlines).
 
 - Prefer **plain text** with blank lines between blocks.
 - If HTML: escape `<`, `>`, `&`; use `<b>` sparingly; no nested entities that Telegram rejects.
+- Admin `/help` (Phase 3F.2.2): wrap only slash-commands in `<code>` via `cmdHtml`; keep placeholders like `<номер>` **outside** `cmdHtml` as `&lt;номер&gt;` so Telegram renders `<номер>`. Never substring-patch help lines.
 - Do not use Markdown `*` `_` `` ` `` as primary (entity parse failures — MetaBOT lesson).
 - Collapse multiple empty lines.
 - Dates: `дд.мм.гггг чч:мм`.

@@ -259,3 +259,12 @@ Same workflow ID `wLrLp4WQHm1VJmxz` (Admin.dev only). Node count **59 → 79** (
 ## 3F.2.1
 
 Patch same Admin ID: canonical `/leads` adapter, `/lead_history` route+handler+help, staff auth for archive/history, reporting lifecycle labels when Admin syncs.
+
+## 3F.2.2
+
+Patch same Admin ID only (`wLrLp4WQHm1VJmxz`):
+
+1. **Lead History Handler** — complete human event-label map including `telegram_sent`; unknown → `техническое событие`.
+2. **Help** — rebuild Admin + moderator `helpReply` templates ([ADMIN-HELP-BUILDER-v1.md](ADMIN-HELP-BUILDER-v1.md)); include pending + `/reminder_status`; Admin-only reminder config subsection.
+3. Do not touch Operational.dev, reminder schedule CONFIG defaults, callback tokens, or Sheets schemas.
+

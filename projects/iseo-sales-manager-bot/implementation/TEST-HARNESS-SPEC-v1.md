@@ -326,3 +326,7 @@ Live command acceptance (separate from the offline harness): admin/moderator/rev
 ## 3F.2.1 harness band
 
 Checks cover archive adapter, history command, keyed reporting mapper, source display, callback token identity, pending/reminder regression. Evidence: `evidence/phase3f2-1/HARNESS-RESULTS-v1.md`.
+
+## 3F.2.2 harness band
+
+Event-label map (including `telegram_sent` / unknown fallback) + Admin/moderator help builders (no corrupted `/ai_on`, pending + reminder_status listed). Evidence: `evidence/phase3f2-2/HARNESS-RESULTS-v1.md` (**33/33 PASS**).

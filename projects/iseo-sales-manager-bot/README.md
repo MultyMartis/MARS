@@ -4,7 +4,7 @@
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
-**Status:** Phase 3F.1 — **COMPLETE — COMMANDS AND REMINDER ENGINE READY; OPERATOR ACTIVATION PENDING**; Phase 3E.2 closed `COMPLETE — HUMAN FIRST REPLY ENGINE READY` (operator visual confirmed); pending-lead commands live-accepted; daily reminder engine implemented, disabled by default; AI OFF
+**Status:** Phase 3F.2.2 — COMPLETE — FINAL ADMIN POLISH READY; OPERATOR CONFIRMATION PENDING; AI OFF; reminders OFF
 
 ---
 
@@ -166,6 +166,11 @@ Admin.dev (same ID, 59→79 nodes) gained a read-only pending-lead view (`/pendi
 Clean production ledger (`LEADS`), immutable lead events, stats epoch 05.08.2026, callback lookup v2, private external reporting workbook. Reminders remain OFF until explicit operator activation.
 
 
+
+## Phase 3F.2.2 (final Admin polish)
+
+Human event labels for `/lead_history` (including `telegram_sent`) and rebuilt Admin/moderator `/help`.
+Evidence: `evidence/phase3f2-2/`. Report: `reports/REPORT-iseo-sales-manager-bot-phase3f2-2-final-admin-polish-v1.md`.
 
 ## Phase 3F.2.1 (view & reporting repair)
 

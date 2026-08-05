@@ -108,3 +108,7 @@ If a new pending card has no buttons, inspect Format output before changing Admi
 ## 3F.2.1 acceptance commands
 
 As Admin: `/leads`, `/lead_history 1`, `/pending_count`, `/pending_leads`, `/reminder_status`, `/help`. Confirm source display, processed status, actor, reply text, reminders OFF.
+
+## 3F.2.2 polish acceptance
+
+As Admin after deploy: `/lead_history 1` (no `telegram_sent`; human delivery phrase), `/help` (intact `/ai_on`, `/lead_history <номер>`, pending + reminder_status). As moderator: `/help` without config/AI/reminder-config commands. Do **not** enable reminders.

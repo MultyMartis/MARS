@@ -1,12 +1,12 @@
 # CURRENT PRODUCTION BASELINE v1
 
-**Срез:** Phase 3F.2, 2026-08-05. **Статус:** `COMPLETE — CLEAN LEDGER READY; OPERATOR REPORTING ACCEPTANCE PENDING`.
+**Срез:** Phase 3F.2.2, 2026-08-06. **Статус:** `COMPLETE — FINAL ADMIN POLISH READY; OPERATOR CONFIRMATION PENDING`.
 
 | Контур | Workflow ID | Active | Nodes | Роль |
 |---|---|---:|---:|---|
 | Sales-Manager-v2 | `h8I2Tl2yl4uzhUnB` | false | — | rollback; не активировать без отдельного решения |
 | i-SEO Sales Manager - Operational.dev | `[external]` | true | 45 | unchanged in 3F.1; `minutesInterval=2`; single-flight 4m; bounded ledger/access/claim retries; AI OFF |
-| i-SEO Sales Manager - Admin.dev | `wLrLp4WQHm1VJmxz` | true | 79 (было 59) | `message` + `callback_query`, ACCESS_CONTROL, actor attribution, archive commands, pending-lead view (3F.1), daily reminder engine (3F.1) |
+| i-SEO Sales Manager - Admin.dev | `wLrLp4WQHm1VJmxz` | true | 82 | Help + lead-history human labels (3F.2.2); pending/reminder; callbacks; reminders OFF |
 
 
 ## Phase 3F.2 — Clean production ledger
@@ -61,3 +61,11 @@ Empty poll BEFORE: one CONFIG write every 30 seconds (about 120/hour). AFTER liv
 ## 3F.2.1 baseline delta
 
 Admin nodes include lead history path. Human source display active. Reporting schema reporting-v1.1 (readiness column additive). Operator acceptance pending for Telegram visuals.
+
+
+## 3F.2.2 baseline delta
+
+- Admin.dev Help rebuilt (Admin + moderator templates); pending + reminder_status listed.
+- /lead_history human map includes 	elegram_sent; unknown → техническое событие.
+- Operational.dev unchanged (45 nodes). Reminders OFF. AI OFF. Access unchanged.
+- Phase 3F.2 closeout prepared; operator visual /help + /lead_history 1 pending.

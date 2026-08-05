@@ -1,0 +1,24 @@
+{
+  "phase": "3F.2.2",
+  "admin_id": "wLrLp4WQHm1VJmxz",
+  "ops_id": "xSnXPy8cEHoZw6xG",
+  "workflows_created": 0,
+  "admin_nodes_before": 82,
+  "admin_nodes_after": 82,
+  "admin_active": true,
+  "ops_active": true,
+  "ops_nodes": 45,
+  "ops_updatedAt_before": "2026-08-05T16:43:52.552Z",
+  "ops_updatedAt_after": "2026-08-05T16:43:52.552Z",
+  "ops_unchanged": true,
+  "help_patched": true,
+  "hist_telegram_sent": true,
+  "hist_unknown_fallback": true,
+  "has_telegram_trigger": true,
+  "has_callback_in_trigger": true,
+  "has_reminder_schedule": true,
+  "patched_nodes": [
+    "Help",
+    "Lead History Handler"
+  ]
+}

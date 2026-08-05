@@ -28,3 +28,7 @@ A new read-only overview (`/pending_count`, `/pending_leads`) and an optional da
 - `/leads` — архивные карточки (без кнопок статуса)
 - `/lead_history <номер>` — история по номеру из `/leads`
 - Источник для форм сайта отображается как «Сайт i-seo.su»
+
+## Phase 3F.2.2 note
+
+В `/help` для модератора доступны `/leads`, `/lead_history`, `/pending_count`, `/pending_leads`, `/reminder_status`. Настройки ИИ и напоминаний — только у администратора. История лида показывает человеческие формулировки событий (без машинных кодов).

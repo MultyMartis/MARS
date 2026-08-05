@@ -31,3 +31,8 @@ Live call counts, safe real-lead recount, final two-recipient proof and five-pol
 - Continuous automatic reporting sync on every new lead remains partial; targeted keyed resync proven for CLIENT_A.
 - Operational dual-write CLEAN vs LEADS unification remains a known follow-up (not redesigned in 3F.2.1).
 - Operator live Telegram acceptance still required.
+
+## 3F.2.2
+
+- Human event labels and Admin/moderator help rebuild are live on Admin.dev; operator visual `/help` + `/lead_history 1` after polish deploy remains the final Telegram confirmation step.
+- Reminders remain OFF; no activation in this polish.
