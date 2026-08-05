@@ -151,7 +151,7 @@ No PII, Telegram IDs, workbook IDs, raw updates, or unsanitized workflow exports
 
 ## 27. Push
 
-Pushed non-force to `origin/mars/canonical-post-recovery` (`dd0cd204..a131fa87`). Ancestor `dd0cd204` retained.
+Pushed non-force to `origin/mars/canonical-post-recovery` (`dd0cd204..a131fa87` polish; tip docs `054811e6`). Ancestor `dd0cd204` retained.
 
 ## 28. Risks
 
