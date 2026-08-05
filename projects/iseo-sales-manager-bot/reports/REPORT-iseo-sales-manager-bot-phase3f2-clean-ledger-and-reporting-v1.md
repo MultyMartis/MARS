@@ -256,11 +256,12 @@ No workbook IDs, Telegram IDs, phones, emails, or credentials in committed evide
 
 ## 44. Commit
 
-See git section after push wave.
+- `7b41285f` — `feat(iseo-sales-manager-bot): add clean production lead ledger`
+- `79d11006` — `feat(iseo-sales-manager-bot): add external lead reporting workbook`
 
 ## 45. Push
 
-`origin/mars/canonical-post-recovery` (no force).
+Pushed FF to `origin/mars/canonical-post-recovery` (`28ebb27d..79d11006`), no force.
 
 ## 46. Risks
 
