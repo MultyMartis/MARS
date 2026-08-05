@@ -152,11 +152,11 @@ No PII, Telegram IDs, chat IDs, usernames, workbook IDs, credentials, raw update
 
 `7d1ce8b8` — `fix(iseo-sales-manager-bot): restore help start and config responses`
 
-Canonical ancestry includes `51b633c6`, `fd7f0522`, `129fffd2`, tip `7d1ce8b8`.
+Canonical ancestry includes `51b633c6`, `fd7f0522`, `129fffd2`, fix `7d1ce8b8`, docs tip `9990a593`.
 
 ## 29. Push
 
-Non-force FF push: `129fffd2..7d1ce8b8` → `origin/mars/canonical-post-recovery`.
+Non-force FF push: `129fffd2..9990a593` → `origin/mars/canonical-post-recovery`.
 
 ## 30. Remaining operator actions
 
