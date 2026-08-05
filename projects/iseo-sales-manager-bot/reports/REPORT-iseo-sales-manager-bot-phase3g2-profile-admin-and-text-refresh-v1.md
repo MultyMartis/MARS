@@ -4,7 +4,7 @@
 
 `COMPLETE — PROFILE ADMIN AND TEXT REFRESH READY; OPERATOR ACCEPTANCE PENDING`
 
-Immutable reply-profile numbers 1–4 seeded and read back. Number-based Admin profile commands live. Help/start/AI/stats/config/reminder/unknown texts refreshed. Offline harness **42/42 PASS**. Live command acceptance via local libs + live Sheets oneshots **PASS**; MOD_A disable/enable restored. Operator must still visually confirm Telegram surfaces. Commits/push **PENDING**.
+Immutable reply-profile numbers 1–4 seeded and read back. Number-based Admin profile commands live. Help/start/AI/stats/config/reminder/unknown texts refreshed. Offline harness **42/42 PASS**. Live command acceptance via local libs + live Sheets oneshots **PASS**; MOD_A disable/enable restored. Operator must still visually confirm Telegram surfaces. Commits: `51b633c6`, `fd7f0522` (push follows).
 
 ## 2. Operator-approved scope
 
@@ -213,11 +213,12 @@ No credentials, Telegram IDs, phones, emails, workbook IDs, or customer PII in c
 
 ## 44. Commit
 
-**PENDING** — not performed in this evidence/report wave (operator charter: do not commit here).
+- `51b633c6` — `feat(iseo-sales-manager-bot): add numbered reply profile administration`
+- `fd7f0522` — `docs(iseo-sales-manager-bot): refresh commands and user-facing texts`
 
 ## 45. Push
 
-**PENDING** — not performed in this evidence/report wave.
+Push to `origin/mars/canonical-post-recovery` (no force) authorized by phase charter; executed after report tip update.
 
 ## 46. Risks
 
