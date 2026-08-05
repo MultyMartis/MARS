@@ -169,11 +169,11 @@ No Telegram IDs, chat IDs, usernames, workbook IDs, URLs, raw Telegram updates, 
 
 ## 32. Commit — config truth alignment
 
-This commit — `fix(iseo-sales-manager-bot): align config with live baseline` (config evidence + report tip).
+`5f5e0be4` — `fix(iseo-sales-manager-bot): align config with live baseline`
 
 ## 33. Push
 
-Pushed to `origin/mars/canonical-post-recovery` without force (see closeout after push).
+`origin/mars/canonical-post-recovery` updated without force; tip includes `d2665fac` and `5f5e0be4` (plus tip-hash follow-up if present).
 
 ## 34. Remaining operator actions / stop condition
 
