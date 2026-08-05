@@ -5,6 +5,13 @@
 
 import { isCommPreferenceOnly, SERVICE_COMPAT, buildFirstReplyDraft, assessLeadQuality, computeMissingInformation } from '../parser-fixtures/parse-lead-lib.mjs';
 import { FIRST_REPLY_VERSION } from './first-reply-engine-v2.mjs';
+import { routeApprovedTemplate } from './approved-template-router-v1.mjs';
+import {
+  buildSharedReplyMetadata,
+  GENERATION_MODE,
+  MANAGER_ASSIST_VERSION,
+} from './approved-template-renderer-v1.mjs';
+import { resolveGenerationMode } from './ai-assist-validator-v1.mjs';
 
 export function isCommPreferenceText(text) {
   return isCommPreferenceOnly(text);
@@ -125,16 +132,18 @@ export function processLeadDeterministic(j = {}) {
   }
 
   const existingVersion = String(j.first_reply_version || '').trim();
-  // Rebuild v1 and v2.0 drafts into Human Reply Style v1 (sm-reply-v2.1)
+  // Build legacy sm-reply-v2.1 draft for rollback/history only — not used as production client copy after 3G.1.
   const legacyReply = !existingVersion
     || /^sm-reply-v1/i.test(existingVersion)
-    || /^sm-reply-v2\.0/i.test(existingVersion);
-  const shouldBuild = legacyReply
+    || /^sm-reply-v2\.0/i.test(existingVersion)
+    || /^sm-reply-v2\.1/i.test(existingVersion);
+  const shouldBuildLegacy = legacyReply
     || (!first_reply_text && first_reply_source !== 'none' && first_reply_source !== 'test_omitted')
     || !human_reply_style_version
     || human_reply_style_version !== 'sm-human-v1.0';
 
-  if (shouldBuild) {
+  let legacy_first_reply_text = '';
+  if (shouldBuildLegacy) {
     const reply = buildFirstReplyDraft({
       client_name: name,
       client_name_normalized: name,
@@ -155,9 +164,9 @@ export function processLeadDeterministic(j = {}) {
       explicit_client_intent: j.explicit_client_intent || '',
       source_topic: j.source_topic || '',
     });
-    first_reply_text = reply.first_reply_text;
-    first_reply_source = reply.first_reply_source;
-    first_reply_version = reply.first_reply_version || FIRST_REPLY_VERSION;
+    legacy_first_reply_text = reply.first_reply_text || '';
+    first_reply_source = 'template_pending_personalization';
+    first_reply_version = FIRST_REPLY_VERSION; // rollback/history stamp only
     human_reply_style_version = reply.human_reply_style_version || human_reply_style_version;
     first_reply_mode = reply.first_reply_mode || '';
     first_reply_subject = reply.first_reply_subject || '';
@@ -168,7 +177,6 @@ export function processLeadDeterministic(j = {}) {
       ? reply.first_reply_reason_codes.join(',')
       : (reply.first_reply_reason_codes || '');
     first_reply_omitted_reason = reply.first_reply_omitted_reason || reply.reply_omitted_reason || '';
-    first_reply_ready = reply.first_reply_ready === true;
     first_reply_warnings = Array.isArray(reply.first_reply_warnings)
       ? reply.first_reply_warnings.join(',')
       : (reply.first_reply_warnings || '');
@@ -178,15 +186,38 @@ export function processLeadDeterministic(j = {}) {
       ? reply.quality_linter_failures.join(',')
       : (reply.quality_linter_failures || '');
   } else {
+    legacy_first_reply_text = first_reply_text;
     first_reply_version = existingVersion || FIRST_REPLY_VERSION;
-    first_reply_ready = j.first_reply_ready === true || Boolean(first_reply_text);
   }
+
+  // Phase 3G.1 — approved template router (shared metadata). Personalized body is rendered per recipient after expansion.
+  const generation_mode = resolveGenerationMode(cfg);
+  const approvedRoute = routeApprovedTemplate({
+    website_state,
+    website_normalized,
+    website: website_normalized || j.website || j.site || '',
+    site: website_normalized || j.site || '',
+    comment_normalized,
+    client_comment: comment_normalized,
+    resolved_service: service_machine,
+    service: service_machine,
+    explicit_client_intent: j.explicit_client_intent || '',
+    source_topic: j.source_topic || '',
+    form_topic: j.form_offer || j.form_name || '',
+  });
+  const sharedReplyMeta = buildSharedReplyMetadata(approvedRoute, generation_mode);
+
+  // Do not publish a single shared client copy before recipient personalization.
+  first_reply_text = '';
+  first_reply_ready = false;
+  first_reply_source = 'approved_template_pending_recipient';
 
   if (contact_missing) {
     quality_status = 'bad';
     lead_quality = 'insufficient';
     lead_quality_label = 'Недостаточно данных';
     first_reply_text = '';
+    legacy_first_reply_text = '';
     first_reply_source = 'none';
     first_reply_mode = 'contact_suppressed';
     first_reply_ready = false;
@@ -204,6 +235,7 @@ export function processLeadDeterministic(j = {}) {
 
   if (is_probable_test) {
     first_reply_text = '';
+    legacy_first_reply_text = '';
     first_reply_source = 'test_omitted';
     first_reply_mode = 'test_suppressed';
     first_reply_ready = false;
@@ -309,13 +341,25 @@ export function processLeadDeterministic(j = {}) {
     quality_linter_failures,
     is_probable_test,
     exclude_from_prod_stats: j.exclude_from_prod_stats === true || is_probable_test || Boolean(j.__synthetic),
-    processing_mode: 'ai_off',
-    ai_status: 'skipped',
+    processing_mode: generation_mode === GENERATION_MODE.AI_ASSISTED_TEMPLATE ? 'ai_on' : 'ai_off',
+    ai_status: generation_mode === GENERATION_MODE.AI_ASSISTED_TEMPLATE ? 'pending_assist' : 'skipped',
     fallback_used: false,
     ai_enabled: Boolean(cfg.ai_enabled),
     message_format_version: cfg.message_format_version || j.message_format_version || 'sm-msg-v2.4',
     manager_status: j.manager_status || 'pending',
-    reply_template_version: cfg.reply_template_version || first_reply_version || FIRST_REPLY_VERSION,
+    reply_template_version: sharedReplyMeta.reply_template_version,
+    reply_standard_version: sharedReplyMeta.reply_standard_version,
+    reply_policy_version: sharedReplyMeta.reply_policy_version,
+    manager_assist_version: MANAGER_ASSIST_VERSION,
+    reply_generation_mode: sharedReplyMeta.reply_generation_mode,
+    selected_template_id: sharedReplyMeta.selected_template_id,
+    selected_template_reason: sharedReplyMeta.selected_template_reason,
+    deterministic_task_summary: sharedReplyMeta.deterministic_task_summary,
+    geo_ai_clause_enabled: sharedReplyMeta.geo_ai_clause_enabled,
+    reply_base_state: sharedReplyMeta.reply_base_state,
+    reply_validation_state: sharedReplyMeta.reply_validation_state,
+    approved_route: approvedRoute,
+    legacy_first_reply_text,
     parser_version: cfg.parser_version || j.parser_version || 'sm-parser-v3.3',
     semantic_model_version: j.semantic_model_version || 'lead-semantic-v1',
   };

@@ -332,34 +332,51 @@ export function buildCardText(j) {
     lines.push('');
   }
 
-  const replyText = String(j.first_reply_text || '').trim();
+  const personalized = String(j.personalized_reply_text || '').trim();
+  const replyText = personalized || String(j.first_reply_text || '').trim();
   const replySource = String(j.first_reply_source || '').trim();
   const replyMode = String(j.first_reply_mode || '').trim();
-  const replyReady = j.first_reply_ready === true;
+  const replyReady = j.first_reply_ready === true || j.copy_block_available === true;
   const omitted = String(j.first_reply_omitted_reason || '').trim();
+  const recipientReplyState = String(j.recipient_reply_state || '').trim();
+  const managerGuidance = String(j.manager_guidance_text || j.manager_guidance || '').trim();
   const replyOmittedForTest = replySource === 'test_omitted'
     || replyMode === 'test_suppressed'
     || omitted === 'probable_test'
-    || (isTest && !replyText);
+    || (isTest && !replyText && recipientReplyState !== 'blocked_missing_sender_name');
   const noContact = j.contact_missing === true
     || replyMode === 'contact_suppressed'
     || omitted === 'missing_contact'
     || j.quality_status === 'bad'
     || j.lead_quality === 'insufficient'
     || replySource === 'none'
-    || (!replyText && !replyReady);
+    || (!replyText && !replyReady && !recipientReplyState);
 
   if (replyOmittedForTest) {
     lines.push('⚠️ Готовый ответ не сформирован: тестовая заявка.');
     lines.push('Ответ клиенту автоматически не отправляется.');
-  } else if (noContact) {
+  } else if (recipientReplyState === 'blocked_missing_sender_name'
+    || recipientReplyState === 'blocked_sender_disabled'
+    || recipientReplyState === 'blocked_validation_failed') {
+    // Prefer omit copy block + manager-only warning (approved fail-closed).
+    lines.push('⚠️ Не задано имя для ответа клиенту. Обратитесь к администратору.');
+    lines.push('Ответ клиенту автоматически не отправляется.');
+    if (managerGuidance) {
+      lines.push('');
+      for (const gl of managerGuidance.split('\n')) lines.push(escapeHtml(gl));
+    }
+  } else if (noContact && !replyText) {
     // Warning once only — next_step already covers "Проверить контактные данные."
     lines.push('⚠️ Готовый ответ не сформирован: нет надёжного способа связи.');
     lines.push('Ответ клиенту автоматически не отправляется.');
   } else if (replyText) {
-    lines.push('✉️ Ответ клиенту — нажмите, чтобы скопировать');
+    lines.push('✉️ Готовый первый ответ — нажмите, чтобы скопировать');
     lines.push('<pre>' + escapeHtml(replyText) + '</pre>');
     lines.push('Ответ клиенту автоматически не отправляется.');
+    if (managerGuidance) {
+      lines.push('');
+      for (const gl of managerGuidance.split('\n')) lines.push(escapeHtml(gl));
+    }
   } else {
     lines.push('Черновик ответа не сформирован.');
     lines.push('Ответ клиенту автоматически не отправляется.');
