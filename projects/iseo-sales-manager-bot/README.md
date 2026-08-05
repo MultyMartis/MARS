@@ -4,7 +4,7 @@
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
-**Status:** Phase 3E.2.3 — **COMPLETE — EXACTLY-ONCE PROOF DELIVERED; OPERATOR VISUAL CONFIRMATION PENDING**; Sheets call-budget live proof PASS; Human Reply Style operator-accepted; AI OFF
+**Status:** Phase 3F.1 — **COMPLETE — COMMANDS AND REMINDER ENGINE READY; OPERATOR ACTIVATION PENDING**; Phase 3E.2 closed `COMPLETE — HUMAN FIRST REPLY ENGINE READY` (operator visual confirmed); pending-lead commands live-accepted; daily reminder engine implemented, disabled by default; AI OFF
 
 ---
 
@@ -53,7 +53,9 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 | First Reply Engine v2.1 + Human Reply Style v1 | [architecture/FIRST-REPLY-ENGINE-v2.md](architecture/FIRST-REPLY-ENGINE-v2.md) · [architecture/HUMAN-REPLY-STYLE-v1.md](architecture/HUMAN-REPLY-STYLE-v1.md) · [architecture/MEANINGFUL-COMMENT-BRANCHING-v1.md](architecture/MEANINGFUL-COMMENT-BRANCHING-v1.md) · [architecture/FIRST-REPLY-QUALITY-LINTER-v1.md](architecture/FIRST-REPLY-QUALITY-LINTER-v1.md) · [architecture/KNOWN-INFORMATION-GUARD-v1.md](architecture/KNOWN-INFORMATION-GUARD-v1.md) · [architecture/MANAGER-CARD-v2.4-CONTRACT-v1.md](architecture/MANAGER-CARD-v2.4-CONTRACT-v1.md) |
 | Delivery fail-closed (3E.2.1) | [architecture/DELIVERY-FAIL-CLOSED-RECONCILIATION-v1.md](architecture/DELIVERY-FAIL-CLOSED-RECONCILIATION-v1.md) |
 | Sheets budget / concurrency (3E.2.3) | [architecture/SHEETS-CALL-BUDGET-v1.md](architecture/SHEETS-CALL-BUDGET-v1.md) · [architecture/OPERATIONAL-SINGLE-FLIGHT-v1.md](architecture/OPERATIONAL-SINGLE-FLIGHT-v1.md) · [architecture/SHEETS-BACKOFF-POLICY-v1.md](architecture/SHEETS-BACKOFF-POLICY-v1.md) |
+| Pending leads view + reminders (3F.1) | [architecture/PENDING-LEADS-VIEW-v1.md](architecture/PENDING-LEADS-VIEW-v1.md) · [architecture/PENDING-REMINDER-v1.md](architecture/PENDING-REMINDER-v1.md) · [architecture/REMINDER-DELIVERY-IDEMPOTENCY-v1.md](architecture/REMINDER-DELIVERY-IDEMPOTENCY-v1.md) |
 | Parser 3.3 research (implemented) | [research/parser-3.3/](research/parser-3.3/) |
+| Phase 3F.1 evidence | [evidence/phase3f1/](evidence/phase3f1/) |
 | Phase 3E.2 evidence | [evidence/phase3e2/](evidence/phase3e2/) |
 | Phase 3E.2.3 evidence | [evidence/phase3e2-3/](evidence/phase3e2-3/) |
 | Phase 3E.2.1 evidence | [evidence/phase3e2-1/](evidence/phase3e2-1/) |
@@ -92,6 +94,8 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 - Auto-reply to clients.
 - AI ON in production (remains OFF until explicit charter).
 - Explained historical Trash actor for unlabeled incident mail (SAFE UNKNOWN; not a Gmail filter).
+- Pending-lead reminders **enabled** in production — the engine is implemented and live-command-accepted but `pending_reminders_enabled=false` until the operator explicitly activates it.
+- A full live dual-recipient reminder Telegram send under normal (non-quota) conditions — the controlled live window reached ACCESS_CONTROL and failed closed on a Sheets quota condition (see `evidence/phase3f1/CONTROLLED-REMINDER-LIVE-ACCEPTANCE-v1.md`).
 
 **Resolved in Phase 3A.1:** sanitized Sales-Manager-v1/v2 JSON baselines and XLSX-derived schema baselines are present under `baselines/`.  
 **Resolved in Phase 3C:** Operational.dev is the active production intake (AI OFF); Sales-Manager-v2 preserved inactive as rollback source; Admin.dev remains active.  
@@ -100,7 +104,9 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 **Resolved in Phase 3D.4:** Olya enrolled in `ACCESS_CONTROL moderator (legacy CONFIG fallback retained) (hash **E6714550214106BA**, not admin); role-aware manager `/start`/`/help`; parser **`sm-parser-v3.2`** (messenger/site split, contact inference, comment «в тг», source page normalization); formatter **`sm-msg-v2.1`** (reduced emoji density); `knowledge/WEBSITE-FORM-FORMATS-v1.md` with free-audit record; synthetic callback acceptance PASS — **live Olya `/start`/`/help` pending**.
 **Resolved in Phase 3D.6 / 3D.6.1:** `/my_status` for public/pending/moderator/Admin/revoked/blocked; grant/revoke Telegram notification branch with ACCESS_EVENTS delivery events and non-rollback failure boundary. Live hotfix `3d6b-my-status-code-mode` fixed Code-node mode (`runOnceForAllItems`). Real non-Admin `/my_status` accepted by operator. Direct grant/revoke notification delivery remains SAFE UNKNOWN without independent visual proof. Harness **31/31 PASS**.
 **Phase 3D.8.x:** product/recovery baseline; action buttons + actor attribution + short labels COMPLETE.  
-**Phase 3E.2.3:** First Reply Engine **v2.1** + **Human Reply Style v1** remain unchanged and operator-accepted; current work only reduces Sheets request amplification and adds bounded concurrency/retry controls. Operational.dev is active after the quiet-window proof; exactly-once delivery and five-poll zero-resend are proven; operator visual confirmation remains pending. Reminders, AI ON pilot and reusable fleet deployment remain **not implemented**.
+**Phase 3E.2.3:** First Reply Engine **v2.1** + **Human Reply Style v1** remain unchanged and operator-accepted; current work only reduces Sheets request amplification and adds bounded concurrency/retry controls. Operational.dev is active after the quiet-window proof; exactly-once delivery and five-poll zero-resend are proven.
+**Phase 3E.2 closeout:** operator visual confirmation received — final verdict `PHASE 3E.2 COMPLETE — HUMAN FIRST REPLY ENGINE READY` (see `evidence/phase3f1/PHASE3E2-FINAL-CLOSEOUT-v1.md`).
+**Phase 3F.1:** Admin.dev gained pending-lead commands (`/pending_count`, `/pending_leads`, `/pending_leads_test`) and a daily reminder engine (`sm-pending-reminder-v1.0`, internal 15-minute schedule trigger, additive `REMINDER_DELIVERIES` ledger). Node count 59→79. Offline harness 73/73 PASS; live command acceptance PASS; a controlled reminder live exercise reached ACCESS_CONTROL and correctly failed closed under Sheets quota. Reminders remain `enabled=false` in production — AI ON pilot and reusable fleet deployment remain **not implemented**.
 
 ---
 
@@ -149,3 +155,7 @@ Operator source drop path (raw retained): `X:\AI MARS STORAGE\incoming\iseo-sale
 ## Phase 3E.2.3 — Sheets call-budget optimization
 
 Empty polls have live proof of zero Sheets writes. Final schedule is `minutesInterval=2`; `secondsInterval=120` was rejected by n8n as an invalid interval. Intake Gate uses a 4-minute single-flight TTL. ACCESS_CONTROL and bounded LEAD_DELIVERIES snapshots are read once with bounded retries; exactly-once proof and five-poll zero-resend passed. See `evidence/phase3e2-3/`.
+
+## Phase 3F.1 — Pending leads commands + daily reminder engine
+
+Admin.dev (same ID, 59→79 nodes) gained a read-only pending-lead view (`/pending_count`, `/pending_leads`, `/pending_leads_test`) and a daily reminder engine (`/reminder_status`, `/reminder_on`, `/reminder_off`, `/reminder_time`, `/reminder_timezone`, `/reminder_min`; internal 15-minute schedule trigger). Pending resolution is `manager_status` primary / `lifecycle_status` secondary / legacy-defaults-to-pending. `REMINDER_DELIVERIES` is a new additive Sheets tab. Offline harness 73/73 PASS; live command acceptance PASS across admin/moderator/revoked; a controlled reminder live exercise reached ACCESS_CONTROL and failed closed under Sheets quota (zero sends, correct behavior). Production reminders remain `enabled=false`. Operational.dev, access state, and AI OFF are unchanged. See `evidence/phase3f1/` and `reports/REPORT-iseo-sales-manager-bot-phase3f1-pending-leads-and-reminders-v1.md`.

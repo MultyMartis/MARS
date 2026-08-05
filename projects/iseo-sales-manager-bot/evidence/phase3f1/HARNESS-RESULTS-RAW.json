@@ -1,0 +1,378 @@
+{
+  "at": "2026-08-05T13:03:44.890Z",
+  "phase": "3F.1",
+  "passed": 73,
+  "failed": 0,
+  "total": 73,
+  "allPass": true,
+  "businessPendingTotal": 4,
+  "withTestsTotal": 5,
+  "fixtureBusinessExpectedMin": 2,
+  "results": [
+    {
+      "id": 1,
+      "description": "Pending lifecycle included",
+      "ok": true
+    },
+    {
+      "id": 2,
+      "description": "Processed excluded",
+      "ok": true
+    },
+    {
+      "id": 3,
+      "description": "Spam excluded",
+      "ok": true
+    },
+    {
+      "id": 4,
+      "description": "Test excluded by default",
+      "ok": true
+    },
+    {
+      "id": 5,
+      "description": "One logical lead counted once",
+      "ok": true
+    },
+    {
+      "id": 6,
+      "description": "Legacy compatibility pending",
+      "ok": true
+    },
+    {
+      "id": 7,
+      "description": "Missing timestamp safe",
+      "ok": true
+    },
+    {
+      "id": 8,
+      "description": "Age formatting",
+      "ok": true
+    },
+    {
+      "id": 9,
+      "description": "Oldest-first ordering",
+      "ok": true
+    },
+    {
+      "id": 10,
+      "description": "Pending count/list consistency",
+      "ok": true
+    },
+    {
+      "id": 11,
+      "description": "Pagination page 1",
+      "ok": true
+    },
+    {
+      "id": 12,
+      "description": "Pagination later page",
+      "ok": true
+    },
+    {
+      "id": 13,
+      "description": "Invalid page clamped",
+      "ok": true
+    },
+    {
+      "id": 14,
+      "description": "HTML escaping",
+      "ok": true
+    },
+    {
+      "id": 15,
+      "description": "Telegram message length",
+      "ok": true
+    },
+    {
+      "id": 16,
+      "description": "Admin pending_count allowed",
+      "ok": true
+    },
+    {
+      "id": 17,
+      "description": "Moderator pending_count allowed",
+      "ok": true
+    },
+    {
+      "id": 18,
+      "description": "Revoked denied",
+      "ok": true
+    },
+    {
+      "id": 19,
+      "description": "Public denied",
+      "ok": true
+    },
+    {
+      "id": 20,
+      "description": "Admin config allowed",
+      "ok": true
+    },
+    {
+      "id": 21,
+      "description": "Moderator config denied",
+      "ok": true
+    },
+    {
+      "id": 22,
+      "description": "ACCESS_CONTROL read error fails closed (contract)",
+      "ok": true
+    },
+    {
+      "id": 23,
+      "description": "Active-recipient snapshot only",
+      "ok": true
+    },
+    {
+      "id": 24,
+      "description": "Disabled check sends zero",
+      "ok": true
+    },
+    {
+      "id": 25,
+      "description": "Outside-window check sends zero",
+      "ok": true
+    },
+    {
+      "id": 26,
+      "description": "Due window zero pending sends zero",
+      "ok": true
+    },
+    {
+      "id": 27,
+      "description": "Due window below min count sends zero",
+      "ok": true
+    },
+    {
+      "id": 28,
+      "description": "Due window pending sends two reminders",
+      "ok": true
+    },
+    {
+      "id": 29,
+      "description": "Revoked sends zero",
+      "ok": true
+    },
+    {
+      "id": 30,
+      "description": "Deterministic window key",
+      "ok": true
+    },
+    {
+      "id": 31,
+      "description": "Already completed window sends zero",
+      "ok": true
+    },
+    {
+      "id": 32,
+      "description": "Partial recipient success does not resend successful recipient",
+      "ok": true
+    },
+    {
+      "id": 33,
+      "description": "Ledger read error sends zero (contract)",
+      "ok": true
+    },
+    {
+      "id": 34,
+      "description": "Claim failure sends zero (contract)",
+      "ok": true
+    },
+    {
+      "id": 35,
+      "description": "Telegram success + stamp uncertainty does not blind resend (contract)",
+      "ok": true
+    },
+    {
+      "id": 36,
+      "description": "Three later schedule checks send zero duplicates",
+      "ok": true
+    },
+    {
+      "id": 37,
+      "description": "Timezone date boundary helper stable",
+      "ok": true
+    },
+    {
+      "id": 38,
+      "description": "Invalid time rejected",
+      "ok": true
+    },
+    {
+      "id": 39,
+      "description": "Invalid timezone rejected",
+      "ok": true
+    },
+    {
+      "id": 40,
+      "description": "Valid configuration readback",
+      "ok": true
+    },
+    {
+      "id": 41,
+      "description": "Restore 10:00 Europe/Moscow",
+      "ok": true
+    },
+    {
+      "id": 42,
+      "description": "Final enabled state OFF before acceptance",
+      "ok": true
+    },
+    {
+      "id": 43,
+      "description": "Processed lead disappears",
+      "ok": true
+    },
+    {
+      "id": 44,
+      "description": "Spam lead disappears",
+      "ok": true
+    },
+    {
+      "id": 45,
+      "description": "Repeated callback idempotent (contract)",
+      "ok": true
+    },
+    {
+      "id": 46,
+      "description": "Actor attribution unchanged (contract)",
+      "ok": true
+    },
+    {
+      "id": 47,
+      "description": "Original action buttons unchanged (contract)",
+      "ok": true
+    },
+    {
+      "id": 48,
+      "description": "Archive cards remain non-actionable (contract)",
+      "ok": true
+    },
+    {
+      "id": 49,
+      "description": "/my_status regression stub",
+      "ok": true
+    },
+    {
+      "id": 50,
+      "description": "/moderator_pending regression stub",
+      "ok": true
+    },
+    {
+      "id": 51,
+      "description": "/moderators regression stub",
+      "ok": true
+    },
+    {
+      "id": 52,
+      "description": "/leads regression stub",
+      "ok": true
+    },
+    {
+      "id": 53,
+      "description": "callback processed regression stub",
+      "ok": true
+    },
+    {
+      "id": 54,
+      "description": "callback spam regression stub",
+      "ok": true
+    },
+    {
+      "id": 55,
+      "description": "Operational exactly-once unaffected (no Ops patch)",
+      "ok": true
+    },
+    {
+      "id": 56,
+      "description": "Parser 3.3 unaffected",
+      "ok": true
+    },
+    {
+      "id": 57,
+      "description": "Human Reply Style unaffected",
+      "ok": true
+    },
+    {
+      "id": 58,
+      "description": "AI OFF",
+      "ok": true
+    },
+    {
+      "id": 59,
+      "description": "automatic client messages=0",
+      "ok": true
+    },
+    {
+      "id": 60,
+      "description": "workflows created=0",
+      "ok": true
+    },
+    {
+      "id": 61,
+      "description": "access changes=0",
+      "ok": true
+    },
+    {
+      "id": 62,
+      "description": "real-client test messages=0",
+      "ok": true
+    },
+    {
+      "id": 63,
+      "description": "destructive migrations=0",
+      "ok": true
+    },
+    {
+      "id": "X1",
+      "description": "business pending count snapshot=2+legacy+missingTs",
+      "ok": true
+    },
+    {
+      "id": "X2",
+      "description": "test leads excluded=1",
+      "ok": true
+    },
+    {
+      "id": "X3",
+      "description": "count reply zero",
+      "ok": true
+    },
+    {
+      "id": "X4",
+      "description": "count reply nonzero",
+      "ok": true
+    },
+    {
+      "id": "X5",
+      "description": "reminder message useful",
+      "ok": true
+    },
+    {
+      "id": "X6",
+      "description": "reminder status short",
+      "ok": true
+    },
+    {
+      "id": "X7",
+      "description": "parse pending args page",
+      "ok": true
+    },
+    {
+      "id": "X8",
+      "description": "parse pending args test",
+      "ok": true
+    },
+    {
+      "id": "X9",
+      "description": "age format under 1h",
+      "ok": true
+    },
+    {
+      "id": "X10",
+      "description": "age format days",
+      "ok": true
+    }
+  ]
+}

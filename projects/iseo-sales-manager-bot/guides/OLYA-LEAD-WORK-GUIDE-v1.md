@@ -17,3 +17,7 @@
 ## Phase 3E.2.3 note
 
 Human Reply Style is already operator-accepted and is not being redesigned. During the inactive quiet window no new cards should arrive from Operational.dev. After reactivation, repeated identical cards must be reported to the operator; do not process both copies and do not ask for access restoration from this guide.
+
+## Phase 3F.1 note
+
+A new read-only overview (`/pending_count`, `/pending_leads`) and an optional daily reminder now exist for active moderators/Admin. These do not change how you process a card — you still copy the reply and press **✅ Обработано** / **🚫 Спам** as before. Reminders are currently **switched off** in production; this guide will be updated separately if/when reminders are activated and if access is ever restored.

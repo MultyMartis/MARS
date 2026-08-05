@@ -243,3 +243,14 @@ Same workflow ID `wLrLp4WQHm1VJmxz` (Admin.dev only):
 2. Handle Callback Action builds safe actor label; writes `actor_display_snapshot` into card text and LEAD_EVENTS `detail`.
 3. `formatPendingList` adds revoked former-moderator section with stable codes; Admin help line updated.
 4. Safe patch: deactivate Admin → PUT same ID → reactivate; keep Operational.dev active; keep Sales-Manager-v2 inactive.
+
+## Phase 3F.1 addendum — pending-lead view + daily reminder
+
+Same workflow ID `wLrLp4WQHm1VJmxz` (Admin.dev only). Node count **59 → 79** (+20).
+
+1. **Pending-lead view nodes** (Route Command branch): `Read CLEAN for Pending` → `Build Pending View` (mirrors `buildPendingView()`) → count/list split → `Format Pending Count` / (`Parse Pending Args` → `Paginate Pending` → `Format Pending List`) → `Safe Telegram Reply`. Full spec: `implementation/PENDING-COMMANDS-v1.md`.
+2. **Reminder command nodes**: `/reminder_status` (staff read, role-aware verbosity) plus Admin-only `/reminder_on` / `/reminder_off` / `/reminder_time` / `/reminder_timezone` / `/reminder_min` with input validation before any CONFIG write. Full spec: `implementation/REMINDER-CONFIG-COMMANDS-v1.md`.
+3. **Reminder schedule branch** (separate trigger path, not the command router): internal `Reminder Schedule Trigger` (every 15 minutes) → `Read Reminder CONFIG (Gate)` → `Reminder Window Gate` (`isReminderWindowDue()`) → on due: `Read CLEAN for Reminder` → `Read ACCESS_CONTROL for Reminder` → `Read REMINDER_DELIVERIES` → per-recipient `Claim Reminder Delivery` → `Send Reminder` → `Stamp Reminder Delivery` → `Finalize Reminder Window` (CONFIG).
+4. Authorization reuses the existing `Read Authorization Config` / ACCESS_CONTROL read already in the Admin graph — no second authorization read added for the new commands.
+5. No change to the callback graph (§Phase 3D.3/3D.8.x), lifecycle mutation, or archive (`/leads`) commands.
+6. Safe patch: deactivate Admin → PUT same ID → reactivate; keep Operational.dev unchanged (45 nodes); keep Sales-Manager-v2 inactive; keep `pending_reminders_enabled=false`.

@@ -163,3 +163,14 @@ Results: `evidence/phase3e2-1/HARNESS-RESULTS-v1.md`.
 - Final schedule `minutesInterval=2` + single-flight TTL 4 minutes reduce overlap; rejected `secondsInterval=120` is not active; claim-before-send remains authoritative.
 
 Live proof PASS: two claims, two sends, two stamps and five later polls with zero resend. Synthetic Gmail finalization error required two CONFIG guards to be reconciled without resend. The documented target remains at-most-once send with reconciliation under uncertain post-send persistence.
+
+## Phase 3F.1 — analogous contract for the reminder engine
+
+The daily pending-lead reminder (Admin.dev, `sm-pending-reminder-v1.0`) is a **separate** delivery surface from lead cards, but follows the same fail-closed family of rules, adapted to a batch/window unit instead of a per-lead unit:
+
+- Window-level idempotency: `pending_reminder_last_window` CONFIG guard, keyed by `pending-reminder:<date>:<time>:<timezone>`.
+- Recipient-level idempotency: new `REMINDER_DELIVERIES` ledger, claim-before-send, one row per `(window, recipient)`.
+- Ledger read error, claim failure, and send-success/stamp-uncertainty all resolve to zero-send or reconciliation-required, never blind resend — same posture as this document's §"claimed / uncertain → no blind resend", applied to the reminder unit.
+- A controlled live exercise reached the ACCESS_CONTROL read step and correctly failed closed under a Sheets quota condition (zero sends).
+
+Full contract: `architecture/REMINDER-DELIVERY-IDEMPOTENCY-v1.md`. This document's lead-card contract is otherwise **unchanged** by Phase 3F.1.

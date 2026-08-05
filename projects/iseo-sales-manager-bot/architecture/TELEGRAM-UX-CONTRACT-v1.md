@@ -381,3 +381,16 @@ For an actionable pending card, Format must emit `telegram_has_buttons=true`, `t
 - Engine: [FIRST-REPLY-ENGINE-v2.md](FIRST-REPLY-ENGINE-v2.md).
 - Buttons/callbacks unchanged.
 
+## Phase 3F.1 — pending-lead view and reminder texts (Admin.dev, read-only)
+
+These are **command replies**, not lead cards — no lifecycle buttons, no `<pre>` copy block.
+
+- `/pending_count` — one or two lines: total count, then a non-zero age-bucket summary (`до 2 часов: X · 2–24 часа: Y · старше суток: Z`). Zero state: `Необработанных заявок сейчас нет.`
+- `/pending_leads [page] [test]` — numbered HTML-escaped entries (`N. <age> · <name>` / `<service> · <site>` / `<summary>` / `Черновик ответа: готов|нет`), footer `Страница P из PC · всего T`.
+- `/reminder_status` — moderator sees a 4-line status/time/timezone summary; Admin sees the extended form (min count, test-inclusion, last window, last success, last pending count, last recipient count, last safe error).
+- Reminder message (`formatReminderMessage`) — `⏰ Напоминание о заявках`, total count, over-24h count when present, oldest-age line, pointer to `/pending_leads`, and an "oldest first" nudge when any lead is over 24h old.
+- All pending/reminder text reuses existing fallback vocabulary (`Без имени`, `Контакт не указан`, `Сайт не указан`, `Задача требует уточнения`) — no new placeholder terms invented.
+- Same forbidden list as §6 applies: no raw enums, no lead ids, no Telegram/chat identifiers, no `#ERROR!`.
+
+See `implementation/PENDING-COMMANDS-v1.md`, `implementation/REMINDER-CONFIG-COMMANDS-v1.md`, and `evidence/phase3f1/` for full acceptance detail.
+

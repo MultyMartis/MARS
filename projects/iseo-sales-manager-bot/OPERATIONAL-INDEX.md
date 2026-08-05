@@ -11,21 +11,23 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | **COMPLETE — EXACTLY-ONCE PROOF DELIVERED; OPERATOR VISUAL CONFIRMATION PENDING** |
-| **Active stage** | `sm-parser-v3.3` / `sm-reply-v2.1` / `sm-human-v1.0` / `sm-msg-v2.4` / AI OFF; 3E.2.3 budget, bounded retry and single-flight hardening |
-| **Runtime** | External n8n — Operational.dev **active after quiet-window proof** (45 nodes, `minutesInterval=2`); Admin.dev unchanged/active; rollback workflow inactive |
+| **Status** | **COMPLETE — COMMANDS AND REMINDER ENGINE READY; OPERATOR ACTIVATION PENDING** (Phase 3F.1); Phase 3E.2 closed `COMPLETE — HUMAN FIRST REPLY ENGINE READY` |
+| **Active stage** | `sm-parser-v3.3` / `sm-reply-v2.1` / `sm-human-v1.0` / `sm-msg-v2.4` / `sm-pending-reminder-v1.0` / AI OFF |
+| **Runtime** | External n8n — Operational.dev **active, unchanged** (45 nodes, `minutesInterval=2`); Admin.dev **active, 59→79 nodes** (pending commands + reminder engine); rollback workflow inactive |
 | **Live parity vs Sales-Manager-v2** | **CUT OVER** — Operational.dev replaced v2 for intake; v2 preserved inactive; filter \`labelIds\` parity confirmed |
 | **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C–3D.3 evidence under `evidence/phase3*` |
 | **Registry** | status **planned** unchanged — promotion to active requires **separate governance gate** (`REGISTRY_STATUS_PROMOTION_PENDING`) |
 | **ATLAS** | Recommendation only — ORG-0003 / PER-0001 / PER-0010 / PER-0011; **no** new IDs |
-| **Next** | Operator visually confirms the sanitized final proof card; commit/push remain parent-agent pending |
-| **AI** | **OFF** — `ai_enabled=false`; no AI ON claim in Phase 3E.2.3 |
+| **Next** | Operator explicitly activates `pending_reminders_enabled=true` when ready; commit/push remain parent-agent pending |
+| **AI** | **OFF** — `ai_enabled=false`; no AI ON claim in Phase 3F.1 |
 | **Product layer** | [product/](product/) |
+| **Evidence 3F.1** | [evidence/phase3f1/](evidence/phase3f1/) — pending commands + reminder engine, harness 73/73 PASS |
 | **Evidence 3E.2.3** | [evidence/phase3e2-3/](evidence/phase3e2-3/) — exactly-once + five-poll live proof PASS |
 | **Evidence 3E.2.2** | [evidence/phase3e2-2/](evidence/phase3e2-2/) · [reports/REPORT-iseo-sales-manager-bot-phase3e2-2-final-acceptance-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3e2-2-final-acceptance-v1.md) |
 | **Evidence 3E.2.1** | [evidence/phase3e2-1/](evidence/phase3e2-1/) |
 | **Evidence 3E.2** | [evidence/phase3e2/](evidence/phase3e2/) |
 | **Evidence 3E.1** | [evidence/phase3e1/](evidence/phase3e1/) · closed — operator visual A–F PASS |
+| **Architecture 3F.1** | [PENDING-LEADS-VIEW-v1.md](architecture/PENDING-LEADS-VIEW-v1.md) · [PENDING-REMINDER-v1.md](architecture/PENDING-REMINDER-v1.md) · [REMINDER-DELIVERY-IDEMPOTENCY-v1.md](architecture/REMINDER-DELIVERY-IDEMPOTENCY-v1.md) |
 | **Architecture 3E.2.1** | [HUMAN-REPLY-STYLE-v1.md](architecture/HUMAN-REPLY-STYLE-v1.md) · [MEANINGFUL-COMMENT-BRANCHING-v1.md](architecture/MEANINGFUL-COMMENT-BRANCHING-v1.md) · [FIRST-REPLY-QUALITY-LINTER-v1.md](architecture/FIRST-REPLY-QUALITY-LINTER-v1.md) · [DELIVERY-FAIL-CLOSED-RECONCILIATION-v1.md](architecture/DELIVERY-FAIL-CLOSED-RECONCILIATION-v1.md) |
 | **Architecture 3E.2** | [FIRST-REPLY-ENGINE-v2.md](architecture/FIRST-REPLY-ENGINE-v2.md) · [KNOWN-INFORMATION-GUARD-v1.md](architecture/KNOWN-INFORMATION-GUARD-v1.md) · [MANAGER-CARD-v2.4-CONTRACT-v1.md](architecture/MANAGER-CARD-v2.4-CONTRACT-v1.md) |
 | **Architecture 3E.1** | [LEAD-SEMANTIC-MODEL-v1.md](architecture/LEAD-SEMANTIC-MODEL-v1.md) · [PARSER-3.3-CONTRACT-v1.md](architecture/PARSER-3.3-CONTRACT-v1.md) · [FIRST-REPLY-RULES-v1.md](architecture/FIRST-REPLY-RULES-v1.md) |
@@ -197,9 +199,11 @@
 | **Phase 3E.2.1** | Human Reply Style v1 + meaningful comment branching + quality linter + delivery fail-closed reconciliation | **OPERATOR-ACCEPTED; no redesign in 3E.2.3** |
 | **Phase 3E.2.2** | Quota diagnosis and acceptance preparation | **ATTENTION; superseded by 3E.2.3 optimization gate** |
 | **Phase 3E.2.3** | Sheets call-budget, bounded reads/retries, single-flight, final exactly-once proof | **COMPLETE — proof delivered; operator visual confirmation pending** |
+| **Phase 3F.1** | Pending-lead commands (`/pending_count`, `/pending_leads`, `/pending_leads_test`) + daily reminder engine (`sm-pending-reminder-v1.0`) | **COMPLETE — COMMANDS AND REMINDER ENGINE READY; OPERATOR ACTIVATION PENDING** |
 | Next form iteration | Per `MULTI-FORM-TEST-PLAN-v1` | **not opened** |
 | Live rename | After clean-lead acceptance | **deferred** |
 | Registry promotion | Separate governance charter | **not opened** |
+| Reminder production activation | Operator sets `pending_reminders_enabled=true` | **not opened** |
 
 ---
 
@@ -253,3 +257,17 @@
 - `architecture/SHEETS-BACKOFF-POLICY-v1.md`
 - `implementation/ACCESS-CONTROL-SNAPSHOT-v1.md`
 - `implementation/BOUNDED-DELIVERY-LEDGER-READ-v1.md`
+
+## Phase 3F.1 — pending leads + daily reminder engine
+
+- Admin.dev same ID `wLrLp4WQHm1VJmxz`: 59 → 79 nodes.
+- New commands: `/pending_count`, `/pending_leads`, `/pending_leads_test`, `/reminder_status`, `/reminder_on`, `/reminder_off`, `/reminder_time`, `/reminder_timezone`, `/reminder_min`.
+- Internal 15-minute Schedule Trigger inside Admin.dev — **not** a new workflow.
+- Pending rule: `manager_status` primary, `lifecycle_status` secondary, legacy rows default to pending unless closed; excludes processed/spam/technical-retry/invalid; deduped by business key; probable tests excluded by default; oldest-first.
+- Reminder CONFIG: `enabled=false` default, `10:00` `Europe/Moscow`, version `sm-pending-reminder-v1.0`; new additive `REMINDER_DELIVERIES` ledger tab.
+- Offline harness `73/73 PASS` (`evidence/phase3f1/HARNESS-RESULTS-v1.md`).
+- Controlled reminder live exercise reached ACCESS_CONTROL and correctly failed closed under Sheets quota; production reminders remain OFF.
+- Operational.dev unchanged (45 nodes); access unchanged; AI OFF; workflows created=0; destructive migrations=0.
+- Architecture: `architecture/PENDING-LEADS-VIEW-v1.md` · `architecture/PENDING-REMINDER-v1.md` · `architecture/REMINDER-DELIVERY-IDEMPOTENCY-v1.md`.
+- Implementation: `implementation/PENDING-COMMANDS-v1.md` · `implementation/REMINDER-CONFIG-COMMANDS-v1.md`.
+- Evidence: `evidence/phase3f1/` · Report: `reports/REPORT-iseo-sales-manager-bot-phase3f1-pending-leads-and-reminders-v1.md`.

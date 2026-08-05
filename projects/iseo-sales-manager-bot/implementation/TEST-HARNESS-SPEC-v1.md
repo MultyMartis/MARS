@@ -302,3 +302,22 @@ Required: sm-reply-v2.0 contract; Audit/SEO/WebsiteDevelopment/WebsiteDevelopmen
 ### Phase 3E.2.3 harness
 
 `node implementation/harness/phase3e23-harness.mjs` — offline budget model B01–B24 plus Human Reply Style and regression checks. It covers zero-write empty polls, one access snapshot, bounded ledger read, two claims/two sends model, fallback guards, five-poll zero resend, single-flight, bounded retries, fail-closed access/claim and AI OFF. Result: **83/83 PASS offline**; live proof remains separate.
+
+## Phase 3F.1 harness — pending leads view + reminder engine
+
+`node implementation/harness/phase3f1-harness.mjs` — offline, pure-JS, mirrors `implementation/runtime-libs/pending-leads-lib.mjs`. Result: **73/73 PASS**.
+
+Coverage groups:
+
+| Range | Area |
+|---|---|
+| 1–15 | Pending view build: lifecycle inclusion/exclusion, dedupe, legacy compatibility, missing timestamp, age formatting, ordering, pagination, HTML escape, message length |
+| 16–23 | Command authorization matrix (admin/moderator/revoked/public; staff-read vs admin-config classes) |
+| 24–42 | Reminder schedule gate, recipient snapshot, window-key determinism, idempotency (window + recipient level), invalid time/timezone rejection, safe default restoration |
+| 43–48 | Post-lifecycle regression: processed/spam disappearance from the pending view; callback idempotency, actor attribution, buttons, archive contracts unchanged |
+| 49–63 | Regression stubs (`/my_status`, `/moderator_pending`, `/moderators`, `/leads`, callbacks, Operational exactly-once, Parser 3.3, Human Reply Style, AI OFF, client messages=0, workflows created=0, access changes=0, destructive migrations=0) |
+| X1–X10 | Fixture-snapshot consistency (business/test counts, reply shapes, reminder message content, argument parsing, age formatting) |
+
+Business pending in the fixture snapshot: **4** (2 fresh leads + 1 legacy-compatible + 1 missing-timestamp); with tests included: **5**. Evidence: `evidence/phase3f1/HARNESS-RESULTS-v1.md`, `evidence/phase3f1/HARNESS-RESULTS-RAW.json`.
+
+Live command acceptance (separate from the offline harness): admin/moderator/revoked paths for `/pending_count`, `/pending_leads`, `/reminder_status`; invalid `/reminder_time` rejection; moderator denial on a config-class command. A controlled reminder schedule exercise reached the ACCESS_CONTROL read and failed closed under a live Sheets quota condition (zero sends) — see `evidence/phase3f1/CONTROLLED-REMINDER-LIVE-ACCEPTANCE-v1.md`.

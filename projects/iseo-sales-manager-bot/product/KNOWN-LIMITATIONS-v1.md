@@ -7,7 +7,7 @@
 - **Google Sheets has no atomic CAS** — claim → send → stamp is best-effort sequential; `claimed`/`uncertain` rows require reconciliation, not blind resend ([DELIVERY-FAIL-CLOSED-RECONCILIATION-v1.md](../architecture/DELIVERY-FAIL-CLOSED-RECONCILIATION-v1.md)).
 - Sheets quota remains an operational risk, but Phase 3E.2.3 live proof passed with zero quota errors: zero-write empty polls, `minutesInterval=2`, bounded reads/retries, two claims/two sends/two stamps and five-poll zero resend. Fail-closed remains mandatory.
 - Additive Sheets columns for semantic / first-reply v2 fields may still be interim-packed into `quality_comment` until migration apply (deferred while quota recovers).
-- Pending-lead reminders **not implemented** — next phase after dual delivery + First Reply human-copy acceptance.
+- Pending-lead reminders are **implemented** (Phase 3F.1: `/pending_count`, `/pending_leads`, `/pending_leads_test`, `sm-pending-reminder-v1.0` daily engine) but **not activated in production** — `pending_reminders_enabled=false` until the operator explicitly turns them on. A full live dual-recipient reminder send under normal (non-quota) conditions has not yet been observed; the controlled live window reached ACCESS_CONTROL and correctly failed closed under a Sheets quota condition.
 - Reusable multi-client deployment / automatic client rollout **not implemented**.
 - AI ON **not approved**.
 - Archive `/leads` cards remain intentionally buttonless.
@@ -16,4 +16,11 @@
 
 ## Phase 3E.2.3 pending limitations
 
-Live call counts, safe real-lead recount, final two-recipient proof and five-poll zero-resend are captured. Remaining gate: operator visual confirmation. Google Sheets still lacks atomic CAS; synthetic Gmail finalization required a continue-regular-output patch and guard reconciliation.
+Live call counts, safe real-lead recount, final two-recipient proof and five-poll zero-resend are captured. Operator visual confirmation is now received (see `evidence/phase3f1/PHASE3E2-FINAL-CLOSEOUT-v1.md`). Google Sheets still lacks atomic CAS; synthetic Gmail finalization required a continue-regular-output patch and guard reconciliation.
+
+## Phase 3F.1 pending limitations
+
+- Reminder engine implemented and command-accepted; `pending_reminders_enabled=false` in production — no automatic reminder message has been sent to real staff.
+- The controlled live acceptance window reached ACCESS_CONTROL and hit the same Sheets quota class documented since Phase 3E.2.2, correctly producing zero sends rather than a partial delivery. A full non-quota dual-recipient live send remains outstanding for a future operator-authorized activation window.
+- Fixture harness counters (business pending=4, tests excluded=1) reflect the offline fixture set, not the live production pending count at any given moment — see `evidence/phase3f1/PENDING-COUNT-ACCEPTANCE-v1.md`.
+- `REMINDER_DELIVERIES` is a new, currently empty production tab — no historical reminder data exists to migrate.

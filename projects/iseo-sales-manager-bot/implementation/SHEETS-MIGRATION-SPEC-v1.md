@@ -293,3 +293,33 @@ Until headers land live:
 
 Evidence: `evidence/phase3e2/STORAGE-MIGRATION-v1.md`.
 
+## Phase 3F.1 — `REMINDER_DELIVERIES` tab (new, additive)
+
+New immutable-append tab in the CLEAN workbook, analogous in role to `LEAD_DELIVERIES` (§Phase 3D.7) but keyed for the daily reminder batch instead of per-lead delivery.
+
+**Writer:** Admin.dev reminder branch · **Reader:** Admin.dev (idempotency check) · **Behavior:** upsert by `reminder_key` · **Retention:** durable audit ledger
+
+| Header | Type | Required | Notes |
+|---|---|---|---|
+| `reminder_key` | string | yes | `<reminder_window>\|<recipient_ref>` — upsert key |
+| `reminder_window` | string | yes | `pending-reminder:<date>:<time>:<timezone>` |
+| `recipient_ref` | string | yes | opaque, no raw Telegram id |
+| `role_snapshot` | enum | yes | `admin`\|`moderator` |
+| `pending_count_snapshot` | number | no | count at claim time |
+| `oldest_age_minutes_snapshot` | number | no | oldest pending age at claim time |
+| `claimed_at` | ISO-8601 | yes | set before send |
+| `sent_at` | ISO-8601 | no | set on Telegram success |
+| `status` | enum | yes | `claimed`\|`delivered`\|`reconciliation_required` |
+| `telegram_message_ref_safe` | string | no | safe reference only, no raw message content |
+| `error_code_safe` | string | no | safe error class only |
+| `reminder_version` | string | yes | `sm-pending-reminder-v1.0` |
+| `reconciled_at` | ISO-8601 | no | set if a claimed row required reconciliation |
+
+**Migration treatment:** tab created empty; no historical data exists to migrate; no existing tab (`CONFIG`, `LEAD_DELIVERIES`, `lead_clean_v2`) was altered to add this tab.
+
+### CONFIG additions (Phase 3F.1)
+
+`pending_reminders_enabled` (`false`), `pending_reminder_time` (`10:00`), `pending_reminder_timezone` (`Europe/Moscow`), `pending_reminder_min_count` (`1`), `pending_reminder_include_tests` (`false`), `pending_reminder_last_window`, `pending_reminder_last_success_at`, `pending_reminder_last_recipient_count`, `pending_reminder_last_pending_count`, `pending_reminder_last_error_safe`, `pending_reminder_version` (`sm-pending-reminder-v1.0`). See `evidence/phase3f1/REMINDER-CONFIG-CONTRACT-v1.md`.
+
+No `lead_clean_v2` header change was required for the pending view — it reads existing fields (`manager_status`, `lifecycle_status`, `client_name`, `site`, `service`, `summary`, timestamps).
+

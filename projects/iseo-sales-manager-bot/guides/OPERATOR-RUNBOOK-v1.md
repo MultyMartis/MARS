@@ -89,4 +89,17 @@ If a new pending card has no buttons, inspect Format output before changing Admi
 4. Final proof is complete: two eligible claims/sends/stamps and five polls with zero resend.
 5. A post-send Sheets failure means `reconciliation_required`; do not replay blindly.
 6. Do not enable AI, change access, activate rollback workflow or implement reminders.
-7. Current stop verdict is `COMPLETE — EXACTLY-ONCE PROOF DELIVERED; OPERATOR VISUAL CONFIRMATION PENDING`.
+7. Closed: operator visual confirmation received. Final verdict `PHASE 3E.2 COMPLETE — HUMAN FIRST REPLY ENGINE READY` (see `evidence/phase3f1/PHASE3E2-FINAL-CLOSEOUT-v1.md`).
+
+## Phase 3F.1 — pending-lead commands and daily reminder engine
+
+1. Admin.dev is the same workflow ID (`wLrLp4WQHm1VJmxz`), now **79 nodes** (was 59). Operational.dev is unchanged (45 nodes).
+2. New staff-read commands: `/pending_count`, `/pending_leads [page] [test]`, `/reminder_status`. New Admin-only commands: `/pending_leads_test`, `/reminder_on`, `/reminder_off`, `/reminder_time HH:MM`, `/reminder_timezone <IANA>`, `/reminder_min <n>`.
+3. Pending resolution is `manager_status` primary, `lifecycle_status` secondary; legacy rows without either default to pending unless already closed.
+4. The reminder engine runs on an **internal 15-minute Schedule Trigger inside Admin.dev** — it is not a separate workflow and does not touch Operational.dev.
+5. Reminders are **OFF in production** (`pending_reminders_enabled=false`, default `10:00` `Europe/Moscow`). Do not flip this to `true` without explicit operator authorization.
+6. A controlled reminder schedule exercise reached the ACCESS_CONTROL read step and correctly failed closed under a live Sheets quota condition — zero sends is the expected, correct outcome, not an incident.
+7. `REMINDER_DELIVERIES` is a new, currently empty Sheets tab; no other tab schema changed.
+8. Offline harness: `node implementation/harness/phase3f1-harness.mjs` → **73/73 PASS**.
+9. Do not restore Оля/Никита, enable AI, or activate the rollback workflow as part of this phase.
+10. Current stop verdict: `COMPLETE — COMMANDS AND REMINDER ENGINE READY; OPERATOR ACTIVATION PENDING`.
