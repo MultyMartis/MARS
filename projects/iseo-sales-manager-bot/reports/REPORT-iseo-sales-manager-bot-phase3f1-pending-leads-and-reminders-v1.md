@@ -255,7 +255,7 @@ No secrets, Telegram/chat identifiers, workbook identifiers, phone numbers, emai
 
 ## 40. Commit
 
-**PENDING_PUSH — parent agent.**
+**031eecb6 — parent agent.**
 
 Expected primary message:
 
@@ -269,7 +269,7 @@ Canonical tip base for this worktree: `56c3d9ed`.
 
 ## 41. Push
 
-**PENDING_PUSH — parent agent.** No push was performed as part of this task.
+**031eecb6 — parent agent.** No push was performed as part of this task.
 
 ## 42. Risks
 
