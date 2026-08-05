@@ -282,4 +282,15 @@ Same Admin workflow (`wLrLp4WQHm1VJmxz`); expect **~84+** nodes after patch:
 3. Seed/confirm immutable numbers 1–4 ([REPLY-PROFILE-NUMBERING-v1.md](../architecture/REPLY-PROFILE-NUMBERING-v1.md)); client name only `reply_sender_name`; name commands must not change access role/status.
 4. Do not enable AI or reminders; do not activate Sales-Manager-v2; do not restore revoked moderators as part of this patch.
 5. Text surfaces: [TELEGRAM-TEXT-CONTRACT-v2.md](../architecture/TELEGRAM-TEXT-CONTRACT-v2.md) · registry [USER-VISIBLE-TEXT-REGISTRY-v1.md](USER-VISIBLE-TEXT-REGISTRY-v1.md).
-6. Evidence stubs: `evidence/phase3g2/`.
+6. Evidence: `evidence/phase3g2/`.
+
+### Phase 3G.2.1 Admin patch note
+
+Same Admin ID only (`wLrLp4WQHm1VJmxz`); **85** nodes retained (no new workflow):
+
+1. **Root causes (separate):** Help + Start — corrupted `startReply` splice → `Unexpected token ')'`; Config Summary — literal `\\n` inside array literal → `Invalid or unexpected token`.
+2. Patch nodes: **Help**, **Start**, **Config Summary**, **Capture Admin Reply** (+ `onError=continueRegularOutput` on builders).
+3. **No-silent guard:** builder try/catch + Capture empty-`reply_text` fallback → `Не удалось сформировать ответ команды. Ошибка зафиксирована, повторите позже.`
+4. Moderator `/start` shows `Имя в ответах:` from ACCESS_CONTROL `reply_sender_name`.
+5. Do **not** touch Reply Profile Commands (hash must stay `961F84B02AA928CE`), Operational.dev, AI, reminders, profile numbers/names.
+6. Evidence: `evidence/phase3g2-1/`. Validate Code-node parse before every text deploy.

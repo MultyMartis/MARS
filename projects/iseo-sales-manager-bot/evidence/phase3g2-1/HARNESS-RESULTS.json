@@ -1,0 +1,239 @@
+{
+  "phase": "3G.2.1",
+  "total": 37,
+  "passed": 37,
+  "failed": 0,
+  "failedIds": [],
+  "ok": true,
+  "lengths": {
+    "adminHelp": 2344,
+    "modHelp": 799,
+    "adminStart": 401,
+    "modStart": 331,
+    "config": 362
+  },
+  "checks": [
+    {
+      "id": 1,
+      "title": "Help parses",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 2,
+      "title": "Start parses",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 3,
+      "title": "Config parses",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 4,
+      "title": "Capture parses",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 5,
+      "title": "No corrupted startReply splice in Help",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 6,
+      "title": "No corrupted startReply splice in Start",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 7,
+      "title": "No literal \\\\n array corruption in Config",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 8,
+      "title": "/help Admin non-empty",
+      "pass": true,
+      "detail": "len=2344"
+    },
+    {
+      "id": 9,
+      "title": "/help moderator non-empty",
+      "pass": true,
+      "detail": "len=799"
+    },
+    {
+      "id": 10,
+      "title": "Admin help has reply_profiles",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 11,
+      "title": "Moderator help has my_reply_profile only among mutations",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 12,
+      "title": "Admin help uses escaped номер",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 13,
+      "title": "Admin help under 4096",
+      "pass": true,
+      "detail": "len=2344"
+    },
+    {
+      "id": 14,
+      "title": "Moderator help under 4096",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 15,
+      "title": "/start Admin branding",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 16,
+      "title": "/start Admin AI OFF",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 17,
+      "title": "/start Admin reminders OFF",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 18,
+      "title": "/start Admin under 4096",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 19,
+      "title": "/start moderator name",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 20,
+      "title": "/start moderator no internal codes",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 21,
+      "title": "/config non-empty",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 22,
+      "title": "/config under 4096",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 23,
+      "title": "/config no secrets markers",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 24,
+      "title": "/config has stats epoch",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 25,
+      "title": "Config code has try/catch guard",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 26,
+      "title": "Help code has try/catch guard",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 27,
+      "title": "Start code has try/catch guard",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 28,
+      "title": "Capture has empty fallback",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 29,
+      "title": "normalize /help",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 30,
+      "title": "normalize trailing space",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 31,
+      "title": "normalize /HELP",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 32,
+      "title": "normalize /help@bot",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 33,
+      "title": "empty builder fallback text fixed",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 34,
+      "title": "unknown command hint contract",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 35,
+      "title": "startReply has single Admin INTLSEO opener",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 36,
+      "title": "HTML placeholders escaped in help",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 37,
+      "title": "split not required",
+      "pass": true,
+      "detail": ""
+    }
+  ]
+}

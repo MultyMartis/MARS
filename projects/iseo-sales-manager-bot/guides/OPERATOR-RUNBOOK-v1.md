@@ -148,6 +148,16 @@ Evidence: `evidence/phase3g1-1/` · Report: `reports/REPORT-iseo-sales-manager-b
 3. `/my_reply_profile` for Admin and moderator; moderators cannot mutate names.
 4. Name commands **do not** change ACCESS_CONTROL role/status — use moderator add/remove for access.
 5. Admin `/help` must list the full profile section; moderator `/help` only `/my_reply_profile` among profile cmds — rebuild templates, never substring-patch.
-6. Contour: Ops 45 · Admin ~84+ · v2 inactive · Parser 3.3 · LEADS / LEAD_EVENTS · epoch 05.08.2026 MSK · AI OFF · reminders OFF.
+6. Contour: Ops 45 · Admin **85** · v2 inactive · Parser 3.3 · LEADS / LEAD_EVENTS · epoch 05.08.2026 MSK · AI OFF · reminders OFF.
 7. Guides: [TELEGRAM-COMMAND-REFERENCE-v1.md](TELEGRAM-COMMAND-REFERENCE-v1.md) · text [TELEGRAM-TEXT-CONTRACT-v2.md](../architecture/TELEGRAM-TEXT-CONTRACT-v2.md).
-8. Evidence stubs: `evidence/phase3g2/` (fill before claiming acceptance).
+8. Evidence: `evidence/phase3g2/`.
+
+## Phase 3G.2.1 — silent `/help` `/start` `/config` repair
+
+1. If `/help`, `/start`, or `/config` produce **no** Telegram reply while profile/AI/stats work: treat as Code-node syntax / builder failure class (see `evidence/phase3g2-1/`).
+2. After 3G.2.1 patch: Admin should receive responses for `/help`, `/start`, `/config`; never silence for recognized commands.
+3. Safe fallback (internal error): `Не удалось сформировать ответ команды. Ошибка зафиксирована, повторите позже.`
+4. Operator acceptance packet: Admin `/help` `/start` `/config` `/ai_status` `/stats` `/reply_profiles` `/reply_profile 3`; moderator `/help` `/start` `/my_reply_profile`.
+5. Do **not** re-run disable/enable on profile 3 unless necessary; keep Михаил enabled.
+6. AI stays OFF; reminders stay OFF; do not activate Sales-Manager-v2.
+7. Evidence: `evidence/phase3g2-1/` · Report: `reports/REPORT-iseo-sales-manager-bot-phase3g2-1-silent-command-repair-v1.md`.

@@ -1,0 +1,79 @@
+{
+  "contour": {
+    "admin": {
+      "id": "wLrLp4WQHm1VJmxz",
+      "name": "i-SEO Sales Manager - Admin.dev",
+      "active": true,
+      "nodes": 85,
+      "gmail": 1,
+      "telegramTriggers": 1
+    },
+    "ops": {
+      "id": "xSnXPy8cEHoZw6xG",
+      "name": "i-SEO Sales Manager - Operational.dev",
+      "active": true,
+      "nodes": 45,
+      "gmail": 4,
+      "telegramTriggers": 0
+    },
+    "v2": {
+      "id": "h8I2Tl2yl4uzhUnB",
+      "name": "Sales-Manager-v2",
+      "active": false,
+      "nodes": 19,
+      "gmail": 5,
+      "telegramTriggers": 0
+    }
+  },
+  "hashes": {
+    "Help": "2DD74ABFE6099814",
+    "Start": "2350550BB3EF82FC",
+    "ConfigSummary": "95ED814DCE102723",
+    "Capture": "52D277079D2DC1C3",
+    "ReplyProfileCommands": "961F84B02AA928CE"
+  },
+  "flags": {
+    "ai_enabled": false,
+    "reminders_enabled": false,
+    "environment": "production"
+  },
+  "profiles": [
+    {
+      "n": 1,
+      "name": "Андрей",
+      "enabled": true,
+      "role": "admin",
+      "status": "active"
+    },
+    {
+      "n": 2,
+      "name": "Оля",
+      "enabled": false,
+      "role": "moderator",
+      "status": "revoked"
+    },
+    {
+      "n": 3,
+      "name": "Михаил",
+      "enabled": true,
+      "role": "moderator",
+      "status": "active"
+    },
+    {
+      "n": 4,
+      "name": "Никита",
+      "enabled": false,
+      "role": "moderator",
+      "status": "revoked"
+    }
+  ],
+  "patchMarkers": {
+    "helpHasGuard": true,
+    "startHasNameLine": true,
+    "configHasReporting": true,
+    "helpNoCorruptSplice": true,
+    "configNoLiteralN": true,
+    "replyProfilesHashUnchanged": true
+  },
+  "sampleExecId": "23640"
+}

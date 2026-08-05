@@ -1,12 +1,12 @@
 # CURRENT PRODUCTION BASELINE v1
 
-**Срез:** Phase 3G.2, 2026-08-06. **Статус:** number-based reply profiles + text contract documented; AI OFF; reminders OFF.
+**Срез:** Phase 3G.2.1, 2026-08-06. **Статус:** silent `/help`/`/start`/`/config` repaired; numbered reply profiles retained; AI OFF; reminders OFF; operator visual acceptance pending.
 
 | Контур | Workflow ID | Active | Nodes | Роль |
 |---|---|---:|---:|---|
 | Sales-Manager-v2 | `h8I2Tl2yl4uzhUnB` | false | — | rollback; не активировать без отдельного решения |
 | i-SEO Sales Manager - Operational.dev | `xSnXPy8cEHoZw6xG` | true | 45 | Parser 3.3; multi-recipient cards; AI OFF; `minutesInterval=2` |
-| i-SEO Sales Manager - Admin.dev | `wLrLp4WQHm1VJmxz` | true | ~84+ | After 3G.2 patch: numbered reply-profile cmds + help rebuild; pending/reminder OFF; callbacks |
+| i-SEO Sales Manager - Admin.dev | `wLrLp4WQHm1VJmxz` | true | **85** | 3G.2 profiles + 3G.2.1 Help/Start/Config/Capture guard; reminders OFF; callbacks |
 
 
 ## Phase 3F.2 — Clean production ledger

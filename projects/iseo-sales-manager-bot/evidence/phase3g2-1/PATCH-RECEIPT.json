@@ -1,0 +1,37 @@
+{
+  "phase": "3G.2.1",
+  "workflowId": "wLrLp4WQHm1VJmxz",
+  "active": true,
+  "nodes": 85,
+  "backupPath": "Admin.dev.backup-pre-3g21-1785964468702.json",
+  "hashes": {
+    "Help": "2DD74ABFE6099814",
+    "Start": "2350550BB3EF82FC",
+    "Config Summary": "95ED814DCE102723",
+    "Capture Admin Reply": "52D277079D2DC1C3"
+  },
+  "helpMeasure": {
+    "adminLen": 2344,
+    "moderatorLen": 799,
+    "adminUnder4096": true,
+    "moderatorUnder4096": true,
+    "splitRequired": false
+  },
+  "patchedNodes": [
+    "Help",
+    "Start",
+    "Config Summary",
+    "Capture Admin Reply"
+  ],
+  "onErrorContinue": [
+    "Help",
+    "Start",
+    "Config Summary"
+  ],
+  "fallbackText": "Не удалось сформировать ответ команды. Ошибка зафиксирована, повторите позже.",
+  "rootCauseClass": {
+    "/help": "runtime code exception (Unexpected token ) from corrupted startReply splice)",
+    "/start": "runtime code exception (Unexpected token ) from corrupted startReply splice)",
+    "/config": "runtime code exception (Invalid or unexpected token from literal \\\\n in array literal)"
+  }
+}

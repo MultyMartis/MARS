@@ -1,6 +1,6 @@
 # USER-VISIBLE TEXT REGISTRY v1
 
-**Phase:** 3G.2  
+**Phase:** 3G.2 (+ 3G.2.1 guard)  
 **Purpose:** inventory of Telegram / operator-visible text surfaces for audit and acceptance  
 **Authority for wording:** [TELEGRAM-TEXT-CONTRACT-v2.md](../architecture/TELEGRAM-TEXT-CONTRACT-v2.md)
 
@@ -10,12 +10,13 @@
 
 | ID | Surface | Primary owner | Role audience | Contract refs | Notes |
 |----|---------|---------------|---------------|---------------|-------|
-| S01 | `/start` Admin | Admin.dev | Admin | TEXT-CONTRACT-v2 · ADMIN-COMMAND | Contour + AI mode |
-| S02 | `/start` moderator | Admin.dev | Moderator | TEXT-CONTRACT-v2 | Manager tip |
-| S03 | `/help` Admin | Admin.dev | Admin | ROLE-AWARE-HELP-v2 | Explicit template; includes profiles |
+| S01 | `/start` Admin | Admin.dev | Admin | TEXT-CONTRACT-v2 · ADMIN-COMMAND | INTLSEO ready + AI/reminders OFF |
+| S02 | `/start` moderator | Admin.dev | Moderator | TEXT-CONTRACT-v2 | Includes `Имя в ответах` (3G.2.1) |
+| S03 | `/help` Admin | Admin.dev | Admin | ROLE-AWARE-HELP-v2 | Explicit template; includes profiles; never silent |
 | S04 | `/help` moderator | Admin.dev | Moderator | ROLE-AWARE-HELP-v2 | Only `/my_reply_profile` among profiles |
 | S05 | `/my_status` | Admin.dev | public+staff | ADMIN-COMMAND | Personal only |
-| S06 | `/status` `/health` `/config` | Admin.dev | Admin | ADMIN-COMMAND · TEXT-CONTRACT | Non-secret |
+| S06 | `/status` `/health` `/config` | Admin.dev | Admin | ADMIN-COMMAND · TEXT-CONTRACT | `/config` safe summary fields (3G.2.1) |
+| S27 | Command response guard fallback | Admin.dev | all recognized cmds | TEXT-CONTRACT-v2 §5 | Safe internal-error reply; no stack traces |
 | S07 | AI commands/status | Admin.dev | Admin | AI-OFF-ON · TEXT-CONTRACT | Production OFF |
 | S08 | `/stats` | Admin.dev | Admin | TEXT-CONTRACT | Epoch 05.08.2026 MSK; LEADS |
 | S09 | `/last_error` | Admin.dev | Admin | TEXT-CONTRACT | Sanitized |

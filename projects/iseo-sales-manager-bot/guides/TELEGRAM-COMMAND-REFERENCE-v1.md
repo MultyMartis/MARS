@@ -1,11 +1,13 @@
 # Telegram Command Reference v1
 
 **Product:** i-SEO Sales Manager Bot  
-**Phase:** 3G.2 (number-based reply profiles + text contract)  
+**Phase:** 3G.2.1 (silent `/help` `/start` `/config` repair on top of 3G.2 profiles + text contract)  
 **Audience:** operators / Admin / moderators  
 **Safety:** never paste Telegram user IDs, secrets, workbook IDs, emails, or phones into operator chat logs.
 
-**Contour (current):** Operational.dev active (45 nodes) · Admin.dev active (~84+ after 3G.2 patch) · Sales-Manager-v2 inactive · AI OFF · reminders OFF · no auto-send to customers.
+**Contour (current):** Operational.dev active (45 nodes) · Admin.dev active (**85** after 3G.2.1) · Sales-Manager-v2 inactive · AI OFF · reminders OFF · no auto-send to customers.
+
+**Response contract:** recognized commands must never go silent — valid reply, permission/validation reply, or safe internal-error fallback.
 
 ---
 
@@ -25,8 +27,8 @@ Roles (Russian labels in bot UI): **Администратор** · **Модер
 
 | Command | Who | Syntax | Example | Purpose | Mut | Safety |
 |---------|-----|--------|---------|---------|-----|--------|
-| `/start` | public+staff | `/start` | `/start` | Greeting; contour + AI mode for Admin; manager tip for moderator | R | Role-aware; no config leak to unauthorized |
-| `/help` | public+staff | `/help` | `/help` | Role-aware help (explicit Admin vs moderator templates) | R | Rebuild templates only — never substring-patch |
+| `/start` | public+staff | `/start` | `/start` | Greeting; Admin AI/reminders; moderator shows approved reply name | R | Role-aware; no config leak to unauthorized |
+| `/help` | public+staff | `/help` | `/help` | Role-aware help (explicit Admin vs moderator templates) | R | Never silent; rebuild templates only — never substring-patch |
 | `/my_status` | public+staff (incl. blocked exception) | `/my_status` | `/my_status` | Personal ACCESS_CONTROL status for caller only | R | No other users’ data |
 
 ---
@@ -42,7 +44,7 @@ Roles (Russian labels in bot UI): **Администратор** · **Модер
 | `/ai_off` | Admin | `/ai_off` | `/ai_off` | Disable AI flag | W | Preferred production posture |
 | `/stats` | Admin | `/stats [days]` | `/stats` · `/stats 30` | Bounded rollup from authoritative `LEADS` epoch **05.08.2026** Europe/Moscow | R | Business vs technical counts; no PII dumps |
 | `/last_error` | Admin | `/last_error` | `/last_error` | Latest safe error summary | R | No stack/credentials |
-| `/config` | Admin | `/config` | `/config` | Allowlisted non-secret CONFIG keys | R | Never show API keys |
+| `/config` | Admin | `/config` | `/config` | Safe contour summary (epoch, source, versions, AI/reminders, reporting sync, recipients) | R | Never show API keys / IDs / workbook IDs; unavailable → `не задано` |
 
 **Deferred / not advertised:** `/test_lead` (sandbox inject — omit from help until chartered).
 

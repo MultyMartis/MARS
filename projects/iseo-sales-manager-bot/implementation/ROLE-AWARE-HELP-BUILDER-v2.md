@@ -1,6 +1,6 @@
 # ROLE-AWARE HELP BUILDER v2
 
-**Phase:** 3G.2  
+**Phase:** 3G.2 (+ 3G.2.1 silent-repair)  
 **Status:** current help-template contract  
 **Extends:** [ADMIN-HELP-BUILDER-v1.md](ADMIN-HELP-BUILDER-v1.md) (HTML/`cmdHtml` rules remain)  
 **Parse mode:** HTML
@@ -13,6 +13,8 @@
 2. **Never** substring-patch an existing help line to insert a command (defect class: Phase 3F.2.1 `/ai_on` corruption).
 3. `cmdHtml('/command')` wraps **only** the slash token; placeholders (`&lt;номер&gt;`, `&lt;имя&gt;`) stay outside `<code>`.
 4. Public/unauthorized paths keep short deny/help — do not leak Admin command inventory.
+5. **Never ship a syntax-broken shared module splice** (defect class: Phase 3G.2 silent `/help` — orphan `}) {` after `startReply`). Validate Code-node parse before deploy.
+6. If Admin help would exceed Telegram 4096, split deterministically into ≤3 parts (leads+profiles / reminders+system+AI / users+settings); current measured Admin help fits in one message (~2344).
 
 ---
 

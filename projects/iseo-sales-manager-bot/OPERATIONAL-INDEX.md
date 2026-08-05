@@ -1,5 +1,20 @@
+<!-- Phase 3G.2.1 silent help/start/config repair 2026-08-06 -->
+## Phase 3G.2.1 (current additive)
+
+| Field | Value |
+|-------|-------|
+| **Phase** | 3G.2.1 — Silent `/help` `/start` `/config` repair + response guard |
+| **Verdict** | `COMPLETE — SILENT COMMANDS REPAIRED; OPERATOR ACCEPTANCE PENDING` |
+| **Root causes** | Help/Start: corrupted `startReply` splice (`Unexpected token ')'`); Config: literal `\\n` in array (`Invalid or unexpected token`) |
+| **Repair** | Admin.dev same ID; Help/Start/Config/Capture patched; no-silent recognized-command guard |
+| **Runtime** | Ops **45** active · Admin **85** active · v2 inactive · AI OFF · reminders OFF |
+| **Profiles** | unchanged 1–4 (Михаил №3 enabled) |
+| **Evidence** | [evidence/phase3g2-1/](evidence/phase3g2-1/) |
+| **Report** | [REPORT-iseo-sales-manager-bot-phase3g2-1-silent-command-repair-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3g2-1-silent-command-repair-v1.md) |
+| **Operator gate** | Visual `/help` `/start` `/config` as Admin + moderator `/help` `/start` `/my_reply_profile` |
+
 <!-- Phase 3G.2 number-based profiles + text contract 2026-08-06 -->
-## Phase 3G.2 (current additive)
+## Phase 3G.2 (additive; historical)
 
 | Field | Value |
 |-------|-------|
@@ -8,9 +23,9 @@
 | **Commands** | Number-based `/reply_profile N` family; moderator `/my_reply_profile` only |
 | **Text** | [TELEGRAM-TEXT-CONTRACT-v2.md](architecture/TELEGRAM-TEXT-CONTRACT-v2.md) · [TELEGRAM-COMMAND-REFERENCE-v1.md](guides/TELEGRAM-COMMAND-REFERENCE-v1.md) |
 | **Help** | [ROLE-AWARE-HELP-BUILDER-v2.md](implementation/ROLE-AWARE-HELP-BUILDER-v2.md) — explicit templates, no substring patch |
-| **Runtime** | Ops 45 active · Admin **~84+** after patch · v2 inactive · Parser 3.3 · LEADS / LEAD_EVENTS · epoch 05.08.2026 MSK · AI OFF · reminders OFF |
-| **Evidence** | [evidence/phase3g2/](evidence/phase3g2/) (stubs) |
-| **Prior** | 3G.1.1 profiles seeded; operator T1/T3 visual acceptance may still be pending historically |
+| **Runtime** | Ops 45 active · Admin **85** after 3G.2.1 · v2 inactive · Parser 3.3 · LEADS / LEAD_EVENTS · epoch 05.08.2026 MSK · AI OFF · reminders OFF |
+| **Evidence** | [evidence/phase3g2/](evidence/phase3g2/) |
+| **Follow-up** | Silent `/help`/`/start`/`/config` repaired in **3G.2.1** |
 
 ## Phase 3G.1.1 (additive; historical seed)
 
@@ -53,9 +68,9 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | **Phase 3G.2 docs active** — numbered reply profiles + text contract; prior 3F.2.2 polish + 3G.1.1 seed remain historical baseline |
+| **Status** | **Phase 3G.2.1** — silent `/help`/`/start`/`/config` repaired; operator Telegram visual acceptance pending |
 | **Active stage** | `sm-parser-v3.3` / INTLSEO first-contact + `iseo-recipient-name-v1.1` / `sm-msg-v2.4` / AI OFF / reminders OFF |
-| **Runtime** | External n8n — Operational.dev **active** (45 nodes); Admin.dev **active (~84+ after 3G.2 patch)**; Sales-Manager-v2 inactive |
+| **Runtime** | External n8n — Operational.dev **active** (45 nodes); Admin.dev **active (85 nodes after 3G.2.1)**; Sales-Manager-v2 inactive |
 | **Phase 3F.2** | Clean production ledger + reporting workbook; callbacks v2; reminders OFF |
 | **Live parity vs Sales-Manager-v2** | **CUT OVER** — Operational.dev replaced v2 for intake; v2 preserved inactive; filter \`labelIds\` parity confirmed |
 | **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C–3D.3 evidence under `evidence/phase3*` |

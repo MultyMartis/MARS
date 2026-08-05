@@ -54,7 +54,11 @@ Live call counts, safe real-lead recount, final two-recipient proof and five-pol
 ## Phase 3G.2 limitations
 
 - Username/token addressing of reply profiles is **obsolete**; number addressing is current — see `REPLY-PROFILE-ADMIN-COMMANDS-v2.md`.
-- Evidence under `evidence/phase3g2/` starts as stubs until live acceptance filled.
-- Admin node count after 3G.2 patch documented as **~84+** (exact post-patch count to confirm in `FINAL-WORKFLOW-STATE-v1.md`).
 - Access restoration for MOD_B_REVOKED / MOD_C_REVOKED remains **out of scope** for name/number commands.
 - AI ON and reminder activation remain separate operator charters.
+
+## Phase 3G.2.1 limitations
+
+- Phase 3G.2 Help/Start/Config Code-node syntax defects caused **silent** Telegram failures; repaired in-place on Admin.dev (85 nodes).
+- Offline silent-command harness **PASS**; **operator visual Telegram acceptance** for `/help` `/start` `/config` (Admin + moderator) remains **pending** (webhook secret blocks agent-side inject).
+- No-silent recognized-command guard is live (builder try/catch + Capture fallback); does not replace operator visual confirmation.

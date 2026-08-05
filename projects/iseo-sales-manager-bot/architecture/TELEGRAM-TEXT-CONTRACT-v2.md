@@ -1,7 +1,7 @@
 # TELEGRAM TEXT CONTRACT v2
 
 **Product:** i-SEO Sales Manager Bot  
-**Phase:** 3G.2  
+**Phase:** 3G.2 (+ 3G.2.1 response-guard addendum)  
 **Status:** current authority for user-visible Telegram **text** tone, labels, and formats  
 **Supersedes for text surfaces:** parts of [TELEGRAM-UX-CONTRACT-v1.md](TELEGRAM-UX-CONTRACT-v1.md) that describe wording/tone (card **layout blocks** remain in v1)
 
@@ -64,6 +64,10 @@ Personalization flag: `Персональный ответ: включён|вы�
 - HTML: wrap only slash-command tokens in `<code>` via `cmdHtml`; placeholders like `<номер>` render as `&lt;номер&gt;` **outside** code tags.
 - Admin help **must** include reply-profile section (list/get/set/enable/disable + `/my_reply_profile`).
 - Moderator help among profile commands: **only** `/my_reply_profile`.
+- Moderator `/start` must show `Имя в ответах: <approved reply_sender_name>` (or `не задано`).
+- **No-silent recognized-command invariant (3G.2.1):** every recognized command path must emit a valid reply, permission/validation reply, or safe internal-error fallback — never terminate without Telegram output.
+- Fallback: `Не удалось сформировать ответ команды. Ошибка зафиксирована, повторите позже.`
+- `/help` may split into ≤3 deterministic parts only if length would exceed Telegram 4096; current Admin help fits in one message.
 
 ---
 
@@ -97,7 +101,7 @@ Access role/status **must not** change as a side effect of reply-name commands.
 ## 8. Stats / config / reminders (wording posture)
 
 - Stats: human Russian counts; epoch display **05.08.2026** (Europe/Moscow); authoritative table `LEADS`; events in `LEAD_EVENTS`.
-- Config: Russian operator labels for allowlisted keys only.
+- Config (Admin): contour; stats start date; source display; parser version; template standard version; personalization version; AI state; reminder state; reporting synchronization state; active recipient count. Unavailable → `не задано`. Never workbook IDs, Telegram IDs, credentials, raw CONFIG secrets.
 - Reminder status: clearly show enabled/disabled; production default **выключены**.
 
 ---
