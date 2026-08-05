@@ -299,3 +299,6 @@ Required: HTML + text + one-line extraction; name/test flags; five website state
 
 Required: sm-reply-v2.0 contract; Audit/SEO/WebsiteDevelopment/WebsiteDevelopmentSEO/AI/Direct/NeedsClarification replies; known-info guards (site/phone/email/Telegram); test + damaged-contact suppression; greeting name/fallback; HTML escape; Telegram length; copy-block integrity + disclaimer outside; stored/legacy archive; Parser 3.3 fixtures A–F; delivery/lifecycle/AI OFF contracts; max length. Local runner: `implementation/harness/phase3e2-harness.mjs` — required **59/59 PASS**. Evidence: `evidence/phase3e2/HARNESS-RESULTS-v1.md`.
 
+### Phase 3E.2.3 harness
+
+`node implementation/harness/phase3e23-harness.mjs` — offline budget model B01–B24 plus Human Reply Style and regression checks. It covers zero-write empty polls, one access snapshot, bounded ledger read, two claims/two sends model, fallback guards, five-poll zero resend, single-flight, bounded retries, fail-closed access/claim and AI OFF. Result: **83/83 PASS offline**; live proof remains separate.

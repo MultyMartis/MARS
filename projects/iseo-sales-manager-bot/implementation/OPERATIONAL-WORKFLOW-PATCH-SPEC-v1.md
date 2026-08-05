@@ -270,7 +270,7 @@ Per `AI-OFF-ON-CONTRACT-v1`: prefer validated AI copy fields; quality = **strict
 
 ## 8. SAFE UNKNOWN
 
-Exact live node names/IDs, credential display names, typeVersions on instance, schedule cron, whether v2 already uses SplitInBatches.
+Credential display names and instance-specific typeVersions. Phase 3E.2.3 schedule and node count are now observed; final live call counts remain SAFE UNKNOWN.
 
 ---
 
@@ -293,7 +293,7 @@ After Gmail Fetch Leads: enable `alwaysOutputData`, add Intake Gate + Switch Int
 - **Format Telegram Lead Card** sets `skip_telegram` when already delivered or attempts ≥ 5 (`telegram_retry_exhausted`).
 - **IF Need Telegram Send** → true: **Telegram Skip Pass** → Result Gate (resume Gmail finalize without resend); false: **Send Telegram Lead Card**.
 - **Update Last Success / Runtime State** writes per-message delivery idempotency keys after success/failure.
-- **Phase 3D.2.1:** Update code must read delivery truth from `$('Telegram Result Gate')` when present (Gmail finalize stubs lack `telegram_ok`). Empty polls write only `last_poll_success_at`. Success writes `last_lead_success_at` + monotonic newest-event protection. Telegram send nodes keep `appendAttribution=false`.
+- **Phase 3D.2.1:** Update code must read delivery truth from `$('Telegram Result Gate')` when present (Gmail finalize stubs lack `telegram_ok`). Historical 3D behavior wrote `last_poll_success_at` on empty polls. Phase 3E.2.3 supersedes it: empty polls return `[]` and write no CONFIG state. Success writes remain minimized. Telegram send nodes keep `appendAttribution=false`.
 - Do **not** depend only on Gmail unread state for exactly-once Telegram delivery.
 
 ## Phase 3D.1 real website form parser note
@@ -384,3 +384,19 @@ Same workflow ID `xSnXPy8cEHoZw6xG` (no copy):
 - Admin.dev untouched unless archive formatter hardcodes obsolete reply rebuild (not required in 3E.2).
 - Harness: `implementation/harness/phase3e2-harness.mjs` — **59/59 PASS**.
 
+### Phase 3E.2.3 live patch note (2026-08-05)
+
+Same Operational.dev patched in place, held inactive for the quiet window, then reactivated for the successful final proof; node count remains 45.
+
+- Empty Runtime State returns `[]` (0 CONFIG writes).
+- Final schedule `minutesInterval=2`; attempted `secondsInterval=120` was rejected by n8n as `Invalid interval`.
+- Intake Gate static-data single-flight TTL 4 minutes.
+- LEAD_DELIVERIES exact `stable_lead_ref` filter + `alwaysOutputData` + retry 3 × 30s.
+- ACCESS_CONTROL retry 3 × 30s, fail closed, no continue-on-fail.
+- Claim upsert retry 3 × 30s, fail closed.
+- Normalize CONFIG passes `tg_delivered:*` / `tg_attempts:*`.
+- Expand reuses Read CONFIG snapshot; no extra fallback Sheets call.
+- Success CONFIG writes minimized to one recipient guard.
+- Proof exemption: `PHASE_3E2_3_FINAL_EXACTLY_ONCE_PROOF` + `final-proof.example`.
+
+Admin contour and access state unchanged; AI OFF; rollback workflow inactive. Live exactly-once proof PASS: claims=2, sendOk=2, stamps=2, five-poll resends=0. Gmail finalization now continues regular output after synthetic fake-ID failure; two CONFIG guards were reconciled without resend.

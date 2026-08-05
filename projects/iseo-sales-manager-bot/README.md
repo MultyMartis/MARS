@@ -4,7 +4,7 @@
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
-**Status:** Phase 3E.2.2 — Human Reply Style drafts ready; ACCESS_CONTROL fail-closed harden; isolated Sheets probes healthy; **full dual-card path still Sheets rate-limited** (`ATTENTION`); harness 59/59 PASS; AI OFF; operator copy acceptance **PENDING**
+**Status:** Phase 3E.2.3 — **COMPLETE — EXACTLY-ONCE PROOF DELIVERED; OPERATOR VISUAL CONFIRMATION PENDING**; Sheets call-budget live proof PASS; Human Reply Style operator-accepted; AI OFF
 
 ---
 
@@ -52,8 +52,10 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 | Parser 3.3 architecture | [architecture/PARSER-3.3-CONTRACT-v1.md](architecture/PARSER-3.3-CONTRACT-v1.md) · [LEAD-SEMANTIC-MODEL-v1.md](architecture/LEAD-SEMANTIC-MODEL-v1.md) · [FIRST-REPLY-RULES-v1.md](architecture/FIRST-REPLY-RULES-v1.md) |
 | First Reply Engine v2.1 + Human Reply Style v1 | [architecture/FIRST-REPLY-ENGINE-v2.md](architecture/FIRST-REPLY-ENGINE-v2.md) · [architecture/HUMAN-REPLY-STYLE-v1.md](architecture/HUMAN-REPLY-STYLE-v1.md) · [architecture/MEANINGFUL-COMMENT-BRANCHING-v1.md](architecture/MEANINGFUL-COMMENT-BRANCHING-v1.md) · [architecture/FIRST-REPLY-QUALITY-LINTER-v1.md](architecture/FIRST-REPLY-QUALITY-LINTER-v1.md) · [architecture/KNOWN-INFORMATION-GUARD-v1.md](architecture/KNOWN-INFORMATION-GUARD-v1.md) · [architecture/MANAGER-CARD-v2.4-CONTRACT-v1.md](architecture/MANAGER-CARD-v2.4-CONTRACT-v1.md) |
 | Delivery fail-closed (3E.2.1) | [architecture/DELIVERY-FAIL-CLOSED-RECONCILIATION-v1.md](architecture/DELIVERY-FAIL-CLOSED-RECONCILIATION-v1.md) |
+| Sheets budget / concurrency (3E.2.3) | [architecture/SHEETS-CALL-BUDGET-v1.md](architecture/SHEETS-CALL-BUDGET-v1.md) · [architecture/OPERATIONAL-SINGLE-FLIGHT-v1.md](architecture/OPERATIONAL-SINGLE-FLIGHT-v1.md) · [architecture/SHEETS-BACKOFF-POLICY-v1.md](architecture/SHEETS-BACKOFF-POLICY-v1.md) |
 | Parser 3.3 research (implemented) | [research/parser-3.3/](research/parser-3.3/) |
 | Phase 3E.2 evidence | [evidence/phase3e2/](evidence/phase3e2/) |
+| Phase 3E.2.3 evidence | [evidence/phase3e2-3/](evidence/phase3e2-3/) |
 | Phase 3E.2.1 evidence | [evidence/phase3e2-1/](evidence/phase3e2-1/) |
 | Phase 3E.1 evidence | [evidence/phase3e1/](evidence/phase3e1/) |
 | Phase 3D.8 evidence | [evidence/phase3d8/](evidence/phase3d8/) |
@@ -98,7 +100,7 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 **Resolved in Phase 3D.4:** Olya enrolled in `ACCESS_CONTROL moderator (legacy CONFIG fallback retained) (hash **E6714550214106BA**, not admin); role-aware manager `/start`/`/help`; parser **`sm-parser-v3.2`** (messenger/site split, contact inference, comment «в тг», source page normalization); formatter **`sm-msg-v2.1`** (reduced emoji density); `knowledge/WEBSITE-FORM-FORMATS-v1.md` with free-audit record; synthetic callback acceptance PASS — **live Olya `/start`/`/help` pending**.
 **Resolved in Phase 3D.6 / 3D.6.1:** `/my_status` for public/pending/moderator/Admin/revoked/blocked; grant/revoke Telegram notification branch with ACCESS_EVENTS delivery events and non-rollback failure boundary. Live hotfix `3d6b-my-status-code-mode` fixed Code-node mode (`runOnceForAllItems`). Real non-Admin `/my_status` accepted by operator. Direct grant/revoke notification delivery remains SAFE UNKNOWN without independent visual proof. Harness **31/31 PASS**.
 **Phase 3D.8.x:** product/recovery baseline; action buttons + actor attribution + short labels COMPLETE.  
-**Phase 3E.2 / 3E.2.1:** First Reply Engine **v2.1** + **Human Reply Style v1** (`sm-human-v1.0`) — natural Оля drafts, silent known-info guard, meaningful comment branching, quality linter; delivery fail-closed reconciliation; local harness **64/64 PASS**; operator copy acceptance **ATTENTION**. Reminders, AI ON pilot and reusable fleet deployment remain **not implemented**.
+**Phase 3E.2.3:** First Reply Engine **v2.1** + **Human Reply Style v1** remain unchanged and operator-accepted; current work only reduces Sheets request amplification and adds bounded concurrency/retry controls. Operational.dev is active after the quiet-window proof; exactly-once delivery and five-poll zero-resend are proven; operator visual confirmation remains pending. Reminders, AI ON pilot and reusable fleet deployment remain **not implemented**.
 
 ---
 
@@ -111,9 +113,9 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 
 ## Next gate
 
-**Current closeout:** **COMPLETE — STATUS READY, LIVE NOTIFICATION CONFIRMATION PENDING.**
-**Next:** operator performs Telegram grant/revoke delivery confirmation → next website form per `MULTI-FORM-TEST-PLAN-v1` (one form per iteration).
-**Later (separate approval):** PHASE 3E — controlled AI ON pilot; optional `.dev` rename; registry promotion.
+**Current gate:** `COMPLETE — EXACTLY-ONCE PROOF DELIVERED; OPERATOR VISUAL CONFIRMATION PENDING`.
+**Proven:** harness 83/83; zero-write empty polls; safe real-lead recount; two claims/two sends/two stamps; five polls with zero resend; two CONFIG guards reconciled without resend.
+**Pre-visual maximum verdict:** `COMPLETE — EXACTLY-ONCE PROOF DELIVERED; OPERATOR VISUAL CONFIRMATION PENDING`. Do not claim PHASE 3E.2 COMPLETE yet.
 
 Do not enable AI or reactivate Sales-Manager-v2 without explicit charter. Do not add Оля to Admin allowlist without approval.
 
@@ -143,3 +145,7 @@ Operator source drop path (raw retained): `X:\AI MARS STORAGE\incoming\iseo-sale
 - A revoked/blocked ACCESS_CONTROL row always overrides CONFIG allowlists.
 - ACCESS_EVENTS append mapping must reference Prepare Access Upsert fields (never post-Upsert `` metadata).
 - Evidence: `evidence/phase3d51/` · Report: `reports/REPORT-iseo-sales-manager-bot-phase3d51-access-registry-repair-v1.md`.
+
+## Phase 3E.2.3 — Sheets call-budget optimization
+
+Empty polls have live proof of zero Sheets writes. Final schedule is `minutesInterval=2`; `secondsInterval=120` was rejected by n8n as an invalid interval. Intake Gate uses a 4-minute single-flight TTL. ACCESS_CONTROL and bounded LEAD_DELIVERIES snapshots are read once with bounded retries; exactly-once proof and five-poll zero-resend passed. See `evidence/phase3e2-3/`.

@@ -1,0 +1,27 @@
+{
+  "sanitized": true,
+  "before": {
+    "emptyPollSheetsWritesPerHourApprox": 120,
+    "scheduleSecondsApprox": 30,
+    "fullPathSheetsFloor": 7,
+    "ledgerReadShape": "full-tab",
+    "ledgerItemsApprox": 52
+  },
+  "after": {
+    "emptyPollSheetsWritesPerHour": 0,
+    "schedule": {
+      "field": "minutes",
+      "minutesInterval": 2
+    },
+    "configReads": 1,
+    "accessReads": 1,
+    "ledgerReads": 1,
+    "ledgerItems": 1,
+    "claims": 2,
+    "telegramSendOk": 2,
+    "deliveredStamps": 2,
+    "configGuardsReconciled": 2,
+    "fivePollExtraSends": 0,
+    "quotaErrorsInProof": 0
+  }
+}

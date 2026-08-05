@@ -1,0 +1,58 @@
+{
+  "sanitized": true,
+  "phase": "3E.2.3",
+  "quietWindow": {
+    "startedAt": "2026-08-05T10:34:01Z",
+    "durationMinutesFloor": 60,
+    "passed": true
+  },
+  "contour": {
+    "operationalActiveAfterProof": true,
+    "operationalNodes": 45,
+    "adminUnchangedActive": true,
+    "rollbackInactive": true,
+    "aiOff": true,
+    "accessUnchanged": true
+  },
+  "schedule": {
+    "field": "minutes",
+    "minutesInterval": 2,
+    "rejectedAttempt": "secondsInterval=120",
+    "rejectedReason": "Invalid interval"
+  },
+  "emptyPolls": {
+    "observed": 3,
+    "sheetsRequestFloorEach": 0,
+    "applyRuntimeConfigRuns": 0,
+    "quotaErrors": 0
+  },
+  "proof": {
+    "executionRef": "23188",
+    "rawRows": 1,
+    "cleanRows": 1,
+    "configReads": 1,
+    "accessReads": 1,
+    "ledgerReads": 1,
+    "ledgerItems": 1,
+    "expandedRecipients": 2,
+    "claims": 2,
+    "telegramSendOk": 2,
+    "deliveredStamps": 2,
+    "fivePollExtraSends": 0,
+    "reconciledConfigGuards": 2
+  },
+  "realLeadSafety": {
+    "eligibleReal": 0,
+    "safelyPending": 0,
+    "lostOrTerminallySkipped": false
+  },
+  "omitted": [
+    "workflow identifiers",
+    "recipient identifiers",
+    "credential identifiers",
+    "hashes",
+    "workbook identifiers",
+    "raw payloads",
+    "PII"
+  ]
+}

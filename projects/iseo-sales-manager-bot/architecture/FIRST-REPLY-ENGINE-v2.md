@@ -2,7 +2,7 @@
 
 **Product:** i-SEO Sales Manager Bot  
 **Version:** `sm-reply-v2.1` (Human Reply Style **`sm-human-v1.0`** layered in Phase 3E.2.1)  
-**Status:** IMPLEMENTED (Phase 3E.2 + 3E.2.1 + 3E.2.2); dual-card live proof **ATTENTION** (Sheets); operator copy acceptance **PENDING**  
+**Status:** IMPLEMENTED and operator-accepted; Phase 3E.2.3 changes delivery call-budget only, with no reply redesign
 **Runtime lib:** `implementation/runtime-libs/first-reply-engine-v2.mjs`  
 **AI:** OFF — deterministic templates only  
 **Delivery:** manager draft for manual copy — never auto-sent to customer
@@ -76,3 +76,7 @@ Harness: `evidence/phase3e2-1/` — 64/64 PASS (includes reply + delivery fail-c
 - [KNOWN-INFORMATION-GUARD-v1.md](KNOWN-INFORMATION-GUARD-v1.md)
 - [MANAGER-CARD-v2.4-CONTRACT-v1.md](MANAGER-CARD-v2.4-CONTRACT-v1.md)
 - [FIRST-REPLY-RULES-v1.md](FIRST-REPLY-RULES-v1.md) (extended by this engine)
+
+## Phase 3E.2.3 non-change note
+
+Proof fixture `PHASE_3E2_3_FINAL_EXACTLY_ONCE_PROOF` on `final-proof.example` is allowed to produce a draft for offline/live acceptance. Human regression text covers traffic decline after a site update. Reply rules, AI OFF behavior and customer auto-send prohibition are unchanged.

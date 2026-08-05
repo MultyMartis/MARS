@@ -13,3 +13,7 @@
 7. Кнопки на всех копиях карточки синхронизируются.
 
 Команды: `/start`, `/help`, `/my_status`.
+
+## Phase 3E.2.3 note
+
+Human Reply Style is already operator-accepted and is not being redesigned. During the inactive quiet window no new cards should arrive from Operational.dev. After reactivation, repeated identical cards must be reported to the operator; do not process both copies and do not ask for access restoration from this guide.

@@ -2,8 +2,8 @@
 
 **Product:** i-SEO Sales Manager Bot  
 **Version:** `sm-human-v1.0`  
-**Layered on:** First Reply Engine **`sm-reply-v2.1`** (Phase 3E.2.2)  
-**Status:** IMPLEMENTED (harness + live drafts); dual-card live delivery **ATTENTION** (Sheets); operator copy acceptance **PENDING**  
+**Layered on:** First Reply Engine **`sm-reply-v2.1`** (unchanged in Phase 3E.2.3)
+**Status:** IMPLEMENTED; **operator-accepted**; no redesign in Phase 3E.2.3
 **Runtime lib:** `implementation/runtime-libs/first-reply-engine-v2.mjs`  
 **AI:** OFF — deterministic templates only  
 **Delivery:** manager draft for Оля (PER-0010) — **never** auto-sent to customer
@@ -124,3 +124,7 @@ Full linter contract: [FIRST-REPLY-QUALITY-LINTER-v1.md](FIRST-REPLY-QUALITY-LIN
 - [FIRST-REPLY-QUALITY-LINTER-v1.md](FIRST-REPLY-QUALITY-LINTER-v1.md)
 - [KNOWN-INFORMATION-GUARD-v1.md](KNOWN-INFORMATION-GUARD-v1.md)
 - Evidence: `evidence/phase3e2-1/HARNESS-RESULTS-v1.md` (64/64 PASS)
+
+## Phase 3E.2.3 status note
+
+This phase changes Sheets request economics and delivery safety only. Voice, branching, linter and manual-copy boundary remain unchanged. Final operator visual confirmation concerns the delivered proof card, not redesign approval.

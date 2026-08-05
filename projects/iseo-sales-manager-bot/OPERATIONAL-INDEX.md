@@ -11,16 +11,17 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | **PHASE 3E.2.2 — ATTENTION — SHEETS DELIVERY PATH STILL RATE-LIMITED** (human copy packet ready; dual-card live sendOk=2 blocked by quota; harness 59/59) |
-| **Active stage** | `sm-parser-v3.3` / `sm-reply-v2.1` / `sm-human-v1.0` / `sm-msg-v2.4` / AI OFF; delivery fail-closed + ACCESS_CONTROL fail-closed |
-| **Runtime** | External n8n — Operational.dev **active** (`xSnXPy8cEHoZw6xG`, **45** nodes, Parser 3.3 + Reply v2.1); Admin.dev **active** (`wLrLp4WQHm1VJmxz`, **59** nodes); Sales-Manager-v2 **inactive** (`h8I2Tl2yl4uzhUnB`) |
+| **Status** | **COMPLETE — EXACTLY-ONCE PROOF DELIVERED; OPERATOR VISUAL CONFIRMATION PENDING** |
+| **Active stage** | `sm-parser-v3.3` / `sm-reply-v2.1` / `sm-human-v1.0` / `sm-msg-v2.4` / AI OFF; 3E.2.3 budget, bounded retry and single-flight hardening |
+| **Runtime** | External n8n — Operational.dev **active after quiet-window proof** (45 nodes, `minutesInterval=2`); Admin.dev unchanged/active; rollback workflow inactive |
 | **Live parity vs Sales-Manager-v2** | **CUT OVER** — Operational.dev replaced v2 for intake; v2 preserved inactive; filter \`labelIds\` parity confirmed |
 | **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C–3D.3 evidence under `evidence/phase3*` |
 | **Registry** | status **planned** unchanged — promotion to active requires **separate governance gate** (`REGISTRY_STATUS_PROMOTION_PENDING`) |
 | **ATLAS** | Recommendation only — ORG-0003 / PER-0001 / PER-0010 / PER-0011; **no** new IDs |
-| **Next** | Wait for Sheets quota recovery → re-prove dual-card sendOk=2; operator visual copy acceptance; then reminders (separate charter) |
-| **AI** | **OFF** — `ai_enabled=false`; no AI ON claim in Phase 3E.2.2 |
+| **Next** | Operator visually confirms the sanitized final proof card; commit/push remain parent-agent pending |
+| **AI** | **OFF** — `ai_enabled=false`; no AI ON claim in Phase 3E.2.3 |
 | **Product layer** | [product/](product/) |
+| **Evidence 3E.2.3** | [evidence/phase3e2-3/](evidence/phase3e2-3/) — exactly-once + five-poll live proof PASS |
 | **Evidence 3E.2.2** | [evidence/phase3e2-2/](evidence/phase3e2-2/) · [reports/REPORT-iseo-sales-manager-bot-phase3e2-2-final-acceptance-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3e2-2-final-acceptance-v1.md) |
 | **Evidence 3E.2.1** | [evidence/phase3e2-1/](evidence/phase3e2-1/) |
 | **Evidence 3E.2** | [evidence/phase3e2/](evidence/phase3e2/) |
@@ -192,8 +193,10 @@
 | **Phase 3D.8** | Product baseline, recovery receipts, button forensic/repair contract, Parser 3.3 research | **COMPLETE** (buttons/attribution/labels); research superseded by 3E.1 |
 | **Phase 3D.8.1–3** | Live callbacks, actor attribution, short button labels | **COMPLETE** |
 | **Phase 3E.1** | Parser 3.3 + Lead Semantic Model + `sm-msg-v2.3` | **HARNESS COMPLETE (46/46); live semantic PENDING** |
-| **Phase 3E.2** | First Reply Engine v2 (`sm-reply-v2.0`) | **COMPLETE** (superseded by 3E.2.1 reply version) |
-| **Phase 3E.2.1** | Human Reply Style v1 + meaningful comment branching + quality linter + delivery fail-closed reconciliation | **HARNESS COMPLETE (64/64); operator copy acceptance ATTENTION** |
+| **Phase 3E.2** | First Reply Engine v2 (`sm-reply-v2.0`) | Engine implemented; umbrella Phase 3E.2 **NOT COMPLETE** pending 3E.2.3 gates |
+| **Phase 3E.2.1** | Human Reply Style v1 + meaningful comment branching + quality linter + delivery fail-closed reconciliation | **OPERATOR-ACCEPTED; no redesign in 3E.2.3** |
+| **Phase 3E.2.2** | Quota diagnosis and acceptance preparation | **ATTENTION; superseded by 3E.2.3 optimization gate** |
+| **Phase 3E.2.3** | Sheets call-budget, bounded reads/retries, single-flight, final exactly-once proof | **COMPLETE — proof delivered; operator visual confirmation pending** |
 | Next form iteration | Per `MULTI-FORM-TEST-PLAN-v1` | **not opened** |
 | Live rename | After clean-lead acceptance | **deferred** |
 | Registry promotion | Separate governance charter | **not opened** |
@@ -223,7 +226,7 @@
 
 ---
 
-*Last updated: 2026-08-05 — Phase 3E.2.1 Human Reply Style v1 / delivery fail-closed / sm-reply-v2.1.*
+*Last updated: 2026-08-05 — Phase 3E.2.3 Sheets call-budget optimization, inactive quiet window.*
 
 
 ## Phase 3D.5.1 — Access registry population and SoT repair
@@ -242,3 +245,11 @@
 - Evidence: `evidence/phase3d52/` · Report: `reports/REPORT-iseo-sales-manager-bot-phase3d52-admin-silence-incident-recovery-v1.md`.
 
 *Last updated: 2026-08-04 — Phase 3D.6.1 live `/my_status` acceptance closeout and 3d6b hotfix canonicalization.*
+
+## Phase 3E.2.3 architecture set
+
+- `architecture/SHEETS-CALL-BUDGET-v1.md`
+- `architecture/OPERATIONAL-SINGLE-FLIGHT-v1.md`
+- `architecture/SHEETS-BACKOFF-POLICY-v1.md`
+- `implementation/ACCESS-CONTROL-SNAPSHOT-v1.md`
+- `implementation/BOUNDED-DELIVERY-LEDGER-READ-v1.md`

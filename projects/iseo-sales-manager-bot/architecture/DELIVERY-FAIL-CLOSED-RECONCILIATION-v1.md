@@ -1,9 +1,9 @@
 # DELIVERY FAIL-CLOSED RECONCILIATION v1
 
 **Product:** i-SEO Sales Manager Bot  
-**Phase:** 3E.2.2  
+**Phase:** 3E.2.3
 **Scope:** Operational.dev multi-recipient Telegram delivery + Gmail finalization boundary  
-**Status:** IMPLEMENTED + ACCESS_CONTROL fail-closed harden; full dual-card live proof **ATTENTION** (Sheets quota)
+**Status:** fail-closed contract preserved; call-budget patch deployed inactive; final exactly-once proof pending
 
 ---
 
@@ -108,7 +108,7 @@ Google Sheets API **does not** provide compare-and-swap or transactional multi-r
 Implications:
 
 - Claim → send → stamp is **best-effort sequential**, not atomic.
-- Concurrent polls or partial failures can leave `claimed` without `delivered` — hence `reconciliation_required`, not blind resend.
+- Single-flight reduces overlapping polls but does not make Sheets transactional. Partial failures can still leave `claimed` without `delivered` — hence `reconciliation_required`, not blind resend.
 - Rate limits (429 / quota) remain an operational risk; mitigated by fail-closed read + claim-before-send + CONFIG fallback + Gmail finalize decoupled from all moderator successes (admin-anchor policy per 3D.7.1).
 
 **Not claimed:** exactly-once delivery under all Sheets failure modes — **at-most-once send** with reconcile path is the documented target.
@@ -151,3 +151,15 @@ Results: `evidence/phase3e2-1/HARNESS-RESULTS-v1.md`.
 - [CONFIGURATION-MODEL-v1.md](CONFIGURATION-MODEL-v1.md)
 - `implementation/OPERATIONAL-WORKFLOW-PATCH-SPEC-v1.md` — idempotency nodes
 - `plans/ROLLBACK-PLAN-v1.md` — `tg_delivered:*` / `tg_attempts:*`
+
+## Phase 3E.2.3 call-budget addendum
+
+- Empty polls write no CONFIG state.
+- Ledger read is filtered by exact `stable_lead_ref`, uses `alwaysOutputData`, and retries at most 3 times with 30-second delay.
+- ACCESS_CONTROL snapshot is read once with the same bounded retry and fails closed.
+- Claim upsert retries are bounded and never continue on failure.
+- Normalize CONFIG preserves delivery guards; Expand reuses the existing CONFIG snapshot.
+- Success writes one recipient-level `tg_delivered` guard.
+- Final schedule `minutesInterval=2` + single-flight TTL 4 minutes reduce overlap; rejected `secondsInterval=120` is not active; claim-before-send remains authoritative.
+
+Live proof PASS: two claims, two sends, two stamps and five later polls with zero resend. Synthetic Gmail finalization error required two CONFIG guards to be reconciled without resend. The documented target remains at-most-once send with reconciliation under uncertain post-send persistence.

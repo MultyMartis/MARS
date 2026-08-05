@@ -59,7 +59,7 @@ If a new pending card has no buttons, inspect Format output before changing Admi
 3. Test leads: no customer draft — `Черновик ответа не сформирован: тестовая заявка.`
 4. Damaged contact: `Контактные данные требуют проверки.` — draft not ready.
 5. Local check: `node implementation/harness/phase3e2-harness.mjs` → **59/59 PASS**.
-6. Operator copy acceptance may still be PENDING — see `evidence/phase3e2/LIVE-FIRST-REPLY-ACCEPTANCE-v1.md`.
+6. Human Reply Style is operator-accepted; Phase 3E.2.3 does not redesign copy.
 7. Pending-lead reminders are **not** in this phase.
 
 ## Phase 3E.2.1 — delivery fail-closed + Human Reply Style v1
@@ -68,7 +68,7 @@ If a new pending card has no buttons, inspect Format output before changing Admi
 2. Post-patch: ledger read error / claim failure → **zero** Telegram sends; CONFIG secondary `tg_delivered:*` guards exist.
 3. Versions: `sm-reply-v2.1` + `sm-human-v1.0`; drafts must not narrate parser/guard logic.
 4. Local: `node implementation/harness/phase3e21-harness.mjs` → **64/64 PASS**.
-5. Evidence: `evidence/phase3e2-1/`; operator human-copy acceptance packet — **PENDING** visual OK.
+5. Evidence: `evidence/phase3e2-1/`; Human Reply Style is now operator-accepted.
 6. Under Sheets quota, claim path correctly blocks send; wait for API recovery before re-proving dual-card live delivery.
 7. Do not restore Olya/Nikita; do not enable AI; do not create workflows; do not implement reminders in this phase.
 
@@ -79,5 +79,14 @@ If a new pending card has no buttons, inspect Format output before changing Admi
 3. Local: `node implementation/harness/phase3e22-harness.mjs` → **59/59 PASS**.
 4. Evidence: `evidence/phase3e2-2/`; report: `reports/REPORT-iseo-sales-manager-bot-phase3e2-2-final-acceptance-v1.md`.
 5. Until dual-card `sendOk=2` is proved after Sheets recovery, status remains **`ATTENTION — SHEETS DELIVERY PATH STILL RATE-LIMITED`**.
-6. Operator must visually accept human drafts before final COMPLETE.
+6. Historical draft-acceptance gate is closed; 3E.2.3 still requires visual confirmation of the final proof card.
 
+## Phase 3E.2.3 — quiet-window reactivation gate
+
+1. Offline harness is **83/83 PASS**; keep Operational.dev inactive until the pending real-lead recount is complete.
+2. Confirm 45 nodes, final `minutesInterval=2` schedule and 4-minute single-flight TTL; do not restore rejected `secondsInterval=120`.
+3. Do not bypass ACCESS_CONTROL, ledger or claim after quota errors; exhausted retry means zero cards.
+4. Final proof is complete: two eligible claims/sends/stamps and five polls with zero resend.
+5. A post-send Sheets failure means `reconciliation_required`; do not replay blindly.
+6. Do not enable AI, change access, activate rollback workflow or implement reminders.
+7. Current stop verdict is `COMPLETE — EXACTLY-ONCE PROOF DELIVERED; OPERATOR VISUAL CONFIRMATION PENDING`.
