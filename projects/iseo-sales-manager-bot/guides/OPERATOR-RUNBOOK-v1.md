@@ -117,9 +117,9 @@ As Admin after deploy: `/lead_history 1` (no `telegram_sent`; human delivery phr
 
 1. Offline gate: `node implementation/harness/phase3g1-harness.mjs` → 100/100 PASS.
 2. Approved names: ADMIN_A→Андрей; MOD_A→Михаил (never Мопс in client copy). Prepared Оля/Никита stay revoked/ineligible.
-3. Admin commands for names: `/reply_profiles`, `/reply_name_set`, enable/disable; moderators use `/my_reply_profile` only.
+3. Admin commands for names: historically token-based in 3G.1 — **superseded in 3G.2 by number** (`/reply_profile N`, `/reply_name_set N …`); moderators use `/my_reply_profile` only.
 4. AI stays OFF; reminders OFF; Sales-Manager-v2 inactive; no customer auto-send.
-5. Live patch applied (3G.1); profile seed repair complete (3G.1.1). Operator **T1/T3 visual acceptance pending** — see Phase 3G.1.1 below.
+5. Live patch applied (3G.1); profile seed repair complete (3G.1.1). Operator **T1/T3 visual acceptance** was a historical gate — see Phase 3G.1.1 below.
 6. Evidence: `evidence/phase3g1/` · `evidence/phase3g1-1/`.
 
 ## Phase 3G.1.1 — operator visual template acceptance
@@ -140,3 +140,14 @@ As Admin after deploy: `/lead_history 1` (no `telegram_sent`; human delivery phr
 10. Do **not** clean TEST_LEADS fixtures until visual sign-off recorded.
 
 Evidence: `evidence/phase3g1-1/` · Report: `reports/REPORT-iseo-sales-manager-bot-phase3g1-1-live-profile-and-template-acceptance-v1.md`.
+
+## Phase 3G.2 — numbered profiles + text contract
+
+1. Profiles addressed by **number**: `/reply_profiles`, `/reply_profile 3`, `/reply_name_set 3 Михаил`, `/reply_name_enable 3`, `/reply_name_disable 3`.
+2. Seed (do not renumber): **1** ADMIN_A Андрей enabled · **2** MOD_B_REVOKED Оля disabled · **3** MOD_A Михаил enabled · **4** MOD_C_REVOKED Никита disabled.
+3. `/my_reply_profile` for Admin and moderator; moderators cannot mutate names.
+4. Name commands **do not** change ACCESS_CONTROL role/status — use moderator add/remove for access.
+5. Admin `/help` must list the full profile section; moderator `/help` only `/my_reply_profile` among profile cmds — rebuild templates, never substring-patch.
+6. Contour: Ops 45 · Admin ~84+ · v2 inactive · Parser 3.3 · LEADS / LEAD_EVENTS · epoch 05.08.2026 MSK · AI OFF · reminders OFF.
+7. Guides: [TELEGRAM-COMMAND-REFERENCE-v1.md](TELEGRAM-COMMAND-REFERENCE-v1.md) · text [TELEGRAM-TEXT-CONTRACT-v2.md](../architecture/TELEGRAM-TEXT-CONTRACT-v2.md).
+8. Evidence stubs: `evidence/phase3g2/` (fill before claiming acceptance).

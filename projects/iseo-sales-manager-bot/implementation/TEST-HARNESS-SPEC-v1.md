@@ -338,3 +338,18 @@ Event-label map (including `telegram_sent` / unknown fallback) + Admin/moderator
 ### Phase 3G.1.1 harness band
 
 Fail-closed personalization subset verifying live profile seed repair: **9/9 PASS** — missing name, invalid `@` name, disabled flag, no display-name/nickname/username fallbacks, ready ADMIN_A/MOD_A profile render. Live T1/T3 acceptance inject complements offline band. Evidence: `evidence/phase3g1-1/HARNESS-RESULTS-v1.md`.
+
+### Phase 3G.2 harness band (planned / fill)
+
+Required coverage (stubs under `evidence/phase3g2/`):
+
+- `reply_profile_number` parse/immutability/seed 1–4 (ADMIN_A, MOD_B_REVOKED, MOD_A, MOD_C_REVOKED)
+- Number-based command handlers; reject non-integer / missing / unknown N
+- Name set does not auto-enable; does not change access role/status
+- Enable blocked when revoked or missing name
+- Admin help includes profile section; moderator help only `/my_reply_profile`
+- No substring-patched help corruption
+- Client name only from `reply_sender_name` (Мопс never in customer copy)
+- AI OFF / reminders OFF / no auto-send regressions
+
+Fill: `evidence/phase3g2/HARNESS-RESULTS-v1.md`, `REGRESSION-RESULTS-v1.md`.

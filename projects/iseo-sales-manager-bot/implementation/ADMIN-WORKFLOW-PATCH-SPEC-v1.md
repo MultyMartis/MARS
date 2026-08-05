@@ -271,4 +271,15 @@ Patch same Admin ID only (`wLrLp4WQHm1VJmxz`):
 
 ### Phase 3G.1 Admin patch note
 
-Add reply-profile commands (`/reply_profiles`, `/reply_profile`, `/reply_name_set`, `/reply_name_enable`, `/reply_name_disable`, `/my_reply_profile`). Mutations Admin-only; moderator view-only. Help lines per role. **Live patch / visual acceptance: pending or in progress.** Lib: `reply-profile-commands-v1.mjs`.
+Add reply-profile commands (`/reply_profiles`, `/reply_profile`, `/reply_name_set`, `/reply_name_enable`, `/reply_name_disable`, `/my_reply_profile`). Mutations Admin-only; moderator view-only. Help lines per role. **Historical:** live patch applied; seed repaired in 3G.1.1. Lib: `reply-profile-commands-v1.mjs`.
+
+### Phase 3G.2 Admin patch note
+
+Same Admin workflow (`wLrLp4WQHm1VJmxz`); expect **~84+** nodes after patch:
+
+1. Reply-profile commands address by **`reply_profile_number`** only — [REPLY-PROFILE-ADMIN-COMMANDS-v2.md](REPLY-PROFILE-ADMIN-COMMANDS-v2.md).
+2. Rebuild Admin + moderator help via **explicit templates** — [ROLE-AWARE-HELP-BUILDER-v2.md](ROLE-AWARE-HELP-BUILDER-v2.md); Admin must include profile section; moderator only `/my_reply_profile`; **no substring patch**.
+3. Seed/confirm immutable numbers 1–4 ([REPLY-PROFILE-NUMBERING-v1.md](../architecture/REPLY-PROFILE-NUMBERING-v1.md)); client name only `reply_sender_name`; name commands must not change access role/status.
+4. Do not enable AI or reminders; do not activate Sales-Manager-v2; do not restore revoked moderators as part of this patch.
+5. Text surfaces: [TELEGRAM-TEXT-CONTRACT-v2.md](../architecture/TELEGRAM-TEXT-CONTRACT-v2.md) · registry [USER-VISIBLE-TEXT-REGISTRY-v1.md](USER-VISIBLE-TEXT-REGISTRY-v1.md).
+6. Evidence stubs: `evidence/phase3g2/`.

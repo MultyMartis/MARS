@@ -1,11 +1,12 @@
 # INTLSEO FIRST-CONTACT STANDARD v1
 
-**Phase:** 3G.1  
-**Status:** approved standard + offline harness PASS; live n8n patch / operator visual acceptance: pending or in progress  
+**Phase:** 3G.1 (+ text/number hygiene **3G.2**)  
+**Status:** approved standard + offline harness PASS; live seed 3G.1.1; profile numbers 3G.2  
 **Versions:**
 - `reply_standard_version` = `iseo-first-contact-v1.0`
 - `reply_template_version` = `iseo-template-set-v1.0`
 - `reply_policy_version` = `iseo-sales-policy-v1.0`
+- `recipient_personalization_version` = `iseo-recipient-name-v1.1` (3G.2)
 - Legacy stamp retained for rollback only: `sm-reply-v2.1`
 
 ## Purpose
@@ -51,14 +52,16 @@
 - `implementation/runtime-libs/reply-profile-commands-v1.mjs`
 - Harness: `implementation/harness/phase3g1-harness.mjs` → **100/100 PASS**
 
-## Contour note (pre-patch baseline)
+## Contour note (current)
 
-- Ops: active, 45 nodes; Admin: active, 82 nodes; Sales-Manager-v2 inactive; AI OFF; reminders OFF.
-- Live patch / operator visual acceptance: **pending or in progress** (не утверждать успех до заполнения evidence).
+- Ops: active, **45** nodes (`xSnXPy8cEHoZw6xG`); Admin: active, **~84+** after 3G.2 patch (`wLrLp4WQHm1VJmxz`); Sales-Manager-v2 inactive; AI OFF; reminders OFF.
+- Authoritative: Parser 3.3 · `LEADS` · `LEAD_EVENTS` · stats epoch 05.08.2026 Europe/Moscow.
+- Sender name only from `reply_sender_name`; profiles numbered 1–4 (see [REPLY-PROFILE-NUMBERING-v1.md](REPLY-PROFILE-NUMBERING-v1.md)).
+- Operator-facing wording: [TELEGRAM-TEXT-CONTRACT-v2.md](TELEGRAM-TEXT-CONTRACT-v2.md).
 
 ## Related
 
 - [RECIPIENT-PERSONALIZED-REPLIES-v1.md](RECIPIENT-PERSONALIZED-REPLIES-v1.md)
 - [AI-MANAGER-ASSIST-v1.md](AI-MANAGER-ASSIST-v1.md)
 - [REPLY-PROFILE-CONTRACT-v1.md](REPLY-PROFILE-CONTRACT-v1.md)
-- Evidence: `evidence/phase3g1/`
+- Evidence: `evidence/phase3g1/` · `evidence/phase3g1-1/` · `evidence/phase3g2/`

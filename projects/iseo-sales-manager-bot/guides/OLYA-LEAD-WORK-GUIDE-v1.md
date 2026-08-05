@@ -36,3 +36,10 @@ A new read-only overview (`/pending_count`, `/pending_leads`) and an optional da
 ## Phase 3G.1 note
 
 First-contact drafts become INTLSEO approved templates with the manager's approved client-facing name. Still: copy manually, never assume auto-send. Guidance under the tip block is for you, not the client. Access remains revoked for this guide's intended recipient unless separately restored — this phase does not restore access.
+
+## Phase 3G.2 note
+
+- Имя в ответе клиенту задаёт только администратор (по **номеру профиля**), не по Telegram-нику.
+- Для модератора из профильных команд доступна только `/my_reply_profile` — посмотреть своё имя в ответе.
+- Если в карточке предупреждение, что имя не задано — напишите администратору; не подставляйте ник вручную в текст клиенту.
+- Доступ (права модератора) **не** меняется командами имени. Напоминания и ИИ по-прежнему выключены, пока оператор не включит отдельно.

@@ -25,4 +25,8 @@ Pending source forensic, view contract, command implementation, reminder schedul
 
 ### Phase 3G.1 — INTLSEO first-contact standard
 
-**In progress / package ready:** approved template corpus + recipient personalization + manager assist contract. Offline harness **100/100 PASS**. Live patch and operator visual acceptance remain the gate before claiming production cutover. AI ON pilot remains a later separate charter (item 7).
+**Package ready (historical):** approved template corpus + recipient personalization + manager assist contract. Offline harness **100/100 PASS**. Live seed repaired in 3G.1.1. AI ON pilot remains a later separate charter (item 7).
+
+### Phase 3G.2 — Profile numbers + Telegram text hygiene
+
+**Current documentation / contract wave:** immutable `reply_profile_number`, number-based Admin commands, explicit role-aware help templates, TELEGRAM-TEXT-CONTRACT-v2, command reference, text registry. Contour unchanged: AI OFF, reminders OFF, no auto-send. Live acceptance evidence to fill under `evidence/phase3g2/`.

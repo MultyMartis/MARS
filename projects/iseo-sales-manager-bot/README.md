@@ -1,4 +1,16 @@
-<!-- Phase 3G.1.1 live profile seed 2026-08-06; profiles seeded; operator template acceptance pending -->
+<!-- Phase 3G.2 documentation + number-based reply profiles 2026-08-06 -->
+
+## Phase 3G.2 — Reply profile numbers + Telegram text contract
+
+**Status:** **DOCUMENTATION PACKAGE + NUMBER CONTRACT**; live Admin patch / acceptance evidence under `evidence/phase3g2/` (stubs → fill).
+
+- Immutable `reply_profile_number` 1–4: ADMIN_A→Андрей enabled; MOD_B_REVOKED→Оля disabled; MOD_A→Михаил enabled; MOD_C_REVOKED→Никита disabled
+- Admin commands by **number only**: `/reply_profiles`, `/reply_profile N`, `/reply_name_set N name`, `/reply_name_enable N`, `/reply_name_disable N`; moderators: `/my_reply_profile`
+- Client name **only** from `reply_sender_name`; access roles unchanged by name commands
+- Text authority: [TELEGRAM-TEXT-CONTRACT-v2.md](architecture/TELEGRAM-TEXT-CONTRACT-v2.md) · commands: [TELEGRAM-COMMAND-REFERENCE-v1.md](guides/TELEGRAM-COMMAND-REFERENCE-v1.md)
+- Help: explicit Admin/moderator templates ([ROLE-AWARE-HELP-BUILDER-v2.md](implementation/ROLE-AWARE-HELP-BUILDER-v2.md)) — no substring patch
+- Contour: Ops **45** active · Admin **~84+** after patch · Sales-Manager-v2 inactive · Parser 3.3 · `LEADS` / `LEAD_EVENTS` · stats epoch **05.08.2026** Europe/Moscow · AI OFF · reminders OFF · no auto-send
+- Evidence: [evidence/phase3g2/](evidence/phase3g2/)
 
 ## Phase 3G.1.1 — Live reply profile seed + T1/T3 template acceptance
 
@@ -80,8 +92,10 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 | Sheets budget / concurrency (3E.2.3) | [architecture/SHEETS-CALL-BUDGET-v1.md](architecture/SHEETS-CALL-BUDGET-v1.md) · [architecture/OPERATIONAL-SINGLE-FLIGHT-v1.md](architecture/OPERATIONAL-SINGLE-FLIGHT-v1.md) · [architecture/SHEETS-BACKOFF-POLICY-v1.md](architecture/SHEETS-BACKOFF-POLICY-v1.md) |
 | Pending leads view + reminders (3F.1) | [architecture/PENDING-LEADS-VIEW-v1.md](architecture/PENDING-LEADS-VIEW-v1.md) · [architecture/PENDING-REMINDER-v1.md](architecture/PENDING-REMINDER-v1.md) · [architecture/REMINDER-DELIVERY-IDEMPOTENCY-v1.md](architecture/REMINDER-DELIVERY-IDEMPOTENCY-v1.md) |
 | Phase 3G.1 INTLSEO first-contact | [architecture/INTLSEO-FIRST-CONTACT-STANDARD-v1.md](architecture/INTLSEO-FIRST-CONTACT-STANDARD-v1.md) · [architecture/RECIPIENT-PERSONALIZED-REPLIES-v1.md](architecture/RECIPIENT-PERSONALIZED-REPLIES-v1.md) · [architecture/AI-MANAGER-ASSIST-v1.md](architecture/AI-MANAGER-ASSIST-v1.md) · [architecture/REPLY-PROFILE-CONTRACT-v1.md](architecture/REPLY-PROFILE-CONTRACT-v1.md) |
+| Phase 3G.2 text + numbers | [architecture/TELEGRAM-TEXT-CONTRACT-v2.md](architecture/TELEGRAM-TEXT-CONTRACT-v2.md) · [architecture/REPLY-PROFILE-NUMBERING-v1.md](architecture/REPLY-PROFILE-NUMBERING-v1.md) · [guides/TELEGRAM-COMMAND-REFERENCE-v1.md](guides/TELEGRAM-COMMAND-REFERENCE-v1.md) · [implementation/REPLY-PROFILE-ADMIN-COMMANDS-v2.md](implementation/REPLY-PROFILE-ADMIN-COMMANDS-v2.md) · [implementation/ROLE-AWARE-HELP-BUILDER-v2.md](implementation/ROLE-AWARE-HELP-BUILDER-v2.md) · [implementation/USER-VISIBLE-TEXT-REGISTRY-v1.md](implementation/USER-VISIBLE-TEXT-REGISTRY-v1.md) |
 | Phase 3G.1 evidence | [evidence/phase3g1/](evidence/phase3g1/) — harness 100/100 PASS |
 | Phase 3G.1.1 evidence | [evidence/phase3g1-1/](evidence/phase3g1-1/) — live profiles seeded; operator template acceptance pending |
+| Phase 3G.2 evidence | [evidence/phase3g2/](evidence/phase3g2/) — stubs for acceptance fill |
 | Parser 3.3 research (implemented) | [research/parser-3.3/](research/parser-3.3/) |
 | Phase 3F.1 evidence | [evidence/phase3f1/](evidence/phase3f1/) |
 | Phase 3E.2 evidence | [evidence/phase3e2/](evidence/phase3e2/) |
@@ -144,6 +158,7 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 |-------|------|
 | Оля — работа с лидами | [guides/OLYA-LEAD-WORK-GUIDE-v1.md](guides/OLYA-LEAD-WORK-GUIDE-v1.md) |
 | Operator runbook (Андрей) | [guides/OPERATOR-RUNBOOK-v1.md](guides/OPERATOR-RUNBOOK-v1.md) |
+| Telegram command reference | [guides/TELEGRAM-COMMAND-REFERENCE-v1.md](guides/TELEGRAM-COMMAND-REFERENCE-v1.md) |
 
 ## Next gate
 

@@ -1,12 +1,12 @@
 # CURRENT PRODUCTION BASELINE v1
 
-**Срез:** Phase 3F.2.2, 2026-08-06. **Статус:** `COMPLETE — FINAL ADMIN POLISH READY; OPERATOR CONFIRMATION PENDING`.
+**Срез:** Phase 3G.2, 2026-08-06. **Статус:** number-based reply profiles + text contract documented; AI OFF; reminders OFF.
 
 | Контур | Workflow ID | Active | Nodes | Роль |
 |---|---|---:|---:|---|
 | Sales-Manager-v2 | `h8I2Tl2yl4uzhUnB` | false | — | rollback; не активировать без отдельного решения |
-| i-SEO Sales Manager - Operational.dev | `[external]` | true | 45 | unchanged in 3F.1; `minutesInterval=2`; single-flight 4m; bounded ledger/access/claim retries; AI OFF |
-| i-SEO Sales Manager - Admin.dev | `wLrLp4WQHm1VJmxz` | true | 84 | Reply profiles live (3G.1.1); Help + lead-history; pending/reminder; callbacks; reminders OFF |
+| i-SEO Sales Manager - Operational.dev | `xSnXPy8cEHoZw6xG` | true | 45 | Parser 3.3; multi-recipient cards; AI OFF; `minutesInterval=2` |
+| i-SEO Sales Manager - Admin.dev | `wLrLp4WQHm1VJmxz` | true | ~84+ | After 3G.2 patch: numbered reply-profile cmds + help rebuild; pending/reminder OFF; callbacks |
 
 
 ## Phase 3F.2 — Clean production ledger
@@ -78,4 +78,14 @@ Target reply versions (live): `iseo-first-contact-v1.0` / `iseo-template-set-v1.
 
 ## Phase 3G.1.1 additive baseline note
 
-Live profile columns repaired and seeded. T1/T3 acceptance inject delivered 4 personalized Telegram cards. Operator visual template acceptance pending. Ops 45 · Admin 84 · v2 inactive · AI OFF · reminders OFF.
+Live profile columns repaired and seeded. T1/T3 acceptance inject delivered 4 personalized Telegram cards. Operator visual template acceptance pending (historical). Ops 45 · Admin 84 · v2 inactive · AI OFF · reminders OFF.
+
+## Phase 3G.2 additive baseline note
+
+- Immutable `reply_profile_number`: **1** ADMIN_A Андрей enabled active · **2** MOD_B_REVOKED Оля disabled revoked · **3** MOD_A Михаил enabled active · **4** MOD_C_REVOKED Никита disabled revoked.
+- Admin mutations address profiles **by number only** (`/reply_profile N`, `/reply_name_set N …`, enable/disable). `/my_reply_profile` for Admin+moderator.
+- Client-facing name **only** from `reply_sender_name`. Name commands do **not** change access role/status.
+- Text: `architecture/TELEGRAM-TEXT-CONTRACT-v2.md`. Help: explicit Admin/moderator templates (`ROLE-AWARE-HELP-BUILDER-v2`). Command map: `guides/TELEGRAM-COMMAND-REFERENCE-v1.md`.
+- Authoritative data: Parser **3.3**; table **`LEADS`**; events **`LEAD_EVENTS`**; stats epoch **05.08.2026** Europe/Moscow.
+- Contour: Ops **45** active · Admin **~84+** after patch · Sales-Manager-v2 inactive · AI OFF · reminders OFF · no customer auto-send.
+- Evidence stubs: `evidence/phase3g2/`.

@@ -1,5 +1,18 @@
-<!-- Phase 3G.1.1 live profile seed 2026-08-06 -->
-## Phase 3G.1.1 (current additive)
+<!-- Phase 3G.2 number-based profiles + text contract 2026-08-06 -->
+## Phase 3G.2 (current additive)
+
+| Field | Value |
+|-------|-------|
+| **Phase** | 3G.2 — Reply profile numbers + Telegram text / help / command docs |
+| **Numbers** | 1 ADMIN_A Андрей enabled · 2 MOD_B_REVOKED Оля disabled · 3 MOD_A Михаил enabled · 4 MOD_C_REVOKED Никита disabled |
+| **Commands** | Number-based `/reply_profile N` family; moderator `/my_reply_profile` only |
+| **Text** | [TELEGRAM-TEXT-CONTRACT-v2.md](architecture/TELEGRAM-TEXT-CONTRACT-v2.md) · [TELEGRAM-COMMAND-REFERENCE-v1.md](guides/TELEGRAM-COMMAND-REFERENCE-v1.md) |
+| **Help** | [ROLE-AWARE-HELP-BUILDER-v2.md](implementation/ROLE-AWARE-HELP-BUILDER-v2.md) — explicit templates, no substring patch |
+| **Runtime** | Ops 45 active · Admin **~84+** after patch · v2 inactive · Parser 3.3 · LEADS / LEAD_EVENTS · epoch 05.08.2026 MSK · AI OFF · reminders OFF |
+| **Evidence** | [evidence/phase3g2/](evidence/phase3g2/) (stubs) |
+| **Prior** | 3G.1.1 profiles seeded; operator T1/T3 visual acceptance may still be pending historically |
+
+## Phase 3G.1.1 (additive; historical seed)
 
 | Field | Value |
 |-------|-------|
@@ -23,8 +36,8 @@
 | **Reply standard** | `iseo-first-contact-v1.0` (live cutover pending) |
 | **AI** | OFF; assist contract exists, not globally enabled |
 | **Evidence** | [evidence/phase3g1/](evidence/phase3g1/) |
-| **Architecture** | [INTLSEO-FIRST-CONTACT-STANDARD-v1.md](architecture/INTLSEO-FIRST-CONTACT-STANDARD-v1.md) · [RECIPIENT-PERSONALIZED-REPLIES-v1.md](architecture/RECIPIENT-PERSONALIZED-REPLIES-v1.md) · [AI-MANAGER-ASSIST-v1.md](architecture/AI-MANAGER-ASSIST-v1.md) · [REPLY-PROFILE-CONTRACT-v1.md](architecture/REPLY-PROFILE-CONTRACT-v1.md) |
-| **Live patch** | applied (3G.1); profile seed repair **3G.1.1 complete** |
+| **Architecture** | [INTLSEO-FIRST-CONTACT-STANDARD-v1.md](architecture/INTLSEO-FIRST-CONTACT-STANDARD-v1.md) · [RECIPIENT-PERSONALIZED-REPLIES-v1.md](architecture/RECIPIENT-PERSONALIZED-REPLIES-v1.md) · [AI-MANAGER-ASSIST-v1.md](architecture/AI-MANAGER-ASSIST-v1.md) · [REPLY-PROFILE-CONTRACT-v1.md](architecture/REPLY-PROFILE-CONTRACT-v1.md) · **3G.2:** [REPLY-PROFILE-NUMBERING-v1.md](architecture/REPLY-PROFILE-NUMBERING-v1.md) · [TELEGRAM-TEXT-CONTRACT-v2.md](architecture/TELEGRAM-TEXT-CONTRACT-v2.md) |
+| **Live patch** | applied (3G.1); profile seed repair **3G.1.1 complete**; number addressing **3G.2** |
 
 <!-- Phase 3F.2 clean ledger active 2026-08-05; reminders OFF; reporting private -->
 # i-SEO Sales Manager Bot — Operational Index
@@ -40,9 +53,9 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | **COMPLETE — FINAL ADMIN POLISH READY; OPERATOR CONFIRMATION PENDING** (Phase 3F.2.2); Phase 3F.2 clean ledger prepared for closeout |
-| **Active stage** | `sm-parser-v3.3` / `sm-reply-v2.1` / `sm-human-v1.0` / `sm-msg-v2.4` / `sm-pending-reminder-v1.0` / AI OFF |
-| **Runtime** | External n8n — Operational.dev **active, unchanged** (45 nodes, `minutesInterval=2`); Admin.dev **active, 82 nodes** (3F.2.2 help/history polish; pending+reminder); rollback workflow inactive |
+| **Status** | **Phase 3G.2 docs active** — numbered reply profiles + text contract; prior 3F.2.2 polish + 3G.1.1 seed remain historical baseline |
+| **Active stage** | `sm-parser-v3.3` / INTLSEO first-contact + `iseo-recipient-name-v1.1` / `sm-msg-v2.4` / AI OFF / reminders OFF |
+| **Runtime** | External n8n — Operational.dev **active** (45 nodes); Admin.dev **active (~84+ after 3G.2 patch)**; Sales-Manager-v2 inactive |
 | **Phase 3F.2** | Clean production ledger + reporting workbook; callbacks v2; reminders OFF |
 | **Live parity vs Sales-Manager-v2** | **CUT OVER** — Operational.dev replaced v2 for intake; v2 preserved inactive; filter \`labelIds\` parity confirmed |
 | **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C–3D.3 evidence under `evidence/phase3*` |
@@ -99,7 +112,7 @@
 | 2 | [architecture/LEAD-DATA-MODEL-v1.md](architecture/LEAD-DATA-MODEL-v1.md) | Phase 2 |
 | 3 | [architecture/LEAD-LIFECYCLE-v1.md](architecture/LEAD-LIFECYCLE-v1.md) | Phase 2 |
 | 4 | [architecture/CONFIGURATION-MODEL-v1.md](architecture/CONFIGURATION-MODEL-v1.md) | Phase 2 |
-| 5 | [architecture/TELEGRAM-UX-CONTRACT-v1.md](architecture/TELEGRAM-UX-CONTRACT-v1.md) | Phase 2 |
+| 5 | [architecture/TELEGRAM-UX-CONTRACT-v1.md](architecture/TELEGRAM-UX-CONTRACT-v1.md) | Phase 2 (+ **text →** [TELEGRAM-TEXT-CONTRACT-v2.md](architecture/TELEGRAM-TEXT-CONTRACT-v2.md) in 3G.2) |
 | 6 | [architecture/ADMIN-COMMAND-CONTRACT-v1.md](architecture/ADMIN-COMMAND-CONTRACT-v1.md) | Phase 2 |
 | 7 | [architecture/HEALTHCHECK-CONTRACT-v1.md](architecture/HEALTHCHECK-CONTRACT-v1.md) | Phase 2 (+ 3C.1 live query wording) |
 | 7a | [architecture/GMAIL-INTAKE-FILTER-CONTRACT-v1.md](architecture/GMAIL-INTAKE-FILTER-CONTRACT-v1.md) | Phase 3C.2 |

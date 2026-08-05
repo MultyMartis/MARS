@@ -38,4 +38,11 @@
 - Recipient personalization via ACCESS_CONTROL reply profiles; drafts stored per recipient; shared metadata on LEADS.
 - Manager guidance separated from customer copy; no auto-send; AI OFF default.
 - Authority docs: `architecture/INTLSEO-FIRST-CONTACT-STANDARD-v1.md`, `RECIPIENT-PERSONALIZED-REPLIES-v1.md`, `AI-MANAGER-ASSIST-v1.md`, `REPLY-PROFILE-CONTRACT-v1.md`.
+
+## Phase 3G.2 — Numbered profiles + text surfaces
+
+- `reply_profile_number` immutable (1–4 seed); Admin commands by number; client name only `reply_sender_name`.
+- Telegram text authority: `TELEGRAM-TEXT-CONTRACT-v2.md` (UX layout still `TELEGRAM-UX-CONTRACT-v1.md`).
+- Help: role-aware explicit templates v2; user-visible registry: `implementation/USER-VISIBLE-TEXT-REGISTRY-v1.md`.
+- Commands guide: `guides/TELEGRAM-COMMAND-REFERENCE-v1.md`.
 - Live n8n wiring: pending or in progress.

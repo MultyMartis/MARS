@@ -4,6 +4,8 @@
 **Audience:** managers (Оля v1)  
 **Format:** safe plain text **or** carefully escaped HTML — **not** fragile Markdown
 
+> **Phase 3G.2:** For tone, Russian role/status labels, help/start wording, reply-profile surfaces, and fail-closed operator strings, use **[TELEGRAM-TEXT-CONTRACT-v2.md](TELEGRAM-TEXT-CONTRACT-v2.md)** as the text authority. This v1 document remains authoritative for **lead-card block layout** and historical UX deltas.
+
 ---
 
 ## 1. Goals
@@ -403,4 +405,11 @@ See `implementation/PENDING-COMMANDS-v1.md`, `implementation/REMINDER-CONFIG-COM
 - Per-recipient intro uses approved first name (ADMIN_A→Андрей, MOD_A→Михаил).
 - Missing name: warning on card; no unsafe draft; not a delivery failure.
 - Admin reply-profile commands; moderator `/my_reply_profile` view-only.
-- No auto-send. Live UX acceptance: pending or in progress.
+- No auto-send. Live UX acceptance: pending or in progress (historical 3G.1/3G.1.1 gate).
+
+## Phase 3G.2 UX / text delta
+
+- Profile addressing by immutable number (`reply_profile_number`); see [REPLY-PROFILE-NUMBERING-v1.md](REPLY-PROFILE-NUMBERING-v1.md).
+- Text tone/labels/formats: [TELEGRAM-TEXT-CONTRACT-v2.md](TELEGRAM-TEXT-CONTRACT-v2.md).
+- Help templates: [ROLE-AWARE-HELP-BUILDER-v2.md](../implementation/ROLE-AWARE-HELP-BUILDER-v2.md) — Admin includes profile section; moderator only `/my_reply_profile`.
+- Command inventory: [TELEGRAM-COMMAND-REFERENCE-v1.md](../guides/TELEGRAM-COMMAND-REFERENCE-v1.md).

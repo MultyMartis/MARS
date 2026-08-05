@@ -408,4 +408,8 @@ Emit `source_display=Сайт i-seo.su` for website-form leads alongside `source
 
 ### Phase 3G.1 patch note
 
-Target: wire Approved Template Router/Renderer + recipient profile resolution into Operational Format/Expand path. Shared metadata → LEADS; personalized drafts → recipient store. Keep AI OFF; no client auto-send; preserve fail-closed delivery. **Live patch status: pending or in progress.** Libs: `runtime-libs/approved-template-*.mjs`, `reply-profile-lib.mjs`. Rollback stamp: `sm-reply-v2.1`.
+Target: wire Approved Template Router/Renderer + recipient profile resolution into Operational Format/Expand path. Shared metadata → LEADS; personalized drafts → recipient store. Keep AI OFF; no client auto-send; preserve fail-closed delivery. **Historical:** live patch applied; seed repaired 3G.1.1. Libs: `runtime-libs/approved-template-*.mjs`, `reply-profile-lib.mjs`. Rollback stamp: `sm-reply-v2.1`.
+
+### Phase 3G.2 Operational note
+
+Operational.dev remains **45** nodes active — no structural expansion required for numbering. Consumer of profiles must resolve `reply_sender_name` + `reply_profile_number` from ACCESS_CONTROL; never Telegram display/username. Nickname «Мопс» never in customer copy (use Михаил for MOD_A). Contour: AI OFF · reminders OFF · Sales-Manager-v2 inactive · `LEADS` / `LEAD_EVENTS` · stats epoch 05.08.2026 Europe/Moscow.
