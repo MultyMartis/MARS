@@ -147,11 +147,11 @@ No PII, Telegram IDs, workbook IDs, raw updates, or unsanitized workflow exports
 
 ## 26. Commit
 
-`fix(iseo-sales-manager-bot): polish lead history and admin help` (this wave).
+`a131fa87` — `fix(iseo-sales-manager-bot): polish lead history and admin help`
 
 ## 27. Push
 
-`origin/mars/canonical-post-recovery` (non-force).
+Pushed non-force to `origin/mars/canonical-post-recovery` (`dd0cd204..a131fa87`). Ancestor `dd0cd204` retained.
 
 ## 28. Risks
 
