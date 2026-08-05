@@ -1,14 +1,13 @@
 /**
- * Phase 3E.1 — sm-msg-v2.3 Telegram lead card formatter.
- * Base: Phase 3D.4 formatter-lib (v2.1) + Phase 3D.8 button payload bridge
- * + Phase 3D.8.3 short button labels.
+ * Phase 3E.2 — sm-msg-v2.4 Telegram lead card formatter.
+ * Base: Phase 3E.1 sm-msg-v2.3 + First Reply Engine v2 copy-block polish.
  * Pure ESM module for harness / OPS sync.
  */
 import { createRequire } from 'node:module';
 
 const nodeRequire = createRequire(import.meta.url);
 
-export const MESSAGE_FORMAT_VERSION = 'sm-msg-v2.3';
+export const MESSAGE_FORMAT_VERSION = 'sm-msg-v2.4';
 
 export const LEAD_TYPE_MAP = {
   new: { emoji: '🟢', title: 'Новый лид' },
@@ -160,14 +159,11 @@ function messengerLabel(value) {
 }
 
 function isProbableOrSyntheticTest(j) {
+  // Badge / suppression UX follows semantic probable-test only.
+  // Synthetic harness markers must not hide a ready first-reply draft on live acceptance cards.
   return Boolean(
     j.is_probable_test === true
-    || j.is_probable_test === 'true'
-    || j.__synthetic
-    || j.synthetic_fixture
-    || j.fixture_id
-    || j.marker === 'SYNTHETIC_TEST'
-    || String(j.phase_marker || '').includes('PHASE_3'),
+    || j.is_probable_test === 'true',
   );
 }
 
@@ -242,7 +238,7 @@ function pushInlineField(lines, label, valueHtmlOrText, alreadyEscaped = false) 
   lines.push(label + ': ' + (alreadyEscaped ? v : escapeHtml(v)));
 }
 
-/** sm-msg-v2.3 — semantic card; omit empty sections; no IP. */
+/** sm-msg-v2.4 — semantic card + First Reply v2 copy UX; omit empty sections; no IP. */
 export function buildCardText(j) {
   const leadType = LEAD_TYPE_MAP[j.duplicate_status] || LEAD_TYPE_MAP.new;
   const managerStatus = normalizeManagerStatus(j);
@@ -286,7 +282,9 @@ export function buildCardText(j) {
   if (isValidContactValue(altValue) && !alternativeContactAlreadyShown(altValue, phone, email, messenger)) {
     const altLabel = altType === 'telegram' || altType === 'Telegram'
       ? 'Telegram'
-      : (altType ? ('Контакт (' + altType + ')') : 'Доп. контакт');
+      : (altType === 'whatsapp' || altType === 'WhatsApp'
+        ? 'WhatsApp'
+        : (altType ? 'Другой контакт' : 'Другой контакт'));
     lines.push(...contactBlockLines(altLabel, altValue));
   }
 
@@ -298,10 +296,13 @@ export function buildCardText(j) {
     pushLabeledBlock(lines, 'Комментарий клиента', comment);
   }
 
-  if (formOffer || pageTitle) {
+  // Form/source context — omit if it merely duplicates the comment/form title already shown
+  const formContextUseful = (formOffer || pageTitle)
+    && !(comment && formOffer && comment.toLowerCase().includes(formOffer.toLowerCase()));
+  if (formContextUseful) {
     lines.push('Контекст формы');
     if (formOffer) lines.push(escapeHtml(formOffer));
-    if (pageTitle) lines.push(escapeHtml(pageTitle));
+    if (pageTitle && pageTitle !== formOffer) lines.push(escapeHtml(pageTitle));
     lines.push('');
   }
 
@@ -335,27 +336,37 @@ export function buildCardText(j) {
 
   const replyText = String(j.first_reply_text || '').trim();
   const replySource = String(j.first_reply_source || '').trim();
+  const replyMode = String(j.first_reply_mode || '').trim();
+  const replyReady = j.first_reply_ready === true;
+  const omitted = String(j.first_reply_omitted_reason || '').trim();
   const replyOmittedForTest = replySource === 'test_omitted'
+    || replyMode === 'test_suppressed'
+    || omitted === 'probable_test'
     || (isTest && !replyText);
   const noContact = j.contact_missing === true
+    || replyMode === 'contact_suppressed'
+    || omitted === 'missing_contact'
     || j.quality_status === 'bad'
     || j.lead_quality === 'insufficient'
     || replySource === 'none'
-    || !replyText;
+    || (!replyText && !replyReady);
 
   if (replyOmittedForTest) {
-    // Test-only: skip reply copy block; keep auto-send disclaimer.
+    lines.push('Черновик ответа не сформирован: тестовая заявка.');
     lines.push('Ответ клиенту автоматически не отправляется.');
   } else if (noContact) {
-    lines.push('⚠️ Готовый ответ не сформирован: нет контактных данных для связи.');
+    lines.push('Контактные данные требуют проверки.');
+    lines.push('⚠️ Готовый ответ не сформирован: нет надёжных контактных данных для связи.');
     lines.push('Ответ клиенту автоматически не отправляется.');
-  } else {
+  } else if (replyText) {
     lines.push('✉️ Ответ клиенту — нажмите, чтобы скопировать');
     lines.push('<pre>' + escapeHtml(replyText) + '</pre>');
     lines.push('Ответ клиенту автоматически не отправляется.');
+  } else {
+    lines.push('Черновик ответа не сформирован.');
+    lines.push('Ответ клиенту автоматически не отправляется.');
   }
 
-  // Collapse accidental double blank lines; never emit IP / raw address fields.
   return lines.join('\n').replace(/\n{3,}/g, '\n\n').trimEnd();
 }
 

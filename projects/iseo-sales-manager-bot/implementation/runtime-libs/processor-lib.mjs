@@ -1,9 +1,10 @@
 /**
- * Phase 3E.1 — deterministic lead processor (semantic pass-through + compat).
+ * Phase 3E.2 — deterministic lead processor (semantic pass-through + First Reply v2).
  * Prefer Parser 3.3 semantic fields when present; AI OFF template replies only.
  */
 
 import { isCommPreferenceOnly, SERVICE_COMPAT, buildFirstReplyDraft, assessLeadQuality, computeMissingInformation } from '../parser-fixtures/parse-lead-lib.mjs';
+import { FIRST_REPLY_VERSION } from './first-reply-engine-v2.mjs';
 
 export function isCommPreferenceText(text) {
   return isCommPreferenceOnly(text);
@@ -61,19 +62,19 @@ export function processLeadDeterministic(j = {}) {
   const phone = validPhone(phoneRaw) ? phoneRaw : '';
   const email = validEmail(emailRaw) ? emailRaw : '';
   const messenger = validMessenger(messengerRaw) ? messengerRaw : '';
-  const contact_missing = !(phone || email || messenger);
+  const altValue = String(j.alternative_contact_value || '').trim();
+  const contact_missing = !(phone || email || messenger || validMessenger(altValue));
   const hasContact = !contact_missing;
   const contact_method = String(j.contact_method_normalized || j.contact_method || '').trim() || 'unknown';
 
   const contacts = [phone, email, messenger].filter(Boolean);
-  const primary_contact = phone || email || messenger || '';
+  const primary_contact = phone || email || messenger || altValue || '';
   let contact_type = 'unknown';
   if (contacts.length > 1) contact_type = 'mixed';
   else if (phone) contact_type = 'phone';
   else if (email) contact_type = 'email';
-  else if (messenger) contact_type = 'messenger';
+  else if (messenger || altValue) contact_type = 'messenger';
 
-  // Prefer parser semantic outputs
   let service_machine = resolved_service || 'NeedsClarification';
   let service_label = String(j.resolved_service_label || j.service_label || '').trim();
   let service = String(j.service || SERVICE_COMPAT[service_machine] || 'Other');
@@ -85,6 +86,14 @@ export function processLeadDeterministic(j = {}) {
   let summary = String(j.request_summary || j.summary || '').trim();
   let first_reply_text = String(j.first_reply_text || '');
   let first_reply_source = String(j.first_reply_source || '');
+  let first_reply_version = String(j.first_reply_version || '').trim();
+  let first_reply_mode = String(j.first_reply_mode || '').trim();
+  let first_reply_subject = String(j.first_reply_subject || '').trim();
+  let first_reply_questions = j.first_reply_questions || '';
+  let first_reply_reason_codes = String(j.first_reply_reason_codes || '').trim();
+  let first_reply_omitted_reason = String(j.first_reply_omitted_reason || '').trim();
+  let first_reply_ready = j.first_reply_ready === true;
+  let first_reply_warnings = String(j.first_reply_warnings || '').trim();
 
   if (!lead_quality) {
     const q = assessLeadQuality({
@@ -111,21 +120,51 @@ export function processLeadDeterministic(j = {}) {
     }).join(', ');
   }
 
-  if (!first_reply_text && first_reply_source !== 'none' && first_reply_source !== 'test_omitted') {
+  const existingVersion = String(j.first_reply_version || '').trim();
+  const legacyReply = !existingVersion || /^sm-reply-v1/i.test(existingVersion);
+  const shouldBuild = legacyReply
+    || (!first_reply_text && first_reply_source !== 'none' && first_reply_source !== 'test_omitted');
+
+  if (shouldBuild) {
     const reply = buildFirstReplyDraft({
       client_name: name,
+      client_name_normalized: name,
       website_state,
       website_normalized,
       resolved_service: service_machine,
+      secondary_service: j.secondary_service || '',
       comment_normalized,
       missing_information: missing_fields,
       hasContact,
       is_probable_test,
-      alternative_contact_value: j.alternative_contact_value || '',
+      alternative_contact_type: j.alternative_contact_type || '',
+      alternative_contact_value: altValue,
       communication_preference: j.communication_preference || '',
+      phone,
+      email,
+      messenger: messenger || altValue,
+      explicit_client_intent: j.explicit_client_intent || '',
+      source_topic: j.source_topic || '',
     });
     first_reply_text = reply.first_reply_text;
     first_reply_source = reply.first_reply_source;
+    first_reply_version = reply.first_reply_version || FIRST_REPLY_VERSION;
+    first_reply_mode = reply.first_reply_mode || '';
+    first_reply_subject = reply.first_reply_subject || '';
+    first_reply_questions = Array.isArray(reply.first_reply_questions)
+      ? reply.first_reply_questions.join(' | ')
+      : (reply.first_reply_questions || '');
+    first_reply_reason_codes = Array.isArray(reply.first_reply_reason_codes)
+      ? reply.first_reply_reason_codes.join(',')
+      : (reply.first_reply_reason_codes || '');
+    first_reply_omitted_reason = reply.first_reply_omitted_reason || reply.reply_omitted_reason || '';
+    first_reply_ready = reply.first_reply_ready === true;
+    first_reply_warnings = Array.isArray(reply.first_reply_warnings)
+      ? reply.first_reply_warnings.join(',')
+      : (reply.first_reply_warnings || '');
+  } else {
+    first_reply_version = existingVersion || FIRST_REPLY_VERSION;
+    first_reply_ready = j.first_reply_ready === true || Boolean(first_reply_text);
   }
 
   if (contact_missing) {
@@ -134,6 +173,19 @@ export function processLeadDeterministic(j = {}) {
     lead_quality_label = 'Недостаточно данных';
     first_reply_text = '';
     first_reply_source = 'none';
+    first_reply_mode = 'contact_suppressed';
+    first_reply_ready = false;
+    first_reply_omitted_reason = 'missing_contact';
+    first_reply_version = first_reply_version || FIRST_REPLY_VERSION;
+  }
+
+  if (is_probable_test) {
+    first_reply_text = '';
+    first_reply_source = 'test_omitted';
+    first_reply_mode = 'test_suppressed';
+    first_reply_ready = false;
+    first_reply_omitted_reason = 'probable_test';
+    first_reply_version = first_reply_version || FIRST_REPLY_VERSION;
   }
 
   let priority = 'normal';
@@ -143,7 +195,7 @@ export function processLeadDeterministic(j = {}) {
 
   let manager_recommendation;
   if (contact_missing) {
-    manager_recommendation = 'Проверить источник заявки и запросить контактные данные, если это возможно.';
+    manager_recommendation = 'Контактные данные требуют проверки.';
   } else if (is_probable_test) {
     manager_recommendation = 'Тестовая заявка — не учитывать в боевой статистике.';
   } else if (service_machine === 'WebsiteDevelopment' || service_machine === 'WebsiteDevelopmentSEO') {
@@ -163,7 +215,6 @@ export function processLeadDeterministic(j = {}) {
       .map((m, i) => ((i + 1) + ') Уточнить: ' + m)).join('\n')
     : '';
 
-  // Site display for CLEAN: never show messenger / нет сайта as URL
   const site = website_state === 'provided' ? website_normalized : '';
 
   return {
@@ -180,7 +231,7 @@ export function processLeadDeterministic(j = {}) {
     website_normalized,
     website_raw: j.website_raw || '',
     alternative_contact_type: j.alternative_contact_type || '',
-    alternative_contact_value: j.alternative_contact_value || '',
+    alternative_contact_value: altValue,
     comment_raw: j.comment_raw || '',
     comment_normalized,
     form_offer: j.form_offer || j.form_name || '',
@@ -188,6 +239,7 @@ export function processLeadDeterministic(j = {}) {
     source_topic: j.source_topic || '',
     resolved_service: service_machine,
     resolved_service_label: service_label,
+    secondary_service: j.secondary_service || '',
     service,
     service_machine,
     service_label,
@@ -197,11 +249,11 @@ export function processLeadDeterministic(j = {}) {
     quality_status,
     lead_quality,
     lead_quality_label,
-    // Persist semantic snapshot in existing CLEAN column (additive sheet columns deferred)
     quality_comment: [
       website_state ? ('website_state=' + website_state) : '',
       service_machine ? ('resolved_service=' + service_machine) : '',
       lead_quality ? ('lead_quality=' + lead_quality) : '',
+      first_reply_version ? ('first_reply_version=' + first_reply_version) : '',
       j.form_offer ? ('form_offer=' + String(j.form_offer).slice(0, 80)) : '',
       is_probable_test ? 'is_probable_test=true' : '',
     ].filter(Boolean).join('; '),
@@ -211,15 +263,23 @@ export function processLeadDeterministic(j = {}) {
     manager_recommendation,
     first_reply_text,
     first_reply_source,
+    first_reply_version: first_reply_version || FIRST_REPLY_VERSION,
+    first_reply_mode,
+    first_reply_subject,
+    first_reply_questions,
+    first_reply_reason_codes,
+    first_reply_omitted_reason,
+    first_reply_ready,
+    first_reply_warnings,
     is_probable_test,
     exclude_from_prod_stats: j.exclude_from_prod_stats === true || is_probable_test || Boolean(j.__synthetic),
     processing_mode: 'ai_off',
     ai_status: 'skipped',
     fallback_used: false,
     ai_enabled: Boolean(cfg.ai_enabled),
-    message_format_version: cfg.message_format_version || j.message_format_version || 'sm-msg-v2.3',
+    message_format_version: cfg.message_format_version || j.message_format_version || 'sm-msg-v2.4',
     manager_status: j.manager_status || 'pending',
-    reply_template_version: cfg.reply_template_version || 'sm-reply-v1.1',
+    reply_template_version: cfg.reply_template_version || first_reply_version || FIRST_REPLY_VERSION,
     parser_version: cfg.parser_version || j.parser_version || 'sm-parser-v3.3',
     semantic_model_version: j.semantic_model_version || 'lead-semantic-v1',
   };

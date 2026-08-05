@@ -365,3 +365,14 @@ Same workflow ID `xSnXPy8cEHoZw6xG` (no copy):
 - Do **not** change callbacks, ACCESS_CONTROL, or create workflows.
 - Harness: `implementation/harness/phase3e1-harness.mjs` — **46/46 PASS**.
 
+## Phase 3E.2 addendum — First Reply Engine v2 / Format sm-msg-v2.4
+
+Same workflow ID `xSnXPy8cEHoZw6xG` (no copy):
+
+- **Parse Lead** / **Deterministic Lead Processor** → embed `first-reply-engine-v2.mjs` (`sm-reply-v2.0`) + known-information guard; Parser remains `sm-parser-v3.3`.
+- **Format Telegram Lead Card** → `message_format_version=sm-msg-v2.4`; copy-block / suppression UX; keep short pending labels and button payload bridge.
+- CONFIG stamps: `parser_version=sm-parser-v3.3`, `message_format_version=sm-msg-v2.4`, `reply_template_version=sm-reply-v2.0`, `ai_enabled=false`.
+- Do **not** change callbacks, ACCESS_CONTROL, activate Sales-Manager-v2, or create workflows.
+- Admin.dev untouched unless archive formatter hardcodes obsolete reply rebuild (not required in 3E.2).
+- Harness: `implementation/harness/phase3e2-harness.mjs` — **59/59 PASS**.
+

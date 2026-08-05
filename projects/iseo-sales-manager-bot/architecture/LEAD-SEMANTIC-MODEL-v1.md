@@ -3,7 +3,7 @@
 **Product:** i-SEO Sales Manager Bot  
 **Status:** **IMPLEMENTED** in Phase 3E.1 (`sm-parser-v3.3`, semantic model `lead-semantic-v1`)  
 **Supersedes draft:** [research/parser-3.3/LEAD-SEMANTIC-MODEL-v1-DRAFT.md](../research/parser-3.3/LEAD-SEMANTIC-MODEL-v1-DRAFT.md)  
-**Related:** [PARSER-3.3-CONTRACT-v1.md](PARSER-3.3-CONTRACT-v1.md) · [FIRST-REPLY-RULES-v1.md](FIRST-REPLY-RULES-v1.md)
+**Related:** [PARSER-3.3-CONTRACT-v1.md](PARSER-3.3-CONTRACT-v1.md) · [FIRST-REPLY-RULES-v1.md](FIRST-REPLY-RULES-v1.md) · [FIRST-REPLY-ENGINE-v2.md](FIRST-REPLY-ENGINE-v2.md) (Phase 3E.2 consumer)
 
 ---
 

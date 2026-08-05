@@ -1,8 +1,9 @@
 # FIRST REPLY RULES v1
 
 **Product:** i-SEO Sales Manager Bot  
-**Status:** **IMPLEMENTED** Phase 3E.1 (deterministic AI OFF templates in `sm-parser-v3.3` / processor)  
-**Message card:** `sm-msg-v2.3`  
+**Status:** **EXTENDED** by Phase 3E.2 First Reply Engine v2 (`sm-reply-v2.0`)  
+**Message card:** `sm-msg-v2.4`  
+**Authoritative engine:** [FIRST-REPLY-ENGINE-v2.md](FIRST-REPLY-ENGINE-v2.md) · [KNOWN-INFORMATION-GUARD-v1.md](KNOWN-INFORMATION-GUARD-v1.md)  
 **Related:** [LEAD-SEMANTIC-MODEL-v1.md](LEAD-SEMANTIC-MODEL-v1.md) · research draft [FIRST-REPLY-CONSISTENCY-RULES-v1.md](../research/parser-3.3/FIRST-REPLY-CONSISTENCY-RULES-v1.md)
 
 ---

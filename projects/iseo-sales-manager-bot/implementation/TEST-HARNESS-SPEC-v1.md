@@ -287,3 +287,7 @@ Required: pending labels `✅ Обработано` / `🚫 Спам`; callback 
 
 Required: HTML + text + one-line extraction; name/test flags; five website states; comment/page/IP/form boundary; intent precedence; first-reply consistency; quality / missing-info; HTML escape + length; Parser 3.2 field compat; RAW/CLEAN shape; buttons/callbacks unchanged; delivery/dedupe stubs; admin command field stubs; AI OFF; client auto-messages=0; no new workflows; `sm-msg-v2.3`. Local runner: `implementation/harness/phase3e1-harness.mjs` — required **46/46 PASS**. Evidence: `evidence/phase3e1/HARNESS-RESULTS-v1.md`. Fixture catalog: `implementation/parser-fixtures/P33-FIXTURE-CATALOG-v1.md`.
 
+## Phase 3E.2 First Reply Engine v2 — 59 cases
+
+Required: sm-reply-v2.0 contract; Audit/SEO/WebsiteDevelopment/WebsiteDevelopmentSEO/AI/Direct/NeedsClarification replies; known-info guards (site/phone/email/Telegram); test + damaged-contact suppression; greeting name/fallback; HTML escape; Telegram length; copy-block integrity + disclaimer outside; stored/legacy archive; Parser 3.3 fixtures A–F; delivery/lifecycle/AI OFF contracts; max length. Local runner: `implementation/harness/phase3e2-harness.mjs` — required **59/59 PASS**. Evidence: `evidence/phase3e2/HARNESS-RESULTS-v1.md`.
+

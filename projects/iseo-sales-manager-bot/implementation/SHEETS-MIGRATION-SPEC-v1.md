@@ -271,3 +271,17 @@ New immutable tab in CLEAN workbook. Upsert key: `delivery_key`. See `evidence/p
 
 Evidence: `evidence/phase3e1/STORAGE-MIGRATION-v1.md`. No bulk historical rewrite in 3E.1.
 
+## Phase 3E.2 — additive First Reply v2 columns (plan)
+
+**Do not** invent workbook IDs in git. Append-only when operator applies headers:
+
+`first_reply_version`, `first_reply_mode`, `first_reply_subject`, `first_reply_questions`, `first_reply_reason_codes`, `first_reply_omitted_reason`, `first_reply_ready`, `first_reply_warnings`.
+
+Until headers land live:
+
+- Keep writing legacy `first_reply_text` / `first_reply_source` / `reply_template_version`.
+- Carry `first_reply_version=sm-reply-v2.0` inside `quality_comment` snapshot.
+- Never bulk-regenerate historical replies.
+
+Evidence: `evidence/phase3e2/STORAGE-MIGRATION-v1.md`.
+

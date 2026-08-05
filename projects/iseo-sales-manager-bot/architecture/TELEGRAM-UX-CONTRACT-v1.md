@@ -364,10 +364,20 @@ For an actionable pending card, Format must emit `telegram_has_buttons=true`, `t
 
 ## Phase 3E.1 — `sm-msg-v2.3` + semantic site/reply
 
-**CONFIG `message_format_version` = `sm-msg-v2.3`** (paired with `sm-parser-v3.3`).
+**CONFIG `message_format_version` = `sm-msg-v2.3`** (paired with `sm-parser-v3.3`) — superseded for new cards by 3E.2 below; historical rows remain readable.
 
 - **Сайт** block reflects `website_state`: provided / explicitly absent / alternative contact / invalid / missing — messenger handles never under Сайт.
 - First-reply block follows [FIRST-REPLY-RULES-v1.md](FIRST-REPLY-RULES-v1.md) (no unsupported facts; no auto-send).
 - Pending buttons remain **`✅ Обработано`** / **`🚫 Спам`**; callbacks unchanged.
 - Authority: [PARSER-3.3-CONTRACT-v1.md](PARSER-3.3-CONTRACT-v1.md) · [LEAD-SEMANTIC-MODEL-v1.md](LEAD-SEMANTIC-MODEL-v1.md).
+
+## Phase 3E.2 — `sm-msg-v2.4` + First Reply Engine v2
+
+**CONFIG `message_format_version` = `sm-msg-v2.4`** · **`first_reply_version` = `sm-reply-v2.0`**.
+
+- Copy heading: `✉️ Ответ клиенту — нажмите, чтобы скопировать` with HTML-escaped `<pre>`; disclaimer outside.
+- Test suppression / damaged-contact wording per [MANAGER-CARD-v2.4-CONTRACT-v1.md](MANAGER-CARD-v2.4-CONTRACT-v1.md).
+- Known-information guard: [KNOWN-INFORMATION-GUARD-v1.md](KNOWN-INFORMATION-GUARD-v1.md).
+- Engine: [FIRST-REPLY-ENGINE-v2.md](FIRST-REPLY-ENGINE-v2.md).
+- Buttons/callbacks unchanged.
 

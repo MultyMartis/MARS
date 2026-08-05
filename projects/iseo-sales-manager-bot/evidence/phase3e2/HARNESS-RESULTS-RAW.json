@@ -1,0 +1,368 @@
+{
+  "phase": "3E.2",
+  "total": 59,
+  "passed": 59,
+  "failed": 0,
+  "first_reply_version": "sm-reply-v2.0",
+  "message_format_version": "sm-msg-v2.4",
+  "parser_version": "sm-parser-v3.3",
+  "ai_provider_calls": 0,
+  "automatic_client_messages": 0,
+  "workflows_created": 0,
+  "results": [
+    {
+      "id": "H01",
+      "title": "First Reply v2 data contract version",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H01b",
+      "title": "Message format v2.4",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H01c",
+      "title": "Parser remains 3.3",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H02",
+      "title": "Audit valid-site reply",
+      "status": "PASS",
+      "detail": "Здравствуйте, Анна Фикстура!\n\nСпасибо за заявку на аудит сайта client-demo-fixture.ru.\n\nЧто для вас сейчас важнее всего "
+    },
+    {
+      "id": "H02b",
+      "title": "Audit vague focused clarification",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H03",
+      "title": "Audit meaningful-task reply",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H04",
+      "title": "Audit missing-site boundary",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H05",
+      "title": "SEO valid-site reply",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H06",
+      "title": "Website Development reply",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H06b",
+      "title": "Dev max three question groups",
+      "status": "PASS",
+      "detail": "3"
+    },
+    {
+      "id": "H07",
+      "title": "Website Development + SEO reply",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H08",
+      "title": "AI/GEO reply",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H09",
+      "title": "Direct/PPC reply",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H10",
+      "title": "NeedsClarification / alt-contact reply",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H11",
+      "title": "Alternative-contact reply card",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H12",
+      "title": "Test suppression",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H12b",
+      "title": "Test card message",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H13",
+      "title": "Damaged-contact suppression",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H13b",
+      "title": "No specialist-will-contact when no contact",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H14",
+      "title": "Known-information guard website",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H15",
+      "title": "Known-information guard phone",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H16",
+      "title": "Known-information guard email",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H17",
+      "title": "Known-information guard Telegram",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H17b",
+      "title": "Guard keeps useful question",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H18",
+      "title": "No unsupported promises patterns in engine samples",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H20",
+      "title": "Greeting with name",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H21",
+      "title": "Greeting fallback",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H21b",
+      "title": "Placeholder-name fallback",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H22",
+      "title": "HTML escaping",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H23",
+      "title": "Telegram length safe",
+      "status": "PASS",
+      "detail": "745"
+    },
+    {
+      "id": "H24",
+      "title": "Copy-block integrity",
+      "status": "PASS",
+      "detail": "🟢 Новый лид\n🕓 Ожидает обработки\n\nКлиент\n<code>Ольга Фикстура</code>\n\nТелефон\n<code>+7 (912) 345-67-89</code>\n\nСайт\n<code>client-demo-fixture.ru</code>\n\nИнтерес: Аудит\nКомментарий клиента\nнужно seo &"
+    },
+    {
+      "id": "H25",
+      "title": "Copy-block excludes disclaimer",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H26",
+      "title": "Disclaimer outside copy block",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H27",
+      "title": "Reply version stored",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H28",
+      "title": "Stored-reply archive behavior",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H29",
+      "title": "Legacy archive compatibility",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H30",
+      "title": "Parser 3.3 fixture A",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H31",
+      "title": "Parser 3.3 fixture B",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H32",
+      "title": "Parser 3.3 fixture C",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H33",
+      "title": "Parser 3.3 fixture D",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H34",
+      "title": "Parser 3.3 fixture E",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H35",
+      "title": "Parser 3.3 fixture F",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H36",
+      "title": "RAW one row (simulated)",
+      "status": "PASS",
+      "detail": "local harness — one parse output object"
+    },
+    {
+      "id": "H37",
+      "title": "CLEAN one row (simulated)",
+      "status": "PASS",
+      "detail": "local harness — one process output object"
+    },
+    {
+      "id": "H38",
+      "title": "delivery exactly once (contract)",
+      "status": "PASS",
+      "detail": "unchanged delivery path — verified live separately"
+    },
+    {
+      "id": "H39",
+      "title": "two recipient copies (contract)",
+      "status": "PASS",
+      "detail": "unchanged expand recipients — verified live separately"
+    },
+    {
+      "id": "H40",
+      "title": "second poll zero duplicates (contract)",
+      "status": "PASS",
+      "detail": "unchanged dedupe — verified live separately"
+    },
+    {
+      "id": "H41",
+      "title": "buttons unchanged labels",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H42",
+      "title": "callback processed token present",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H43",
+      "title": "callback spam path present",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H44",
+      "title": "actor attribution untouched (contract)",
+      "status": "PASS",
+      "detail": "Admin.dev actor path unchanged this phase"
+    },
+    {
+      "id": "H45",
+      "title": "/leads archive uses stored reply (contract)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H46",
+      "title": "/my_status untouched (contract)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H47",
+      "title": "/moderator_pending untouched (contract)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H48",
+      "title": "ACCESS_CONTROL primary unchanged (contract)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H49",
+      "title": "AI OFF",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H50",
+      "title": "client auto-messages=0",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H51",
+      "title": "workflows created=0",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "H52",
+      "title": "Safe length absolute max",
+      "status": "PASS",
+      "detail": "347"
+    }
+  ]
+}

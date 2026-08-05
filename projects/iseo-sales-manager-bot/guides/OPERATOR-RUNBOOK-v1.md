@@ -48,10 +48,17 @@ If a new pending card has no buttons, inspect Format output before changing Admi
 
 ## Phase 3E.1 — Parser 3.3 / semantic cards
 
-1. CONFIG should show `parser_version=sm-parser-v3.3`, `message_format_version=sm-msg-v2.3`, `ai_enabled=false`.
+1. Phase 3E.1 is **COMPLETE** (operator visual A–F PASS).
 2. Card **Сайт**: valid URL vs «сайта нет» / messenger-as-contact — messenger never as website.
-3. First reply must not re-ask known site or invent facts; copy only — never auto-send.
-4. Local check: from project root run `node implementation/harness/phase3e1-harness.mjs` → expect **46/46 PASS**.
-5. Live semantic acceptance may still be PENDING — see `evidence/phase3e1/LIVE-SEMANTIC-ACCEPTANCE-v1.md`.
-6. Do not activate Sales-Manager-v2 (`h8I2Tl2yl4uzhUnB`) without charter; Ops `xSnXPy8cEHoZw6xG` / Admin `wLrLp4WQHm1VJmxz` remain the active pair.
+3. Do not activate Sales-Manager-v2 (`h8I2Tl2yl4uzhUnB`) without charter; Ops `xSnXPy8cEHoZw6xG` / Admin `wLrLp4WQHm1VJmxz` remain the active pair.
+
+## Phase 3E.2 — First Reply Engine v2 / card v2.4
+
+1. CONFIG: `parser_version=sm-parser-v3.3`, `message_format_version=sm-msg-v2.4`, `reply_template_version=sm-reply-v2.0`, `ai_enabled=false`.
+2. Copy block: `✉️ Ответ клиенту — нажмите, чтобы скопировать` + `<pre>`; disclaimer outside the block.
+3. Test leads: no customer draft — `Черновик ответа не сформирован: тестовая заявка.`
+4. Damaged contact: `Контактные данные требуют проверки.` — draft not ready.
+5. Local check: `node implementation/harness/phase3e2-harness.mjs` → **59/59 PASS**.
+6. Operator copy acceptance may still be PENDING — see `evidence/phase3e2/LIVE-FIRST-REPLY-ACCEPTANCE-v1.md`.
+7. Pending-lead reminders are **not** in this phase.
 

@@ -1,12 +1,19 @@
 /**
- * Phase 3E.1 — sm-parser-v3.3 + Lead Semantic Model v1 (pure module).
+ * Phase 3E.1/3E.2 — sm-parser-v3.3 + Lead Semantic Model v1 (pure module).
+ * First Reply Engine v2 (sm-reply-v2.0) for manager drafts.
  * Local harness + n8n SYNC target. No $input — import-only.
  * AI OFF. Deterministic extraction / intent / reply facts only.
  */
 
+import {
+  buildFirstReplyDraftV2,
+  FIRST_REPLY_VERSION,
+} from '../runtime-libs/first-reply-engine-v2.mjs';
+
 export const PARSER_VERSION = 'sm-parser-v3.3';
 export const SEMANTIC_MODEL_VERSION = 'lead-semantic-v1';
-export const MESSAGE_FORMAT_VERSION_DEFAULT = 'sm-msg-v2.3';
+export const MESSAGE_FORMAT_VERSION_DEFAULT = 'sm-msg-v2.4';
+export { FIRST_REPLY_VERSION };
 
 const INVALID = new Set([
   '44', '#error!', 'unknown', 'telegram', 'whatsapp', 'viber',
@@ -542,11 +549,13 @@ export function classifyProbableTest({ name, comment, site, phone, email, marker
   const n = String(name || '');
   const c = String(comment || '');
   const s = String(site || '');
-  if (/\btest\b/i.test(n) || /тест/i.test(n)) reasons.push('name_test');
-  if (/тест\s*бота/i.test(c) || /\btest\b/i.test(c) || /тест/i.test(c)) reasons.push('comment_test');
+  // Word-ish boundaries: avoid false positives inside «проверить», «протестировать» stems where «тест» is not a standalone token.
+  const hasRuTestToken = (text) => /(^|[^\p{L}])тест(?:овая|овый|овое|овые|ов|ик|ирование|ируем|ировать)?([^\p{L}]|$)/iu.test(text);
+  if (/\btest\b/i.test(n) || hasRuTestToken(n)) reasons.push('name_test');
+  if (/тест\s*бота/i.test(c) || /\btest\b/i.test(c) || hasRuTestToken(c)) reasons.push('comment_test');
   if (/synthetic|parser|stabilization|phase\s*3/i.test(c)) reasons.push('comment_internal');
   if (/\.(test|example)(\b|\/|$)/i.test(s)) reasons.push('synthetic_domain');
-  if (/SYNTHETIC_TEST|PHASE_3E1|PHASE_3D/i.test(String(marker || '') + ' ' + String(phase_marker || ''))) {
+  if (/SYNTHETIC_TEST|PHASE_3E1|PHASE_3E2|PHASE_3D/i.test(String(marker || '') + ' ' + String(phase_marker || ''))) {
     reasons.push('phase_marker');
   }
   if (/900\s*111\s*22\s*33|lead\.test@example\.com/i.test([phone, email].join(' '))) {
@@ -772,107 +781,18 @@ export function computeMissingInformation({
   return missing.filter((m, i, arr) => arr.indexOf(m) === i);
 }
 
+/**
+ * First Reply Engine v2 entry (compat wrapper).
+ * Keeps historical function name used by processor / harness / n8n SYNC.
+ */
 export function buildFirstReplyDraft(ctx) {
-  const {
-    client_name,
-    website_state,
-    website_normalized,
-    resolved_service,
-    comment_normalized,
-    missing_information,
-    hasContact,
-    is_probable_test,
-    alternative_contact_value,
-    communication_preference,
-  } = ctx;
-
-  if (is_probable_test) {
-    return {
-      first_reply_text: '',
-      first_reply_source: 'test_omitted',
-      reply_omitted_reason: 'probable_test',
-    };
-  }
-  if (!hasContact) {
-    return { first_reply_text: '', first_reply_source: 'none', reply_omitted_reason: 'missing_contact' };
-  }
-
-  const name = String(client_name || '').trim();
-  const greet = name ? ('Здравствуйте, ' + name + '!') : 'Здравствуйте!';
-  const miss = Array.isArray(missing_information) ? missing_information : String(missing_information || '').split(',').map((s) => s.trim()).filter(Boolean);
-
-  const askSite = miss.includes('сайт') && website_state !== 'provided' && website_state !== 'explicitly_absent';
-  // Invariant: never ask for site address when provided or explicitly absent
-  const lines = [greet, ''];
-
-  if (resolved_service === 'WebsiteDevelopmentSEO') {
-    lines.push('Спасибо за обращение. Поняли задачу: нужен новый сайт и затем SEO-продвижение.');
-    lines.push('');
-    lines.push('Чтобы подготовить предложение, уточните, пожалуйста:');
-    lines.push('1) Чем занимается бизнес и какая аудитория?');
-    lines.push('2) Какие разделы/функции нужны на сайте?');
-    lines.push('3) Есть ли примеры сайтов, которые нравятся?');
-    lines.push('4) По какому региону и целям планируете продвижение?');
-  } else if (resolved_service === 'WebsiteDevelopment') {
-    lines.push('Спасибо за обращение. Поняли, что нужен новый сайт.');
-    lines.push('');
-    lines.push('Чтобы подготовить предложение, уточните, пожалуйста:');
-    lines.push('1) Чем занимается бизнес?');
-    lines.push('2) Какие разделы и функции нужны?');
-    lines.push('3) Есть ли примеры сайтов, которые вам нравятся?');
-    lines.push('4) Есть ли желаемые сроки?');
-  } else if (resolved_service === 'SEO' && website_state === 'provided') {
-    lines.push('Спасибо за заявку по SEO.');
-    lines.push('');
-    lines.push('Сайт ' + website_normalized + ' уже указан — повторно присылать адрес не нужно.');
-    lines.push('');
-    if (!comment_normalized || comment_normalized.length < 12 || /^seo\.?$/i.test(comment_normalized)) {
-      lines.push('Уточните, пожалуйста:');
-      lines.push('1) Какой результат хотите получить?');
-      lines.push('2) Есть ли приоритетные услуги/регионы?');
-    } else {
-      lines.push('Мы учли ваш комментарий и свяжемся, чтобы уточнить план работ.');
-    }
-  } else if (resolved_service === 'Audit' && website_state === 'provided') {
-    lines.push('Спасибо за заявку на аудит.');
-    lines.push('');
-    lines.push('Сайт ' + website_normalized + ' уже указан — повторно присылать адрес не нужно.');
-    lines.push('');
-    if (!comment_normalized || comment_normalized.length < 20 || isCommPreferenceOnly(comment_normalized)) {
-      lines.push('Кратко напишите, что именно требуется проверить или улучшить.');
-    } else {
-      lines.push('Мы учли вашу задачу и подготовим следующие шаги.');
-    }
-  } else if (resolved_service === 'AISearch') {
-    lines.push('Спасибо за интерес к AI Search / GEO.');
-    lines.push('');
-    lines.push('Уточните, пожалуйста, какие системы поиска и какой результат для вас приоритетны.');
-  } else if (resolved_service === 'Direct') {
-    lines.push('Спасибо за интерес к контекстной рекламе.');
-    lines.push('');
-    lines.push('Уточните, пожалуйста, регион, услуги для рекламы и текущий сайт (если есть).');
-  } else if (website_state === 'alternative_contact' || communication_preference === 'telegram' || alternative_contact_value) {
-    lines.push('Спасибо, ваша заявка получена.');
-    lines.push('');
-    lines.push('Уточните, пожалуйста, какая задача для вас сейчас главная: аудит, SEO, разработка сайта или реклама.');
-  } else {
-    lines.push('Спасибо, ваша заявка получена.');
-    lines.push('');
-    if (askSite) lines.push('Если есть сайт — пришлите, пожалуйста, его адрес.');
-    lines.push('Кратко опишите, какая задача для вас сейчас главная.');
-  }
-
-  // Safety: strip any accidental "пришлите адрес сайта" when site is known/absent
-  let text = lines.join('\n');
-  if (website_state === 'provided' || website_state === 'explicitly_absent') {
-    text = text
-      .replace(/Пришлите,?\s*пожалуйста,?\s*адрес сайта[^.]*\./gi, '')
-      .replace(/Укажите адрес сайта[^.]*\./gi, '')
-      .replace(/\n{3,}/g, '\n\n');
-  }
-
-  text = (text + '\n\nС уважением,\nкоманда i-SEO').replace(/\n{3,}/g, '\n\n').trim();
-  return { first_reply_text: text, first_reply_source: 'template', reply_omitted_reason: '' };
+  return buildFirstReplyDraftV2({
+    ...ctx,
+    client_name: ctx.client_name || ctx.client_name_normalized || '',
+    phone: ctx.phone || ctx.phone_normalized || '',
+    email: ctx.email || ctx.email_normalized || '',
+    messenger: ctx.messenger || ctx.telegram_contact_normalized || '',
+  });
 }
 
 export function parseLeadItem(j = {}) {
@@ -1044,15 +964,23 @@ export function parseLeadItem(j = {}) {
 
   const reply = buildFirstReplyDraft({
     client_name: client_name_normalized || client_name_raw,
+    client_name_normalized: client_name_normalized || client_name_raw,
     website_state: website.website_state,
     website_normalized: website.website_normalized,
     resolved_service: intent.resolved_service,
+    secondary_service: intent.secondary_service,
     comment_normalized,
     missing_information,
     hasContact,
     is_probable_test: testInfo.is_probable_test,
+    alternative_contact_type: website.alternative_contact_type,
     alternative_contact_value: website.alternative_contact_value,
     communication_preference: commentPref || '',
+    phone: phone_normalized,
+    email: email_normalized,
+    messenger: telegram_contact_normalized,
+    explicit_client_intent: intent.explicit_client_intent,
+    source_topic,
   });
 
   const warnings = [
@@ -1142,6 +1070,15 @@ export function parseLeadItem(j = {}) {
     missing_fields: missing_information.join(', '),
     first_reply_text: reply.first_reply_text,
     first_reply_source: reply.first_reply_source,
+    first_reply_version: reply.first_reply_version || FIRST_REPLY_VERSION,
+    first_reply_mode: reply.first_reply_mode || '',
+    first_reply_subject: reply.first_reply_subject || '',
+    first_reply_questions: Array.isArray(reply.first_reply_questions) ? reply.first_reply_questions.join(' | ') : (reply.first_reply_questions || ''),
+    first_reply_reason_codes: Array.isArray(reply.first_reply_reason_codes) ? reply.first_reply_reason_codes.join(',') : (reply.first_reply_reason_codes || ''),
+    first_reply_omitted_reason: reply.first_reply_omitted_reason || reply.reply_omitted_reason || '',
+    first_reply_ready: reply.first_reply_ready === true,
+    first_reply_warnings: Array.isArray(reply.first_reply_warnings) ? reply.first_reply_warnings.join(',') : (reply.first_reply_warnings || ''),
+    reply_template_version: reply.reply_template_version || FIRST_REPLY_VERSION,
     client_name: parsed_name,
     phone: parsed_phone,
     email: parsed_email,

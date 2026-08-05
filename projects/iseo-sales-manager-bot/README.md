@@ -4,7 +4,7 @@
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
-**Status:** Phase 3E.1 — Parser **`sm-parser-v3.3`** + Lead Semantic Model v1; formatter **`sm-msg-v2.3`**; harness 46/46 PASS; live semantic acceptance PENDING; ACCESS_CONTROL SoT; AI OFF
+**Status:** Phase 3E.2 — First Reply Engine **`sm-reply-v2.0`** + manager card **`sm-msg-v2.4`**; Parser **`sm-parser-v3.3`** (3E.1 COMPLETE); harness 59/59 PASS; AI OFF; drafts are manager-copy only
 
 ---
 
@@ -50,7 +50,9 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 | Operational index | [OPERATIONAL-INDEX.md](OPERATIONAL-INDEX.md) |
 | Product manual layer | [product/](product/) |
 | Parser 3.3 architecture | [architecture/PARSER-3.3-CONTRACT-v1.md](architecture/PARSER-3.3-CONTRACT-v1.md) · [LEAD-SEMANTIC-MODEL-v1.md](architecture/LEAD-SEMANTIC-MODEL-v1.md) · [FIRST-REPLY-RULES-v1.md](architecture/FIRST-REPLY-RULES-v1.md) |
+| First Reply Engine v2 | [architecture/FIRST-REPLY-ENGINE-v2.md](architecture/FIRST-REPLY-ENGINE-v2.md) · [KNOWN-INFORMATION-GUARD-v1.md](architecture/KNOWN-INFORMATION-GUARD-v1.md) · [MANAGER-CARD-v2.4-CONTRACT-v1.md](architecture/MANAGER-CARD-v2.4-CONTRACT-v1.md) |
 | Parser 3.3 research (implemented) | [research/parser-3.3/](research/parser-3.3/) |
+| Phase 3E.2 evidence | [evidence/phase3e2/](evidence/phase3e2/) |
 | Phase 3E.1 evidence | [evidence/phase3e1/](evidence/phase3e1/) |
 | Phase 3D.8 evidence | [evidence/phase3d8/](evidence/phase3d8/) |
 | Phase 3D.8.1 evidence | [evidence/phase3d8-1/](evidence/phase3d8-1/) |
