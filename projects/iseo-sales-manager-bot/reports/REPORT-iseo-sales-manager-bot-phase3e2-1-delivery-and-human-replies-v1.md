@@ -178,12 +178,12 @@ No secrets, raw Telegram/chat IDs, workbook IDs, raw emails, screenshots, or uns
 
 ## 40. Commit
 
-`0b3d0fbe` — `fix(iseo-sales-manager-bot): harden delivery and humanize first replies`  
+`6364b5fc` — `fix(iseo-sales-manager-bot): harden delivery and humanize first replies`  
 (clean worktree detached at prior tip `76507b81`; selective paths under `projects/iseo-sales-manager-bot/**`; Phase 3E.2 implementation ancestor `01a65015` present).
 
 ## 41. Push
 
-Non-force: `git push origin HEAD:mars/canonical-post-recovery` from clean worktree (detached HEAD; main workspace holds the branch checkout).
+Pushed without force: `76507b81..6364b5fc` → `origin/mars/canonical-post-recovery`.
 
 ## 42. Risks
 
