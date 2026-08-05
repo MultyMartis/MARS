@@ -235,7 +235,8 @@ No credentials, Telegram IDs, phones, emails, workbook URLs, raw exports, or cus
 
 ## 45. Push
 
-Pending immediate push to `origin/mars/canonical-post-recovery` (no force).
+Pushed without force to `origin/mars/canonical-post-recovery`.  
+Tip: `ebacffdd` (includes docs tip-hash commit after the three feature commits).
 
 ## 46. Risks
 
