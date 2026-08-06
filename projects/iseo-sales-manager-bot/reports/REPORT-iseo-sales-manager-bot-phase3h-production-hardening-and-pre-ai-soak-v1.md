@@ -213,11 +213,14 @@ No Telegram IDs, workbook IDs, emails, phones, raw payloads, or unsanitized expo
 
 ## 50. Commits
 
-(filled after git wave)
+1. `5f41e82c` — `fix(iseo-sales-manager-bot): clean test fixtures and align reporting state`
+2. `455bb210` — `feat(iseo-sales-manager-bot): onboard Olya as active moderator`
+3. `7689998e` — `feat(iseo-sales-manager-bot): activate exactly-once pending reminders`
+4. `5b26ad3d` — `docs(iseo-sales-manager-bot): establish pre-ai production soak baseline`
 
 ## 51. Push
 
-(filled after push)
+`origin/mars/canonical-post-recovery` tip `5b26ad3d` (fast-forward from `d76a68f7`).
 
 ## 52. Risks
 
