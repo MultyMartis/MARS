@@ -110,3 +110,7 @@ Every surface that resolves a profile — including the Operational.dev recipien
 - [../implementation/REPLY-PROFILE-READ-PATH-UNIFICATION-v1.md](../implementation/REPLY-PROFILE-READ-PATH-UNIFICATION-v1.md)
 - Runtime: `implementation/runtime-libs/reply-profile-resolver-v1.mjs`, `reply-profile-lib.mjs`, `reply-profile-commands-v1.mjs`
 - Evidence: `evidence/phase3g2-2/`
+
+## Phase 3H.6
+
+Resolver remains `iseo-reply-profile-resolver-v1.0`. Seed labels mentioning revoked MOD_C are historical fallbacks only; live MOD_C is active.

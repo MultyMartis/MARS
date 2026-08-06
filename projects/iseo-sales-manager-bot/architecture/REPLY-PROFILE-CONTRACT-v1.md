@@ -70,3 +70,7 @@ Name/enable commands **must not** mutate ACCESS_CONTROL role or access status.
 - All resolution now goes through one contract, `iseo-reply-profile-resolver-v1.0` — see [UNIFIED-REPLY-PROFILE-RESOLVER-v1.md](UNIFIED-REPLY-PROFILE-RESOLVER-v1.md).
 - Anti-wipe allowlist (`REPLY_PROFILE_ACCESS_FIELDS`) and auto-rehydrate (`buildProfileRehydratePatch`) deployed on the same Admin.dev workflow; fail-closed guarantees (§ above) reaffirmed and proven under wipe conditions — harness `phase3g22-harness.mjs` **53/53 PASS**.
 - Evidence: `evidence/phase3g2-2/`.
+
+## Phase 3H.6
+
+Approved production profiles include MOD_C (№4, Никита) as active card recipient.

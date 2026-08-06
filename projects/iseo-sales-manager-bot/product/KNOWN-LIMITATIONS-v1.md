@@ -90,3 +90,7 @@ Live call counts, safe real-lead recount, final two-recipient proof and five-pol
 - After 3H.4, `/status` could show `нет данных` while `/stats`/`/leads` showed processed@17:22 because CONFIG `last_production_processed_*` values were empty (backfill webhook nesting). **Repaired** in 3H.4.1: cache rewritten from LEADS; Status uses `iseo-last-production-processed-v1.0`.
 - Synthetic `last_lead_success_at` (22:23) remains in CONFIG as a technical stamp but must not drive the production `/status` line.
 
+## Phase 3H.6 note
+
+- CONFIG `pending_reminder_active_recipients_count` is a cache; `/reminder_status` now prefers live ACCESS. Refresh cache when the approved staff set changes.
+- Three-recipient contract is historical; production baseline is four recipients.

@@ -199,3 +199,10 @@ Evidence: `evidence/phase3g1-1/` · Report: `reports/REPORT-iseo-sales-manager-b
 
 If `/stats` processed≥1 but `/status` shows `нет данных`, treat as CONFIG cache / Status readback defect — do not rewrite LEADS. Verify `last_production_processed_at` non-empty and Moscow formatting. See `guides/PRE-AI-SOAK-RUNBOOK-v1.md`.
 
+## Phase 3H.6 run notes
+
+- Approved recipients: Андрей, Оля, Михаил, Никита (4)
+- `/reminder_status` must show Получателей: 4
+- Do not revoke Никита without a new baseline charter
+- Soak T+0: 2026-08-06 20:28 Europe/Moscow · earliest PASS 2026-08-08 20:28
+- AI remains OFF; Phase 3I.1 blocked

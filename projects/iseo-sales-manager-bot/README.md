@@ -78,6 +78,8 @@
 
 # i-SEO Sales Manager Bot
 
+**Phase 3H.6 (current):** four-recipient baseline aligned; reminders count=4; soak T+0 2026-08-06 20:28 Europe/Moscow; Phase 3I.1 blocked. Prior T+0 STOP reclassified via erratum (operator-approved MOD_C restore).
+
 **project_id:** `iseo-sales-manager-bot`  
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  

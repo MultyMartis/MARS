@@ -1,17 +1,35 @@
+<!-- Phase 3H.6 four-recipient baseline + reminder alignment 2026-08-06 -->
+## Phase 3H.6 (current)
+
+| Field | Value |
+|-------|-------|
+| **Phase** | 3H.6 — Four-recipient baseline, reminder alignment, soak re-charter |
+| **Verdict** | `PHASE 3H.6 COMPLETE — FOUR-RECIPIENT BASELINE ALIGNED; FINAL 48-HOUR SOAK RESTARTED` |
+| **Operator decision** | MOD_C / Никита intentionally restored · approved recipients=4 |
+| **Erratum** | Prior T+0 STOP reclassified: `SOAK T+0 INVALIDATED — OPERATOR-APPROVED RECIPIENT SET CHANGED FROM 3 TO 4` |
+| **Repair** | CONFIG reminder count 3→4 · Admin Reminder Commands live ACCESS count |
+| **Proofs** | Renderer 4/4 · Telegram cards 4/4 · reminders 4/4 · exactly-once pass2=0 · `/reminder_status`=4 |
+| **Runtime** | Ops **45** active · Admin **85** active · v2 inactive · AI **OFF** · reminders **ON** 10:00 Europe/Moscow |
+| **Recipients** | 4 — Андрей, Оля, Михаил, Никита |
+| **Soak T+0** | **2026-08-06 20:28 Europe/Moscow** · earliest PASS **2026-08-08 20:28 Europe/Moscow** |
+| **Evidence** | [evidence/phase3h6-four-recipient/](evidence/phase3h6-four-recipient/) |
+| **Report** | [REPORT-iseo-sales-manager-bot-phase3h6-four-recipient-baseline-and-reminder-alignment-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3h6-four-recipient-baseline-and-reminder-alignment-v1.md) |
+| **Gate** | Phase 3I.1 blocked until soak PASS |
+
 <!-- Phase 3H.5 final pre-AI soak T+0 observation 2026-08-06 -->
-## Phase 3H.5 T+0 (current)
+## Phase 3H.5 T+0 (historical; invalidated)
 
 | Field | Value |
 |-------|-------|
 | **Phase** | 3H.5 — Final pre-AI soak observation checkpoint T+0 |
-| **Verdict** | `SOAK T+0 STOP — PRODUCTION INVARIANT VIOLATION` |
+| **Original verdict** | `SOAK T+0 STOP — PRODUCTION INVARIANT VIOLATION` |
+| **Corrected** | `SOAK T+0 INVALIDATED — OPERATOR-APPROVED RECIPIENT SET CHANGED FROM 3 TO 4` |
 | **Executed** | **2026-08-06 19:52 Europe/Moscow** (~3h 32m after final T+0 16:20) |
-| **STOP** | MOD_C identity reactivated after T+0 · lead card delivered (4-recipient fanout) |
-| **Runtime** | Ops **45** active · Admin **85** active · v2 inactive · AI **OFF** · heartbeat OK · reminders armed |
-| **Next mark** | T+6 06.08.2026 22:20 Europe/Moscow (calendar only; not PASS) |
+| **Note** | MOD_C restoration was operator-authorized; not a security incident |
+| **Erratum** | [ERRATUM-iseo-sales-manager-bot-final-pre-ai-soak-t0-recipient-classification-v1.md](reports/ERRATUM-iseo-sales-manager-bot-final-pre-ai-soak-t0-recipient-classification-v1.md) |
 | **Evidence** | [evidence/pre-ai-soak/](evidence/pre-ai-soak/) |
 | **Report** | [REPORT-iseo-sales-manager-bot-final-pre-ai-soak-t0-v1.md](reports/REPORT-iseo-sales-manager-bot-final-pre-ai-soak-t0-v1.md) |
-| **Gate** | Phase 3I.1 blocked |
+| **Gate** | superseded by Phase 3H.6 soak |
 
 <!-- Phase 3H.4.1 last processed status readback repair 2026-08-06 -->
 ## Phase 3H.4.1 (additive; prior)

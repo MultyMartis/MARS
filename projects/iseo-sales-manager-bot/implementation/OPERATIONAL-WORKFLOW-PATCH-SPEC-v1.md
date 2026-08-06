@@ -426,3 +426,7 @@ Same Operational.dev ID (45 nodes):
 2. Stamp `last_production_processed_*` on non-test processing success only.
 3. Supersedes pre-3H.4 empty-poll `[]` no-write behavior that froze `/status` poll time.
 4. Evidence: `evidence/phase3h4/` · `architecture/GMAIL-POLL-HEARTBEAT-CONTRACT-v1.md` · `implementation/SCHEDULED-POLL-OBSERVABILITY-v1.md`.
+
+## Phase 3H.6
+
+Operational.dev unchanged (45 nodes). Card fanout already dynamic; no Ops patch required.

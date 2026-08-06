@@ -41,3 +41,6 @@ Complete. Last production processed `/status` readback repaired; final 48-hour s
 
 Executed 2026-08-06 19:52 Europe/Moscow. Verdict: `SOAK T+0 STOP — PRODUCTION INVARIANT VIOLATION` (MOD_C reactivation + revoked delivery). Phase 3I.1 remains blocked. No AI enablement.
 
+## Phase 3H.6
+
+Four-recipient baseline + reminder alignment complete. Final 48-hour pre-AI soak restarted 2026-08-06 20:28 Europe/Moscow. Phase 3I.1 blocked until soak PASS.

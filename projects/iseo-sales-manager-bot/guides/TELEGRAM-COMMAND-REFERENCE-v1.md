@@ -148,3 +148,7 @@ Callbacks: `sm:p:<token12>` / `sm:s:<token12>`. Immediate ack `Обрабаты�
 ## Phase 3G.2.2 note
 
 `/reply_profiles`, `/reply_profile <N>`, `/my_reply_profile`, and the `/start` reply-name line now auto-rehydrate a previously wiped row before responding — see `evidence/phase3g2-2/`. `/config` displays the live parser version and an added resolver-version line; reporting-sync state is shown honestly rather than omitted.
+
+## Phase 3H.6
+
+`/reminder_status` Admin long-form includes `Получателей:` from live ACCESS (fallback CONFIG cache). Expected production value: **4**.

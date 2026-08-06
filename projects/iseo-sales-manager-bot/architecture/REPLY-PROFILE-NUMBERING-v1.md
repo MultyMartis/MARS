@@ -61,3 +61,7 @@ Delivery eligibility remains ACCESS_CONTROL role+status; numbering alone does no
 ## 5. Phase 3G.2.2 — numbering held through wipe/rehydrate
 
 The ADMIN_A/MOD_A profile-value wipe (Phase 3G.2.2 forensic) did **not** touch `reply_profile_number` on any row — numbers 1–4 remained intact and unique throughout. Auto-rehydrate only fills blank name/enabled fields for an identity with an existing approved seed; it never assigns or reassigns a number. Proof: `evidence/phase3g2-2/PROFILE-NUMBER-INVARIANTS-v1.md`.
+
+## Phase 3H.6
+
+Live numbers 1–4 all assigned and nonblank for the approved four-recipient baseline.
