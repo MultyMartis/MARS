@@ -169,9 +169,9 @@ No Telegram IDs, phones, emails, customer names/domains, workbook IDs, raw execu
 
 ## 42. Commit
 
-- fix: `7dda2d43799edaefc4703a957f33a51244a9bee5` — restore last production processed status
-- docs: `b8dd6494025e3c4c3684e55cba88328ac1a8c1e7` — restart final pre-ai soak
-
+- fix: `63385c1307e96d0a296e50c35f7fa2e889071de5` — restore last production processed status
+- docs: `610500fd633cf98f392d516585b638da0e570f09` — restart final pre-ai soak
+- tip docs: `1055ba5ca6a1e9e86aba6c06a8e07b70944cc465` — record phase 3h4.1 commit hashes
 
 ## 43. Push
 
@@ -199,4 +199,6 @@ Whether every historical LEAD_EVENTS row uses a single canonical `event_type` st
 ## 48. Stop condition
 
 Stop after production truth verified, `/status`=17:22, stats/leads/status agree, no production mutation, observability intact, reminders unchanged, post-repair backup done, final soak restarted, Phase 3I.1 blocked. **Met.**
+
+
 
