@@ -183,8 +183,10 @@ No Telegram numeric IDs, usernames, emails, workbook IDs, raw exports, or screen
 
 ## 43. Commits
 
-Not performed in this documentation wave — operator/parent agent charter.
-
+1. `86296a85` fix(iseo-sales-manager-bot): restore reminder status response
+2. `3356975d` fix(iseo-sales-manager-bot): add truthful gmail poll heartbeat
+3. `074a1db4` fix(iseo-sales-manager-bot): align operational status timestamps
+4. `73bcae9c` docs(iseo-sales-manager-bot): restart pre-ai soak after observability repair
 ## 44. Push
 
 Not performed — documentation-only wave in agent worktree.
@@ -212,3 +214,4 @@ Blocked until soak PASS + explicit operator approval. AI stays OFF.
 ## 49. Stop condition
 
 Phase 3H.4 observability repairs deployed · evidence + architecture docs committed · soak restarted · 3I.1 not started — **met**.
+
