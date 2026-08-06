@@ -1,0 +1,50 @@
+{
+  "token": "D6F1A_DAILY_END_TO_END_TIMELINE_COMPLETE",
+  "days": [
+    {
+      "date": "2026-08-01",
+      "import": "not locally logged in STORAGE for this day; monitor ran",
+      "monitor": "2026-08-01_12-30-02 success HYGIENE_REVIEW_REQUIRED marker=yes",
+      "producer": "ran ENABLED; WEBHOOK_CREDS_MISSING exit 50; event 6a3ff8b6…",
+      "n8n": "no execution",
+      "data_table": "unchanged",
+      "telegram": "no send",
+      "outcome": "SILENCE — webhook creds key mismatch"
+    },
+    {
+      "date": "2026-08-02",
+      "monitor": "2026-08-02_12-30-02 success HYGIENE marker=yes",
+      "producer": "no scheduler log",
+      "n8n": "no",
+      "telegram": "no",
+      "outcome": "SILENCE — producer not triggered"
+    },
+    {
+      "date": "2026-08-03",
+      "monitor": "2026-08-03_13-39-42 success (after 13:00 producer slot)",
+      "producer": "no scheduler log",
+      "outcome": "SILENCE — producer not triggered; monitor after producer window"
+    },
+    {
+      "date": "2026-08-04",
+      "monitor": "2026-08-04_13-43-35 success (after 13:00)",
+      "producer": "no scheduler log",
+      "outcome": "SILENCE — producer not triggered"
+    },
+    {
+      "date": "2026-08-05",
+      "monitor": "2026-08-05_12-30-02 success HYGIENE marker=yes",
+      "producer": "ran; selected 2026-08-01; BLOCKED_STALE exit 21",
+      "outcome": "SILENCE — stale backlog selection"
+    },
+    {
+      "date": "2026-08-06",
+      "import": "mars-20260806-080001 — catalog PASS import0_1; offers PASS no input files",
+      "offers_state": "OFFERS_INPUT_ABSENT",
+      "monitor": "2026-08-06_13-04-53 success HYGIENE marker=yes",
+      "producer": "missed (no log); NextRun 2026-08-07",
+      "n8n": "gallery test executions only (manual)",
+      "outcome": "SILENCE natural; gallery delivered manually"
+    }
+  ]
+}

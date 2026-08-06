@@ -1,0 +1,24 @@
+{
+  "primary": "SILENCE_N8N_WEBHOOK_NOT_REACHED",
+  "primary_detail": "WEBHOOK_CREDS_MISSING — scheduled wrapper looked for CLIENT_OPS_WEBHOOK_TOKEN but secrets.local.env only has CLIENT_OPS_WEBHOOK_AUTH_SECRET (Aug 1 ENABLED attempt)",
+  "contributing": [
+    "SILENCE_PRODUCER_CURSOR_SKIPPED_EVENT",
+    "SILENCE_MONITOR_ARTIFACT_NOT_ELIGIBLE",
+    "SILENCE_PRODUCER_TASK_NOT_TRIGGERED"
+  ],
+  "contributing_detail": {
+    "SILENCE_PRODUCER_CURSOR_SKIPPED_EVENT": "Oldest-first selection kept reselecting 2026-08-01; by 2026-08-05 STALE exit 21 blocked newer days",
+    "SILENCE_MONITOR_ARTIFACT_NOT_ELIGIBLE": "Aug 5 candidate 2026-08-01_12-30-02 classified STALE_REVIEW_REQUIRED / POST_CUTOFF_BUT_NOT_FRESH",
+    "SILENCE_PRODUCER_TASK_NOT_TRIGGERED": "No producer scheduler logs for 2026-08-02/03/04/06; missed run observed"
+  },
+  "latent": [
+    "SILENCE_OFFERS_INPUT_MISSING_NOT_CLASSIFIED"
+  ],
+  "latent_detail": "Monitor is sitemap hygiene-only; missing offers0_*.xml not yet emitted as monitor classification (import contract added in D6F1A)",
+  "not_causes": [
+    "SILENCE_N8N_WORKFLOW_INACTIVE",
+    "SILENCE_TELEGRAM_DESTINATION_INVALID",
+    "SILENCE_EVENT_ID_COLLAPSED_REPEATED_DAILY_CONDITION"
+  ],
+  "token": "D6F1A_PRODUCTION_SILENCE_ROOT_CAUSE_PROVEN"
+}

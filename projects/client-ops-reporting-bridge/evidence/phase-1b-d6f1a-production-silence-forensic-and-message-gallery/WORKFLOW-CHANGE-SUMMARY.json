@@ -1,0 +1,11 @@
+{
+  "phase": "1B-D6F1A",
+  "changed": false,
+  "prior_versionId": "e46d4169-eac1-423e-aa01-52632d1f2f03",
+  "new_versionId": "449a2c83-6e13-456c-bdbb-9e4cbf7e990a",
+  "active_before": true,
+  "active_after": true,
+  "node_count": 20,
+  "node": "Telegram Notify Accepted",
+  "change": "Telegram text returns full action.text when it starts with test marker; production path omits Event UUID line"
+}

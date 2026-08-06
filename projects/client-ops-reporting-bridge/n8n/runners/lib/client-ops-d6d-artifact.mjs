@@ -500,7 +500,13 @@ export function discoverCandidates(fs, root, opts = {}) {
 }
 
 /**
- * Select at most maxCandidates after validation; prefer oldest unevaluated.
+ * Select at most maxCandidates after validation.
+ *
+ * D6F1A daily-report semantics:
+ * - each monitor run is independently reportable;
+ * - prefer FRESH_AND_ELIGIBLE candidates so a stale backlog cannot suppress newer days;
+ * - skip runs already evaluated as non-deliverable (STALE/NOT_SAFE NO_SEND);
+ * - among the chosen pool, still process oldest-first for deterministic backlog drain.
  */
 export function selectCandidates(validatedList, opts = {}) {
   const max = opts.maxCandidatesPerRun ?? 1;
@@ -512,17 +518,32 @@ export function selectCandidates(validatedList, opts = {}) {
     if (prior?.processing_terminal && prior?.cursor_state === 'DELIVERY_TERMINAL') {
       return false;
     }
+    if (prior?.delivery_decision === 'DELIVERED') {
+      return false;
+    }
+    // Do not re-select a run already judged non-deliverable; otherwise the oldest
+    // stale post-cutoff run permanently blocks later daily monitor cycles.
+    if (
+      prior?.delivery_decision === 'NO_SEND' &&
+      (prior?.result_class === 'STALE_REVIEW_REQUIRED' ||
+        prior?.result_class === 'NOT_SAFE_TO_SEND')
+    ) {
+      return false;
+    }
     return true;
   });
-  // Sort by observed_at ascending then run_id
-  pending.sort((a, b) => {
+  const fresh = pending.filter(
+    (v) => v.delivery_eligibility === DELIVERY_ELIGIBILITY.FRESH_AND_ELIGIBLE,
+  );
+  const pool = fresh.length > 0 ? fresh : pending;
+  pool.sort((a, b) => {
     const ao = String(a.observed_at || '');
     const bo = String(b.observed_at || '');
     if (ao < bo) return -1;
     if (ao > bo) return 1;
     return String(a.run_id).localeCompare(String(b.run_id));
   });
-  return pending.slice(0, max);
+  return pool.slice(0, max);
 }
 
 export function createMemoryFs(initial = {}) {

@@ -1,0 +1,88 @@
+{
+  "phase": "1B-D6F1A",
+  "gallery_timestamp": "2026-08-06T11-20-38-397Z",
+  "count": 9,
+  "scenarios": [
+    {
+      "scenario_id": "G1",
+      "scenario_name": "FULL IMPORT SUCCESS",
+      "severity": "OK",
+      "report_class": "CONFLICT_OR_INCOMPLETE_FILE_SET",
+      "event_id": "c5a6f615-bc00-5b6f-ab61-72cdc118037b",
+      "event_namespace": "mars.client-ops.test-gallery.site-002.2026-08-06T11-20-38-397Z.G1",
+      "message_text": "🧪 ТЕСТОВОЕ СООБЩЕНИЕ\nСценарий: FULL IMPORT SUCCESS\n\nСайт: bzpm.ru\nВремя отчёта: 2026-08-06 11:20 UTC\nСтатус: OK\nВывод: Полный обмен 1С завершён без критических ошибок.\nКаталог: обработан (import0-1.xml)\nOffers: обработан (offers0-1.xml)\nСчётчики: каталог=OK, offers=OK\nМожет затронуть: нет\nИсточник: TEST-GALLERY / G1"
+    },
+    {
+      "scenario_id": "G2",
+      "scenario_name": "CATALOG SUCCESS, OFFERS FILE MISSING",
+      "severity": "ATTENTION",
+      "report_class": "CONFLICT_OR_INCOMPLETE_FILE_SET",
+      "event_id": "fab8fe84-db7b-55e4-b423-cf6ca6c1b6ed",
+      "event_namespace": "mars.client-ops.test-gallery.site-002.2026-08-06T11-20-38-397Z.G2",
+      "message_text": "🧪 ТЕСТОВОЕ СООБЩЕНИЕ\nСценарий: CATALOG SUCCESS, OFFERS FILE MISSING\n\nСайт: bzpm.ru\nВремя отчёта: 2026-08-06 11:20 UTC\nСтатус: ATTENTION\nВывод: Каталог импортирован; offers0-N.xml не получен — это не полный успешный обмен.\nКаталог: завершён (import0-1.xml)\nOffers: входной файл offers0-N.xml отсутствует\nМожет затронуть: цены и остатки могли не обновиться\nДействие: Проверить выгрузку offers0-N.xml из 1С и повтор обмена\nИсточник: TEST-GALLERY / G2"
+    },
+    {
+      "scenario_id": "G3",
+      "scenario_name": "CATALOG AND OFFERS SUCCESS WITH MATERIAL CHANGES",
+      "severity": "OK",
+      "report_class": "CONFLICT_OR_INCOMPLETE_FILE_SET",
+      "event_id": "593d605b-5567-5e89-98bd-2933185bd617",
+      "event_namespace": "mars.client-ops.test-gallery.site-002.2026-08-06T11-20-38-397Z.G3",
+      "message_text": "🧪 ТЕСТОВОЕ СООБЩЕНИЕ\nСценарий: CATALOG AND OFFERS SUCCESS WITH MATERIAL CHANGES\n\nСайт: bzpm.ru\nВремя отчёта: 2026-08-06 11:20 UTC\nСтатус: OK\nВывод: Каталог и offers обработаны; есть существенные изменения.\nКаталог: обработан\nOffers: обработан\nСчётчики: добавлено URL=12, удалено=3, offers-позиций≈120 (синтетика)\nМожет затронуть: нет критических\nИсточник: TEST-GALLERY / G3"
+    },
+    {
+      "scenario_id": "G4",
+      "scenario_name": "IMPORT COMPLETED WITH WARNINGS",
+      "severity": "ATTENTION",
+      "report_class": "CONFLICT_OR_INCOMPLETE_FILE_SET",
+      "event_id": "972e9447-43d2-5392-9da1-5809b874d462",
+      "event_namespace": "mars.client-ops.test-gallery.site-002.2026-08-06T11-20-38-397Z.G4",
+      "message_text": "🧪 ТЕСТОВОЕ СООБЩЕНИЕ\nСценарий: IMPORT COMPLETED WITH WARNINGS\n\nСайт: bzpm.ru\nВремя отчёта: 2026-08-06 11:20 UTC\nСтатус: ATTENTION\nВывод: Импорт завершён с некритическими предупреждениями.\nКаталог: PASS с предупреждениями\nOffers: PASS с предупреждениями\nМожет затронуть: отдельные позиции каталога/цен\nДействие: Просмотреть предупреждения в журнале импорта\nИсточник: TEST-GALLERY / G4"
+    },
+    {
+      "scenario_id": "G5",
+      "scenario_name": "IMPORT ERROR",
+      "severity": "FAILED",
+      "report_class": "IMPORT_ERROR",
+      "event_id": "0efff276-9490-56ea-bbb4-12c63aea043a",
+      "event_namespace": "mars.client-ops.test-gallery.site-002.2026-08-06T11-20-38-397Z.G5",
+      "message_text": "🧪 ТЕСТОВОЕ СООБЩЕНИЕ\nСценарий: IMPORT ERROR\n\nСайт: bzpm.ru\nВремя отчёта: 2026-08-06 11:20 UTC\nСтатус: ERROR\nВывод: Ошибка на фазе импорта 1С.\nКаталог: ошибка фазы\nOffers: не подтверждена\nМожет затронуть: актуальность каталога/цен\nДействие: Разобрать ошибку по журналу импорта и повторить обмен\nИсточник: TEST-GALLERY / G5"
+    },
+    {
+      "scenario_id": "G6",
+      "scenario_name": "NO FRESH 1C IMPORT",
+      "severity": "ATTENTION",
+      "report_class": "NO_FRESH_IMPORT",
+      "event_id": "39a682a2-f970-569c-bc5c-31be7ef1b758",
+      "event_namespace": "mars.client-ops.test-gallery.site-002.2026-08-06T11-20-38-397Z.G6",
+      "message_text": "🧪 ТЕСТОВОЕ СООБЩЕНИЕ\nСценарий: NO FRESH 1C IMPORT\n\nСайт: bzpm.ru\nВремя отчёта: 2026-08-06 11:20 UTC\nСтатус: ATTENTION\nВывод: Свежий обмен с 1С в ожидаемом окне не подтверждён.\nКаталог: нет свежего цикла\nOffers: нет свежего цикла\nМожет затронуть: цены, остатки и состав каталога могут быть устаревшими\nДействие: Проверить расписание и факт выгрузки/импорта 1С\nИсточник: TEST-GALLERY / G6"
+    },
+    {
+      "scenario_id": "G7",
+      "scenario_name": "MONITOR COULD NOT CONFIRM COMPLETION",
+      "severity": "ATTENTION",
+      "report_class": "MONITOR_COULD_NOT_CONFIRM_COMPLETION",
+      "event_id": "50c6b908-5ad2-5105-8048-97f08d851af5",
+      "event_namespace": "mars.client-ops.test-gallery.site-002.2026-08-06T11-20-38-397Z.G7",
+      "message_text": "🧪 ТЕСТОВОЕ СООБЩЕНИЕ\nСценарий: MONITOR COULD NOT CONFIRM COMPLETION\n\nСайт: bzpm.ru\nВремя отчёта: 2026-08-06 11:20 UTC\nСтатус: ATTENTION\nВывод: Монитор не подтвердил корректное завершение цикла.\nКаталог: не подтверждено монитором\nOffers: не подтверждено монитором\nМожет затронуть: достоверность отчёта\nДействие: Проверить marker/summary и повторный запуск монитора\nИсточник: TEST-GALLERY / G7"
+    },
+    {
+      "scenario_id": "G8",
+      "scenario_name": "CONFLICT OR INCOMPLETE FILE SET",
+      "severity": "ATTENTION",
+      "report_class": "CONFLICT_OR_INCOMPLETE_FILE_SET",
+      "event_id": "d8441876-3963-5928-8ba5-47eba69390da",
+      "event_namespace": "mars.client-ops.test-gallery.site-002.2026-08-06T11-20-38-397Z.G8",
+      "message_text": "🧪 ТЕСТОВОЕ СООБЩЕНИЕ\nСценарий: CONFLICT OR INCOMPLETE FILE SET\n\nСайт: bzpm.ru\nВремя отчёта: 2026-08-06 11:20 UTC\nСтатус: ATTENTION\nВывод: Обнаружен конфликтный или неполный набор файлов обмена.\nКаталог: частично/конфликт\nOffers: неполный комплект\nМожет затронуть: целостность обмена\nДействие: Сверить имена и состав import0-N / offers0-N перед повторным импортом\nИсточник: TEST-GALLERY / G8"
+    },
+    {
+      "scenario_id": "G9",
+      "scenario_name": "RECOVERY / CONDITION RESOLVED",
+      "severity": "OK",
+      "report_class": "CONFLICT_OR_INCOMPLETE_FILE_SET",
+      "event_id": "f2dd5534-368c-5530-915c-f9e5210ee4f9",
+      "event_namespace": "mars.client-ops.test-gallery.site-002.2026-08-06T11-20-38-397Z.G9",
+      "message_text": "🧪 ТЕСТОВОЕ СООБЩЕНИЕ\nСценарий: RECOVERY / CONDITION RESOLVED\n\nСайт: bzpm.ru\nВремя отчёта: 2026-08-06 11:20 UTC\nСтатус: OK\nВывод: Ранее зафиксированное внимание снято: последний цикл успешен.\nКаталог: обработан\nOffers: обработан\nМожет затронуть: нет\nИсточник: TEST-GALLERY / G9"
+    }
+  ]
+}
