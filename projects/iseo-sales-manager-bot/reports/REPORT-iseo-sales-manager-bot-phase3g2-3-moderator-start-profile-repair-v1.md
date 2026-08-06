@@ -116,12 +116,13 @@ No Telegram IDs, raw executions, or unsanitized exports in evidence. Labels ADMI
 ## 22. Commit
 
 `fix(iseo-sales-manager-bot): resolve moderator profile before start reply`  
-Tip hash: *(filled after commit)*  
-Ancestors verified in worktree base: `d2665fac`, `5f5e0be4`, `84406d87`.
+Tip hash: `16fac937`  
+Full: `16fac937205c5471ddb266fdba4647501de8db80`  
+Ancestors verified: `d2665fac`, `5f5e0be4`, `84406d87`.
 
 ## 23. Push
 
-`origin/mars/canonical-post-recovery` — *(filled after push)*
+`origin/mars/canonical-post-recovery` @ `16fac937` (fast-forward from `84406d87`). Docs tip-hash follow-up may trail.
 
 ## 24. Remaining operator action
 
