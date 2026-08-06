@@ -1,0 +1,117 @@
+{{ header }}{{ column_left }}
+<div id="content">
+  <div class="page-header">
+    <div class="container-fluid">
+      <div class="pull-right">
+        <button type="button" id="button-refresh" data-toggle="tooltip" title="{{ button_refresh }}" class="btn btn-default"><i class="fa fa-refresh"></i></button>
+        {% if can_modify %}
+        <button type="button" id="button-run" data-toggle="tooltip" title="{{ button_run }}" class="btn btn-primary"><i class="fa fa-play"></i> {{ button_run }}</button>
+        {% endif %}
+      </div>
+      <h1>{{ heading_title }}</h1>
+      <ul class="breadcrumb">
+        {% for breadcrumb in breadcrumbs %}
+        <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="panel panel-default">
+      <div class="panel-heading"><h3 class="panel-title"><i class="fa fa-exchange"></i> {{ heading_title }}</h3></div>
+      <div class="panel-body">
+        <table class="table table-bordered" id="mars-1c-status-table">
+          <tr><td>Статус</td><td id="f-ui-status">{{ initial.ui_status }}</td></tr>
+          <tr><td>Run ID</td><td id="f-run-id">{{ initial.run_id }}</td></tr>
+          <tr><td>Источник запуска</td><td id="f-trigger">{{ initial.trigger_source }}</td></tr>
+          <tr><td>Запрошен</td><td id="f-requested">{{ initial.requested_at }}</td></tr>
+          <tr><td>Начат</td><td id="f-started">{{ initial.started_at }}</td></tr>
+          <tr><td>Завершён</td><td id="f-completed">{{ initial.completed_at }}</td></tr>
+          <tr><td>Фаза</td><td id="f-phase">{{ initial.current_phase }}</td></tr>
+          <tr><td>Каталог</td><td id="f-catalog">{{ initial.catalog_result }}</td></tr>
+          <tr><td>Цены/остатки</td><td id="f-offers">{{ initial.offers_result }}</td></tr>
+          <tr><td>Доставка отчёта</td><td id="f-dispatch">{{ initial.report_dispatch_status }}</td></tr>
+          <tr><td>Ошибка</td><td id="f-error">{{ initial.sanitized_error_summary }}</td></tr>
+          <tr><td>Журнал</td><td id="f-report">{{ initial.txt_report }}</td></tr>
+          <tr><td>Прошло секунд</td><td id="f-elapsed">{{ initial.elapsed_seconds }}</td></tr>
+        </table>
+        <p class="text-muted">Повторный запуск недоступен, пока импорт выполняется. Секреты и пути сервера не отображаются.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+(function() {
+  var statusUrl = {{ status_url|json_encode|raw }};
+  var runUrl = {{ run_url|json_encode|raw }};
+  var userToken = {{ user_token|json_encode|raw }};
+  var confirmText = {{ text_confirm|json_encode|raw }};
+  var pollTimer = null;
+  var polling = false;
+
+  function setFields(d) {
+    if (!d) return;
+    $('#f-ui-status').text(d.ui_status || '');
+    $('#f-run-id').text(d.run_id || '');
+    $('#f-trigger').text(d.trigger_source || '');
+    $('#f-requested').text(d.requested_at || '');
+    $('#f-started').text(d.started_at || '');
+    $('#f-completed').text(d.completed_at || '');
+    $('#f-phase').text(d.current_phase || '');
+    $('#f-catalog').text(d.catalog_result || '');
+    $('#f-offers').text(d.offers_result || '');
+    $('#f-dispatch').text(d.report_dispatch_status || '');
+    $('#f-error').text(d.sanitized_error_summary || '');
+    $('#f-report').text(d.txt_report || '');
+    $('#f-elapsed').text(d.elapsed_seconds != null ? d.elapsed_seconds : '');
+    if (d.import_active) {
+      $('#button-run').prop('disabled', true);
+      startPoll();
+    } else {
+      $('#button-run').prop('disabled', false);
+      stopPoll();
+    }
+  }
+
+  function refresh() {
+    $.getJSON(statusUrl).done(function(d) { setFields(d); });
+  }
+
+  function startPoll() {
+    if (polling) return;
+    polling = true;
+    pollTimer = setInterval(refresh, 5000);
+  }
+  function stopPoll() {
+    polling = false;
+    if (pollTimer) { clearInterval(pollTimer); pollTimer = null; }
+  }
+
+  $('#button-refresh').on('click', refresh);
+  $('#button-run').on('click', function() {
+    if (!window.confirm(confirmText)) return;
+    $('#button-run').prop('disabled', true);
+    $.ajax({
+      url: runUrl,
+      type: 'POST',
+      dataType: 'json',
+      data: { user_token: userToken },
+      success: function(d) {
+        if (!d || !d.accepted) {
+          alert((d && d.error) ? d.error : 'Не удалось запустить');
+          $('#button-run').prop('disabled', false);
+        }
+        refresh();
+        startPoll();
+      },
+      error: function() {
+        alert('Ошибка запроса');
+        $('#button-run').prop('disabled', false);
+      }
+    });
+  });
+
+  setFields({{ initial|json_encode|raw }});
+})();
+</script>
+{{ footer }}

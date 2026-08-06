@@ -1,0 +1,24 @@
+{
+  "MARS_SITE_002_Client_Ops_Producer": {
+    "execute": "powershell.exe",
+    "nextRun": "08/07/2026 13:00:00",
+    "name": "MARS_SITE_002_Client_Ops_Producer",
+    "state": "Ready",
+    "arguments": "-NoProfile -ExecutionPolicy Bypass -File \"X:\\AI MARS STORAGE\\runtime-state\\client-ops-site-002-producer\\tmp\\run-client-ops-site-002-producer-scheduled.ps1\"",
+    "enabled": true,
+    "lastResult": 21,
+    "workingDirectory": "X:\\AI MARS STORAGE\\runtime-checkouts\\client-ops-site-002-producer\\repo",
+    "lastRun": "08/05/2026 13:00:00"
+  },
+  "MARS_SITE_002_Post_1C_Catalog_Monitor": {
+    "execute": "powershell.exe",
+    "nextRun": "08/07/2026 12:30:30",
+    "name": "MARS_SITE_002_Post_1C_Catalog_Monitor",
+    "state": "Ready",
+    "arguments": "-NoProfile -ExecutionPolicy Bypass -File \"X:\\AI MARS STORAGE\\runtime-checkouts\\site-002-monitor\\repo\\projects\\ocpilot\\sites\\site-002\\tools\\site-002-post-1c-monitor-runner.ps1\"",
+    "enabled": true,
+    "lastResult": 0,
+    "workingDirectory": "X:\\AI MARS STORAGE\\runtime-checkouts\\site-002-monitor\\repo",
+    "lastRun": "08/06/2026 13:04:04"
+  }
+}

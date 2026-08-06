@@ -14,8 +14,10 @@
  */
 declare(strict_types=1);
 
-const MARS_WRAPPER_OPERATION = 'SITE-002-PROD-CRON-RUN-REPORTS-DURATION-FIX-01';
-const MARS_WRAPPER_VERSION = '1.1.1';
+require_once __DIR__ . '/mars_1c_import_run_contract.php';
+
+const MARS_WRAPPER_OPERATION = 'SITE-002-PROD-D6G-EVENT-DRIVEN-1C-IMPORT-01';
+const MARS_WRAPPER_VERSION = '1.2.0';
 const MARS_CMD_CATALOG = '1c';
 const MARS_CMD_OFFERS = '1c_offers';
 const MARS_MAX_RUNTIME_SECONDS = 2700;
@@ -60,6 +62,10 @@ function mars_paths(): array
         'config_php' => $root . '/public_html/config.php',
         'cronjob_route' => 'index.php?route=common/cronjob',
         'wrapper_path' => $root . '/storage/mars-tools/cron/mars_1c_import_wrapper.php',
+        'runs_dir' => $root . '/storage/mars-tools/cron/runs',
+        'current_run' => $root . '/storage/mars-tools/cron/current-run.json',
+        'dispatch_inbox' => $root . '/storage/mars-tools/cron/dispatch-inbox',
+        'contract_path' => $root . '/storage/mars-tools/cron/mars_1c_import_run_contract.php',
     ];
 }
 
@@ -370,43 +376,41 @@ function mars_parse_mode(): string
         if (in_array('--run', $args, true)) {
             return 'run';
         }
+        if (in_array('--enqueue', $args, true)) {
+            return 'enqueue';
+        }
         return 'dry-run';
     }
     $mode = isset($_GET['mode']) ? (string) $_GET['mode'] : 'dry-run';
-    return in_array($mode, ['dry-run', 'status', 'run'], true) ? $mode : 'dry-run';
+    return in_array($mode, ['dry-run', 'status', 'run', 'enqueue'], true) ? $mode : 'dry-run';
 }
 
 function mars_lock_status(array $paths): array
 {
-    $lock = $paths['lock_file'];
-    if (!is_file($lock)) {
-        return ['locked' => false, 'pid' => null, 'started_at' => null, 'age_seconds' => null];
+    $parsed = mars_1c_parse_lock($paths);
+    if (empty($parsed['locked'])) {
+        return ['locked' => false, 'pid' => null, 'started_at' => null, 'age_seconds' => null, 'run_id' => null, 'phase' => null];
     }
-    $raw = (string) file_get_contents($lock);
-    $parts = explode('|', $raw);
-    $started = isset($parts[1]) ? (int) $parts[1] : 0;
-    $age = $started > 0 ? time() - $started : null;
-    return [
-        'locked' => true,
-        'pid' => isset($parts[0]) ? (int) $parts[0] : null,
-        'started_at' => $started ?: null,
-        'age_seconds' => $age,
-        'stale' => $age !== null && $age > MARS_STALE_LOCK_SECONDS,
-    ];
+    return $parsed;
 }
 
-function mars_acquire_lock(array $paths): bool
+function mars_acquire_lock(array $paths, string $runId = '', string $trigger = MARS_1C_TRIGGER_SCHEDULED, string $phase = MARS_1C_PHASE_STARTING): bool
 {
     $status = mars_lock_status($paths);
-    if ($status['locked'] && empty($status['stale'])) {
+    if (!empty($status['locked']) && empty($status['stale'])) {
+        // Active lock — reject overlap (do not kill active import).
         return false;
     }
-    if ($status['locked'] && !empty($status['stale'])) {
+    if (!empty($status['locked']) && !empty($status['stale'])) {
+        $alive = mars_1c_process_alive(isset($status['pid']) ? (int) $status['pid'] : null);
+        if ($alive) {
+            return false; // age exceeded but process still alive — do not steal
+        }
         @unlink($paths['lock_file']);
-        mars_log($paths, 'warn', 'Removed stale lock file');
+        mars_log($paths, 'warn', 'Removed stale lock after proven inactive process');
     }
     mars_ensure_dir(dirname($paths['lock_file']));
-    $payload = getmypid() . '|' . time();
+    $payload = mars_1c_lock_payload($paths, $runId !== '' ? $runId : mars_generate_run_id(), $phase, $trigger);
     $fh = fopen($paths['lock_file'], 'c+');
     if ($fh === false) {
         return false;
@@ -418,6 +422,9 @@ function mars_acquire_lock(array $paths): bool
     ftruncate($fh, 0);
     fwrite($fh, $payload);
     fflush($fh);
+    // Keep lock file; flock released on process end. Also rewrite without holding FH permanently:
+    fclose($fh);
+    file_put_contents($paths['lock_file'], $payload, LOCK_EX);
     return true;
 }
 
@@ -472,6 +479,127 @@ function mars_check_xml(array $paths): array
         'offers0_sample' => array_slice(array_map('basename', $offers), 0, 5),
     ];
 }
+
+
+function mars_parse_trigger(): string
+{
+    if (PHP_SAPI === 'cli') {
+        global $argv;
+        $args = $argv ?? [];
+        foreach ($args as $a) {
+            if (strpos($a, '--trigger=') === 0) {
+                $v = substr($a, strlen('--trigger='));
+                if ($v === MARS_1C_TRIGGER_ADMIN_MANUAL) {
+                    return MARS_1C_TRIGGER_ADMIN_MANUAL;
+                }
+            }
+        }
+        return MARS_1C_TRIGGER_SCHEDULED;
+    }
+    $t = isset($_REQUEST['trigger']) ? (string) $_REQUEST['trigger'] : MARS_1C_TRIGGER_SCHEDULED;
+    return $t === MARS_1C_TRIGGER_ADMIN_MANUAL ? MARS_1C_TRIGGER_ADMIN_MANUAL : MARS_1C_TRIGGER_SCHEDULED;
+}
+
+function mars_spawn_background_run(array $paths, string $runId, string $trigger): array
+{
+    $php = PHP_BINARY ?: 'php';
+    $script = $paths['wrapper_path'];
+    if (!is_file($script) && is_file(__FILE__)) {
+        $script = __FILE__;
+    }
+    $cmd = escapeshellarg($php) . ' ' . escapeshellarg($script)
+        . ' --run --trigger=' . escapeshellarg($trigger)
+        . ' --resume-run-id=' . escapeshellarg($runId);
+    $log = $paths['log_dir'] . '/background_' . preg_replace('/[^a-zA-Z0-9._-]/', '_', $runId) . '.log';
+    mars_ensure_dir($paths['log_dir']);
+    if (strncasecmp(PHP_OS, 'WIN', 3) === 0) {
+        $full = 'start /B "" ' . $cmd . ' > ' . escapeshellarg($log) . ' 2>&1';
+        pclose(popen($full, 'r'));
+        return ['ok' => true, 'method' => 'windows_start', 'log' => basename($log)];
+    }
+    $full = 'nohup ' . $cmd . ' > ' . escapeshellarg($log) . ' 2>&1 & echo $!';
+    $pidOut = [];
+    $code = 0;
+    @exec($full, $pidOut, $code);
+    return [
+        'ok' => $code === 0,
+        'method' => 'nohup',
+        'spawn_pid' => isset($pidOut[0]) ? (int) $pidOut[0] : null,
+        'log' => basename($log),
+    ];
+}
+
+function mars_mode_enqueue(array $paths, array $localCfg)
+{
+    $isCli = PHP_SAPI === 'cli';
+    $token = isset($_REQUEST['token']) ? (string) $_REQUEST['token'] : '';
+    $tokenOk = $localCfg['run_token'] !== '' && hash_equals($localCfg['run_token'], $token);
+    if (!$isCli && (!$localCfg['allow_http_run'] || !$tokenOk)) {
+        // Admin path uses OpenCart session — gateway may pass admin_enqueue flag via local include only.
+        if (empty($localCfg['allow_admin_enqueue']) || empty($GLOBALS['MARS_1C_ADMIN_ENQUEUE_AUTHORIZED'])) {
+            mars_output([
+                'operation' => MARS_WRAPPER_OPERATION,
+                'mode' => 'enqueue',
+                'error' => 'Enqueue denied',
+                'mutation' => false,
+            ], 403);
+        }
+    }
+
+    $trigger = mars_parse_trigger();
+    if ($trigger !== MARS_1C_TRIGGER_ADMIN_MANUAL) {
+        $trigger = MARS_1C_TRIGGER_ADMIN_MANUAL;
+    }
+
+    $lock = mars_lock_status($paths);
+    if (!empty($lock['locked']) && empty($lock['stale'])) {
+        mars_output([
+            'operation' => MARS_WRAPPER_OPERATION,
+            'mode' => 'enqueue',
+            'accepted' => false,
+            'error' => 'Импорт уже выполняется',
+            'lock' => $lock,
+            'current_run' => mars_1c_read_json(mars_1c_current_path($paths)),
+            'mutation' => false,
+        ], 409);
+    }
+
+    $runId = mars_generate_run_id();
+    $requestedAt = date('c');
+    $state = mars_1c_new_run_state($runId, $trigger, $requestedAt);
+    $state['current_phase'] = MARS_1C_PHASE_QUEUED;
+    mars_1c_write_run_state($paths, $state);
+
+    if (!mars_acquire_lock($paths, $runId, $trigger, MARS_1C_PHASE_QUEUED)) {
+        // Race
+        mars_output([
+            'operation' => MARS_WRAPPER_OPERATION,
+            'mode' => 'enqueue',
+            'accepted' => false,
+            'error' => 'Импорт уже выполняется',
+            'lock' => mars_lock_status($paths),
+            'mutation' => false,
+        ], 409);
+    }
+
+    $spawn = mars_spawn_background_run($paths, $runId, $trigger);
+    $state['current_phase'] = MARS_1C_PHASE_STARTING;
+    $state['pid'] = $spawn['spawn_pid'] ?? getmypid();
+    mars_1c_write_run_state($paths, $state);
+
+    mars_output([
+        'operation' => MARS_WRAPPER_OPERATION,
+        'mode' => 'enqueue',
+        'accepted' => true,
+        'run_id' => $runId,
+        'trigger_source' => $trigger,
+        'ui_status' => 'Ожидает запуска',
+        'spawn' => ['ok' => $spawn['ok'], 'method' => $spawn['method']],
+        'mutation' => true,
+        'note' => 'Background canonical runner started; HTTP returns immediately.',
+    ], 0);
+}
+
 
 function mars_mode_dry_run(array $paths, array $localCfg)
 {
@@ -550,6 +678,7 @@ function mars_mode_status(array $paths)
         ],
     ]);
 
+    $current = mars_1c_read_json(mars_1c_current_path($paths));
     $payload = [
         'operation' => MARS_WRAPPER_OPERATION,
         'mode' => 'status',
@@ -557,6 +686,7 @@ function mars_mode_status(array $paths)
         'run_id' => $runId,
         'report_file' => $reportPath,
         'lock' => mars_lock_status($paths),
+        'current_run' => $current,
         'last_log_lines' => mars_tail_log($paths),
         'log_file' => is_file(mars_log_path($paths)) ? mars_log_path($paths) : null,
         'reports_dir' => $paths['reports_dir'],
@@ -645,21 +775,52 @@ function mars_mode_run(array $paths, array $localCfg)
         ], 403);
     }
 
-    if (!mars_acquire_lock($paths)) {
+    $trigger = mars_parse_trigger();
+    $resumeId = null;
+    if (PHP_SAPI === 'cli') {
+        global $argv;
+        foreach (($argv ?? []) as $a) {
+            if (strpos($a, '--resume-run-id=') === 0) {
+                $resumeId = substr($a, strlen('--resume-run-id='));
+            }
+        }
+    } elseif (isset($_REQUEST['resume_run_id'])) {
+        $resumeId = (string) $_REQUEST['resume_run_id'];
+    }
+
+    $existingLock = mars_lock_status($paths);
+    $runId = $resumeId ?: mars_generate_run_id();
+    // If enqueue already holds lock for this run_id, continue; else acquire.
+    $needAcquire = true;
+    if (!empty($existingLock['locked']) && empty($existingLock['stale']) && ($existingLock['run_id'] ?? null) === $runId) {
+        $needAcquire = false;
+    }
+    if ($needAcquire && !mars_acquire_lock($paths, $runId, $trigger, MARS_1C_PHASE_STARTING)) {
         mars_output([
             'operation' => MARS_WRAPPER_OPERATION,
             'mode' => 'run',
-            'error' => 'Another import appears to be running (lock held).',
-            'lock' => mars_lock_status($paths),
+            'error' => 'Импорт уже выполняетсяИмпорт уже выполняется => mars_lock_status($paths),
+            'current_run' => mars_1c_read_json(mars_1c_current_path($paths)),
             'mutation' => false,
         ], 409);
     }
 
-    $runId = mars_generate_run_id();
     $lockBefore = mars_lock_status($paths);
     $xmlSummary = mars_xml_input_summary($paths);
     $started = microtime(true);
-    mars_log($paths, 'info', 'Run mode started');
+    $requestedAt = date('c');
+    $state = mars_1c_read_json(mars_1c_run_dir($paths, $runId) . '/run-state.json');
+    if (!$state) {
+        $state = mars_1c_new_run_state($runId, $trigger, $requestedAt);
+    }
+    $state['started_at'] = date('c');
+    $state['current_phase'] = MARS_1C_PHASE_STARTING;
+    $state['pid'] = getmypid();
+    $state['log_reference'] = 'logs/mars_1c_import_' . date('Ymd') . '.log';
+    $state['catalog_input_inventory'] = $xmlSummary['catalog'];
+    $state['offers_input_inventory'] = $xmlSummary['offers'];
+    mars_1c_write_run_state($paths, $state);
+    mars_log($paths, 'info', 'Run mode started run_id=' . $runId . ' trigger=' . $trigger);
     $steps = [];
     $dbFlags = [
         '1c_before' => 'NOT READ',
@@ -687,6 +848,8 @@ function mars_mode_run(array $paths, array $localCfg)
         $dbFlags['1c_before'] = mars_read_cron_active($db, MARS_CMD_CATALOG);
         $dbFlags['1c_offers_before'] = mars_read_cron_active($db, MARS_CMD_OFFERS);
 
+        $state['current_phase'] = MARS_1C_PHASE_CATALOG;
+        mars_1c_write_run_state($paths, $state);
         mars_log($paths, 'info', 'Step 1 — activate command ' . MARS_CMD_CATALOG);
         $step1Start = microtime(true);
         mars_set_cron_active($db, MARS_CMD_CATALOG, 1);
@@ -706,6 +869,8 @@ function mars_mode_run(array $paths, array $localCfg)
             throw new RuntimeException('Catalog import step failed or returned empty response');
         }
 
+        $state['current_phase'] = MARS_1C_PHASE_OFFERS;
+        mars_1c_write_run_state($paths, $state);
         mars_log($paths, 'info', 'Step 2 — activate command ' . MARS_CMD_OFFERS);
         $step2Start = microtime(true);
         mars_set_cron_active($db, MARS_CMD_OFFERS, 1);
@@ -725,11 +890,39 @@ function mars_mode_run(array $paths, array $localCfg)
             throw new RuntimeException('Offers import step failed or returned empty response');
         }
 
-        $finalStatus = 'SUCCESS';
-        mars_log($paths, 'info', 'Run mode finished OK');
-        mars_release_lock($paths);
-
+        $class = mars_1c_classify_terminal($stepCatalog, $stepOffers, $xmlSummary, false, null);
+        $finalStatus = $class['final_status'];
+        mars_log($paths, 'info', 'Run mode finished classification=' . $finalStatus);
         $runDurationSeconds = round(microtime(true) - $started, 2);
+        $completedAt = date('c');
+
+        $state['catalog_phase_result'] = $stepCatalog;
+        $state['offers_phase_result'] = $stepOffers;
+        $state['sanitized_error_summary'] = $class['sanitized_error_summary'];
+        $state['final_status'] = $finalStatus;
+        $state['completed_at'] = $completedAt;
+        $state['current_phase'] = MARS_1C_PHASE_TERMINAL;
+
+        $terminal = [
+            'schema_version' => MARS_1C_RUN_SCHEMA_VERSION,
+            'site_id' => MARS_1C_SITE_ID,
+            'run_id' => $runId,
+            'trigger_source' => $trigger,
+            'started_at' => $state['started_at'],
+            'completed_at' => $completedAt,
+            'duration_seconds' => $runDurationSeconds,
+            'final_status' => $finalStatus,
+            'report_class' => $class['report_class'],
+            'summary_code' => $class['summary_code'],
+            'catalog_phase_result' => $stepCatalog,
+            'offers_phase_result' => $stepOffers,
+            'catalog_input_inventory' => $xmlSummary['catalog'],
+            'offers_input_inventory' => $xmlSummary['offers'],
+            'sanitized_error_summary' => $class['sanitized_error_summary'],
+            'log_reference' => $state['log_reference'],
+        ];
+        mars_1c_write_terminal($paths, $state, $terminal);
+
         $report = mars_report_begin($paths, 'run', $runId, $started);
         $reportPath = $report['finalize']($finalStatus, [
             'lock_before' => $lockBefore,
@@ -740,17 +933,33 @@ function mars_mode_run(array $paths, array $localCfg)
             'db_flags' => $dbFlags,
             'duration_seconds' => $runDurationSeconds,
         ]);
+        $state['txt_report_path'] = $reportPath ? basename((string) $reportPath) : null;
+
+        $state['current_phase'] = MARS_1C_PHASE_DISPATCH;
+        $state['report_dispatch_status'] = 'PENDING';
+        mars_1c_write_run_state($paths, $state);
+        mars_1c_enqueue_dispatch($paths, $runId);
+        $state['report_dispatch_status'] = 'QUEUED';
+        $state['report_dispatch_at'] = date('c');
+        $state['current_phase'] = MARS_1C_PHASE_DONE;
+        mars_1c_write_run_state($paths, $state);
+
+        mars_release_lock($paths);
 
         mars_output([
             'operation' => MARS_WRAPPER_OPERATION,
             'mode' => 'run',
             'mutation' => true,
             'run_id' => $runId,
+            'trigger_source' => $trigger,
+            'final_status' => $finalStatus,
+            'report_class' => $class['report_class'],
             'report_file' => $reportPath,
             'duration_seconds' => $runDurationSeconds,
             'steps' => $steps,
+            'dispatch' => 'QUEUED',
             'legacy_preserved' => true,
-            'note' => 'Invoked Sergey legacy common/cronjob route twice with cron.active orchestration.',
+            'note' => 'Canonical runner terminal result written; completion dispatch queued.',
         ], 0);
     } catch (Throwable $e) {
         mars_log($paths, 'error', $e->getMessage());
@@ -771,10 +980,38 @@ function mars_mode_run(array $paths, array $localCfg)
         } elseif ($stepOffers['status'] === 'SKIPPED') {
             $stepOffers['status'] = 'SKIPPED';
         }
-        $finalStatus = empty($steps) ? 'FAILED' : 'PARTIAL';
-        mars_release_lock($paths);
-
+        $class = mars_1c_classify_terminal($stepCatalog, $stepOffers, $xmlSummary, true, $e->getMessage());
+        $finalStatus = $class['final_status'];
         $runDurationSeconds = round(microtime(true) - $started, 2);
+        $completedAt = date('c');
+        if (!isset($state) || !is_array($state)) {
+            $state = mars_1c_new_run_state($runId, $trigger ?? MARS_1C_TRIGGER_SCHEDULED, date('c'));
+        }
+        $state['catalog_phase_result'] = $stepCatalog;
+        $state['offers_phase_result'] = $stepOffers;
+        $state['sanitized_error_summary'] = $class['sanitized_error_summary'];
+        $state['final_status'] = $finalStatus;
+        $state['completed_at'] = $completedAt;
+        $terminal = [
+            'schema_version' => MARS_1C_RUN_SCHEMA_VERSION,
+            'site_id' => MARS_1C_SITE_ID,
+            'run_id' => $runId,
+            'trigger_source' => $trigger ?? MARS_1C_TRIGGER_SCHEDULED,
+            'started_at' => $state['started_at'] ?? null,
+            'completed_at' => $completedAt,
+            'duration_seconds' => $runDurationSeconds,
+            'final_status' => $finalStatus,
+            'report_class' => $class['report_class'],
+            'summary_code' => $class['summary_code'],
+            'catalog_phase_result' => $stepCatalog,
+            'offers_phase_result' => $stepOffers,
+            'catalog_input_inventory' => $xmlSummary['catalog'] ?? [],
+            'offers_input_inventory' => $xmlSummary['offers'] ?? [],
+            'sanitized_error_summary' => $class['sanitized_error_summary'],
+            'log_reference' => $state['log_reference'] ?? null,
+        ];
+        mars_1c_write_terminal($paths, $state, $terminal);
+
         $report = mars_report_begin($paths, 'run', $runId, $started);
         $reportPath = $report['finalize']($finalStatus, [
             'lock_before' => $lockBefore,
@@ -785,16 +1022,27 @@ function mars_mode_run(array $paths, array $localCfg)
             'db_flags' => $dbFlags,
             'duration_seconds' => $runDurationSeconds,
         ]);
+        $state['txt_report_path'] = $reportPath ? basename((string) $reportPath) : null;
+        $state['report_dispatch_status'] = 'PENDING';
+        mars_1c_write_run_state($paths, $state);
+        mars_1c_enqueue_dispatch($paths, $runId);
+        $state['report_dispatch_status'] = 'QUEUED';
+        $state['report_dispatch_at'] = date('c');
+        $state['current_phase'] = MARS_1C_PHASE_DONE;
+        mars_1c_write_run_state($paths, $state);
+        mars_release_lock($paths);
 
         mars_output([
             'operation' => MARS_WRAPPER_OPERATION,
             'mode' => 'run',
             'mutation' => true,
             'run_id' => $runId,
+            'final_status' => $finalStatus,
             'report_file' => $reportPath,
-            'error' => $e->getMessage(),
+            'error' => mars_1c_sanitize_error($e->getMessage()),
             'steps' => $steps,
             'duration_seconds' => $runDurationSeconds,
+            'dispatch' => 'QUEUED',
         ], 1);
     }
 }
@@ -807,6 +1055,9 @@ $mode = mars_parse_mode();
 switch ($mode) {
     case 'status':
         mars_mode_status($paths);
+        break;
+    case 'enqueue':
+        mars_mode_enqueue($paths, $localCfg);
         break;
     case 'run':
         mars_mode_run($paths, $localCfg);
