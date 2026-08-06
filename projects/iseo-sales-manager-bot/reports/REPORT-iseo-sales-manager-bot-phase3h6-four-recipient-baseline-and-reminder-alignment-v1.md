@@ -234,7 +234,7 @@ No credentials, Telegram IDs, customer PII, workbook IDs, or raw exports committ
 2. `af75319a` fix(iseo-sales-manager-bot): align reminders with four active recipients
 3. `00e60096` test(iseo-sales-manager-bot): prove four-recipient delivery and reminders
 4. `17ccda6b` docs(iseo-sales-manager-bot): establish four-recipient pre-ai soak baseline
-5. tip hash note commit (this wave) after push
+5. `f440915e` docs(iseo-sales-manager-bot): record phase 3h6 commit hashes
 
 ## 48. Push
 
