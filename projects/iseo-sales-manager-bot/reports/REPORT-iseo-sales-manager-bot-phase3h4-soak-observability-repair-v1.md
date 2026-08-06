@@ -183,13 +183,21 @@ No Telegram numeric IDs, usernames, emails, workbook IDs, raw exports, or screen
 
 ## 43. Commits
 
-1. `86296a85` fix(iseo-sales-manager-bot): restore reminder status response
-2. `3356975d` fix(iseo-sales-manager-bot): add truthful gmail poll heartbeat
-3. `074a1db4` fix(iseo-sales-manager-bot): align operational status timestamps
-4. `73bcae9c` docs(iseo-sales-manager-bot): restart pre-ai soak after observability repair
+1. `b86a32b6` fix(iseo-sales-manager-bot): restore reminder status response
+2. `041bdb3f` fix(iseo-sales-manager-bot): add truthful gmail poll heartbeat
+3. `5aac3a74` fix(iseo-sales-manager-bot): align operational status timestamps
+4. `c8258970` docs(iseo-sales-manager-bot): restart pre-ai soak after observability repair
+5. `0b35b235` docs(iseo-sales-manager-bot): record phase 3h4 commit hashes (pre-rebase tip; superseded by this alignment tip)
+
+Canonical tip after push alignment: see §44.
+
 ## 44. Push
 
-Not performed — documentation-only wave in agent worktree.
+Pushed to `origin/mars/canonical-post-recovery` (fast-forward after rebase onto `c59f8297`; no force). Tip at push: `0b35b235`. This alignment commit follows.
+
+Post-repair raw sha256 (Storage private, cited only):
+- Operational.dev `acf309a73759bd2e79225ce15a7ee966ca45f19144ad7b5807d802cee1bf3761`
+- Admin.dev `daffa1babea4edd4989ab283393f489b4cf8449a02e6d366f4d09feba49ea377`
 
 ## 45. Risks
 
@@ -199,7 +207,7 @@ Not performed — documentation-only wave in agent worktree.
 
 ## 46. SAFE UNKNOWN
 
-Exact post-repair workflow export sha256 not committed (private manifest only). Additional stable-cadence poll observation may still be running beyond the three cited executions.
+Operator visual Telegram confirmation of native Trigger-path `/reminder_status` (vs acceptance webhook using the same patched Code body) remains recommended. Stable cadence polls 24230/24232/24233 proven (~120–131s).
 
 ## 47. Remaining operator actions
 
