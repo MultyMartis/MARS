@@ -122,7 +122,7 @@ Ancestors verified: `d2665fac`, `5f5e0be4`, `84406d87`.
 
 ## 23. Push
 
-`origin/mars/canonical-post-recovery` @ `16fac937` (fast-forward from `84406d87`). Docs tip-hash follow-up may trail.
+`origin/mars/canonical-post-recovery` tip `53022026` (docs tip hashes). Fix commit `16fac937` (fast-forward from `84406d87`).
 
 ## 24. Remaining operator action
 
