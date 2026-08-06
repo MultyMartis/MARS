@@ -1,0 +1,27 @@
+{
+  "phase": "1B-D1",
+  "timestamp_utc": "2026-07-24T07:42:15.742Z",
+  "exact_name_count": 1,
+  "workflow_id": "tkM4H0G0gM3q9Foi",
+  "active": false,
+  "nodes": 10,
+  "versionId": "fc6c6801-0c0e-48b6-bdcc-4d8b4ae6c658",
+  "executions": 26,
+  "running": 0,
+  "max_execution_id": 3410,
+  "fingerprint_sha16": "1c68279bd2c55a6a",
+  "webhook": {
+    "authentication": "headerAuth",
+    "credential_id": "WKHmPaw6QBp7WnzP",
+    "credential_name": "MARS Client Ops Webhook Auth — bzpm.ru"
+  },
+  "telegram": {
+    "credential_id": "2bIC5376l7ElXb4B",
+    "credential_name": "MARS Client Ops Telegram — bzpm.ru",
+    "chat_id": "499423375"
+  },
+  "pattern_b": true,
+  "data_table_nodes": 0,
+  "dedupe_table_exact_name_count": 0,
+  "pre_gate_errors": []
+}

@@ -1,0 +1,47 @@
+{
+  "phase": "1B-D6F1B",
+  "gallery_timestamp": "2026-08-06T12-05-59-200Z",
+  "count": 4,
+  "scenarios": [
+    {
+      "scenario_id": "T1",
+      "scenario_name_ru": "Успешный импорт",
+      "severity": "OK",
+      "report_class": "CATALOG_AND_OFFERS_SUCCESS",
+      "event_id_redacted": "45c8b37c…",
+      "event_namespace": "mars.client-ops.d6f1b-acceptance.site-002.2026-08-06T12-05-59-200Z.T1",
+      "local_time": "06.08.2026, 19:03",
+      "message_text": "🧪 ТЕСТОВОЕ СООБЩЕНИЕ\n\nПроверяемый сценарий: Успешный импорт\n\n✅ Импорт 1С завершён успешно\n\nСайт: bzpm.ru\nВремя: 06.08.2026, 19:03\n\nКаталог обновлён.\nЦены и остатки обработаны.\nКритических ошибок не обнаружено."
+    },
+    {
+      "scenario_id": "T2",
+      "scenario_name_ru": "Каталог загружен, цены и остатки не получены",
+      "severity": "ATTENTION",
+      "report_class": "CATALOG_SUCCESS_OFFERS_INPUT_MISSING",
+      "event_id_redacted": "c61264c1…",
+      "event_namespace": "mars.client-ops.d6f1b-acceptance.site-002.2026-08-06T12-05-59-200Z.T2",
+      "local_time": "06.08.2026, 19:03",
+      "message_text": "🧪 ТЕСТОВОЕ СООБЩЕНИЕ\n\nПроверяемый сценарий: Каталог загружен, цены и остатки не получены\n\n⚠️ Импорт 1С выполнен не полностью\n\nСайт: bzpm.ru\nВремя: 06.08.2026, 19:03\n\nКаталог обработан успешно.\nФайл с ценами и остатками от 1С не получен.\n\nЦены и остатки товаров могли не обновиться.\n\nЧто проверить:\nвыгрузку предложений из 1С и наличие файла <code>offers0_*.xml</code>."
+    },
+    {
+      "scenario_id": "T3",
+      "scenario_name_ru": "Свежий импорт не обнаружен",
+      "severity": "ATTENTION",
+      "report_class": "NO_FRESH_IMPORT",
+      "event_id_redacted": "fbc2b258…",
+      "event_namespace": "mars.client-ops.d6f1b-acceptance.site-002.2026-08-06T12-05-59-200Z.T3",
+      "local_time": "06.08.2026, 19:03",
+      "message_text": "🧪 ТЕСТОВОЕ СООБЩЕНИЕ\n\nПроверяемый сценарий: Свежий импорт не обнаружен\n\n⚠️ Свежий импорт 1С не обнаружен\n\nСайт: bzpm.ru\nВремя проверки: 06.08.2026, 19:03\n\nВ ожидаемое время новый обмен с 1С не подтверждён.\n\nКаталог, цены и остатки могли остаться без обновления.\n\nЧто проверить:\nрасписание обмена и журнал выгрузки 1С."
+    },
+    {
+      "scenario_id": "T4",
+      "scenario_name_ru": "Ошибка импорта",
+      "severity": "FAILED",
+      "report_class": "IMPORT_ERROR",
+      "event_id_redacted": "fbd94cd3…",
+      "event_namespace": "mars.client-ops.d6f1b-acceptance.site-002.2026-08-06T12-05-59-200Z.T4",
+      "local_time": "06.08.2026, 19:03",
+      "message_text": "🧪 ТЕСТОВОЕ СООБЩЕНИЕ\n\nПроверяемый сценарий: Ошибка импорта\n\n❌ Импорт 1С завершился с ошибкой\n\nСайт: bzpm.ru\nВремя: 06.08.2026, 19:03\n\nОбмен не был завершён корректно.\nАктуальность каталога, цен и остатков не подтверждена.\n\nОшибка: Ошибка фазы импорта каталога\n\nЧто сделать:\nпроверить журнал импорта и устранить указанную ошибку."
+    }
+  ]
+}

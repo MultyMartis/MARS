@@ -1,0 +1,18 @@
+{
+  "site_id": "SITE-002",
+  "enabled_absent": true,
+  "producer_identity": "mars.client-ops.site-002.unattended-producer",
+  "phase": "1B-D6D3R",
+  "bytes_unchanged": true,
+  "config_hash": "159f79d5e57f1feef8833ea6453c82adc5b4914ca4d213321e8d6629bbfef4ba",
+  "file_sha256": "0F4C53D029CA337730F2A82B1FF5AB6BE2F5577D357BAB105956451EA3409390",
+  "path": "X:\\AI MARS STORAGE\\runtime-state\\client-ops-site-002-producer\\config\\kill-switch.json",
+  "tokens": [
+    "D6D3R_KILL_SWITCH_DRY_RUN_RECONFIRMED",
+    "D6D3R_ENABLED_MODE_NOT_AUTHORIZED"
+  ],
+  "schema_version": 1,
+  "exists": true,
+  "enabled_mode_authorized": false,
+  "mode": "DRY_RUN"
+}

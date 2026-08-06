@@ -1,0 +1,43 @@
+{
+  "phase": "1B-D6A2",
+  "action": "put",
+  "ok": true,
+  "pre_versionId": "3d2fd6fc-bc17-4e0f-b9e5-086c959afd29",
+  "post_versionId": "dc8746bf-df9c-425d-9b3f-4ace452ac5ef",
+  "pre_nodes": 17,
+  "post_nodes": 20,
+  "active": false,
+  "static_validation": {
+    "ok": true,
+    "errors": [],
+    "node_count": 20,
+    "node_names": [
+      "Webhook Intake",
+      "Capture Request Metadata",
+      "Process Client Ops Gates",
+      "IF Accepted Branch",
+      "Prepare Accepted Response",
+      "Prepare Rejected Response",
+      "Respond Accepted",
+      "Respond Rejected",
+      "Sanitized Internal Evidence",
+      "Telegram Notify Accepted",
+      "Prepare Dedupe Context",
+      "Dedupe Lookup",
+      "Dedupe Classify",
+      "IF Dedupe First Seen",
+      "Dedupe Claim Insert",
+      "Prepare Non-First-Seen Response",
+      "Respond Non-First-Seen",
+      "Classify Telegram Delivery Outcome",
+      "IF Delivery Finalize",
+      "Delivery Ledger Finalize Update"
+    ]
+  },
+  "credentials_unchanged": {
+    "auth": true,
+    "telegram": true,
+    "chat": true
+  },
+  "verdict": "D6A2_PRODUCTION_WORKFLOW_LEDGER_APPLIED"
+}

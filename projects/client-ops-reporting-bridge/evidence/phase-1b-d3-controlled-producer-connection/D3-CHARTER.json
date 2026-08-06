@@ -1,0 +1,22 @@
+{
+  "phase": "1B-D3",
+  "title": "Controlled Sequential Producer Connection and Synthetic Live POST",
+  "baseline_producer_commit": "ee065a77696528b8c8bcb2935f024ec4331e5a4a",
+  "workflow_id": "tkM4H0G0gM3q9Foi",
+  "workflow_name": "MARS Client Ops Bridge — bzpm.ru",
+  "table_id": "H6VYhwz7RXZCBMmu",
+  "table_name": "MARS Client Ops Dedupe — bzpm.ru",
+  "max_real_http_requests": 2,
+  "concurrency": 1,
+  "max_retries": 0,
+  "workflow_put_authorized": false,
+  "site_002_runtime_connection": false,
+  "scheduler": false,
+  "producer_marker": "mars-client-ops-producer-live-d3",
+  "authorized_live_mutations": {
+    "activation_changes": 2,
+    "producer_http_requests": "1_or_2",
+    "telegram_deliveries": 1,
+    "datatable_rows_via_workflow": 1
+  }
+}

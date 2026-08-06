@@ -1,0 +1,86 @@
+{
+  "producer_run_id": "29c58f03-493d-4228-92ea-cf2667b76b76",
+  "event_id": "c84e29bf-79b1-5aea-98c4-9dc8d651fc96",
+  "site_id": "SITE-002",
+  "status": "ATTENTION",
+  "observed_at": "2026-07-26T10:52:32Z",
+  "transport_mode": "http",
+  "dispatch_attempted": true,
+  "simulated_dispatch": false,
+  "http_status": 404,
+  "business_result": "REJECTED",
+  "dedupe_result": "NA",
+  "retry_decision": "TERMINAL_FAILURE",
+  "retry_count": 0,
+  "failure_category": "HTTP_400_AUTH_OR_VALIDATION",
+  "intake_accepted": false,
+  "telegram_delivery_known": false,
+  "telegram_message_id": null,
+  "n8n_execution_id": null,
+  "elapsed_ms": 1634,
+  "final_state": "VALIDATION_REJECTED",
+  "redaction_status": "redacted",
+  "network_calls": 1,
+  "automatic_retry": false,
+  "endpoint_identity": {
+    "host_class": "n8n-client-ops",
+    "route_configured": true,
+    "scheme": "https",
+    "host_approved": true,
+    "host_len": 19,
+    "path_prefix_ok": true,
+    "route_class_ok": true,
+    "port": null,
+    "query_present": false,
+    "fragment_present": false,
+    "userinfo_present": false
+  },
+  "request_sanitized": {
+    "method": "POST",
+    "host_class": "n8n-client-ops",
+    "route_configured": true,
+    "content_type": "application/json",
+    "auth_header_name": "X-MARS-Client-Ops-Token",
+    "auth_header_present": true,
+    "headers_redacted": {
+      "Content-Type": "application/json",
+      "X-MARS-Client-Ops-Token": "<redacted>"
+    },
+    "body_event_id": "c84e29bf-79b1-5aea-98c4-9dc8d651fc96",
+    "body_schema_name": "mars.client_ops.report",
+    "connect_timeout_ms": 5000,
+    "request_timeout_ms": 30000
+  },
+  "extra": {
+    "retry_plan": {
+      "event_id": "c84e29bf-79b1-5aea-98c4-9dc8d651fc96",
+      "same_event_id": true,
+      "envelope_event_id": "c84e29bf-79b1-5aea-98c4-9dc8d651fc96",
+      "retry_count_next": 0,
+      "automatic_retry": false,
+      "retry_decision": "TERMINAL_FAILURE",
+      "requires_manual_dedupe_check": false,
+      "dispatch_triggered": false
+    },
+    "transport_response": {
+      "ok": false,
+      "http_status": 404,
+      "error_class": null,
+      "simulated": false,
+      "network_calls": 1,
+      "body_keys": [
+        "hint",
+        "message"
+      ]
+    },
+    "real_network": true,
+    "phase": "1B-D5",
+    "d5_marker": "mars-client-ops-site002-real-source-d5",
+    "source_label": "site002-post-1c-run/2026-07-26_17-48-38",
+    "source_run_id": "2026-07-26_17-48-38",
+    "auth_header_present": true,
+    "auth_header_value": "<redacted>",
+    "charter_consumed": true
+  },
+  "ok": true
+}

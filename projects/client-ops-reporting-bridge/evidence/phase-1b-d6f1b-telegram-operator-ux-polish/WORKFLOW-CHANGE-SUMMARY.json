@@ -1,0 +1,11 @@
+{
+  "phase": "1B-D6F1B",
+  "changed": true,
+  "prior_versionId": "16fa9214-834a-44c5-93b1-1be64aa7461b",
+  "new_versionId": "9c1f936f-e2bb-4a2f-8372-c26257e982b7",
+  "active_before": true,
+  "active_after": true,
+  "node_count": 20,
+  "node": "Telegram Notify Accepted",
+  "change": "Telegram text: pass-through full Russian operator/test messages; production fallback uses compact UTC+07 Russian contract"
+}

@@ -1,0 +1,101 @@
+{
+  "phase": "1B-D3",
+  "mode": "apply-reconfirm",
+  "generated_at": "2026-07-24T20:05:29.041Z",
+  "preflight": {
+    "exact_name_count": 1,
+    "workflow": {
+      "id": "tkM4H0G0gM3q9Foi",
+      "name": "MARS Client Ops Bridge — bzpm.ru",
+      "active": false,
+      "versionId": "3d2fd6fc-bc17-4e0f-b9e5-086c959afd29",
+      "node_count": 17,
+      "has_schedule": false
+    },
+    "nodes": {
+      "count": 17,
+      "missing": [],
+      "extra": [],
+      "has_all_base": true,
+      "has_all_dedupe": true
+    },
+    "executions": {
+      "observable": true,
+      "count": 29,
+      "running": 0,
+      "max_id": 3413,
+      "known_ids": [
+        "3413",
+        "3412",
+        "3411",
+        "3410",
+        "3409",
+        "3406",
+        "3405",
+        "3404",
+        "3403",
+        "3402",
+        "3401",
+        "3400",
+        "3399",
+        "3398",
+        "3397",
+        "3396",
+        "3395",
+        "3394",
+        "3393",
+        "3392",
+        "3391",
+        "3390",
+        "3389",
+        "3388",
+        "3387",
+        "3386",
+        "3385",
+        "3384",
+        "3383"
+      ]
+    },
+    "table": {
+      "exact_name_count": 1,
+      "id": "H6VYhwz7RXZCBMmu",
+      "name": "MARS Client Ops Dedupe — bzpm.ru",
+      "row_count": 1
+    },
+    "credentials": {
+      "webhook_auth": {
+        "id": "WKHmPaw6QBp7WnzP",
+        "name": "MARS Client Ops Webhook Auth — bzpm.ru",
+        "id_ok": true,
+        "name_ok": true
+      },
+      "telegram": {
+        "id": "2bIC5376l7ElXb4B",
+        "name": "MARS Client Ops Telegram — bzpm.ru",
+        "chat_id": "499423375",
+        "id_ok": true,
+        "name_ok": true,
+        "chat_ok": true
+      },
+      "ok": true
+    },
+    "gates": {
+      "exact_name_count_1": true,
+      "active_false": true,
+      "nodes_17": true,
+      "version_exact": true,
+      "no_schedule": true,
+      "exec_count_29": true,
+      "running_0": true,
+      "table_name_count_1": true,
+      "table_id_exact": true,
+      "table_name_exact": true,
+      "table_rows_1": true,
+      "credentials_ok": true,
+      "nodes_inventory_ok": true
+    },
+    "blockers": [],
+    "ready_n8n": true
+  },
+  "readiness": "READY_FOR_ONE_CONTROLLED_SYNTHETIC_PRODUCER_POST"
+}

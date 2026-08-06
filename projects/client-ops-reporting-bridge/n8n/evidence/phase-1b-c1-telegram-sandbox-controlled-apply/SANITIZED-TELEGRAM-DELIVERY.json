@@ -1,0 +1,18 @@
+{
+  "phase": "1B-C1",
+  "attempts": 1,
+  "delivered": 1,
+  "duplicates": 0,
+  "chat_id": 499423375,
+  "chat_type": "private",
+  "credential_id": "2bIC5376l7ElXb4B",
+  "credential_name": "MARS Client Ops Telegram — bzpm.ru",
+  "operation": "sendMessage",
+  "message_id": 4,
+  "node_name": "Telegram Notify Accepted",
+  "synthetic_marker_required": "Тестовое уведомление MARS. Production SITE-002 не затронут.",
+  "production_data": false,
+  "secrets_in_message": false,
+  "direct_telegram_api_calls": 0,
+  "raw_telegram_response_persisted": false
+}

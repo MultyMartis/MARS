@@ -1,0 +1,65 @@
+{
+  "id": "03-valid-failed",
+  "title": "Valid FAILED",
+  "input": {
+    "headers": {
+      "content-type": "application/json",
+      "x-mars-client-ops-token": "SYNTHETIC_CLIENT_OPS_HARNESS_SECRET_v1_NOT_A_REAL_CREDENTIAL"
+    },
+    "body": {
+      "schema_name": "mars.client_ops.report",
+      "schema_version": "1.0",
+      "event_id": "702b3d9b-7f88-599e-8c97-ab67aba8e668",
+      "event_type": "site.post_1c_monitor",
+      "generated_at": "2026-07-20T15:10:00Z",
+      "observed_at": "2026-07-20T15:05:00Z",
+      "environment": "production",
+      "site": {
+        "site_id": "SITE-002",
+        "site_name": "ZPM",
+        "domain": "bzpm.ru"
+      },
+      "producer": {
+        "name": "ocpilot.site-002.post-1c-exporter",
+        "version": "1.0"
+      },
+      "run": {
+        "run_id": "2026-07-20_18-05-00",
+        "source_status": "FAILURE_REVIEW_REQUIRED",
+        "normalized_status": "FAILED",
+        "summary_code": "SOURCE_EXECUTION_FAILED",
+        "reason_codes": [
+          "BASELINE_DELTA_ZERO"
+        ]
+      },
+      "action": {
+        "required": true,
+        "code": "REVIEW_SOURCE_FAILURE",
+        "text": "review monitor failure"
+      },
+      "metrics": {
+        "baseline_count": 100,
+        "current_count": 100,
+        "added_urls": 0,
+        "removed_urls": 0,
+        "onboarding_needed_count": 0
+      },
+      "freshness": {
+        "age_seconds": 300,
+        "stale": false
+      },
+      "security": {
+        "classification": "internal",
+        "contains_secrets": false,
+        "redacted": true
+      }
+    }
+  },
+  "expect": {
+    "http_status": 202,
+    "response": {
+      "ok": true,
+      "result": "ACCEPTED"
+    }
+  }
+}

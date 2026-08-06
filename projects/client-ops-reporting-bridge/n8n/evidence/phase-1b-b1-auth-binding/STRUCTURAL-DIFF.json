@@ -1,0 +1,84 @@
+{
+  "client_managed_auth_delta_only": true,
+  "unexpected_differences": [],
+  "areas": [
+    {
+      "area": "workflow_id",
+      "expected": "tkM4H0G0gM3q9Foi",
+      "live": "tkM4H0G0gM3q9Foi",
+      "state": "MATCH"
+    },
+    {
+      "area": "name",
+      "expected": "MARS Client Ops Bridge — bzpm.ru",
+      "live": "MARS Client Ops Bridge — bzpm.ru",
+      "state": "MATCH"
+    },
+    {
+      "area": "active",
+      "expected": false,
+      "live": false,
+      "state": "MATCH"
+    },
+    {
+      "area": "node_count",
+      "expected": 9,
+      "live": 9,
+      "state": "MATCH"
+    },
+    {
+      "area": "webhook_authentication",
+      "expected": "headerAuth",
+      "live": "headerAuth",
+      "state": "MATCH"
+    },
+    {
+      "area": "credential_reference",
+      "expected": {
+        "id": "WKHmPaw6QBp7WnzP",
+        "name": "MARS Client Ops Webhook Auth — bzpm.ru",
+        "type": "httpHeaderAuth"
+      },
+      "live": {
+        "id": "WKHmPaw6QBp7WnzP",
+        "name": "MARS Client Ops Webhook Auth — bzpm.ru",
+        "type": "httpHeaderAuth"
+      },
+      "state": "MATCH"
+    },
+    {
+      "area": "auth_placeholder",
+      "expected": "absent",
+      "live": "absent",
+      "state": "MATCH"
+    },
+    {
+      "area": "dedupe",
+      "expected": "DEDUPE_DEFERRED_SANDBOX",
+      "live": "DEDUPE_DEFERRED_SANDBOX",
+      "state": "MATCH"
+    },
+    {
+      "area": "telegram",
+      "expected": "absent",
+      "live": "absent",
+      "state": "MATCH"
+    },
+    {
+      "area": "connections",
+      "expected": "unchanged",
+      "live": "unchanged",
+      "state": "MATCH"
+    }
+  ],
+  "server_managed_fields_changed": {
+    "versionId": {
+      "before": "6d44f0ee-3060-43fa-90d6-8a01f7c5b2a7",
+      "after": "6c6d1282-0105-47e1-a3f5-b070cec0664b"
+    },
+    "updatedAt": {
+      "before": "2026-07-23T17:32:40.294Z",
+      "after": "2026-07-23T18:21:07.808Z"
+    }
+  }
+}

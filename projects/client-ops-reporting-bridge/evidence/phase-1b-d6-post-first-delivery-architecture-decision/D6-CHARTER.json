@@ -1,0 +1,67 @@
+{
+  "phase": "1B-D6",
+  "title": "Client Ops Post-First-Delivery Architecture Decision Charter",
+  "type": "DESIGN_ARCHITECTURE_DECISION_ONLY",
+  "accepted_evidence_baseline_commit": "e9c9be59f643e66970930e31339431acb8077b55",
+  "runtime_pin": "8bb6e8f0f56388c12fdb013cf4cc1b27eb84331c",
+  "first_verified_event_id": "c84e29bf-79b1-5aea-98c4-9dc8d651fc96",
+  "first_verified_run_id": "2026-07-26_17-48-38",
+  "allowed": [
+    "source_inspection",
+    "tests_offline",
+    "get_only_n8n",
+    "get_only_datatable",
+    "repo_history_inspection",
+    "static_runtime_readonly",
+    "architecture_documentation"
+  ],
+  "forbidden": [
+    "workflow_edits",
+    "workflow_activation",
+    "producer_post",
+    "webhook_call",
+    "telegram",
+    "datatable_mutation",
+    "code_implementation_A_E",
+    "runtime_modification",
+    "scheduler_execution",
+    "monitor_execution",
+    "git_commit",
+    "git_push",
+    "git_staging"
+  ],
+  "mutation_caps": {
+    "site002_production_writes": 0,
+    "ftp_sftp_ssh_writes": 0,
+    "db_writes": 0,
+    "monitor_executions": 0,
+    "scheduler_executions": 0,
+    "scheduler_config_changes": 0,
+    "runtime_modifications": 0,
+    "producer_http_requests": 0,
+    "webhook_calls": 0,
+    "n8n_content_mutations": 0,
+    "n8n_activation_changes": 0,
+    "n8n_executions_added": 0,
+    "datatable_mutations": 0,
+    "telegram_calls": 0,
+    "credential_mutations": 0,
+    "ai_api_calls": 0,
+    "main_index_mutations": 0,
+    "git_commits": 0,
+    "git_pushes": 0
+  },
+  "historical_charters_immutable": {
+    "OLD_D5": { "state": "UNUSED", "real_http_requests": 0 },
+    "D5R2": {
+      "state": "CONSUMED",
+      "real_http_requests": 1,
+      "outcome": "HTTP_404_BEFORE_INTAKE"
+    },
+    "D5R2A": {
+      "state": "CONSUMED",
+      "real_http_requests": 1,
+      "outcome": "HTTP_202_FIRST_SEEN_TELEGRAM_7"
+    }
+  }
+}

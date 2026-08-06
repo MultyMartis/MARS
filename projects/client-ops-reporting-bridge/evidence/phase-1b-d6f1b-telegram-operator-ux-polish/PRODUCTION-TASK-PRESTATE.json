@@ -1,0 +1,21 @@
+{
+  "captured_at": "2026-08-06T19:02:42.6564151+07:00",
+  "phase": "1B-D6F1B",
+  "monitor": {
+    "next_run": "08/07/2026 12:30:30",
+    "name": "MARS_SITE_002_Post_1C_Catalog_Monitor",
+    "state": "Ready",
+    "last_result": 0,
+    "last_run": "08/06/2026 13:04:04"
+  },
+  "kill_switch_mode": "ENABLED",
+  "max_concurrency": 1,
+  "automatic_retries": 0,
+  "producer": {
+    "next_run": "08/07/2026 13:00:00",
+    "name": "MARS_SITE_002_Client_Ops_Producer",
+    "state": "Ready",
+    "last_result": 21,
+    "last_run": "08/05/2026 13:00:00"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "phase": "1B-D6E",
+  "title": "Retry and Concurrency Policy Binding",
+  "live_apply_authorized": false,
+  "workstream_order": [
+    "A",
+    "B",
+    "C",
+    "E",
+    "D"
+  ],
+  "baselines": {
+    "A": "12e4c6ad1f4199458b6f091d084f33ca5f8a965d",
+    "B": "94d06c05ea79eb22780588d91064006c3edf2a05",
+    "C": "79c2071dd8ae8096506d45bc189e1f732b310d35"
+  },
+  "defaults": {
+    "automatic_retries_enabled": false,
+    "max_automatic_retries": 0,
+    "max_safe_concurrency": 1,
+    "ambiguity_default": "RECONCILE_BEFORE_RETRY"
+  },
+  "decision_values": [
+    "SAFE_TO_RETRY",
+    "UNSAFE_TO_RETRY",
+    "RECONCILE_BEFORE_RETRY",
+    "FINAL_FAILURE"
+  ],
+  "forbidden": [
+    "automatic_retry_loop",
+    "production_webhook",
+    "activation",
+    "telegram_send",
+    "data_table_mutation",
+    "unattended_mode",
+    "workstream_D",
+    "historical_d5r2a_row_reconciliation_apply"
+  ],
+  "next_phase": "Phase 1B-D6E2 \u2014 Retry and Reconciliation Policy Production Read-Only Verification"
+}

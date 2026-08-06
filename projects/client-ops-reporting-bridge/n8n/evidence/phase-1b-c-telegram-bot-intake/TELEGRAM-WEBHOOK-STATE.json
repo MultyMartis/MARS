@@ -1,0 +1,17 @@
+{
+  "phase": "1B-C0R2",
+  "getWebhookInfo_calls": 1,
+  "webhook_configured": false,
+  "url_exposed": false,
+  "url_value": "",
+  "has_custom_certificate": false,
+  "pending_update_count": 1,
+  "last_error_date": null,
+  "last_error_message_class": null,
+  "max_connections": null,
+  "ip_address_present": false,
+  "verdict": "TELEGRAM_WEBHOOK_CLEAR",
+  "getUpdates_authorized_after_gate": true,
+  "mutation_calls": 0,
+  "note": "Reconfirmed clear webhook before Phase 1B-C0R2 getUpdates final retry. Pending updates positive after operator Start. No setWebhook/deleteWebhook performed."
+}

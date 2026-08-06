@@ -1,0 +1,17 @@
+{
+  "phase": "1B-D5",
+  "approved": false,
+  "verdict": "REAL_SOURCE_PREVIEW_NOT_APPROVED_FOR_LIVE_POST",
+  "pre_live_readiness": "NOT_READY_FOR_ONE_MANUAL_REAL_SOURCE_POST",
+  "selected_for_live": null,
+  "primary_inspected": "candidate1",
+  "rejection_basis": [
+    "candidate1_SOURCE_ARTIFACT_CONFLICT",
+    "candidate2_SOURCE_REPORT_STALE",
+    "candidate3_SOURCE_REPORT_STALE"
+  ],
+  "live_phrases_authorized": false,
+  "monitor_execution_recommended": false,
+  "scheduler_recommended": false,
+  "next_recommendation": "Phase 1B-D5R — SITE-002 Monitor Classification Authority Alignment and Fresh Safe-Source Reassessment"
+}

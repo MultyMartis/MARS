@@ -1,0 +1,32 @@
+{
+  "verdict": "TELEGRAM_N8N_CREDENTIAL_SCHEMA_CONFIRMED",
+  "api_host": "n8n.ai-metacode.com",
+  "credential_type": "telegramApi",
+  "create_endpoint": "POST /api/v1/credentials",
+  "list_endpoint": "GET /api/v1/credentials",
+  "schema_endpoint": "GET /api/v1/credentials/schema/telegramApi",
+  "data_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [],
+    "properties": {
+      "accessToken": { "type": "string", "role": "bot_token_field" },
+      "baseUrl": { "type": "string", "role": "optional_override", "required_for_create": false }
+    }
+  },
+  "token_field": "accessToken",
+  "baseUrl_required": false,
+  "metadata_excludes_token": true,
+  "telegram_node_type": "n8n-nodes-base.telegram",
+  "telegram_node_typeVersions_evidenced": ["1", "1.2"],
+  "credential_reference_key": "telegramApi",
+  "sendMessage_support": {
+    "chatId": true,
+    "text": true,
+    "additionalFields": true,
+    "parse_mode_via_additionalFields": "SAFE_UNKNOWN_DEFAULT_prefer_plain",
+    "disable_web_page_preview": "via_additionalFields_expected_metabot_precedent"
+  },
+  "metabot_precedent": "workflow-sanitized-legacy.json and pc14-fu03 Telegram sendMessage nodes use credentials.telegramApi",
+  "operator_ui_required": false
+}

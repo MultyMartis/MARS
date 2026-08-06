@@ -1,0 +1,11 @@
+{
+  "webhook_base": "https://n8n.example.invalid",
+  "webhook_route": "/webhook/client-ops-PLACEHOLDER",
+  "request_timeout_ms": 30000,
+  "connect_timeout_ms": 5000,
+  "environment": "sandbox",
+  "site_id": "SITE-002",
+  "max_retries": 0,
+  "concurrency": 1,
+  "host_class": "n8n-client-ops"
+}

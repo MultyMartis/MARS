@@ -1,0 +1,21 @@
+{
+  "phase": "1B-D6D2",
+  "authorized": [
+    "dedicated_producer_runtime_deployment",
+    "kill_switch_DRY_RUN",
+    "bootstrap_boundary",
+    "one_manual_DRY_RUN",
+    "GET_only_client_ops"
+  ],
+  "forbidden": [
+    "ENABLED",
+    "scheduler_creation",
+    "webhook_POST",
+    "Telegram",
+    "Data_Table_mutation",
+    "activation",
+    "commit",
+    "push",
+    "monitor_execution"
+  ]
+}

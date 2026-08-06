@@ -1,0 +1,34 @@
+{
+  "phase": "1B-D0",
+  "probe": "GET_ONLY",
+  "openapi_path": "/api/v1/openapi.yml",
+  "openapi_status": 200,
+  "legacy_data_store_in_openapi": false,
+  "data_table_in_openapi": true,
+  "static_data_mentioned_in_openapi": true,
+  "data_table_api_paths_documented": [
+    "/api/v1/data-tables",
+    "/api/v1/data-tables/{dataTableId}",
+    "/api/v1/data-tables/{dataTableId}/rows",
+    "/api/v1/data-tables/{dataTableId}/rows/update",
+    "/api/v1/data-tables/{dataTableId}/rows/upsert",
+    "/api/v1/data-tables/{dataTableId}/rows/delete"
+  ],
+  "list_data_tables": {
+    "method": "GET",
+    "path": "/api/v1/data-tables",
+    "status": 200,
+    "count": 0,
+    "client_ops_dedupe_table_exists": false
+  },
+  "upsert_documented": true,
+  "atomic_check_and_set_proven": false,
+  "node_type_for_workflow_data_table": "SAFE_UNKNOWN",
+  "classification": {
+    "installed_api_surface": "PROVEN",
+    "usable_as_durable_dedupe_store": "PROPOSED",
+    "concurrency_atomicity": "SAFE_UNKNOWN",
+    "workflow_node_binding": "SAFE_UNKNOWN"
+  },
+  "recommendation_input": "Prefer n8n Data Table as primary durable dedupe candidate; prove upsert atomicity and workflow node syntax in Phase 1B-D1 before runtime connection."
+}

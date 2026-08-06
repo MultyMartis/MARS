@@ -1,0 +1,20 @@
+{
+  "phase": "1B-D6C2B",
+  "mode": "OFFLINE_EVIDENCE_BASELINE_COMMIT_ONLY",
+  "workstream": "C",
+  "roadmap": "A_TO_B_TO_C_TO_E_TO_D",
+  "base_head": "3b35673f2a5275d556a24f2642c8cc3814bfca1d",
+  "allow_production_mutation": false,
+  "allow_workflow_activation": false,
+  "allow_webhook": false,
+  "allow_telegram": false,
+  "allow_data_table_mutation": false,
+  "allow_push": false,
+  "required_main_index_untouched": true,
+  "pre_existing_main_staged_state": {
+    "files_changed": 213,
+    "insertions": 74,
+    "deletions": 12674,
+    "sha256": "cfe8d424640779627668b56d266f1b92c11b11d033963d2599028cdf96029049"
+  }
+}

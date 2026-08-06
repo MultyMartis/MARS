@@ -1,0 +1,32 @@
+{
+  "phase": "1B-D5R",
+  "precheck": {
+    "workflow_id": "tkM4H0G0gM3q9Foi",
+    "workflow_name": "MARS Client Ops Bridge — bzpm.ru",
+    "active": false,
+    "nodes": 17,
+    "versionId": "3d2fd6fc-bc17-4e0f-b9e5-086c959afd29",
+    "executions_count": 31,
+    "running": 0,
+    "has_schedule_node": false
+  },
+  "datatable": {
+    "id": "H6VYhwz7RXZCBMmu",
+    "name": "MARS Client Ops Dedupe — bzpm.ru",
+    "columns": 15,
+    "rows": 2,
+    "event_ids_present": [
+      "1e8673d0-2b47-4950-89cb-350f335d5d7f",
+      "3c66aedb-e1ea-55dc-aa56-32fa3810dcab"
+    ]
+  },
+  "mutations": {
+    "activation_changes": 0,
+    "workflow_updates": 0,
+    "datatable_row_mutations": 0,
+    "producer_http": 0,
+    "telegram": 0
+  },
+  "method": "GET_ONLY",
+  "note": "D5 candidate event_ids not present in table rows (unseen); no POST performed"
+}

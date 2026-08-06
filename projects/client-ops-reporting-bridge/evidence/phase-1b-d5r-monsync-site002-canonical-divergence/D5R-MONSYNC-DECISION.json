@@ -1,0 +1,33 @@
+{
+  "phase": "1B-D5R-MONSYNC",
+  "decision": "READY_FOR_SITE002_CLEAN_RUNTIME_RESTORATION_FROM_RECONCILED_COMMIT",
+  "final_verdict": "COMPLETE — SITE-002 MONITOR BASELINE 1737 AND RUNNER AUTHORITY REPAIR RECONCILED INTO ONE CLEAN COMMITTED RUNTIME TARGET",
+  "gates": {
+    "ORIGIN_MONITOR_BASELINE_AUTHORITY_CONFIRMED": true,
+    "MONITOR_BASELINE_DELTA_ISOLATABLE": true,
+    "CLEAN_GIT_SYNC_WORKTREE_READY": true,
+    "MONITOR_BASELINE_1737_INTEGRATED": true,
+    "RUNNER_AUTHORITY_REPAIR_PRESERVED": true,
+    "PROPOSED_RUNTIME_TARGET_READY": true,
+    "CLEAN_COMMITTED_RUNTIME_TARGET_CREATED": true,
+    "MAIN_INDEX_UNTOUCHED_BY_MONSYNC": true
+  },
+  "authority": {
+    "origin_monitor_commit": "af5f3fcae588cdf0631ae7b3a4b7b7d48f404ef6",
+    "origin_monitor_blob": "9c0272f6271a666cd50bad501779b8468c03e68c",
+    "runner_repair_commit": "9a48e93bdc46cd1a0a05153b9e4588ee23cf81d7",
+    "runner_blob": "a96b7aefbfd337d9eff9398c7843c731331623e5",
+    "harness_blob": "a125ce314023169831adbe78134e12026f1d659e",
+    "local_base_head": "a6802b1abd78af4128844d868227919a3b17b308"
+  },
+  "mond_fresh_artifact": {
+    "run_id": "2026-07-26_17-48-38",
+    "event_id": "c84e29bf-79b1-5aea-98c4-9dc8d651fc96",
+    "modifications": 0,
+    "reruns": 0
+  },
+  "push": false,
+  "origin_contains_reconciliation": false,
+  "runtime_checkout_restored": false,
+  "next_phase": "Phase 1B-D5R-MONRESTORE — SITE-002 Clean Runtime Reconstruction from Reconciled Canonical Commit"
+}

@@ -1,0 +1,9 @@
+{
+  "method": "control-plane GET workflow after activation: active=true + webhook node webhookId present + established n8n production webhook semantics (no probe POST)",
+  "active": true,
+  "webhook_nodes": 4,
+  "webhook_id_present": true,
+  "webhook_path_configured": true,
+  "probe_post": false,
+  "verdict": "D5R2A_PRODUCTION_WEBHOOK_READY"
+}

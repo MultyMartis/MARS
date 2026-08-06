@@ -1,0 +1,19 @@
+{
+  "http_status_producer_console": null,
+  "producer_stdout_parse": "FAILED",
+  "recovery_basis": [
+    "execution 3416 mode=webhook status=success",
+    "node Respond Accepted execution_status=success",
+    "Data Table intake_state=FIRST_SEEN for event",
+    "established Client Ops Respond Accepted returns HTTP 202"
+  ],
+  "recovery_method": "GET_ONLY_N8N_EXECUTION",
+  "real_http_requests": 1,
+  "business_result": "INTAKE_ACCEPTED",
+  "phase": "1B-D5R2A",
+  "http_status_recovered": 202,
+  "intake_accepted": true,
+  "interpretation": "HTTP_202_INTAKE_ACCEPTED_RECOVERED_VIA_GET_ONLY — producer stdout JSON parse failed; no retry; delivery verified via GET-only",
+  "dedupe_result": "FIRST_SEEN",
+  "retry_count": 0
+}

@@ -1,0 +1,38 @@
+{
+  "phase": "1B-C1",
+  "title": "Telegram Sandbox Integration Controlled Apply",
+  "workflow_id": "tkM4H0G0gM3q9Foi",
+  "workflow_name": "MARS Client Ops Bridge — bzpm.ru",
+  "pattern": "B_RESPONSE_FIRST_THEN_TELEGRAM",
+  "confirmation_phrases": {
+    "apply": "APPLY CLIENT OPS TELEGRAM SANDBOX INTEGRATION BZPM",
+    "activate": "ACTIVATE CLIENT OPS TELEGRAM SANDBOX TEST BZPM",
+    "post": "SEND ONE CLIENT OPS TELEGRAM SANDBOX TEST BZPM",
+    "deactivate": "DEACTIVATE CLIENT OPS TELEGRAM SANDBOX TEST BZPM",
+    "rollback": "ROLL BACK CLIENT OPS TELEGRAM SANDBOX INTEGRATION BZPM"
+  },
+  "authorized_live_operations": [
+    "GET workflow/credentials",
+    "one workflow PUT",
+    "one activation",
+    "one authenticated synthetic POST",
+    "execution metadata inspect for resulting execution only",
+    "one deactivation",
+    "GET final state",
+    "emergency deactivation retry if needed"
+  ],
+  "forbidden": [
+    "credential create/update/delete",
+    "direct Telegram API",
+    "SITE-002 monitor/exporter/scheduler/1C",
+    "commit/push",
+    "second POST",
+    "matrix replay"
+  ],
+  "telegram_credential_id": "2bIC5376l7ElXb4B",
+  "telegram_credential_name": "MARS Client Ops Telegram — bzpm.ru",
+  "webhook_credential_id": "WKHmPaw6QBp7WnzP",
+  "bot_id": 8852310960,
+  "bot_username": "monitor_bzpm_metacode_bot",
+  "baseline_commit": "6031557dafed42596cb62046757aa6c5c4581c47"
+}

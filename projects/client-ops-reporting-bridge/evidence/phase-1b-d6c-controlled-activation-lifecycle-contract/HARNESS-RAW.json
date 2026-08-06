@@ -1,0 +1,137 @@
+{
+  "phase": "1B-D6C",
+  "harness": "d6c-activation-lifecycle-harness",
+  "total": 30,
+  "passed": 30,
+  "failed": 0,
+  "results": [
+    {
+      "id": "C1",
+      "ok": true
+    },
+    {
+      "id": "C2",
+      "ok": true
+    },
+    {
+      "id": "C3",
+      "ok": true
+    },
+    {
+      "id": "C4",
+      "ok": true
+    },
+    {
+      "id": "C5",
+      "ok": true
+    },
+    {
+      "id": "C6",
+      "ok": true
+    },
+    {
+      "id": "C7",
+      "ok": true
+    },
+    {
+      "id": "C8",
+      "ok": true
+    },
+    {
+      "id": "C9",
+      "ok": true
+    },
+    {
+      "id": "C10",
+      "ok": true
+    },
+    {
+      "id": "C11",
+      "ok": true
+    },
+    {
+      "id": "C12",
+      "ok": true
+    },
+    {
+      "id": "C13",
+      "ok": true
+    },
+    {
+      "id": "C14",
+      "ok": true
+    },
+    {
+      "id": "C15",
+      "ok": true
+    },
+    {
+      "id": "C16",
+      "ok": true
+    },
+    {
+      "id": "C17",
+      "ok": true
+    },
+    {
+      "id": "C18",
+      "ok": true
+    },
+    {
+      "id": "C19",
+      "ok": true
+    },
+    {
+      "id": "C20",
+      "ok": true
+    },
+    {
+      "id": "C21",
+      "ok": true
+    },
+    {
+      "id": "C22",
+      "ok": true
+    },
+    {
+      "id": "C23",
+      "ok": true
+    },
+    {
+      "id": "C24",
+      "ok": true
+    },
+    {
+      "id": "C25",
+      "ok": true
+    },
+    {
+      "id": "C26",
+      "ok": true
+    },
+    {
+      "id": "C27",
+      "ok": true
+    },
+    {
+      "id": "C28",
+      "ok": true
+    },
+    {
+      "id": "C29",
+      "ok": true
+    },
+    {
+      "id": "C30",
+      "ok": true
+    }
+  ],
+  "invariants": {
+    "max_retries": 0,
+    "max_concurrency": 1,
+    "stale_after": 93600,
+    "workflow_id": "tkM4H0G0gM3q9Foi",
+    "model": "HYBRID_C1_TO_C3_BOUNDED"
+  },
+  "verdict": "D6C_OFFLINE_LIFECYCLE_HARNESS_PASS"
+}

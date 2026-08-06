@@ -1,0 +1,38 @@
+{
+  "phase": "1B-D5",
+  "mode": "adapter_dry_run_preview_only",
+  "network_calls": 0,
+  "storage_mutations": 0,
+  "monitor_executions": 0,
+  "raw_logs_read": 0,
+  "source_root_class": "STORAGE/ocpilot/.../scheduled-monitors/post-1c/",
+  "primary_inspected": "candidate1",
+  "primary_label": "site002-post-1c-run/2026-07-26_12-30-02",
+  "provenance": "REAL_EXISTING_SITE002_MONITOR_ARTIFACT",
+  "observed_at": "2026-07-26T05:33:06Z",
+  "monitor_classification": "ONBOARDING_REQUIRED",
+  "run_summary_classification": "NO_ACTION_REQUIRED",
+  "adapter_summary_code": "SOURCE_ARTIFACT_CONFLICT",
+  "client_ops_status": "BLOCKED",
+  "event_id": "e30ef970-7ea1-561b-ac2d-411201ba04c8",
+  "distributable_for_live": false,
+  "secrets_present": false,
+  "absolute_storage_paths_present": false,
+  "other_candidates_summarized": [
+    {
+      "id": "candidate2",
+      "label": "site002-post-1c-run/2026-07-20_22-32-43",
+      "adapter_summary_code": "SOURCE_REPORT_STALE",
+      "client_ops_status": "BLOCKED",
+      "event_id": "b819e684-8a5e-5793-8b91-4543b43fa52f"
+    },
+    {
+      "id": "candidate3",
+      "label": "site002-post-1c-run/2026-07-20_12-45-01",
+      "adapter_summary_code": "SOURCE_REPORT_STALE",
+      "client_ops_status": "BLOCKED",
+      "event_id": "9244a403-12cb-5424-80d8-c65cfa22db3c"
+    }
+  ],
+  "preview_note": "All candidates fail closed; no envelope authorized for live POST"
+}

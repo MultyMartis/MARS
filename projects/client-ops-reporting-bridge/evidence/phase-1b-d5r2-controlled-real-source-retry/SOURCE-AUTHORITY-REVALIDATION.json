@@ -1,0 +1,39 @@
+{
+  "phase": "1B-D5R2",
+  "verdict": "D5R2_SOURCE_AUTHORITY_REVALIDATED",
+  "run_id": "2026-07-26_17-48-38",
+  "files_present": {
+    "monitor-classification.json": true,
+    "changed-summary.json": true,
+    "run-summary.json": true
+  },
+  "parse_ok": true,
+  "classification": {
+    "monitor_classification": "ONBOARDING_REQUIRED",
+    "run_summary": "ONBOARDING_REQUIRED",
+    "match": true
+  },
+  "next_action": {
+    "value": "Review category-onboarding-needs and plan SITE-002 onboarding charter.",
+    "match": true
+  },
+  "run_completed_successfully": true,
+  "exit_code": 0,
+  "status": "success",
+  "changed_summary_coherent": true,
+  "metrics": {
+    "baseline_url_count": 1737,
+    "current_url_count": 1854,
+    "added_count": 119,
+    "removed_count": 2,
+    "onboarding_needs_count": 7
+  },
+  "sha256": {
+    "monitor-classification.json": "2391677BE5B284480D4CBCD678DD5286344856C26EBC1EAEDB51385C3135BB36",
+    "changed-summary.json": "61D4C5EEBAEFCD3B40A463D433C32095E5B9E7D89AA1CE6395CD70BFA442E629",
+    "run-summary.json": "40FC8960E2B4E679692D2639C5FD801E796231423A113756923963BBB2B3BCEC"
+  },
+  "source_unchanged_since_mond": true,
+  "raw_run_log_reads": 0,
+  "event_id_expected": "c84e29bf-79b1-5aea-98c4-9dc8d651fc96"
+}

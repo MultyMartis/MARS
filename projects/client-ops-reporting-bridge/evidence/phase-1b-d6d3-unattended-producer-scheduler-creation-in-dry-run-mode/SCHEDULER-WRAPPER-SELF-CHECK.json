@@ -1,0 +1,106 @@
+{
+  "phase": "1B-D6D3",
+  "mode": "self-check",
+  "pass": true,
+  "results": [
+    {
+      "name": "runtime_pin_clean",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "head": "e1d2a1786fd7d778957b74fb213cf5656231a256"
+      }
+    },
+    {
+      "name": "wrong_runtime_head_would_reject",
+      "pass": true,
+      "detail": "pin shape"
+    },
+    {
+      "name": "dirty_runtime_rejected_when_present",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "d6db_ancestry_present",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kill_switch_dry_run",
+      "pass": true,
+      "detail": {
+        "mode": "DRY_RUN",
+        "hash": "159f79d5e57f1feef8833ea6453c82adc5b4914ca4d213321e8d6629bbfef4ba"
+      }
+    },
+    {
+      "name": "missing_kill_switch_rejected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "malformed_kill_switch_rejected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "enabled_mode_rejected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "active_lock_second_acquire_rejected",
+      "pass": true,
+      "detail": {
+        "first": true,
+        "second": "PRODUCER_LOCK_HELD"
+      }
+    },
+    {
+      "name": "activation_method_prohibited",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "webhook_method_prohibited",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "telegram_method_prohibited",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "data_table_mutation_prohibited",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "readonly_invariant",
+      "pass": true,
+      "detail": "D6E2_READ_ONLY_INVARIANT_ARMED"
+    },
+    {
+      "name": "wrapper_writes_only_approved_local_state",
+      "pass": true,
+      "detail": [
+        "receipts/",
+        "logs/",
+        "state/scheduler-last-run.json",
+        "state/producer-cursor.json",
+        "locks/"
+      ]
+    },
+    {
+      "name": "secrets_not_on_argv",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "kill_switch_config_hash": "159f79d5e57f1feef8833ea6453c82adc5b4914ca4d213321e8d6629bbfef4ba",
+  "runtime_commit": "e1d2a1786fd7d778957b74fb213cf5656231a256",
+  "finished_at": "2026-07-29T21:46:27.030Z",
+  "token": "D6D3_SCHEDULER_WRAPPER_SELF_CHECK_PASS"
+}

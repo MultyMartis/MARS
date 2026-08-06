@@ -1,0 +1,98 @@
+{
+  "python_d6e": {
+    "code": 0,
+    "out_tail": "ed_dict_strips_secrets (tests.test_retry_policy_d6e.TestD6ERetryPolicyBinding.test_sanitized_dict_strips_secrets) ... ok\r\ntest_sent_terminal (tests.test_retry_policy_d6e.TestD6ERetryPolicyBinding.test_sent_terminal) ... ok\r\ntest_stale_blocks_retry (tests.test_retry_policy_d6e.TestD6ERetryPolicyBinding.test_stale_blocks_retry) ... ok\r\ntest_telegram_success_pending_fails_closed (tests.test_retry_policy_d6e.TestD6ERetryPolicyBinding.test_telegram_success_pending_fails_closed) ... ok\r\ntest_terminal_mappings (tests.test_retry_policy_d6e.TestD6ERetryPolicyBinding.test_terminal_mappings) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 10 tests in 0.001s\r\n\r\nOK\r\n"
+  },
+  "d6e_concurrency": {
+    "same_harness": true,
+    "note": "covered by d6e harness",
+    "code": 0
+  },
+  "python_d6d": {
+    "code": 0,
+    "out_tail": "s (tests.test_unattended_d6d.TestD6DLanguageBoundary.test_authoritative_artifacts) ... ok\r\ntest_contracts (tests.test_unattended_d6d.TestD6DLanguageBoundary.test_contracts) ... ok\r\ntest_freshness_binding (tests.test_unattended_d6d.TestD6DLanguageBoundary.test_freshness_binding) ... ok\r\ntest_production_disabled (tests.test_unattended_d6d.TestD6DLanguageBoundary.test_production_disabled) ... ok\r\ntest_status_mapping (tests.test_unattended_d6d.TestD6DLanguageBoundary.test_status_mapping) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 5 tests in 0.001s\r\n\r\nOK\r\n"
+  },
+  "d6c_harness": {
+    "code": 0,
+    "out_tail": " \"C22\",\r\n      \"ok\": true\r\n    },\r\n    {\r\n      \"id\": \"C23\",\r\n      \"ok\": true\r\n    },\r\n    {\r\n      \"id\": \"C24\",\r\n      \"ok\": true\r\n    },\r\n    {\r\n      \"id\": \"C25\",\r\n      \"ok\": true\r\n    },\r\n    {\r\n      \"id\": \"C26\",\r\n      \"ok\": true\r\n    },\r\n    {\r\n      \"id\": \"C27\",\r\n      \"ok\": true\r\n    },\r\n    {\r\n      \"id\": \"C28\",\r\n      \"ok\": true\r\n    },\r\n    {\r\n      \"id\": \"C29\",\r\n      \"ok\": true\r\n    },\r\n    {\r\n      \"id\": \"C30\",\r\n      \"ok\": true\r\n    }\r\n  ],\r\n  \"invariants\": {\r\n    \"max_retries\": 0,\r\n    \"max_concurrency\": 1,\r\n    \"stale_after\": 93600,\r\n    \"workflow_id\": \"tkM4H0G0gM3q9Foi\",\r\n    \"model\": \"HYBRID_C1_TO_C3_BOUNDED\"\r\n  },\r\n  \"verdict\": \"D6C_OFFLINE_LIFECYCLE_HARNESS_PASS\"\r\n}\r\n"
+  },
+  "d6e_harness": {
+    "code": 0,
+    "out_tail": "\r\n      \"id\": \"EC5\",\r\n      \"ok\": true\r\n    },\r\n    {\r\n      \"id\": \"EC6\",\r\n      \"ok\": true\r\n    },\r\n    {\r\n      \"id\": \"EC7\",\r\n      \"ok\": true\r\n    },\r\n    {\r\n      \"id\": \"EC8\",\r\n      \"ok\": true\r\n    },\r\n    {\r\n      \"id\": \"EC9\",\r\n      \"ok\": true\r\n    },\r\n    {\r\n      \"id\": \"EC10\",\r\n      \"ok\": true\r\n    },\r\n    {\r\n      \"id\": \"INV-AUTO-RETRY\",\r\n      \"ok\": true\r\n    },\r\n    {\r\n      \"id\": \"INV-AUTHORITY\",\r\n      \"ok\": true\r\n    },\r\n    {\r\n      \"id\": \"INV-PLANNER\",\r\n      \"ok\": true\r\n    },\r\n    {\r\n      \"id\": \"INV-CLOCK\",\r\n      \"ok\": true\r\n    }\r\n  ],\r\n  \"failed_details\": [],\r\n  \"verdict\": \"D6E_OFFLINE_POLICY_HARNESS_PASS\",\r\n  \"concurrency_verdict\": \"D6E_CONCURRENCY_HARNESS_PASS\"\r\n}\r\n"
+  },
+  "security_scan": {
+    "pass": true,
+    "out_tail": "{\r\n  \"files_scanned\": 0,\r\n  \"findings\": [],\r\n  \"allow_markers\": [\r\n    \"SYNTHETIC_CLIENT_OPS_HARNESS_SECRET_v1_NOT_A_REAL_CREDENTIAL\",\r\n    \"<<<HITL_REQUIRED:CLIENT_OPS_WEBHOOK_AUTH_SECRET>>>\",\r\n    \"WRONG_SYNTHETIC_VALUE\"\r\n  ],\r\n  \"verdict\": \"CLEAN\"\r\n}\r\n",
+    "code": 0
+  },
+  "d6b_harness": {
+    "code": 0,
+    "out_tail": "....................{\r\n  \"phase\": \"1B-D6B\",\r\n  \"harness\": \"d6b-freshness-semantics-harness\",\r\n  \"token\": \"D6B_OFFLINE_SEMANTICS_HARNESS_PASS\",\r\n  \"b1_b15_required\": 15,\r\n  \"b1_b15_missing\": [],\r\n  \"tests_run\": 20,\r\n  \"failures\": 0,\r\n  \"errors\": 0,\r\n  \"pass\": true,\r\n  \"live_apply_performed\": false,\r\n  \"stale_after_seconds\": 93600,\r\n  \"threshold_boundary\": \"age==93600 FRESH; age==93601 STALE (operator >)\"\r\n}\r\n"
+  },
+  "d6d_harness": {
+    "out_tail": "{\r\n  \"phase\": \"1B-D6D\",\r\n  \"d_pass\": 60,\r\n  \"d_fail\": 0,\r\n  \"ds_pass\": 10,\r\n  \"ds_fail\": 0,\r\n  \"total_pass\": 70,\r\n  \"total_fail\": 0,\r\n  \"stale_after_seconds\": 93600,\r\n  \"marker\": \"run-complete.marker\",\r\n  \"failures\": []\r\n}\r\n",
+    "summary": {
+      "phase": "1B-D6D",
+      "d_pass": 60,
+      "d_fail": 0,
+      "ds_pass": 10,
+      "ds_fail": 0,
+      "total_pass": 70,
+      "total_fail": 0,
+      "stale_after_seconds": 93600,
+      "marker": "run-complete.marker",
+      "failures": []
+    },
+    "code": 0
+  },
+  "syntax": [
+    {
+      "file": "n8n/runners/lib/client-ops-d6d-unattended-producer.mjs",
+      "code": 0
+    },
+    {
+      "file": "n8n/runners/lib/client-ops-d6d-artifact.mjs",
+      "code": 0
+    },
+    {
+      "file": "n8n/runners/lib/client-ops-d6d-kill-switch.mjs",
+      "code": 0
+    },
+    {
+      "file": "n8n/runners/lib/client-ops-d6d-producer-lock.mjs",
+      "code": 0
+    },
+    {
+      "file": "n8n/runners/lib/client-ops-d6d-cursor.mjs",
+      "code": 0
+    },
+    {
+      "file": "n8n/runners/lib/client-ops-d6d-receipt.mjs",
+      "code": 0
+    },
+    {
+      "file": "n8n/runners/lib/client-ops-d6d-runtime-gates.mjs",
+      "code": 0
+    }
+  ],
+  "overall_pass": true,
+  "d6a_validator": {
+    "code": 0,
+    "out_tail": "{\r\n  \"validator\": \"validate-client-ops-d6a-delivery-ledger\",\r\n  \"gates\": 48,\r\n  \"pass_count\": 48,\r\n  \"fail_count\": 0,\r\n  \"failed\": [],\r\n  \"verdict\": \"PASS\"\r\n}\r\n"
+  },
+  "d6a_harness": {
+    "code": 0,
+    "out_tail": "PASS  case1_first_seen_telegram_success\r\nPASS  case2_first_seen_telegram_failure\r\nPASS  case3_duplicate_with_sent\r\nPASS  case4_duplicate_with_pending\r\nPASS  case5_duplicate_with_failed\r\nPASS  case6_telegram_success_ledger_write_failure\r\nPASS  case7_finalizer_double_call_sent\r\nPASS  case8_sent_to_failed_rejected\r\nPASS  case_compose_offline_workflow\r\nPASS  case_security_no_secrets_in_metadata\r\nPASS  case_ambiguous_leaves_pending\r\n{\r\n  \"harness\": \"delivery-ledger-harness\",\r\n  \"phase\": \"1B-D6A\",\r\n  \"total\": 11,\r\n  \"passed\": 11,\r\n  \"failed\": 0,\r\n  \"failures\": [],\r\n  \"max_retries\": 0,\r\n  \"max_safe_concurrency\": 1,\r\n  \"verdict\": \"D6A_OFFLINE_LEDGER_HARNESS_PASS\"\r\n}\r\n"
+  },
+  "codes": {
+    "python_d6e": 0,
+    "d6a_validator": 0,
+    "d6d_harness": 0,
+    "security_scan": 0,
+    "d6b_harness": 0,
+    "d6e_harness": 0,
+    "d6a_harness": 0,
+    "d6c_harness": 0,
+    "python_d6d": 0
+  }
+}

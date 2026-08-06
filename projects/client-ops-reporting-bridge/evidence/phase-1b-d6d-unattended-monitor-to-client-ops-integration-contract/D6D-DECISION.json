@@ -1,0 +1,42 @@
+{
+  "phase": "1B-D6D",
+  "workstream": "D",
+  "implementation_mode": "OFFLINE_ONLY",
+  "unattended_production_enabled": false,
+  "existing_monitor_scheduler_modified": false,
+  "future_producer_scheduler_created": false,
+  "dedicated_clean_runtime_required": true,
+  "automatic_retries_enabled": false,
+  "max_automatic_retries": 0,
+  "max_safe_concurrency": 1,
+  "max_candidates_per_run": 1,
+  "kill_switch_modes": [
+    "DISABLED",
+    "DRY_RUN",
+    "ENABLED"
+  ],
+  "current_production_kill_switch_mode": "NOT_DEPLOYED",
+  "missing_or_malformed_kill_switch_fails_closed": true,
+  "artifact_completion_required": true,
+  "artifact_stabilization_required": true,
+  "deterministic_event_identity": true,
+  "freshness_recheck_required": true,
+  "durable_ledger_authoritative": true,
+  "pending_unattended_send_allowed": false,
+  "sent_resend_allowed": false,
+  "failed_auto_resend_allowed": false,
+  "ambiguous_request_auto_retry_allowed": false,
+  "controlled_lifecycle_required": true,
+  "containment_failure_stops_producer": true,
+  "historical_d5r2a_resend_allowed": false,
+  "webhook_calls": 0,
+  "activation_attempts": 0,
+  "data_table_mutations": 0,
+  "telegram_messages": 0,
+  "authoritative_source": "scheduled-monitors/post-1c/<run_id>/{run-summary,monitor-classification,changed-summary}.json + run-complete.marker",
+  "offline_harness": {
+    "d1_d60": "60/60",
+    "ds1_ds10": "10/10"
+  },
+  "recommended_next_phase": "Phase 1B-D6D2 — Unattended Producer Controlled Runtime Deployment and Dry-Run Verification"
+}

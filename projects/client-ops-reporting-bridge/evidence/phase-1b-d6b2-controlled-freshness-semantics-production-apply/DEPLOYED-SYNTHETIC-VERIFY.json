@@ -1,0 +1,79 @@
+{
+  "phase": "1B-D6B2",
+  "network_calls": 0,
+  "webhook_calls": 0,
+  "telegram_attempts": 0,
+  "stale_after_seconds": 93600,
+  "max_retries": 0,
+  "max_safe_concurrency": 1,
+  "synthetic_ids": {
+    "s1_event_id": "6ae206d0-3e52-594e-a00b-c825d29813ba",
+    "s1_run_id": "d6b2-syn-s1-fresh-attention",
+    "s2_event_id": "18d77782-fe13-5f2f-8f75-f673e98a3308",
+    "s2_run_id": "d6b2-syn-s2-stale-attention",
+    "s3_event_id": "990a318c-3759-5e95-bffb-f0b98a5fcd06",
+    "s3_run_id": "d6b2-syn-s3-true-blocked",
+    "identity_same_event_id": "d61f599c-3df0-5862-b99e-5bfd32ee2cf3",
+    "identity_new_event_id": "e4a4ede4-4d55-5a73-92ce-9773a5b364a4"
+  },
+  "checks": {
+    "s1_fresh_attention": {
+      "pass": true,
+      "source_status": "ATTENTION",
+      "delivery_eligibility": "FRESH_AND_ELIGIBLE",
+      "preview_approved": true,
+      "verdict": "REAL_SOURCE_PREVIEW_APPROVED_FOR_ONE_LIVE_POST",
+      "webhook_calls": 0
+    },
+    "s2_stale_attention": {
+      "pass": true,
+      "source_status": "ATTENTION",
+      "delivery_eligibility": "STALE_REVIEW_REQUIRED",
+      "preview_approved": false,
+      "verdict": "SOURCE_VALID_BUT_STALE_REVIEW_REQUIRED",
+      "live_authorized": false,
+      "message_preview": null,
+      "webhook_calls": 0,
+      "telegram_attempts": 0,
+      "datatable_intake_mutations": 0
+    },
+    "s3_true_blocked": {
+      "pass": true,
+      "source_status": "BLOCKED",
+      "delivery_eligibility": "NOT_SAFE_TO_SEND",
+      "preview_approved": false,
+      "verdict": "REAL_SOURCE_PREVIEW_NOT_APPROVED_FOR_LIVE_POST",
+      "webhook_calls": 0,
+      "telegram_attempts": 0
+    },
+    "stale_ok": {
+      "pass": true,
+      "source_status": "OK",
+      "delivery_eligibility": "STALE_REVIEW_REQUIRED"
+    },
+    "stale_failed": {
+      "pass": true,
+      "source_status": "FAILED",
+      "delivery_eligibility": "STALE_REVIEW_REQUIRED"
+    },
+    "threshold_boundary": {
+      "pass": true,
+      "age_93600": "FRESH_AND_ELIGIBLE",
+      "age_93601": "STALE_REVIEW_REQUIRED",
+      "operator": "age_seconds > 93600"
+    },
+    "event_identity": {
+      "pass": true,
+      "fresh_event_id": "d61f599c-3df0-5862-b99e-5bfd32ee2cf3",
+      "stale_event_id": "d61f599c-3df0-5862-b99e-5bfd32ee2cf3",
+      "new_run_event_id": "e4a4ede4-4d55-5a73-92ce-9773a5b364a4",
+      "freshness_changes_event_identity": false
+    },
+    "no_historical_id_reuse": {
+      "pass": true,
+      "forbidden_touched": []
+    }
+  },
+  "all_pass": true,
+  "token": "D6B2_DEPLOYED_SYNTHETIC_SEMANTICS_PASS"
+}

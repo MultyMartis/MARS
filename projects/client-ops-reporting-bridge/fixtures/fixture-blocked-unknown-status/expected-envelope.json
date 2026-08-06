@@ -1,0 +1,49 @@
+{
+  "schema_name": "mars.client_ops.report",
+  "schema_version": "1.0",
+  "event_id": "4724bcec-672c-5fb0-9dc9-fd9ad085376a",
+  "event_type": "site.post_1c_monitor",
+  "generated_at": "2026-07-23T13:10:37.865Z",
+  "observed_at": "2026-07-23T09:30:00Z",
+  "environment": "production",
+  "site": {
+    "site_id": "SITE-002",
+    "site_name": "ЗПМ",
+    "domain": "bzpm.ru"
+  },
+  "producer": {
+    "name": "ocpilot.site-002.post-1c-exporter",
+    "version": "1.0"
+  },
+  "run": {
+    "run_id": "2026-07-23_12-30-00",
+    "source_status": "WEIRD_UNKNOWN_STATUS",
+    "normalized_status": "BLOCKED",
+    "summary_code": "SOURCE_SCHEMA_UNSUPPORTED",
+    "reason_codes": [
+      "SOURCE_CLASSIFICATION_UNKNOWN",
+      "UNSUPPORTED_SOURCE_VOCABULARY"
+    ]
+  },
+  "action": {
+    "required": true,
+    "code": "REVIEW_SCHEMA_COMPATIBILITY",
+    "text": "проверить совместимость схемы исходных артефактов"
+  },
+  "metrics": {
+    "baseline_count": 100,
+    "current_count": 100,
+    "added_urls": 0,
+    "removed_urls": 0,
+    "onboarding_needed_count": 0
+  },
+  "freshness": {
+    "age_seconds": 11100,
+    "stale": false
+  },
+  "security": {
+    "classification": "internal",
+    "contains_secrets": false,
+    "redacted": true
+  }
+}

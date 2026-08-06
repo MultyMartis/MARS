@@ -1,0 +1,36 @@
+{
+  "baseline": {
+    "observable": true,
+    "count": 0,
+    "row_count": 0
+  },
+  "after_matrix": {
+    "observable": true,
+    "count": 24,
+    "row_count": 24
+  },
+  "final": {
+    "observable": true,
+    "count": 24,
+    "row_count": 24,
+    "execution_id_range": {
+      "min": "3383",
+      "max": "3406"
+    },
+    "all_workflow_id": "tkM4H0G0gM3q9Foi",
+    "all_status": "success"
+  },
+  "attribution": {
+    "posts": 28,
+    "expected_no_execution_cases": ["T01", "T02", "T04", "T26"],
+    "expected_execution_count": 24,
+    "observed_execution_count": 24,
+    "note": "T01/T02 native auth and T04/T26 native parse produce no workflow executions on this host."
+  },
+  "sanitized_execution_ids": [
+    "3383", "3384", "3385", "3386", "3387", "3388", "3389", "3390",
+    "3391", "3392", "3393", "3394", "3395", "3396", "3397", "3398",
+    "3399", "3400", "3401", "3402", "3403", "3404", "3405", "3406"
+  ],
+  "note": "Sanitized execution metadata only; no raw payloads. Full row timestamps retained in local ignored runner report."
+}

@@ -1,0 +1,22 @@
+{
+  "captured_from": "SITE-002-PROD-1C-OFFERS-MISSING-AND-PRICE-FORM-DIAGNOSTIC-01 / 2026-08-06",
+  "webdata": {
+    "import0_1_xml": {
+      "present": true,
+      "size": 11236652
+    },
+    "offers0_star_xml": {
+      "present": false
+    },
+    "offers_xml": {
+      "present": false
+    },
+    "offer_xml": {
+      "present": false
+    }
+  },
+  "latest_import_run_id": "mars-20260806-080001-8a1a9b1e",
+  "catalog_phase": "PASS",
+  "offers_phase": "PASS_NO_INPUT_FILES",
+  "offers_classification": "OFFERS_INPUT_ABSENT"
+}

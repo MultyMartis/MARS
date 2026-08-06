@@ -1,0 +1,24 @@
+# D6F1B Operator UX Regression
+
+Pass: 20/20
+
+- U1: PASS
+- U2: PASS
+- U3: PASS
+- U4: PASS
+- U5: PASS
+- U6: PASS
+- U7: PASS
+- U8: PASS
+- U9: PASS
+- U10: PASS
+- U11: PASS
+- U12: PASS
+- U13: PASS
+- U14: PASS
+- U15: PASS
+- U16: PASS
+- U17: PASS
+- U18: PASS
+- U19: PASS
+- U20: PASS

@@ -1,0 +1,39 @@
+{
+  "schema": "d6d-producer-receipt-v1",
+  "producer_run_id": "14e5540f-7e22-498f-9bde-def65a7b3dce",
+  "site_id": "SITE-002",
+  "artifact_identity": null,
+  "artifact_path_sanitized": null,
+  "artifact_hash": null,
+  "source_run_id": null,
+  "event_id": null,
+  "source_status": null,
+  "delivery_eligibility": null,
+  "kill_switch_mode": "DRY_RUN",
+  "dedupe_result": null,
+  "retry_policy_decision": null,
+  "lifecycle_state_summary": null,
+  "request_attempts": 0,
+  "http_class": null,
+  "delivery_state": null,
+  "containment_result": null,
+  "cursor_result": null,
+  "final_exit_class": "BLOCKED_KILL_SWITCH",
+  "final_exit_code": 20,
+  "timestamps": {
+    "started_at": "2026-07-29T21:48:04.419Z",
+    "finished_at": "2026-07-29T21:48:04.423Z",
+    "evaluation_clock_ms": 1785361684423
+  },
+  "gates_passed": [
+    "acquire_producer_singleton_lock"
+  ],
+  "reason_codes": [
+    "KILL_SWITCH_SITE_MISMATCH"
+  ],
+  "task_name": "MARS_SITE_002_Client_Ops_Producer",
+  "runtime_commit": "e1d2a1786fd7d778957b74fb213cf5656231a256",
+  "request_authorized": false,
+  "scheduler_phase": "1B-D6D3",
+  "ledger_observation": null
+}

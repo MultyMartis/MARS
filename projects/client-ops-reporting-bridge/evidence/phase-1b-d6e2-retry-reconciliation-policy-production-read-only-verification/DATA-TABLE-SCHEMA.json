@@ -1,0 +1,76 @@
+{
+  "token": "D6E2_DATA_TABLE_SCHEMA_RECONFIRMED",
+  "id": "H6VYhwz7RXZCBMmu",
+  "name": "MARS Client Ops Dedupe — bzpm.ru",
+  "column_count": 15,
+  "columns": [
+    {
+      "name": "conflict_count",
+      "type": "number"
+    },
+    {
+      "name": "delivery_state",
+      "type": "string"
+    },
+    {
+      "name": "duplicate_count",
+      "type": "number"
+    },
+    {
+      "name": "event_fingerprint",
+      "type": "string"
+    },
+    {
+      "name": "event_id",
+      "type": "string"
+    },
+    {
+      "name": "event_status",
+      "type": "string"
+    },
+    {
+      "name": "event_type",
+      "type": "string"
+    },
+    {
+      "name": "first_seen_at",
+      "type": "string"
+    },
+    {
+      "name": "intake_state",
+      "type": "string"
+    },
+    {
+      "name": "last_seen_at",
+      "type": "string"
+    },
+    {
+      "name": "redaction_version",
+      "type": "string"
+    },
+    {
+      "name": "sandbox_marker",
+      "type": "string"
+    },
+    {
+      "name": "schema_name",
+      "type": "string"
+    },
+    {
+      "name": "schema_version",
+      "type": "string"
+    },
+    {
+      "name": "site_id",
+      "type": "string"
+    }
+  ],
+  "reconciliation_relevant": [
+    "event_id",
+    "intake_state",
+    "event_status",
+    "delivery_state",
+    "first_seen_at",
+    "last_seen_at"
+  ]
+}

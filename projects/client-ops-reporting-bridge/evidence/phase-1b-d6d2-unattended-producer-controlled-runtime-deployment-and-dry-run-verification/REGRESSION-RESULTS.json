@@ -1,0 +1,84 @@
+{
+  "d6d_harness": {
+    "code": 0,
+    "summary": {
+      "phase": "1B-D6D",
+      "d_pass": 60,
+      "d_fail": 0,
+      "ds_pass": 10,
+      "ds_fail": 0,
+      "total_pass": 70,
+      "total_fail": 0,
+      "stale_after_seconds": 93600,
+      "marker": "run-complete.marker",
+      "failures": []
+    }
+  },
+  "python_d6d": {
+    "code": 0,
+    "out_tail": "test_authoritative_artifacts (tests.test_unattended_d6d.TestD6DLanguageBoundary.test_authoritative_artifacts) ... ok\r\ntest_contracts (tests.test_unattended_d6d.TestD6DLanguageBoundary.test_contracts) ... ok\r\ntest_freshness_binding (tests.test_unattended_d6d.TestD6DLanguageBoundary.test_freshness_binding) ... ok\r\ntest_production_disabled (tests.test_unattended_d6d.TestD6DLanguageBoundary.test_production_disabled) ... ok\r\ntest_status_mapping (tests.test_unattended_d6d.TestD6DLanguageBoundary.test_status_mapping) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 5 tests in 0.001s\r\n\r\nOK\r\n"
+  },
+  "d6a_harness": {
+    "code": 0,
+    "out_tail": "PASS  case1_first_seen_telegram_success\nPASS  case2_first_seen_telegram_failure\nPASS  case3_duplicate_with_sent\nPASS  case4_duplicate_with_pending\nPASS  case5_duplicate_with_failed\nPASS  case6_telegram_success_ledger_write_failure\nPASS  case7_finalizer_double_call_sent\nPASS  case8_sent_to_failed_rejected\nPASS  case_compose_offline_workflow\nPASS  case_security_no_secrets_in_metadata\nPASS  case_ambiguous_leaves_pending\n{\n  \"harness\": \"delivery-ledger-harness\",\n  \"phase\": \"1B-D6A\",\n  \"total\": 11,\n  \"passed\": 11,\n  \"failed\": 0,\n  \"failures\": [],\n  \"max_retries\": 0,\n  \"max_safe_concurrency\": 1,\n  \"verdict\": \"D6A_OFFLINE_LEDGER_HARNESS_PASS\"\n}\n"
+  },
+  "d6a_validator": {
+    "code": 0,
+    "out_tail": "{\n  \"validator\": \"validate-client-ops-d6a-delivery-ledger\",\n  \"gates\": 48,\n  \"pass_count\": 48,\n  \"fail_count\": 0,\n  \"failed\": [],\n  \"verdict\": \"PASS\"\n}\n"
+  },
+  "d6b_harness": {
+    "code": 0,
+    "out_tail": "....................{\r\n  \"phase\": \"1B-D6B\",\r\n  \"harness\": \"d6b-freshness-semantics-harness\",\r\n  \"token\": \"D6B_OFFLINE_SEMANTICS_HARNESS_PASS\",\r\n  \"b1_b15_required\": 15,\r\n  \"b1_b15_missing\": [],\r\n  \"tests_run\": 20,\r\n  \"failures\": 0,\r\n  \"errors\": 0,\r\n  \"pass\": true,\r\n  \"live_apply_performed\": false,\r\n  \"stale_after_seconds\": 93600,\r\n  \"threshold_boundary\": \"age==93600 FRESH; age==93601 STALE (operator >)\"\r\n}\r\n"
+  },
+  "d6c_harness": {
+    "code": 0,
+    "out_tail": "C19\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"C20\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"C21\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"C22\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"C23\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"C24\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"C25\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"C26\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"C27\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"C28\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"C29\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"C30\",\n      \"ok\": true\n    }\n  ],\n  \"invariants\": {\n    \"max_retries\": 0,\n    \"max_concurrency\": 1,\n    \"stale_after\": 93600,\n    \"workflow_id\": \"tkM4H0G0gM3q9Foi\",\n    \"model\": \"HYBRID_C1_TO_C3_BOUNDED\"\n  },\n  \"verdict\": \"D6C_OFFLINE_LIFECYCLE_HARNESS_PASS\"\n}\n"
+  },
+  "d6e_harness": {
+    "code": 0,
+    "out_tail": "     \"id\": \"EC2\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"EC3\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"EC4\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"EC5\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"EC6\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"EC7\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"EC8\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"EC9\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"EC10\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"INV-AUTO-RETRY\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"INV-AUTHORITY\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"INV-PLANNER\",\n      \"ok\": true\n    },\n    {\n      \"id\": \"INV-CLOCK\",\n      \"ok\": true\n    }\n  ],\n  \"failed_details\": [],\n  \"verdict\": \"D6E_OFFLINE_POLICY_HARNESS_PASS\",\n  \"concurrency_verdict\": \"D6E_CONCURRENCY_HARNESS_PASS\"\n}\n"
+  },
+  "d6e_concurrency": {
+    "same_harness": true,
+    "code": 0,
+    "note": "D6E concurrency covered by d6e-retry-concurrency-policy-harness.mjs"
+  },
+  "python_d6e": {
+    "code": 0,
+    "out_tail": "le) ... ok\r\ntest_defaults_remain_safe (tests.test_retry_policy_d6e.TestD6ERetryPolicyBinding.test_defaults_remain_safe) ... ok\r\ntest_failed_terminal (tests.test_retry_policy_d6e.TestD6ERetryPolicyBinding.test_failed_terminal) ... ok\r\ntest_pending_never_auto_retry (tests.test_retry_policy_d6e.TestD6ERetryPolicyBinding.test_pending_never_auto_retry) ... ok\r\ntest_rejects_nonzero_max_retries (tests.test_retry_policy_d6e.TestD6ERetryPolicyBinding.test_rejects_nonzero_max_retries) ... ok\r\ntest_sanitized_dict_strips_secrets (tests.test_retry_policy_d6e.TestD6ERetryPolicyBinding.test_sanitized_dict_strips_secrets) ... ok\r\ntest_sent_terminal (tests.test_retry_policy_d6e.TestD6ERetryPolicyBinding.test_sent_terminal) ... ok\r\ntest_stale_blocks_retry (tests.test_retry_policy_d6e.TestD6ERetryPolicyBinding.test_stale_blocks_retry) ... ok\r\ntest_telegram_success_pending_fails_closed (tests.test_retry_policy_d6e.TestD6ERetryPolicyBinding.test_telegram_success_pending_fails_closed) ... ok\r\ntest_terminal_mappings (tests.test_retry_policy_d6e.TestD6ERetryPolicyBinding.test_terminal_mappings) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 10 tests in 0.001s\r\n\r\nOK\r\n"
+  },
+  "syntax": [
+    {
+      "file": "n8n/runners/lib/client-ops-d6d-unattended-producer.mjs",
+      "code": 0
+    },
+    {
+      "file": "n8n/runners/lib/client-ops-d6d-artifact.mjs",
+      "code": 0
+    },
+    {
+      "file": "n8n/runners/lib/client-ops-d6d-kill-switch.mjs",
+      "code": 0
+    },
+    {
+      "file": "n8n/runners/lib/client-ops-d6d-producer-lock.mjs",
+      "code": 0
+    },
+    {
+      "file": "n8n/runners/lib/client-ops-d6d-cursor.mjs",
+      "code": 0
+    },
+    {
+      "file": "n8n/runners/lib/client-ops-d6d-receipt.mjs",
+      "code": 0
+    },
+    {
+      "file": "n8n/runners/lib/client-ops-d6d-runtime-gates.mjs",
+      "code": 0
+    }
+  ],
+  "security_scan": {
+    "hits": [],
+    "pass": true
+  }
+}

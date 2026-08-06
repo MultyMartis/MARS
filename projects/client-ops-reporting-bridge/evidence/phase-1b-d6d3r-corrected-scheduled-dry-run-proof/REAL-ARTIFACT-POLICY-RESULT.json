@@ -1,0 +1,31 @@
+{
+  "source_status": "ATTENTION",
+  "selected_run_id": "2026-07-10_13-27-20",
+  "exit_code": 21,
+  "request_authorized": false,
+  "artifact_hash": "0341f8d2898a6df211133b17ff5f32cb7b568efea5c49e5833b0e3ae8d8f6b93",
+  "note": "Same historical stale candidate as D6D2; accurate fail-closed stale classification after corrected kill-switch gate",
+  "delivery_eligibility": "STALE_REVIEW_REQUIRED",
+  "historical_fallback_stabilization_used": true,
+  "phase": "1B-D6D3R",
+  "scheduled_run_result": "BLOCKED_STALE",
+  "gates_passed": [
+    "acquire_producer_singleton_lock",
+    "verify_kill_switch",
+    "discover_candidates",
+    "validate_stabilize_artifact",
+    "derive_event_identity_fingerprint",
+    "inspect_local_cursor",
+    "derive_source_status",
+    "compute_freshness_eligibility"
+  ],
+  "completion_marker_runtime_deployed": false,
+  "request_attempts": 0,
+  "scheduled_real_artifact_evaluation_reached": true,
+  "reason_codes": [
+    "STALE_BLOCKS_BEFORE_ACTIVATION"
+  ],
+  "selected_event_id": "7493aaa9-dd5b-5fb9-a317-b413adcb8426",
+  "observed_at": "2026-07-30T08:41:00.314Z",
+  "token": "D6D3R_SCHEDULED_REAL_ARTIFACT_CLASSIFIED"
+}

@@ -1,0 +1,58 @@
+{
+  "phase": "1B-D6A2",
+  "nodes_added": [
+    "Classify Telegram Delivery Outcome",
+    "IF Delivery Finalize",
+    "Delivery Ledger Finalize Update"
+  ],
+  "nodes_modified": [
+    {
+      "name": "Telegram Notify Accepted",
+      "changes": [
+        "continueOnFail=true",
+        "onError=continueRegularOutput"
+      ],
+      "why": "Allow definite Telegram failure to reach classifier → FAILED finalize"
+    }
+  ],
+  "edges_changed": [
+    {
+      "from": "Telegram Notify Accepted",
+      "to": "Classify Telegram Delivery Outcome",
+      "why": "Classify Telegram outcome after send"
+    },
+    {
+      "from": "Classify Telegram Delivery Outcome",
+      "to": "IF Delivery Finalize",
+      "why": "Gate terminal finalize on should_finalize"
+    },
+    {
+      "from": "IF Delivery Finalize",
+      "to_true": "Delivery Ledger Finalize Update",
+      "to_false": null,
+      "why": "Ambiguous remains PENDING; no resend"
+    }
+  ],
+  "parameters_changed": {
+    "Delivery_Ledger_Finalize_Update": {
+      "writes": [
+        "delivery_state"
+      ],
+      "filters": [
+        "event_id",
+        "delivery_state=PENDING"
+      ],
+      "forbidden_writes": [
+        "intake_state",
+        "event_status",
+        "event_id"
+      ]
+    }
+  },
+  "unrelated_changes": [],
+  "scope_verdict": "D6A2_WORKFLOW_DELTA_SCOPE_CLEAN",
+  "validate": {
+    "ok": true,
+    "errors": []
+  }
+}

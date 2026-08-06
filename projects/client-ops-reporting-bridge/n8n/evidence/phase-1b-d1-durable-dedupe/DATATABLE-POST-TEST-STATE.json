@@ -1,0 +1,22 @@
+{
+  "table_id": "H6VYhwz7RXZCBMmu",
+  "table_name": "MARS Client Ops Dedupe — bzpm.ru",
+  "exact_name_count": 1,
+  "row_count_for_event": 1,
+  "retained_policy": "retain_one_sanitized_synthetic_d1_row",
+  "rows_sanitized": [
+    {
+      "event_id": "1e8673d0-2b47-4950-89cb-350f335d5d7f",
+      "event_fingerprint": "{\"action_code\":\"NONE\",\"action_required\":false,\"domain\":\"bzpm.ru\",\"event_type\":\"site.post_1c_monitor\",\"metrics\":{\"added_urls\":0,\"baseline_count\":42,\"current_count\":42,\"onboarding_needed_count\":0,\"removed_urls\":0},\"normalized_status\":\"OK\",\"schema_name\":\"mars.client_ops.report\",\"schema_version\":\"1.0\",\"site_id\":\"SITE-002\",\"source_status\":\"NO_ACTION_REQUIRED\",\"summary_code\":\"NO_ACTION_REQUIRED\"}",
+      "intake_state": "FIRST_SEEN",
+      "delivery_state": "PENDING",
+      "duplicate_count": 0,
+      "conflict_count": 0,
+      "sandbox_marker": "mars-client-ops-dedupe-sandbox-d1",
+      "site_id": "SITE-002"
+    }
+  ],
+  "original_fingerprint_retained": true,
+  "secrets_absent": true,
+  "raw_payload_absent": true
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "phase": "1B-D6D2",
+  "mode": "DRY_RUN_INVENTORY",
+  "deployment_epoch": "2026-07-29T20:44:55.652Z",
+  "site_id": "SITE-002",
+  "producer_identity": "mars.client-ops.site-002.unattended-producer",
+  "artifact_root_allowlisted": "X:\\AI MARS STORAGE\\ocpilot\\project-sites\\site-002\\production\\scheduled-monitors\\post-1c",
+  "discovered_run_dirs": 46,
+  "complete_candidates": 39,
+  "incomplete_or_rejected": 7,
+  "marker_present_count": 0,
+  "selection_policy": "observed_at ascending then run_id; max_candidates_per_run=1",
+  "selected_for_evaluation": {
+    "run_id": "2026-07-10_13-27-20",
+    "event_id": "7493aaa9-dd5b-5fb9-a317-b413adcb8426",
+    "observed_at": "2026-07-10T06:28:52Z",
+    "age_seconds": 1692975,
+    "delivery_eligibility": "STALE_REVIEW_REQUIRED"
+  },
+  "excluded_from_delivery": "ALL — DRY_RUN forces request_authorized=false",
+  "historical_d5r2a_excluded_from_delivery": true,
+  "max_candidates_per_run": 1
+}

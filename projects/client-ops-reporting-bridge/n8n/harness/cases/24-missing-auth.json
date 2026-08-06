@@ -1,0 +1,63 @@
+{
+  "id": "24-missing-auth",
+  "title": "Missing auth",
+  "input": {
+    "headers": {
+      "content-type": "application/json"
+    },
+    "body": {
+      "schema_name": "mars.client_ops.report",
+      "schema_version": "1.0",
+      "event_id": "703f19ac-92bd-5d6b-8664-d908b8de8b74",
+      "event_type": "site.post_1c_monitor",
+      "generated_at": "2026-07-20T15:10:00Z",
+      "observed_at": "2026-07-20T15:05:00Z",
+      "environment": "production",
+      "site": {
+        "site_id": "SITE-002",
+        "site_name": "ZPM",
+        "domain": "bzpm.ru"
+      },
+      "producer": {
+        "name": "ocpilot.site-002.post-1c-exporter",
+        "version": "1.0"
+      },
+      "run": {
+        "run_id": "2026-07-20_18-05-00",
+        "source_status": "NO_ACTION_REQUIRED",
+        "normalized_status": "OK",
+        "summary_code": "NO_ACTION_REQUIRED",
+        "reason_codes": [
+          "BASELINE_DELTA_ZERO"
+        ]
+      },
+      "action": {
+        "required": false,
+        "code": "NONE",
+        "text": "none"
+      },
+      "metrics": {
+        "baseline_count": 100,
+        "current_count": 100,
+        "added_urls": 0,
+        "removed_urls": 0,
+        "onboarding_needed_count": 0
+      },
+      "freshness": {
+        "age_seconds": 300,
+        "stale": false
+      },
+      "security": {
+        "classification": "internal",
+        "contains_secrets": false,
+        "redacted": true
+      }
+    }
+  },
+  "expect": {
+    "http_status": 401,
+    "response": {
+      "code": "UNAUTHORIZED"
+    }
+  }
+}

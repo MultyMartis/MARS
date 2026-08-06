@@ -1,0 +1,18 @@
+{
+  "phase": "1B-D5R2",
+  "verdict": "D5R2_OFFLINE_PREVIEW_REVALIDATED",
+  "network_calls": 0,
+  "contract": "site002-monitor-result-v1",
+  "source_classification": "ONBOARDING_REQUIRED",
+  "mapped_client_ops_status": "ATTENTION",
+  "firewall": "PASS",
+  "preview": "D5_PREVIEW_READY",
+  "preview_decision": "REAL_SOURCE_PREVIEW_APPROVED_FOR_ONE_LIVE_POST",
+  "event_id": "c84e29bf-79b1-5aea-98c4-9dc8d651fc96",
+  "event_id_deterministic_rebuild": true,
+  "source_age_seconds_at_preview": 14874,
+  "path_leak_in_customer_message": false,
+  "secrets_in_preview": false,
+  "d4_adapter_ok": true,
+  "distributable": true
+}

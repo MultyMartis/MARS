@@ -1,0 +1,102 @@
+{
+  "columns": [
+    {
+      "name": "event_id",
+      "type": "string",
+      "purpose": "primary lookup key",
+      "retention": "MVP durable"
+    },
+    {
+      "name": "event_fingerprint",
+      "type": "string",
+      "purpose": "canonical content fingerprint",
+      "retention": "MVP durable"
+    },
+    {
+      "name": "site_id",
+      "type": "string",
+      "purpose": "site scope",
+      "retention": "MVP durable"
+    },
+    {
+      "name": "schema_name",
+      "type": "string",
+      "purpose": "envelope schema",
+      "retention": "MVP durable"
+    },
+    {
+      "name": "schema_version",
+      "type": "string",
+      "purpose": "envelope version",
+      "retention": "MVP durable"
+    },
+    {
+      "name": "event_type",
+      "type": "string",
+      "purpose": "event type",
+      "retention": "MVP durable"
+    },
+    {
+      "name": "event_status",
+      "type": "string",
+      "purpose": "normalized_status at first seen",
+      "retention": "MVP durable"
+    },
+    {
+      "name": "intake_state",
+      "type": "string",
+      "purpose": "FIRST_SEEN classification at claim",
+      "retention": "MVP durable"
+    },
+    {
+      "name": "delivery_state",
+      "type": "string",
+      "purpose": "PENDING (SENT deferred)",
+      "retention": "MVP durable"
+    },
+    {
+      "name": "first_seen_at",
+      "type": "string",
+      "purpose": "claim timestamp",
+      "retention": "MVP durable"
+    },
+    {
+      "name": "last_seen_at",
+      "type": "string",
+      "purpose": "claim timestamp",
+      "retention": "MVP durable"
+    },
+    {
+      "name": "duplicate_count",
+      "type": "number",
+      "purpose": "reserved; update deferred",
+      "retention": "MVP durable"
+    },
+    {
+      "name": "conflict_count",
+      "type": "number",
+      "purpose": "reserved; update deferred",
+      "retention": "MVP durable"
+    },
+    {
+      "name": "redaction_version",
+      "type": "string",
+      "purpose": "schema redaction marker",
+      "retention": "MVP durable"
+    },
+    {
+      "name": "sandbox_marker",
+      "type": "string",
+      "purpose": "synthetic D1 marker",
+      "retention": "MVP durable"
+    }
+  ],
+  "forbidden_storage": [
+    "telegram_token",
+    "header_auth_secret",
+    "n8n_api_key",
+    "raw_payload",
+    "raw_logs",
+    "personal_telegram_data"
+  ]
+}

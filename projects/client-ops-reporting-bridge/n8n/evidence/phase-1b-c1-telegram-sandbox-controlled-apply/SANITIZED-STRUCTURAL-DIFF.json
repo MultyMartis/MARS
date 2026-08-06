@@ -1,0 +1,37 @@
+{
+  "phase": "1B-C1",
+  "before": {
+    "nodes": 9,
+    "telegram_nodes": 0,
+    "connections_from_Respond_Accepted": null,
+    "versionId": "6c6d1282-0105-47e1-a3f5-b070cec0664b",
+    "active": false,
+    "headerAuth": "headerAuth",
+    "auth_credential_id": "WKHmPaw6QBp7WnzP",
+    "dedupe": "DEDUPE_DEFERRED_SANDBOX"
+  },
+  "after": {
+    "nodes": 10,
+    "telegram_nodes": 1,
+    "telegram_node_name": "Telegram Notify Accepted",
+    "telegram_type": "n8n-nodes-base.telegram",
+    "telegram_typeVersion": 1.2,
+    "telegram_credential_id": "2bIC5376l7ElXb4B",
+    "telegram_chat_id": 499423375,
+    "connections_from_Respond_Accepted": "Telegram Notify Accepted",
+    "connections_from_Respond_Rejected_to_telegram": false,
+    "versionId": "900407ad-ca23-45be-9a16-bbd9d88e836f",
+    "active": false,
+    "headerAuth": "headerAuth",
+    "auth_credential_id": "WKHmPaw6QBp7WnzP",
+    "dedupe": "DEDUPE_DEFERRED_SANDBOX"
+  },
+  "delta": {
+    "nodes_added": 1,
+    "nodes_removed": 0,
+    "connections_added": 1,
+    "unrelated_parameter_changes": 0,
+    "helper_nodes_added": 0
+  },
+  "verdict": "EXACT_TELEGRAM_SANDBOX_DELTA"
+}

@@ -1,0 +1,15 @@
+{
+  "phase": "1B-D2",
+  "readiness": "READY_FOR_SEQUENTIAL_RUNTIME_PRODUCER_OFFLINE_BASELINE_COMMIT",
+  "network_dispatch": "FORBIDDEN_D2",
+  "transport_modes_d2": ["disabled", "fixture", "mock"],
+  "http_transport": "BLOCKED",
+  "concurrency": 1,
+  "max_retries_default": 0,
+  "automatic_retries": false,
+  "http_202_means": "INTAKE_ACCEPTED",
+  "http_202_does_not_mean": "TELEGRAM_DELIVERED",
+  "ambiguous_timeout": "MANUAL_DEDUPE_CHECK_REQUIRED",
+  "next_recommendation": "Phase 1B-D2B — Sequential Runtime Producer Offline Evidence Baseline Commit",
+  "d3_authorized": false
+}

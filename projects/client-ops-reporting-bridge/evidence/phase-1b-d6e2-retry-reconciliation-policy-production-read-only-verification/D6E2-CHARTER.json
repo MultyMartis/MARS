@@ -1,0 +1,23 @@
+{
+  "phase": "D6E2",
+  "workflow_id": "tkM4H0G0gM3q9Foi",
+  "expected_version_id": "dc8746bf-df9c-425d-9b3f-4ace452ac5ef",
+  "data_table_id": "H6VYhwz7RXZCBMmu",
+  "allowed_event_ids": [
+    "c84e29bf-79b1-5aea-98c4-9dc8d651fc96",
+    "d6a2a001-27d6-4a2e-bd6a-000000000001"
+  ],
+  "allow_reads": true,
+  "allow_webhook": false,
+  "allow_activation": false,
+  "allow_deactivation": false,
+  "allow_data_table_mutation": false,
+  "allow_telegram": false,
+  "allow_retry_execution": false,
+  "allow_reconciliation_mutation": false,
+  "automatic_retries": 0,
+  "max_safe_concurrency": 1,
+  "explicit_operator_authorization": true,
+  "production_surface": "READ_ONLY_CONTROL_AND_LEDGER",
+  "reconciliation_is_read_only": true
+}

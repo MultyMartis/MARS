@@ -1,0 +1,47 @@
+{
+  "token": "D6E2_HISTORICAL_PENDING_POLICY_VERIFIED",
+  "blind_retry_prohibited_token": "D6E2_HISTORICAL_PENDING_BLIND_RETRY_PROHIBITED",
+  "observation": {
+    "event_id": "c84e29bf-79b1-5aea-98c4-9dc8d651fc96",
+    "intake_state": "FIRST_SEEN",
+    "event_status": "ATTENTION",
+    "delivery_state": "PENDING",
+    "telegram_quality": "KNOWN_SUCCESS_EVIDENCE",
+    "execution_available": true
+  },
+  "result": {
+    "decision": "UNSAFE_TO_RETRY",
+    "reason_code": "HISTORICAL_PENDING_BLIND_RETRY_PROHIBITED",
+    "retry_authorized": false,
+    "automatic_retry": false,
+    "requires_reconciliation": true,
+    "requires_new_charter": false,
+    "freshness_recheck_required": true,
+    "controlled_lifecycle_required": true,
+    "operator_action_required": true,
+    "no_send_guard": true,
+    "max_automatic_retries": 0,
+    "max_safe_concurrency": 1,
+    "note": "Blind retry prohibited; historical Telegram success evidence implies duplicate risk",
+    "event_id": "c84e29bf-79b1-5aea-98c4-9dc8d651fc96",
+    "event_identity_preserved": true,
+    "automatic_retries_enabled": false,
+    "reconciliation_plan": {
+      "decision": "UNSAFE_TO_RETRY",
+      "reason_code": "HISTORICAL_PENDING_BLIND_RETRY_PROHIBITED",
+      "actions": [
+        "READ_DATA_TABLE_EVENT",
+        "VERIFY_TELEGRAM_EVIDENCE",
+        "READ_N8N_EXECUTIONS",
+        "OPERATOR_REVIEW_REQUIRED"
+      ],
+      "executable": false,
+      "production_mutation_authorized": false,
+      "live_reconciliation_executed": false
+    },
+    "workstream_a_unchanged": true,
+    "workstream_b_unchanged": true,
+    "workstream_c_unchanged": true,
+    "unattended_mode_enabled": false
+  }
+}

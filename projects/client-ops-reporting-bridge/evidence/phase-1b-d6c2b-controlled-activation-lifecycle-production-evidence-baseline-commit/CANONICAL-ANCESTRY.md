@@ -1,0 +1,9 @@
+# Canonical Ancestry
+
+D6C2B_CANONICAL_BASELINE_RECONFIRMED
+
+Ancestors verified in local canonical tip:
+- 12e4c6ad1f4199458b6f091d084f33ca5f8a965d
+- 94d06c05ea79eb22780588d91064006c3edf2a05
+- e9c9be59f643e66970930e31339431acb8077b55
+- 8bb6e8f0f56388c12fdb013cf4cc1b27eb84331c

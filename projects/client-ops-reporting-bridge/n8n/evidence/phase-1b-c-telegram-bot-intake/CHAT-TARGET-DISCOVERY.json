@@ -1,0 +1,46 @@
+{
+  "phase": "1B-C0R2",
+  "discovery_final_retry_performed": true,
+  "prior_phases": ["1B-C", "1B-C0"],
+  "operator_confirmed_start_and_slash_start": true,
+  "method": "getUpdates",
+  "getWebhookInfo_calls": 1,
+  "getUpdates_calls": 1,
+  "getMe_calls": 1,
+  "mutation": false,
+  "offset_supplied": false,
+  "webhook_was_clear": true,
+  "pending_update_count_at_webhook_info": 1,
+  "update_count_observed": 1,
+  "unique_chat_count": 1,
+  "private_candidate_count": 1,
+  "candidates_sanitized": [
+    {
+      "chat_id": 499423375,
+      "chat_type": "private",
+      "start_like": true,
+      "update_kind": "message"
+    }
+  ],
+  "selected_chat": {
+    "chat_id": 499423375,
+    "chat_type": "private",
+    "source_method": "getUpdates",
+    "start_like": true
+  },
+  "verdict": "TELEGRAM_CHAT_TARGET_CONFIRMED",
+  "raw_message_text_recorded": false,
+  "personal_names_recorded": false,
+  "phone_numbers_recorded": false,
+  "personal_data_stored": false,
+  "raw_response_stored": false,
+  "telegram_messages_sent": 0,
+  "mutation_calls": 0,
+  "local_target_file_created": true,
+  "local_target_path": "local/client-ops-reporting-bridge/bzpm.ru/telegram.target.local.env",
+  "multiple_updates_same_target": false,
+  "token_reprompt_forbidden": true,
+  "prior_phase_1b_c_verdict": "TELEGRAM_CHAT_TARGET_NOT_YET_AVAILABLE",
+  "prior_phase_1b_c0_verdict": "TELEGRAM_CHAT_TARGET_NOT_YET_AVAILABLE",
+  "note": "Phase 1B-C0R2 authorized exactly one getUpdates final retry after operator-confirmed Start and /start. One private chat update observed; target confirmed. No raw message text or personal identity retained."
+}

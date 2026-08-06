@@ -1,0 +1,20 @@
+{
+  "phase": "1B-D1",
+  "mode": "post-apply",
+  "pre_nodes": 10,
+  "post_nodes": 17,
+  "added_nodes": [
+    "Prepare Dedupe Context",
+    "Dedupe Lookup",
+    "Dedupe Classify",
+    "IF Dedupe First Seen",
+    "Dedupe Claim Insert",
+    "Prepare Non-First-Seen Response",
+    "Respond Non-First-Seen"
+  ],
+  "removed_nodes": [],
+  "validate": {
+    "ok": true,
+    "errors": []
+  }
+}

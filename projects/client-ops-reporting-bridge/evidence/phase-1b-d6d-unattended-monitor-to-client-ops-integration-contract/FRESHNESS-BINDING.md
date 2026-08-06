@@ -1,0 +1,7 @@
+# FRESHNESS-BINDING
+
+Token: D6D_FRESHNESS_BINDING_DEFINED
+
+STALE_AFTER_SECONDS=93600; operator age > 93600.
+Eligibility: FRESH_AND_ELIGIBLE | STALE_REVIEW_REQUIRED | NOT_SAFE_TO_SEND.
+Event identity independent of evaluation clock.

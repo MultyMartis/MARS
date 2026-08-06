@@ -1,0 +1,21 @@
+{
+  "phase": "1B-D6A2",
+  "title": "Controlled Durable Delivery Ledger Production Apply and Synthetic Verification",
+  "workstream": "A",
+  "workflow_id": "tkM4H0G0gM3q9Foi",
+  "datatable_id": "H6VYhwz7RXZCBMmu",
+  "authorized": {
+    "production_workflow_content_apply": 1,
+    "temporary_activation_for_synthetic": true,
+    "synthetic_webhook_calls_max": 3,
+    "historical_row_mutation": false,
+    "schema_migration": false,
+    "site002_connection": false,
+    "unattended": false
+  },
+  "forbidden": ["B", "C", "E", "D", "git_commit", "git_push", "real_site002_producer"],
+  "accepted_d6a_readiness": "READY_FOR_D6A_CONTROLLED_PRODUCTION_APPLY_CHARTER",
+  "pre_apply_versionId": "3d2fd6fc-bc17-4e0f-b9e5-086c959afd29",
+  "pre_apply_nodes": 17,
+  "pre_apply_executions": 32
+}

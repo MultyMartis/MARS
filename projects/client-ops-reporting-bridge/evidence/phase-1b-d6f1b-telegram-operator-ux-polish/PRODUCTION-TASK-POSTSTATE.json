@@ -1,0 +1,23 @@
+{
+  "phase": "1B-D6F1B",
+  "producer": {
+    "last_run": "08/05/2026 13:00:00",
+    "state": "Ready",
+    "next_run": "08/07/2026 13:00:00",
+    "name": "MARS_SITE_002_Client_Ops_Producer",
+    "last_result": 21
+  },
+  "automatic_retries": 0,
+  "workflow_versionId": "9c1f936f-e2bb-4a2f-8372-c26257e982b7",
+  "workflow_active": true,
+  "captured_at": "2026-08-06T19:05:52.0822052+07:00",
+  "kill_switch_mode": "ENABLED",
+  "max_concurrency": 1,
+  "monitor": {
+    "last_run": "08/06/2026 13:04:04",
+    "state": "Ready",
+    "next_run": "08/07/2026 12:30:30",
+    "name": "MARS_SITE_002_Post_1C_Catalog_Monitor",
+    "last_result": 0
+  }
+}

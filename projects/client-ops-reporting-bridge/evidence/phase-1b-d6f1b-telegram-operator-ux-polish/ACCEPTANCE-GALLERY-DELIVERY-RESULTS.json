@@ -1,0 +1,48 @@
+{
+  "phase": "1B-D6F1B",
+  "delivered": 4,
+  "required": 4,
+  "workflow_version_final": "9c1f936f-e2bb-4a2f-8372-c26257e982b7",
+  "workflow_active_after": true,
+  "failed_attempt_t2_exec": "24219",
+  "t2_retry_exec": "24225",
+  "results": [
+    {
+      "scenario_id": "T1",
+      "scenario_name_ru": "Успешный импорт",
+      "n8n_execution_id": "24217",
+      "telegram_delivery_success": true,
+      "telegram_message_id_redacted": "msg:18***",
+      "duplicate_retry_posts": 1,
+      "delivery_state": "SENT"
+    },
+    {
+      "scenario_id": "T2",
+      "scenario_name_ru": "Каталог загружен, цены и остатки не получены",
+      "n8n_execution_id": "24225",
+      "telegram_delivery_success": true,
+      "telegram_message_id_redacted": "msg:21***",
+      "duplicate_retry_posts": 0,
+      "delivery_state": "SENT",
+      "note": "First attempt exec 24219 FAILED (Telegram entity parse on offers0_*.xml under default Markdown). Fixed via HTML parse_mode + <code>; resent once with new test event id."
+    },
+    {
+      "scenario_id": "T3",
+      "scenario_name_ru": "Свежий импорт не обнаружен",
+      "n8n_execution_id": "24220",
+      "telegram_delivery_success": true,
+      "telegram_message_id_redacted": "msg:19***",
+      "duplicate_retry_posts": 0,
+      "delivery_state": "SENT"
+    },
+    {
+      "scenario_id": "T4",
+      "scenario_name_ru": "Ошибка импорта",
+      "n8n_execution_id": "24221",
+      "telegram_delivery_success": true,
+      "telegram_message_id_redacted": "msg:20***",
+      "duplicate_retry_posts": 0,
+      "delivery_state": "SENT"
+    }
+  ]
+}

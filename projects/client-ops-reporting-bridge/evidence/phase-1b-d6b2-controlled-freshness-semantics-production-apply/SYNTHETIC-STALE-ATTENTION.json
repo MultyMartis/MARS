@@ -1,0 +1,15 @@
+{
+  "phase": "1B-D6B2",
+  "token": "D6B2_SYNTHETIC_STALE_ATTENTION_VERIFIED",
+  "method": "deployed_producer_preview_gate",
+  "run_id": "d6b2-syn-s2-stale-attention",
+  "event_id": "18d77782-fe13-5f2f-8f75-f673e98a3308",
+  "source_status": "ATTENTION",
+  "delivery_eligibility": "STALE_REVIEW_REQUIRED",
+  "preview_verdict": "SOURCE_VALID_BUT_STALE_REVIEW_REQUIRED",
+  "live_authorized": false,
+  "POST": 0,
+  "Telegram": 0,
+  "Data_Table_intake_mutation": 0,
+  "factual_status_preserved": true
+}

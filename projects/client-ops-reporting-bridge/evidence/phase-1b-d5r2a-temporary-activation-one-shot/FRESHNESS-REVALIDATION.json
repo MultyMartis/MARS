@@ -1,0 +1,15 @@
+{
+  "validation_time_utc": "2026-07-26T15:11:35Z",
+  "source_age_seconds": 15543,
+  "observed_at": "2026-07-26T10:52:32Z",
+  "verdict": "D5R2A_CANDIDATE_FRESH",
+  "run_id": "2026-07-26_17-48-38",
+  "threshold_unchanged": true,
+  "freshness_semantics_status": "FRESHNESS_STATUS_SEMANTICS_REQUIRES_SEPARATE_REPAIR",
+  "stale_after_seconds": 93600,
+  "phase": "1B-D5R2A",
+  "note": "Source status NOT falsified to BLOCKED solely due age.",
+  "delivery_eligibility": "FRESH_AND_ELIGIBLE",
+  "source_status_factual": "ATTENTION",
+  "source_classification": "ONBOARDING_REQUIRED"
+}

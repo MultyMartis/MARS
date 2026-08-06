@@ -1,0 +1,31 @@
+{
+  "phase": "1B-C1",
+  "exact_name_count": 1,
+  "workflow_id": "tkM4H0G0gM3q9Foi",
+  "workflow_name": "MARS Client Ops Bridge — bzpm.ru",
+  "active": false,
+  "nodes": 10,
+  "executions": 25,
+  "running": 0,
+  "versionId": "900407ad-ca23-45be-9a16-bbd9d88e836f",
+  "pre_versionId": "6c6d1282-0105-47e1-a3f5-b070cec0664b",
+  "telegram_nodes": 1,
+  "telegram_node_name": "Telegram Notify Accepted",
+  "telegram_credential": {
+    "id": "2bIC5376l7ElXb4B",
+    "name": "MARS Client Ops Telegram — bzpm.ru",
+    "type": "telegramApi"
+  },
+  "telegram_chat_id": 499423375,
+  "pattern_b_connection": "Respond Accepted → Telegram Notify Accepted",
+  "rejected_path_reaches_telegram": false,
+  "webhook_authentication": "headerAuth",
+  "auth_credential_id": "WKHmPaw6QBp7WnzP",
+  "http_request_nodes": 0,
+  "google_sheets_nodes": 0,
+  "data_store_nodes": 0,
+  "dedupe": "DEDUPE_DEFERRED_SANDBOX",
+  "production_monitor_connected": false,
+  "scheduler_connected": false,
+  "exporter_runtime_connected": false
+}

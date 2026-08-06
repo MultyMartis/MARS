@@ -1,0 +1,53 @@
+{
+  "behaviors": [
+    {
+      "behavior": "Native auth reject (no/wrong header)",
+      "intended": "Reject before business nodes; non-2xx",
+      "observed": "HTTP 403 text 'Authorization data is wrong!'",
+      "state": "OBSERVED_SAFE_NATIVE"
+    },
+    {
+      "behavior": "Valid authenticated OK/ATTENTION/FAILED/BLOCKED",
+      "intended": "HTTP 202 ACCEPTED + DEFERRED_SANDBOX",
+      "observed": "HTTP 202; result ACCEPTED; dedupe DEFERRED_SANDBOX",
+      "state": "MATCH"
+    },
+    {
+      "behavior": "Schema/identity/metric validation rejects",
+      "intended": "HTTP 400 INVALID_SCHEMA",
+      "observed": "HTTP 400 INVALID_SCHEMA",
+      "state": "MATCH"
+    },
+    {
+      "behavior": "Security rejects",
+      "intended": "HTTP 400 SECURITY_REJECTED",
+      "observed": "HTTP 400 SECURITY_REJECTED",
+      "state": "MATCH"
+    },
+    {
+      "behavior": "Unsupported Content-Type",
+      "intended": "415 UNSUPPORTED_MEDIA_TYPE (workflow or native)",
+      "observed": "HTTP 415 workflow JSON REJECTED/UNSUPPORTED_MEDIA_TYPE (auth passed; business gate ran)",
+      "state": "MATCH_WORKFLOW"
+    },
+    {
+      "behavior": "Malformed JSON",
+      "intended": "Controlled reject; no secret leak",
+      "observed": "HTTP 422 native 'Failed to parse request body'; no workflow execution",
+      "state": "OBSERVED_SAFE_NATIVE"
+    },
+    {
+      "behavior": "Oversized payload",
+      "intended": "HTTP 413 PAYLOAD_TOO_LARGE via workflow size gate",
+      "observed": "HTTP 422 native 'Failed to parse request body' before workflow size gate; no execution; no leak",
+      "state": "CONTRACT_DISCREPANCY_SAFE"
+    },
+    {
+      "behavior": "Duplicate event_id",
+      "intended": "Both ACCEPTED with DEFERRED_SANDBOX (no durable dedupe)",
+      "observed": "T27 and T28 both HTTP 202 ACCEPTED DEFERRED_SANDBOX",
+      "state": "MATCH_DEFERRED"
+    }
+  ],
+  "note": "Native n8n Header Auth and body parse can reject before workflow Code nodes."
+}

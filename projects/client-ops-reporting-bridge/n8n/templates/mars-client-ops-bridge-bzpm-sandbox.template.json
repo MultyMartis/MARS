@@ -1,0 +1,249 @@
+{
+  "name": "MARS Client Ops Bridge — bzpm.ru",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "mars-client-ops-bridge-bzpm-sandbox",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "3be98c96-0514-42d4-9b0d-4f75b7afd314",
+      "name": "Webhook Intake",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Capture Request Metadata — Client Ops sandbox\nconst item = $input.first().json || {};\nconst headers = item.headers || item.header || {};\nconst body = item.body !== undefined ? item.body : item;\nlet rawBodyBytes = 0;\ntry {\n  rawBodyBytes = Buffer.byteLength(JSON.stringify(body ?? {}), 'utf8');\n} catch (e) {\n  rawBodyBytes = 0;\n}\nreturn [{\n  json: {\n    headers,\n    body,\n    rawBodyBytes,\n    received_at: new Date().toISOString(),\n  }\n}];\n"
+      },
+      "id": "3f3a1ca9-a1d1-444a-a14e-f5f488cf6a9b",
+      "name": "Capture Request Metadata",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        240,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Client Ops Process Gates — sandbox template\n// AUTH SECRET BINDING: HITL_REQUIRED — placeholder must be replaced before apply.\n/**\r\n * MARS Client Ops Bridge — offline / Code@2-compatible validation library.\r\n *\r\n * Pure JavaScript. No network. No secret values emitted in responses.\r\n * Suitable for Node harness and for embedding into n8n Code@2 nodes.\r\n *\r\n * AUTH: MVP compares request header token to an injected expectedSecret\r\n * string. Live credential/env binding remains HITL_REQUIRED — do not invent\r\n * n8n env access syntax here.\r\n */\r\n\r\nconst WORKFLOW_NAME = 'MARS Client Ops Bridge — bzpm.ru';\r\nconst SCHEMA_NAME = 'mars.client_ops.report';\r\nconst SCHEMA_MAJOR = 1;\r\nconst EVENT_TYPE = 'site.post_1c_monitor';\r\nconst SITE_ID = 'SITE-002';\r\nconst SITE_DOMAIN = 'bzpm.ru';\r\nconst MAX_PAYLOAD_BYTES = 256 * 1024;\r\nconst AUTH_HEADER = 'x-mars-client-ops-token';\r\nconst AUTH_PLACEHOLDER = '<<<HITL_REQUIRED:CLIENT_OPS_WEBHOOK_AUTH_SECRET>>>';\r\n/** Clearly synthetic harness-only secret — never a production credential. */\r\nconst SYNTHETIC_HARNESS_SECRET =\r\n  'SYNTHETIC_CLIENT_OPS_HARNESS_SECRET_v1_NOT_A_REAL_CREDENTIAL';\r\n\r\nconst ALLOWED_STATUSES = new Set(['OK', 'ATTENTION', 'FAILED', 'BLOCKED']);\r\n\r\nconst REQUIRED_TOP_LEVEL = [\r\n  'schema_name',\r\n  'schema_version',\r\n  'event_id',\r\n  'event_type',\r\n  'generated_at',\r\n  'observed_at',\r\n  'environment',\r\n  'site',\r\n  'producer',\r\n  'run',\r\n  'action',\r\n  'metrics',\r\n  'freshness',\r\n  'security',\r\n];\r\n\r\nconst METRIC_KEYS = [\r\n  'baseline_count',\r\n  'current_count',\r\n  'added_urls',\r\n  'removed_urls',\r\n  'onboarding_needed_count',\r\n];\r\n\r\nconst FORBIDDEN_TOP_LEVEL_KEYS = new Set([\r\n  'delivery',\r\n  'ai',\r\n  'routing',\r\n  'telegram',\r\n  'chat_id',\r\n  'bot_token',\r\n  'webhook',\r\n  'credentials',\r\n  'secret',\r\n  'secrets',\r\n  'password',\r\n  'token',\r\n  'api_key',\r\n  'openrouter',\r\n  'atlas',\r\n  'source_path',\r\n  'absolute_path',\r\n  'storage_path',\r\n]);\r\n\r\nconst RE_WINDOWS_ABS = /[A-Za-z]:\\\\/;\r\nconst RE_UNC = /\\\\\\\\[^\\s\\\\/]+\\\\/;\r\nconst RE_URI_CREDS = /[a-zA-Z][a-zA-Z0-9+.-]*:\\/\\/[^/\\s]*:[^/\\s]*@/;\r\nconst RE_TOKENISH =\r\n  /(\\b(api[_-]?key|bot[_-]?token|access[_-]?token|secret[_-]?key|bearer\\s+[A-Za-z0-9\\-._~+/]+=*)\\b|\\b\\d{8,10}:[A-Za-z0-9_-]{30,}\\b)/i;\r\nconst RE_STACK = /^(Traceback \\(most recent call last\\):|\\s+File \".+\", line \\d+)/m;\r\nconst RE_PRIVATE_KEY = /-----BEGIN (RSA |OPENSSH )?PRIVATE KEY-----/i;\r\nconst RE_UUID =\r\n  /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;\r\n\r\n/**\r\n * @param {unknown} headers\r\n * @returns {Record<string, string>}\r\n */\r\nfunction normalizeHeaders(headers) {\r\n  const out = {};\r\n  if (!headers || typeof headers !== 'object') return out;\r\n  for (const [key, value] of Object.entries(headers)) {\r\n    if (value === undefined || value === null) continue;\r\n    out[String(key).toLowerCase()] = Array.isArray(value)\r\n      ? String(value[0] ?? '')\r\n      : String(value);\r\n  }\r\n  return out;\r\n}\r\n\r\n/**\r\n * @param {Record<string, string>} headers\r\n * @returns {{ ok: boolean, code?: string }}\r\n */\r\nfunction validateContentType(headers) {\r\n  const raw = headers['content-type'] || '';\r\n  const base = raw.split(';')[0].trim().toLowerCase();\r\n  if (base !== 'application/json') {\r\n    return { ok: false, code: 'UNSUPPORTED_MEDIA_TYPE' };\r\n  }\r\n  return { ok: true };\r\n}\r\n\r\n/**\r\n * Auth interface only. Does not leak secrets.\r\n * @param {Record<string, string>} headers\r\n * @param {string} expectedSecret\r\n * @returns {{ ok: boolean, code?: string }}\r\n */\r\nfunction validateAuthInterface(headers, expectedSecret) {\r\n  if (\r\n    !expectedSecret ||\r\n    expectedSecret === AUTH_PLACEHOLDER ||\r\n    expectedSecret.includes('HITL_REQUIRED')\r\n  ) {\r\n    return { ok: false, code: 'AUTH_BINDING_UNRESOLVED' };\r\n  }\r\n  const headerToken = (headers[AUTH_HEADER] || '').trim();\r\n  const auth = (headers.authorization || '').trim();\r\n  let presented = headerToken;\r\n  if (!presented && /^Bearer\\s+/i.test(auth)) {\r\n    presented = auth.replace(/^Bearer\\s+/i, '').trim();\r\n  }\r\n  if (!presented) {\r\n    return { ok: false, code: 'UNAUTHORIZED' };\r\n  }\r\n  if (presented !== expectedSecret) {\r\n    return { ok: false, code: 'UNAUTHORIZED' };\r\n  }\r\n  return { ok: true };\r\n}\r\n\r\n/**\r\n * @param {unknown} envelope\r\n * @returns {{ ok: boolean, code?: string, field?: string }}\r\n */\r\nfunction validateEnvelopeShape(envelope) {\r\n  if (!envelope || typeof envelope !== 'object' || Array.isArray(envelope)) {\r\n    return { ok: false, code: 'INVALID_SCHEMA', field: '(root)' };\r\n  }\r\n  for (const key of REQUIRED_TOP_LEVEL) {\r\n    if (!(key in envelope)) {\r\n      return { ok: false, code: 'INVALID_SCHEMA', field: key };\r\n    }\r\n  }\r\n  for (const key of Object.keys(envelope)) {\r\n    if (FORBIDDEN_TOP_LEVEL_KEYS.has(String(key).toLowerCase())) {\r\n      return { ok: false, code: 'SECURITY_REJECTED', field: key };\r\n    }\r\n  }\r\n  return { ok: true };\r\n}\r\n\r\n/**\r\n * @param {unknown} version\r\n * @returns {{ ok: boolean, code?: string }}\r\n */\r\nfunction validateSchemaVersion(version) {\r\n  if (typeof version !== 'string' || !/^\\d+\\.\\d+$/.test(version)) {\r\n    return { ok: false, code: 'INVALID_SCHEMA' };\r\n  }\r\n  const major = Number(version.split('.')[0]);\r\n  if (major !== SCHEMA_MAJOR) {\r\n    return { ok: false, code: 'INVALID_SCHEMA' };\r\n  }\r\n  return { ok: true };\r\n}\r\n\r\n/**\r\n * @param {unknown} status\r\n * @returns {{ ok: boolean, code?: string }}\r\n */\r\nfunction validateAllowedStatus(status) {\r\n  if (typeof status !== 'string' || !ALLOWED_STATUSES.has(status)) {\r\n    return { ok: false, code: 'INVALID_SCHEMA' };\r\n  }\r\n  return { ok: true };\r\n}\r\n\r\n/**\r\n * @param {unknown} security\r\n * @returns {{ ok: boolean, code?: string, field?: string }}\r\n */\r\nfunction validateSecurityFlags(security) {\r\n  if (!security || typeof security !== 'object') {\r\n    return { ok: false, code: 'SECURITY_REJECTED', field: 'security' };\r\n  }\r\n  if (security.contains_secrets !== false) {\r\n    return {\r\n      ok: false,\r\n      code: 'SECURITY_REJECTED',\r\n      field: 'security.contains_secrets',\r\n    };\r\n  }\r\n  if (security.redacted !== true) {\r\n    return {\r\n      ok: false,\r\n      code: 'SECURITY_REJECTED',\r\n      field: 'security.redacted',\r\n    };\r\n  }\r\n  return { ok: true };\r\n}\r\n\r\n/**\r\n * @param {unknown} eventId\r\n * @returns {{ ok: boolean, code?: string }}\r\n */\r\nfunction validateEventId(eventId) {\r\n  if (typeof eventId !== 'string' || !RE_UUID.test(eventId)) {\r\n    return { ok: false, code: 'INVALID_SCHEMA' };\r\n  }\r\n  return { ok: true };\r\n}\r\n\r\n/**\r\n * @param {string} text\r\n * @param {number} [maxLen]\r\n */\r\nfunction redactForDiagnostics(text, maxLen = 80) {\r\n  let cleaned = String(text);\r\n  cleaned = cleaned.replace(RE_WINDOWS_ABS, '<REDACTED_PATH>');\r\n  cleaned = cleaned.replace(RE_UNC, '<REDACTED_UNC>');\r\n  cleaned = cleaned.replace(RE_URI_CREDS, '<REDACTED_URI>');\r\n  cleaned = cleaned.replace(RE_TOKENISH, '<REDACTED_TOKEN>');\r\n  if (cleaned.length > maxLen) return `${cleaned.slice(0, maxLen - 3)}...`;\r\n  return cleaned;\r\n}\r\n\r\n/**\r\n * @param {unknown} value\r\n * @param {string} [prefix]\r\n * @returns {Iterable<[string, string]>}\r\n */\r\nfunction* iterStrings(value, prefix = '') {\r\n  if (typeof value === 'string') {\r\n    yield [prefix, value];\r\n  } else if (value && typeof value === 'object' && !Array.isArray(value)) {\r\n    for (const [key, child] of Object.entries(value)) {\r\n      const path = prefix ? `${prefix}.${key}` : String(key);\r\n      yield* iterStrings(child, path);\r\n    }\r\n  } else if (Array.isArray(value)) {\r\n    for (let i = 0; i < value.length; i += 1) {\r\n      yield* iterStrings(value[i], `${prefix}[${i}]`);\r\n    }\r\n  }\r\n}\r\n\r\n/**\r\n * @param {unknown} envelope\r\n * @returns {{ ok: boolean, code?: string, field?: string, diagnostic?: string }}\r\n */\r\nfunction scanUnsafeStrings(envelope) {\r\n  for (const [path, text] of iterStrings(envelope)) {\r\n    if (RE_WINDOWS_ABS.test(text) || RE_UNC.test(text)) {\r\n      return {\r\n        ok: false,\r\n        code: 'SECURITY_REJECTED',\r\n        field: path,\r\n        diagnostic: 'path_pattern',\r\n      };\r\n    }\r\n    if (RE_URI_CREDS.test(text)) {\r\n      return {\r\n        ok: false,\r\n        code: 'SECURITY_REJECTED',\r\n        field: path,\r\n        diagnostic: 'uri_credentials',\r\n      };\r\n    }\r\n    if (RE_TOKENISH.test(text)) {\r\n      return {\r\n        ok: false,\r\n        code: 'SECURITY_REJECTED',\r\n        field: path,\r\n        diagnostic: 'token_like',\r\n      };\r\n    }\r\n    if (RE_STACK.test(text) || RE_PRIVATE_KEY.test(text)) {\r\n      return {\r\n        ok: false,\r\n        code: 'SECURITY_REJECTED',\r\n        field: path,\r\n        diagnostic: 'raw_secret_or_stack',\r\n      };\r\n    }\r\n  }\r\n  return { ok: true };\r\n}\r\n\r\n/**\r\n * @param {string} [eventId]\r\n * @param {'NEW'|'DEFERRED_SANDBOX'|'DUPLICATE'} [dedupe]\r\n */\r\nfunction buildAcceptedResponse(eventId, dedupe = 'DEFERRED_SANDBOX') {\r\n  return {\r\n    ok: true,\r\n    result: 'ACCEPTED',\r\n    event_id: eventId || null,\r\n    workflow: WORKFLOW_NAME,\r\n    dedupe,\r\n  };\r\n}\r\n\r\n/**\r\n * @param {string} code\r\n * @param {string} [eventId]\r\n */\r\nfunction buildRejectedResponse(code, eventId) {\r\n  const body = {\r\n    ok: false,\r\n    result: code === 'INTERNAL_ERROR' ? 'ERROR' : 'REJECTED',\r\n    code,\r\n  };\r\n  if (eventId) body.event_id = eventId;\r\n  return body;\r\n}\r\n\r\n/**\r\n * @param {string} eventId\r\n */\r\nfunction buildDuplicateResponse(eventId) {\r\n  return {\r\n    ok: true,\r\n    result: 'DUPLICATE',\r\n    event_id: eventId,\r\n  };\r\n}\r\n\r\nfunction isNonNegInt(value) {\r\n  return typeof value === 'number' && Number.isInteger(value) && value >= 0;\r\n}\r\n\r\nfunction parseableTimestamp(value) {\r\n  if (typeof value !== 'string' || !value.trim()) return false;\r\n  const t = Date.parse(value);\r\n  return Number.isFinite(t);\r\n}\r\n\r\n/**\r\n * Full envelope business validation (already-normalized envelope only).\r\n * @param {unknown} envelope\r\n * @returns {{ ok: boolean, code?: string, field?: string, diagnostic?: string }}\r\n */\r\nfunction validateBusinessEnvelope(envelope) {\r\n  const shape = validateEnvelopeShape(envelope);\r\n  if (!shape.ok) return shape;\r\n\r\n  const env = /** @type {Record<string, any>} */ (envelope);\r\n\r\n  if (env.schema_name !== SCHEMA_NAME) {\r\n    return { ok: false, code: 'INVALID_SCHEMA', field: 'schema_name' };\r\n  }\r\n\r\n  const ver = validateSchemaVersion(env.schema_version);\r\n  if (!ver.ok) return { ...ver, field: 'schema_version' };\r\n\r\n  if (env.event_type !== EVENT_TYPE) {\r\n    return { ok: false, code: 'INVALID_SCHEMA', field: 'event_type' };\r\n  }\r\n\r\n  const eid = validateEventId(env.event_id);\r\n  if (!eid.ok) return { ...eid, field: 'event_id' };\r\n\r\n  if (!parseableTimestamp(env.generated_at)) {\r\n    return { ok: false, code: 'INVALID_SCHEMA', field: 'generated_at' };\r\n  }\r\n  if (!parseableTimestamp(env.observed_at)) {\r\n    return { ok: false, code: 'INVALID_SCHEMA', field: 'observed_at' };\r\n  }\r\n\r\n  if (!env.site || typeof env.site !== 'object') {\r\n    return { ok: false, code: 'INVALID_SCHEMA', field: 'site' };\r\n  }\r\n  if (env.site.site_id !== SITE_ID) {\r\n    return { ok: false, code: 'INVALID_SCHEMA', field: 'site.site_id' };\r\n  }\r\n  if (env.site.domain !== SITE_DOMAIN) {\r\n    return { ok: false, code: 'INVALID_SCHEMA', field: 'site.domain' };\r\n  }\r\n  if (typeof env.site.site_name !== 'string' || !env.site.site_name.trim()) {\r\n    return { ok: false, code: 'INVALID_SCHEMA', field: 'site.site_name' };\r\n  }\r\n\r\n  if (!env.producer || typeof env.producer !== 'object') {\r\n    return { ok: false, code: 'INVALID_SCHEMA', field: 'producer' };\r\n  }\r\n  if (typeof env.producer.name !== 'string' || !env.producer.name.trim()) {\r\n    return { ok: false, code: 'INVALID_SCHEMA', field: 'producer.name' };\r\n  }\r\n  if (typeof env.producer.version !== 'string' || !env.producer.version.trim()) {\r\n    return { ok: false, code: 'INVALID_SCHEMA', field: 'producer.version' };\r\n  }\r\n\r\n  if (!env.run || typeof env.run !== 'object') {\r\n    return { ok: false, code: 'INVALID_SCHEMA', field: 'run' };\r\n  }\r\n  if (typeof env.run.run_id !== 'string' || !env.run.run_id.trim()) {\r\n    return { ok: false, code: 'INVALID_SCHEMA', field: 'run.run_id' };\r\n  }\r\n  const status = validateAllowedStatus(env.run.normalized_status);\r\n  if (!status.ok) {\r\n    return { ok: false, code: 'INVALID_SCHEMA', field: 'run.normalized_status' };\r\n  }\r\n  if (typeof env.run.source_status !== 'string' || !env.run.source_status.trim()) {\r\n    return { ok: false, code: 'INVALID_SCHEMA', field: 'run.source_status' };\r\n  }\r\n  if (typeof env.run.summary_code !== 'string' || !env.run.summary_code.trim()) {\r\n    return { ok: false, code: 'INVALID_SCHEMA', field: 'run.summary_code' };\r\n  }\r\n  if (!Array.isArray(env.run.reason_codes)) {\r\n    return { ok: false, code: 'INVALID_SCHEMA', field: 'run.reason_codes' };\r\n  }\r\n\r\n  if (!env.action || typeof env.action !== 'object') {\r\n    return { ok: false, code: 'INVALID_SCHEMA', field: 'action' };\r\n  }\r\n  if (typeof env.action.required !== 'boolean') {\r\n    return { ok: false, code: 'INVALID_SCHEMA', field: 'action.required' };\r\n  }\r\n  if (typeof env.action.code !== 'string' || !env.action.code.trim()) {\r\n    return { ok: false, code: 'INVALID_SCHEMA', field: 'action.code' };\r\n  }\r\n  if (typeof env.action.text !== 'string') {\r\n    return { ok: false, code: 'INVALID_SCHEMA', field: 'action.text' };\r\n  }\r\n\r\n  if (!env.metrics || typeof env.metrics !== 'object') {\r\n    return { ok: false, code: 'INVALID_SCHEMA', field: 'metrics' };\r\n  }\r\n  for (const key of METRIC_KEYS) {\r\n    const val = env.metrics[key];\r\n    if (typeof val === 'boolean' || !isNonNegInt(val)) {\r\n      return { ok: false, code: 'INVALID_SCHEMA', field: `metrics.${key}` };\r\n    }\r\n  }\r\n\r\n  if (!env.freshness || typeof env.freshness !== 'object') {\r\n    return { ok: false, code: 'INVALID_SCHEMA', field: 'freshness' };\r\n  }\r\n  if (!isNonNegInt(env.freshness.age_seconds)) {\r\n    return { ok: false, code: 'INVALID_SCHEMA', field: 'freshness.age_seconds' };\r\n  }\r\n  if (typeof env.freshness.stale !== 'boolean') {\r\n    return { ok: false, code: 'INVALID_SCHEMA', field: 'freshness.stale' };\r\n  }\r\n\r\n  const flags = validateSecurityFlags(env.security);\r\n  if (!flags.ok) return flags;\r\n\r\n  const unsafe = scanUnsafeStrings(env);\r\n  if (!unsafe.ok) return unsafe;\r\n\r\n  return { ok: true };\r\n}\r\n\r\n/**\r\n * Dedupe sandbox decision: deferred — never claims durable uniqueness.\r\n * @returns {{ mode: 'DEFERRED_SANDBOX', result: 'ACCEPTED', dedupe: 'DEFERRED_SANDBOX' }}\r\n */\r\nfunction decideDedupeSandbox() {\r\n  return {\r\n    mode: 'DEFERRED_SANDBOX',\r\n    result: 'ACCEPTED',\r\n    dedupe: 'DEFERRED_SANDBOX',\r\n  };\r\n}\r\n\r\n/**\r\n * HTTP status mapping for frozen response contract.\r\n * @param {string} result\r\n * @param {string} [code]\r\n */\r\nfunction httpStatusFor(result, code) {\r\n  if (result === 'ACCEPTED') return 202;\r\n  if (result === 'DUPLICATE') return 200;\r\n  if (code === 'UNAUTHORIZED') return 401;\r\n  if (code === 'UNSUPPORTED_MEDIA_TYPE') return 415;\r\n  if (code === 'PAYLOAD_TOO_LARGE') return 413;\r\n  if (code === 'SECURITY_REJECTED') return 400;\r\n  if (code === 'INVALID_SCHEMA') return 400;\r\n  if (code === 'INTERNAL_ERROR') return 500;\r\n  return 400;\r\n}\r\n\r\n/**\r\n * Full request processing pipeline for harness / Code@2.\r\n *\r\n * @param {{\r\n *   headers?: unknown,\r\n *   body?: unknown,\r\n *   rawBodyBytes?: number,\r\n *   expectedSecret?: string,\r\n *   forceDuplicateDeferredResponse?: boolean,\r\n * }} input\r\n */\r\nfunction processClientOpsRequest(input) {\r\n  try {\r\n    const headers = normalizeHeaders(input.headers || {});\r\n    const expectedSecret =\r\n      input.expectedSecret === undefined\r\n        ? SYNTHETIC_HARNESS_SECRET\r\n        : input.expectedSecret;\r\n\r\n    const ct = validateContentType(headers);\r\n    if (!ct.ok) {\r\n      const code = ct.code || 'UNSUPPORTED_MEDIA_TYPE';\r\n      return {\r\n        http_status: httpStatusFor('REJECTED', code),\r\n        response: buildRejectedResponse(code),\r\n        evidence: { gate: 'content_type', code },\r\n      };\r\n    }\r\n\r\n    const size = Number(input.rawBodyBytes || 0);\r\n    if (Number.isFinite(size) && size > MAX_PAYLOAD_BYTES) {\r\n      return {\r\n        http_status: 413,\r\n        response: buildRejectedResponse('PAYLOAD_TOO_LARGE'),\r\n        evidence: { gate: 'size', code: 'PAYLOAD_TOO_LARGE' },\r\n      };\r\n    }\r\n\r\n    const auth = validateAuthInterface(headers, expectedSecret);\r\n    if (!auth.ok) {\r\n      const code = auth.code === 'AUTH_BINDING_UNRESOLVED' ? 'UNAUTHORIZED' : auth.code;\r\n      return {\r\n        http_status: httpStatusFor('REJECTED', code),\r\n        response: buildRejectedResponse(code),\r\n        evidence: {\r\n          gate: 'auth',\r\n          code: auth.code,\r\n          note:\r\n            auth.code === 'AUTH_BINDING_UNRESOLVED'\r\n              ? 'HITL_REQUIRED_AUTH_BINDING'\r\n              : undefined,\r\n        },\r\n      };\r\n    }\r\n\r\n    const body = input.body;\r\n    if (!body || typeof body !== 'object' || Array.isArray(body)) {\r\n      return {\r\n        http_status: 400,\r\n        response: buildRejectedResponse('INVALID_SCHEMA'),\r\n        evidence: { gate: 'payload_shape', code: 'INVALID_SCHEMA' },\r\n      };\r\n    }\r\n\r\n    const business = validateBusinessEnvelope(body);\r\n    if (!business.ok) {\r\n      const code = business.code || 'INVALID_SCHEMA';\r\n      return {\r\n        http_status: httpStatusFor('REJECTED', code),\r\n        response: buildRejectedResponse(code),\r\n        evidence: {\r\n          gate: 'business',\r\n          code,\r\n          field: business.field || null,\r\n          diagnostic: business.diagnostic || null,\r\n        },\r\n      };\r\n    }\r\n\r\n    const eventId = String(body.event_id);\r\n\r\n    if (input.forceDuplicateDeferredResponse) {\r\n      return {\r\n        http_status: 200,\r\n        response: {\r\n          ok: true,\r\n          result: 'DUPLICATE',\r\n          event_id: eventId,\r\n          dedupe: 'DEFERRED_SANDBOX',\r\n          note: 'DEDUPE_NOT_ENABLED_SANDBOX',\r\n        },\r\n        evidence: {\r\n          gate: 'dedupe',\r\n          code: 'DEDUPE_NOT_ENABLED_SANDBOX',\r\n          event_id: eventId,\r\n        },\r\n      };\r\n    }\r\n\r\n    const dedupe = decideDedupeSandbox();\r\n    return {\r\n      http_status: httpStatusFor('ACCEPTED'),\r\n      response: buildAcceptedResponse(eventId, dedupe.dedupe),\r\n      evidence: {\r\n        gate: 'accepted',\r\n        code: 'ACCEPTED',\r\n        event_id: eventId,\r\n        dedupe: dedupe.dedupe,\r\n        note: 'DEDUPE_NOT_ENABLED_SANDBOX',\r\n      },\r\n    };\r\n  } catch {\r\n    return {\r\n      http_status: 500,\r\n      response: buildRejectedResponse('INTERNAL_ERROR'),\r\n      evidence: { gate: 'internal', code: 'INTERNAL_ERROR' },\r\n    };\r\n  }\r\n}\r\n\n\nconst item = $input.first().json || {};\nconst expectedSecret = \"<<<HITL_REQUIRED:CLIENT_OPS_WEBHOOK_AUTH_SECRET>>>\";\n\nconst result = processClientOpsRequest({\n  headers: item.headers || {},\n  body: item.body,\n  rawBodyBytes: item.rawBodyBytes || 0,\n  expectedSecret,\n});\n\nconst accepted =\n  result.response &&\n  (result.response.result === 'ACCEPTED' || result.response.result === 'DUPLICATE');\n\nreturn [{\n  json: {\n    http_status: result.http_status,\n    response: result.response,\n    evidence: result.evidence || {},\n    branch_accepted: accepted,\n    received_at: item.received_at || null,\n  }\n}];\n"
+      },
+      "id": "f8d02d31-0b8e-4154-a34f-6332d64b19d8",
+      "name": "Process Client Ops Gates",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "c37e4772-e012-4136-bf10-fc8063e1b871",
+              "leftValue": "={{ String($json.branch_accepted) }}",
+              "rightValue": "true",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "88c2a229-98ef-4583-bf95-3eaed949350c",
+      "name": "IF Accepted Branch",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        720,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const j = $input.first().json || {};\nreturn [{\n  json: {\n    http_status: j.http_status,\n    response: j.response,\n    evidence: j.evidence || {},\n    received_at: j.received_at || null,\n  }\n}];"
+      },
+      "id": "e7957b65-11cc-4a98-ae4b-63cdabd99e0f",
+      "name": "Prepare Accepted Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        960,
+        180
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const j = $input.first().json || {};\nreturn [{\n  json: {\n    http_status: j.http_status,\n    response: j.response,\n    evidence: j.evidence || {},\n    received_at: j.received_at || null,\n  }\n}];"
+      },
+      "id": "123a3d0e-6e07-4315-af28-6788c96af156",
+      "name": "Prepare Rejected Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        960,
+        420
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json.response }}",
+        "options": {
+          "responseCode": "={{ $json.http_status }}"
+        }
+      },
+      "id": "23d5ca7d-ca14-4b70-9f17-6a292003463c",
+      "name": "Respond Accepted",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        1200,
+        180
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json.response }}",
+        "options": {
+          "responseCode": "={{ $json.http_status }}"
+        }
+      },
+      "id": "5e756b10-5f50-4faf-a06e-45fe014f3e8d",
+      "name": "Respond Rejected",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        1200,
+        420
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const j = $input.first().json || {};\nconst evidence = j.evidence || {};\nconst response = j.response || {};\nreturn [{\n  json: {\n    sanitized_evidence: {\n      gate: evidence.gate || null,\n      code: evidence.code || null,\n      event_id: evidence.event_id || response.event_id || null,\n      dedupe: evidence.dedupe || response.dedupe || null,\n      http_status: j.http_status,\n      received_at: j.received_at || null,\n    }\n  }\n}];"
+      },
+      "id": "16187c62-0e8e-46ea-be26-3e05de0773c3",
+      "name": "Sanitized Internal Evidence",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        960,
+        300
+      ],
+      "disabled": true,
+      "notes": "Optional post-gate evidence shape. Disabled in first sandbox; does not send Telegram or write Storage."
+    }
+  ],
+  "connections": {
+    "Webhook Intake": {
+      "main": [
+        [
+          {
+            "node": "Capture Request Metadata",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Capture Request Metadata": {
+      "main": [
+        [
+          {
+            "node": "Process Client Ops Gates",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Process Client Ops Gates": {
+      "main": [
+        [
+          {
+            "node": "IF Accepted Branch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Accepted Branch": {
+      "main": [
+        [
+          {
+            "node": "Prepare Accepted Response",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Prepare Rejected Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Accepted Response": {
+      "main": [
+        [
+          {
+            "node": "Respond Accepted",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Rejected Response": {
+      "main": [
+        [
+          {
+            "node": "Respond Rejected",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "mars_template": true,
+    "mars_status": "LOCAL_TEMPLATE_NOT_APPLIED",
+    "mars_auth_binding": "HITL_REQUIRED",
+    "mars_auth_placeholder": "<<<HITL_REQUIRED:CLIENT_OPS_WEBHOOK_AUTH_SECRET>>>",
+    "mars_dedupe": "DEDUPE_DEFERRED_SANDBOX",
+    "mars_profile": "PROFILE_B_REQUIRED",
+    "mars_site_id": "SITE-002",
+    "mars_domain": "bzpm.ru",
+    "mars_no_telegram": true,
+    "mars_no_manual_ui_assembly": true
+  },
+  "tags": []
+}

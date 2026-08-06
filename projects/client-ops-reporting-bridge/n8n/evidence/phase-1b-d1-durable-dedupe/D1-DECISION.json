@@ -1,0 +1,40 @@
+{
+  "readiness": "READY_FOR_DURABLE_DEDUPE_BASELINE_COMMIT",
+  "verdict": "COMPLETE — DURABLE DEDUPE PROVEN IN INACTIVE SANDBOX; DUPLICATE DELIVERY SUPPRESSED",
+  "concurrency_class": "DEDUPE_SEQUENTIAL_SAFE_CONCURRENCY_UNPROVEN",
+  "architecture": "n8n_data_table_primary",
+  "mutations": {
+    "table_creates": 1,
+    "workflow_puts": 1,
+    "activation_changes": 2,
+    "webhook_posts": 3,
+    "telegram_deliveries": 1,
+    "table_deletes": 0,
+    "note": "Successful second-attempt accounting only"
+  },
+  "historical_mutations_full_d1_including_failed_first_attempt": {
+    "n8n_workflow_updates": 3,
+    "n8n_activation_changes": 4,
+    "n8n_workflow_executions_added": 4,
+    "client_ops_webhook_calls": 4,
+    "n8n_data_table_creates": 2,
+    "n8n_data_table_deletes": 1,
+    "retained_test_rows_created": 1,
+    "telegram_messages_attempted": 1,
+    "telegram_messages_delivered": 1,
+    "note": "Includes execution 3410 failed first attempt + rollback; original charter expected executions 25→28; accepted final 25→29"
+  },
+  "final_state": {
+    "active": false,
+    "nodes": 17,
+    "versionId": "3d2fd6fc-bc17-4e0f-b9e5-086c959afd29",
+    "executions": 29,
+    "running": 0,
+    "table_exact_name_count": 1,
+    "table_id": "H6VYhwz7RXZCBMmu"
+  },
+  "deferred": {
+    "post_telegram_sent_ledger": true,
+    "concurrent_atomicity": true
+  }
+}

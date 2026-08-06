@@ -1,0 +1,66 @@
+{
+  "logs_count": 4,
+  "phase": "1B-D6D3R",
+  "next_normal_trigger_safe": true,
+  "producer_task": {
+    "last_result": 20,
+    "last_run": "2026-07-30T04:47:47+07:00",
+    "restart_count": 0,
+    "number_of_missed_runs": 0,
+    "settings_enabled": false,
+    "next_run": "2026-07-31T13:00:00+07:00",
+    "name": "MARS_SITE_002_Client_Ops_Producer",
+    "multiple_instances": "IgnoreNew",
+    "state": "Disabled",
+    "execution_time_limit": "PT30M"
+  },
+  "logs": [
+    {
+      "Name": "d6d2-run-summary.json",
+      "Length": 2768,
+      "LastWriteTime": "2026-07-30T03:45:13.2908319+07:00"
+    },
+    {
+      "Name": "d6d3r-wrapper-fix-self-check.json",
+      "Length": 2130,
+      "LastWriteTime": "2026-07-30T15:39:19.6837126+07:00"
+    },
+    {
+      "Name": "scheduler-2026-07-29.log",
+      "Length": 134,
+      "LastWriteTime": "2026-07-30T04:48:04.4266214+07:00"
+    },
+    {
+      "Name": "scheduler-self-check.json",
+      "Length": 2360,
+      "LastWriteTime": "2026-07-30T15:39:22.358898+07:00"
+    }
+  ],
+  "previous_scheduled_result": "BLOCKED_KILL_SWITCH",
+  "monitor_task": {
+    "state": "Ready",
+    "last_run": "2026-07-30T12:30:30+07:00",
+    "name": "MARS_SITE_002_Post_1C_Catalog_Monitor",
+    "next_run": "2026-07-31T12:30:30+07:00",
+    "last_result": 0
+  },
+  "captured_at": "2026-07-30T08:40:38.2604719Z",
+  "previous_exit_code": 20,
+  "kill_switch_mode": "DRY_RUN",
+  "producer_process_count": 0,
+  "lock_present": false,
+  "delivery_prohibition": "D6D3R_DELIVERY_PROHIBITION_ARMED",
+  "receipts": [
+    {
+      "Name": "d6d2-dry-run-2026-07-29T20-44-55-652Z.json",
+      "Length": 1287,
+      "LastWriteTime": "2026-07-30T03:45:07.6479404+07:00"
+    },
+    {
+      "Name": "scheduler-dry-run-2026-07-29T21-48-04-408Z.json",
+      "Length": 1129,
+      "LastWriteTime": "2026-07-30T04:48:04.4246263+07:00"
+    }
+  ],
+  "receipts_count": 2
+}

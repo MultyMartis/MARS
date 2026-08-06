@@ -1,0 +1,65 @@
+{
+  "id": "02-valid-attention",
+  "title": "Valid ATTENTION",
+  "input": {
+    "headers": {
+      "content-type": "application/json",
+      "x-mars-client-ops-token": "SYNTHETIC_CLIENT_OPS_HARNESS_SECRET_v1_NOT_A_REAL_CREDENTIAL"
+    },
+    "body": {
+      "schema_name": "mars.client_ops.report",
+      "schema_version": "1.0",
+      "event_id": "86ed33fb-c65f-594e-b0be-72afbe626de4",
+      "event_type": "site.post_1c_monitor",
+      "generated_at": "2026-07-20T15:10:00Z",
+      "observed_at": "2026-07-20T15:05:00Z",
+      "environment": "production",
+      "site": {
+        "site_id": "SITE-002",
+        "site_name": "ZPM",
+        "domain": "bzpm.ru"
+      },
+      "producer": {
+        "name": "ocpilot.site-002.post-1c-exporter",
+        "version": "1.0"
+      },
+      "run": {
+        "run_id": "2026-07-20_18-05-00",
+        "source_status": "ONBOARDING_REQUIRED",
+        "normalized_status": "ATTENTION",
+        "summary_code": "ONBOARDING_REQUIRED",
+        "reason_codes": [
+          "BASELINE_DELTA_ZERO"
+        ]
+      },
+      "action": {
+        "required": true,
+        "code": "REVIEW_ONBOARDING",
+        "text": "review catalog branches"
+      },
+      "metrics": {
+        "baseline_count": 1737,
+        "current_count": 1817,
+        "added_urls": 80,
+        "removed_urls": 0,
+        "onboarding_needed_count": 4
+      },
+      "freshness": {
+        "age_seconds": 300,
+        "stale": false
+      },
+      "security": {
+        "classification": "internal",
+        "contains_secrets": false,
+        "redacted": true
+      }
+    }
+  },
+  "expect": {
+    "http_status": 202,
+    "response": {
+      "ok": true,
+      "result": "ACCEPTED"
+    }
+  }
+}

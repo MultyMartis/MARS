@@ -1,0 +1,49 @@
+{
+  "schema_name": "mars.client_ops.report",
+  "schema_version": "1.0",
+  "event_id": "9c5be074-415a-5db7-8cfa-3fa6c281c5ac",
+  "event_type": "site.post_1c_monitor",
+  "generated_at": "2026-07-23T13:10:53.635Z",
+  "observed_at": "2026-07-23T09:30:00Z",
+  "environment": "production",
+  "site": {
+    "site_id": "SITE-002",
+    "site_name": "ЗПМ",
+    "domain": "bzpm.ru"
+  },
+  "producer": {
+    "name": "ocpilot.site-002.post-1c-exporter",
+    "version": "1.0"
+  },
+  "run": {
+    "run_id": "2026-07-23_12-30-00",
+    "source_status": "NO_ACTION_REQUIRED",
+    "normalized_status": "BLOCKED",
+    "summary_code": "SOURCE_ARTIFACT_CONFLICT",
+    "reason_codes": [
+      "METRIC_DELTA_INCONSISTENT",
+      "SOURCE_METRIC_CONFLICT"
+    ]
+  },
+  "action": {
+    "required": true,
+    "code": "REVIEW_SOURCE_ARTIFACTS",
+    "text": "состояние сайта не подтверждено — проверить исходные артефакты"
+  },
+  "metrics": {
+    "baseline_count": 100,
+    "current_count": 150,
+    "added_urls": 10,
+    "removed_urls": 0,
+    "onboarding_needed_count": 0
+  },
+  "freshness": {
+    "age_seconds": 11100,
+    "stale": false
+  },
+  "security": {
+    "classification": "internal",
+    "contains_secrets": false,
+    "redacted": true
+  }
+}

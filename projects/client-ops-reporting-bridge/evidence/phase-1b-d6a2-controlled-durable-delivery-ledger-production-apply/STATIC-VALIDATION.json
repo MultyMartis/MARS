@@ -1,0 +1,32 @@
+{
+  "token": "D6A2_DEPLOYED_LEDGER_STATIC_VALIDATION_PASS",
+  "ok": true,
+  "errors": [],
+  "node_count": 20,
+  "node_names": [
+    "Webhook Intake",
+    "Capture Request Metadata",
+    "Process Client Ops Gates",
+    "IF Accepted Branch",
+    "Prepare Accepted Response",
+    "Prepare Rejected Response",
+    "Respond Accepted",
+    "Respond Rejected",
+    "Sanitized Internal Evidence",
+    "Telegram Notify Accepted",
+    "Prepare Dedupe Context",
+    "Dedupe Lookup",
+    "Dedupe Classify",
+    "IF Dedupe First Seen",
+    "Dedupe Claim Insert",
+    "Prepare Non-First-Seen Response",
+    "Respond Non-First-Seen",
+    "Classify Telegram Delivery Outcome",
+    "IF Delivery Finalize",
+    "Delivery Ledger Finalize Update"
+  ],
+  "http_202_path_unchanged": true,
+  "duplicate_bypasses_telegram": true,
+  "max_retries": 0,
+  "max_safe_concurrency": 1
+}

@@ -1,0 +1,41 @@
+{
+  "phase": "1B-D6B2",
+  "production_apply_performed": true,
+  "production_surface": "D6B2_PRODUCTION_SURFACE_PRODUCER_ONLY",
+  "source_status_values": [
+    "OK",
+    "ATTENTION",
+    "FAILED",
+    "BLOCKED"
+  ],
+  "delivery_eligibility_values": [
+    "FRESH_AND_ELIGIBLE",
+    "STALE_REVIEW_REQUIRED",
+    "NOT_SAFE_TO_SEND"
+  ],
+  "stale_after_seconds": 93600,
+  "age_93600": "FRESH_AND_ELIGIBLE",
+  "age_93601": "STALE_REVIEW_REQUIRED",
+  "stale_attention_preserves_status": true,
+  "stale_ok_preserves_status": true,
+  "stale_failed_preserves_status": true,
+  "true_blocked_remains_blocked": true,
+  "freshness_changes_event_identity": false,
+  "workstream_a_unchanged": true,
+  "automatic_retries_enabled": false,
+  "max_retries": 0,
+  "max_safe_concurrency": 1,
+  "workflow_final_active": false,
+  "n8n_workflow_content_mutations": 0,
+  "n8n_activation_changes": 0,
+  "synthetic_webhook_calls": 0,
+  "fresh_attention_method": "deployed_producer_preview_gate",
+  "recommended_next_phase": "Phase 1B-D6B2B \u2014 Freshness Semantics Production Evidence Baseline Commit",
+  "readiness": "READY_FOR_D6B2_EVIDENCE_BASELINE_COMMIT",
+  "CLIENT_OPS_UNATTENDED_PRODUCTION_READY": "NO",
+  "CLIENT_OPS_AUTOMATIC_SITE002_CONNECTION_AUTHORIZED": "NO",
+  "D6C_NOT_STARTED": true,
+  "D6E_NOT_STARTED": true,
+  "D6D_NOT_STARTED": true,
+  "HISTORICAL_D5R2A_ROW_RECONCILIATION_AUTHORIZED": "NO"
+}

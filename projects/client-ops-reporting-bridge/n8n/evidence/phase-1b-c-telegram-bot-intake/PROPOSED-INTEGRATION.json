@@ -1,0 +1,71 @@
+{
+  "phase": "1B-C0S",
+  "applied": false,
+  "workflow_id": "tkM4H0G0gM3q9Foi",
+  "workflow_name": "MARS Client Ops Bridge — bzpm.ru",
+  "proposed_integration": {
+    "applied": false,
+    "workflow_name": "MARS Client Ops Bridge — bzpm.ru",
+    "pattern": "B_RESPONSE_FIRST_THEN_TELEGRAM",
+    "pattern_rationale": "Runtime-verified on this n8n host: nodes after Respond to Webhook execute, including Telegram sendMessage exactly once.",
+    "preserves_headerAuth": true,
+    "preserves_auth_credential_id": "WKHmPaw6QBp7WnzP",
+    "preserves_dedupe": "DEDUPE_DEFERRED_SANDBOX",
+    "remains_inactive": true,
+    "no_production_activation": true,
+    "no_durable_dedupe_false_claim": true,
+    "preserves_response_contract": true,
+    "rejects_do_not_send": true,
+    "external_http_nodes": 0,
+    "contains_bot_token": false,
+    "credential": {
+      "id": "2bIC5376l7ElXb4B",
+      "name": "MARS Client Ops Telegram — bzpm.ru",
+      "type": "telegramApi",
+      "reference_key": "telegramApi",
+      "key": "telegramApi"
+    },
+    "telegram_node": {
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion_proposed": 1.2,
+      "operation": "sendMessage",
+      "send_count": 1,
+      "parameters_shape": {
+        "chatId": 499423375,
+        "text": "FROM_MESSAGE_CONTRACT_PLAIN",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      }
+    },
+    "branching": {
+      "send_only_after": [
+        "native_header_auth_passed",
+        "schema_validation_passed",
+        "security_validation_passed",
+        "accepted_status_determined"
+      ],
+      "no_send_on": [
+        "UNAUTHORIZED",
+        "INVALID_SCHEMA",
+        "SECURITY_REJECTED",
+        "UNSUPPORTED_MEDIA_TYPE",
+        "PAYLOAD_TOO_LARGE"
+      ]
+    },
+    "chat_target": {
+      "verdict": "TELEGRAM_CHAT_TARGET_CONFIRMED",
+      "chat_id": 499423375,
+      "chat_type": "private",
+      "source_method": "getUpdates"
+    },
+    "chat_target_verdict": "TELEGRAM_CHAT_TARGET_CONFIRMED",
+    "integration_semantics": {
+      "pattern_b_continuation_after_respond": "PATTERN_B_CONFIRMED",
+      "evidence_phase": "1B-C0S"
+    }
+  },
+  "live_apply_authorized": false,
+  "note": "Phase 1B-C0S verified PATTERN_B_CONFIRMED on this n8n host. Proposal updated but not applied. Ready for Phase 1B-C1 Telegram sandbox integration controlled apply.",
+  "overall_apply_readiness": "READY_FOR_TELEGRAM_SANDBOX_INTEGRATION_APPLY"
+}

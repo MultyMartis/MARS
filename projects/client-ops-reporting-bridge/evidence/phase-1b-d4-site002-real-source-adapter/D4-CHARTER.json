@@ -1,0 +1,26 @@
+{
+  "phase": "1B-D4",
+  "title": "SITE-002 Real-Source Adapter Design and Manual Dry-Run Integration",
+  "mode": "OFFLINE_READ_ONLY",
+  "client_ops_baseline_ancestor": "1390a3850309ee5513463fdc98fdf93d69c79fb2",
+  "authorized": [
+    "design real-source adapter",
+    "sanitized fixtures from accepted authority",
+    "offline dry-run + mock producer",
+    "Client Ops + optional MetaBOT extension writes"
+  ],
+  "forbidden": [
+    "SITE-002 monitor execution",
+    "SITE-002 file mutation",
+    "real-source HTTP POST",
+    "n8n activate/update",
+    "Data Table mutation",
+    "Telegram send",
+    "scheduler",
+    "Storage mutation",
+    "git commit",
+    "git push"
+  ],
+  "live_dispatch": "REAL_SOURCE_LIVE_DISPATCH_NOT_AUTHORIZED_D4",
+  "d3_charter": "CONSUMED_CANNOT_AUTHORIZE_D4_SOURCE"
+}

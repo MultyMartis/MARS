@@ -1,0 +1,53 @@
+{
+  "phase": "1B-C1",
+  "pre_apply": {
+    "exact_name_count": 1,
+    "workflow_id": "tkM4H0G0gM3q9Foi",
+    "workflow_name": "MARS Client Ops Bridge — bzpm.ru",
+    "active": false,
+    "nodes": 9,
+    "executions": 24,
+    "running": 0,
+    "versionId": "6c6d1282-0105-47e1-a3f5-b070cec0664b",
+    "webhook_authentication": "headerAuth",
+    "auth_credential_id": "WKHmPaw6QBp7WnzP",
+    "telegram_nodes": 0,
+    "telegram_credential_unbound": true,
+    "http_request_nodes": 0,
+    "google_sheets_nodes": 0,
+    "data_store_nodes": 0,
+    "dedupe": "DEDUPE_DEFERRED_SANDBOX",
+    "temp_semantics_workflow_count": 0,
+    "fingerprint_sha16": "d64d2890460bb63c"
+  },
+  "credentials": {
+    "webhook": {
+      "exact_name_count": 1,
+      "id": "WKHmPaw6QBp7WnzP",
+      "type": "httpHeaderAuth",
+      "value_visible": false
+    },
+    "telegram": {
+      "exact_name_count": 1,
+      "id": "2bIC5376l7ElXb4B",
+      "type": "telegramApi",
+      "token_visible": false
+    }
+  },
+  "local_boundaries": {
+    "header_auth_secret_ignored": true,
+    "telegram_secret_ignored": true,
+    "telegram_target_ignored": true,
+    "ignored_proposal_ignored": true,
+    "secrets_printed": false
+  },
+  "proposal_compare": {
+    "committed_vs_ignored_equal": true,
+    "pattern": "B_RESPONSE_FIRST_THEN_TELEGRAM",
+    "credential_match": true,
+    "chat_match": true,
+    "applied_false": true
+  },
+  "rollback_dir": "local/client-ops-reporting-bridge/bzpm.ru/rollback/phase-1b-c1/",
+  "rollback_prepared": true
+}

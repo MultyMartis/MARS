@@ -1,0 +1,21 @@
+{
+  "phase": "1B-D5R2",
+  "run_id": "2026-07-26_17-48-38",
+  "observed_at": "2026-07-26T10:52:32Z",
+  "validation_time_utc": "2026-07-26T14:58:10Z",
+  "source_age_seconds": 14738,
+  "stale_after_seconds": 93600,
+  "threshold_unchanged": true,
+  "verdict": "D5R2_CANDIDATE_FRESH",
+  "source_status_factual": "ATTENTION",
+  "source_classification": "ONBOARDING_REQUIRED",
+  "delivery_eligibility": "FRESH_AND_ELIGIBLE",
+  "freshness_semantics_status": "FRESHNESS_STATUS_SEMANTICS_REQUIRES_SEPARATE_REPAIR",
+  "note": "Source status NOT falsified to BLOCKED solely due age.",
+  "pre_post_freshness": {
+    "validation_time_utc": "2026-07-26T15:01:11Z",
+    "source_age_seconds": 14920,
+    "delivery_eligibility": "FRESH",
+    "aborted_stale": false
+  }
+}

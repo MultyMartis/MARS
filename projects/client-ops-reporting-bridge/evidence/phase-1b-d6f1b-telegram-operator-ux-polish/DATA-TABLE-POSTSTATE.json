@@ -1,0 +1,21 @@
+{
+  "total": 27,
+  "known_acceptance_event_ids_redacted": [
+    "bd605d89…",
+    "6381ef41…",
+    "da471ea3…",
+    "b396dad7…",
+    "26392a70…"
+  ],
+  "notes": [
+    "Data Table schema has no producer/environment columns; test rows identified by known acceptance event IDs from gallery runners",
+    "6381ef41… is failed T2 first attempt (delivery_state=FAILED); 26392a70… is successful T2 retry",
+    "Existing production ledger rows were not updated by acceptance gallery (new event IDs only)"
+  ],
+  "delivery_state_counts": {
+    "PENDING": 3,
+    "SENT": 14,
+    "FAILED": 10
+  },
+  "production_ledger_untouched_by_acceptance": true
+}

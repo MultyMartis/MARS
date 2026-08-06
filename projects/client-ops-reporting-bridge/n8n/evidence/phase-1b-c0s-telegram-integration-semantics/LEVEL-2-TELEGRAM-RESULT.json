@@ -1,0 +1,112 @@
+{
+  "request_count": 1,
+  "response_status": 202,
+  "elapsed_ms": 123,
+  "body_fields": {
+    "status": "SEMANTICS_TEST_ACCEPTED",
+    "test_id": "L2-284893"
+  },
+  "execution_id": "3408",
+  "execution_status": "success",
+  "node_order": [
+    "Set Synthetic Accepted Event",
+    "Webhook Semantics",
+    "Respond Semantics",
+    "Telegram Semantics Send",
+    "Set Delivery Marker"
+  ],
+  "telegram_node_runs": 1,
+  "messages_attempted": 1,
+  "messages_delivered": 1,
+  "final_marker": true,
+  "duplicate_sends": false,
+  "telegram_after_respond": true,
+  "marker_after_telegram": true,
+  "verdict": "PATTERN_B_TELEGRAM_AFTER_RESPOND_CONFIRMED",
+  "inspect": {
+    "execution_status": "success",
+    "finished": true,
+    "node_run_count": 5,
+    "node_order": [
+      "Set Synthetic Accepted Event",
+      "Webhook Semantics",
+      "Respond Semantics",
+      "Telegram Semantics Send",
+      "Set Delivery Marker"
+    ],
+    "node_counts": {
+      "Set Synthetic Accepted Event": 1,
+      "Webhook Semantics": 1,
+      "Respond Semantics": 1,
+      "Telegram Semantics Send": 1,
+      "Set Delivery Marker": 1
+    },
+    "runs": [
+      {
+        "node": "Set Synthetic Accepted Event",
+        "run_index": 0,
+        "startTime": 1784871417156,
+        "executionTime": 1,
+        "has_error": false,
+        "error_class": null,
+        "marker_after_reached": false,
+        "delivery_marker_reached": false,
+        "telegram_ok_signal": false,
+        "telegram_message_id_present": false
+      },
+      {
+        "node": "Webhook Semantics",
+        "run_index": 0,
+        "startTime": 1784871417156,
+        "executionTime": 0,
+        "has_error": false,
+        "error_class": null,
+        "marker_after_reached": false,
+        "delivery_marker_reached": false,
+        "telegram_ok_signal": false,
+        "telegram_message_id_present": false
+      },
+      {
+        "node": "Respond Semantics",
+        "run_index": 0,
+        "startTime": 1784871417157,
+        "executionTime": 8,
+        "has_error": false,
+        "error_class": null,
+        "marker_after_reached": false,
+        "delivery_marker_reached": false,
+        "telegram_ok_signal": false,
+        "telegram_message_id_present": false
+      },
+      {
+        "node": "Telegram Semantics Send",
+        "run_index": 0,
+        "startTime": 1784871417166,
+        "executionTime": 93,
+        "has_error": false,
+        "error_class": null,
+        "marker_after_reached": false,
+        "delivery_marker_reached": false,
+        "telegram_ok_signal": true,
+        "telegram_message_id_present": true
+      },
+      {
+        "node": "Set Delivery Marker",
+        "run_index": 0,
+        "startTime": 1784871417259,
+        "executionTime": 1,
+        "has_error": false,
+        "error_class": null,
+        "marker_after_reached": false,
+        "delivery_marker_reached": true,
+        "telegram_ok_signal": false,
+        "telegram_message_id_present": false
+      }
+    ],
+    "after_marker_reached": false,
+    "delivery_marker_reached": true,
+    "telegram_node_runs": 1,
+    "telegram_ok_signal": true,
+    "telegram_message_id_present": true
+  }
+}

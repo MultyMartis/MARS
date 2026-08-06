@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "site_id": "SITE-002",
+  "producer_identity": "mars.client-ops.site-002.unattended-producer",
+  "mode": "DRY_RUN",
+  "operator_reason": "Phase 1B-D6D2 controlled dedicated producer runtime deployment and one bounded manual DRY_RUN; ENABLED not authorized",
+  "path_sanitized": "X:\\AI MARS STORAGE\\runtime-state\\client-ops-site-002-producer\\config\\kill-switch.json",
+  "contains_secrets": false,
+  "token": "D6D2_KILL_SWITCH_DRY_RUN_DEPLOYED",
+  "enabled_mode": false,
+  "not_enabled_token": "D6D2_KILL_SWITCH_NOT_ENABLED"
+}

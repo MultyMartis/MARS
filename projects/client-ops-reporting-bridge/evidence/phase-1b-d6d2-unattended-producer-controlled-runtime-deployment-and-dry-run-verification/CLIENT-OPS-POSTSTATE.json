@@ -1,0 +1,49 @@
+{
+  "phase": "1B-D6D2",
+  "label": "poststate",
+  "method": "GET_ONLY",
+  "live_mutations_performed": false,
+  "workflow": {
+    "id": "tkM4H0G0gM3q9Foi",
+    "name": "MARS Client Ops Bridge — bzpm.ru",
+    "active": false,
+    "nodes": 20,
+    "versionId": "dc8746bf-df9c-425d-9b3f-4ace452ac5ef"
+  },
+  "executions": {
+    "observable": true,
+    "count": 34,
+    "running": 0
+  },
+  "datatable": {
+    "id": "H6VYhwz7RXZCBMmu",
+    "column_count": 15,
+    "rows": 4,
+    "name": "MARS Client Ops Dedupe — bzpm.ru"
+  },
+  "historical": {
+    "event_id": "c84e29bf-79b1-5aea-98c4-9dc8d651fc96",
+    "rows": 1,
+    "intake_state": "FIRST_SEEN",
+    "event_status": "ATTENTION",
+    "delivery_state": "PENDING",
+    "first_seen_at": "2026-07-26T15:12:15.686Z",
+    "last_seen_at": "2026-07-26T15:12:15.686Z",
+    "duplicate_count": 0,
+    "conflict_count": 0,
+    "sandbox_marker": "mars-client-ops-dedupe-sandbox-d1"
+  },
+  "d6a2_synthetic": {
+    "event_id": "d6a2a001-27d6-4a2e-bd6a-000000000001",
+    "rows": 1,
+    "intake_state": "FIRST_SEEN",
+    "event_status": "OK",
+    "delivery_state": "SENT",
+    "first_seen_at": "2026-07-26T18:09:08.575Z",
+    "last_seen_at": "2026-07-26T18:09:08.575Z",
+    "duplicate_count": 0,
+    "conflict_count": 0,
+    "sandbox_marker": "mars-client-ops-dedupe-sandbox-d1"
+  },
+  "baseline_match": true
+}

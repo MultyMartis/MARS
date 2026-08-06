@@ -1,0 +1,96 @@
+{
+  "phase": "1B-D6",
+  "client_ops_unattended_production_ready": false,
+  "automatic_site002_connection_authorized": false,
+  "priority_hypothesis": "CONFIRMED",
+  "ranked_order": ["A", "B", "C", "E", "D"],
+  "workstreams": {
+    "A": {
+      "name": "durable_post_telegram_sent_ledger",
+      "maturity": "PARTIALLY_PROVEN",
+      "required_before_unattended": true,
+      "decision": "D6_SENT_LEDGER_REQUIRED_BEFORE_UNATTENDED=YES"
+    },
+    "B": {
+      "name": "freshness_semantics_separation",
+      "maturity": "PARTIALLY_PROVEN",
+      "required_before_unattended": true,
+      "decision": "D6_FRESHNESS_SEPARATION_REQUIRED_BEFORE_UNATTENDED=YES"
+    },
+    "C": {
+      "name": "controlled_activation_lifecycle",
+      "maturity": "PARTIALLY_PROVEN",
+      "required_before_unattended": true,
+      "activation_model_recommendation": "HYBRID"
+    },
+    "D": {
+      "name": "unattended_monitor_client_ops_integration",
+      "maturity": "DESIGNED_NOT_IMPLEMENTED",
+      "required_before_unattended": false,
+      "note": "D is the unattended goal itself; must be last",
+      "unattended_architecture_recommendation": "D2"
+    },
+    "E": {
+      "name": "retry_concurrency_policy",
+      "maturity": "PARTIALLY_PROVEN",
+      "required_before_unattended": true,
+      "retry_policy_prerequisite": "durable_SENT_ledger_plus_GET_only_reconciliation_plus_freshness_separation",
+      "max_safe_concurrency_today": 1
+    }
+  },
+  "dependency_edges": [
+    { "from": "A", "to": "E", "why": "retry unsafe without SENT vs PENDING" },
+    { "from": "A", "to": "D", "why": "unattended needs terminal delivery state" },
+    { "from": "B", "to": "D", "why": "eligibility must not rewrite factual status" },
+    { "from": "B", "to": "E", "why": "stale must not retry as fresh" },
+    { "from": "C", "to": "D", "why": "unattended needs activation contract" },
+    { "from": "E", "to": "D", "why": "unattended failure recovery undefined without policy" }
+  ],
+  "activation_model_recommendation": "HYBRID",
+  "unattended_architecture_recommendation": "D2",
+  "retry_policy_prerequisite": "durable_SENT_ledger_plus_GET_only_reconciliation_plus_freshness_separation",
+  "max_safe_concurrency_today": 1,
+  "baseline": {
+    "evidence_commit": "e9c9be59f643e66970930e31339431acb8077b55",
+    "runtime_commit": "8bb6e8f0f56388c12fdb013cf4cc1b27eb84331c",
+    "workflow_id": "tkM4H0G0gM3q9Foi",
+    "workflow_active": false,
+    "nodes": 17,
+    "executions": 32,
+    "running": 0,
+    "datatable_id": "H6VYhwz7RXZCBMmu",
+    "datatable_rows": 3,
+    "event_rows": 1,
+    "event_id": "c84e29bf-79b1-5aea-98c4-9dc8d651fc96",
+    "intake_state": "FIRST_SEEN",
+    "delivery_state": "PENDING",
+    "reconfirmed": "D6_BASELINE_RECONFIRMED"
+  },
+  "gates": {
+    "D6_BASELINE_RECONFIRMED": true,
+    "D6_WORKSTREAM_A_ANALYZED": true,
+    "D6_WORKSTREAM_B_ANALYZED": true,
+    "D6_WORKSTREAM_C_ANALYZED": true,
+    "D6_WORKSTREAM_D_ANALYZED": true,
+    "D6_WORKSTREAM_E_ANALYZED": true,
+    "D6_DEPENDENCY_GRAPH_COMPLETE": true,
+    "D6_FAILURE_MODE_MATRIX_COMPLETE": true,
+    "D6_MINIMUM_PRODUCTION_SAFE_MODEL_DEFINED": true,
+    "D6_SECURITY_ARCHITECTURE_REVIEWED": true,
+    "D6_ROADMAP_DEFINED": true
+  },
+  "recommended_next_phase": "Phase 1B-D6A — Durable Post-Telegram Delivery Ledger Design and Offline Implementation",
+  "readiness": "READY_FOR_D6_FIRST_IMPLEMENTATION_CHARTER",
+  "final_verdict": "COMPLETE — CLIENT OPS POST-FIRST-DELIVERY ARCHITECTURE DECISION COMPLETE; NEXT IMPLEMENTATION PRIORITY DEFINED, PRODUCTION REMAINS CONTAINED",
+  "mutations_by_task": {
+    "producer_http_requests": 0,
+    "webhook_calls": 0,
+    "n8n_activation_changes": 0,
+    "n8n_executions_added": 0,
+    "datatable_mutations": 0,
+    "telegram_calls": 0,
+    "git_commits": 0,
+    "git_pushes": 0,
+    "main_index_mutations": 0
+  }
+}

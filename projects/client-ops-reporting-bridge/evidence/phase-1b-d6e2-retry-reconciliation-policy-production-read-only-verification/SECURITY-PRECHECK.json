@@ -1,0 +1,12 @@
+{
+  "token": "D6E2_SECURITY_GATE_PASS",
+  "issues": [],
+  "workflow_id_allowlisted": true,
+  "data_table_id_allowlisted": true,
+  "event_ids_allowlisted": true,
+  "no_arbitrary_url": true,
+  "no_raw_api_key_in_evidence": true,
+  "no_authorization_header_persisted": true,
+  "no_telegram_token": true,
+  "no_webhook_auth_secret": true
+}

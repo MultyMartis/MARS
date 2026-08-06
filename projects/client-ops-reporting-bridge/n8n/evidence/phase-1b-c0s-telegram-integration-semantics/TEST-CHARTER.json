@@ -1,0 +1,13 @@
+{
+  "phase": "1B-C0S",
+  "confirm_phrase": "VERIFY CLIENT OPS TELEGRAM EXECUTION SEMANTICS",
+  "temp_workflow_name": "MARS TEMP — Respond Telegram Semantics — bzpm.ru",
+  "real_workflow_deny": "tkM4H0G0gM3q9Foi",
+  "max_telegram_messages": 1,
+  "max_webhook_requests": 2,
+  "patterns_under_test": [
+    "PATTERN_B",
+    "PATTERN_A_FALLBACK",
+    "ASYNC_BRANCH_DOC_ONLY"
+  ]
+}
