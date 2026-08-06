@@ -1,0 +1,19 @@
+{
+  "workflow_id": "tkM4H0G0gM3q9Foi",
+  "execution_id": "24268",
+  "event_id": "a71c3991-74ca-5dac-952e-7eb51200c848",
+  "run_id": "mars-20260806-160514-5d2cdb3b",
+  "intake_state": "FIRST_SEEN",
+  "event_status": "ATTENTION",
+  "telegram_outcome": "SUCCESS",
+  "target_delivery_state": "SENT",
+  "should_finalize": true,
+  "data_table_id": "H6VYhwz7RXZCBMmu",
+  "data_table_name": "MARS Client Ops Dedupe — bzpm.ru",
+  "mutations": {
+    "dedupe_claim_insert": true,
+    "delivery_ledger_finalize_update": true,
+    "duplicate_prevented_on_redispatch": true
+  },
+  "notes": "Row identity keyed by deterministic event_id for this import run_id. Secrets/chat identifiers omitted."
+}

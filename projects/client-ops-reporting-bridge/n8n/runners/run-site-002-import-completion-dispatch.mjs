@@ -90,12 +90,15 @@ function buildEnvelopeFromTerminal(terminal, { classifyImportReport, formatOpera
   });
 
   const runId = String(terminal.run_id);
-  const fingerprint = createHash('sha256')
-    .update(JSON.stringify({ run_id: runId, final_status: terminal.final_status, completed_at: terminal.completed_at }))
-    .digest('hex');
+  const severity =
+    classification.severity === 'OK'
+      ? 'OK'
+      : classification.severity === 'ERROR'
+        ? 'FAILED'
+        : 'ATTENTION';
   const event_id = computeEventId({
     action_code: classification.action_code || 'NONE',
-    event_type: 'site002_1c_import_completion',
+    event_type: 'site.post_1c_monitor',
     metrics: {
       added_urls: 0,
       baseline_count: 0,
@@ -103,7 +106,7 @@ function buildEnvelopeFromTerminal(terminal, { classifyImportReport, formatOpera
       onboarding_needed_count: 0,
       removed_urls: 0,
     },
-    normalized_status: classification.severity === 'OK' ? 'OK' : classification.severity === 'ERROR' ? 'ERROR' : 'ATTENTION',
+    normalized_status: severity === 'FAILED' ? 'FAILED' : severity,
     observed_at: observedAt,
     reason_codes: classification.reason_codes || [],
     run_id: runId,
@@ -111,40 +114,58 @@ function buildEnvelopeFromTerminal(terminal, { classifyImportReport, formatOpera
     site_id: 'SITE-002',
     summary_code: classification.summary_code || 'IMPORT_COMPLETION',
   });
-  const identity = {
-    site_id: 'SITE-002',
-    domain: 'bzpm.ru',
-    source_system: 'mars-1c-import-terminal',
-    run_id: runId,
-    artifact_fingerprint: fingerprint,
-    event_id,
-  };
 
-  const severity = classification.severity === 'OK' ? 'OK' : classification.severity === 'ERROR' ? 'ERROR' : 'ATTENTION';
   return {
-    schema_version: 1,
+    schema_name: 'mars.client_ops.report',
+    schema_version: '1.0',
     event_id,
-    site_id: 'SITE-002',
-    domain: 'bzpm.ru',
-    source_system: 'mars-1c-import-terminal',
-    run_id: runId,
-    observed_at: observedAt,
+    event_type: 'site.post_1c_monitor',
     generated_at: new Date().toISOString(),
-    normalized_status: severity,
-    severity,
-    title: telegram_text.split('\n')[0],
-    summary: classification.action_text || classification.summary_code,
-    telegram_text,
-    report_class: classification.report_class,
-    summary_code: classification.summary_code,
-    reason_codes: classification.reason_codes,
-    import_final_status: terminal.final_status,
-    trigger_source: terminal.trigger_source || null,
+    observed_at: observedAt,
+    environment: 'production',
+    site: {
+      site_id: 'SITE-002',
+      site_name: 'BZPM',
+      domain: 'bzpm.ru',
+    },
     producer: {
       name: 'mars.client-ops.site-002.completion-dispatcher',
       version: '1b-d6g.1',
     },
-    identity,
+    run: {
+      run_id: runId,
+      source_status:
+        severity === 'OK'
+          ? 'CLEAN'
+          : severity === 'FAILED'
+            ? 'FAILURE_REVIEW_REQUIRED'
+            : 'ATTENTION_REQUIRED',
+      normalized_status: severity === 'FAILED' ? 'FAILED' : severity,
+      summary_code: classification.summary_code,
+      reason_codes: ['D6G_IMPORT_COMPLETION', ...(classification.reason_codes || [])],
+    },
+    action: {
+      required: severity !== 'OK',
+      code: classification.action_code || 'NONE',
+      text: telegram_text,
+    },
+    metrics: {
+      baseline_count: 0,
+      current_count: 0,
+      added_urls: 0,
+      removed_urls: 0,
+      onboarding_needed_count: 0,
+    },
+    freshness: { age_seconds: 30, stale: false },
+    security: {
+      classification: 'internal',
+      contains_secrets: false,
+      redacted: true,
+    },
+    // Non-secret operator aids (workflow may ignore)
+    report_class: classification.report_class,
+    import_final_status: terminal.final_status,
+    trigger_source: terminal.trigger_source || null,
   };
 }
 

@@ -1,0 +1,46 @@
+{
+  "captured_at": "2026-08-06T13:20:00Z",
+  "tasks": [
+    {
+      "name": "MARS_SITE_002_Import_Completion_Poller",
+      "purpose": "Poll dispatch-inbox / terminal results and invoke completion dispatcher for exact run_id",
+      "enabled": true,
+      "state": "Ready",
+      "next_run": "2026-08-07T11:50:50",
+      "can_send_success_error_reports": true,
+      "watchdog_only": false,
+      "action": "run-site-002-import-completion-poller-scheduled.ps1"
+    },
+    {
+      "name": "MARS_SITE_002_Client_Ops_Producer",
+      "purpose": "Daily no-import watchdog only (repurposed; not normal success/error delivery)",
+      "enabled": true,
+      "state": "Ready",
+      "next_run": "2026-08-07T13:00:00",
+      "can_send_success_error_reports": false,
+      "watchdog_only": true,
+      "action": "run-site-002-no-import-watchdog-scheduled.ps1"
+    },
+    {
+      "name": "MARS_SITE_002_Post_1C_Catalog_Monitor",
+      "purpose": "Legacy sitemap/catalog hygiene monitor (not primary Telegram delivery path)",
+      "enabled": true,
+      "state": "Ready",
+      "next_run": "2026-08-07T12:30:30",
+      "last_result": 0,
+      "can_send_success_error_reports": false,
+      "watchdog_only": false,
+      "action": "site-002-post-1c-monitor runner"
+    }
+  ],
+  "workflow": {
+    "id": "tkM4H0G0gM3q9Foi",
+    "active": true,
+    "nodes": 20
+  },
+  "runtime_heads": {
+    "producer": "9c5d44aa2f709d61455df8f34603a2fcee3f9f95",
+    "monitor": "9c5d44aa2f709d61455df8f34603a2fcee3f9f95"
+  },
+  "note": "After envelope-fix commit, runtimes must be fast-forwarded to the new tip and schedule pins updated."
+}

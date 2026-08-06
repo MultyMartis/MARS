@@ -1,0 +1,27 @@
+{
+  "phase": "1B-D6G",
+  "run_id": "mars-20260806-160514-5d2cdb3b",
+  "first_attempt": {
+    "finished_at": "2026-08-06T13:05:30Z_approx",
+    "http_status": 400,
+    "ok": false,
+    "event_id_attempted": "4c67b1b7-b61f-5486-be7d-e2df8e6d52fb",
+    "note": "Incomplete envelope (missing mars.client_ops.report required shape) rejected by webhook gates; no Telegram sent"
+  },
+  "successful_dispatch": {
+    "finished_at": "2026-08-06T13:06:50.399Z",
+    "http_status": 202,
+    "ok": true,
+    "event_id": "a71c3991-74ca-5dac-952e-7eb51200c848",
+    "report_class": "CATALOG_SUCCESS_OFFERS_INPUT_MISSING",
+    "n8n_execution_id": "24268",
+    "telegram_outcome": "SUCCESS",
+    "delivery_state": "SENT",
+    "idempotent_redispatch": {
+      "ok": true,
+      "duplicate": true,
+      "reason": "ALREADY_DISPATCHED"
+    }
+  },
+  "fix_applied": "buildEnvelopeFromTerminal now emits full mars.client_ops.report v1.0 with action.text operator UX"
+}

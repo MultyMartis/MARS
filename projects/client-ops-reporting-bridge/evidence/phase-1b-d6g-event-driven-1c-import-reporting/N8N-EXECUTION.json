@@ -1,0 +1,168 @@
+{
+  "execution_id": "24268",
+  "status": "success",
+  "finished": true,
+  "startedAt": "2026-08-06T13:06:49.229Z",
+  "stoppedAt": "2026-08-06T13:06:49.508Z",
+  "nodes": [
+    "Webhook Intake",
+    "Capture Request Metadata",
+    "Process Client Ops Gates",
+    "IF Accepted Branch",
+    "Prepare Dedupe Context",
+    "Dedupe Lookup",
+    "Dedupe Classify",
+    "IF Dedupe First Seen",
+    "Dedupe Claim Insert",
+    "Prepare Accepted Response",
+    "Respond Accepted",
+    "Telegram Notify Accepted",
+    "Classify Telegram Delivery Outcome",
+    "IF Delivery Finalize",
+    "Delivery Ledger Finalize Update"
+  ],
+  "event_hits": [
+    {
+      "path": "data.resultData.runData.Webhook Intake[0].data.main[0][0].json.body.event_id",
+      "value": "a71c3991-74ca-5dac-952e-7eb51200c848"
+    },
+    {
+      "path": "data.resultData.runData.Webhook Intake[0].data.main[0][0].json.body.run.run_id",
+      "value": "mars-20260806-160514-5d2cdb3b"
+    },
+    {
+      "path": "data.resultData.runData.Capture Request Metadata[0].data.main[0][0].json.body.event_id",
+      "value": "a71c3991-74ca-5dac-952e-7eb51200c848"
+    },
+    {
+      "path": "data.resultData.runData.Capture Request Metadata[0].data.main[0][0].json.body.run.run_id",
+      "value": "mars-20260806-160514-5d2cdb3b"
+    },
+    {
+      "path": "data.resultData.runData.Process Client Ops Gates[0].data.main[0][0].json.response.event_id",
+      "value": "a71c3991-74ca-5dac-952e-7eb51200c848"
+    },
+    {
+      "path": "data.resultData.runData.Process Client Ops Gates[0].data.main[0][0].json.evidence.event_id",
+      "value": "a71c3991-74ca-5dac-952e-7eb51200c848"
+    },
+    {
+      "path": "data.resultData.runData.IF Accepted Branch[0].data.main[0][0].json.response.event_id",
+      "value": "a71c3991-74ca-5dac-952e-7eb51200c848"
+    },
+    {
+      "path": "data.resultData.runData.IF Accepted Branch[0].data.main[0][0].json.evidence.event_id",
+      "value": "a71c3991-74ca-5dac-952e-7eb51200c848"
+    },
+    {
+      "path": "data.resultData.runData.Prepare Dedupe Context[0].data.main[0][0].json.response.event_id",
+      "value": "a71c3991-74ca-5dac-952e-7eb51200c848"
+    },
+    {
+      "path": "data.resultData.runData.Prepare Dedupe Context[0].data.main[0][0].json.evidence.event_id",
+      "value": "a71c3991-74ca-5dac-952e-7eb51200c848"
+    },
+    {
+      "path": "data.resultData.runData.Prepare Dedupe Context[0].data.main[0][0].json.event_id",
+      "value": "a71c3991-74ca-5dac-952e-7eb51200c848"
+    },
+    {
+      "path": "data.resultData.runData.Dedupe Classify[0].data.main[0][0].json.response.event_id",
+      "value": "a71c3991-74ca-5dac-952e-7eb51200c848"
+    },
+    {
+      "path": "data.resultData.runData.Dedupe Classify[0].data.main[0][0].json.evidence.event_id",
+      "value": "a71c3991-74ca-5dac-952e-7eb51200c848"
+    },
+    {
+      "path": "data.resultData.runData.Dedupe Classify[0].data.main[0][0].json.event_id",
+      "value": "a71c3991-74ca-5dac-952e-7eb51200c848"
+    },
+    {
+      "path": "data.resultData.runData.IF Dedupe First Seen[0].data.main[0][0].json.response.event_id",
+      "value": "a71c3991-74ca-5dac-952e-7eb51200c848"
+    },
+    {
+      "path": "data.resultData.runData.IF Dedupe First Seen[0].data.main[0][0].json.evidence.event_id",
+      "value": "a71c3991-74ca-5dac-952e-7eb51200c848"
+    },
+    {
+      "path": "data.resultData.runData.IF Dedupe First Seen[0].data.main[0][0].json.event_id",
+      "value": "a71c3991-74ca-5dac-952e-7eb51200c848"
+    },
+    {
+      "path": "data.resultData.runData.Dedupe Claim Insert[0].data.main[0][0].json.event_id",
+      "value": "a71c3991-74ca-5dac-952e-7eb51200c848"
+    },
+    {
+      "path": "data.resultData.runData.Prepare Accepted Response[0].data.main[0][0].json.response.event_id",
+      "value": "a71c3991-74ca-5dac-952e-7eb51200c848"
+    },
+    {
+      "path": "data.resultData.runData.Prepare Accepted Response[0].data.main[0][0].json.evidence.event_id",
+      "value": "a71c3991-74ca-5dac-952e-7eb51200c848"
+    }
+  ],
+  "telegram_text_hits": [
+    {
+      "path": "data.resultData.runData.Webhook Intake[0].data.main[0][0].json.body.action.text",
+      "value": "⚠️ Импорт 1С выполнен не полностью\n\nСайт: bzpm.ru\nВремя: 06.08.2026, 20:05\n\nКаталог обработан успешно.\nФайл с ценами и остатками от 1С не получен.\n\nЦены и остатки товаров могли не обновиться.\n\nЧто проверить:\nвыгрузку предложений из 1С и наличие файла <code>offers0_*.xml</code>."
+    },
+    {
+      "path": "data.resultData.runData.Capture Request Metadata[0].data.main[0][0].json.body.action.text",
+      "value": "⚠️ Импорт 1С выполнен не полностью\n\nСайт: bzpm.ru\nВремя: 06.08.2026, 20:05\n\nКаталог обработан успешно.\nФайл с ценами и остатками от 1С не получен.\n\nЦены и остатки товаров могли не обновиться.\n\nЧто проверить:\nвыгрузку предложений из 1С и наличие файла <code>offers0_*.xml</code>."
+    },
+    {
+      "path": "data.resultData.runData.Telegram Notify Accepted[0].data.main[0][0].json.result.text",
+      "value": "⚠️ Импорт 1С выполнен не полностью\n\nСайт: bzpm.ru\nВремя: 06.08.2026, 20:05\n\nКаталог обработан успешно.\nФайл с ценами и остатками от 1С не получен.\n\nЦены и остатки товаров могли не обновиться.\n\nЧто проверить:\nвыгрузку предложений из 1С и наличие файла offers0_*.xml."
+    },
+    {
+      "path": "workflowData.nodes[9].parameters.text",
+      "value": "={{ (() => {\n  const body = $('Capture Request Metadata').item.json.body || {};\n  const actionText = String((body.action && body.action.text) || '');\n  if (\n    actionText.indexOf('🧪 ТЕСТОВОЕ СООБЩЕНИЕ') === 0 ||\n    actionText.indexOf('✅ ') === 0 ||\n    actionText.indexOf('⚠️ ') === 0 ||\n    actionText.indexOf('❌ ') === 0\n  ) {\n    return actionText;\n  }\n  const status = String((body.run && body.run.normalized_status) || 'OK').toUpperCase();\n  const summary = String((body.run && body.run.summary_code) || '');\n  const reasons = ((body.run && body.run.reason_codes) || []).map(String);\n  const domain = String((body.site && body.site.domain) || 'bzpm.ru');\n  const observedRaw = String(body.observed_at || body.generated_at || '');\n  let localTime = '';\n  if (observedRaw) {\n    const ms = Date"
+    }
+  ],
+  "node_errors": {},
+  "classify_snippet": {
+    "event_id": "a71c3991-74ca-5dac-952e-7eb51200c848",
+    "intake_state": "FIRST_SEEN",
+    "event_status": "ATTENTION",
+    "telegram_outcome": "SUCCESS",
+    "target_delivery_state": "SENT",
+    "should_finalize": true,
+    "telegram_message_id": "22",
+    "sanitized_error_class": null,
+    "expected_current_delivery_state": "PENDING",
+    "delivery_finished_at": "2026-08-06T13:06:49.488Z"
+  },
+  "telegram_snippet": {
+    "ok": true,
+    "result": {
+      "message_id": 22,
+      "from": {
+        "id": "[REDACTED]",
+        "is_bot": true,
+        "username": "[REDACTED]"
+      },
+      "chat": {
+        "id": "[REDACTED]",
+        "type": "private",
+        "name": "[REDACTED]"
+      },
+      "date": 1786021609,
+      "text": "⚠️ Импорт 1С выполнен не полностью\n\nСайт: bzpm.ru\nВремя: 06.08.2026, 20:05\n\nКаталог обработан успешно.\nФайл с ценами и остатками от 1С не получен.\n\nЦены и остатки товаров могли не обновиться.\n\nЧто проверить:\nвыгрузку предложений из 1С и наличие файла offers0_*.xml.",
+      "entities": [
+        {
+          "offset": 42,
+          "length": 7,
+          "type": "url"
+        },
+        {
+          "offset": 251,
+          "length": 13,
+          "type": "code"
+        }
+      ]
+    }
+  },
+  "durable_snippet": null
+}

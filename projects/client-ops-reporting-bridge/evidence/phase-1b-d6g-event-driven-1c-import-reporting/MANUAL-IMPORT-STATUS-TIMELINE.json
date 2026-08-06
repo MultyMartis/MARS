@@ -1,0 +1,21 @@
+{
+  "run_id": "mars-20260806-160514-5d2cdb3b",
+  "timeline": [
+    {
+      "t": "2026-08-06T13:05:15+00:00",
+      "ui_status": "Выполняется",
+      "phase": "CATALOG",
+      "final": null,
+      "elapsed": 0,
+      "dispatch": "NOT_REQUESTED"
+    },
+    {
+      "t": "2026-08-06T13:05:25+00:00",
+      "ui_status": "Требует внимания",
+      "phase": "DONE",
+      "final": "ATTENTION_OFFERS_INPUT_MISSING",
+      "elapsed": null,
+      "dispatch": "QUEUED"
+    }
+  ]
+}

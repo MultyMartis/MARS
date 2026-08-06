@@ -1,0 +1,19 @@
+{
+  "launched_at": "2026-08-06T13:05:15+00:00",
+  "admin_path_proof": {
+    "page_ok": true,
+    "route": "tool/mars_1c_exchange/run",
+    "method": "POST",
+    "permission_grant_groups": 3
+  },
+  "async_response_ms": 298,
+  "launch": {
+    "ok": true,
+    "accepted": true,
+    "run_id": "mars-20260806-160514-5d2cdb3b",
+    "ui_status": "Ожидает запуска",
+    "trigger_source": "ADMIN_MANUAL",
+    "error": null,
+    "message": "Импорт принят в очередь"
+  }
+}

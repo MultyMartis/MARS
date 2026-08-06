@@ -1,0 +1,18 @@
+{
+  "phase": "1B-D6G",
+  "decision": "ACCEPT_EVENT_DRIVEN_1C_IMPORT_REPORTING_AND_ADMIN_MANUAL_TRIGGER",
+  "readiness": "READY_FOR_NORMAL_EVENT_DRIVEN_1C_OPERATION",
+  "live_manual_import_run_id": "mars-20260806-160514-5d2cdb3b",
+  "live_classification": "OFFERS_INPUT_MISSING",
+  "telegram_delivered": true,
+  "telegram_factually_accepted": true,
+  "workflow_id": "tkM4H0G0gM3q9Foi",
+  "workflow_active": true,
+  "kill_switch_enabled": true,
+  "automatic_retries_enabled": false,
+  "notes": [
+    "First completion webhook returned HTTP 400 due to incomplete envelope; fixed to mars.client_ops.report v1.0; re-dispatched same run_id successfully without second import.",
+    "Producer 13:00 task is watchdog-only.",
+    "Scheduled Beget cron import remains enabled via shared canonical wrapper."
+  ]
+}
