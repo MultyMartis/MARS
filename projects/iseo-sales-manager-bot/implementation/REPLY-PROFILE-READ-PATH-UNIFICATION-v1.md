@@ -23,6 +23,10 @@
 4. **Start node** — reply-name line reads the rehydrated row; if no approved seed exists for the identity, renders the existing "не задано" fail-closed text rather than falling back to display name or username.
 5. **Config Summary node** — adds `resolver_version`, corrected parser-version display, reporting-sync honesty line, and active-recipient count sourced from the same resolver contract (see `CONFIG-TRUTH-FORENSIC-v1.md`).
 
+### Phase 3G.2.3 Start read-path correction
+
+3G.2.2 stamped the resolver version on Start but still sourced `reply_sender_name` from `$('Read ACCESS_CONTROL')` (pre-rehydrate). Live exec 24097 proved Auth already held `access_upsert.reply_sender_name=Михаил` while Start rendered «не задано». **3G.2.3** changes Start to prefer `j.access_upsert` (post-rehydrate), with sheet fallback only when upsert name is blank. Library: `resolveStartReplySenderName`. Harness: `phase3g23-harness.mjs`.
+
 ## 3. Operational.dev implementation notes
 
 `Expand Delivery Recipients` gains a version-stamp field (`resolver_version=iseo-reply-profile-resolver-v1.0`) on its output for traceability. No structural node change; personalization logic already read ACCESS_CONTROL profile fields directly and is confirmed unaffected by regression check (`evidence/phase3g2-2/OPERATIONAL-PERSONALIZATION-REGRESSION-v1.md`).

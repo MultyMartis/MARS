@@ -1,0 +1,56 @@
+{
+  "phase": "3G.2.3",
+  "pulled_at": "2026-08-06T10:15:41.734Z",
+  "before": {
+    "admin": {
+      "id": "wLrLp4WQHm1VJmxz",
+      "active": true,
+      "nodes": 85,
+      "updatedAt": "2026-08-05T22:00:28.133Z"
+    },
+    "ops": {
+      "id": "xSnXPy8cEHoZw6xG",
+      "active": true,
+      "nodes": 45,
+      "updatedAt": "2026-08-05T21:57:05.638Z"
+    },
+    "v2": {
+      "id": "h8I2Tl2yl4uzhUnB",
+      "active": false
+    },
+    "start_hash": "9436A389742AF744"
+  },
+  "patch": {
+    "changed": true,
+    "reason": "patched",
+    "parseOk": true,
+    "parseError": null
+  },
+  "after_hash": "7E0A13DB067254EF",
+  "invariants_pre": {
+    "admin_active": true,
+    "ops_active": true,
+    "v2_inactive": true,
+    "admin_nodes": 85,
+    "ops_nodes": 45,
+    "workflows_created": 0
+  },
+  "admin_deploy": {
+    "id": "wLrLp4WQHm1VJmxz",
+    "active": true,
+    "nodes": 85,
+    "updatedAt": "2026-08-06T10:15:41.979Z",
+    "start_hash": "7E0A13DB067254EF",
+    "has_3g23_marker": true,
+    "prefers_access_upsert": true
+  },
+  "invariants_post": {
+    "admin_active": true,
+    "ops_active": true,
+    "v2_inactive": true,
+    "admin_nodes": 85,
+    "ops_nodes": 45,
+    "same_admin_id": true,
+    "workflows_created": 0
+  }
+}

@@ -26,6 +26,7 @@ import {
   formatMyReplyProfile,
   buildProfileRehydratePatch,
   mergeRehydrateIntoUpsert,
+  resolveStartReplySenderName,
 } from './reply-profile-resolver-v1.mjs';
 
 export {
@@ -33,6 +34,7 @@ export {
   resolveReplyProfile,
   buildProfileRehydratePatch,
   mergeRehydrateIntoUpsert,
+  resolveStartReplySenderName,
 };
 
 export const REPLY_PROFILE_COMMANDS = Object.freeze({

@@ -69,3 +69,9 @@ Live call counts, safe real-lead recount, final two-recipient proof and five-pol
 - **Storage restore for ADMIN_A/MOD_A is fire-on-next-command, not yet operator-confirmed live** — the agent has no direct Google Sheets API credential from the n8n management API in this session, and a Telegram webhook inject attempt returned 404. The correct values are re-derived deterministically from the approved seed the first time either actor sends a rehydrate-covered command.
 - CONFIG parser-version display had drifted stale (`sm-parser-v3.2`) versus the live `Parse Lead` stamp (`sm-parser-v3.3`) since Phase 3E.1; no automatic re-sync exists for this CONFIG cell — corrected on display in this phase, but the underlying manual-sync gap for this specific cell is not eliminated as a class of risk for future parser-version bumps.
 - Operator live Telegram acceptance for ADMIN_A and MOD_A restored profiles, and for the corrected `/config` output, remains **pending**.
+
+## Phase 3G.2.3 limitations
+
+- After 3G.2.2, `/my_reply_profile` could show the restored name while `/start` in a wiped-sheet execution still rendered `Имя в ответах: не задано` because Start read the pre-rehydrate sheet snapshot instead of `access_upsert` (proven exec 24097).
+- **Repaired in-place on Admin.dev Start** (read-after-rehydrate). Offline harness **30/30 PASS**. Operator post-deploy visual `/start` as MOD_A remains **pending** (agent cannot inject Telegram updates).
+- Do not treat pre-repair Telegram history (stale Start) as acceptance of 3G.2.3.

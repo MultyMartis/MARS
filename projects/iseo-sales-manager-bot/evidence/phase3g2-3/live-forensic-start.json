@@ -1,0 +1,54 @@
+{
+  "pulled_at": "2026-08-06T10:11:55.585Z",
+  "admin": {
+    "id": "wLrLp4WQHm1VJmxz",
+    "name": "i-SEO Sales Manager - Admin.dev",
+    "active": true,
+    "nodes": 85,
+    "updatedAt": "2026-08-05T22:00:28.133Z"
+  },
+  "ops": {
+    "id": "xSnXPy8cEHoZw6xG",
+    "name": "i-SEO Sales Manager - Operational.dev",
+    "active": true,
+    "nodes": 45,
+    "updatedAt": "2026-08-05T21:57:05.638Z"
+  },
+  "hashes": {
+    "start": "9436A389742AF744",
+    "check_auth": "4D5AD3569FF494D0",
+    "reply_profile_commands": "B8006003E98864AA",
+    "prepare_access_upsert": "06CF51A14DAA5C88",
+    "restore_admin_reply_target": "A3237EC84821F59C"
+  },
+  "start": {
+    "reads_Read_ACCESS_CONTROL": true,
+    "reads_access_upsert": false,
+    "uses_rehydrate": false,
+    "uses_resolveReplyProfile": false,
+    "has_resolver_version_stamp": true,
+    "fail_closed_comment": true,
+    "tail": "const j = $input.first().json;\ntry {\n  const role = j.auth_role === 'admin' ? 'admin'\n    : (j.auth_role === 'moderator' ? 'moderator'\n    : (j.auth_role === 'blocked' ? 'blocked' : 'public'));\n  let replyName = '';\n  try {\n    const rows = $('Read ACCESS_CONTROL').all().map((i) => i.json || {});\n    const uid = String(j.user_id || '');\n    const row = rows.find((r) => String(r.telegram_user_id || '') === uid);\n    // Phase 3G.2.2 — authoritative reply_sender_name only (no nickname/display fallback)\n    if (row) {\n      const nm = String(row.reply_sender_name || '').trim();\n      // fail-closed: do not use display_name/username\n      replyName = nm;\n    } else replyName = '';\n  } catch (e) { replyName = ''; }\n  const text = startReply(role, j.config_map || {}, { reply_sender_name: replyName, reply_profile_resolver_version: 'iseo-reply-profile-resolver-v1.0' });\n  if (!text || !String(text).trim()) {\n    return [{ json: Object.assign({}, j, {\n      reply_text: \"Не удалось сформировать ответ команды. Ошибка зафиксирована, повторите позже.\",\n      parse_mode: 'HTML',\n      command_response_guard: 'empty_builder',\n      deny_reason: 'processing_failure',\n      error_node: 'Start',\n    }) }];\n  }\n  // length guard (Telegram hard limit 4096)\n  if (String(text).length > 4096) {\n    return [{ json: Object.assign({}, j, {\n      reply_text: \"Не удалось сформировать ответ команды. Ошибка зафиксирована, повторите позже.\",\n      parse_mode: 'HTML',\n      command_response_guard: 'length_overflow',\n      deny_reason: 'processing_failure',\n      error_node: 'Start',\n    }) }];\n  }\n  return [{ json: Object.assign({}, j, { reply_text: text, parse_mode: 'HTML' }) }];\n} catch (e) {\n  return [{ json: Object.assign({}, j, {\n    reply_text: \"Не удалось сформировать ответ команды. Ошибка зафиксирована, повторите позже.\",\n    parse_mode: 'HTML',\n    command_response_guard: 'runtime_exception',\n    deny_reason: 'processing_failure',\n    error_node: 'Start',\n  }) }];\n}\n"
+  },
+  "auth": {
+    "has_rehydrateReplyProfile": true,
+    "has_reply_sender_in_headers": true,
+    "rowFromSheet_includes_profile": true,
+    "start_upsert_uses_rehydrate": true,
+    "rowFromSheet": "function rowFromSheet(r = {}) {\n  // Phase 3G.2.2 — preserve reply-profile columns (anti-wipe on /start last_seen upsert)\n  return {\n    telegram_user_id: String(r.telegram_user_id ?? ''),\n    telegram_user_hash: String(r.telegram_user_hash ?? ''),\n    telegram_username: normalizeUsername(r.telegram_username),\n    display_name: String(r.display_name ?? ''),\n    role: String(r.role ?? '').toLowerCase(),\n    status: String(r.status ?? '').toLowerCase(),\n    first_seen_at: String(r.first_seen_at ?? ''),\n    last_seen_at: String(r.last_seen_at ?? ''),\n    requested_at: String(r.requested_at ?? ''),\n    approved_at: String(r.approved_at ?? ''),\n    approved_by: String(r.approved_by ?? ''),\n    revoked_at: String(r.revoked_at ?? ''),\n    revoked_by: String(r.revoked_by ?? ''),\n    source: String(r.source ?? ''),\n    notes: String(r.notes ?? ''),\n    reply_profile_number: r.reply_profile_number ?? '',\n    reply_sender_name: String(r.reply_sender_name ?? ''),\n    reply_sender_enabled: r.reply_sender_enabled ?? '',\n    reply_company_name: String(r.reply_company_name ?? ''),\n    reply_profile_version: String(r.reply_profile_version ?? ''),\n    reply_profile_updated_at: String(r.reply_profile_updated_at ?? ''),\n    reply_profile_updated_by: String(r.reply_profile_updated_by ?? ''),\n  };\n}",
+    "start_upsert_snippet": "registry_read_ok && cmdLower === '/start' && (role === 'public' || (decision.identity && (decision.identity.status === 'pending' || decision.identity.status === 'none')))) {\n  const up = buildPublicStartUpsert({\n    user_id: lead.user_id,\n    username: lead.username,\n    display_name: lead.display_name,\n    existing: decision.identity && decision.identity.row ? decision.identity.row : null,\n    nowIso,\n  });\n  if (up.mutate && (up.row.role === 'public' || up.row.status === 'pending' || up.row.status === 'revoked')) {\n    access_registry_write = true;\n    access_upsert = up.row;\n    access_event = {\n      ts: nowIso,\n      opaque_user_ref: opaqueUserRef(lead.user_id),\n      event: up.event.event,\n      prior_role: up.event.prior_role || '',\n      prior_status: up.event.prior_status || '',\n      new_role: up.event.new_role,\n      new_status: up.event.new_status,\n      actor_ref: opaqueUserRef(lead.user_id),\n      source: 'telegra"
+  },
+  "reply_profile_commands": {
+    "has_rehydrate": true,
+    "has_resolver_version": true
+  },
+  "upsert_columns": [
+    "reply_sender_name",
+    "reply_sender_enabled",
+    "reply_company_name",
+    "reply_profile_version",
+    "reply_profile_updated_at",
+    "reply_profile_updated_by",
+    "reply_profile_number"
+  ]
+}

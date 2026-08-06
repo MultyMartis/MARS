@@ -1,10 +1,26 @@
+<!-- Phase 3G.2.3 moderator start read-after-rehydrate 2026-08-06 -->
+## Phase 3G.2.3 (current additive)
+
+| Field | Value |
+|-------|-------|
+| **Phase** | 3G.2.3 — Moderator `/start` read-after-rehydrate repair |
+| **Verdict** | `COMPLETE — MODERATOR START PROFILE REPAIRED; OPERATOR ACCEPTANCE PENDING` |
+| **Root cause** | Start Reply read pre-rehydrate `Read ACCESS_CONTROL` while Auth `access_upsert` already held Михаил (exec 24097) |
+| **Fix** | Admin.dev Start prefers `j.access_upsert.reply_sender_name`; sheet fallback; same ID · 85 nodes · hash `7E0A13DB067254EF` |
+| **Invariant** | Single-execution consistency: `/start` must not rely on the next command |
+| **Runtime** | Ops **45** active · Admin **85** active · v2 inactive · AI OFF · reminders OFF |
+| **Harness** | `phase3g23-harness.mjs` **30/30 PASS** |
+| **Evidence** | [evidence/phase3g2-3/](evidence/phase3g2-3/) |
+| **Report** | [REPORT-iseo-sales-manager-bot-phase3g2-3-moderator-start-profile-repair-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3g2-3-moderator-start-profile-repair-v1.md) |
+| **Operator gate** | MOD_A `/start` ×2 + `/my_reply_profile`; ADMIN_A `/start` + `/reply_profiles` |
+
 <!-- Phase 3G.2.2 unified resolver + config truth repair 2026-08-06 -->
-## Phase 3G.2.2 (current additive)
+## Phase 3G.2.2 (additive; historical)
 
 | Field | Value |
 |-------|-------|
 | **Phase** | 3G.2.2 — Unified reply profile resolver + config truth repair |
-| **Verdict** | `COMPLETE — PROFILE RESOLVER UNIFIED; OPERATOR ACCEPTANCE PENDING` |
+| **Verdict** | `COMPLETE — PROFILE RESOLVER UNIFIED; MODERATOR START READ-AFTER-REHYDRATE REPAIR PENDING` → closed by **3G.2.3** |
 | **Root cause** | `Check User Authorization` `rowFromSheet()` stripped `reply_profile_*` fields; `/start`/`/my_status` last-seen upsert wrote ACCESS_CONTROL without those fields, wiping ADMIN_A and MOD_A on routine authenticated traffic |
 | **Fix** | Anti-wipe projection allowlist + auto-rehydrate on same Admin.dev workflow; unified resolver `iseo-reply-profile-resolver-v1.0` backs all 8 profile read paths |
 | **Storage** | Single authoritative `ACCESS_CONTROL` store confirmed; 4 profile rows, 0 duplicates, 0 renumbering |
@@ -13,7 +29,7 @@
 | **Harness** | `phase3g22-harness.mjs` **53/53 PASS**; regression `phase3g2-harness.mjs` **42/42 PASS** |
 | **Evidence** | [evidence/phase3g2-2/](evidence/phase3g2-2/) |
 | **Report** | [REPORT-iseo-sales-manager-bot-phase3g2-2-profile-resolver-and-config-truth-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3g2-2-profile-resolver-and-config-truth-v1.md) |
-| **Operator gate** | Live Telegram confirmation from ADMIN_A and MOD_A that restored profile displays correctly; visual confirm corrected `/config` |
+| **Follow-up** | Start stale-read closed in **3G.2.3** |
 
 <!-- Phase 3G.2.1 silent help/start/config repair 2026-08-06 -->
 ## Phase 3G.2.1 (additive; historical)

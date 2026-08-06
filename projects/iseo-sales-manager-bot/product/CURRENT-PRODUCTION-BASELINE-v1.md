@@ -1,6 +1,6 @@
 # CURRENT PRODUCTION BASELINE v1
 
-**Срез:** Phase 3G.2.2, 2026-08-06. **Статус:** unified reply-profile resolver + config truth repair deployed; ADMIN_A/MOD_A profile wipe root-caused and auto-rehydrate patch live; AI OFF; reminders OFF; operator Telegram acceptance pending.
+**Срез:** Phase 3G.2.3, 2026-08-06. **Статус:** unified resolver live; moderator `/start` read-after-rehydrate repair deployed (Start prefers `access_upsert`); AI OFF; reminders OFF; operator Telegram acceptance pending.
 
 | Контур | Workflow ID | Active | Nodes | Роль |
 |---|---|---:|---:|---|
@@ -98,3 +98,11 @@ Live profile columns repaired and seeded. T1/T3 acceptance inject delivered 4 pe
 - Offline harness `phase3g22-harness.mjs` **53/53 PASS**; regression `phase3g2-harness.mjs` **42/42 PASS**. Contour unchanged: Ops 45 active · Admin 85 active · v2 inactive · AI OFF · reminders OFF · workflows created=0.
 - Storage restore of ADMIN_A/MOD_A fires on the next live Telegram command from each actor that hits a rehydrate-covered path; direct Sheets API restore and Telegram webhook inject were not available to the agent this session — see `evidence/phase3g2-2/ADMIN-A-RESTORE-v1.md`.
 - Evidence: `evidence/phase3g2-2/`. Architecture: `architecture/UNIFIED-REPLY-PROFILE-RESOLVER-v1.md`.
+
+## Phase 3G.2.3 additive baseline note
+
+- Residual defect after 3G.2.2: moderator `/start` built `Имя в ответах` from the pre-rehydrate `Read ACCESS_CONTROL` snapshot while `Check User Authorization` already held the correct post-rehydrate `access_upsert` (live exec 24097: sheet blank, upsert Михаил, Start «не задано»).
+- Repair: Admin.dev **Start** node prefers `j.access_upsert.reply_sender_name` (unified contract `iseo-reply-profile-resolver-v1.0`); sheet is fallback only. Same workflow ID · **85** nodes · Start hash `7E0A13DB067254EF`.
+- Single-execution invariant: `/start` must show Михаил in the same command that rehydrates — must not rely on the next command.
+- Offline harness `phase3g23-harness.mjs` **30/30 PASS**. Contour unchanged: Ops 45 · Admin 85 · v2 inactive · AI OFF · reminders OFF · workflows created=0.
+- Evidence: `evidence/phase3g2-3/`.

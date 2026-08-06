@@ -1,6 +1,6 @@
 # UNIFIED REPLY PROFILE RESOLVER v1
 
-**Phase:** 3G.2.2
+**Phase:** 3G.2.2 (+ 3G.2.3 Start read-after-rehydrate)
 **Version:** `reply_profile_resolver_version = iseo-reply-profile-resolver-v1.0`
 **Status:** current authority for reply-profile resolution across all read paths
 **Supersedes:** ad hoc per-path field projection described implicitly in [REPLY-PROFILE-CONTRACT-v1.md](REPLY-PROFILE-CONTRACT-v1.md) prior to 3G.2.2
@@ -79,6 +79,10 @@ Rehydrate is invoked:
 
 - Before formatting any of the four profile-view commands (§4.2–4.5).
 - Before every `/start` / `/my_status` last-seen upsert, merged into the write mapping so the write itself cannot re-wipe the row.
+
+### Phase 3G.2.3 — `/start` must consume post-rehydrate output
+
+Rehydrate in Check User Authorization alone is insufficient if Start still reads the pre-rehydrate sheet item. **Single-execution consistency:** moderator `/start` must resolve `Имя в ответах` from `access_upsert.reply_sender_name` (post-rehydrate) via this contract — not from the blank `Read ACCESS_CONTROL` snapshot and not from the next command. Helper: `resolveStartReplySenderName` in `reply-profile-resolver-v1.mjs`. Evidence: `evidence/phase3g2-3/`.
 
 ---
 

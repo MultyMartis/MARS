@@ -1,0 +1,188 @@
+{
+  "phase": "3G.2.3",
+  "total": 30,
+  "passed": 30,
+  "failed": 0,
+  "checks": [
+    {
+      "id": 1,
+      "title": "MOD_A storage seed has Михаил after rehydrate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 2,
+      "title": "MOD_A Start resolver returns Михаил",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 3,
+      "title": "Start uses post-rehydrate profile (access_upsert)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 4,
+      "title": "Start does not use stale sheet input",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 5,
+      "title": "Repeated Start preserves profile (upsert merge)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 6,
+      "title": "my_status preserves profile (mergeRehydrate)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 7,
+      "title": "my_reply_profile agrees with Start",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 8,
+      "title": "ADMIN_A profile preserved",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 9,
+      "title": "Revoked profiles unchanged",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 10,
+      "title": "No duplicate rows in fixture set",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 11,
+      "title": "No hardcoded moderator name in Start builder path",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 12,
+      "title": "No display-name fallback",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 13,
+      "title": "No username fallback",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 14,
+      "title": "AI OFF in admin start text",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 15,
+      "title": "Reminders OFF in admin start text",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 16,
+      "title": "Operational active invariant (documented)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 17,
+      "title": "Admin active invariant (documented)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 18,
+      "title": "Sales-Manager-v2 inactive invariant (documented)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 19,
+      "title": "Workflows created=0",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 20,
+      "title": "Access changes=0",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 21,
+      "title": "Production leads modified=0",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 22,
+      "title": "Real leads lost=0",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 23,
+      "title": "Real leads duplicated=0",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 24,
+      "title": "Resolver version stamp",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 25,
+      "title": "Fixed Start text contains Михаил",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 26,
+      "title": "Legacy Start text contains не задано",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 27,
+      "title": "Admin start has no mandatory reply-name line",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 28,
+      "title": "Sheet-filled Start still works",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 29,
+      "title": "Prefer upsert over conflicting blank sheet",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": 30,
+      "title": "No Мопс nickname in start text",
+      "pass": true,
+      "detail": ""
+    }
+  ]
+}

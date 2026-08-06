@@ -208,3 +208,36 @@ export function formatMyReplyProfile(row) {
   }
   return lines.join('\n');
 }
+
+/**
+ * Phase 3G.2.3 — single-execution /start reply-name resolution.
+ * Prefer post-rehydrate `access_upsert` from Check User Authorization over the
+ * pre-rehydrate Read ACCESS_CONTROL sheet snapshot. Fail-closed: never use
+ * display_name / username / nickname.
+ *
+ * @param {{ access_upsert?: object|null, sheet_row?: object|null }} input
+ * @returns {{ reply_sender_name: string, source: 'access_upsert'|'sheet'|'none', resolver_version: string, resolved: object|null }}
+ */
+export function resolveStartReplySenderName(input = {}) {
+  const upsert = input.access_upsert && typeof input.access_upsert === 'object' ? input.access_upsert : null;
+  const sheet = input.sheet_row && typeof input.sheet_row === 'object' ? input.sheet_row : null;
+  let row = null;
+  let source = 'none';
+  if (upsert && String(upsert.reply_sender_name || '').trim()) {
+    row = upsert;
+    source = 'access_upsert';
+  } else if (sheet) {
+    row = upsert ? { ...sheet, ...upsert } : sheet;
+    source = 'sheet';
+  } else if (upsert) {
+    row = upsert;
+    source = 'access_upsert';
+  }
+  const resolved = row ? resolveReplyProfile(row) : null;
+  return {
+    reply_sender_name: resolved?.reply_sender_name || '',
+    source,
+    resolver_version: REPLY_PROFILE_RESOLVER_VERSION,
+    resolved,
+  };
+}
