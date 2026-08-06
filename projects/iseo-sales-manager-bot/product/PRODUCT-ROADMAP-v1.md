@@ -9,6 +9,7 @@
 5. **First Reply Engine v2 + Human Reply Style v1 (3E.2.x)** — copy layer operator-accepted; Phase 3E.2.3 call-budget and exactly-once proof COMPLETE: two claims/two sends/two stamps, five-poll zero resend. Operator visual confirmation **received** — Phase 3E.2 closed `COMPLETE — HUMAN FIRST REPLY ENGINE READY`.
 6. **Pending-lead reminders (3F.1)** — engine ready historically; **activated in Phase 3H.3** (`pending_reminders_enabled=true`, 10:00 Europe/Moscow, source LEADS, tests excluded).
 6b. **Phase 3H production hardening** — **IMPLEMENTATION COMPLETE — 48-HOUR SOAK STARTED** (2026-08-06): fixture cleanup, reporting MANUAL truth, Olya onboarded, three-recipient delivery proven, reminders ON. Phase 3I.1 blocked until soak PASS + explicit approval.
+6c. **Phase 3H.4 soak observability repair** — **COMPLETE — SOAK RESTARTED** (2026-08-06 19:15 МСК T+0): `/reminder_status` SyntaxError fix, empty-poll heartbeat, `/status` production truth, health/status separation. Soak attempt 1 invalidated. Earliest PASS **2026-08-08 19:15 МСК**.
 7. **AI ON pilot (Phase 3I.1+)** — blocked until pre-AI soak PASS and separate operator charter; AI remains OFF.
 8. **Reusable client profile** — schema для изолированных config/source/storage/staff boundaries.
 9. **Deployment automation** — versioned package, compatibility, migration и rollback tooling.

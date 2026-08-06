@@ -1,5 +1,20 @@
+<!-- Phase 3H.4 soak observability repair 2026-08-06 -->
+## Phase 3H.4 (current)
+
+| Field | Value |
+|-------|-------|
+| **Phase** | 3H.4 — Soak observability repair + soak restart |
+| **Verdict** | `PHASE 3H.4 COMPLETE — SOAK OBSERVABILITY REPAIRED; 48-HOUR SOAK RESTARTED` |
+| **Repairs** | `/reminder_status` SyntaxError · empty-poll heartbeat · `/status` production lead truth · health/status separation |
+| **Runtime** | Ops **45** active · Admin **85** active · v2 inactive · AI **OFF** · reminders **ON** |
+| **Soak T+0** | **2026-08-06 19:15 Europe/Moscow** · earliest PASS **2026-08-08 19:15 Europe/Moscow** |
+| **Soak attempt 1** | 06.08.2026 14:20 МСК — **INVALIDATED** (observability repair) |
+| **Evidence** | [evidence/phase3h4/](evidence/phase3h4/) |
+| **Report** | [REPORT-iseo-sales-manager-bot-phase3h4-soak-observability-repair-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3h4-soak-observability-repair-v1.md) |
+| **Gate** | Phase 3I.1 blocked until soak PASS |
+
 <!-- Phase 3H production hardening + pre-AI soak 2026-08-06 -->
-## Phase 3H (current)
+## Phase 3H (additive; historical)
 
 | Field | Value |
 |-------|-------|

@@ -184,3 +184,13 @@ Evidence: `evidence/phase3g1-1/` · Report: `reports/REPORT-iseo-sales-manager-b
 7. Offline gate: `node implementation/harness/phase3g22-harness.mjs` → 53/53 PASS; regression `node implementation/harness/phase3g2-harness.mjs` → 42/42 PASS.
 8. AI stays OFF; reminders stay OFF; do not activate Sales-Manager-v2; do not change access roles.
 9. Evidence: `evidence/phase3g2-2/` · Report: `reports/REPORT-iseo-sales-manager-bot-phase3g2-2-profile-resolver-and-config-truth-v1.md`.
+
+## Phase 3H.4 — soak observability repair
+
+1. **Symptom:** `/reminder_status` silent for Admin; `/status` stale poll time; wrong last processed lead (22:23 МСК from synth test).
+2. **Root causes:** Reminder Commands SyntaxError (exec 24194/24196); empty polls did not write heartbeat; Status read synthetic `last_lead_success_at`.
+3. **Fix deployed:** Admin Reminder/Status/Health patched; Operational poll heartbeat v1.0; CONFIG backfill for production lead + recipient count=3.
+4. **Soak:** attempt 1 invalidated; new T+0 **2026-08-06 19:15 Europe/Moscow**; earliest PASS **2026-08-08 19:15 Europe/Moscow**.
+5. As ADMIN_A: `/reminder_status` `/status` `/health` — confirm visible replies and corrected production lead time.
+6. Do not start Phase 3I.1 until soak PASS.
+7. Evidence: `evidence/phase3h4/` · Report: `reports/REPORT-iseo-sales-manager-bot-phase3h4-soak-observability-repair-v1.md`.

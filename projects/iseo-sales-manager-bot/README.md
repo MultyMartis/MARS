@@ -1,3 +1,16 @@
+<!-- Phase 3H.4 soak observability repair 2026-08-06 -->
+
+## Phase 3H.4 — Soak observability repair + soak restart (current)
+
+**Status:** `PHASE 3H.4 COMPLETE — SOAK OBSERVABILITY REPAIRED; 48-HOUR SOAK RESTARTED`
+
+- Root causes: `/reminder_status` Admin SyntaxError (exec 24194/24196); stale Gmail poll heartbeat on empty runs; `/status` showed synthetic test stamp (22:23 МСК) not production lead `lead_19fd2052066e18b7` (17:22 МСК)
+- Repairs: Admin Reminder Commands/Status/Health patched; Operational poll heartbeat `iseo-gmail-poll-heartbeat-v1.0`; CONFIG backfill for production lead + recipient count=3
+- Soak attempt 1 (06.08.2026 14:20 МСК) **INVALIDATED**; restart T+0 **2026-08-06 19:15 Europe/Moscow** · earliest PASS **2026-08-08 19:15 Europe/Moscow**
+- Contour: Ops 45 active · Admin 85 active · v2 inactive · AI OFF · reminders ON
+- Evidence: [evidence/phase3h4/](evidence/phase3h4/) · Report: [REPORT-iseo-sales-manager-bot-phase3h4-soak-observability-repair-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3h4-soak-observability-repair-v1.md)
+- Phase 3I.1 blocked until soak PASS
+
 <!-- Phase 3G.2.2 unified resolver + config truth repair 2026-08-06 -->
 
 ## Phase 3G.2.2 — Unified reply profile resolver + config truth repair (current)
@@ -55,7 +68,7 @@
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
-**Status:** Phase 3G.2.2 — COMPLETE — PROFILE RESOLVER UNIFIED; OPERATOR ACCEPTANCE PENDING; AI OFF; reminders OFF
+**Status:** Phase 3H.4 — COMPLETE — SOAK OBSERVABILITY REPAIRED; 48-HOUR SOAK RESTARTED; AI OFF; reminders ON
 
 ---
 

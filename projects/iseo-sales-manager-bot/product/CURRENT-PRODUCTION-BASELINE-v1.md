@@ -1,7 +1,7 @@
 # CURRENT PRODUCTION BASELINE v1
 
-**Срез:** Phase 3H implementation complete — 48-hour pre-AI soak started 06.08.2026 14:20 МСК.  
-**Статус:** AI OFF; reminders ON 10:00 Europe/Moscow; reporting manual; active recipients=3 (Андрей, Оля, Михаил); Никита revoked.
+**Срез:** Phase 3H.4 observability repair complete — 48-hour pre-AI soak **restarted** 2026-08-06 19:15 Europe/Moscow.  
+**Статус:** AI OFF; reminders ON 10:00 Europe/Moscow; reporting manual; active recipients=3 (Андрей, Оля, Михаил); Никита revoked; poll heartbeat v1.0; `/status` uses `last_production_processed_*`.
 
 | Контур | Workflow ID | Active | Nodes | Роль |
 |---|---|---:|---:|---|
@@ -26,4 +26,4 @@
 
 ## Immutable soak baseline
 
-See `product/PRODUCTION-BASELINE-PRE-AI-SOAK-v1.md`. Earliest soak PASS: 08.08.2026 14:20 МСК.
+See `product/PRODUCTION-BASELINE-PRE-AI-SOAK-v1.md`. Soak attempt 1 (14:20 МСК) invalidated. Earliest soak PASS: **08.08.2026 19:15 МСК** (T+0 06.08.2026 19:15 МСК).

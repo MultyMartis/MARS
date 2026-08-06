@@ -1,6 +1,7 @@
 # PRODUCTION BASELINE PRE-AI SOAK v1
 
-**Date/time:** 06.08.2026 14:20 МСК
+**Date/time (attempt 1):** 06.08.2026 14:20 МСК — **INVALIDATED** by Phase 3H.4  
+**Soak restart T+0:** 2026-08-06 19:15 Europe/Moscow · earliest PASS 2026-08-08 19:15 Europe/Moscow
 
 | Contour | ID | Active | Nodes |
 |---|---|---:|---:|
@@ -20,3 +21,4 @@
 - AI OFF · automatic client send OFF
 - Rollback backups: Storage `git-sync-iseo-sm-phase3h-20260806-175957\runtime\backups\`
 - Canonical tip at program start: `d76a68f7` (origin/mars/canonical-post-recovery)
+- Phase 3H.4: observability repair — poll heartbeat `iseo-gmail-poll-heartbeat-v1.0`; `/status` production truth keys; evidence `evidence/phase3h4/`

@@ -75,3 +75,12 @@ Live call counts, safe real-lead recount, final two-recipient proof and five-pol
 - After 3G.2.2, `/my_reply_profile` could show the restored name while `/start` in a wiped-sheet execution still rendered `Имя в ответах: не задано` because Start read the pre-rehydrate sheet snapshot instead of `access_upsert` (proven exec 24097).
 - **Repaired in-place on Admin.dev Start** (read-after-rehydrate). Offline harness **30/30 PASS**. Operator post-deploy visual `/start` as MOD_A remains **pending** (agent cannot inject Telegram updates).
 - Do not treat pre-repair Telegram history (stale Start) as acceptance of 3G.2.3.
+
+## Phase 3H.4 limitations
+
+- Soak attempt 1 (06.08.2026 14:20 МСК) **invalidated** — 48h clock restarted at **2026-08-06 19:15 Europe/Moscow**; soak PASS unavailable until **2026-08-08 19:15 Europe/Moscow** minimum.
+- Pre-repair `/reminder_status` could go **silent** for Admin due to Reminder Commands SyntaxError (exec 24194/24196) — **repaired**; offline `node --check` PASS.
+- Pre-repair `/status` could show stale Gmail poll time when inbox empty (`POLLING_ACTIVE_BUT_HEARTBEAT_NOT_WRITTEN_ON_EMPTY_RUNS`) — **repaired** via `iseo-gmail-poll-heartbeat-v1.0`.
+- Pre-repair `/status` could show synthetic test last-lead time (22:23 МСК) instead of production `lead_19fd2052066e18b7` (17:22 МСК) — **repaired** via `last_production_processed_*` keys.
+- `/health` Gmail probe must not be interpreted as scheduled poll heartbeat — documented in `HEALTH-SEMANTIC-SEPARATION-v1.md`.
+- Phase 3I.1 remains blocked until soak PASS + explicit approval.
