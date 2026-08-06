@@ -102,7 +102,8 @@ Access role/status **must not** change as a side effect of reply-name commands.
 
 - Stats: human Russian counts; epoch display **05.08.2026** (Europe/Moscow); authoritative table `LEADS`; events in `LEAD_EVENTS`.
 - Config (Admin): contour; stats start date; source display; parser version; template standard version; personalization version; **resolver version**; AI state; reminder state; reporting synchronization state; active recipient count. Unavailable → `не задано`. Never workbook IDs, Telegram IDs, credentials, raw CONFIG secrets.
-- Reminder status: clearly show enabled/disabled; production default **выключены**.
+- Reminder status: clearly show enabled/disabled; production **ON** since Phase 3H.3 (10:00 Europe/Moscow).
+- **Phase 3H.4:** `/status` poll line uses scheduled heartbeat keys; production last-lead line uses `last_production_processed_*`; `/health` probe text must not imply poll heartbeat. See `OPERATIONAL-STATUS-TRUTH-CONTRACT-v1.md`.
 - **Phase 3G.2.2:** `/config` must display the **live** parser version (source: `Parse Lead` stamp), not a stale cached CONFIG key; reporting-sync state must be stated honestly (e.g. «выключена») rather than omitted when no sync node is active. See `evidence/phase3g2-2/CONFIG-TRUTH-FORENSIC-v1.md` / `CONFIG-HUMAN-DISPLAY-v1.md`.
 
 ---

@@ -311,3 +311,13 @@ Same Admin workflow (85 nodes retained, no new workflow):
 4. Do not change ACCESS_CONTROL schema, access roles/status, or profile numbers; do not enable AI or reminders; do not activate Sales-Manager-v2.
 5. Offline harness `phase3g22-harness.mjs` **53/53 PASS**; regression `phase3g2-harness.mjs` **42/42 PASS**.
 6. Evidence: `evidence/phase3g2-2/`.
+
+### Phase 3H.4 Admin patch note
+
+Same Admin workflow (85 nodes; workflows_created=0):
+
+1. **Reminder Commands:** fix Admin long-form `/reminder_status` SyntaxError (literal `,\n` between array elements — exec 24194/24196).
+2. **Status:** read poll heartbeat + `last_production_processed_*`; decouple synthetic test stamps.
+3. **Health:** clarify on-demand probe vs scheduled poll heartbeat.
+4. Temporary webhook nodes during deploy removed; final count **85**.
+5. Evidence: `evidence/phase3h4/` · `implementation/REMINDER-STATUS-COMMAND-REPAIR-v1.md` · `STATUS-DATA-SOURCE-REPAIR-v1.md`.

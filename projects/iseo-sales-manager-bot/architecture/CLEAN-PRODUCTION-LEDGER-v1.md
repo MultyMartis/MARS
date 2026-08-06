@@ -34,3 +34,7 @@ Human-facing list/history adapters must read LEADS field names (`lifecycle_statu
 ## Phase 3G.1 ledger note
 
 LEADS remains one-row-per-business-lead. Personalized reply texts belong in `RECIPIENT_REPLIES` or extended `LEAD_DELIVERIES`, not duplicated LEADS rows. Reporting workbook keeps shared template id only. Stats counting invariant unchanged.
+
+## Phase 3H.4 ledger note
+
+`/status` production display uses CONFIG `last_production_processed_*` stamped from real LEADS rows (`is_real_lead=true`, `production_generation=v2`). Synthetic test deliveries must not drive operator-facing last-lead time.
