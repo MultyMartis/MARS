@@ -1,7 +1,7 @@
 # CURRENT PRODUCTION BASELINE v1
 
-**Срез:** Phase 3H.4.1 `/status` last-processed readback repaired — final 48-hour pre-AI soak **restarted** 2026-08-06 16:20 Europe/Moscow.  
-**Статус:** AI OFF; reminders ON 10:00 Europe/Moscow; reporting manual; active recipients=3 (Андрей, Оля, Михаил); Никита revoked; poll heartbeat v1.0; `/status` production line = `iseo-last-production-processed-v1.0` / CONFIG cache aligned to LEADS 17:22 МСК.
+**Срез:** Final pre-AI soak **T+0 observation** 2026-08-06 19:52 Europe/Moscow — verdict `SOAK T+0 STOP — PRODUCTION INVARIANT VIOLATION` (MOD_C identity reactivated + card delivery). Final soak T+0 charter remains 2026-08-06 16:20 Europe/Moscow.  
+**Статус:** AI OFF; reminders ON 10:00 Europe/Moscow; reporting manual; poll heartbeat v1.0 healthy; **access/delivery invariant broken for MOD_C** (requires operator remediation). Workflows Ops 45 / Admin 85 / v2 inactive unchanged.
 
 | Контур | Workflow ID | Active | Nodes | Роль |
 |---|---|---:|---:|---|
@@ -15,15 +15,18 @@
 
 ## Profiles
 
+**Desired soak baseline (charter):**  
 1. Андрей — admin — active — cards — personalization ON  
 2. Оля — moderator — active — cards — personalization ON  
 3. Михаил — moderator — active — cards — personalization ON  
 4. Никита — moderator — revoked — no cards  
 
+**Live at T+0 observation:** MOD_C identity observed **active** with blank profile number after post-T+0 access upsert; received card on PROD_LEAD_3 — **STOP**.
+
 ## Statistics epoch
 
-05.08.2026 16:02 МСК · received=1 · pending=0 · processed=1 · spam=0 (unless genuine new lead arrives during soak)
+05.08.2026 16:02 МСК epoch remains. Post-T+0 genuine leads observed (aliases PROD_LEAD_2 / PROD_LEAD_3); exact `/stats` packet after T+0 not captured in-agent.
 
 ## Immutable soak baseline
 
-See `product/PRODUCTION-BASELINE-PRE-AI-SOAK-v1.md`. Attempts 1–2 interrupted. Earliest soak PASS: **08.08.2026 16:20 МСК** (T+0 06.08.2026 16:20 МСК).
+See `product/PRODUCTION-BASELINE-PRE-AI-SOAK-v1.md`. Attempts 1–2 interrupted. T+0 observation **STOP**. Earliest soak PASS clock **08.08.2026 16:20 МСК** is not claimable under current STOP without remediation + explicit re-charter.

@@ -37,3 +37,7 @@ Pending source forensic, view contract, command implementation, reminder schedul
 
 Complete. Last production processed `/status` readback repaired; final 48-hour soak restarted (T+0 2026-08-06 16:20 Europe/Moscow). Phase 3I.1 remains blocked until soak PASS.
 
+## Phase 3H.5 T+0 observation
+
+Executed 2026-08-06 19:52 Europe/Moscow. Verdict: `SOAK T+0 STOP — PRODUCTION INVARIANT VIOLATION` (MOD_C reactivation + revoked delivery). Phase 3I.1 remains blocked. No AI enablement.
+

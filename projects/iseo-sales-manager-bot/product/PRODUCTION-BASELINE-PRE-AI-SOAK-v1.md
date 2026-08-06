@@ -27,3 +27,7 @@
 
 Attempt 2 (2026-08-06 19:15 Europe/Moscow) interrupted by last-processed status readback repair. Final T+0: **2026-08-06 16:20 Europe/Moscow**. Earliest PASS: **2026-08-08 16:20 Europe/Moscow**. Phase 3I.1 remains blocked.
 
+## Phase 3H.5 T+0 observation
+
+Executed **2026-08-06 19:52 Europe/Moscow**. Verdict: `SOAK T+0 STOP — PRODUCTION INVARIANT VIOLATION` (MOD_C reactivation + revoked delivery). Evidence: `evidence/pre-ai-soak/FINAL-SOAK-CHECKPOINT-T0-v1.md`. Phase 3I.1 remains blocked.
+

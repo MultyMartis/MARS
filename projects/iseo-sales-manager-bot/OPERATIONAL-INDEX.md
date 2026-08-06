@@ -1,5 +1,20 @@
+<!-- Phase 3H.5 final pre-AI soak T+0 observation 2026-08-06 -->
+## Phase 3H.5 T+0 (current)
+
+| Field | Value |
+|-------|-------|
+| **Phase** | 3H.5 — Final pre-AI soak observation checkpoint T+0 |
+| **Verdict** | `SOAK T+0 STOP — PRODUCTION INVARIANT VIOLATION` |
+| **Executed** | **2026-08-06 19:52 Europe/Moscow** (~3h 32m after final T+0 16:20) |
+| **STOP** | MOD_C identity reactivated after T+0 · lead card delivered (4-recipient fanout) |
+| **Runtime** | Ops **45** active · Admin **85** active · v2 inactive · AI **OFF** · heartbeat OK · reminders armed |
+| **Next mark** | T+6 06.08.2026 22:20 Europe/Moscow (calendar only; not PASS) |
+| **Evidence** | [evidence/pre-ai-soak/](evidence/pre-ai-soak/) |
+| **Report** | [REPORT-iseo-sales-manager-bot-final-pre-ai-soak-t0-v1.md](reports/REPORT-iseo-sales-manager-bot-final-pre-ai-soak-t0-v1.md) |
+| **Gate** | Phase 3I.1 blocked |
+
 <!-- Phase 3H.4.1 last processed status readback repair 2026-08-06 -->
-## Phase 3H.4.1 (current)
+## Phase 3H.4.1 (additive; prior)
 
 | Field | Value |
 |-------|-------|

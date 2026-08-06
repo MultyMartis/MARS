@@ -7,6 +7,15 @@
 - **Final T+0:** 2026-08-06 16:20 Europe/Moscow
 - **Earliest PASS time:** 2026-08-08 16:20 Europe/Moscow
 
+## T+0 observation checkpoint (executed)
+
+- Executed: **2026-08-06 19:52 Europe/Moscow** (~3h 32m elapsed)
+- Verdict: `SOAK T+0 STOP — PRODUCTION INVARIANT VIOLATION`
+- STOP: MOD_C_REVOKED identity reactivated after T+0 and received a lead card (4-recipient fanout)
+- Next calendar mark: T+6 @ 06.08.2026 22:20 Europe/Moscow (not a PASS claim)
+- Phase 3I.1: **blocked**
+- Evidence: `evidence/pre-ai-soak/FINAL-SOAK-CHECKPOINT-T0-v1.md`
+
 ## Rules
 
 - No feature work · AI stays OFF · no OpenRouter · no customer auto-send
@@ -25,4 +34,4 @@
 
 ## Evidence to return
 
-Checkpoint notes under `evidence/pre-ai-soak/` and `evidence/phase3h4-1/FINAL-SOAK-CHECKPOINT-T0-v1.md` only after real elapsed times.
+Checkpoint notes under `evidence/pre-ai-soak/` only after real elapsed times. T+0 STOP evidence recorded 06.08.2026 19:52 МСК.
