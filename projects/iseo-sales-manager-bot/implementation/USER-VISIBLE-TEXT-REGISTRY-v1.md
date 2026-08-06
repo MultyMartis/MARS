@@ -58,3 +58,9 @@
 
 - S06 (`/config`) now sources parser version from the live `Parse Lead` stamp instead of a stale CONFIG key, and adds a resolver-version line + honest reporting-sync state — see `evidence/phase3g2-2/CONFIG-HUMAN-DISPLAY-v1.md`.
 - S02 (`/start` moderator), S16–S18 (reply profile surfaces) now resolve through the unified contract with auto-rehydrate; a previously wiped row self-corrects on the next command instead of displaying stale blanks.
+
+## Phase 3H.4 addendum
+
+- S06 (`/status`): poll line from scheduled heartbeat; production lead from `last_production_processed_*` — not synthetic test stamps; not `/health` probe.
+- S13 (`/reminder_status`): Admin long-form SyntaxError eliminated; reminders ON in production.
+- S06 (`/health`): on-demand probes; Gmail line ≠ scheduled poll heartbeat.

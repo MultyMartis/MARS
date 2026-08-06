@@ -5,7 +5,9 @@
 **Audience:** operators / Admin / moderators  
 **Safety:** never paste Telegram user IDs, secrets, workbook IDs, emails, or phones into operator chat logs.
 
-**Contour (current):** Operational.dev active (45 nodes) · Admin.dev active (**85** after 3G.2.1) · Sales-Manager-v2 inactive · AI OFF · reminders OFF · no auto-send to customers.
+**Contour (current):** Operational.dev active (45 nodes) · Admin.dev active (**85**) · Sales-Manager-v2 inactive · AI OFF · reminders **ON** 10:00 Europe/Moscow · no auto-send to customers.
+
+**Phase 3H.4:** `/reminder_status` Admin SyntaxError repaired; `/status` uses poll heartbeat + `last_production_processed_*`; `/health` Gmail probe ≠ poll heartbeat.
 
 **Response contract:** recognized commands must never go silent — valid reply, permission/validation reply, or safe internal-error fallback.
 
@@ -37,8 +39,8 @@ Roles (Russian labels in bot UI): **Администратор** · **Модер
 
 | Command | Who | Syntax | Example | Purpose | Mut | Safety |
 |---------|-----|--------|---------|---------|-----|--------|
-| `/status` | Admin | `/status` | `/status` | Environment, AI, last poll/lead success | R | No secrets |
-| `/health` | Admin | `/health` | `/health` | Healthcheck contract | R | Pass/fail lines only |
+| `/status` | Admin | `/status` | `/status` | Environment, AI, last poll/lead success | R | Poll line = scheduled heartbeat; production lead = `last_production_processed_*` (3H.4) |
+| `/health` | Admin | `/health` | `/health` | Healthcheck contract | R | On-demand probes; Gmail ≠ scheduled poll heartbeat (3H.4) |
 | `/ai_status` | Admin | `/ai_status` | `/ai_status` | AI flags snapshot | R | Production stays OFF unless chartered |
 | `/ai_on` | Admin | `/ai_on` | `/ai_on` | Enable AI flag | W | Does not call provider by itself; audit required; **do not enable casually** |
 | `/ai_off` | Admin | `/ai_off` | `/ai_off` | Disable AI flag | W | Preferred production posture |
