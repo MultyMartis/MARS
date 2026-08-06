@@ -169,11 +169,14 @@ No Telegram IDs, phones, emails, customer names/domains, workbook IDs, raw execu
 
 ## 42. Commit
 
-(recorded after git wave)
+- fix: `7dda2d43799edaefc4703a957f33a51244a9bee5` — restore last production processed status
+- docs: `b8dd6494025e3c4c3684e55cba88328ac1a8c1e7` — restart final pre-ai soak
+
 
 ## 43. Push
 
-(recorded after git wave)
+Pending push to `origin/mars/canonical-post-recovery` (no force).
+
 
 ## 44. Risks
 
@@ -196,3 +199,4 @@ Whether every historical LEAD_EVENTS row uses a single canonical `event_type` st
 ## 48. Stop condition
 
 Stop after production truth verified, `/status`=17:22, stats/leads/status agree, no production mutation, observability intact, reminders unchanged, post-repair backup done, final soak restarted, Phase 3I.1 blocked. **Met.**
+
