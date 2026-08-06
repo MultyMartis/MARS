@@ -1,5 +1,23 @@
+<!-- Phase 3H production hardening + pre-AI soak 2026-08-06 -->
+## Phase 3H (current)
+
+| Field | Value |
+|-------|-------|
+| **Phase** | 3H — Production hardening, Olya onboarding, reminders, pre-AI soak |
+| **Verdict** | `PHASE 3H IMPLEMENTATION COMPLETE — 48-HOUR SOAK STARTED` |
+| **3H.1** | Cleanup + reporting MANUAL truth + three-profile renderer PASS |
+| **3H.2** | Olya restored (Оля, active, cards) · three-recipient Telegram 3/3 PASS |
+| **3H.3** | Reminders ON 10:00 Europe/Moscow · source LEADS · zero-pending armed |
+| **Runtime** | Ops **45** active · Admin **85** active · v2 inactive · AI **OFF** · reminders **ON** |
+| **Recipients** | 3 — Андрей, Оля, Михаил · Никита revoked |
+| **Reporting** | manual (`только вручную`) · tests/archive excluded |
+| **Soak start** | 06.08.2026 14:20 МСК · earliest PASS 08.08.2026 14:20 МСК |
+| **Evidence** | [evidence/phase3h1/](evidence/phase3h1/) · [phase3h2/](evidence/phase3h2/) · [phase3h3/](evidence/phase3h3/) · [pre-ai-soak/](evidence/pre-ai-soak/) |
+| **Report** | [REPORT-iseo-sales-manager-bot-phase3h-production-hardening-and-pre-ai-soak-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3h-production-hardening-and-pre-ai-soak-v1.md) |
+| **Gate** | Phase 3I.1 blocked until soak PASS + explicit operator approval |
+
 <!-- Phase 3G.2.3 moderator start read-after-rehydrate 2026-08-06 -->
-## Phase 3G.2.3 (current additive)
+## Phase 3G.2.3 (additive; historical)
 
 | Field | Value |
 |-------|-------|

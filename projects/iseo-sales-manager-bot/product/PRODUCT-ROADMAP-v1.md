@@ -7,8 +7,9 @@
 3. **Actor attribution + revoked moderator visibility (3D.8.2)** — ACCESS_CONTROL safe actor labels on final cards; `/moderator_pending` lists revoked former moderators with stable codes.
 4. **Parser 3.3 / Lead Semantic Model (3E.1)** — **COMPLETE** — operator visual acceptance A–F PASS; verdict `PHASE 3E.1 COMPLETE — PARSER 3.3 AND LEAD SEMANTIC MODEL READY`.
 5. **First Reply Engine v2 + Human Reply Style v1 (3E.2.x)** — copy layer operator-accepted; Phase 3E.2.3 call-budget and exactly-once proof COMPLETE: two claims/two sends/two stamps, five-poll zero resend. Operator visual confirmation **received** — Phase 3E.2 closed `COMPLETE — HUMAN FIRST REPLY ENGINE READY`.
-6. **Pending-lead reminders (3F.1)** — **COMPLETE — COMMANDS AND REMINDER ENGINE READY; OPERATOR ACTIVATION PENDING**: `/pending_leads`, `/pending_count`, `/pending_leads_test`, configurable daily reminder (`sm-pending-reminder-v1.0`, default 10:00 Europe/Moscow), active recipients only, pending lifecycle only, deduplicated reminder windows (`REMINDER_DELIVERIES` ledger). Implemented and live-command-accepted; `pending_reminders_enabled=false` until explicit operator activation.
-7. **AI ON pilot** — только отдельный reference pilot с fallback и cost/safety evidence.
+6. **Pending-lead reminders (3F.1)** — engine ready historically; **activated in Phase 3H.3** (`pending_reminders_enabled=true`, 10:00 Europe/Moscow, source LEADS, tests excluded).
+6b. **Phase 3H production hardening** — **IMPLEMENTATION COMPLETE — 48-HOUR SOAK STARTED** (2026-08-06): fixture cleanup, reporting MANUAL truth, Olya onboarded, three-recipient delivery proven, reminders ON. Phase 3I.1 blocked until soak PASS + explicit approval.
+7. **AI ON pilot (Phase 3I.1+)** — blocked until pre-AI soak PASS and separate operator charter; AI remains OFF.
 8. **Reusable client profile** — schema для изолированных config/source/storage/staff boundaries.
 9. **Deployment automation** — versioned package, compatibility, migration и rollback tooling.
 10. **Centralized controlled rollout** — fleet visibility и staged cohort control.
