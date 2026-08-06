@@ -373,3 +373,6 @@ Deploy-tool preparation is a **separate task**.
 - Registration report: [reports/SITE-002-PRODUCTION-PROFILE-REGISTRATION.md](reports/SITE-002-PRODUCTION-PROFILE-REGISTRATION.md)
 - External storage registry: [../../external-storage-registry.md](../../external-storage-registry.md)
 - Recovery closeout: [reports/SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md](reports/SITE-002-BZPM-RECOVERY-CLOSEOUT-REGISTRATION.md)
+
+
+| Offers + price form diagnostic (Production) | **COMPLETE — FORM FIXED / IMPORT ATTENTION** (Run **4.320**, 2026-08-06) — `offers0_*.xml` absent; latest import SUCCESS with offers inputs none; price-list dialog7 UI fixed (FormData before `zpmFormSetLoading`); sitemap 1879 · [report](reports/SITE-002-PROD-1C-OFFERS-MISSING-AND-PRICE-FORM-DIAGNOSTIC-01.md) |

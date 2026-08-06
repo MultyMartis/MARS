@@ -365,6 +365,19 @@ If documentation contradicts current **Production** behaviour → verify on http
 
 ---
 
+
+
+### Offers missing + price-list FormData bug (Run 4.320)
+
+| Item | Value |
+|------|-------|
+| Exchange | `1c_incoming/webdata/` — `import0_1.xml` present; `offers0_*.xml` **absent** (2026-08-06) |
+| Latest import | `mars_1c_import_2026-08-06_080005.txt` SUCCESS; offers inputs `(none listed)` |
+| Price-list CTA | dialog **7** on `.zpm-commercial-trust.zpm-dealers` («Получить прайс-лист») |
+| Bug | `zpmFormSetLoading` disabled fields before `FormData` → empty POST → empty-lead 400 |
+| Fix | Build `FormData` before disable in dealer/fancybox/corp-cta handlers (`assets/js/main.js`) |
+| Report | [SITE-002-PROD-1C-OFFERS-MISSING-AND-PRICE-FORM-DIAGNOSTIC-01.md](../reports/SITE-002-PROD-1C-OFFERS-MISSING-AND-PRICE-FORM-DIAGNOSTIC-01.md) |
+
 ## 2. 1C Architecture
 
 ### Overview

@@ -1,3 +1,7 @@
+
+
+**SITE-002 Run 4.320 (2026-08-06):** Offers missing + price form diagnostic — price-list form **FIXED** (`main.js` FormData before disable); import **ATTENTION** (offers0_*.xml absent; latest import SUCCESS import-only). Report: [SITE-002-PROD-1C-OFFERS-MISSING-AND-PRICE-FORM-DIAGNOSTIC-01.md](sites/site-002/reports/SITE-002-PROD-1C-OFFERS-MISSING-AND-PRICE-FORM-DIAGNOSTIC-01.md).
+
 # OCPilot — Program State
 
 **Status:** living state document — **not** automated router  
