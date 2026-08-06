@@ -40,35 +40,30 @@ def write_json(path: Path, data) -> None:
 
 def load_ftp_fields() -> dict[str, str]:
     text = SECRETS.read_text(encoding="utf-8")
-    # Prefer PRODUCTION section
-    block = text
-    pm = re.search(r"##\s*PRODUCTION[\s\S]*?(?=##\s|\Z)", text, re.I)
-    if pm:
-        block = pm.group(0)
-    m = re.search(r"###\s*FTP\s*/\s*SFTP\s*([\s\S]*?)(?=^### |\Z)", block, re.M | re.I)
-    if not m:
-        m = re.search(r"###\s*FTP\s*/\s*SFTP\s*([\s\S]*?)(?=^### |\Z)", text, re.M | re.I)
-    if not m:
-        raise RuntimeError("FTP section not found")
+    match = re.search(r"^## PRODUCTION\s*$([\s\S]*?)(?=^## |\Z)", text, re.MULTILINE)
+    if not match:
+        raise RuntimeError("PRODUCTION section not found in secrets file")
+    block = match.group(1)
+    ftp_match = re.search(r"^### FTP / SFTP\s*$([\s\S]*?)(?=^### |\Z)", block, re.MULTILINE)
+    if not ftp_match:
+        raise RuntimeError("PRODUCTION FTP / SFTP subsection not found")
     fields: dict[str, str] = {}
-    for line in m.group(1).splitlines():
-        lm = re.match(r"[-*]?\s*(host|port|username|user|login|password|pass)\s*[:=]\s*(.+)$", line.strip(), re.I)
-        if not lm:
+    current_key = None
+    for line in ftp_match.group(1).splitlines():
+        stripped = line.strip()
+        if not stripped:
             continue
-        key = lm.group(1).lower()
-        val = lm.group(2).strip().strip("`").strip('"').strip("'")
-        if key == "host":
-            fields["host"] = val
-        elif key == "port":
-            fields["port"] = val
-        elif key in ("username", "user", "login"):
-            fields["username"] = val
-        elif key in ("password", "pass"):
-            fields["password"] = val
-    fields.setdefault("port", "21")
-    for req in ("host", "username", "password"):
-        if not fields.get(req):
-            raise RuntimeError(f"Missing FTP {req}")
+        if stripped.endswith(":"):
+            current_key = stripped[:-1].strip().lower().replace(" ", "_")
+            fields.setdefault(current_key, "")
+            continue
+        if current_key:
+            fields[current_key] = stripped
+            current_key = None
+    required = ("host", "port", "username", "password")
+    missing = [k for k in required if not fields.get(k)]
+    if missing:
+        raise RuntimeError("Missing PRODUCTION FTP fields: " + ", ".join(missing))
     return fields
 
 
@@ -215,6 +210,9 @@ def patch_column_left(src: str) -> tuple[str, bool]:
 
 def cmd_deploy(_: argparse.Namespace) -> int:
     DEPLOY_ROOT.mkdir(parents=True, exist_ok=True)
+    (DEPLOY_ROOT / "server-source-before").mkdir(parents=True, exist_ok=True)
+    (DEPLOY_ROOT / "server-source-after").mkdir(parents=True, exist_ok=True)
+    (DEPLOY_ROOT / "logs").mkdir(parents=True, exist_ok=True)
     fields = load_ftp_fields()
     ftp = ftp_connect(fields)
     roots = resolve_roots(ftp)

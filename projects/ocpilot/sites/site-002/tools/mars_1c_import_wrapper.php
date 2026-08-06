@@ -799,7 +799,8 @@ function mars_mode_run(array $paths, array $localCfg)
         mars_output([
             'operation' => MARS_WRAPPER_OPERATION,
             'mode' => 'run',
-            'error' => 'Импорт уже выполняетсяИмпорт уже выполняется => mars_lock_status($paths),
+            'error' => 'Импорт уже выполняется',
+            'lock' => mars_lock_status($paths),
             'current_run' => mars_1c_read_json(mars_1c_current_path($paths)),
             'mutation' => false,
         ], 409);
