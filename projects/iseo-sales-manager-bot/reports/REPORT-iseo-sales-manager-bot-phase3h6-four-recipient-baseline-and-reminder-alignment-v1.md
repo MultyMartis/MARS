@@ -230,7 +230,11 @@ No credentials, Telegram IDs, customer PII, workbook IDs, or raw exports committ
 
 ## 47. Commits
 
-See git log on `agent/iseo-sm-phase3h6-four-recipient` (four planned commits).
+1. `cf8a3493` docs(iseo-sales-manager-bot): correct recipient incident classification
+2. `af75319a` fix(iseo-sales-manager-bot): align reminders with four active recipients
+3. `00e60096` test(iseo-sales-manager-bot): prove four-recipient delivery and reminders
+4. `17ccda6b` docs(iseo-sales-manager-bot): establish four-recipient pre-ai soak baseline
+5. tip hash note commit (this wave) after push
 
 ## 48. Push
 
