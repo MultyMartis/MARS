@@ -171,11 +171,12 @@ Committed text sanitized: no customer names/phones/domains, no Telegram/chat IDs
 
 ## 26. Commit
 
-See git section after push wave.
+`691fc347` — `docs(iseo-sales-manager-bot): record final pre-ai soak t0 checkpoint`  
+Scope: `projects/iseo-sales-manager-bot/**` only (clean worktree).
 
 ## 27. Push
 
-See git section after push wave.
+Pushed without force to `origin/mars/canonical-post-recovery` (`0d29cc24..691fc347`).
 
 ## 28. Phase 3I.1 gate
 
