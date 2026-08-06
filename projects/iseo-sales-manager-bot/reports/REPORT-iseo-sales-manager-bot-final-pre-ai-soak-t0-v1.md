@@ -1,3 +1,5 @@
+> **ERRATUM (Phase 3H.6):** Classification corrected to `SOAK T+0 INVALIDATED — OPERATOR-APPROVED RECIPIENT SET CHANGED FROM 3 TO 4`. See [ERRATUM-iseo-sales-manager-bot-final-pre-ai-soak-t0-recipient-classification-v1.md](ERRATUM-iseo-sales-manager-bot-final-pre-ai-soak-t0-recipient-classification-v1.md). Original STOP text below is preserved as historical record.
+
 # REPORT — ISEO SALES MANAGER BOT FINAL PRE-AI SOAK T+0 CHECKPOINT
 
 ## 1. Verdict
