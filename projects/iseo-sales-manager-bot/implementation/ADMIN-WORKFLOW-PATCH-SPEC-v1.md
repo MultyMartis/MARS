@@ -321,3 +321,8 @@ Same Admin workflow (85 nodes; workflows_created=0):
 3. **Health:** clarify on-demand probe vs scheduled poll heartbeat.
 4. Temporary webhook nodes during deploy removed; final count **85**.
 5. Evidence: `evidence/phase3h4/` · `implementation/REMINDER-STATUS-COMMAND-REPAIR-v1.md` · `STATUS-DATA-SOURCE-REPAIR-v1.md`.
+
+## Phase 3H.4.1 Status patch
+
+Admin.dev Status Code updated to `iseo-last-production-processed-v1.0` resolver. Same workflow ID `wLrLp4WQHm1VJmxz`, node count 85. No Operational.dev change.
+

@@ -60,3 +60,8 @@ Operators could misread `/health` Gmail probe as scheduled poll truth.
 ## 5. Evidence
 
 `evidence/phase3h4/STATUS-DATA-SOURCE-MATRIX-v1.md` · `LAST-PROCESSED-LEAD-FORENSIC-v1.md` · `STATUS-LIVE-ACCEPTANCE-v1.md`
+
+## Phase 3H.4.1
+
+Confirmed empty `last_production_processed_at` after 3H.4 backfill. 3H.4.1 rewrote cache from LEADS (`2026-08-05T14:22:55.186Z`) and hardened Status resolver. See `implementation/LAST-PROCESSED-STATUS-READBACK-REPAIR-v1.md`.
+

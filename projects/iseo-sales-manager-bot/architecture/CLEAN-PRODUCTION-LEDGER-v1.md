@@ -38,3 +38,8 @@ LEADS remains one-row-per-business-lead. Personalized reply texts belong in `REC
 ## Phase 3H.4 ledger note
 
 `/status` production display uses CONFIG `last_production_processed_*` stamped from real LEADS rows (`is_real_lead=true`, `production_generation=v2`). Synthetic test deliveries must not drive operator-facing last-lead time.
+
+## Phase 3H.4.1 status cache
+
+`/status` production line reads CONFIG `last_production_processed_*` as a cache of the clean production ledger processed transition. Cache writers must not persist empty values. Ledger rows themselves were not mutated in 3H.4.1.
+

@@ -50,3 +50,8 @@ Never conflate the two Gmail signals.
 ## 5. Implementation reference
 
 `implementation/STATUS-DATA-SOURCE-REPAIR-v1.md` · Evidence: `evidence/phase3h4/STATUS-DATA-SOURCE-MATRIX-v1.md`
+
+## Phase 3H.4.1 addendum
+
+Production last-processed display is governed by `iseo-last-production-processed-v1.0` (`architecture/LAST-PRODUCTION-PROCESSED-CONTRACT-v1.md`). CONFIG cache must carry a non-empty ISO value derived from LEADS/LEAD_EVENTS; empty cache ⇒ `нет данных`. Never use `last_lead_success_at` for the operator production line.
+

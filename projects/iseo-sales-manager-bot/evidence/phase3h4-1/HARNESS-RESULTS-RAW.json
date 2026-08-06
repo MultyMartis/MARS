@@ -1,0 +1,101 @@
+{
+  "harness": "phase3h41-last-production-processed",
+  "contract": "iseo-last-production-processed-v1.0",
+  "total": 23,
+  "passed": 23,
+  "failed": 0,
+  "results": [
+    {
+      "name": "1 Valid ISO UTC → Moscow",
+      "pass": true
+    },
+    {
+      "name": "2 Valid Date object converts",
+      "pass": true
+    },
+    {
+      "name": "3 LEAD_EVENTS processed wins",
+      "pass": true
+    },
+    {
+      "name": "4 LEADS processed_at fallback",
+      "pass": true
+    },
+    {
+      "name": "5 CONFIG cache fallback",
+      "pass": true
+    },
+    {
+      "name": "6 Test event excluded",
+      "pass": true
+    },
+    {
+      "name": "7 Synthetic event excluded",
+      "pass": true
+    },
+    {
+      "name": "8 Archive test event excluded",
+      "pass": true
+    },
+    {
+      "name": "9 Pre-epoch event excluded",
+      "pass": true
+    },
+    {
+      "name": "10 Delivery event excluded",
+      "pass": true
+    },
+    {
+      "name": "11 Reminder event excluded",
+      "pass": true
+    },
+    {
+      "name": "12 Spam transition excluded",
+      "pass": true
+    },
+    {
+      "name": "13 Pending transition excluded",
+      "pass": true
+    },
+    {
+      "name": "14 Invalid timestamp → no value",
+      "pass": true
+    },
+    {
+      "name": "15 Missing value → нет данных",
+      "pass": true
+    },
+    {
+      "name": "16 Later production processed replaces earlier",
+      "pass": true
+    },
+    {
+      "name": "17 Duplicate callback does not invent later false ts",
+      "pass": true
+    },
+    {
+      "name": "18 Timezone Europe/Moscow",
+      "pass": true
+    },
+    {
+      "name": "19 No hardcoded display date in Status patch",
+      "pass": true
+    },
+    {
+      "name": "20 No hardcoded lead identity in Status patch",
+      "pass": true
+    },
+    {
+      "name": "21 Synthetic CONFIG stamp ignored when production empty",
+      "pass": true
+    },
+    {
+      "name": "22 Empty string CONFIG treated as missing",
+      "pass": true
+    },
+    {
+      "name": "23 Status patch node --check syntax",
+      "pass": true
+    }
+  ]
+}

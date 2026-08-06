@@ -64,3 +64,8 @@
 - S06 (`/status`): poll line from scheduled heartbeat; production lead from `last_production_processed_*` — not synthetic test stamps; not `/health` probe.
 - S13 (`/reminder_status`): Admin long-form SyntaxError eliminated; reminders ON in production.
 - S06 (`/health`): on-demand probes; Gmail line ≠ scheduled poll heartbeat.
+
+## Phase 3H.4.1 `/status` line
+
+S06 `/status` production line: `Последний обработанный лид: <DD.MM.YYYY HH:MM МСК|нет данных>` from `iseo-last-production-processed-v1.0`. Must agree with `/leads` processed time when a production processed lead exists.
+
