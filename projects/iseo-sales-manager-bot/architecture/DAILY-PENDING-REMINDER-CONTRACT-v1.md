@@ -8,4 +8,5 @@
 - message: compact pending count + /pending_leads · no PII
 - zero pending → zero sends
 - `/reminder_status` must return visible reply (Phase 3H.4 — Admin long-form SyntaxError repaired)
-- Evidence: `evidence/phase3h4/REMINDER-CONFIG-INVARIANTS-v1.md`
+- **Phase 3H.6:** recipient count must match live ACCESS active staff (four under current baseline); CONFIG `pending_reminder_active_recipients_count` is a cache only; `/reminder_status` prefers `$('Read ACCESS_CONTROL')`
+- Evidence: `evidence/phase3h4/REMINDER-CONFIG-INVARIANTS-v1.md` · `evidence/phase3h6-four-recipient/`

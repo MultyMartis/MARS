@@ -6,3 +6,7 @@ Source sheet must be LEADS.
 ## Phase 3H.4 note
 
 `/reminder_status` Admin long-form builder repaired (SyntaxError). Active recipients count backfilled to 3. See `implementation/REMINDER-STATUS-COMMAND-REPAIR-v1.md`.
+
+## Phase 3H.6
+
+Active recipients count aligned to **4**. `/reminder_status` uses live ACCESS preference. Isolated four-recipient exactly-once proof PASS.

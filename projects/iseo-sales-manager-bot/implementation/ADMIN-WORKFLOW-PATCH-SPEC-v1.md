@@ -326,3 +326,6 @@ Same Admin workflow (85 nodes; workflows_created=0):
 
 Admin.dev Status Code updated to `iseo-last-production-processed-v1.0` resolver. Same workflow ID `wLrLp4WQHm1VJmxz`, node count 85. No Operational.dev change.
 
+## Phase 3H.6
+
+Same Admin ID `wLrLp4WQHm1VJmxz`, **85** nodes retained. Patch: Reminder Commands live ACCESS recipient count (Phase 3H.6 marker). No new workflows.
