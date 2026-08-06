@@ -417,3 +417,12 @@ Operational.dev remains **45** nodes active — no structural expansion required
 ### Phase 3G.2.2 Operational note
 
 Operational.dev remains **45** nodes active — the ADMIN_A/MOD_A profile-wipe defect was isolated to Admin.dev's authorization/upsert path and did not affect Operational.dev's recipient personalization (regression-checked, `evidence/phase3g2-2/OPERATIONAL-PERSONALIZATION-REGRESSION-v1.md`). `Expand Delivery Recipients` gains a `resolver_version=iseo-reply-profile-resolver-v1.0` label field for traceability — no structural change. Contour unchanged: AI OFF · reminders OFF · Sales-Manager-v2 inactive.
+
+### Phase 3H.4 Operational patch note
+
+Same Operational.dev ID (45 nodes):
+
+1. **Update Last Success / Runtime State:** write `gmail_poll_heartbeat` + mirror keys on **empty** scheduled polls (`iseo-gmail-poll-heartbeat-v1.0`).
+2. Stamp `last_production_processed_*` on non-test processing success only.
+3. Supersedes pre-3H.4 empty-poll `[]` no-write behavior that froze `/status` poll time.
+4. Evidence: `evidence/phase3h4/` · `architecture/GMAIL-POLL-HEARTBEAT-CONTRACT-v1.md` · `implementation/SCHEDULED-POLL-OBSERVABILITY-v1.md`.
