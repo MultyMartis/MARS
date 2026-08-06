@@ -1,3 +1,17 @@
+<!-- Phase 3H.4.1 last processed status readback repair 2026-08-06 -->
+## Phase 3H.4.1 (current)
+
+| Field | Value |
+|-------|-------|
+| **Phase** | 3H.4.1 — Last production processed status readback repair |
+| **Verdict** | `PHASE 3H.4.1 COMPLETE — STATUS READBACK REPAIRED; FINAL 48-HOUR SOAK RESTARTED` |
+| **Root cause** | Empty CONFIG `last_production_processed_*` cache after 3H.4 backfill; Status fail-closed to `нет данных` |
+| **Repair** | Admin Status `iseo-last-production-processed-v1.0` + CONFIG cache from LEADS |
+| **Runtime** | Ops **45** active · Admin **85** active · v2 inactive · AI **OFF** · reminders **ON** |
+| **Soak** | Attempt 2 interrupted · Final T+0 **2026-08-06 16:20 Europe/Moscow** · earliest PASS **2026-08-08 16:20 Europe/Moscow** |
+| **Evidence** | [evidence/phase3h4-1/](evidence/phase3h4-1/) |
+| **Report** | [REPORT-iseo-sales-manager-bot-phase3h4-1-last-processed-status-repair-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3h4-1-last-processed-status-repair-v1.md) |
+| **Gate** | Phase 3I.1 blocked until soak PASS |
 <!-- Phase 3H.4 soak observability repair 2026-08-06 -->
 ## Phase 3H.4 (current)
 
@@ -404,3 +418,4 @@
 - Status: view/reporting repair applied; operator acceptance pending
 - Evidence: `evidence/phase3f2-1/`
 - Report: `reports/REPORT-iseo-sales-manager-bot-phase3f2-1-view-and-reporting-repair-v1.md`
+

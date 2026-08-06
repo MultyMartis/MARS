@@ -22,3 +22,8 @@
 - Rollback backups: Storage `git-sync-iseo-sm-phase3h-20260806-175957\runtime\backups\`
 - Canonical tip at program start: `d76a68f7` (origin/mars/canonical-post-recovery)
 - Phase 3H.4: observability repair — poll heartbeat `iseo-gmail-poll-heartbeat-v1.0`; `/status` production truth keys; evidence `evidence/phase3h4/`
+
+## Phase 3H.4.1 soak reset
+
+Attempt 2 (2026-08-06 19:15 Europe/Moscow) interrupted by last-processed status readback repair. Final T+0: **2026-08-06 16:20 Europe/Moscow**. Earliest PASS: **2026-08-08 16:20 Europe/Moscow**. Phase 3I.1 remains blocked.
+

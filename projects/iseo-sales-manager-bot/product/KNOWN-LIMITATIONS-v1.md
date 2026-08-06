@@ -84,3 +84,9 @@ Live call counts, safe real-lead recount, final two-recipient proof and five-pol
 - Pre-repair `/status` could show synthetic test last-lead time (22:23 МСК) instead of production `lead_19fd2052066e18b7` (17:22 МСК) — **repaired** via `last_production_processed_*` keys.
 - `/health` Gmail probe must not be interpreted as scheduled poll heartbeat — documented in `HEALTH-SEMANTIC-SEPARATION-v1.md`.
 - Phase 3I.1 remains blocked until soak PASS + explicit approval.
+
+## Phase 3H.4.1 — `/status` empty production cache
+
+- After 3H.4, `/status` could show `нет данных` while `/stats`/`/leads` showed processed@17:22 because CONFIG `last_production_processed_*` values were empty (backfill webhook nesting). **Repaired** in 3H.4.1: cache rewritten from LEADS; Status uses `iseo-last-production-processed-v1.0`.
+- Synthetic `last_lead_success_at` (22:23) remains in CONFIG as a technical stamp but must not drive the production `/status` line.
+

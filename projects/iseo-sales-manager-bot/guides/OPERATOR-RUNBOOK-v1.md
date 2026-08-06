@@ -194,3 +194,8 @@ Evidence: `evidence/phase3g1-1/` · Report: `reports/REPORT-iseo-sales-manager-b
 5. As ADMIN_A: `/reminder_status` `/status` `/health` — confirm visible replies and corrected production lead time.
 6. Do not start Phase 3I.1 until soak PASS.
 7. Evidence: `evidence/phase3h4/` · Report: `reports/REPORT-iseo-sales-manager-bot-phase3h4-soak-observability-repair-v1.md`.
+
+## Phase 3H.4.1 operator check
+
+If `/stats` processed≥1 but `/status` shows `нет данных`, treat as CONFIG cache / Status readback defect — do not rewrite LEADS. Verify `last_production_processed_at` non-empty and Moscow formatting. See `guides/PRE-AI-SOAK-RUNBOOK-v1.md`.
+

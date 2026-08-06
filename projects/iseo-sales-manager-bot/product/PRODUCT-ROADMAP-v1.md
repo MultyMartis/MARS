@@ -32,3 +32,8 @@ Pending source forensic, view contract, command implementation, reminder schedul
 ### Phase 3G.2 — Profile numbers + Telegram text hygiene
 
 **Current documentation / contract wave:** immutable `reply_profile_number`, number-based Admin commands, explicit role-aware help templates, TELEGRAM-TEXT-CONTRACT-v2, command reference, text registry. Contour unchanged: AI OFF, reminders OFF, no auto-send. Live acceptance evidence to fill under `evidence/phase3g2/`.
+
+## Phase 3H.4.1
+
+Complete. Last production processed `/status` readback repaired; final 48-hour soak restarted (T+0 2026-08-06 16:20 Europe/Moscow). Phase 3I.1 remains blocked until soak PASS.
+

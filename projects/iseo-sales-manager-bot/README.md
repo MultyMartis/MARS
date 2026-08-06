@@ -1,3 +1,17 @@
+<!-- Phase 3H.4.1 last processed status readback repair 2026-08-06 -->
+
+## Phase 3H.4.1 — Last production processed `/status` readback repair (current)
+
+**Status:** `PHASE 3H.4.1 COMPLETE — STATUS READBACK REPAIRED; FINAL 48-HOUR SOAK RESTARTED`
+
+- Defect: `/stats`+`/leads` showed processed@17:22 МСК but `/status` showed `нет данных`
+- Root cause: CONFIG `last_production_processed_*` keys existed with **empty values** after Phase 3H.4 backfill webhook nesting bug; Status correctly fail-closed
+- Repair: Admin Status resolver `iseo-last-production-processed-v1.0` + CONFIG cache rewrite from LEADS (no LEADS mutation)
+- Live: `Последний обработанный лид: 05.08.2026 17:22 МСК` · harness 23/23 PASS
+- Soak Attempt 2 (19:15 МСК) **INTERRUPTED**; final T+0 **2026-08-06 16:20 Europe/Moscow** · earliest PASS **2026-08-08 16:20 Europe/Moscow**
+- Contour: Ops 45 active · Admin 85 active · v2 inactive · AI OFF · reminders ON
+- Evidence: [evidence/phase3h4-1/](evidence/phase3h4-1/) · Report: [REPORT-iseo-sales-manager-bot-phase3h4-1-last-processed-status-repair-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3h4-1-last-processed-status-repair-v1.md)
+- Phase 3I.1 blocked until soak PASS
 <!-- Phase 3H.4 soak observability repair 2026-08-06 -->
 
 ## Phase 3H.4 — Soak observability repair + soak restart (current)
@@ -68,7 +82,7 @@
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
-**Status:** Phase 3H.4 — COMPLETE — SOAK OBSERVABILITY REPAIRED; 48-HOUR SOAK RESTARTED; AI OFF; reminders ON
+**Status:** Phase 3H.4.1 — COMPLETE — STATUS READBACK REPAIRED; FINAL 48-HOUR SOAK RESTARTED; AI OFF; reminders ON
 
 ---
 
@@ -255,3 +269,5 @@ Approved five-template corpus + recipient personalization + manager assist contr
 ## Phase 3G.1.1 — Live reply profile seed (additive)
 
 ACCESS_CONTROL columns Q–V created and seeded. T1/T3 acceptance inject 4/4 Telegram; fail-closed harness 9/9 PASS. Admin 84 active. Report: `reports/REPORT-iseo-sales-manager-bot-phase3g1-1-live-profile-and-template-acceptance-v1.md`.
+
+
