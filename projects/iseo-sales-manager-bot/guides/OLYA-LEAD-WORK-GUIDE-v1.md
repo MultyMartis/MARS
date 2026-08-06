@@ -1,45 +1,39 @@
 # Руководство Оли — работа с лидами (v1)
 
-> Phase 3D.8 access note: intended guide recipient is currently **revoked by operator choice**. This remains a future moderator guide; do not restore access from this document.
+**Статус доступа (Phase 3H.2):** активный модератор · имя в ответах клиенту — **Оля**.
 
-Новые заявки приходят в **личный чат** с ботом Sales Manager.
+## Что присылает бот
 
-1. Откройте карточку лида.
-2. Прочитайте комментарий клиента и блок **Интерес** — готовый ответ должен звучать как обычное сообщение менеджера (Human Reply Style v1; пакет примеров: `evidence/phase3e2-2/ACTUAL-HUMAN-COPY-PACKET-v1.md`).
-3. Скопируйте контакт и при необходимости блок **✉️ Ответ клиенту** (бот сам клиенту не пишет).
-4. Если ответа нет и есть предупреждение про контакт — сначала проверьте способ связи; не отправляйте клиенту системные формулировки.
-5. После связи с клиентом нажмите **✅ Обработано** или **🚫 Спам**.
-6. Статус **общий** для всей команды: повторный клик не перезапишет чужой статус.
-7. Кнопки на всех копиях карточки синхронизируются.
+В личный чат приходит карточка заявки с контактом и блоком **✉️ Ответ клиенту**.
 
-Команды: `/start`, `/help`, `/my_status`.
+## Как читать карточку
 
-## Phase 3E.2.3 note
+1. Посмотрите имя клиента, контакт, сайт/услугу и комментарий.
+2. Готовый первый ответ уже персонализирован: `Меня зовут Оля, компания INTLSEO.`
+3. Скопируйте ответ и отправьте клиенту **вручную** (бот клиенту сам не пишет).
 
-Human Reply Style is already operator-accepted and is not being redesigned. During the inactive quiet window no new cards should arrive from Operational.dev. After reactivation, repeated identical cards must be reported to the operator; do not process both copies and do not ask for access restoration from this guide.
+## Кнопки
 
-## Phase 3F.1 note
+- `✅ Обработано` — после того, как связались с клиентом.
+- `🚫 Спам` — если заявка мусорная/нецелевая.
+- Статус общий на всю команду; повторный клик безопасен (идемпотентность).
 
-A new read-only overview (`/pending_count`, `/pending_leads`) and an optional daily reminder now exist for active moderators/Admin. These do not change how you process a card — you still copy the reply and press **✅ Обработано** / **🚫 Спам** as before. Reminders are currently **switched off** in production; this guide will be updated separately if/when reminders are activated and if access is ever restored.
+## Команды
 
-
-## Архив и история (3F.2.1)
-
-- `/leads` — архивные карточки (без кнопок статуса)
+- `/start` · `/help` · `/my_status` · `/my_reply_profile`
+- `/pending_count` · `/pending_leads` — что ещё ждёт обработки
+- `/leads` — архивные карточки
 - `/lead_history <номер>` — история по номеру из `/leads`
-- Источник для форм сайта отображается как «Сайт i-seo.su»
+- `/reminder_status` — статус ежедневных напоминаний (без права менять настройки)
 
-## Phase 3F.2.2 note
+## Напоминания
 
-В `/help` для модератора доступны `/leads`, `/lead_history`, `/pending_count`, `/pending_leads`, `/reminder_status`. Настройки ИИ и напоминаний — только у администратора. История лида показывает человеческие формулировки событий (без машинных кодов).
+Если есть необработанные заявки, около **10:00 МСК** бот может напомнить. Это не новые заявки.
 
-## Phase 3G.1 note
+## Если ответ выглядит странно
 
-First-contact drafts become INTLSEO approved templates with the manager's approved client-facing name. Still: copy manually, never assume auto-send. Guidance under the tip block is for you, not the client. Access remains revoked for this guide's intended recipient unless separately restored — this phase does not restore access.
+Не отправляйте клиенту. Напишите Андрею. Не обещайте сроки, цены и «гарантии в топ».
 
-## Phase 3G.2 note
+## Ошибки бота
 
-- Имя в ответе клиенту задаёт только администратор (по **номеру профиля**), не по Telegram-нику.
-- Для модератора из профильных команд доступна только `/my_reply_profile` — посмотреть своё имя в ответе.
-- Если в карточке предупреждение, что имя не задано — напишите администратору; не подставляйте ник вручную в текст клиенту.
-- Доступ (права модератора) **не** меняется командами имени. Напоминания и ИИ по-прежнему выключены, пока оператор не включит отдельно.
+Сообщите Андрею: что увидели, время (МСК), текст команды/кнопки. Не пересылайте секреты и чужие чаты.
