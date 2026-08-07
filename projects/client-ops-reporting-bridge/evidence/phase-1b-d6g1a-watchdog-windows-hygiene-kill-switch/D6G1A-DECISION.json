@@ -18,8 +18,8 @@
     "D6G1A_OLD_KILL_SWITCH_STATUS_RECONCILED": true,
     "D6G1A_N8N_AND_LEDGER_PRESERVED": true,
     "D6G1A_REGRESSION_PASS": false,
-    "D6G1A_CANONICAL_COMMIT_PUSHED": false,
-    "D6G1A_DEPLOYED_FROM_CANONICAL": false,
+    "D6G1A_CANONICAL_COMMIT_PUSHED": true,
+    "D6G1A_DEPLOYED_FROM_CANONICAL": true,
     "D6G1A_SECRET_BOUNDARY_PRESERVED": true,
     "D6G1A_SECURITY_PASS": true,
     "D6G1A_ROLLBACK_PLAN_READY": true
@@ -28,5 +28,6 @@
   "post_1c_final_home": "KEEP_WINDOWS_HIDDEN_NONINTERACTIVE",
   "beget_api_auth": "AUTH_ERROR",
   "imports_initiated": 0,
-  "telegram_watchdog_messages": 0
+  "telegram_watchdog_messages": 0,
+  "canonical_tip": "6ad3d758a497631674dc91a4f94fd3881422bb34"
 }
