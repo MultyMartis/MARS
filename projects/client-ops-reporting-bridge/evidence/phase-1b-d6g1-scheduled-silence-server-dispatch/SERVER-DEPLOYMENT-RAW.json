@@ -1,0 +1,69 @@
+{
+  "operation": "SITE-002-PROD-D6G1-SERVER-SIDE-COMPLETION-DISPATCH-01",
+  "started_at": "2026-08-07T08:34:30+00:00",
+  "webhook_url_host": "n8n.ai-metacode.com",
+  "webhook_path": "mars-client-ops-bridge-bzpm-sandbox",
+  "token_present": true,
+  "token_sha256_prefix8": "1514756d",
+  "uploads": [
+    {
+      "rel": "tools/mars_1c_import_wrapper.php",
+      "remote": "mars-tools/cron/mars_1c_import_wrapper.php",
+      "bytes": 46432,
+      "sha256": "df51e8a916927ca1c456ee13391cb66ab83d6521c688ca15a9cc5bd39646e764",
+      "verified": true
+    },
+    {
+      "rel": "tools/mars_1c_import_run_contract.php",
+      "remote": "mars-tools/cron/mars_1c_import_run_contract.php",
+      "bytes": 10623,
+      "sha256": "c67ff78d866ab355a00a455dc65dd2001211c2a00af295a22088fa1bb727b8cc",
+      "verified": true
+    },
+    {
+      "rel": "tools/mars_1c_completion_dispatch.php",
+      "remote": "mars-tools/cron/mars_1c_completion_dispatch.php",
+      "bytes": 21257,
+      "sha256": "3b5cb9c7bcedc63b22a1e3347b79ee32d94f6c2634984272213bb6ca988076ef",
+      "verified": true
+    },
+    {
+      "rel": "tools/mars_1c_no_import_watchdog.php",
+      "remote": "mars-tools/cron/mars_1c_no_import_watchdog.php",
+      "bytes": 12057,
+      "sha256": "c66d5d84b5f31ceab8db70d9c899eaa0215568498b5c6436fda5905f521b1695",
+      "verified": true
+    },
+    {
+      "rel": "opencart-admin/mars_1c_exchange/admin/controller/tool/mars_1c_exchange.php",
+      "remote": "admin/controller/tool/mars_1c_exchange.php",
+      "bytes": 4373,
+      "sha256": "43e76bce2e276aba460afd5c3e2e5b0abd7e1d63bbba01ff10bdf95791fae48b",
+      "verified": true
+    },
+    {
+      "rel": "opencart-admin/mars_1c_exchange/admin/model/tool/mars_1c_exchange.php",
+      "remote": "admin/model/tool/mars_1c_exchange.php",
+      "bytes": 7228,
+      "sha256": "c1d7bb7ca66c581ccf6da349407d16645b89b77393ed9f20517f5661da06617e",
+      "verified": true
+    },
+    {
+      "rel": "opencart-admin/mars_1c_exchange/admin/view/template/tool/mars_1c_exchange.twig",
+      "remote": "admin/view/template/tool/mars_1c_exchange.twig",
+      "bytes": 5039,
+      "sha256": "59b75d28b3d2fc9b24435b27b89251bb6a999a16c2544b13a8efed40b444f13d",
+      "verified": true
+    }
+  ],
+  "roots": {
+    "public_suffix": "public_html",
+    "storage_suffix": "storage"
+  },
+  "local_config_updated": true,
+  "local_config_bytes": 762,
+  "local_config_contains_webhook_url": true,
+  "local_config_contains_secret_key": true,
+  "modification_cleared_names": [],
+  "finished_at": "2026-08-07T08:35:00+00:00"
+}

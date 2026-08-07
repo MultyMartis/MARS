@@ -1,0 +1,12 @@
+{
+  "phase": "1B-D6G1",
+  "decision": "D6G1_SERVER_SIDE_COMPLETION_DISPATCH_FINAL",
+  "today_scheduled_run_id": "mars-20260807-080002-5bbdaf1c",
+  "today_silence_primary": "COMPLETION_POLLER_FAILED",
+  "today_silence_contributing": ["WATCHDOG_FALSE_SKIP", "WORKSTATION_DEPENDENT_DELIVERY"],
+  "manual_acceptance_run_id": "mars-20260807-114238-7cb452ec",
+  "windows_completion_poller": "DISABLED_AND_RETIRED",
+  "watchdog": "SERVER_SIDE_PRIMARY",
+  "readiness": "READY_FOR_WORKSTATION_INDEPENDENT_EVENT_DRIVEN_1C_OPERATION",
+  "readiness_qualification": "Beget panel cron for watchdog HTTP gateway must remain configured analogously to import cron; Post_1C catalog monitor remains the only enabled SITE-002 Windows task and is not on the completion reporting path."
+}

@@ -50,6 +50,31 @@ class ModelToolMars1cExchange extends Model {
             $ui = 'Выполняется';
         }
 
+        $dispatchRaw = is_array($state) ? ($state['report_dispatch_status'] ?? null) : null;
+        $dispatchUi = is_array($state) ? ($state['report_dispatch_ui'] ?? null) : null;
+        if ($dispatchUi === null || $dispatchUi === '') {
+            switch ((string) $dispatchRaw) {
+                case 'SENT':
+                case 'ALREADY_DISPATCHED':
+                case 'DELIVERED':
+                    $dispatchUi = 'Отправлен';
+                    break;
+                case 'SENDING':
+                    $dispatchUi = 'Отправляется';
+                    break;
+                case 'FAILED_RETRYABLE':
+                case 'FAILED_FINAL':
+                    $dispatchUi = 'Ошибка отправки';
+                    break;
+                case 'PENDING':
+                case 'QUEUED':
+                    $dispatchUi = 'Ожидает отправки';
+                    break;
+                default:
+                    $dispatchUi = $dispatchRaw;
+            }
+        }
+
         return array(
             'ok' => true,
             'ui_status' => $ui,
@@ -62,7 +87,8 @@ class ModelToolMars1cExchange extends Model {
             'catalog_result' => is_array($state) && isset($state['catalog_phase_result']['status']) ? $state['catalog_phase_result']['status'] : null,
             'offers_result' => is_array($state) && isset($state['offers_phase_result']['status']) ? $state['offers_phase_result']['status'] : null,
             'final_status' => is_array($state) ? ($state['final_status'] ?? null) : null,
-            'report_dispatch_status' => is_array($state) ? ($state['report_dispatch_status'] ?? null) : null,
+            'report_dispatch_status' => $dispatchRaw,
+            'report_dispatch_ui' => $dispatchUi,
             'sanitized_error_summary' => is_array($state) ? ($state['sanitized_error_summary'] ?? null) : null,
             'txt_report' => is_array($state) ? ($state['txt_report_path'] ?? null) : null,
             'import_active' => $active,

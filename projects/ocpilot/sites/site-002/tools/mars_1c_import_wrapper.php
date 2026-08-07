@@ -15,9 +15,10 @@
 declare(strict_types=1);
 
 require_once __DIR__ . '/mars_1c_import_run_contract.php';
+require_once __DIR__ . '/mars_1c_completion_dispatch.php';
 
-const MARS_WRAPPER_OPERATION = 'SITE-002-PROD-D6G-EVENT-DRIVEN-1C-IMPORT-01';
-const MARS_WRAPPER_VERSION = '1.2.0';
+const MARS_WRAPPER_OPERATION = 'SITE-002-PROD-D6G1-SERVER-SIDE-COMPLETION-DISPATCH-01';
+const MARS_WRAPPER_VERSION = '1.3.0';
 const MARS_CMD_CATALOG = '1c';
 const MARS_CMD_OFFERS = '1c_offers';
 const MARS_MAX_RUNTIME_SECONDS = 2700;
@@ -65,7 +66,10 @@ function mars_paths(): array
         'runs_dir' => $root . '/storage/mars-tools/cron/runs',
         'current_run' => $root . '/storage/mars-tools/cron/current-run.json',
         'dispatch_inbox' => $root . '/storage/mars-tools/cron/dispatch-inbox',
+        'dispatch_state' => $root . '/storage/mars-tools/cron/dispatch-state',
         'contract_path' => $root . '/storage/mars-tools/cron/mars_1c_import_run_contract.php',
+        'completion_dispatch_path' => $root . '/storage/mars-tools/cron/mars_1c_completion_dispatch.php',
+        'watchdog_path' => $root . '/storage/mars-tools/cron/mars_1c_no_import_watchdog.php',
     ];
 }
 
@@ -75,6 +79,12 @@ function mars_load_local_config(array $paths): array
         'run_token' => '',
         'site_base_url' => 'https://bzpm.ru/',
         'allow_http_run' => false,
+        'enabled' => false,
+        // Non-Git secrets for server-side Client Ops completion (never log values)
+        'client_ops_webhook_url' => '',
+        'client_ops_webhook_auth_secret' => '',
+        'client_ops_webhook_token' => '',
+        'server_dispatch_enabled' => true,
     ];
     if (is_file($paths['local_config'])) {
         /** @noinspection PhpIncludeInspection */
@@ -84,6 +94,59 @@ function mars_load_local_config(array $paths): array
         }
     }
     return $cfg;
+}
+
+/**
+ * After authoritative terminal write: enqueue inbox (audit) + immediate server-side dispatch.
+ *
+ * @return array{status:string,http_status:?int,event_id:?string,reason:?string}
+ */
+function mars_1c_finalize_completion_dispatch(array $paths, array $cfg, string $runId, array $terminal, array &$state): array
+{
+    $state['current_phase'] = MARS_1C_PHASE_DISPATCH;
+    $state['report_dispatch_status'] = MARS_1C_DISPATCH_PENDING;
+    mars_1c_write_run_state($paths, $state);
+    mars_1c_enqueue_dispatch($paths, $runId);
+
+    if (empty($cfg['server_dispatch_enabled'])) {
+        $state['report_dispatch_status'] = 'QUEUED';
+        $state['report_dispatch_at'] = date('c');
+        $state['report_dispatch_ui'] = mars_1c_dispatch_ui_label('QUEUED');
+        $state['current_phase'] = MARS_1C_PHASE_DONE;
+        mars_1c_write_run_state($paths, $state);
+        return [
+            'status' => 'QUEUED',
+            'http_status' => null,
+            'event_id' => null,
+            'reason' => 'SERVER_DISPATCH_DISABLED',
+        ];
+    }
+
+    $result = mars_1c_server_dispatch_completion($paths, $cfg, $runId, $terminal);
+    $status = (string) ($result['status'] ?? MARS_1C_DISPATCH_FAILED_RETRYABLE);
+    $state['report_dispatch_status'] = $status;
+    $state['report_dispatch_at'] = date('c');
+    $state['report_dispatch_ui'] = mars_1c_dispatch_ui_label($status);
+    $state['report_dispatch_http_status'] = $result['http_status'] ?? null;
+    $state['report_dispatch_reason'] = $result['reason'] ?? null;
+    // Never store event payload secrets; event_id is non-secret correlation id.
+    $state['report_dispatch_event_id'] = $result['event_id'] ?? null;
+    $state['current_phase'] = MARS_1C_PHASE_DONE;
+    mars_1c_write_run_state($paths, $state);
+    mars_log(
+        $paths,
+        !empty($result['ok']) ? 'info' : 'error',
+        'Server completion dispatch run_id=' . $runId
+        . ' status=' . $status
+        . ' http=' . (string) ($result['http_status'] ?? 'null')
+        . ' reason=' . (string) ($result['reason'] ?? '')
+    );
+    return [
+        'status' => $status,
+        'http_status' => $result['http_status'] ?? null,
+        'event_id' => $result['event_id'] ?? null,
+        'reason' => $result['reason'] ?? null,
+    ];
 }
 
 function mars_ensure_dir(string $dir): void
@@ -367,6 +430,14 @@ function mars_parse_mode(): string
     if (PHP_SAPI === 'cli') {
         global $argv;
         $args = $argv ?? [];
+        foreach ($args as $a) {
+            if (is_string($a) && strpos($a, '--dispatch-run=') === 0) {
+                return 'dispatch-run';
+            }
+        }
+        if (in_array('--dispatch-recover', $args, true)) {
+            return 'dispatch-recover';
+        }
         if (in_array('--dry-run', $args, true)) {
             return 'dry-run';
         }
@@ -382,7 +453,85 @@ function mars_parse_mode(): string
         return 'dry-run';
     }
     $mode = isset($_GET['mode']) ? (string) $_GET['mode'] : 'dry-run';
-    return in_array($mode, ['dry-run', 'status', 'run', 'enqueue'], true) ? $mode : 'dry-run';
+    return in_array($mode, ['dry-run', 'status', 'run', 'enqueue', 'dispatch-run', 'dispatch-recover'], true) ? $mode : 'dry-run';
+}
+
+function mars_cli_arg_value(string $prefix): ?string
+{
+    global $argv;
+    foreach (($argv ?? []) as $a) {
+        if (is_string($a) && strpos($a, $prefix) === 0) {
+            return substr($a, strlen($prefix));
+        }
+    }
+    return null;
+}
+
+function mars_mode_dispatch_run(array $paths, array $cfg): void
+{
+    $isCli = PHP_SAPI === 'cli';
+    if (!$isCli) {
+        $token = isset($_REQUEST['token']) ? (string) $_REQUEST['token'] : '';
+        $tokenOk = $cfg['run_token'] !== '' && hash_equals($cfg['run_token'], $token);
+        if (!$cfg['allow_http_run'] || !$tokenOk) {
+            mars_output([
+                'operation' => MARS_WRAPPER_OPERATION,
+                'mode' => 'dispatch-run',
+                'error' => 'HTTP dispatch denied',
+                'mutation' => false,
+            ], 403);
+        }
+    }
+    $runId = mars_cli_arg_value('--dispatch-run=');
+    if ($runId === null || $runId === '') {
+        $runId = isset($_REQUEST['run_id']) ? (string) $_REQUEST['run_id'] : '';
+    }
+    if ($runId === '') {
+        mars_output(['ok' => false, 'error' => 'run_id required'], 2);
+    }
+    $result = mars_1c_server_dispatch_completion($paths, $cfg, $runId);
+    // Mirror into current-run dispatch fields when matching
+    $state = mars_1c_read_json(mars_1c_current_path($paths));
+    if (is_array($state) && ($state['run_id'] ?? null) === $runId) {
+        $state['report_dispatch_status'] = $result['status'] ?? null;
+        $state['report_dispatch_at'] = date('c');
+        $state['report_dispatch_ui'] = mars_1c_dispatch_ui_label($result['status'] ?? null);
+        $state['report_dispatch_http_status'] = $result['http_status'] ?? null;
+        $state['report_dispatch_reason'] = $result['reason'] ?? null;
+        $state['report_dispatch_event_id'] = $result['event_id'] ?? null;
+        mars_1c_write_run_state($paths, $state);
+    }
+    mars_output([
+        'operation' => MARS_WRAPPER_OPERATION,
+        'mode' => 'dispatch-run',
+        'mutation' => false,
+        'run_id' => $runId,
+        'dispatch' => $result,
+    ], !empty($result['ok']) ? 0 : 1);
+}
+
+function mars_mode_dispatch_recover(array $paths, array $cfg): void
+{
+    $isCli = PHP_SAPI === 'cli';
+    if (!$isCli) {
+        $token = isset($_REQUEST['token']) ? (string) $_REQUEST['token'] : '';
+        $tokenOk = $cfg['run_token'] !== '' && hash_equals($cfg['run_token'], $token);
+        if (!$cfg['allow_http_run'] || !$tokenOk) {
+            mars_output([
+                'operation' => MARS_WRAPPER_OPERATION,
+                'mode' => 'dispatch-recover',
+                'error' => 'HTTP dispatch recover denied',
+                'mutation' => false,
+            ], 403);
+        }
+    }
+    $sweep = mars_1c_dispatch_recovery_sweep($paths, $cfg, 20);
+    mars_output([
+        'operation' => MARS_WRAPPER_OPERATION,
+        'mode' => 'dispatch-recover',
+        'mutation' => false,
+        'sweep' => $sweep,
+    ], 0);
 }
 
 function mars_lock_status(array $paths): array
@@ -936,14 +1085,7 @@ function mars_mode_run(array $paths, array $localCfg)
         ]);
         $state['txt_report_path'] = $reportPath ? basename((string) $reportPath) : null;
 
-        $state['current_phase'] = MARS_1C_PHASE_DISPATCH;
-        $state['report_dispatch_status'] = 'PENDING';
-        mars_1c_write_run_state($paths, $state);
-        mars_1c_enqueue_dispatch($paths, $runId);
-        $state['report_dispatch_status'] = 'QUEUED';
-        $state['report_dispatch_at'] = date('c');
-        $state['current_phase'] = MARS_1C_PHASE_DONE;
-        mars_1c_write_run_state($paths, $state);
+        $dispatch = mars_1c_finalize_completion_dispatch($paths, mars_load_local_config($paths), $runId, $terminal, $state);
 
         mars_release_lock($paths);
 
@@ -958,9 +1100,10 @@ function mars_mode_run(array $paths, array $localCfg)
             'report_file' => $reportPath,
             'duration_seconds' => $runDurationSeconds,
             'steps' => $steps,
-            'dispatch' => 'QUEUED',
+            'dispatch' => $dispatch['status'],
+            'dispatch_http_status' => $dispatch['http_status'],
             'legacy_preserved' => true,
-            'note' => 'Canonical runner terminal result written; completion dispatch queued.',
+            'note' => 'Canonical runner terminal result written; server-side completion dispatch attempted.',
         ], 0);
     } catch (Throwable $e) {
         mars_log($paths, 'error', $e->getMessage());
@@ -1024,13 +1167,7 @@ function mars_mode_run(array $paths, array $localCfg)
             'duration_seconds' => $runDurationSeconds,
         ]);
         $state['txt_report_path'] = $reportPath ? basename((string) $reportPath) : null;
-        $state['report_dispatch_status'] = 'PENDING';
-        mars_1c_write_run_state($paths, $state);
-        mars_1c_enqueue_dispatch($paths, $runId);
-        $state['report_dispatch_status'] = 'QUEUED';
-        $state['report_dispatch_at'] = date('c');
-        $state['current_phase'] = MARS_1C_PHASE_DONE;
-        mars_1c_write_run_state($paths, $state);
+        $dispatch = mars_1c_finalize_completion_dispatch($paths, mars_load_local_config($paths), $runId, $terminal, $state);
         mars_release_lock($paths);
 
         mars_output([
@@ -1043,7 +1180,8 @@ function mars_mode_run(array $paths, array $localCfg)
             'error' => mars_1c_sanitize_error($e->getMessage()),
             'steps' => $steps,
             'duration_seconds' => $runDurationSeconds,
-            'dispatch' => 'QUEUED',
+            'dispatch' => $dispatch['status'],
+            'dispatch_http_status' => $dispatch['http_status'],
         ], 1);
     }
 }
@@ -1062,6 +1200,12 @@ switch ($mode) {
         break;
     case 'run':
         mars_mode_run($paths, $localCfg);
+        break;
+    case 'dispatch-run':
+        mars_mode_dispatch_run($paths, $localCfg);
+        break;
+    case 'dispatch-recover':
+        mars_mode_dispatch_recover($paths, $localCfg);
         break;
     case 'dry-run':
     default:

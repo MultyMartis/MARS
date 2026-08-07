@@ -1,0 +1,42 @@
+{
+    "schema_version": "1b-d6g.1",
+    "site_id": "SITE-002",
+    "run_id": "mars-20260807-114238-7cb452ec",
+    "trigger_source": "ADMIN_MANUAL",
+    "requested_at": "2026-08-07T11:42:38+03:00",
+    "started_at": "2026-08-07T11:42:38+03:00",
+    "completed_at": "2026-08-07T11:42:42+03:00",
+    "current_phase": "DONE",
+    "final_status": "ATTENTION_OFFERS_INPUT_MISSING",
+    "ui_status": "Требует внимания",
+    "catalog_input_inventory": [
+        "import0_1.xml (import0_*.xml)"
+    ],
+    "offers_input_inventory": [],
+    "catalog_phase_result": {
+        "status": "PASS",
+        "input_files": [
+            "import0_1.xml (import0_*.xml)"
+        ],
+        "duration": "4.18 seconds",
+        "errors": ""
+    },
+    "offers_phase_result": {
+        "status": "PASS",
+        "input_files": [],
+        "duration": "0.04 seconds",
+        "errors": ""
+    },
+    "authoritative_counts": [],
+    "sanitized_error_summary": "Файл с ценами и остатками от 1С не получен",
+    "log_reference": "logs\/mars_1c_import_20260807.log",
+    "terminal_result_path": null,
+    "txt_report_path": "mars_1c_import_2026-08-07_114242.txt",
+    "report_dispatch_status": "SENT",
+    "report_dispatch_at": "2026-08-07T11:42:42+03:00",
+    "pid": 317299,
+    "report_dispatch_ui": "Отправлен",
+    "report_dispatch_http_status": 202,
+    "report_dispatch_reason": null,
+    "report_dispatch_event_id": "83c97eab-6243-56e4-810e-0b05d1612bac"
+}

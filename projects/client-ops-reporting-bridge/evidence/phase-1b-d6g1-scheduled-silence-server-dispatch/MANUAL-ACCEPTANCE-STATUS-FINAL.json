@@ -1,0 +1,19 @@
+{
+  "ok": true,
+  "ui_status": "Требует внимания",
+  "run_id": "mars-20260807-114238-7cb452ec",
+  "trigger_source": "ADMIN_MANUAL",
+  "requested_at": "2026-08-07T11:42:38+03:00",
+  "started_at": "2026-08-07T11:42:38+03:00",
+  "completed_at": "2026-08-07T11:42:42+03:00",
+  "current_phase": "DONE",
+  "catalog_result": "PASS",
+  "offers_result": "PASS",
+  "final_status": "ATTENTION_OFFERS_INPUT_MISSING",
+  "report_dispatch_status": "SENT",
+  "report_dispatch_ui": "Отправлен",
+  "sanitized_error_summary": "Файл с ценами и остатками от 1С не получен",
+  "txt_report": "mars_1c_import_2026-08-07_114242.txt",
+  "import_active": false,
+  "elapsed_seconds": null
+}

@@ -1,0 +1,15 @@
+{
+  "phase": "1B-D6G1",
+  "title": "Scheduled Silence Forensic, Server-Side Completion Dispatch and Windows Poller Removal",
+  "operator_local_incident_time": "2026-08-07T15:17:00+07:00",
+  "accepted_d6g_tip": "2a688106c12f39e59521511837326479ce0a1dbf",
+  "branch": "mars/canonical-post-recovery",
+  "authorized_mutations": [
+    "forensic",
+    "server_side_completion_dispatch",
+    "windows_poller_retirement",
+    "watchdog_fix_or_server_migration",
+    "one_controlled_admin_manual_import",
+    "canonical_commit_push_deploy"
+  ]
+}

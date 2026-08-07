@@ -91,16 +91,21 @@ async function main() {
   const terminals = listTodayTerminals(eventDate);
   const hasTerminal = terminals.some((t) => t.final_status);
   const importActive = terminals.some((t) => !t.final_status && t.current_phase && t.current_phase !== 'DONE');
-  // Also check current-run mirror if present
+  // Also check current-run mirror if present — only for today's reporting date.
   const currentPath = join(STATE_ROOT, 'import-terminals', '_current', 'run-state.json');
   if (existsSync(currentPath)) {
     try {
       const cur = JSON.parse(readFileSync(currentPath, 'utf8'));
-      if (cur && !cur.final_status && cur.current_phase && !['DONE', 'QUEUED'].includes(cur.current_phase)) {
+      const rid = String(cur?.run_id || '');
+      const completed = String(cur?.completed_at || cur?.started_at || '');
+      const isToday =
+        rid.includes(eventDate.replace(/-/g, '')) ||
+        completed.includes(eventDate);
+      if (isToday && cur && !cur.final_status && cur.current_phase && !['DONE', 'QUEUED'].includes(cur.current_phase)) {
         console.log(JSON.stringify({ ok: true, skipped: true, reason: 'IMPORT_STILL_RUNNING', run_id: cur.run_id }, null, 2));
         return;
       }
-      if (cur?.final_status) {
+      if (isToday && cur?.final_status) {
         console.log(JSON.stringify({ ok: true, skipped: true, reason: 'TERMINAL_EXISTS', run_id: cur.run_id }, null, 2));
         return;
       }

@@ -1,0 +1,18 @@
+{
+  "execution_id": "24972",
+  "status": "success",
+  "startedAt": "2026-08-07T08:42:42.639Z",
+  "stoppedAt": "2026-08-07T08:42:42.941Z",
+  "intake_state": "FIRST_SEEN",
+  "delivery_state": "PENDING",
+  "event_ids": [
+    "={{ $json.event_id }}",
+    "83c97eab-6243-56e4-810e-0b05d1612bac"
+  ],
+  "run_ids": [
+    "mars-20260807-114238-7cb452ec"
+  ],
+  "telegram_message_found": true,
+  "telegram_message": "⚠️ Импорт 1С выполнен не полностью\\n\\nСайт: bzpm.ru\\nВремя: 07.08.2026, 15:42\\n\\nКаталог обработан успешно.\\nФайл с ценами и остатками от 1С не получен.\\n\\nЦены и остатки товаров могли не обновиться.\\n\\nЧто проверить:\\nвыгрузку предложений из 1С и наличие файла offers0_*.xml.",
+  "contains_secret_markers": true
+}
