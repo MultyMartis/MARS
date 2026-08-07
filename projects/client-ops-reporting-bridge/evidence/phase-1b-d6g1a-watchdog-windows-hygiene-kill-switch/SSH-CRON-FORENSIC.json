@@ -1,0 +1,56 @@
+[
+  {
+    "cmd": "which crontab || echo NO_CRONTAB",
+    "exit": 0,
+    "stdout": "NO_CRONTAB\n",
+    "stderr": ""
+  },
+  {
+    "cmd": "crontab -l 2>&1 | head -n 20 || true",
+    "exit": 0,
+    "stdout": "bash: line 1: crontab: command not found\n",
+    "stderr": ""
+  },
+  {
+    "cmd": "ls -la ~/ | head",
+    "exit": 0,
+    "stdout": "total 40\ndrwx------+  5 root  root         4096 Jul 27 12:41 .\ndrwx------+ 15 root  root         4096 Aug  7 12:30 ..\ndrwx------+  3 assum newcustomers 4096 Jul 27 12:41 .config\ndrwx------+ 11 root  root         4096 Jul  7 00:38 public_html\ndrwx------+ 10 assum newcustomers 4096 Jul  5 20:19 storage\n",
+    "stderr": ""
+  },
+  {
+    "cmd": "which beget || echo NO_BEGET_CLI",
+    "exit": 0,
+    "stdout": "NO_BEGET_CLI\n",
+    "stderr": ""
+  },
+  {
+    "cmd": "ls /home/a/assum/bzpm.ru/storage/mars-tools/cron/logs 2>&1 | tail -n 30",
+    "exit": 0,
+    "stdout": "mars_1c_import_20260709.log\nmars_1c_import_20260710.log\nmars_1c_import_20260711.log\nmars_1c_import_20260712.log\nmars_1c_import_20260713.log\nmars_1c_import_20260714.log\nmars_1c_import_20260715.log\nmars_1c_import_20260716.log\nmars_1c_import_20260717.log\nmars_1c_import_20260718.log\nmars_1c_import_20260719.log\nmars_1c_import_20260720.log\nmars_1c_import_20260721.log\nmars_1c_import_20260722.log\nmars_1c_import_20260723.log\nmars_1c_import_20260724.log\nmars_1c_import_20260725.log\nmars_1c_import_20260726.log\nmars_1c_import_20260727.log\nmars_1c_import_20260728.log\nmars_1c_import_20260729.log\nmars_1c_import_20260730.log\nmars_1c_import_20260731.log\nmars_1c_import_20260801.log\nmars_1c_import_20260802.log\nmars_1c_import_20260803.log\nmars_1c_import_20260804.log\nmars_1c_import_20260805.log\nmars_1c_import_20260806.log\nmars_1c_import_20260807.log\n",
+    "stderr": ""
+  },
+  {
+    "cmd": "grep -n 'watchdog\\|mars_1c_http_gateway\\|NO_FRESH' /home/a/assum/bzpm.ru/storage/mars-tools/cron/logs/beget_cron_stdout.log 2>/dev/null | tail -n 20 || echo NO_MATCH",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "cmd": "php -v | head -n 1",
+    "exit": 0,
+    "stdout": "PHP 5.6.40 (cli) (built: Jan 17 2024 12:07:44) \n",
+    "stderr": ""
+  },
+  {
+    "cmd": "test -f /home/a/assum/bzpm.ru/public_html/mars-tools/cron/mars_1c_watchdog_http_gateway.php && echo GATEWAY_OK",
+    "exit": 0,
+    "stdout": "GATEWAY_OK\n",
+    "stderr": ""
+  },
+  {
+    "cmd": "test -f /home/a/assum/bzpm.ru/storage/mars-tools/cron/mars_1c_no_import_watchdog.php && echo WATCHDOG_OK",
+    "exit": 0,
+    "stdout": "WATCHDOG_OK\n",
+    "stderr": ""
+  }
+]

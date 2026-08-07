@@ -6,7 +6,7 @@
  */
 declare(strict_types=1);
 
-const MARS_1C_DISPATCH_SCHEMA = '1b-d6g1.1';
+const MARS_1C_DISPATCH_SCHEMA = '1b-d6g1a.1';
 const MARS_CLIENT_OPS_REPORT_NAMESPACE_UUID = '8f3c2a91-6b4e-4d7a-9c1f-2e5a8b0d4f67';
 const MARS_1C_DISPATCH_PENDING = 'PENDING';
 const MARS_1C_DISPATCH_SENDING = 'SENDING';
@@ -14,6 +14,39 @@ const MARS_1C_DISPATCH_SENT = 'SENT';
 const MARS_1C_DISPATCH_FAILED_RETRYABLE = 'FAILED_RETRYABLE';
 const MARS_1C_DISPATCH_FAILED_FINAL = 'FAILED_FINAL';
 const MARS_1C_DISPATCH_ALREADY = 'ALREADY_DISPATCHED';
+const MARS_1C_DISPATCH_BLOCKED_KILL_SWITCH = 'BLOCKED_BY_KILL_SWITCH';
+
+/**
+ * Authoritative server-side outbound Client Ops kill switch (Phase 1B-D6G1A).
+ * Preferred key: CLIENT_OPS_DISPATCH_ENABLED
+ * Established equivalent (D6G1): server_dispatch_enabled
+ * Default: true (dispatch allowed).
+ */
+function mars_1c_client_ops_dispatch_enabled(array $cfg): bool
+{
+    foreach (['CLIENT_OPS_DISPATCH_ENABLED', 'client_ops_dispatch_enabled', 'server_dispatch_enabled'] as $key) {
+        if (!array_key_exists($key, $cfg)) {
+            continue;
+        }
+        $v = $cfg[$key];
+        if (is_bool($v)) {
+            return $v;
+        }
+        if (is_int($v) || is_float($v)) {
+            return ((int) $v) !== 0;
+        }
+        if (is_string($v)) {
+            $normalized = strtolower(trim($v));
+            if (in_array($normalized, ['1', 'true', 'yes', 'on', 'enabled'], true)) {
+                return true;
+            }
+            if (in_array($normalized, ['0', 'false', 'no', 'off', 'disabled'], true)) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
 
 function mars_1c_dispatch_dir(array $paths): string
 {
@@ -281,6 +314,9 @@ function mars_1c_dispatch_ui_label(?string $status): string
         case MARS_1C_DISPATCH_PENDING:
         case 'QUEUED':
             return 'Ожидает отправки';
+        case MARS_1C_DISPATCH_BLOCKED_KILL_SWITCH:
+        case 'SERVER_DISPATCH_DISABLED':
+            return 'Отключено (kill switch)';
         default:
             return $status !== null && $status !== '' ? (string) $status : 'Не запрошен';
     }
@@ -307,6 +343,20 @@ function mars_1c_server_dispatch_completion(array $paths, array $cfg, string $ru
             'delivery_state' => $prev['delivery_state'] ?? null,
             'duplicate' => true,
         ];
+    }
+
+    if (!mars_1c_client_ops_dispatch_enabled($cfg)) {
+        $blocked = [
+            'status' => MARS_1C_DISPATCH_BLOCKED_KILL_SWITCH,
+            'http_status' => null,
+            'event_id' => null,
+            'attempted_at' => date('c'),
+            'reason' => 'BLOCKED_BY_KILL_SWITCH',
+            'intake_state' => null,
+            'delivery_state' => null,
+        ];
+        mars_1c_write_dispatch_status($paths, $runId, $blocked);
+        return ['ok' => true, 'blocked' => true] + $blocked;
     }
 
     if ($terminal === null) {
@@ -500,7 +550,9 @@ function mars_1c_dispatch_recovery_sweep(array $paths, array $cfg, int $limit = 
             || $status === ''
             || $status === MARS_1C_DISPATCH_PENDING
             || $status === 'QUEUED'
-            || $status === MARS_1C_DISPATCH_FAILED_RETRYABLE;
+            || $status === MARS_1C_DISPATCH_FAILED_RETRYABLE
+            || $status === MARS_1C_DISPATCH_BLOCKED_KILL_SWITCH
+            || $status === 'SERVER_DISPATCH_DISABLED';
         if (!$eligible) {
             continue;
         }

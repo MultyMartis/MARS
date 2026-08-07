@@ -31,6 +31,7 @@
           <tr><td>Каталог</td><td id="f-catalog">{{ initial.catalog_result }}</td></tr>
           <tr><td>Цены/остатки</td><td id="f-offers">{{ initial.offers_result }}</td></tr>
           <tr><td>Отчёт</td><td id="f-dispatch">{{ initial.report_dispatch_ui|default(initial.report_dispatch_status) }}</td></tr>
+          <tr><td>Отчёты в Telegram</td><td id="f-dispatch-enabled">{{ initial.client_ops_dispatch_ui|default('Включены') }}</td></tr>
           <tr><td>Ошибка</td><td id="f-error">{{ initial.sanitized_error_summary }}</td></tr>
           <tr><td>Журнал</td><td id="f-report">{{ initial.txt_report }}</td></tr>
           <tr><td>Прошло секунд</td><td id="f-elapsed">{{ initial.elapsed_seconds }}</td></tr>
@@ -61,6 +62,7 @@
     $('#f-catalog').text(d.catalog_result || '');
     $('#f-offers').text(d.offers_result || '');
     $('#f-dispatch').text(d.report_dispatch_ui || d.report_dispatch_status || '');
+    $('#f-dispatch-enabled').text(d.client_ops_dispatch_ui || ((d.client_ops_dispatch_enabled === false) ? 'Отключены' : 'Включены'));
     $('#f-error').text(d.sanitized_error_summary || '');
     $('#f-report').text(d.txt_report || '');
     $('#f-elapsed').text(d.elapsed_seconds != null ? d.elapsed_seconds : '');

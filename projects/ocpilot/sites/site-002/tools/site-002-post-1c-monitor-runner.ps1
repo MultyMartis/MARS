@@ -19,6 +19,21 @@ param(
 
 $ErrorActionPreference = 'Stop'
 
+# D6G1A: hide console window when Task Scheduler launches interactive powershell.exe
+try {
+    $sig = @'
+[DllImport("user32.dll")] public static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+[DllImport("kernel32.dll")] public static extern IntPtr GetConsoleWindow();
+'@
+    Add-Type -MemberDefinition $sig -Name NativeMethods -Namespace MarsPost1c -ErrorAction SilentlyContinue | Out-Null
+    $hwnd = [MarsPost1c.NativeMethods]::GetConsoleWindow()
+    if ($hwnd -ne [IntPtr]::Zero) {
+        [void][MarsPost1c.NativeMethods]::ShowWindow($hwnd, 0)
+    }
+} catch {
+    # best-effort only
+}
+
 # Repository root derived from runner path (.../projects/ocpilot/sites/site-002/tools).
 $RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..\..\..\..')).Path
 $MonitorScript = Join-Path $RepoRoot 'projects\ocpilot\sites\site-002\tools\site-002-prod-post-1c-catalog-onboarding-monitor-02.py'

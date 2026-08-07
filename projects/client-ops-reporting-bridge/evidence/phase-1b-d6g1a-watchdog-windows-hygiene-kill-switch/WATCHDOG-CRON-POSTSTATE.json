@@ -1,0 +1,16 @@
+{
+  "captured_at": "2026-08-07T09:29:59+00:00",
+  "pre_existing_watchdog_count": 0,
+  "action": "CREATED",
+  "row_number": null,
+  "schedule": "0 9 * * *",
+  "timezone": "Europe/Moscow",
+  "equivalent_plus07": "13:00",
+  "command_redacted": "wget -q -O - \"https://bzpm.ru/mars-tools/cron/mars_1c_watchdog_http_gateway.php?token=***\" >> /home/a/assum/bzpm.ru/storage/mars-tools/cron/logs/beget_watchdog_stdout.log 2>&1",
+  "active": false,
+  "add_response_status": "error",
+  "add_error": null,
+  "post_rows": [],
+  "watchdog_rows": [],
+  "exactly_one_watchdog": false
+}

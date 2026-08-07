@@ -15,6 +15,7 @@ class ModelToolMars1cExchange extends Model {
             'current' => $this->storageRoot() . '/mars-tools/cron/current-run.json',
             'lock' => $this->storageRoot() . '/mars-tools/cron/mars_1c_import.lock',
             'wrapper' => $this->storageRoot() . '/mars-tools/cron/mars_1c_import_wrapper.php',
+            'local_config' => $this->storageRoot() . '/mars-tools/cron/mars_1c_wrapper.local.php',
             'reports' => $this->storageRoot() . '/mars-tools/cron/reports',
             'app_root' => $root,
         );
@@ -27,6 +28,47 @@ class ModelToolMars1cExchange extends Model {
         $raw = file_get_contents($path);
         $data = json_decode($raw, true);
         return is_array($data) ? $data : null;
+    }
+
+    /**
+     * Read-only Client Ops outbound dispatch kill-switch state (no secrets).
+     * @return array{enabled:bool,ui:string,source_key:?string}
+     */
+    private function readDispatchKillSwitchState() {
+        $paths = $this->paths();
+        $enabled = true;
+        $sourceKey = null;
+        if (is_file($paths['local_config'])) {
+            /** @noinspection PhpIncludeInspection */
+            $local = include $paths['local_config'];
+            if (is_array($local)) {
+                foreach (array('CLIENT_OPS_DISPATCH_ENABLED', 'client_ops_dispatch_enabled', 'server_dispatch_enabled') as $key) {
+                    if (!array_key_exists($key, $local)) {
+                        continue;
+                    }
+                    $sourceKey = $key;
+                    $v = $local[$key];
+                    if (is_bool($v)) {
+                        $enabled = $v;
+                    } elseif (is_int($v) || is_float($v)) {
+                        $enabled = ((int) $v) !== 0;
+                    } elseif (is_string($v)) {
+                        $n = strtolower(trim($v));
+                        if (in_array($n, array('0', 'false', 'no', 'off', 'disabled'), true)) {
+                            $enabled = false;
+                        } elseif (in_array($n, array('1', 'true', 'yes', 'on', 'enabled'), true)) {
+                            $enabled = true;
+                        }
+                    }
+                    break;
+                }
+            }
+        }
+        return array(
+            'enabled' => $enabled,
+            'ui' => $enabled ? 'Включены' : 'Отключены',
+            'source_key' => $sourceKey,
+        );
     }
 
     public function getPublicStatus() {
@@ -70,10 +112,16 @@ class ModelToolMars1cExchange extends Model {
                 case 'QUEUED':
                     $dispatchUi = 'Ожидает отправки';
                     break;
+                case 'BLOCKED_BY_KILL_SWITCH':
+                case 'SERVER_DISPATCH_DISABLED':
+                    $dispatchUi = 'Отключено (kill switch)';
+                    break;
                 default:
                     $dispatchUi = $dispatchRaw;
             }
         }
+
+        $kill = $this->readDispatchKillSwitchState();
 
         return array(
             'ok' => true,
@@ -89,6 +137,8 @@ class ModelToolMars1cExchange extends Model {
             'final_status' => is_array($state) ? ($state['final_status'] ?? null) : null,
             'report_dispatch_status' => $dispatchRaw,
             'report_dispatch_ui' => $dispatchUi,
+            'client_ops_dispatch_enabled' => !empty($kill['enabled']),
+            'client_ops_dispatch_ui' => $kill['ui'],
             'sanitized_error_summary' => is_array($state) ? ($state['sanitized_error_summary'] ?? null) : null,
             'txt_report' => is_array($state) ? ($state['txt_report_path'] ?? null) : null,
             'import_active' => $active,

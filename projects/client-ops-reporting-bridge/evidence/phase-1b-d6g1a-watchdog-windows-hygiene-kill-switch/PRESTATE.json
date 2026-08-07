@@ -1,0 +1,58 @@
+{
+  "operation": "SITE-002-PROD-D6G1A-WATCHDOG-KILL-SWITCH-01",
+  "captured_at": "2026-08-07T09:29:47+00:00",
+  "server_hashes": {
+    "wrapper": "659dfcfe043322072db4377e4ef55864cfa6d9eae93d4213e52bd38e86d71270",
+    "wrapper_version": "1.3.0",
+    "dispatch": "3b5cb9c7bcedc63b22a1e3347b79ee32d94f6c2634984272213bb6ca988076ef",
+    "watchdog": "c66d5d84b5f31ceab8db70d9c899eaa0215568498b5c6436fda5905f521b1695",
+    "gateway": "f15c6023751adfa04bbfabac346033197f53a8bf3733f9c460d4545776b2e004",
+    "local": "169711839ba95dc91221606212a4fbbd1215c6bbd4bacc52c171931d596e9864",
+    "current": "62ee9919b0fb4cdfcaa168647cbc49681319d4f029a8f075459611151a9a2362"
+  },
+  "local_config_keys": {
+    "server_dispatch_enabled": true,
+    "watchdog_enabled": true,
+    "enabled": true,
+    "run_token_present": true,
+    "run_token_fp": "7f113df68ed5",
+    "client_ops_webhook_url_present": true,
+    "client_ops_webhook_auth_secret_present": true
+  },
+  "run_token_present": true,
+  "beget_cron": {
+    "api_status": "error",
+    "error_text": null,
+    "row_count": 0,
+    "rows": [],
+    "watchdog_rows": [],
+    "import_rows": [],
+    "cursor_can_update_via_api": true,
+    "ssh_crontab_authoritative": false,
+    "panel_or_api_authoritative": true,
+    "timezone_semantics": "Beget cron fields are Europe/Moscow wall-clock for this contour (import 0 8 proven)"
+  },
+  "n8n_workflow": {
+    "ok": true,
+    "id": "tkM4H0G0gM3q9Foi",
+    "name": "MARS Client Ops Bridge — bzpm.ru",
+    "active": true,
+    "versionId": "9c1f936f-e2bb-4a2f-8372-c26257e982b7",
+    "node_count": 20,
+    "updatedAt": "2026-08-06T12:05:18.537Z"
+  },
+  "data_table": {
+    "ok": true,
+    "raw_keys": [
+      "data",
+      "nextCursor"
+    ],
+    "sample": "redacted"
+  },
+  "kill_switch_prestate": {
+    "CLIENT_OPS_DISPATCH_ENABLED": null,
+    "server_dispatch_enabled": true,
+    "old_local_producer_kill_switch_mode": "ENABLED_BUT_NOT_AUTHORITATIVE_FOR_SERVER_DISPATCH",
+    "d6g1_flag_note": "D6G1_KILL_SWITCH_ENABLED=NO referred to absence of formalized server-side CLIENT_OPS_DISPATCH_ENABLED semantics, not to outbound being disabled"
+  }
+}

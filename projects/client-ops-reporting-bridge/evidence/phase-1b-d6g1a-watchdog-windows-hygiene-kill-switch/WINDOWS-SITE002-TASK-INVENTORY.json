@@ -1,0 +1,41 @@
+[
+  {
+    "name": "MARS_SITE_002_Client_Ops_Producer",
+    "state": "Disabled",
+    "hidden": true,
+    "logon": "Interactive",
+    "user": "MetaCODE ONE",
+    "execute": "powershell.exe",
+    "arguments": "-WindowStyle Hidden -NoProfile -ExecutionPolicy Bypass -File \"X:\\AI MARS STORAGE\\runtime-state\\client-ops-site-002-producer\\tmp\\run-site-002-no-import-watchdog-scheduled.ps1\"",
+    "workingDirectory": "X:\\AI MARS STORAGE\\runtime-checkouts\\client-ops-site-002-producer\\repo",
+    "lastRun": "08/07/2026 13:28:28",
+    "nextRun": "08/08/2026 13:00:00",
+    "lastResult": 2147946720
+  },
+  {
+    "name": "MARS_SITE_002_Import_Completion_Poller",
+    "state": "Disabled",
+    "hidden": false,
+    "logon": "Interactive",
+    "user": "MetaCODE ONE",
+    "execute": "powershell.exe",
+    "arguments": "-NoProfile -ExecutionPolicy Bypass -File \"X:\\AI MARS STORAGE\\runtime-state\\client-ops-site-002-producer\\tmp\\run-site-002-import-completion-poller-scheduled.ps1\"",
+    "workingDirectory": "X:\\AI MARS STORAGE\\runtime-checkouts\\client-ops-site-002-producer\\repo",
+    "lastRun": "08/07/2026 15:34:34",
+    "nextRun": "08/08/2026 11:50:50",
+    "lastResult": 1
+  },
+  {
+    "name": "MARS_SITE_002_Post_1C_Catalog_Monitor",
+    "state": "Ready",
+    "hidden": false,
+    "logon": "Interactive",
+    "user": "MetaCODE ONE",
+    "execute": "powershell.exe",
+    "arguments": "-NoProfile -ExecutionPolicy Bypass -File \"X:\\AI MARS STORAGE\\runtime-checkouts\\site-002-monitor\\repo\\projects\\ocpilot\\sites\\site-002\\tools\\site-002-post-1c-monitor-runner.ps1\"",
+    "workingDirectory": "X:\\AI MARS STORAGE\\runtime-checkouts\\site-002-monitor\\repo",
+    "lastRun": "08/07/2026 13:28:28",
+    "nextRun": "08/08/2026 12:30:30",
+    "lastResult": 0
+  }
+]

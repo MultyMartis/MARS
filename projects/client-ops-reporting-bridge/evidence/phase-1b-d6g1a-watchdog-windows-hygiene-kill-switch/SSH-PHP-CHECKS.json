@@ -1,0 +1,66 @@
+{
+  "lint": [
+    {
+      "cmd": "/usr/local/bin/php8.3 -l /home/a/assum/bzpm.ru/storage/mars-tools/cron/mars_1c_completion_dispatch.php",
+      "exit": 0,
+      "stdout": "No syntax errors detected in /home/a/assum/bzpm.ru/storage/mars-tools/cron/mars_1c_completion_dispatch.php\n",
+      "stderr": ""
+    },
+    {
+      "cmd": "/usr/local/bin/php8.3 -l /home/a/assum/bzpm.ru/storage/mars-tools/cron/mars_1c_no_import_watchdog.php",
+      "exit": 0,
+      "stdout": "No syntax errors detected in /home/a/assum/bzpm.ru/storage/mars-tools/cron/mars_1c_no_import_watchdog.php\n",
+      "stderr": ""
+    },
+    {
+      "cmd": "/usr/local/bin/php8.3 -l /home/a/assum/bzpm.ru/storage/mars-tools/cron/mars_1c_import_wrapper.php",
+      "exit": 0,
+      "stdout": "No syntax errors detected in /home/a/assum/bzpm.ru/storage/mars-tools/cron/mars_1c_import_wrapper.php\n",
+      "stderr": ""
+    },
+    {
+      "cmd": "/usr/local/bin/php8.3 -l /home/a/assum/bzpm.ru/storage/mars-tools/cron/mars_1c_d6g1a_offline_regression.php",
+      "exit": 0,
+      "stdout": "No syntax errors detected in /home/a/assum/bzpm.ru/storage/mars-tools/cron/mars_1c_d6g1a_offline_regression.php\n",
+      "stderr": ""
+    },
+    {
+      "cmd": "/usr/local/bin/php8.3 -l /home/a/assum/bzpm.ru/public_html/admin/model/tool/mars_1c_exchange.php",
+      "exit": 0,
+      "stdout": "No syntax errors detected in /home/a/assum/bzpm.ru/public_html/admin/model/tool/mars_1c_exchange.php\n",
+      "stderr": ""
+    }
+  ],
+  "offline_regression": {
+    "cmd": "/usr/local/bin/php8.3 /home/a/assum/bzpm.ru/storage/mars-tools/cron/mars_1c_d6g1a_offline_regression.php",
+    "exit": 0,
+    "stdout": "{\n    \"phase\": \"1B-D6G1A\",\n    \"check\": \"offline-regression\",\n    \"pass\": true,\n    \"results\": [\n        {\n            \"id\": \"R_kill_true_enabled\",\n            \"pass\": true,\n            \"detail\": []\n        },\n        {\n            \"id\": \"R_kill_false_blocks\",\n            \"pass\": true,\n            \"detail\": []\n        },\n        {\n            \"id\": \"R_kill_alias_server_dispatch\",\n            \"pass\": true,\n            \"detail\": []\n        },\n        {\n            \"id\": \"R_kill_default_true\",\n            \"pass\": true,\n            \"detail\": []\n        },\n        {\n            \"id\": \"R_ui_blocked_label\",\n            \"pass\": true,\n            \"detail\": []\n        },\n        {\n            \"id\": \"R12_kill_false_blocks_webhook\",\n            \"pass\": true,\n            \"detail\": []\n        },\n        {\n            \"id\": \"R13_terminal_still_present\",\n            \"pass\": true,\n            \"detail\": []\n        },\n        {\n            \"id\": \"R11_kill_true_eligible_not_blocked\",\n            \"pass\": true,\n            \"detail\": []\n        },\n        {\n            \"id\": \"R15_recovery_idempotent_already\",\n            \"pass\": true,\n            \"detail\": []\n        },\n        {\n            \"id\": \"R5_missing_creates_one\",\n            \"pass\": true,\n            \"detail\": []\n        },\n        {\n            \"id\": \"R6_same_date_dedupes\",\n            \"pass\": true,\n            \"detail\": []\n        },\n        {\n            \"id\": \"R7_next_day_new_event\",\n            \"pass\": true,\n            \"detail\": []\n        }\n    ],\n    \"sandbox\": \"\\/tmp\\/mars-d6g1a-4321640b\"\n}\n",
+    "stderr": ""
+  },
+  "kill_switch_flip": [
+    {
+      "cmd": "/usr/local/bin/php8.3 /home/a/assum/bzpm.ru/storage/mars-tools/cron/_d6g1a_kill_flip.php false",
+      "exit": 0,
+      "stdout": "FLIPPED_FALSE\n",
+      "stderr": ""
+    },
+    {
+      "cmd": "/usr/local/bin/php8.3 /home/a/assum/bzpm.ru/storage/mars-tools/cron/mars_1c_no_import_watchdog.php",
+      "exit": 0,
+      "stdout": "{\n    \"ok\": true,\n    \"watchdog_version\": \"1b-d6g1a.1\",\n    \"event_date\": \"2026-08-07\",\n    \"local_hour\": 16,\n    \"skipped\": true,\n    \"reason\": \"BLOCKED_BY_KILL_SWITCH\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "cmd": "/usr/local/bin/php8.3 /home/a/assum/bzpm.ru/storage/mars-tools/cron/_d6g1a_kill_flip.php true",
+      "exit": 0,
+      "stdout": "RESTORED_TRUE\n",
+      "stderr": ""
+    },
+    {
+      "cmd": "/usr/local/bin/php8.3 /home/a/assum/bzpm.ru/storage/mars-tools/cron/_d6g1a_kill_flip.php read",
+      "exit": 0,
+      "stdout": "{\"CLIENT_OPS_DISPATCH_ENABLED\":true,\"server_dispatch_enabled\":true}\n",
+      "stderr": ""
+    }
+  ]
+}

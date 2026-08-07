@@ -1,0 +1,16 @@
+{
+  "invoked_at": "2026-08-07T09:37:04+00:00",
+  "http_status": 200,
+  "response": {
+    "ok": true,
+    "watchdog_version": "1b-d6g1a.1",
+    "event_date": "2026-08-07",
+    "local_hour": 16,
+    "skipped": true,
+    "reason": "TERMINAL_EXISTS",
+    "run_id": "mars-20260807-080002-5bbdaf1c",
+    "trigger_source": "SCHEDULED"
+  },
+  "expected_reason_today": "TERMINAL_EXISTS",
+  "pass": true
+}

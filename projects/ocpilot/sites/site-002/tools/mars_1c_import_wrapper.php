@@ -17,8 +17,8 @@ declare(strict_types=1);
 require_once __DIR__ . '/mars_1c_import_run_contract.php';
 require_once __DIR__ . '/mars_1c_completion_dispatch.php';
 
-const MARS_WRAPPER_OPERATION = 'SITE-002-PROD-D6G1-SERVER-SIDE-COMPLETION-DISPATCH-01';
-const MARS_WRAPPER_VERSION = '1.3.0';
+const MARS_WRAPPER_OPERATION = 'SITE-002-PROD-D6G1A-WATCHDOG-KILL-SWITCH-01';
+const MARS_WRAPPER_VERSION = '1.3.1';
 const MARS_CMD_CATALOG = '1c';
 const MARS_CMD_OFFERS = '1c_offers';
 const MARS_MAX_RUNTIME_SECONDS = 2700;
@@ -84,6 +84,8 @@ function mars_load_local_config(array $paths): array
         'client_ops_webhook_url' => '',
         'client_ops_webhook_auth_secret' => '',
         'client_ops_webhook_token' => '',
+        // Preferred kill-switch key (D6G1A); server_dispatch_enabled remains accepted equivalent.
+        'CLIENT_OPS_DISPATCH_ENABLED' => true,
         'server_dispatch_enabled' => true,
     ];
     if (is_file($paths['local_config'])) {
@@ -108,17 +110,28 @@ function mars_1c_finalize_completion_dispatch(array $paths, array $cfg, string $
     mars_1c_write_run_state($paths, $state);
     mars_1c_enqueue_dispatch($paths, $runId);
 
-    if (empty($cfg['server_dispatch_enabled'])) {
-        $state['report_dispatch_status'] = 'QUEUED';
+    if (!mars_1c_client_ops_dispatch_enabled($cfg)) {
+        $blocked = [
+            'status' => MARS_1C_DISPATCH_BLOCKED_KILL_SWITCH,
+            'http_status' => null,
+            'event_id' => null,
+            'attempted_at' => date('c'),
+            'reason' => 'BLOCKED_BY_KILL_SWITCH',
+            'intake_state' => null,
+            'delivery_state' => null,
+        ];
+        mars_1c_write_dispatch_status($paths, $runId, $blocked);
+        $state['report_dispatch_status'] = MARS_1C_DISPATCH_BLOCKED_KILL_SWITCH;
         $state['report_dispatch_at'] = date('c');
-        $state['report_dispatch_ui'] = mars_1c_dispatch_ui_label('QUEUED');
+        $state['report_dispatch_ui'] = mars_1c_dispatch_ui_label(MARS_1C_DISPATCH_BLOCKED_KILL_SWITCH);
+        $state['report_dispatch_reason'] = 'BLOCKED_BY_KILL_SWITCH';
         $state['current_phase'] = MARS_1C_PHASE_DONE;
         mars_1c_write_run_state($paths, $state);
         return [
-            'status' => 'QUEUED',
+            'status' => MARS_1C_DISPATCH_BLOCKED_KILL_SWITCH,
             'http_status' => null,
             'event_id' => null,
-            'reason' => 'SERVER_DISPATCH_DISABLED',
+            'reason' => 'BLOCKED_BY_KILL_SWITCH',
         ];
     }
 

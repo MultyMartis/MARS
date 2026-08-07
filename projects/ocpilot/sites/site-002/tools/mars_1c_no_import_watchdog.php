@@ -1,6 +1,6 @@
 <?php
 /**
- * MARS SITE-002 server-side no-import watchdog (Phase 1B-D6G1).
+ * MARS SITE-002 server-side no-import watchdog (Phase 1B-D6G1A).
  * Emits at most one NO_FRESH_IMPORT Client Ops event per reporting date
  * when no completed scheduled terminal exists for the expected window.
  *
@@ -12,7 +12,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/mars_1c_import_run_contract.php';
 require_once __DIR__ . '/mars_1c_completion_dispatch.php';
 
-const MARS_WATCHDOG_VERSION = '1b-d6g1.1';
+const MARS_WATCHDOG_VERSION = '1b-d6g1a.1';
 const MARS_WATCHDOG_DEADLINE_HOUR_BARNAUL = 13;
 
 function mars_watchdog_paths(): array
@@ -42,6 +42,7 @@ function mars_watchdog_load_cfg(array $paths): array
         'client_ops_webhook_url' => '',
         'client_ops_webhook_auth_secret' => '',
         'client_ops_webhook_token' => '',
+        'CLIENT_OPS_DISPATCH_ENABLED' => true,
         'server_dispatch_enabled' => true,
         'watchdog_enabled' => true,
     ];
@@ -142,7 +143,7 @@ function mars_watchdog_build_no_fresh_envelope(string $eventDate, string $observ
             'source_status' => 'ATTENTION_REQUIRED',
             'normalized_status' => 'ATTENTION',
             'summary_code' => 'NO_FRESH_1C_IMPORT',
-            'reason_codes' => ['NO_FRESH_IMPORT_IN_EXPECTED_WINDOW', 'D6G1_SERVER_WATCHDOG'],
+            'reason_codes' => ['NO_FRESH_IMPORT_IN_EXPECTED_WINDOW', 'D6G1A_SERVER_WATCHDOG'],
         ],
         'action' => [
             'required' => true,
@@ -243,6 +244,12 @@ function mars_watchdog_main(): void
     if (empty($cfg['watchdog_enabled'])) {
         $out['skipped'] = true;
         $out['reason'] = 'WATCHDOG_DISABLED';
+        echo json_encode($out, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) . "\n";
+        return;
+    }
+    if (!mars_1c_client_ops_dispatch_enabled($cfg)) {
+        $out['skipped'] = true;
+        $out['reason'] = 'BLOCKED_BY_KILL_SWITCH';
         echo json_encode($out, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) . "\n";
         return;
     }

@@ -1,0 +1,50 @@
+[
+  {
+    "label": "panel",
+    "login_len": 12,
+    "status": "error",
+    "error_text": "Username/password incorrect",
+    "error_code": "AUTH_ERROR",
+    "answer_is_none": true
+  },
+  {
+    "label": "ssh",
+    "login_len": 13,
+    "status": "error",
+    "error_text": "Username/password incorrect",
+    "error_code": "AUTH_ERROR",
+    "answer_is_none": true
+  },
+  {
+    "label": "ssh_pass",
+    "login_len": 13,
+    "status": "error",
+    "error_text": "Username/password incorrect",
+    "error_code": "AUTH_ERROR",
+    "answer_is_none": true
+  },
+  {
+    "label": "ftp",
+    "login_len": 13,
+    "status": "error",
+    "error_text": "Username/password incorrect",
+    "error_code": "AUTH_ERROR",
+    "answer_is_none": true
+  },
+  {
+    "label": "derived_host",
+    "login_len": 5,
+    "status": "error",
+    "error_text": "Username/password incorrect",
+    "error_code": "AUTH_ERROR",
+    "answer_is_none": true
+  },
+  {
+    "label": "derived_sshpass",
+    "login_len": 5,
+    "status": "error",
+    "error_text": "Username/password incorrect",
+    "error_code": "AUTH_ERROR",
+    "answer_is_none": true
+  }
+]
