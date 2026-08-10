@@ -1,0 +1,13 @@
+# SOAK RESTART RECEIPT — Phase 3H.7.2
+
+## New soak T+0
+- UTC: `2026-08-10T09:25:53.878Z`
+
+## Windows
+- T+6: `2026-08-10T15:25:53.878Z`
+- Next 10:00 Europe/Moscow: `2026-08-11T07:00:00.000Z`
+- T+24: `2026-08-11T09:25:53.878Z`
+- T+36: `2026-08-11T21:25:53.878Z`
+- T+48: `2026-08-12T09:25:53.878Z`
+
+PASS not claimed. Phase 3I.1 blocked.

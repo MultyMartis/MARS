@@ -49,3 +49,6 @@ See evidence/phase3h7 and architecture/LEAD-REOPEN-CONTRACT-v1.md. Soak interrup
 
 ## Phase 3H.7.1 note
 Gmail OAuth recovery closed; original terminal cards now expose `↩️ Вернуть в обработку`; MISSED_PROD_LEAD_1 resolved without replay (no absent genuine form lead); soak restarted; Phase 3I.1 blocked.
+
+## Phase 3H.7.2 note
+Callback acknowledgement contract `iseo-lead-callback-ack-v1.0` deployed. Reopen ack is «Лид возвращён в обработку.». Aggregate no longer maps pending applied→processed. Operator-approved resurface of three genuine leads completed for acceptance; global reopen still does not fan out. Soak restarted; Phase 3I.1 blocked. See `evidence/phase3h72/`.
