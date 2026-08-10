@@ -202,11 +202,14 @@ AI **OFF**.
 
 ## 41. Commits
 
-See Git log on branch `mars/iseo-sm-phase3h731-acceptance-card` (fix/test/docs commits).
+- `c5c2e24b` fix(iseo-sales-manager-bot): canonicalize authoritative acceptance cards
+- `6faf8eaa` fix(iseo-sales-manager-bot): correct authoritative card instance selection
+- `53fd2161` test(iseo-sales-manager-bot): preserve full card body across status lifecycle
+- `ca69be22` docs(iseo-sales-manager-bot): restart soak after acceptance card parity
 
 ## 42. Push
 
-Pushed to `origin/mars/canonical-post-recovery` without force (after merge/fast-forward per phase charter).
+Fast-forward pushed to `origin/mars/canonical-post-recovery` without force. Tip: `ca69be22`.
 
 ## 43. SAFE UNKNOWN
 
