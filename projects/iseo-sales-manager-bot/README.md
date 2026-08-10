@@ -300,3 +300,7 @@ Gmail OAuth recovery closed; original terminal cards now expose `↩️ Верн
 
 ## Phase 3H.7.2 note
 Callback acknowledgement contract `iseo-lead-callback-ack-v1.0` deployed. Reopen ack is «Лид возвращён в обработку.». Aggregate no longer maps pending applied→processed. Operator-approved resurface of three genuine leads completed for acceptance; global reopen still does not fan out. Soak restarted; Phase 3I.1 blocked. See `evidence/phase3h72/`.
+
+### Phase 3H.7.3.1
+Acceptance card canonicalization + authoritative instance v1.1. Evidence: [evidence/phase3h731/](evidence/phase3h731/). Report: [reports/REPORT-iseo-sales-manager-bot-phase3h731-acceptance-card-canonicalization-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3h731-acceptance-card-canonicalization-v1.md). Phase 3I.1 blocked; AI OFF; new soak T+0 after repair.
+
