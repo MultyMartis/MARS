@@ -3,9 +3,6 @@
  * Base: Phase 3E.1 sm-msg-v2.3 + First Reply Engine v2 copy-block polish.
  * Pure ESM module for harness / OPS sync.
  */
-import { createRequire } from 'node:module';
-
-const nodeRequire = createRequire(import.meta.url);
 
 export const MESSAGE_FORMAT_VERSION = 'sm-msg-v2.4';
 

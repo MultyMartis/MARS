@@ -1,5 +1,12 @@
 # OPERATOR RESURFACE PRODUCTION-PARITY REPAIR — Phase 3H.7.3
 
+## Phase 3H.7.3.1 (2026-08-10)
+- Verdict baseline: acceptance-card canonicalization + authoritative instance v1.1
+- Root cause: callback status sync used reduced `buildFinalCard`; fixed to full canonical body
+- Contract: `iseo-authoritative-card-instance-v1.1`
+- Soak: new final 48h restarted (does not reuse 3H.7.3 T+0); Phase 3I.1 blocked; AI OFF
+- Evidence: `evidence/phase3h731/`
+
 ## Defect (live operator acceptance)
 
 Phase 3H.7.2 `operator_resurface` used a special simplified card builder:
@@ -22,3 +29,4 @@ Phase 3H.7.2 `operator_resurface` used a special simplified card builder:
 ## Evidence
 
 `evidence/phase3h73/`
+

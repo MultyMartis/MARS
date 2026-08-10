@@ -1,3 +1,10 @@
+
+## Phase 3H.7.3.1 (2026-08-10)
+- Verdict baseline: acceptance-card canonicalization + authoritative instance v1.1
+- Root cause: callback status sync used reduced `buildFinalCard`; fixed to full canonical body
+- Contract: `iseo-authoritative-card-instance-v1.1`
+- Soak: new final 48h restarted (does not reuse 3H.7.3 T+0); Phase 3I.1 blocked; AI OFF
+- Evidence: `evidence/phase3h731/`
 <!-- Phase 3H.7.3 operator resurface production-parity repair 2026-08-10 -->
 ## Phase 3H.7.3 (current)
 
@@ -39,3 +46,4 @@ Pending: no reopen button.
 
 ## Phase 3H.7.2 note
 Callback acknowledgement contract `iseo-lead-callback-ack-v1.0` deployed. Reopen ack is «Лид возвращён в обработку.». Aggregate no longer maps pending applied→processed. Operator-approved resurface of three genuine leads completed for acceptance; global reopen still does not fan out. Soak restarted; Phase 3I.1 blocked. See `evidence/phase3h72/`.
+

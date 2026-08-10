@@ -1,5 +1,12 @@
 # CANONICAL LEAD CARD RENDERER — v1
 
+## Phase 3H.7.3.1 (2026-08-10)
+- Verdict baseline: acceptance-card canonicalization + authoritative instance v1.1
+- Root cause: callback status sync used reduced `buildFinalCard`; fixed to full canonical body
+- Contract: `iseo-authoritative-card-instance-v1.1`
+- Soak: new final 48h restarted (does not reuse 3H.7.3 T+0); Phase 3I.1 blocked; AI OFF
+- Evidence: `evidence/phase3h731/`
+
 Contract id: `iseo-canonical-lead-card-renderer-v1`
 
 ## Purpose
@@ -37,3 +44,4 @@ One human-facing Telegram lead-card renderer for:
 - `architecture/LEAD-CARD-INSTANCE-REGISTRY-v1.md`
 - `architecture/TELEGRAM-UX-CONTRACT-v1.md`
 - `architecture/MANAGER-CARD-v2.4-CONTRACT-v1.md`
+

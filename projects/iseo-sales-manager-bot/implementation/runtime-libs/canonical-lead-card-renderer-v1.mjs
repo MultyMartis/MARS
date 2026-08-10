@@ -20,6 +20,8 @@ import { resolveRecipientReplyProfile } from './reply-profile-lib.mjs';
 
 export const CANONICAL_LEAD_CARD_RENDERER_CONTRACT = 'iseo-canonical-lead-card-renderer-v1';
 export const CARD_INSTANCE_REGISTRY_CONTRACT = 'iseo-lead-card-instance-registry-v1';
+/** Phase 3H.7.3.1 — authoritative current-card selection. */
+export const AUTHORITATIVE_CARD_INSTANCE_CONTRACT = 'iseo-authoritative-card-instance-v1.1';
 
 const FORMULA_ERROR_RE = /#ERROR!|#N\/A|#VALUE!|#REF!|^#\w+!/i;
 
@@ -167,8 +169,46 @@ export function renderCanonicalLeadCard({
 }
 
 /**
+ * Normalize recipient identity for authoritative selection.
+ * Case-fold recipient_ref so u:ABC and u:abc collapse to one slot.
+ */
+export function normalizeRecipientKey(r = {}) {
+  const ref = String(r.recipient_ref || '').trim().toLowerCase();
+  if (ref) return ref;
+  const chat = String(r.telegram_delivery_chat_id || r.telegram_chat_id || '').trim();
+  return chat ? `chat:${chat}` : '';
+}
+
+/**
+ * Append status-transition attribution WITHOUT collapsing canonical body.
+ */
+export function appendStatusAttribution(telegramText, {
+  managerStatus = 'pending',
+  actorLabelHtml = '',
+  whenMoscow = '',
+} = {}) {
+  const base = String(telegramText || '').trimEnd();
+  const status = String(managerStatus || 'pending').toLowerCase();
+  const when = String(whenMoscow || '').trim();
+  const actor = String(actorLabelHtml || '').trim();
+  const lines = [];
+  if (status === 'spam' || status === 'processed') {
+    if (actor) lines.push('Кем: ' + actor);
+    if (when) lines.push('Время: ' + when);
+  } else if (actor) {
+    lines.push('Возвращено в обработку: ' + actor);
+    if (when) lines.push('Время: ' + when);
+  }
+  if (!lines.length) return base;
+  return (base + '\n\n' + lines.join('\n')).trimEnd();
+}
+
+/**
  * Select authoritative current card instances for status sync.
- * Exactly one current instance per recipient_ref (or chat_id fallback).
+ * Contract: iseo-authoritative-card-instance-v1.1
+ * Exactly one current instance per recipient. Superseded excluded from sync accounting.
+ * After explicit operator resurface / parity repair, newer canonical cards win.
+ * Stale callbacks must not promote superseded messages back to authoritative.
  */
 export function selectAuthoritativeCardInstances(deliveries = [], leadId) {
   const lid = String(leadId || '');
@@ -177,7 +217,6 @@ export function selectAuthoritativeCardInstances(deliveries = [], leadId) {
     if (String(r.delivery_status || '') !== 'delivered') return false;
     if (!r.telegram_message_ref) return false;
     if (!(r.telegram_delivery_chat_id || r.telegram_chat_id)) return false;
-    // Skip explicitly superseded
     if (String(r.card_instance_state || '').toLowerCase() === 'superseded') return false;
     if (String(r.active_sync || '').toLowerCase() === 'false') return false;
     return true;
@@ -185,7 +224,7 @@ export function selectAuthoritativeCardInstances(deliveries = [], leadId) {
 
   const byRecipient = new Map();
   for (const r of rows) {
-    const key = String(r.recipient_ref || r.telegram_delivery_chat_id || r.telegram_chat_id || '');
+    const key = normalizeRecipientKey(r);
     if (!key) continue;
     const prev = byRecipient.get(key);
     if (!prev) {
@@ -195,12 +234,19 @@ export function selectAuthoritativeCardInstances(deliveries = [], leadId) {
     byRecipient.set(key, preferAuthoritativeInstance(prev, r));
   }
 
-  const authoritative = [...byRecipient.values()];
+  const authoritative = [...byRecipient.values()].map((r) => ({
+    ...r,
+    card_instance_state: 'authoritative',
+    active_sync: 'true',
+  }));
   const authKeys = new Set(authoritative.map((r) => String(r.delivery_key || `${r.recipient_ref}:${r.telegram_message_ref}`)));
-  const superseded = rows.filter((r) => !authKeys.has(String(r.delivery_key || `${r.recipient_ref}:${r.telegram_message_ref}`)));
+  const superseded = rows
+    .filter((r) => !authKeys.has(String(r.delivery_key || `${r.recipient_ref}:${r.telegram_message_ref}`)))
+    .map((r) => ({ ...r, card_instance_state: 'superseded', active_sync: 'false' }));
 
   return {
-    contract: CARD_INSTANCE_REGISTRY_CONTRACT,
+    contract: AUTHORITATIVE_CARD_INSTANCE_CONTRACT,
+    registry_contract: CARD_INSTANCE_REGISTRY_CONTRACT,
     lead_id: lid,
     authoritative,
     superseded,
@@ -212,13 +258,50 @@ function preferAuthoritativeInstance(a, b) {
   const score = (r) => {
     let s = 0;
     const key = String(r.delivery_key || '');
-    const reason = String(r.delivery_reason || '');
+    const reason = String(r.delivery_reason || '').toLowerCase();
+    const state = String(r.card_instance_state || '').toLowerCase();
+    // Explicit parity / resurface / acceptance-canonicalization beats historical initial.
+    if (key.includes('acceptance_canonical') || reason.includes('acceptance_canonical')) s += 140;
+    if (key.includes('operator_resurface_parity') || reason === 'operator_resurface_parity') s += 120;
     if (reason === 'operator_resurface' || key.includes('operator_resurface')) s += 100;
-    if (String(r.card_instance_state || '').toLowerCase() === 'authoritative') s += 50;
-    if (String(r.card_instance_state || '').toLowerCase() === 'current') s += 40;
+    if (state === 'authoritative') s += 50;
+    if (state === 'current') s += 40;
+    if (state === 'superseded') s -= 1000;
+    // Prefer rows that still have a usable chat id (syncable).
+    if (r.telegram_delivery_chat_id || r.telegram_chat_id) s += 20;
     const ts = Date.parse(String(r.delivered_at || r.delivery_timestamp || r.updated_at || '')) || 0;
-    s += Math.min(Math.floor(ts / 1000), 2_000_000_000) / 1e10; // tiny tie-break by time
+    s += ts / 1e13;
     return s;
   };
   return score(b) >= score(a) ? b : a;
+}
+
+/**
+ * Full canonical card for callback status sync (pending/spam/processed).
+ * Never use a reduced status-only body for authoritative current cards.
+ */
+export function renderCanonicalStatusCard({
+  lead,
+  recipientProfile,
+  managerStatus = 'pending',
+  actorLabelHtml = '',
+  whenMoscow = '',
+  deliveryReason = 'status_sync',
+} = {}) {
+  const rendered = renderCanonicalLeadCard({
+    lead,
+    recipientProfile,
+    managerStatus,
+    deliveryReason,
+  });
+  const telegram_text = appendStatusAttribution(rendered.telegram_text, {
+    managerStatus,
+    actorLabelHtml,
+    whenMoscow,
+  });
+  return {
+    ...rendered,
+    telegram_text,
+    authoritative_instance_contract: AUTHORITATIVE_CARD_INSTANCE_CONTRACT,
+  };
 }
