@@ -211,6 +211,15 @@ See git commits under `projects/iseo-sales-manager-bot/**` (renderer, architectu
 
 ## 42. Commits
 
+```n65f42204 docs(iseo-sales-manager-bot): restart soak after resurface parity repair
+3f3c10c2 test(iseo-sales-manager-bot): prove resurface production parity
+18695b94 fix(iseo-sales-manager-bot): synchronize resurfaced lead cards reliably
+d74d9b1a fix(iseo-sales-manager-bot): track authoritative telegram card instances
+4b5c5e17 fix(iseo-sales-manager-bot): prevent formula errors in contact rendering
+d5d0b130 fix(iseo-sales-manager-bot): use canonical renderer for operator resurface
+```
+
+
 Suggested series:
 
 1. `fix(iseo-sales-manager-bot): use canonical renderer for operator resurface`
