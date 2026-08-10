@@ -211,27 +211,19 @@ See git commits under `projects/iseo-sales-manager-bot/**` (renderer, architectu
 
 ## 42. Commits
 
-```n65f42204 docs(iseo-sales-manager-bot): restart soak after resurface parity repair
-3f3c10c2 test(iseo-sales-manager-bot): prove resurface production parity
-18695b94 fix(iseo-sales-manager-bot): synchronize resurfaced lead cards reliably
-d74d9b1a fix(iseo-sales-manager-bot): track authoritative telegram card instances
-4b5c5e17 fix(iseo-sales-manager-bot): prevent formula errors in contact rendering
-d5d0b130 fix(iseo-sales-manager-bot): use canonical renderer for operator resurface
 ```
-
-
-Suggested series:
-
-1. `fix(iseo-sales-manager-bot): use canonical renderer for operator resurface`
-2. `fix(iseo-sales-manager-bot): prevent formula errors in contact rendering`
-3. `fix(iseo-sales-manager-bot): track authoritative telegram card instances`
-4. `fix(iseo-sales-manager-bot): synchronize resurfaced lead cards reliably`
-5. `test(iseo-sales-manager-bot): prove resurface production parity`
-6. `docs(iseo-sales-manager-bot): restart soak after resurface parity repair`
+840490e3 docs(iseo-sales-manager-bot): set phase 3h73 report tip hash
+10f3ccdd docs(iseo-sales-manager-bot): restart soak after resurface parity repair
+5acff32f test(iseo-sales-manager-bot): prove resurface production parity
+ddc87014 fix(iseo-sales-manager-bot): synchronize resurfaced lead cards reliably
+7c4c57cc fix(iseo-sales-manager-bot): track authoritative telegram card instances
+afa85e11 fix(iseo-sales-manager-bot): prevent formula errors in contact rendering
+766b82cb fix(iseo-sales-manager-bot): use canonical renderer for operator resurface
+```
 
 ## 43. Push
 
-Canonical push without force after commits (this report updated with SHAs in tip-hash commit if needed).
+Pushed to `origin/mars/canonical-post-recovery` without force. Tip: `840490e3` (pre-final tip-hash refresh may append one docs commit).
 
 ## 44. SAFE UNKNOWN
 
