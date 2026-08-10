@@ -138,3 +138,11 @@ Blocked (false).
 
 ## 55. Stop condition
 Stopped after root-cause proof, Error Handler repair, reopen deploy + isolated harness, documentation. Recovery and soak restart await operator Gmail reauth.
+
+## Git tip (post-push)
+
+Branch: `agent/iseo-sm-phase3h7-missed-lead-reopen`
+
+```
+d388b6f3 docs(iseo-sales-manager-bot): restart pre-ai soak after lead recovery fa9f782f test(iseo-sales-manager-bot): prove reopen lifecycle and four-recipient sync e813313f feat(iseo-sales-manager-bot): reopen terminal leads to pending 055044b5 fix(iseo-sales-manager-bot): recover missed production lead path
+```
