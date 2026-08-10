@@ -417,3 +417,7 @@ See `implementation/PENDING-COMMANDS-v1.md`, `implementation/REMINDER-CONFIG-COM
 
 ### Phase 3H.7 delta
 See evidence/phase3h7 and LEAD-REOPEN-CONTRACT-v1.
+
+
+## Terminal reopen action
+Inline button `↩️ Вернуть в обработку` (`sm:r:`) on terminal original + archive cards.
