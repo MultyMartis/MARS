@@ -101,3 +101,7 @@ Live call counts, safe real-lead recount, final two-recipient proof and five-pol
 - Gmail OAuth refresh token can invalidate and stop all intake; errors must surface as `gmail_read_failed`.
 - Reopen does not resend Telegram cards automatically.
 - Exact missed Gmail message recovery requires live mailbox access.
+
+
+## Phase 3H.7.1 note
+Gmail OAuth recovery closed; original terminal cards now expose `↩️ Вернуть в обработку`; MISSED_PROD_LEAD_1 resolved without replay (no absent genuine form lead); soak restarted; Phase 3I.1 blocked.

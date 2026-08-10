@@ -27,3 +27,7 @@ Attempt 3 / prior T+0 STOP reclassified via erratum: operator-approved baseline 
 ## Immutable soak baseline
 
 See `product/PRODUCTION-BASELINE-PRE-AI-SOAK-FOUR-RECIPIENT-v1.md`.
+
+
+## Phase 3H.7.1 note
+Gmail OAuth recovery closed; original terminal cards now expose `↩️ Вернуть в обработку`; MISSED_PROD_LEAD_1 resolved without replay (no absent genuine form lead); soak restarted; Phase 3I.1 blocked.

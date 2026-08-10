@@ -45,3 +45,7 @@ Attempt 3 invalidated (operator-approved baseline change 3→4). New T+0 **2026-
 
 See evidence/phase3h7 and architecture/LEAD-REOPEN-CONTRACT-v1.md. Soak interrupted pending Gmail reauth + missed-lead recovery. Reopen: processed|spam -> pending via sm:r:.
 
+
+
+## Phase 3H.7.1 note
+Gmail OAuth recovery closed; original terminal cards now expose `↩️ Вернуть в обработку`; MISSED_PROD_LEAD_1 resolved without replay (no absent genuine form lead); soak restarted; Phase 3I.1 blocked.

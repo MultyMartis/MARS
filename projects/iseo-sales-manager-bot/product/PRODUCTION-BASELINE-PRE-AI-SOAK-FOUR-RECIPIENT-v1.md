@@ -27,3 +27,7 @@
 
 Status: `INTERRUPTED — MISSED PRODUCTION LEAD INVESTIGATION AND REOPEN WORKFLOW CHANGE`.
 New T+0 not started until Gmail reauth + missed-lead recovery gate.
+
+
+## Phase 3H.7.1 note
+Gmail OAuth recovery closed; original terminal cards now expose `↩️ Вернуть в обработку`; MISSED_PROD_LEAD_1 resolved without replay (no absent genuine form lead); soak restarted; Phase 3I.1 blocked.

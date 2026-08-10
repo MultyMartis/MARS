@@ -457,3 +457,7 @@
 ## Phase 3H.7
 
 Missed production lead forensic (Gmail OAuth invalid_grant). Reopen `processed|spam → pending` deployed. Soak interrupted; Phase 3I.1 blocked. See `reports/REPORT-iseo-sales-manager-bot-phase3h7-missed-lead-and-reopen-workflow-v1.md`.
+
+
+## Phase 3H.7.1 note
+Gmail OAuth recovery closed; original terminal cards now expose `↩️ Вернуть в обработку`; MISSED_PROD_LEAD_1 resolved without replay (no absent genuine form lead); soak restarted; Phase 3I.1 blocked.
