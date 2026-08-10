@@ -413,3 +413,7 @@ See `implementation/PENDING-COMMANDS-v1.md`, `implementation/REMINDER-CONFIG-COM
 - Text tone/labels/formats: [TELEGRAM-TEXT-CONTRACT-v2.md](TELEGRAM-TEXT-CONTRACT-v2.md).
 - Help templates: [ROLE-AWARE-HELP-BUILDER-v2.md](../implementation/ROLE-AWARE-HELP-BUILDER-v2.md) — Admin includes profile section; moderator only `/my_reply_profile`.
 - Command inventory: [TELEGRAM-COMMAND-REFERENCE-v1.md](../guides/TELEGRAM-COMMAND-REFERENCE-v1.md).
+
+
+### Phase 3H.7 delta
+See evidence/phase3h7 and LEAD-REOPEN-CONTRACT-v1.

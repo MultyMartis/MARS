@@ -120,6 +120,15 @@ export function buildReplyMarkup(token) {
   };
 }
 
+/** Phase 3H.7 — reopen terminal leads (archive cards). */
+export function buildReopenReplyMarkup(token) {
+  return {
+    inline_keyboard: [[
+      { text: '↩️ Вернуть в обработку', callback_data: 'sm:r:' + token },
+    ]],
+  };
+}
+
 export function isMalformedLead(j) {
   if (!j || typeof j !== 'object') return true;
   if (!String(j.lead_id || '').trim()) return true;
