@@ -273,3 +273,8 @@ Approved five-template corpus + recipient personalization + manager assist contr
 ACCESS_CONTROL columns Q–V created and seeded. T1/T3 acceptance inject 4/4 Telegram; fail-closed harness 9/9 PASS. Admin 84 active. Report: `reports/REPORT-iseo-sales-manager-bot-phase3g1-1-live-profile-and-template-acceptance-v1.md`.
 
 
+
+
+## Phase 3H.7
+
+Missed production lead forensic (Gmail OAuth invalid_grant). Reopen `processed|spam → pending` deployed. Soak interrupted; Phase 3I.1 blocked. See `reports/REPORT-iseo-sales-manager-bot-phase3h7-missed-lead-and-reopen-workflow-v1.md`.

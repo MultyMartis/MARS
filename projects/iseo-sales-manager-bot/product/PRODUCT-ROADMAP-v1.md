@@ -44,3 +44,8 @@ Executed 2026-08-06 19:52 Europe/Moscow. Verdict: `SOAK T+0 STOP — PRODUCTION 
 ## Phase 3H.6
 
 Four-recipient baseline + reminder alignment complete. Final 48-hour pre-AI soak restarted 2026-08-06 20:28 Europe/Moscow. Phase 3I.1 blocked until soak PASS.
+
+
+## Phase 3H.7
+
+Missed-lead forensic + terminal reopen. Phase 3I.1 still blocked.

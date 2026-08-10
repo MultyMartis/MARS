@@ -43,3 +43,9 @@ LEADS remains one-row-per-business-lead. Personalized reply texts belong in `REC
 
 `/status` production line reads CONFIG `last_production_processed_*` as a cache of the clean production ledger processed transition. Cache writers must not persist empty values. Ledger rows themselves were not mutated in 3H.4.1.
 
+
+
+### Phase 3H.7
+
+See evidence/phase3h7 and architecture/LEAD-REOPEN-CONTRACT-v1.md. Soak interrupted pending Gmail reauth + missed-lead recovery. Reopen: processed|spam -> pending via sm:r:.
+
