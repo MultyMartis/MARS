@@ -39,3 +39,9 @@ Checkpoint notes under `evidence/pre-ai-soak/` only after real elapsed times. T+
 ## Phase 3H.6 four-recipient soak
 
 Attempt 3 invalidated (operator-approved baseline change 3→4). New T+0 **2026-08-06 20:28 Europe/Moscow**. Pass criteria require stable four-recipient fanout and reminder selection. STOP criteria unchanged except four-recipient expectation replaces three.
+
+
+### Phase 3H.7
+
+See evidence/phase3h7 and architecture/LEAD-REOPEN-CONTRACT-v1.md. Soak interrupted pending Gmail reauth + missed-lead recovery. Reopen: processed|spam -> pending via sm:r:.
+

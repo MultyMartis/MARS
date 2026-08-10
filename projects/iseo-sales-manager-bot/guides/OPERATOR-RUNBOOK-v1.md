@@ -206,3 +206,9 @@ If `/stats` processed≥1 but `/status` shows `нет данных`, treat as CO
 - Do not revoke Никита without a new baseline charter
 - Soak T+0: 2026-08-06 20:28 Europe/Moscow · earliest PASS 2026-08-08 20:28
 - AI remains OFF; Phase 3I.1 blocked
+
+
+### Phase 3H.7
+
+See evidence/phase3h7 and architecture/LEAD-REOPEN-CONTRACT-v1.md. Soak interrupted pending Gmail reauth + missed-lead recovery. Reopen: processed|spam -> pending via sm:r:.
+

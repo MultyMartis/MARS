@@ -37,3 +37,9 @@
 ## Ошибки бота
 
 Сообщите Андрею: что увидели, время (МСК), текст команды/кнопки. Не пересылайте секреты и чужие чаты.
+
+
+### Phase 3H.7
+
+See evidence/phase3h7 and architecture/LEAD-REOPEN-CONTRACT-v1.md. Soak interrupted pending Gmail reauth + missed-lead recovery. Reopen: processed|spam -> pending via sm:r:.
+

@@ -452,3 +452,8 @@
 - Evidence: `evidence/phase3f2-1/`
 - Report: `reports/REPORT-iseo-sales-manager-bot-phase3f2-1-view-and-reporting-repair-v1.md`
 
+
+
+## Phase 3H.7
+
+Missed production lead forensic (Gmail OAuth invalid_grant). Reopen `processed|spam → pending` deployed. Soak interrupted; Phase 3I.1 blocked. See `reports/REPORT-iseo-sales-manager-bot-phase3h7-missed-lead-and-reopen-workflow-v1.md`.

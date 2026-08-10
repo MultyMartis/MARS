@@ -94,3 +94,10 @@ Live call counts, safe real-lead recount, final two-recipient proof and five-pol
 
 - CONFIG `pending_reminder_active_recipients_count` is a cache; `/reminder_status` now prefers live ACCESS. Refresh cache when the approved staff set changes.
 - Three-recipient contract is historical; production baseline is four recipients.
+
+
+## Phase 3H.7
+
+- Gmail OAuth refresh token can invalidate and stop all intake; errors must surface as `gmail_read_failed`.
+- Reopen does not resend Telegram cards automatically.
+- Exact missed Gmail message recovery requires live mailbox access.

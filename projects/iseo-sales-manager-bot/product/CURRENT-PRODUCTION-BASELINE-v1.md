@@ -1,6 +1,6 @@
 # CURRENT PRODUCTION BASELINE v1
 
-**Срез:** Phase 3H.6 four-recipient baseline · soak T+0 **2026-08-06 20:28 Europe/Moscow**  
+**Срез:** Phase 3H.7 missed-lead forensic + reopen · 2026-08-10 11:29 Europe/Moscow
 **Статус:** AI OFF; reminders ON 10:00 Europe/Moscow; reporting manual; poll heartbeat v1.0; **active recipients=4** (Андрей, Оля, Михаил, Никита). Workflows Ops 45 / Admin 85 / v2 inactive.
 
 | Контур | Workflow ID | Active | Nodes | Роль |
