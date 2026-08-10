@@ -1,12 +1,19 @@
 
+## Phase 3H.7.3.2 (2026-08-10)
+- Verdict: `PHASE 3H.7.3.2 TECHNICAL REPAIR COMPLETE — OPERATOR LIVE CARD-EDIT ACCEPTANCE REQUIRED`
+- Root cause: Expand scoring double-counted `operator_resurface_parity` via `includes('operator_resurface')`, selecting stale MSG over operator-visible acceptance_canonical card
+- Contract: `iseo-authoritative-card-instance-v1.2` (exclusive scoring + callback initiator preference + archive exclusion)
+- Soak: NOT restarted; prior soak timing invalidated; Phase 3I.1 blocked; AI OFF
+- Evidence: `evidence/phase3h732/` · Report: `reports/REPORT-iseo-sales-manager-bot-phase3h732-live-telegram-card-edit-v1.md`
+
 ## Phase 3H.7.3.1 (2026-08-10)
 - Verdict baseline: acceptance-card canonicalization + authoritative instance v1.1
 - Root cause: callback status sync used reduced `buildFinalCard`; fixed to full canonical body
 - Contract: `iseo-authoritative-card-instance-v1.1`
-- Soak: new final 48h restarted (does not reuse 3H.7.3 T+0); Phase 3I.1 blocked; AI OFF
+- Soak: interrupted by 3H.7.3.2 card-edit targeting defect
 - Evidence: `evidence/phase3h731/`
 <!-- Phase 3H.7.3 operator resurface production-parity repair 2026-08-10 -->
-## Phase 3H.7.3 (current)
+## Phase 3H.7.3 (superseded soak by 3H.7.3.2)
 
 | Field | Value |
 |-------|-------|
