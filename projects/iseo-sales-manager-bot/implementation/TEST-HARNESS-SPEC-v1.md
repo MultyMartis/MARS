@@ -353,3 +353,7 @@ Required coverage (stubs under `evidence/phase3g2/`):
 - AI OFF / reminders OFF / no auto-send regressions
 
 Fill: `evidence/phase3g2/HARNESS-RESULTS-v1.md`, `REGRESSION-RESULTS-v1.md`.
+
+
+### Phase 3H.7 delta
+See evidence/phase3h7 and LEAD-REOPEN-CONTRACT-v1.
