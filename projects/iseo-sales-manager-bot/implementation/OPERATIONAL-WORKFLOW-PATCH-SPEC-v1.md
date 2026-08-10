@@ -434,3 +434,7 @@ Operational.dev unchanged (45 nodes). Card fanout already dynamic; no Ops patch 
 
 ### Phase 3H.7 delta
 See evidence/phase3h7 and LEAD-REOPEN-CONTRACT-v1.
+
+
+## Phase 3H.7.1 note
+Gmail OAuth recovery closed; original terminal cards now expose `↩️ Вернуть в обработку`; MISSED_PROD_LEAD_1 resolved without replay (no absent genuine form lead); soak restarted; Phase 3I.1 blocked.
