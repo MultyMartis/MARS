@@ -20,8 +20,8 @@ import { resolveRecipientReplyProfile } from './reply-profile-lib.mjs';
 
 export const CANONICAL_LEAD_CARD_RENDERER_CONTRACT = 'iseo-canonical-lead-card-renderer-v1';
 export const CARD_INSTANCE_REGISTRY_CONTRACT = 'iseo-lead-card-instance-registry-v1';
-/** Phase 3H.7.3.1 — authoritative current-card selection. */
-export const AUTHORITATIVE_CARD_INSTANCE_CONTRACT = 'iseo-authoritative-card-instance-v1.1';
+/** Phase 3H.7.3.2 — authoritative current-card selection (exclusive delivery-class scoring). */
+export const AUTHORITATIVE_CARD_INSTANCE_CONTRACT = 'iseo-authoritative-card-instance-v1.2';
 
 const FORMULA_ERROR_RE = /#ERROR!|#N\/A|#VALUE!|#REF!|^#\w+!/i;
 
@@ -205,9 +205,10 @@ export function appendStatusAttribution(telegramText, {
 
 /**
  * Select authoritative current card instances for status sync.
- * Contract: iseo-authoritative-card-instance-v1.1
- * Exactly one current instance per recipient. Superseded excluded from sync accounting.
- * After explicit operator resurface / parity repair, newer canonical cards win.
+ * Contract: iseo-authoritative-card-instance-v1.2
+ * Exactly one current instance per recipient. Superseded / archive excluded from sync.
+ * Delivery-class scores are exclusive (no substring double-count).
+ * Newer acceptance_canonical must beat older operator_resurface_parity.
  * Stale callbacks must not promote superseded messages back to authoritative.
  */
 export function selectAuthoritativeCardInstances(deliveries = [], leadId) {
@@ -219,6 +220,10 @@ export function selectAuthoritativeCardInstances(deliveries = [], leadId) {
     if (!(r.telegram_delivery_chat_id || r.telegram_chat_id)) return false;
     if (String(r.card_instance_state || '').toLowerCase() === 'superseded') return false;
     if (String(r.active_sync || '').toLowerCase() === 'false') return false;
+    const key = String(r.delivery_key || '').toLowerCase();
+    const reason = String(r.delivery_reason || '').toLowerCase();
+    // Archive /leads view cards are never current production sync targets.
+    if (key.includes('archive') || reason.includes('archive') || reason.includes('pending_view')) return false;
     return true;
   });
 
@@ -254,26 +259,71 @@ export function selectAuthoritativeCardInstances(deliveries = [], leadId) {
   };
 }
 
+/**
+ * Exclusive delivery-class score. Critical Phase 3H.7.3.2 fix:
+ * `operator_resurface_parity` must NOT also match `includes('operator_resurface')`.
+ */
+export function scoreAuthoritativeInstance(r = {}) {
+  let s = 0;
+  const key = String(r.delivery_key || '');
+  const reason = String(r.delivery_reason || '').toLowerCase();
+  const state = String(r.card_instance_state || '').toLowerCase();
+  const keyLower = key.toLowerCase();
+
+  if (keyLower.includes('acceptance_canonical') || reason.includes('acceptance_canonical')) {
+    s += 140;
+  } else if (keyLower.includes('operator_resurface_parity') || reason === 'operator_resurface_parity') {
+    s += 120;
+  } else if (
+    reason === 'operator_resurface' ||
+    keyLower.startsWith('operator_resurface:') ||
+    keyLower.includes(':operator_resurface:')
+  ) {
+    s += 100;
+  }
+
+  if (state === 'authoritative') s += 50;
+  if (state === 'current') s += 40;
+  if (state === 'superseded') s -= 1000;
+  if (r.telegram_delivery_chat_id || r.telegram_chat_id) s += 20;
+
+  const ts = Date.parse(String(r.delivered_at || r.delivery_timestamp || r.updated_at || '')) || 0;
+  // Stronger recency so a newer same-class card wins.
+  s += ts / 1e11;
+
+  const mid = Number(r.telegram_message_ref);
+  if (Number.isFinite(mid) && mid > 0) s += mid / 1e9;
+
+  return s;
+}
+
 function preferAuthoritativeInstance(a, b) {
-  const score = (r) => {
-    let s = 0;
-    const key = String(r.delivery_key || '');
-    const reason = String(r.delivery_reason || '').toLowerCase();
-    const state = String(r.card_instance_state || '').toLowerCase();
-    // Explicit parity / resurface / acceptance-canonicalization beats historical initial.
-    if (key.includes('acceptance_canonical') || reason.includes('acceptance_canonical')) s += 140;
-    if (key.includes('operator_resurface_parity') || reason === 'operator_resurface_parity') s += 120;
-    if (reason === 'operator_resurface' || key.includes('operator_resurface')) s += 100;
-    if (state === 'authoritative') s += 50;
-    if (state === 'current') s += 40;
-    if (state === 'superseded') s -= 1000;
-    // Prefer rows that still have a usable chat id (syncable).
-    if (r.telegram_delivery_chat_id || r.telegram_chat_id) s += 20;
-    const ts = Date.parse(String(r.delivered_at || r.delivery_timestamp || r.updated_at || '')) || 0;
-    s += ts / 1e13;
-    return s;
+  return scoreAuthoritativeInstance(b) >= scoreAuthoritativeInstance(a) ? b : a;
+}
+
+/**
+ * Resolve edit target message_id for one authoritative card.
+ * If this card belongs to the callback initiator chat, prefer the clicked message_id.
+ */
+export function resolveEditMessageTarget(card = {}, callback = {}) {
+  const cardChat = String(card.telegram_delivery_chat_id || card.telegram_chat_id || '').trim();
+  const callbackChat = String(callback.callback_chat_id || callback.edit_chat_id || callback.chat_id || '').trim();
+  const callbackMsg = String(callback.callback_message_id || callback.edit_message_id || '').trim();
+  const registryMsg = String(card.telegram_message_ref || '').trim();
+  if (callbackChat && cardChat && callbackChat === cardChat && callbackMsg) {
+    return {
+      edit_chat_id: cardChat,
+      edit_message_id: callbackMsg,
+      message_ref_source: 'callback_initiator',
+      registry_message_ref: registryMsg,
+    };
+  }
+  return {
+    edit_chat_id: cardChat,
+    edit_message_id: registryMsg,
+    message_ref_source: 'authoritative_registry',
+    registry_message_ref: registryMsg,
   };
-  return score(b) >= score(a) ? b : a;
 }
 
 /**
