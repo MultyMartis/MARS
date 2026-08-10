@@ -160,3 +160,8 @@ Push to origin without force (worktree).
 
 ## 40. Stop condition
 Stop after Gmail healthy, missed lead state resolved, reopen buttons live on original+archive surfaces, reopen lifecycle proven on fixtures, canonical contains 3H.7+3H.7.1, post-backup complete, soak restarted, Phase 3I.1 blocked.
+
+## Tip hash
+- HEAD: `2d204d700c43e20642308d637f43f2a4ae51b8d5`
+- short: `2d204d70`
+- branch: `agent/iseo-sm-phase3h71-reopen-surface`
