@@ -430,3 +430,7 @@ Same Operational.dev ID (45 nodes):
 ## Phase 3H.6
 
 Operational.dev unchanged (45 nodes). Card fanout already dynamic; no Ops patch required.
+
+
+### Phase 3H.7 delta
+See evidence/phase3h7 and LEAD-REOPEN-CONTRACT-v1.
