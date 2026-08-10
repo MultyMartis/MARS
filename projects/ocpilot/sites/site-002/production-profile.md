@@ -376,3 +376,4 @@ Deploy-tool preparation is a **separate task**.
 
 
 | Offers + price form diagnostic (Production) | **COMPLETE — FORM FIXED / IMPORT ATTENTION** (Run **4.320**, 2026-08-06) — `offers0_*.xml` absent; latest import SUCCESS with offers inputs none; price-list dialog7 UI fixed (FormData before `zpmFormSetLoading`); sitemap 1879 · [report](reports/SITE-002-PROD-1C-OFFERS-MISSING-AND-PRICE-FORM-DIAGNOSTIC-01.md) |
+| Price form spam guard (Production) | **ACTIVE — LAYERED ANTI-SPAM** (Run **4.321**, 2026-08-10) — dialog7 gibberish blocked via honeypot `zpm_hp` / timestamp `zpm_ft` / risk scoring / soft-hard rate-limit in `checkout/anketa.php` + `assets/js/main.js`; empty-lead guard + Run 4.320 FormData fix intact; recipients unchanged · [report](reports/SITE-002-PROD-PRICE-FORM-SPAM-GUARD-01.md) |

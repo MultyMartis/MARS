@@ -367,6 +367,16 @@ If documentation contradicts current **Production** behaviour → verify on http
 
 
 
+### Price form spam guard (Run 4.321)
+
+| Item | Detail |
+|------|--------|
+| Problem | Dialog 7 dealer/price-list spam with non-empty Latin gibberish name/message |
+| Guard layers | Empty-lead (4.264) + honeypot `zpm_hp` + fill-time `zpm_ft` + risk scoring + soft/hard IP+dialog rate-limit + sanitized `zpm_form_spam.log` |
+| Frontend | `assets/js/main.js` attaches hidden guards on `.zpm-form`; **must keep** FormData-before-disable (4.320) |
+| Backend | `catalog/controller/checkout/anketa.php` — reject above score threshold; honeypot fake-ok without mail |
+| Durable rule | Do not regress 4.320 FormData order; do not replace layered scoring with brittle single-factor country bans |
+
 ### Offers missing + price-list FormData bug (Run 4.320)
 
 | Item | Value |
@@ -2157,7 +2167,7 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 | **Confirmation report** | [SITE-002-PROD-MAIL-RECIPIENTS-ADMIN-ADD-01.md](../reports/SITE-002-PROD-MAIL-RECIPIENTS-ADMIN-ADD-01.md) |
 | **Storage artefacts** | Discovery: `.../SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01\` · Confirmation: `.../SITE-002-PROD-MAIL-RECIPIENTS-ADMIN-ADD-01\` |
 
-**Change rules:** Recipients are managed through OpenCart native Mail Alert Emails — do not hardcode in `anketa.php` unless admin path is unavailable. Do not edit anketa/mail paths during unrelated catalog/cron work. Verify CSRF + reCAPTCHA after any anketa change. Mask recipient emails in reports. **Empty-lead guard (Run 4.264 + verified 4.265 + full rerun 4.266):** anketa rejects POST when all allowlisted user-content fields are empty/whitespace after `trim` (HTTP 400) — service-only page/referrer/utm/dialog=0 blocked; valid dialogs (incl. 7/2/1/8–11) still 200. Operator empty mail at 2026-07-13 20:21:09 was **pre-patch** controlled HeadlessChrome test. Full form mail rerun marker `MARS-TEST-SITE002-FULL-FORM-RERUN-01`.
+**Change rules:** Recipients are managed through OpenCart native Mail Alert Emails — do not hardcode in `anketa.php` unless admin path is unavailable. Do not edit anketa/mail paths during unrelated catalog/cron work. Verify CSRF + reCAPTCHA after any anketa change. Mask recipient emails in reports. **Empty-lead guard (Run 4.264 + verified 4.265 + full rerun 4.266):** anketa rejects POST when all allowlisted user-content fields are empty/whitespace after `trim` (HTTP 400) — service-only page/referrer/utm/dialog=0 blocked; valid dialogs (incl. 7/2/1/8–11) still 200. Operator empty mail at 2026-07-13 20:21:09 was **pre-patch** controlled HeadlessChrome test. Full form mail rerun marker `MARS-TEST-SITE002-FULL-FORM-RERUN-01`. **Spam guard (Run 4.321):** layered honeypot/timestamp/risk/rate-limit after empty-lead; dialog7 gibberish pattern blocked; FormData-before-disable must remain intact.
 
 ---
 

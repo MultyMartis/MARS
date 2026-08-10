@@ -192,7 +192,9 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | `checkout_anketa_mail_admin_forms.php` | Patched `checkout/anketa.php` source for Run 4.224 (repo reference; superseded by customer-forms variant for Run 4.226) |
 | `checkout_anketa_mail_customer_forms.php` | Patched `checkout/anketa.php` source for Run 4.226 — customer confirmations + admin mail (repo reference; superseded by info-page-forms variant for Run 4.230) |
 | `main_js_price_form_formdata_loading_fix.js` | Production `assets/js/main.js` mirror after Run **4.320** FormData-before-disable fix for price-list/dealer/corp/fancybox forms |
-| `checkout_anketa_info_page_forms.php` | Patched `checkout/anketa.php` source for Run 4.230 — dialogs 8–11 + extra fields; **+ Run 4.264 empty-lead user-content guard** (repo reference; deployed to Production) |
+| `main_js_price_form_spam_guard.js` | Production `assets/js/main.js` mirror after Run **4.321** — FormData fix + `zpm_hp`/`zpm_ft` spam-guard attach helpers |
+| `checkout_anketa_price_form_spam_guard.php` | Production `checkout/anketa.php` mirror after Run **4.321** — empty-lead guard + layered spam scoring/honeypot/rate-limit |
+| `checkout_anketa_info_page_forms.php` | Patched `checkout/anketa.php` source for Run 4.230 — dialogs 8–11 + extra fields; **+ Run 4.264 empty-lead user-content guard** (repo reference; deployed to Production; superseded for spam-guard by `checkout_anketa_price_form_spam_guard.php`) |
 | `site-002-mail-design-system-preview-01.php` | Local preview generator for mail design system (no SMTP; uses fixtures + renderer) |
 | `mail_renderer.php` | Shared `ZpmMailRenderer` source — deployed to Production `system/library/zpm/mail_renderer.php`; customer + admin render methods |
 | `zpm-corp-cta-forms.js` | Corp CTA submit handler snippet merged into Production `main.js` (Run 4.230) |
