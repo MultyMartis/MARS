@@ -114,3 +114,9 @@ Access role/status **must not** change as a side effect of reply-name commands.
 - [REPLY-PROFILE-NUMBERING-v1.md](REPLY-PROFILE-NUMBERING-v1.md)
 - [UNIFIED-REPLY-PROFILE-RESOLVER-v1.md](UNIFIED-REPLY-PROFILE-RESOLVER-v1.md) — Phase 3G.2.2
 - Evidence: `evidence/phase3g2/TEXT-CONTRACT-COVERAGE-v1.md` (stub) · `evidence/phase3g2-2/CONFIG-HUMAN-DISPLAY-v1.md`
+
+
+### Phase 3H.7
+
+See evidence/phase3h7 and architecture/LEAD-REOPEN-CONTRACT-v1.md. Soak interrupted pending Gmail reauth + missed-lead recovery. Reopen: processed|spam -> pending via sm:r:.
+

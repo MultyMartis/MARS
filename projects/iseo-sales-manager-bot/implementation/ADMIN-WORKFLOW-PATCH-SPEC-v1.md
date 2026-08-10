@@ -329,3 +329,7 @@ Admin.dev Status Code updated to `iseo-last-production-processed-v1.0` resolver.
 ## Phase 3H.6
 
 Same Admin ID `wLrLp4WQHm1VJmxz`, **85** nodes retained. Patch: Reminder Commands live ACCESS recipient count (Phase 3H.6 marker). No new workflows.
+
+
+### Phase 3H.7 delta
+See evidence/phase3h7 and LEAD-REOPEN-CONTRACT-v1.
