@@ -1,0 +1,26 @@
+[
+  {
+    "cmd": "/usr/local/bin/php8.3 /home/a/assum/bzpm.ru/storage/mars-tools/cron/mars_1c_d6g1a_offline_regression.php",
+    "exit": 0,
+    "stdout": "{\n    \"phase\": \"1B-D6G1A\",\n    \"check\": \"offline-regression\",\n    \"pass\": true,\n    \"results\": [\n        {\n            \"id\": \"R_kill_true_enabled\",\n            \"pass\": true,\n            \"detail\": []\n        },\n        {\n            \"id\": \"R_kill_false_blocks\",\n            \"pass\": true,\n            \"detail\": []\n        },\n        {\n            \"id\": \"R_kill_alias_server_dispatch\",\n            \"pass\": true,\n            \"detail\": []\n        },\n        {\n            \"id\": \"R_kill_default_true\",\n            \"pass\": true,\n            \"detail\": []\n        },\n        {\n            \"id\": \"R_ui_blocked_label\",\n            \"pass\": true,\n            \"detail\": []\n        },\n        {\n            \"id\": \"R12_kill_false_blocks_webhook\",\n            \"pass\": true,\n            \"detail\": []\n        },\n        {\n            \"id\": \"R13_terminal_still_present\",\n            \"pass\": true,\n            \"detail\": []\n        },\n        {\n            \"id\": \"R11_kill_true_eligible_not_blocked\",\n            \"pass\": true,\n            \"detail\": []\n        },\n        {\n            \"id\": \"R15_recovery_idempotent_already\",\n            \"pass\": true,\n            \"detail\": []\n        },\n        {\n            \"id\": \"R5_missing_creates_one\",\n            \"pass\": true,\n            \"detail\": []\n        },\n        {\n            \"id\": \"R6_same_date_dedupes\",\n            \"pass\": true,\n            \"detail\": []\n        },\n        {\n            \"id\": \"R7_next_day_new_event\",\n            \"pass\": true,\n            \"detail\": []\n        }\n    ],\n    \"sandbox\": \"\\/tmp\\/mars-d6g1a-7b459147\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "cmd": "/usr/local/bin/php8.3 -r '$c=include \"/home/a/assum/bzpm.ru/storage/mars-tools/cron/mars_1c_wrapper.local.php\"; echo json_encode([\"CLIENT_OPS_DISPATCH_ENABLED\"=>!empty($c[\"CLIENT_OPS_DISPATCH_ENABLED\"]),\"server_dispatch_enabled\"=>!empty($c[\"server_dispatch_enabled\"]),\"watchdog_enabled\"=>!empty($c[\"watchdog_enabled\"])]);'",
+    "exit": 0,
+    "stdout": "{\"CLIENT_OPS_DISPATCH_ENABLED\":true,\"server_dispatch_enabled\":true,\"watchdog_enabled\":true}",
+    "stderr": ""
+  },
+  {
+    "cmd": "grep -n 'Отчёты в Telegram' /home/a/assum/bzpm.ru/public_html/admin/model/tool/mars_1c_exchange.php /home/a/assum/bzpm.ru/public_html/admin/view/template/tool/*.tpl 2>/dev/null | head",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "cmd": "/usr/local/bin/php8.3 -r 'require \"/home/a/assum/bzpm.ru/storage/mars-tools/cron/mars_1c_completion_dispatch.php\"; $c=include \"/home/a/assum/bzpm.ru/storage/mars-tools/cron/mars_1c_wrapper.local.php\"; $en=mars_1c_client_ops_dispatch_enabled($c); echo $en?\"ENABLED\":\"DISABLED\"; echo \"\\n\"; echo $en?\"Отчёты в Telegram: Включены\":\"Отчёты в Telegram: Отключены\"; echo \"\\n\";'",
+    "exit": 0,
+    "stdout": "ENABLED\nОтчёты в Telegram: Включены\n",
+    "stderr": ""
+  }
+]

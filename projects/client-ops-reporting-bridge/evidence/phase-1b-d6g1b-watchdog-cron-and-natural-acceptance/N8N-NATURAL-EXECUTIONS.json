@@ -1,0 +1,58 @@
+{
+  "workflow": {
+    "ok": true,
+    "id": "tkM4H0G0gM3q9Foi",
+    "name": "MARS Client Ops Bridge — bzpm.ru",
+    "active": true,
+    "node_count": 20,
+    "updatedAt": "2026-08-06T12:05:18.537Z",
+    "versionId": "9c1f936f-e2bb-4a2f-8372-c26257e982b7"
+  },
+  "natural_scheduled_success": [
+    {
+      "id": "29083",
+      "workflowId": "tkM4H0G0gM3q9Foi",
+      "status": "success",
+      "finished": true,
+      "mode": "webhook",
+      "startedAt": "2026-08-12T05:00:06.842Z",
+      "stoppedAt": "2026-08-12T05:00:07.176Z"
+    },
+    {
+      "id": "28266",
+      "workflowId": "tkM4H0G0gM3q9Foi",
+      "status": "success",
+      "finished": true,
+      "mode": "webhook",
+      "startedAt": "2026-08-11T05:00:08.983Z",
+      "stoppedAt": "2026-08-11T05:00:09.345Z"
+    },
+    {
+      "id": "27299",
+      "workflowId": "tkM4H0G0gM3q9Foi",
+      "status": "success",
+      "finished": true,
+      "mode": "webhook",
+      "startedAt": "2026-08-10T05:00:06.740Z",
+      "stoppedAt": "2026-08-10T05:00:07.091Z"
+    },
+    {
+      "id": "26482",
+      "workflowId": "tkM4H0G0gM3q9Foi",
+      "status": "success",
+      "finished": true,
+      "mode": "webhook",
+      "startedAt": "2026-08-09T05:00:07.098Z",
+      "stoppedAt": "2026-08-09T05:00:07.343Z"
+    },
+    {
+      "id": "25665",
+      "workflowId": "tkM4H0G0gM3q9Foi",
+      "status": "success",
+      "finished": true,
+      "mode": "webhook",
+      "startedAt": "2026-08-08T05:00:07.104Z",
+      "stoppedAt": "2026-08-08T05:00:07.415Z"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "phase": "1B-D6G1B",
+  "title": "Beget Watchdog Cron Verification, D6G1A Final Closure and Natural Scheduled Run Acceptance",
+  "accepted_d6g1a_tip": "6b299672cec1d2242f059d152663e29ad695face",
+  "no_synthetic_import": true,
+  "no_test_telegram": true,
+  "no_n8n_mutation": true,
+  "operator_beget_panel": {
+    "import_task": "SITE-002 MARS 1C Import Wrapper",
+    "import_schedule": "0 8 * * *",
+    "watchdog_task": "SITE-002 MARS 1C No-Import Watchdog",
+    "watchdog_schedule": "0 9 * * *",
+    "both_enabled": true,
+    "timezone": "Europe/Moscow / Beget server contour"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "phase": "1B-D6G1B",
+  "readiness": "READY_FOR_FULLY_WORKSTATION_INDEPENDENT_SITE002_CLIENT_OPS",
+  "watchdog_execution_gate": "D6G1B_WATCHDOG_SCHEDULE_ACTIVE_AWAITING_FIRST_NATURAL_EXECUTION",
+  "d6g1a_server_watchdog_cron_active_previous": "NO",
+  "d6g1a_server_watchdog_cron_active_current": "YES",
+  "gates": {
+    "D6G1B_PRESTATE_CAPTURED": true,
+    "D6G1B_BEGET_IMPORT_CRON_CONFIRMED": true,
+    "D6G1B_BEGET_WATCHDOG_CRON_CONFIRMED": true,
+    "D6G1B_NO_DUPLICATE_WATCHDOG_CRON": true,
+    "D6G1B_WATCHDOG_COMMAND_VALIDATED_REDACTED": true,
+    "D6G1B_WATCHDOG_SCHEDULE_ACTIVE_AWAITING_FIRST_NATURAL_EXECUTION": true,
+    "D6G1B_WATCHDOG_NATURAL_EXECUTION_PROVEN": false,
+    "D6G1B_NATURAL_SCHEDULED_RUNS_RECONCILED": true,
+    "D6G1B_NATURAL_TELEGRAM_REPORTS_FACTUALLY_ACCEPTED": true,
+    "D6G1B_REPEATED_DAILY_ATTENTION_REPORTING_PASS": true,
+    "D6G1B_NORMAL_REPORTING_WORKSTATION_INDEPENDENT": true,
+    "D6G1B_WINDOWS_POPUP_POSTCHECK_PASS": true,
+    "D6G1B_SERVER_KILL_SWITCH_ENABLED": true,
+    "D6G1B_WATCHDOG_REGRESSION_PASS": true,
+    "D6G1B_N8N_AND_LEDGER_NATURAL_ACCEPTANCE_PASS": true,
+    "D6G1B_D6G1A_FAILED_GATE_CLOSED": true,
+    "D6G1B_CANONICAL_EVIDENCE_COMMIT_PUSHED": false,
+    "D6G1B_SECRET_BOUNDARY_PRESERVED": true
+  },
+  "mutations": {
+    "real_1c_imports_initiated_by_phase": 0,
+    "manual_import_attempts": 0,
+    "test_telegram_messages": 0,
+    "natural_telegram_messages_inspected": 3,
+    "natural_scheduled_runs_reconciled": 5,
+    "beget_cron_changes_by_cursor": 0,
+    "beget_cron_operator_created_tasks_verified": 1,
+    "windows_task_mutations": 0,
+    "server_production_code_mutations": 0,
+    "opencart_mutations": 0,
+    "n8n_mutations": 0,
+    "data_table_synthetic_mutations": 0,
+    "main_index_mutations": 0,
+    "foreign_wip_mutations": 0
+  }
+}

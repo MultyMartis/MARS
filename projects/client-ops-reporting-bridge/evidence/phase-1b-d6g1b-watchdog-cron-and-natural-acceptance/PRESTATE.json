@@ -1,0 +1,84 @@
+{
+  "phase": "1B-D6G1B",
+  "operation": "SITE-002-PROD-D6G1B-WATCHDOG-CRON-AND-NATURAL-ACCEPTANCE-01",
+  "captured_at_utc": "2026-08-12T19:14:12+00:00",
+  "captured_at_plus07": "2026-08-13T02:14:12+07:00",
+  "captured_at_msk": "2026-08-12T22:14:12+03:00",
+  "conversation_reference_date": "2026-08-13",
+  "main_repo": {
+    "cwd": "X:\\AI MARS",
+    "branch": "mars/canonical-post-recovery",
+    "head": "6d16de0e70082a664784025c134932671ed1ab18",
+    "origin_tip_at_start": "6b4bec2ff9e6892912a91b0bbd48c85542f880ab",
+    "accepted_d6g1a_tip": "6b299672cec1d2242f059d152663e29ad695face",
+    "main_dirty": true,
+    "main_staged_foreign": true,
+    "work_model": "clean_worktree_only"
+  },
+  "clean_worktree": {
+    "path": "X:\\AI MARS STORAGE\\git-sync-d6g1b-20260813T021108\\repo",
+    "base": "origin/mars/canonical-post-recovery",
+    "base_tip": "6b4bec2ff9e6892912a91b0bbd48c85542f880ab"
+  },
+  "deployed_server": {
+    "wrapper_version": "1.3.1",
+    "wrapper_sha256": "fe7532b072c73285bb57378605f2c337a6bfba9122a341c2390d379796f91d7b",
+    "dispatch_sha256": "3b86aa6868c0f56e4c1c31c4461ce594c5e122a48d653f584b4549cf8b2d135a",
+    "watchdog_sha256": "f98904ba1830b43734c7e12da26699f22ff13696201d50509880f5e099ee5ce7",
+    "watchdog_gateway_sha256": "f15c6023751adfa04bbfabac346033197f53a8bf3733f9c460d4545776b2e004",
+    "import_gateway_sha256": "59dced94134d71ba386bfba3b3cf3dc05ae677ac210c6186c4ea0b13a4095ffc"
+  },
+  "n8n_workflow": {
+    "ok": true,
+    "id": "tkM4H0G0gM3q9Foi",
+    "name": "MARS Client Ops Bridge — bzpm.ru",
+    "active": true,
+    "node_count": 20,
+    "updatedAt": "2026-08-06T12:05:18.537Z",
+    "versionId": "9c1f936f-e2bb-4a2f-8372-c26257e982b7"
+  },
+  "kill_switch": {
+    "CLIENT_OPS_DISPATCH_ENABLED": true,
+    "server_dispatch_enabled": true,
+    "watchdog_enabled": true,
+    "source": "mars_1c_wrapper.local.php"
+  },
+  "windows_tasks": [
+    {
+      "Name": "MARS_SITE_002_Client_Ops_Producer",
+      "State": 1,
+      "LastRun": "2026-08-07T13:28:28+07:00",
+      "LastResult": 2147946720,
+      "NextRun": "2026-08-13T13:00:00+07:00",
+      "Actions": "powershell.exe -WindowStyle Hidden -NoProfile -ExecutionPolicy Bypass -File \"X:\\AI MARS STORAGE\\runtime-state\\client-ops-site-002-producer\\tmp\\run-site-002-no-import-watchdog-scheduled.ps1\""
+    },
+    {
+      "Name": "MARS_SITE_002_Import_Completion_Poller",
+      "State": 1,
+      "LastRun": "2026-08-07T15:34:34+07:00",
+      "LastResult": 1,
+      "NextRun": "2026-08-13T11:50:50+07:00",
+      "Actions": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"X:\\AI MARS STORAGE\\runtime-state\\client-ops-site-002-producer\\tmp\\run-site-002-import-completion-poller-scheduled.ps1\""
+    },
+    {
+      "Name": "MARS_SITE_002_Post_1C_Catalog_Monitor",
+      "State": 3,
+      "LastRun": "2026-08-12T14:25:25+07:00",
+      "LastResult": 0,
+      "NextRun": "2026-08-13T12:30:30+07:00",
+      "Actions": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"X:\\AI MARS STORAGE\\runtime-checkouts\\site-002-monitor\\repo\\projects\\ocpilot\\sites\\site-002\\tools\\site-002-post-1c-monitor-runner.ps1\""
+    }
+  ],
+  "beget_api": {
+    "status": "error",
+    "row_count": 0,
+    "note": "AUTH still failing; panel/operator + execution evidence used",
+    "raw_summary": {
+      "status": "error",
+      "error_flag": null,
+      "answer_type": "NoneType",
+      "answer": null
+    }
+  },
+  "gate": "D6G1B_PRESTATE_CAPTURED"
+}

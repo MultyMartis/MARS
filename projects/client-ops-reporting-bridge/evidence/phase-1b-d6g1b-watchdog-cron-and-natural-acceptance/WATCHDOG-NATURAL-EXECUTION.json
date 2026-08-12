@@ -1,0 +1,10 @@
+{
+  "classification": "D6G1B_WATCHDOG_SCHEDULE_ACTIVE_AWAITING_FIRST_NATURAL_EXECUTION",
+  "beget_watchdog_stdout_log_exists": false,
+  "watchdog_state_dir_exists": false,
+  "no_fresh_markers_in_beget_cron_stdout": true,
+  "server_time_at_capture_msk": "2026-08-12T22:07:38+03:00",
+  "next_natural_0900_msk_boundary_after_capture": "2026-08-13T09:00:00+03:00",
+  "note": "Operator enabled schedule is accepted as active. First natural cron stdout/state proof not yet due/observed.",
+  "live_no_send_not_forced": true
+}

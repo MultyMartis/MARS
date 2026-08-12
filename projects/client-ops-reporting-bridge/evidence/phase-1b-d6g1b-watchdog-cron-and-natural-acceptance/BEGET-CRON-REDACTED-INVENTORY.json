@@ -1,0 +1,26 @@
+{
+  "api_status": "error",
+  "api_usable": false,
+  "operator_panel_inventory": [
+    {
+      "name": "SITE-002 MARS 1C Import Wrapper",
+      "schedule": "0 8 * * *",
+      "enabled": true,
+      "timezone": "Europe/Moscow",
+      "role": "import",
+      "proof": "natural_scheduled_runs_and_beget_cron_stdout"
+    },
+    {
+      "name": "SITE-002 MARS 1C No-Import Watchdog",
+      "schedule": "0 9 * * *",
+      "enabled": true,
+      "timezone": "Europe/Moscow",
+      "role": "watchdog",
+      "proof": "operator_panel_screenshot_charter",
+      "count_on_panel": 1
+    }
+  ],
+  "watchdog_duplicate_count_observed": 0,
+  "import_duplicate_count_observed": 0,
+  "note": "Token values never stored. Command shape documented separately."
+}

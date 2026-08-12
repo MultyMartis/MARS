@@ -1,0 +1,6 @@
+{
+  "exit": 0,
+  "stdout": "FILE /home/a/assum/bzpm.ru/storage/mars-tools/cron/mars_1c_wrapper.local.php exists=yes\nrun_token=***\nenabled=true\nallow_http_run=true\nsite_base_url=present_len_16\ncreated_by=SITE-002-PROD-CRON-ACTIVATION-PREFLIGHT-01\nnotes=local production config, not committed\nclient_ops_webhook_url=present_len_71\nclient_ops_webhook_auth_secret=present_len_43\nserver_dispatch_enabled=true\nwatchdog_enabled=true\nCLIENT_OPS_DISPATCH_ENABLED=true\nFILE /home/a/assum/bzpm.ru/storage/mars-tools/cron/local.php exists=no\n",
+  "stderr": "",
+  "cmd": "php -r '\n$paths=[\"/home/a/assum/bzpm.ru/storage/mars-tools/cron/mars_1c_wrapper.local.php\",\"/home/a/assum/bzpm.ru/storage/mars-tools/cron/local.php\"];\nforeach($paths as $p){\n  echo \"FILE \".$p.\" exists=\". (file_exists($p)?\"yes\":\"no\").\"\\n\";\n  if(!file_exists($p)) continue;\n  $cfg=include $p;\n  if(!is_array($cfg)){ echo \"not_array\\n\"; continue; }\n  foreach($cfg as $k=>$v){\n    if(preg_match(\"/token|s"
+}
