@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-28 (Run 4.316 — SITE-002-PROD-FIRST-LEVEL-BLOCK-ALL15-CORRECTION-APPLY-01 — ALL-15 Neutral first-level on home+`/katalog/` incl. empty **82/83/85/87/89** with empty copy; mega/deep/tech unchanged; baseline **1879**; ready for operator visual review)
+**Last updated:** 2026-08-12 (Run 4.322 — SITE-002-PROD-STABLE-CHECKPOINT-AFTER-SPAM-GUARD-AND-CLEANUP-INVENTORY-01 — stable Git tag after spam guard; operator spam observation preliminary OK; dealer form OK; 1C offers gap remains OPEN; cleanup inventory ready, no delete)
 
 ---
 
@@ -377,3 +377,4 @@ Deploy-tool preparation is a **separate task**.
 
 | Offers + price form diagnostic (Production) | **COMPLETE — FORM FIXED / IMPORT ATTENTION** (Run **4.320**, 2026-08-06) — `offers0_*.xml` absent; latest import SUCCESS with offers inputs none; price-list dialog7 UI fixed (FormData before `zpmFormSetLoading`); sitemap 1879 · [report](reports/SITE-002-PROD-1C-OFFERS-MISSING-AND-PRICE-FORM-DIAGNOSTIC-01.md) |
 | Price form spam guard (Production) | **ACTIVE — LAYERED ANTI-SPAM** (Run **4.321**, 2026-08-10) — dialog7 gibberish blocked via honeypot `zpm_hp` / timestamp `zpm_ft` / risk scoring / soft-hard rate-limit in `checkout/anketa.php` + `assets/js/main.js`; empty-lead guard + Run 4.320 FormData fix intact; recipients unchanged · [report](reports/SITE-002-PROD-PRICE-FORM-SPAM-GUARD-01.md) |
+| Stable prod checkpoint after spam guard | **ISSUED** (Run **4.322**, 2026-08-12) — Git tag `site-002/stable-prod-after-spam-guard-20260812`; operator `SPAM_GUARD_OBSERVATION_PRELIMINARY_OK` + dealer form OK; 1C offers **OPEN**; local cleanup inventory ready (**no delete**) · [report](reports/SITE-002-PROD-STABLE-CHECKPOINT-AFTER-SPAM-GUARD-AND-CLEANUP-INVENTORY-01.md) |

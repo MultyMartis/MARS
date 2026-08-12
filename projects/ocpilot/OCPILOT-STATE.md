@@ -1,13 +1,14 @@
 
 
+**SITE-002 Run 4.322 (2026-08-12):** Stable checkpoint after spam guard — tag `site-002/stable-prod-after-spam-guard-20260812`; operator spam observation **PRELIMINARY OK**; dealer form OK; 1C offers **OPEN**; cleanup inventory ready (**no delete**). Report: [SITE-002-PROD-STABLE-CHECKPOINT-AFTER-SPAM-GUARD-AND-CLEANUP-INVENTORY-01.md](sites/site-002/reports/SITE-002-PROD-STABLE-CHECKPOINT-AFTER-SPAM-GUARD-AND-CLEANUP-INVENTORY-01.md).
 **SITE-002 Run 4.321 (2026-08-10):** Price form spam guard **COMPLETE** — dialog7 gibberish blocked (honeypot/timestamp/risk/rate-limit); FormData fix + empty-lead intact. Report: [SITE-002-PROD-PRICE-FORM-SPAM-GUARD-01.md](sites/site-002/reports/SITE-002-PROD-PRICE-FORM-SPAM-GUARD-01.md).
 **SITE-002 Run 4.320 (2026-08-06):** Offers missing + price form diagnostic — price-list form **FIXED** (`main.js` FormData before disable); import **ATTENTION** (offers0_*.xml absent; latest import SUCCESS import-only). Report: [SITE-002-PROD-1C-OFFERS-MISSING-AND-PRICE-FORM-DIAGNOSTIC-01.md](sites/site-002/reports/SITE-002-PROD-1C-OFFERS-MISSING-AND-PRICE-FORM-DIAGNOSTIC-01.md).
 
 # OCPilot — Program State
 
 **Status:** living state document — **not** automated router  
-**Last updated:** 2026-07-30
-**Evidence cutoff:** 2026-07-30 (SITE-002 Run **4.319** / `SITE-002-PROD-1C-FIRST-LEVEL-CATEGORY-PLACEMENT-FORENSIC-01` — natural import **2026-07-30 SUCCESS**; target first-level categories **PARTIAL**; Посуда **364** under Tech **362**; Холодильное legacy empty **95**; Упаковочное absent; sitemap count **1879**; monitor hygiene review for 1 URL swap; apply not executed)
+**Last updated:** 2026-08-12
+**Evidence cutoff:** 2026-08-12 (SITE-002 Run **4.322** / `SITE-002-PROD-STABLE-CHECKPOINT-AFTER-SPAM-GUARD-AND-CLEANUP-INVENTORY-01` — stable Git tag after spam guard; operator `SPAM_GUARD_OBSERVATION_PRELIMINARY_OK` + dealer form OK; 1C `offers0_*.xml` gap **OPEN**; sitemap/baseline **1879**; local cleanup inventory ready; delete **not** executed)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -21,7 +22,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **1C First-Level Category Placement Forensic 01 (Run 4.319)** — import `2026-07-30` **SUCCESS**; targets **PARTIAL** (Посуда **364** under Tech **362**; Холодильное legacy empty **95**; Упаковочное absent) · next **operator scope decision** (no apply yet) · sitemap count **1879**; monitor `2026-07-30_12-30-02` hygiene URL swap · [forensic 4.319](sites/site-002/reports/SITE-002-PROD-1C-FIRST-LEVEL-CATEGORY-PLACEMENT-FORENSIC-01.md) · [healthcheck 4.318](sites/site-002/reports/SITE-002-PROD-POST-IMAGE-WAVE-VISUAL-ACCEPTANCE-AND-1C-HEALTHCHECK-01.md) · [empty-copy+images 4.317](sites/site-002/reports/SITE-002-PROD-EMPTY-CATEGORY-COPY-RELOCATE-AND-NEW-FIRSTLEVEL-IMAGES-01.md) · [baseline refresh 4.312](sites/site-002/reports/SITE-002-MONITOR-BASELINE-REFRESH-08.md) |
+| Current SITE-002 focus | **Stable checkpoint after spam guard (Run 4.322)** — tag `site-002/stable-prod-after-spam-guard-20260812`; spam observation **PRELIMINARY OK**; dealer form OK; **1C offers gap OPEN** (Run 4.320); placement forensic targets still open (Run 4.319); baseline **1879**; cleanup inventory ready (**no delete**) · [stable checkpoint 4.322](sites/site-002/reports/SITE-002-PROD-STABLE-CHECKPOINT-AFTER-SPAM-GUARD-AND-CLEANUP-INVENTORY-01.md) · [spam guard 4.321](sites/site-002/reports/SITE-002-PROD-PRICE-FORM-SPAM-GUARD-01.md) · [offers+form 4.320](sites/site-002/reports/SITE-002-PROD-1C-OFFERS-MISSING-AND-PRICE-FORM-DIAGNOSTIC-01.md) · [forensic 4.319](sites/site-002/reports/SITE-002-PROD-1C-FIRST-LEVEL-CATEGORY-PLACEMENT-FORENSIC-01.md) |
 
 ### Git authority note (SITE-002 Wave E — 2026-07-10)
 

@@ -377,6 +377,17 @@ If documentation contradicts current **Production** behaviour → verify on http
 | Backend | `catalog/controller/checkout/anketa.php` — reject above score threshold; honeypot fake-ok without mail |
 | Durable rule | Do not regress 4.320 FormData order; do not replace layered scoring with brittle single-factor country bans |
 
+### Stable checkpoint after spam guard (Run 4.322)
+
+| Item | Detail |
+|------|--------|
+| Git tag | `site-002/stable-prod-after-spam-guard-20260812` |
+| Operator spam observation | `SPAM_GUARD_OBSERVATION_PRELIMINARY_OK` (not permanent final proof) |
+| Operator form check | Dealer/price-list form works |
+| Open | 1C `offers0_*.xml` absent (Run 4.320); placement charter (Run 4.319) |
+| Local cleanup | Inventory + charter prepared; **delete not executed** |
+| Report | [SITE-002-PROD-STABLE-CHECKPOINT-AFTER-SPAM-GUARD-AND-CLEANUP-INVENTORY-01.md](../reports/SITE-002-PROD-STABLE-CHECKPOINT-AFTER-SPAM-GUARD-AND-CLEANUP-INVENTORY-01.md) |
+
 ### Offers missing + price-list FormData bug (Run 4.320)
 
 | Item | Value |
