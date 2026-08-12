@@ -1,0 +1,49 @@
+{
+  "schema_version": "corvonero-stable-project-sheet-ref-v1",
+  "project_id": "corvonero",
+  "sheet_date": "2026-08-12",
+  "created_at": "2026-08-12T14:34:32.770357+00:00",
+  "storage_package": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-STABLE-PROJECT-SHEET-2026-08-12",
+  "storage_md": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-STABLE-PROJECT-SHEET-2026-08-12\\01-CORVONERO-STABLE-PROJECT-SHEET-v1.md",
+  "storage_xlsx": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-STABLE-PROJECT-SHEET-2026-08-12\\01-CORVONERO-STABLE-PROJECT-SHEET-v1.xlsx",
+  "authority": "V2.6",
+  "deployable_package": "V2.6.2",
+  "deployable_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30",
+  "current_state": "OPERATIONAL / LAUNCHED / PERFORMANCE_OBSERVATION",
+  "confidence_notes": {
+    "launch_import_adjustment": "OPERATOR_REPORTED",
+    "direct_actual": "SAFE UNKNOWN",
+    "legal_publication": "SAFE UNKNOWN",
+    "landing_live_current": "SAFE UNKNOWN",
+    "exact_statistics": "PENDING"
+  },
+  "structure": {
+    "campaigns": 10,
+    "groups": 71,
+    "keyword_placements": 926,
+    "ads": 71
+  },
+  "closure_checkpoint": "2e7daa32833dec6b15cca3d321833054d4597e72",
+  "cleanup": {
+    "deleted_count": 3,
+    "backup_dir": "X:\\AI MARS STORAGE\\backups\\search-ppc\\CORVONERO-CLEANUP-PREDELETE-2026-08-12-213432",
+    "deleted": [
+      {
+        "path": "X:\\AI MARS\\.tools\\corvonero-landing-prelaunch-scan-v1.py",
+        "backup": "X:\\AI MARS STORAGE\\backups\\search-ppc\\CORVONERO-CLEANUP-PREDELETE-2026-08-12-213432\\.tools\\corvonero-landing-prelaunch-scan-v1.py",
+        "sha256": "e1e46395e132a99eb4794c68e6e0e992af39c652f6d41dd194141d34966d358e"
+      },
+      {
+        "path": "X:\\AI MARS\\.tools\\corvonero-landing-scan-result-v1.json",
+        "backup": "X:\\AI MARS STORAGE\\backups\\search-ppc\\CORVONERO-CLEANUP-PREDELETE-2026-08-12-213432\\.tools\\corvonero-landing-scan-result-v1.json",
+        "sha256": "0477a5daddc05771615c0563b817e7b62a08417743dafcd8d229f39882fa322c"
+      },
+      {
+        "path": "X:\\AI MARS\\.tools\\corvonero-legal-pages-docx-pack-v1.py",
+        "backup": "X:\\AI MARS STORAGE\\backups\\search-ppc\\CORVONERO-CLEANUP-PREDELETE-2026-08-12-213432\\.tools\\corvonero-legal-pages-docx-pack-v1.py",
+        "sha256": "eaf562f77409550b9469ee160fe5be712a7899f9a9effd8f2ecdd2ac22fb6d60"
+      }
+    ]
+  },
+  "git_checkpoint_this_task": "NOT_PERFORMED"
+}
