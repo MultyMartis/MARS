@@ -352,6 +352,8 @@ Do not treat C:\ paths in this document as current write targets.
 
 | 4.323 | **MARS Local Storage Cleanup Dry Run 01** | **COMPLETE — ALLOWLIST READY** (2026-08-12; dry-run only; operator Beget backup confirmed; stable tag verified `a14a97c9`; allowlist **96** paths / ~**245 GB** reclaimable estimate; keep/unknown lists ready; **no delete/move/archive**; production/FTP/DB/Client Ops/dirty main **0**) | [sites/site-002/reports/MARS-LOCAL-STORAGE-CLEANUP-DRY-RUN-01.md](sites/site-002/reports/MARS-LOCAL-STORAGE-CLEANUP-DRY-RUN-01.md), Storage `deployments/MARS-LOCAL-STORAGE-CLEANUP-DRY-RUN-01/`, [OCPILOT-STATE.md](OCPILOT-STATE.md) |
 
+| 4.324 | **MARS Local Storage Cleanup Apply 01** | **COMPLETE — EXACT ALLOWLIST DELETED** (2026-08-12; operator approval `Ок, утверждаю. Жду промт.`; Beget backup confirmed; validated deletes **95**/95; blocked **1** Active Brain path `X:\AI MARS\.recovery-temp`; reclaim ~**244.78 GB**; active roots verified; keep/unknown untouched; production/FTP/DB/Client Ops/dirty main **0**) | [sites/site-002/reports/MARS-LOCAL-STORAGE-CLEANUP-APPLY-01.md](sites/site-002/reports/MARS-LOCAL-STORAGE-CLEANUP-APPLY-01.md), Storage `deployments/MARS-LOCAL-STORAGE-CLEANUP-APPLY-01/`, [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
 | 5 | **First Read-Only Site Audit** | **paused** (init done) | [sites/site-001/reports/RUN-5-FIRST-FINDINGS.md](sites/site-001/reports/RUN-5-FIRST-FINDINGS.md), [freeze/site-001-pre-runtime-bridge/](freeze/site-001-pre-runtime-bridge/README.md), [shared/external-access-runtime/](../../shared/external-access-runtime/README.md) |
 
 | 6 | **Catalog / Theme / Controller Planning** | planned | SAFE UNKNOWN — spec TBD after baseline + audit |

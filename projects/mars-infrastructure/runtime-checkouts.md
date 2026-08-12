@@ -2,7 +2,7 @@
 
 **Document role:** Human-operated registry of clean Git checkouts used for scheduled/local runtime — **not** a runtime product.
 
-**Last updated:** 2026-07-20 (Run 4.288 monitor baseline refresh 04 sync; pin commit still `08803bd4` / earlier `0ab7e9f5`)
+**Last updated:** 2026-08-12 (Run 4.324 local cleanup apply verified monitor checkout intact; prior 2026-07-20 Run 4.288 monitor baseline refresh 04 sync; pin commit still `08803bd4` / earlier `0ab7e9f5`)
 
 ---
 
