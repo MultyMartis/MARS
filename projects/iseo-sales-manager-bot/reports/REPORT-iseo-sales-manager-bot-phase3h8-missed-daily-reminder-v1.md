@@ -84,7 +84,14 @@ Ops active; Admin active; v2 inactive; Gmail path not modified this phase.
 reminders ON 10:00 MSK; recipients=4; reporting manual; AI OFF; workflows created=0.
 
 ## 28. Git
-Clean worktree on `origin/mars/canonical-post-recovery`; scoped commits under `projects/iseo-sales-manager-bot/**`.
+Clean worktree from `origin/mars/canonical-post-recovery`; scoped commits under `projects/iseo-sales-manager-bot/**` only.
+
+| Commit | Message |
+|---|---|
+| `5c874279` | `fix(iseo-sales-manager-bot): repair missed daily reminder evaluation` |
+| `983e56f2` | `fix(iseo-sales-manager-bot): expose reminder decision observability` |
+| `d8b6fe1c` | `test(iseo-sales-manager-bot): prove reminder exactly-once isolation` |
+| `62b6722c` | `docs(iseo-sales-manager-bot): prepare real reminder acceptance window` |
 
 ## 29. Soak status
 `INTERRUPTED — REAL PENDING LEAD MISSED DAILY REMINDER WINDOW` — not restarted.
