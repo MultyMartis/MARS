@@ -1,3 +1,13 @@
+<!-- Phase 3H.8 addendum 2026-08-13 -->
+## Phase 3H.8 addendum
+
+- Reminder/pending CLEAN source of truth: `lead_clean_v2` (not obsolete `LEADS`).
+- Observability contract: `iseo-reminder-observability-v1.1`.
+- Soak: **INTERRUPTED — REAL PENDING LEAD MISSED DAILY REMINDER WINDOW**.
+- Next live acceptance window: **2026-08-14 10:00 Europe/Moscow** with `REMINDER_PROD_LEAD_A` left pending.
+- Phase 3I.1 blocked; AI OFF; do not artificially invoke production reminder.
+
+---
 
 ## Phase 3H.7.3.2 (2026-08-10)
 - Verdict: `PHASE 3H.7.3.2 TECHNICAL REPAIR COMPLETE — OPERATOR LIVE CARD-EDIT ACCEPTANCE REQUIRED`

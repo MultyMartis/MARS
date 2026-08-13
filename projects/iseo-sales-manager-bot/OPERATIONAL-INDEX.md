@@ -1,3 +1,18 @@
+<!-- Phase 3H.8 missed daily reminder repair 2026-08-13 -->
+## Phase 3H.8 (current)
+
+| Field | Value |
+|---|---|
+| **Phase** | 3H.8 — Missed daily reminder forensic + live next-window acceptance prep |
+| **Verdict** | PHASE 3H.8 TECHNICAL REPAIR COMPLETE — REAL 10:00 REMINDER ACCEPTANCE PENDING |
+| **Root cause** | Reminder read obsolete `LEADS` instead of `lead_clean_v2` |
+| **Repair** | Admin CLEAN retarget + observability v1.1 |
+| **Acceptance lead** | `REMINDER_PROD_LEAD_A` spam→pending for 2026-08-14 10:00 Europe/Moscow |
+| **Soak** | INTERRUPTED — REAL PENDING LEAD MISSED DAILY REMINDER WINDOW |
+| **Gate** | Phase 3I.1 blocked; AI OFF |
+| **Evidence** | [evidence/phase3h8/](evidence/phase3h8/) |
+| **Report** | [reports/REPORT-iseo-sales-manager-bot-phase3h8-missed-daily-reminder-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3h8-missed-daily-reminder-v1.md) |
+
 <!-- Phase 3H.7.3 operator resurface production-parity repair 2026-08-10 -->
 ## Phase 3H.7.3 (current)
 

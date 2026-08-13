@@ -1,3 +1,10 @@
+<!-- Phase 3H.8 -->
+## Current status (Phase 3H.8)
+
+Technical repair complete for missed daily reminder (selector sheet retarget to `lead_clean_v2`).  
+**Operator live acceptance pending** at next real **10:00 Europe/Moscow** window with `REMINDER_PROD_LEAD_A` left pending.  
+Do not start Phase 3I.1. AI remains OFF. Previous soak: **INTERRUPTED — REAL PENDING LEAD MISSED DAILY REMINDER WINDOW**.
+
 <!-- Phase 3H.7.3 operator resurface production-parity repair 2026-08-10 -->
 ## Phase 3H.7.3 (current)
 
