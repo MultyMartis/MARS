@@ -1,0 +1,526 @@
+{
+  "contract": "iseo-sheets-429-retry-v1.0",
+  "window_now": "2026-08-15T07:00:10.000Z",
+  "checks": [
+    {
+      "id": 6,
+      "ok": true,
+      "detail": "resume after one 429"
+    },
+    {
+      "id": 5,
+      "ok": true,
+      "detail": "one retry"
+    },
+    {
+      "id": 12,
+      "ok": true,
+      "detail": "claims 4"
+    },
+    {
+      "id": 15,
+      "ok": true,
+      "detail": "successes 4"
+    },
+    {
+      "id": 7,
+      "ok": true,
+      "detail": "two 429 recover"
+    },
+    {
+      "id": 8,
+      "ok": true,
+      "detail": "ERROR_SHEETS_429_ACCESS"
+    },
+    {
+      "id": 10,
+      "ok": true,
+      "detail": "bounded 4 attempts"
+    },
+    {
+      "id": 11,
+      "ok": true,
+      "detail": "no claims/sends"
+    },
+    {
+      "id": 17,
+      "ok": true,
+      "detail": "date not poisoned"
+    },
+    {
+      "id": 9,
+      "ok": true,
+      "detail": "non-429 no retry loop"
+    },
+    {
+      "id": 11,
+      "ok": true,
+      "detail": "non-429 no claims"
+    },
+    {
+      "id": 5,
+      "ok": true,
+      "detail": "no unnecessary delay"
+    },
+    {
+      "id": 12,
+      "ok": true,
+      "detail": "first claims 4"
+    },
+    {
+      "id": 13,
+      "ok": true,
+      "detail": "second eval 0 additional claims"
+    },
+    {
+      "id": 16,
+      "ok": true,
+      "detail": "no duplicate sends"
+    },
+    {
+      "id": 13,
+      "ok": true,
+      "detail": "no duplicate recipient rows"
+    },
+    {
+      "id": 17,
+      "ok": true,
+      "detail": "failed run does not poison date"
+    },
+    {
+      "id": 14,
+      "ok": true,
+      "detail": "zero pending zero sends"
+    },
+    {
+      "id": 15,
+      "ok": true,
+      "detail": "one pending 4/4"
+    },
+    {
+      "id": 18,
+      "ok": true,
+      "detail": "last evaluation recorded"
+    },
+    {
+      "id": 19,
+      "ok": true,
+      "detail": "retry count recorded"
+    },
+    {
+      "id": 20,
+      "ok": true,
+      "detail": "error stage recorded"
+    },
+    {
+      "id": 21,
+      "ok": true,
+      "detail": "/reminder_status error truth"
+    }
+  ],
+  "pass": 23,
+  "fail": 0,
+  "cases": [
+    {
+      "name": "A_one_429_then_success",
+      "decision": "SENT",
+      "pending_count": 1,
+      "recipient_count": 4,
+      "claims": 4,
+      "sends": 4,
+      "successes": 4,
+      "retries": {
+        "CONFIG": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        },
+        "CLEAN": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        },
+        "ACCESS_CONTROL": {
+          "attempts": 2,
+          "retries": 1,
+          "delaysMs": [
+            5000
+          ]
+        },
+        "REMINDER_DELIVERIES": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        }
+      },
+      "delays": [
+        5000
+      ],
+      "last_decision": "SENT",
+      "error_class": "",
+      "mark_complete": true
+    },
+    {
+      "name": "B_two_429_then_success",
+      "decision": "SENT",
+      "pending_count": 1,
+      "recipient_count": 4,
+      "claims": 4,
+      "sends": 4,
+      "successes": 4,
+      "retries": {
+        "CONFIG": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        },
+        "CLEAN": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        },
+        "ACCESS_CONTROL": {
+          "attempts": 3,
+          "retries": 2,
+          "delaysMs": [
+            5000,
+            15000
+          ]
+        },
+        "REMINDER_DELIVERIES": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        }
+      },
+      "delays": [
+        5000,
+        15000
+      ],
+      "last_decision": "SENT",
+      "error_class": "",
+      "mark_complete": true
+    },
+    {
+      "name": "C_all_retries_fail",
+      "decision": "ERROR_SHEETS_429_ACCESS",
+      "pending_count": "not_computed",
+      "recipient_count": 0,
+      "claims": 0,
+      "sends": 0,
+      "successes": 0,
+      "retries": {
+        "CONFIG": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        },
+        "CLEAN": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        }
+      },
+      "delays": [
+        5000,
+        15000,
+        30000
+      ],
+      "last_decision": "ERROR",
+      "error_class": "SHEETS_429",
+      "mark_complete": false
+    },
+    {
+      "name": "D_non429_fatal",
+      "decision": "ERROR",
+      "pending_count": "not_computed",
+      "recipient_count": 0,
+      "claims": 0,
+      "sends": 0,
+      "successes": 0,
+      "retries": {
+        "CONFIG": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        },
+        "CLEAN": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        }
+      },
+      "delays": [],
+      "last_decision": "ERROR",
+      "error_class": "SHEETS_PERMANENT",
+      "mark_complete": false
+    },
+    {
+      "name": "E_first_attempt_success",
+      "decision": "SENT",
+      "pending_count": 1,
+      "recipient_count": 4,
+      "claims": 4,
+      "sends": 4,
+      "successes": 4,
+      "retries": {
+        "CONFIG": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        },
+        "CLEAN": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        },
+        "ACCESS_CONTROL": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        },
+        "REMINDER_DELIVERIES": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        }
+      },
+      "delays": [],
+      "last_decision": "SENT",
+      "error_class": "",
+      "mark_complete": true
+    },
+    {
+      "name": "F_retry_then_send",
+      "decision": "SENT",
+      "pending_count": 1,
+      "recipient_count": 4,
+      "claims": 4,
+      "sends": 4,
+      "successes": 4,
+      "retries": {
+        "CONFIG": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        },
+        "CLEAN": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        },
+        "ACCESS_CONTROL": {
+          "attempts": 2,
+          "retries": 1,
+          "delaysMs": [
+            5000
+          ]
+        },
+        "REMINDER_DELIVERIES": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        }
+      },
+      "delays": [
+        5000
+      ],
+      "last_decision": "SENT",
+      "error_class": "",
+      "mark_complete": true
+    },
+    {
+      "name": "F_second_eval_same_window",
+      "decision": "SKIPPED_ALREADY_SENT",
+      "pending_count": 1,
+      "recipient_count": 4,
+      "claims": 0,
+      "sends": 4,
+      "successes": 4,
+      "retries": {
+        "CONFIG": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        },
+        "CLEAN": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        },
+        "ACCESS_CONTROL": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        },
+        "REMINDER_DELIVERIES": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        }
+      },
+      "delays": [],
+      "last_decision": "SKIPPED_ALREADY_SENT",
+      "error_class": "",
+      "mark_complete": false
+    },
+    {
+      "name": "G_fail_then_recover_eval1",
+      "decision": "ERROR_SHEETS_429_ACCESS",
+      "pending_count": "not_computed",
+      "recipient_count": 0,
+      "claims": 0,
+      "sends": 0,
+      "successes": 0,
+      "retries": {
+        "CONFIG": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        },
+        "CLEAN": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        }
+      },
+      "delays": [
+        5000,
+        15000,
+        30000
+      ],
+      "last_decision": "ERROR",
+      "error_class": "SHEETS_429",
+      "mark_complete": false
+    },
+    {
+      "name": "G_fail_then_recover_eval2",
+      "decision": "SENT",
+      "pending_count": 1,
+      "recipient_count": 4,
+      "claims": 4,
+      "sends": 4,
+      "successes": 4,
+      "retries": {
+        "CONFIG": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        },
+        "CLEAN": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        },
+        "ACCESS_CONTROL": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        },
+        "REMINDER_DELIVERIES": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        }
+      },
+      "delays": [],
+      "last_decision": "SENT",
+      "error_class": "",
+      "mark_complete": true
+    },
+    {
+      "name": "H_zero_pending",
+      "decision": "SKIPPED_ZERO_PENDING",
+      "pending_count": 0,
+      "recipient_count": 4,
+      "claims": 0,
+      "sends": 0,
+      "successes": 0,
+      "retries": {
+        "CONFIG": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        },
+        "CLEAN": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        },
+        "ACCESS_CONTROL": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        }
+      },
+      "delays": [],
+      "last_decision": "SKIPPED_ZERO_PENDING",
+      "error_class": "",
+      "mark_complete": false
+    },
+    {
+      "name": "I_one_pending_four",
+      "decision": "SENT",
+      "pending_count": 1,
+      "recipient_count": 4,
+      "claims": 4,
+      "sends": 4,
+      "successes": 4,
+      "retries": {
+        "CONFIG": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        },
+        "CLEAN": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        },
+        "ACCESS_CONTROL": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        },
+        "REMINDER_DELIVERIES": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        }
+      },
+      "delays": [],
+      "last_decision": "SENT",
+      "error_class": "",
+      "mark_complete": true
+    },
+    {
+      "name": "J_status_error_lines",
+      "decision": "ERROR_SHEETS_429_ACCESS",
+      "pending_count": "not_computed",
+      "recipient_count": 0,
+      "claims": 0,
+      "sends": 0,
+      "successes": 0,
+      "retries": {
+        "CONFIG": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        },
+        "CLEAN": {
+          "attempts": 1,
+          "retries": 0,
+          "delaysMs": []
+        }
+      },
+      "delays": [
+        5000,
+        15000,
+        30000
+      ],
+      "last_decision": "ERROR",
+      "error_class": "SHEETS_429",
+      "mark_complete": false
+    }
+  ]
+}
