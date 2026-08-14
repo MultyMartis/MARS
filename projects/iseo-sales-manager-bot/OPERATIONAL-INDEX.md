@@ -1,3 +1,19 @@
+<!-- Phase 3H.8.2 addendum 2026-08-14 -->
+## Phase 3H.8.2 (current)
+
+| Field | Value |
+|---|---|
+| **Phase** | 3H.8.2 — Reminder Sheets 429 resilience + next-window acceptance prep |
+| **Verdict** | PHASE 3H.8.2 TECHNICAL REPAIR COMPLETE — REAL NEXT-WINDOW REMINDER ACCEPTANCE PENDING |
+| **Root cause** | ACCESS_CONTROL HTTP 429 aborted 2026-08-14 10:00 reminder |
+| **Repair** | `iseo-sheets-429-retry-v1.0` Wait loop on ACCESS; fail closed; `/reminder_status` ERROR lines |
+| **Acceptance lead** | `REMINDER_ACCEPTANCE_LEAD_2` pending for **2026-08-15 10:00 Europe/Moscow** |
+| **Soak** | INTERRUPTED — REAL REMINDER WINDOW FAILED ON SHEETS 429 |
+| **Gate** | Phase 3I.1 blocked; AI OFF; Admin 92 · Ops 45 · v2 inactive |
+| **Evidence** | [evidence/phase3h82/](evidence/phase3h82/) |
+| **Report** | [reports/REPORT-iseo-sales-manager-bot-phase3h82-reminder-sheets429-resilience-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3h82-reminder-sheets429-resilience-v1.md) |
+
+
 <!-- Phase 3H.8 missed daily reminder repair 2026-08-13 -->
 ## Phase 3H.8 (current)
 

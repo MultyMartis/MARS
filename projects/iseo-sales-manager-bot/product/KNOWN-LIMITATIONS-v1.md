@@ -1,3 +1,15 @@
+<!-- Phase 3H.8.2 addendum 2026-08-14 -->
+## Phase 3H.8.2 addendum
+
+- Contract: `iseo-sheets-429-retry-v1.0` on reminder-critical Sheets reads (Admin.dev only).
+- ACCESS_CONTROL 429: explicit Wait 5s/15s/30s loop (max 4 attempts); fail closed `ERROR_SHEETS_429_ACCESS`; no stale ACCESS send fallback.
+- `/reminder_status` exposes ERROR + stage + quota reason + retry count.
+- Soak remains: **INTERRUPTED — REAL REMINDER WINDOW FAILED ON SHEETS 429** (not restarted).
+- Next live acceptance: **2026-08-15 10:00 Europe/Moscow** with `REMINDER_ACCEPTANCE_LEAD_2` left pending.
+- Do not claim REMINDER LIVE PASS until that scheduled window succeeds.
+- Phase 3I.1 blocked; AI OFF; Admin **92** nodes; Ops **45**; v2 inactive.
+- Evidence: [evidence/phase3h82/](evidence/phase3h82/) · Report: [reports/REPORT-iseo-sales-manager-bot-phase3h82-reminder-sheets429-resilience-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3h82-reminder-sheets429-resilience-v1.md)
+
 <!-- Phase 3H.8 addendum 2026-08-13 -->
 ## Phase 3H.8 addendum
 
@@ -44,6 +56,8 @@
 - AI ON **not approved**.
 - Archive `/leads` cards remain intentionally buttonless.
 - Google Sheets still has no atomic CAS; static-data single-flight is not a distributed transaction. A crashed post-send path can require reconciliation, and blind resend remains forbidden.
+- Reminder ACCESS_CONTROL HTTP 429 is retried under `iseo-sheets-429-retry-v1.0`; exhaustion fails closed and does not mark the business date sent. Sustained project quota around 10:00 remains an operational risk.
+
 - Full Sheets PII cell dumps are not part of backup packages (structure only).
 
 ## Phase 3E.2.3 pending limitations
