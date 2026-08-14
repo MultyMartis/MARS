@@ -3,11 +3,11 @@
  * Isolated harness / documentation mirror. No production mutations unless callers inject them.
  */
 import {
-  buildPendingView,
   isReminderWindowDue,
   reminderDeliveryKey,
   selectActiveStaffRecipients,
   formatReminderMessage,
+  buildPendingView,
 } from './pending-leads-lib.mjs';
 import {
   readWith429Retry,
@@ -16,18 +16,15 @@ import {
   decisionForSheetsError,
   SHEETS_429_RETRY_CONTRACT,
 } from './sheets-429-retry-v1.mjs';
+import {
+  selectAuthoritativePending,
+  ERROR_CURRENT_STATE_RESOLUTION,
+  REMINDER_CURRENT_STATE_SELECTOR_CONTRACT,
+} from './reminder-current-state-selector-v1.mjs';
 
-export { SHEETS_429_RETRY_CONTRACT };
+export { SHEETS_429_RETRY_CONTRACT, REMINDER_CURRENT_STATE_SELECTOR_CONTRACT };
 
 const CLAIMABLE = new Set(['claimed', 'delivered', 'sent', 'reconcile']);
-
-function life(r) {
-  const a = String(r.manager_status || '').trim().toLowerCase();
-  const b = String(r.lifecycle_status || '').trim().toLowerCase();
-  if (a === 'processed' || a === 'spam') return a;
-  if (b === 'processed' || b === 'spam') return b;
-  return 'pending';
-}
 
 function cfgMap(rows) {
   const map = {};
@@ -148,11 +145,62 @@ export async function evaluateReminderWithRetry(input = {}) {
     return stampError(e, 'CLEAN');
   }
 
-  const view = buildPendingView(cleanRows, {
+  let leadsRows = [];
+  let eventRows = [];
+  if (typeof reads.LEADS_CURRENT === 'function') {
+    try {
+      const r = await logicalRead('LEADS_CURRENT', reads.LEADS_CURRENT);
+      leadsRows = r.value || [];
+    } catch (e) {
+      return stampError(e, 'LEADS_CURRENT');
+    }
+  }
+  if (typeof reads.LEAD_EVENTS === 'function') {
+    try {
+      const r = await logicalRead('LEAD_EVENTS', reads.LEAD_EVENTS);
+      eventRows = r.value || [];
+    } catch (e) {
+      // Events are priority-2 fallback only; CLEAN/LEADS may still resolve. Fail closed only if caller requires events.
+      if (input.requireLeadEvents === true) return stampError(e, 'LEAD_EVENTS');
+      eventRows = [];
+    }
+  }
+
+  const selection = selectAuthoritativePending({
+    cleanRows,
+    leadsCurrentRows: leadsRows,
+    leadEvents: eventRows,
     includeTests: String(cfg.pending_reminder_include_tests || 'false') === 'true',
-    nowMs: now.getTime(),
+    includeArchive: String(cfg.pending_reminder_include_archive || 'false') === 'true',
   });
-  const pendingCount = view.total;
+  if (!selection.ok) {
+    const out = stampError(new Error(ERROR_CURRENT_STATE_RESOLUTION), 'CURRENT_STATE', 'not_computed');
+    out.decision = ERROR_CURRENT_STATE_RESOLUTION;
+    out.observability.reminder_decision = ERROR_CURRENT_STATE_RESOLUTION;
+    out.observability.last_error_class = ERROR_CURRENT_STATE_RESOLUTION;
+    out.observability.last_error_stage = 'CURRENT_STATE';
+    out.selection = selection;
+    return out;
+  }
+
+  // Message age helpers still use pending view over eligible CLEAN rows only.
+  const view = buildPendingView(
+    selection.eligible.map((e) => {
+      const id = String(e.lead_id || '').replace(/^lead:/, '').replace(/^stable:/, '').replace(/^gmail:/, '');
+      return (cleanRows || []).find((r) => String(r.lead_id || '') === id || String(r.stable_lead_ref || '') === id) || {
+        lead_id: id,
+        manager_status: 'pending',
+        client_name: 'lead',
+        site: 'n/a',
+        summary: 'pending',
+      };
+    }),
+    {
+      includeTests: String(cfg.pending_reminder_include_tests || 'false') === 'true',
+      nowMs: now.getTime(),
+    },
+  );
+  const pendingCount = selection.pending_count;
   const minCount = Number(cfg.pending_reminder_min_count || 1);
 
   let accessRows;
