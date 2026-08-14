@@ -1,5 +1,8 @@
 # REMINDER SHEETS 429 RESILIENCE v1
 
+> **Phase 3H.8.2.2 (2026-08-14):** Reminder pending eligibility uses `iseo-reminder-current-state-selector-v1.0` — unique `lead_id` → authoritative current status → eligibility. First CLEAN pending row no longer wins. Production Reminder Build Claims adds no per-lead Sheets calls. Duplicate CLEAN row source forensic is deferred. Real 10:00 acceptance still pending.
+
+
 **Phase:** 3H.8.2  
 **Workflow:** Admin.dev `wLrLp4WQHm1VJmxz` (92 nodes after patch)  
 **Contract:** `iseo-sheets-429-retry-v1.0`

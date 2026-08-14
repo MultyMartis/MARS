@@ -1,3 +1,5 @@
+> **Phase 3H.8.2.2 (2026-08-14):** Reminder pending eligibility uses `iseo-reminder-current-state-selector-v1.0` — unique `lead_id` → authoritative current status → eligibility. First CLEAN pending row no longer wins. Production Reminder Build Claims adds no per-lead Sheets calls. Duplicate CLEAN row source forensic is deferred. Real 10:00 acceptance still pending.
+
 <!-- Phase 3H.8.2 addendum 2026-08-14 -->
 ## Phase 3H.8.2 addendum
 
@@ -154,4 +156,8 @@ Gmail OAuth recovery closed; original terminal cards now expose `↩️ Верн
 
 ## Phase 3H.7.2 note
 Callback acknowledgement contract `iseo-lead-callback-ack-v1.0` deployed. Reopen ack is «Лид возвращён в обработку.». Aggregate no longer maps pending applied→processed. Operator-approved resurface of three genuine leads completed for acceptance; global reopen still does not fan out. Soak restarted; Phase 3I.1 blocked. See `evidence/phase3h72/`.
+
+
+
+- **KNOWN FOLLOW-UP — CLEAN DUPLICATE ROW PRODUCTION SOURCE FORENSIC** (Phase 3H.8.2.2 deferred): duplicate CLEAN rows inflate naive counts; reminder selector now resolves authoritative unique pending without deleting historical copies.
 
