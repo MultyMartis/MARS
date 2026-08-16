@@ -1,6 +1,6 @@
 <?php
 /**
- * Dashboard widget: MetaCODE / system state — PROD-P14.
+ * Dashboard widget: MetaCODE / system state — PROD-P15.
  *
  * Canonical concise operational summary for FP-0002. No global Admin notices.
  *
@@ -29,7 +29,7 @@ final class SystemDashboard implements ModuleInterface {
 	/**
 	 * Latest accepted production wave label.
 	 */
-	const LATEST_ACCEPTED_WAVE = 'P13 + P13-FU01';
+	const LATEST_ACCEPTED_WAVE = 'P15 environment cleanup';
 
 	/**
 	 * {@inheritdoc}
@@ -104,12 +104,15 @@ final class SystemDashboard implements ModuleInterface {
 		$wave     = isset( $meta['latest_wave'] ) ? (string) $meta['latest_wave'] : self::LATEST_ACCEPTED_WAVE;
 
 		$php_ver = function_exists( 'phpversion' ) ? phpversion() : '';
+		$debug_on = ( defined( 'WP_DEBUG' ) && WP_DEBUG );
+		$blog_public = (int) get_option( 'blog_public', 1 );
+		$mail_suppressed = (bool) has_filter( 'pre_wp_mail' );
 
 		echo '<div class="fp02-metacode-system">';
 
 		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'Сайт', 'shpigovsky-core' ) . '</h3>';
 		echo '<table class="widefat striped" style="border:none;box-shadow:none;margin-bottom:12px;">';
-		self::row( __( 'Проект', 'shpigovsky-core' ), 'FP-0002 / Шпиговский Дом' );
+		self::row( __( 'Проект', 'shpigovsky-core' ), 'FP-0002 / Шпиговский дом' );
 		self::row(
 			__( 'Runtime', 'shpigovsky-core' ),
 			$is_beget
@@ -128,6 +131,30 @@ final class SystemDashboard implements ModuleInterface {
 		}
 		echo '</table>';
 
+		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'Environment', 'shpigovsky-core' ) . '</h3>';
+		echo '<table class="widefat striped" style="border:none;box-shadow:none;margin-bottom:12px;">';
+		self::row(
+			'WP_ENVIRONMENT_TYPE',
+			$env_const !== '' ? $env_const : $env_fn
+		);
+		self::row(
+			__( 'Debug', 'shpigovsky-core' ),
+			$debug_on ? __( 'on', 'shpigovsky-core' ) : __( 'off', 'shpigovsky-core' )
+		);
+		self::row(
+			__( 'Indexing', 'shpigovsky-core' ),
+			( 0 === $blog_public )
+				? __( 'закрыта до cutover', 'shpigovsky-core' )
+				: __( 'open', 'shpigovsky-core' )
+		);
+		self::row(
+			__( 'Mail', 'shpigovsky-core' ),
+			$mail_suppressed
+				? __( 'SMTP / outbound delivery pending cutover', 'shpigovsky-core' )
+				: __( 'suppression not detected — verify before go-live', 'shpigovsky-core' )
+		);
+		echo '</table>';
+
 		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'MetaCODE', 'shpigovsky-core' ) . '</h3>';
 		echo '<table class="widefat striped" style="border:none;box-shadow:none;margin-bottom:12px;">';
 		self::row( __( 'shpigovsky-core', 'shpigovsky-core' ), defined( 'SHPIGOVSKY_CORE_VERSION' ) ? SHPIGOVSKY_CORE_VERSION : '—' );
@@ -144,7 +171,7 @@ final class SystemDashboard implements ModuleInterface {
 		);
 		echo '</table>';
 
-		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'Последнее состояние', 'shpigovsky-core' ) . '</h3>';
+		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'Current baseline', 'shpigovsky-core' ) . '</h3>';
 		echo '<table class="widefat striped" style="border:none;box-shadow:none;margin-bottom:12px;">';
 		self::row( __( 'Latest accepted wave', 'shpigovsky-core' ), $wave );
 		self::row( __( 'Source ↔ production parity', 'shpigovsky-core' ), $parity );
@@ -158,20 +185,20 @@ final class SystemDashboard implements ModuleInterface {
 		}
 		echo '</table>';
 
-		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'Открытые технические хвосты', 'shpigovsky-core' ) . '</h3>';
+		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'Remaining launch tails', 'shpigovsky-core' ) . '</h3>';
 		echo '<ul style="margin:0 0 12px 1.2em;">';
-		self::li( 'P06 environment / migration cleanup' );
 		self::li( __( 'Residual typography', 'shpigovsky-core' ) );
-		self::li( 'SMTP' );
 		self::li( 'PRE-CUTOVER' );
-		self::li( __( 'Final domain / SSL', 'shpigovsky-core' ) );
+		self::li( __( 'DNS / domain / SSL', 'shpigovsky-core' ) );
+		self::li( __( 'SMTP after domain/DNS', 'shpigovsky-core' ) );
 		self::li( __( 'robots / indexing', 'shpigovsky-core' ) );
 		self::li( __( 'Sitemap submissions', 'shpigovsky-core' ) );
+		self::li( __( 'Final crawl', 'shpigovsky-core' ) );
 		echo '</ul>';
 
 		if ( $is_beget && ( 'local' === $env_const || 'local' === $env_fn ) ) {
 			echo '<p style="margin:0 0 8px;padding:8px 10px;border-left:3px solid #dba617;background:#fff8e5;">';
-			echo esc_html__( 'Environment warning: WP_ENVIRONMENT_TYPE is still «local» on this production host. Runtime is Production/Beget; leftover constant is P06 cleanup — not a local staging claim.', 'shpigovsky-core' );
+			echo esc_html__( 'Environment warning: WP_ENVIRONMENT_TYPE is still «local» on this production host — unexpected after P15.', 'shpigovsky-core' );
 			echo '</p>';
 		}
 

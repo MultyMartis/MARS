@@ -1,0 +1,80 @@
+{
+  "utc": "2026-08-16T18:21:32.462003+00:00",
+  "login_user": "mars",
+  "logged_in": true,
+  "login_final_url": "http://shpigovsky.beget.tech/wp-admin/",
+  "screens": {
+    "dashboard": {
+      "status": 200,
+      "len": 335251,
+      "fatal": false,
+      "login_bounce": false,
+      "has_fp02_metacode": true,
+      "has_metacode_text": true,
+      "runtime_beget": true,
+      "indexing_closed": true,
+      "mail_smtp_pending": true,
+      "wave_p15": true,
+      "core_036": true,
+      "env_production_row": true,
+      "debug_off": true,
+      "no_local_mars": true,
+      "no_p06_tail": true,
+      "no_local_env_warning": true
+    },
+    "services": {
+      "status": 200,
+      "len": 532593,
+      "fatal": false,
+      "login_bounce": false
+    },
+    "specialists": {
+      "status": 200,
+      "len": 493998,
+      "fatal": false,
+      "login_bounce": false
+    },
+    "posts": {
+      "status": 200,
+      "len": 532343,
+      "fatal": false,
+      "login_bounce": false
+    },
+    "site_settings": {
+      "status": 403,
+      "len": 2552,
+      "fatal": false,
+      "login_bounce": false
+    },
+    "seo": {
+      "status": 403,
+      "len": 2552,
+      "fatal": false,
+      "login_bounce": false
+    },
+    "social": {
+      "status": 200,
+      "len": 361050,
+      "fatal": false,
+      "login_bounce": false
+    },
+    "activity": {
+      "status": 200,
+      "len": 276390,
+      "fatal": false,
+      "login_bounce": false
+    },
+    "users": {
+      "status": 200,
+      "len": 280997,
+      "fatal": false,
+      "login_bounce": false
+    },
+    "docx": {
+      "status": 403,
+      "len": 2552,
+      "fatal": false,
+      "login_bounce": false
+    }
+  }
+}

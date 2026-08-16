@@ -1,0 +1,28 @@
+{
+  "wp_config_excerpt": {
+    "WP_ENVIRONMENT_TYPE": "'local'",
+    "WP_DEBUG": "true",
+    "WP_DEBUG_DISPLAY": "false",
+    "WP_DEBUG_LOG": "true",
+    "SCRIPT_DEBUG": "true",
+    "SAVEQUERIES": null,
+    "DISALLOW_FILE_EDIT": "true",
+    "DISALLOW_FILE_MODS": null,
+    "WP_HOME": null,
+    "WP_SITEURL": null
+  },
+  "runtime": {
+    "WP_ENVIRONMENT_TYPE": "local",
+    "WP_DEBUG": true,
+    "WP_DEBUG_DISPLAY": false,
+    "WP_DEBUG_LOG": true,
+    "SCRIPT_DEBUG": true,
+    "SAVEQUERIES": null,
+    "DISALLOW_FILE_EDIT": true,
+    "DISALLOW_FILE_MODS": null,
+    "WP_HOME": null,
+    "WP_SITEURL": null,
+    "CONCATENATE_SCRIPTS": null
+  },
+  "env_fn": "local"
+}

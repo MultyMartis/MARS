@@ -1,0 +1,24 @@
+[
+  {
+    "rel": "shpigovsky-core.php",
+    "match": true,
+    "local_sha256": "7dd6b9c6dcc4701a470e85d051f6313476f1620c19c4fa9661932a3a67c9fb5e",
+    "prod_sha256": "7dd6b9c6dcc4701a470e85d051f6313476f1620c19c4fa9661932a3a67c9fb5e"
+  },
+  {
+    "rel": "src/Admin/SystemDashboard.php",
+    "match": true,
+    "local_sha256": "7094eb4c56b051f865181800bffe007e47109fd114ef00547a87b830a193dbad",
+    "prod_sha256": "7094eb4c56b051f865181800bffe007e47109fd114ef00547a87b830a193dbad"
+  },
+  {
+    "rel": "fp02-pre-cutover-mail-suppression.php",
+    "match": true,
+    "local_sha256": "f2ba7afcec153739fac7aee154da63a67a269f9e698852f7430904ae4941a004",
+    "prod_sha256": "f2ba7afcec153739fac7aee154da63a67a269f9e698852f7430904ae4941a004"
+  },
+  {
+    "rel": "mars-local-runtime.php",
+    "present_on_prod": false
+  }
+]

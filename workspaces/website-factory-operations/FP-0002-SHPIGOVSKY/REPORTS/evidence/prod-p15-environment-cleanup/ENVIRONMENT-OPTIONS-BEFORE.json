@@ -1,0 +1,30 @@
+{
+  "siteurl": "http://shpigovsky.beget.tech",
+  "home": "http://shpigovsky.beget.tech",
+  "blogname": "Шпиговский Дом",
+  "blogdescription": "",
+  "admin_email": "mli-fp0002@localhost.test",
+  "WPLANG": "ru_RU",
+  "timezone_string": "Europe/Moscow",
+  "gmt_offset": 3,
+  "permalink_structure": "/blog/%postname%/",
+  "default_role": "subscriber",
+  "blog_public": "0",
+  "show_on_front": "page",
+  "page_on_front": "4",
+  "page_for_posts": "19",
+  "users_can_register": "0",
+  "start_of_week": "1",
+  "date_format": "d.m.Y",
+  "time_format": "H:i",
+  "fp02_metacode_system_meta": {
+    "baseline_id": "FP-0002-PROD-BASELINE-2026-08-17",
+    "latest_wave": "P13 + P13-FU01",
+    "parity": "MATCH",
+    "verified_at": "2026-08-16 17:44 UTC",
+    "backup": "2026-08-16 / Storage prod-p14-full-20260816-173046",
+    "git_sha": "9a5f671c",
+    "wave": "PROD-P14"
+  },
+  "fp02_activity_log_db_version": "1"
+}

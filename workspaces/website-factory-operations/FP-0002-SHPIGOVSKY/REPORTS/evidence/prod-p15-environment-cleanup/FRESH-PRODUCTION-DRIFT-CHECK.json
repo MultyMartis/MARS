@@ -1,0 +1,1275 @@
+{
+  "utc": "2026-08-16T18:14:34.921780+00:00",
+  "wp_config_sha256": "148cd6a5c90d9e346e6883d80d101c93e773be2ca5ccd18db035885847a156c1",
+  "wp_config_defines_excerpt": {
+    "WP_ENVIRONMENT_TYPE": "'local'",
+    "WP_DEBUG": "true",
+    "WP_DEBUG_DISPLAY": "false",
+    "WP_DEBUG_LOG": "true",
+    "SCRIPT_DEBUG": "true",
+    "SAVEQUERIES": null,
+    "DISALLOW_FILE_EDIT": "true",
+    "DISALLOW_FILE_MODS": null,
+    "WP_HOME": null,
+    "WP_SITEURL": null
+  },
+  "env_focus": [
+    {
+      "kind": "mu",
+      "rel": "mars-local-runtime.php",
+      "prod_sha256": "738fd07e59b0113f7bf8c1d0aadc280d238c9767326cee3a70167655bcc4c0d5",
+      "local_sha256": "738fd07e59b0113f7bf8c1d0aadc280d238c9767326cee3a70167655bcc4c0d5",
+      "match": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "shpigovsky-core.php",
+      "prod_sha256": "244c2ac6afa2304971e8805a37f813657f8db28761ce38365a0efc5285cc6dcc",
+      "local_sha256": "244c2ac6afa2304971e8805a37f813657f8db28761ce38365a0efc5285cc6dcc",
+      "match": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Admin/SystemDashboard.php",
+      "prod_sha256": "e44596c43beb1bd133633e31e93b844d65122eec939456a9c3babe4522cc7e31",
+      "local_sha256": "e44596c43beb1bd133633e31e93b844d65122eec939456a9c3babe4522cc7e31",
+      "match": true
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/seo-integrations.php",
+      "prod_sha256": "038f8895977fd7ff866d128818ca21f92bdffa54ac6b1f2b2c2cec11b906a98d",
+      "local_sha256": "038f8895977fd7ff866d128818ca21f92bdffa54ac6b1f2b2c2cec11b906a98d",
+      "match": true
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/sitemap-helpers.php",
+      "prod_sha256": "999463a2d1d3b373ac3eb2af36137d88040bfc5e32f38315f39979bcbb27f60d",
+      "local_sha256": "999463a2d1d3b373ac3eb2af36137d88040bfc5e32f38315f39979bcbb27f60d",
+      "match": true
+    },
+    {
+      "kind": "theme",
+      "rel": "functions.php",
+      "prod_sha256": "65466663a6a1f585bd481795362d6f2190e85bc3882d649fbac51d815b7a01b0",
+      "local_sha256": "65466663a6a1f585bd481795362d6f2190e85bc3882d649fbac51d815b7a01b0",
+      "match": true
+    }
+  ],
+  "trees": [
+    {
+      "kind": "theme",
+      "match_count": 666,
+      "prod_drift_count": 0,
+      "local_only_count": 0,
+      "prod_only_count": 0,
+      "prod_drift": [],
+      "local_only": [],
+      "prod_only": []
+    },
+    {
+      "kind": "plugin",
+      "match_count": 38,
+      "prod_drift_count": 0,
+      "local_only_count": 0,
+      "prod_only_count": 0,
+      "prod_drift": [],
+      "local_only": [],
+      "prod_only": []
+    },
+    {
+      "kind": "mu",
+      "match_count": 1,
+      "prod_drift_count": 0,
+      "local_only_count": 0,
+      "prod_only_count": 0,
+      "prod_drift": [],
+      "local_only": [],
+      "prod_only": []
+    }
+  ],
+  "tree_totals": {
+    "match": 705,
+    "prod_drift": 0,
+    "local_only": 0,
+    "prod_only": 0
+  },
+  "inventory": {
+    "utc": "2026-08-16T18:14:32+00:00",
+    "env_fn": "local",
+    "constants": {
+      "WP_ENVIRONMENT_TYPE": "local",
+      "WP_DEBUG": true,
+      "WP_DEBUG_DISPLAY": false,
+      "WP_DEBUG_LOG": true,
+      "SCRIPT_DEBUG": true,
+      "SAVEQUERIES": null,
+      "DISALLOW_FILE_EDIT": true,
+      "DISALLOW_FILE_MODS": null,
+      "WP_HOME": null,
+      "WP_SITEURL": null,
+      "CONCATENATE_SCRIPTS": null
+    },
+    "options": {
+      "siteurl": "http://shpigovsky.beget.tech",
+      "home": "http://shpigovsky.beget.tech",
+      "blogname": "Шпиговский Дом",
+      "blogdescription": "",
+      "admin_email": "mli-fp0002@localhost.test",
+      "WPLANG": "ru_RU",
+      "timezone_string": "Europe/Moscow",
+      "gmt_offset": 3,
+      "permalink_structure": "/blog/%postname%/",
+      "default_role": "subscriber",
+      "blog_public": "0",
+      "show_on_front": "page",
+      "page_on_front": "4",
+      "page_for_posts": "19",
+      "users_can_register": "0",
+      "start_of_week": "1",
+      "date_format": "d.m.Y",
+      "time_format": "H:i",
+      "fp02_metacode_system_meta": {
+        "baseline_id": "FP-0002-PROD-BASELINE-2026-08-17",
+        "latest_wave": "P13 + P13-FU01",
+        "parity": "MATCH",
+        "verified_at": "2026-08-16 17:44 UTC",
+        "backup": "2026-08-16 / Storage prod-p14-full-20260816-173046",
+        "git_sha": "9a5f671c",
+        "wave": "PROD-P14"
+      },
+      "fp02_activity_log_db_version": "1"
+    },
+    "core_version": "0.3.5-p14",
+    "theme": {
+      "name": "Shpigovsky",
+      "version": "0.3.0-d7a-shell"
+    },
+    "mu_plugins": [
+      {
+        "name": "mars-local-runtime.php",
+        "size": 918,
+        "sha256": "738fd07e59b0113f7bf8c1d0aadc280d238c9767326cee3a70167655bcc4c0d5"
+      }
+    ],
+    "hits": {
+      "options": [
+        {
+          "pattern": ".test",
+          "option_name": "admin_email",
+          "preview": "mli-fp0002@localhost.test"
+        },
+        {
+          "pattern": ".test",
+          "option_name": "fp02-block-specialists_specialists_all_link_url",
+          "preview": "http://shpigovsky.test/specyalisty/"
+        },
+        {
+          "pattern": ".test",
+          "option_name": "fp02-block-comfort_comfort_all_link_url",
+          "preview": "http://shpigovsky.test/o-centre/galereya-o-dome/"
+        },
+        {
+          "pattern": ".test",
+          "option_name": "auto_core_update_notified",
+          "preview": "a:4:{s:4:\"type\";s:7:\"success\";s:5:\"email\";s:25:\"mli-fp0002@localhost.test\";s:7:\"version\";s:5:\"7.0.4\";s:9:\"timestamp\";i:1786550884;}"
+        },
+        {
+          "pattern": "localhost",
+          "option_name": "admin_email",
+          "preview": "mli-fp0002@localhost.test"
+        },
+        {
+          "pattern": "localhost",
+          "option_name": "auto_core_update_notified",
+          "preview": "a:4:{s:4:\"type\";s:7:\"success\";s:5:\"email\";s:25:\"mli-fp0002@localhost.test\";s:7:\"version\";s:5:\"7.0.4\";s:9:\"timestamp\";i:1786550884;}"
+        },
+        {
+          "pattern": "shpigovsky.beget.tech",
+          "option_name": "siteurl",
+          "preview": "http://shpigovsky.beget.tech"
+        },
+        {
+          "pattern": "shpigovsky.beget.tech",
+          "option_name": "home",
+          "preview": "http://shpigovsky.beget.tech"
+        },
+        {
+          "pattern": "shpigovsky.beget.tech",
+          "option_name": "acf_site_health",
+          "preview": "{\"version\":\"6.8.5\",\"plugin_type\":\"PRO\",\"update_source\":\"ACF Direct\",\"activated\":true,\"activated_url\":\"http:\\/\\/shpigovsky.beget.tech\",\"license_type\":\"ACF PRO\",\"license_status\":\"act"
+        },
+        {
+          "pattern": "shpigovsky.ru",
+          "option_name": "options_site_email",
+          "preview": "Info@shpigovsky.ru"
+        }
+      ],
+      "posts": [
+        {
+          "ID": "3",
+          "post_type": "page",
+          "post_status": "publish",
+          "post_name": "privacy-policy",
+          "post_title": "Политика конфиденциальности",
+          "guid_preview": "http://shpigovsky.test/?page_id=3",
+          "pattern": ".test"
+        },
+        {
+          "ID": "4",
+          "post_type": "page",
+          "post_status": "publish",
+          "post_name": "glavnaya",
+          "post_title": "Главная",
+          "guid_preview": "http://shpigovsky.test/glavnaya/",
+          "pattern": ".test"
+        },
+        {
+          "ID": "5",
+          "post_type": "page",
+          "post_status": "publish",
+          "post_name": "uslugi",
+          "post_title": "Услуги",
+          "guid_preview": "http://shpigovsky.test/uslugi/",
+          "pattern": ".test"
+        },
+        {
+          "ID": "11",
+          "post_type": "page",
+          "post_status": "publish",
+          "post_name": "o-centre",
+          "post_title": "О центре",
+          "guid_preview": "http://shpigovsky.test/o-centre/",
+          "pattern": ".test"
+        },
+        {
+          "ID": "12",
+          "post_type": "page",
+          "post_status": "publish",
+          "post_name": "o-nas",
+          "post_title": "О нас",
+          "guid_preview": "http://shpigovsky.test/o-centre/o-nas/",
+          "pattern": ".test"
+        },
+        {
+          "ID": "13",
+          "post_type": "page",
+          "post_status": "publish",
+          "post_name": "programma-lecheniya",
+          "post_title": "Программа лечения",
+          "guid_preview": "http://shpigovsky.test/o-centre/programma-lecheniya/",
+          "pattern": ".test"
+        },
+        {
+          "ID": "14",
+          "post_type": "page",
+          "post_status": "publish",
+          "post_name": "galereya-o-dome",
+          "post_title": "Галерея о доме",
+          "guid_preview": "http://shpigovsky.test/o-centre/galereya-o-dome/",
+          "pattern": ".test"
+        },
+        {
+          "ID": "15",
+          "post_type": "page",
+          "post_status": "publish",
+          "post_name": "specialistam",
+          "post_title": "Специалистам",
+          "guid_preview": "http://shpigovsky.test/o-centre/specialistam/",
+          "pattern": ".test"
+        },
+        {
+          "ID": "16",
+          "post_type": "page",
+          "post_status": "publish",
+          "post_name": "rodstvennikam",
+          "post_title": "Родственникам",
+          "guid_preview": "http://shpigovsky.test/o-centre/rodstvennikam/",
+          "pattern": ".test"
+        },
+        {
+          "ID": "18",
+          "post_type": "page",
+          "post_status": "publish",
+          "post_name": "otzyvy",
+          "post_title": "Отзывы",
+          "guid_preview": "http://shpigovsky.test/otzyvy/",
+          "pattern": ".test"
+        },
+        {
+          "ID": "19",
+          "post_type": "page",
+          "post_status": "publish",
+          "post_name": "blog",
+          "post_title": "Статьи",
+          "guid_preview": "http://shpigovsky.test/blog/",
+          "pattern": ".test"
+        },
+        {
+          "ID": "20",
+          "post_type": "page",
+          "post_status": "publish",
+          "post_name": "kontakty",
+          "post_title": "Контакты",
+          "guid_preview": "http://shpigovsky.test/kontakty/",
+          "pattern": ".test"
+        },
+        {
+          "ID": "22",
+          "post_type": "page",
+          "post_status": "publish",
+          "post_name": "user-agreement",
+          "post_title": "Пользовательское соглашение",
+          "guid_preview": "http://shpigovsky.test/user-agreement/",
+          "pattern": ".test"
+        },
+        {
+          "ID": "23",
+          "post_type": "page",
+          "post_status": "publish",
+          "post_name": "consent-personal-data",
+          "post_title": "Согласие на обработку персональных данных",
+          "guid_preview": "http://shpigovsky.test/consent-personal-data/",
+          "pattern": ".test"
+        },
+        {
+          "ID": "24",
+          "post_type": "page",
+          "post_status": "publish",
+          "post_name": "cookie-files-policy",
+          "post_title": "Политика Cookie-файлов",
+          "guid_preview": "http://shpigovsky.test/cookie-files-policy/",
+          "pattern": ".test"
+        },
+        {
+          "ID": "27",
+          "post_type": "nav_menu_item",
+          "post_status": "publish",
+          "post_name": "27",
+          "post_title": "Лечение и профилактика",
+          "guid_preview": "http://shpigovsky.test/27/",
+          "pattern": ".test"
+        },
+        {
+          "ID": "29",
+          "post_type": "nav_menu_item",
+          "post_status": "publish",
+          "post_name": "29",
+          "post_title": "",
+          "guid_preview": "http://shpigovsky.test/29/",
+          "pattern": ".test"
+        },
+        {
+          "ID": "30",
+          "post_type": "nav_menu_item",
+          "post_status": "publish",
+          "post_name": "30",
+          "post_title": "",
+          "guid_preview": "http://shpigovsky.test/30/",
+          "pattern": ".test"
+        },
+        {
+          "ID": "31",
+          "post_type": "nav_menu_item",
+          "post_status": "publish",
+          "post_name": "31",
+          "post_title": "",
+          "guid_preview": "http://shpigovsky.test/31/",
+          "pattern": ".test"
+        },
+        {
+          "ID": "32",
+          "post_type": "nav_menu_item",
+          "post_status": "publish",
+          "post_name": "32",
+          "post_title": "",
+          "guid_preview": "http://shpigovsky.test/32/",
+          "pattern": ".test"
+        },
+        {
+          "ID": "33",
+          "post_type": "nav_menu_item",
+          "post_status": "publish",
+          "post_name": "33",
+          "post_title": "Услуги",
+          "guid_preview": "http://shpigovsky.test/33/",
+          "pattern": ".test"
+        },
+        {
+          "ID": "34",
+          "post_type": "nav_menu_item",
+          "post_status": "publish",
+          "post_name": "34",
+          "post_title": "О центре",
+          "guid_preview": "http://shpigovsky.test/34/",
+          "pattern": ".test"
+        },
+        {
+          "ID": "35",
+          "post_type": "nav_menu_item",
+          "post_status": "publish",
+          "post_name": "35",
+          "post_title": "Контакты",
+          "guid_preview": "http://shpigovsky.test/35/",
+          "pattern": ".test"
+        },
+        {
+          "ID": "37",
+          "post_type": "nav_menu_item",
+          "post_status": "publish",
+          "post_name": "37",
+          "post_title": "Политика конфиденциальности",
+          "guid_preview": "http://shpigovsky.test/37/",
+          "pattern": ".test"
+        },
+        {
+          "ID": "38",
+          "post_type": "nav_menu_item",
+          "post_status": "publish",
+          "post_name": "38",
+          "post_title": "Пользовательское соглашение",
+          "guid_preview": "http://shpigovsky.test/38/",
+          "pattern": ".test"
+        },
+        {
+          "ID": "39",
+          "post_type": "nav_menu_item",
+          "post_status": "publish",
+          "post_name": "39",
+          "post_title": "Согласие на обработку персональных данных",
+          "guid_preview": "http://shpigovsky.test/39/",
+          "pattern": ".test"
+        },
+        {
+          "ID": "40",
+          "post_type": "nav_menu_item",
+          "post_status": "publish",
+          "post_name": "40",
+          "post_title": "Политика Cookie-файлов",
+          "guid_preview": "http://shpigovsky.test/40/",
+          "pattern": ".test"
+        },
+        {
+          "ID": "41",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "3-revision-v1",
+          "post_title": "Политика конфиденциальности",
+          "guid_preview": "http://shpigovsky.test/?p=41",
+          "pattern": ".test"
+        },
+        {
+          "ID": "42",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "4-revision-v1",
+          "post_title": "Главная",
+          "guid_preview": "http://shpigovsky.test/?p=42",
+          "pattern": ".test"
+        },
+        {
+          "ID": "43",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "5-revision-v1",
+          "post_title": "Услуги",
+          "guid_preview": "http://shpigovsky.test/?p=43",
+          "pattern": ".test"
+        },
+        {
+          "ID": "545",
+          "post_type": "acf-field-group",
+          "post_status": "acf-disabled",
+          "post_name": "group_fp02_service_layout_hero",
+          "post_title": "Service — Layout and Hero",
+          "guid_preview": "http://shpigovsky.test/?post_type=acf-field-group&#038;p=545",
+          "pattern": "localhost"
+        },
+        {
+          "ID": "714",
+          "post_type": "acf-field-group",
+          "post_status": "acf-disabled",
+          "post_name": "group_fp02_service_structured_sections",
+          "post_title": "Service — Structured Sections",
+          "guid_preview": "http://shpigovsky.test/?post_type=acf-field-group&#038;p=714",
+          "pattern": "localhost"
+        },
+        {
+          "ID": "750",
+          "post_type": "post",
+          "post_status": "publish",
+          "post_name": "nazvanie-stati",
+          "post_title": "Лечение алкогольной зависимости: почему сила воли здесь ни при чём",
+          "guid_preview": "http://shpigovsky.test/blog/nazvanie-stati/",
+          "pattern": "new-site.space"
+        },
+        {
+          "ID": "1759",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "4-revision-v1",
+          "post_title": "Главная",
+          "guid_preview": "https://shpigovsky-wp.new-site.space/?p=1759",
+          "pattern": "new-site.space"
+        },
+        {
+          "ID": "1761",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1039-revision-v1",
+          "post_title": "Интервью и СМИ",
+          "guid_preview": "https://shpigovsky-wp.new-site.space/?p=1761",
+          "pattern": "new-site.space"
+        },
+        {
+          "ID": "1762",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1039-revision-v1",
+          "post_title": "Интервью и СМИ",
+          "guid_preview": "https://shpigovsky-wp.new-site.space/?p=1762",
+          "pattern": "new-site.space"
+        },
+        {
+          "ID": "1766",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "314-revision-v1",
+          "post_title": "Лечение наркотической зависимости",
+          "guid_preview": "https://shpigovsky-wp.new-site.space/?p=1766",
+          "pattern": "new-site.space"
+        },
+        {
+          "ID": "1768",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1013-revision-v1",
+          "post_title": "Лечение героиновой зависимости",
+          "guid_preview": "https://shpigovsky-wp.new-site.space/?p=1768",
+          "pattern": "new-site.space"
+        },
+        {
+          "ID": "1769",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1012-autosave-v1",
+          "post_title": "Лечение метадоновой зависимости",
+          "guid_preview": "https://shpigovsky-wp.new-site.space/?p=1769",
+          "pattern": "new-site.space"
+        },
+        {
+          "ID": "1770",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1012-revision-v1",
+          "post_title": "Лечение метадоновой зависимости",
+          "guid_preview": "https://shpigovsky-wp.new-site.space/?p=1770",
+          "pattern": "new-site.space"
+        },
+        {
+          "ID": "1771",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1011-revision-v1",
+          "post_title": "Лечение солевой зависимости",
+          "guid_preview": "https://shpigovsky-wp.new-site.space/?p=1771",
+          "pattern": "new-site.space"
+        },
+        {
+          "ID": "1772",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "315-revision-v1",
+          "post_title": "Лечение лекарственной зависимости",
+          "guid_preview": "https://shpigovsky-wp.new-site.space/?p=1772",
+          "pattern": "new-site.space"
+        },
+        {
+          "ID": "1773",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1048-revision-v1",
+          "post_title": "Лечение опиумной зависимости",
+          "guid_preview": "https://shpigovsky-wp.new-site.space/?p=1773",
+          "pattern": "new-site.space"
+        },
+        {
+          "ID": "1774",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1048-revision-v1",
+          "post_title": "Лечение опиумной зависимости",
+          "guid_preview": "https://shpigovsky-wp.new-site.space/?p=1774",
+          "pattern": "new-site.space"
+        },
+        {
+          "ID": "1775",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1047-revision-v1",
+          "post_title": "Компьютерная зависимость",
+          "guid_preview": "https://shpigovsky-wp.new-site.space/?p=1775",
+          "pattern": "new-site.space"
+        },
+        {
+          "ID": "1776",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "75-revision-v1",
+          "post_title": "Профилактический анализ",
+          "guid_preview": "https://shpigovsky-wp.new-site.space/?p=1776",
+          "pattern": "new-site.space"
+        },
+        {
+          "ID": "1777",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1019-revision-v1",
+          "post_title": "Зависимость от постоянных покупок",
+          "guid_preview": "https://shpigovsky-wp.new-site.space/?p=1777",
+          "pattern": "new-site.space"
+        },
+        {
+          "ID": "1778",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1017-revision-v1",
+          "post_title": "Интернет-зависимость",
+          "guid_preview": "https://shpigovsky-wp.new-site.space/?p=1778",
+          "pattern": "new-site.space"
+        },
+        {
+          "ID": "1779",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1016-revision-v1",
+          "post_title": "Лечение игровой зависимости",
+          "guid_preview": "https://shpigovsky-wp.new-site.space/?p=1779",
+          "pattern": "new-site.space"
+        },
+        {
+          "ID": "1780",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1018-revision-v1",
+          "post_title": "Лечение созависимости",
+          "guid_preview": "https://shpigovsky-wp.new-site.space/?p=1780",
+          "pattern": "new-site.space"
+        },
+        {
+          "ID": "1781",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "316-revision-v1",
+          "post_title": "Поведенческие зависимости",
+          "guid_preview": "https://shpigovsky-wp.new-site.space/?p=1781",
+          "pattern": "new-site.space"
+        },
+        {
+          "ID": "1782",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "78-revision-v1",
+          "post_title": "Депрессия",
+          "guid_preview": "https://shpigovsky-wp.new-site.space/?p=1782",
+          "pattern": "new-site.space"
+        },
+        {
+          "ID": "1783",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "79-revision-v1",
+          "post_title": "ПТСР",
+          "guid_preview": "https://shpigovsky-wp.new-site.space/?p=1783",
+          "pattern": "new-site.space"
+        },
+        {
+          "ID": "1784",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "80-revision-v1",
+          "post_title": "Эмоциональное выгорание",
+          "guid_preview": "https://shpigovsky-wp.new-site.space/?p=1784",
+          "pattern": "new-site.space"
+        },
+        {
+          "ID": "1785",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "81-revision-v1",
+          "post_title": "Тревожные расстройства",
+          "guid_preview": "https://shpigovsky-wp.new-site.space/?p=1785",
+          "pattern": "new-site.space"
+        },
+        {
+          "ID": "1786",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "82-revision-v1",
+          "post_title": "Расстройства сна",
+          "guid_preview": "https://shpigovsky-wp.new-site.space/?p=1786",
+          "pattern": "new-site.space"
+        },
+        {
+          "ID": "1787",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "83-revision-v1",
+          "post_title": "Травма",
+          "guid_preview": "https://shpigovsky-wp.new-site.space/?p=1787",
+          "pattern": "new-site.space"
+        },
+        {
+          "ID": "1788",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1049-revision-v1",
+          "post_title": "Хроническая усталость",
+          "guid_preview": "https://shpigovsky-wp.new-site.space/?p=1788",
+          "pattern": "new-site.space"
+        },
+        {
+          "ID": "1789",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "87-revision-v1",
+          "post_title": "Компульсивное переедание",
+          "guid_preview": "https://shpigovsky-wp.new-site.space/?p=1789",
+          "pattern": "new-site.space"
+        },
+        {
+          "ID": "1790",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "86-revision-v1",
+          "post_title": "Булимия",
+          "guid_preview": "https://shpigovsky-wp.new-site.space/?p=1790",
+          "pattern": "new-site.space"
+        },
+        {
+          "ID": "1791",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "85-revision-v1",
+          "post_title": "Анорексия",
+          "guid_preview": "https://shpigovsky-wp.new-site.space/?p=1791",
+          "pattern": "new-site.space"
+        },
+        {
+          "ID": "1792",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1050-revision-v1",
+          "post_title": "Стресс",
+          "guid_preview": "https://shpigovsky-wp.new-site.space/?p=1792",
+          "pattern": "new-site.space"
+        },
+        {
+          "ID": "1884",
+          "post_type": "post",
+          "post_status": "auto-draft",
+          "post_name": "",
+          "post_title": "Auto Draft",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1884",
+          "pattern": "shpigovsky.beget.tech"
+        },
+        {
+          "ID": "1886",
+          "post_type": "post",
+          "post_status": "auto-draft",
+          "post_name": "",
+          "post_title": "Черновик",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1886",
+          "pattern": "shpigovsky.beget.tech"
+        },
+        {
+          "ID": "1887",
+          "post_type": "service",
+          "post_status": "trash",
+          "post_name": "zavisimosti-kopiya__trashed",
+          "post_title": "Генотипирование",
+          "guid_preview": "http://shpigovsky.beget.tech/uslugi/zavisimosti-kopiya/",
+          "pattern": "shpigovsky.beget.tech"
+        },
+        {
+          "ID": "1888",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1887-revision-v1",
+          "post_title": "Генотипирование",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1888",
+          "pattern": "shpigovsky.beget.tech"
+        },
+        {
+          "ID": "1889",
+          "post_type": "service",
+          "post_status": "publish",
+          "post_name": "%d0%b3%d0%b5%d0%bd%d0%be%d1%82%d0%b8%d0%bf%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5",
+          "post_title": "Генотипирование",
+          "guid_preview": "http://shpigovsky.beget.tech/uslugi/",
+          "pattern": "shpigovsky.beget.tech"
+        },
+        {
+          "ID": "1890",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1889-revision-v1",
+          "post_title": "Генотипирование",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1890",
+          "pattern": "shpigovsky.beget.tech"
+        },
+        {
+          "ID": "1891",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1889-revision-v1",
+          "post_title": "Генотипирование",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1891",
+          "pattern": "shpigovsky.beget.tech"
+        },
+        {
+          "ID": "1892",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1889-autosave-v1",
+          "post_title": "Генотипирование",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1892",
+          "pattern": "shpigovsky.beget.tech"
+        },
+        {
+          "ID": "1893",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1889-revision-v1",
+          "post_title": "Генотипирование",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1893",
+          "pattern": "shpigovsky.beget.tech"
+        },
+        {
+          "ID": "1894",
+          "post_type": "service",
+          "post_status": "publish",
+          "post_name": "profilakticheskiy-analiz-kopiya",
+          "post_title": "Генотипирование для специалистов",
+          "guid_preview": "http://shpigovsky.beget.tech/uslugi/%d0%b3%d0%b5%d0%bd%d0%be%d1%82%d0%b8%d0%bf%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5/profilakticheskiy-analiz-kopiya/",
+          "pattern": "shpigovsky.beget.tech"
+        },
+        {
+          "ID": "1895",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1894-revision-v1",
+          "post_title": "Генотипирование для специалистов",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1895",
+          "pattern": "shpigovsky.beget.tech"
+        },
+        {
+          "ID": "1896",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1894-revision-v1",
+          "post_title": "Генотипирование для специалистов",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1896",
+          "pattern": "shpigovsky.beget.tech"
+        },
+        {
+          "ID": "1897",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1894-revision-v1",
+          "post_title": "Генотипирование для специалистов",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1897",
+          "pattern": "shpigovsky.beget.tech"
+        },
+        {
+          "ID": "1898",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "75-revision-v1",
+          "post_title": "Профилактический анализ",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1898",
+          "pattern": "shpigovsky.beget.tech"
+        },
+        {
+          "ID": "1899",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1894-revision-v1",
+          "post_title": "Генотипирование для специалистов",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1899",
+          "pattern": "shpigovsky.beget.tech"
+        },
+        {
+          "ID": "1900",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "75-revision-v1",
+          "post_title": "Профилактический анализ",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1900",
+          "pattern": "shpigovsky.beget.tech"
+        },
+        {
+          "ID": "1901",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "314-revision-v1",
+          "post_title": "Лечение наркотической зависимости",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1901",
+          "pattern": "shpigovsky.beget.tech"
+        },
+        {
+          "ID": "1902",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1013-revision-v1",
+          "post_title": "Лечение героиновой зависимости",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1902",
+          "pattern": "shpigovsky.beget.tech"
+        },
+        {
+          "ID": "1903",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "316-revision-v1",
+          "post_title": "Поведенческие зависимости",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1903",
+          "pattern": "shpigovsky.beget.tech"
+        },
+        {
+          "ID": "1904",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "77-revision-v1",
+          "post_title": "Психическое здоровье",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1904",
+          "pattern": "shpigovsky.beget.tech"
+        },
+        {
+          "ID": "1905",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "77-revision-v1",
+          "post_title": "Психическое здоровье",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1905",
+          "pattern": "shpigovsky.beget.tech"
+        },
+        {
+          "ID": "1906",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "78-revision-v1",
+          "post_title": "Депрессия",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1906",
+          "pattern": "shpigovsky.beget.tech"
+        },
+        {
+          "ID": "1907",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "79-revision-v1",
+          "post_title": "ПТСР",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1907",
+          "pattern": "shpigovsky.beget.tech"
+        },
+        {
+          "ID": "1908",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "73-revision-v1",
+          "post_title": "Зависимости",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1908",
+          "pattern": "shpigovsky.beget.tech"
+        },
+        {
+          "ID": "1909",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "80-revision-v1",
+          "post_title": "Эмоциональное выгорание",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1909",
+          "pattern": "shpigovsky.beget.tech"
+        },
+        {
+          "ID": "1910",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "77-revision-v1",
+          "post_title": "Психическое здоровье",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1910",
+          "pattern": "shpigovsky.beget.tech"
+        },
+        {
+          "ID": "1911",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "81-revision-v1",
+          "post_title": "Тревожные расстройства",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1911",
+          "pattern": "shpigovsky.beget.tech"
+        },
+        {
+          "ID": "1912",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "82-revision-v1",
+          "post_title": "Расстройства сна",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1912",
+          "pattern": "shpigovsky.beget.tech"
+        },
+        {
+          "ID": "1913",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "83-revision-v1",
+          "post_title": "Травма",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1913",
+          "pattern": "shpigovsky.beget.tech"
+        },
+        {
+          "ID": "1914",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1049-revision-v1",
+          "post_title": "Хроническая усталость",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1914",
+          "pattern": "shpigovsky.beget.tech"
+        },
+        {
+          "ID": "3",
+          "post_type": "page",
+          "post_status": "publish",
+          "post_name": "privacy-policy",
+          "post_title": "Политика конфиденциальности",
+          "guid_preview": "http://shpigovsky.test/?page_id=3",
+          "pattern": "shpigovsky.ru"
+        },
+        {
+          "ID": "22",
+          "post_type": "page",
+          "post_status": "publish",
+          "post_name": "user-agreement",
+          "post_title": "Пользовательское соглашение",
+          "guid_preview": "http://shpigovsky.test/user-agreement/",
+          "pattern": "shpigovsky.ru"
+        },
+        {
+          "ID": "23",
+          "post_type": "page",
+          "post_status": "publish",
+          "post_name": "consent-personal-data",
+          "post_title": "Согласие на обработку персональных данных",
+          "guid_preview": "http://shpigovsky.test/consent-personal-data/",
+          "pattern": "shpigovsky.ru"
+        },
+        {
+          "ID": "24",
+          "post_type": "page",
+          "post_status": "publish",
+          "post_name": "cookie-files-policy",
+          "post_title": "Политика Cookie-файлов",
+          "guid_preview": "http://shpigovsky.test/cookie-files-policy/",
+          "pattern": "shpigovsky.ru"
+        }
+      ],
+      "postmeta_sample": []
+    },
+    "public_artifacts": [
+      {
+        "path": "wp-content/debug.log",
+        "size": 9852558,
+        "sha256": "00da13c26133b34f416f8f150d710f687d3021ee6ab85ff0ae776c3da3f91972",
+        "mtime": "2026-08-16T18:08:00+00:00"
+      }
+    ],
+    "robots": {
+      "exists": true,
+      "size": 80,
+      "sha256": "2492f7f1451552b8cbf1151fd87c6bccaf21580e5686459d7afebb5b5a9d66a5",
+      "preview": "User-agent: *\nDisallow: /\n\nSitemap: http://shpigovsky.beget.tech/wp-sitemap.xml\n"
+    },
+    "mail": {
+      "pre_wp_mail_has": true
+    },
+    "db_prefix": "fp02_",
+    "db_name_hint": "shpigovsky_main"
+  },
+  "public_smoke": {
+    "/": {
+      "status": 200,
+      "len": 206670,
+      "has_debug_notice": false,
+      "has_test_host": true
+    },
+    "/robots.txt": {
+      "status": 200,
+      "len": 80,
+      "has_debug_notice": false,
+      "has_test_host": false
+    },
+    "/wp-sitemap.xml": {
+      "status": 200,
+      "len": 562,
+      "has_debug_notice": false,
+      "has_test_host": false
+    }
+  },
+  "docroot_top": [
+    {
+      "name": "wp-blog-header.php",
+      "mode": "0o100700",
+      "size": 351,
+      "is_dir": false
+    },
+    {
+      "name": "mars-runtime",
+      "mode": "0o40700",
+      "size": 4096,
+      "is_dir": true
+    },
+    {
+      "name": "acf-json",
+      "mode": "0o40700",
+      "size": 4096,
+      "is_dir": true
+    },
+    {
+      "name": "wp-admin",
+      "mode": "0o40700",
+      "size": 4096,
+      "is_dir": true
+    },
+    {
+      "name": ".htaccess",
+      "mode": "0o100700",
+      "size": 307,
+      "is_dir": false
+    },
+    {
+      "name": "readme.html",
+      "mode": "0o100700",
+      "size": 7406,
+      "is_dir": false
+    },
+    {
+      "name": "wp-settings.php",
+      "mode": "0o100700",
+      "size": 32650,
+      "is_dir": false
+    },
+    {
+      "name": "wp-content",
+      "mode": "0o40700",
+      "size": 4096,
+      "is_dir": true
+    },
+    {
+      "name": "wp-signup.php",
+      "mode": "0o100700",
+      "size": 34755,
+      "is_dir": false
+    },
+    {
+      "name": "index.php",
+      "mode": "0o100700",
+      "size": 405,
+      "is_dir": false
+    },
+    {
+      "name": "wp-comments-post.php",
+      "mode": "0o100700",
+      "size": 2323,
+      "is_dir": false
+    },
+    {
+      "name": "wp-cron.php",
+      "mode": "0o100700",
+      "size": 5617,
+      "is_dir": false
+    },
+    {
+      "name": "wp-config.php",
+      "mode": "0o100700",
+      "size": 3329,
+      "is_dir": false
+    },
+    {
+      "name": "license.txt",
+      "mode": "0o100700",
+      "size": 19903,
+      "is_dir": false
+    },
+    {
+      "name": "app",
+      "mode": "0o40700",
+      "size": 4096,
+      "is_dir": true
+    },
+    {
+      "name": "wp-mail.php",
+      "mode": "0o100700",
+      "size": 8727,
+      "is_dir": false
+    },
+    {
+      "name": "wp-login.php",
+      "mode": "0o100700",
+      "size": 51872,
+      "is_dir": false
+    },
+    {
+      "name": "robots.txt",
+      "mode": "0o100600",
+      "size": 80,
+      "is_dir": false
+    },
+    {
+      "name": "xmlrpc.php",
+      "mode": "0o100700",
+      "size": 3205,
+      "is_dir": false
+    },
+    {
+      "name": "wp-links-opml.php",
+      "mode": "0o100700",
+      "size": 2493,
+      "is_dir": false
+    },
+    {
+      "name": "wp-load.php",
+      "mode": "0o100700",
+      "size": 3937,
+      "is_dir": false
+    },
+    {
+      "name": "_tmp-e47-fix04-val",
+      "mode": "0o40700",
+      "size": 4096,
+      "is_dir": true
+    },
+    {
+      "name": "wp-trackback.php",
+      "mode": "0o100700",
+      "size": 5214,
+      "is_dir": false
+    },
+    {
+      "name": "wp-config-sample.php",
+      "mode": "0o100700",
+      "size": 3339,
+      "is_dir": false
+    },
+    {
+      "name": "wp-activate.php",
+      "mode": "0o100700",
+      "size": 7371,
+      "is_dir": false
+    },
+    {
+      "name": "wp-includes",
+      "mode": "0o40700",
+      "size": 16384,
+      "is_dir": true
+    }
+  ]
+}

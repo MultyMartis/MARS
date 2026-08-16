@@ -1,0 +1,138 @@
+{
+  "utc": "2026-08-16T18:18:50.591479+00:00",
+  "e47_cleanup": "E47_GONE",
+  "env": {
+    "utc": "2026-08-16T18:18:45+00:00",
+    "env_fn": "production",
+    "WP_ENVIRONMENT_TYPE": "production",
+    "WP_DEBUG": false,
+    "WP_DEBUG_DISPLAY": false,
+    "WP_DEBUG_LOG": false,
+    "SCRIPT_DEBUG": false,
+    "siteurl": "http://shpigovsky.beget.tech",
+    "home": "http://shpigovsky.beget.tech",
+    "blogname": "Шпиговский Дом",
+    "admin_email": "Info@shpigovsky.ru",
+    "blog_public": "0",
+    "core_version": "0.3.6-p15",
+    "mail_filter": true,
+    "mu": [
+      "fp02-pre-cutover-mail-suppression.php"
+    ],
+    "debug_log_exists": true,
+    "debug_log_size": 0,
+    "specialists_url": "http://shpigovsky.beget.tech/specyalisty/",
+    "comfort_url": "http://shpigovsky.beget.tech/o-centre/galereya-o-dome/",
+    "home4": {
+      "0": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "1": "http://shpigovsky.beget.tech/uslugi/zavisimosti/",
+      "2": "http://shpigovsky.beget.tech/uslugi/zavisimosti/",
+      "3": "http://shpigovsky.beget.tech/uslugi/zavisimosti/",
+      "geno": "http://shpigovsky.beget.tech/uslugi/zavisimosti/profilakticheskiy-analiz/"
+    },
+    "meta": {
+      "baseline_id": "FP-0002-PROD-BASELINE-2026-08-17",
+      "latest_wave": "P15 environment cleanup",
+      "parity": "MATCH",
+      "verified_at": "2026-08-16 18:17 UTC",
+      "backup": "2026-08-16 / Storage prod-p14-full-20260816-173046",
+      "git_sha": "9a5f671c",
+      "wave": "PROD-P15",
+      "p15_note": "Environment cleanup; mail+indexing deferred; domain not cut over"
+    },
+    "tmp_e47_exists": false
+  },
+  "parity": [
+    {
+      "rel": "shpigovsky-core.php",
+      "match": true,
+      "local_sha256": "7dd6b9c6dcc4701a470e85d051f6313476f1620c19c4fa9661932a3a67c9fb5e",
+      "prod_sha256": "7dd6b9c6dcc4701a470e85d051f6313476f1620c19c4fa9661932a3a67c9fb5e"
+    },
+    {
+      "rel": "src/Admin/SystemDashboard.php",
+      "match": true,
+      "local_sha256": "7094eb4c56b051f865181800bffe007e47109fd114ef00547a87b830a193dbad",
+      "prod_sha256": "7094eb4c56b051f865181800bffe007e47109fd114ef00547a87b830a193dbad"
+    },
+    {
+      "rel": "fp02-pre-cutover-mail-suppression.php",
+      "match": true,
+      "local_sha256": "f2ba7afcec153739fac7aee154da63a67a269f9e698852f7430904ae4941a004",
+      "prod_sha256": "f2ba7afcec153739fac7aee154da63a67a269f9e698852f7430904ae4941a004"
+    },
+    {
+      "rel": "mars-local-runtime.php",
+      "present_on_prod": false
+    }
+  ],
+  "frontend": {
+    "/": {
+      "status": 200,
+      "len": 191954,
+      "test_hits": [],
+      "debug_visible": false
+    },
+    "/uslugi/": {
+      "status": 200,
+      "len": 126135,
+      "test_hits": [],
+      "debug_visible": false
+    },
+    "/uslugi/zavisimosti/": {
+      "status": 200,
+      "len": 137748,
+      "test_hits": [
+        "http://shpigovsky.test/o-centre/programma-lecheniya/"
+      ],
+      "debug_visible": false
+    },
+    "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/": {
+      "status": 200,
+      "len": 137260,
+      "test_hits": [
+        "http://shpigovsky.test/o-centre/programma-lecheniya/"
+      ],
+      "debug_visible": false
+    },
+    "/specyalisty/": {
+      "status": 200,
+      "len": 59865,
+      "test_hits": [],
+      "debug_visible": false
+    },
+    "/specyalisty/kostyuk/": {
+      "status": 200,
+      "len": 63807,
+      "test_hits": [],
+      "debug_visible": false
+    },
+    "/blog/": {
+      "status": 200,
+      "len": 82031,
+      "test_hits": [],
+      "debug_visible": false
+    },
+    "/kontakty/": {
+      "status": 200,
+      "len": 69169,
+      "test_hits": [],
+      "debug_visible": false
+    },
+    "/robots.txt": {
+      "status": 200,
+      "len": 80,
+      "test_hits": [],
+      "debug_visible": false
+    },
+    "/wp-sitemap.xml": {
+      "status": 200,
+      "len": 562,
+      "test_hits": [],
+      "debug_visible": false
+    }
+  },
+  "admin": {
+    "error": "admin credentials missing in secrets map"
+  }
+}

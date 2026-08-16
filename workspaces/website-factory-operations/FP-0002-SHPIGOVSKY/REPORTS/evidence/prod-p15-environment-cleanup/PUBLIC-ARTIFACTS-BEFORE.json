@@ -1,0 +1,174 @@
+{
+  "php_scan": [
+    {
+      "path": "wp-content/debug.log",
+      "size": 9852558,
+      "sha256": "00da13c26133b34f416f8f150d710f687d3021ee6ab85ff0ae776c3da3f91972",
+      "mtime": "2026-08-16T18:08:00+00:00"
+    }
+  ],
+  "docroot_top": [
+    {
+      "name": "wp-blog-header.php",
+      "mode": "0o100700",
+      "size": 351,
+      "is_dir": false
+    },
+    {
+      "name": "mars-runtime",
+      "mode": "0o40700",
+      "size": 4096,
+      "is_dir": true
+    },
+    {
+      "name": "acf-json",
+      "mode": "0o40700",
+      "size": 4096,
+      "is_dir": true
+    },
+    {
+      "name": "wp-admin",
+      "mode": "0o40700",
+      "size": 4096,
+      "is_dir": true
+    },
+    {
+      "name": ".htaccess",
+      "mode": "0o100700",
+      "size": 307,
+      "is_dir": false
+    },
+    {
+      "name": "readme.html",
+      "mode": "0o100700",
+      "size": 7406,
+      "is_dir": false
+    },
+    {
+      "name": "wp-settings.php",
+      "mode": "0o100700",
+      "size": 32650,
+      "is_dir": false
+    },
+    {
+      "name": "wp-content",
+      "mode": "0o40700",
+      "size": 4096,
+      "is_dir": true
+    },
+    {
+      "name": "wp-signup.php",
+      "mode": "0o100700",
+      "size": 34755,
+      "is_dir": false
+    },
+    {
+      "name": "index.php",
+      "mode": "0o100700",
+      "size": 405,
+      "is_dir": false
+    },
+    {
+      "name": "wp-comments-post.php",
+      "mode": "0o100700",
+      "size": 2323,
+      "is_dir": false
+    },
+    {
+      "name": "wp-cron.php",
+      "mode": "0o100700",
+      "size": 5617,
+      "is_dir": false
+    },
+    {
+      "name": "wp-config.php",
+      "mode": "0o100700",
+      "size": 3329,
+      "is_dir": false
+    },
+    {
+      "name": "license.txt",
+      "mode": "0o100700",
+      "size": 19903,
+      "is_dir": false
+    },
+    {
+      "name": "app",
+      "mode": "0o40700",
+      "size": 4096,
+      "is_dir": true
+    },
+    {
+      "name": "wp-mail.php",
+      "mode": "0o100700",
+      "size": 8727,
+      "is_dir": false
+    },
+    {
+      "name": "wp-login.php",
+      "mode": "0o100700",
+      "size": 51872,
+      "is_dir": false
+    },
+    {
+      "name": "robots.txt",
+      "mode": "0o100600",
+      "size": 80,
+      "is_dir": false
+    },
+    {
+      "name": "xmlrpc.php",
+      "mode": "0o100700",
+      "size": 3205,
+      "is_dir": false
+    },
+    {
+      "name": "wp-links-opml.php",
+      "mode": "0o100700",
+      "size": 2493,
+      "is_dir": false
+    },
+    {
+      "name": "wp-load.php",
+      "mode": "0o100700",
+      "size": 3937,
+      "is_dir": false
+    },
+    {
+      "name": "_tmp-e47-fix04-val",
+      "mode": "0o40700",
+      "size": 4096,
+      "is_dir": true
+    },
+    {
+      "name": "wp-trackback.php",
+      "mode": "0o100700",
+      "size": 5214,
+      "is_dir": false
+    },
+    {
+      "name": "wp-config-sample.php",
+      "mode": "0o100700",
+      "size": 3339,
+      "is_dir": false
+    },
+    {
+      "name": "wp-activate.php",
+      "mode": "0o100700",
+      "size": 7371,
+      "is_dir": false
+    },
+    {
+      "name": "wp-includes",
+      "mode": "0o40700",
+      "size": 16384,
+      "is_dir": true
+    }
+  ],
+  "robots": {
+    "exists": true,
+    "size": 80,
+    "sha256": "2492f7f1451552b8cbf1151fd87c6bccaf21580e5686459d7afebb5b5a9d66a5",
+    "preview": "User-agent: *\nDisallow: /\n\nSitemap: http://shpigovsky.beget.tech/wp-sitemap.xml\n"
+  }
+}

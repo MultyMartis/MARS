@@ -1,0 +1,233 @@
+{
+  "utc": "2026-08-16T18:17:48.322998+00:00",
+  "steps": [
+    {
+      "wp_config": {
+        "actions": [
+          {
+            "define": "WP_ENVIRONMENT_TYPE",
+            "from": "'local'",
+            "to": "'production'"
+          },
+          {
+            "define": "WP_DEBUG",
+            "from": "true",
+            "to": "false"
+          },
+          {
+            "define": "WP_DEBUG_DISPLAY",
+            "status": "already",
+            "value": "false"
+          },
+          {
+            "define": "WP_DEBUG_LOG",
+            "from": "true",
+            "to": "false"
+          },
+          {
+            "define": "SCRIPT_DEBUG",
+            "from": "true",
+            "to": "false"
+          }
+        ],
+        "before_sha256": "148cd6a5c90d9e346e6883d80d101c93e773be2ca5ccd18db035885847a156c1",
+        "after_sha256": "ea9a7c5b7b7221a9a668d469d921e2ff8cae26607ab59520ac47deed0819c3e5",
+        "match_upload": true
+      }
+    },
+    {
+      "deploy_plugin": [
+        {
+          "rel": "shpigovsky-core.php",
+          "local_sha256": "7dd6b9c6dcc4701a470e85d051f6313476f1620c19c4fa9661932a3a67c9fb5e",
+          "prod_after_sha256": "7dd6b9c6dcc4701a470e85d051f6313476f1620c19c4fa9661932a3a67c9fb5e",
+          "match": true
+        },
+        {
+          "rel": "src/Admin/SystemDashboard.php",
+          "local_sha256": "7094eb4c56b051f865181800bffe007e47109fd114ef00547a87b830a193dbad",
+          "prod_after_sha256": "7094eb4c56b051f865181800bffe007e47109fd114ef00547a87b830a193dbad",
+          "match": true
+        }
+      ]
+    },
+    {
+      "mu": {
+        "new": "fp02-pre-cutover-mail-suppression.php",
+        "new_match": true,
+        "new_sha256": "f2ba7afcec153739fac7aee154da63a67a269f9e698852f7430904ae4941a004",
+        "removed_old": true,
+        "old_name": "mars-local-runtime.php"
+      }
+    },
+    {
+      "debug_log": {
+        "present": true,
+        "archived_local": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p15-debug-archive\\debug.log.p15-pre-20260816-181753",
+        "removed_webroot": false,
+        "truncated": true,
+        "error": "[Errno 13] Permission denied"
+      }
+    },
+    {
+      "tmp_dirs_inspect": {
+        "_tmp-e47-fix04-val": {
+          "exists": true,
+          "entries": [
+            "package.json",
+            "package-lock.json",
+            "node_modules",
+            "browsers",
+            "validate-toggle.mjs"
+          ],
+          "count": 5
+        },
+        "mars-runtime": {
+          "exists": true,
+          "entries": [
+            "scripts"
+          ],
+          "count": 1
+        },
+        "app": {
+          "exists": true,
+          "entries": [
+            "public"
+          ],
+          "count": 1
+        }
+      }
+    },
+    {
+      "tmp_e47_cleanup": [
+        "package.json",
+        "package-lock.json",
+        "SKIP:node_modules",
+        "SKIP:browsers",
+        "validate-toggle.mjs",
+        "DIR_KEEP:Failure"
+      ]
+    },
+    {
+      "mars_runtime_decision": "KEEP / UNKNOWN — not deleted in P15",
+      "app_decision": "KEEP — likely WP structure residue, not deleted"
+    }
+  ],
+  "apply": {
+    "utc": "2026-08-16T18:17:57+00:00",
+    "actions": [
+      {
+        "update_option": "fp02-block-specialists_specialists_all_link_url",
+        "from": "http://shpigovsky.test/specyalisty/",
+        "to": "http://shpigovsky.beget.tech/specyalisty/"
+      },
+      {
+        "update_option": "fp02-block-comfort_comfort_all_link_url",
+        "from": "http://shpigovsky.test/o-centre/galereya-o-dome/",
+        "to": "http://shpigovsky.beget.tech/o-centre/galereya-o-dome/"
+      },
+      {
+        "update_option": "admin_email",
+        "from": "mli-fp0002@localhost.test",
+        "to": "Info@shpigovsky.ru"
+      },
+      {
+        "update_post_meta": "home_why_us_items_0_url",
+        "from": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+        "to": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"
+      },
+      {
+        "update_post_meta": "home_why_us_items_1_url",
+        "from": "http://shpigovsky.test/uslugi/zavisimosti/",
+        "to": "http://shpigovsky.beget.tech/uslugi/zavisimosti/"
+      },
+      {
+        "update_post_meta": "home_why_us_items_2_url",
+        "from": "http://shpigovsky.test/uslugi/zavisimosti/",
+        "to": "http://shpigovsky.beget.tech/uslugi/zavisimosti/"
+      },
+      {
+        "update_post_meta": "home_why_us_items_3_url",
+        "from": "http://shpigovsky.test/uslugi/zavisimosti/",
+        "to": "http://shpigovsky.beget.tech/uslugi/zavisimosti/"
+      },
+      {
+        "update_post_meta": "home_genotyping_link_url",
+        "from": "http://shpigovsky.test/uslugi/zavisimosti/profilakticheskiy-analiz/",
+        "to": "http://shpigovsky.beget.tech/uslugi/zavisimosti/profilakticheskiy-analiz/"
+      },
+      {
+        "update_option": "fp02_metacode_system_meta",
+        "ok": true
+      }
+    ],
+    "before": {
+      "options": {
+        "fp02-block-specialists_specialists_all_link_url": "http://shpigovsky.test/specyalisty/",
+        "fp02-block-comfort_comfort_all_link_url": "http://shpigovsky.test/o-centre/galereya-o-dome/",
+        "admin_email": "mli-fp0002@localhost.test",
+        "siteurl": "http://shpigovsky.beget.tech",
+        "home": "http://shpigovsky.beget.tech",
+        "blogname": "Шпиговский Дом",
+        "blog_public": "0"
+      },
+      "home4": {
+        "home_why_us_items_0_url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+        "home_why_us_items_1_url": "http://shpigovsky.test/uslugi/zavisimosti/",
+        "home_why_us_items_2_url": "http://shpigovsky.test/uslugi/zavisimosti/",
+        "home_why_us_items_3_url": "http://shpigovsky.test/uslugi/zavisimosti/",
+        "home_genotyping_link_url": "http://shpigovsky.test/uslugi/zavisimosti/profilakticheskiy-analiz/"
+      }
+    },
+    "after": {
+      "options": {
+        "fp02-block-specialists_specialists_all_link_url": "http://shpigovsky.beget.tech/specyalisty/",
+        "fp02-block-comfort_comfort_all_link_url": "http://shpigovsky.beget.tech/o-centre/galereya-o-dome/",
+        "admin_email": "Info@shpigovsky.ru",
+        "siteurl": "http://shpigovsky.beget.tech",
+        "home": "http://shpigovsky.beget.tech",
+        "blogname": "Шпиговский Дом",
+        "blog_public": "0"
+      },
+      "home4": {
+        "home_why_us_items_0_url": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+        "home_why_us_items_1_url": "http://shpigovsky.beget.tech/uslugi/zavisimosti/",
+        "home_why_us_items_2_url": "http://shpigovsky.beget.tech/uslugi/zavisimosti/",
+        "home_why_us_items_3_url": "http://shpigovsky.beget.tech/uslugi/zavisimosti/",
+        "home_genotyping_link_url": "http://shpigovsky.beget.tech/uslugi/zavisimosti/profilakticheskiy-analiz/"
+      }
+    },
+    "env_fn": "production",
+    "WP_ENVIRONMENT_TYPE": "production",
+    "WP_DEBUG": false,
+    "WP_DEBUG_DISPLAY": false,
+    "WP_DEBUG_LOG": false,
+    "SCRIPT_DEBUG": false,
+    "core_version": "0.3.6-p15",
+    "mail_filter": true,
+    "mu_files": [
+      "fp02-pre-cutover-mail-suppression.php"
+    ],
+    "siteurl": "http://shpigovsky.beget.tech",
+    "home": "http://shpigovsky.beget.tech",
+    "blog_public": "0",
+    "snap": {
+      "options": {
+        "fp02-block-specialists_specialists_all_link_url": "http://shpigovsky.test/specyalisty/",
+        "fp02-block-comfort_comfort_all_link_url": "http://shpigovsky.test/o-centre/galereya-o-dome/",
+        "admin_email": "mli-fp0002@localhost.test",
+        "siteurl": "http://shpigovsky.beget.tech",
+        "home": "http://shpigovsky.beget.tech",
+        "blogname": "Шпиговский Дом",
+        "blog_public": "0"
+      },
+      "home4": {
+        "home_why_us_items_0_url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+        "home_why_us_items_1_url": "http://shpigovsky.test/uslugi/zavisimosti/",
+        "home_why_us_items_2_url": "http://shpigovsky.test/uslugi/zavisimosti/",
+        "home_why_us_items_3_url": "http://shpigovsky.test/uslugi/zavisimosti/",
+        "home_genotyping_link_url": "http://shpigovsky.test/uslugi/zavisimosti/profilakticheskiy-analiz/"
+      }
+    }
+  }
+}
