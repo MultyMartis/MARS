@@ -1,0 +1,125 @@
+{
+  "captured_at": "2026-08-16T17:36:09.723Z",
+  "named_workflows": [
+    {
+      "id": "cJGoQUqIIHull4p7",
+      "name": "Sales-Manager-v1",
+      "active": false
+    },
+    {
+      "id": "h8I2Tl2yl4uzhUnB",
+      "name": "Sales-Manager-v2",
+      "active": false
+    },
+    {
+      "id": "wLrLp4WQHm1VJmxz",
+      "name": "i-SEO Sales Manager - Admin.dev",
+      "active": true
+    },
+    {
+      "id": "xSnXPy8cEHoZw6xG",
+      "name": "i-SEO Sales Manager - Operational.dev",
+      "active": true
+    }
+  ],
+  "ops": {
+    "id": "xSnXPy8cEHoZw6xG",
+    "name": "i-SEO Sales Manager - Operational.dev",
+    "active": true,
+    "nodeCount": 45,
+    "disabledNodes": [
+      "OpenRouter AI"
+    ],
+    "connectionHash": "0CB507230FD6ADD6990CC7B9FEFB796542F6537004CE8AFBA6FC488BC5B4AE7A",
+    "sanitizedHash": "64B2F91974ACB07EC2022FAB9C207614896A823AD1B9AE4653DAFEC50924DD53",
+    "codeHashes": {
+      "Parse Lead": "ABF87EE55E3A03C7",
+      "Normalize CONFIG": "32798BDB1E6C53F9",
+      "Deterministic Lead Processor": "5EA0239E34A1C47D",
+      "Prepare AI Request": "2F65726CEC71832E",
+      "Validate AI Result": "E4CF768C7CBF56A7",
+      "Merge AI or Fallback": "3D797525EED7AC9C",
+      "Classify Duplicate": "3979F1F74BCE3022",
+      "Format Telegram Lead Card": "BE07964BF2433AF6",
+      "Telegram Result Gate": "1FDD4349FE217DB3",
+      "Error Handler": "C854E8A13F95CCB7",
+      "Update Last Success / Runtime State": "387BF2013BA0E576",
+      "Intake Gate": "A95C7236FF8986CE",
+      "Telegram Skip Pass": "77A65A0EA2CBECFA",
+      "Expand Delivery Recipients": "0F330031C90FC223",
+      "Stamp Delivery Result": "674C84E16D7F3FB4",
+      "Aggregate Delivery Finalizer": "3D1A8133C1228850",
+      "Prepare Delivery Claims": "691CE9CB88BE457A",
+      "Restore Claimed Delivery Items": "84D7CF0F9D7F5AAA"
+    },
+    "gmail_simple": false
+  },
+  "admin": {
+    "id": "wLrLp4WQHm1VJmxz",
+    "name": "i-SEO Sales Manager - Admin.dev",
+    "active": true,
+    "nodeCount": 100,
+    "disabledNodes": [],
+    "connectionHash": "F7D43E1C33AE926CF5E8A5B4BD7DD981DB73D8DAD66416CE452A5797858C8B42",
+    "sanitizedHash": "49F9FF4D557CD15DD80B04D8858A95CB907F369800EC1EB60CAC4A034FEBFF5E",
+    "codeHashes": {
+      "Handle Callback Action": "896596A542F9F746",
+      "Reminder Schedule Gate": "F59DEE0535143CCD",
+      "Decide Gmail Source Fallback": "5AC1772B929F66B2",
+      "Attach Gmail Full Source": "87FDD72E019AC8DB"
+    },
+    "extra_nodes": [
+      {
+        "name": "Decide Gmail Source Fallback",
+        "present": true
+      },
+      {
+        "name": "IF Need Gmail Source Fallback",
+        "present": true
+      },
+      {
+        "name": "Gmail Get Source Fallback",
+        "present": true
+      },
+      {
+        "name": "Attach Gmail Full Source",
+        "present": true
+      },
+      {
+        "name": "Read RAW for Callback",
+        "present": true
+      },
+      {
+        "name": "Resolve Callback Lead",
+        "present": true
+      },
+      {
+        "name": "Maybe Send Raw Continuation",
+        "present": true
+      }
+    ]
+  },
+  "v2": {
+    "id": "h8I2Tl2yl4uzhUnB",
+    "name": "Sales-Manager-v2",
+    "active": false
+  },
+  "ai": {
+    "openrouter_disabled": true,
+    "ai_enabled_cfg": "false"
+  },
+  "reminder": {
+    "ai_enabled": "false",
+    "pending_reminders_enabled": "true",
+    "pending_reminder_time": "10:00",
+    "pending_reminder_timezone": "Europe/Moscow",
+    "pending_reminder_weekdays": "Mon-Fri",
+    "pending_reminder_include_tests": "false",
+    "pending_reminder_include_archive": "false",
+    "pending_reminder_version": "sm-pending-reminder-v1.0",
+    "message_format_version": "sm-msg-v2.2",
+    "parser_version": "sm-parser-v3.3",
+    "last_reminder_window_date": null,
+    "last_reminder_window_status": null
+  }
+}

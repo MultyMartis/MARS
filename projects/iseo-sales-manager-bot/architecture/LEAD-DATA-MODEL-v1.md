@@ -3,6 +3,8 @@
 **Product:** i-SEO Sales Manager Bot  
 **Status:** documented schema target — **Sheets not mutated in Phase 2**
 
+> **Production supersession (2026-08-17):** Canonical live RAW/CLEAN + full-source contract is [baselines/PRODUCTION-STABLE-BASELINE-2026-08-17.md](../baselines/PRODUCTION-STABLE-BASELINE-2026-08-17.md). Durable `raw_text` is full visible source (snippet is not authoritative when a body exists). This Phase 2 file remains historical design context.
+
 ---
 
 ## 1. Table strategy (minimal disruption)

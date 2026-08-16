@@ -1,0 +1,119 @@
+{
+  "monday_boundary": "2026-08-17 10:00 Europe/Moscow",
+  "msk_now": {
+    "localDate": "2026-08-16",
+    "weekday": "Sun",
+    "time": "20:36:09",
+    "isoLike": "2026-08-16 20:36:09"
+  },
+  "monday_window_reached": false,
+  "natural_acceptance": "PENDING_OBSERVATION",
+  "status_label": "STABLE_BASELINE_WITH_PENDING_NATURAL_REMINDER_OBSERVATION",
+  "admin_exec_sample": [
+    {
+      "id": "32887",
+      "status": "success",
+      "mode": "trigger",
+      "startedAt": "2026-08-16T17:30:24.202Z",
+      "stoppedAt": "2026-08-16T17:30:25.692Z"
+    },
+    {
+      "id": "32883",
+      "status": "success",
+      "mode": "webhook",
+      "startedAt": "2026-08-16T17:24:16.000Z",
+      "stoppedAt": "2026-08-16T17:24:20.446Z"
+    },
+    {
+      "id": "32882",
+      "status": "success",
+      "mode": "webhook",
+      "startedAt": "2026-08-16T17:24:04.355Z",
+      "stoppedAt": "2026-08-16T17:24:10.712Z"
+    },
+    {
+      "id": "32881",
+      "status": "success",
+      "mode": "webhook",
+      "startedAt": "2026-08-16T17:23:54.476Z",
+      "stoppedAt": "2026-08-16T17:23:55.854Z"
+    },
+    {
+      "id": "32880",
+      "status": "success",
+      "mode": "webhook",
+      "startedAt": "2026-08-16T17:23:35.347Z",
+      "stoppedAt": "2026-08-16T17:23:37.229Z"
+    },
+    {
+      "id": "32879",
+      "status": "success",
+      "mode": "webhook",
+      "startedAt": "2026-08-16T17:22:54.171Z",
+      "stoppedAt": "2026-08-16T17:22:57.945Z"
+    },
+    {
+      "id": "32869",
+      "status": "success",
+      "mode": "trigger",
+      "startedAt": "2026-08-16T17:15:54.067Z",
+      "stoppedAt": "2026-08-16T17:15:55.631Z"
+    },
+    {
+      "id": "32858",
+      "status": "success",
+      "mode": "trigger",
+      "startedAt": "2026-08-16T17:00:54.060Z",
+      "stoppedAt": "2026-08-16T17:00:55.498Z"
+    },
+    {
+      "id": "32855",
+      "status": "success",
+      "mode": "webhook",
+      "startedAt": "2026-08-16T16:57:08.977Z",
+      "stoppedAt": "2026-08-16T16:57:14.503Z"
+    },
+    {
+      "id": "32848",
+      "status": "success",
+      "mode": "trigger",
+      "startedAt": "2026-08-16T16:45:54.062Z",
+      "stoppedAt": "2026-08-16T16:45:55.463Z"
+    },
+    {
+      "id": "32830",
+      "status": "success",
+      "mode": "trigger",
+      "startedAt": "2026-08-16T16:30:54.094Z",
+      "stoppedAt": "2026-08-16T16:30:55.551Z"
+    },
+    {
+      "id": "32820",
+      "status": "success",
+      "mode": "trigger",
+      "startedAt": "2026-08-16T16:15:54.068Z",
+      "stoppedAt": "2026-08-16T16:15:55.567Z"
+    },
+    {
+      "id": "32816",
+      "status": "success",
+      "mode": "webhook",
+      "startedAt": "2026-08-16T16:10:27.662Z",
+      "stoppedAt": "2026-08-16T16:10:32.340Z"
+    },
+    {
+      "id": "32815",
+      "status": "success",
+      "mode": "webhook",
+      "startedAt": "2026-08-16T16:10:17.055Z",
+      "stoppedAt": "2026-08-16T16:10:21.741Z"
+    },
+    {
+      "id": "32814",
+      "status": "success",
+      "mode": "webhook",
+      "startedAt": "2026-08-16T16:10:07.270Z",
+      "stoppedAt": "2026-08-16T16:10:12.297Z"
+    }
+  ]
+}

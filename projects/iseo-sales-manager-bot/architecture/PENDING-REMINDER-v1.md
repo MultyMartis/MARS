@@ -1,5 +1,7 @@
 # PENDING REMINDER v1
 
+> **Production supersession (2026-08-17):** Reminders are **enabled** in production CONFIG (`pending_reminders_enabled=true`), Mon–Fri **10:00 Europe/Moscow**, weekday fail-close gate active. Canonical: [baselines/PRODUCTION-STABLE-BASELINE-2026-08-17.md](../baselines/PRODUCTION-STABLE-BASELINE-2026-08-17.md). The historical `enabled=false` status line below is obsolete for live production.
+
 **Product:** i-SEO Sales Manager Bot
 **Phase:** 3F.1
 **Scope:** daily scheduled reminder for unresolved pending leads

@@ -1,3 +1,4 @@
+> **Production supersession (2026-08-17):** Current reminder contour is PRODUCTION STABLE — enabled Mon–Fri 10:00 Europe/Moscow with weekday gate and current-state pending selector. First natural Monday observation after weekday-gate change may still be pending at freeze. Canonical: [baselines/PRODUCTION-STABLE-BASELINE-2026-08-17.md](../baselines/PRODUCTION-STABLE-BASELINE-2026-08-17.md). Historical soak/429 addenda below remain historical.
 > **Phase 3H.8.2.2 (2026-08-14):** Reminder pending eligibility uses `iseo-reminder-current-state-selector-v1.0` — unique `lead_id` → authoritative current status → eligibility. First CLEAN pending row no longer wins. Production Reminder Build Claims adds no per-lead Sheets calls. Duplicate CLEAN row source forensic is deferred. Real 10:00 acceptance still pending.
 
 <!-- Phase 3H.8.2 addendum 2026-08-14 -->

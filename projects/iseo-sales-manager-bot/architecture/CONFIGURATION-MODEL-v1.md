@@ -4,6 +4,8 @@
 **Storage:** Google Sheets tab `CONFIG` (auditable)  
 **Status:** documented — Sheets not mutated in Phase 2
 
+> **Production supersession (2026-08-17):** Live CONFIG includes reminder keys (`pending_reminders_enabled=true`, `pending_reminder_time=10:00`, `pending_reminder_timezone=Europe/Moscow`, tests/archive excluded) and `ai_enabled=false`. Weekday Mon–Fri gate is in Admin code. Canonical: [baselines/PRODUCTION-STABLE-BASELINE-2026-08-17.md](../baselines/PRODUCTION-STABLE-BASELINE-2026-08-17.md).
+
 ---
 
 ## 1. Why Sheets CONFIG

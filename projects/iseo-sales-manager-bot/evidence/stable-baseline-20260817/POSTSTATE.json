@@ -1,0 +1,301 @@
+{
+  "captured_at": "2026-08-16T17:36:09.723Z",
+  "designation": "Sales Manager v2 — Production Stable Baseline 2026-08-17",
+  "status": "PRODUCTION STABLE",
+  "reminder_observation_status": "STABLE_BASELINE_WITH_PENDING_NATURAL_REMINDER_OBSERVATION",
+  "host": "n8n.ai-metacode.com",
+  "named_workflows": [
+    {
+      "id": "cJGoQUqIIHull4p7",
+      "name": "Sales-Manager-v1",
+      "active": false
+    },
+    {
+      "id": "h8I2Tl2yl4uzhUnB",
+      "name": "Sales-Manager-v2",
+      "active": false
+    },
+    {
+      "id": "wLrLp4WQHm1VJmxz",
+      "name": "i-SEO Sales Manager - Admin.dev",
+      "active": true
+    },
+    {
+      "id": "xSnXPy8cEHoZw6xG",
+      "name": "i-SEO Sales Manager - Operational.dev",
+      "active": true
+    }
+  ],
+  "named_count": 4,
+  "ops": {
+    "id": "xSnXPy8cEHoZw6xG",
+    "name": "i-SEO Sales Manager - Operational.dev",
+    "active": true,
+    "nodeCount": 45,
+    "connectionHash": "0CB507230FD6ADD6990CC7B9FEFB796542F6537004CE8AFBA6FC488BC5B4AE7A",
+    "sanitizedHash": "64B2F91974ACB07EC2022FAB9C207614896A823AD1B9AE4653DAFEC50924DD53",
+    "disabledNodes": [
+      "OpenRouter AI"
+    ],
+    "codeHashes": {
+      "Parse Lead": "ABF87EE55E3A03C7",
+      "Normalize CONFIG": "32798BDB1E6C53F9",
+      "Deterministic Lead Processor": "5EA0239E34A1C47D",
+      "Prepare AI Request": "2F65726CEC71832E",
+      "Validate AI Result": "E4CF768C7CBF56A7",
+      "Merge AI or Fallback": "3D797525EED7AC9C",
+      "Classify Duplicate": "3979F1F74BCE3022",
+      "Format Telegram Lead Card": "BE07964BF2433AF6",
+      "Telegram Result Gate": "1FDD4349FE217DB3",
+      "Error Handler": "C854E8A13F95CCB7",
+      "Update Last Success / Runtime State": "387BF2013BA0E576",
+      "Intake Gate": "A95C7236FF8986CE",
+      "Telegram Skip Pass": "77A65A0EA2CBECFA",
+      "Expand Delivery Recipients": "0F330031C90FC223",
+      "Stamp Delivery Result": "674C84E16D7F3FB4",
+      "Aggregate Delivery Finalizer": "3D1A8133C1228850",
+      "Prepare Delivery Claims": "691CE9CB88BE457A",
+      "Restore Claimed Delivery Items": "84D7CF0F9D7F5AAA"
+    },
+    "telegramTriggers": [],
+    "telegramSendNodes": [
+      {
+        "name": "Send Telegram Lead Card With Buttons",
+        "disabled": false,
+        "typeVersion": 1.2,
+        "appendAttribution": false,
+        "hasAppendAttributionKey": true,
+        "credIdHash": "261EB5EE97F9865A"
+      },
+      {
+        "name": "Send Telegram Lead Card",
+        "disabled": false,
+        "typeVersion": 1.2,
+        "appendAttribution": false,
+        "hasAppendAttributionKey": true,
+        "credIdHash": "261EB5EE97F9865A"
+      }
+    ],
+    "pinDataPresent": false
+  },
+  "admin": {
+    "id": "wLrLp4WQHm1VJmxz",
+    "name": "i-SEO Sales Manager - Admin.dev",
+    "active": true,
+    "nodeCount": 100,
+    "connectionHash": "F7D43E1C33AE926CF5E8A5B4BD7DD981DB73D8DAD66416CE452A5797858C8B42",
+    "sanitizedHash": "49F9FF4D557CD15DD80B04D8858A95CB907F369800EC1EB60CAC4A034FEBFF5E",
+    "disabledNodes": [],
+    "codeHashes": {
+      "Normalize Command": "71065B806400D760",
+      "Check User Authorization": "4D5AD3569FF494D0",
+      "Help": "2DD74ABFE6099814",
+      "Status": "422130EE7926B1B7",
+      "AI Status": "52CDA9C7AF60EE48",
+      "AI On": "CAABF85BA04A8457",
+      "AI Off": "F000DEAD3AFE2687",
+      "Health": "8EAE551D5BA92BC3",
+      "Stats": "169CA3D4766B81A4",
+      "Synthetic Test Lead": "8D3A3F48783D4C4B",
+      "Last Error": "B2E2065E2295F0A8",
+      "Config Summary": "575A858FFA410C80",
+      "Unknown Command": "080F6C3ADF67EB1C",
+      "Deny Reply": "5C8159D633EDD652",
+      "Capture Admin Reply": "52D277079D2DC1C3",
+      "Prepare Config Write": "5F2543BCAB982365",
+      "Restore Reply After Config Write": "985CCC740779C85D",
+      "Start": "7E0A13DB067254EF",
+      "Handle Callback Action": "896596A542F9F746",
+      "Recent Leads": "087B747A98290F41",
+      "Prepare Callback Answer": "03253784C3EFFE01",
+      "Callback Edit Result": "1DEBD987C7E76D06",
+      "Prepare Access Upsert": "06CF51A14DAA5C88",
+      "Restore Admin Reply Target": "A3237EC84821F59C",
+      "Collapse Authorization Context": "F738BB6FC807979C",
+      "My Status": "FCB01DED101173CA",
+      "Finalize Access Notification": "98214555ED2DB8F5",
+      "Expand Card Sync Copies": "046BE16ECF80BFB3",
+      "Aggregate Card Sync Result": "33418A28E00CBEFB",
+      "Prepare Early Callback Ack": "F3D17F7FE2B16B2F",
+      "Pending View Handler": "A8E890230029A931",
+      "Reminder Commands": "8B9E6597FCFAD310",
+      "Reminder Schedule Gate": "F59DEE0535143CCD",
+      "Reminder Build Claims": "30D2BA20DE29C81D",
+      "Reminder Stamp": "6853DD875F7BC8D6",
+      "Reminder Mark Window Complete": "6A3A565C8452FCCC",
+      "Prepare Reminder Window Config Write": "159CF0ADD11ED419",
+      "Lead History Handler": "18E9FF51BDDB5F99",
+      "Reply Profile Commands": "B8006003E98864AA",
+      "Reminder Classify Sheets Error": "6BBAD534B586803E",
+      "Reminder Stamp Sheets Error": "A09E8C560782A045",
+      "Resolve Callback Lead": "6A62FC64309D6066",
+      "Maybe Send Raw Continuation": "2D1B959DFC250C84",
+      "Decide Gmail Source Fallback": "5AC1772B929F66B2",
+      "Attach Gmail Full Source": "87FDD72E019AC8DB"
+    },
+    "telegramTriggers": [
+      {
+        "name": "Telegram Trigger",
+        "disabled": false,
+        "type": "n8n-nodes-base.telegramTrigger",
+        "typeVersion": 1.2,
+        "hasWebhookId": true,
+        "credIdHash": "261EB5EE97F9865A",
+        "credName": "Telegram account - Sales Manager for i-SEO",
+        "updates": [
+          "message",
+          "callback_query"
+        ]
+      }
+    ],
+    "telegramSendNodes": [
+      {
+        "name": "Safe Telegram Reply",
+        "disabled": false,
+        "typeVersion": 1.2,
+        "appendAttribution": false,
+        "hasAppendAttributionKey": true,
+        "credIdHash": "261EB5EE97F9865A"
+      },
+      {
+        "name": "Answer Callback Query",
+        "disabled": false,
+        "typeVersion": 1.2,
+        "appendAttribution": false,
+        "hasAppendAttributionKey": true,
+        "credIdHash": "261EB5EE97F9865A"
+      },
+      {
+        "name": "Edit Lead Card Message",
+        "disabled": false,
+        "typeVersion": 1.2,
+        "appendAttribution": false,
+        "hasAppendAttributionKey": true,
+        "credIdHash": "261EB5EE97F9865A"
+      },
+      {
+        "name": "Answer Callback Deny",
+        "disabled": false,
+        "typeVersion": 1.2,
+        "appendAttribution": false,
+        "hasAppendAttributionKey": true,
+        "credIdHash": "261EB5EE97F9865A"
+      },
+      {
+        "name": "Notify Access Subject",
+        "disabled": false,
+        "typeVersion": 1.2,
+        "appendAttribution": false,
+        "hasAppendAttributionKey": true,
+        "credIdHash": "261EB5EE97F9865A"
+      },
+      {
+        "name": "Answer Callback Early",
+        "disabled": false,
+        "typeVersion": 1.2,
+        "appendAttribution": false,
+        "hasAppendAttributionKey": true,
+        "credIdHash": "261EB5EE97F9865A"
+      },
+      {
+        "name": "Send Reminder Telegram",
+        "disabled": false,
+        "typeVersion": 1.2,
+        "appendAttribution": false,
+        "hasAppendAttributionKey": true,
+        "credIdHash": "261EB5EE97F9865A"
+      },
+      {
+        "name": "Edit Lead Card Message Pending",
+        "disabled": false,
+        "typeVersion": 1.2,
+        "appendAttribution": false,
+        "hasAppendAttributionKey": true,
+        "credIdHash": "261EB5EE97F9865A"
+      },
+      {
+        "name": "Send Raw Continuation",
+        "disabled": false,
+        "typeVersion": 1.2,
+        "appendAttribution": false,
+        "hasAppendAttributionKey": true,
+        "credIdHash": "261EB5EE97F9865A"
+      }
+    ],
+    "pinDataPresent": false
+  },
+  "v2_active": false,
+  "config": {
+    "ai_enabled": "false",
+    "pending_reminders_enabled": "true",
+    "pending_reminder_time": "10:00",
+    "pending_reminder_timezone": "Europe/Moscow",
+    "pending_reminder_weekdays": "Mon-Fri",
+    "pending_reminder_include_tests": "false",
+    "pending_reminder_include_archive": "false",
+    "pending_reminder_version": "sm-pending-reminder-v1.0",
+    "message_format_version": "sm-msg-v2.2",
+    "parser_version": "sm-parser-v3.3",
+    "last_reminder_window_date": null,
+    "last_reminder_window_status": null
+  },
+  "hashes": {
+    "reminder_gate_hash": "F59DEE0535143CCD",
+    "parse_hash": "ABF87EE55E3A03C7",
+    "handle_hash": "896596A542F9F746",
+    "format_hash": "BE07964BF2433AF6",
+    "ops_connection_hash": "0CB507230FD6ADD6990CC7B9FEFB796542F6537004CE8AFBA6FC488BC5B4AE7A",
+    "admin_connection_hash": "F7D43E1C33AE926CF5E8A5B4BD7DD981DB73D8DAD66416CE452A5797858C8B42",
+    "ops_sanitized_hash": "64B2F91974ACB07EC2022FAB9C207614896A823AD1B9AE4653DAFEC50924DD53",
+    "admin_sanitized_hash": "49F9FF4D557CD15DD80B04D8858A95CB907F369800EC1EB60CAC4A034FEBFF5E"
+  },
+  "gmail_simple": false,
+  "admin_extra_nodes": [
+    {
+      "name": "Decide Gmail Source Fallback",
+      "present": true
+    },
+    {
+      "name": "IF Need Gmail Source Fallback",
+      "present": true
+    },
+    {
+      "name": "Gmail Get Source Fallback",
+      "present": true
+    },
+    {
+      "name": "Attach Gmail Full Source",
+      "present": true
+    },
+    {
+      "name": "Read RAW for Callback",
+      "present": true
+    },
+    {
+      "name": "Resolve Callback Lead",
+      "present": true
+    },
+    {
+      "name": "Maybe Send Raw Continuation",
+      "present": true
+    }
+  ],
+  "card_buttons": {
+    "processed": true,
+    "spam": true,
+    "raw_source": true
+  },
+  "freeze_boundary": {
+    "active_tmp_workflows": [],
+    "active_tmp_count": 0,
+    "experimental_rs_label_defs": false,
+    "literal_renderer": true,
+    "gmail_simple_false": true,
+    "openrouter_disabled": true,
+    "workflow_copy_delta": 0,
+    "tmp_cfg_deleted": true
+  },
+  "next_natural_reminder": "2026-08-17 10:00 Europe/Moscow",
+  "accepted_live_test_lead_id_ref": "LEAD_4CC52CE3F311",
+  "accepted_live_test_note": "Operator visually accepted raw source; literal PII/body not stored in Git evidence."
+}

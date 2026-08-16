@@ -1,0 +1,33 @@
+{
+  "designation": "Sales Manager v2 — Production Stable Baseline 2026-08-17",
+  "status": "PRODUCTION STABLE",
+  "captured_at": "2026-08-16T17:36:09.723Z",
+  "matrix": [
+    { "area": "Gmail intake", "result": "PASS" },
+    { "area": "Full-source preservation", "result": "PASS" },
+    { "area": "Line-break preservation", "result": "PASS" },
+    { "area": "RAW/CLEAN separation", "result": "PASS" },
+    { "area": "Literal raw callback", "result": "PASS" },
+    { "area": "Legacy Gmail fallback", "result": "PASS" },
+    { "area": "Telegram card delivery", "result": "PASS" },
+    { "area": "Processed action", "result": "PASS" },
+    { "area": "Spam action", "result": "PASS" },
+    { "area": "Raw source action", "result": "PASS" },
+    { "area": "Lifecycle preservation on raw click", "result": "PASS" },
+    { "area": "Dedupe", "result": "PASS" },
+    { "area": "Delivery retry guard", "result": "PASS" },
+    { "area": "AI OFF", "result": "PASS" },
+    { "area": "Reminder configuration", "result": "PASS" },
+    { "area": "Reminder weekday gate", "result": "PASS" },
+    { "area": "Monday weekend-backlog logic", "result": "PASS" },
+    {
+      "area": "Natural Monday reminder live acceptance",
+      "result": "PENDING OBSERVATION — NOT YET A FAILURE",
+      "label": "STABLE_BASELINE_WITH_PENDING_NATURAL_REMINDER_OBSERVATION",
+      "boundary": "2026-08-17 10:00 Europe/Moscow"
+    }
+  ],
+  "synthetic_tests_sent": 0,
+  "reminder_manually_triggered": false,
+  "gate": "SM_STABLE_ACCEPTANCE_MATRIX_COMPLETE"
+}
