@@ -71,7 +71,14 @@
 
 ## Git checkpoint
 
-Filled after clean-worktree push (see P14 report §15–16).
+| Field | Value |
+|-------|-------|
+| Commit | `9a5f671cafece716635e6fb37b984bd9009261de` |
+| Short | `9a5f671c` |
+| Branch | `origin/mars/canonical-post-recovery` |
+| Message | FP-0002: stabilize production baseline after P13/FU01 |
+| Staged paths | 838 (FP-0002 scope; evidence runners / INCOMING / oversized zips excluded) |
+| Clean worktree | `X:\AI MARS STORAGE\git-sync-fp0002-p14-20260816-173714\repo` |
 
 ## Open tails
 
