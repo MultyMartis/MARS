@@ -1,0 +1,62 @@
+{
+  "kind": "playwright-core",
+  "alcohol": {
+    "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+    "http": 200,
+    "consoleErrors": [],
+    "initial": {
+      "present": true,
+      "hasButton": true,
+      "buttonHidden": true,
+      "ariaExpanded": "false",
+      "isClamped": false,
+      "isExpanded": false,
+      "clientHeight": 120,
+      "scrollHeight": 120,
+      "lineHeight": 24,
+      "fiveLines": 120,
+      "overflow": false,
+      "textLen": 426
+    },
+    "afterClick": null,
+    "shortText": {
+      "ok": true,
+      "buttonHidden": true,
+      "isClamped": false,
+      "clientHeight": 24,
+      "scrollHeight": 24,
+      "fiveLines": 120,
+      "overflow": false
+    }
+  },
+  "p314": {
+    "url": "http://shpigovsky.test/?p=314",
+    "http": 200,
+    "hasSigns": false,
+    "consoleErrors": []
+  },
+  "p78": {
+    "url": "http://shpigovsky.test/?p=78",
+    "http": 200,
+    "hasSigns": false,
+    "consoleErrors": []
+  },
+  "home": {
+    "url": "http://shpigovsky.test/",
+    "http": 200,
+    "hasSigns": false,
+    "consoleErrors": []
+  },
+  "uslugi": {
+    "url": "http://shpigovsky.test/uslugi/",
+    "http": 200,
+    "hasSigns": false,
+    "consoleErrors": []
+  },
+  "zavisimosti": {
+    "url": "http://shpigovsky.test/uslugi/zavisimosti/",
+    "http": 200,
+    "hasSigns": false,
+    "consoleErrors": []
+  }
+}

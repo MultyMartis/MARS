@@ -1,0 +1,24 @@
+
+Route                                                                  NoFollowStatus Status Title                                                                       Len LocalResidue
+-----                                                                  -------------- ------ -----                                                                       --- ------------
+/                                                                                 200    200 Шпиговский — локальная разработка                                        189812         True
+/o-centre/                                                                        200    200 О центре &#8211; Шпиговский — локальная разработка                       137048         True
+/o-centre/programma-lecheniya/                                                    200    200 Программа лечения &#8211; Шпиговский — локальная разработка               70579        False
+/o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/                       200    200 Пространство восстановления &#8211; Шпиговский — локальная разработка     70680        False
+/uslugi/                                                                          200    200 Услуги &#8211; Шпиговский — локальная разработка                         128859         True
+/uslugi/zavisimosti/                                                              200    200 Зависимости &#8211; Шпиговский — локальная разработка                    144398         True
+/uslugi/zavisimosti/lechenie-alkogolnoj-zavisimosti/                              404    404 Page not found &#8211; Шпиговский — локальная разработка                  68465        False
+/uslugi/zavisimosti/lechenie-opijnoj-zavisimosti/                                 404    404 Page not found &#8211; Шпиговский — локальная разработка                  68465        False
+/kontakty/                                                                        200    200 Контакты &#8211; Шпиговский — локальная разработка                        79235        False
+/blog/                                                                            200    200 Статьи &#8211; Шпиговский — локальная разработка                          90186        False
+/otzyvy/                                                                          200    200 Отзывы &#8211; Шпиговский — локальная разработка                          90198        False
+/?s=                                                                              200    200 Результаты поиска &#8211; Шпиговский — локальная разработка               69137        False
+/?s=%D0%B7%D0%B0%D0%B2%D0%B8%D1%81%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C            200    200 Результаты поиска: зависимость &#8211; Шпиговский — локальная разработка  70640        False
+/wp-login.php                                                                     200    200                                                                             273        False
+/robots.txt                                                                       200    200                                                                              67        False
+/wp-json/                                                                         200    200                                                                          212362        False
+/wp-sitemap.xml                                                                   404    404 Page not found &#8211; Шпиговский — локальная разработка                  68465        False
+/sitemap_index.xml                                                                404    404 Page not found &#8211; Шпиговский — локальная разработка                  68465        False
+/this-route-should-404-prod-p01/                                                  404    404 Page not found &#8211; Шпиговский — локальная разработка                  68465        False
+
+

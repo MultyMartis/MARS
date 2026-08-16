@@ -1,0 +1,20 @@
+diff --git "a/X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\assets\\css\\fp02-search.css" "b/X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p09-fu01-layer-b-pre\\theme__assets__css__fp02-search.css.prod-before"
+index 6de14d79..dad9bae3 100644
+--- "a/X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\assets\\css\\fp02-search.css"	
++++ "b/X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p09-fu01-layer-b-pre\\theme__assets__css__fp02-search.css.prod-before"	
+@@ -437,12 +437,12 @@
+ }
+ 
+ .site-search-suggest {
+-  margin-top: 16px;
++  margin-top: 30px;
+   max-height: min(55vh, 420px);
+   overflow-x: hidden;
+   overflow-y: auto;
+-  border-top: var(--border-width, 1px) solid var(--border-color-subtle, #c9d4e3);
+-  padding-top: 12px;
++  /* border-top: var(--border-width, 1px) solid var(--border-color-subtle, #c9d4e3); */
++  /* padding-top: 12px; */
+ }
+ 
+ .site-search-suggest[hidden] {

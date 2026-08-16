@@ -1,0 +1,11 @@
+{
+  "status": "DEFERRED",
+  "path": "X:\\AI MARS STORAGE\\runtime-checkouts\\fp-0002-shpigovsky-production\\repo",
+  "reason": [
+    "P02 policy: defer until a scheduled/runtime monitoring job exists",
+    "No scheduled task created in P03",
+    "Filesystem account is not bound to the WordPress docroot, so a checkout would not unlock production file monitoring yet",
+    "Do not clone from dirty X:\\AI MARS"
+  ],
+  "created": false
+}

@@ -1,0 +1,43 @@
+diff --git "a/X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p07-fu01-cont2-layer-b-pre\\theme__inc__service-general-helpers.php.prod-before" "b/X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\inc\\service-general-helpers.php"
+index 1f56d13f..15b03d3f 100644
+--- "a/X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p07-fu01-cont2-layer-b-pre\\theme__inc__service-general-helpers.php.prod-before"	
++++ "b/X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\inc\\service-general-helpers.php"	
+@@ -253,6 +253,9 @@ function shpigovsky_get_general_signs_copy( $post_id ) {
+ 	$heading   = shpigovsky_get_general_field( $post_id, 'service_general_signs_heading' );
+ 	$intro     = shpigovsky_get_general_field( $post_id, 'service_general_signs_intro' );
+ 	$editorial = shpigovsky_get_general_field( $post_id, 'service_general_signs_editorial' );
++	if ( function_exists( 'shpigovsky_is_demo_or_lorem_placeholder_copy' ) && shpigovsky_is_demo_or_lorem_placeholder_copy( $editorial ) ) {
++		$editorial = '';
++	}
+ 	$rows      = shpigovsky_get_general_field_raw( $post_id, 'service_general_signs_items' );
+ 	$items     = array();
+ 
+@@ -370,12 +373,18 @@ function shpigovsky_get_general_program_copy( $post_id ) {
+ 	$heading    = shpigovsky_get_general_field( $post_id, 'service_general_program_heading' );
+ 	$more_label = shpigovsky_get_general_field( $post_id, 'service_general_program_more_label' );
+ 	$lead       = shpigovsky_get_general_field( $post_id, 'service_general_program_lead' );
++	if ( function_exists( 'shpigovsky_is_demo_or_lorem_placeholder_copy' ) && shpigovsky_is_demo_or_lorem_placeholder_copy( $lead ) ) {
++		$lead = '';
++	}
+ 	$rows       = shpigovsky_get_general_field_raw( $post_id, 'service_general_program_intro_items' );
+ 	$intros     = array();
+ 
+ 	if ( is_array( $rows ) ) {
+ 		foreach ( $rows as $row ) {
+ 			$text = is_array( $row ) && isset( $row['text'] ) ? trim( (string) $row['text'] ) : '';
++			if ( '' !== $text && function_exists( 'shpigovsky_is_demo_or_lorem_placeholder_copy' ) && shpigovsky_is_demo_or_lorem_placeholder_copy( $text ) ) {
++				continue;
++			}
+ 			if ( '' !== $text ) {
+ 				$intros[] = $text;
+ 			}
+@@ -496,6 +505,9 @@ function shpigovsky_get_general_faq_items( $post_id ) {
+ 			if ( '' === $question && '' === $answer ) {
+ 				continue;
+ 			}
++			if ( function_exists( 'shpigovsky_is_demo_or_lorem_placeholder_copy' ) && shpigovsky_is_demo_or_lorem_placeholder_copy( $answer ) ) {
++				continue;
++			}
+ 			$answers = preg_split( "/\n\s*\n/", $answer ) ?: array();
+ 			$answers = array_values(
+ 				array_filter(

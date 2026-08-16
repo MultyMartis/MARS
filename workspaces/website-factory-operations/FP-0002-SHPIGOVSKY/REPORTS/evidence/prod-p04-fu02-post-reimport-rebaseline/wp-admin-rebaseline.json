@@ -1,0 +1,58 @@
+{
+  "auth": "FAIL",
+  "username": "mars",
+  "role": null,
+  "surfaces": {},
+  "variants": [
+    {
+      "variant": "beget_domain",
+      "auth": "FAIL",
+      "final_url": "http://shpigovsky.beget.tech/wp-login.php?redirect_to=http%3A%2F%2Fshpigovsky.beget.tech%2Fwp-admin%2F&reauth=1",
+      "status": 200,
+      "login_error_safe": null,
+      "cookie_names": [
+        "beget",
+        "wordpress_test_cookie"
+      ],
+      "body_has_incorrect": false,
+      "body_has_reauth": true
+    },
+    {
+      "variant": "beget_no_domain",
+      "auth": "FAIL",
+      "final_url": "http://shpigovsky.beget.tech/wp-login.php?redirect_to=http%3A%2F%2Fshpigovsky.beget.tech%2Fwp-admin%2F&reauth=1",
+      "status": 200,
+      "login_error_safe": null,
+      "cookie_names": [
+        "beget",
+        "wordpress_test_cookie"
+      ],
+      "body_has_incorrect": false,
+      "body_has_reauth": true
+    },
+    {
+      "variant": "warm_home",
+      "auth": "FAIL",
+      "final_url": "http://shpigovsky.beget.tech/wp-login.php?redirect_to=http%3A%2F%2Fshpigovsky.beget.tech%2Fwp-admin%2F&reauth=1",
+      "status": 200,
+      "login_error_safe": null,
+      "cookie_names": [
+        "beget",
+        "wordpress_test_cookie"
+      ],
+      "body_has_incorrect": false,
+      "body_has_reauth": true
+    }
+  ],
+  "mutations": "none intended",
+  "db_administrator_proven": true,
+  "db_user_id": 3,
+  "db_registered": "2026-08-14 08:00:13",
+  "note": "HTTP login failed across variants; DB proves mars Administrator capability exists",
+  "rebaseline_marker": "MARS WP ADMIN HTTP LOGIN NOT PROVEN — DB ROLE PROVEN",
+  "http_login": "FAIL",
+  "db_role": "Administrator",
+  "password_matches_db_hash": false,
+  "password_check_detail": "MISMATCH",
+  "likely_cause": "secrets.local.md wordpress_password does not match recreated mars user_pass hash"
+}

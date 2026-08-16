@@ -1,0 +1,35 @@
+{
+  "captured_at": "2026-08-16T17:40:00+00:00",
+  "phase": "PROD-P14 post-reconcile",
+  "host": "http://shpigovsky.beget.tech",
+  "docroot": "/home/s/shpigovsky/shpigovsky.ru/public_html",
+  "summary": {
+    "intake_local_files_walked": 705,
+    "intake_MATCH": 703,
+    "intake_PROD_DRIFT": 2,
+    "intake_LOCAL_ONLY": 0,
+    "intake_PROD_ONLY": 7,
+    "operator_drift_canonized": [
+      "theme/assets/css/v9-style.css",
+      "theme/template-parts/generic/content-page.php"
+    ],
+    "p14_deployed_MATCH": [
+      "plugin/shpigovsky-core.php",
+      "plugin/src/Admin/SystemDashboard.php"
+    ],
+    "post_reconcile_deployable": "MATCH",
+    "accepted_prod_only": [
+      "root/robots.txt"
+    ],
+    "intentional_placeholder_prod_only": [
+      "theme/assets/img/.gitkeep",
+      "theme/assets/js/.gitkeep",
+      "theme/assets/svg/.gitkeep",
+      "theme/languages/.gitkeep",
+      "theme/template-parts/.gitkeep",
+      "plugin/languages/.gitkeep"
+    ],
+    "unresolved_legitimate_drift": 0
+  },
+  "required": "ALL CURRENT SOURCE-OWNED PRODUCTION FILES ACCOUNTED FOR — N/N SOURCE ↔ PRODUCTION MATCH for deployable FP-0002 code"
+}

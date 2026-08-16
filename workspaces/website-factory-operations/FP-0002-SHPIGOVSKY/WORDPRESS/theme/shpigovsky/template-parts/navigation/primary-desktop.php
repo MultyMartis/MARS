@@ -24,7 +24,8 @@ $search_button = sprintf(
 			'fallback_cb'           => 'shpigovsky_primary_nav_fallback',
 			'shpigovsky_item_class' => 'site-header__nav-item',
 			'shpigovsky_link_class' => 'site-header__nav-link',
-			'depth'                 => 1,
+			'depth'                 => 2,
+			'walker'                => new Shpigovsky_Desktop_Nav_Walker(),
 			'items_wrap'            => '<ul class="%2$s">%3$s' . $search_button . '</ul>',
 		)
 	);

@@ -1,0 +1,38 @@
+{
+  "wave": "PROD-P07-FU01-CONT2",
+  "created_at": "2026-08-14T12:00:22.139509+00:00",
+  "transport": "SSH/SFTP",
+  "docroot": "/home/s/shpigovsky/shpigovsky.ru/public_html",
+  "production_file_write_count_target": 3,
+  "production_file_writes": 3,
+  "db_admin_writes": 0,
+  "wpilot_writes": 0,
+  "files": [
+    {
+      "rel": "inc/v9-static-content.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/v9-static-content.php",
+      "local_sha256": "3471898fa12c253f97820a7c33754524d2d0e9cab1c50f2aa222755901e55604",
+      "prod_after_sha256": "3471898fa12c253f97820a7c33754524d2d0e9cab1c50f2aa222755901e55604",
+      "bytes": 29428,
+      "parity": "MATCH"
+    },
+    {
+      "rel": "inc/services-hub-helpers.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/services-hub-helpers.php",
+      "local_sha256": "6e11bbc453d33f395d8bdfe7f6a00e913ce3ee0777c66d46942ff2aca391e305",
+      "prod_after_sha256": "6e11bbc453d33f395d8bdfe7f6a00e913ce3ee0777c66d46942ff2aca391e305",
+      "bytes": 24442,
+      "parity": "MATCH"
+    },
+    {
+      "rel": "inc/service-general-helpers.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/service-general-helpers.php",
+      "local_sha256": "b4ac89d7d9e67d7cfabe3c06b3f9ab617863b512b3e0bf210936e73b8eb74293",
+      "prod_after_sha256": "b4ac89d7d9e67d7cfabe3c06b3f9ab617863b512b3e0bf210936e73b8eb74293",
+      "bytes": 19440,
+      "parity": "MATCH"
+    }
+  ],
+  "parity": "3/3 SOURCE ↔ PRODUCTION MATCH",
+  "verdict": "PASS — 3/3 SOURCE ↔ PRODUCTION MATCH"
+}

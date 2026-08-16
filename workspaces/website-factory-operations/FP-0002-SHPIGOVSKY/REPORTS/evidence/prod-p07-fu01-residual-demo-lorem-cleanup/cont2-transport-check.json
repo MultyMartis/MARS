@@ -1,0 +1,50 @@
+{
+  "wave": "PROD-P07-FU01-CONT2",
+  "created_at": "2026-08-14T11:57:22.227094+00:00",
+  "operator_root_cause": "PRIOR TRANSPORT FAILURE ROOT CAUSE = BEGET IP BLOCK — OPERATOR IP UNBLOCKED BY BEGET SUPPORT",
+  "selected_transport": "SSH/SFTP",
+  "ssh_sftp": {
+    "status": "PASS",
+    "protocol": "SSH/SFTP",
+    "ident_lines": [
+      "/home/s/shpigovsky/shpigovsky.ru/public_html",
+      "dream.beget.ru",
+      "shpigovsky_mars",
+      "drwx------+ 9 root root 4096 Aug 14 10:59 /home/s/shpigovsky/shpigovsky.ru/public_html"
+    ],
+    "stderr": ""
+  },
+  "ftp": {
+    "status": "NOT_TESTED"
+  },
+  "docroot": "/home/s/shpigovsky/shpigovsky.ru/public_html",
+  "account_user_present": true,
+  "account_user_suffix": "y_mars",
+  "files": [
+    {
+      "rel": "inc/v9-static-content.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/v9-static-content.php",
+      "size": 37586,
+      "mtime": 1786701040,
+      "readable": true,
+      "head_ascii_prefix": "<?php\r\n/**\r\n * Static V9"
+    },
+    {
+      "rel": "inc/services-hub-helpers.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/services-hub-helpers.php",
+      "size": 24252,
+      "mtime": 1786694333,
+      "readable": true,
+      "head_ascii_prefix": "<?php\r\n/**\r\n * Services "
+    },
+    {
+      "rel": "inc/service-general-helpers.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/service-general-helpers.php",
+      "size": 18792,
+      "mtime": 1786701039,
+      "readable": true,
+      "head_ascii_prefix": "<?php\r\n/**\r\n * Service g"
+    }
+  ],
+  "verdict": "BEGET FILE TRANSPORT RESTORED"
+}

@@ -112,109 +112,119 @@ function shpigovsky_brand_label() {
 }
 
 /**
- * Static V9 visual fallback messenger rows when social_links option is empty.
+ * Static V9 visual fallback messenger rows — retired in P13.
+ * Empty configuration must not invent placeholder URLs.
  *
- * D9-B: placeholder href="#" only — no operator URLs invented.
- *
- * @param string $context header|mobile-header|offcanvas.
- * @return array<int, array{label:string,url:string,icon:string}>
+ * @param string $context Context.
+ * @return array<int, array{label:string,url:string,icon:string,type:string}>
  */
 function shpigovsky_get_messenger_visual_fallback_rows( $context = 'header' ) {
-	$desktop = array(
-		array(
-			'label' => 'Telegram',
-			'url'   => '#',
-			'icon'  => 'telegram.svg',
-		),
-		array(
-			'label' => 'WhatsApp',
-			'url'   => '#',
-			'icon'  => 'whatsapp.svg',
-		),
-		array(
-			'label' => 'Max',
-			'url'   => '#',
-			'icon'  => 'max.svg',
-		),
-	);
-
-	$mobile = array(
-		array(
-			'label' => 'Telegram',
-			'url'   => '#',
-			'icon'  => 'telegram.svg',
-		),
-		array(
-			'label' => 'WhatsApp',
-			'url'   => '#',
-			'icon'  => 'whatsapp.svg',
-		),
-		array(
-			'label' => 'Max',
-			'url'   => '#',
-			'icon'  => 'max.svg',
-		),
-	);
-
-	if ( 'header' === $context ) {
-		return $desktop;
-	}
-
-	return $mobile;
+	unset( $context );
+	return array();
 }
 
 /**
- * Resolve messenger rows for chrome: configured options or static visual fallback.
+ * Resolve messenger rows for chrome from the canonical social_platforms settings.
  *
- * @param string $context header|mobile-header|offcanvas.
- * @return array<int, array{label:string,url:string,icon?:string,fallback?:bool}>
+ * @param string $context header|mobile-header|offcanvas|footer|contacts.
+ * @return array<int, array{label:string,url:string,icon:string,type:string}>
  */
 function shpigovsky_get_messenger_link_rows( $context = 'header' ) {
-	$rows = shpigovsky_get_social_link_rows();
-
-	if ( ! empty( $rows ) ) {
-		return $rows;
+	$surface = 'header';
+	if ( 'footer' === $context ) {
+		$surface = 'footer';
+	} elseif ( 'contacts' === $context ) {
+		$surface = 'contacts';
 	}
 
-	$fallback = shpigovsky_get_messenger_visual_fallback_rows( $context );
-
-	foreach ( $fallback as $index => $row ) {
-		$fallback[ $index ]['fallback'] = true;
-	}
-
-	return $fallback;
+	return shpigovsky_get_social_platform_rows( $surface );
 }
 
 /**
- * Read configured social/messenger rows from site options.
+ * Canonical social/messenger rows.
+ *
+ * Contacts: every configured platform with a URL.
+ * Header (incl. floating + offcanvas): show_header.
+ * Footer: show_footer.
+ *
+ * @param string $surface header|footer|contacts.
+ * @return array<int, array{label:string,url:string,icon:string,type:string,show_header:bool,show_footer:bool}>
+ */
+function shpigovsky_get_social_platform_rows( $surface = 'header' ) {
+	$rows = array();
+
+	if ( function_exists( 'get_field' ) ) {
+		$raw = get_field( 'social_platforms', 'option' );
+		if ( is_array( $raw ) ) {
+			foreach ( $raw as $row ) {
+				$normalized = shpigovsky_normalize_social_platform_row( $row );
+				if ( null === $normalized ) {
+					continue;
+				}
+				$rows[] = $normalized;
+			}
+		}
+	}
+
+	if ( empty( $rows ) ) {
+		foreach ( shpigovsky_get_legacy_social_link_rows() as $legacy ) {
+			$normalized = shpigovsky_normalize_social_platform_row(
+				array(
+					'type'        => shpigovsky_infer_social_platform_type( $legacy['label'], $legacy['url'] ),
+					'url'         => $legacy['url'],
+					'show_header' => 1,
+					'show_footer' => 1,
+				)
+			);
+			if ( null !== $normalized ) {
+				$rows[] = $normalized;
+			}
+		}
+	}
+
+	$out = array();
+	foreach ( $rows as $row ) {
+		if ( 'contacts' === $surface ) {
+			$out[] = $row;
+			continue;
+		}
+		if ( 'footer' === $surface && ! empty( $row['show_footer'] ) ) {
+			$out[] = $row;
+			continue;
+		}
+		if ( 'header' === $surface && ! empty( $row['show_header'] ) ) {
+			$out[] = $row;
+		}
+	}
+
+	return $out;
+}
+
+/**
+ * Legacy social_links repeater (pre-P13). Used only as fallback if new field empty.
  *
  * @return array<int, array{label:string,url:string}>
  */
-function shpigovsky_get_social_link_rows() {
+function shpigovsky_get_legacy_social_link_rows() {
 	if ( ! function_exists( 'get_field' ) ) {
 		return array();
 	}
 
 	$rows = get_field( 'social_links', 'option' );
-
 	if ( ! is_array( $rows ) ) {
 		return array();
 	}
 
 	$normalized = array();
-
 	foreach ( $rows as $row ) {
 		if ( ! is_array( $row ) ) {
 			continue;
 		}
-
 		$url   = isset( $row['url'] ) ? trim( (string) $row['url'] ) : '';
 		$label = isset( $row['label'] ) ? trim( (string) $row['label'] ) : '';
-
-		if ( '' === $url ) {
+		if ( '' === $url || '#' === $url ) {
 			continue;
 		}
-
 		$normalized[] = array(
 			'label' => $label,
 			'url'   => $url,
@@ -225,29 +235,109 @@ function shpigovsky_get_social_link_rows() {
 }
 
 /**
+ * Read configured social/messenger rows from site options (canonical).
+ *
+ * @return array<int, array{label:string,url:string,icon?:string,type?:string}>
+ */
+function shpigovsky_get_social_link_rows() {
+	return shpigovsky_get_social_platform_rows( 'footer' );
+}
+
+/**
+ * Normalize one platform row.
+ *
+ * @param mixed $row Raw row.
+ * @return array{label:string,url:string,icon:string,type:string,show_header:bool,show_footer:bool}|null
+ */
+function shpigovsky_normalize_social_platform_row( $row ) {
+	if ( ! is_array( $row ) ) {
+		return null;
+	}
+
+	$url  = isset( $row['url'] ) ? trim( (string) $row['url'] ) : '';
+	$type = isset( $row['type'] ) ? sanitize_key( (string) $row['type'] ) : '';
+	if ( '' === $type ) {
+		$type = shpigovsky_infer_social_platform_type( isset( $row['label'] ) ? (string) $row['label'] : '', $url );
+	}
+
+	$catalog = shpigovsky_social_platform_catalog();
+	if ( '' === $url || '#' === $url || ! isset( $catalog[ $type ] ) ) {
+		return null;
+	}
+
+	$meta = $catalog[ $type ];
+
+	return array(
+		'type'        => $type,
+		'label'       => $meta['label'],
+		'url'         => $url,
+		'icon'        => $meta['icon'],
+		'show_header' => ! empty( $row['show_header'] ),
+		'show_footer' => ! empty( $row['show_footer'] ),
+	);
+}
+
+/**
+ * Known platforms that already have theme icons.
+ *
+ * @return array<string, array{label:string,icon:string}>
+ */
+function shpigovsky_social_platform_catalog() {
+	return array(
+		'telegram' => array(
+			'label' => 'Telegram',
+			'icon'  => 'telegram.svg',
+		),
+		'whatsapp' => array(
+			'label' => 'WhatsApp',
+			'icon'  => 'whatsapp.svg',
+		),
+		'max'      => array(
+			'label' => 'MAX',
+			'icon'  => 'max.svg',
+		),
+		'youtube'  => array(
+			'label' => 'YouTube',
+			'icon'  => '',
+		),
+	);
+}
+
+/**
+ * Infer platform type from label/URL.
+ *
+ * @param string $label Label.
+ * @param string $url   URL.
+ * @return string
+ */
+function shpigovsky_infer_social_platform_type( $label, $url ) {
+	$hay = mb_strtolower( trim( $label . ' ' . $url ) );
+	if ( str_contains( $hay, 't.me' ) || str_contains( $hay, 'telegram' ) ) {
+		return 'telegram';
+	}
+	if ( str_contains( $hay, 'wa.me' ) || str_contains( $hay, 'whatsapp' ) || str_contains( $hay, 'what\'s up' ) || str_contains( $hay, 'whats up' ) ) {
+		return 'whatsapp';
+	}
+	if ( str_contains( $hay, 'youtu' ) ) {
+		return 'youtube';
+	}
+	if ( str_contains( $hay, 'max.ru' ) || preg_match( '/(^|[^a-zа-я])max([^a-zа-я]|$)/u', $hay ) ) {
+		return 'max';
+	}
+	return '';
+}
+
+/**
  * Map a social label to a packaged icon filename when known.
  *
  * @param string $label Social label.
  * @return string Icon filename or empty for Font Awesome fallback.
  */
 function shpigovsky_social_icon_for_label( $label ) {
-	$key = mb_strtolower( trim( (string) $label ) );
-
-	if ( str_contains( $key, 'telegram' ) ) {
-		return 'telegram.svg';
+	$type = shpigovsky_infer_social_platform_type( (string) $label, '' );
+	$catalog = shpigovsky_social_platform_catalog();
+	if ( isset( $catalog[ $type ] ) ) {
+		return $catalog[ $type ]['icon'];
 	}
-
-	if ( str_contains( $key, 'whatsapp' ) ) {
-		return 'whatsapp.svg';
-	}
-
-	if ( 'max' === $key || str_contains( $key, 'max' ) ) {
-		return 'max.svg';
-	}
-
-	if ( str_contains( $key, 'youtube' ) ) {
-		return '';
-	}
-
 	return '';
 }

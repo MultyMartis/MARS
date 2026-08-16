@@ -1,0 +1,28 @@
+{
+  "captured_at": "2026-08-14T16:20:57.151397+00:00",
+  "method": "SFTP byte compare (PHP not served as source over HTTP)",
+  "files": [
+    {
+      "rel": "assets/js/v9-shell.js",
+      "local_sha256": "a1b1f244fe302d2a60e06fb1e315e4f61d2850339d9f6090ba175e215d5c3411",
+      "prod_sftp_sha256": "a1b1f244fe302d2a60e06fb1e315e4f61d2850339d9f6090ba175e215d5c3411",
+      "match": true,
+      "prod_size": 79508
+    },
+    {
+      "rel": "assets/css/fp02-search.css",
+      "local_sha256": "2109907c2bc3b1a840f608f1199821b6230d07d6c78f73e247c329f7c855533b",
+      "prod_sftp_sha256": "2109907c2bc3b1a840f608f1199821b6230d07d6c78f73e247c329f7c855533b",
+      "match": true,
+      "prod_size": 13322
+    },
+    {
+      "rel": "template-parts/navigation/offcanvas.php",
+      "local_sha256": "ea63674eac1ab8d5237dcd54124fb2e069ba5bfe1d0115608bdad2fc7e8fe848",
+      "prod_sftp_sha256": "ea63674eac1ab8d5237dcd54124fb2e069ba5bfe1d0115608bdad2fc7e8fe848",
+      "match": true,
+      "prod_size": 3953
+    }
+  ],
+  "parity": "MATCH"
+}

@@ -1,0 +1,78 @@
+{
+  "fancybox_nav": {
+    "before": "1/3",
+    "after_next": "2/3",
+    "after_prev": "1/3",
+    "pass": true
+  },
+  "mobile_forced_panel": {
+    "375": {
+      "suggest_visible": true,
+      "box": {
+        "x": 15,
+        "y": 324,
+        "width": 330,
+        "height": 121
+      },
+      "panel_box": {
+        "x": 0,
+        "y": 80,
+        "width": 360,
+        "height": 386
+      },
+      "horizontal_overflow": false,
+      "has_specialists": true
+    },
+    "390": {
+      "suggest_visible": true,
+      "box": {
+        "x": 15,
+        "y": 324,
+        "width": 345,
+        "height": 121
+      },
+      "panel_box": {
+        "x": 0,
+        "y": 80,
+        "width": 375,
+        "height": 386
+      },
+      "horizontal_overflow": false,
+      "has_specialists": true
+    },
+    "767": {
+      "suggest_visible": true,
+      "box": {
+        "x": 16,
+        "y": 304,
+        "width": 720,
+        "height": 45
+      },
+      "panel_box": {
+        "x": 0,
+        "y": 80,
+        "width": 752,
+        "height": 290
+      },
+      "horizontal_overflow": false,
+      "has_specialists": false
+    },
+    "768": {
+      "suggest_visible": true,
+      "box": {
+        "x": 16.5,
+        "y": 241,
+        "width": 720,
+        "height": 103
+      },
+      "panel_box": {
+        "x": 0,
+        "y": 80,
+        "width": 753,
+        "height": 285
+      },
+      "horizontal_overflow": false,
+      "has_specialists": true
+    }
+  }
+}

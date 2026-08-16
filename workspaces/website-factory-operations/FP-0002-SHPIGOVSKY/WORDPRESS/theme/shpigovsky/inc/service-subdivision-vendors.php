@@ -1,9 +1,9 @@
 <?php
 /**
- * Service subdivision vendor enqueue — Swiper for specialists/reviews sliders (V9-06E15).
+ * Service subdivision vendor enqueue — Swiper + Fancybox (V9-06E15 / V9-07A01).
  *
- * Subdivision stack reuses home specialists/reviews partials; home-vendors.php limits
- * Swiper to is_front_page() and alcohol-direct-v9-vendors.php scopes to alcohol leaf only.
+ * Subdivision stack reuses home specialists/reviews/comfort partials; home-vendors.php
+ * limits Swiper/Fancybox to is_front_page(); alcohol-direct vendors cover the leaf stack.
  *
  * @package Shpigovsky
  */
@@ -77,6 +77,11 @@ function shpigovsky_enqueue_service_subdivision_vendors() {
 				$GLOBALS['wp_scripts']->registered['shpigovsky-v9-shell']->deps = array_merge( $shell_deps, array( 'shpigovsky-swiper' ) );
 			}
 		}
+	}
+
+	// Comfort gallery on subdivision routes reuses home/comfort.php (needs Fancybox).
+	if ( function_exists( 'shpigovsky_enqueue_fancybox_vendor' ) ) {
+		shpigovsky_enqueue_fancybox_vendor( true );
 	}
 }
 add_action( 'shpigovsky_enqueue_theme_assets', 'shpigovsky_enqueue_service_subdivision_vendors' );

@@ -1,9 +1,9 @@
 <?php
 /**
- * Services hub (/uslugi/) vendor enqueue — Swiper for category galleries (V9-06E33-FIX01).
+ * Services hub (/uslugi/) vendor enqueue — Swiper + Fancybox (V9-06E33-FIX01 / V9-07A01).
  *
- * home-vendors.php limits Swiper to is_front_page(); category card sliders on the
- * services hub need the same local Swiper vendor (no CDN).
+ * home-vendors.php limits Swiper/Fancybox to is_front_page(); category card sliders
+ * and Comfort gallery on the services hub need the same local vendors (no CDN).
  *
  * @package Shpigovsky
  */
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Enqueue Swiper on the services hub page template only.
+ * Enqueue Swiper + Fancybox on the services hub page template only.
  */
 function shpigovsky_enqueue_services_hub_vendors() {
 	if ( ! is_page_template( 'page-templates/services-hub.php' ) ) {
@@ -60,6 +60,11 @@ function shpigovsky_enqueue_services_hub_vendors() {
 				$GLOBALS['wp_scripts']->registered['shpigovsky-v9-shell']->deps = array_merge( $shell_deps, array( 'shpigovsky-swiper' ) );
 			}
 		}
+	}
+
+	// Comfort gallery on /uslugi/ reuses home/comfort.php (needs Fancybox).
+	if ( function_exists( 'shpigovsky_enqueue_fancybox_vendor' ) ) {
+		shpigovsky_enqueue_fancybox_vendor( true );
 	}
 }
 add_action( 'shpigovsky_enqueue_theme_assets', 'shpigovsky_enqueue_services_hub_vendors' );

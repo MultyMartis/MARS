@@ -1,158 +1,290 @@
-# Copyright (C) 2026 FP-0002 / Shpigovsky Core
-# This file is distributed under the same license as the Shpigovsky Core package.
+# Shpigovsky Core translations
 msgid ""
 msgstr ""
-"Project-Id-Version: Shpigovsky Core 0.3.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-14 00:20+0700\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Project-Id-Version: Shpigovsky Core 0.3.4-p13\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 "X-Domain: shpigovsky-core\n"
-"X-Generator: FP-0002 V9-06E39 manual foundation POT\n"
+"X-Generator: FP-0002 PROD-P13\n"
 
-#: src/Fields/FieldGroups.php
-msgid "Страница — Главная"
+msgid "MetaCODE / System status"
 msgstr ""
 
-msgid "Изображение hero"
+msgid "Project"
 msgstr ""
 
-msgid "Основное изображение hero. Имеет приоритет над изображением слайда. Если пусто — берётся изображение из слайдов, затем asset темы."
+msgid "Runtime"
 msgstr ""
 
-msgid "Текст кнопки в hero-блоке"
+msgid "Production host (Beget). wp-config still contains leftover local environment constants — P06 cleanup."
 msgstr ""
 
-msgid "Индивидуальный текст кнопки для hero-блока этой страницы. Если оставить пустым, используется текущий текст по умолчанию."
+msgid "Environment: %s"
 msgstr ""
 
-msgid "Слайды hero"
+msgid "WordPress"
 msgstr ""
 
-msgid "Слайды hero на главной. Ограниченный повторитель; максимум строк задан в исходнике и проверках."
+msgid "Theme"
 msgstr ""
 
-msgid "Заголовок"
+msgid "Shpigovsky Core"
 msgstr ""
 
-msgid "Текст"
+msgid "WPilot"
 msgstr ""
 
-msgid "Изображение"
+msgid "Active · writes %s"
 msgstr ""
 
-msgid "Добавить"
+msgid "enabled"
 msgstr ""
 
-msgid "Введение о восстановлении — заголовок"
+msgid "disabled"
 msgstr ""
 
-msgid "Заголовок блока «Шпиговский дом — восстановление…» на главной."
+msgid "Not active"
 msgstr ""
 
-msgid "Введение о восстановлении — абзац 1"
+msgid "Local-runtime MU-plugin"
 msgstr ""
 
-msgid "Первый абзац блока введения о восстановлении на главной."
+msgid "Present (notices removed in P13; leftover local residue remains for P06)."
 msgstr ""
 
-msgid "Введение о восстановлении — абзац 2"
+msgid "Absent"
 msgstr ""
 
-msgid "Второй абзац блока введения о восстановлении на главной."
+msgid "No secrets, tokens, or filesystem credentials are shown here."
 msgstr ""
 
-msgid "Карточки введения"
+msgid "Import from Word"
 msgstr ""
 
-msgid "Карточки в блоке введения о восстановлении. Ограниченный повторитель; максимум строк задан в исходнике и проверках."
+msgid "Import articles from Word"
 msgstr ""
 
-msgid "Цитата основателя на главной"
+msgid "Upload one or more .docx files. Drafts are created for review — nothing is published automatically."
 msgstr ""
 
-msgid "Автоматический блок: цитата основателя берётся из «Настройки сайта → Цитата основателя». На главной отдельных полей нет."
+msgid "Draft discarded."
 msgstr ""
 
-msgid "Лечение и профилактика на главной"
+msgid "Publication date saved."
 msgstr ""
 
-msgid "Автоматический блок: аккордеон «Лечение и профилактика» формируется из иерархии услуг (CPT service). Редактируйте услуги в каталоге «Услуги»."
+msgid "Download article template (.docx)"
 msgstr ""
 
-msgid "Галерея на главной"
+msgid "Word files (.docx)"
 msgstr ""
 
-msgid "Автоматический блок: слайдер галереи на главной формируется из услуг (CPT service) с флагом «Показывать в слайдере на главной». Ручной блок Gallery / media bands снят — не используется в рендере."
+msgid "Create drafts"
 msgstr ""
 
-msgid "Преимущества / доверие"
+msgid "Last import"
 msgstr ""
 
-msgid "Карточки преимуществ (feature grid) на главной. Ограниченный повторитель; максимум строк задан в исходнике и проверках."
+msgid "File"
 msgstr ""
 
-msgid "Отзывы на главной"
+msgid "Status"
 msgstr ""
 
-msgid "Автоматический блок: заголовок и список отзывов — «Настройки сайта / Отзывы». Home-мета home_reviews_heading — только fallback, в админке главной не показывается."
+msgid "Draft"
 msgstr ""
 
-msgid "Комфорт на главной"
+msgid "Actions"
 msgstr ""
 
-msgid "Автоматический блок: заголовок и лид блока «Комфорт» берутся из «Повторяемые блоки — Комфорт / преимущества». Home-мета home_comfort_* — только fallback, в админке главной не показываются."
+msgid "Discard draft"
 msgstr ""
 
-msgid "Специалисты на главной"
+msgid "Schedule"
 msgstr ""
 
-msgid "Автоматический блок: карточки специалистов берутся из дочерних страниц /specyalisty/. Заголовок секции редактируйте в «Повторяемые блоки — Специалисты». Поле home_specialists_heading на главной сохранено только как fallback и скрыто из админки."
+msgid "Insufficient permissions."
 msgstr ""
 
-msgid "Статьи — заголовок"
+msgid "Error"
 msgstr ""
 
-msgid "Заголовок блока «Статьи» на главной. Сами карточки — опубликованные записи блога."
+msgid "No files received."
 msgstr ""
 
-msgid "Статьи на главной"
+msgid "Upload failed."
 msgstr ""
 
-msgid "Автоматический блок: слайдер статей на главной формируется из опубликованных записей (posts). Переключатель Blog teaser enabled снят — тема его не читает."
+msgid "File is too large (15 MB max)."
 msgstr ""
 
-msgid "Заголовок FAQ"
+msgid "Temporary file is missing."
 msgstr ""
 
-msgid "Заголовок секции FAQ на главной (например «Нас часто спрашивают»)."
+msgid "Only .docx is supported."
 msgstr ""
 
-msgid "Вопросы и ответы (FAQ)"
+msgid "MIME type is not a Word document."
 msgstr ""
 
-msgid "Вопросы и ответы на главной. Ограниченный повторитель; максимум строк задан в исходнике и проверках."
+msgid "Could not create the draft."
 msgstr ""
 
-msgid "Вопрос"
+msgid "Draft created"
 msgstr ""
 
-msgid "Ответ"
+msgid "Template is not available."
 msgstr ""
 
-msgid "CTA / форма — заголовок (fallback)"
+msgid "ZipArchive is required."
 msgstr ""
 
-msgid "Fallback-заголовок финальной формы на главной. Приоритет: «Повторяемые блоки — Финальная форма», затем это поле, затем статический текст темы."
+msgid "The file is not a valid DOCX archive."
 msgstr ""
 
-msgid "CTA / форма — текст (fallback)"
+msgid "document.xml is missing."
 msgstr ""
 
-msgid "Fallback-текст финальной формы на главной. Приоритет: «Повторяемые блоки — Финальная форма», затем это поле, затем статический текст темы."
+msgid "Imported article"
 msgstr ""
+
+msgid "Social networks and messengers"
+msgstr ""
+
+msgid "Platforms"
+msgstr ""
+
+msgid "One row per platform. Type selects the icon and label. Empty URL hides that platform. Header and footer flags are independent. The Contacts page shows every configured platform with a URL."
+msgstr ""
+
+msgid "Add platform"
+msgstr ""
+
+msgid "Platform"
+msgstr ""
+
+msgid "Link"
+msgstr ""
+
+msgid "Show in header"
+msgstr ""
+
+msgid "Show in footer"
+msgstr ""
+
+msgid "SEO"
+msgstr ""
+
+msgid "SEO Title"
+msgstr ""
+
+msgid "Optional. If empty, the public title uses the object title and site name."
+msgstr ""
+
+msgid "Meta Description"
+msgstr ""
+
+msgid "Optional. If empty, no meta description is output (marketing copy is not invented)."
+msgstr ""
+
+msgid "URL / slug"
+msgstr ""
+
+msgid "This slug becomes part of the public URL. Existing addresses are not regenerated unless you change this value."
+msgstr ""
+
+msgid "Slug"
+msgstr ""
+
+msgid "Leave empty and Update to regenerate from the title."
+msgstr ""
+
+msgid "Current URL:"
+msgstr ""
+
+msgid "Page"
+msgstr ""
+
+msgid "Article"
+msgstr ""
+
+msgid "Service"
+msgstr ""
+
+msgid "Specialist"
+msgstr ""
+
+msgid "Review"
+msgstr ""
+
+msgid "Created"
+msgstr ""
+
+msgid "Updated"
+msgstr ""
+
+msgid "Moved to trash"
+msgstr ""
+
+msgid "Restored"
+msgstr ""
+
+msgid "System"
+msgstr ""
+
+msgid "All users"
+msgstr ""
+
+msgid "Date and time"
+msgstr ""
+
+msgid "User"
+msgstr ""
+
+msgid "Action"
+msgstr ""
+
+msgid "Type"
+msgstr ""
+
+msgid "Object"
+msgstr ""
+
+msgid "ACF Pro is required for FP-0002 field groups. Source is safe, but runtime field registration is unavailable."
+msgstr ""
+
+msgid "Журнал действий"
+msgstr ""
+
+msgid "Базовый журнал создания и изменения контента. Хранит до 8000 последних записей. Не фиксирует пароли и тела записей."
+msgstr ""
+
+msgid "Все действия"
+msgstr ""
+
+msgid "Все типы"
+msgstr ""
+
+msgid "Фильтр"
+msgstr ""
+
+msgid "Записей пока нет."
+msgstr ""
+
+msgid "Недостаточно прав."
+msgstr ""
+
+msgid "Настройки сайта"
+msgstr ""
+
+msgid "Настройки сайта обновлены."
+msgstr ""
+
+msgid "Общие настройки"
+msgstr ""
+
+msgid "SEO и интеграции"
+msgstr ""
+

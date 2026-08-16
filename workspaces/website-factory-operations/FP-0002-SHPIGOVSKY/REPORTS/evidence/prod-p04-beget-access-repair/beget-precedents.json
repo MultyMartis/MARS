@@ -1,0 +1,25 @@
+{
+  "polygon": {
+    "ftp": "chroot = WP docroot when account bound to the correct site",
+    "db": "phpMyAdmin read-only used; direct remote MySQL not required",
+    "beget_panel": "optional / not required when FTP+WP+PMA exist"
+  },
+  "iseo": {
+    "sftp": "site-scoped SFTP to real docroot",
+    "db": "not used as primary; SFTP+Admin"
+  },
+  "metallka": {
+    "ssh": "preferred filesystem channel when available; WP-CLI read",
+    "ftp": "fallback only",
+    "beget_panel": "fields often incomplete; not required for FS/DB if SSH works"
+  },
+  "ocpilot_site001": {
+    "remote_mysql_1045": "Beget blocks external MySQL without allowlist; used localhost PHP helper historically",
+    "fp0002_choice": "SSH tunnel to localhost MySQL instead of PHP helper upload (no product file write)"
+  },
+  "beget_kb": {
+    "ftp": "https://cp.beget.com/ftp — directory set at creation; after create: SSH toggle / password / delete only (no directory edit)",
+    "mysql": "default localhost; remote requires adding IP in MySQL section; SSH: mysql -h localhost"
+  },
+  "other_site_secrets_copied": 0
+}

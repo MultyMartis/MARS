@@ -194,7 +194,96 @@ function shpigovsky_get_blog_archive_card_fallback_image() {
 }
 
 /**
- * Format reading time for archive cards.
+ * Default reading speed for automatic article reading time (PROD-P08).
+ *
+ * @return int Words per minute.
+ */
+function shpigovsky_get_blog_reading_words_per_minute() {
+	return 190;
+}
+
+/**
+ * Extract readable plain text from article content for word counting.
+ *
+ * @param int $post_id Post ID.
+ * @return string
+ */
+function shpigovsky_get_blog_article_readable_text( $post_id ) {
+	$post_id = (int) $post_id;
+	if ( $post_id <= 0 ) {
+		return '';
+	}
+
+	$chunks = array();
+
+	if ( function_exists( 'get_field' ) ) {
+		$lead = get_field( 'article_lead', $post_id );
+		if ( is_string( $lead ) && '' !== trim( $lead ) ) {
+			$chunks[] = $lead;
+		}
+	}
+
+	$content = (string) get_post_field( 'post_content', $post_id );
+	if ( '' !== trim( $content ) ) {
+		$chunks[] = $content;
+	}
+
+	$raw = implode( "\n", $chunks );
+	if ( '' === trim( $raw ) ) {
+		return '';
+	}
+
+	if ( function_exists( 'strip_shortcodes' ) ) {
+		$raw = strip_shortcodes( $raw );
+	}
+
+	$raw = preg_replace( '#<(script|style)\b[^>]*>.*?</\1>#is', ' ', $raw );
+	$raw = wp_strip_all_tags( (string) $raw, true );
+	$raw = html_entity_decode( $raw, ENT_QUOTES | ENT_HTML5, 'UTF-8' );
+	$raw = preg_replace( '/\s+/u', ' ', (string) $raw );
+
+	return trim( (string) $raw );
+}
+
+/**
+ * Count words in readable article text (Unicode-aware).
+ *
+ * @param string $text Plain text.
+ * @return int
+ */
+function shpigovsky_count_blog_readable_words( $text ) {
+	$text = trim( (string) $text );
+	if ( '' === $text ) {
+		return 0;
+	}
+
+	if ( preg_match_all( '/[\p{L}\p{N}][\p{L}\p{N}\'-]*/u', $text, $matches ) ) {
+		return count( $matches[0] );
+	}
+
+	$parts = preg_split( '/\s+/u', $text, -1, PREG_SPLIT_NO_EMPTY );
+	return is_array( $parts ) ? count( $parts ) : 0;
+}
+
+/**
+ * Automatic reading time in whole minutes (ceil, min 1). Not written to DB.
+ *
+ * @param int $post_id Post ID.
+ * @return int
+ */
+function shpigovsky_calculate_blog_reading_time_minutes( $post_id ) {
+	$words = shpigovsky_count_blog_readable_words( shpigovsky_get_blog_article_readable_text( $post_id ) );
+	if ( $words <= 0 ) {
+		return 1;
+	}
+
+	$wpm = max( 1, (int) shpigovsky_get_blog_reading_words_per_minute() );
+	return max( 1, (int) ceil( $words / $wpm ) );
+}
+
+/**
+ * Format reading time for archive cards and single meta.
+ * PROD-P08: MANUAL OVERRIDE → AUTO CALCULATION IF EMPTY (render-time only).
  *
  * @param int $post_id Post ID.
  * @return string
@@ -203,11 +292,16 @@ function shpigovsky_get_blog_card_reading_time( $post_id ) {
 	$minutes = 0;
 
 	if ( function_exists( 'get_field' ) ) {
-		$minutes = (int) get_field( 'article_reading_time', $post_id );
+		$raw = get_field( 'article_reading_time', $post_id );
+		if ( is_numeric( $raw ) ) {
+			$minutes = (int) $raw;
+		} elseif ( is_string( $raw ) && preg_match( '/(\d+)/', $raw, $m ) ) {
+			$minutes = (int) $m[1];
+		}
 	}
 
 	if ( $minutes <= 0 ) {
-		return '';
+		$minutes = shpigovsky_calculate_blog_reading_time_minutes( $post_id );
 	}
 
 	$mod10  = $minutes % 10;
@@ -637,16 +731,12 @@ function shpigovsky_article_anchor_id( $text ) {
 }
 
 /**
- * Ensure h2/h3 in article content have stable anchor ids.
+ * Assign stable unique IDs to article H2/H3 headings (H3 kept for in-page links; TOC uses H2 only).
  *
- * @param string $content Post content.
+ * @param string $content Post content / HTML.
  * @return string
  */
-function shpigovsky_article_content_heading_ids( $content ) {
-	if ( ! shpigovsky_is_blog_single() || ! in_the_loop() || ! is_main_query() ) {
-		return $content;
-	}
-
+function shpigovsky_article_assign_heading_ids( $content ) {
 	if ( ! is_string( $content ) || '' === $content ) {
 		return $content;
 	}
@@ -661,7 +751,20 @@ function shpigovsky_article_content_heading_ids( $content ) {
 			$inner = $matches[3];
 
 			if ( preg_match( '/\sid=(["\'])([^"\']+)\1/i', $attrs, $id_match ) ) {
-				$used[ $id_match[2] ] = true;
+				$existing = (string) $id_match[2];
+				if ( isset( $used[ $existing ] ) ) {
+					$base = $existing;
+					$idx  = 2;
+					$id   = $base . '-' . $idx;
+					while ( isset( $used[ $id ] ) ) {
+						++$idx;
+						$id = $base . '-' . $idx;
+					}
+					$used[ $id ] = true;
+					$attrs       = preg_replace( '/\sid=(["\'])([^"\']+)\1/i', ' id="' . esc_attr( $id ) . '"', $attrs, 1 );
+					return sprintf( '<h%s%s>%s</h%s>', $level, $attrs, $inner, $level );
+				}
+				$used[ $existing ] = true;
 				return $matches[0];
 			}
 
@@ -681,10 +784,24 @@ function shpigovsky_article_content_heading_ids( $content ) {
 		$content
 	);
 }
+
+/**
+ * Ensure h2/h3 in article content have stable anchor ids.
+ *
+ * @param string $content Post content.
+ * @return string
+ */
+function shpigovsky_article_content_heading_ids( $content ) {
+	if ( ! shpigovsky_is_blog_single() || ! in_the_loop() || ! is_main_query() ) {
+		return $content;
+	}
+
+	return shpigovsky_article_assign_heading_ids( $content );
+}
 add_filter( 'the_content', 'shpigovsky_article_content_heading_ids', 5 );
 
 /**
- * Build TOC items from rendered article headings.
+ * Build TOC items from article-body H2 headings only.
  *
  * @param int $post_id Post ID.
  * @return array<int, array{id:string,label:string,level:int}>
@@ -697,25 +814,31 @@ function shpigovsky_get_article_toc_items( $post_id ) {
 		return array();
 	}
 
-	$content = apply_filters( 'the_content', $post->post_content );
+	$content = shpigovsky_article_assign_heading_ids( (string) $post->post_content );
 
-	if ( ! preg_match_all( '/<h([23])[^>]*id=(["\'])([^"\']+)\2[^>]*>(.*?)<\/h\1>/is', $content, $matches, PREG_SET_ORDER ) ) {
+	if ( ! preg_match_all( '/<h2\b([^>]*)>(.*?)<\/h2>/is', $content, $matches, PREG_SET_ORDER ) ) {
 		return array();
 	}
 
 	$items = array();
 
 	foreach ( $matches as $match ) {
-		$label = trim( wp_strip_all_tags( $match[4] ) );
+		$attrs = $match[1];
+		$label = trim( wp_strip_all_tags( $match[2] ) );
+		$id    = '';
 
-		if ( '' === $label ) {
+		if ( preg_match( '/\sid=(["\'])([^"\']+)\1/i', $attrs, $id_match ) ) {
+			$id = (string) $id_match[2];
+		}
+
+		if ( '' === $label || '' === $id ) {
 			continue;
 		}
 
 		$items[] = array(
-			'id'    => (string) $match[3],
+			'id'    => $id,
 			'label' => $label,
-			'level' => (int) $match[1],
+			'level' => 2,
 		);
 	}
 

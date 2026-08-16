@@ -1,0 +1,130 @@
+diff --git "a/X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p07-fu01-cont2-layer-b-pre\\theme__inc__services-hub-helpers.php.prod-before" "b/X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\inc\\services-hub-helpers.php"
+index 7b9e0434..1aa4ab49 100644
+--- "a/X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p07-fu01-cont2-layer-b-pre\\theme__inc__services-hub-helpers.php.prod-before"	
++++ "b/X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\inc\\services-hub-helpers.php"	
+@@ -482,25 +482,55 @@ function shpigovsky_services_hub_body_class( $classes ) {
+ }
+ add_filter( 'body_class', 'shpigovsky_services_hub_body_class' );
+ 
++/**
++ * Whether copy is technical DEMO/Lorem placeholder (non-empty payload only).
++ *
++ * Empty string is absence, not a placeholder.
++ *
++ * @param string $text Candidate copy.
++ * @return bool
++ */
++function shpigovsky_is_demo_or_lorem_placeholder_copy( $text ) {
++	$text = trim( (string) $text );
++
++	if ( '' === $text ) {
++		return false;
++	}
++
++	$lower = function_exists( 'mb_strtolower' ) ? mb_strtolower( $text ) : strtolower( $text );
++
++	if ( false !== strpos( $lower, 'lorem ipsum' ) ) {
++		return true;
++	}
++
++	if (
++		0 === strpos( $text, 'DEMO' )
++		|| 0 === strpos( $lower, 'demo тАФ' )
++		|| 0 === strpos( $lower, 'demo -' )
++		|| 0 === strpos( $lower, 'demo:' )
++	) {
++		return true;
++	}
++
++	if ( false !== strpos( $lower, '╨▓╤А╨╡╨╝╨╡╨╜╨╜╤Л╨╣ ╤В╨╡╤Е╨╜╨╕╤З╨╡╤Б╨║╨╕╨╣ ╤В╨╡╨║╤Б╤В' ) ) {
++		return true;
++	}
++
++	return false;
++}
++
+ /**
+  * DEMO mini-description fallback when ACF and V9 static are empty.
+  *
++ * PROD-P07-FU01: do not emit user-facing DEMO markers. Empty = omit card text.
++ *
+  * @param string $slug Service post slug.
+  * @return string
+  */
+ function shpigovsky_get_service_demo_mini_description_fallback( $slug ) {
+-	$demos = array(
+-		'zavisimosti'                        => 'DEMO тАФ ╨╜╨░╨┐╤А╨░╨▓╨╗╨╡╨╜╨╕╨╡ ╨╗╨╡╤З╨╡╨╜╨╕╤П ╨╖╨░╨▓╨╕╤Б╨╕╨╝╨╛╤Б╤В╨╡╨╣. ╨Ъ╨░╤А╤В╨╛╤З╨║╨░ ╤А╨░╨╖╨┤╨╡╨╗╨░ ╨┤╨╗╤П ╨┐╨╗╨╛╤Б╨║╨╛╨│╨╛ ╤А╨╡╨╢╨╕╨╝╨░ ╨╛╤В╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╤П /uslugi/.',
+-		'psihicheskoe-zdorovie'              => 'DEMO тАФ ╨╜╨░╨┐╤А╨░╨▓╨╗╨╡╨╜╨╕╨╡ ╨┐╤Б╨╕╤Е╨╕╤З╨╡╤Б╨║╨╛╨│╨╛ ╨╖╨┤╨╛╤А╨╛╨▓╤М╤П. ╨Ъ╨░╤А╤В╨╛╤З╨║╨░ ╤А╨░╨╖╨┤╨╡╨╗╨░ ╨┤╨╗╤П ╨┐╨╗╨╛╤Б╨║╨╛╨│╨╛ ╤А╨╡╨╢╨╕╨╝╨░ ╨╛╤В╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╤П /uslugi/.',
+-		'rasstroystva-pischevogo-povedeniya' => 'DEMO тАФ ╨╜╨░╨┐╤А╨░╨▓╨╗╨╡╨╜╨╕╨╡ ╤А╨░╤Б╤Б╤В╤А╨╛╨╣╤Б╤В╨▓ ╨┐╨╕╤Й╨╡╨▓╨╛╨│╨╛ ╨┐╨╛╨▓╨╡╨┤╨╡╨╜╨╕╤П. ╨Ъ╨░╤А╤В╨╛╤З╨║╨░ ╤А╨░╨╖╨┤╨╡╨╗╨░ ╨┤╨╗╤П ╨┐╨╗╨╛╤Б╨║╨╛╨│╨╛ ╤А╨╡╨╢╨╕╨╝╨░ ╨╛╤В╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╤П /uslugi/.',
+-		'genotipirovanie'                    => 'DEMO тАФ ╨╜╨░╨┐╤А╨░╨▓╨╗╨╡╨╜╨╕╨╡ ╨│╨╡╨╜╨╛╤В╨╕╨┐╨╕╤А╨╛╨▓╨░╨╜╨╕╤П. ╨Ъ╨░╤А╤В╨╛╤З╨║╨░ ╤А╨░╨╖╨┤╨╡╨╗╨░ ╨┤╨╗╤П ╨┐╨╗╨╛╤Б╨║╨╛╨│╨╛ ╤А╨╡╨╢╨╕╨╝╨░ ╨╛╤В╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╤П /uslugi/.',
+-	);
++	unset( $slug );
+ 
+-	if ( isset( $demos[ $slug ] ) ) {
+-		return $demos[ $slug ];
+-	}
+-
+-	return 'DEMO тАФ ╨║╤А╨░╤В╨║╨╛╨╡ ╨╛╨┐╨╕╤Б╨░╨╜╨╕╨╡ ╤Г╤Б╨╗╤Г╨│╨╕ ╨┤╨╗╤П ╨║╨░╤А╤В╨╛╤З╨║╨╕ ╨╜╨░ /uslugi/. ╨Ъ╨╛╨╜╤В╨╡╨╜╤В ╨╛╨╢╨╕╨┤╨░╨╡╤В ╤Б╨╛╨│╨╗╨░╤Б╨╛╨▓╨░╨╜╨╕╤П ╨╛╨┐╨╡╤А╨░╤В╨╛╤А╨╛╨╝.';
++	return '';
+ }
+ 
+ /**
+@@ -518,7 +548,7 @@ function shpigovsky_resolve_service_mini_description_source( $post_id ) {
+ 
+ 	$admin = shpigovsky_get_service_field( $post_id, 'service_short_description' );
+ 
+-	if ( '' !== $admin ) {
++	if ( '' !== $admin && ! shpigovsky_is_demo_or_lorem_placeholder_copy( $admin ) ) {
+ 		return 'ACF_FIELD';
+ 	}
+ 
+@@ -530,8 +560,13 @@ function shpigovsky_resolve_service_mini_description_source( $post_id ) {
+ 
+ 	$v9 = shpigovsky_get_v9_services_hub_child_copy( $post->post_name );
+ 
+-	if ( null !== $v9 && '' !== trim( (string) $v9['text'] ) ) {
+-		return 'V9_FALLBACK';
++	if ( null !== $v9 ) {
++		$v9_text = trim( (string) $v9['text'] );
++		if ( '' !== $v9_text && ! shpigovsky_is_demo_or_lorem_placeholder_copy( $v9_text ) ) {
++			return 'V9_FALLBACK';
++		}
++
++		return 'EMPTY';
+ 	}
+ 
+ 	$demo = shpigovsky_get_service_demo_mini_description_fallback( $post->post_name );
+@@ -556,7 +591,7 @@ function shpigovsky_resolve_services_hub_category_intro( $parent, $v9 = null ) {
+ 
+ 	$admin = shpigovsky_get_service_field( $parent->ID, 'service_short_description' );
+ 
+-	if ( '' !== $admin ) {
++	if ( '' !== $admin && ! shpigovsky_is_demo_or_lorem_placeholder_copy( $admin ) ) {
+ 		return $admin;
+ 	}
+ 
+@@ -628,7 +663,7 @@ function shpigovsky_get_service_mini_description( $post_id ) {
+ 
+ 	$admin = shpigovsky_get_service_field( $post_id, 'service_short_description' );
+ 
+-	if ( '' !== $admin ) {
++	if ( '' !== $admin && ! shpigovsky_is_demo_or_lorem_placeholder_copy( $admin ) ) {
+ 		return $admin;
+ 	}
+ 
+@@ -640,8 +675,13 @@ function shpigovsky_get_service_mini_description( $post_id ) {
+ 
+ 	$v9 = shpigovsky_get_v9_services_hub_child_copy( $post->post_name );
+ 
+-	if ( null !== $v9 && '' !== trim( (string) $v9['text'] ) ) {
+-		return trim( (string) $v9['text'] );
++	if ( null !== $v9 ) {
++		$v9_text = trim( (string) $v9['text'] );
++		if ( '' !== $v9_text && ! shpigovsky_is_demo_or_lorem_placeholder_copy( $v9_text ) ) {
++			return $v9_text;
++		}
++
++		return '';
+ 	}
+ 
+ 	return shpigovsky_get_service_demo_mini_description_fallback( $post->post_name );

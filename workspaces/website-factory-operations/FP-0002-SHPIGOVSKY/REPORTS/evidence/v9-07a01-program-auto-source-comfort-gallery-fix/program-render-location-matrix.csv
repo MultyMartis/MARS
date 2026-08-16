@@ -1,0 +1,6 @@
+route,template_helper,title_source,url_source,description_source,previous_defect
+Home home/rehabilitation-program.php,shpigovsky_get_program_direction_items(home),child get_the_title,get_permalink,treatment_program_short_description,hardcoded slug/title map (neyropsihologicheskaya-korrektsiya)
+/o-centre/ institutional program,shpigovsky_get_about_program_context,child title_display,child permalink,n/a (cards no mini-desc),about_program_items ACF titles + stale helper
+/uslugi/ services-hub rehabilitation-program,shpigovsky_get_program_direction_items(service),child,child,n/a,hardcoded slug map
+/uslugi/zavisimosti/ service/program.php subdivision,shpigovsky_get_service_subdivision_programme_fallback_items,child,child,child text,programme_items ACF titles
+service leaf program/approach,auto-source helpers,child,child,child text,programme_items ACF titles

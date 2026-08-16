@@ -141,6 +141,7 @@ if ( '' === $cta_label ) {
 					class="services-category-section-v2__gallery-pagination swiper-pagination"
 					data-gallery-pagination
 				></div>
+				<?php get_template_part( 'template-parts/components/fp02-slider-mobile-nav' ); ?>
 				<?php endif; ?>
 			</div>
 		<?php endif; ?>

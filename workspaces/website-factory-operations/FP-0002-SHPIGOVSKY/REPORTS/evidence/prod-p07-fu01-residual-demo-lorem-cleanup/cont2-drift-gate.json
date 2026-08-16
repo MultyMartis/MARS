@@ -1,0 +1,22 @@
+{
+  "wave": "PROD-P07-FU01-CONT2",
+  "verdict": "MATCH",
+  "note": "production-before equals accepted P07 where hashed; local canonical ahead only by approved residual cleanup",
+  "production_before": {
+    "inc/v9-static-content.php": "5ee639d1b05ff4e603c35fc5ec23e7271a639d060b1ef4f14f84dd305d158026",
+    "inc/services-hub-helpers.php": "ff4024d0a18ab9690741f594c3371794eb1e15efb68751d0ad7e9023887c5d0b",
+    "inc/service-general-helpers.php": "163f7d2de0fa13d32138f44302ae6dc0fba42d5e713e20be1b1a123b819f89ee"
+  },
+  "p07_accepted": {
+    "inc/v9-static-content.php": "5ee639d1b05ff4e603c35fc5ec23e7271a639d060b1ef4f14f84dd305d158026",
+    "inc/service-general-helpers.php": "163f7d2de0fa13d32138f44302ae6dc0fba42d5e713e20be1b1a123b819f89ee",
+    "inc/services-hub-helpers.php": null
+  },
+  "fu01_local_and_prod_after": {
+    "inc/v9-static-content.php": "3471898fa12c253f97820a7c33754524d2d0e9cab1c50f2aa222755901e55604",
+    "inc/services-hub-helpers.php": "6e11bbc453d33f395d8bdfe7f6a00e913ce3ee0777c66d46942ff2aca391e305",
+    "inc/service-general-helpers.php": "b4ac89d7d9e67d7cfabe3c06b3f9ab617863b512b3e0bf210936e73b8eb74293"
+  },
+  "operator_edits_on_production": "NONE",
+  "php_lint": "No syntax errors detected (3/3 local canonical + 3/3 pending pack)"
+}

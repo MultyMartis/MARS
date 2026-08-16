@@ -56,11 +56,11 @@
         },
         {
             "key": "field_fp02_article_reading_time",
-            "label": "Reading time",
+            "label": "Время на чтение",
             "name": "article_reading_time",
             "aria-label": "",
             "type": "number",
-            "instructions": "",
+            "instructions": "Необязательно. Число минут. Если заполнено — показывается вручную. Если пусто — сайт посчитает время автоматически (~190 слов/мин). Не пишите слово «минут».",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {

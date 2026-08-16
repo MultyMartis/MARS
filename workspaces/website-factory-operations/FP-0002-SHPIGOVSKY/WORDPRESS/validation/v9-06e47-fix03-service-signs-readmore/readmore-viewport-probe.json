@@ -1,0 +1,116 @@
+{
+  "desktop": {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "consoleErrors": [],
+    "initial": {
+      "clientHeight": 120,
+      "scrollHeight": 120,
+      "lineHeight": 24,
+      "fiveLines": 120,
+      "isClamped": false,
+      "buttonHidden": true,
+      "buttonTag": "BUTTON",
+      "ariaExpanded": "false",
+      "textWidth": 900
+    },
+    "afterClick": null,
+    "forced": {
+      "before": {
+        "isClamped": true,
+        "buttonHidden": false,
+        "clientHeight": 120,
+        "scrollHeight": 840,
+        "ariaExpanded": "false"
+      },
+      "after": {
+        "isClamped": false,
+        "buttonHidden": true,
+        "clientHeight": 840,
+        "scrollHeight": 840,
+        "ariaExpanded": "true",
+        "overflow": false
+      }
+    }
+  },
+  "tablet": {
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "consoleErrors": [],
+    "initial": {
+      "clientHeight": 144,
+      "scrollHeight": 144,
+      "lineHeight": 24,
+      "fiveLines": 120,
+      "isClamped": false,
+      "buttonHidden": true,
+      "buttonTag": "BUTTON",
+      "ariaExpanded": "false",
+      "textWidth": 723
+    },
+    "afterClick": null,
+    "forced": {
+      "before": {
+        "isClamped": true,
+        "buttonHidden": false,
+        "clientHeight": 120,
+        "scrollHeight": 1056,
+        "ariaExpanded": "false"
+      },
+      "after": {
+        "isClamped": false,
+        "buttonHidden": true,
+        "clientHeight": 1056,
+        "scrollHeight": 1056,
+        "ariaExpanded": "true",
+        "overflow": false
+      }
+    }
+  },
+  "mobile": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "consoleErrors": [],
+    "initial": {
+      "clientHeight": 120,
+      "scrollHeight": 264,
+      "lineHeight": 24,
+      "fiveLines": 120,
+      "isClamped": true,
+      "buttonHidden": false,
+      "buttonTag": "BUTTON",
+      "ariaExpanded": "false",
+      "textWidth": 345
+    },
+    "afterClick": {
+      "clientHeight": 264,
+      "scrollHeight": 264,
+      "isClamped": false,
+      "buttonHidden": true,
+      "ariaExpanded": "true"
+    },
+    "forced": {
+      "before": {
+        "isClamped": true,
+        "buttonHidden": false,
+        "clientHeight": 120,
+        "scrollHeight": 2400,
+        "ariaExpanded": "false"
+      },
+      "after": {
+        "isClamped": false,
+        "buttonHidden": true,
+        "clientHeight": 2400,
+        "scrollHeight": 2400,
+        "ariaExpanded": "true",
+        "overflow": false
+      }
+    }
+  }
+}

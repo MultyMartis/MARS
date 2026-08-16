@@ -1,0 +1,236 @@
+{
+  "captured_at": "2026-08-16T16:04:29.630652+00:00",
+  "php": {
+    "utc": "2026-08-16T16:04:22+00:00",
+    "core_version": "0.3.4-p13",
+    "theme_version": "0.3.0-d7a-shell",
+    "env": "local",
+    "wp_environment_type_const": "local",
+    "blog_public": "0",
+    "wplang": "ru_RU",
+    "wpilot_write_enabled": false,
+    "metacode_wpilot_write_enabled": false,
+    "active_plugins": [
+      "acf-extended-pro/acf-extended.php",
+      "advanced-custom-fields-pro/acf.php",
+      "classic-editor/classic-editor.php",
+      "metacode-wpilot/metacode-wpilot.php",
+      "shpigovsky-core/shpigovsky-core.php"
+    ],
+    "mu_plugin_exists": true,
+    "mu_has_admin_notices": false,
+    "mu_has_local_mars_notice": false,
+    "mu_has_siteurl_guard": true,
+    "users": {
+      "mli_admin_fp0002": null,
+      "admin": {
+        "ID": 2,
+        "email": "ola4seo@yandex.ru",
+        "display_name": "admin",
+        "roles": [
+          "administrator"
+        ]
+      },
+      "mars": {
+        "ID": 3,
+        "email": "support@polygon-ws.ru",
+        "display_name": "MARS MetaCODE",
+        "roles": [
+          "administrator"
+        ]
+      },
+      "metacode": {
+        "ID": 4,
+        "email": "metacode@polygon-ws.ru",
+        "display_name": "MetaCODE",
+        "roles": [
+          "administrator"
+        ]
+      }
+    },
+    "privacy_page_author": 2,
+    "modules": {
+      "menu_hygiene": true,
+      "dashboard": true,
+      "docx": true,
+      "slug": true,
+      "seo": true,
+      "social": true
+    },
+    "social_platforms": [
+      {
+        "type": "telegram",
+        "url": "https://t.me/Spigovsky_house",
+        "show_header": true,
+        "show_footer": true
+      },
+      {
+        "type": "whatsapp",
+        "url": "https://wa.me/89251836464",
+        "show_header": true,
+        "show_footer": true
+      }
+    ],
+    "social_links_legacy_still_present": [
+      {
+        "label": "Telegram",
+        "url": "https://t.me/Spigovsky_house"
+      },
+      {
+        "label": "What's up",
+        "url": "https://wa.me/89251836464"
+      }
+    ],
+    "docx_template_readable": true,
+    "i18n_ru_import": "Импорт из Word",
+    "i18n_ru_system": "Система",
+    "i18n_en_journal": "Activity log",
+    "i18n_en_import": "Import from Word",
+    "slug_create": {
+      "parent": 1999,
+      "child": 2000
+    },
+    "slug_persist": "fp02-p13-slug-persist",
+    "slug_empty_regen": "fp02-p13-qa-slug-child",
+    "slug_collision": "fp02-p13-qa-slug-parent",
+    "slug_specialist_persist": "fp02-p13-spec-persist",
+    "slug_cleanup": {
+      "parent": "deleted",
+      "child": "deleted",
+      "spec": "deleted"
+    },
+    "toc_sample": {
+      "id": 750,
+      "title": "Лечение алкогольной зависимости: почему сила воли здесь ни при чём",
+      "permalink": "http://shpigovsky.beget.tech/blog/nazvanie-stati/",
+      "h2_count": 5,
+      "items": [
+        {
+          "id": "alkogolizm-kak-bolezn-mozga",
+          "label": "Алкоголизм как болезнь мозга: эндогенная природа зависимости",
+          "level": 2
+        },
+        {
+          "id": "kto-na-samom-dele-pyuet",
+          "label": "Кто на самом деле пьет: развенчивая стереотип о \"неудачниках\"",
+          "level": 2
+        },
+        {
+          "id": "psihologicheskie-mehanizmy-zavisimosti",
+          "label": "Психологические механизмы зависимости: что происходит внутри",
+          "level": 2
+        },
+        {
+          "id": "neyrobiologiya-i-psihologiya",
+          "label": "Нейробиология встречает психологию: как это работает вместе",
+          "level": 2
+        },
+        {
+          "id": "statsionarnoe-lechenie",
+          "label": "Стационарное лечение алкогольной зависимости: что важно знать",
+          "level": 2
+        }
+      ]
+    },
+    "activity_qa_remaining": 0,
+    "options_page_owner": "ACF Extended PRO acf-extended-pro"
+  },
+  "http": {
+    "home": {
+      "ok": true,
+      "path": "/",
+      "len": 202569,
+      "hero_h1": true,
+      "hero_tagline_span": true,
+      "extra_h1_count": 1,
+      "child_cta": true,
+      "footer_whatsapp_icon": true,
+      "footer_youtube_fa_count": 0,
+      "telegram_href": true,
+      "whatsapp_href": true,
+      "nav_sub_list": true,
+      "toc_present": false,
+      "local_mars_notice": false
+    },
+    "uslugi": {
+      "ok": true,
+      "path": "/uslugi/",
+      "len": 136803,
+      "hero_h1": false,
+      "hero_tagline_span": false,
+      "extra_h1_count": 1,
+      "child_cta": true,
+      "footer_whatsapp_icon": true,
+      "footer_youtube_fa_count": 0,
+      "telegram_href": true,
+      "whatsapp_href": true,
+      "nav_sub_list": true,
+      "toc_present": false,
+      "local_mars_notice": false
+    },
+    "zavisimosti": {
+      "ok": true,
+      "path": "/uslugi/zavisimosti/",
+      "len": 146648,
+      "hero_h1": false,
+      "hero_tagline_span": false,
+      "extra_h1_count": 1,
+      "child_cta": true,
+      "footer_whatsapp_icon": true,
+      "footer_youtube_fa_count": 0,
+      "telegram_href": true,
+      "whatsapp_href": true,
+      "nav_sub_list": true,
+      "toc_present": false,
+      "local_mars_notice": false
+    },
+    "specyalisty": {
+      "ok": true,
+      "path": "/specyalisty/",
+      "len": 71442,
+      "hero_h1": false,
+      "hero_tagline_span": false,
+      "extra_h1_count": 1,
+      "child_cta": true,
+      "footer_whatsapp_icon": true,
+      "footer_youtube_fa_count": 0,
+      "telegram_href": true,
+      "whatsapp_href": true,
+      "nav_sub_list": true,
+      "toc_present": false,
+      "local_mars_notice": false
+    },
+    "contacts": {
+      "ok": true,
+      "path": "/kontakty/",
+      "len": 79843,
+      "hero_h1": false,
+      "hero_tagline_span": false,
+      "extra_h1_count": 1,
+      "child_cta": true,
+      "footer_whatsapp_icon": true,
+      "footer_youtube_fa_count": 0,
+      "telegram_href": true,
+      "whatsapp_href": true,
+      "nav_sub_list": true,
+      "toc_present": false,
+      "local_mars_notice": false
+    },
+    "blog_article": {
+      "ok": true,
+      "path": "/blog/nazvanie-stati/",
+      "len": 99947,
+      "hero_h1": false,
+      "hero_tagline_span": false,
+      "extra_h1_count": 1,
+      "child_cta": true,
+      "footer_whatsapp_icon": true,
+      "footer_youtube_fa_count": 0,
+      "telegram_href": true,
+      "whatsapp_href": true,
+      "nav_sub_list": true,
+      "toc_present": true,
+      "local_mars_notice": false
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+    "cpt_exists": true,
+    "labels": {
+        "name": "Специалисты",
+        "all_items": "Все специалисты",
+        "add_new": "Добавить нового",
+        "add_new_item": "Добавить специалиста",
+        "edit_item": "Редактировать специалиста"
+    },
+    "menu_position": 22,
+    "menu_icon": "dashicons-groups",
+    "supports": {
+        "title": true,
+        "thumbnail": true,
+        "page-attributes": true
+    },
+    "has_archive": false,
+    "rewrite": {
+        "slug": "specyalisty",
+        "with_front": false,
+        "pages": true,
+        "feeds": false,
+        "ep_mask": 1
+    },
+    "show_ui": true,
+    "acf_group": {
+        "key": "group_fp02_specialist_profile",
+        "title": "Специалист — профиль",
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "specialist"
+                }
+            ]
+        ],
+        "active": true
+    },
+    "acf_field_names": [
+        {
+            "key": "field_fp02_specialist_portrait_notice",
+            "name": "",
+            "label": "Портрет"
+        },
+        {
+            "key": "field_fp02_specialist_role",
+            "name": "specialist_role",
+            "label": "Должность \/ профессия"
+        },
+        {
+            "key": "field_fp02_specialist_experience",
+            "name": "specialist_experience",
+            "label": "Опыт"
+        },
+        {
+            "key": "field_fp02_specialist_specialty",
+            "name": "specialist_specialty",
+            "label": "Специальность"
+        },
+        {
+            "key": "field_fp02_specialist_education",
+            "name": "specialist_education",
+            "label": "Образование"
+        },
+        {
+            "key": "field_fp02_specialist_specialization",
+            "name": "specialist_specialization",
+            "label": "Специализация"
+        },
+        {
+            "key": "field_fp02_specialist_principles",
+            "name": "specialist_principles",
+            "label": "Принципы \/ подход к работе"
+        },
+        {
+            "key": "field_fp02_specialist_additional",
+            "name": "specialist_additional",
+            "label": "Дополнительная информация"
+        },
+        {
+            "key": "field_fp02_specialist_certificates",
+            "name": "specialist_certificates",
+            "label": "Сертификаты и дипломы"
+        }
+    ],
+    "groups_on_kostyuk": [
+        {
+            "key": "group_fp02_specialist_profile",
+            "title": "Специалист — профиль"
+        }
+    ],
+    "post_1033_type": "specialist",
+    "post_1033_parent": 0,
+    "menu_order": 30
+}

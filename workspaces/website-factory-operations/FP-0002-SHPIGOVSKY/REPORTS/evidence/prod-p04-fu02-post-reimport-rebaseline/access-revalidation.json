@@ -1,0 +1,14 @@
+{
+  "ssh": "PASS",
+  "ftp": "PASS",
+  "docroot": "/home/s/shpigovsky/shpigovsky.ru/public_html",
+  "real_docroot": true,
+  "db_select": "PASS",
+  "wp_admin": "FAIL",
+  "ssh_user_suffix": "sky_mars",
+  "identity_probe": "shpigovsky_mars\n/home/s/shpigovsky/shpigovsky.ru/public_html\ntotal 308\ndrwx------+  9 root       root          4096 Aug 14 10:59 .\ndrwx------+  3 root       root          4096 Jul 23 20:06 ..\ndrwx------+  2 shpigovsky newcustomers  4096 Aug 14 10:58 acf-json\ndrwx------+  3 shpigovsky newcustomers  4096 Aug 14 10:58 app\n-rw-------+  1 shpigovsky newcustomers   307 Aug 14 10:58 .htaccess\n-rw-------+  1 shpigovsky newcustomers   405 Aug 14 10:58 index.php\n-rw-------+  1 shpigovsky newcustomers 19903 Aug 14 10:58 license.txt\ndrwx------+  3 shpigovsky newcustomers  4096 Aug 14 10:58 mars-runtime\n-rw-------+  1 shpigovsky newcustomers  7406 Aug 14 10:58 readme.html\n-rw-------+  1 shpigovsky newcustomers    26 Aug 14 10:58 robots.txt\ndrwx------+  4 shpigovsky newcustomers  4096 Aug 14 10:58 _tmp-e47-fix04-val\n-rw-------+  1 shpigovsky newcustomers  7371 Aug 14 10:58 wp-activate.php\ndrwx------+  9 shpigovsky newcustomers  4096 Aug 14 10:58 wp-admin\n-rw-------+  1 shpigovsky newcustomers   351 Aug 14 10:58 wp-blog-header.php\n-rw-------+  1 shpigovsky newcustomers  2323 Aug 14 10:58 wp-comments-post.php\n-rw-------+  1 shpigovsky newcustomers  3329 Aug 14 10:59 wp-config.php\n-rw-------+  1 shpigovsky newcustomers  3339 Aug 14 10:58 wp-config-sample.php\ndrwx------+  9 shpigovsky newcustomers  4096 Aug 14 10:58 wp-content\n-rw-------+  1 shpigovsky newcustomers  5617 Aug 14 10:58 wp-cron.php\n",
+  "real_wp_ok": true,
+  "ftp_listing_has_wp": true,
+  "wp_admin_db_role": "Administrator",
+  "wp_admin_http": "FAIL"
+}

@@ -1,0 +1,240 @@
+{
+  "created_at": "2026-08-14T15:07:37.140155+00:00",
+  "layer_b_root": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p08-layer-b-pre",
+  "files": [
+    {
+      "kind": "theme",
+      "rel": "assets/js/v9-shell.js",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/assets/js/v9-shell.js",
+      "exists_on_prod_before": true,
+      "local_sha256": "36a475cddba1dd7546e8ec56a94c77c21add27e24b6d4888ef1ed762a02c0b50",
+      "prod_before_sha256": "7fc32c90effd99fc39ff0c3781c8cf4038387c27a5943235d44686c2bc8c45a1",
+      "status": "DRIFT_OR_LOCAL_NEWER"
+    },
+    {
+      "kind": "theme",
+      "rel": "assets/js/fp02-lifebuoy-parallax.js",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/assets/js/fp02-lifebuoy-parallax.js",
+      "exists_on_prod_before": true,
+      "local_sha256": "0bd0660ec96e0a5cf693dbb64e1fb192d119188cb490c24d804c897d5bbf6fee",
+      "prod_before_sha256": "dcf1357b304331c4ee370b5de151fa6f0f0eedc1d84d2fc5b22ad38d89cbdc20",
+      "status": "DRIFT_OR_LOCAL_NEWER"
+    },
+    {
+      "kind": "theme",
+      "rel": "assets/css/fp02-lifebuoy-parallax.css",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/assets/css/fp02-lifebuoy-parallax.css",
+      "exists_on_prod_before": true,
+      "local_sha256": "4247390c73022f740e9a5281bc807011b9a4d3be2398b024fc67b649271d3d9e",
+      "prod_before_sha256": "fd8b5551813dd52a792e20a71f05762dbc6084a77e91916aa7ebb3d87d148559",
+      "status": "DRIFT_OR_LOCAL_NEWER"
+    },
+    {
+      "kind": "theme",
+      "rel": "assets/css/fp02-mobile-slider-nav.css",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/assets/css/fp02-mobile-slider-nav.css",
+      "exists_on_prod_before": false,
+      "local_sha256": "14651072f54badae288e91736c817b46b4f4547044c73276a655840267d588cc",
+      "prod_before_sha256": null,
+      "status": "NEW_FILE"
+    },
+    {
+      "kind": "theme",
+      "rel": "assets/css/fp02-specialist-profile.css",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/assets/css/fp02-specialist-profile.css",
+      "exists_on_prod_before": false,
+      "local_sha256": "41b4a9d537a2f5a0dc5c6b918bcb3f19b2b03fe7d3b356890c99550fa21d6525",
+      "prod_before_sha256": null,
+      "status": "NEW_FILE"
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/assets.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/assets.php",
+      "exists_on_prod_before": true,
+      "local_sha256": "d42794bb7693e5e60e1ffac48dd2d386e835b9d3ac3d00c6e5cadb3be5396bba",
+      "prod_before_sha256": "4ff6e84095c4883fa9b8ad431e86a21e24fecdef34c17229e0bea85c6950c91c",
+      "status": "DRIFT_OR_LOCAL_NEWER"
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/blog-helpers.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/blog-helpers.php",
+      "exists_on_prod_before": true,
+      "local_sha256": "e9475a1de37740cab96c4717756c3f0732ced9ec7a556b1b88e633dd54b6ac95",
+      "prod_before_sha256": "17b8e68cb737d3941bece99db2cff18570df926b19e975038df02fd91cf84908",
+      "status": "DRIFT_OR_LOCAL_NEWER"
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/specialist-helpers.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/specialist-helpers.php",
+      "exists_on_prod_before": false,
+      "local_sha256": "fed1164f06c0950774b72a519bd8b7d41406ebdf80fcf8d4b7160be6ea26c8e4",
+      "prod_before_sha256": null,
+      "status": "NEW_FILE"
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/reusable-blocks-helpers.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/reusable-blocks-helpers.php",
+      "exists_on_prod_before": true,
+      "local_sha256": "2fc4a7da0508791576783c6e607b8b66751dd52241388fc8253e2e4e837c3703",
+      "prod_before_sha256": "baf08fe5f455b4d8f31eea05167f56e3164fcd45c3f351ca4c5421712a0b64ae",
+      "status": "DRIFT_OR_LOCAL_NEWER"
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/v9-static-content.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/v9-static-content.php",
+      "exists_on_prod_before": true,
+      "local_sha256": "e986f0bbc7e9ab65352fc4287cfeb5456a64d8af0a6de274770d98f4331056ff",
+      "prod_before_sha256": "3471898fa12c253f97820a7c33754524d2d0e9cab1c50f2aa222755901e55604",
+      "status": "DRIFT_OR_LOCAL_NEWER"
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/home-fallbacks.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/home-fallbacks.php",
+      "exists_on_prod_before": true,
+      "local_sha256": "f1beeb2423a2619a3e0914a3a7949562d7441846073c6264ba635fa3fe51ce93",
+      "prod_before_sha256": "2e1602c8caeab69966ad96a5d91e874cab752e5c6412978d45975998f215f0e6",
+      "status": "DRIFT_OR_LOCAL_NEWER"
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/institutional-about-v9-content.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/institutional-about-v9-content.php",
+      "exists_on_prod_before": true,
+      "local_sha256": "25095b38da59b7c0b4fdee81289109f15bd0fa83c477bac4878e137021016785",
+      "prod_before_sha256": "985c38bbf2b91a219d2c7128ff72aab9f3f6a45bc3d1b84cb672923c1d86e5b3",
+      "status": "DRIFT_OR_LOCAL_NEWER"
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/contacts-helpers.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/contacts-helpers.php",
+      "exists_on_prod_before": true,
+      "local_sha256": "eba42e58dfddd649e5d70d6105afc78c7150f2bb8d3b2a14daf6f984d07ec091",
+      "prod_before_sha256": "fddd0818d17b5e240033ae74063012f851fd9a2fefc280ef7fb247ab9f366dd4",
+      "status": "DRIFT_OR_LOCAL_NEWER"
+    },
+    {
+      "kind": "theme",
+      "rel": "functions.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/functions.php",
+      "exists_on_prod_before": true,
+      "local_sha256": "e738df3ba25e8f0311288b358609cbae7361c00e317d6baa5b6bd0ba931cfac7",
+      "prod_before_sha256": "6c543cd504354275910161c733788e1becf07c9f9654467bce146e1b4c85961a",
+      "status": "DRIFT_OR_LOCAL_NEWER"
+    },
+    {
+      "kind": "theme",
+      "rel": "template-parts/components/fp02-slider-mobile-nav.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/components/fp02-slider-mobile-nav.php",
+      "exists_on_prod_before": false,
+      "local_sha256": "38660191dfaf57795e408bce551825c601ca8124f54aacb89bb1ed7a7c8f6f7c",
+      "prod_before_sha256": null,
+      "status": "NEW_FILE"
+    },
+    {
+      "kind": "theme",
+      "rel": "template-parts/home/gallery.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/home/gallery.php",
+      "exists_on_prod_before": true,
+      "local_sha256": "1ddc92288b3332af15dc0a3affe6c56a2a85ad430c4cce47c73e781ac2f654c9",
+      "prod_before_sha256": "8e4bd86835d090b71f3da760ddcc1591f4edae895c4acc35f51c51fc14980375",
+      "status": "DRIFT_OR_LOCAL_NEWER"
+    },
+    {
+      "kind": "theme",
+      "rel": "template-parts/home/specialists.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/home/specialists.php",
+      "exists_on_prod_before": true,
+      "local_sha256": "eda5af53ed84038101aa7f822f1faba0ca26a79181abb8b38b91a424b146ec48",
+      "prod_before_sha256": "4cb5b29523bc909f6985da4c81ba1dd4c9620d5975b2eedbaaab238043b4b48d",
+      "status": "DRIFT_OR_LOCAL_NEWER"
+    },
+    {
+      "kind": "theme",
+      "rel": "template-parts/home/articles-teaser.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/home/articles-teaser.php",
+      "exists_on_prod_before": true,
+      "local_sha256": "e5693bdf59cb5e41bfdbecb153c2af77e436d08bd09fefd057699a8ffaccb36e",
+      "prod_before_sha256": "d77b92d94a95812ed9ff2927c1a9752ce031832ef31c850409fc3147a513a952",
+      "status": "DRIFT_OR_LOCAL_NEWER"
+    },
+    {
+      "kind": "theme",
+      "rel": "template-parts/shared/reviews-slider.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/shared/reviews-slider.php",
+      "exists_on_prod_before": true,
+      "local_sha256": "12c285f3f1491df764d107cd38c0d693c66007d5fdd1e706b8b3dbd5d1bd546a",
+      "prod_before_sha256": "93fc7811243f958c57ec28ce4c0767812d9135f5cd32d9a81b740efd10021fcc",
+      "status": "DRIFT_OR_LOCAL_NEWER"
+    },
+    {
+      "kind": "theme",
+      "rel": "template-parts/service/alcohol-direct-v9/specialists.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/service/alcohol-direct-v9/specialists.php",
+      "exists_on_prod_before": true,
+      "local_sha256": "0757392f30e2c05d4127fdcd361c9d046a834050562bd95e470103c1ea780f5a",
+      "prod_before_sha256": "6cfcdfec2ef5759c1d64ce02395b1df291da12af7e1b0ad6b90b516c165dabf4",
+      "status": "DRIFT_OR_LOCAL_NEWER"
+    },
+    {
+      "kind": "theme",
+      "rel": "template-parts/services-hub/service-group.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/services-hub/service-group.php",
+      "exists_on_prod_before": true,
+      "local_sha256": "b5a3093c6f410c59a38500fa09895509914cad14987b86b9cb2b6178dfe39e89",
+      "prod_before_sha256": "9204908963ff175442ddc59c35f8b9734d69d509d03713c5a624ea1ec9fc5820",
+      "status": "DRIFT_OR_LOCAL_NEWER"
+    },
+    {
+      "kind": "theme",
+      "rel": "template-parts/generic/content-page.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/generic/content-page.php",
+      "exists_on_prod_before": true,
+      "local_sha256": "37aaac70af8113e182b159fb98704240a4ec35241cc93ecceda3f9bcfee6d108",
+      "prod_before_sha256": "f9a43fa11b8813c571dd1df2975d5903cb7d255e1b401985f34b0dbcd247e93f",
+      "status": "DRIFT_OR_LOCAL_NEWER"
+    },
+    {
+      "kind": "theme",
+      "rel": "template-parts/specialist/profile.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/specialist/profile.php",
+      "exists_on_prod_before": false,
+      "local_sha256": "e86723c863145cab77997c21cc9f0c63a16d2573b73e6e0cbd9aa77af425d7bb",
+      "prod_before_sha256": null,
+      "status": "NEW_FILE"
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Fields/FieldGroups.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Fields/FieldGroups.php",
+      "exists_on_prod_before": true,
+      "local_sha256": "ee63efab4e2fe3c8aa4929afa402b656bdc325bf41e2909714864fda17cb5bbf",
+      "prod_before_sha256": "5daa46a52365a5b2bf7b875c59af07919424531e60857caa8ba85ac385aec2bd",
+      "status": "DRIFT_OR_LOCAL_NEWER"
+    },
+    {
+      "kind": "acf",
+      "rel": "group_fp02_specialist_profile.json",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/acf-json/group_fp02_specialist_profile.json",
+      "exists_on_prod_before": false,
+      "local_sha256": "055f4faf47d44e0e978b775a777338a33046a91084b37c0f70dddb7d928488cb",
+      "prod_before_sha256": null,
+      "status": "NEW_FILE"
+    },
+    {
+      "kind": "acf",
+      "rel": "group_fp02_blog_post_article_meta.json",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/acf-json/group_fp02_blog_post_article_meta.json",
+      "exists_on_prod_before": true,
+      "local_sha256": "f6b0deb83066d193f8e1f7cf6b49c91b404c7d6b19d704946d17f13e0e2280ab",
+      "prod_before_sha256": "eb4f0442e51dc75f2e91adbde649d3b2e7342a1bffca3fd002a2ab8f4556d64a",
+      "status": "DRIFT_OR_LOCAL_NEWER"
+    }
+  ]
+}

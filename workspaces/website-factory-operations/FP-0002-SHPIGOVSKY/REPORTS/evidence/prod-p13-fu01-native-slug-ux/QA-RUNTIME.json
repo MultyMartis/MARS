@@ -1,0 +1,470 @@
+{
+  "utc": "2026-08-16T16:34:37+00:00",
+  "wpilot": {
+    "write_enabled_option": null,
+    "write_enabled_from_opts": null
+  },
+  "hooks": {
+    "has_metabox_action": false,
+    "has_after_title": false,
+    "has_admin_css": false,
+    "has_insert_data": 99,
+    "has_unique_slug": 10
+  },
+  "service": {
+    "persist": {
+      "ID": 2015,
+      "created_slug": "fp02-fu01-qa-service-persist",
+      "update_result": 2015,
+      "reloaded_slug": "fp02-fu01-qa-service-native",
+      "permalink": "http://shpigovsky.beget.tech/uslugi/fp02-fu01-qa-service-native/",
+      "pass": true
+    },
+    "unrelated_title_edit": {
+      "slug": "fp02-fu01-qa-service-native",
+      "pass": true
+    },
+    "clear_regenerate": {
+      "slug": "fp02-fu01-qa-service-regen-title",
+      "expected": "fp02-fu01-qa-service-regen-title",
+      "pass": true
+    }
+  },
+  "specialist": {
+    "persist": {
+      "ID": 2019,
+      "reloaded_slug": "fp02-fu01-qa-spec-native",
+      "permalink": "http://shpigovsky.beget.tech/?post_type=specialist&p=2019",
+      "rewrite_ok": false,
+      "pass": true
+    },
+    "unrelated_title_edit": {
+      "slug": "fp02-fu01-qa-spec-native",
+      "pass": true
+    },
+    "clear_regenerate": {
+      "slug": "fp02-fu01-qa-specialist-regen-title",
+      "expected": "fp02-fu01-qa-specialist-regen-title",
+      "pass": true
+    }
+  },
+  "collision": {
+    "service": {
+      "first": "fp02-fu01-qa-collision",
+      "second": "fp02-fu01-qa-collision-copy-01",
+      "third": "fp02-fu01-qa-collision-copy-02",
+      "pass": true
+    },
+    "specialist": {
+      "first": "fp02-fu01-qa-spec-collision",
+      "second": "fp02-fu01-qa-spec-collision-copy-01",
+      "pass": true
+    }
+  },
+  "cleanup": [
+    {
+      "ID": 2015,
+      "deleted": true
+    },
+    {
+      "ID": 2019,
+      "deleted": true
+    },
+    {
+      "ID": 2020,
+      "deleted": true
+    },
+    {
+      "ID": 2021,
+      "deleted": true
+    },
+    {
+      "ID": 2022,
+      "deleted": true
+    },
+    {
+      "ID": 2023,
+      "deleted": true
+    },
+    {
+      "ID": 2024,
+      "deleted": true
+    }
+  ],
+  "url_safety": {
+    "service_count_before": 31,
+    "service_count_after": 31,
+    "specialist_count_before": 9,
+    "specialist_count_after": 9,
+    "service_accidental": [],
+    "specialist_accidental": [],
+    "pass": true
+  },
+  "cleanup_activity_log_rows": 9,
+  "after_inventory": {
+    "services": [
+      {
+        "ID": 73,
+        "post_type": "service",
+        "post_status": "publish",
+        "post_parent": 0,
+        "title": "Зависимости",
+        "post_name": "zavisimosti",
+        "permalink": "http://shpigovsky.beget.tech/uslugi/zavisimosti/"
+      },
+      {
+        "ID": 74,
+        "post_type": "service",
+        "post_status": "publish",
+        "post_parent": 73,
+        "title": "Лечение алкогольной зависимости",
+        "post_name": "lechenie-alkogolnoy-zavisimosti",
+        "permalink": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"
+      },
+      {
+        "ID": 75,
+        "post_type": "service",
+        "post_status": "publish",
+        "post_parent": 1889,
+        "title": "Профилактический анализ",
+        "post_name": "profilakticheskiy-analiz",
+        "permalink": "http://shpigovsky.beget.tech/uslugi/%d0%b3%d0%b5%d0%bd%d0%be%d1%82%d0%b8%d0%bf%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5/profilakticheskiy-analiz/"
+      },
+      {
+        "ID": 77,
+        "post_type": "service",
+        "post_status": "publish",
+        "post_parent": 0,
+        "title": "Психическое здоровье",
+        "post_name": "psihicheskoe-zdorovie",
+        "permalink": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/"
+      },
+      {
+        "ID": 78,
+        "post_type": "service",
+        "post_status": "publish",
+        "post_parent": 77,
+        "title": "Депрессия",
+        "post_name": "depressiya",
+        "permalink": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/depressiya/"
+      },
+      {
+        "ID": 79,
+        "post_type": "service",
+        "post_status": "publish",
+        "post_parent": 77,
+        "title": "ПТСР",
+        "post_name": "ptsr",
+        "permalink": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/ptsr/"
+      },
+      {
+        "ID": 80,
+        "post_type": "service",
+        "post_status": "publish",
+        "post_parent": 77,
+        "title": "Эмоциональное выгорание",
+        "post_name": "emotsionalnoe-vygoranie",
+        "permalink": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/emotsionalnoe-vygoranie/"
+      },
+      {
+        "ID": 81,
+        "post_type": "service",
+        "post_status": "publish",
+        "post_parent": 77,
+        "title": "Тревожные расстройства",
+        "post_name": "trevozhnye-rasstroystva",
+        "permalink": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/"
+      },
+      {
+        "ID": 82,
+        "post_type": "service",
+        "post_status": "publish",
+        "post_parent": 77,
+        "title": "Расстройства сна",
+        "post_name": "rasstroystva-sna",
+        "permalink": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/"
+      },
+      {
+        "ID": 83,
+        "post_type": "service",
+        "post_status": "publish",
+        "post_parent": 77,
+        "title": "Травма",
+        "post_name": "travma",
+        "permalink": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/travma/"
+      },
+      {
+        "ID": 84,
+        "post_type": "service",
+        "post_status": "publish",
+        "post_parent": 0,
+        "title": "Расстройства пищевого поведения",
+        "post_name": "rasstroystva-pischevogo-povedeniya",
+        "permalink": "http://shpigovsky.beget.tech/uslugi/rasstroystva-pischevogo-povedeniya/"
+      },
+      {
+        "ID": 85,
+        "post_type": "service",
+        "post_status": "publish",
+        "post_parent": 84,
+        "title": "Анорексия",
+        "post_name": "anoreksiya",
+        "permalink": "http://shpigovsky.beget.tech/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/"
+      },
+      {
+        "ID": 86,
+        "post_type": "service",
+        "post_status": "publish",
+        "post_parent": 84,
+        "title": "Булимия",
+        "post_name": "buliniya",
+        "permalink": "http://shpigovsky.beget.tech/uslugi/rasstroystva-pischevogo-povedeniya/buliniya/"
+      },
+      {
+        "ID": 87,
+        "post_type": "service",
+        "post_status": "publish",
+        "post_parent": 84,
+        "title": "Компульсивное переедание",
+        "post_name": "kompulsivnoe-pereedanie",
+        "permalink": "http://shpigovsky.beget.tech/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/"
+      },
+      {
+        "ID": 314,
+        "post_type": "service",
+        "post_status": "publish",
+        "post_parent": 73,
+        "title": "Лечение наркотической зависимости",
+        "post_name": "lechenie-narkoticheskoy-zavisimosti",
+        "permalink": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/"
+      },
+      {
+        "ID": 315,
+        "post_type": "service",
+        "post_status": "publish",
+        "post_parent": 314,
+        "title": "Лечение лекарственной зависимости",
+        "post_name": "lekarstva",
+        "permalink": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/lekarstva/"
+      },
+      {
+        "ID": 316,
+        "post_type": "service",
+        "post_status": "publish",
+        "post_parent": 73,
+        "title": "Поведенческие зависимости",
+        "post_name": "lechenie-povedencheskoy-zavisimosti",
+        "permalink": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/"
+      },
+      {
+        "ID": 1011,
+        "post_type": "service",
+        "post_status": "publish",
+        "post_parent": 314,
+        "title": "Лечение солевой зависимости",
+        "post_name": "soli",
+        "permalink": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/soli/"
+      },
+      {
+        "ID": 1012,
+        "post_type": "service",
+        "post_status": "publish",
+        "post_parent": 314,
+        "title": "Лечение метадоновой зависимости",
+        "post_name": "matadon",
+        "permalink": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/matadon/"
+      },
+      {
+        "ID": 1013,
+        "post_type": "service",
+        "post_status": "publish",
+        "post_parent": 314,
+        "title": "Лечение героиновой зависимости",
+        "post_name": "geroin",
+        "permalink": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/geroin/"
+      },
+      {
+        "ID": 1016,
+        "post_type": "service",
+        "post_status": "publish",
+        "post_parent": 316,
+        "title": "Лечение игровой зависимости",
+        "post_name": "ludomaniya",
+        "permalink": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/ludomaniya/"
+      },
+      {
+        "ID": 1017,
+        "post_type": "service",
+        "post_status": "publish",
+        "post_parent": 316,
+        "title": "Интернет-зависимость",
+        "post_name": "internet-zavisimost",
+        "permalink": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/internet-zavisimost/"
+      },
+      {
+        "ID": 1018,
+        "post_type": "service",
+        "post_status": "publish",
+        "post_parent": 316,
+        "title": "Лечение созависимости",
+        "post_name": "sozavisimost",
+        "permalink": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/sozavisimost/"
+      },
+      {
+        "ID": 1019,
+        "post_type": "service",
+        "post_status": "publish",
+        "post_parent": 316,
+        "title": "Зависимость от постоянных покупок",
+        "post_name": "shopogolizm",
+        "permalink": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/shopogolizm/"
+      },
+      {
+        "ID": 1047,
+        "post_type": "service",
+        "post_status": "publish",
+        "post_parent": 316,
+        "title": "Компьютерная зависимость",
+        "post_name": "kompyuternaya-zavisimost",
+        "permalink": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/kompyuternaya-zavisimost/"
+      },
+      {
+        "ID": 1048,
+        "post_type": "service",
+        "post_status": "publish",
+        "post_parent": 314,
+        "title": "Лечение опиумной зависимости",
+        "post_name": "lechenie-opiumnoy-zavisimosti",
+        "permalink": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/lechenie-opiumnoy-zavisimosti/"
+      },
+      {
+        "ID": 1049,
+        "post_type": "service",
+        "post_status": "publish",
+        "post_parent": 77,
+        "title": "Хроническая усталость",
+        "post_name": "hronicheskaya-ustalost",
+        "permalink": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/hronicheskaya-ustalost/"
+      },
+      {
+        "ID": 1050,
+        "post_type": "service",
+        "post_status": "publish",
+        "post_parent": 77,
+        "title": "Стресс",
+        "post_name": "stress",
+        "permalink": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/stress/"
+      },
+      {
+        "ID": 1051,
+        "post_type": "service",
+        "post_status": "publish",
+        "post_parent": 77,
+        "title": "Нарциссизм",
+        "post_name": "nartsissizm",
+        "permalink": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/nartsissizm/"
+      },
+      {
+        "ID": 1889,
+        "post_type": "service",
+        "post_status": "publish",
+        "post_parent": 0,
+        "title": "Генотипирование",
+        "post_name": "%d0%b3%d0%b5%d0%bd%d0%be%d1%82%d0%b8%d0%bf%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5",
+        "permalink": "http://shpigovsky.beget.tech/uslugi/%d0%b3%d0%b5%d0%bd%d0%be%d1%82%d0%b8%d0%bf%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5/"
+      },
+      {
+        "ID": 1894,
+        "post_type": "service",
+        "post_status": "publish",
+        "post_parent": 1889,
+        "title": "Генотипирование для специалистов",
+        "post_name": "profilakticheskiy-analiz-kopiya",
+        "permalink": "http://shpigovsky.beget.tech/uslugi/%d0%b3%d0%b5%d0%bd%d0%be%d1%82%d0%b8%d0%bf%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5/profilakticheskiy-analiz-kopiya/"
+      }
+    ],
+    "specialists": [
+      {
+        "ID": 1031,
+        "post_type": "specialist",
+        "post_status": "publish",
+        "post_parent": 0,
+        "title": "Сергей Юрьевич Шпиговский",
+        "post_name": "shipovsky",
+        "permalink": "http://shpigovsky.beget.tech/specyalisty/shipovsky/"
+      },
+      {
+        "ID": 1032,
+        "post_type": "specialist",
+        "post_status": "publish",
+        "post_parent": 0,
+        "title": "Максим Михайлович Казаков",
+        "post_name": "kazakov",
+        "permalink": "http://shpigovsky.beget.tech/specyalisty/kazakov/"
+      },
+      {
+        "ID": 1033,
+        "post_type": "specialist",
+        "post_status": "publish",
+        "post_parent": 0,
+        "title": "Дарья Владимировна Костюк",
+        "post_name": "kostyuk",
+        "permalink": "http://shpigovsky.beget.tech/specyalisty/kostyuk/"
+      },
+      {
+        "ID": 1097,
+        "post_type": "specialist",
+        "post_status": "publish",
+        "post_parent": 0,
+        "title": "Шапигузова Татьяна Андреевна",
+        "post_name": "shapiguzova",
+        "permalink": "http://shpigovsky.beget.tech/specyalisty/shapiguzova/"
+      },
+      {
+        "ID": 1949,
+        "post_type": "specialist",
+        "post_status": "publish",
+        "post_parent": 0,
+        "title": "Литвинов Кирилл Алексеевич",
+        "post_name": "copy-01",
+        "permalink": "http://shpigovsky.beget.tech/specyalisty/copy-01/"
+      },
+      {
+        "ID": 1957,
+        "post_type": "specialist",
+        "post_status": "publish",
+        "post_parent": 0,
+        "title": "Поверинов Александр Константинович",
+        "post_name": "copy-01-copy-01",
+        "permalink": "http://shpigovsky.beget.tech/specyalisty/copy-01-copy-01/"
+      },
+      {
+        "ID": 1963,
+        "post_type": "specialist",
+        "post_status": "publish",
+        "post_parent": 0,
+        "title": "Филиппов Илья Владимирович",
+        "post_name": "copy-01-copy-02",
+        "permalink": "http://shpigovsky.beget.tech/specyalisty/copy-01-copy-02/"
+      },
+      {
+        "ID": 1967,
+        "post_type": "specialist",
+        "post_status": "publish",
+        "post_parent": 0,
+        "title": "Ханикова Светлана Николаевна",
+        "post_name": "copy-01-copy-03",
+        "permalink": "http://shpigovsky.beget.tech/specyalisty/copy-01-copy-03/"
+      },
+      {
+        "ID": 1988,
+        "post_type": "specialist",
+        "post_status": "publish",
+        "post_parent": 0,
+        "title": "Филиппова Мария Михайловна",
+        "post_name": "copy-01-copy-04",
+        "permalink": "http://shpigovsky.beget.tech/specyalisty/copy-01-copy-04/"
+      }
+    ]
+  }
+}

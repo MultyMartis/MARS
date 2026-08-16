@@ -1,0 +1,156 @@
+warning: in the working copy of 'X:\AI MARS\workspaces\website-factory-operations\FP-0002-SHPIGOVSKY\WORDPRESS\theme\shpigovsky\assets\css\v9-style.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'X:\AI MARS STORAGE\deployment-packs\fp-0002\prod-p09-fu01-layer-b-pre\theme__assets__css__v9-style.css.prod-before', LF will be replaced by CRLF the next time Git touches it
+diff --git "a/X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\assets\\css\\v9-style.css" "b/X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p09-fu01-layer-b-pre\\theme__assets__css__v9-style.css.prod-before"
+index 7242b58a..724e7680 100644
+--- "a/X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\assets\\css\\v9-style.css"	
++++ "b/X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p09-fu01-layer-b-pre\\theme__assets__css__v9-style.css.prod-before"	
+@@ -20426,6 +20426,7 @@ body.is-modal-scroll-locked {
+   object-fit: cover;
+   object-position: center;
+   border-radius: var(--radius-main);
++  min-height: 220px;
+ }
+ 
+ /* ==========================================================================
+@@ -20780,6 +20781,7 @@ body.is-modal-scroll-locked {
+ .specialists__pagination .swiper-pagination-bullet,
+ .home-articles__pagination .swiper-pagination-bullet {
+   width: 10px;
++  min-width: 10px;
+   height: 10px;
+   margin: 0;
+   border: var(--border-width) solid var(--color-text-primary);
+@@ -23563,8 +23565,8 @@ body[data-offcanvas-state=open] {
+   display: flex;
+   align-items: stretch;
+   box-sizing: border-box;
+-  padding-top: var(--pad-x);
+-  padding-bottom: var(--pad-x);
++  padding-top: calc(var(--pad-y) + var(--pad-y));
++  padding-bottom: calc(var(--pad-y) + var(--pad-y));
+ }
+ 
+ .services-inner-hero-v2__container {
+@@ -23823,7 +23825,7 @@ body[data-offcanvas-state=open] {
+   display: flex;
+   flex-direction: column;
+   gap: var(--pad-gap);
+-  padding-bottom: var(--pad-gap);
++  /* padding-bottom: var(--pad-gap); */
+ }
+ 
+ .page-uslugi-v2 .services-category-section-v2__service:last-child {
+@@ -24228,6 +24230,10 @@ body[data-offcanvas-state=open] {
+   position: relative;
+ }
+ 
++#who-we-treat .program-cta-band {
++  margin-top: var(--pad-y);
++}
++
+ .program-cta-band--flush {
+   margin-bottom: 0;
+ }
+@@ -24335,6 +24341,17 @@ body[data-offcanvas-state=open] {
+     align-items: flex-start;
+   }
+ }
++
++
++
++
++.services-program-v2__container > .program-cta-band {
++    margin-top: calc(var(--pad-y) + var(--pad-y));
++}
++
++
++
++
+ /* FP-0002 Service Subdivision Pass 1 */
+ .page-service-subdivision-v1__main {
+   display: flex;
+@@ -28206,6 +28223,17 @@ html.js-reveal-ready [data-reveal].is-revealed {
+    (767px and below only; desktop 70vh / max-height cascade unchanged)
+    ========================================================================== */
+ @media (max-width: 767px) {
++
++  .page-uslugi-v2 .services-category-section-v2__intro {
++    margin-left: -60px;
++    margin-top: 30px;
++    }
++
++  .founder-quote__mark {
++    width: 40px;
++    height: 35px;
++  }
++
+   .hero--home {
+     height: auto;
+     max-height: none;
+@@ -28227,6 +28255,8 @@ html.js-reveal-ready [data-reveal].is-revealed {
+   .hero--home {
+     aspect-ratio: 100 / 80;
+   }
++
++
+ }
+ 
+ @media (max-width: 650px) {
+@@ -28251,12 +28281,33 @@ html.js-reveal-ready [data-reveal].is-revealed {
+   .hero--home {
+     aspect-ratio: 100 / 130;
+   }
++
++  .page-uslugi-v2 .services-category-section-v2__heading {
++    margin-top: 0px;
++  }
++
++  .home-rehabilitation-requirements__cta-wrap02 {
++    flex-flow: column;
++    gap: 10px;
++  }
++
++  .home-rehabilitation-requirements__cta-wrap02 > div {
++    align-items: flex-start;
++  }
++
+ }
+ 
+ @media (max-width: 410px) {
+   .hero--home {
+     aspect-ratio: 100 / 150;
+   }
++
++  .final-form__heading {
++    font-size: 28px;
++    line-height: 32px;
++  }
++
++
+ }
+ 
+ @media (max-width: 370px) {
+@@ -28303,4 +28354,22 @@ html.js-reveal-ready [data-reveal].is-revealed {
+ }
+ .page-id-11 .clinic-landscape {
+   padding-top: var(--pad-gap);
++}
++
++@media (max-width: 1440px) {
++  .services-inner-hero-v2__content {
++    padding-top: var(--pad-y);
++    padding-bottom: var(--pad-y);
++  }
++}
++
++
++
++@media (max-width: 767px) {
++
++
++
++
++
++
+ }
+\ No newline at end of file

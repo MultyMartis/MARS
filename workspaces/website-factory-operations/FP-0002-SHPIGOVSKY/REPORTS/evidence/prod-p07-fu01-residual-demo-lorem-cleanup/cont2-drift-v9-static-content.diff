@@ -1,0 +1,197 @@
+diff --git "a/X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p07-fu01-cont2-layer-b-pre\\theme__inc__v9-static-content.php.prod-before" "b/X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\inc\\v9-static-content.php"
+index f0a19e1b..d7090b66 100644
+--- "a/X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p07-fu01-cont2-layer-b-pre\\theme__inc__v9-static-content.php.prod-before"	
++++ "b/X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\inc\\v9-static-content.php"	
+@@ -64,6 +64,8 @@ function shpigovsky_resolve_v9_services_hub_child_slug( $slug ) {
+ 		'narkoticheskaya-zavisimost' => 'lechenie-narkoticheskoy-zavisimosti',
+ 		'lekarstvennaya-zavisimost'  => 'lekarstva',
+ 		'povedencheskie-zavisimosti' => 'lechenie-povedencheskoy-zavisimosti',
++		'emotsionalnoe-vygoranie'    => 'emocionalnoe-vygoranie',
++		'buliniya'                   => 'nervnaya-bulimiya',
+ 	);
+ 
+ 	return isset( $aliases[ $slug ] ) ? $aliases[ $slug ] : $slug;
+@@ -77,7 +79,7 @@ function shpigovsky_resolve_v9_services_hub_child_slug( $slug ) {
+  */
+ function shpigovsky_get_v9_services_hub_child_copy( $slug ) {
+ 	$slug = shpigovsky_resolve_v9_services_hub_child_slug( $slug );
+-	$demo_lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.';
++	// Residual demo Lorem retired from user-facing hub cards (PROD-P07-FU01). Empty = omit card text.
+ 
+ 	$map = array(
+ 		'lechenie-alkogolnoy-zavisimosti' => array(
+@@ -110,43 +112,43 @@ function shpigovsky_get_v9_services_hub_child_copy( $slug ) {
+ 		),
+ 		'profilakticheskiy-analiz' => array(
+ 			'title' => '╨Я╤А╨╛╤Д╨╕╨╗╨░╨║╤В╨╕╤З╨╡╤Б╨║╨╕╨╣ ╨░╨╜╨░╨╗╨╕╨╖',
+-			'text'  => 'DEMO тАФ ╨║╤А╨░╤В╨║╨╛╨╡ ╨╛╨┐╨╕╤Б╨░╨╜╨╕╨╡ ╨┐╤А╨╛╤Д╨╕╨╗╨░╨║╤В╨╕╤З╨╡╤Б╨║╨╛╨│╨╛ ╨░╨╜╨░╨╗╨╕╨╖╨░ ╨┤╨╗╤П ╨║╨░╤А╤В╨╛╤З╨║╨╕ ╨╜╨░ /uslugi/. ╨в╨╡╤Е╨╜╨╕╤З╨╡╤Б╨║╨╛╨╡ ╨╜╨░╨┐╨╛╨╗╨╜╨╡╨╜╨╕╨╡; ╤Д╨╕╨╜╨░╨╗╤М╨╜╤Л╨╣ ╤В╨╡╨║╤Б╤В ╨▒╤Г╨┤╨╡╤В ╤Б╨╛╨│╨╗╨░╤Б╨╛╨▓╨░╨╜ ╨╛╨┐╨╡╤А╨░╤В╨╛╤А╨╛╨╝.',
++			'text'  => '',
+ 		),
+ 		'depressiya' => array(
+ 			'title' => '╨Ф╨╡╨┐╤А╨╡╤Б╤Б╨╕╤П',
+-			'text'  => $demo_lorem,
++			'text'  => '',
+ 		),
+ 		'ptrs' => array(
+ 			'title' => '╨Я╨в╨б╨а',
+-			'text'  => $demo_lorem,
++			'text'  => '',
+ 		),
+ 		'emocionalnoe-vygoranie' => array(
+ 			'title' => '╨н╨╝╨╛╤Ж╨╕╨╛╨╜╨░╨╗╤М╨╜╨╛╨╡ ╨▓╤Л╨│╨╛╤А╨░╨╜╨╕╨╡',
+-			'text'  => $demo_lorem,
++			'text'  => '',
+ 		),
+ 		'trevozhnye-rasstroystva' => array(
+ 			'title' => '╨в╤А╨╡╨▓╨╛╨╢╨╜╤Л╨╡ ╤А╨░╤Б╤Б╤В╤А╨╛╨╣╤Б╤В╨▓╨░',
+-			'text'  => $demo_lorem,
++			'text'  => '',
+ 		),
+ 		'rasstroystva-sna' => array(
+ 			'title' => '╨а╨░╤Б╤Б╤В╤А╨╛╨╣╤Б╤В╨▓╨░ ╤Б╨╜╨░',
+-			'text'  => $demo_lorem,
++			'text'  => '',
+ 		),
+ 		'travma' => array(
+ 			'title' => '╨в╤А╨░╨▓╨╝╨░',
+-			'text'  => $demo_lorem,
++			'text'  => '',
+ 		),
+ 		'anoreksiya' => array(
+ 			'title' => '╨Э╨╡╤А╨▓╨╜╨░╤П ╨░╨╜╨╛╤А╨╡╨║╤Б╨╕╤П',
+-			'text'  => $demo_lorem,
++			'text'  => '',
+ 		),
+ 		'nervnaya-bulimiya' => array(
+ 			'title' => '╨Э╨╡╤А╨▓╨╜╨░╤П ╨▒╤Г╨╗╨╕╨╝╨╕╤П',
+-			'text'  => $demo_lorem,
++			'text'  => '',
+ 		),
+ 		'kompulsivnoe-pereedanie' => array(
+ 			'title' => '╨Ъ╨╛╨╝╨┐╤Г╨╗╤М╤Б╨╕╨▓╨╜╨╛╨╡ ╨┐╨╡╤А╨╡╨╡╨┤╨░╨╜╨╕╨╡',
+-			'text'  => $demo_lorem,
++			'text'  => '',
+ 		),
+ 		'genotipirovanie' => array(
+ 			'title' => '╨Р╨╜╨░╨╗╨╕╨╖ ╨│╨╡╨╜╨╡╤В╨╕╤З╨╡╤Б╨║╨╛╨╣ ╨┐╤А╨╡╨┤╤А╨░╤Б╨┐╨╛╨╗╨╛╨╢╨╡╨╜╨╜╨╛╤Б╤В╨╕ ╨╕ ╤А╨╕╤Б╨║╨╛╨▓',
+@@ -260,20 +262,27 @@ function shpigovsky_get_v9_alcohol_signs_copy() {
+ 			'╨Т╤Л ╨╜╨░╤А╤Г╤И╨╕╨╗╨╕ ╨╛╨▒╨╡╤Й╨░╨╜╨╕╨╡, ╨┤╨░╨╜╨╜╨╛╨╡ ╨▒╨╗╨╕╨╖╨║╨╕╨╝, ╨╕╨╖-╨╖╨░ ╤Б╨▓╨╛╨╡╨│╨╛ ╨┐╤А╨╕╤Б╤В╤А╨░╤Б╤В╨╕╤П ╨║ ╨░╨╗╨║╨╛╨│╨╛╨╗╤О?',
+ 			'╨Т╤Л ╨╛╨┐╨░╤Б╨░╨╡╤В╨╡╤Б╤М, ╤З╤В╨╛ ╨╝╨╛╨╢╨╡╤В╨╡ ╨▒╤Л╤В╤М ╨░╨╗╨║╨╛╨│╨╛╨╗╨╕╨║╨╛╨╝?',
+ 		),
+-		'editorial' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem',
++		'editorial' => '',
+ 	);
+ }
+ 
+ /**
+- * Alcohol leaf program block demo copy from V9 fixture (lorem тАФ classified DEMO).
++ * Alcohol leaf program block chrome.
++ *
++ * Historical name retained. User-facing copy is the production-safe hub program
++ * chrome already shipped on `/uslugi/` тАФ not Lorem/demo filler and not new clinical claims.
+  *
+  * @return array{lead:string,intro:string,intro2:string}
+  */
+ function shpigovsky_get_v9_alcohol_leaf_program_demo_copy() {
++	$hub = function_exists( 'shpigovsky_get_v9_services_hub_program_copy' )
++		? shpigovsky_get_v9_services_hub_program_copy()
++		: array();
++
+ 	return array(
+-		'lead'   => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+-		'intro'  => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+-		'intro2' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
++		'lead'   => isset( $hub['lead'] ) ? trim( (string) $hub['lead'] ) : '',
++		'intro'  => isset( $hub['intro'] ) ? trim( (string) $hub['intro'] ) : '',
++		'intro2' => isset( $hub['intro2'] ) ? trim( (string) $hub['intro2'] ) : '',
+ 	);
+ }
+ 
+@@ -333,82 +342,15 @@ function shpigovsky_get_v9_alcohol_leaf_stages_copy() {
+ }
+ 
+ /**
+- * Alcohol leaf FAQ items тАФ static V9 authority (faq.html on usluga-konechnaya-v1).
++ * Alcohol leaf FAQ items тАФ historical V9 fixture.
++ *
++ * PROD-P07-FU01: technical Lorem / layout-check answers are not user-facing.
++ * Live FAQ is ACF `service_general_faq_items` when present. Empty fallback hides the optional section.
+  *
+  * @return array<int, array{question:string,answers:string[]}>
+  */
+ function shpigovsky_get_v9_alcohol_leaf_faq_items() {
+-	return array(
+-		array(
+-			'question' => '╨Ъ╨░╨║ ╨┐╨╡╤А╨╡╤Б╤В╨░╤В╤М ╨╕╨╝╨╡╨╜╨╜╨╛ ╤Е╨╛╤В╨╡╤В╤М ╨▓╤Л╨┐╨╕╤В╤М, ╨░ ╨╜╨╡ ╨╖╨░╤Б╤В╨░╨▓╨╗╤П╤В╤М ╤Б╨╡╨▒╤П ╤Н╤В╨╛╨│╨╛ ╨╜╨╡ ╨┤╨╡╨╗╨░╤В╤М?',
+-			'answers'  => array(
+-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation .Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation .',
+-			),
+-		),
+-		array(
+-			'question' => '╨Р╨╜╨╛╨╜╨╕╨╝╨╜╨╛╨╡ ╨╗╨╡╤З╨╡╨╜╨╕╨╡ ╨╕╨╗╨╕ ╨╜╨╡╤В?',
+-			'answers'  => array(
+-				'╨н╤В╨╛ ╨▓╤А╨╡╨╝╨╡╨╜╨╜╤Л╨╣ ╤В╨╡╤Е╨╜╨╕╤З╨╡╤Б╨║╨╕╨╣ ╤В╨╡╨║╤Б╤В ╨┤╨╗╤П ╨┐╤А╨╛╨▓╨╡╤А╨║╨╕ ╨▒╨╗╨╛╨║╨░ FAQ. ╨Ч╨┤╨╡╤Б╤М ╨▒╤Г╨┤╨╡╤В ╤А╨░╨╖╨╝╨╡╤Й╤С╨╜ ╤Д╨╕╨╜╨░╨╗╤М╨╜╤Л╨╣ ╨╛╤В╨▓╨╡╤В ╨╛ ╤Д╨╛╤А╨╝╨░╤В╨╡ ╨╛╨▒╤А╨░╤Й╨╡╨╜╨╕╤П ╨╕ ╨┐╨╛╤А╤П╨┤╨║╨╡ ╨┐╨╡╤А╨▓╨╕╤З╨╜╨╛╨│╨╛ ╨║╨╛╨╜╤В╨░╨║╤В╨░ ╤Б ╤Ж╨╡╨╜╤В╤А╨╛╨╝.',
+-				'╨в╨╡╨║╤Б╤В ╨╜╨╡ ╤П╨▓╨╗╤П╨╡╤В╤Б╤П ╨╝╨░╤А╨║╨╡╤В╨╕╨╜╨│╨╛╨▓╤Л╨╝ ╨╛╨▒╨╡╤Й╨░╨╜╨╕╨╡╨╝ ╨╕ ╨╜╨╡ ╨╖╨░╨╝╨╡╨╜╤П╨╡╤В ╨║╨╛╨╜╤Б╤Г╨╗╤М╤В╨░╤Ж╨╕╤О ╤Б╨┐╨╡╤Ж╨╕╨░╨╗╨╕╤Б╤В╨░. ╨д╨╕╨╜╨░╨╗╤М╨╜╨░╤П ╤А╨╡╨┤╨░╨║╤Ж╨╕╤П ╨▒╤Г╨┤╨╡╤В ╤Б╨╛╨│╨╗╨░╤Б╨╛╨▓╨░╨╜╨░ ╨╛╨┐╨╡╤А╨░╤В╨╛╤А╨╛╨╝ ╨╛╤В╨┤╨╡╨╗╤М╨╜╨╛.',
+-			),
+-		),
+-		array(
+-			'question' => '╨Ъ╨░╨║ ╨┤╨╛╨╗╨│╨╛ ╨┤╨╗╨╕╤В╤Б╤П ╤А╨╡╨░╨▒╨╕╨╗╨╕╤В╨░╤Ж╨╕╤П?',
+-			'answers'  => array(
+-				'╨н╤В╨╛ ╨▓╤А╨╡╨╝╨╡╨╜╨╜╤Л╨╣ ╤В╨╡╤Е╨╜╨╕╤З╨╡╤Б╨║╨╕╨╣ ╤В╨╡╨║╤Б╤В ╨┤╨╗╤П ╨┐╤А╨╛╨▓╨╡╤А╨║╨╕ ╨▓╤Л╤Б╨╛╤В╤Л ╨░╨║╨║╨╛╤А╨┤╨╡╨╛╨╜╨░. ╨Т ╤Д╨╕╨╜╨░╨╗╤М╨╜╨╛╨╣ ╨▓╨╡╤А╤Б╨╕╨╕ ╨╖╨┤╨╡╤Б╤М ╨▒╤Г╨┤╨╡╤В ╨╛╨┐╨╕╤Б╨░╨╜ ╤В╨╕╨┐╨╛╨▓╨╛╨╣ ╨┐╨╛╤А╤П╨┤╨╛╨║ ╤Н╤В╨░╨┐╨╛╨▓ ╤Б╨╛╨┐╤А╨╛╨▓╨╛╨╢╨┤╨╡╨╜╨╕╤П ╨▒╨╡╨╖ ╤Г╨║╨░╨╖╨░╨╜╨╕╤П ╨║╨╛╨╜╨║╤А╨╡╤В╨╜╤Л╤Е ╤Б╤А╨╛╨║╨╛╨▓.',
+-				'╨Ф╨╗╨╕╤В╨╡╨╗╤М╨╜╨╛╤Б╤В╤М ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╤Л ╨╖╨░╨▓╨╕╤Б╨╕╤В ╨╛╤В ╨╕╨╜╨┤╨╕╨▓╨╕╨┤╤Г╨░╨╗╤М╨╜╨╛╨│╨╛ ╨╖╨░╨┐╤А╨╛╤Б╨░ ╨╕ ╤Б╨╛╨│╨╗╨░╤Б╤Г╨╡╤В╤Б╤П ╨╜╨░ ╨║╨╛╨╜╤Б╤Г╨╗╤М╤В╨░╤Ж╨╕╨╕. ╨Ф╨░╨╜╨╜╤Л╨╣ ╨░╨▒╨╖╨░╤Ж ╨┤╨╛╨▒╨░╨▓╨╗╨╡╨╜ ╤В╨╛╨╗╤М╨║╨╛ ╨┤╨╗╤П ╨▓╤С╤А╤Б╤В╨╛╤З╨╜╨╛╨╣ ╨┐╤А╨╛╨▓╨╡╤А╨║╨╕.',
+-			),
+-		),
+-		array(
+-			'question' => '╨Ъ╨░╨║ ╤Г╨│╨╛╨▓╨╛╤А╨╕╤В╤М ╨▒╨╗╨╕╨╖╨║╨╛╨│╨╛ ╨┐╤А╨╛╨╣╤В╨╕ ╨╗╨╡╤З╨╡╨╜╨╕╨╡ ╨╛╤В ╨╖╨░╨▓╨╕╤Б╨╕╨╝╨╛╤Б╤В╨╕?',
+-			'answers'  => array(
+-				'╨н╤В╨╛ ╨▓╤А╨╡╨╝╨╡╨╜╨╜╤Л╨╣ ╤В╨╡╤Е╨╜╨╕╤З╨╡╤Б╨║╨╕╨╣ ╤В╨╡╨║╤Б╤В ╨┤╨╗╤П ╨┐╤А╨╛╨▓╨╡╤А╨║╨╕ ╨▒╨╗╨╛╨║╨░ FAQ. ╨Ч╨┤╨╡╤Б╤М ╨▒╤Г╨┤╨╡╤В ╤А╨░╨╖╨╝╨╡╤Й╤С╨╜ ╤Д╨╕╨╜╨░╨╗╤М╨╜╤Л╨╣ ╨╛╤В╨▓╨╡╤В ╨╛ ╤В╨╛╨╝, ╨║╨░╨║ ╤Б╨╡╨╝╤М╨╡ ╨┐╨╛╨┤╨│╨╛╤В╨╛╨▓╨╕╤В╤М╤Б╤П ╨║ ╤А╨░╨╖╨│╨╛╨▓╨╛╤А╤Г ╤Б ╨▒╨╗╨╕╨╖╨║╨╕╨╝ ╤З╨╡╨╗╨╛╨▓╨╡╨║╨╛╨╝.',
+-				'╨Ь╨░╤В╨╡╤А╨╕╨░╨╗ ╨╜╨╛╤Б╨╕╤В ╤Б╨┐╤А╨░╨▓╨╛╤З╨╜╤Л╨╣ ╤Е╨░╤А╨░╨║╤В╨╡╤А ╨╕ ╨╜╨╡ ╤Б╨╛╨┤╨╡╤А╨╢╨╕╤В ╨╛╨▒╨╡╤Й╨░╨╜╨╕╨╣ ╤А╨╡╨╖╤Г╨╗╤М╤В╨░╤В╨░. ╨Ю╨║╨╛╨╜╤З╨░╤В╨╡╨╗╤М╨╜╨░╤П ╤Д╨╛╤А╨╝╤Г╨╗╨╕╤А╨╛╨▓╨║╨░ ╨▒╤Г╨┤╨╡╤В ╨┐╨╛╨┤╨│╨╛╤В╨╛╨▓╨╗╨╡╨╜╨░ ╨▓ ╤А╨░╨╝╨║╨░╤Е ╨║╨╛╨╜╤В╨╡╨╜╤В╨╜╨╛╨│╨╛ ╤Н╤В╨░╨┐╨░.',
+-			),
+-		),
+-		array(
+-			'question' => '╨Ь╨╛╨╢╨╜╨╛ ╨╗╨╕ ╤Б╨░╨╝╨╛╤Б╤В╨╛╤П╤В╨╡╨╗╤М╨╜╨╛ ╨┐╨╡╤А╨╡╤Б╤В╨░╤В╤М ╤Г╨┐╨╛╤В╤А╨╡╨▒╨╗╤П╤В╤М ╨╜╨░╤А╨║╨╛╤В╨╕╨║╨╕?',
+-			'answers'  => array(
+-				'╨н╤В╨╛ ╨▓╤А╨╡╨╝╨╡╨╜╨╜╤Л╨╣ ╤В╨╡╤Е╨╜╨╕╤З╨╡╤Б╨║╨╕╨╣ ╤В╨╡╨║╤Б╤В ╨┤╨╗╤П ╨┐╤А╨╛╨▓╨╡╤А╨║╨╕ ╨░╨║╨║╨╛╤А╨┤╨╡╨╛╨╜╨░. ╨Т ╤Д╨╕╨╜╨░╨╗╤М╨╜╨╛╨╣ ╨▓╨╡╤А╤Б╨╕╨╕ ╨╖╨┤╨╡╤Б╤М ╨▒╤Г╨┤╨╡╤В ╨╜╨╡╨╣╤В╤А╨░╨╗╤М╨╜╨╛╨╡ ╨╛╨┐╨╕╤Б╨░╨╜╨╕╨╡ ╤Б╤Ж╨╡╨╜╨░╤А╨╕╨╡╨▓, ╨║╨╛╨│╨┤╨░ ╤Б╨░╨╝╨╛╤Б╤В╨╛╤П╤В╨╡╨╗╤М╨╜╤Л╨╡ ╨┐╨╛╨┐╤Л╤В╨║╨╕ ╤В╤А╨╡╨▒╤Г╤О╤В ╨┤╨╛╨┐╨╛╨╗╨╜╨╕╤В╨╡╨╗╤М╨╜╨╛╨╣ ╨┐╨╛╨┤╨┤╨╡╤А╨╢╨║╨╕.',
+-				'╨в╨╡╨║╤Б╤В ╨╜╨╡ ╤Б╨╛╨┤╨╡╤А╨╢╨╕╤В ╨╝╨╡╨┤╨╕╤Ж╨╕╨╜╤Б╨║╨╕╤Е ╤Г╤В╨▓╨╡╤А╨╢╨┤╨╡╨╜╨╕╨╣ ╨╕ ╨╜╨╡ ╨╛╨┐╨╕╤Б╤Л╨▓╨░╨╡╤В ╨│╨░╤А╨░╨╜╤В╨╕╤А╨╛╨▓╨░╨╜╨╜╤Л╨╣ ╨╕╤Б╤Е╨╛╨┤. ╨Ш╤Б╨┐╨╛╨╗╤М╨╖╤Г╨╡╤В╤Б╤П ╤В╨╛╨╗╤М╨║╨╛ ╨┤╨╗╤П ╨┐╤А╨╛╨▓╨╡╤А╨║╨╕ ╨┐╨╛╨▓╨╡╨┤╨╡╨╜╨╕╤П ╨╕╨╜╤В╨╡╤А╤Д╨╡╨╣╤Б╨░ ╨╜╨░ ╤А╨░╨╖╨╜╤Л╤Е ╤Н╨║╤А╨░╨╜╨░╤Е.',
+-			),
+-		),
+-		array(
+-			'question' => '╨Ъ╨░╨║ ╨┐╨╛╨╜╤П╤В╤М, ╤З╤В╨╛ ╤Г ╨╝╨╡╨╜╤П ╨╡╤Б╤В╤М ╨┐╤А╨╛╨▒╨╗╨╡╨╝╤Л ╤Б ╨░╨╗╨║╨╛╨│╨╛╨╗╨╡╨╝?',
+-			'answers'  => array(
+-				'╨н╤В╨╛ ╨▓╤А╨╡╨╝╨╡╨╜╨╜╤Л╨╣ ╤В╨╡╤Е╨╜╨╕╤З╨╡╤Б╨║╨╕╨╣ ╤В╨╡╨║╤Б╤В ╨┤╨╗╤П ╨┐╤А╨╛╨▓╨╡╤А╨║╨╕ ╨▒╨╗╨╛╨║╨░ FAQ. ╨Ч╨┤╨╡╤Б╤М ╨▒╤Г╨┤╨╡╤В ╤А╨░╨╖╨╝╨╡╤Й╤С╨╜ ╤Д╨╕╨╜╨░╨╗╤М╨╜╤Л╨╣ ╨╛╤В╨▓╨╡╤В ╤Б ╨╛╤А╨╕╨╡╨╜╤В╨╕╤А╨░╨╝╨╕ ╨┤╨╗╤П ╤Б╨░╨╝╨╛╨╜╨░╨▒╨╗╤О╨┤╨╡╨╜╨╕╤П ╨▒╨╡╨╖ ╨┤╨╕╨░╨│╨╜╨╛╤Б╤В╨╕╤З╨╡╤Б╨║╨╕╤Е ╤Д╨╛╤А╨╝╤Г╨╗╨╕╤А╨╛╨▓╨╛╨║.',
+-				'╨Ь╨░╤В╨╡╤А╨╕╨░╨╗ ╨┐╤А╨╡╨┤╨╜╨░╨╖╨╜╨░╤З╨╡╨╜ ╨┤╨╗╤П ╨┐╤А╨╛╨▓╨╡╤А╨║╨╕ ╤В╨╕╨┐╨╛╨│╤А╨░╤Д╨╕╨║╨╕ ╨╕ ╨▓╨╡╤А╤В╨╕╨║╨░╨╗╤М╨╜╤Л╤Е ╨╛╤В╤Б╤В╤Г╨┐╨╛╨▓. ╨Ъ╨╛╨╜╤В╨╡╨╜╤В ╨▒╤Г╨┤╨╡╤В ╨╖╨░╨╝╨╡╨╜╤С╨╜ ╨┐╨╛╤Б╨╗╨╡ ╤Б╨╛╨│╨╗╨░╤Б╨╛╨▓╨░╨╜╨╕╤П ╤Б ╨╛╨┐╨╡╤А╨░╤В╨╛╤А╨╛╨╝.',
+-			),
+-		),
+-		array(
+-			'question' => '╨Ч╨░╤З╨╡╨╝ ╨▓ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╤Г ╨▓╨║╨╗╤О╤З╨╡╨╜╤Л ╨╖╨░╨╜╤П╤В╨╕╤П ╨╣╨╛╨│╨╛╨╣?',
+-			'answers'  => array(
+-				'╨н╤В╨╛ ╨▓╤А╨╡╨╝╨╡╨╜╨╜╤Л╨╣ ╤В╨╡╤Е╨╜╨╕╤З╨╡╤Б╨║╨╕╨╣ ╤В╨╡╨║╤Б╤В ╨┤╨╗╤П ╨┐╤А╨╛╨▓╨╡╤А╨║╨╕ ╨░╨║╨║╨╛╤А╨┤╨╡╨╛╨╜╨░. ╨Т ╤Д╨╕╨╜╨░╨╗╤М╨╜╨╛╨╣ ╨▓╨╡╤А╤Б╨╕╨╕ ╨╖╨┤╨╡╤Б╤М ╨▒╤Г╨┤╨╡╤В ╨╛╨┐╨╕╤Б╨░╨╜╨░ ╤А╨╛╨╗╤М ╨┐╤А╨░╨║╤В╨╕╨║ ╨▓ ╨╛╨▒╤Й╨╡╨╣ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╡ ╤Б╨╛╨┐╤А╨╛╨▓╨╛╨╢╨┤╨╡╨╜╨╕╤П.',
+-				'╨в╨╡╨║╤Б╤В ╨╜╨╡ ╤П╨▓╨╗╤П╨╡╤В╤Б╤П ╤А╨╡╨║╨╗╨░╨╝╨╜╤Л╨╝ ╨╛╨▒╨╡╤Й╨░╨╜╨╕╨╡╨╝ ╨╕ ╨╜╨╡ ╨╖╨░╨╝╨╡╨╜╤П╨╡╤В ╨╕╨╜╨┤╨╕╨▓╨╕╨┤╤Г╨░╨╗╤М╨╜╤Г╤О ╨║╨╛╨╜╤Б╤Г╨╗╤М╤В╨░╤Ж╨╕╤О. ╨Р╨▒╨╖╨░╤Ж ╨┤╨╛╨▒╨░╨▓╨╗╨╡╨╜ ╨┤╨╗╤П ╨┐╤А╨╛╨▓╨╡╤А╨║╨╕ ╨▓╤Л╤Б╨╛╤В╤Л ╤А╨░╤Б╨║╤А╤Л╤В╨╛╨╣ ╨┐╨░╨╜╨╡╨╗╨╕.',
+-			),
+-		),
+-		array(
+-			'question' => '╨Ъ╨░╨║╨╕╨╡ ╨╝╨╡╤В╨╛╨┤╤Л ╨┐╤А╨╛╤Д╨╕╨╗╨░╨║╤В╨╕╨║╨╕ ╨╖╨░╨▓╨╕╤Б╨╕╨╝╨╛╤Б╤В╨╕ ╨╕╤Б╨┐╨╛╨╗╤М╨╖╤Г╤О╤В╤Б╤П?',
+-			'answers'  => array(
+-				'╨н╤В╨╛ ╨▓╤А╨╡╨╝╨╡╨╜╨╜╤Л╨╣ ╤В╨╡╤Е╨╜╨╕╤З╨╡╤Б╨║╨╕╨╣ ╤В╨╡╨║╤Б╤В ╨┤╨╗╤П ╨┐╤А╨╛╨▓╨╡╤А╨║╨╕ ╨▒╨╗╨╛╨║╨░ FAQ. ╨Ч╨┤╨╡╤Б╤М ╨▒╤Г╨┤╨╡╤В ╤А╨░╨╖╨╝╨╡╤Й╤С╨╜ ╤Д╨╕╨╜╨░╨╗╤М╨╜╤Л╨╣ ╨╛╤В╨▓╨╡╤В ╨╛ ╨┐╨╛╨┤╤Е╨╛╨┤╨░╤Е ╨┐╤А╨╛╤Д╨╕╨╗╨░╨║╤В╨╕╨║╨╕ ╨▓ ╨╛╨▒╨╛╨▒╤Й╤С╨╜╨╜╨╛╨╣ ╤Д╨╛╤А╨╝╨╡.',
+-				'╨д╨╛╤А╨╝╤Г╨╗╨╕╤А╨╛╨▓╨║╨╕ ╨╜╨╛╤Б╤П╤В ╤В╨╡╤Е╨╜╨╕╤З╨╡╤Б╨║╨╕╨╣ ╤Е╨░╤А╨░╨║╤В╨╡╤А ╨╕ ╨╜╨╡ ╤Б╨╛╨┤╨╡╤А╨╢╨░╤В ╨║╨╛╨╜╨║╤А╨╡╤В╨╜╤Л╤Е ╨╝╨╡╤В╨╛╨┤╨╕╨║ ╨╕╨╗╨╕ ╨│╨░╤А╨░╨╜╤В╨╕╨╣. ╨Ш╤Б╨┐╨╛╨╗╤М╨╖╤Г╤О╤В╤Б╤П ╤В╨╛╨╗╤М╨║╨╛ ╨┤╨╗╤П ╨┐╤А╨╛╨▓╨╡╤А╨║╨╕ ╨╕╨╜╤В╨╡╤А╤Д╨╡╨╣╤Б╨░.',
+-			),
+-		),
+-		array(
+-			'question' => '╨Э╨╡ ╨╝╨╛╨│╤Г ╨┐╨╛╨╗╨╜╨╛╤Б╤В╤М╤О ╨╕╤Б╨║╨╗╤О╤З╨╕╤В╤М ╤А╨░╨▒╨╛╤В╤Г. ╨Ь╨╛╨╢╨╜╨╛ ╨╗╨╕ ╤Б╨╛╨▓╨╝╨╡╤Б╤В╨╕╤В╤М ╨┐╤А╨╛╤Ж╨╡╤Б╤Б ╤А╨╡╨░╨▒╨╕╨╗╨╕╤В╨░╤Ж╨╕╨╕ ╤Б ╤А╨░╨▒╨╛╤В╨╛╨╣?',
+-			'answers'  => array(
+-				'╨н╤В╨╛ ╨▓╤А╨╡╨╝╨╡╨╜╨╜╤Л╨╣ ╤В╨╡╤Е╨╜╨╕╤З╨╡╤Б╨║╨╕╨╣ ╤В╨╡╨║╤Б╤В ╨┤╨╗╤П ╨┐╤А╨╛╨▓╨╡╤А╨║╨╕ ╨░╨║╨║╨╛╤А╨┤╨╡╨╛╨╜╨░. ╨Т ╤Д╨╕╨╜╨░╨╗╤М╨╜╨╛╨╣ ╨▓╨╡╤А╤Б╨╕╨╕ ╨╖╨┤╨╡╤Б╤М ╨▒╤Г╨┤╨╡╤В ╨╛╨┐╨╕╤Б╨░╨╜ ╨┐╨╛╤А╤П╨┤╨╛╨║ ╤Б╨╛╨│╨╗╨░╤Б╨╛╨▓╨░╨╜╨╕╤П ╤А╨░╨▒╨╛╤З╨╡╨│╨╛ ╨│╤А╨░╤Д╨╕╨║╨░ ╨▓ ╨╛╨▒╤Й╨╕╤Е ╤З╨╡╤А╤В╨░╤Е.',
+-				'╨в╨╡╨║╤Б╤В ╨╜╨╡ ╤Б╨╛╨┤╨╡╤А╨╢╨╕╤В ╨╛╨▒╨╡╤Й╨░╨╜╨╕╨╣ ╨┐╨╛ ╤Б╤А╨╛╨║╨░╨╝ ╨╕ ╤Г╤Б╨╗╨╛╨▓╨╕╤П╨╝. ╨Ф╨╛╨▒╨░╨▓╨╗╨╡╨╜ ╨┤╨╗╤П ╨┐╤А╨╛╨▓╨╡╤А╨║╨╕ ╨╝╨╜╨╛╨│╨╛╨░╨▒╨╖╨░╤Ж╨╜╨╛╨│╨╛ ╨╛╤В╨▓╨╡╤В╨░ ╨╕ ╨║╨╛╤А╤А╨╡╨║╤В╨╜╨╛╨╣ ╤А╨░╨▒╨╛╤В╤Л ╨║╨╗╨░╨▓╨╕╨░╤В╤Г╤А╨╜╨╛╨│╨╛ ╤Г╨┐╤А╨░╨▓╨╗╨╡╨╜╨╕╤П.',
+-			),
+-		),
+-		array(
+-			'question' => '╨Ъ╨░╨║ ╨┐╨╛╨╜╤П╤В╤М, ╤З╤В╨╛ ╨▒╨╗╨╕╨╖╨║╨╕╨╣ ╤З╨╡╨╗╨╛╨▓╨╡╨║ ╤Б╤В╨░╨╗ ╨╜╨░╤А╨║╨╛╨╝╨░╨╜╨╛╨╝?',
+-			'answers'  => array(
+-				'╨н╤В╨╛ ╨▓╤А╨╡╨╝╨╡╨╜╨╜╤Л╨╣ ╤В╨╡╤Е╨╜╨╕╤З╨╡╤Б╨║╨╕╨╣ ╤В╨╡╨║╤Б╤В ╨┤╨╗╤П ╨┐╤А╨╛╨▓╨╡╤А╨║╨╕ ╨▒╨╗╨╛╨║╨░ FAQ. ╨Ч╨┤╨╡╤Б╤М ╨▒╤Г╨┤╨╡╤В ╤А╨░╨╖╨╝╨╡╤Й╤С╨╜ ╤Д╨╕╨╜╨░╨╗╤М╨╜╤Л╨╣ ╨╛╤В╨▓╨╡╤В ╨┤╨╗╤П ╤А╨╛╨┤╤Б╤В╨▓╨╡╨╜╨╜╨╕╨║╨╛╨▓ ╤Б ╨╜╨╡╨╣╤В╤А╨░╨╗╤М╨╜╤Л╨╝╨╕ ╤А╨╡╨║╨╛╨╝╨╡╨╜╨┤╨░╤Ж╨╕╤П╨╝╨╕ ╨┐╨╛ ╨╜╨░╨▒╨╗╤О╨┤╨╡╨╜╨╕╤О.',
+-				'╨Ь╨░╤В╨╡╤А╨╕╨░╨╗ ╨╜╨╡ ╤Б╨╛╨┤╨╡╤А╨╢╨╕╤В ╨┤╨╕╨░╨│╨╜╨╛╤Б╤В╨╕╤З╨╡╤Б╨║╨╕╤Е ╤Г╤В╨▓╨╡╤А╨╢╨┤╨╡╨╜╨╕╨╣ ╨╕ ╨╜╨╡ ╨╖╨░╨╝╨╡╨╜╤П╨╡╤В ╨╛╤З╨╜╤Г╤О ╨║╨╛╨╜╤Б╤Г╨╗╤М╤В╨░╤Ж╨╕╤О. ╨Ш╤Б╨┐╨╛╨╗╤М╨╖╤Г╨╡╤В╤Б╤П ╤В╨╛╨╗╤М╨║╨╛ ╨┤╨╗╤П ╨┐╤А╨╛╨▓╨╡╤А╨║╨╕ ╨▓╤С╤А╤Б╤В╨║╨╕ ╨╕ ╨┐╨╛╨▓╨╡╨┤╨╡╨╜╨╕╤П ╨░╨║╨║╨╛╤А╨┤╨╡╨╛╨╜╨░.',
+-			),
+-		),
+-	);
++	return array();
+ }
+ 
+ /**

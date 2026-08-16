@@ -75,6 +75,36 @@ function shpigovsky_admin_edit_page_id() {
 }
 
 /**
+ * Whether current admin edit screen is the specialist CPT.
+ *
+ * @return bool
+ */
+function shpigovsky_admin_is_specialist_edit_screen() {
+	if ( ! is_admin() ) {
+		return false;
+	}
+
+	$screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
+
+	if ( $screen && isset( $screen->post_type ) && 'specialist' === $screen->post_type ) {
+		return true;
+	}
+
+	$post_id = shpigovsky_admin_edit_page_id();
+
+	if ( $post_id > 0 ) {
+		$post = get_post( $post_id );
+		return $post && 'specialist' === $post->post_type;
+	}
+
+	if ( isset( $_GET['post_type'] ) && 'specialist' === $_GET['post_type'] ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		return true;
+	}
+
+	return false;
+}
+
+/**
  * Whether current admin edit screen is the service CPT.
  *
  * @return bool
@@ -117,6 +147,11 @@ function shpigovsky_maybe_remove_page_editor_support() {
 		return;
 	}
 
+	if ( shpigovsky_admin_is_specialist_edit_screen() ) {
+		remove_post_type_support( 'specialist', 'editor' );
+		return;
+	}
+
 	$page_id = shpigovsky_admin_edit_page_id();
 
 	if ( ! shpigovsky_should_hide_native_editor( $page_id ) ) {
@@ -146,6 +181,11 @@ function shpigovsky_hide_native_editor_metabox() {
 		return;
 	}
 
+	if ( 'specialist' === $screen->post_type ) {
+		remove_meta_box( 'postdivrich', 'specialist', 'normal' );
+		return;
+	}
+
 	if ( 'page' !== $screen->post_type ) {
 		return;
 	}
@@ -169,6 +209,7 @@ function shpigovsky_hide_native_editor_admin_css() {
 	}
 
 	$hide = shpigovsky_admin_is_service_edit_screen()
+		|| shpigovsky_admin_is_specialist_edit_screen()
 		|| shpigovsky_should_hide_native_editor( shpigovsky_admin_edit_page_id() );
 
 	if ( ! $hide ) {
@@ -243,7 +284,7 @@ function shpigovsky_admin_should_enqueue_fp02_acf_css( $hook_suffix ) {
 		$screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
 		$post_type = ( $screen && isset( $screen->post_type ) ) ? (string) $screen->post_type : '';
 
-		if ( in_array( $post_type, array( 'page', 'service' ), true ) ) {
+		if ( in_array( $post_type, array( 'page', 'service', 'specialist' ), true ) ) {
 			return true;
 		}
 	}

@@ -1,0 +1,74 @@
+{
+  "utc": "2026-08-16T11:47:26.417002+00:00",
+  "fe": {
+    "uslugi": {
+      "url": "http://shpigovsky.beget.tech/uslugi/",
+      "status": 200,
+      "bytes": 138187,
+      "phone_note": true,
+      "has_phone_note_class": true,
+      "neurobiology": false,
+      "genotyping_heading": true,
+      "geno_link": false,
+      "lifebuoy_mover": true,
+      "lifebuoy_js": true,
+      "php_fatal": false
+    },
+    "zavisimosti": {
+      "url": "http://shpigovsky.beget.tech/uslugi/zavisimosti/",
+      "status": 200,
+      "bytes": 140483,
+      "phone_note": true,
+      "has_phone_note_class": true,
+      "neurobiology": false,
+      "genotyping_heading": false,
+      "geno_link": false,
+      "lifebuoy_mover": true,
+      "lifebuoy_js": true,
+      "php_fatal": false
+    },
+    "home": {
+      "url": "http://shpigovsky.beget.tech/",
+      "status": 200,
+      "bytes": 200471,
+      "phone_note": false,
+      "has_phone_note_class": false,
+      "neurobiology": false,
+      "genotyping_heading": true,
+      "geno_link": false,
+      "lifebuoy_mover": true,
+      "lifebuoy_js": true,
+      "php_fatal": false
+    },
+    "specialists": {
+      "url": "http://shpigovsky.beget.tech/specyalisty/",
+      "status": 200,
+      "bytes": 72755,
+      "phone_note": false,
+      "has_phone_note_class": false,
+      "neurobiology": false,
+      "genotyping_heading": false,
+      "geno_link": false,
+      "lifebuoy_mover": true,
+      "lifebuoy_js": true,
+      "php_fatal": false
+    },
+    "kostyuk": {
+      "url": "http://shpigovsky.beget.tech/specyalisty/kostyuk/",
+      "status": 200,
+      "bytes": 75834,
+      "phone_note": false,
+      "has_phone_note_class": false,
+      "neurobiology": false,
+      "genotyping_heading": false,
+      "geno_link": false,
+      "lifebuoy_mover": true,
+      "lifebuoy_js": true,
+      "php_fatal": false
+    }
+  },
+  "probe": {
+    "parse_error": "Expecting value: line 1 column 1 (char 0)",
+    "raw": ""
+  }
+}

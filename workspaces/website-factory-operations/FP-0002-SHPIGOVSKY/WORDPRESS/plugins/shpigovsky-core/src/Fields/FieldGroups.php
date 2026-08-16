@@ -48,6 +48,8 @@ final class FieldGroups implements ModuleInterface {
 	 */
 	public static function register() {
 		add_action( 'acf/init', array( __CLASS__, 'register_field_groups' ), 20 );
+		add_action( 'acf/init', array( SocialPlatformsOptions::class, 'maybe_migrate' ), 40 );
+		add_filter( 'acf/prepare_field/name=social_links', array( __CLASS__, 'hide_legacy_social_links_field' ) );
 		// ACF 5.7.11+: acf/get_field_groups is deprecated alias of acf/load_field_groups.
 		add_filter( 'acf/load_field_groups', array( __CLASS__, 'filter_service_parity_groups_by_role' ), 30 );
 		add_filter( 'acf/get_field_groups', array( __CLASS__, 'filter_service_parity_groups_by_role' ), 30 );
@@ -156,6 +158,17 @@ final class FieldGroups implements ModuleInterface {
 	}
 
 	/**
+	 * Hide the legacy General social_links repeater after P13 structured settings exist.
+	 * Data is retained.
+	 *
+	 * @param array<string, mixed>|false $field Field.
+	 * @return array<string, mixed>|false
+	 */
+	public static function hide_legacy_social_links_field( $field ) {
+		return false;
+	}
+
+	/**
 	 * Return deterministic field group definitions.
 	 *
 	 * @return array<int, array<string, mixed>>
@@ -175,6 +188,7 @@ final class FieldGroups implements ModuleInterface {
 			self::page_layout_mode(),
 			self::page_generic_content(),
 			self::page_treatment_program_child(),
+			self::page_specialist_profile(),
 			self::page_institutional_child(),
 			self::page_contacts(),
 			self::page_reviews(),
@@ -184,6 +198,9 @@ final class FieldGroups implements ModuleInterface {
 			self::site_options_contacts(),
 			self::site_options_modal_cta(),
 			self::site_options_reviews(),
+			SeoIntegrationsOptions::group(),
+			SocialPlatformsOptions::group(),
+			SeoEntityMeta::group(),
 			self::block_final_form(),
 			self::block_specialists(),
 			self::block_cta_bands(),
@@ -1669,7 +1686,7 @@ final class FieldGroups implements ModuleInterface {
 					'home_specialists_source_notice',
 					'message',
 					array(
-						'message' => __( 'Автоматический блок: карточки специалистов берутся из дочерних страниц /specyalisty/. Заголовок секции редактируйте в «Повторяемые блоки — Специалисты». Поле home_specialists_heading на главной сохранено только как fallback и скрыто из админки.', 'shpigovsky-core' ),
+						'message' => __( 'Автоматический блок: карточки специалистов берутся из CPT «Специалисты» (меню Специалисты). Заголовок секции редактируйте в «Повторяемые блоки — Специалисты». Поле home_specialists_heading на главной сохранено только как fallback и скрыто из админки.', 'shpigovsky-core' ),
 						'wrapper' => array(
 							'width' => '',
 							'class' => 'fp02-acf-section-title',
@@ -2516,14 +2533,38 @@ final class FieldGroups implements ModuleInterface {
 						'rows' => 3,
 					)
 				),
+				self::field(
+					'field_fp02_about_program_items_auto_note',
+					'О центре — Программа: направления (автоматически)',
+					'about_program_items_auto_note',
+					'message',
+					array(
+						'message'   => 'Карточки направлений читаются автоматически из дочерних страниц «Программа лечения» (родитель #13): заголовок страницы, постоянная ссылка и поле «Мини-описание». Редактируйте карточки там. Устаревший повторитель скрыт; исторические postmeta сохранены.',
+						'new_lines' => 'br',
+						'wrapper'   => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
 				self::repeater(
 					'field_fp02_about_program_items',
-					'О центре — Программа: направления',
+					'О центре — Программа: направления (устарело)',
 					'about_program_items',
 					4,
 					array(
 						self::field( 'field_fp02_about_program_item_title', 'Заголовок', 'title', 'text' ),
 						self::field( 'field_fp02_about_program_item_image', 'Изображение', 'image', 'image', array( 'return_format' => 'array' ) ),
+					),
+					0,
+					array(
+						'instructions' => 'LEGACY DORMANT (V9-07A01): не читается на фронтенде. Исторические postmeta сохранены для отката. Источник карточек — дочерние страницы программы лечения.',
+						'wrapper'      => array(
+							'width' => '',
+							'class' => 'fp02-acf-legacy-retired',
+							'id'    => '',
+						),
 					)
 				),
 				self::repeater(
@@ -2626,6 +2667,31 @@ final class FieldGroups implements ModuleInterface {
 						'delay'         => 0,
 					)
 				),
+				array(
+					'key'           => 'field_fp02_generic_page_reusable_notice',
+					'label'         => __( 'Повторно используемые блоки', 'shpigovsky-core' ),
+					'name'          => 'generic_page_reusable_notice',
+					'type'          => 'message',
+					'message'       => __( 'Включает уже существующие общие блоки сайта. Контент блоков не копируется на страницу — редактируется в их канонических настройках (Комфорт / требования; галерея «О доме»).', 'shpigovsky-core' ),
+					'new_lines'     => 'wpautop',
+					'esc_html'      => 0,
+				),
+				array(
+					'key'           => 'field_fp02_generic_page_reusable_blocks',
+					'label'         => __( 'Показать блоки на странице', 'shpigovsky-core' ),
+					'name'          => 'generic_page_reusable_blocks',
+					'type'          => 'checkbox',
+					'instructions'  => __( 'Отметьте блоки, которые нужно показать под основным текстом. Порядок на странице фиксированный: сначала требования к реабилитации, затем «О доме».', 'shpigovsky-core' ),
+					'choices'       => array(
+						'rehab_requirements' => __( 'Что нужно для прохождения реабилитации и лечения', 'shpigovsky-core' ),
+						'about_home'         => __( 'О доме / комфорт и территория', 'shpigovsky-core' ),
+					),
+					'default_value' => array(),
+					'layout'        => 'vertical',
+					'return_format' => 'value',
+					'allow_custom'  => 0,
+					'save_custom'   => 0,
+				),
 			),
 			self::location( 'page_template', '==', 'page-templates/generic.php' )
 		);
@@ -2643,7 +2709,7 @@ final class FieldGroups implements ModuleInterface {
 			'tags',
 			'send-trackbacks',
 		);
-		$group['description']    = 'V9-06E52 generic page ACF content source of truth (Generic Content template).';
+		$group['description']    = 'V9-06E52 generic page ACF content source of truth (Generic Content template). PROD-P07: reusable shared blocks selector.';
 
 		return $group;
 	}
@@ -2676,6 +2742,140 @@ final class FieldGroups implements ModuleInterface {
 
 		$group['menu_order']  = 0;
 		$group['description'] = 'V9-06E62D Treatment Program child mini-description for Home direction cards. Location: page_parent == 13 (Программа лечения).';
+
+		return $group;
+	}
+
+	/**
+	 * Specialist profile CPT (PROD-P11). Field keys preserved from P08.
+	 *
+	 * @return array<string, mixed>
+	 */
+	private static function page_specialist_profile() {
+		$group = self::group(
+			'group_fp02_specialist_profile',
+			__( 'Специалист — профиль', 'shpigovsky-core' ),
+			array(
+				self::field(
+					'field_fp02_specialist_portrait_notice',
+					__( 'Портрет', 'shpigovsky-core' ),
+					'specialist_portrait_notice',
+					'message',
+					array(
+						'message'   => __( 'Портрет берётся из поля «Фото» (Featured Image). Отдельное поле-дубликат не создаём.', 'shpigovsky-core' ),
+						'new_lines' => 'br',
+					)
+				),
+				self::field(
+					'field_fp02_specialist_role',
+					__( 'Должность / профессия', 'shpigovsky-core' ),
+					'specialist_role',
+					'text',
+					array(
+						'instructions' => __( 'Кратко: кто специалист (например: «Психолог, EMDR терапевт»). Показывается в карточке слайдера и в шапке страницы.', 'shpigovsky-core' ),
+					)
+				),
+				self::field(
+					'field_fp02_specialist_experience',
+					__( 'Опыт', 'shpigovsky-core' ),
+					'specialist_experience',
+					'text',
+					array(
+						'instructions' => __( 'Например: «Опыт — 2,5 года».', 'shpigovsky-core' ),
+					)
+				),
+				self::field(
+					'field_fp02_specialist_specialty',
+					__( 'Специальность', 'shpigovsky-core' ),
+					'specialist_specialty',
+					'wysiwyg',
+					array(
+						'instructions' => __( 'Блок «Специальность». Пустое поле на сайте не показывается.', 'shpigovsky-core' ),
+						'tabs'         => 'all',
+						'toolbar'      => 'basic',
+						'media_upload' => 0,
+					)
+				),
+				self::field(
+					'field_fp02_specialist_education',
+					__( 'Образование', 'shpigovsky-core' ),
+					'specialist_education',
+					'wysiwyg',
+					array(
+						'instructions' => __( 'Блок «Образование». Пустое поле на сайте не показывается.', 'shpigovsky-core' ),
+						'tabs'         => 'all',
+						'toolbar'      => 'basic',
+						'media_upload' => 0,
+					)
+				),
+				self::field(
+					'field_fp02_specialist_specialization',
+					__( 'Специализация', 'shpigovsky-core' ),
+					'specialist_specialization',
+					'wysiwyg',
+					array(
+						'instructions' => __( 'Блок «Специализация». Пустое поле на сайте не показывается.', 'shpigovsky-core' ),
+						'tabs'         => 'all',
+						'toolbar'      => 'basic',
+						'media_upload' => 0,
+					)
+				),
+				self::field(
+					'field_fp02_specialist_principles',
+					__( 'Принципы / подход к работе', 'shpigovsky-core' ),
+					'specialist_principles',
+					'wysiwyg',
+					array(
+						'instructions' => __( 'Блок про подход к работе. Пустое поле на сайте не показывается.', 'shpigovsky-core' ),
+						'tabs'         => 'all',
+						'toolbar'      => 'basic',
+						'media_upload' => 0,
+					)
+				),
+				self::field(
+					'field_fp02_specialist_additional',
+					__( 'Дополнительная информация', 'shpigovsky-core' ),
+					'specialist_additional',
+					'wysiwyg',
+					array(
+						'instructions' => __( 'Всё, что не вошло в структурированные блоки выше (legacy-текст без потери содержимого).', 'shpigovsky-core' ),
+						'tabs'         => 'all',
+						'toolbar'      => 'full',
+						'media_upload' => 0,
+					)
+				),
+				self::field(
+					'field_fp02_specialist_certificates',
+					__( 'Сертификаты и дипломы', 'shpigovsky-core' ),
+					'specialist_certificates',
+					'gallery',
+					array(
+						'instructions' => __( 'Галерея сертификатов/дипломов. На сайте — сетка с увеличением по клику.', 'shpigovsky-core' ),
+						'return_format'=> 'array',
+						'preview_size' => 'medium',
+						'library'      => 'all',
+						'min'          => 0,
+						'max'          => 40,
+					)
+				),
+			),
+			self::location( 'post_type', '==', 'specialist' )
+		);
+
+		$group['menu_order']     = 5;
+		$group['hide_on_screen'] = array(
+			'the_content',
+			'excerpt',
+			'discussion',
+			'comments',
+			'revisions',
+			'author',
+			'format',
+			'categories',
+			'tags',
+			'send-trackbacks',
+		);
+		$group['description']    = 'PROD-P11 Specialist CPT structured profile (keys from P08). Portrait = Featured Image. Location: post_type=specialist.';
 
 		return $group;
 	}
@@ -2836,7 +3036,17 @@ final class FieldGroups implements ModuleInterface {
 				self::field( 'field_fp02_article_eyebrow', 'Eyebrow', 'article_eyebrow', 'text' ),
 				self::field( 'field_fp02_article_lead', 'Lead / announcement', 'article_lead', 'textarea', array( 'rows' => 4 ) ),
 				self::field( 'field_fp02_article_source_label', 'Source label', 'article_source_label', 'text' ),
-				self::field( 'field_fp02_article_reading_time', 'Reading time', 'article_reading_time', 'number', array( 'min' => 0 ) ),
+				self::field(
+					'field_fp02_article_reading_time',
+					__( 'Время на чтение', 'shpigovsky-core' ),
+					'article_reading_time',
+					'number',
+					array(
+						'min'          => 0,
+						'instructions' => __( 'Необязательно. Число минут. Если заполнено — показывается вручную. Если пусто — сайт посчитает время автоматически (~190 слов/мин). Не пишите слово «минут».', 'shpigovsky-core' ),
+						'placeholder'  => '',
+					)
+				),
 				self::field( 'field_fp02_article_disclaimer', 'Article disclaimer', 'article_disclaimer', 'textarea', array( 'rows' => 3 ) ),
 				self::field( 'field_fp02_article_hide_author_public', 'Hide author publicly', 'article_hide_author_public', 'true_false', array( 'default_value' => 1 ) ),
 				self::field( 'field_fp02_article_author_label', 'Author label override', 'article_author_label', 'text' ),
@@ -3145,7 +3355,7 @@ final class FieldGroups implements ModuleInterface {
 					'specialists_source_notice',
 					'message',
 					array(
-						'message' => 'V9-06E34: карточки слайдера автоматически берутся из дочерних страниц «Специалисты» (/specyalisty/). Добавляйте/переупорядочивайте специалистов через страницы (menu_order). Ручной repeater specialists_items больше не используется в рендере.',
+						'message' => 'PROD-P11: карточки слайдера автоматически берутся из CPT «Специалисты». Добавляйте/переупорядочивайте специалистов через меню Специалисты (menu_order). Ручной repeater specialists_items больше не используется в рендере.',
 					)
 				),
 				self::field( 'field_fp02_specialists_section_heading', 'Заголовок секции', 'specialists_section_heading', 'text' ),

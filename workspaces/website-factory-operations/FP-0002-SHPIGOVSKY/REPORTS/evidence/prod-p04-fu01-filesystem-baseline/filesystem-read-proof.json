@@ -1,0 +1,27 @@
+{
+  "date": "2026-08-13",
+  "wave": "PROD-P04-FU01",
+  "account": "shpigovsky_mars",
+  "note": "Same username as prior P04 account name; operator rebound by delete+recreate against shpigovsky.ru site resource.",
+  "protocol": {
+    "ssh": "auth PASS preferred for hashing",
+    "ftp": "auth PASS; jail root IS wordpress docroot"
+  },
+  "pwd": "/home/s/shpigovsky/shpigovsky.ru/public_html",
+  "wordpress_in_jail": true,
+  "real_docroot": "/home/s/shpigovsky/shpigovsky.ru/public_html",
+  "wp_config_readable": true,
+  "required_paths_readable": {
+    "wp-config.php": true,
+    "wp-admin/": true,
+    "wp-includes/": true,
+    "wp-content/": true,
+    "wp-content/themes/shpigovsky/": true,
+    "wp-content/plugins/shpigovsky-core/": true,
+    "wp-content/plugins/metacode-wpilot/": true,
+    "wp-content/acf-json/": true,
+    "wp-content/uploads/": true
+  },
+  "writes": 0,
+  "result": "REAL WORDPRESS FILESYSTEM READ PROVEN"
+}

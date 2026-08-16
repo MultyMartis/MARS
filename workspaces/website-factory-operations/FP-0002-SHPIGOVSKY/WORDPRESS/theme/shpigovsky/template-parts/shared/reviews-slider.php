@@ -99,6 +99,7 @@ $aria_label    = wp_strip_all_tags( $heading );
       </div>
 
       <div class="reviews__pagination swiper-pagination" data-reviews-pagination></div>
+      <?php get_template_part( 'template-parts/components/fp02-slider-mobile-nav' ); ?>
     </div>
   </div>
 </section>

@@ -1,0 +1,37 @@
+{
+  "production_location": "wp-content/acf-json",
+  "wp_content_count": 24,
+  "docroot_secondary_count": 7,
+  "counts_vs_local": {
+    "MATCH": 24,
+    "KNOWN_INTENTIONAL_SOURCE_ONLY": 7
+  },
+  "known_intentional_source_only": [
+    "group_fp02_block_final_form.json",
+    "group_fp02_block_specialists.json",
+    "group_fp02_page_institutional_child.json",
+    "group_fp02_page_legal.json",
+    "group_fp02_service_faq.json",
+    "group_fp02_service_relationships.json",
+    "group_fp02_service_structured_sections.json"
+  ],
+  "stable_v1_source_only_reference": [
+    "group_fp02_block_final_form.json",
+    "group_fp02_block_specialists.json",
+    "group_fp02_page_institutional_child.json",
+    "group_fp02_page_legal.json",
+    "group_fp02_service_faq.json",
+    "group_fp02_service_relationships.json",
+    "group_fp02_service_structured_sections.json"
+  ],
+  "divergent": [],
+  "production_only": [],
+  "local_only_non_intentional": [],
+  "vs_fu01": {
+    "prior_match": 24,
+    "prior_source_only": 7,
+    "new_match": 24,
+    "new_source_only": 7
+  },
+  "sync_performed": false
+}

@@ -24,6 +24,11 @@ Capture reusable operational experience from the FP-0002 Shpigovsky Web-GPT/Curs
 | [GIT-PERSISTENCE-LESSONS.md](./GIT-PERSISTENCE-LESSONS.md) | MARS monorepo selective persistence + push |
 | [WEB-GPT-CHAT-MIGRATION-NOTES.md](./WEB-GPT-CHAT-MIGRATION-NOTES.md) | Handoff notes for a fresh Web-GPT chat |
 
+## Related packs
+
+- **Master index:** [../INDEX.md](../INDEX.md)
+- **Phase 2 (E54–E63 / Stable v1):** [../v9-stable-v1-phase-02/INDEX.md](../v9-stable-v1-phase-02/INDEX.md) — extends this Phase 1 pack; does not rewrite it.
+
 ## Guardrails (this pack)
 
 - Do **not** modify Forge Proger brain/system/rules from this pack alone.

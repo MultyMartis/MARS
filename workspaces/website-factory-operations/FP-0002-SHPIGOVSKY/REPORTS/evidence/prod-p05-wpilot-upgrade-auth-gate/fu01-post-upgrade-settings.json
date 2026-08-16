@@ -1,0 +1,61 @@
+{
+  "plugin_active": true,
+  "settings_safe": {
+    "bridge_enabled": true,
+    "write_enabled": false,
+    "emergency_disabled": false,
+    "dev_confirmed": true,
+    "plugin_version": "0.3.0",
+    "schema_version": "0.2.0",
+    "token_hash_present": true,
+    "token_hash_len": 63,
+    "token_created_at": "2026-07-02 15:54:57",
+    "token_revoked_at": "",
+    "last_token_used_at": "2026-07-02 17:18:36",
+    "last_connection_status": "success",
+    "last_connection_success_at": "2026-07-02 17:18:36",
+    "last_authorized_connection_at": "2026-07-02 17:18:36",
+    "last_authorized_endpoint": "indexing-state",
+    "last_connection_failure_at": "2026-07-03 20:24:17",
+    "last_connection_failure_reason": "auth_missing",
+    "wpilot_schema_valid": "1"
+  },
+  "write_enabled": false,
+  "recovery_space_candidates": [
+    {
+      "id": 1054,
+      "post_type": "page",
+      "post_status": "publish",
+      "post_name": "prostranstvo-vosstanovleniya",
+      "title_match": true
+    },
+    {
+      "id": 1809,
+      "post_type": "revision",
+      "post_status": "inherit",
+      "post_name": "1054-revision-v1",
+      "title_match": true
+    },
+    {
+      "id": 1810,
+      "post_type": "revision",
+      "post_status": "inherit",
+      "post_name": "1054-revision-v1",
+      "title_match": true
+    },
+    {
+      "id": 1812,
+      "post_type": "revision",
+      "post_status": "inherit",
+      "post_name": "1054-revision-v1",
+      "title_match": true
+    },
+    {
+      "id": 1813,
+      "post_type": "revision",
+      "post_status": "inherit",
+      "post_name": "1054-revision-v1",
+      "title_match": true
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+/**
+ * FP-0002 PROD-P08 — mobile prev/next for non-Hero dot sliders
+ *
+ * At ≤767px: hide dot bullets; show left-aligned compact prev/next.
+ * At ≥768px: retain current centered dots; hide prev/next.
+ * Explicitly does not target Hero (`.hero__*`, `.services-inner-hero-v2__*`).
+ */
+
+.fp02-slider-nav {
+  display: none;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: var(--pad-gap, 16px);
+  width: 100%;
+}
+
+.fp02-slider-nav__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border: var(--border-width, 1px) solid var(--color-text-primary, #1a1a1a);
+  border-radius: var(--radius-full, 999px);
+  background-color: transparent;
+  color: var(--color-text-primary, #1a1a1a);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+}
+
+.fp02-slider-nav__btn:hover,
+.fp02-slider-nav__btn:focus-visible {
+  background-color: var(--color-text-primary, #1a1a1a);
+  color: #fff;
+  outline: none;
+}
+
+.fp02-slider-nav__btn.swiper-button-disabled,
+.fp02-slider-nav__btn[aria-disabled="true"],
+.fp02-slider-nav__btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .fp02-slider-nav {
+    display: inline-flex;
+  }
+
+  .home-gallery__pagination .swiper-pagination-bullet,
+  .reviews__pagination .swiper-pagination-bullet,
+  .specialists__pagination .swiper-pagination-bullet,
+  .home-articles__pagination .swiper-pagination-bullet,
+  .services-category-section-v2__gallery-pagination .swiper-pagination-bullet,
+  .page-uslugi-v2 .services-category-section-v2__gallery-pagination .swiper-pagination-bullet {
+    display: none !important;
+  }
+
+  .home-gallery__pagination,
+  .reviews__pagination,
+  .specialists__pagination,
+  .home-articles__pagination,
+  .services-category-section-v2__gallery-pagination,
+  .page-uslugi-v2 .services-category-section-v2__gallery-pagination.swiper-pagination {
+    justify-content: flex-start;
+    min-height: 0;
+    margin-top: 0;
+    gap: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .fp02-slider-nav {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fp02-slider-nav__btn {
+    transition: none;
+  }
+}

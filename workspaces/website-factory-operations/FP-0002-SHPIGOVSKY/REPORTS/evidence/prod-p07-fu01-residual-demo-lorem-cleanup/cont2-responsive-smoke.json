@@ -1,0 +1,138 @@
+{
+  "wave": "PROD-P07-FU01-CONT2",
+  "created_at": "2026-08-14T12:03:07.745320+00:00",
+  "shots": [
+    {
+      "route": "uslugi",
+      "viewport": "desktop-1440",
+      "file": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\REPORTS\\evidence\\prod-p07-fu01-residual-demo-lorem-cleanup\\cont2-responsive\\uslugi--desktop-1440.png",
+      "metrics": {
+        "scrollWidth": 1425,
+        "clientWidth": 1440,
+        "overflowX": false,
+        "emptyHeadings": 0,
+        "emptyAccordion": 0,
+        "malformedCards": 0,
+        "largeBlank": 0,
+        "footerCollisionSuspect": false,
+        "title": "Услуги — Шпиговский Дом"
+      }
+    },
+    {
+      "route": "alcohol",
+      "viewport": "desktop-1440",
+      "file": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\REPORTS\\evidence\\prod-p07-fu01-residual-demo-lorem-cleanup\\cont2-responsive\\alcohol--desktop-1440.png",
+      "metrics": {
+        "scrollWidth": 1425,
+        "clientWidth": 1440,
+        "overflowX": false,
+        "emptyHeadings": 0,
+        "emptyAccordion": 0,
+        "malformedCards": 0,
+        "largeBlank": 2,
+        "footerCollisionSuspect": false,
+        "title": "Лечение алкогольной зависимости — Шпиговский Дом"
+      }
+    },
+    {
+      "route": "zavisimosti",
+      "viewport": "desktop-1440",
+      "file": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\REPORTS\\evidence\\prod-p07-fu01-residual-demo-lorem-cleanup\\cont2-responsive\\zavisimosti--desktop-1440.png",
+      "metrics": {
+        "scrollWidth": 1425,
+        "clientWidth": 1440,
+        "overflowX": false,
+        "emptyHeadings": 0,
+        "emptyAccordion": 0,
+        "malformedCards": 0,
+        "largeBlank": 1,
+        "footerCollisionSuspect": false,
+        "title": "Зависимости — Шпиговский Дом"
+      }
+    },
+    {
+      "route": "uslugi",
+      "viewport": "mobile-390",
+      "file": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\REPORTS\\evidence\\prod-p07-fu01-residual-demo-lorem-cleanup\\cont2-responsive\\uslugi--mobile-390.png",
+      "metrics": {
+        "scrollWidth": 375,
+        "clientWidth": 390,
+        "overflowX": false,
+        "emptyHeadings": 0,
+        "emptyAccordion": 0,
+        "malformedCards": 0,
+        "largeBlank": 0,
+        "footerCollisionSuspect": false,
+        "title": "Услуги — Шпиговский Дом"
+      }
+    },
+    {
+      "route": "alcohol",
+      "viewport": "mobile-390",
+      "file": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\REPORTS\\evidence\\prod-p07-fu01-residual-demo-lorem-cleanup\\cont2-responsive\\alcohol--mobile-390.png",
+      "metrics": {
+        "scrollWidth": 375,
+        "clientWidth": 390,
+        "overflowX": false,
+        "emptyHeadings": 0,
+        "emptyAccordion": 0,
+        "malformedCards": 0,
+        "largeBlank": 0,
+        "footerCollisionSuspect": false,
+        "title": "Лечение алкогольной зависимости — Шпиговский Дом"
+      }
+    },
+    {
+      "route": "zavisimosti",
+      "viewport": "mobile-390",
+      "file": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\REPORTS\\evidence\\prod-p07-fu01-residual-demo-lorem-cleanup\\cont2-responsive\\zavisimosti--mobile-390.png",
+      "metrics": {
+        "scrollWidth": 375,
+        "clientWidth": 390,
+        "overflowX": false,
+        "emptyHeadings": 0,
+        "emptyAccordion": 0,
+        "malformedCards": 0,
+        "largeBlank": 0,
+        "footerCollisionSuspect": false,
+        "title": "Зависимости — Шпиговский Дом"
+      }
+    }
+  ],
+  "regression_flags": [
+    {
+      "route": "alcohol",
+      "viewport": "desktop-1440",
+      "file": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\REPORTS\\evidence\\prod-p07-fu01-residual-demo-lorem-cleanup\\cont2-responsive\\alcohol--desktop-1440.png",
+      "metrics": {
+        "scrollWidth": 1425,
+        "clientWidth": 1440,
+        "overflowX": false,
+        "emptyHeadings": 0,
+        "emptyAccordion": 0,
+        "malformedCards": 0,
+        "largeBlank": 2,
+        "footerCollisionSuspect": false,
+        "title": "Лечение алкогольной зависимости — Шпиговский Дом"
+      }
+    },
+    {
+      "route": "zavisimosti",
+      "viewport": "desktop-1440",
+      "file": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\REPORTS\\evidence\\prod-p07-fu01-residual-demo-lorem-cleanup\\cont2-responsive\\zavisimosti--desktop-1440.png",
+      "metrics": {
+        "scrollWidth": 1425,
+        "clientWidth": 1440,
+        "overflowX": false,
+        "emptyHeadings": 0,
+        "emptyAccordion": 0,
+        "malformedCards": 0,
+        "largeBlank": 1,
+        "footerCollisionSuspect": false,
+        "title": "Зависимости — Шпиговский Дом"
+      }
+    }
+  ],
+  "verdict": "RESPONSIVE SMOKE PASS",
+  "largeBlank_note": "desktop alcohol/zavisimosti hits are image-only clinic-landscape/corridor sections, not cleanup gaps"
+}

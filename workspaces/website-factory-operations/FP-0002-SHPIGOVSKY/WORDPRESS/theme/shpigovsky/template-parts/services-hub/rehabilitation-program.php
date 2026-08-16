@@ -101,7 +101,9 @@ if ( '' === $cta_button ) {
 				'title'          => $cta_title,
 				'subtitle'       => $cta_sub,
 				'phone'          => $cta_phone,
-				'phone_hint'     => '',
+				'phone_hint'     => function_exists( 'shpigovsky_get_cta_band_phone_hint' )
+					? shpigovsky_get_cta_band_phone_hint( __( 'Или позвоните нам', 'shpigovsky' ) )
+					: __( 'Или позвоните нам', 'shpigovsky' ),
 				'button_label'   => $cta_button,
 				'modal_source'   => $v9_program['cta']['source'],
 				'section_id'     => '',

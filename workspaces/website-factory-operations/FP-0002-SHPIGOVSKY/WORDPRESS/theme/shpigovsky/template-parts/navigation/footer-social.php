@@ -1,6 +1,6 @@
 <?php
 /**
- * Footer social links — static V9 visual fallback (D9-D).
+ * Footer social links — canonical social_platforms SoT (PROD-P13).
  *
  * @package Shpigovsky
  */
@@ -9,23 +9,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$rows = shpigovsky_get_social_link_rows();
+$rows = shpigovsky_get_social_platform_rows( 'footer' );
 
 if ( empty( $rows ) ) {
-	$rows = array(
-		array( 'label' => 'Telegram', 'url' => '#' ),
-		array( 'label' => 'WhatsApp', 'url' => '#' ),
-		array( 'label' => 'Max', 'url' => '#' ),
-		array( 'label' => 'YouTube', 'url' => '#' ),
-	);
+	return;
 }
 ?>
 <div class="site-footer__social">
 	<?php foreach ( $rows as $row ) : ?>
 		<?php
-		$icon  = shpigovsky_social_icon_for_label( $row['label'] );
-		$label = '' !== $row['label'] ? $row['label'] : __( 'Социальная сеть', 'shpigovsky' );
-		$is_fa = '' === $icon && str_contains( mb_strtolower( $label ), 'youtube' );
+		$icon  = isset( $row['icon'] ) ? (string) $row['icon'] : '';
+		$label = isset( $row['label'] ) ? (string) $row['label'] : '';
+		$type  = isset( $row['type'] ) ? (string) $row['type'] : '';
+		$is_fa = 'youtube' === $type || ( '' === $icon && str_contains( mb_strtolower( $label ), 'youtube' ) );
 		?>
 		<a class="site-footer__social-link<?php echo $is_fa ? ' site-footer__social-link--fa' : ''; ?>" href="<?php echo esc_url( $row['url'] ); ?>" aria-label="<?php echo esc_attr( $label ); ?>">
 			<?php if ( $is_fa ) : ?>

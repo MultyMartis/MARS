@@ -1,0 +1,14 @@
+E64 INVENTORY TOTALS (2026-07-18T01:32:12)
+total_backup_bytes=15741655900 (14,66 GB)
+protected_backup_bytes=4341137338 (4,04 GB)
+confirmed_removable_backup_bytes=2211034969 (2,06 GB)
+evidence_bytes=387064713 (369,13 MB)
+confirmed_removable_evidence_bytes=0 (KEEP packs; no evidence allowlist yet)
+git_worktree_total_bytes=9375613928
+confirmed_removable_worktree_bytes=8901213454 (8,29 GB)
+runtime_debug_log_bytes=3847501 (3,67 MB)
+total_proposed_removal_bytes=11116095924 (10,35 GB)
+inventory_rows=169
+backup_delete_allowlist_count=17
+worktree_delete_allowlist_count=5
+manual_review_note=e29c-e35 SKIPPED due to unpushed commits; E59/E61 MANUAL_REVIEW retained; pre-E54 deferred

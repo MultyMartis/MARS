@@ -130,5 +130,18 @@ if ( 'subdivision' === $variant ) {
 				<p class="service-subdivision-dependencies-v1__footer-text"><?php echo esc_html( $footer_text ); ?></p>
 			<?php endif; ?>
 		</div>
+
+		<div class="services-category-section-v2__actions">
+			<button
+				type="button"
+				class="btn btn_dark btn--primary services-category-section-v2__cta"
+				data-modal-open="consultation"
+				data-modal-source="service-child-services"
+				data-modal-title="<?php echo esc_attr__( 'Записаться на консультацию', 'shpigovsky' ); ?>"
+				data-modal-submit-text="<?php echo esc_attr__( 'Записаться на консультацию', 'shpigovsky' ); ?>"
+			>
+				<?php echo esc_html__( 'Записаться на консультацию', 'shpigovsky' ); ?>
+			</button>
+		</div>
 	</div>
 </section>

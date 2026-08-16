@@ -1,0 +1,158 @@
+{
+  "base": "http://shpigovsky.beget.tech",
+  "php_powered_by": "PHP/8.3.20",
+  "server": "nginx-reuseport/1.21.1",
+  "routes": [
+    {
+      "path": "/",
+      "final_url": "http://shpigovsky.beget.tech/",
+      "status": 200,
+      "bytes": 217495,
+      "has_theme_css": true,
+      "has_theme_js": true,
+      "php_notice_visible": false,
+      "broken_shortcode": false,
+      "title": "Шпиговский — локальная разработка",
+      "program_cards_markup": true,
+      "shortcode_hits_sample": []
+    },
+    {
+      "path": "/o-centre/",
+      "final_url": "http://shpigovsky.beget.tech/o-centre/",
+      "status": 200,
+      "bytes": 151497,
+      "has_theme_css": true,
+      "has_theme_js": true,
+      "php_notice_visible": false,
+      "broken_shortcode": false,
+      "title": "О центре &#8211; Шпиговский — локальная разработка",
+      "shortcode_hits_sample": []
+    },
+    {
+      "path": "/o-centre/programma-lecheniya/",
+      "final_url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/",
+      "status": 200,
+      "bytes": 77907,
+      "has_theme_css": true,
+      "has_theme_js": true,
+      "php_notice_visible": false,
+      "broken_shortcode": false,
+      "title": "Программа лечения &#8211; Шпиговский — локальная разработка",
+      "program_cards_markup": true,
+      "shortcode_hits_sample": []
+    },
+    {
+      "path": "/o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/",
+      "final_url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/",
+      "status": 200,
+      "bytes": 72348,
+      "has_theme_css": true,
+      "has_theme_js": true,
+      "php_notice_visible": false,
+      "broken_shortcode": false,
+      "title": "Пространство восстановления &#8211; Шпиговский — локальная разработка",
+      "shortcode_hits_sample": []
+    },
+    {
+      "path": "/uslugi/",
+      "final_url": "http://shpigovsky.beget.tech/uslugi/",
+      "status": 200,
+      "bytes": 138739,
+      "has_theme_css": true,
+      "has_theme_js": true,
+      "php_notice_visible": false,
+      "broken_shortcode": false,
+      "title": "Услуги &#8211; Шпиговский — локальная разработка",
+      "shortcode_hits_sample": []
+    },
+    {
+      "path": "/uslugi/zavisimosti/",
+      "final_url": "http://shpigovsky.beget.tech/uslugi/zavisimosti/",
+      "status": 200,
+      "bytes": 153924,
+      "has_theme_css": true,
+      "has_theme_js": true,
+      "php_notice_visible": false,
+      "broken_shortcode": false,
+      "title": "Зависимости &#8211; Шпиговский — локальная разработка",
+      "child_links_sample": [
+        "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+        "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+        "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/",
+        "http://shpigovsky.beget.tech/uslugi/zavisimosti/profilakticheskiy-analiz/"
+      ],
+      "shortcode_hits_sample": []
+    },
+    {
+      "path": "/kontakty/",
+      "final_url": "http://shpigovsky.beget.tech/kontakty/",
+      "status": 200,
+      "bytes": 82311,
+      "has_theme_css": true,
+      "has_theme_js": true,
+      "php_notice_visible": false,
+      "broken_shortcode": false,
+      "title": "Контакты &#8211; Шпиговский — локальная разработка",
+      "shortcode_hits_sample": []
+    },
+    {
+      "path": "/blog/",
+      "final_url": "http://shpigovsky.beget.tech/blog/",
+      "status": 200,
+      "bytes": 95953,
+      "has_theme_css": true,
+      "has_theme_js": true,
+      "php_notice_visible": false,
+      "broken_shortcode": false,
+      "title": "Статьи &#8211; Шпиговский — локальная разработка",
+      "shortcode_hits_sample": []
+    },
+    {
+      "path": "/otzyvy/",
+      "final_url": "http://shpigovsky.beget.tech/otzyvy/",
+      "status": 200,
+      "bytes": 95866,
+      "has_theme_css": true,
+      "has_theme_js": true,
+      "php_notice_visible": false,
+      "broken_shortcode": false,
+      "title": "Отзывы &#8211; Шпиговский — локальная разработка",
+      "shortcode_hits_sample": []
+    },
+    {
+      "path": "/?s=лечение",
+      "final_url": "http://shpigovsky.beget.tech/?s=%D0%BB%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B5",
+      "status": 200,
+      "bytes": 76419,
+      "has_theme_css": true,
+      "has_theme_js": true,
+      "php_notice_visible": false,
+      "broken_shortcode": false,
+      "title": "Результаты поиска: лечение &#8211; Шпиговский — локальная разработка",
+      "shortcode_hits_sample": []
+    },
+    {
+      "path": "/this-route-should-404-fp0002-fu02/",
+      "final_url": "http://shpigovsky.beget.tech/this-route-should-404-fp0002-fu02/",
+      "status": 404,
+      "bytes": 70109,
+      "has_theme_css": true,
+      "has_theme_js": true,
+      "php_notice_visible": false,
+      "broken_shortcode": false,
+      "title": "Page not found &#8211; Шпиговский — локальная разработка",
+      "expected_404": true,
+      "is_404_ok": true,
+      "shortcode_hits_sample": []
+    }
+  ],
+  "comfort_gallery": {
+    "leaf": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+    "checked": true,
+    "status": 200,
+    "has_comfort_markup": true,
+    "has_fancybox": true,
+    "php_notice_visible": false
+  },
+  "mutations": 0
+}

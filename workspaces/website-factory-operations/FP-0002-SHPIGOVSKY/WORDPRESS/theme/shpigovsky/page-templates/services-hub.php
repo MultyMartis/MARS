@@ -61,7 +61,9 @@ get_header();
 				'title'          => '' !== $sec_title ? $sec_title : $v9_cta['title'],
 				'subtitle'       => '' !== $sec_sub ? $sec_sub : $v9_cta['subtitle'],
 				'phone'          => $cta_phone,
-				'phone_hint'     => '',
+				'phone_hint'     => function_exists( 'shpigovsky_get_cta_band_phone_hint' )
+					? shpigovsky_get_cta_band_phone_hint( __( 'Или позвоните нам', 'shpigovsky' ) )
+					: __( 'Или позвоните нам', 'shpigovsky' ),
 				'button_label'   => '' !== $sec_button ? $sec_button : $v9_cta['button_label'],
 				'modal_source'   => $v9_cta['source'],
 				'section_id'     => '',

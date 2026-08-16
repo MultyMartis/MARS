@@ -1,0 +1,54 @@
+{
+  "captured_at": "2026-08-16T16:30:17.521565+00:00",
+  "label": "before",
+  "logged_in": true,
+  "login_has_error": false,
+  "login_final_path": "http://shpigovsky.beget.tech/wp-admin/",
+  "screens": {
+    "service_zavisimosti": {
+      "status": 200,
+      "bytes": 622056,
+      "ui": {
+        "count_postoyannaya": 2,
+        "count_edit_slug_box": 2,
+        "count_fp02_metabox": 11,
+        "count_fp02_post_name": 4,
+        "has_url_yarlyk": true,
+        "has_izmenit": true,
+        "has_editable_post_name": false,
+        "has_fp02_edit_slug_box": true,
+        "has_loginform": false
+      }
+    },
+    "specialist_kostyuk": {
+      "status": 200,
+      "bytes": 508164,
+      "ui": {
+        "count_postoyannaya": 2,
+        "count_edit_slug_box": 2,
+        "count_fp02_metabox": 11,
+        "count_fp02_post_name": 4,
+        "has_url_yarlyk": true,
+        "has_izmenit": true,
+        "has_editable_post_name": true,
+        "has_fp02_edit_slug_box": true,
+        "has_loginform": false
+      }
+    },
+    "page_uslugi": {
+      "status": 200,
+      "bytes": 577656,
+      "ui": {
+        "count_postoyannaya": 1,
+        "count_edit_slug_box": 1,
+        "count_fp02_metabox": 0,
+        "count_fp02_post_name": 0,
+        "has_url_yarlyk": false,
+        "has_izmenit": true,
+        "has_editable_post_name": true,
+        "has_fp02_edit_slug_box": false,
+        "has_loginform": false
+      }
+    }
+  }
+}

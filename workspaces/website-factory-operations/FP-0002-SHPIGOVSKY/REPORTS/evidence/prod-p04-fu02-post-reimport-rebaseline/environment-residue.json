@@ -1,0 +1,38 @@
+{
+  "blogname": {
+    "value": "Шпиговский — локальная разработка",
+    "class": "migration residue"
+  },
+  "blogdescription": {
+    "value": "",
+    "class": "correct for temporary production phase"
+  },
+  "home": {
+    "value": "http://shpigovsky.beget.tech",
+    "class": "final-domain deferred"
+  },
+  "siteurl": {
+    "value": "http://shpigovsky.beget.tech",
+    "class": "final-domain deferred"
+  },
+  "WP_DEBUG": {
+    "value": "true",
+    "class": "migration residue"
+  },
+  "WP_ENVIRONMENT_TYPE": {
+    "value": "'local'",
+    "class": "migration residue"
+  },
+  "DB_HOST": {
+    "value": "localhost",
+    "class": "correct for temporary production phase"
+  },
+  "table_prefix": {
+    "value": "fp02_",
+    "class": "correct for temporary production phase"
+  },
+  "DB_CHARSET": {
+    "value": "utf8",
+    "class": "correct for temporary production phase"
+  }
+}

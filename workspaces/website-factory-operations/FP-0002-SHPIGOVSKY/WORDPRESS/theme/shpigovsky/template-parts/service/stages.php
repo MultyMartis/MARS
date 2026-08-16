@@ -14,7 +14,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 $post_id = shpigovsky_get_current_service_id();
 $stages  = shpigovsky_get_service_repeater( $post_id, 'stages' );
 $variant = get_query_var( 'shpigovsky_service_layout_variant', shpigovsky_get_service_layout_variant() );
-$cta     = shpigovsky_get_service_cta_band( $post_id );
+// This block is the repeated «Что нужно для прохождения реабилитации и лечения» owner:
+// Guest Visit CTA only here — do not use generic «Остались вопросы?» service CTA defaults.
+$cta = function_exists( 'shpigovsky_get_about_guest_cta_band' )
+	? shpigovsky_get_about_guest_cta_band( 'service-stages-guest-cta' )
+	: shpigovsky_get_service_cta_band( $post_id );
 
 if ( 'subdivision' === $variant ) {
 	$section_id    = 'service-subdivision-stages';

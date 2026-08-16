@@ -1,0 +1,70 @@
+{
+  "parity": "10/10",
+  "files": [
+    {
+      "rel": "functions.php",
+      "match": true,
+      "local_sha256": "b1bbfeda6a050d551cbf671e4aff179274b423ccad360aada946fac59b4a2a8f",
+      "prod_sha256": "b1bbfeda6a050d551cbf671e4aff179274b423ccad360aada946fac59b4a2a8f"
+    },
+    {
+      "rel": "inc/seo-integrations.php",
+      "match": true,
+      "local_sha256": "038f8895977fd7ff866d128818ca21f92bdffa54ac6b1f2b2c2cec11b906a98d",
+      "prod_sha256": "038f8895977fd7ff866d128818ca21f92bdffa54ac6b1f2b2c2cec11b906a98d"
+    },
+    {
+      "rel": "inc/sitemap-helpers.php",
+      "match": true,
+      "local_sha256": "d3d2b7f3d2a8dd13d711e88b5afd17d1281ad24334eb6117c989d91439d26f6c",
+      "prod_sha256": "d3d2b7f3d2a8dd13d711e88b5afd17d1281ad24334eb6117c989d91439d26f6c"
+    },
+    {
+      "rel": "inc/search-helpers.php",
+      "match": true,
+      "local_sha256": "9fdcb996ecd3e905dac0c961e5ad453645f0bb9e378f689aa74464d4fa1e91c0",
+      "prod_sha256": "9fdcb996ecd3e905dac0c961e5ad453645f0bb9e378f689aa74464d4fa1e91c0"
+    },
+    {
+      "rel": "inc/assets.php",
+      "match": true,
+      "local_sha256": "a2fbe6fcf177ef4410113c49849707a2acb9569d5a4681f0031e409ce92da271",
+      "prod_sha256": "a2fbe6fcf177ef4410113c49849707a2acb9569d5a4681f0031e409ce92da271"
+    },
+    {
+      "rel": "assets/js/v9-shell.js",
+      "match": true,
+      "local_sha256": "e8175bd9bd1d313545975713278a897defc3cc2d81962d3acfc11ab33a33cbfe",
+      "prod_sha256": "e8175bd9bd1d313545975713278a897defc3cc2d81962d3acfc11ab33a33cbfe"
+    },
+    {
+      "rel": "src/Admin/OptionsPage.php",
+      "match": true,
+      "local_sha256": "9d0ae8beecb41ff6ed488d827cf0b4f7ed5ac6d3d8865c9bc52f11838436e52e",
+      "prod_sha256": "9d0ae8beecb41ff6ed488d827cf0b4f7ed5ac6d3d8865c9bc52f11838436e52e"
+    },
+    {
+      "rel": "src/Fields/FieldGroups.php",
+      "match": true,
+      "local_sha256": "061c6cbe4a33c88bada12eacc12f943448e10332490bf5f6dc6896c2c206fa26",
+      "prod_sha256": "061c6cbe4a33c88bada12eacc12f943448e10332490bf5f6dc6896c2c206fa26"
+    },
+    {
+      "rel": "src/Fields/SeoIntegrationsOptions.php",
+      "match": true,
+      "local_sha256": "4923b7664ecd4d24eb8b72ca1ed12564a05b06638a375775fbae47e94005e4c1",
+      "prod_sha256": "4923b7664ecd4d24eb8b72ca1ed12564a05b06638a375775fbae47e94005e4c1"
+    },
+    {
+      "rel": "group_fp02_site_options_seo_integrations.json",
+      "match": true,
+      "local_sha256": "afd407c687c0959df450271400953b08e5fa844ab5f03b0c0ed35b4856d3df77",
+      "prod_sha256": "afd407c687c0959df450271400953b08e5fa844ab5f03b0c0ed35b4856d3df77"
+    }
+  ],
+  "home_has_yandex_verification": false,
+  "home_has_google_verification": false,
+  "home_has_metrica": false,
+  "home_has_gtm": false,
+  "robots": "User-agent: *\nDisallow: /\n\nSitemap: http://shpigovsky.beget.tech/wp-sitemap.xml\n"
+}

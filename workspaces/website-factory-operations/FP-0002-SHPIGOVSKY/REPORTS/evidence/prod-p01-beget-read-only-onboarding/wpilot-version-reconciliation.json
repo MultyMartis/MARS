@@ -1,0 +1,37 @@
+{
+  "zip_sha256_documented": "d55c19d6ea1a55cd145e9b67c42ca201c30e4356f08d8cf3932ef6a5ebc80934",
+  "rc6_zip": "X:\\AI MARS STORAGE\\wpilot\\deploy-packages\\metacode-wpilot-v0.3.0-rc6.zip",
+  "zip_path": "X:\\AI MARS STORAGE\\wpilot\\deploy-packages\\metacode-wpilot-v0.3.2-rc1.zip",
+  "source_plugin_version": "0.3.2",
+  "recommendation": "RECONCILE existing migrated install first; do not blind reinstall; preferred package if upgrade needed = 0.3.2-RC1",
+  "production_version": "SAFE UNKNOWN — not exposed by public ping",
+  "historical_local_fp0002_note": "OPERATIONAL-INDEX historically listed local shpigovsky.test on v0.3.0-rc5",
+  "zip_sha256_recomputed": "d55c19d6ea1a55cd145e9b67c42ca201c30e4356f08d8cf3932ef6a5ebc80934",
+  "source_release_label": "0.3.2-RC1",
+  "schema_version": "0.2.0",
+  "rc6_sha256": "4a0b929cee34e8c6188a10991b0c120bb1e8ffdd09674418a32d920c2aa16bf6",
+  "rest_namespace": "wpilot/v1",
+  "production_public_ping": {
+    "ok": true,
+    "data": {
+      "plugin": "metacode-wpilot",
+      "status": "installed",
+      "bridge_enabled": true,
+      "write_enabled": false,
+      "state": "token-generated"
+    },
+    "meta": {
+      "request_id": "wpilot-7a8b971f-a8e7-44b9-8332-67fbcfa37834",
+      "timestamp_utc": "2026-08-12 20:09:59",
+      "endpoint": "ping",
+      "auth_state": "not-required",
+      "bridge_state_snapshot": {
+        "state": "token-generated",
+        "bridge_enabled": true,
+        "dev_confirmed": true,
+        "emergency_disabled": false,
+        "write_enabled": false
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "case": "B",
+  "result": "WPILOT TOKEN CLIENT COPY UNAVAILABLE \u2014 TOKEN ROTATION/REISSUE GATE REQUIRED",
+  "report_token": "TOKEN ROTATION/REISSUE REQUIRED",
+  "local_file_created": false,
+  "reason": "0.3.x stores only wp_hash_password(token) in wpilot_options; plaintext not recoverable; production mutation (generate/rotate) forbidden this wave; local DEV token not tested against production (would mutate connection tracker; wrong environment)"
+}

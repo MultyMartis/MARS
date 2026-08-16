@@ -253,6 +253,9 @@ function shpigovsky_get_general_signs_copy( $post_id ) {
 	$heading   = shpigovsky_get_general_field( $post_id, 'service_general_signs_heading' );
 	$intro     = shpigovsky_get_general_field( $post_id, 'service_general_signs_intro' );
 	$editorial = shpigovsky_get_general_field( $post_id, 'service_general_signs_editorial' );
+	if ( function_exists( 'shpigovsky_is_demo_or_lorem_placeholder_copy' ) && shpigovsky_is_demo_or_lorem_placeholder_copy( $editorial ) ) {
+		$editorial = '';
+	}
 	$rows      = shpigovsky_get_general_field_raw( $post_id, 'service_general_signs_items' );
 	$items     = array();
 
@@ -323,7 +326,9 @@ function shpigovsky_get_general_approach_copy( $post_id ) {
 			}
 			$cards[] = array(
 				'title' => $title,
-				'text'  => $text,
+				'text'  => function_exists( 'shpigovsky_sanitize_approach_card_text' )
+					? shpigovsky_sanitize_approach_card_text( $title, $text )
+					: $text,
 			);
 		}
 	}
@@ -368,12 +373,18 @@ function shpigovsky_get_general_program_copy( $post_id ) {
 	$heading    = shpigovsky_get_general_field( $post_id, 'service_general_program_heading' );
 	$more_label = shpigovsky_get_general_field( $post_id, 'service_general_program_more_label' );
 	$lead       = shpigovsky_get_general_field( $post_id, 'service_general_program_lead' );
+	if ( function_exists( 'shpigovsky_is_demo_or_lorem_placeholder_copy' ) && shpigovsky_is_demo_or_lorem_placeholder_copy( $lead ) ) {
+		$lead = '';
+	}
 	$rows       = shpigovsky_get_general_field_raw( $post_id, 'service_general_program_intro_items' );
 	$intros     = array();
 
 	if ( is_array( $rows ) ) {
 		foreach ( $rows as $row ) {
 			$text = is_array( $row ) && isset( $row['text'] ) ? trim( (string) $row['text'] ) : '';
+			if ( '' !== $text && function_exists( 'shpigovsky_is_demo_or_lorem_placeholder_copy' ) && shpigovsky_is_demo_or_lorem_placeholder_copy( $text ) ) {
+				continue;
+			}
 			if ( '' !== $text ) {
 				$intros[] = $text;
 			}
@@ -492,6 +503,9 @@ function shpigovsky_get_general_faq_items( $post_id ) {
 			$question = isset( $row['question'] ) ? trim( (string) $row['question'] ) : '';
 			$answer   = isset( $row['answer'] ) ? trim( (string) $row['answer'] ) : '';
 			if ( '' === $question && '' === $answer ) {
+				continue;
+			}
+			if ( function_exists( 'shpigovsky_is_demo_or_lorem_placeholder_copy' ) && shpigovsky_is_demo_or_lorem_placeholder_copy( $answer ) ) {
 				continue;
 			}
 			$answers = preg_split( "/\n\s*\n/", $answer ) ?: array();

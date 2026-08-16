@@ -1,0 +1,62 @@
+{
+  "frontend": [
+    {
+      "path": "/",
+      "http_status": 200,
+      "ok": true,
+      "php_noise": false,
+      "title": "Шпиговский — локальная разработка",
+      "len": 202093
+    },
+    {
+      "path": "/o-centre/",
+      "http_status": 200,
+      "ok": true,
+      "php_noise": false,
+      "title": "О центре &#8211; Шпиговский — локальная разработка",
+      "len": 144831
+    },
+    {
+      "path": "/uslugi/",
+      "http_status": 200,
+      "ok": true,
+      "php_noise": false,
+      "title": "Услуги &#8211; Шпиговский — локальная разработка",
+      "len": 136763
+    },
+    {
+      "path": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "http_status": 200,
+      "ok": true,
+      "php_noise": false,
+      "title": "Лечение алкогольной зависимости &#8211; Шпиговский — локальная разработка",
+      "len": 152098
+    },
+    {
+      "path": "/kontakty/",
+      "http_status": 200,
+      "ok": true,
+      "php_noise": false,
+      "title": "Контакты &#8211; Шпиговский — локальная разработка",
+      "len": 87003
+    }
+  ],
+  "frontend_pass": true,
+  "admin": {
+    "dashboard": "PASS",
+    "plugins": "PASS",
+    "wpilot_page": "PASS",
+    "wpilot_visible": true,
+    "plugin_active_hint": null,
+    "versions_seen": [],
+    "page_versions_seen": [
+      "0.14.0",
+      "0.2.0",
+      "0.3.2",
+      "0.9.2"
+    ],
+    "release_label_seen": false,
+    "php_noise_dashboard": false,
+    "php_noise_wpilot": false
+  }
+}

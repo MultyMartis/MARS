@@ -40,7 +40,7 @@ final class ServicePermalinks implements ModuleInterface {
 	public static function register() {
 		add_action( 'init', array( __CLASS__, 'register_rewrite_rules' ), 20 );
 		add_filter( 'request', array( __CLASS__, 'filter_service_request' ), 10, 1 );
-		add_filter( 'post_type_link', array( __CLASS__, 'filter_service_permalink' ), 10, 2 );
+		add_filter( 'post_type_link', array( __CLASS__, 'filter_service_permalink' ), 10, 4 );
 		add_filter( 'redirect_canonical', array( __CLASS__, 'filter_canonical_redirect' ), 10, 2 );
 	}
 
@@ -76,16 +76,34 @@ final class ServicePermalinks implements ModuleInterface {
 	/**
 	 * Generate canonical service permalinks from ancestor chain.
 	 *
+	 * When $leavename is true (native sample permalink / slug editor), the last
+	 * path segment is left as %postname% so WordPress can render one native
+	 * «Изменить» control. Frontend get_permalink() keeps fully resolved URLs.
+	 *
 	 * @param string   $permalink Generated permalink.
-	 * @param \WP_Post $post Post object.
+	 * @param \WP_Post $post      Post object.
+	 * @param bool     $leavename Whether to keep the post name placeholder.
+	 * @param bool     $sample    Whether this is a sample permalink.
 	 * @return string
 	 */
-	public static function filter_service_permalink( $permalink, $post ) {
+	public static function filter_service_permalink( $permalink, $post, $leavename = false, $sample = false ) {
 		if ( ! $post instanceof \WP_Post || Service::POST_TYPE !== $post->post_type ) {
 			return $permalink;
 		}
 
 		$path = self::build_path_from_post( $post );
+
+		if ( $leavename ) {
+			if ( '' === $path || 'uslugi' === $path ) {
+				$path = '%postname%';
+			} else {
+				$parts                         = explode( '/', $path );
+				$parts[ count( $parts ) - 1 ] = '%postname%';
+				$path                          = implode( '/', $parts );
+			}
+
+			return home_url( user_trailingslashit( 'uslugi/' . $path ) );
+		}
 
 		if ( '' === $path || 'uslugi' === $path ) {
 			return home_url( '/uslugi/' );

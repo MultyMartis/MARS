@@ -1,0 +1,12 @@
+{
+  "pushed": false,
+  "commit": "cd7070a504303b6ce743f9a7426df00090968d93",
+  "remote_sha": "4cf62bb78ebbee224a1219a0fcb1ea9a1f94bd10",
+  "target": "origin/mars/canonical-post-recovery",
+  "staged_count": 839,
+  "rebuilt_from": "76610e811af155bbfb5da006a4e377172bbfcb0e",
+  "stdout": "",
+  "stderr": "remote: error: Trace: 0182e420bebfaae2feab2ac041ee76eecfdcf04dd92ffe79c689b63d8a20ab42        \nremote: error: See https://gh.io/lfs for more information.        \nremote: error: File workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_logo_extract/temp.zip is 141.34 MB; this exceeds GitHub's file size limit of 100.00 MB        \nremote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.        \nTo https://github.com/MultyMartis/MARS.git\n ! [remote rejected]   HEAD -> mars/canonical-post-recovery (pre-receive hook declined)\nerror: failed to push some refs to 'https://github.com/MultyMartis/MARS.git'\n",
+  "worktree": "X:\\AI MARS STORAGE\\git-sync-fp0002-p14-20260816-173714\\repo",
+  "utc": "2026-08-16T17:42:03.575643+00:00"
+}

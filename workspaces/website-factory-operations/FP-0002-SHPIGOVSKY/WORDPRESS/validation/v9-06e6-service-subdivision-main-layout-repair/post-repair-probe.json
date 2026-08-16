@@ -1,0 +1,290 @@
+{
+  "routes": {
+    "/": {
+      "http_status": 200,
+      "php_fatal": false,
+      "body_class": "home wp-singular page-template-default page page-id-4 wp-theme-shpigovsky",
+      "main_class": "site-main site-main--front",
+      "has_page_service_subdivision_v1_body": false,
+      "has_services_inner_hero_v2": false,
+      "has_page_uslugi_v2_main": false,
+      "has_page_service_subdivision_main": false,
+      "subdivision_hero_img": false,
+      "sections": null,
+      "first_review_author": null
+    },
+    "/uslugi/": {
+      "http_status": 200,
+      "php_fatal": false,
+      "body_class": "wp-singular page-template page-template-page-templates page-template-services-hub page-template-page-templatesservices-hub-php page page-id-5 page-parent wp-theme-shpigovsky page-uslugi-v2",
+      "main_class": "page-uslugi-v2__main site-main site-main--services-hub",
+      "has_page_service_subdivision_v1_body": false,
+      "has_services_inner_hero_v2": true,
+      "has_page_uslugi_v2_main": true,
+      "has_page_service_subdivision_main": false,
+      "subdivision_hero_img": false,
+      "sections": null,
+      "first_review_author": null
+    },
+    "/uslugi/zavisimosti/": {
+      "http_status": 200,
+      "php_fatal": false,
+      "body_class": "wp-singular service-template-default single single-service postid-73 wp-theme-shpigovsky page-service-subdivision-v1",
+      "main_class": "page-service-subdivision-v1__main site-main site-main--service site-main--service-subdivision",
+      "has_page_service_subdivision_v1_body": true,
+      "has_services_inner_hero_v2": true,
+      "has_page_uslugi_v2_main": false,
+      "has_page_service_subdivision_main": true,
+      "subdivision_hero_img": true,
+      "sections": [
+        {
+          "tag": "section",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "nav",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "nav",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "section",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "article",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "article",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "article",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "section",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "section",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "section",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "article",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "article",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "article",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "article",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "section",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "section",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "section",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "section",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "article",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "article",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "article",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "article",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "article",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "section",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "section",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "section",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "article",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "article",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "article",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "article",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "article",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "article",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "article",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "article",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "article",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "article",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "section",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "section",
+          "id": "",
+          "class": ""
+        }
+      ],
+      "first_review_author": null
+    },
+    "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/": {
+      "http_status": 200,
+      "php_fatal": false,
+      "body_class": "wp-singular service-template-default single single-service postid-74 wp-theme-shpigovsky page-service-leaf-v1",
+      "main_class": "page-service-leaf-v1__main site-main site-main--service site-main--service-leaf",
+      "has_page_service_subdivision_v1_body": false,
+      "has_services_inner_hero_v2": true,
+      "has_page_uslugi_v2_main": false,
+      "has_page_service_subdivision_main": false,
+      "subdivision_hero_img": false,
+      "sections": null,
+      "first_review_author": null
+    },
+    "/kontakty/": {
+      "http_status": 200,
+      "php_fatal": false,
+      "body_class": "wp-singular page-template page-template-page-templates page-template-contacts page-template-page-templatescontacts-php page page-id-20 wp-theme-shpigovsky page-kontakty",
+      "main_class": "page-kontakty__main site-main site-main--contacts",
+      "has_page_service_subdivision_v1_body": false,
+      "has_services_inner_hero_v2": false,
+      "has_page_uslugi_v2_main": false,
+      "has_page_service_subdivision_main": false,
+      "subdivision_hero_img": false,
+      "sections": null,
+      "first_review_author": null
+    },
+    "/otzyvy/": {
+      "http_status": 200,
+      "php_fatal": false,
+      "body_class": "wp-singular page-template page-template-page-templates page-template-reviews page-template-page-templatesreviews-php page page-id-18 wp-theme-shpigovsky page-otzyvy",
+      "main_class": "page-otzyvy__main",
+      "has_page_service_subdivision_v1_body": false,
+      "has_services_inner_hero_v2": false,
+      "has_page_uslugi_v2_main": false,
+      "has_page_service_subdivision_main": false,
+      "subdivision_hero_img": false,
+      "sections": null,
+      "first_review_author": null
+    },
+    "/privacy-policy/": {
+      "http_status": 200,
+      "php_fatal": false,
+      "body_class": "privacy-policy wp-singular page-template page-template-page-templates page-template-legal page-template-page-templateslegal-php page page-id-3 wp-theme-shpigovsky",
+      "main_class": "page-plain-content__main",
+      "has_page_service_subdivision_v1_body": false,
+      "has_services_inner_hero_v2": false,
+      "has_page_uslugi_v2_main": false,
+      "has_page_service_subdivision_main": false,
+      "subdivision_hero_img": false,
+      "sections": null,
+      "first_review_author": null
+    }
+  },
+  "css_rule_check": {
+    "http_status": 200,
+    "root_absolute_assets_remaining": 0
+  }
+}

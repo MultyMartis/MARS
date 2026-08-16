@@ -1,0 +1,31 @@
+{
+  "status": 200,
+  "keys": [
+    "ok",
+    "data",
+    "meta"
+  ],
+  "body": {
+    "ok": true,
+    "data": {
+      "plugin": "metacode-wpilot",
+      "status": "installed",
+      "bridge_enabled": true,
+      "write_enabled": false,
+      "state": "token-generated"
+    },
+    "meta": {
+      "request_id": "wpilot-880856ee-8b91-4337-9f04-b22d287ce92a",
+      "timestamp_utc": "2026-08-14 11:13:39",
+      "endpoint": "ping",
+      "auth_state": "not-required",
+      "bridge_state_snapshot": {
+        "state": "token-generated",
+        "bridge_enabled": true,
+        "dev_confirmed": true,
+        "emergency_disabled": false,
+        "write_enabled": false
+      }
+    }
+  }
+}

@@ -1,9 +1,9 @@
 <?php
 /**
- * Alcohol direct V9 vendor enqueue — Swiper for specialists/reviews sliders (V9-06E13).
+ * Alcohol / general service leaf vendor enqueue — Swiper + Fancybox (V9-06E13 / V9-07A01).
  *
- * Static V9 usluga-konechnaya-v1.html requires Swiper on service leaf; home-vendors.php
- * limits Swiper to is_front_page() only.
+ * Service leaf needs Swiper for specialists/reviews; Comfort gallery reuses
+ * home/comfort.php and therefore requires Fancybox. home-vendors.php is front-page only.
  *
  * @package Shpigovsky
  */
@@ -75,6 +75,11 @@ function shpigovsky_enqueue_alcohol_direct_v9_vendors() {
 				$GLOBALS['wp_scripts']->registered['shpigovsky-v9-shell']->deps = array_merge( $shell_deps, array( 'shpigovsky-swiper' ) );
 			}
 		}
+	}
+
+	// Comfort gallery on general service leaf reuses home/comfort.php (needs Fancybox).
+	if ( function_exists( 'shpigovsky_enqueue_fancybox_vendor' ) ) {
+		shpigovsky_enqueue_fancybox_vendor( true );
 	}
 }
 add_action( 'shpigovsky_enqueue_theme_assets', 'shpigovsky_enqueue_alcohol_direct_v9_vendors' );

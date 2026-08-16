@@ -483,24 +483,54 @@ function shpigovsky_services_hub_body_class( $classes ) {
 add_filter( 'body_class', 'shpigovsky_services_hub_body_class' );
 
 /**
+ * Whether copy is technical DEMO/Lorem placeholder (non-empty payload only).
+ *
+ * Empty string is absence, not a placeholder.
+ *
+ * @param string $text Candidate copy.
+ * @return bool
+ */
+function shpigovsky_is_demo_or_lorem_placeholder_copy( $text ) {
+	$text = trim( (string) $text );
+
+	if ( '' === $text ) {
+		return false;
+	}
+
+	$lower = function_exists( 'mb_strtolower' ) ? mb_strtolower( $text ) : strtolower( $text );
+
+	if ( false !== strpos( $lower, 'lorem ipsum' ) ) {
+		return true;
+	}
+
+	if (
+		0 === strpos( $text, 'DEMO' )
+		|| 0 === strpos( $lower, 'demo —' )
+		|| 0 === strpos( $lower, 'demo -' )
+		|| 0 === strpos( $lower, 'demo:' )
+	) {
+		return true;
+	}
+
+	if ( false !== strpos( $lower, 'временный технический текст' ) ) {
+		return true;
+	}
+
+	return false;
+}
+
+/**
  * DEMO mini-description fallback when ACF and V9 static are empty.
+ *
+ * PROD-P07-FU01: do not emit user-facing DEMO markers. Empty = omit card text.
  *
  * @param string $slug Service post slug.
  * @return string
  */
 function shpigovsky_get_service_demo_mini_description_fallback( $slug ) {
-	$demos = array(
-		'zavisimosti'                        => 'DEMO — направление лечения зависимостей. Карточка раздела для плоского режима отображения /uslugi/.',
-		'psihicheskoe-zdorovie'              => 'DEMO — направление психического здоровья. Карточка раздела для плоского режима отображения /uslugi/.',
-		'rasstroystva-pischevogo-povedeniya' => 'DEMO — направление расстройств пищевого поведения. Карточка раздела для плоского режима отображения /uslugi/.',
-		'genotipirovanie'                    => 'DEMO — направление генотипирования. Карточка раздела для плоского режима отображения /uslugi/.',
-	);
+	unset( $slug );
 
-	if ( isset( $demos[ $slug ] ) ) {
-		return $demos[ $slug ];
-	}
-
-	return 'DEMO — краткое описание услуги для карточки на /uslugi/. Контент ожидает согласования оператором.';
+	return '';
 }
 
 /**
@@ -518,7 +548,7 @@ function shpigovsky_resolve_service_mini_description_source( $post_id ) {
 
 	$admin = shpigovsky_get_service_field( $post_id, 'service_short_description' );
 
-	if ( '' !== $admin ) {
+	if ( '' !== $admin && ! shpigovsky_is_demo_or_lorem_placeholder_copy( $admin ) ) {
 		return 'ACF_FIELD';
 	}
 
@@ -530,8 +560,13 @@ function shpigovsky_resolve_service_mini_description_source( $post_id ) {
 
 	$v9 = shpigovsky_get_v9_services_hub_child_copy( $post->post_name );
 
-	if ( null !== $v9 && '' !== trim( (string) $v9['text'] ) ) {
-		return 'V9_FALLBACK';
+	if ( null !== $v9 ) {
+		$v9_text = trim( (string) $v9['text'] );
+		if ( '' !== $v9_text && ! shpigovsky_is_demo_or_lorem_placeholder_copy( $v9_text ) ) {
+			return 'V9_FALLBACK';
+		}
+
+		return 'EMPTY';
 	}
 
 	$demo = shpigovsky_get_service_demo_mini_description_fallback( $post->post_name );
@@ -556,7 +591,7 @@ function shpigovsky_resolve_services_hub_category_intro( $parent, $v9 = null ) {
 
 	$admin = shpigovsky_get_service_field( $parent->ID, 'service_short_description' );
 
-	if ( '' !== $admin ) {
+	if ( '' !== $admin && ! shpigovsky_is_demo_or_lorem_placeholder_copy( $admin ) ) {
 		return $admin;
 	}
 
@@ -628,7 +663,7 @@ function shpigovsky_get_service_mini_description( $post_id ) {
 
 	$admin = shpigovsky_get_service_field( $post_id, 'service_short_description' );
 
-	if ( '' !== $admin ) {
+	if ( '' !== $admin && ! shpigovsky_is_demo_or_lorem_placeholder_copy( $admin ) ) {
 		return $admin;
 	}
 
@@ -640,8 +675,13 @@ function shpigovsky_get_service_mini_description( $post_id ) {
 
 	$v9 = shpigovsky_get_v9_services_hub_child_copy( $post->post_name );
 
-	if ( null !== $v9 && '' !== trim( (string) $v9['text'] ) ) {
-		return trim( (string) $v9['text'] );
+	if ( null !== $v9 ) {
+		$v9_text = trim( (string) $v9['text'] );
+		if ( '' !== $v9_text && ! shpigovsky_is_demo_or_lorem_placeholder_copy( $v9_text ) ) {
+			return $v9_text;
+		}
+
+		return '';
 	}
 
 	return shpigovsky_get_service_demo_mini_description_fallback( $post->post_name );

@@ -1,0 +1,13 @@
+{
+  "date": "2026-08-13",
+  "wave": "PROD-P04-FU01",
+  "temporary_http_host": "http://shpigovsky.beget.tech/",
+  "canonical_domain": "shpigovsky.ru",
+  "dns_cutover": "DEFERRED",
+  "classification": "WEB_VHOST_ALIAS_TO_SHPIGOVSKY_RU_SITE__FTP_NOW_BOUND_TO_REAL_DOCROOT",
+  "ftp_ssh_account": "shpigovsky_mars",
+  "account_home": "/home/s/shpigovsky/shpigovsky.ru/public_html",
+  "prior_obsolete_jail": "/home/s/shpigovsky/shpigovsky.beget.tech/public_html",
+  "prior_obsolete_status": "REMOVED / OBSOLETE (operator deleted old binding; recreated against shpigovsky.ru)",
+  "result": "BOUND_CORRECTLY"
+}

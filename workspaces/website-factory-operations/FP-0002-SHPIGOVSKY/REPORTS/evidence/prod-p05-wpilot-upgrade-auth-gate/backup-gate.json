@@ -1,0 +1,17 @@
+{
+  "documented_layer_a": "P01 operator-confirmed Beget files+DB backup (post original migration)",
+  "layer_a_id_timestamp": "SAFE UNKNOWN",
+  "operator_reimport": "PROD-P04-FU02 accepted as new live baseline (2026-08-14)",
+  "covers_current_post_reimport_state": false,
+  "beget_panel_credentials": "MISSING — cannot independently list Beget backups",
+  "fresh_post_reimport_backup_documented": false,
+  "verdict": "OPERATOR ACTION REQUIRED — CREATE FRESH BEGET FILES + DB BACKUP",
+  "upgrade_allowed": false,
+  "note": "Independent second blocker; primary stop this wave is WP Admin auth FAIL",
+  "narrow_wpilot_snapshot": {
+    "path": "X:\\AI MARS STORAGE\\wpilot\\evidence\\fp-0002-shpigovsky\\prod-p05\\pre-upgrade-wpilot-0.3.0",
+    "file_count": 27,
+    "all_sha_match_production": true,
+    "created_inside_production": false
+  }
+}

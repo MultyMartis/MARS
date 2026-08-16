@@ -1,0 +1,66 @@
+{
+  "started_utc": "2026-08-14T09:04:42.130555+00:00",
+  "secrets_meta": {
+    "username": "mars",
+    "password_present": true,
+    "password_len": 22,
+    "password_non_ascii": false,
+    "password_has_space": false,
+    "login_url": "http://shpigovsky.beget.tech/wp-admin/"
+  },
+  "http": {
+    "home_status": 200,
+    "home_final_host": "shpigovsky.beget.tech",
+    "get_status": 200,
+    "get_url_host": "http://shpigovsky.beget.tech",
+    "get_len": 7171,
+    "input_names": [
+      "log",
+      "pwd",
+      "rememberme",
+      "wp-submit",
+      "redirect_to",
+      "testcookie",
+      "redirect_to"
+    ],
+    "hidden_fields_sanitized": {
+      "redirect_to": "http://shpigovsky.beget.tech/wp-admin/",
+      "testcookie": "1"
+    },
+    "pre_post_cookie_names": [
+      "beget",
+      "wordpress_test_cookie"
+    ],
+    "post_no_redirect_status": 200,
+    "post_location_class": null,
+    "post_location_scheme_host": null,
+    "set_cookie_header_present": true,
+    "logged_in_cookie_after_post": true,
+    "cookie_names_after_post": [
+      "beget",
+      "wordpress_73932154b34e3f36352ba5dcfa91b5df",
+      "wordpress_logged_in_73932154b34e3f36352ba5dcfa91b5df",
+      "wordpress_test_cookie"
+    ],
+    "has_login_error": false,
+    "follow": null
+  },
+  "https_probe": {
+    "attempted": true,
+    "error_type": "SSLError"
+  },
+  "password_vs_db": {
+    "attempted": true,
+    "user": "mars",
+    "id": 3,
+    "registered": "2026-08-14 08:00:13",
+    "hash_prefix": "$wp$2y$",
+    "hash_len": 63,
+    "password_matches_db_hash": false,
+    "password_check_detail": "MISMATCH",
+    "hash_value_printed": false,
+    "capabilities_contains_administrator": true
+  },
+  "secrets_printed": false,
+  "cookie_values_printed": false
+}

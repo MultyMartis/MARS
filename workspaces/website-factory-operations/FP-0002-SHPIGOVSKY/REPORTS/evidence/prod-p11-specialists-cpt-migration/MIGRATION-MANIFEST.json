@@ -1,0 +1,110 @@
+{
+  "captured_at": "2026-08-14T17:12:29.865567+00:00",
+  "mode": "migrate",
+  "ids": [
+    1031,
+    1032,
+    1033,
+    1097
+  ],
+  "steps": [
+    {
+      "cpt_probe": "CPT_OK specyalisty flush_flag=1"
+    },
+    {
+      "home_http": "200"
+    },
+    {
+      "flush": "FLUSH_ALREADY"
+    }
+  ],
+  "results": [
+    {
+      "id": 1031,
+      "skipped": false,
+      "before": {
+        "ID": 1031,
+        "post_type": "page",
+        "post_parent": 1030,
+        "post_name": "shipovsky",
+        "post_status": "publish",
+        "menu_order": 10
+      },
+      "after": {
+        "ID": 1031,
+        "post_type": "specialist",
+        "post_parent": 0,
+        "post_name": "shipovsky",
+        "post_status": "publish",
+        "menu_order": 10
+      },
+      "permalink": "http://shpigovsky.beget.tech/specyalisty/shipovsky/",
+      "expected_path": "/specyalisty/shipovsky/",
+      "path_ok": true,
+      "http": "200"
+    },
+    {
+      "id": 1032,
+      "skipped": false,
+      "before": {
+        "ID": 1032,
+        "post_type": "page",
+        "post_parent": 1030,
+        "post_name": "kazakov",
+        "post_status": "publish",
+        "menu_order": 20
+      },
+      "after": {
+        "ID": 1032,
+        "post_type": "specialist",
+        "post_parent": 0,
+        "post_name": "kazakov",
+        "post_status": "publish",
+        "menu_order": 20
+      },
+      "permalink": "http://shpigovsky.beget.tech/specyalisty/kazakov/",
+      "expected_path": "/specyalisty/kazakov/",
+      "path_ok": true,
+      "http": "200"
+    },
+    {
+      "id": 1033,
+      "skipped": true,
+      "before": {
+        "ID": 1033,
+        "post_type": "specialist",
+        "post_parent": 0,
+        "post_name": "kostyuk",
+        "post_status": "publish",
+        "menu_order": 30
+      },
+      "permalink": "http://shpigovsky.beget.tech/specyalisty/kostyuk/",
+      "expected_path": "/specyalisty/kostyuk/"
+    },
+    {
+      "id": 1097,
+      "skipped": false,
+      "before": {
+        "ID": 1097,
+        "post_type": "page",
+        "post_parent": 1030,
+        "post_name": "shapiguzova",
+        "post_status": "publish",
+        "menu_order": 40
+      },
+      "after": {
+        "ID": 1097,
+        "post_type": "specialist",
+        "post_parent": 0,
+        "post_name": "shapiguzova",
+        "post_status": "publish",
+        "menu_order": 40
+      },
+      "permalink": "http://shpigovsky.beget.tech/specyalisty/shapiguzova/",
+      "expected_path": "/specyalisty/shapiguzova/",
+      "path_ok": true,
+      "http": "200"
+    }
+  ],
+  "status": "PASS"
+}

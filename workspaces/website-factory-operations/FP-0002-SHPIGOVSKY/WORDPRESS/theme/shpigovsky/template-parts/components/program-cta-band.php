@@ -102,7 +102,7 @@ if ( $wrap_section ) :
 				<div>
 					<a class="program-cta-band__phone" href="<?php echo esc_url( $phone_href ); ?>"><?php echo wp_kses_post( $phone ); ?></a>
 					<?php if ( '' !== $phone_hint ) : ?>
-						<span><?php echo esc_html( $phone_hint ); ?></span>
+						<span class="program-cta-band__phone-note"><?php echo esc_html( $phone_hint ); ?></span>
 					<?php endif; ?>
 				</div>
 			<?php endif; ?>

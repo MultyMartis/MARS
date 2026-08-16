@@ -1,0 +1,339 @@
+{
+  "mode": "deploy",
+  "deployed_at": "2026-08-16T16:01:03.292233+00:00",
+  "files": [
+    {
+      "kind": "theme",
+      "rel": "assets/css/v9-style.css",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/assets/css/v9-style.css",
+      "local_sha256": "f60b02cc2880fb3f66f2dd207583b56a01b538d4ed267d5e4df44bb5c249fa80",
+      "prod_after_sha256": "f60b02cc2880fb3f66f2dd207583b56a01b538d4ed267d5e4df44bb5c249fa80",
+      "match": true
+    },
+    {
+      "kind": "theme",
+      "rel": "assets/css/fp02-search.css",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/assets/css/fp02-search.css",
+      "local_sha256": "06ea1950cba0adc0a3c26da7edf65f9554dc2e5948e64ad1c673fafa6ec0024f",
+      "prod_after_sha256": "06ea1950cba0adc0a3c26da7edf65f9554dc2e5948e64ad1c673fafa6ec0024f",
+      "match": true
+    },
+    {
+      "kind": "theme",
+      "rel": "assets/css/fp02-lifebuoy-parallax.css",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/assets/css/fp02-lifebuoy-parallax.css",
+      "local_sha256": "aac9265226344816a2cb4f0dc6e3196b943d4e8311f8a1fe2bf0b8e2fcbc08b4",
+      "prod_after_sha256": "aac9265226344816a2cb4f0dc6e3196b943d4e8311f8a1fe2bf0b8e2fcbc08b4",
+      "match": true
+    },
+    {
+      "kind": "theme",
+      "rel": "assets/js/fp02-lifebuoy-parallax.js",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/assets/js/fp02-lifebuoy-parallax.js",
+      "local_sha256": "f6c032e06eadbd6f3a3d33c0f02c3075bb9711ab2d38145a5b4b7aeb640408b6",
+      "prod_after_sha256": "f6c032e06eadbd6f3a3d33c0f02c3075bb9711ab2d38145a5b4b7aeb640408b6",
+      "match": true
+    },
+    {
+      "kind": "theme",
+      "rel": "assets/js/v9-shell.js",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/assets/js/v9-shell.js",
+      "local_sha256": "ac584a569cba9042127785fbb2639888ff1f0a74b2b652c0c940244eeff64a24",
+      "prod_after_sha256": "ac584a569cba9042127785fbb2639888ff1f0a74b2b652c0c940244eeff64a24",
+      "match": true
+    },
+    {
+      "kind": "theme",
+      "rel": "functions.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/functions.php",
+      "local_sha256": "65466663a6a1f585bd481795362d6f2190e85bc3882d649fbac51d815b7a01b0",
+      "prod_after_sha256": "65466663a6a1f585bd481795362d6f2190e85bc3882d649fbac51d815b7a01b0",
+      "match": true
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/site-chrome.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/site-chrome.php",
+      "local_sha256": "ad4c272600ce7633948e01f390b031382330ffc6d8a9e610cde71f907e70823d",
+      "prod_after_sha256": "ad4c272600ce7633948e01f390b031382330ffc6d8a9e610cde71f907e70823d",
+      "match": true
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/contacts-helpers.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/contacts-helpers.php",
+      "local_sha256": "f30a52889bb8758bf6ce697a49072b199b89284f59e20c00a1f57fb01ff9487e",
+      "prod_after_sha256": "f30a52889bb8758bf6ce697a49072b199b89284f59e20c00a1f57fb01ff9487e",
+      "match": true
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/blog-helpers.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/blog-helpers.php",
+      "local_sha256": "59cc73cd18ef3fadceb131a955ec7e9af884110132bc28ab5164899178f845f5",
+      "prod_after_sha256": "59cc73cd18ef3fadceb131a955ec7e9af884110132bc28ab5164899178f845f5",
+      "match": true
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/nav-walker.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/nav-walker.php",
+      "local_sha256": "72561ddff0e69e2e44ef99067a3aefbce1f433f67815941619233f7371d75b22",
+      "prod_after_sha256": "72561ddff0e69e2e44ef99067a3aefbce1f433f67815941619233f7371d75b22",
+      "match": true
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/seo-entity-meta.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/seo-entity-meta.php",
+      "local_sha256": "2174cd86a8740812724db34931a06b2d4a35c21eefcd4a0d5e3cfa77adba7670",
+      "prod_after_sha256": "2174cd86a8740812724db34931a06b2d4a35c21eefcd4a0d5e3cfa77adba7670",
+      "match": true
+    },
+    {
+      "kind": "theme",
+      "rel": "template-parts/home/hero.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/home/hero.php",
+      "local_sha256": "2623c7459d31174c5545f2ad8e7dca49a842a7c32f416a5606dd332a79345ce8",
+      "prod_after_sha256": "2623c7459d31174c5545f2ad8e7dca49a842a7c32f416a5606dd332a79345ce8",
+      "match": true
+    },
+    {
+      "kind": "theme",
+      "rel": "template-parts/service/children.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/service/children.php",
+      "local_sha256": "44c0b4afb535a779e582784852196953175318015faaae4f1e0afc402c287951",
+      "prod_after_sha256": "44c0b4afb535a779e582784852196953175318015faaae4f1e0afc402c287951",
+      "match": true
+    },
+    {
+      "kind": "theme",
+      "rel": "template-parts/navigation/footer-social.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/navigation/footer-social.php",
+      "local_sha256": "c3789ecd27b40f0936a7e851a235b4c768452694cbedf5aa8b307e1f99b0065d",
+      "prod_after_sha256": "c3789ecd27b40f0936a7e851a235b4c768452694cbedf5aa8b307e1f99b0065d",
+      "match": true
+    },
+    {
+      "kind": "theme",
+      "rel": "template-parts/navigation/messenger-links.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/navigation/messenger-links.php",
+      "local_sha256": "61951f44d5ad4a46bb49af9e717470361e833723258e21155dd9d54d044bdf99",
+      "prod_after_sha256": "61951f44d5ad4a46bb49af9e717470361e833723258e21155dd9d54d044bdf99",
+      "match": true
+    },
+    {
+      "kind": "theme",
+      "rel": "template-parts/navigation/primary-desktop.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/navigation/primary-desktop.php",
+      "local_sha256": "13228d9ed1bce91e3b7ad7b5599263c7eb42dae39c8f7af58bc7738848dac4ea",
+      "prod_after_sha256": "13228d9ed1bce91e3b7ad7b5599263c7eb42dae39c8f7af58bc7738848dac4ea",
+      "match": true
+    },
+    {
+      "kind": "theme",
+      "rel": "template-parts/navigation/offcanvas.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/navigation/offcanvas.php",
+      "local_sha256": "4a6c840da2b8fbc4caef4629eb052aa608c9b9176d0de7a25cc315df616d385c",
+      "prod_after_sha256": "4a6c840da2b8fbc4caef4629eb052aa608c9b9176d0de7a25cc315df616d385c",
+      "match": true
+    },
+    {
+      "kind": "theme",
+      "rel": "languages/shpigovsky.pot",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/languages/shpigovsky.pot",
+      "local_sha256": "9ca8689682dae966403d51421be937b86f5ecff9a185bf31fdf75eded320edbb",
+      "prod_after_sha256": "9ca8689682dae966403d51421be937b86f5ecff9a185bf31fdf75eded320edbb",
+      "match": true
+    },
+    {
+      "kind": "theme",
+      "rel": "languages/shpigovsky-ru_RU.po",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/languages/shpigovsky-ru_RU.po",
+      "local_sha256": "31fb542b4f370d343fc52c82d29f0a20ccbeb08dd877a3b93f7a2c249f0f43c8",
+      "prod_after_sha256": "31fb542b4f370d343fc52c82d29f0a20ccbeb08dd877a3b93f7a2c249f0f43c8",
+      "match": true
+    },
+    {
+      "kind": "theme",
+      "rel": "languages/shpigovsky-ru_RU.mo",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/languages/shpigovsky-ru_RU.mo",
+      "local_sha256": "c0f84e012aecaf700347f0b533b85a22b31b8c887be11f153f0c725686767377",
+      "prod_after_sha256": "c0f84e012aecaf700347f0b533b85a22b31b8c887be11f153f0c725686767377",
+      "match": true
+    },
+    {
+      "kind": "theme",
+      "rel": "languages/shpigovsky-en_US.po",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/languages/shpigovsky-en_US.po",
+      "local_sha256": "1467ea561f351ae2a3050ba8195cffa12804700f87a31b444c68494369447790",
+      "prod_after_sha256": "1467ea561f351ae2a3050ba8195cffa12804700f87a31b444c68494369447790",
+      "match": true
+    },
+    {
+      "kind": "theme",
+      "rel": "languages/shpigovsky-en_US.mo",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/languages/shpigovsky-en_US.mo",
+      "local_sha256": "9f74648c7c7853278be70d2d6151a4e6244a733f4d761ab184edd5c55a2a3c82",
+      "prod_after_sha256": "9f74648c7c7853278be70d2d6151a4e6244a733f4d761ab184edd5c55a2a3c82",
+      "match": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "shpigovsky-core.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/shpigovsky-core.php",
+      "local_sha256": "a11cdaf5f30dcaa5f95c7cc590a49c63388474e168c0988d8e495b9c57988a78",
+      "prod_after_sha256": "a11cdaf5f30dcaa5f95c7cc590a49c63388474e168c0988d8e495b9c57988a78",
+      "match": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/ModuleRegistry.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/ModuleRegistry.php",
+      "local_sha256": "82219a5e7cdf32da2e211f7893def2b4e1f376ad64f37e32e0d7975382d7f964",
+      "prod_after_sha256": "82219a5e7cdf32da2e211f7893def2b4e1f376ad64f37e32e0d7975382d7f964",
+      "match": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Admin/PermalinkSlugUX.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Admin/PermalinkSlugUX.php",
+      "local_sha256": "0810207d10cc25838342bb9cd78320ac60252e761d645f8be598e3e76a4d56cc",
+      "prod_after_sha256": "0810207d10cc25838342bb9cd78320ac60252e761d645f8be598e3e76a4d56cc",
+      "match": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Admin/ActivityLog.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Admin/ActivityLog.php",
+      "local_sha256": "44cc3447b26f4eb270525e034affb0bb7e92fc0f83ee94eb9265de63a24be3e6",
+      "prod_after_sha256": "44cc3447b26f4eb270525e034affb0bb7e92fc0f83ee94eb9265de63a24be3e6",
+      "match": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Admin/AdminMenuHygiene.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Admin/AdminMenuHygiene.php",
+      "local_sha256": "de78e2deffd75673edd3deec21ec098f79072512beeb8aeaf69820fd42b65af6",
+      "prod_after_sha256": "de78e2deffd75673edd3deec21ec098f79072512beeb8aeaf69820fd42b65af6",
+      "match": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Admin/SystemDashboard.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Admin/SystemDashboard.php",
+      "local_sha256": "890f047c3f27a08543719f9ff3c21b8de9fe9e54902f1a94740ba36889aae686",
+      "prod_after_sha256": "890f047c3f27a08543719f9ff3c21b8de9fe9e54902f1a94740ba36889aae686",
+      "match": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Admin/DocxImporter.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Admin/DocxImporter.php",
+      "local_sha256": "568e6d1a5cb266c08f56077d3897820e28c4359362420f4831f9cbe999372f7d",
+      "prod_after_sha256": "568e6d1a5cb266c08f56077d3897820e28c4359362420f4831f9cbe999372f7d",
+      "match": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Admin/OptionsPage.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Admin/OptionsPage.php",
+      "local_sha256": "24e5f517b5829ffc6905098edf9c07f95385aaa20a5b82660e02e04970ca1fa4",
+      "prod_after_sha256": "24e5f517b5829ffc6905098edf9c07f95385aaa20a5b82660e02e04970ca1fa4",
+      "match": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Fields/AcfIntegration.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Fields/AcfIntegration.php",
+      "local_sha256": "00adc4fdb3f629b2a493eb16dd9a3ed1bcefb7a8e69aa1756cb361356f0deaa0",
+      "prod_after_sha256": "00adc4fdb3f629b2a493eb16dd9a3ed1bcefb7a8e69aa1756cb361356f0deaa0",
+      "match": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Fields/FieldGroups.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Fields/FieldGroups.php",
+      "local_sha256": "b916874a60bb5c88ffc17d2e25129f3a2cd4a40e37105e91c139ae1b337c6f1e",
+      "prod_after_sha256": "b916874a60bb5c88ffc17d2e25129f3a2cd4a40e37105e91c139ae1b337c6f1e",
+      "match": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Fields/SeoEntityMeta.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Fields/SeoEntityMeta.php",
+      "local_sha256": "bda7292c30e4068a3eef8300806c96fd3fa6ea3362a17e76b8857b9798532088",
+      "prod_after_sha256": "bda7292c30e4068a3eef8300806c96fd3fa6ea3362a17e76b8857b9798532088",
+      "match": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Fields/SocialPlatformsOptions.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Fields/SocialPlatformsOptions.php",
+      "local_sha256": "0c14c88d4927ae05c645844a85181d2a09d7cca4c060c8e63e6b60d4f3bf2bfb",
+      "prod_after_sha256": "0c14c88d4927ae05c645844a85181d2a09d7cca4c060c8e63e6b60d4f3bf2bfb",
+      "match": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "languages/shpigovsky-core.pot",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/languages/shpigovsky-core.pot",
+      "local_sha256": "7a19f19ce3cf60ad69aca3c0cd30e0e9cba9f67bf2e7246288083ae8fa05df2c",
+      "prod_after_sha256": "7a19f19ce3cf60ad69aca3c0cd30e0e9cba9f67bf2e7246288083ae8fa05df2c",
+      "match": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "languages/shpigovsky-core-ru_RU.po",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/languages/shpigovsky-core-ru_RU.po",
+      "local_sha256": "e1c2d3164282f278668e49bf5965457c99a960e5fbda141545c675a0a4284045",
+      "prod_after_sha256": "e1c2d3164282f278668e49bf5965457c99a960e5fbda141545c675a0a4284045",
+      "match": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "languages/shpigovsky-core-ru_RU.mo",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/languages/shpigovsky-core-ru_RU.mo",
+      "local_sha256": "2288336439cc99625e01d426620e4c276339e467e150799eebc922342ac97a9e",
+      "prod_after_sha256": "2288336439cc99625e01d426620e4c276339e467e150799eebc922342ac97a9e",
+      "match": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "languages/shpigovsky-core-en_US.po",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/languages/shpigovsky-core-en_US.po",
+      "local_sha256": "26e50d754fc87523b2a2ad170021cf2829b86cf1bc518ba57ff26cb57c997c44",
+      "prod_after_sha256": "26e50d754fc87523b2a2ad170021cf2829b86cf1bc518ba57ff26cb57c997c44",
+      "match": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "languages/shpigovsky-core-en_US.mo",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/languages/shpigovsky-core-en_US.mo",
+      "local_sha256": "43d48ded62109647bf5ff4ab895cdf51ec84483edd605bfa7d35350d6e29291b",
+      "prod_after_sha256": "43d48ded62109647bf5ff4ab895cdf51ec84483edd605bfa7d35350d6e29291b",
+      "match": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "assets/docx/fp02-article-template.docx",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/assets/docx/fp02-article-template.docx",
+      "local_sha256": "533da93ea46eee0e7c2473303627997f14f9173ae40eb2eeebc62e0868df22d0",
+      "prod_after_sha256": "533da93ea46eee0e7c2473303627997f14f9173ae40eb2eeebc62e0868df22d0",
+      "match": true
+    },
+    {
+      "kind": "mu",
+      "rel": "mars-local-runtime.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/mu-plugins/mars-local-runtime.php",
+      "local_sha256": "738fd07e59b0113f7bf8c1d0aadc280d238c9767326cee3a70167655bcc4c0d5",
+      "prod_after_sha256": "738fd07e59b0113f7bf8c1d0aadc280d238c9767326cee3a70167655bcc4c0d5",
+      "match": true
+    }
+  ],
+  "parity": "41/41",
+  "hotfixes_after_initial_deploy": [
+    "PermalinkSlugUX.php collision uniqueness for drafts",
+    "fp02-article-template.docx list numPr"
+  ]
+}

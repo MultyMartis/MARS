@@ -1,0 +1,19 @@
+{
+  "production_version_option_and_admin": "0.3.0",
+  "production_schema": "0.2.0",
+  "production_release_label": "ABSENT in options (not 0.3.2-RC1)",
+  "current_baseline": "0.3.2 / 0.3.2-RC1",
+  "exact_package": "X:\\AI MARS STORAGE\\wpilot\\deploy-packages\\metacode-wpilot-v0.3.2-rc1.zip",
+  "package_sha256_p03_reverified": "d55c19d6ea1a55cd145e9b67c42ca201c30e4356f08d8cf3932ef6a5ebc80934",
+  "production_plugin_file_inventory": "NOT READABLE",
+  "upgrade_delta_known": "PACKAGE_YES_PRODUCTION_FILES_NO",
+  "upgrade_performed": false,
+  "token_reissued": false,
+  "write_enabled": false,
+  "recommended_upgrade_method": "Native WP Admin Plugins → Upload plugin → Replace current with uploaded (Polygon P07 precedent; no deactivate/reactivate)",
+  "new_files_in_032_rc1_vs_031": [
+    "includes/class-wpilot-write-context.php",
+    "includes/class-wpilot-content-persistence-service.php"
+  ],
+  "p05_blocked_until": "FILESYSTEM ACCESS REBOUND (exact-file verify after Admin ZIP replace)"
+}

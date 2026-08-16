@@ -43,22 +43,29 @@ $phone = '' !== $phone ? $phone : '8 (925) 183-64-64';
 
 		<div class="service-leaf-stages-v1__cta">
 			<?php
+			$guest_cta = function_exists( 'shpigovsky_get_about_guest_cta_band' )
+				? shpigovsky_get_about_guest_cta_band( 'service-leaf-stages-cta-v1' )
+				: array(
+					'title'        => 'Запишитесь на гостевой визит',
+					'subtitle'     => 'Вы сможете все посмотреть и задать вопросы лично',
+					'phone'        => $phone,
+					'phone_hint'   => 'Или позвоните нам',
+					'button_label' => 'Записаться',
+					'source'       => 'service-leaf-stages-cta-v1',
+				);
 			set_query_var(
 				'shpigovsky_program_cta_band',
-				array(
-					'title'          => 'Запишитесь на гостевой визит',
-					'subtitle'       => 'Вы сможете все посмотреть и задать вопросы лично',
-					'phone'          => $phone,
-					'phone_hint'     => 'Или позвоните нам',
-					'button_label'   => 'Записаться',
-					'source'         => 'service-leaf-stages-cta-v1',
-					'section_id'     => '',
-					'heading_id'     => '',
-					'heading_text'   => '',
-					'wrap_section'   => false,
-					'wrap_container' => false,
-					'button_first'   => true,
-					'margin_flush'   => true,
+				array_merge(
+					$guest_cta,
+					array(
+						'section_id'     => '',
+						'heading_id'     => '',
+						'heading_text'   => '',
+						'wrap_section'   => false,
+						'wrap_container' => false,
+						'button_first'   => true,
+						'margin_flush'   => true,
+					)
 				)
 			);
 			get_template_part( 'template-parts/components/program-cta-band' );

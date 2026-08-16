@@ -1,0 +1,39 @@
+{
+  "started_at": "2026-08-16T17:30:47.408499+00:00",
+  "backup_root": "X:\\AI MARS STORAGE\\backups\\fp-0002\\prod-p14-full-20260816-173046",
+  "stamp": "20260816-173046",
+  "steps": [
+    {
+      "mkdir": 0,
+      "out": "OK",
+      "err": ""
+    },
+    {
+      "mysqldump": {
+        "code": 0,
+        "out": "EXIT:0\n-rw------- 1 shpigovsky_mars newcustomers 1198790 Aug 16 20:30 /tmp/fp02_p14_backup_20260816-173046/db-shpigovsky_main.sql.gz\n",
+        "err": "mysqldump: Error: 'Access denied; you need (at least one of) the PROCESS privilege(s) for this operation' when trying to dump tablespaces\n"
+      }
+    },
+    {
+      "tar": {
+        "code": 0,
+        "out": "EXIT:0\n-rw------- 1 shpigovsky_mars newcustomers 637254469 Aug 16 20:31 /tmp/fp02_p14_backup_20260816-173046/files-public_html.tar.gz\n",
+        "err": ""
+      }
+    }
+  ],
+  "db": {
+    "path": "X:\\AI MARS STORAGE\\backups\\fp-0002\\prod-p14-full-20260816-173046\\db-shpigovsky_main.sql.gz",
+    "size": 1198790,
+    "sha256": "4a30c86afcbf0dd98a6e818e61020ad9fb6c142ee7babf10067fa3991a8bf51f"
+  },
+  "files": {
+    "path": "X:\\AI MARS STORAGE\\backups\\fp-0002\\prod-p14-full-20260816-173046\\files-public_html.tar.gz",
+    "size": 637254469,
+    "sha256": "7f4d7ed8b56fca2447ae8371ef3055093b5d6ad074ada1b4bfcb6532a0d633e6"
+  },
+  "finished_at": "2026-08-16T17:32:38.590843+00:00",
+  "status": "PASS",
+  "type": "full_files_plus_db_via_ssh"
+}

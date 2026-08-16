@@ -1,0 +1,18 @@
+{
+  "before": {
+    "dev_confirmed": true,
+    "bridge_enabled": true,
+    "write_enabled": false,
+    "emergency_disabled": false,
+    "token_hash_present": true
+  },
+  "after": {
+    "dev_confirmed": true,
+    "bridge_enabled": true,
+    "write_enabled": false,
+    "emergency_disabled": false,
+    "token_hash_present": true
+  },
+  "mutations": [],
+  "write_enabled_never_enabled": true
+}

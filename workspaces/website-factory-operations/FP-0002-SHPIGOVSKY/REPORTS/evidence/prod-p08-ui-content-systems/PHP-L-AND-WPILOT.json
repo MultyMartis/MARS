@@ -1,0 +1,38 @@
+{
+  "php_l": {
+    "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/blog-helpers.php": "No syntax errors detected in /home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/blog-helpers.php",
+    "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/specialist-helpers.php": "No syntax errors detected in /home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/specialist-helpers.php",
+    "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/specialist/profile.php": "No syntax errors detected in /home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/specialist/profile.php",
+    "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/generic/content-page.php": "No syntax errors detected in /home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/generic/content-page.php",
+    "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/functions.php": "No syntax errors detected in /home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/functions.php",
+    "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Fields/FieldGroups.php": "Errors parsing /home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Fields/FieldGroups.php"
+  },
+  "wpilot": {
+    "options_sample": [
+      "wpilot_options\ta:20:{s:14:\"bridge_enabled\";b:1;s:13:\"write_enabled\";b:0;s:18:\"emergency_disabled\";b:0;s:10:\"token_hash\";s:63:\"$wp$2y$10$xRzT5lBLB3DVs3aTM8sAsOGRNuprMWZplkUwWkAzfhwtAPh3vciLS\";s:16:\"token_created_at\";",
+      "wpilot_schema_valid\t1"
+    ],
+    "grep": [
+      "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/metacode-wpilot/includes/class-wpilot-rest-controller.php:189:\t\t\t\t'write_enabled'  => (bool) $options['write_enabled'],",
+      "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/metacode-wpilot/includes/class-wpilot-auth.php:64:\t\tif ( empty( $options['write_enabled'] ) ) {",
+      "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/metacode-wpilot/includes/class-wpilot-auth.php:139:\t\tif ( empty( $options['write_enabled'] ) ) {",
+      "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/metacode-wpilot/includes/class-wpilot-settings.php:23:\t\t\t'write_enabled'        => false,",
+      "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/metacode-wpilot/includes/class-wpilot-settings.php:54:\t\t$options['write_enabled']      = false;",
+      "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/metacode-wpilot/includes/class-wpilot-settings.php:73:\t\t$options['write_enabled']  = false;",
+      "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/metacode-wpilot/includes/class-wpilot-settings.php:183:\t\t$write_enabled      = ! empty( $options['write_enabled'] )",
+      "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/metacode-wpilot/includes/class-wpilot-settings.php:188:\t\tif ( ! $allow_write_enable && empty( $current_options['write_enabled'] ) && $write_enabled ) {",
+      "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/metacode-wpilot/includes/class-wpilot-settings.php:189:\t\t\t$write_enabled = false;",
+      "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/metacode-wpilot/includes/class-wpilot-settings.php:194:\t\t\t'write_enabled'        => $write_enabled,",
+      "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/metacode-wpilot/includes/class-wpilot-environment.php:58:\t\treturn empty( $options['write_enabled'] );",
+      "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/metacode-wpilot/includes/class-wpilot-environment.php:74:\t\t\t&& array_key_exists( 'write_enabled', $options );",
+      "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/metacode-wpilot/includes/class-wpilot-environment.php:166:\t\t\t'write_enabled'      => ! self::write_disabled( $options ),",
+      "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/metacode-wpilot/includes/class-wpilot-site-reader.php:33:\t\t\t'write_enabled'   => ! empty( WPilot_Settings::get_options()['write_enabled'] ),",
+      "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/metacode-wpilot/admin/class-wpilot-admin-ui-model.php:111:\t\t\t\t'write_readiness'=> self::write_enabled_label( $options['write_enabled'] ),",
+      "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/metacode-wpilot/admin/class-wpilot-admin-ui-model.php:369:\t * @param bool $write_enabled Whether write readiness is enabled.",
+      "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/metacode-wpilot/admin/class-wpilot-admin-ui-model.php:375:\tpublic static function write_enabled_label( $write_enabled ) {",
+      "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/metacode-wpilot/admin/class-wpilot-admin-ui-model.php:377:\t\tif ( $write_enabled ) {",
+      "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/metacode-wpilot/admin/class-wpilot-admin-page.php:605:\t\t\t__( 'Write enabled', 'metacode-wpilot' )        => WPilot_Admin_UI_Model::write_enabled_label( $options['write_enabled'] ),",
+      "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/metacode-wpilot/admin/class-wpilot-admin-page.php:655:\t\t\t\t\t<input type=\"checkbox\" name=\"write_enabled\" value=\"1\" <?php checked( $options['write_enabled'] ); ?>>"
+    ]
+  }
+}

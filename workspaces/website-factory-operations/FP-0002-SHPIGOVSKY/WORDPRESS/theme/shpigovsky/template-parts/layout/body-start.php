@@ -18,14 +18,16 @@ $fp02_lifebuoy_uri = SHPIGOVSKY_THEME_URI . '/assets/img/decor/lifebuoy.webp';
 	data-fp02-lifebuoy-parallax
 	aria-hidden="true"
 >
-	<img
-		class="fp02-lifebuoy-parallax__img"
-		src="<?php echo esc_url( $fp02_lifebuoy_uri ); ?>"
-		alt=""
-		width="1075"
-		height="1093"
-		decoding="async"
-		draggable="false"
-	>
+	<div class="fp02-lifebuoy-parallax__mover" data-fp02-lifebuoy-mover>
+		<img
+			class="fp02-lifebuoy-parallax__img"
+			src="<?php echo esc_url( $fp02_lifebuoy_uri ); ?>"
+			alt=""
+			width="1075"
+			height="1093"
+			decoding="async"
+			draggable="false"
+		>
+	</div>
 </div>
 <div class="site-page-shell" data-page-shell>

@@ -1,0 +1,106 @@
+{
+  "captured_at": "2026-08-14T16:13:48.447282+00:00",
+  "layer_b": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p09-fu01-layer-b-pre",
+  "files": [
+    {
+      "rel": "assets/css/fp02-search.css",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/assets/css/fp02-search.css",
+      "exists": true,
+      "rollback_path": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p09-fu01-layer-b-pre\\theme__assets__css__fp02-search.css.prod-before",
+      "prod_sha256": "742365428245889c4bfdb96cf85995ba360675f58442ef241ab17886e95ff89d",
+      "local_sha256": "4dee70a8b5bc00f5d69b19a5347bb1fc755295dd2807d77d72bff262f975fab3",
+      "match": false,
+      "prod_size": 11903,
+      "local_size": 11891,
+      "readable": true
+    },
+    {
+      "rel": "assets/css/v9-style.css",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/assets/css/v9-style.css",
+      "exists": true,
+      "rollback_path": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p09-fu01-layer-b-pre\\theme__assets__css__v9-style.css.prod-before",
+      "prod_sha256": "4cc114fd26dd1f0f8741ff04f90e1d1a6ba03422c313394f8a5d902d2a799f97",
+      "local_sha256": "e7e51ec0e64a1e4aa4238d20bc49bbced0d82cfcc1dc7eac930d60387375a234",
+      "match": false,
+      "prod_size": 589800,
+      "local_size": 588832,
+      "readable": true
+    },
+    {
+      "rel": "assets/js/v9-shell.js",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/assets/js/v9-shell.js",
+      "exists": true,
+      "rollback_path": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p09-fu01-layer-b-pre\\theme__assets__js__v9-shell.js.prod-before",
+      "prod_sha256": "bf6b2cb1bf2e1d23e0380986fe0ae0f8358c8439ed548a53287155d60a2b9d42",
+      "local_sha256": "bf6b2cb1bf2e1d23e0380986fe0ae0f8358c8439ed548a53287155d60a2b9d42",
+      "match": true,
+      "prod_size": 77293,
+      "local_size": 77293,
+      "readable": true
+    },
+    {
+      "rel": "searchform.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/searchform.php",
+      "exists": true,
+      "rollback_path": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p09-fu01-layer-b-pre\\theme__searchform.php.prod-before",
+      "prod_sha256": "77760e321b0db9c4850b4c2aa6d3aa4f1e4acb4e40eb8268ef62771521ea6dcb",
+      "local_sha256": "77760e321b0db9c4850b4c2aa6d3aa4f1e4acb4e40eb8268ef62771521ea6dcb",
+      "match": true,
+      "prod_size": 2872,
+      "local_size": 2872,
+      "readable": true
+    },
+    {
+      "rel": "template-parts/navigation/search-panel.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/navigation/search-panel.php",
+      "exists": true,
+      "rollback_path": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p09-fu01-layer-b-pre\\theme__template-parts__navigation__search-panel.php.prod-before",
+      "prod_sha256": "8023391c34a0d5a4124c74ab3cda8a8b02cf388bcede8642ed15585d2700012d",
+      "local_sha256": "8023391c34a0d5a4124c74ab3cda8a8b02cf388bcede8642ed15585d2700012d",
+      "match": true,
+      "prod_size": 1121,
+      "local_size": 1121,
+      "readable": true
+    },
+    {
+      "rel": "template-parts/navigation/offcanvas.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/navigation/offcanvas.php",
+      "exists": true,
+      "rollback_path": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p09-fu01-layer-b-pre\\theme__template-parts__navigation__offcanvas.php.prod-before",
+      "prod_sha256": "5f9f003c778c2e399e2c577608e3f9c63ff45f83a75a3e0a36748e1429d59247",
+      "local_sha256": "5f9f003c778c2e399e2c577608e3f9c63ff45f83a75a3e0a36748e1429d59247",
+      "match": true,
+      "prod_size": 3794,
+      "local_size": 3794,
+      "readable": true
+    },
+    {
+      "rel": "inc/assets.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/assets.php",
+      "exists": true,
+      "rollback_path": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p09-fu01-layer-b-pre\\theme__inc__assets.php.prod-before",
+      "prod_sha256": "068659057854e6bbb1e6c8b9ced8cec40d428b8b181c097fa7b242584b3a788c",
+      "local_sha256": "068659057854e6bbb1e6c8b9ced8cec40d428b8b181c097fa7b242584b3a788c",
+      "match": true,
+      "prod_size": 7183,
+      "local_size": 7183,
+      "readable": true
+    },
+    {
+      "rel": "inc/search-helpers.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/search-helpers.php",
+      "exists": true,
+      "rollback_path": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p09-fu01-layer-b-pre\\theme__inc__search-helpers.php.prod-before",
+      "prod_sha256": "b5e8ce1bbca35a466e6a500d12543eef9aba4e714250a6fd040ff7e08525b069",
+      "local_sha256": "b5e8ce1bbca35a466e6a500d12543eef9aba4e714250a6fd040ff7e08525b069",
+      "match": true,
+      "prod_size": 21056,
+      "local_size": 21056,
+      "readable": true
+    }
+  ],
+  "drift_rels": [
+    "assets/css/fp02-search.css",
+    "assets/css/v9-style.css"
+  ]
+}

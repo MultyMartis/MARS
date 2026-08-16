@@ -1,0 +1,331 @@
+{
+  "captured_at": "2026-08-16T16:27:41.102143+00:00",
+  "docroot": "/home/s/shpigovsky/shpigovsky.ru/public_html",
+  "layer_b": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p13-fu01-layer-b-pre",
+  "match_count": 12,
+  "drift_count": 0,
+  "missing_prod": [],
+  "missing_local": [],
+  "drifted": [],
+  "files": [
+    {
+      "kind": "plugin",
+      "rel": "src/Admin/PermalinkSlugUX.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Admin/PermalinkSlugUX.php",
+      "status": "MATCH",
+      "local_sha256": "0810207d10cc25838342bb9cd78320ac60252e761d645f8be598e3e76a4d56cc",
+      "prod_sha256": "0810207d10cc25838342bb9cd78320ac60252e761d645f8be598e3e76a4d56cc",
+      "local_exists": true,
+      "prod_exists": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/ModuleRegistry.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/ModuleRegistry.php",
+      "status": "MATCH",
+      "local_sha256": "82219a5e7cdf32da2e211f7893def2b4e1f376ad64f37e32e0d7975382d7f964",
+      "prod_sha256": "82219a5e7cdf32da2e211f7893def2b4e1f376ad64f37e32e0d7975382d7f964",
+      "local_exists": true,
+      "prod_exists": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/ContentTypes/Service.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/ContentTypes/Service.php",
+      "status": "MATCH",
+      "local_sha256": "966c37aa1489451f6a2adb581a4442440abe99fc63749d62545ae8ccdcb548cf",
+      "prod_sha256": "966c37aa1489451f6a2adb581a4442440abe99fc63749d62545ae8ccdcb548cf",
+      "local_exists": true,
+      "prod_exists": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/ContentTypes/Specialist.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/ContentTypes/Specialist.php",
+      "status": "MATCH",
+      "local_sha256": "b6cf3d4f8c9d8d4ad869befcaf35b0b847d0d09e07a32c778312aa841eb9746d",
+      "prod_sha256": "b6cf3d4f8c9d8d4ad869befcaf35b0b847d0d09e07a32c778312aa841eb9746d",
+      "local_exists": true,
+      "prod_exists": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Admin/EditorRestrictions.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Admin/EditorRestrictions.php",
+      "status": "MATCH",
+      "local_sha256": "9e314e133e5a2e71e42165a5eaf08c75da3af1cc6a0ddf9757aea095dcfed627",
+      "prod_sha256": "9e314e133e5a2e71e42165a5eaf08c75da3af1cc6a0ddf9757aea095dcfed627",
+      "local_exists": true,
+      "prod_exists": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Permalinks/ServicePermalinks.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Permalinks/ServicePermalinks.php",
+      "status": "MATCH",
+      "local_sha256": "6266afba97af88d5ceac4ed0bb871fa46576020fc0f523744388f3c61a7d6c63",
+      "prod_sha256": "6266afba97af88d5ceac4ed0bb871fa46576020fc0f523744388f3c61a7d6c63",
+      "local_exists": true,
+      "prod_exists": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Admin/ServiceDuplicate.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Admin/ServiceDuplicate.php",
+      "status": "MATCH",
+      "local_sha256": "ab820c30ec07d51c1375d72002ab0d348d8c3c3e86ddd4b74cee6be305d9f18f",
+      "prod_sha256": "ab820c30ec07d51c1375d72002ab0d348d8c3c3e86ddd4b74cee6be305d9f18f",
+      "local_exists": true,
+      "prod_exists": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Plugin.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Plugin.php",
+      "status": "MATCH",
+      "local_sha256": "dc7939a27259ddf92d6101dde015a65fe89518cfc986ece05be9bcd345428bce",
+      "prod_sha256": "dc7939a27259ddf92d6101dde015a65fe89518cfc986ece05be9bcd345428bce",
+      "local_exists": true,
+      "prod_exists": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "shpigovsky-core.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/shpigovsky-core.php",
+      "status": "MATCH",
+      "local_sha256": "a11cdaf5f30dcaa5f95c7cc590a49c63388474e168c0988d8e495b9c57988a78",
+      "prod_sha256": "a11cdaf5f30dcaa5f95c7cc590a49c63388474e168c0988d8e495b9c57988a78",
+      "local_exists": true,
+      "prod_exists": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "languages/shpigovsky-core-ru_RU.po",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/languages/shpigovsky-core-ru_RU.po",
+      "status": "MATCH",
+      "local_sha256": "e1c2d3164282f278668e49bf5965457c99a960e5fbda141545c675a0a4284045",
+      "prod_sha256": "e1c2d3164282f278668e49bf5965457c99a960e5fbda141545c675a0a4284045",
+      "local_exists": true,
+      "prod_exists": true
+    },
+    {
+      "kind": "theme",
+      "rel": "assets/css/v9-style.css",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/assets/css/v9-style.css",
+      "status": "MATCH",
+      "local_sha256": "f60b02cc2880fb3f66f2dd207583b56a01b538d4ed267d5e4df44bb5c249fa80",
+      "prod_sha256": "f60b02cc2880fb3f66f2dd207583b56a01b538d4ed267d5e4df44bb5c249fa80",
+      "local_exists": true,
+      "prod_exists": true
+    },
+    {
+      "kind": "theme",
+      "rel": "assets/css/fp02-specialist-profile.css",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/assets/css/fp02-specialist-profile.css",
+      "status": "MATCH",
+      "local_sha256": "657b8d3eb05282ff735c49f16b9737b73b4b2a341f39cb2074a549b5c55548dd",
+      "prod_sha256": "657b8d3eb05282ff735c49f16b9737b73b4b2a341f39cb2074a549b5c55548dd",
+      "local_exists": true,
+      "prod_exists": true
+    }
+  ],
+  "listings": {
+    "plugin_admin": [
+      {
+        "name": "EditorRestrictions.php",
+        "size": 9592,
+        "mtime": 1786727736
+      },
+      {
+        "name": "AdminMenuHygiene.php",
+        "size": 3384,
+        "mtime": 1786896101
+      },
+      {
+        "name": "SystemDashboard.php",
+        "size": 4295,
+        "mtime": 1786896103
+      },
+      {
+        "name": "DocxImporter.php",
+        "size": 24762,
+        "mtime": 1786896104
+      },
+      {
+        "name": "ActivityLog.php",
+        "size": 15006,
+        "mtime": 1786896100
+      },
+      {
+        "name": "OptionsPage.php",
+        "size": 12896,
+        "mtime": 1786896105
+      },
+      {
+        "name": "ServiceLayoutGovernance.php",
+        "size": 30140,
+        "mtime": 1786694331
+      },
+      {
+        "name": "ServiceDuplicate.php",
+        "size": 13043,
+        "mtime": 1786694331
+      },
+      {
+        "name": "PermalinkSlugUX.php",
+        "size": 10468,
+        "mtime": 1786896392
+      }
+    ],
+    "plugin_content_types": [
+      {
+        "name": "Specialist.php",
+        "size": 6936,
+        "mtime": 1786727731
+      },
+      {
+        "name": "Service.php",
+        "size": 4172,
+        "mtime": 1786694331
+      }
+    ],
+    "plugin_permalinks": [
+      {
+        "name": "ServicePermalinks.php",
+        "size": 6083,
+        "mtime": 1786694331
+      }
+    ],
+    "theme_css": [
+      {
+        "name": "fp02-specialist-profile.css",
+        "size": 2626,
+        "mtime": 1786720639
+      },
+      {
+        "name": "foundation.css",
+        "size": 755,
+        "mtime": 1786694333
+      },
+      {
+        "name": "fp02-floating-header.css",
+        "size": 4820,
+        "mtime": 1786694333
+      },
+      {
+        "name": "service-child-services.css",
+        "size": 1763,
+        "mtime": 1786694333
+      },
+      {
+        "name": "fp02-mobile-slider-nav.css",
+        "size": 2401,
+        "mtime": 1786720059
+      },
+      {
+        "name": "fp02-search.css",
+        "size": 13322,
+        "mtime": 1786896066
+      },
+      {
+        "name": "fp02-404.css",
+        "size": 4461,
+        "mtime": 1786694333
+      },
+      {
+        "name": "admin-fp02-acf.css",
+        "size": 7775,
+        "mtime": 1786694333
+      },
+      {
+        "name": "admin-home-acf.css",
+        "size": 295,
+        "mtime": 1786694333
+      },
+      {
+        "name": "v9-style.css",
+        "size": 593093,
+        "mtime": 1786896064
+      },
+      {
+        "name": "fp02-lifebuoy-parallax.css",
+        "size": 1479,
+        "mtime": 1786896067
+      }
+    ],
+    "theme_js": [
+      {
+        "name": "v9-shell.js",
+        "size": 81919,
+        "mtime": 1786896071
+      },
+      {
+        "name": "fp02-lifebuoy-parallax.js",
+        "size": 6938,
+        "mtime": 1786896069
+      },
+      {
+        "name": "fp02-floating-header.js",
+        "size": 2833,
+        "mtime": 1786694333
+      },
+      {
+        "name": ".gitkeep",
+        "size": 0,
+        "mtime": 1786694333
+      }
+    ]
+  },
+  "admin_before": {
+    "logged_in": false,
+    "screens": {
+      "service_zavisimosti": {
+        "url": "http://shpigovsky.beget.tech/wp-admin/post.php?post=73&action=edit",
+        "status": 200,
+        "bytes": 12110,
+        "ui": {
+          "count_postoyannaya": 0,
+          "count_edit_slug_box": 0,
+          "count_fp02_metabox": 0,
+          "count_fp02_post_name": 0,
+          "count_edit_slug": 0,
+          "has_native_izmenit": false,
+          "has_url_yarlyk": false
+        }
+      },
+      "specialist_kostyuk": {
+        "url": "http://shpigovsky.beget.tech/wp-admin/post.php?post=1033&action=edit",
+        "status": 200,
+        "bytes": 12114,
+        "ui": {
+          "count_postoyannaya": 0,
+          "count_edit_slug_box": 0,
+          "count_fp02_metabox": 0,
+          "count_fp02_post_name": 0,
+          "count_edit_slug": 0,
+          "has_native_izmenit": false,
+          "has_url_yarlyk": false
+        }
+      },
+      "page_sample": {
+        "url": "http://shpigovsky.beget.tech/wp-admin/post.php?post=5&action=edit",
+        "status": 200,
+        "bytes": 12108,
+        "ui": {
+          "count_postoyannaya": 0,
+          "count_edit_slug_box": 0,
+          "count_fp02_metabox": 0,
+          "count_fp02_post_name": 0,
+          "count_edit_slug": 0,
+          "has_native_izmenit": false,
+          "has_url_yarlyk": false
+        }
+      }
+    }
+  },
+  "inventory_stderr": "",
+  "service_count": 0,
+  "specialist_count": 0,
+  "wpilot_write_enabled_option": null,
+  "wpilot_write_enabled_from_opts": null
+}

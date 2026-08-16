@@ -237,6 +237,16 @@
 		document.removeEventListener('keydown', onKeydown);
 		document.removeEventListener('keydown', trapFocus);
 
+		// Clear offcanvas Smart Search suggestions on close (shared instances).
+		var offcanvasForm = offcanvas.querySelector('[data-smart-search-form]');
+		if (offcanvasForm && window.shpigovskySmartSearchInstances) {
+			window.shpigovskySmartSearchInstances.forEach(function (instance) {
+				if (instance && instance.form === offcanvasForm && typeof instance.clearSuggest === 'function') {
+					instance.clearSuggest();
+				}
+			});
+		}
+
 		if (lastTrigger) {
 			focusOffcanvasElement(lastTrigger, true);
 		}
@@ -336,11 +346,47 @@
 
 // FP-0002 v6 — home gallery swiper
 // V9-06E33-FIX01 — shared options also used by /uslugi/ category galleries
+// PROD-P08 — attach optional non-Hero mobile prev/next when markup present
 (function initHomeGallery() {
 	'use strict';
 
-	function gallerySwiperOptions(slider) {
+	function fp02TrackpadMousewheel() {
 		return {
+			enabled: true,
+			forceToAxis: true,
+			releaseOnEdges: true,
+			invert: false,
+			sensitivity: 1,
+			thresholdDelta: 8,
+			thresholdTime: 500
+		};
+	}
+
+	window.shpigovskyTrackpadMousewheel = fp02TrackpadMousewheel;
+
+	function attachFp02SliderNav(slider, options) {
+		if (!slider || !options || typeof options !== 'object') {
+			return options;
+		}
+		if (!options.mousewheel) {
+			options.mousewheel = fp02TrackpadMousewheel();
+		}
+		var prev = slider.querySelector('[data-fp02-slider-prev]');
+		var next = slider.querySelector('[data-fp02-slider-next]');
+		if (prev && next) {
+			options.navigation = {
+				prevEl: prev,
+				nextEl: next,
+				disabledClass: 'swiper-button-disabled',
+			};
+		}
+		return options;
+	}
+
+	window.shpigovskyAttachFp02SliderNav = attachFp02SliderNav;
+
+	function gallerySwiperOptions(slider) {
+		return attachFp02SliderNav(slider, {
 			slidesPerView: 1.15,
 			spaceBetween: 10,
 			loop: false,
@@ -371,7 +417,7 @@
 							spaceBetween: 30,
 						},
 			},
-		};
+		});
 	}
 
 	// Expose for /uslugi/ category galleries (same settings as Home).
@@ -413,8 +459,7 @@
 			}
 
 			var pagination = slider.querySelector('[data-reviews-pagination]');
-
-			new window.Swiper(slider, {
+			var options = {
 			slidesPerView: 1.15,
 			spaceBetween: 10,
 			loop: false,
@@ -442,7 +487,13 @@
 							spaceBetween: 30,
 						},
 			},
-		});
+		};
+
+			if (typeof window.shpigovskyAttachFp02SliderNav === 'function') {
+				options = window.shpigovskyAttachFp02SliderNav(slider, options);
+			}
+
+			new window.Swiper(slider, options);
 		});
 	}
 
@@ -468,8 +519,7 @@
 			}
 
 			var pagination = slider.querySelector('[data-specialists-pagination]');
-
-			new window.Swiper(slider, {
+			var options = {
 			slidesPerView: 1.15,
 			spaceBetween: 10,
 			loop: false,
@@ -497,7 +547,13 @@
 							spaceBetween: 30,
 						},
 			},
-		});
+		};
+
+			if (typeof window.shpigovskyAttachFp02SliderNav === 'function') {
+				options = window.shpigovskyAttachFp02SliderNav(slider, options);
+			}
+
+			new window.Swiper(slider, options);
 		});
 	}
 
@@ -533,6 +589,7 @@
 				pagination: false,
 				watchOverflow: true,
 				grabCursor: true,
+				mousewheel: typeof window.shpigovskyTrackpadMousewheel === 'function' ? window.shpigovskyTrackpadMousewheel() : { forceToAxis: true, releaseOnEdges: true },
 				preventClicks: true,
 				preventClicksPropagation: true,
 				threshold: 8,
@@ -582,19 +639,26 @@
 		},
 	};
 
+	var booted = false;
+
 	function boot() {
 		var fancybox = window.Fancybox;
 
-		if (typeof fancybox !== 'function') {
+		if (typeof fancybox !== 'function' || booted) {
 			return;
 		}
 
+		booted = true;
+
 		var galleryOptions = FP0002_FANCYBOX_ANIMATION;
 
-		fancybox.bind('[data-fancybox="comfort"]', galleryOptions);
+		// Comfort galleries (Home /uslugi/ /service stacks): real items only
+		// (decor lives outside .comfort__gallery — E59-FIX01).
+		fancybox.bind('.comfort__gallery [data-fancybox]', galleryOptions);
+		// O-centre infrastructure galleries outside the Comfort stage.
 		fancybox.bind('[data-fancybox="o-centre-infrastructure"]', galleryOptions);
-		fancybox.bind('[data-fancybox="o-centre-infrastructure-g5"]', galleryOptions);
-		fancybox.bind('[data-fancybox="services-comfort-v2"]', galleryOptions);
+		// Specialist certificates / diplomas (PROD-P09): one gallery group per page via data-fancybox.
+		fancybox.bind('.specialist-profile__certs-grid [data-fancybox]', galleryOptions);
 	}
 
 	if (document.readyState === 'loading') {
@@ -1806,6 +1870,10 @@
 					},
 				};
 
+			if (!optionsFactory && typeof window.shpigovskyAttachFp02SliderNav === 'function') {
+				options = window.shpigovskyAttachFp02SliderNav(slider, options);
+			}
+
 			new window.Swiper(slider, options);
 		});
 	}
@@ -1869,6 +1937,10 @@
 					el: articlesPagination,
 					clickable: true,
 				};
+			}
+
+			if (!optionsFactory && typeof window.shpigovskyAttachFp02SliderNav === 'function') {
+				options = window.shpigovskyAttachFp02SliderNav(slider, options);
 			}
 
 			new window.Swiper(slider, options);
@@ -2468,6 +2540,330 @@
 })();
 
 /* FP-0002 V9-06E62E / FIX01 — header site search dropdown (desktop main header only) */
+(function initSmartSearchForms() {
+	'use strict';
+
+	var cfg = window.shpigovskySmartSearch || {};
+	var endpoint = typeof cfg.endpoint === 'string' ? cfg.endpoint : '';
+	var minChars = typeof cfg.minChars === 'number' ? cfg.minChars : 3;
+	var debounceMs = typeof cfg.debounceMs === 'number' ? cfg.debounceMs : 250;
+	var i18n = cfg.i18n || {};
+	var groupOrder = Array.isArray(cfg.groupOrder) && cfg.groupOrder.length
+		? cfg.groupOrder
+		: ['services', 'articles', 'specialists', 'pages'];
+	var groupLabels = {
+		services: i18n.services || 'Услуги',
+		articles: i18n.articles || 'Статьи',
+		specialists: i18n.specialists || 'Специалисты',
+		pages: i18n.pages || 'Страницы',
+	};
+
+	if (!endpoint) {
+		return;
+	}
+
+	function escapeHtml(value) {
+		return String(value == null ? '' : value)
+			.replace(/&/g, '&amp;')
+			.replace(/</g, '&lt;')
+			.replace(/>/g, '&gt;')
+			.replace(/"/g, '&quot;')
+			.replace(/'/g, '&#39;');
+	}
+
+	/**
+	 * Shared Smart Search binder — one instance per form.
+	 * Desktop header panel and mobile offcanvas each keep isolated request state.
+	 */
+	function bindSmartSearchForm(form) {
+		if (!form || form.getAttribute('data-smart-search-init') === 'true') {
+			return null;
+		}
+
+		var smartInput = form.querySelector('[data-smart-search-input]');
+		var suggestRoot = form.querySelector('[data-smart-search-suggest]');
+
+		if (!smartInput || !suggestRoot) {
+			return null;
+		}
+
+		form.setAttribute('data-smart-search-init', 'true');
+
+		var debounceTimer = null;
+		var requestSeq = 0;
+		var abortController = null;
+		var activeIndex = -1;
+		var resultLinks = [];
+
+		function clearSuggest() {
+			activeIndex = -1;
+			resultLinks = [];
+			suggestRoot.innerHTML = '';
+			suggestRoot.hidden = true;
+			suggestRoot.removeAttribute('data-smart-search-state');
+		}
+
+		function setSuggestState(state) {
+			suggestRoot.hidden = false;
+			suggestRoot.setAttribute('data-smart-search-state', state);
+		}
+
+		function renderLoading() {
+			setSuggestState('loading');
+			suggestRoot.innerHTML =
+				'<p class="site-search-suggest__status">' + escapeHtml(i18n.loading || 'Поиск…') + '</p>';
+		}
+
+		function renderEmpty() {
+			setSuggestState('empty');
+			suggestRoot.innerHTML =
+				'<p class="site-search-suggest__status">' + escapeHtml(i18n.empty || 'Ничего не найдено') + '</p>';
+		}
+
+		function renderError() {
+			setSuggestState('error');
+			suggestRoot.innerHTML =
+				'<p class="site-search-suggest__status">' +
+				escapeHtml(i18n.error || 'Не удалось выполнить поиск. Попробуйте ещё раз или отправьте форму.') +
+				'</p>';
+		}
+
+		function renderGroups(groups) {
+			var html = '';
+			var total = 0;
+
+			groupOrder.forEach(function (key) {
+				var items = groups && groups[key] ? groups[key] : [];
+
+				if (!items.length) {
+					return;
+				}
+
+				html += '<section class="site-search-suggest__group" data-smart-search-group="' + escapeHtml(key) + '">';
+				html += '<h3 class="site-search-suggest__heading">' + escapeHtml(groupLabels[key] || key) + '</h3>';
+				html += '<ul class="site-search-suggest__list">';
+
+				items.forEach(function (item) {
+					var title = escapeHtml(item.title || '');
+					var url = escapeHtml(item.url || '#');
+					var snippet = item.snippet
+						? '<span class="site-search-suggest__snippet">' + escapeHtml(item.snippet) + '</span>'
+						: '';
+					html +=
+						'<li class="site-search-suggest__item">' +
+						'<a class="site-search-suggest__link" href="' +
+						url +
+						'" data-smart-search-result>' +
+						'<span class="site-search-suggest__title">' +
+						title +
+						'</span>' +
+						snippet +
+						'</a></li>';
+					total += 1;
+				});
+
+				html += '</ul></section>';
+			});
+
+			if (!total) {
+				renderEmpty();
+				return;
+			}
+
+			setSuggestState('results');
+			suggestRoot.innerHTML = html;
+			resultLinks = Array.prototype.slice.call(suggestRoot.querySelectorAll('[data-smart-search-result]'));
+			activeIndex = -1;
+		}
+
+		function setActiveResult(index) {
+			if (!resultLinks.length) {
+				activeIndex = -1;
+				return;
+			}
+
+			if (index < 0) {
+				activeIndex = -1;
+			} else if (index >= resultLinks.length) {
+				activeIndex = resultLinks.length - 1;
+			} else {
+				activeIndex = index;
+			}
+
+			resultLinks.forEach(function (link, i) {
+				if (i === activeIndex) {
+					link.setAttribute('data-smart-search-active', 'true');
+					link.classList.add('is-active');
+				} else {
+					link.removeAttribute('data-smart-search-active');
+					link.classList.remove('is-active');
+				}
+			});
+		}
+
+		function fetchSuggestions(query) {
+			requestSeq += 1;
+			var seq = requestSeq;
+
+			if (abortController && typeof abortController.abort === 'function') {
+				try {
+					abortController.abort();
+				} catch (err) {
+					// Ignore abort errors.
+				}
+			}
+
+			abortController = typeof window.AbortController === 'function' ? new window.AbortController() : null;
+			renderLoading();
+
+			var url = endpoint + (endpoint.indexOf('?') === -1 ? '?' : '&') + 'q=' + encodeURIComponent(query);
+			var fetchOpts = {
+				method: 'GET',
+				credentials: 'same-origin',
+				headers: {
+					Accept: 'application/json',
+				},
+			};
+
+			if (abortController) {
+				fetchOpts.signal = abortController.signal;
+			}
+
+			window
+				.fetch(url, fetchOpts)
+				.then(function (response) {
+					if (!response.ok) {
+						throw new Error('smart-search-http');
+					}
+
+					return response.json();
+				})
+				.then(function (data) {
+					if (seq !== requestSeq) {
+						return;
+					}
+
+					if (!data || data.empty) {
+						renderEmpty();
+						return;
+					}
+
+					renderGroups(data.groups || {});
+				})
+				.catch(function (err) {
+					if (seq !== requestSeq) {
+						return;
+					}
+
+					if (err && err.name === 'AbortError') {
+						return;
+					}
+
+					renderError();
+				});
+		}
+
+		function scheduleSuggest(rawValue) {
+			var value = String(rawValue || '').replace(/^\s+|\s+$/g, '');
+
+			if (debounceTimer) {
+				window.clearTimeout(debounceTimer);
+				debounceTimer = null;
+			}
+
+			if (value.length < minChars) {
+				if (abortController && typeof abortController.abort === 'function') {
+					try {
+						abortController.abort();
+					} catch (err) {
+						// Ignore.
+					}
+				}
+				requestSeq += 1;
+				clearSuggest();
+				return;
+			}
+
+			debounceTimer = window.setTimeout(function () {
+				fetchSuggestions(value);
+			}, debounceMs);
+		}
+
+		function isInstanceActive() {
+			if (document.activeElement === smartInput) {
+				return true;
+			}
+
+			if (suggestRoot.contains(document.activeElement)) {
+				return true;
+			}
+
+			return !suggestRoot.hidden && form.contains(document.activeElement);
+		}
+
+		smartInput.addEventListener('input', function () {
+			scheduleSuggest(smartInput.value);
+		});
+
+		smartInput.addEventListener('search', function () {
+			scheduleSuggest(smartInput.value);
+		});
+
+		document.addEventListener('keydown', function (event) {
+			if (!isInstanceActive()) {
+				return;
+			}
+
+			if (event.key === 'Escape') {
+				if (!suggestRoot.hidden) {
+					event.preventDefault();
+					event.stopImmediatePropagation();
+					clearSuggest();
+				}
+				return;
+			}
+
+			if (suggestRoot.hidden || !resultLinks.length) {
+				return;
+			}
+
+			if (event.key === 'ArrowDown') {
+				event.preventDefault();
+				setActiveResult(activeIndex + 1);
+				return;
+			}
+
+			if (event.key === 'ArrowUp') {
+				event.preventDefault();
+				setActiveResult(activeIndex <= 0 ? -1 : activeIndex - 1);
+				return;
+			}
+
+			if (event.key === 'Enter' && activeIndex >= 0 && resultLinks[activeIndex]) {
+				event.preventDefault();
+				window.location.href = resultLinks[activeIndex].href;
+			}
+		});
+
+		return {
+			form: form,
+			input: smartInput,
+			suggestRoot: suggestRoot,
+			clearSuggest: clearSuggest,
+		};
+	}
+
+	var instances = [];
+	Array.prototype.forEach.call(document.querySelectorAll('[data-smart-search-form]'), function (form) {
+		var instance = bindSmartSearchForm(form);
+		if (instance) {
+			instances.push(instance);
+		}
+	});
+
+	window.shpigovskySmartSearchInstances = instances;
+})();
+
 (function initSiteSearchPanel() {
 	'use strict';
 
@@ -2479,15 +2875,29 @@
 
 	panel.setAttribute('data-search-init', 'true');
 
-	// Only explicit dropdown toggles (data-search-toggle). Mobile offcanvas Search link must not use this attribute.
+	// Only explicit dropdown toggles (data-search-toggle). Mobile offcanvas owns its own form.
 	var toggles = document.querySelectorAll('[data-search-toggle]');
 	var closeButtons = panel.querySelectorAll('[data-search-close]');
 	var forms = document.querySelectorAll('[data-site-search-form]');
 	var isOpen = false;
 	var lastToggle = null;
+	var panelSmartForm = panel.querySelector('[data-smart-search-form]');
 
 	function getFocusInput() {
 		return panel.querySelector('[data-search-focus], input[type="search"], input[name="s"]');
+	}
+
+	function clearPanelSuggest() {
+		if (!panelSmartForm) {
+			return;
+		}
+
+		var instances = window.shpigovskySmartSearchInstances || [];
+		instances.forEach(function (instance) {
+			if (instance && instance.form === panelSmartForm && typeof instance.clearSuggest === 'function') {
+				instance.clearSuggest();
+			}
+		});
 	}
 
 	function setOpen(open, trigger) {
@@ -2525,6 +2935,7 @@
 			panel.setAttribute('data-search-state', 'closed');
 			panel.hidden = true;
 			panel.setAttribute('hidden', 'hidden');
+			clearPanelSuggest();
 		}
 
 		Array.prototype.forEach.call(toggles, function (btn) {
@@ -2534,9 +2945,9 @@
 		if (open) {
 			lastToggle = trigger || lastToggle || toggles[0] || null;
 			window.setTimeout(function () {
-				var input = getFocusInput();
-				if (input) {
-					input.focus();
+				var focusInput = getFocusInput();
+				if (focusInput) {
+					focusInput.focus();
 				}
 			}, 0);
 		} else if (lastToggle && typeof lastToggle.focus === 'function') {
@@ -2560,14 +2971,19 @@
 	});
 
 	document.addEventListener('keydown', function (event) {
-		if (!isOpen) {
+		if (!isOpen || event.key !== 'Escape') {
 			return;
 		}
 
-		if (event.key === 'Escape') {
+		var suggest = panel.querySelector('[data-smart-search-suggest]');
+		if (suggest && !suggest.hidden) {
 			event.preventDefault();
-			setOpen(false);
+			clearPanelSuggest();
+			return;
 		}
+
+		event.preventDefault();
+		setOpen(false);
 	});
 
 	document.addEventListener('click', function (event) {
@@ -2614,6 +3030,60 @@
 			if (!value) {
 				event.preventDefault();
 				input.focus();
+			}
+		});
+	});
+})();
+
+/* PROD-P13 — desktop submenu keyboard + offcanvas accordion */
+(function initSecondLevelNav() {
+	'use strict';
+
+	function closeDesktop(item) {
+		item.classList.remove('is-open');
+		var link = item.querySelector(':scope > .site-header__nav-link');
+		if (link) {
+			link.setAttribute('aria-expanded', 'false');
+		}
+	}
+
+	document.addEventListener('keydown', function (event) {
+		if (event.key !== 'Escape') {
+			return;
+		}
+		document.querySelectorAll('.site-header__nav-item--has-children.is-open').forEach(closeDesktop);
+	});
+
+	document.querySelectorAll('.site-header__nav-item--has-children').forEach(function (item) {
+		var link = item.querySelector(':scope > .site-header__nav-link');
+		if (link) {
+			link.setAttribute('aria-expanded', 'false');
+			link.addEventListener('focus', function () {
+				item.classList.add('is-open');
+				link.setAttribute('aria-expanded', 'true');
+			});
+		}
+		item.addEventListener('focusout', function () {
+			window.setTimeout(function () {
+				if (!item.contains(document.activeElement)) {
+					closeDesktop(item);
+				}
+			}, 0);
+		});
+	});
+
+	document.querySelectorAll('[data-offcanvas-sub-toggle]').forEach(function (button) {
+		button.addEventListener('click', function (event) {
+			event.preventDefault();
+			var expanded = button.getAttribute('aria-expanded') === 'true';
+			var controls = button.getAttribute('aria-controls');
+			var panel = controls ? document.getElementById(controls) : null;
+			if (!panel && button.parentElement && button.parentElement.parentElement) {
+				panel = button.parentElement.parentElement.querySelector('.offcanvas__sub-list');
+			}
+			button.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+			if (panel) {
+				panel.hidden = expanded;
 			}
 		});
 	});

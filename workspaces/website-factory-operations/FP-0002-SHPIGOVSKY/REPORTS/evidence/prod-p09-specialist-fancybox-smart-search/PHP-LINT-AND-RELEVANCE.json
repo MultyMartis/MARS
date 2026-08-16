@@ -1,0 +1,49 @@
+{
+  "php_lint": {
+    "wp-content/themes/shpigovsky/inc/search-helpers.php": "Errors parsing /home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/search-helpers.php",
+    "wp-content/themes/shpigovsky/inc/assets.php": "No syntax errors detected in /home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/assets.php",
+    "wp-content/themes/shpigovsky/searchform.php": "No syntax errors detected in /home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/searchform.php",
+    "wp-content/themes/shpigovsky/template-parts/navigation/search-panel.php": "No syntax errors detected in /home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/navigation/search-panel.php"
+  },
+  "relevance_exact_specialist": {
+    "q": "Костюк",
+    "specialists": [
+      {
+        "id": 1033,
+        "group": "specialists",
+        "title": "Дарья Владимировна Костюк",
+        "url": "http://shpigovsky.beget.tech/specyalisty/kostyuk/",
+        "snippet": "Психолог, EMDR терапевт, телесно-ориентированный терапевт"
+      }
+    ],
+    "empty": false
+  },
+  "mixed_lech": {
+    "counts": {
+      "services": 5,
+      "articles": 5,
+      "specialists": 0,
+      "pages": 1
+    },
+    "first_titles": {
+      "services": [
+        "Лечение алкогольной зависимости",
+        "Лечение наркотической зависимости"
+      ],
+      "articles": [
+        "Лечение алкогольной зависимости: почему сила воли здесь ни при чём",
+        "Срывы и рецидивы: почему это не конец лечения, а сигнал к корректировке"
+      ],
+      "specialists": [],
+      "pages": [
+        "Программа лечения"
+      ]
+    }
+  },
+  "wpilot_public": {
+    "reachable": true,
+    "path": "/wp-json/wpilot/v1/ping",
+    "body_prefix": "{\"ok\":true,\"data\":{\"plugin\":\"metacode-wpilot\",\"status\":\"installed\",\"bridge_enabled\":true,\"write_enabled\":false,\"state\":\"token-generated\"},\"meta\":{\"request_id\":\"wpilot-be71e211-c062-4e59-bd49-b8395426d993\",\"timestamp_utc\":\"2026-08-14 16:02:08\",\"endpoint\":\"ping\",\"auth_state\":\"not-required\",\"bridge_state_snapshot\":{\"state\":\"token-generated\",\"bridge_enabled\":true,\"dev_confirmed\":true,\"emergency_disabl"
+  },
+  "permalink_note": "URLs use get_permalink()/home_url — host reflects current WP siteurl (beget.tech), not hardcoded source strings."
+}

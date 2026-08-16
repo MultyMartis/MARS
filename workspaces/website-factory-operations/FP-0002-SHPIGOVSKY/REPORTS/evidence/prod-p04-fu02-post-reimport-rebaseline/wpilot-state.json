@@ -1,0 +1,43 @@
+{
+  "filesystem_version_header": "0.3.0",
+  "db_options_safe": {
+    "bridge_enabled": true,
+    "write_enabled": false,
+    "emergency_disabled": false,
+    "dev_confirmed": true,
+    "plugin_version": "0.3.0",
+    "schema_version": "0.2.0",
+    "token_hash": "PRESENT_LEN_63"
+  },
+  "counts_vs_canonical_0_3_2": {
+    "DIVERGENT": 15,
+    "MATCH": 12,
+    "LOCAL_ONLY": 5
+  },
+  "production_file_count": 27,
+  "production_only_paths": [],
+  "divergent_count": 15,
+  "package": {
+    "path": "X:\\AI MARS STORAGE\\wpilot\\deploy-packages\\metacode-wpilot-v0.3.2-rc1.zip",
+    "exists": true,
+    "sha256": "d55c19d6ea1a55cd145e9b67c42ca201c30e4356f08d8cf3932ef6a5ebc80934",
+    "size": 74788,
+    "sha_matches_expected": true
+  },
+  "current_global_baseline": "0.3.2 / 0.3.2-RC1",
+  "upgrade_safety": "SAFE",
+  "write_enabled": false,
+  "write_safety": "write_enabled=false OK",
+  "token": {
+    "token_present": "YES",
+    "recoverable_plain_client_token": "NO",
+    "hash_only": "YES",
+    "local_production_token_file_present": "NO",
+    "future_auth_requirement": "TOKEN REISSUE REQUIRED",
+    "reissue_performed": false
+  },
+  "upgrade_performed": false,
+  "mutations": 0,
+  "active": "active",
+  "rest_namespace": "wpilot/v1"
+}

@@ -1,0 +1,71 @@
+{
+  "wave": "PROD-P04-FU02",
+  "started_utc": "2026-08-14T08:12:10.739295+00:00",
+  "finished_utc": "2026-08-14T08:12:41.985892+00:00",
+  "status": "PARTIAL",
+  "blockers": [
+    "wp_admin_http_login"
+  ],
+  "access": {
+    "ssh": "PASS",
+    "ftp": "PASS",
+    "docroot": "/home/s/shpigovsky/shpigovsky.ru/public_html",
+    "real_docroot": true,
+    "db_select": "PASS",
+    "wp_admin": "FAIL",
+    "ssh_user_suffix": "sky_mars",
+    "real_wp_ok": true,
+    "ftp_listing_has_wp": true
+  },
+  "product_code_verdict": "REIMPORT PRODUCT CODE PARITY CLEAN",
+  "pre_post_counts": {
+    "unchanged_production_sha": 708,
+    "changed_production_sha": 1,
+    "added_on_production": 1,
+    "removed_from_production": 0,
+    "material_code_changes": 1,
+    "material_code_changes_effective": 0,
+    "line_ending_only_changes": 1,
+    "non_material_production_only": 1
+  },
+  "theme_counts": {
+    "MATCH": 660,
+    "LINE_ENDING_ONLY_NOTE": 1,
+    "PRODUCTION_ONLY": 1
+  },
+  "core_counts": {
+    "MATCH": 25,
+    "KNOWN_INTENTIONAL_SOURCE_ONLY": 0,
+    "PRODUCTION_ONLY": 0,
+    "LOCAL_ONLY": 0,
+    "DIVERGENT": 0,
+    "UNKNOWN": 0
+  },
+  "acf_counts": {
+    "MATCH": 24,
+    "KNOWN_INTENTIONAL_SOURCE_ONLY": 7,
+    "PRODUCTION_ONLY": 0,
+    "LOCAL_ONLY": 0,
+    "DIVERGENT": 0,
+    "UNKNOWN": 0
+  },
+  "db_counts": {
+    "posts_all": 16,
+    "posts_publish": 16,
+    "pages_publish": 25,
+    "revisions": 250,
+    "all_publish": 857,
+    "users": 3,
+    "attachments": 38,
+    "services_publish": 29
+  },
+  "residue_non_revision": 41,
+  "wpilot_upgrade_safety": "SAFE",
+  "wp_admin": "FAIL",
+  "mutations": 0,
+  "next_wave_hint": "PROD-P05 after operator confirms WP Admin password in secrets.local.md (DB proves Administrator; HTTP login FAIL — likely credential mismatch post-recreate). WPilot upgrade SAFE; token reissue required.",
+  "css_drift_blocks": 0,
+  "wp_admin_db_administrator": true,
+  "password_mismatch_proven": true,
+  "finished_utc_final": "2026-08-14T08:30:00+00:00"
+}

@@ -1,0 +1,58 @@
+{
+  "date": "2026-08-13",
+  "scope": "source-owned product files that could be hashed without production FS read",
+  "full_theme_inventory": "NOT POSSIBLE this wave",
+  "full_plugin_inventory": "NOT POSSIBLE this wave",
+  "full_acf_json_inventory": "NOT POSSIBLE this wave",
+  "wpilot_file_hashes": "NOT POSSIBLE this wave",
+  "files_counted": 5,
+  "files": [
+    {
+      "relative_path": "theme/shpigovsky/assets/css/v9-style.css",
+      "production_sha256": "1ccc5a8f1150bc696186e0f8d4546b7d55a1895bfa3c77dd50a32204b09a7ba9",
+      "local_source_sha256": "1ccc5a8f1150bc696186e0f8d4546b7d55a1895bfa3c77dd50a32204b09a7ba9",
+      "classification": "MATCH",
+      "source": "public HTTP (filesystem download blocked)"
+    },
+    {
+      "relative_path": "theme/shpigovsky/assets/js/v9-shell.js",
+      "production_sha256": "7fc32c90effd99fc39ff0c3781c8cf4038387c27a5943235d44686c2bc8c45a1",
+      "local_source_sha256": "7fc32c90effd99fc39ff0c3781c8cf4038387c27a5943235d44686c2bc8c45a1",
+      "classification": "MATCH",
+      "source": "public HTTP (filesystem download blocked)"
+    },
+    {
+      "relative_path": "theme/shpigovsky/style.css",
+      "production_sha256": "82a31308ce46c143528518f1036437a28e93f14d42e2c89ad22f0bf97037750e",
+      "local_source_sha256": "82a31308ce46c143528518f1036437a28e93f14d42e2c89ad22f0bf97037750e",
+      "classification": "MATCH",
+      "source": "public HTTP (filesystem download blocked)"
+    },
+    {
+      "relative_path": "theme/shpigovsky/assets/css/fp02-404.css",
+      "production_sha256": "31f9d6fd747341819a12f19ab113111886e91c4fa9948f46f8028bdacc59ebfc",
+      "local_source_sha256": "31f9d6fd747341819a12f19ab113111886e91c4fa9948f46f8028bdacc59ebfc",
+      "classification": "MATCH",
+      "source": "public HTTP (filesystem download blocked)"
+    },
+    {
+      "relative_path": "theme/shpigovsky/assets/css/fp02-search.css",
+      "production_sha256": "8dd6e89f3b7373623cd3bb8718e9de0bf883a24b892ab5e6d767b7d244c01f94",
+      "local_source_sha256": "8dd6e89f3b7373623cd3bb8718e9de0bf883a24b892ab5e6d767b7d244c01f94",
+      "classification": "MATCH",
+      "source": "public HTTP (filesystem download blocked)"
+    }
+  ],
+  "admin_version_labels": {
+    "shpigovsky-core": {
+      "production": "0.3.3-v9-06e25a-source",
+      "local_source": "0.3.3-v9-06e25a-source",
+      "classification": "MATCH (version string only; file SHA unknown)"
+    },
+    "metacode-wpilot": {
+      "production": "0.3.0",
+      "local_source": "0.3.2 / 0.3.2-RC1",
+      "classification": "OLDER"
+    }
+  }
+}

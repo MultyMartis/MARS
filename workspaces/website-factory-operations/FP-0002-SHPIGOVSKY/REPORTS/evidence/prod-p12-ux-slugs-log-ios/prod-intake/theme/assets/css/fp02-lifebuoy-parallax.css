@@ -1,0 +1,64 @@
+/**
+ * FP-0002 V9-06E57-FIX02 — global decorative lifebuoy parallax
+ * Scoped additive layer; does not modify operator-owned v9-style.css.
+ *
+ * Base visual size ≈ E57 × 1.30 (FIX01). Motion (x/y/scale/rotate) driven by JS
+ * custom properties; single transform stack: translate → scale → rotate.
+ * FIX02 defaults: start X −50% (~50% visible), rotate −7.2deg.
+ */
+
+.fp02-lifebuoy-parallax {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  contain: layout paint size;
+}
+
+.fp02-lifebuoy-parallax__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  /* E57 was min(68vw, 620px); FIX01 ≈ +30% base size. */
+  width: min(88vw, 806px);
+  max-width: none;
+  height: auto;
+  opacity: 0.2;
+  user-select: none;
+  -webkit-user-drag: none;
+  /* PROD-P08: JS writes transform directly for WebKit. Keep var-based fallback
+     only until first paint / if JS disabled mid-scroll — initial defaults. */
+  transform: translate3d(-50%, -12vh, 0) scale(1) rotate(-7.2deg);
+  -webkit-transform: translate3d(-50%, -12vh, 0) scale(1) rotate(-7.2deg);
+  transform-origin: center center;
+  -webkit-transform-origin: center center;
+  will-change: transform;
+}
+
+/* Keep page content above the decorative layer. */
+.site-page-shell {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .fp02-lifebuoy-parallax__img {
+    /* E57: min(78vw, 520px) → ×1.30 */
+    width: min(100vw, 676px);
+  }
+}
+
+@media (max-width: 767px) {
+  .fp02-lifebuoy-parallax__img {
+    /* E57: min(92vw, 420px) → ×1.30; cap vw to avoid horizontal overflow */
+    width: min(100vw, 546px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fp02-lifebuoy-parallax__img {
+    will-change: auto;
+  }
+}

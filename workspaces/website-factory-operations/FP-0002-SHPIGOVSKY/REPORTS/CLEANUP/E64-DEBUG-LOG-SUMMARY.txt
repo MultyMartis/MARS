@@ -1,0 +1,8 @@
+# E64 debug.log summary (no log content)
+
+- Path: X:\MARS-Localhost\sites\wordpress\projects\shpigovsky\wp-content\debug.log
+- Final size before delete: 3847501 bytes (3.67 MB)
+- Last modified: 2026-07-18T00:39:24
+- Recurring pattern (tail sample): PHP Warning Undefined* (development noise under WP_DEBUG)
+- Unique unresolved Stable release blocker in log: none identified (Stable v1 already accepted; routes post-cleanup show php_noise=False)
+- Action: DELETED (regenerable; WP_DEBUG_LOG remains enabled)

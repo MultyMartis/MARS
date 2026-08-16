@@ -1,0 +1,799 @@
+ .../DOCS/DEMO-CONTENT-CLEANUP-BACKLOG-v1.md        |    35 +
+ ...SETTINGS-ADMIN-IA-AUDIT-AND-RU-UX-REBUILD-v1.md |    42 +
+ .../DOCS/REVIEWS-STABLE-UID-ANCHORS-v1.md          |    25 +
+ .../SERVICE-ADMIN-HIDDEN-LEGACY-GROUPS-E62C-v1.md  |    23 +
+ .../FP-0002-SHPIGOVSKY/PROJECT-STATUS.md           |    28 +-
+ ...RCE-RUNTIME-DISPOSITION-FP-0002-V9-STABLE-V1.md |    35 +
+ .../REPORTS/FREEZE-FP-0002-V9-STABLE-V1.md         |    31 +
+ ...02-V9-06E57-FIX01-lifebuoy-motion-refinement.md |   497 +-
+ ...E58-FU01-visual-audit-operator-decision-pack.md |   566 +
+ ...T-FP-0002-V9-06E58-figma-visual-layout-audit.md |    83 +
+ ...9-06E58-freeze-backup-and-figma-visual-audit.md |   285 +
+ ...59-FIX01-comfort-contacts-footer-corrections.md |   206 +
+ ...6E59-layout-polish-maps-footer-comfort-admin.md |   217 +
+ ...002-V9-06E60-FIX01-breadcrumb-subnav-reviews.md |   225 +
+ ...02-V9-06E60-nav-breadcrumb-cta-service-links.md |   235 +
+ ...-controls-contacts-blog-reviews-ocentre-home.md |   229 +
+ ...-V9-06E62A-404-breadcrumb-wrapper-phone-mask.md |   228 +
+ ...62B-blog-reviews-pagination-seo-slider-links.md |   273 +
+ ...service-admin-review-anchor-final-regression.md |   314 +
+ ...ogram-mini-descriptions-404-figma-correction.md |   246 +
+ ...FP-0002-V9-06E62E-404-decor-wordpress-search.md |   249 +
+ ...6E62E-FIX01-search-wrapper-trigger-placement.md |   213 +
+ .../REPORT-FP-0002-V9-06E63-STABLE-V1-CLOSEOUT.md  |   181 +
+ .../ACCEPTED-BASELINE-FP-0002-V9-STABLE-V1.md      |    25 +
+ ...RCE-RUNTIME-DISPOSITION-FP-0002-V9-STABLE-V1.md |    35 +
+ .../DEFERRED-WORK-FP-0002-AFTER-STABLE-V1.md       |    11 +
+ .../GIT-ALLOWLIST-FP-0002-V9-STABLE-V1.txt         |   798 +
+ .../REPORTS/STABLE-V1/GIT-BASELINE-COMPARISON.txt  |     7 +
+ .../GIT-DIFF-SUMMARY-FP-0002-V9-STABLE-V1.md       |    27 +
+ .../REPORTS/STABLE-V1/GIT-EXCLUDED-FOREIGN-WIP.txt |   336 +
+ ...RE-PRODUCTION-CHECKLIST-FP-0002-V9-STABLE-V1.md |    21 +
+ .../RELEASE-MANIFEST-FP-0002-V9-STABLE-V1.md       |    51 +
+ .../STABLE-V1/VALIDATION-FP-0002-V9-STABLE-V1.md   |    45 +
+ .../REPORTS/evidence/_e62a-backup-path.txt         |     1 +
+ .../_e57fix01_validate.cjs                         |   738 +-
+ .../git-push-result.csv                            |    11 +
+ .../git-source-commit.txt                          |     3 +
+ .../git-staged-paths.txt                           |   405 +
+ .../audit-capture.mjs                              |   291 +
+ .../capture-summary.json                           | 31138 +++++++++++++++++++
+ .../component-consistency-matrix.csv               |     8 +
+ .../figma-authority.md                             |    37 +
+ .../findings.csv                                   |     9 +
+ .../findings.json                                  |   146 +
+ .../metrics/blog-single__1024__wp.json             |   417 +
+ .../metrics/blog-single__1440__v9.json             |   429 +
+ .../metrics/blog-single__1440__wp.json             |   417 +
+ .../metrics/blog-single__370__wp.json              |   417 +
+ .../metrics/blog-single__480__v9.json              |   429 +
+ .../metrics/blog-single__480__wp.json              |   417 +
+ .../metrics/blog__1024__wp.json                    |   408 +
+ .../metrics/blog__1440__v9.json                    |   401 +
+ .../metrics/blog__1440__wp.json                    |   408 +
+ .../metrics/blog__370__wp.json                     |   408 +
+ .../metrics/blog__480__v9.json                     |   401 +
+ .../metrics/blog__480__wp.json                     |   408 +
+ .../metrics/generic-geno__1024__wp.json            |   156 +
+ .../metrics/generic-geno__1440__v9.json            |   206 +
+ .../metrics/generic-geno__1440__wp.json            |   156 +
+ .../metrics/generic-geno__370__wp.json             |   156 +
+ .../metrics/generic-geno__480__v9.json             |   212 +
+ .../metrics/generic-geno__480__wp.json             |   156 +
+ .../metrics/home__1024__wp.json                    |   663 +
+ .../metrics/home__1440__v9.json                    |   639 +
+ .../metrics/home__1440__wp.json                    |   663 +
+ .../metrics/home__370__wp.json                     |   663 +
+ .../metrics/home__480__v9.json                     |   639 +
+ .../metrics/home__480__wp.json                     |   663 +
+ .../metrics/kontakty__1024__wp.json                |   210 +
+ .../metrics/kontakty__1440__v9.json                |   185 +
+ .../metrics/kontakty__1440__wp.json                |   210 +
+ .../metrics/kontakty__370__wp.json                 |   210 +
+ .../metrics/kontakty__480__v9.json                 |   185 +
+ .../metrics/kontakty__480__wp.json                 |   210 +
+ .../metrics/ocentre__1024__wp.json                 |   730 +
+ .../metrics/ocentre__1440__v9.json                 |   673 +
+ .../metrics/ocentre__1440__wp.json                 |   710 +
+ .../metrics/ocentre__370__wp.json                  |   695 +
+ .../metrics/ocentre__480__v9.json                  |   673 +
+ .../metrics/ocentre__480__wp.json                  |   705 +
+ .../metrics/section-rpp__1024__wp.json             |   916 +
+ .../metrics/section-rpp__1440__v9.json             |   140 +
+ .../metrics/section-rpp__1440__wp.json             |   876 +
+ .../metrics/section-rpp__370__wp.json              |   865 +
+ .../metrics/section-rpp__480__v9.json              |   140 +
+ .../metrics/section-rpp__480__wp.json              |   865 +
+ .../metrics/service-alcohol__1024__wp.json         |   706 +
+ .../metrics/service-alcohol__1440__v9.json         |   639 +
+ .../metrics/service-alcohol__1440__wp.json         |   666 +
+ .../metrics/service-alcohol__370__wp.json          |   671 +
+ .../metrics/service-alcohol__480__v9.json          |   639 +
+ .../metrics/service-alcohol__480__wp.json          |   681 +
+ .../metrics/service-narc__1024__wp.json            |   696 +
+ .../metrics/service-narc__1440__v9.json            |   140 +
+ .../metrics/service-narc__1440__wp.json            |   656 +
+ .../metrics/service-narc__370__wp.json             |   661 +
+ .../metrics/service-narc__480__v9.json             |   140 +
+ .../metrics/service-narc__480__wp.json             |   671 +
+ .../metrics/specialist__1024__wp.json              |   156 +
+ .../metrics/specialist__1440__wp.json              |   156 +
+ .../metrics/specialist__370__wp.json               |   156 +
+ .../metrics/specialist__480__wp.json               |   156 +
+ .../metrics/uslugi__1024__wp.json                  |   724 +
+ .../metrics/uslugi__1440__v9.json                  |   708 +
+ .../metrics/uslugi__1440__wp.json                  |   724 +
+ .../metrics/uslugi__370__wp.json                   |   724 +
+ .../metrics/uslugi__480__v9.json                   |   708 +
+ .../metrics/uslugi__480__wp.json                   |   724 +
+ .../refs/design-png-dimensions.txt                 |    20 +
+ .../refs/ref-blog-desktop.png                      |   Bin 0 -> 4050277 bytes
+ .../refs/ref-blog-mobile.png                       |   Bin 0 -> 2556984 bytes
+ .../refs/ref-blog-single-desktop.png               |   Bin 0 -> 8778970 bytes
+ .../refs/ref-blog-single-mobile.png                |   Bin 0 -> 3403584 bytes
+ .../refs/ref-generic-desktop.png                   |   Bin 0 -> 614515 bytes
+ .../refs/ref-generic-mobile.png                    |   Bin 0 -> 503508 bytes
+ .../refs/ref-kontakty-desktop.png                  |   Bin 0 -> 2622313 bytes
+ .../refs/ref-kontakty-mobile.png                   |   Bin 0 -> 1014125 bytes
+ .../refs/ref-ocentre-desktop.png                   |   Bin 0 -> 13496724 bytes
+ .../refs/ref-ocentre-mobile.png                    |   Bin 0 -> 5614617 bytes
+ .../refs/ref-section-desktop.png                   |   Bin 0 -> 11434472 bytes
+ .../refs/ref-section-mobile.png                    |   Bin 0 -> 5608826 bytes
+ .../refs/ref-service-desktop.png                   |   Bin 0 -> 11476382 bytes
+ .../refs/ref-service-mobile.png                    |   Bin 0 -> 5605767 bytes
+ .../refs/ref-uslugi-desktop.png                    |   Bin 0 -> 9157634 bytes
+ .../refs/ref-uslugi-mobile.png                     |   Bin 0 -> 5143791 bytes
+ .../route-viewport-matrix.csv                      |    12 +
+ .../screenshots/blog-single__1024__wp__body.png    |   Bin 0 -> 453889 bytes
+ .../screenshots/blog-single__1024__wp__full.png    |   Bin 0 -> 372821 bytes
+ .../screenshots/blog-single__1440__v9__body.png    |   Bin 0 -> 5777573 bytes
+ .../screenshots/blog-single__1440__v9__full.png    |   Bin 0 -> 2192542 bytes
+ .../screenshots/blog-single__1440__wp__body.png    |   Bin 0 -> 487727 bytes
+ .../screenshots/blog-single__1440__wp__full.png    |   Bin 0 -> 498806 bytes
+ .../screenshots/blog-single__370__wp__body.png     |   Bin 0 -> 304409 bytes
+ .../screenshots/blog-single__370__wp__full.png     |   Bin 0 -> 291355 bytes
+ .../screenshots/blog-single__480__v9__body.png     |   Bin 0 -> 2641065 bytes
+ .../screenshots/blog-single__480__v9__full.png     |   Bin 0 -> 1917033 bytes
+ .../screenshots/blog-single__480__wp__body.png     |   Bin 0 -> 383607 bytes
+ .../screenshots/blog-single__480__wp__full.png     |   Bin 0 -> 325069 bytes
+ .../screenshots/blog__1024__wp__body.png           |   Bin 0 -> 241532 bytes
+ .../screenshots/blog__1024__wp__full.png           |   Bin 0 -> 302861 bytes
+ .../screenshots/blog__1440__v9__body.png           |   Bin 0 -> 1353240 bytes
+ .../screenshots/blog__1440__v9__full.png           |   Bin 0 -> 1391352 bytes
+ .../screenshots/blog__1440__wp__body.png           |   Bin 0 -> 491151 bytes
+ .../screenshots/blog__1440__wp__full.png           |   Bin 0 -> 625109 bytes
+ .../screenshots/blog__370__wp__body.png            |   Bin 0 -> 161723 bytes
+ .../screenshots/blog__370__wp__full.png            |   Bin 0 -> 199949 bytes
+ .../screenshots/blog__480__v9__body.png            |   Bin 0 -> 498359 bytes
+ .../screenshots/blog__480__v9__full.png            |   Bin 0 -> 504314 bytes
+ .../screenshots/blog__480__wp__body.png            |   Bin 0 -> 196829 bytes
+ .../screenshots/blog__480__wp__full.png            |   Bin 0 -> 250366 bytes
+ .../screenshots/generic-geno__1024__wp__body.png   |   Bin 0 -> 22947 bytes
+ .../screenshots/generic-geno__1024__wp__full.png   |   Bin 0 -> 227547 bytes
+ .../screenshots/generic-geno__1440__v9__body.png   |   Bin 0 -> 53437 bytes
+ .../screenshots/generic-geno__1440__v9__full.png   |   Bin 0 -> 1311241 bytes
+ .../screenshots/generic-geno__1440__wp__body.png   |   Bin 0 -> 21236 bytes
+ .../screenshots/generic-geno__1440__wp__full.png   |   Bin 0 -> 256717 bytes
+ .../screenshots/generic-geno__370__wp__body.png    |   Bin 0 -> 20033 bytes
+ .../screenshots/generic-geno__370__wp__full.png    |   Bin 0 -> 147284 bytes
+ .../screenshots/generic-geno__480__v9__body.png    |   Bin 0 -> 50710 bytes
+ .../screenshots/generic-geno__480__v9__full.png    |   Bin 0 -> 350063 bytes
+ .../screenshots/generic-geno__480__wp__body.png    |   Bin 0 -> 21601 bytes
+ .../screenshots/generic-geno__480__wp__full.png    |   Bin 0 -> 167672 bytes
+ .../screenshots/home__1024__wp__body.png           |   Bin 0 -> 355531 bytes
+ .../screenshots/home__1024__wp__full.png           |   Bin 0 -> 1083032 bytes
+ .../screenshots/home__1440__v9__body.png           |   Bin 0 -> 331793 bytes
+ .../screenshots/home__1440__v9__full.png           |   Bin 0 -> 1404593 bytes
+ .../screenshots/home__1440__wp__body.png           |   Bin 0 -> 358742 bytes
+ .../screenshots/home__1440__wp__full.png           |   Bin 0 -> 1512182 bytes
+ .../screenshots/home__370__wp__body.png            |   Bin 0 -> 93107 bytes
+ .../screenshots/home__370__wp__full.png            |   Bin 0 -> 303711 bytes
+ .../screenshots/home__480__v9__body.png            |   Bin 0 -> 310920 bytes
+ .../screenshots/home__480__v9__full.png            |   Bin 0 -> 534708 bytes
+ .../screenshots/home__480__wp__body.png            |   Bin 0 -> 89128 bytes
+ .../screenshots/home__480__wp__full.png            |   Bin 0 -> 377986 bytes
+ .../screenshots/kontakty__1024__wp__body.png       |   Bin 0 -> 1277458 bytes
+ .../screenshots/kontakty__1024__wp__full.png       |   Bin 0 -> 812760 bytes
+ .../screenshots/kontakty__1440__v9__body.png       |   Bin 0 -> 1664652 bytes
+ .../screenshots/kontakty__1440__v9__full.png       |   Bin 0 -> 1695306 bytes
+ .../screenshots/kontakty__1440__wp__body.png       |   Bin 0 -> 1659505 bytes
+ .../screenshots/kontakty__1440__wp__full.png       |   Bin 0 -> 1816527 bytes
+ .../screenshots/kontakty__370__wp__body.png        |   Bin 0 -> 299902 bytes
+ .../screenshots/kontakty__370__wp__full.png        |   Bin 0 -> 248765 bytes
+ .../screenshots/kontakty__480__v9__body.png        |   Bin 0 -> 434995 bytes
+ .../screenshots/kontakty__480__v9__full.png        |   Bin 0 -> 287765 bytes
+ .../screenshots/kontakty__480__wp__body.png        |   Bin 0 -> 428488 bytes
+ .../screenshots/kontakty__480__wp__full.png        |   Bin 0 -> 336720 bytes
+ .../screenshots/ocentre__1024__wp__body.png        |   Bin 0 -> 412313 bytes
+ .../screenshots/ocentre__1024__wp__full.png        |   Bin 0 -> 1339960 bytes
+ .../screenshots/ocentre__1440__v9__body.png        |   Bin 0 -> 328501 bytes
+ .../screenshots/ocentre__1440__v9__full.png        |   Bin 0 -> 1590536 bytes
+ .../screenshots/ocentre__1440__wp__body.png        |   Bin 0 -> 366241 bytes
+ .../screenshots/ocentre__1440__wp__full.png        |   Bin 0 -> 1684613 bytes
+ .../screenshots/ocentre__370__wp__body.png         |   Bin 0 -> 288839 bytes
+ .../screenshots/ocentre__370__wp__full.png         |   Bin 0 -> 579827 bytes
+ .../screenshots/ocentre__480__v9__body.png         |   Bin 0 -> 282805 bytes
+ .../screenshots/ocentre__480__v9__full.png         |   Bin 0 -> 586921 bytes
+ .../screenshots/ocentre__480__wp__body.png         |   Bin 0 -> 290762 bytes
+ .../screenshots/ocentre__480__wp__full.png         |   Bin 0 -> 634897 bytes
+ .../screenshots/section-rpp__1024__wp__body.png    |   Bin 0 -> 259064 bytes
+ .../screenshots/section-rpp__1024__wp__full.png    |   Bin 0 -> 1267953 bytes
+ .../screenshots/section-rpp__1440__v9__body.png    |   Bin 0 -> 25187 bytes
+ .../screenshots/section-rpp__1440__v9__full.png    |   Bin 0 -> 138801 bytes
+ .../screenshots/section-rpp__1440__wp__body.png    |   Bin 0 -> 220926 bytes
+ .../screenshots/section-rpp__1440__wp__full.png    |   Bin 0 -> 1662275 bytes
+ .../screenshots/section-rpp__370__wp__body.png     |   Bin 0 -> 178675 bytes
+ .../screenshots/section-rpp__370__wp__full.png     |   Bin 0 -> 530897 bytes
+ .../screenshots/section-rpp__480__v9__body.png     |   Bin 0 -> 25341 bytes
+ .../screenshots/section-rpp__480__v9__full.png     |   Bin 0 -> 119524 bytes
+ .../screenshots/section-rpp__480__wp__body.png     |   Bin 0 -> 179563 bytes
+ .../screenshots/section-rpp__480__wp__full.png     |   Bin 0 -> 594661 bytes
+ .../service-alcohol__1024__wp__body.png            |   Bin 0 -> 277631 bytes
+ .../service-alcohol__1024__wp__full.png            |   Bin 0 -> 1191323 bytes
+ .../service-alcohol__1440__v9__body.png            |   Bin 0 -> 266204 bytes
+ .../service-alcohol__1440__v9__full.png            |   Bin 0 -> 1473570 bytes
+ .../service-alcohol__1440__wp__body.png            |   Bin 0 -> 266599 bytes
+ .../service-alcohol__1440__wp__full.png            |   Bin 0 -> 1526223 bytes
+ .../screenshots/service-alcohol__370__wp__body.png |   Bin 0 -> 187220 bytes
+ .../screenshots/service-alcohol__370__wp__full.png |   Bin 0 -> 521274 bytes
+ .../screenshots/service-alcohol__480__v9__body.png |   Bin 0 -> 229696 bytes
+ .../screenshots/service-alcohol__480__v9__full.png |   Bin 0 -> 572286 bytes
+ .../screenshots/service-alcohol__480__wp__body.png |   Bin 0 -> 229741 bytes
+ .../screenshots/service-alcohol__480__wp__full.png |   Bin 0 -> 614491 bytes
+ .../screenshots/service-narc__1024__wp__body.png   |   Bin 0 -> 266105 bytes
+ .../screenshots/service-narc__1024__wp__full.png   |   Bin 0 -> 1150096 bytes
+ .../screenshots/service-narc__1440__v9__body.png   |   Bin 0 -> 21255 bytes
+ .../screenshots/service-narc__1440__v9__full.png   |   Bin 0 -> 135337 bytes
+ .../screenshots/service-narc__1440__wp__body.png   |   Bin 0 -> 256341 bytes
+ .../screenshots/service-narc__1440__wp__full.png   |   Bin 0 -> 1482588 bytes
+ .../screenshots/service-narc__370__wp__body.png    |   Bin 0 -> 174680 bytes
+ .../screenshots/service-narc__370__wp__full.png    |   Bin 0 -> 475560 bytes
+ .../screenshots/service-narc__480__v9__body.png    |   Bin 0 -> 20346 bytes
+ .../screenshots/service-narc__480__v9__full.png    |   Bin 0 -> 115046 bytes
+ .../screenshots/service-narc__480__wp__body.png    |   Bin 0 -> 216249 bytes
+ .../screenshots/service-narc__480__wp__full.png    |   Bin 0 -> 576074 bytes
+ .../screenshots/specialist__1024__wp__body.png     |   Bin 0 -> 204755 bytes
+ .../screenshots/specialist__1024__wp__full.png     |   Bin 0 -> 259223 bytes
+ .../screenshots/specialist__1440__wp__body.png     |   Bin 0 -> 205779 bytes
+ .../screenshots/specialist__1440__wp__full.png     |   Bin 0 -> 393823 bytes
+ .../screenshots/specialist__370__wp__body.png      |   Bin 0 -> 167245 bytes
+ .../screenshots/specialist__370__wp__full.png      |   Bin 0 -> 201488 bytes
+ .../screenshots/specialist__480__wp__body.png      |   Bin 0 -> 196130 bytes
+ .../screenshots/specialist__480__wp__full.png      |   Bin 0 -> 231292 bytes
+ .../screenshots/uslugi__1024__wp__body.png         |   Bin 0 -> 223551 bytes
+ .../screenshots/uslugi__1024__wp__full.png         |   Bin 0 -> 1048362 bytes
+ .../screenshots/uslugi__1440__v9__body.png         |   Bin 0 -> 179862 bytes
+ .../screenshots/uslugi__1440__v9__full.png         |   Bin 0 -> 1304048 bytes
+ .../screenshots/uslugi__1440__wp__body.png         |   Bin 0 -> 184647 bytes
+ .../screenshots/uslugi__1440__wp__full.png         |   Bin 0 -> 1353375 bytes
+ .../screenshots/uslugi__370__wp__body.png          |   Bin 0 -> 151679 bytes
+ .../screenshots/uslugi__370__wp__full.png          |   Bin 0 -> 431467 bytes
+ .../screenshots/uslugi__480__v9__body.png          |   Bin 0 -> 165314 bytes
+ .../screenshots/uslugi__480__v9__full.png          |   Bin 0 -> 467169 bytes
+ .../screenshots/uslugi__480__wp__body.png          |   Bin 0 -> 160299 bytes
+ .../screenshots/uslugi__480__wp__full.png          |   Bin 0 -> 492831 bytes
+ .../section-padding-diffs-wp-vs-v9.csv             |    84 +
+ .../wp-vs-v9-metrics.csv                           |    37 +
+ .../E58-VA-001/comparison-board-1440.png           |   Bin 0 -> 21328 bytes
+ .../E58-VA-001/comparison-board-480.png            |   Bin 0 -> 13177 bytes
+ .../E58-VA-001/current-wp-crop-1440.png            |   Bin 0 -> 3353 bytes
+ .../E58-VA-001/measurement-evidence.md             |     3 +
+ .../E58-VA-001/selector-source-notes.md            |    23 +
+ .../E58-VA-001/v9-static-crop-1440.png             |   Bin 0 -> 3353 bytes
+ .../E58-VA-002/comparison-board-1440.png           |   Bin 0 -> 571625 bytes
+ .../E58-VA-002/current-wp-crop-1440.png            |   Bin 0 -> 3414 bytes
+ .../E58-VA-002/figma-ref-crop-desktop.png          |   Bin 0 -> 651772 bytes
+ .../E58-VA-002/measurement-evidence.md             |     3 +
+ .../E58-VA-002/selector-source-notes.md            |    11 +
+ .../E58-VA-002/v9-static-crop-1440.png             |   Bin 0 -> 3414 bytes
+ .../E58-VA-003/comparison-board-370.png            |   Bin 0 -> 12729 bytes
+ .../E58-VA-003/current-wp-btn-crop-370.png         |   Bin 0 -> 5699 bytes
+ .../E58-VA-003/measurement-evidence.md             |     3 +
+ .../E58-VA-003/selector-source-notes.md            |    10 +
+ .../E58-VA-004/comparison-board-1440.png           |   Bin 0 -> 151591 bytes
+ .../E58-VA-004/measurement-evidence.md             |     3 +
+ .../E58-VA-004/selector-source-notes.md            |     9 +
+ .../E58-VA-005/comparison-board-1440.png           |   Bin 0 -> 449786 bytes
+ .../E58-VA-005/comparison-board-480.png            |   Bin 0 -> 247731 bytes
+ .../E58-VA-005/current-wp-crop-1440.png            |   Bin 0 -> 22332 bytes
+ .../E58-VA-005/figma-ref-crop-desktop.png          |   Bin 0 -> 465780 bytes
+ .../E58-VA-005/measurement-evidence.md             |     3 +
+ .../E58-VA-005/selector-source-notes.md            |    10 +
+ .../E58-VA-005/v9-static-crop-1440.png             |   Bin 0 -> 21775 bytes
+ .../E58-VA-006/comparison-board-1440.png           |   Bin 0 -> 529661 bytes
+ .../E58-VA-006/current-wp-crop-1440.png            |   Bin 0 -> 93253 bytes
+ .../E58-VA-006/figma-ref-crop-desktop.png          |   Bin 0 -> 316417 bytes
+ .../E58-VA-006/measurement-evidence.md             |     3 +
+ .../E58-VA-006/selector-source-notes.md            |     7 +
+ .../E58-VA-006/v9-static-crop-1440.png             |   Bin 0 -> 353017 bytes
+ .../E58-VA-007/comparison-board-1440.png           |   Bin 0 -> 144266 bytes
+ .../E58-VA-007/current-wp-crop-1440.png            |   Bin 0 -> 68129 bytes
+ .../E58-VA-007/measurement-evidence.md             |     3 +
+ .../E58-VA-007/selector-source-notes.md            |    10 +
+ .../E58-VA-007/v9-static-crop-1440.png             |   Bin 0 -> 200070 bytes
+ .../E58-VA-008/comparison-board-1440.png           |   Bin 0 -> 161043 bytes
+ .../E58-VA-008/current-wp-crop-1440.png            |   Bin 0 -> 24606 bytes
+ .../E58-VA-008/figma-ref-crop-desktop.png          |   Bin 0 -> 325761 bytes
+ .../E58-VA-008/measurement-evidence.md             |     3 +
+ .../E58-VA-008/selector-source-notes.md            |     9 +
+ .../authority-conflicts.md                         |    42 +
+ .../decision-summary.csv                           |     9 +
+ .../measurement-matrix.csv                         |    27 +
+ .../proposed-fix-matrix.csv                        |     9 +
+ .../BACKUP-INFO.md                                 |    14 +
+ .../BACKUP-OK.txt                                  |     1 +
+ .../backup-hashes-before.csv                       |    19 +
+ .../comfort-assertions.txt                         |     7 +
+ .../comfort-dom-after-home.txt                     |    28 +
+ .../comfort-dom-after-ocentre.txt                  |    52 +
+ .../comfort-dom-before-after.txt                   |    19 +
+ .../contacts-acf-usage-audit.csv                   |    10 +
+ .../contacts-admin-fields-after.txt                |     8 +
+ .../contacts-page-20-meta-after.txt                |    63 +
+ .../delivery-hashes.csv                            |     9 +
+ .../footer-hover-rule-after.txt                    |     1 +
+ .../frontend-home.html                             |  3029 ++
+ .../frontend-kontakty.html                         |  1488 +
+ .../operator-change-manifest.csv                   |     4 +
+ .../regression-matrix.csv                          |     9 +
+ .../removed-field-matrix.csv                       |     6 +
+ .../db-mutation-report.json                        |    20 +
+ .../delivery-hashes.csv                            |    16 +
+ .../frontend-home.html                             |  3025 ++
+ .../frontend-kontakty.html                         |  1487 +
+ .../operator-change-manifest.csv                   |     5 +
+ .../operator-diff-inventory.md                     |    18 +
+ .../pre-change-backup-proof.txt                    |     4 +
+ .../promoted-file-manifest.csv                     |    16 +
+ .../regression-matrix.json                         |    10 +
+ .../validation-report.json                         |    67 +
+ .../BACKUP-PROOF.txt                               |     7 +
+ .../backup-path.txt                                |     1 +
+ .../breadcrumb-selector-property-matrix.csv        |     9 +
+ .../operator-diff-inventory.csv                    |     4 +
+ .../probe-missing-crumbs.json                      |   158 +
+ .../regression-matrix.csv                          |    10 +
+ .../removed-current-rule-manifest.csv              |     6 +
+ .../reviews-figma-audit.csv                        |    11 +
+ .../reviews-markup-proof.csv                       |     2 +
+ .../screenshots/blog-single-1024x768.png           |   Bin 0 -> 80309 bytes
+ .../screenshots/crumb-blog-1024x768.png            |   Bin 0 -> 116184 bytes
+ .../screenshots/crumb-blog-1440x900.png            |   Bin 0 -> 239942 bytes
+ .../screenshots/crumb-blog-370x812.png             |   Bin 0 -> 82421 bytes
+ .../screenshots/crumb-blog-480x900.png             |   Bin 0 -> 99208 bytes
+ .../screenshots/crumb-kontakty-1024x768.png        |   Bin 0 -> 236408 bytes
+ .../screenshots/crumb-kontakty-1440x900.png        |   Bin 0 -> 384128 bytes
+ .../screenshots/crumb-kontakty-370x812.png         |   Bin 0 -> 98686 bytes
+ .../screenshots/crumb-kontakty-480x900.png         |   Bin 0 -> 155264 bytes
+ .../screenshots/crumb-o-centre-1024x768.png        |   Bin 0 -> 893499 bytes
+ .../screenshots/crumb-o-centre-1440x900.png        |   Bin 0 -> 1226614 bytes
+ .../screenshots/crumb-o-centre-370x812.png         |   Bin 0 -> 290683 bytes
+ .../screenshots/crumb-o-centre-480x900.png         |   Bin 0 -> 346759 bytes
+ .../screenshots/crumb-otzyvy-1024x768.png          |   Bin 0 -> 127833 bytes
+ .../screenshots/crumb-otzyvy-1440x900.png          |   Bin 0 -> 210478 bytes
+ .../screenshots/crumb-otzyvy-370x812.png           |   Bin 0 -> 80781 bytes
+ .../screenshots/crumb-otzyvy-480x900.png           |   Bin 0 -> 119814 bytes
+ .../screenshots/crumb-uslugi-1024x768.png          |   Bin 0 -> 805598 bytes
+ .../screenshots/crumb-uslugi-1440x900.png          |   Bin 0 -> 1120845 bytes
+ .../screenshots/crumb-uslugi-370x812.png           |   Bin 0 -> 290862 bytes
+ .../screenshots/crumb-uslugi-480x900.png           |   Bin 0 -> 346746 bytes
+ .../crumb-uslugi_zavisimosti-1024x768.png          |   Bin 0 -> 998563 bytes
+ .../crumb-uslugi_zavisimosti-1440x900.png          |   Bin 0 -> 1412891 bytes
+ .../crumb-uslugi_zavisimosti-370x812.png           |   Bin 0 -> 354161 bytes
+ .../crumb-uslugi_zavisimosti-480x900.png           |   Bin 0 -> 425119 bytes
+ ...ti_lechenie-alkogolnoy-zavisimosti-1024x768.png |   Bin 0 -> 927711 bytes
+ ...ti_lechenie-alkogolnoy-zavisimosti-1440x900.png |   Bin 0 -> 1267763 bytes
+ ...sti_lechenie-alkogolnoy-zavisimosti-370x812.png |   Bin 0 -> 340628 bytes
+ ...sti_lechenie-alkogolnoy-zavisimosti-480x900.png |   Bin 0 -> 416590 bytes
+ .../screenshots/otzyvy-1024x768.png                |   Bin 0 -> 162744 bytes
+ .../screenshots/otzyvy-1440x900.png                |   Bin 0 -> 259269 bytes
+ .../screenshots/otzyvy-370x812.png                 |   Bin 0 -> 105668 bytes
+ .../screenshots/otzyvy-480x900.png                 |   Bin 0 -> 136663 bytes
+ .../screenshots/otzyvy-body-1024x768.png           |   Bin 0 -> 123109 bytes
+ .../screenshots/otzyvy-body-1440x900.png           |   Bin 0 -> 186045 bytes
+ .../screenshots/otzyvy-body-370x812.png            |   Bin 0 -> 92544 bytes
+ .../screenshots/otzyvy-body-480x900.png            |   Bin 0 -> 107033 bytes
+ .../screenshots/subnav-uslugi-1024x768.png         |   Bin 0 -> 800375 bytes
+ .../screenshots/subnav-uslugi-1440x900.png         |   Bin 0 -> 1120845 bytes
+ .../screenshots/subnav-uslugi-370x812.png          |   Bin 0 -> 289876 bytes
+ .../screenshots/subnav-uslugi-480x900.png          |   Bin 0 -> 347114 bytes
+ .../subnav-uslugi_zavisimosti-1024x768.png         |   Bin 0 -> 994515 bytes
+ .../subnav-uslugi_zavisimosti-1440x900.png         |   Bin 0 -> 1413628 bytes
+ .../subnav-uslugi_zavisimosti-370x812.png          |   Bin 0 -> 350122 bytes
+ .../subnav-uslugi_zavisimosti-480x900.png          |   Bin 0 -> 422386 bytes
+ ...ti_lechenie-alkogolnoy-zavisimosti-1024x768.png |   Bin 0 -> 927676 bytes
+ ...ti_lechenie-alkogolnoy-zavisimosti-1440x900.png |   Bin 0 -> 1267763 bytes
+ ...sti_lechenie-alkogolnoy-zavisimosti-370x812.png |   Bin 0 -> 340621 bytes
+ ...sti_lechenie-alkogolnoy-zavisimosti-480x900.png |   Bin 0 -> 416122 bytes
+ .../source-runtime-hashes.csv                      |     3 +
+ .../stable-backup-rule-extraction.txt              |    16 +
+ .../stable-current-final-computed-matrix.csv       |    13 +
+ .../subnav-selector-property-matrix.csv            |     4 +
+ .../validate.mjs                                   |   283 +
+ .../validation-report.json                         |  2114 ++
+ .../BACKUP-PROOF.txt                               |     1 +
+ .../backup-path.txt                                |     1 +
+ .../extra-routes.csv                               |     5 +
+ .../hover-focus-audit-matrix.csv                   |    13 +
+ .../nav-breadcrumb-history-matrix.csv              |     6 +
+ .../operator-diff-inventory.csv                    |     5 +
+ .../service-link-url-matrix.csv                    |     4 +
+ .../shot-blog-1024x768.png                         |   Bin 0 -> 139057 bytes
+ .../shot-blog-1440x900.png                         |   Bin 0 -> 200338 bytes
+ .../shot-blog-370x812.png                          |   Bin 0 -> 70227 bytes
+ .../shot-blog-480x900.png                          |   Bin 0 -> 91636 bytes
+ .../shot-home-1024x768.png                         |   Bin 0 -> 704595 bytes
+ .../shot-home-1440x900.png                         |   Bin 0 -> 1132473 bytes
+ .../shot-home-370x812.png                          |   Bin 0 -> 210696 bytes
+ .../shot-home-480x900.png                          |   Bin 0 -> 278428 bytes
+ .../shot-uslugi-1024x768.png                       |   Bin 0 -> 792299 bytes
+ .../shot-uslugi-1440x900.png                       |   Bin 0 -> 211997 bytes
+ .../shot-uslugi-370x812.png                        |   Bin 0 -> 74743 bytes
+ .../shot-uslugi-480x900.png                        |   Bin 0 -> 73324 bytes
+ .../shot-zavisimosti-1024x768.png                  |   Bin 0 -> 118967 bytes
+ .../shot-zavisimosti-1440x900.png                  |   Bin 0 -> 205638 bytes
+ .../shot-zavisimosti-370x812.png                   |   Bin 0 -> 67662 bytes
+ .../shot-zavisimosti-480x900.png                   |   Bin 0 -> 93377 bytes
+ .../source-runtime-hashes.csv                      |    10 +
+ .../validation-report.json                         |   159 +
+ .../viewport-validation.json                       |   701 +
+ .../changed-theme-files-hashes.csv                 |    57 +
+ .../db-writes.csv.json                             |   178 +
+ .../db-writes.json                                 |   178 +
+ .../demo-posts.csv                                 |    11 +
+ .../operator-change-manifest.csv                   |     4 +
+ .../pre-backup-hashes.csv                          |    34 +
+ .../preflight-contacts.html                        |  1490 +
+ ...diff-assets-css-fp02-lifebuoy-parallax.css.diff |    13 +
+ .../preflight-diff-assets-css-v9-style.css.diff    |   528 +
+ .../preflight-diff-assets-js-v9-shell.js.diff      |    32 +
+ .../preflight-home.html                            |  3029 ++
+ .../preflight-ocentre.html                         |  2343 ++
+ .../404-figma-authority.md                         |     9 +
+ .../404-visual-source-crop.png                     |   Bin 0 -> 473185 bytes
+ .../breadcrumb-template-family-matrix.csv          |    12 +
+ .../crop-content.png                               |   Bin 0 -> 1667858 bytes
+ .../crop-visual-a.png                              |   Bin 0 -> 148656 bytes
+ .../crop-visual-b.png                              |   Bin 0 -> 81910 bytes
+ .../crop-visual-c.png                              |   Bin 0 -> 251753 bytes
+ .../dom/blog.txt                                   |     1 +
+ .../dom/breadcrumb-wrapper-matrix.csv              |    10 +
+ .../dom/galereya-wrapper-proof.txt                 |     1 +
+ .../dom/kontakty.txt                               |     1 +
+ .../dom/o-centre-galereya-o-dome.txt               |     1 +
+ .../dom/o-centre-o-nas.txt                         |     1 +
+ .../dom/o-centre.txt                               |     1 +
+ .../dom/otzyvy.txt                                 |     1 +
+ .../dom/specyalisty-shipovsky.txt                  |     1 +
+ .../dom/specyalisty.txt                            |     1 +
+ .../dom/uslugi-zavisimosti.txt                     |     1 +
+ .../figma-authority-404-desktop.png                |   Bin 0 -> 525647 bytes
+ .../figma-authority-404-mobile.png                 |   Bin 0 -> 201069 bytes
+ .../http/404-status-matrix.csv                     |     4 +
+ .../blog-this-blog-post-does-not-exist-e62a.html   |  1321 +
+ .../this-page-definitely-does-not-exist-e62a.html  |  1321 +
+ ...visimosti-this-service-does-not-exist-e62a.html |  1321 +
+ .../open-e61-tails.md                              |     7 +
+ .../operator-canonization-inventory.csv            |     2 +
+ .../phone-input-inventory-home.txt                 |    13 +
+ .../phone-mask-logic-matrix.txt                    |     7 +
+ .../phone-mask-validation-matrix.csv               |     7 +
+ .../regression-matrix.csv                          |    11 +
+ .../screenshots/404-1024.png                       |   Bin 0 -> 208612 bytes
+ .../screenshots/404-1440.png                       |   Bin 0 -> 283045 bytes
+ .../screenshots/404-370.png                        |   Bin 0 -> 84005 bytes
+ .../screenshots/404-480.png                        |   Bin 0 -> 113729 bytes
+ .../screenshots/galereya-1440.png                  |   Bin 0 -> 250566 bytes
+ .../screenshots/phone-modal-masked-1440.png        |   Bin 0 -> 679654 bytes
+ .../source-runtime-hashes.csv                      |    11 +
+ .../strip-1100-1600.png                            |   Bin 0 -> 26293 bytes
+ .../strip-400-900.png                              |   Bin 0 -> 144347 bytes
+ .../strip-700-1200.png                             |   Bin 0 -> 490631 bytes
+ .../strip-900-1400.png                             |   Bin 0 -> 362331 bytes
+ .../triumph-phone-mask-reference.md                |    10 +
+ .../backup-proof.csv                               |     3 +
+ .../db-writes.csv                                  |     1 +
+ .../demo-blog-image-mapping.csv                    |    11 +
+ .../demo-reviews-matrix.csv                        |    21 +
+ .../featured-tweaks.csv                            |     1 +
+ .../founder-ownership-before-after.md              |    14 +
+ .../founder-ownership.csv                          |     6 +
+ .../head-blog-page-2.html                          |     5 +
+ .../head-blog.html                                 |     5 +
+ .../head-otzyvy-page-2.html                        |     5 +
+ .../head-otzyvy-page-3.html                        |     5 +
+ .../head-otzyvy.html                               |     5 +
+ .../operator-canonization-inventory.csv            |     3 +
+ .../pagination-summary.json                        |     8 +
+ .../regression-matrix.csv                          |    14 +
+ .../review-anchor-destination-matrix.csv           |    31 +
+ .../screenshots/blog-1440.png                      |   Bin 0 -> 614258 bytes
+ .../screenshots/blog-370.png                       |   Bin 0 -> 178291 bytes
+ .../screenshots/blog-480.png                       |   Bin 0 -> 273221 bytes
+ .../screenshots/blog-page2-1024.png                |   Bin 0 -> 103065 bytes
+ .../screenshots/home-reviews-1440.png              |   Bin 0 -> 1127112 bytes
+ .../screenshots/ocentre-1440.png                   |   Bin 0 -> 371922 bytes
+ .../screenshots/otzyvy-1440.png                    |   Bin 0 -> 205393 bytes
+ .../screenshots/otzyvy-page2-480.png               |   Bin 0 -> 127360 bytes
+ .../screenshots/otzyvy-page3-370.png               |   Bin 0 -> 95067 bytes
+ .../screenshots/service-reviews-1024.png           |   Bin 0 -> 552803 bytes
+ .../screenshots/test.png                           |   Bin 0 -> 196174 bytes
+ .../seo-canonical-matrix.csv                       |    15 +
+ .../seo-validate-final.json                        |   184 +
+ .../seo-validate-raw.json                          |   184 +
+ .../source-runtime-hashes.csv                      |    12 +
+ .../admin-html-blog-19.html                        |  3159 ++
+ .../admin-html-contacts-20.html                    |  3476 +++
+ .../admin-html-founder.html                        |  2854 ++
+ .../admin-html-ocentre-11.html                     |  4067 +++
+ .../admin-html-reviews.html                        |  3558 +++
+ .../admin-html-service-73.html                     |  3906 +++
+ .../admin-html-service-74.html                     |  4561 +++
+ .../admin-html-site-settings.html                  |  1268 +
+ .../admin-screenshot-matrix.csv                    |     9 +
+ .../admin-screenshots/admin-html-blog-19.png       |   Bin 0 -> 114739 bytes
+ .../admin-screenshots/admin-html-contacts-20.png   |   Bin 0 -> 127451 bytes
+ .../admin-screenshots/admin-html-founder.png       |   Bin 0 -> 137932 bytes
+ .../admin-screenshots/admin-html-ocentre-11.png    |   Bin 0 -> 238281 bytes
+ .../admin-screenshots/admin-html-reviews.png       |   Bin 0 -> 94965 bytes
+ .../admin-screenshots/admin-html-service-73.png    |   Bin 0 -> 138549 bytes
+ .../admin-screenshots/admin-html-service-74.png    |   Bin 0 -> 155179 bytes
+ .../admin-screenshots/admin-html-site-settings.png |   Bin 0 -> 89108 bytes
+ .../admin-validation-matrix.json                   |    90 +
+ .../backup-proof.csv                               |     5 +
+ .../db-writes.csv                                  |     5 +
+ .../db-writes.json                                 |    48 +
+ .../deep-regression-matrix.csv                     |    10 +
+ .../demo-content-inventory.json                    |    93 +
+ .../nested-cta-audit.md                            |     2 +
+ .../ocentre-infrastructure-intro-dom-after.html    |     7 +
+ .../ocentre-who-we-treat-dom-after.html            |   232 +
+ .../operator-diff-inventory.csv                    |     4 +
+ .../regression-probe.json                          |   297 +
+ .../reorder-stability-test.json                    |    13 +
+ .../review-anchor-page1.txt                        |    20 +
+ .../review-uid-migration-matrix.csv                |    31 +
+ .../review-uid-migration-matrix.json               |   302 +
+ .../reviews-items-after-uid-before-reorder.json    |   362 +
+ .../route-http-matrix.csv                          |    17 +
+ .../screenshots/404__1024x768.png                  |   Bin 0 -> 214843 bytes
+ .../screenshots/404__1440x900.png                  |   Bin 0 -> 291995 bytes
+ .../screenshots/404__370x812.png                   |   Bin 0 -> 114469 bytes
+ .../screenshots/404__480x900.png                   |   Bin 0 -> 125427 bytes
+ .../screenshots/blog-page-2__1024x768.png          |   Bin 0 -> 139181 bytes
+ .../screenshots/blog-page-2__1440x900.png          |   Bin 0 -> 195537 bytes
+ .../screenshots/blog-page-2__370x812.png           |   Bin 0 -> 88712 bytes
+ .../screenshots/blog-page-2__480x900.png           |   Bin 0 -> 88562 bytes
+ .../screenshots/blog-single__1024x768.png          |   Bin 0 -> 348214 bytes
+ .../screenshots/blog-single__1440x900.png          |   Bin 0 -> 407985 bytes
+ .../screenshots/blog-single__370x812.png           |   Bin 0 -> 186399 bytes
+ .../screenshots/blog-single__480x900.png           |   Bin 0 -> 238905 bytes
+ .../screenshots/blog__1024x768.png                 |   Bin 0 -> 195064 bytes
+ .../screenshots/blog__1440x900.png                 |   Bin 0 -> 273102 bytes
+ .../screenshots/blog__370x812.png                  |   Bin 0 -> 142662 bytes
+ .../screenshots/blog__480x900.png                  |   Bin 0 -> 163645 bytes
+ .../screenshots/home__1024x768.png                 |   Bin 0 -> 701474 bytes
+ .../screenshots/home__1440x900.png                 |   Bin 0 -> 1088292 bytes
+ .../screenshots/home__370x812.png                  |   Bin 0 -> 205579 bytes
+ .../screenshots/home__480x900.png                  |   Bin 0 -> 290926 bytes
+ .../screenshots/kontakty__1024x768.png             |   Bin 0 -> 171399 bytes
+ .../screenshots/kontakty__1440x900.png             |   Bin 0 -> 217378 bytes
+ .../screenshots/kontakty__370x812.png              |   Bin 0 -> 111673 bytes
+ .../screenshots/kontakty__480x900.png              |   Bin 0 -> 132295 bytes
+ .../screenshots/o-centre-gallery__1024x768.png     |   Bin 0 -> 135107 bytes
+ .../screenshots/o-centre-gallery__1440x900.png     |   Bin 0 -> 199165 bytes
+ .../screenshots/o-centre-gallery__370x812.png      |   Bin 0 -> 81834 bytes
+ .../screenshots/o-centre-gallery__480x900.png      |   Bin 0 -> 92701 bytes
+ .../screenshots/o-centre__1024x768.png             |   Bin 0 -> 166688 bytes
+ .../screenshots/o-centre__1440x900.png             |   Bin 0 -> 194262 bytes
+ .../screenshots/o-centre__370x812.png              |   Bin 0 -> 76895 bytes
+ .../screenshots/o-centre__480x900.png              |   Bin 0 -> 80700 bytes
+ .../screenshots/otzyvy-page-2__1024x768.png        |   Bin 0 -> 160762 bytes
+ .../screenshots/otzyvy-page-2__1440x900.png        |   Bin 0 -> 218698 bytes
+ .../screenshots/otzyvy-page-2__370x812.png         |   Bin 0 -> 95187 bytes
+ .../screenshots/otzyvy-page-2__480x900.png         |   Bin 0 -> 104983 bytes
+ .../screenshots/otzyvy-page-3__1024x768.png        |   Bin 0 -> 171608 bytes
+ .../screenshots/otzyvy-page-3__1440x900.png        |   Bin 0 -> 226102 bytes
+ .../screenshots/otzyvy-page-3__370x812.png         |   Bin 0 -> 97842 bytes
+ .../screenshots/otzyvy-page-3__480x900.png         |   Bin 0 -> 105232 bytes
+ .../screenshots/otzyvy__1024x768.png               |   Bin 0 -> 154463 bytes
+ .../screenshots/otzyvy__1440x900.png               |   Bin 0 -> 228192 bytes
+ .../screenshots/otzyvy__370x812.png                |   Bin 0 -> 93103 bytes
+ .../screenshots/otzyvy__480x900.png                |   Bin 0 -> 94972 bytes
+ .../screenshots/section-zavisimosti__1024x768.png  |   Bin 0 -> 256745 bytes
+ .../screenshots/section-zavisimosti__1440x900.png  |   Bin 0 -> 197995 bytes
+ .../screenshots/section-zavisimosti__370x812.png   |   Bin 0 -> 88244 bytes
+ .../screenshots/section-zavisimosti__480x900.png   |   Bin 0 -> 166199 bytes
+ .../screenshots/service-alcohol__1024x768.png      |   Bin 0 -> 142713 bytes
+ .../screenshots/service-alcohol__1440x900.png      |   Bin 0 -> 298916 bytes
+ .../screenshots/service-alcohol__370x812.png       |   Bin 0 -> 85507 bytes
+ .../screenshots/service-alcohol__480x900.png       |   Bin 0 -> 117142 bytes
+ .../screenshots/specialist-kostyuk__1024x768.png   |   Bin 0 -> 259038 bytes
+ .../screenshots/specialist-kostyuk__1440x900.png   |   Bin 0 -> 311294 bytes
+ .../screenshots/specialist-kostyuk__370x812.png    |   Bin 0 -> 226037 bytes
+ .../screenshots/specialist-kostyuk__480x900.png    |   Bin 0 -> 237761 bytes
+ .../screenshots/specyalisty__1024x768.png          |   Bin 0 -> 127024 bytes
+ .../screenshots/specyalisty__1440x900.png          |   Bin 0 -> 197541 bytes
+ .../screenshots/specyalisty__370x812.png           |   Bin 0 -> 87021 bytes
+ .../screenshots/specyalisty__480x900.png           |   Bin 0 -> 91237 bytes
+ .../screenshots/uslugi__1024x768.png               |   Bin 0 -> 216623 bytes
+ .../screenshots/uslugi__1440x900.png               |   Bin 0 -> 258481 bytes
+ .../screenshots/uslugi__370x812.png                |   Bin 0 -> 100932 bytes
+ .../screenshots/uslugi__480x900.png                |   Bin 0 -> 111107 bytes
+ .../service-field-group-audit.csv                  |     3 +
+ .../slider-destination-matrix.csv                  |    11 +
+ .../source-runtime-hashes.csv                      |    10 +
+ .../source-runtime-parity-final.csv                |    11 +
+ .../viewport-screenshot-matrix.csv                 |    65 +
+ .../who-we-treat-before.php                        |    63 +
+ .../404-after-computed.json                        |   286 +
+ .../404-before-computed.json                       |   438 +
+ .../404-measurement-matrix.csv                     |    12 +
+ .../after/404-after-1024.png                       |   Bin 0 -> 193303 bytes
+ .../after/404-after-1440.png                       |   Bin 0 -> 281016 bytes
+ .../after/404-after-370.png                        |   Bin 0 -> 75663 bytes
+ .../after/404-after-480.png                        |   Bin 0 -> 108436 bytes
+ .../before/404-before-1024.png                     |   Bin 0 -> 193303 bytes
+ .../before/404-before-1440.png                     |   Bin 0 -> 281016 bytes
+ .../before/404-before-370.png                      |   Bin 0 -> 75663 bytes
+ .../before/404-before-480.png                      |   Bin 0 -> 108436 bytes
+ .../db-write-log.md                                |    14 +
+ .../figma-404-desktop-content-crop.png             |   Bin 0 -> 512441 bytes
+ .../figma-404-desktop-mid.png                      |   Bin 0 -> 474317 bytes
+ .../figma-404-desktop-upper.png                    |   Bin 0 -> 512188 bytes
+ .../figma-404-desktop.png                          |   Bin 0 -> 525647 bytes
+ .../figma-404-mobile-content-crop.png              |   Bin 0 -> 118808 bytes
+ .../figma-404-mobile-upper.png                     |   Bin 0 -> 134490 bytes
+ .../figma-404-mobile.png                           |   Bin 0 -> 201069 bytes
+ .../home/home-rehab-1024.png                       |   Bin 0 -> 727375 bytes
+ .../home/home-rehab-1440.png                       |   Bin 0 -> 1101502 bytes
+ .../home/home-rehab-370.png                        |   Bin 0 -> 211349 bytes
+ .../home/home-rehab-480.png                        |   Bin 0 -> 291629 bytes
+ .../migration-matrix.csv                           |     5 +
+ .../operator-canonization-inventory.csv            |     4 +
+ .../program-child-page-matrix.csv                  |     5 +
+ .../regression-matrix.json                         |   117 +
+ .../source-runtime-hashes.csv                      |     7 +
+ .../404-1024x768.png                               |   Bin 0 -> 147746 bytes
+ .../404-1440x900.png                               |   Bin 0 -> 179434 bytes
+ .../404-370x812.png                                |   Bin 0 -> 199091 bytes
+ .../404-480x900.png                                |   Bin 0 -> 233841 bytes
+ .../404-asset-reference-audit.csv                  |     4 +
+ .../v9-06e62e-404-decor-wordpress-search/404.html  |  1393 +
+ .../home-head-snippet.html                         |  3099 ++
+ .../home-header-1440.png                           |   Bin 0 -> 1088292 bytes
+ .../operator-canonization-inventory.csv            |     3 +
+ .../regression-matrix.csv                          |    13 +
+ .../search-no-results-1440.png                     |   Bin 0 -> 179125 bytes
+ .../search-no-results.html                         |  1418 +
+ .../search-page2.html                              |  1461 +
+ .../search-pagination-1440.png                     |   Bin 0 -> 194162 bytes
+ .../search-pagination.html                         |  1528 +
+ .../search-query-matrix.csv                        |     8 +
+ .../search-results-1440.png                        |   Bin 0 -> 234599 bytes
+ .../search-results.html                            |  1416 +
+ .../search-trigger-inventory.csv                   |     6 +
+ .../source-runtime-hashes.csv                      |    19 +
+ .../backup-proof.csv                               |     5 +
+ .../blank-search-from-offcanvas-480.png            |   Bin 0 -> 69413 bytes
+ .../desktop-header-1440.png                        |   Bin 0 -> 1108804 bytes
+ .../desktop-search-open-1440.png                   |   Bin 0 -> 844662 bytes
+ .../floating-header-1440.png                       |   Bin 0 -> 336880 bytes
+ .../js-interaction-matrix.json                     |    16 +
+ .../mobile-header-1024.png                         |   Bin 0 -> 690301 bytes
+ .../mobile-header-370.png                          |   Bin 0 -> 205860 bytes
+ .../mobile-header-480.png                          |   Bin 0 -> 281510 bytes
+ .../offcanvas-search-1024.png                      |   Bin 0 -> 407707 bytes
+ .../offcanvas-search-370.png                       |   Bin 0 -> 50803 bytes
+ .../offcanvas-search-480.png                       |   Bin 0 -> 127832 bytes
+ .../operator-diff-inventory.csv                    |     4 +
+ .../regression-matrix.csv                          |    11 +
+ .../search-blank-1440.png                          |   Bin 0 -> 261649 bytes
+ .../search-breadcrumb-dom-before-after.md          |    16 +
+ .../search-no-results-1440.png                     |   Bin 0 -> 176639 bytes
+ .../search-pagination-1440.png                     |   Bin 0 -> 268321 bytes
+ .../search-results-1440.png                        |   Bin 0 -> 232201 bytes
+ .../search-trigger-inventory-before-after.csv      |     5 +
+ .../source-runtime-hashes.csv                      |     9 +
+ .../v9-06e63-stable-v1-closeout/acf-inventory.csv  |    32 +
+ .../backup-timestamp.txt                           |     1 +
+ .../v9-06e63-stable-v1-closeout/freeze-meta.json   |     6 +
+ .../v9-06e63-stable-v1-closeout/freeze-path.txt    |     1 +
+ .../freeze-timestamp.txt                           |     1 +
+ .../git-allowlist-removed.txt                      |    34 +
+ .../git-excluded-within-fp0002.txt                 |    55 +
+ .../git-status-fp0002-dirty.txt                    |   210 +
+ .../operator-canonization-manifest.csv             |     4 +
+ .../pre-release-backup-meta.json                   |     8 +
+ .../pre-release-backup-path.txt                    |     1 +
+ .../route-http-matrix-extra.csv                    |    14 +
+ .../route-http-matrix-final.csv                    |    29 +
+ .../route-http-matrix.csv                          |    18 +
+ .../screenshots/404__1440x900.png                  |   Bin 0 -> 178932 bytes
+ .../screenshots/404__370x812.png                   |   Bin 0 -> 134896 bytes
+ .../screenshots/404__480x900.png                   |   Bin 0 -> 212912 bytes
+ .../screenshots/blog__1440x900.png                 |   Bin 0 -> 632306 bytes
+ .../screenshots/contacts__1440x900.png             |   Bin 0 -> 230465 bytes
+ .../screenshots/desktop-search-open__1440x900.png  |   Bin 0 -> 844602 bytes
+ .../screenshots/home__1440x900.png                 |   Bin 0 -> 1108804 bytes
+ .../screenshots/home__370x812.png                  |   Bin 0 -> 205860 bytes
+ .../screenshots/home__480x900.png                  |   Bin 0 -> 281510 bytes
+ .../screenshots/legal__1440x900.png                |   Bin 0 -> 287818 bytes
+ .../screenshots/ocentre__1440x900.png              |   Bin 0 -> 1415289 bytes
+ .../screenshots/program-child__1440x900.png        |   Bin 0 -> 261993 bytes
+ .../screenshots/reviews__1440x900.png              |   Bin 0 -> 241635 bytes
+ .../screenshots/screenshot-probe-matrix.json       |   250 +
+ .../screenshots/search-blank__1440x900.png         |   Bin 0 -> 259941 bytes
+ .../screenshots/search-empty__1440x900.png         |   Bin 0 -> 262859 bytes
+ .../screenshots/search-page2__1440x900.png         |   Bin 0 -> 436023 bytes
+ .../screenshots/search-results__1440x900.png       |   Bin 0 -> 759571 bytes
+ .../screenshots/search__370x812.png                |   Bin 0 -> 88385 bytes
+ .../screenshots/search__480x900.png                |   Bin 0 -> 110277 bytes
+ .../screenshots/service-alcohol__1440x900.png      |   Bin 0 -> 1405312 bytes
+ .../screenshots/specialist__1440x900.png           |   Bin 0 -> 303405 bytes
+ .../screenshots/uslugi__1440x900.png               |   Bin 0 -> 1243873 bytes
+ .../screenshots/uslugi__370x812.png                |   Bin 0 -> 270169 bytes
+ .../screenshots/uslugi__480x900.png                |   Bin 0 -> 326768 bytes
+ .../search-pagination-capacity.txt                 |     9 +
+ .../source-runtime-diff-after-canonization.csv     |     9 +
+ .../source-runtime-diff-before.csv                 |    12 +
+ .../v9-06e63-stable-v1-closeout/tail-ledger.md     |    15 +
+ .../wp-discover-routes.txt                         |    42 +
+ .../WORDPRESS/SOURCE-AUTHORITY.md                  |    40 +
+ .../group_fp02_block_comfort_requirements.json     |    79 +-
+ .../acf-json/group_fp02_block_cta_bands.json       |    24 +-
+ .../acf-json/group_fp02_block_founder_quote.json   |    81 +
+ .../acf-json/group_fp02_blog_archive_settings.json |   211 +-
+ .../acf-json/group_fp02_page_contacts.json         |   210 +-
+ .../acf-json/group_fp02_page_ocentre_hub.json      |    18 +
+ .../acf-json/group_fp02_page_reviews.json          |    89 +-
+ .../acf-json/group_fp02_service_relationships.json |     4 +-
+ .../group_fp02_service_structured_sections.json    |     4 +-
+ .../acf-json/group_fp02_site_options_contacts.json |    42 +-
+ .../acf-json/group_fp02_site_options_reviews.json  |    82 +-
+ .../group_fp02_treatment_program_child.json        |    45 +
+ .../shpigovsky-core/src/Admin/OptionsPage.php      |     1 +
+ .../shpigovsky-core/src/Fields/FieldGroups.php     |   431 +-
+ .../src/Fields/RepeaterValidation.php              |     2 +-
+ .../WORDPRESS/theme/shpigovsky/404.php             |    54 +-
+ .../theme/shpigovsky/assets/css/fp02-404.css       |   234 +
+ .../assets/css/fp02-lifebuoy-parallax.css          |     2 +-
+ .../theme/shpigovsky/assets/css/fp02-search.css    |   429 +
+ .../theme/shpigovsky/assets/css/v9-style.css       |   671 +-
+ .../theme/shpigovsky/assets/js/v9-shell.js         |   401 +-
+ .../WORDPRESS/theme/shpigovsky/front-page.php      |     8 +-
+ .../WORDPRESS/theme/shpigovsky/functions.php       |     3 +
+ .../WORDPRESS/theme/shpigovsky/home.php            |    37 +-
+ .../theme/shpigovsky/inc/admin-editor.php          |     4 +
+ .../WORDPRESS/theme/shpigovsky/inc/assets.php      |    28 +
+ .../theme/shpigovsky/inc/blog-helpers.php          |    60 +-
+ .../theme/shpigovsky/inc/contacts-helpers.php      |   178 +-
+ .../theme/shpigovsky/inc/institutional-helpers.php |     9 +-
+ .../WORDPRESS/theme/shpigovsky/inc/navigation.php  |     2 +-
+ .../theme/shpigovsky/inc/pagination-seo.php        |   178 +
+ .../shpigovsky/inc/program-direction-helpers.php   |    72 +-
+ .../shpigovsky/inc/reusable-blocks-helpers.php     |    97 +-
+ .../theme/shpigovsky/inc/reviews-helpers.php       |   459 +-
+ .../theme/shpigovsky/inc/search-helpers.php        |   380 +
+ .../theme/shpigovsky/inc/service-helpers.php       |     6 +-
+ .../theme/shpigovsky/inc/template-tags.php         |   151 +-
+ .../theme/shpigovsky/inc/yandex-map-embed.php      |    92 +
+ .../theme/shpigovsky/page-templates/contacts.php   |    10 +-
+ .../shpigovsky/page-templates/institutional.php    |    16 +-
+ .../theme/shpigovsky/page-templates/reviews.php    |    10 +-
+ .../WORDPRESS/theme/shpigovsky/search.php          |    92 +-
+ .../WORDPRESS/theme/shpigovsky/searchform.php      |    61 +
+ .../shpigovsky/template-parts/blog/lower-stack.php |    11 +-
+ .../template-parts/components/final-form.php       |     4 +-
+ .../components/internal-page-nav.php               |     4 +
+ .../template-parts/components/program-cta-band.php |    57 +-
+ .../components/review-archive-card.php             |    23 +-
+ .../template-parts/components/service-card.php     |    12 +-
+ .../template-parts/contacts/location-card.php      |    26 +-
+ .../template-parts/contacts/map-body.php           |    74 +-
+ .../shpigovsky/template-parts/home/comfort.php     |    46 +-
+ .../template-parts/home/feature-grid.php           |     6 +-
+ .../template-parts/home/founder-quote.php          |    36 +-
+ .../shpigovsky/template-parts/home/genotyping.php  |     4 +-
+ .../template-parts/home/rehabilitation-program.php |     5 +-
+ .../home/rehabilitation-requirements.php           |    35 +-
+ .../shpigovsky/template-parts/home/staff-photo.php |     6 +-
+ .../shpigovsky/template-parts/home/why-us.php      |     6 +-
+ .../template-parts/institutional/about-program.php |     4 +-
+ .../template-parts/institutional/approach-band.php |     2 +-
+ .../institutional/infrastructure-narrative.php     |    53 +-
+ .../template-parts/institutional/who-we-treat.php  |    31 +-
+ .../shpigovsky/template-parts/layout/footer.php    |     8 +-
+ .../layout/global-consultation-modal.php           |     2 +-
+ .../shpigovsky/template-parts/layout/header.php    |     1 +
+ .../template-parts/navigation/breadcrumbs.php      |    34 +-
+ .../template-parts/navigation/offcanvas.php        |    11 +
+ .../template-parts/navigation/primary-desktop.php  |     2 +-
+ .../template-parts/navigation/search-panel.php     |    44 +
+ .../template-parts/reviews/archive-list.php        |    50 +-
+ .../shpigovsky/template-parts/service/children.php |     6 +-
+ .../shpigovsky/template-parts/service/mid-cta.php  |    25 +-
+ .../shpigovsky/template-parts/service/program.php  |     4 +-
+ .../services-hub/rehabilitation-program.php        |     2 +-
+ .../template-parts/shared/reviews-slider.php       |    19 +-
+ 798 files changed, 140336 insertions(+), 1537 deletions(-)

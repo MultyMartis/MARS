@@ -1,0 +1,289 @@
+{
+  "counts": {
+    "MATCH": 24,
+    "KNOWN_INTENTIONAL_SOURCE_ONLY": 0,
+    "PRODUCTION_ONLY_OPERATOR_DRIFT": 1,
+    "LOCAL_ONLY_NEWER": 0,
+    "PRODUCTION_NEWER": 0,
+    "DIVERGENT": 0,
+    "UNKNOWN": 0
+  },
+  "files": [
+    {
+      "surface": "shpigovsky-core",
+      "relative_path": "README.md",
+      "production_sha256": "444ec06659134c32acf0e32ff05ca65e9bd51b413ba04b226de8976b4c11260a",
+      "local_sha256": "444ec06659134c32acf0e32ff05ca65e9bd51b413ba04b226de8976b4c11260a",
+      "production_size": 2164,
+      "local_size": 2164,
+      "local_presence": true,
+      "production_presence": true,
+      "classification": "MATCH"
+    },
+    {
+      "surface": "shpigovsky-core",
+      "relative_path": "inc/compat.php",
+      "production_sha256": "8bd9f8eeecae89287d889f85d51fa4af3e25cb1bcf84c22fa28b380af1b04881",
+      "local_sha256": "8bd9f8eeecae89287d889f85d51fa4af3e25cb1bcf84c22fa28b380af1b04881",
+      "production_size": 1728,
+      "local_size": 1728,
+      "local_presence": true,
+      "production_presence": true,
+      "classification": "MATCH"
+    },
+    {
+      "surface": "shpigovsky-core",
+      "relative_path": "index.php",
+      "production_sha256": "e5c2434c1cce8d94a71d752f3fad0d958a9a81353fbe8b0fab3f9f8d8b6f1f49",
+      "local_sha256": "e5c2434c1cce8d94a71d752f3fad0d958a9a81353fbe8b0fab3f9f8d8b6f1f49",
+      "production_size": 131,
+      "local_size": 131,
+      "local_presence": true,
+      "production_presence": true,
+      "classification": "MATCH"
+    },
+    {
+      "surface": "shpigovsky-core",
+      "relative_path": "languages/.gitkeep",
+      "production_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "local_sha256": null,
+      "production_size": 0,
+      "local_size": null,
+      "local_presence": false,
+      "production_presence": true,
+      "classification": "PRODUCTION_ONLY_OPERATOR_DRIFT"
+    },
+    {
+      "surface": "shpigovsky-core",
+      "relative_path": "languages/shpigovsky-core.pot",
+      "production_sha256": "4fdaad3527917835ba0920069bba6f8410faa90b65b9eeb5a57073e07129ac78",
+      "local_sha256": "4fdaad3527917835ba0920069bba6f8410faa90b65b9eeb5a57073e07129ac78",
+      "production_size": 6914,
+      "local_size": 6914,
+      "local_presence": true,
+      "production_presence": true,
+      "classification": "MATCH"
+    },
+    {
+      "surface": "shpigovsky-core",
+      "relative_path": "shpigovsky-core.php",
+      "production_sha256": "3ad1aa540143bc5d5e51336049b3a9b92820d5fb94712cc04df637275f83e7a0",
+      "local_sha256": "3ad1aa540143bc5d5e51336049b3a9b92820d5fb94712cc04df637275f83e7a0",
+      "production_size": 1809,
+      "local_size": 1809,
+      "local_presence": true,
+      "production_presence": true,
+      "classification": "MATCH"
+    },
+    {
+      "surface": "shpigovsky-core",
+      "relative_path": "src/Admin/EditorRestrictions.php",
+      "production_sha256": "11618c6d38919e16842d89bc9dfe581e92c9e73f760f170a427c19e0c10f3611",
+      "local_sha256": "11618c6d38919e16842d89bc9dfe581e92c9e73f760f170a427c19e0c10f3611",
+      "production_size": 8785,
+      "local_size": 8785,
+      "local_presence": true,
+      "production_presence": true,
+      "classification": "MATCH"
+    },
+    {
+      "surface": "shpigovsky-core",
+      "relative_path": "src/Admin/OptionsPage.php",
+      "production_sha256": "17993721a9bba0c17d73072566517b22e11ad5c5236e9d753347106e8dd190d7",
+      "local_sha256": "17993721a9bba0c17d73072566517b22e11ad5c5236e9d753347106e8dd190d7",
+      "production_size": 11931,
+      "local_size": 11931,
+      "local_presence": true,
+      "production_presence": true,
+      "classification": "MATCH"
+    },
+    {
+      "surface": "shpigovsky-core",
+      "relative_path": "src/Admin/ServiceDuplicate.php",
+      "production_sha256": "ab820c30ec07d51c1375d72002ab0d348d8c3c3e86ddd4b74cee6be305d9f18f",
+      "local_sha256": "ab820c30ec07d51c1375d72002ab0d348d8c3c3e86ddd4b74cee6be305d9f18f",
+      "production_size": 13043,
+      "local_size": 13043,
+      "local_presence": true,
+      "production_presence": true,
+      "classification": "MATCH"
+    },
+    {
+      "surface": "shpigovsky-core",
+      "relative_path": "src/Admin/ServiceLayoutGovernance.php",
+      "production_sha256": "278bdb3f2cd774cb97bf75b8f5b4c62b0f0c2fd659f18456cdf9fd53b8bb4e1c",
+      "local_sha256": "278bdb3f2cd774cb97bf75b8f5b4c62b0f0c2fd659f18456cdf9fd53b8bb4e1c",
+      "production_size": 30140,
+      "local_size": 30140,
+      "local_presence": true,
+      "production_presence": true,
+      "classification": "MATCH"
+    },
+    {
+      "surface": "shpigovsky-core",
+      "relative_path": "src/ContentTypes/Service.php",
+      "production_sha256": "966c37aa1489451f6a2adb581a4442440abe99fc63749d62545ae8ccdcb548cf",
+      "local_sha256": "966c37aa1489451f6a2adb581a4442440abe99fc63749d62545ae8ccdcb548cf",
+      "production_size": 4172,
+      "local_size": 4172,
+      "local_presence": true,
+      "production_presence": true,
+      "classification": "MATCH"
+    },
+    {
+      "surface": "shpigovsky-core",
+      "relative_path": "src/Contracts/ModuleInterface.php",
+      "production_sha256": "97051adc5f2ab4a83ac7b8c21261facae549c17bd1df8cc2f1d9306700fa1132",
+      "local_sha256": "97051adc5f2ab4a83ac7b8c21261facae549c17bd1df8cc2f1d9306700fa1132",
+      "production_size": 598,
+      "local_size": 598,
+      "local_presence": true,
+      "production_presence": true,
+      "classification": "MATCH"
+    },
+    {
+      "surface": "shpigovsky-core",
+      "relative_path": "src/Fields/AcfIntegration.php",
+      "production_sha256": "818457616c5eaf13f0c33ff5bf1b0b7471db3d24de930adbb5a0d490078539e0",
+      "local_sha256": "818457616c5eaf13f0c33ff5bf1b0b7471db3d24de930adbb5a0d490078539e0",
+      "production_size": 2521,
+      "local_size": 2521,
+      "local_presence": true,
+      "production_presence": true,
+      "classification": "MATCH"
+    },
+    {
+      "surface": "shpigovsky-core",
+      "relative_path": "src/Fields/FieldGroups.php",
+      "production_sha256": "9a9af85795a3e277bb602de6a33a9ff591665fadb8a17c4aab14a20cd4e94fbb",
+      "local_sha256": "9a9af85795a3e277bb602de6a33a9ff591665fadb8a17c4aab14a20cd4e94fbb",
+      "production_size": 151344,
+      "local_size": 151344,
+      "local_presence": true,
+      "production_presence": true,
+      "classification": "MATCH"
+    },
+    {
+      "surface": "shpigovsky-core",
+      "relative_path": "src/Fields/RepeaterValidation.php",
+      "production_sha256": "659217479e91aff5f9b70be9a287ed11f7850dd33cdde525adae5662c49b2252",
+      "local_sha256": "659217479e91aff5f9b70be9a287ed11f7850dd33cdde525adae5662c49b2252",
+      "production_size": 10881,
+      "local_size": 10881,
+      "local_presence": true,
+      "production_presence": true,
+      "classification": "MATCH"
+    },
+    {
+      "surface": "shpigovsky-core",
+      "relative_path": "src/Fields/ServiceGeneralParity.php",
+      "production_sha256": "ae77215e49a611fbf195db89e3dd5acb03f870efc56fd8955a5359b35d46497a",
+      "local_sha256": "ae77215e49a611fbf195db89e3dd5acb03f870efc56fd8955a5359b35d46497a",
+      "production_size": 34592,
+      "local_size": 34592,
+      "local_presence": true,
+      "production_presence": true,
+      "classification": "MATCH"
+    },
+    {
+      "surface": "shpigovsky-core",
+      "relative_path": "src/Fields/ServiceSectionParity.php",
+      "production_sha256": "8b454a8b57e6f383d609c3705a44de7a7cedc0d0b5559850063053d1f569361e",
+      "local_sha256": "8b454a8b57e6f383d609c3705a44de7a7cedc0d0b5559850063053d1f569361e",
+      "production_size": 32087,
+      "local_size": 32087,
+      "local_presence": true,
+      "production_presence": true,
+      "classification": "MATCH"
+    },
+    {
+      "surface": "shpigovsky-core",
+      "relative_path": "src/Forms/ConsultationHandler.php",
+      "production_sha256": "c9617766b703eb6f79cd078c4eee076d3bd7aeb1caa81c333abee57d79606e25",
+      "local_sha256": "c9617766b703eb6f79cd078c4eee076d3bd7aeb1caa81c333abee57d79606e25",
+      "production_size": 18847,
+      "local_size": 18847,
+      "local_presence": true,
+      "production_presence": true,
+      "classification": "MATCH"
+    },
+    {
+      "surface": "shpigovsky-core",
+      "relative_path": "src/Loader/Autoloader.php",
+      "production_sha256": "34c93352f63bbbefb2fba85bb566502bd6e779a1120b4fbd9a5d6dc64df14e3e",
+      "local_sha256": "34c93352f63bbbefb2fba85bb566502bd6e779a1120b4fbd9a5d6dc64df14e3e",
+      "production_size": 1111,
+      "local_size": 1111,
+      "local_presence": true,
+      "production_presence": true,
+      "classification": "MATCH"
+    },
+    {
+      "surface": "shpigovsky-core",
+      "relative_path": "src/Migrations/MigrationRunner.php",
+      "production_sha256": "96654bd34b957c4ac1fdd7970c4c580ce9c4cc058a2540c9dab1d5d1e9faf5a3",
+      "local_sha256": "96654bd34b957c4ac1fdd7970c4c580ce9c4cc058a2540c9dab1d5d1e9faf5a3",
+      "production_size": 888,
+      "local_size": 888,
+      "local_presence": true,
+      "production_presence": true,
+      "classification": "MATCH"
+    },
+    {
+      "surface": "shpigovsky-core",
+      "relative_path": "src/ModuleRegistry.php",
+      "production_sha256": "c32e5ac7a71bb717a9e966e9693799ae766e04f260cf321db2cb8842517f5454",
+      "local_sha256": "c32e5ac7a71bb717a9e966e9693799ae766e04f260cf321db2cb8842517f5454",
+      "production_size": 5619,
+      "local_size": 5619,
+      "local_presence": true,
+      "production_presence": true,
+      "classification": "MATCH"
+    },
+    {
+      "surface": "shpigovsky-core",
+      "relative_path": "src/Permalinks/ServicePermalinks.php",
+      "production_sha256": "6266afba97af88d5ceac4ed0bb871fa46576020fc0f523744388f3c61a7d6c63",
+      "local_sha256": "6266afba97af88d5ceac4ed0bb871fa46576020fc0f523744388f3c61a7d6c63",
+      "production_size": 6083,
+      "local_size": 6083,
+      "local_presence": true,
+      "production_presence": true,
+      "classification": "MATCH"
+    },
+    {
+      "surface": "shpigovsky-core",
+      "relative_path": "src/Plugin.php",
+      "production_sha256": "dc7939a27259ddf92d6101dde015a65fe89518cfc986ece05be9bcd345428bce",
+      "local_sha256": "dc7939a27259ddf92d6101dde015a65fe89518cfc986ece05be9bcd345428bce",
+      "production_size": 1958,
+      "local_size": 1958,
+      "local_presence": true,
+      "production_presence": true,
+      "classification": "MATCH"
+    },
+    {
+      "surface": "shpigovsky-core",
+      "relative_path": "src/Settings/SiteSettings.php",
+      "production_sha256": "e9ff653258a3c033feddf7b50c068648c7767759334a7d9d5faab1fb70f25ae4",
+      "local_sha256": "e9ff653258a3c033feddf7b50c068648c7767759334a7d9d5faab1fb70f25ae4",
+      "production_size": 1625,
+      "local_size": 1625,
+      "local_presence": true,
+      "production_presence": true,
+      "classification": "MATCH"
+    },
+    {
+      "surface": "shpigovsky-core",
+      "relative_path": "src/Taxonomies/README.md",
+      "production_sha256": "8b5850f496a5cfc917a00b28ed6de7c6cb8f28e09dbd0e3c493495b3b39a6ca4",
+      "local_sha256": "8b5850f496a5cfc917a00b28ed6de7c6cb8f28e09dbd0e3c493495b3b39a6ca4",
+      "production_size": 143,
+      "local_size": 143,
+      "local_presence": true,
+      "production_presence": true,
+      "classification": "MATCH"
+    }
+  ],
+  "diffs": []
+}

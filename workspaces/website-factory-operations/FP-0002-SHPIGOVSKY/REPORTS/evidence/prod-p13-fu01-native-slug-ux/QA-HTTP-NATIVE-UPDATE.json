@@ -1,0 +1,61 @@
+{
+  "captured_at": "2026-08-16T16:36:48.101533+00:00",
+  "wpilot": {
+    "wpilot_write_enabled": false,
+    "metacode_wpilot_write_enabled": false,
+    "const_metacode": null,
+    "option_names": [
+      "wpilot_options",
+      "wpilot_schema_valid"
+    ]
+  },
+  "logged_in": true,
+  "service_http": {
+    "get_status": 200,
+    "one_permalink_before_update": true,
+    "has_native_edit": true,
+    "no_custom_metabox": true,
+    "slug_before": "fp02-fu01-http-service",
+    "nonce_found": true,
+    "post_status": 200,
+    "reload_status": 200,
+    "slug_after": "fp02-fu01-http-service-saved",
+    "one_permalink_after": true,
+    "pass": true
+  },
+  "specialist_http": {
+    "get_status": 200,
+    "one_permalink_before_update": true,
+    "has_native_edit": true,
+    "no_custom_metabox": true,
+    "slug_before": "fp02-fu01-http-spec",
+    "nonce_found": true,
+    "post_status": 200,
+    "reload_status": 200,
+    "slug_after": "fp02-fu01-http-spec-saved",
+    "one_permalink_after": true,
+    "pass": true
+  },
+  "service_db": {
+    "ID": 2028,
+    "post_name": "fp02-fu01-http-service-saved",
+    "post_status": "draft",
+    "permalink": "http://shpigovsky.beget.tech/uslugi/fp02-fu01-http-service-saved/"
+  },
+  "specialist_db": {
+    "ID": 2029,
+    "post_name": "fp02-fu01-http-spec-saved",
+    "post_status": "draft",
+    "permalink": "http://shpigovsky.beget.tech/?post_type=specialist&p=2029"
+  },
+  "cleanup": [
+    {
+      "deleted": true,
+      "ID": 2028
+    },
+    {
+      "deleted": true,
+      "ID": 2029
+    }
+  ]
+}

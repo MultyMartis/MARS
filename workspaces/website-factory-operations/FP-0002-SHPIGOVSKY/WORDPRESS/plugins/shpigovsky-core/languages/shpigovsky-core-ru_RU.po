@@ -1,0 +1,257 @@
+# Shpigovsky Core translations
+msgid ""
+msgstr ""
+"Project-Id-Version: Shpigovsky Core 0.3.4-p13\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru_RU\n"
+"X-Domain: shpigovsky-core\n"
+"X-Generator: FP-0002 PROD-P13\n"
+
+msgid "MetaCODE / System status"
+msgstr "MetaCODE / Состояние системы"
+
+msgid "Project"
+msgstr "Проект"
+
+msgid "Runtime"
+msgstr "Среда"
+
+msgid "Production host (Beget). wp-config still contains leftover local environment constants — P06 cleanup."
+msgstr "Продакшен-хост (Beget). В wp-config остались локальные константы — очистка в P06."
+
+msgid "Environment: %s"
+msgstr "Среда: %s"
+
+msgid "WordPress"
+msgstr "WordPress"
+
+msgid "Theme"
+msgstr "Тема"
+
+msgid "Shpigovsky Core"
+msgstr "Shpigovsky Core"
+
+msgid "WPilot"
+msgstr "WPilot"
+
+msgid "Active · writes %s"
+msgstr "Активен · запись %s"
+
+msgid "enabled"
+msgstr "включена"
+
+msgid "disabled"
+msgstr "выключена"
+
+msgid "Not active"
+msgstr "Не активен"
+
+msgid "Local-runtime MU-plugin"
+msgstr "MU-плагин local-runtime"
+
+msgid "Present (notices removed in P13; leftover local residue remains for P06)."
+msgstr "Присутствует (уведомления сняты в P13; остаток local — на P06)."
+
+msgid "Absent"
+msgstr "Отсутствует"
+
+msgid "No secrets, tokens, or filesystem credentials are shown here."
+msgstr "Секреты, токены и учётные данные файловой системы здесь не показываются."
+
+msgid "Import from Word"
+msgstr "Импорт из Word"
+
+msgid "Import articles from Word"
+msgstr "Импорт статей из Word"
+
+msgid "Upload one or more .docx files. Drafts are created for review — nothing is published automatically."
+msgstr "Загрузите один или несколько файлов .docx. Создаются черновики для проверки — публикация не выполняется автоматически."
+
+msgid "Draft discarded."
+msgstr "Черновик удалён."
+
+msgid "Publication date saved."
+msgstr "Дата публикации сохранена."
+
+msgid "Download article template (.docx)"
+msgstr "Скачать шаблон статьи (.docx)"
+
+msgid "Word files (.docx)"
+msgstr "Файлы Word (.docx)"
+
+msgid "Create drafts"
+msgstr "Создать черновики"
+
+msgid "Last import"
+msgstr "Последний импорт"
+
+msgid "File"
+msgstr "Файл"
+
+msgid "Status"
+msgstr "Статус"
+
+msgid "Draft"
+msgstr "Черновик"
+
+msgid "Actions"
+msgstr "Действия"
+
+msgid "Discard draft"
+msgstr "Удалить черновик"
+
+msgid "Schedule"
+msgstr "Запланировать"
+
+msgid "Insufficient permissions."
+msgstr "Недостаточно прав."
+
+msgid "Error"
+msgstr "Ошибка"
+
+msgid "No files received."
+msgstr "Файлы не получены."
+
+msgid "Upload failed."
+msgstr "Загрузка не удалась."
+
+msgid "File is too large (15 MB max)."
+msgstr "Файл слишком большой (максимум 15 МБ)."
+
+msgid "Temporary file is missing."
+msgstr "Временный файл отсутствует."
+
+msgid "Only .docx is supported."
+msgstr "Поддерживается только .docx."
+
+msgid "MIME type is not a Word document."
+msgstr "MIME-тип не является документом Word."
+
+msgid "Could not create the draft."
+msgstr "Не удалось создать черновик."
+
+msgid "Draft created"
+msgstr "Черновик создан"
+
+msgid "Template is not available."
+msgstr "Шаблон недоступен."
+
+msgid "ZipArchive is required."
+msgstr "Требуется ZipArchive."
+
+msgid "The file is not a valid DOCX archive."
+msgstr "Файл не является корректным архивом DOCX."
+
+msgid "document.xml is missing."
+msgstr "Отсутствует document.xml."
+
+msgid "Imported article"
+msgstr "Импортированная статья"
+
+msgid "Social networks and messengers"
+msgstr "Соцсети и мессенджеры"
+
+msgid "Platforms"
+msgstr "Площадки"
+
+msgid "One row per platform. Type selects the icon and label. Empty URL hides that platform. Header and footer flags are independent. The Contacts page shows every configured platform with a URL."
+msgstr "Одна строка на площадку. Тип задаёт иконку и название. Пустая ссылка скрывает площадку. Флаги шапки и подвала независимы. На странице Контакты показываются все площадки с URL."
+
+msgid "Add platform"
+msgstr "Добавить площадку"
+
+msgid "Platform"
+msgstr "Площадка"
+
+msgid "Link"
+msgstr "Ссылка"
+
+msgid "Show in header"
+msgstr "Показывать в шапке"
+
+msgid "Show in footer"
+msgstr "Показывать в подвале"
+
+msgid "SEO"
+msgstr "SEO"
+
+msgid "SEO Title"
+msgstr "SEO-заголовок"
+
+msgid "Optional. If empty, the public title uses the object title and site name."
+msgstr "Необязательно. Если пусто, публичный title берётся из названия объекта и имени сайта."
+
+msgid "Meta Description"
+msgstr "Meta Description"
+
+msgid "Optional. If empty, no meta description is output (marketing copy is not invented)."
+msgstr "Необязательно. Если пусто, meta description не выводится (рекламный текст не выдумывается)."
+
+msgid "URL / slug"
+msgstr "URL / ярлык"
+
+msgid "This slug becomes part of the public URL. Existing addresses are not regenerated unless you change this value."
+msgstr "Этот ярлык становится частью публичного URL. Текущие адреса не пересобираются, пока вы не измените значение."
+
+msgid "Slug"
+msgstr "Ярлык"
+
+msgid "Leave empty and Update to regenerate from the title."
+msgstr "Оставьте пустым и нажмите Обновить, чтобы сгенерировать из заголовка."
+
+msgid "Current URL:"
+msgstr "Текущий URL:"
+
+msgid "Page"
+msgstr "Страница"
+
+msgid "Article"
+msgstr "Статья"
+
+msgid "Service"
+msgstr "Услуга"
+
+msgid "Specialist"
+msgstr "Специалист"
+
+msgid "Review"
+msgstr "Отзыв"
+
+msgid "Created"
+msgstr "Создано"
+
+msgid "Updated"
+msgstr "Изменено"
+
+msgid "Moved to trash"
+msgstr "В корзине"
+
+msgid "Restored"
+msgstr "Восстановлено"
+
+msgid "System"
+msgstr "Система"
+
+msgid "All users"
+msgstr "Все пользователи"
+
+msgid "Date and time"
+msgstr "Дата и время"
+
+msgid "User"
+msgstr "Пользователь"
+
+msgid "Action"
+msgstr "Действие"
+
+msgid "Type"
+msgstr "Тип"
+
+msgid "Object"
+msgstr "Объект"
+
+msgid "ACF Pro is required for FP-0002 field groups. Source is safe, but runtime field registration is unavailable."
+msgstr "Для групп полей FP-0002 требуется ACF Pro. Исходники в безопасности, но регистрация полей в runtime недоступна."
+

@@ -127,6 +127,10 @@ function shpigovsky_search_result_type_label( $post_id ) {
 		return __( 'Статья', 'shpigovsky' );
 	}
 
+	if ( 'specialist' === $type ) {
+		return __( 'Специалист', 'shpigovsky' );
+	}
+
 	if ( 'page' === $type ) {
 		$ancestors = get_post_ancestors( $post_id );
 		$hub       = get_page_by_path( 'specyalisty' );
@@ -378,3 +382,516 @@ function shpigovsky_search_remove_core_canonical() {
 	remove_action( 'wp_head', 'rel_canonical' );
 }
 add_action( 'wp', 'shpigovsky_search_remove_core_canonical', 20 );
+
+/**
+ * UTF-8-safe string length for smart-search threshold.
+ *
+ * @param string $text Text.
+ * @return int
+ */
+function shpigovsky_smart_search_strlen( $text ) {
+	$text = (string) $text;
+
+	if ( function_exists( 'mb_strlen' ) ) {
+		return (int) mb_strlen( $text, 'UTF-8' );
+	}
+
+	if ( preg_match_all( '/./u', $text, $matches ) ) {
+		return count( $matches[0] );
+	}
+
+	return strlen( $text );
+}
+
+/**
+ * UTF-8-safe lowercase.
+ *
+ * @param string $text Text.
+ * @return string
+ */
+function shpigovsky_smart_search_lower( $text ) {
+	$text = (string) $text;
+
+	if ( function_exists( 'mb_strtolower' ) ) {
+		return (string) mb_strtolower( $text, 'UTF-8' );
+	}
+
+	return strtolower( $text );
+}
+
+/**
+ * Whether haystack contains needle (UTF-8).
+ *
+ * @param string $haystack Haystack.
+ * @param string $needle   Needle.
+ * @return bool
+ */
+function shpigovsky_smart_search_contains( $haystack, $needle ) {
+	$haystack = shpigovsky_smart_search_lower( $haystack );
+	$needle   = shpigovsky_smart_search_lower( $needle );
+
+	if ( '' === $needle ) {
+		return false;
+	}
+
+	if ( function_exists( 'mb_strpos' ) ) {
+		return false !== mb_strpos( $haystack, $needle, 0, 'UTF-8' );
+	}
+
+	return false !== strpos( $haystack, $needle );
+}
+
+/**
+ * Whether haystack starts with needle (UTF-8).
+ *
+ * @param string $haystack Haystack.
+ * @param string $needle   Needle.
+ * @return bool
+ */
+function shpigovsky_smart_search_starts_with( $haystack, $needle ) {
+	$haystack = shpigovsky_smart_search_lower( $haystack );
+	$needle   = shpigovsky_smart_search_lower( $needle );
+
+	if ( '' === $needle ) {
+		return false;
+	}
+
+	if ( function_exists( 'mb_strpos' ) ) {
+		return 0 === mb_strpos( $haystack, $needle, 0, 'UTF-8' );
+	}
+
+	return 0 === strpos( $haystack, $needle );
+}
+
+/**
+ * Smart-search group key for a published post (mutually exclusive).
+ *
+ * @param int $post_id Post ID.
+ * @return string One of: services|articles|specialists|pages|''
+ */
+function shpigovsky_smart_search_group_key( $post_id ) {
+	$post_id = (int) $post_id;
+	$type    = get_post_type( $post_id );
+
+	if ( 'service' === $type ) {
+		return 'services';
+	}
+
+	if ( 'post' === $type ) {
+		return 'articles';
+	}
+
+	if ( 'specialist' === $type ) {
+		return 'specialists';
+	}
+
+	if ( 'page' !== $type ) {
+		return '';
+	}
+
+	$excluded = shpigovsky_search_excluded_page_ids();
+
+	if ( in_array( $post_id, $excluded, true ) ) {
+		return '';
+	}
+
+	$hub = get_page_by_path( 'specyalisty' );
+
+	if ( $hub instanceof WP_Post ) {
+		$hub_id = (int) $hub->ID;
+
+		if ( $post_id === $hub_id ) {
+			return 'pages';
+		}
+
+		// Legacy child-page specialists (pre-P11 / rollback only).
+		$ancestors = array_map( 'intval', (array) get_post_ancestors( $post_id ) );
+		$parent    = (int) get_post_field( 'post_parent', $post_id );
+
+		if ( in_array( $hub_id, $ancestors, true ) || $parent === $hub_id ) {
+			return 'specialists';
+		}
+	}
+
+	return 'pages';
+}
+
+/**
+ * Plain searchable text for ranking (public fields only; no private meta dump).
+ *
+ * @param WP_Post $post Post.
+ * @return array{excerpt:string,body:string,extra:string}
+ */
+function shpigovsky_smart_search_rank_texts( WP_Post $post ) {
+	$excerpt = '';
+	$body    = '';
+	$extra   = '';
+
+	if ( has_excerpt( $post ) ) {
+		$excerpt = wp_strip_all_tags( (string) $post->post_excerpt );
+	}
+
+	$body = wp_strip_all_tags( strip_shortcodes( (string) $post->post_content ) );
+
+	if ( function_exists( 'get_field' ) ) {
+		if ( 'service' === $post->post_type ) {
+			foreach ( array( 'treatment_program_short_description', 'service_intro_note', 'intro_note' ) as $field ) {
+				$value = get_field( $field, $post->ID );
+				if ( is_string( $value ) && '' !== trim( wp_strip_all_tags( $value ) ) ) {
+					$extra .= ' ' . wp_strip_all_tags( $value );
+				}
+			}
+		}
+
+		if ( 'specialist' === $post->post_type || ( 'page' === $post->post_type && 'specialists' === shpigovsky_smart_search_group_key( (int) $post->ID ) ) ) {
+			foreach ( array( 'specialist_role', 'specialist_specialty', 'specialist_specialization' ) as $field ) {
+				$value = get_field( $field, $post->ID );
+				if ( is_string( $value ) && '' !== trim( wp_strip_all_tags( $value ) ) ) {
+					$extra .= ' ' . wp_strip_all_tags( $value );
+				}
+			}
+		}
+
+		if ( 'page' === $post->post_type ) {
+			$lead = get_field( 'generic_page_lead', $post->ID );
+			if ( is_string( $lead ) && '' !== trim( wp_strip_all_tags( $lead ) ) ) {
+				$extra .= ' ' . wp_strip_all_tags( $lead );
+			}
+		}
+	}
+
+	$excerpt = trim( preg_replace( '/\s+/u', ' ', $excerpt ) );
+	$body    = trim( preg_replace( '/\s+/u', ' ', $body ) );
+	$extra   = trim( preg_replace( '/\s+/u', ' ', $extra ) );
+
+	return array(
+		'excerpt' => $excerpt,
+		'body'    => $body,
+		'extra'   => $extra,
+	);
+}
+
+/**
+ * Deterministic relevance score (higher = better).
+ *
+ * Tiers: exact title 100, title starts 80, title contains 60,
+ * excerpt/extra 40, body 20.
+ *
+ * @param WP_Post $post  Post.
+ * @param string  $query Normalized query.
+ * @return int
+ */
+function shpigovsky_smart_search_score( WP_Post $post, $query ) {
+	$query = trim( (string) $query );
+	$title = (string) get_the_title( $post );
+
+	if ( '' === $query || '' === $title ) {
+		return 0;
+	}
+
+	$title_l = shpigovsky_smart_search_lower( $title );
+	$query_l = shpigovsky_smart_search_lower( $query );
+
+	if ( $title_l === $query_l ) {
+		return 100;
+	}
+
+	if ( shpigovsky_smart_search_starts_with( $title, $query ) ) {
+		return 80;
+	}
+
+	if ( shpigovsky_smart_search_contains( $title, $query ) ) {
+		return 60;
+	}
+
+	$settings = function_exists( 'shpigovsky_smart_search_settings' ) ? shpigovsky_smart_search_settings() : array(
+		'match_excerpt' => true,
+		'match_body'    => true,
+	);
+	$texts    = shpigovsky_smart_search_rank_texts( $post );
+
+	if ( ! empty( $settings['match_excerpt'] ) ) {
+		if (
+			( '' !== $texts['excerpt'] && shpigovsky_smart_search_contains( $texts['excerpt'], $query ) )
+			|| ( '' !== $texts['extra'] && shpigovsky_smart_search_contains( $texts['extra'], $query ) )
+		) {
+			return 40;
+		}
+	}
+
+	if ( ! empty( $settings['match_body'] ) && '' !== $texts['body'] && shpigovsky_smart_search_contains( $texts['body'], $query ) ) {
+		return 20;
+	}
+
+	return 0;
+}
+
+/**
+ * Short public snippet for a suggestion card.
+ *
+ * @param int $post_id Post ID.
+ * @return string
+ */
+function shpigovsky_smart_search_snippet( $post_id ) {
+	$excerpt = shpigovsky_search_result_excerpt( (int) $post_id );
+
+	if ( '' === $excerpt ) {
+		return '';
+	}
+
+	return wp_trim_words( $excerpt, 18, '…' );
+}
+
+/**
+ * Build one suggestion payload item.
+ *
+ * @param WP_Post $post  Post.
+ * @param string  $group Group key.
+ * @param int     $score Score.
+ * @return array{id:int,group:string,title:string,url:string,snippet:string,score:int}
+ */
+function shpigovsky_smart_search_item( WP_Post $post, $group, $score ) {
+	return array(
+		'id'      => (int) $post->ID,
+		'group'   => (string) $group,
+		'title'   => wp_strip_all_tags( get_the_title( $post ) ),
+		'url'     => (string) get_permalink( $post ),
+		'snippet' => shpigovsky_smart_search_snippet( (int) $post->ID ),
+		'score'   => (int) $score,
+	);
+}
+
+/**
+ * Collect and rank candidates for one post type, then filter by group key.
+ *
+ * @param string $query     Query.
+ * @param string $post_type Post type.
+ * @param string $group     Expected group key.
+ * @param int    $limit     Max results for this group.
+ * @return array<int, array{id:int,group:string,title:string,url:string,snippet:string,score:int}>
+ */
+function shpigovsky_smart_search_collect_group( $query, $post_type, $group, $limit = 5 ) {
+	if ( 'service' === $post_type && ! post_type_exists( 'service' ) ) {
+		return array();
+	}
+
+	if ( 'specialist' === $post_type && ! post_type_exists( 'specialist' ) ) {
+		return array();
+	}
+
+	$settings = function_exists( 'shpigovsky_smart_search_settings' ) ? shpigovsky_smart_search_settings() : array(
+		'per_group'   => 5,
+		'exclude_ids' => array(),
+	);
+
+	$limit = isset( $settings['per_group'] ) ? (int) $settings['per_group'] : (int) $limit;
+	$limit = max( 1, min( 20, $limit ) );
+
+	$exclude = shpigovsky_search_excluded_page_ids();
+	if ( ! empty( $settings['exclude_ids'] ) && is_array( $settings['exclude_ids'] ) ) {
+		$exclude = array_merge( $exclude, array_map( 'intval', $settings['exclude_ids'] ) );
+	}
+	$exclude = array_values( array_unique( array_filter( $exclude ) ) );
+
+	$args = array(
+		'post_type'              => $post_type,
+		'post_status'            => 'publish',
+		's'                      => $query,
+		'posts_per_page'         => 40,
+		'ignore_sticky_posts'    => true,
+		'has_password'           => false,
+		'no_found_rows'          => true,
+		'update_post_meta_cache' => false,
+		'update_post_term_cache' => false,
+	);
+
+	if ( ! empty( $exclude ) ) {
+		$args['post__not_in'] = $exclude;
+	}
+
+	$q      = new WP_Query( $args );
+	$scored = array();
+
+	foreach ( (array) $q->posts as $post ) {
+		if ( ! $post instanceof WP_Post ) {
+			continue;
+		}
+
+		$item_group = shpigovsky_smart_search_group_key( (int) $post->ID );
+
+		if ( $item_group !== $group ) {
+			continue;
+		}
+
+		$score = shpigovsky_smart_search_score( $post, $query );
+
+		if ( $score < 1 ) {
+			continue;
+		}
+
+		$scored[] = shpigovsky_smart_search_item( $post, $group, $score );
+	}
+
+	wp_reset_postdata();
+
+	usort(
+		$scored,
+		static function ( $a, $b ) {
+			if ( $a['score'] === $b['score'] ) {
+				return $a['id'] <=> $b['id'];
+			}
+
+			return $b['score'] <=> $a['score'];
+		}
+	);
+
+	return array_slice( $scored, 0, $limit );
+}
+
+/**
+ * Register public read-only smart-search REST route.
+ *
+ * @return void
+ */
+function shpigovsky_smart_search_register_rest_route() {
+	register_rest_route(
+		'shpigovsky/v1',
+		'/smart-search',
+		array(
+			'methods'             => WP_REST_Server::READABLE,
+			'callback'            => 'shpigovsky_smart_search_rest_callback',
+			'permission_callback' => '__return_true',
+			'args'                => array(
+				'q' => array(
+					'required'          => false,
+					'type'              => 'string',
+					'default'           => '',
+					'sanitize_callback' => static function ( $value ) {
+						$value = is_string( $value ) ? $value : '';
+						$value = wp_unslash( $value );
+						$value = sanitize_text_field( $value );
+						return trim( $value );
+					},
+				),
+			),
+		)
+	);
+}
+add_action( 'rest_api_init', 'shpigovsky_smart_search_register_rest_route' );
+
+/**
+ * REST callback for live search suggestions.
+ *
+ * @param WP_REST_Request $request Request.
+ * @return WP_REST_Response
+ */
+function shpigovsky_smart_search_rest_callback( WP_REST_Request $request ) {
+	$query = (string) $request->get_param( 'q' );
+	$query = trim( sanitize_text_field( $query ) );
+
+	$settings = function_exists( 'shpigovsky_smart_search_settings' ) ? shpigovsky_smart_search_settings() : array(
+		'min_chars' => 3,
+		'per_group' => 5,
+		'enabled'   => array(
+			'services'    => true,
+			'articles'    => true,
+			'specialists' => true,
+			'pages'       => true,
+		),
+		'order'     => array( 'services', 'articles', 'specialists', 'pages' ),
+	);
+
+	$min = isset( $settings['min_chars'] ) ? (int) $settings['min_chars'] : 3;
+	$min = max( 2, min( 10, $min ) );
+
+	$order = isset( $settings['order'] ) && is_array( $settings['order'] )
+		? $settings['order']
+		: array( 'services', 'articles', 'specialists', 'pages' );
+
+	$enabled = isset( $settings['enabled'] ) && is_array( $settings['enabled'] )
+		? $settings['enabled']
+		: array();
+
+	$groups_payload = array(
+		'services'    => array(),
+		'articles'    => array(),
+		'specialists' => array(),
+		'pages'       => array(),
+	);
+
+	$response = array(
+		'q'      => $query,
+		'groups' => $groups_payload,
+		'empty'  => true,
+		'min'    => $min,
+		'order'  => array_values( $order ),
+	);
+
+	if ( shpigovsky_smart_search_strlen( $query ) < $min ) {
+		return new WP_REST_Response( $response, 200 );
+	}
+
+	$map = array(
+		'services'    => array( 'service', 'services' ),
+		'articles'    => array( 'post', 'articles' ),
+		'specialists' => array( post_type_exists( 'specialist' ) ? 'specialist' : 'page', 'specialists' ),
+		'pages'       => array( 'page', 'pages' ),
+	);
+
+	$groups = $groups_payload;
+	$limit  = isset( $settings['per_group'] ) ? (int) $settings['per_group'] : 5;
+
+	foreach ( $order as $key ) {
+		if ( empty( $enabled[ $key ] ) || ! isset( $map[ $key ] ) ) {
+			continue;
+		}
+
+		if ( 'specialists' === $key && post_type_exists( 'specialist' ) ) {
+			$cpt_items = shpigovsky_smart_search_collect_group( $query, 'specialist', 'specialists', $limit );
+			if ( ! empty( $cpt_items ) ) {
+				$groups[ $key ] = $cpt_items;
+				continue;
+			}
+			// Pre-migration / rollback: fall back to legacy page children classification.
+			$groups[ $key ] = shpigovsky_smart_search_collect_group( $query, 'page', 'specialists', $limit );
+			continue;
+		}
+
+		$groups[ $key ] = shpigovsky_smart_search_collect_group(
+			$query,
+			$map[ $key ][0],
+			$map[ $key ][1],
+			$limit
+		);
+	}
+
+	// Strip internal score from public payload; keep order.
+	foreach ( $groups as $key => $items ) {
+		$clean = array();
+		$seen  = array();
+
+		foreach ( $items as $item ) {
+			$id = (int) $item['id'];
+
+			if ( isset( $seen[ $id ] ) ) {
+				continue;
+			}
+
+			$seen[ $id ] = true;
+			unset( $item['score'] );
+			$clean[] = $item;
+		}
+
+		$groups[ $key ] = $clean;
+	}
+
+	$response['groups'] = $groups;
+	$response['empty']  = (
+		empty( $groups['services'] )
+		&& empty( $groups['articles'] )
+		&& empty( $groups['specialists'] )
+		&& empty( $groups['pages'] )
+	);
+
+	return new WP_REST_Response( $response, 200 );
+}

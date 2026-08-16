@@ -1,0 +1,258 @@
+{
+  "utc": "2026-08-16T17:28:44+00:00",
+  "siteurl": "http://shpigovsky.beget.tech",
+  "home": "http://shpigovsky.beget.tech",
+  "blogname": "Шпиговский Дом",
+  "admin_email": "mli-fp0002@localhost.test",
+  "WPLANG": "ru_RU",
+  "blog_public": "0",
+  "permalink_structure": "/blog/%postname%/",
+  "show_on_front": "page",
+  "page_on_front": 4,
+  "page_for_posts": 19,
+  "wp_version": "7.0.4",
+  "php_version": "8.2.28",
+  "env_fn": "local",
+  "WP_ENVIRONMENT_TYPE": "local",
+  "WP_DEBUG": true,
+  "WP_DEBUG_DISPLAY": false,
+  "WP_DEBUG_LOG": true,
+  "theme_name": "Shpigovsky",
+  "theme_version": "0.3.0-d7a-shell",
+  "stylesheet": "shpigovsky",
+  "template": "shpigovsky",
+  "core_version": "0.3.4-p13",
+  "active_plugins": [
+    "acf-extended-pro/acf-extended.php",
+    "advanced-custom-fields-pro/acf.php",
+    "classic-editor/classic-editor.php",
+    "metacode-wpilot/metacode-wpilot.php",
+    "shpigovsky-core/shpigovsky-core.php"
+  ],
+  "users": [
+    {
+      "ID": 2,
+      "user_login": "admin",
+      "user_email": "ola4seo@yandex.ru",
+      "display_name": "admin",
+      "roles": [
+        "administrator"
+      ],
+      "user_registered": "2026-07-02 15:53:39"
+    },
+    {
+      "ID": 3,
+      "user_login": "mars",
+      "user_email": "support@polygon-ws.ru",
+      "display_name": "MARS MetaCODE",
+      "roles": [
+        "administrator"
+      ],
+      "user_registered": "2026-08-14 08:00:13"
+    },
+    {
+      "ID": 4,
+      "user_login": "metacode",
+      "user_email": "metacode@polygon-ws.ru",
+      "display_name": "MetaCODE",
+      "roles": [
+        "administrator"
+      ],
+      "user_registered": "2026-08-16 16:02:25"
+    }
+  ],
+  "user_count": 3,
+  "wpilot_write_enabled_option": null,
+  "wpilot_write_enabled_from_opts": null,
+  "wpilot_version": "0.3.2",
+  "activity_log": {
+    "table": "fp02_user_activity_log",
+    "exists": true,
+    "schema_version_option": "1",
+    "retention_max_code": 8000,
+    "row_count": 54,
+    "sample_recent": [
+      {
+        "id": 81,
+        "user_id": 2,
+        "user_login": "admin",
+        "action": "updated",
+        "object_type": "specialist",
+        "object_id": 1031,
+        "object_title": "Сергей Юрьевич Шпиговский",
+        "created_at": "2026-08-16 19:51:24"
+      },
+      {
+        "id": 80,
+        "user_id": 2,
+        "user_login": "admin",
+        "action": "updated",
+        "object_type": "specialist",
+        "object_id": 1949,
+        "object_title": "Литвинов Кирилл Алексеевич",
+        "created_at": "2026-08-16 19:50:47"
+      },
+      {
+        "id": 79,
+        "user_id": 2,
+        "user_login": "admin",
+        "action": "updated",
+        "object_type": "specialist",
+        "object_id": 1957,
+        "object_title": "Поверинов Александр Константинович",
+        "created_at": "2026-08-16 19:50:32"
+      },
+      {
+        "id": 78,
+        "user_id": 2,
+        "user_login": "admin",
+        "action": "updated",
+        "object_type": "specialist",
+        "object_id": 1963,
+        "object_title": "Филиппов Илья Владимирович",
+        "created_at": "2026-08-16 19:50:02"
+      },
+      {
+        "id": 77,
+        "user_id": 2,
+        "user_login": "admin",
+        "action": "updated",
+        "object_type": "specialist",
+        "object_id": 1967,
+        "object_title": "Ханикова Светлана Николаевна",
+        "created_at": "2026-08-16 19:49:46"
+      },
+      {
+        "id": 76,
+        "user_id": 2,
+        "user_login": "admin",
+        "action": "updated",
+        "object_type": "specialist",
+        "object_id": 1988,
+        "object_title": "Филиппова Мария Михайловна",
+        "created_at": "2026-08-16 19:49:30"
+      },
+      {
+        "id": 75,
+        "user_id": 2,
+        "user_login": "admin",
+        "action": "updated",
+        "object_type": "service",
+        "object_id": 74,
+        "object_title": "Лечение алкогольной зависимости",
+        "created_at": "2026-08-16 19:48:14"
+      },
+      {
+        "id": 74,
+        "user_id": 2,
+        "user_login": "admin",
+        "action": "updated",
+        "object_type": "service",
+        "object_id": 74,
+        "object_title": "Лечение алкогольной зависимости",
+        "created_at": "2026-08-16 19:48:04"
+      },
+      {
+        "id": 73,
+        "user_id": 2,
+        "user_login": "admin",
+        "action": "updated",
+        "object_type": "service",
+        "object_id": 73,
+        "object_title": "Зависимости",
+        "created_at": "2026-08-16 19:47:58"
+      },
+      {
+        "id": 72,
+        "user_id": 2,
+        "user_login": "admin",
+        "action": "updated",
+        "object_type": "service",
+        "object_id": 74,
+        "object_title": "Лечение алкогольной зависимости",
+        "created_at": "2026-08-16 19:44:45"
+      },
+      {
+        "id": 71,
+        "user_id": 3,
+        "user_login": "mars",
+        "action": "updated",
+        "object_type": "specialist",
+        "object_id": 2029,
+        "object_title": "FP02 FU01 HTTP Persist",
+        "created_at": "2026-08-16 19:36:44"
+      },
+      {
+        "id": 70,
+        "user_id": 3,
+        "user_login": "mars",
+        "action": "updated",
+        "object_type": "service",
+        "object_id": 2028,
+        "object_title": "FP02 FU01 HTTP Persist",
+        "created_at": "2026-08-16 19:36:42"
+      },
+      {
+        "id": 69,
+        "user_id": 0,
+        "user_login": "system",
+        "action": "created",
+        "object_type": "specialist",
+        "object_id": 2029,
+        "object_title": "FP02 FU01 HTTP Spec",
+        "created_at": "2026-08-16 19:36:39"
+      },
+      {
+        "id": 68,
+        "user_id": 0,
+        "user_login": "system",
+        "action": "created",
+        "object_type": "service",
+        "object_id": 2028,
+        "object_title": "FP02 FU01 HTTP Service",
+        "created_at": "2026-08-16 19:36:39"
+      },
+      {
+        "id": 47,
+        "user_id": 2,
+        "user_login": "admin",
+        "action": "updated",
+        "object_type": "page",
+        "object_id": 4,
+        "object_title": "Главная",
+        "created_at": "2026-08-16 18:53:37"
+      }
+    ],
+    "qa_like_candidates": []
+  },
+  "counts": {
+    "service_publish": 31,
+    "specialist_publish": 9,
+    "post_publish": 16,
+    "page_publish": 21
+  },
+  "modules": {
+    "services": true,
+    "specialists": true,
+    "activity_log_class": true,
+    "system_dashboard_class": true,
+    "docx_importer_class": true,
+    "permalink_slug_ux_class": true,
+    "admin_menu_hygiene_class": true,
+    "seo_entity_meta_class": true,
+    "social_platforms_class": true,
+    "seo_integrations_class": true
+  },
+  "mu_plugins": [
+    "mars-local-runtime.php"
+  ],
+  "mu_local_runtime_present": true,
+  "options_presence": {
+    "seo_integrations_present": false,
+    "social_platforms_present": false,
+    "smart_search_present": false,
+    "fp02_activity_log_db_version": "1"
+  },
+  "db_name_hint": "shpigovsky_main",
+  "db_prefix": "fp02_"
+}

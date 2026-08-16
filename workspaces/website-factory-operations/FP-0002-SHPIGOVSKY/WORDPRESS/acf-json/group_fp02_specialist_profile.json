@@ -1,0 +1,215 @@
+{
+    "key": "group_fp02_specialist_profile",
+    "title": "Специалист — профиль",
+    "fields": [
+        {
+            "key": "field_fp02_specialist_portrait_notice",
+            "label": "Портрет",
+            "name": "specialist_portrait_notice",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Портрет берётся из поля «Фото» (Featured Image). Отдельное поле-дубликат не создаём.",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_fp02_specialist_role",
+            "label": "Должность / профессия",
+            "name": "specialist_role",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Кратко: кто специалист (например: «Психолог, EMDR терапевт»). Показывается в карточке слайдера и в шапке страницы.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_specialist_experience",
+            "label": "Опыт",
+            "name": "specialist_experience",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Например: «Опыт — 2,5 года».",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_specialist_specialty",
+            "label": "Специальность",
+            "name": "specialist_specialty",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Блок «Специальность». Пустое поле на сайте не показывается.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_fp02_specialist_education",
+            "label": "Образование",
+            "name": "specialist_education",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Блок «Образование». Пустое поле на сайте не показывается.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_fp02_specialist_specialization",
+            "label": "Специализация",
+            "name": "specialist_specialization",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Блок «Специализация». Пустое поле на сайте не показывается.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_fp02_specialist_principles",
+            "label": "Принципы / подход к работе",
+            "name": "specialist_principles",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Блок про подход к работе. Пустое поле на сайте не показывается.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_fp02_specialist_additional",
+            "label": "Дополнительная информация",
+            "name": "specialist_additional",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Всё, что не вошло в структурированные блоки выше (legacy-текст без потери содержимого).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_fp02_specialist_certificates",
+            "label": "Сертификаты и дипломы",
+            "name": "specialist_certificates",
+            "aria-label": "",
+            "type": "gallery",
+            "instructions": "Галерея сертификатов/дипломов. На сайте — сетка с увеличением по клику.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "insert": "append",
+            "library": "all",
+            "min": 0,
+            "max": 40,
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "specialist"
+            }
+        ]
+    ],
+    "menu_order": 5,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "author",
+        "format",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": true,
+    "description": "PROD-P11 Specialist CPT structured profile (keys from P08). Portrait = Featured Image. Location: post_type=specialist.",
+    "show_in_rest": 0,
+    "modified": 1786924800
+}

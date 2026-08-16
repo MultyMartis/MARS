@@ -1,0 +1,28 @@
+{
+  "chosen_model": "SSH_LOCAL_MYSQL",
+  "why": [
+    "Beget default DB access is localhost only",
+    "Remote 3306 from operator IP returned 1045 in P03 (ACL, not proven-wrong password)",
+    "OCPilot SITE-001 precedent: Beget 1045 for external hosts",
+    "Beget KB: ssh then mysql -h localhost",
+    "This wave: SSH tunnel 127.0.0.1:3306 from shpigovsky_mars SELECT PASS",
+    "Least privilege: do not add operator IP / do not enable public remote MySQL"
+  ],
+  "rejected": {
+    "REMOTE_MYSQL": "would require Beget IP allowlist / public exposure; not needed",
+    "phpMyAdmin_automation": "CLI/SSH path available"
+  },
+  "connect": {
+    "ssh_account": "shpigovsky_mars",
+    "tunnel_dest": "127.0.0.1:3306",
+    "db_name": "shpigovsky_main",
+    "db_user": "shpigovsky_main@localhost",
+    "server_hostname": "dream.beget.ru",
+    "server_port_variable": 3307,
+    "mysql_version": "8.4.8-8-beget-1-2",
+    "charset": "utf8mb4",
+    "collation": "utf8mb4_unicode_ci",
+    "table_prefix": "fp02_"
+  },
+  "writes": 0
+}

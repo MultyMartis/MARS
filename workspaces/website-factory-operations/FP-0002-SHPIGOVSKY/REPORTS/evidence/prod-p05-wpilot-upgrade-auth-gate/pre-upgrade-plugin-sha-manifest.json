@@ -1,0 +1,285 @@
+{
+  "docroot": "/home/s/shpigovsky/shpigovsky.ru/public_html",
+  "plugin_dir": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/metacode-wpilot",
+  "ssh_user_suffix": "sky_mars",
+  "file_count": 27,
+  "counts_vs_canonical_0_3_2": {
+    "DIVERGENT": 15,
+    "MATCH": 12,
+    "LOCAL_ONLY_NEWER": 5
+  },
+  "production_only_paths": [],
+  "local_only_vs_032": [
+    "includes/class-wpilot-content-persistence-service.php",
+    "includes/class-wpilot-vc-raw-html-blocks.php",
+    "includes/class-wpilot-vc-raw-html-text-node-service.php",
+    "includes/class-wpilot-vc-raw-html-text-node.php",
+    "includes/class-wpilot-write-context.php"
+  ],
+  "filesystem_constants": {
+    "HEADER": "0.3.0",
+    "VERSION": "0.3.0",
+    "RELEASE_LABEL": "ABSENT",
+    "RELEASE_CANDIDATE": "ABSENT",
+    "SCHEMA_VERSION": "0.2.0"
+  },
+  "upgrade_safety": "SAFE",
+  "files": [
+    {
+      "relative_path": "README.md",
+      "production_sha256": "2186fbe2a47acaf9b8fa1a6d9dd524a5e1f3b89fc0d69d058b710ac3f29d5908",
+      "production_size": 2064,
+      "canonical_032_sha256": "dc15304d87195f8b7a33185a4d38ba7e492601363e1f150eb29a89fc8c079c2a",
+      "canonical_032_size": 3272,
+      "classification": "DIVERGENT"
+    },
+    {
+      "relative_path": "admin/class-wpilot-admin-page.php",
+      "production_sha256": "d63d2801d7a4716b20d63ccb1a8edb5c95f4952c1d00bfb40a05db9c631d4912",
+      "production_size": 23787,
+      "canonical_032_sha256": "38a7d0828b85b5ff676cf1b8807e5ccbefc1cca701f1b2d0c180d303050587e2",
+      "canonical_032_size": 24051,
+      "classification": "DIVERGENT"
+    },
+    {
+      "relative_path": "admin/class-wpilot-admin-ui-model.php",
+      "production_sha256": "5d6592773c86d6c180743485af651a9149cc650ee327973c41000eb6966516c3",
+      "production_size": 7919,
+      "canonical_032_sha256": "10bde9f40a6c010d809241fa3d5a8fbf6a3eeffbcf42e4e7c26934ffa872c06a",
+      "canonical_032_size": 7981,
+      "classification": "DIVERGENT"
+    },
+    {
+      "relative_path": "includes/class-wpilot-audit-service.php",
+      "production_sha256": "c3bca3a5b479f7448413a8581a8ef4e2d3bf05c3e96f6524e4ced39edda4d983",
+      "production_size": 3210,
+      "canonical_032_sha256": "69e08d132491182805b4e0ffc071778d1121c9355f93a76cbc90ffaa4070c2ff",
+      "canonical_032_size": 3432,
+      "classification": "DIVERGENT"
+    },
+    {
+      "relative_path": "includes/class-wpilot-auth.php",
+      "production_sha256": "ee1811577c18a5d420a94fcc71f15cd346309d99eb14b57cd4dad266510f1535",
+      "production_size": 7067,
+      "canonical_032_sha256": "ee1811577c18a5d420a94fcc71f15cd346309d99eb14b57cd4dad266510f1535",
+      "canonical_032_size": 7067,
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-backup-service.php",
+      "production_sha256": "5ef345673ac74c68c584e862ed0de35733dfb55910ec928db82e2b7823cc6ceb",
+      "production_size": 7319,
+      "canonical_032_sha256": "5ef345673ac74c68c584e862ed0de35733dfb55910ec928db82e2b7823cc6ceb",
+      "canonical_032_size": 7319,
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-checksum.php",
+      "production_sha256": "04f2a426c45ce1896c8ca1291f0aa933b2dd42e3b3c76a1c3bf5a4b0cfc9c1ba",
+      "production_size": 1313,
+      "canonical_032_sha256": "04f2a426c45ce1896c8ca1291f0aa933b2dd42e3b3c76a1c3bf5a4b0cfc9c1ba",
+      "canonical_032_size": 1313,
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-connection-tracker.php",
+      "production_sha256": "3d65864c2a2237a909f81eb43fb18a8b33fe1442ce8dc76d933f2173282ab860",
+      "production_size": 4751,
+      "canonical_032_sha256": "3d65864c2a2237a909f81eb43fb18a8b33fe1442ce8dc76d933f2173282ab860",
+      "canonical_032_size": 4751,
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-constants.php",
+      "production_sha256": "1170f1882552de552d3b6ee75d0a5c1640fa7ceeea1340be3155065a6cd6a3b4",
+      "production_size": 1583,
+      "canonical_032_sha256": "d6f52374a4fbddcb4119170b47250c014315f2c83b15b8604a44bcd3e25f2fd9",
+      "canonical_032_size": 1974,
+      "classification": "DIVERGENT"
+    },
+    {
+      "relative_path": "includes/class-wpilot-content-persistence-service.php",
+      "production_sha256": null,
+      "production_size": null,
+      "canonical_032_sha256": "6c117293c1ae80a0c5aefa0cdde093499b214d7b3c2b954e432d35a82308f33e",
+      "canonical_032_size": 12841,
+      "classification": "LOCAL_ONLY_NEWER"
+    },
+    {
+      "relative_path": "includes/class-wpilot-dry-run.php",
+      "production_sha256": "014c54e3b0dfbb7e55201b5956d8f1b12c99448c46705087a2a787759705b502",
+      "production_size": 16712,
+      "canonical_032_sha256": "433273c697502dd6a0dbe6a6656be71deac23012128e2edbbe91e99027b38637",
+      "canonical_032_size": 17167,
+      "classification": "DIVERGENT"
+    },
+    {
+      "relative_path": "includes/class-wpilot-environment.php",
+      "production_sha256": "4f032400c673c5269bc04a87de8324f63502bb83bda3b5260f86749f4dadde10",
+      "production_size": 3996,
+      "canonical_032_sha256": "4ebb96ee2182c43896ea0ba6af51206101bd0ed45531e3da482ad334a09eeca4",
+      "canonical_032_size": 4887,
+      "classification": "DIVERGENT"
+    },
+    {
+      "relative_path": "includes/class-wpilot-errors.php",
+      "production_sha256": "855d8b160e5774076f08bb164cfc11698ab860037c8da9e411c94faffccf81d9",
+      "production_size": 4437,
+      "canonical_032_sha256": "855d8b160e5774076f08bb164cfc11698ab860037c8da9e411c94faffccf81d9",
+      "canonical_032_size": 4437,
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-operation-id.php",
+      "production_sha256": "1da95919a1ff1670894a559c2db1ec5e47c95860d3aafaa9994838cb5a3c06c7",
+      "production_size": 478,
+      "canonical_032_sha256": "1da95919a1ff1670894a559c2db1ec5e47c95860d3aafaa9994838cb5a3c06c7",
+      "canonical_032_size": 478,
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-plugin.php",
+      "production_sha256": "ad27d9628cc157961cda0d9970b68f6548ff8702428e6a6721f09016a5716771",
+      "production_size": 1294,
+      "canonical_032_sha256": "ad27d9628cc157961cda0d9970b68f6548ff8702428e6a6721f09016a5716771",
+      "canonical_032_size": 1294,
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-request-context.php",
+      "production_sha256": "2740cbbec0ae71f51c1f329d4fff535133c6824b525a9d742ec07ee27a00c588",
+      "production_size": 3111,
+      "canonical_032_sha256": "2740cbbec0ae71f51c1f329d4fff535133c6824b525a9d742ec07ee27a00c588",
+      "canonical_032_size": 3111,
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-response.php",
+      "production_sha256": "5e9d8c8d3c6cf7ddbba525059518375f91a175617bbce969cce114558864917c",
+      "production_size": 2288,
+      "canonical_032_sha256": "5e9d8c8d3c6cf7ddbba525059518375f91a175617bbce969cce114558864917c",
+      "canonical_032_size": 2288,
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-rest-controller.php",
+      "production_sha256": "75d9109a4434c13b363eb0867db1a39976977d12695c0043f24778b828e6c861",
+      "production_size": 33936,
+      "canonical_032_sha256": "1810f5f7cbd91c8df3ec3f8e034e61c3bba37b6f4ff8e0577f1d04fecd8b4172",
+      "canonical_032_size": 43910,
+      "classification": "DIVERGENT"
+    },
+    {
+      "relative_path": "includes/class-wpilot-rollback-service.php",
+      "production_sha256": "24836a4c4c10c57cc80a4d23a70ce0e0dc48c4adbd1711f8df63f2e0fabd6890",
+      "production_size": 5796,
+      "canonical_032_sha256": "3a1c49448383f49b62397bb5d2fd062f4fa7183d9107932deb1f99a77653f1c4",
+      "canonical_032_size": 7564,
+      "classification": "DIVERGENT"
+    },
+    {
+      "relative_path": "includes/class-wpilot-schema.php",
+      "production_sha256": "8587d4ae9b7b81ec25b0cd372c03f73b8de4a8d3d2a7974cbd09358187f35839",
+      "production_size": 4688,
+      "canonical_032_sha256": "8587d4ae9b7b81ec25b0cd372c03f73b8de4a8d3d2a7974cbd09358187f35839",
+      "canonical_032_size": 4688,
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-scoped-replace-service.php",
+      "production_sha256": "551d90fda6a22a9dd500dba8fb0362aa0e3f8a52361d7004353f7f5424474b05",
+      "production_size": 5921,
+      "canonical_032_sha256": "a8989d1c32fce343637bd4bb4133ef757b3e815d5e85051cef2188e670c36ef5",
+      "canonical_032_size": 7000,
+      "classification": "DIVERGENT"
+    },
+    {
+      "relative_path": "includes/class-wpilot-settings.php",
+      "production_sha256": "f11e3093583b766eebde3891a49b8eafd0812c11bf348b219fc6a2f7fb40cb39",
+      "production_size": 7941,
+      "canonical_032_sha256": "576bc1a1f0b42e575ae9e6453150a87f4ef38a07d2c674f9f5508cf1ba835509",
+      "canonical_032_size": 8002,
+      "classification": "DIVERGENT"
+    },
+    {
+      "relative_path": "includes/class-wpilot-site-reader.php",
+      "production_sha256": "6a102d82042ac999e66ef825203287f3ae0f743fc26eac8248d0fc6300f73604",
+      "production_size": 7483,
+      "canonical_032_sha256": "6a102d82042ac999e66ef825203287f3ae0f743fc26eac8248d0fc6300f73604",
+      "canonical_032_size": 7483,
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-vc-raw-html-blocks.php",
+      "production_sha256": null,
+      "production_size": null,
+      "canonical_032_sha256": "b0ce40da2ba6d07a81ef7c56ba128d8117dcff0016bd44995eda3214e2d81457",
+      "canonical_032_size": 8344,
+      "classification": "LOCAL_ONLY_NEWER"
+    },
+    {
+      "relative_path": "includes/class-wpilot-vc-raw-html-text-node-service.php",
+      "production_sha256": null,
+      "production_size": null,
+      "canonical_032_sha256": "41aa9a042e638b2aaf467c7df7724bd7cf4d6db830f9c8835d7bb75ff671a76e",
+      "canonical_032_size": 17154,
+      "classification": "LOCAL_ONLY_NEWER"
+    },
+    {
+      "relative_path": "includes/class-wpilot-vc-raw-html-text-node.php",
+      "production_sha256": null,
+      "production_size": null,
+      "canonical_032_sha256": "9309251ebdbf904703bc0a8c41ea307f292ad64faa8f42efef73ec5814e36973",
+      "canonical_032_size": 15545,
+      "classification": "LOCAL_ONLY_NEWER"
+    },
+    {
+      "relative_path": "includes/class-wpilot-wpbakery-detector.php",
+      "production_sha256": "3587d5f4ba3683c7f54108616773ff8070b92af85158edd7b5745f073b8ee452",
+      "production_size": 4306,
+      "canonical_032_sha256": "3587d5f4ba3683c7f54108616773ff8070b92af85158edd7b5745f073b8ee452",
+      "canonical_032_size": 4306,
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-write-context.php",
+      "production_sha256": null,
+      "production_size": null,
+      "canonical_032_sha256": "01df710774c2d4499bf2da6b15f114b368e4b93559b141c646af7446c702ab03",
+      "canonical_032_size": 7242,
+      "classification": "LOCAL_ONLY_NEWER"
+    },
+    {
+      "relative_path": "languages/metacode-wpilot-ru_RU.mo",
+      "production_sha256": "d4905259150397f41d26f3603ab3cd567d2657c4e0c6d23fcd0dbb130cabea25",
+      "production_size": 11890,
+      "canonical_032_sha256": "85644b9b8457801e0fec175ed2f015fa6d24ff0aa86efe6de35f64f9f02380e9",
+      "canonical_032_size": 12581,
+      "classification": "DIVERGENT"
+    },
+    {
+      "relative_path": "languages/metacode-wpilot-ru_RU.po",
+      "production_sha256": "f0fbd97f228d6e3c2b196cedffed1be72764dd41f2df9ae1be325824cc7b1590",
+      "production_size": 17276,
+      "canonical_032_sha256": "2455bf18450d0d48b5b5a7a512d337130f9c356d81ff0810f2c9f29597ef3908",
+      "canonical_032_size": 17999,
+      "classification": "DIVERGENT"
+    },
+    {
+      "relative_path": "languages/metacode-wpilot.pot",
+      "production_sha256": "acb6e1f86b90fd8572833cd9c30dbe03535ebb1649857329422700349eef0a6a",
+      "production_size": 10904,
+      "canonical_032_sha256": "5127f9c7c4674e7971b3a3e28d2133aa56bfcc1f82fda82671169ee537a059af",
+      "canonical_032_size": 11190,
+      "classification": "DIVERGENT"
+    },
+    {
+      "relative_path": "metacode-wpilot.php",
+      "production_sha256": "ff9c1b13b8930c1ba668476cbae38dcff31146b294db90f41eb221a80ad4e4ce",
+      "production_size": 2612,
+      "canonical_032_sha256": "4882d6935962c49d9a801cdadb376a520e6a9880682c4e09cb56e5b8f73eb2d0",
+      "canonical_032_size": 3040,
+      "classification": "DIVERGENT"
+    }
+  ]
+}

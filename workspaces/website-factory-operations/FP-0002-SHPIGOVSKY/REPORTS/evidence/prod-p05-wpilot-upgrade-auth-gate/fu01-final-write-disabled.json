@@ -1,0 +1,18 @@
+{
+  "write_enabled": false,
+  "emergency_disabled": false,
+  "dev_confirmed": true,
+  "bridge_enabled": true,
+  "token_hash_present": true,
+  "plugin_version_option": "0.3.0",
+  "schema_version": "0.2.0",
+  "verdict": "WPILOT WRITE CLOSED AFTER READ GATE",
+  "telemetry": {
+    "last_token_used_at": "2026-08-14 09:05:53",
+    "last_connection_status": "success",
+    "last_authorized_endpoint": "pages/1054",
+    "last_authorized_connection_at": "2026-08-14 09:05:53"
+  },
+  "expected_wpilot_operational_telemetry_write": true,
+  "business_content_writes": 0
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "Endpoint": "/wp-json/wpilot/v1/ping",
+    "Status": 200,
+    "Snip": "{\"ok\":true,\"data\":{\"plugin\":\"metacode-wpilot\",\"status\":\"installed\",\"bridge_enabled\":true,\"write_enabled\":false,\"state\":\"token-generated\"},\"meta\":{\"request_id\":\"wpilot-308706e5-1722-4ff1-a25b-aab9bc81dcc3\",\"timestamp_utc\":\"2026-08-12 20:09:10\",\"endpoint\":\"ping\",\"auth_state\":\"not-required\",\"bridge_state_snapshot\":{\"state\":\"token-generated\",\"bridge_enabled\":true,\"dev_confirmed\":true,\"emergency_disabled\":false,\"write_enabled\":false}}}"
+  },
+  {
+    "Endpoint": "/wp-json/wpilot/v1/site-info",
+    "Status": 401,
+    "Snip": "{\"ok\":false,\"error\":{\"code\":\"AUTH_MISSING\",\"message\":\"Authentication token is required.\"},\"meta\":{\"request_id\":\"wpilot-def28056-9d43-405c-915f-07e63c2daf96\",\"timestamp_utc\":\"2026-08-12 20:09:14\",\"endpoint\":\"wpilot-v1-site-info\",\"auth_state\":\"checking\",\"bridge_state_snapshot\":{\"state\":\"token-generated\",\"bridge_enabled\":true,\"dev_confirmed\":true,\"emergency_disabled\":false,\"write_enabled\":false}}}"
+  }
+]

@@ -11,7 +11,13 @@ use Shpigovsky\Core\Admin\EditorRestrictions;
 use Shpigovsky\Core\Admin\OptionsPage;
 use Shpigovsky\Core\Admin\ServiceDuplicate;
 use Shpigovsky\Core\Admin\ServiceLayoutGovernance;
+use Shpigovsky\Core\Admin\PermalinkSlugUX;
+use Shpigovsky\Core\Admin\ActivityLog;
+use Shpigovsky\Core\Admin\AdminMenuHygiene;
+use Shpigovsky\Core\Admin\SystemDashboard;
+use Shpigovsky\Core\Admin\DocxImporter;
 use Shpigovsky\Core\ContentTypes\Service;
+use Shpigovsky\Core\ContentTypes\Specialist;
 use Shpigovsky\Core\Fields\AcfIntegration;
 use Shpigovsky\Core\Fields\FieldGroups;
 use Shpigovsky\Core\Fields\RepeaterValidation;
@@ -43,6 +49,12 @@ final class ModuleRegistry {
 		'content-types.service'      => array(
 			'module'            => 'ContentTypes',
 			'class'             => Service::class,
+			'status'            => self::ENABLED_IN_CONTENT_MODEL,
+			'runtime_delivered' => false,
+		),
+		'content-types.specialist'   => array(
+			'module'            => 'ContentTypes',
+			'class'             => Specialist::class,
 			'status'            => self::ENABLED_IN_CONTENT_MODEL,
 			'runtime_delivered' => false,
 		),
@@ -97,6 +109,36 @@ final class ModuleRegistry {
 		'admin.service-duplicate'   => array(
 			'module'            => 'Admin',
 			'class'             => ServiceDuplicate::class,
+			'status'            => self::ENABLED_IN_CONTENT_MODEL,
+			'runtime_delivered' => false,
+		),
+		'admin.permalink-slug-ux'   => array(
+			'module'            => 'Admin',
+			'class'             => PermalinkSlugUX::class,
+			'status'            => self::ENABLED_IN_CONTENT_MODEL,
+			'runtime_delivered' => false,
+		),
+		'admin.activity-log'        => array(
+			'module'            => 'Admin',
+			'class'             => ActivityLog::class,
+			'status'            => self::ENABLED_IN_CONTENT_MODEL,
+			'runtime_delivered' => false,
+		),
+		'admin.menu-hygiene'        => array(
+			'module'            => 'Admin',
+			'class'             => AdminMenuHygiene::class,
+			'status'            => self::ENABLED_IN_CONTENT_MODEL,
+			'runtime_delivered' => false,
+		),
+		'admin.system-dashboard'    => array(
+			'module'            => 'Admin',
+			'class'             => SystemDashboard::class,
+			'status'            => self::ENABLED_IN_CONTENT_MODEL,
+			'runtime_delivered' => false,
+		),
+		'admin.docx-importer'       => array(
+			'module'            => 'Admin',
+			'class'             => DocxImporter::class,
 			'status'            => self::ENABLED_IN_CONTENT_MODEL,
 			'runtime_delivered' => false,
 		),

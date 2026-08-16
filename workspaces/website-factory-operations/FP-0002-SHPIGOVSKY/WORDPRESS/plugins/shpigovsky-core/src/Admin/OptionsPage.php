@@ -30,6 +30,11 @@ final class OptionsPage implements ModuleInterface {
 	public const GENERAL_SLUG = 'fp02-site-settings-general';
 
 	/**
+	 * SEO / Smart Search / analytics subpage slug — PROD-P10.
+	 */
+	public const SEO_INTEGRATIONS_SLUG = 'fp02-site-settings-seo-integrations';
+
+	/**
 	 * Reusable blocks parent subpage slug.
 	 */
 	public const BLOCKS_PARENT_SLUG = 'fp02-site-settings-blocks';
@@ -106,6 +111,30 @@ final class OptionsPage implements ModuleInterface {
 				'page_title'  => __( 'Общие настройки', 'shpigovsky-core' ),
 				'menu_title'  => __( 'Общие настройки', 'shpigovsky-core' ),
 				'menu_slug'   => self::GENERAL_SLUG,
+				'parent_slug' => self::PARENT_SLUG,
+				'post_id'     => 'option',
+				'capability'  => 'manage_options',
+				'autoload'    => true,
+			)
+		);
+
+		acf_add_options_sub_page(
+			array(
+				'page_title'  => __( 'Social networks and messengers', 'shpigovsky-core' ),
+				'menu_title'  => __( 'Social networks and messengers', 'shpigovsky-core' ),
+				'menu_slug'   => 'fp02-site-settings-social',
+				'parent_slug' => self::PARENT_SLUG,
+				'post_id'     => 'option',
+				'capability'  => 'manage_options',
+				'autoload'    => true,
+			)
+		);
+
+		acf_add_options_sub_page(
+			array(
+				'page_title'  => __( 'SEO и интеграции', 'shpigovsky-core' ),
+				'menu_title'  => __( 'SEO и интеграции', 'shpigovsky-core' ),
+				'menu_slug'   => self::SEO_INTEGRATIONS_SLUG,
 				'parent_slug' => self::PARENT_SLUG,
 				'post_id'     => 'option',
 				'capability'  => 'manage_options',

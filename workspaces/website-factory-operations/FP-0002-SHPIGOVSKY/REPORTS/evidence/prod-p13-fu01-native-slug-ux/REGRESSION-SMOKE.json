@@ -1,0 +1,52 @@
+{
+  "captured_at": "2026-08-16T16:34:45.276506+00:00",
+  "routes": [
+    {
+      "url": "http://shpigovsky.beget.tech/",
+      "status": 200,
+      "bytes": 8000
+    },
+    {
+      "url": "http://shpigovsky.beget.tech/uslugi/",
+      "status": 200,
+      "bytes": 8000
+    },
+    {
+      "url": "http://shpigovsky.beget.tech/uslugi/zavisimosti/",
+      "status": 200,
+      "bytes": 8000
+    },
+    {
+      "url": "http://shpigovsky.beget.tech/specyalisty/",
+      "status": 200,
+      "bytes": 8000
+    },
+    {
+      "url": "http://shpigovsky.beget.tech/specyalisty/kostyuk/",
+      "status": 200,
+      "bytes": 8000
+    },
+    {
+      "url": "http://shpigovsky.beget.tech/wp-sitemap.xml",
+      "status": 200,
+      "bytes": 562
+    }
+  ],
+  "wpilot_probe": {
+    "paths": [
+      {
+        "rel": "/wp-content/uploads/wpilot/wpilot-options.json",
+        "exists": false
+      },
+      {
+        "rel": "/wp-content/uploads/metacode-wpilot/options.json",
+        "exists": false
+      },
+      {
+        "rel": "/wp-content/plugins/metacode-wpilot/wpilot-options.json",
+        "exists": false
+      }
+    ]
+  },
+  "qa_stderr": ""
+}

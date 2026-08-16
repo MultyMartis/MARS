@@ -158,21 +158,56 @@
   pointer-events: none;
 }
 
-/* Mobile offcanvas Search link (navigates to blank Search page; not a dropdown toggle) */
+/* Mobile offcanvas Smart Search form (PROD-P09-FU01) */
 .offcanvas__nav-list--actions {
   margin-top: var(--pad-gap-line, 12px);
 }
 
-.offcanvas__nav-link--search {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
+.offcanvas__nav-item--search {
+  width: 100%;
+  min-width: 0;
 }
 
-.offcanvas__nav-link--search i {
-  font-size: 0.95em;
-  line-height: 1;
-  pointer-events: none;
+.site-search-form--offcanvas {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.site-search-form--offcanvas .site-search-form__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: stretch;
+  width: 100%;
+  max-width: 100%;
+}
+
+.site-search-form--offcanvas .site-search-form__input {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.site-search-form--offcanvas .site-search-form__submit {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.site-search-form--offcanvas .site-search-suggest {
+  width: 100%;
+  max-width: 100%;
+  max-height: min(42vh, 320px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.site-search-form--offcanvas .site-search-suggest__link {
+  min-height: 44px;
+  padding: 12px 10px;
 }
 
 /* --------------------------------------------------------------------------
@@ -426,4 +461,128 @@
 
 .page-search__content {
   padding-top: 0px;
+}
+
+/* --------------------------------------------------------------------------
+   PROD-P09 — Live grouped smart-search suggestions (header panel only)
+   -------------------------------------------------------------------------- */
+
+.site-search-form--header {
+  position: relative;
+}
+
+.site-search-suggest {
+  margin-top: 30px;
+  max-height: min(55vh, 420px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* border-top: var(--border-width, 1px) solid var(--border-color-subtle, #c9d4e3); */
+  /* padding-top: 12px; */
+}
+
+.site-search-suggest[hidden] {
+  display: none;
+}
+
+.site-search-suggest__status {
+  margin: 0;
+  padding: 8px 0 4px;
+  font-size: var(--font-size-small, 14px);
+  line-height: var(--line-height-small, 20px);
+  color: var(--color-text-primary, #475371);
+}
+
+.site-search-suggest__group + .site-search-suggest__group {
+  margin-top: 14px;
+}
+
+.site-search-suggest__heading {
+  margin: 0 0 8px;
+  font-family: var(--font-family-base, 'Inter', system-ui, sans-serif);
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-text-primary, #475371);
+}
+
+.site-search-suggest__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-search-suggest__item + .site-search-suggest__item {
+  margin-top: 4px;
+}
+
+.site-search-suggest__link {
+  display: block;
+  min-height: 44px;
+  padding: 10px 12px;
+  border-radius: 0;
+  text-decoration: none;
+  color: var(--color-text-primary, #475371);
+  background-color: transparent;
+}
+
+.site-search-suggest__link:hover,
+.site-search-suggest__link:focus-visible,
+.site-search-suggest__link.is-active,
+.site-search-suggest__link[data-smart-search-active='true'] {
+  background-color: rgba(217, 106, 47, 0.08);
+  color: var(--color-accent-hover, #c45c26);
+  outline: none;
+}
+
+.site-search-suggest__link:focus-visible {
+  outline: 1px solid var(--color-accent, #d96a2f);
+  outline-offset: 2px;
+}
+
+.site-search-suggest__title {
+  display: block;
+  font-size: var(--font-size-base, 16px);
+  line-height: 22px;
+}
+
+.site-search-suggest__snippet {
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--color-text-primary, #475371);
+  opacity: 0.85;
+}
+
+@media (max-width: 767px) {
+  .site-search-suggest {
+    max-height: min(48vh, 360px);
+  }
+}
+
+
+/* PROD-P09-FU01 — offcanvas suggest constraints (375–767); do not alter desktop operator suggest styling */
+@media (max-width: 767px) {
+  .site-search-form--offcanvas .site-search-suggest {
+    max-height: min(40vh, 300px);
+  }
+
+  .site-search-form--offcanvas .site-search-suggest__title {
+    font-size: 15px;
+    line-height: 20px;
+    word-break: break-word;
+  }
+
+  .site-search-form--offcanvas .site-search-suggest__snippet {
+    word-break: break-word;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Offcanvas may still open from floating header; keep suggest scrollable inside panel */
+  .site-search-form--offcanvas .site-search-suggest {
+    max-height: min(36vh, 280px);
+  }
 }

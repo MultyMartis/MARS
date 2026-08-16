@@ -41,15 +41,13 @@ This workspace is the **operational foundation** for the Factory track — not s
 
 ## Current phase
 
-**Foundation** — project contour and intake infrastructure only.
+See [PROJECT-STATUS.md](PROJECT-STATUS.md). Production Beget host: `http://shpigovsky.beget.tech/` (`DNS_CUTOVER = DEFERRED` for `shpigovsky.ru`). Access contour: [DOCS/PRODUCTION/FP-0002-MARS-PRODUCTION-CONNECTION-PROFILE-v1.md](DOCS/PRODUCTION/FP-0002-MARS-PRODUCTION-CONNECTION-PROFILE-v1.md).
 
 ---
 
 ## Current status
 
 See [PROJECT-STATUS.md](PROJECT-STATUS.md).
-
-Summary: Website Factory **Pre-Onboarding**; production lanes **Not Started**; design materials **Awaiting Intake**.
 
 ---
 

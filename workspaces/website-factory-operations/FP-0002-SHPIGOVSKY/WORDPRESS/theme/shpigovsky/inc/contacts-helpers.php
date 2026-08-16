@@ -184,44 +184,41 @@ function shpigovsky_get_contacts_phone_rows() {
  * @return array<int, array{label:string,url:string,icon:string}>
  */
 function shpigovsky_get_contacts_messenger_rows() {
-	$page_rows = shpigovsky_get_contacts_repeater( 'contacts_messengers' );
-	$normalized  = array();
+	$normalized = array();
+	$seen       = array();
 
-	foreach ( $page_rows as $row ) {
-		$url   = isset( $row['url'] ) ? trim( (string) $row['url'] ) : '';
-		$label = isset( $row['label'] ) ? trim( (string) $row['label'] ) : '';
-
-		if ( '' === $url ) {
+	foreach ( shpigovsky_get_social_platform_rows( 'contacts' ) as $row ) {
+		$url = isset( $row['url'] ) ? trim( (string) $row['url'] ) : '';
+		if ( '' === $url || isset( $seen[ $url ] ) ) {
 			continue;
 		}
-
-		$normalized[] = array(
-			'label' => $label,
-			'url'   => $url,
-			'icon'  => shpigovsky_social_icon_for_label( $label ),
-		);
+		$seen[ $url ]   = true;
+		$normalized[] = $row;
 	}
 
 	if ( ! empty( $normalized ) ) {
 		return $normalized;
 	}
 
-	// Same data path as header messengers (configured social_links or visual # fallback).
-	foreach ( shpigovsky_get_messenger_link_rows( 'header' ) as $row ) {
+	$page_rows = shpigovsky_get_contacts_repeater( 'contacts_messengers' );
+	foreach ( $page_rows as $row ) {
 		$url   = isset( $row['url'] ) ? trim( (string) $row['url'] ) : '';
 		$label = isset( $row['label'] ) ? trim( (string) $row['label'] ) : '';
-
-		if ( '' === $url ) {
+		if ( '' === $url || '#' === $url ) {
 			continue;
 		}
-
-		$normalized[] = array(
-			'label' => $label,
-			'url'   => $url,
-			'icon'  => isset( $row['icon'] ) && '' !== trim( (string) $row['icon'] )
-				? trim( (string) $row['icon'] )
-				: shpigovsky_social_icon_for_label( $label ),
+		$type = shpigovsky_infer_social_platform_type( $label, $url );
+		$mapped = shpigovsky_normalize_social_platform_row(
+			array(
+				'type'        => $type,
+				'url'         => $url,
+				'show_header' => 1,
+				'show_footer' => 1,
+			)
 		);
+		if ( null !== $mapped ) {
+			$normalized[] = $mapped;
+		}
 	}
 
 	return $normalized;
@@ -252,8 +249,8 @@ function shpigovsky_get_contacts_hours_lines() {
 	}
 
 	return array(
-		'Пн-пт с 09-00 до 19-00',
-		'Сб-вс с 09-00 до 20-00',
+		'Пн-пт с 09-00 до 19-00',
+		'Сб-вс с 09-00 до 20-00',
 	);
 }
 
@@ -279,7 +276,7 @@ function shpigovsky_get_contacts_static_locations() {
 
 	return array(
 		array(
-			'title'         => 'Центр профилактики и лечения зависимости',
+			'title'         => 'Центр профилактики и лечения зависимости',
 			'address'       => $location_one_address,
 			'address_label' => 'Адрес центра Шпиговский дом',
 			'hours_html'    => $hours_html,
@@ -288,19 +285,19 @@ function shpigovsky_get_contacts_static_locations() {
 			'email_label'   => 'почта',
 			'map_image'     => $map_images['mo'],
 			'map_embed'     => '',
-			'map_alt'       => 'Карта расположения центра в Московской области',
+			'map_alt'       => 'Карта расположения центра в Московской области',
 		),
 		array(
 			'title'         => 'Лечение зависимостей Москва',
 			'address'       => $location_two_address,
-			'address_label' => 'Адрес консультирования в Москве',
+			'address_label' => 'Адрес консультирования в Москве',
 			'hours_html'    => $hours_html,
 			'hours_label'   => 'Режим работы',
 			'email'         => $email,
 			'email_label'   => 'почта',
 			'map_image'     => $map_images['moscow'],
 			'map_embed'     => '',
-			'map_alt'       => 'Карта расположения консультационного офиса в Москве',
+			'map_alt'       => 'Карта расположения консультационного офиса в Москве',
 		),
 	);
 }
@@ -470,7 +467,7 @@ function shpigovsky_get_contacts_intro() {
 		return $intro;
 	}
 
-	return 'Ведем прием и консультируем в Москве и Московской области. Для нас не существует границ в привычном понимании этого слова — к нам приезжают из разных городов и стран, доверяя свое здоровье и благополучие заботливой помощи наших специалистов.';
+	return 'Ведем прием и консультируем в Москве и Московской области. Для нас не существует границ в привычном понимании этого слова — к нам приезжают из разных городов и стран, доверяя свое здоровье и благополучие заботливой помощи наших специалистов.';
 }
 
 /**
@@ -482,23 +479,23 @@ function shpigovsky_get_contacts_rehabilitation_steps() {
 	return array(
 		array(
 			'number' => '01',
-			'title'  => 'Свяжитесь с нами удобным способом',
-			'text'   => 'Расскажите нам о своей ситуации — в удобном для вас формате и в удобное время. Первый разговор ни к чему не обязывает, но часто становится началом перемен.',
+			'title'  => 'Свяжитесь с нами удобным способом',
+			'text'   => 'Расскажите нам о своей ситуации — в удобном для вас формате и в удобное время. Первый разговор ни к чему не обязывает, но часто становится началом перемен.',
 		),
 		array(
 			'number' => '02',
-			'title'  => 'Поможем определить цели и программу',
-			'text'   => 'Вместе со специалистами центра мы разберёмся, что именно происходит, и составим программу, которая отвечает вашей ситуации.',
+			'title'  => 'Поможем определить цели и программу',
+			'text'   => 'Вместе со специалистами центра мы разберёмся, что именно происходит, и составим программу, которая отвечает вашей ситуации.',
 		),
 		array(
 			'number' => '03',
 			'title'  => 'Выберите категорию номера, период стационарного проживания',
-			'text'   => 'Комфорт среды — часть восстановления. Мы подберём условия проживания, которые подойдут именно вам, и согласуем удобные сроки.',
+			'text'   => 'Комфорт среды — часть восстановления. Мы подберём условия проживания, которые подойдут именно вам, и согласуем удобные сроки.',
 		),
 		array(
 			'number' => '04',
-			'title'  => 'Начните реабилитацию и лечение',
-			'text'   => 'С первого дня рядом с вами будет команда специалистов. Здесь начинается то, ради чего вы пришли. Мы с вами — шаг за шагом, в вашем темпе.',
+			'title'  => 'Начните реабилитацию и лечение',
+			'text'   => 'С первого дня рядом с вами будет команда специалистов. Здесь начинается то, ради чего вы пришли. Мы с вами — шаг за шагом, в вашем темпе.',
 		),
 	);
 }
@@ -510,10 +507,10 @@ function shpigovsky_get_contacts_rehabilitation_steps() {
  */
 function shpigovsky_get_contacts_support_items() {
 	return array(
-		'Интервенция на лечение — мотивация вас или ваших близких;',
-		'Круглосуточная поддержка психологов — в любое время будет оказана помощь;',
-		'Занятия в мини-группах — эффективная работа с каждым;',
-		'По договоренности, возможность удалённой работы в условиях стационара.',
+		'Интервенция на лечение — мотивация вас или ваших близких;',
+		'Круглосуточная поддержка психологов — в любое время будет оказана помощь;',
+		'Занятия в мини-группах — эффективная работа с каждым;',
+		'По договоренности, возможность удалённой работы в условиях стационара.',
 	);
 }
 
@@ -526,8 +523,8 @@ function shpigovsky_get_contacts_cta_band() {
 	$phone = shpigovsky_get_contacts_primary_phone();
 
 	return array(
-		'title'        => 'Запишитесь на гостевой визит',
-		'subtitle'     => 'Вы сможете все посмотреть и задать вопросы лично',
+		'title'        => 'Запишитесь на гостевой визит',
+		'subtitle'     => 'Вы сможете все посмотреть и задать вопросы лично',
 		'phone'        => $phone['display'],
 		'phone_hint'   => 'Или позвоните нам',
 		'button_label' => shpigovsky_get_site_option( 'default_button_label' ) ?: 'Записаться',

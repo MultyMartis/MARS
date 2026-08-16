@@ -1,0 +1,24 @@
+{
+  "captured_at": "2026-08-14T16:14:23.808977+00:00",
+  "action": "OPERATOR CSS DRIFT CANONIZED INTO LOCAL SOURCE",
+  "files": [
+    {
+      "rel": "assets/css/fp02-search.css",
+      "local_before_sha256": "4dee70a8b5bc00f5d69b19a5347bb1fc755295dd2807d77d72bff262f975fab3",
+      "prod_sha256": "742365428245889c4bfdb96cf85995ba360675f58442ef241ab17886e95ff89d",
+      "local_after_sha256": "742365428245889c4bfdb96cf85995ba360675f58442ef241ab17886e95ff89d",
+      "canonized_match": true,
+      "local_backup": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\REPORTS\\evidence\\prod-p09-specialist-fancybox-smart-search\\fu01-local-pre-canon\\assets__css__fp02-search.css.local-before-canon",
+      "source": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p09-fu01-layer-b-pre\\theme__assets__css__fp02-search.css.prod-before"
+    },
+    {
+      "rel": "assets/css/v9-style.css",
+      "local_before_sha256": "e7e51ec0e64a1e4aa4238d20bc49bbced0d82cfcc1dc7eac930d60387375a234",
+      "prod_sha256": "4cc114fd26dd1f0f8741ff04f90e1d1a6ba03422c313394f8a5d902d2a799f97",
+      "local_after_sha256": "4cc114fd26dd1f0f8741ff04f90e1d1a6ba03422c313394f8a5d902d2a799f97",
+      "canonized_match": true,
+      "local_backup": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\REPORTS\\evidence\\prod-p09-specialist-fancybox-smart-search\\fu01-local-pre-canon\\assets__css__v9-style.css.local-before-canon",
+      "source": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p09-fu01-layer-b-pre\\theme__assets__css__v9-style.css.prod-before"
+    }
+  ]
+}

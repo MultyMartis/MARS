@@ -1,0 +1,138 @@
+{
+  "select_proven": true,
+  "database": "shpigovsky_main",
+  "mysql_version": "8.4.8-8-beget-1-2",
+  "prefix": "fp02_",
+  "charset": "utf8mb4",
+  "collation": "utf8mb4_unicode_ci",
+  "table_count": 14,
+  "tables": [
+    "fp02_commentmeta",
+    "fp02_comments",
+    "fp02_links",
+    "fp02_options",
+    "fp02_postmeta",
+    "fp02_posts",
+    "fp02_term_relationships",
+    "fp02_term_taxonomy",
+    "fp02_termmeta",
+    "fp02_terms",
+    "fp02_usermeta",
+    "fp02_users",
+    "fp02_wpilot_audit_log",
+    "fp02_wpilot_backups"
+  ],
+  "core_tables_present": {
+    "options": true,
+    "posts": true,
+    "postmeta": true,
+    "users": true,
+    "usermeta": true,
+    "terms": true,
+    "term_taxonomy": true,
+    "term_relationships": true,
+    "comments": true,
+    "commentmeta": true
+  },
+  "wordpress": {
+    "home": "http://shpigovsky.beget.tech",
+    "siteurl": "http://shpigovsky.beget.tech",
+    "blogname": "Шпиговский — локальная разработка",
+    "blogdescription": "",
+    "template": "shpigovsky",
+    "stylesheet": "shpigovsky",
+    "permalink_structure": "/blog/%postname%/",
+    "db_version": "61833",
+    "active_plugins": [
+      "acf-extended-pro/acf-extended.php",
+      "advanced-custom-fields-pro/acf.php",
+      "classic-editor/classic-editor.php",
+      "metacode-wpilot/metacode-wpilot.php",
+      "shpigovsky-core/shpigovsky-core.php"
+    ],
+    "counts": {
+      "posts_all": 16,
+      "posts_publish": 16,
+      "pages_publish": 25,
+      "revisions": 250,
+      "all_publish": 857,
+      "users": 3,
+      "attachments": 38,
+      "services_publish": 29
+    },
+    "acf_field_group_rows": 35,
+    "acf_unique_titles": 21
+  },
+  "wpilot_safe": {
+    "bridge_enabled": true,
+    "write_enabled": false,
+    "emergency_disabled": false,
+    "dev_confirmed": true,
+    "plugin_version": "0.3.0",
+    "schema_version": "0.2.0",
+    "token_hash": "PRESENT_REDACTED",
+    "token": "REDACTED_OR_ABSENT"
+  },
+  "wpilot_token": {
+    "token_present": "YES",
+    "recoverable_plain_client_token": "NO",
+    "hash_only": "YES",
+    "local_production_token_file_present": "NO",
+    "future_auth_requirement": "TOKEN REISSUE REQUIRED",
+    "reissue_performed": false
+  },
+  "mars_admin_users": [
+    {
+      "id": 3,
+      "login": "mars",
+      "email_domain": "polygon-ws.ru",
+      "registered": "2026-08-14 08:00:13",
+      "capabilities_raw_present": true,
+      "is_administrator": true
+    }
+  ],
+  "count_delta_vs_prior_p04": {
+    "posts_all": {
+      "current": 16,
+      "prior_p04": 1085,
+      "delta": -1069
+    },
+    "posts_publish": {
+      "current": 16,
+      "prior_p04": 16,
+      "delta": 0
+    },
+    "pages_publish": {
+      "current": 25,
+      "prior_p04": 25,
+      "delta": 0
+    },
+    "revisions": {
+      "current": 250,
+      "prior_p04": null,
+      "delta": null
+    },
+    "all_publish": {
+      "current": 857,
+      "prior_p04": 857,
+      "delta": 0
+    },
+    "users": {
+      "current": 3,
+      "prior_p04": 3,
+      "delta": 0
+    },
+    "attachments": {
+      "current": 38,
+      "prior_p04": null,
+      "delta": null
+    },
+    "services_publish": {
+      "current": 29,
+      "prior_p04": null,
+      "delta": null
+    }
+  },
+  "secrets_printed": 0,
+  "writes": 0
+}

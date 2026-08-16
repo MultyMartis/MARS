@@ -682,17 +682,35 @@
             "rows": 3
         },
         {
-            "key": "field_fp02_about_program_items",
-            "label": "О центре — Программа: направления",
-            "name": "about_program_items",
+            "key": "field_fp02_about_program_items_auto_note",
+            "label": "О центре — Программа: направления (автоматически)",
+            "name": "about_program_items_auto_note",
             "aria-label": "",
-            "type": "repeater",
-            "instructions": "Bounded repeater. Max rows are enforced in source and validation hooks.",
+            "type": "message",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Карточки направлений читаются автоматически из дочерних страниц «Программа лечения» (родитель #13): заголовок страницы, постоянная ссылка и поле «Мини-описание». Редактируйте карточки там. Устаревший повторитель скрыт; исторические postmeta сохранены.",
+            "new_lines": "br",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_about_program_items",
+            "label": "О центре — Программа: направления (устарело)",
+            "name": "about_program_items",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "LEGACY DORMANT (V9-07A01): не читается на фронтенде. Исторические postmeta сохранены для отката. Источник карточек — дочерние страницы программы лечения.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-legacy-retired",
                 "id": ""
             },
             "default_value": "",

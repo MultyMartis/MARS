@@ -1,0 +1,81 @@
+{
+  "wpjson": {
+    "http": 200,
+    "url": "http://shpigovsky.beget.tech",
+    "home": "http://shpigovsky.beget.tech",
+    "name": "\u0428\u043f\u0438\u0433\u043e\u0432\u0441\u043a\u0438\u0439 \u2014 \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u0430\u044f \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430",
+    "description": "",
+    "gmt_offset": 3,
+    "timezone_string": "Europe/Moscow",
+    "namespaces_sample": [
+      "oembed/1.0",
+      "wpilot/v1",
+      "wp/v2",
+      "wp-site-health/v1",
+      "wp-block-editor/v1",
+      "wp-abilities/v1"
+    ],
+    "has_wpilot": true
+  },
+  "assets": {
+    "/wp-content/themes/shpigovsky/assets/css/v9-style.css": {
+      "http": 200,
+      "len": 615192,
+      "sha256": "1ccc5a8f1150bc696186e0f8d4546b7d55a1895bfa3c77dd50a32204b09a7ba9",
+      "local_exists": true,
+      "local_len": 615192,
+      "local_sha256": "1ccc5a8f1150bc696186e0f8d4546b7d55a1895bfa3c77dd50a32204b09a7ba9",
+      "match": true
+    },
+    "/wp-content/themes/shpigovsky/assets/js/v9-shell.js": {
+      "http": 200,
+      "len": 68702,
+      "sha256": "7fc32c90effd99fc39ff0c3781c8cf4038387c27a5943235d44686c2bc8c45a1",
+      "local_exists": true,
+      "local_len": 68702,
+      "local_sha256": "7fc32c90effd99fc39ff0c3781c8cf4038387c27a5943235d44686c2bc8c45a1",
+      "match": true
+    },
+    "/wp-content/themes/shpigovsky/style.css": {
+      "http": 200,
+      "len": 673,
+      "sha256": "82a31308ce46c143528518f1036437a28e93f14d42e2c89ad22f0bf97037750e",
+      "local_exists": true,
+      "local_len": 673,
+      "local_sha256": "82a31308ce46c143528518f1036437a28e93f14d42e2c89ad22f0bf97037750e",
+      "match": true
+    },
+    "/wp-content/themes/shpigovsky/assets/css/fp02-404.css": {
+      "http": 200,
+      "len": 4461,
+      "sha256": "31f9d6fd747341819a12f19ab113111886e91c4fa9948f46f8028bdacc59ebfc",
+      "local_exists": true,
+      "local_len": 4461,
+      "local_sha256": "31f9d6fd747341819a12f19ab113111886e91c4fa9948f46f8028bdacc59ebfc",
+      "match": true
+    },
+    "/wp-content/themes/shpigovsky/assets/css/fp02-search.css": {
+      "http": 200,
+      "len": 9493,
+      "sha256": "8dd6e89f3b7373623cd3bb8718e9de0bf883a24b892ab5e6d767b7d244c01f94",
+      "local_exists": true,
+      "local_len": 9493,
+      "local_sha256": "8dd6e89f3b7373623cd3bb8718e9de0bf883a24b892ab5e6d767b7d244c01f94",
+      "match": true
+    }
+  },
+  "zip": {
+    "path": "X:\\AI MARS STORAGE\\wpilot\\deploy-packages\\metacode-wpilot-v0.3.2-rc1.zip",
+    "exists": true,
+    "sha256": "d55c19d6ea1a55cd145e9b67c42ca201c30e4356f08d8cf3932ef6a5ebc80934",
+    "matches_expected": true,
+    "size": 74788
+  },
+  "wpilot_source": {
+    "VERSION": "0.3.2",
+    "SCHEMA_VERSION": "0.2.0",
+    "RELEASE_LABEL": "0.3.2-RC1",
+    "REST_NAMESPACE": "wpilot/v1"
+  },
+  "note": "Full theme/plugin/ACF filesystem SHA inventory blocked (ACL). Public CSS/JS sample 5/5 MATCH."
+}

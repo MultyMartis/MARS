@@ -1,0 +1,43 @@
+{
+  "installed_plugin_header_version": "0.3.0",
+  "release_label_admin": "NOT SHOWN as 0.3.2-RC1",
+  "schema_version_admin": "0.2.0",
+  "rest_namespace": "wpilot/v1",
+  "active": true,
+  "environment_constant_admin": "DEV",
+  "runtime_maturity_admin": "proven_content_writes",
+  "classification_vs_current_baseline": "OLDER",
+  "current_global_baseline": {
+    "version": "0.3.2",
+    "release": "0.3.2-RC1",
+    "schema": "0.2.0",
+    "zip_sha256": "d55c19d6ea1a55cd145e9b67c42ca201c30e4356f08d8cf3932ef6a5ebc80934",
+    "zip_reverified": true
+  },
+  "likely_lineage": "migrated local shpigovsky.test v0.3.0-rc5 (OPERATIONAL-INDEX); production header Version 0.3.0",
+  "upgrade_required": true,
+  "upgrade_performed": false,
+  "public_ping": {
+    "bridge_enabled": true,
+    "write_enabled": false,
+    "dev_confirmed": true,
+    "emergency_disabled": false,
+    "state": "token-generated"
+  },
+  "token_storage_model": "password hash in wpilot_options only (CASE B); plaintext not recoverable",
+  "local_prod_token_file": "MISSING",
+  "local_dev_token_file_exists": true,
+  "local_dev_token_tested_against_production": false,
+  "authenticated_read_attempted": false,
+  "authenticated_read_blocker": [
+    "TOKEN CLIENT COPY UNAVAILABLE",
+    "authenticated GET mutates last_token_used_at + connection tracker (not read-only)",
+    "installed version OLDER than 0.3.2-RC1 \u2014 stop before upgrade"
+  ],
+  "preexisting_admin_last_failure": {
+    "at_utc": "2026-08-12 20:09:14",
+    "reason": "auth_missing",
+    "caused_by_this_wave": false
+  },
+  "write_enabled_safety": "false \u2014 no SAFETY BLOCKER"
+}

@@ -1,0 +1,27 @@
+{
+  "inventory_ok": true,
+  "inventory_stderr": "",
+  "inventory_raw_head": "",
+  "service_count": 31,
+  "specialist_count": 9,
+  "wpilot_write_enabled_option": null,
+  "wpilot_write_enabled_from_opts": null,
+  "login_debug": {
+    "login_scheme_host": "http://shpigovsky.beget.tech",
+    "site_scheme_host": "http://shpigovsky.beget.tech",
+    "login_path": "/wp-admin/",
+    "r0_status": 200,
+    "r1_status": 200,
+    "r1_url_path": "/wp-login.php",
+    "r1_has_login_error": false,
+    "r1_has_loginform": true,
+    "cookie_names": [
+      "beget",
+      "wordpress_test_cookie"
+    ],
+    "logged_in": false,
+    "user_len": 4,
+    "pwd_len": 22
+  },
+  "screens": {}
+}

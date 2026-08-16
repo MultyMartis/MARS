@@ -1,0 +1,20 @@
+{
+  "wave": "PROD-P05",
+  "started_utc": "2026-08-14T08:46:04.359798+00:00",
+  "finished_utc": "2026-08-14T08:46:16.748810+00:00",
+  "status": "BLOCKED",
+  "primary_reason": "BLOCKED — WP ADMIN AUTHENTICATION FAILED DESPITE OPERATOR PASSWORD SYNC",
+  "secondary_reason": "OPERATOR ACTION REQUIRED — CREATE FRESH BEGET FILES + DB BACKUP",
+  "password_matches_db_hash": false,
+  "package_sha_match": true,
+  "write_enabled": false,
+  "upgrade_performed": false,
+  "token_reissue": false,
+  "readiness_flag_mutations": 0,
+  "business_content_mutations": 0,
+  "unrelated_plugin_theme_mutations": 0,
+  "commit_push": "none",
+  "layer_b_snapshot": "X:\\AI MARS STORAGE\\wpilot\\evidence\\fp-0002-shpigovsky\\prod-p05\\pre-upgrade-wpilot-0.3.0",
+  "wpilot_fs_version": "0.3.0",
+  "upgrade_safety": "SAFE"
+}

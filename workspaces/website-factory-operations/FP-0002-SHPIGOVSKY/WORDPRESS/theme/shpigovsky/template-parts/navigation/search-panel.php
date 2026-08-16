@@ -31,11 +31,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 				'searchform',
 				null,
 				array(
-					'input_id'   => 'site-header-search-field',
-					'form_class' => 'site-search-form site-search-form--header',
-					'show_intro' => true,
-					'autofocus'  => true,
-					'value'      => '',
+					'input_id'            => 'site-header-search-field',
+					'form_class'          => 'site-search-form site-search-form--header',
+					'show_intro'          => true,
+					'autofocus'           => true,
+					'value'               => '',
+					'enable_live_suggest' => true,
 				)
 			);
 			?>

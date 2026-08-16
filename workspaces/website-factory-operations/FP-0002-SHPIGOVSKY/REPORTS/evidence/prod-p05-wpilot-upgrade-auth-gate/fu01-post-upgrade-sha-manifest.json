@@ -1,0 +1,209 @@
+{
+  "filesystem_header": {
+    "HEADER": "0.3.2",
+    "VERSION": "0.3.2",
+    "RELEASE_LABEL": "0.3.2-RC1",
+    "SCHEMA_VERSION": "0.2.0"
+  },
+  "file_count": 32,
+  "counts_vs_package": {
+    "MATCH": 32
+  },
+  "production_only": [],
+  "zip_only": [],
+  "expected_parity": true,
+  "files": [
+    {
+      "relative_path": "README.md",
+      "production_sha256": "3fe044dd4748e82db28d736515d4e58f00664e72f0b53f3807fb10183c22076a",
+      "package_sha256": "3fe044dd4748e82db28d736515d4e58f00664e72f0b53f3807fb10183c22076a",
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "admin/class-wpilot-admin-page.php",
+      "production_sha256": "38a7d0828b85b5ff676cf1b8807e5ccbefc1cca701f1b2d0c180d303050587e2",
+      "package_sha256": "38a7d0828b85b5ff676cf1b8807e5ccbefc1cca701f1b2d0c180d303050587e2",
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "admin/class-wpilot-admin-ui-model.php",
+      "production_sha256": "10bde9f40a6c010d809241fa3d5a8fbf6a3eeffbcf42e4e7c26934ffa872c06a",
+      "package_sha256": "10bde9f40a6c010d809241fa3d5a8fbf6a3eeffbcf42e4e7c26934ffa872c06a",
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-audit-service.php",
+      "production_sha256": "69e08d132491182805b4e0ffc071778d1121c9355f93a76cbc90ffaa4070c2ff",
+      "package_sha256": "69e08d132491182805b4e0ffc071778d1121c9355f93a76cbc90ffaa4070c2ff",
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-auth.php",
+      "production_sha256": "ee1811577c18a5d420a94fcc71f15cd346309d99eb14b57cd4dad266510f1535",
+      "package_sha256": "ee1811577c18a5d420a94fcc71f15cd346309d99eb14b57cd4dad266510f1535",
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-backup-service.php",
+      "production_sha256": "5ef345673ac74c68c584e862ed0de35733dfb55910ec928db82e2b7823cc6ceb",
+      "package_sha256": "5ef345673ac74c68c584e862ed0de35733dfb55910ec928db82e2b7823cc6ceb",
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-checksum.php",
+      "production_sha256": "04f2a426c45ce1896c8ca1291f0aa933b2dd42e3b3c76a1c3bf5a4b0cfc9c1ba",
+      "package_sha256": "04f2a426c45ce1896c8ca1291f0aa933b2dd42e3b3c76a1c3bf5a4b0cfc9c1ba",
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-connection-tracker.php",
+      "production_sha256": "3d65864c2a2237a909f81eb43fb18a8b33fe1442ce8dc76d933f2173282ab860",
+      "package_sha256": "3d65864c2a2237a909f81eb43fb18a8b33fe1442ce8dc76d933f2173282ab860",
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-constants.php",
+      "production_sha256": "d6f52374a4fbddcb4119170b47250c014315f2c83b15b8604a44bcd3e25f2fd9",
+      "package_sha256": "d6f52374a4fbddcb4119170b47250c014315f2c83b15b8604a44bcd3e25f2fd9",
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-content-persistence-service.php",
+      "production_sha256": "6c117293c1ae80a0c5aefa0cdde093499b214d7b3c2b954e432d35a82308f33e",
+      "package_sha256": "6c117293c1ae80a0c5aefa0cdde093499b214d7b3c2b954e432d35a82308f33e",
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-dry-run.php",
+      "production_sha256": "433273c697502dd6a0dbe6a6656be71deac23012128e2edbbe91e99027b38637",
+      "package_sha256": "433273c697502dd6a0dbe6a6656be71deac23012128e2edbbe91e99027b38637",
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-environment.php",
+      "production_sha256": "4ebb96ee2182c43896ea0ba6af51206101bd0ed45531e3da482ad334a09eeca4",
+      "package_sha256": "4ebb96ee2182c43896ea0ba6af51206101bd0ed45531e3da482ad334a09eeca4",
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-errors.php",
+      "production_sha256": "855d8b160e5774076f08bb164cfc11698ab860037c8da9e411c94faffccf81d9",
+      "package_sha256": "855d8b160e5774076f08bb164cfc11698ab860037c8da9e411c94faffccf81d9",
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-operation-id.php",
+      "production_sha256": "1da95919a1ff1670894a559c2db1ec5e47c95860d3aafaa9994838cb5a3c06c7",
+      "package_sha256": "1da95919a1ff1670894a559c2db1ec5e47c95860d3aafaa9994838cb5a3c06c7",
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-plugin.php",
+      "production_sha256": "ad27d9628cc157961cda0d9970b68f6548ff8702428e6a6721f09016a5716771",
+      "package_sha256": "ad27d9628cc157961cda0d9970b68f6548ff8702428e6a6721f09016a5716771",
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-request-context.php",
+      "production_sha256": "2740cbbec0ae71f51c1f329d4fff535133c6824b525a9d742ec07ee27a00c588",
+      "package_sha256": "2740cbbec0ae71f51c1f329d4fff535133c6824b525a9d742ec07ee27a00c588",
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-response.php",
+      "production_sha256": "5e9d8c8d3c6cf7ddbba525059518375f91a175617bbce969cce114558864917c",
+      "package_sha256": "5e9d8c8d3c6cf7ddbba525059518375f91a175617bbce969cce114558864917c",
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-rest-controller.php",
+      "production_sha256": "1810f5f7cbd91c8df3ec3f8e034e61c3bba37b6f4ff8e0577f1d04fecd8b4172",
+      "package_sha256": "1810f5f7cbd91c8df3ec3f8e034e61c3bba37b6f4ff8e0577f1d04fecd8b4172",
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-rollback-service.php",
+      "production_sha256": "3a1c49448383f49b62397bb5d2fd062f4fa7183d9107932deb1f99a77653f1c4",
+      "package_sha256": "3a1c49448383f49b62397bb5d2fd062f4fa7183d9107932deb1f99a77653f1c4",
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-schema.php",
+      "production_sha256": "8587d4ae9b7b81ec25b0cd372c03f73b8de4a8d3d2a7974cbd09358187f35839",
+      "package_sha256": "8587d4ae9b7b81ec25b0cd372c03f73b8de4a8d3d2a7974cbd09358187f35839",
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-scoped-replace-service.php",
+      "production_sha256": "a8989d1c32fce343637bd4bb4133ef757b3e815d5e85051cef2188e670c36ef5",
+      "package_sha256": "a8989d1c32fce343637bd4bb4133ef757b3e815d5e85051cef2188e670c36ef5",
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-settings.php",
+      "production_sha256": "576bc1a1f0b42e575ae9e6453150a87f4ef38a07d2c674f9f5508cf1ba835509",
+      "package_sha256": "576bc1a1f0b42e575ae9e6453150a87f4ef38a07d2c674f9f5508cf1ba835509",
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-site-reader.php",
+      "production_sha256": "6a102d82042ac999e66ef825203287f3ae0f743fc26eac8248d0fc6300f73604",
+      "package_sha256": "6a102d82042ac999e66ef825203287f3ae0f743fc26eac8248d0fc6300f73604",
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-vc-raw-html-blocks.php",
+      "production_sha256": "b0ce40da2ba6d07a81ef7c56ba128d8117dcff0016bd44995eda3214e2d81457",
+      "package_sha256": "b0ce40da2ba6d07a81ef7c56ba128d8117dcff0016bd44995eda3214e2d81457",
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-vc-raw-html-text-node-service.php",
+      "production_sha256": "41aa9a042e638b2aaf467c7df7724bd7cf4d6db830f9c8835d7bb75ff671a76e",
+      "package_sha256": "41aa9a042e638b2aaf467c7df7724bd7cf4d6db830f9c8835d7bb75ff671a76e",
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-vc-raw-html-text-node.php",
+      "production_sha256": "9309251ebdbf904703bc0a8c41ea307f292ad64faa8f42efef73ec5814e36973",
+      "package_sha256": "9309251ebdbf904703bc0a8c41ea307f292ad64faa8f42efef73ec5814e36973",
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-wpbakery-detector.php",
+      "production_sha256": "3587d5f4ba3683c7f54108616773ff8070b92af85158edd7b5745f073b8ee452",
+      "package_sha256": "3587d5f4ba3683c7f54108616773ff8070b92af85158edd7b5745f073b8ee452",
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "includes/class-wpilot-write-context.php",
+      "production_sha256": "01df710774c2d4499bf2da6b15f114b368e4b93559b141c646af7446c702ab03",
+      "package_sha256": "01df710774c2d4499bf2da6b15f114b368e4b93559b141c646af7446c702ab03",
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "languages/metacode-wpilot-ru_RU.mo",
+      "production_sha256": "85644b9b8457801e0fec175ed2f015fa6d24ff0aa86efe6de35f64f9f02380e9",
+      "package_sha256": "85644b9b8457801e0fec175ed2f015fa6d24ff0aa86efe6de35f64f9f02380e9",
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "languages/metacode-wpilot-ru_RU.po",
+      "production_sha256": "2455bf18450d0d48b5b5a7a512d337130f9c356d81ff0810f2c9f29597ef3908",
+      "package_sha256": "2455bf18450d0d48b5b5a7a512d337130f9c356d81ff0810f2c9f29597ef3908",
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "languages/metacode-wpilot.pot",
+      "production_sha256": "5127f9c7c4674e7971b3a3e28d2133aa56bfcc1f82fda82671169ee537a059af",
+      "package_sha256": "5127f9c7c4674e7971b3a3e28d2133aa56bfcc1f82fda82671169ee537a059af",
+      "classification": "MATCH"
+    },
+    {
+      "relative_path": "metacode-wpilot.php",
+      "production_sha256": "4882d6935962c49d9a801cdadb376a520e6a9880682c4e09cb56e5b8f73eb2d0",
+      "package_sha256": "4882d6935962c49d9a801cdadb376a520e6a9880682c4e09cb56e5b8f73eb2d0",
+      "classification": "MATCH"
+    }
+  ]
+}

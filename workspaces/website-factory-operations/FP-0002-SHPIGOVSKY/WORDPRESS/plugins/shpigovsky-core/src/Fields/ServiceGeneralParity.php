@@ -459,7 +459,7 @@ final class ServiceGeneralParity {
 					'label'             => __( 'Карточки подхода', 'shpigovsky-core' ),
 					'name'              => 'service_general_approach_cards',
 					'type'              => 'repeater',
-					'instructions'      => $demo,
+					'instructions'      => __( 'Редактируйте здесь карточки подхода, видимые на странице услуги (до 6 шт.). Источник фронта — этот repeater. Пустые ряды скрываются. Не оставляйте Lorem/DEMO — такие тексты на фронте заменяются техническим запасным описанием.', 'shpigovsky-core' ),
 					'required'          => 0,
 					'conditional_logic' => self::when_service(),
 					'layout'            => 'row',

@@ -710,3 +710,58 @@ E62E **PASS** (local; no commit/push/freeze): Operator runtime CSS canonized fir
 
 E63 **STABLE v1 CLOSEOUT PASS**: Operator runtime CSS/JS promoted into canonical source (`v9-style` **`1CCC5A8F…`**, `fp02-search.css`, `v9-shell.js` mobile-first slider defaults). Theme/plugin product DIFF after promote **0**; 8 source-only ACF JSON groups retained (PHP registration; 2 inactive). Pre-release backup `v9-06e63-before-stable-v1-closeout-20260718-003355`. Authoritative freeze `v9-stable-v1-near-production-freeze-20260718-004137` DB SHA256 `E38978E7D4FB2EADE3099A81144C7E8AADEE00B0F1DEC83E2D43275800C7469D`. Release pack `REPORTS/STABLE-V1/`. Formulation: **Stable local near-production baseline**. **No** public production deployment. **No** production SMTP claim. Demo Blog/Reviews retained locally (deferred cleanup). Git: clean-worktree exact-allowlist commit + push to `origin/mars/canonical-post-recovery` (see closeout report).
 
+
+## V9-07A01 Program auto-source + Comfort gallery Fancybox (2026-07-23)
+
+V9-07A01 **PASS** (local; no commit/push/freeze): Post–Stable v1 correction. Theme/plugin preflight MATCH (no operator CSS promote). Treatment Program cards auto-source from parent `#13` children (title/permalink/`treatment_program_short_description`); O-centre `about_program_items` admin-hidden/dormant; service `programme_items` not read for frontend cards. Comfort Fancybox shared enqueue helper for `/uslugi/` + subdivision/leaf. Exact-file delivery; lasting DB writes **0**. Backup: `v9-07a01-before-program-auto-source-comfort-gallery-fix-20260723-214353`. Report: `REPORTS/REPORT-FP-0002-V9-07A01-PROGRAM-AUTO-SOURCE-COMFORT-GALLERY-FIX.md`. Ownership: `DOCS/TREATMENT-PROGRAM-AUTO-SOURCE-OWNERSHIP-v1.md`. Stable v1 freeze marker unchanged.
+
+## PROD-P01 — Post-migration dual authority (Beget) (2026-08-13)
+
+**Post–Stable production onboarding** (does **not** rewrite Stable v1 historical freeze semantics).
+
+Operator manually migrated the accepted complete local WordPress filesystem + DB to Beget. Working pre-DNS-cutover host: `http://shpigovsky.beget.tech/`. Canonical domain `shpigovsky.ru` remains **`DNS_CUTOVER = DEFERRED`**.
+
+| Surface | Authority role |
+|---------|----------------|
+| `WORDPRESS/` (this tree) | **CODE / SOURCE AUTHORITY** — theme PHP/CSS/JS, `shpigovsky-core`, ACF JSON/PHP, source-owned assets |
+| `http://shpigovsky.beget.tech/` | **LIVE RUNTIME TRUTH / PRODUCTION OPERATIONAL AUTHORITY** |
+| Beget WordPress DB | **LIVE CONTENT / ADMIN STATE AUTHORITY** |
+| `X:\MARS-Localhost\sites\wordpress\projects\shpigovsky\` | **LOCAL ACCEPTED REFERENCE / DEVELOPMENT MIRROR** — must **not** automatically overwrite production |
+
+**Golden rule:** never broad `local source → production` sync. Before every future production filesystem mutation: inspect production → hash/diff → detect drift → preserve legitimate production changes → reconcile into source → backup → deploy **exact files only**.
+
+The V9-07A01 14-file upload pack is **not** the sole migration authority — the entire migrated WordPress state is the production starting state. Public PROD-P01 evidence shows key theme CSS/JS hashes match this source (`v9-style` `1CCC5A8F…`) while some hardcoded `http://shpigovsky.test/...` CTA links remain as migration residue (documented, not repaired in P01).
+
+Production ops docs: `DOCS/PRODUCTION/`. Report: `REPORTS/REPORT-FP-0002-PROD-P01-BEGET-READ-ONLY-ONBOARDING.md`.
+
+## PROD-P02 — Production access contour (2026-08-13)
+
+Access structure / credential **paths** prepared. No production mutation. No DNS change. Dual-authority table above is unchanged.
+
+Operational binding: `DOCS/PRODUCTION/FP-0002-SOURCE-PRODUCTION-AUTHORITY-v1.md` · connection entry: `DOCS/PRODUCTION/FP-0002-MARS-PRODUCTION-CONNECTION-PROFILE-v1.md`. Local secrets (gitignored): `X:\AI MARS\local\sites\shpigovsky-production\secrets.local.md`.
+
+## PROD-P03 — Credentialed read-only mapping (2026-08-13)
+
+**PARTIAL.** Dual-authority table above unchanged. Production WordPress filesystem lives at `/home/s/shpigovsky/shpigovsky.ru/public_html`, not in the additional FTP user’s `shpigovsky.beget.tech` jail. Full source↔production SHA inventory remains **blocked** until that account is rebound. Public theme CSS/JS sample still **MATCH**. WPilot on production is **0.3.0**, not source `0.3.2-RC1`. No production mutation. No commit/push.
+
+## PROD-P04-FU01 — Filesystem baseline (historical pre-reimport) (2026-08-13)
+
+**HISTORICAL PRE-REIMPORT PRODUCTION BASELINE.** Full product SHA baseline established against then-current Beget docroot. Superseded as *live* baseline by PROD-P04-FU02 after operator re-import. Evidence retained: REPORTS/evidence/prod-p04-fu01-filesystem-baseline/. Report: REPORTS/REPORT-FP-0002-PROD-P04-FU01-FILESYSTEM-BASELINE.md. Dual-authority table unchanged. No production product mutations in that wave.
+
+## PROD-P04-FU02 — Post-reimport production rebaseline (2026-08-14)
+
+**PARTIAL** (WP Admin HTTP password sync pending). Operator replaced production files+DB with a newer demo/staging site version (desired content edits preserved).
+
+| Surface | Authority role after FU02 |
+|---------|---------------------------|
+| WORDPRESS/ (this tree) | **CODE / SOURCE AUTHORITY** |
+| Beget filesystem @ shpigovsky.ru/public_html | **LIVE RUNTIME TRUTH** |
+| **Current** Beget WordPress DB | **LIVE CONTENT / ADMIN AUTHORITY** |
+| PROD-P04-FU01 manifests / prior DB inventory | **HISTORICAL PRE-REIMPORT BASELINE** |
+
+`	ext
+NO OLD DB RESTORE OR LOCAL DB OVERWRITE WITHOUT EXPLICIT OPERATOR APPROVAL
+REIMPORT PRODUCT CODE PARITY CLEAN
+`
+
+Filesystem rebaseline: theme/shpigovsky-core/ACF JSON SHA recomputed; material product code drift **none** (CSS byte SHA differs only by CRLF→LF). Migration residue recalculated (shpigovsky.test). WPilot remains **0.3.0** / schema **0.2.0**, write_enabled=false, package replace **SAFE**, token **REISSUE REQUIRED**. MARS user mars recreated as Administrator in DB; local secrets password **MISMATCH** blocks HTTP Admin until operator syncs. Writes closed. No commit/push. Evidence: REPORTS/evidence/prod-p04-fu02-post-reimport-rebaseline/. Report: REPORTS/REPORT-FP-0002-PROD-P04-FU02-POST-REIMPORT-REBASELINE.md.

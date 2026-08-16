@@ -58,19 +58,27 @@ $callback_label  = '' !== $callback_label ? $callback_label : __( 'Заказа�
 					'fallback_cb'           => 'shpigovsky_offcanvas_nav_fallback',
 					'shpigovsky_item_class' => 'offcanvas__nav-item',
 					'shpigovsky_link_class' => 'offcanvas__nav-link',
-					'depth'                 => 1,
+					'depth'                 => 2,
+					'walker'                => new Shpigovsky_Offcanvas_Nav_Walker(),
 				)
 			);
 			?>
 			<ul class="offcanvas__nav-list offcanvas__nav-list--actions">
-				<li class="offcanvas__nav-item">
-					<a
-						class="offcanvas__nav-link offcanvas__nav-link--search"
-						href="<?php echo esc_url( home_url( '/?s=' ) ); ?>"
-					>
-						<i class="fas fa-search" aria-hidden="true"></i>
-						<span><?php esc_html_e( 'Поиск', 'shpigovsky' ); ?></span>
-					</a>
+				<li class="offcanvas__nav-item offcanvas__nav-item--search">
+					<?php
+					get_template_part(
+						'searchform',
+						null,
+						array(
+							'input_id'            => 'offcanvas-search-field',
+							'form_class'          => 'site-search-form site-search-form--offcanvas',
+							'show_intro'          => false,
+							'autofocus'           => false,
+							'value'               => '',
+							'enable_live_suggest' => true,
+						)
+					);
+					?>
 				</li>
 			</ul>
 		</nav>

@@ -1,0 +1,33 @@
+{
+  "files": [
+    {
+      "kind": "theme",
+      "rel": "assets/css/v9-style.css",
+      "match": true,
+      "local": "fbd85afc77e9a3926037a2d11efb6d92b39ca5223338cccc35b9f341b9ddc27b",
+      "prod": "fbd85afc77e9a3926037a2d11efb6d92b39ca5223338cccc35b9f341b9ddc27b"
+    },
+    {
+      "kind": "theme",
+      "rel": "template-parts/generic/content-page.php",
+      "match": true,
+      "local": "37aaac70af8113e182b159fb98704240a4ec35241cc93ecceda3f9bcfee6d108",
+      "prod": "37aaac70af8113e182b159fb98704240a4ec35241cc93ecceda3f9bcfee6d108"
+    },
+    {
+      "kind": "plugin",
+      "rel": "shpigovsky-core.php",
+      "match": true,
+      "local": "244c2ac6afa2304971e8805a37f813657f8db28761ce38365a0efc5285cc6dcc",
+      "prod": "244c2ac6afa2304971e8805a37f813657f8db28761ce38365a0efc5285cc6dcc"
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Admin/SystemDashboard.php",
+      "match": true,
+      "local": "e44596c43beb1bd133633e31e93b844d65122eec939456a9c3babe4522cc7e31",
+      "prod": "e44596c43beb1bd133633e31e93b844d65122eec939456a9c3babe4522cc7e31"
+    }
+  ],
+  "all_match": true
+}

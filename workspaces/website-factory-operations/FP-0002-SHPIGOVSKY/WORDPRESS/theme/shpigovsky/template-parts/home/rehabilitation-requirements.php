@@ -11,7 +11,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! shpigovsky_home_list_enabled( 'home_rehab_requirements_visible' ) ) {
+// Home toggle applies on the front page only. Other templates may reuse this shared block.
+if ( is_front_page() && ! shpigovsky_home_list_enabled( 'home_rehab_requirements_visible' ) ) {
 	return;
 }
 

@@ -1,0 +1,25 @@
+{
+  "captured_at": "2026-08-14T17:16:42.754983+00:00",
+  "method": "wp-admin-http+begetok",
+  "checks": {
+    "logged_in": false,
+    "admin_has_menu_specialists": false,
+    "list_status": 200,
+    "list_has_kostyuk": false,
+    "list_has_photo_col": false,
+    "list_has_role_col": false,
+    "list_has_order_col": false,
+    "edit_status": 200,
+    "edit_has_profile_group": false,
+    "edit_has_role_field": false,
+    "edit_has_certs": false,
+    "edit_no_generic_content_group": true,
+    "edit_no_page_parent": true,
+    "edit_has_featured_image": false,
+    "edit_has_page_attributes_order": false,
+    "new_status": 200,
+    "seo_has_specialists_label": false,
+    "fatal": false
+  },
+  "pass": false
+}

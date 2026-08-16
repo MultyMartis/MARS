@@ -1,0 +1,55 @@
+{
+  "date": "2026-08-13",
+  "configured_protocol": "ftp",
+  "ftp_auth": "PASS",
+  "ssh_auth": "PASS",
+  "account": "shpigovsky_mars",
+  "account_home": "/home/s/shpigovsky/shpigovsky.beget.tech/public_html",
+  "account_home_contents": [
+    "index.php (Beget placeholder 35472 B, 2026-07-23)",
+    "cgi-bin/"
+  ],
+  "wordpress_in_account_home": false,
+  "real_wordpress_docroot": "/home/s/shpigovsky/shpigovsky.ru/public_html",
+  "real_docroot_evidence": "SSH test -f wp-config.php PASS; stat size 3329; mode 0600 owner shpigovsky; ACL does not include shpigovsky_mars",
+  "acl_real_docroot_users": [
+    "shpigovsky",
+    "shpigovsky__shpigovsky3ru__6s"
+  ],
+  "paths": {
+    "beget_account_visible_root_for_this_user": {
+      "path": "/home/s/shpigovsky/shpigovsky.beget.tech/public_html",
+      "class": "VERIFIED",
+      "note": "placeholder site, not WP"
+    },
+    "production_wordpress_docroot": {
+      "path": "/home/s/shpigovsky/shpigovsky.ru/public_html",
+      "class": "VERIFIED (exists; NOT READABLE by this account)"
+    },
+    "wp-content": {
+      "path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content",
+      "class": "SAFE UNKNOWN / NOT READABLE (Permission denied)"
+    },
+    "theme_shpigovsky": {
+      "path": "expected wp-content/themes/shpigovsky",
+      "class": "VERIFIED via public HTTP + WP Admin; filesystem NOT READABLE"
+    },
+    "plugin_shpigovsky_core": {
+      "path": "expected wp-content/plugins/shpigovsky-core",
+      "class": "VERIFIED via WP Admin (active); filesystem NOT READABLE"
+    },
+    "acf_json": {
+      "path": "expected wp-content/acf-json",
+      "class": "SAFE UNKNOWN (filesystem NOT READABLE; ACF admin groups visible)"
+    },
+    "wpilot": {
+      "path": "expected wp-content/plugins/metacode-wpilot",
+      "class": "VERIFIED via WP Admin (active 0.3.0) + public REST; filesystem NOT READABLE"
+    },
+    "uploads": {
+      "path": "expected wp-content/uploads",
+      "class": "SAFE UNKNOWN (filesystem NOT READABLE)"
+    }
+  },
+  "write_performed": false
+}

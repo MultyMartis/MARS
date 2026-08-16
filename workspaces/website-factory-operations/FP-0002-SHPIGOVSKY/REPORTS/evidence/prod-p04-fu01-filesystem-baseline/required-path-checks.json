@@ -1,0 +1,62 @@
+{
+  "wp-config.php": [
+    "EXISTS",
+    "READABLE",
+    "FILE",
+    "3329"
+  ],
+  "wp-admin": [
+    "EXISTS",
+    "READABLE",
+    "DIR",
+    "102"
+  ],
+  "wp-includes": [
+    "EXISTS",
+    "READABLE",
+    "DIR",
+    "286"
+  ],
+  "wp-content": [
+    "EXISTS",
+    "READABLE",
+    "DIR",
+    "9"
+  ],
+  "wp-content/themes/shpigovsky": [
+    "EXISTS",
+    "READABLE",
+    "DIR",
+    "20"
+  ],
+  "wp-content/plugins/shpigovsky-core": [
+    "EXISTS",
+    "READABLE",
+    "DIR",
+    "7"
+  ],
+  "wp-content/plugins/metacode-wpilot": [
+    "EXISTS",
+    "READABLE",
+    "DIR",
+    "5"
+  ],
+  "wp-content/acf-json": [
+    "EXISTS",
+    "READABLE",
+    "DIR",
+    "24"
+  ],
+  "wp-content/uploads": [
+    "EXISTS",
+    "READABLE",
+    "DIR",
+    "2"
+  ],
+  "acf-json": [
+    "EXISTS",
+    "READABLE",
+    "DIR",
+    "7"
+  ]
+}

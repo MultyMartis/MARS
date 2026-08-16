@@ -1,0 +1,35 @@
+{
+  "date": "2026-08-13",
+  "account": "shpigovsky_mars",
+  "protocol": {
+    "ftp": "auth PASS (P03, unchanged jail)",
+    "ssh": "auth PASS"
+  },
+  "jail_home": "/home/s/shpigovsky/shpigovsky.beget.tech/public_html",
+  "jail_contents": [
+    "index.php (Beget placeholder)",
+    "cgi-bin/"
+  ],
+  "wordpress_in_jail": false,
+  "real_docroot": "/home/s/shpigovsky/shpigovsky.ru/public_html",
+  "wp_config_stat": "EXISTS size 3329 mode 0600 owner shpigovsky",
+  "wp_config_readable": false,
+  "real_docroot_listable": false,
+  "acl_users": [
+    "shpigovsky",
+    "shpigovsky__shpigovsky3ru__6s"
+  ],
+  "required_paths_readable": {
+    "wp-config.php": false,
+    "wp-content/": false,
+    "wp-content/themes/shpigovsky/": false,
+    "wp-content/plugins/shpigovsky-core/": false,
+    "wp-content/plugins/metacode-wpilot/": false,
+    "wp-content/acf-json/": false,
+    "wp-content/uploads/": false
+  },
+  "wp_cli": "present at /usr/local/bin/wp; cannot load WP (path not a readable install for this user)",
+  "mysql_client": true,
+  "php_cli": "5.6.40 (host default CLI; not site PHP 8.3.20)",
+  "writes": 0
+}

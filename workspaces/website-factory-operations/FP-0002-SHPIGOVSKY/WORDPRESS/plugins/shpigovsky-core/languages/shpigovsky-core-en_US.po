@@ -1,0 +1,290 @@
+# Shpigovsky Core translations
+msgid ""
+msgstr ""
+"Project-Id-Version: Shpigovsky Core 0.3.4-p13\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en_US\n"
+"X-Domain: shpigovsky-core\n"
+"X-Generator: FP-0002 PROD-P13\n"
+
+msgid "MetaCODE / System status"
+msgstr "MetaCODE / System status"
+
+msgid "Project"
+msgstr "Project"
+
+msgid "Runtime"
+msgstr "Runtime"
+
+msgid "Production host (Beget). wp-config still contains leftover local environment constants — P06 cleanup."
+msgstr "Production host (Beget). wp-config still contains leftover local environment constants — P06 cleanup."
+
+msgid "Environment: %s"
+msgstr "Environment: %s"
+
+msgid "WordPress"
+msgstr "WordPress"
+
+msgid "Theme"
+msgstr "Theme"
+
+msgid "Shpigovsky Core"
+msgstr "Shpigovsky Core"
+
+msgid "WPilot"
+msgstr "WPilot"
+
+msgid "Active · writes %s"
+msgstr "Active · writes %s"
+
+msgid "enabled"
+msgstr "enabled"
+
+msgid "disabled"
+msgstr "disabled"
+
+msgid "Not active"
+msgstr "Not active"
+
+msgid "Local-runtime MU-plugin"
+msgstr "Local-runtime MU-plugin"
+
+msgid "Present (notices removed in P13; leftover local residue remains for P06)."
+msgstr "Present (notices removed in P13; leftover local residue remains for P06)."
+
+msgid "Absent"
+msgstr "Absent"
+
+msgid "No secrets, tokens, or filesystem credentials are shown here."
+msgstr "No secrets, tokens, or filesystem credentials are shown here."
+
+msgid "Import from Word"
+msgstr "Import from Word"
+
+msgid "Import articles from Word"
+msgstr "Import articles from Word"
+
+msgid "Upload one or more .docx files. Drafts are created for review — nothing is published automatically."
+msgstr "Upload one or more .docx files. Drafts are created for review — nothing is published automatically."
+
+msgid "Draft discarded."
+msgstr "Draft discarded."
+
+msgid "Publication date saved."
+msgstr "Publication date saved."
+
+msgid "Download article template (.docx)"
+msgstr "Download article template (.docx)"
+
+msgid "Word files (.docx)"
+msgstr "Word files (.docx)"
+
+msgid "Create drafts"
+msgstr "Create drafts"
+
+msgid "Last import"
+msgstr "Last import"
+
+msgid "File"
+msgstr "File"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Draft"
+msgstr "Draft"
+
+msgid "Actions"
+msgstr "Actions"
+
+msgid "Discard draft"
+msgstr "Discard draft"
+
+msgid "Schedule"
+msgstr "Schedule"
+
+msgid "Insufficient permissions."
+msgstr "Insufficient permissions."
+
+msgid "Error"
+msgstr "Error"
+
+msgid "No files received."
+msgstr "No files received."
+
+msgid "Upload failed."
+msgstr "Upload failed."
+
+msgid "File is too large (15 MB max)."
+msgstr "File is too large (15 MB max)."
+
+msgid "Temporary file is missing."
+msgstr "Temporary file is missing."
+
+msgid "Only .docx is supported."
+msgstr "Only .docx is supported."
+
+msgid "MIME type is not a Word document."
+msgstr "MIME type is not a Word document."
+
+msgid "Could not create the draft."
+msgstr "Could not create the draft."
+
+msgid "Draft created"
+msgstr "Draft created"
+
+msgid "Template is not available."
+msgstr "Template is not available."
+
+msgid "ZipArchive is required."
+msgstr "ZipArchive is required."
+
+msgid "The file is not a valid DOCX archive."
+msgstr "The file is not a valid DOCX archive."
+
+msgid "document.xml is missing."
+msgstr "document.xml is missing."
+
+msgid "Imported article"
+msgstr "Imported article"
+
+msgid "Social networks and messengers"
+msgstr "Social networks and messengers"
+
+msgid "Platforms"
+msgstr "Platforms"
+
+msgid "One row per platform. Type selects the icon and label. Empty URL hides that platform. Header and footer flags are independent. The Contacts page shows every configured platform with a URL."
+msgstr "One row per platform. Type selects the icon and label. Empty URL hides that platform. Header and footer flags are independent. The Contacts page shows every configured platform with a URL."
+
+msgid "Add platform"
+msgstr "Add platform"
+
+msgid "Platform"
+msgstr "Platform"
+
+msgid "Link"
+msgstr "Link"
+
+msgid "Show in header"
+msgstr "Show in header"
+
+msgid "Show in footer"
+msgstr "Show in footer"
+
+msgid "SEO"
+msgstr "SEO"
+
+msgid "SEO Title"
+msgstr "SEO Title"
+
+msgid "Optional. If empty, the public title uses the object title and site name."
+msgstr "Optional. If empty, the public title uses the object title and site name."
+
+msgid "Meta Description"
+msgstr "Meta Description"
+
+msgid "Optional. If empty, no meta description is output (marketing copy is not invented)."
+msgstr "Optional. If empty, no meta description is output (marketing copy is not invented)."
+
+msgid "URL / slug"
+msgstr "URL / slug"
+
+msgid "This slug becomes part of the public URL. Existing addresses are not regenerated unless you change this value."
+msgstr "This slug becomes part of the public URL. Existing addresses are not regenerated unless you change this value."
+
+msgid "Slug"
+msgstr "Slug"
+
+msgid "Leave empty and Update to regenerate from the title."
+msgstr "Leave empty and Update to regenerate from the title."
+
+msgid "Current URL:"
+msgstr "Current URL:"
+
+msgid "Page"
+msgstr "Page"
+
+msgid "Article"
+msgstr "Article"
+
+msgid "Service"
+msgstr "Service"
+
+msgid "Specialist"
+msgstr "Specialist"
+
+msgid "Review"
+msgstr "Review"
+
+msgid "Created"
+msgstr "Created"
+
+msgid "Updated"
+msgstr "Updated"
+
+msgid "Moved to trash"
+msgstr "Moved to trash"
+
+msgid "Restored"
+msgstr "Restored"
+
+msgid "System"
+msgstr "System"
+
+msgid "All users"
+msgstr "All users"
+
+msgid "Date and time"
+msgstr "Date and time"
+
+msgid "User"
+msgstr "User"
+
+msgid "Action"
+msgstr "Action"
+
+msgid "Type"
+msgstr "Type"
+
+msgid "Object"
+msgstr "Object"
+
+msgid "ACF Pro is required for FP-0002 field groups. Source is safe, but runtime field registration is unavailable."
+msgstr "ACF Pro is required for FP-0002 field groups. Source is safe, but runtime field registration is unavailable."
+
+msgid "Журнал действий"
+msgstr "Activity log"
+
+msgid "Базовый журнал создания и изменения контента. Хранит до 8000 последних записей. Не фиксирует пароли и тела записей."
+msgstr "Basic log of content create/update events. Keeps up to 8000 latest rows. Does not store passwords or post bodies."
+
+msgid "Все действия"
+msgstr "All actions"
+
+msgid "Все типы"
+msgstr "All types"
+
+msgid "Фильтр"
+msgstr "Filter"
+
+msgid "Записей пока нет."
+msgstr "No entries yet."
+
+msgid "Недостаточно прав."
+msgstr "Insufficient permissions."
+
+msgid "Настройки сайта"
+msgstr "Site settings"
+
+msgid "Настройки сайта обновлены."
+msgstr "Site settings updated."
+
+msgid "Общие настройки"
+msgstr "General"
+
+msgid "SEO и интеграции"
+msgstr "SEO and integrations"
+

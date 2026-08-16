@@ -1,8 +1,6 @@
 <?php
 /**
- * Messenger icon links — configured social_links or static V9 visual fallback.
- *
- * D9-B: when social_links is empty, render placeholder href="#" icons for parity.
+ * Messenger icon links — canonical social_platforms SoT (PROD-P13).
  *
  * @package Shpigovsky
  *
@@ -31,16 +29,18 @@ if ( 'mobile-header' === $context ) {
 <div class="<?php echo esc_attr( $wrapper_class ); ?>">
 	<?php foreach ( $rows as $row ) : ?>
 		<?php
-		$icon = isset( $row['icon'] ) && '' !== $row['icon']
-			? (string) $row['icon']
-			: shpigovsky_social_icon_for_label( $row['label'] );
-		$label = '' !== $row['label'] ? $row['label'] : __( 'Социальная сеть', 'shpigovsky' );
+		$icon  = isset( $row['icon'] ) ? (string) $row['icon'] : '';
+		$label = isset( $row['label'] ) ? (string) $row['label'] : '';
+		$type  = isset( $row['type'] ) ? (string) $row['type'] : '';
+		$is_fa = 'youtube' === $type;
 		?>
 		<a class="<?php echo esc_attr( $link_class ); ?>" href="<?php echo esc_url( $row['url'] ); ?>" aria-label="<?php echo esc_attr( $label ); ?>">
-			<?php if ( '' !== $icon ) : ?>
+			<?php if ( $is_fa ) : ?>
+				<i class="fab fa-youtube" aria-hidden="true"></i>
+			<?php elseif ( '' !== $icon ) : ?>
 				<img class="<?php echo esc_attr( $icon_class ); ?>" src="<?php echo esc_url( shpigovsky_asset_uri( 'img/social/' . $icon ) ); ?>" alt="">
 			<?php else : ?>
-				<i class="fab fa-youtube" aria-hidden="true"></i>
+				<span class="site-header__messenger-fallback"><?php echo esc_html( $label ); ?></span>
 			<?php endif; ?>
 		</a>
 	<?php endforeach; ?>

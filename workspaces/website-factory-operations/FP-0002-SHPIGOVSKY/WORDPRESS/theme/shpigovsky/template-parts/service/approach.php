@@ -2,7 +2,8 @@
 /**
  * Template part: service/approach.php
  *
- * Approach cards from programme_items when present.
+ * Approach cards from live Treatment Program children (V9-07A01).
+ * Legacy programme_items postmeta is dormant and not read for titles/text.
  *
  * @package Shpigovsky
  */
@@ -12,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $post_id   = shpigovsky_get_current_service_id();
-$programme = shpigovsky_get_service_repeater( $post_id, 'programme_items' );
+$programme = shpigovsky_get_service_programme_fallback_items();
 
 if ( empty( $programme ) ) {
 	return;
@@ -40,6 +41,7 @@ $program_url = home_url( '/o-centre/programma-lecheniya/' );
 				<?php
 				$title = isset( $item['title'] ) ? trim( (string) $item['title'] ) : '';
 				$text  = isset( $item['text'] ) ? trim( (string) $item['text'] ) : '';
+				$url   = isset( $item['url'] ) ? trim( (string) $item['url'] ) : '';
 
 				if ( '' === $title && '' === $text ) {
 					continue;
@@ -47,7 +49,13 @@ $program_url = home_url( '/o-centre/programma-lecheniya/' );
 				?>
 				<li class="home-feature-grid__card service-leaf-approach-v1__approach-card">
 					<?php if ( '' !== $title ) : ?>
-						<h3 class="home-feature-grid__card-title"><?php echo esc_html( $title ); ?></h3>
+						<h3 class="home-feature-grid__card-title">
+							<?php if ( '' !== $url ) : ?>
+								<a href="<?php echo esc_url( $url ); ?>"><?php echo esc_html( $title ); ?></a>
+							<?php else : ?>
+								<?php echo esc_html( $title ); ?>
+							<?php endif; ?>
+						</h3>
 					<?php endif; ?>
 					<?php if ( '' !== $text ) : ?>
 						<p class="home-feature-grid__card-text"><?php echo wp_kses_post( $text ); ?></p>

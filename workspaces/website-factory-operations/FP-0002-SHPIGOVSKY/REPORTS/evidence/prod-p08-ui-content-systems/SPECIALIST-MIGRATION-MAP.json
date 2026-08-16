@@ -1,0 +1,111 @@
+{
+  "wave": "PROD-P08",
+  "created_at": "2026-08-14T15:07:25.461239+00:00",
+  "db_admin_writes": "bounded specialist_* postmeta upserts",
+  "objects": {
+    "1033": {
+      "slug": "kostyuk",
+      "fields_written": {
+        "specialist_role": {
+          "field_key": "field_fp02_specialist_role",
+          "bytes": 103,
+          "sha256": "eeb1e5e72ad58f709d099d66d9b7d19e8a5215bc6ef3d0e2dee0aa2c2ae20350"
+        },
+        "specialist_experience": {
+          "field_key": "field_fp02_specialist_experience",
+          "bytes": 26,
+          "sha256": "4608a115cedd80be6dc1135734a054d911d502cbc553440bdb38c8a9fb26dc65"
+        },
+        "specialist_specialty": {
+          "field_key": "field_fp02_specialist_specialty",
+          "bytes": 154,
+          "sha256": "dea1a885fbca432645a0e81bf021d85b6b19b4b61eee1509e291aa1f91ad3b76"
+        },
+        "specialist_education": {
+          "field_key": "field_fp02_specialist_education",
+          "bytes": 398,
+          "sha256": "a00f98f62bd00a3be5555b4f9c9d5ba5d4e2eae479b433d3ae0ff4eaae7deab2"
+        },
+        "specialist_specialization": {
+          "field_key": "field_fp02_specialist_specialization",
+          "bytes": 276,
+          "sha256": "d58be9eaac6b6574c557eadc00434baf373faab26345cfebdeaeb9aaabe0601e"
+        },
+        "specialist_principles": {
+          "field_key": "field_fp02_specialist_principles",
+          "bytes": 593,
+          "sha256": "b8c51fc20100c62ccbe7e6ebffdc0f42fb406215832a1ec48756261ad43b7cc5"
+        },
+        "specialist_certificates": {
+          "field_key": "field_fp02_specialist_certificates",
+          "bytes": 39,
+          "sha256": "17a0a08a14ae7fd9372843eba0425d69f9e23674cce03e0a57f624c5bed62b8f"
+        }
+      },
+      "certificates": [
+        1853,
+        1855,
+        1854
+      ],
+      "notes": "Mapped from generic_page_body strong-labeled sections; certs wp-image-1853/1855/1854; body preserved.",
+      "generic_body_preserved": true
+    },
+    "1031": {
+      "slug": "shipovsky",
+      "fields_written": {
+        "specialist_role": {
+          "field_key": "field_fp02_specialist_role",
+          "bytes": 52,
+          "sha256": "29b511db7f401e89825c21ceae99565f5ade793b8d7215ca611a99fb65175fb4"
+        },
+        "specialist_additional": {
+          "field_key": "field_fp02_specialist_additional",
+          "bytes": 183,
+          "sha256": "44d0e30bd386c2b3857852402cb877d27913385331a8031d557bcf0681dc57f1"
+        }
+      },
+      "certificates": [],
+      "notes": "Role from body/excerpt; remaining body text preserved in additional; generic_page_body kept.",
+      "generic_body_preserved": true
+    },
+    "1032": {
+      "slug": "kazakov",
+      "fields_written": {
+        "specialist_role": {
+          "field_key": "field_fp02_specialist_role",
+          "bytes": 100,
+          "sha256": "f19766bea6a2cbb90650af53cfd5f45448c5308d394b50fb4000b894e6dc9b58"
+        },
+        "specialist_additional": {
+          "field_key": "field_fp02_specialist_additional",
+          "bytes": 183,
+          "sha256": "44d0e30bd386c2b3857852402cb877d27913385331a8031d557bcf0681dc57f1"
+        }
+      },
+      "certificates": [],
+      "notes": "Role from body/excerpt; remaining body text preserved in additional; generic_page_body kept.",
+      "generic_body_preserved": true
+    },
+    "1097": {
+      "slug": "shapiguzova",
+      "fields_written": {
+        "specialist_role": {
+          "field_key": "field_fp02_specialist_role",
+          "bytes": 144,
+          "sha256": "395122330f0dbb7434b4e8d53de4ec1f5a48af853a4c59880c21d4b5d3af2c78"
+        },
+        "specialist_additional": {
+          "field_key": "field_fp02_specialist_additional",
+          "bytes": 183,
+          "sha256": "44d0e30bd386c2b3857852402cb877d27913385331a8031d557bcf0681dc57f1"
+        }
+      },
+      "certificates": [],
+      "notes": "Role from body/excerpt; remaining body text preserved in additional; generic_page_body kept.",
+      "generic_body_preserved": true
+    }
+  },
+  "stderr": "",
+  "stdout": "",
+  "generic_page_body": "PRESERVED (not deleted)"
+}

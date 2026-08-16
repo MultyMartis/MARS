@@ -1,0 +1,285 @@
+{
+  "utc": "2026-08-16T16:02:25+00:00",
+  "wpilot_write_enabled": null,
+  "before": {
+    "mli_admin_fp0002": {
+      "ID": 1,
+      "login": "mli_admin_fp0002",
+      "email": "mli-fp0002@localhost.test",
+      "display_name": "mli_admin_fp0002",
+      "roles": [
+        "administrator"
+      ]
+    },
+    "admin": {
+      "ID": 2,
+      "login": "admin",
+      "email": "admin@localhost.test",
+      "display_name": "admin",
+      "roles": [
+        "administrator"
+      ]
+    },
+    "mars": {
+      "ID": 3,
+      "login": "mars",
+      "email": "support@polygon-ws.ru",
+      "display_name": "MARS MetaCODE",
+      "roles": [
+        "administrator"
+      ]
+    },
+    "metacode": null,
+    "mli_admin_authored": [
+      {
+        "ID": "3",
+        "post_type": "page",
+        "post_status": "publish",
+        "post_title": "Политика конфиденциальности"
+      },
+      {
+        "ID": "1745",
+        "post_type": "post",
+        "post_status": "publish",
+        "post_title": "Демо-статья для проверки пагинации — 01"
+      },
+      {
+        "ID": "1746",
+        "post_type": "post",
+        "post_status": "publish",
+        "post_title": "Демо-статья для проверки пагинации — 02"
+      },
+      {
+        "ID": "1747",
+        "post_type": "post",
+        "post_status": "publish",
+        "post_title": "Демо-статья для проверки пагинации — 03"
+      },
+      {
+        "ID": "1748",
+        "post_type": "post",
+        "post_status": "publish",
+        "post_title": "Демо-статья для проверки пагинации — 04"
+      },
+      {
+        "ID": "1749",
+        "post_type": "post",
+        "post_status": "publish",
+        "post_title": "Демо-статья для проверки пагинации — 05"
+      },
+      {
+        "ID": "1750",
+        "post_type": "post",
+        "post_status": "publish",
+        "post_title": "Демо-статья для проверки пагинации — 06"
+      },
+      {
+        "ID": "1751",
+        "post_type": "post",
+        "post_status": "publish",
+        "post_title": "Демо-статья для проверки пагинации — 07"
+      },
+      {
+        "ID": "1752",
+        "post_type": "post",
+        "post_status": "publish",
+        "post_title": "Демо-статья для проверки пагинации — 08"
+      },
+      {
+        "ID": "1753",
+        "post_type": "post",
+        "post_status": "publish",
+        "post_title": "Демо-статья для проверки пагинации — 09"
+      },
+      {
+        "ID": "1754",
+        "post_type": "post",
+        "post_status": "publish",
+        "post_title": "Демо-статья для проверки пагинации — 10"
+      }
+    ],
+    "social_links": [
+      {
+        "label": "Telegram",
+        "url": "https://t.me/Spigovsky_house"
+      },
+      {
+        "label": "What's up",
+        "url": "https://wa.me/89251836464"
+      }
+    ],
+    "social_platforms": [
+      {
+        "type": "telegram",
+        "url": "https://t.me/Spigovsky_house",
+        "show_header": true,
+        "show_footer": true
+      },
+      {
+        "type": "whatsapp",
+        "url": "https://wa.me/89251836464",
+        "show_header": true,
+        "show_footer": true
+      }
+    ],
+    "fp02_social_platforms_migrated": "1",
+    "p12_qa_activity_rows": [
+      {
+        "id": "1",
+        "user_id": "0",
+        "action": "created",
+        "object_type": "service",
+        "object_id": "1927",
+        "object_title": "FP02 P12 QA Slug 20260816114828",
+        "created_at": "2026-08-16 14:48:28"
+      },
+      {
+        "id": "2",
+        "user_id": "0",
+        "action": "created",
+        "object_type": "service",
+        "object_id": "1928",
+        "object_title": "FP02 P12 QA Slug 20260816114828",
+        "created_at": "2026-08-16 14:48:28"
+      },
+      {
+        "id": "3",
+        "user_id": "0",
+        "action": "updated",
+        "object_type": "service",
+        "object_id": "1927",
+        "object_title": "FP02 P12 QA Slug 20260816114828",
+        "created_at": "2026-08-16 14:48:28"
+      },
+      {
+        "id": "4",
+        "user_id": "0",
+        "action": "created",
+        "object_type": "service",
+        "object_id": "1931",
+        "object_title": "FP02 P12 Collision QA",
+        "created_at": "2026-08-16 14:48:57"
+      },
+      {
+        "id": "5",
+        "user_id": "0",
+        "action": "created",
+        "object_type": "service",
+        "object_id": "1932",
+        "object_title": "FP02 P12 Collision QA",
+        "created_at": "2026-08-16 14:48:57"
+      },
+      {
+        "id": "6",
+        "user_id": "0",
+        "action": "created",
+        "object_type": "service",
+        "object_id": "1933",
+        "object_title": "FP02 P12 Collision QA",
+        "created_at": "2026-08-16 14:49:36"
+      },
+      {
+        "id": "7",
+        "user_id": "0",
+        "action": "created",
+        "object_type": "service",
+        "object_id": "1934",
+        "object_title": "FP02 P12 Collision QA",
+        "created_at": "2026-08-16 14:49:36"
+      }
+    ]
+  },
+  "actions": [
+    {
+      "op": "wp_delete_user",
+      "deleted_id": 1,
+      "reassign_to": 2,
+      "result": true,
+      "still_exists": false
+    },
+    {
+      "op": "admin_email_update",
+      "user_id": 2,
+      "result_ok": true,
+      "email_after": "ola4seo@yandex.ru",
+      "display_name_after": "admin"
+    },
+    {
+      "op": "create_metacode",
+      "ok": true,
+      "id": 4,
+      "email_used": "metacode@polygon-ws.ru",
+      "error": null
+    },
+    {
+      "op": "social_migrate",
+      "ok": true
+    },
+    {
+      "op": "delete_p12_qa_activity_rows",
+      "ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "deleted": 7
+    }
+  ],
+  "after": {
+    "mli_admin_fp0002": null,
+    "admin": {
+      "ID": 2,
+      "login": "admin",
+      "email": "ola4seo@yandex.ru",
+      "display_name": "admin",
+      "roles": [
+        "administrator"
+      ]
+    },
+    "mars": {
+      "ID": 3,
+      "login": "mars",
+      "email": "support@polygon-ws.ru",
+      "display_name": "MARS MetaCODE",
+      "roles": [
+        "administrator"
+      ]
+    },
+    "metacode": {
+      "ID": 4,
+      "login": "metacode",
+      "email": "metacode@polygon-ws.ru",
+      "display_name": "MetaCODE",
+      "roles": [
+        "administrator"
+      ]
+    },
+    "social_platforms": [
+      {
+        "type": "telegram",
+        "url": "https://t.me/Spigovsky_house",
+        "show_header": true,
+        "show_footer": true
+      },
+      {
+        "type": "whatsapp",
+        "url": "https://wa.me/89251836464",
+        "show_header": true,
+        "show_footer": true
+      }
+    ],
+    "fp02_social_platforms_migrated": "1",
+    "qa_rows_remaining": 0,
+    "wpilot_write_enabled": null
+  },
+  "flags": {
+    "requested_email_owned_by": 3,
+    "metacode_email_partial": true,
+    "metacode_email_reason": "requested email already owned by another user; unique mailbox used to satisfy WP uniqueness",
+    "metacode_created": true
+  }
+}

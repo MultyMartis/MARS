@@ -1,0 +1,50 @@
+{
+  "generated_at": "2026-08-14T09:51:39.822382+00:00",
+  "mutations": [
+    {
+      "object": 73,
+      "field": "section_program_footer_label",
+      "action": "strip ТЕСТ suffix",
+      "new": "подробнее о программе"
+    },
+    {
+      "object": 73,
+      "field": "section_approach_cards",
+      "action": "rebuild ACF repeater 0-based count=3; replace Lorem with production-safe texts",
+      "rows": 3
+    },
+    {
+      "object": 77,
+      "field": "section_approach_cards",
+      "action": "normalize ACF repeater + replace Lorem/DEMO texts",
+      "rows": 4
+    },
+    {
+      "object": 84,
+      "field": "section_approach_cards",
+      "action": "normalize ACF repeater + replace Lorem/DEMO texts",
+      "rows": 4
+    },
+    {
+      "object": 84,
+      "field": "service_short_description",
+      "action": "strip leading тест020 marker",
+      "before_prefix": "тест020"
+    },
+    {
+      "object": 13,
+      "field": "generic_page_reusable_blocks",
+      "action": "enable rehab_requirements + about_home",
+      "value": [
+        "rehab_requirements",
+        "about_home"
+      ]
+    }
+  ],
+  "before": {
+    "raw": "73\tsection_approach_cards\t\n73\tsection_approach_cards_1_text\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor\n73\tsection_approach_cards_1_title\tпсихиатрия\n73\tsection_approach_cards_2_text\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor\n73\tsection_approach_cards_2_title\tфункциональная терапия\n73\tsection_approach_cards_3_text\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor\n73\tsection_approach_cards_3_title\tкомплементарная терапия\n73\tsection_program_footer_label\tподробнее о программе ТЕСТ\n73\tservice_short_description\tЗависимость не начинается с желания разрушить себе жизнь. Начало в попытках справиться с болью, тревогой, пустотой или просто с ощущением, что иначе не получается. Наша программа направлена не просто на то, чтобы вывести\n77\tsection_approach_cards\ta:4:{i:0;a:2:{s:5:\"title\";s:53:\"диагностические инструменты\";s:4:\"text\";s:192:\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim \n77\tservice_short_description\tТревога, которая не отпускает. Депрессия, из которой не выйти привычными способами. Состояния, которые сложно описать вслух, — но которые реально мешают жить. Психические расстройства почти никогда не бывают «просто в го\n84\tsection_approach_cards\ta:4:{i:0;a:2:{s:5:\"title\";s:53:\"диагностические инструменты\";s:4:\"text\";s:207:\"DEMO: краткий нейтральный текст раздела для демонстрации структуры блока. Замените на финальный контент в админке.\";}i:1;a:2:{s:5:\"title\";s:2\n84\tservice_short_description\tтест020 Взаимоотношения с едой — это отношения с собственным телом, с контролем, с ощущением себя. За ограничениями в еде, перееданием или навязчивыми ритуалами вокруг питания стоит что-то, что ждёт внимания и аккуратной\n"
+  },
+  "after": {
+    "raw": "13\t_generic_page_reusable_blocks\tfield_fp02_generic_page_reusable_blocks\n13\tgeneric_page_reusable_blocks\ta:2:{i:0;s:18:\"rehab_requirements\";i:1;s:10:\"about_home\";}\n73\tsection_approach_cards\t3\n73\tsection_approach_cards_0_text\tВрачебное сопровождение психического состояния, работа с сопутствующими расстройствами и подбор терапии по показаниям.\n73\tsection_approach_cards_0_title\tпсихиатрия\n73\tsection_approach_cards_1_text\tВосстановление навыков саморегуляции, режима и повседневного функционирования как часть устойчивой ремиссии.\n73\tsection_approach_cards_1_title\tфункциональная терапия\n73\tsection_approach_cards_2_text\tДополнительные методы поддержки — движение, восстановление тела и эмоционального баланса в безопасной среде центра.\n73\tsection_approach_cards_2_title\tкомплементарная терапия\n73\tsection_program_footer_label\tподробнее о программе\n73\tservice_short_description\tЗависимость не начинается с желания разрушить себе жизнь. Начало в попытках справиться с болью, тревогой, пустотой или просто с ощущением, что иначе не получается. Наша программа направлена не просто на то, чтобы вывести\n77\tsection_approach_cards\t4\n77\tsection_approach_cards_0_text\tКомплексная оценка состояния: клинические и лабораторные методы, которые помогают понять природу зависимости и выбрать безопасный старт.\n77\tsection_approach_cards_0_title\tдиагностические инструменты\n77\tsection_approach_cards_1_text\tВрачебное сопровождение психического состояния, работа с сопутствующими расстройствами и подбор терапии по показаниям.\n77\tsection_approach_cards_1_title\tпсихиатрия\n77\tsection_approach_cards_2_text\tВосстановление навыков саморегуляции, режима и повседневного функционирования как часть устойчивой ремиссии.\n77\tsection_approach_cards_2_title\tфункциональная терапия\n77\tsection_approach_cards_3_text\tДополнительные методы поддержки — движение, восстановление тела и эмоционального баланса в безопасной среде центра.\n77\tsection_approach_cards_3_title\tкомплементарная терапия\n77\tservice_short_description\tТревога, которая не отпускает. Депрессия, из которой не выйти привычными способами. Состояния, которые сложно описать вслух, — но которые реально мешают жить. Психические расстройства почти никогда не бывают «просто в го\n84\tsection_approach_cards\t4\n84\tsection_approach_cards_0_text\tКомплексная оценка состояния: клинические и лабораторные методы, которые помогают понять природу зависимости и выбрать безопасный старт.\n84\tsection_approach_cards_0_title\tдиагностические инструменты\n84\tsection_approach_cards_1_text\tВрачебное сопровождение психического состояния, работа с сопутствующими расстройствами и подбор терапии по показаниям.\n84\tsection_approach_cards_1_title\tпсихиатрия\n84\tsection_approach_cards_2_text\tВосстановление навыков саморегуляции, режима и повседневного функционирования как часть устойчивой ремиссии.\n84\tsection_approach_cards_2_title\tфункциональная терапия\n84\tsection_approach_cards_3_text\tДополнительные методы поддержки — движение, восстановление тела и эмоционального баланса в безопасной среде центра.\n84\tsection_approach_cards_3_title\tкомплементарная терапия\n84\tservice_short_description\tВзаимоотношения с едой — это отношения с собственным телом, с контролем, с ощущением себя. За ограничениями в еде, перееданием или навязчивыми ритуалами вокруг питания стоит что-то, что ждёт внимания и аккуратной работы,\n"
+  }
+}

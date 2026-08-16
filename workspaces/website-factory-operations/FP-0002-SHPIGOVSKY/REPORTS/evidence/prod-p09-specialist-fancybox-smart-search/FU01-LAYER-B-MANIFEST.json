@@ -1,0 +1,44 @@
+{
+  "mode": "P09-FU01 EXACT-FILE ROLLBACK MODE",
+  "full_layer_a_required": false,
+  "snapshot_root": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p09-fu01-layer-b-pre",
+  "captured_at": "2026-08-14T16:17:27.632485+00:00",
+  "files": [
+    {
+      "kind": "theme",
+      "rel": "assets/js/v9-shell.js",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/assets/js/v9-shell.js",
+      "local": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\assets\\js\\v9-shell.js",
+      "rollback_path": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p09-fu01-layer-b-pre\\theme__assets__js__v9-shell.js.prod-before",
+      "rollback_readable": true,
+      "prod_before_sha256": "bf6b2cb1bf2e1d23e0380986fe0ae0f8358c8439ed548a53287155d60a2b9d42",
+      "local_sha256": "a1b1f244fe302d2a60e06fb1e315e4f61d2850339d9f6090ba175e215d5c3411",
+      "already_match": false,
+      "captured_at": "2026-08-14T16:17:26.901149+00:00"
+    },
+    {
+      "kind": "theme",
+      "rel": "assets/css/fp02-search.css",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/assets/css/fp02-search.css",
+      "local": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\assets\\css\\fp02-search.css",
+      "rollback_path": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p09-fu01-layer-b-pre\\theme__assets__css__fp02-search.css.prod-before",
+      "rollback_readable": true,
+      "prod_before_sha256": "742365428245889c4bfdb96cf85995ba360675f58442ef241ab17886e95ff89d",
+      "local_sha256": "2109907c2bc3b1a840f608f1199821b6230d07d6c78f73e247c329f7c855533b",
+      "already_match": false,
+      "captured_at": "2026-08-14T16:17:27.265216+00:00"
+    },
+    {
+      "kind": "theme",
+      "rel": "template-parts/navigation/offcanvas.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/navigation/offcanvas.php",
+      "local": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\navigation\\offcanvas.php",
+      "rollback_path": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p09-fu01-layer-b-pre\\theme__template-parts__navigation__offcanvas.php.prod-before",
+      "rollback_readable": true,
+      "prod_before_sha256": "5f9f003c778c2e399e2c577608e3f9c63ff45f83a75a3e0a36748e1429d59247",
+      "local_sha256": "ea63674eac1ab8d5237dcd54124fb2e069ba5bfe1d0115608bdad2fc7e8fe848",
+      "already_match": false,
+      "captured_at": "2026-08-14T16:17:27.632450+00:00"
+    }
+  ]
+}

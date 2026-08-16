@@ -1,0 +1,18 @@
+--- local/fp02-search.css
++++ prod/fp02-search.css
+@@ -437,12 +437,12 @@
+ }
+ 
+ .site-search-suggest {
+-  margin-top: 16px;
++  margin-top: 30px;
+   max-height: min(55vh, 420px);
+   overflow-x: hidden;
+   overflow-y: auto;
+-  border-top: var(--border-width, 1px) solid var(--border-color-subtle, #c9d4e3);
+-  padding-top: 12px;
++  /* border-top: var(--border-width, 1px) solid var(--border-color-subtle, #c9d4e3); */
++  /* padding-top: 12px; */
+ }
+ 
+ .site-search-suggest[hidden] {

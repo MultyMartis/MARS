@@ -1,0 +1,25 @@
+{
+  "captured_at": "2026-08-14T16:46:21.853252+00:00",
+  "before_keys": [],
+  "test_min_3chars_under_threshold": {
+    "q": "abc",
+    "min": 4,
+    "empty": true,
+    "pass": true
+  },
+  "test_query_alko": {
+    "min": 4,
+    "articles_count": 0,
+    "services_count": 0,
+    "services_ids": [],
+    "articles_disabled_pass": true,
+    "cap_pass": true,
+    "exclude_74_pass": true
+  },
+  "restored": {
+    "min": 3,
+    "has_services": true,
+    "pass_defaults": true
+  },
+  "secret_safety": "DB credentials not written to evidence"
+}

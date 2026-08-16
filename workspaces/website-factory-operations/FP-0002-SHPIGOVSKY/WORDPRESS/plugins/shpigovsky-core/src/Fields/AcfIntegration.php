@@ -88,14 +88,6 @@ final class AcfIntegration implements ModuleInterface {
 				'<div class="notice notice-error"><p><strong>Shpigovsky Core</strong> — %s</p></div>',
 				esc_html__( 'ACF Pro is required for FP-0002 field groups. Source is safe, but runtime field registration is unavailable.', 'shpigovsky-core' )
 			);
-			return;
-		}
-
-		if ( shpigovsky_core_acf_extended_is_active() ) {
-			printf(
-				'<div class="notice notice-info"><p><strong>Shpigovsky Core</strong> — %s</p></div>',
-				esc_html__( 'ACF Extended PRO is present but FP-0002 does not use ACFE APIs or ACFE-only field types.', 'shpigovsky-core' )
-			);
 		}
 	}
 }

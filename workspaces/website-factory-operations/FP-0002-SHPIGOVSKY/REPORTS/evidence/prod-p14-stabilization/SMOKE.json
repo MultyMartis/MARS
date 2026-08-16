@@ -1,0 +1,147 @@
+{
+  "frontend": {
+    "/": {
+      "status": 200,
+      "bytes": 206702,
+      "has_fatal": false,
+      "has_php_warning_public": false
+    },
+    "/uslugi/": {
+      "status": 200,
+      "bytes": 140901,
+      "has_fatal": false,
+      "has_php_warning_public": false
+    },
+    "/uslugi/zavisimosti/": {
+      "status": 200,
+      "bytes": 152508,
+      "has_fatal": false,
+      "has_php_warning_public": false
+    },
+    "/specyalisty/": {
+      "status": 200,
+      "bytes": 75540,
+      "has_fatal": false,
+      "has_php_warning_public": false
+    },
+    "/specyalisty/kostyuk/": {
+      "status": 200,
+      "bytes": 78579,
+      "has_fatal": false,
+      "has_php_warning_public": false
+    },
+    "/blog/": {
+      "status": 200,
+      "bytes": 96803,
+      "has_fatal": false,
+      "has_php_warning_public": false
+    },
+    "/kontakty/": {
+      "status": 200,
+      "bytes": 83941,
+      "has_fatal": false,
+      "has_php_warning_public": false
+    },
+    "/wp-sitemap.xml": {
+      "status": 200,
+      "bytes": 562,
+      "has_fatal": false,
+      "has_php_warning_public": false
+    },
+    "/robots.txt": {
+      "status": 200,
+      "bytes": 80,
+      "has_fatal": false,
+      "has_php_warning_public": false
+    },
+    "/?s=лечение": {
+      "status": 200,
+      "bytes": 79162,
+      "has_fatal": false,
+      "has_php_warning_public": false
+    }
+  },
+  "admin": {
+    "logged_in": false,
+    "dashboard": {
+      "status": 200,
+      "bytes": 12068,
+      "has_fatal": false,
+      "has_metacode_widget": false,
+      "has_local_mars_notice": false,
+      "has_acfe_options": false
+    },
+    "services": {
+      "status": 200,
+      "bytes": 12102,
+      "has_fatal": false,
+      "has_metacode_widget": false,
+      "has_local_mars_notice": false,
+      "has_acfe_options": false
+    },
+    "specialists": {
+      "status": 200,
+      "bytes": 12108,
+      "has_fatal": false,
+      "has_metacode_widget": false,
+      "has_local_mars_notice": false,
+      "has_acfe_options": false
+    },
+    "posts": {
+      "status": 200,
+      "bytes": 12066,
+      "has_fatal": false,
+      "has_metacode_widget": false,
+      "has_local_mars_notice": false,
+      "has_acfe_options": false
+    },
+    "pages": {
+      "status": 200,
+      "bytes": 12096,
+      "has_fatal": false,
+      "has_metacode_widget": false,
+      "has_local_mars_notice": false,
+      "has_acfe_options": false
+    },
+    "users": {
+      "status": 200,
+      "bytes": 12068,
+      "has_fatal": false,
+      "has_metacode_widget": false,
+      "has_local_mars_notice": false,
+      "has_acfe_options": false
+    },
+    "activity_log": {
+      "status": 200,
+      "bytes": 12114,
+      "has_fatal": false,
+      "has_metacode_widget": false,
+      "has_local_mars_notice": false,
+      "has_acfe_options": false
+    },
+    "site_settings": {
+      "status": 200,
+      "bytes": 12116,
+      "has_fatal": false,
+      "has_metacode_widget": false,
+      "has_local_mars_notice": false,
+      "has_acfe_options": false
+    },
+    "plugins": {
+      "status": 200,
+      "bytes": 12072,
+      "has_fatal": false,
+      "has_metacode_widget": false,
+      "has_local_mars_notice": false,
+      "has_acfe_options": false
+    }
+  },
+  "wpilot_ping": {
+    "status": 200,
+    "body_snip": "{\"ok\":true,\"data\":{\"plugin\":\"metacode-wpilot\",\"status\":\"installed\",\"bridge_enabled\":true,\"write_enabled\":false,\"state\":\"token-generated\"},\"meta\":{\"request_id\":\"wpilot-8cb4ac48-07ab-4d52-aa7e-4bdeb65df025\",\"timestamp_utc\":\"2026-08-16 17:28:50\",\"endpoint\":\"ping\",\"auth_state\":\"not-required\",\"bridge_sta"
+  },
+  "smart_search": {
+    "status": 200,
+    "bytes": 153
+  }
+}

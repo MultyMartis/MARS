@@ -1,0 +1,119 @@
+{
+    "mode": "all",
+    "baseline": {
+        "phase": "V9-06E7",
+        "generated_at": "2026-07-06T11:58:47+00:00",
+        "rows": [
+            {
+                "key": "home",
+                "object_id": 4,
+                "field": "hero_media",
+                "current": {
+                    "empty": true
+                }
+            },
+            {
+                "key": "services_hub",
+                "object_id": 5,
+                "field": "hero_media",
+                "current": {
+                    "empty": true
+                }
+            },
+            {
+                "key": "service_subdivision",
+                "object_id": 73,
+                "field": "hero_media",
+                "current": {
+                    "empty": true
+                }
+            },
+            {
+                "key": "service_leaf_alcohol",
+                "object_id": 77,
+                "field": "hero_media",
+                "current": {
+                    "empty": true
+                }
+            }
+        ]
+    },
+    "seed": {
+        "phase": "V9-06E7",
+        "generated_at": "2026-07-06T11:58:52+00:00",
+        "results": [
+            {
+                "key": "home",
+                "object_id": 4,
+                "field": "hero_media",
+                "attachment_id": 302,
+                "url": "http://shpigovsky.test/wp-content/uploads/2026/07/hero-main.png",
+                "result": "PASS"
+            },
+            {
+                "key": "services_hub",
+                "object_id": 5,
+                "field": "hero_media",
+                "attachment_id": 303,
+                "url": "http://shpigovsky.test/wp-content/uploads/2026/07/services-hero.webp",
+                "result": "PASS"
+            },
+            {
+                "key": "service_subdivision",
+                "object_id": 73,
+                "field": "hero_media",
+                "attachment_id": 304,
+                "url": "http://shpigovsky.test/wp-content/uploads/2026/07/service-subdivision-hero.webp",
+                "result": "PASS"
+            },
+            {
+                "key": "service_leaf_alcohol",
+                "object_id": 77,
+                "field": "hero_media",
+                "attachment_id": 305,
+                "url": "http://shpigovsky.test/wp-content/uploads/2026/07/service-leaf-alcohol-hero.webp",
+                "result": "PASS"
+            }
+        ],
+        "result": "PASS"
+    },
+    "verify": {
+        "phase": "V9-06E7",
+        "generated_at": "2026-07-06T11:58:52+00:00",
+        "rows": [
+            {
+                "key": "home",
+                "object_id": 4,
+                "field": "hero_media",
+                "seeded": true,
+                "url": "http://shpigovsky.test/wp-content/uploads/2026/07/hero-main.png",
+                "result": "PASS"
+            },
+            {
+                "key": "services_hub",
+                "object_id": 5,
+                "field": "hero_media",
+                "seeded": true,
+                "url": "http://shpigovsky.test/wp-content/uploads/2026/07/services-hero.webp",
+                "result": "PASS"
+            },
+            {
+                "key": "service_subdivision",
+                "object_id": 73,
+                "field": "hero_media",
+                "seeded": true,
+                "url": "http://shpigovsky.test/wp-content/uploads/2026/07/service-subdivision-hero.webp",
+                "result": "PASS"
+            },
+            {
+                "key": "service_leaf_alcohol",
+                "object_id": 77,
+                "field": "hero_media",
+                "seeded": true,
+                "url": "http://shpigovsky.test/wp-content/uploads/2026/07/service-leaf-alcohol-hero.webp",
+                "result": "PASS"
+            }
+        ],
+        "result": "PASS"
+    }
+}

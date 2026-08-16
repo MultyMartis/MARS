@@ -98,14 +98,21 @@ if ( $is_slider ) {
 					<div class="hero__container">
 						<div class="hero__panel">
 							<div class="hero__content-inner">
-								<?php if ( '' !== $hero_text ) : ?>
+								<?php if ( 0 === $index && ( '' !== $hero_text || '' !== $hero_title ) ) : ?>
+								<h1 class="hero__title">
+									<?php if ( '' !== $hero_text ) : ?>
+									<span class="hero__tagline"><?php echo wp_kses_post( $hero_text ); ?></span>
+									<?php endif; ?>
+									<?php if ( '' !== $hero_title ) : ?>
+									<span class="hero__title-main"><?php echo esc_html( $hero_title ); ?></span>
+									<?php endif; ?>
+								</h1>
+								<?php else : ?>
+									<?php if ( '' !== $hero_text ) : ?>
 								<p class="hero__tagline"><?php echo wp_kses_post( $hero_text ); ?></p>
-								<?php endif; ?>
-								<?php if ( '' !== $hero_title ) : ?>
-									<?php if ( 0 === $index ) : ?>
-								<h1 class="hero__title"><?php echo esc_html( $hero_title ); ?></h1>
-									<?php else : ?>
-								<p class="hero__title"><?php echo esc_html( $hero_title ); ?></p>
+									<?php endif; ?>
+									<?php if ( '' !== $hero_title ) : ?>
+								<p class="hero__title"><span class="hero__title-main"><?php echo esc_html( $hero_title ); ?></span></p>
 									<?php endif; ?>
 								<?php endif; ?>
 							</div>

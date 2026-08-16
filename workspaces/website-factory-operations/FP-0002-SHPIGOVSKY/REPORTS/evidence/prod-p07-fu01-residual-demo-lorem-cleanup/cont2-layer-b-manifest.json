@@ -1,0 +1,38 @@
+{
+  "wave": "PROD-P07-FU01-CONT2",
+  "created_at": "2026-08-14T11:58:25.052209+00:00",
+  "purpose": "production-before Layer B exact-file snapshot",
+  "layer_a": "CURRENT POST-P07 LAYER A BACKUP = OPERATOR CONFIRMED",
+  "transport": "SSH/SFTP",
+  "docroot": "/home/s/shpigovsky/shpigovsky.ru/public_html",
+  "production_path_map": {
+    "inc/v9-static-content.php": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/v9-static-content.php",
+    "inc/services-hub-helpers.php": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/services-hub-helpers.php",
+    "inc/service-general-helpers.php": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/service-general-helpers.php"
+  },
+  "files": [
+    {
+      "rel": "inc/v9-static-content.php",
+      "production_path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/v9-static-content.php",
+      "snapshot_file": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p07-fu01-cont2-layer-b-pre\\theme__inc__v9-static-content.php.prod-before",
+      "bytes": 37586,
+      "sha256": "5ee639d1b05ff4e603c35fc5ec23e7271a639d060b1ef4f14f84dd305d158026"
+    },
+    {
+      "rel": "inc/services-hub-helpers.php",
+      "production_path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/services-hub-helpers.php",
+      "snapshot_file": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p07-fu01-cont2-layer-b-pre\\theme__inc__services-hub-helpers.php.prod-before",
+      "bytes": 24252,
+      "sha256": "ff4024d0a18ab9690741f594c3371794eb1e15efb68751d0ad7e9023887c5d0b"
+    },
+    {
+      "rel": "inc/service-general-helpers.php",
+      "production_path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/service-general-helpers.php",
+      "snapshot_file": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p07-fu01-cont2-layer-b-pre\\theme__inc__service-general-helpers.php.prod-before",
+      "bytes": 18792,
+      "sha256": "163f7d2de0fa13d32138f44302ae6dc0fba42d5e713e20be1b1a123b819f89ee"
+    }
+  ],
+  "captured": 3,
+  "verdict": "LAYER B COMPLETE — 3/3 PRODUCTION-BEFORE FILES CAPTURED"
+}

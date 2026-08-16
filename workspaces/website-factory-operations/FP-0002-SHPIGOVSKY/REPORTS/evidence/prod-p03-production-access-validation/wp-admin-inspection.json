@@ -1,0 +1,36 @@
+{
+  "auth": "PASS",
+  "username": "mars",
+  "role": "Administrator",
+  "antibot": "Beget JS cookie beget=begetok required (client cookie only)",
+  "surfaces": {
+    "dashboard": "PASS",
+    "plugins": "PASS",
+    "themes": "PASS",
+    "options-general": "PASS",
+    "profile": "PASS",
+    "users": "PASS (role read only)",
+    "wpilot_admin": "PASS GET /wp-admin/admin.php?page=metacode-wpilot",
+    "acf_field_groups": "PASS"
+  },
+  "site_settings": {
+    "blogname": "\u0428\u043f\u0438\u0433\u043e\u0432\u0441\u043a\u0438\u0439 \u2014 \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u0430\u044f \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430",
+    "blogdescription": "",
+    "siteurl": "http://shpigovsky.beget.tech",
+    "home": "http://shpigovsky.beget.tech"
+  },
+  "plugins_active_slugs": [
+    "advanced-custom-fields",
+    "advanced-custom-fields-pro",
+    "acf-extended",
+    "akismet",
+    "classic-editor",
+    "hello-dolly",
+    "metacode-wpilot",
+    "shpigovsky-core"
+  ],
+  "shpigovsky_core_version_admin": "0.3.3-v9-06e25a-source",
+  "theme_shpigovsky_visible": true,
+  "acf_field_group_titles_count": 35,
+  "mutations": "none (no save/update/dismiss). WordPress core may record last_login/session as a login side effect."
+}

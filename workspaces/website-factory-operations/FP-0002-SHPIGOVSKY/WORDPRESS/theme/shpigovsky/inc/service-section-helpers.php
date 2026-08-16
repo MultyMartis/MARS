@@ -254,51 +254,20 @@ function shpigovsky_get_section_nature_text_blocks_fallback() {
 }
 
 /**
- * Resolve nature text blocks: repeater → legacy pair fields → empty (no demo inject).
+ * Resolve nature text blocks from Admin repeater only (PROD-P12).
  *
- * V9-06E50: hardcoded demo fallback is not a normal content source.
+ * Canonical Admin SoT: `section_nature_text_blocks`.
+ * Empty repeater → empty output (no demo/legacy frontend inject).
+ * Legacy pair metas (`section_nature_neurobiology_*` / `section_nature_genotyping_*`)
+ * remain dormant in DB and are not rendered.
  *
  * @param int $post_id Service ID.
  * @return array<int, array{heading:string,text:string,link_label:string,link_url:string,after_text:string}>
  */
 function shpigovsky_get_section_nature_text_blocks( $post_id ) {
-	$rows = shpigovsky_section_normalize_nature_text_blocks(
+	return shpigovsky_section_normalize_nature_text_blocks(
 		shpigovsky_get_section_field_raw( $post_id, 'section_nature_text_blocks' )
 	);
-
-	if ( ! empty( $rows ) ) {
-		return $rows;
-	}
-
-	$legacy = array();
-	$neuro_heading = shpigovsky_get_section_field( $post_id, 'section_nature_neurobiology_heading' );
-	$neuro_text    = shpigovsky_get_section_field( $post_id, 'section_nature_neurobiology_text' );
-	if ( '' !== $neuro_heading || '' !== $neuro_text ) {
-		$legacy[] = array(
-			'heading'    => $neuro_heading,
-			'text'       => $neuro_text,
-			'link_label' => '',
-			'link_url'   => '',
-			'after_text' => '',
-		);
-	}
-
-	$geno_heading = shpigovsky_get_section_field( $post_id, 'section_nature_genotyping_heading' );
-	$geno_text    = shpigovsky_get_section_field( $post_id, 'section_nature_genotyping_text' );
-	$geno_label   = shpigovsky_get_section_field( $post_id, 'section_nature_genotyping_link_label' );
-	$geno_url     = shpigovsky_get_section_field( $post_id, 'section_nature_genotyping_link_url' );
-	$geno_after   = shpigovsky_get_section_field( $post_id, 'section_nature_genotyping_after_text' );
-	if ( '' !== $geno_heading || '' !== $geno_text || '' !== $geno_label || '' !== $geno_after ) {
-		$legacy[] = array(
-			'heading'    => $geno_heading,
-			'text'       => $geno_text,
-			'link_label' => $geno_label,
-			'link_url'   => $geno_url,
-			'after_text' => $geno_after,
-		);
-	}
-
-	return $legacy;
 }
 
 /**
@@ -586,30 +555,135 @@ function shpigovsky_section_normalize_stages_items( $rows ) {
 /**
  * EMERGENCY ONLY — approach cards reserve for unseeded/legacy pages.
  * Not used on the normal frontend path after V9-06E50 (ACF SoT).
+ * Production-safe Russian copy (no Lorem / DEMO filler).
  *
  * @return array<int, array{title:string,text:string}>
  */
 function shpigovsky_get_section_approach_fallback_cards() {
-	$lorem = __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor', 'shpigovsky' );
-
 	return array(
 		array(
 			'title' => __( 'диагностические инструменты', 'shpigovsky' ),
-			'text'  => $lorem,
+			'text'  => __( 'Комплексная оценка состояния: клинические и лабораторные методы, которые помогают понять природу зависимости и выбрать безопасный старт.', 'shpigovsky' ),
 		),
 		array(
 			'title' => __( 'психиатрия', 'shpigovsky' ),
-			'text'  => $lorem,
+			'text'  => __( 'Врачебное сопровождение психического состояния, работа с сопутствующими расстройствами и подбор терапии по показаниям.', 'shpigovsky' ),
 		),
 		array(
 			'title' => __( 'функциональная терапия', 'shpigovsky' ),
-			'text'  => $lorem,
+			'text'  => __( 'Восстановление навыков саморегуляции, режима и повседневного функционирования как часть устойчивой ремиссии.', 'shpigovsky' ),
 		),
 		array(
 			'title' => __( 'комплементарная терапия', 'shpigovsky' ),
-			'text'  => $lorem,
+			'text'  => __( 'Дополнительные методы поддержки — движение, восстановление тела и эмоционального баланса в безопасной среде центра.', 'shpigovsky' ),
 		),
 	);
+}
+
+/**
+ * Whether approach-card text looks like technical demo filler.
+ *
+ * @param string $text Card text.
+ * @return bool
+ */
+function shpigovsky_is_technical_demo_card_text( $text ) {
+	$text = trim( (string) $text );
+	if ( '' === $text ) {
+		return true;
+	}
+	$lower = function_exists( 'mb_strtolower' ) ? mb_strtolower( $text ) : strtolower( $text );
+	if ( 0 === strpos( $lower, 'lorem ipsum' ) || false !== strpos( $lower, 'lorem ipsum' ) ) {
+		return true;
+	}
+	if ( 0 === strpos( $text, 'DEMO' ) || 0 === strpos( $text, 'DEMO:' ) || 0 === strpos( $lower, 'demo —' ) || 0 === strpos( $lower, 'demo:' ) ) {
+		return true;
+	}
+	return false;
+}
+
+/**
+ * Replace technical demo card text with production-safe copy matched by title.
+ *
+ * @param string $title Card title.
+ * @param string $text Current text.
+ * @return string
+ */
+function shpigovsky_sanitize_approach_card_text( $title, $text ) {
+	$title = trim( (string) $title );
+	$text  = trim( (string) $text );
+
+	if ( ! shpigovsky_is_technical_demo_card_text( $text ) ) {
+		return $text;
+	}
+
+	foreach ( shpigovsky_get_section_approach_fallback_cards() as $row ) {
+		if ( isset( $row['title'], $row['text'] ) && $title === (string) $row['title'] ) {
+			return (string) $row['text'];
+		}
+	}
+
+	return __( 'Краткое описание направления подхода. Замените текст в поле «Карточки подхода» в админке этой страницы.', 'shpigovsky' );
+}
+
+/**
+ * Load approach cards for a section page with orphaned-meta recovery.
+ *
+ * Canonical Admin SoT: ACF repeater `section_approach_cards`.
+ * Recovers broken count / 1-based orphan rows / accidental serialized blobs.
+ *
+ * @param int $post_id Service ID.
+ * @return array<int, array{title:string,text:string}>
+ */
+function shpigovsky_get_section_approach_cards( $post_id ) {
+	$post_id = absint( $post_id );
+	$raw     = shpigovsky_get_section_field_raw( $post_id, 'section_approach_cards' );
+	$cards   = array();
+
+	if ( is_array( $raw ) && ! empty( $raw ) ) {
+		// Serialized / already-decoded array of rows, or ACF repeater rows.
+		$is_list = array_keys( $raw ) === range( 0, count( $raw ) - 1 );
+		if ( $is_list ) {
+			$cards = shpigovsky_section_normalize_title_text_rows( $raw );
+		}
+	}
+
+	if ( empty( $cards ) ) {
+		// Recover orphaned ACF row meta when count meta is empty/broken.
+		$found = array();
+		for ( $i = 0; $i <= 6; $i++ ) {
+			$title = get_post_meta( $post_id, 'section_approach_cards_' . $i . '_title', true );
+			$text  = get_post_meta( $post_id, 'section_approach_cards_' . $i . '_text', true );
+			$title = is_string( $title ) ? trim( $title ) : '';
+			$text  = is_string( $text ) ? trim( $text ) : '';
+			if ( '' === $title && '' === $text ) {
+				continue;
+			}
+			$found[] = array(
+				'title' => $title,
+				'text'  => $text,
+			);
+		}
+		$cards = $found;
+	}
+
+	if ( empty( $cards ) ) {
+		return array();
+	}
+
+	$out = array();
+	foreach ( $cards as $card ) {
+		$title = isset( $card['title'] ) ? trim( (string) $card['title'] ) : '';
+		$text  = isset( $card['text'] ) ? trim( (string) $card['text'] ) : '';
+		if ( '' === $title && '' === $text ) {
+			continue;
+		}
+		$out[] = array(
+			'title' => $title,
+			'text'  => shpigovsky_sanitize_approach_card_text( $title, $text ),
+		);
+	}
+
+	return $out;
 }
 
 /**

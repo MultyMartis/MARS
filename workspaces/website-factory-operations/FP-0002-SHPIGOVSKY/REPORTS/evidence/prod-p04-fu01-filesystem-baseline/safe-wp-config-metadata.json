@@ -1,0 +1,29 @@
+{
+  "DB_NAME": "shpigovsky_main",
+  "DB_USER": "shpigovsky_main",
+  "DB_HOST": "localhost",
+  "DB_CHARSET": "utf8",
+  "DB_COLLATE": "",
+  "table_prefix": "fp02_",
+  "WP_DEBUG": "true",
+  "WP_DEBUG_LOG": "true",
+  "WP_DEBUG_DISPLAY": "false",
+  "SCRIPT_DEBUG": "true",
+  "DISALLOW_FILE_EDIT": "true",
+  "WP_ENVIRONMENT_TYPE": "local",
+  "DB_PASSWORD_PRESENT": true,
+  "AUTH_KEY_PRESENT": true,
+  "SECURE_AUTH_KEY_PRESENT": true,
+  "LOGGED_IN_KEY_PRESENT": true,
+  "NONCE_KEY_PRESENT": true,
+  "AUTH_SALT_PRESENT": true,
+  "SECURE_AUTH_SALT_PRESENT": true,
+  "LOGGED_IN_SALT_PRESENT": true,
+  "NONCE_SALT_PRESENT": true,
+  "notes": [
+    "DB_CHARSET define is utf8; live tables observed utf8mb4 in P04 SELECT",
+    "WP_ENVIRONMENT_TYPE=local and WP_DEBUG=true are migration leftovers \u2014 not mutated this wave",
+    "WP_DEBUG_LOG_FILE points at historical D:/MARS-Localhost path \u2014 migration leftover; value is a path not a secret",
+    "No DB_PASSWORD/salts/keys values captured"
+  ]
+}

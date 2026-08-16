@@ -1,0 +1,121 @@
+{
+  "namespace": "wpilot/v1",
+  "header": "X-WPilot-Token",
+  "header_value_recorded": false,
+  "recovery_space": {
+    "resolved_id": 1054,
+    "post_type": "page",
+    "candidates": [
+      {
+        "id": 1054,
+        "post_type": "page",
+        "post_status": "publish",
+        "post_name": "prostranstvo-vosstanovleniya",
+        "title_match": true
+      },
+      {
+        "id": 1809,
+        "post_type": "revision",
+        "post_status": "inherit",
+        "post_name": "1054-revision-v1",
+        "title_match": true
+      },
+      {
+        "id": 1810,
+        "post_type": "revision",
+        "post_status": "inherit",
+        "post_name": "1054-revision-v1",
+        "title_match": true
+      },
+      {
+        "id": 1812,
+        "post_type": "revision",
+        "post_status": "inherit",
+        "post_name": "1054-revision-v1",
+        "title_match": true
+      },
+      {
+        "id": 1813,
+        "post_type": "revision",
+        "post_status": "inherit",
+        "post_name": "1054-revision-v1",
+        "title_match": true
+      }
+    ]
+  },
+  "matrix": [
+    {
+      "route": "/wp-json/wpilot/v1/site-info",
+      "http_status": 401,
+      "sanitized_result": {
+        "ok": false,
+        "error_code": "AUTH_MISSING"
+      },
+      "auth": "none",
+      "proves_not_public": true
+    },
+    {
+      "route": "/wp-json/wpilot/v1/site-info",
+      "http_status": 200,
+      "sanitized_result": {
+        "ok": true,
+        "error_code": null,
+        "wp_version": "7.0.4",
+        "php_version": "8.3.20",
+        "active_theme": "Shpigovsky",
+        "bridge_enabled": true,
+        "write_enabled": false
+      },
+      "auth": "X-WPilot-Token"
+    },
+    {
+      "route": "/wp-json/wpilot/v1/themes",
+      "http_status": 200,
+      "sanitized_result": {
+        "ok": true,
+        "error_code": null,
+        "theme_name": "Shpigovsky",
+        "theme_version": "0.3.0-d7a-shell"
+      },
+      "auth": "X-WPilot-Token"
+    },
+    {
+      "route": "/wp-json/wpilot/v1/plugins",
+      "http_status": 200,
+      "sanitized_result": {
+        "ok": true,
+        "error_code": null,
+        "plugin_count": 5,
+        "wpilot_version": "0.3.2",
+        "wpilot_file": "metacode-wpilot/metacode-wpilot.php"
+      },
+      "auth": "X-WPilot-Token"
+    },
+    {
+      "route": "/wp-json/wpilot/v1/pages",
+      "http_status": 200,
+      "sanitized_result": {
+        "ok": true,
+        "error_code": null,
+        "page_count": 25,
+        "limit": 50
+      },
+      "auth": "X-WPilot-Token"
+    },
+    {
+      "route": "/wp-json/wpilot/v1/pages/1054",
+      "http_status": 200,
+      "sanitized_result": {
+        "ok": true,
+        "error_code": null,
+        "id": 1054,
+        "status": "publish",
+        "title_len": 27,
+        "checksum_prefix": "sha256:8db0894c99e",
+        "has_wpbakery": false
+      },
+      "auth": "X-WPilot-Token"
+    }
+  ],
+  "verdict": "AUTHENTICATED READ CONNECTION TO MARS PROVEN"
+}

@@ -1,0 +1,80 @@
+{
+  "desktop": {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "consoleErrors": [],
+    "initial": {
+      "clientHeight": 120,
+      "scrollHeight": 120,
+      "lineHeight": 24,
+      "fiveLines": 120,
+      "isClamped": false,
+      "buttonHidden": true,
+      "ariaExpanded": "false"
+    },
+    "afterClick": null,
+    "shortText": {
+      "buttonHidden": true,
+      "isClamped": false,
+      "scrollHeight": 24
+    }
+  },
+  "tablet": {
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "consoleErrors": [],
+    "initial": {
+      "clientHeight": 120,
+      "scrollHeight": 144,
+      "lineHeight": 24,
+      "fiveLines": 120,
+      "isClamped": true,
+      "buttonHidden": false,
+      "ariaExpanded": "false"
+    },
+    "afterClick": {
+      "clientHeight": 144,
+      "scrollHeight": 144,
+      "isClamped": false,
+      "buttonHidden": true,
+      "ariaExpanded": "true"
+    },
+    "shortText": {
+      "buttonHidden": true,
+      "isClamped": false,
+      "scrollHeight": 24
+    }
+  },
+  "mobile": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "consoleErrors": [],
+    "initial": {
+      "clientHeight": 120,
+      "scrollHeight": 264,
+      "lineHeight": 24,
+      "fiveLines": 120,
+      "isClamped": true,
+      "buttonHidden": false,
+      "ariaExpanded": "false"
+    },
+    "afterClick": {
+      "clientHeight": 264,
+      "scrollHeight": 264,
+      "isClamped": false,
+      "buttonHidden": true,
+      "ariaExpanded": "true"
+    },
+    "shortText": {
+      "buttonHidden": true,
+      "isClamped": false,
+      "scrollHeight": 24
+    }
+  }
+}

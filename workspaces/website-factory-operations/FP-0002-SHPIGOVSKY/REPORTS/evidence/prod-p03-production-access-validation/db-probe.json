@@ -1,0 +1,32 @@
+{
+  "secrets_host": "MISSING",
+  "secrets_port": "MISSING",
+  "secrets_name": "shpigovsky_main",
+  "secrets_user": "shpigovsky_main",
+  "secrets_password": "PRESENT",
+  "secrets_prefix": "MISSING",
+  "secrets_charset": "MISSING",
+  "wpconfig_parse": "NOT POSSIBLE (no read ACL on wp-config.php)",
+  "attempts": [
+    {
+      "host": "shpigovsky.beget.tech",
+      "port": 3306,
+      "reason": "BEGET_CONVENTION_PROBE_ftp_host",
+      "tcp": "OPEN",
+      "auth": "FAIL",
+      "mysql_code": 1045,
+      "note": "Access denied for user shpigovsky_main@<operator-ip>"
+    },
+    {
+      "host": "shpigovsky.beget.tech",
+      "port": 3307,
+      "reason": "BEGET_CONVENTION_PROBE_3307",
+      "tcp": "OPEN",
+      "auth": "FAIL",
+      "note": "Lost connection / timeout"
+    }
+  ],
+  "select_proven": false,
+  "write_attempted": false,
+  "likely_cause": "db_host not filled; and/or Beget remote MySQL ACL does not allow operator IP"
+}

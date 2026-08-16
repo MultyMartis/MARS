@@ -1,0 +1,10 @@
+{
+  "wave": "PROD-P07-FU01",
+  "generated_at": "2026-08-14T10:53:00+07:00",
+  "verdict": "CURRENT POST-P07 LAYER A BACKUP = OPERATOR CONFIRMED",
+  "operator_token": "POST-P07 BEGET BACKUP CREATED",
+  "prior_blocker": "OPERATOR ACTION REQUIRED — CREATE FRESH POST-P07 BEGET FILES + DB BACKUP",
+  "prior_blocker_resolved": true,
+  "request_another_full_backup_before_continuation": false,
+  "narrow_snapshots": "created immediately before each mutation; stored outside production"
+}

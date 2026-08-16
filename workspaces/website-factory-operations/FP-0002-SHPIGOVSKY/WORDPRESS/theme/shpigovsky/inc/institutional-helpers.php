@@ -226,56 +226,18 @@ function shpigovsky_get_about_program_context( $page_id ) {
 	$intro   = shpigovsky_get_institutional_field( $page_id, 'about_program_intro' );
 	$intro2  = shpigovsky_get_institutional_field( $page_id, 'about_program_intro2' );
 
-	$items = shpigovsky_get_institutional_repeater_or_static( $page_id, 'about_program_items', array() );
-
-	if ( empty( $items ) ) {
-		foreach ( shpigovsky_get_program_direction_items( 'service' ) as $direction ) {
-			$items[] = array(
-				'title'  => $direction['title_display'],
-				'image'  => $direction['image'],
-				'width'  => $direction['width'],
-				'height' => $direction['height'],
-				'alt'    => $direction['alt'],
-				'url'    => $direction['url'],
-			);
-		}
-	} else {
-		$normalized = array();
-		$directions = shpigovsky_get_program_direction_items( 'service' );
-
-		foreach ( $items as $index => $row ) {
-			$fallback = isset( $static['items'][ $index ] ) ? $static['items'][ $index ] : array();
-			$image    = isset( $row['image'] ) && is_array( $row['image'] ) ? $row['image'] : array();
-			$asset    = isset( $fallback['image'] ) ? (string) $fallback['image'] : '';
-			$dir_url  = isset( $directions[ $index ]['url'] ) ? (string) $directions[ $index ]['url'] : '';
-
-			$normalized[] = array(
-				'title'  => isset( $row['title'] ) && '' !== trim( (string) $row['title'] ) ? trim( (string) $row['title'] ) : ( isset( $fallback['title'] ) ? $fallback['title'] : '' ),
-				'image'  => ! empty( $image['url'] ) ? (string) $image['url'] : shpigovsky_asset_uri( $asset ),
-				'width'  => ! empty( $image['width'] ) ? (int) $image['width'] : ( isset( $fallback['width'] ) ? (int) $fallback['width'] : 0 ),
-				'height' => ! empty( $image['height'] ) ? (int) $image['height'] : ( isset( $fallback['height'] ) ? (int) $fallback['height'] : 0 ),
-				'alt'    => ! empty( $image['alt'] ) ? (string) $image['alt'] : ( isset( $fallback['alt'] ) ? (string) $fallback['alt'] : '' ),
-				'url'    => $dir_url,
-			);
-		}
-
-		$items = $normalized;
-	}
-
-	if ( ! empty( $items ) && isset( $items[0]['image'] ) && false === strpos( (string) $items[0]['image'], '://' ) ) {
-		foreach ( $items as $index => $item ) {
-			$items[ $index ]['image'] = shpigovsky_asset_uri( (string) $item['image'] );
-		}
-	}
-
-	// Attach URLs for static-copy path when ACF empty used static items without url.
-	if ( ! empty( $items ) ) {
-		$directions = shpigovsky_get_program_direction_items( 'service' );
-		foreach ( $items as $index => $item ) {
-			if ( empty( $items[ $index ]['url'] ) && isset( $directions[ $index ]['url'] ) ) {
-				$items[ $index ]['url'] = $directions[ $index ]['url'];
-			}
-		}
+	// V9-07A01: card title/URL/image always from live Treatment Program children.
+	// Legacy about_program_items postmeta is dormant (admin-hidden; not read).
+	$items = array();
+	foreach ( shpigovsky_get_program_direction_items( 'about' ) as $direction ) {
+		$items[] = array(
+			'title'  => $direction['title_display'],
+			'image'  => $direction['image'],
+			'width'  => $direction['width'],
+			'height' => $direction['height'],
+			'alt'    => $direction['alt'],
+			'url'    => $direction['url'],
+		);
 	}
 
 	return array(
@@ -396,19 +358,28 @@ function shpigovsky_get_about_guest_cta_band( $source = 'o-centre-cta-1' ) {
 	$phone  = shpigovsky_get_site_option( 'phone_primary' );
 	$phone  = '' !== $phone ? $phone : '8 (925) 183-64-64';
 
+	// Guest Visit owns its own copy. Do NOT inherit cta_band_default_* —
+	// those options may hold the generic «Остались вопросы?» CTA semantics.
+	$title        = isset( $static['title'] ) ? (string) $static['title'] : 'Запишитесь на гостевой визит';
+	$subtitle     = isset( $static['subtitle'] ) ? (string) $static['subtitle'] : 'Вы сможете все посмотреть и задать вопросы лично';
+	$button_label = isset( $static['button_label'] ) ? (string) $static['button_label'] : 'Записаться';
+	$phone_hint   = function_exists( 'shpigovsky_get_cta_band_phone_hint' )
+		? shpigovsky_get_cta_band_phone_hint( __( 'Или позвоните нам', 'shpigovsky' ) )
+		: __( 'Или позвоните нам', 'shpigovsky' );
+
 	return array(
-		'title'          => shpigovsky_get_cta_band_default_title( $static['title'] ),
-		'subtitle'       => shpigovsky_get_cta_band_default_subtitle( $static['subtitle'] ),
+		'title'          => $title,
+		'subtitle'       => $subtitle,
 		'phone'          => $phone,
-		'phone_hint'     => '',
-		'button_label'   => shpigovsky_get_cta_band_default_button_label( $static['button_label'] ),
+		'phone_hint'     => $phone_hint,
+		'button_label'   => $button_label,
 		'source'         => $source,
 		'section_id'     => $source,
 		'heading_id'     => $source . '-heading',
-		'heading_text'   => shpigovsky_get_cta_band_default_title( $static['title'] ),
+		'heading_text'   => $title,
 		'wrap_section'   => true,
 		'wrap_container' => false,
-		'button_first'   => false,
+		'button_first'   => true,
 		'margin_flush'   => false,
 	);
 }

@@ -10,7 +10,7 @@
 | Formulation | Stable local near-production baseline |
 | Operator acceptance | Yes |
 | Commit | `d1befe9b8bfc8688f2f286998ec048e6be49beb6` |
-| Push | `dd49fc5cc5fe6717af96cf87fda3816df309b1ba` |
+| Push | `9d5dcc285eb45c827231bfe89c7611fb84e850d2` |
 | Freeze | `X:\MARS-Localhost\backups\wordpress\projects\shpigovsky\v9-stable-v1-near-production-freeze-20260718-004137` |
 | Production deployment | **Not performed** |
 
@@ -113,7 +113,7 @@ Excluded: runtime, backups, INCOMING binaries, validation chrome/temps, node_mod
 |-------|-------|
 | Hash | `d1befe9b8bfc8688f2f286998ec048e6be49beb6` |
 | Message | `feat(fp-0002): freeze V9 stable v1 near-production baseline` |
-| Files | _PENDING_ |
+| Files | 798 (content release commit) |
 
 ## 12. Push
 
@@ -122,7 +122,7 @@ Excluded: runtime, backups, INCOMING binaries, validation chrome/temps, node_mod
 | Remote | origin |
 | Branch | mars/canonical-post-recovery |
 | Previous remote HEAD | `29c07d210169ff273d69e7b5f9000d84c1c097b1` |
-| Final remote HEAD | `dd49fc5cc5fe6717af96cf87fda3816df309b1ba` |
+| Final remote HEAD | `9d5dcc285eb45c827231bfe89c7611fb84e850d2` |
 | Force used | **no** |
 
 ## 13. Tag
@@ -179,6 +179,7 @@ Excluded: runtime, backups, INCOMING binaries, validation chrome/temps, node_mod
 - scope lock honored: yes (`X:\AI MARS`, `X:\AI MARS STORAGE`, `X:\MARS-Localhost`)
 - destructive ops: none (robocopy copy-only; no MIR/PURGE; no git clean/reset)
 - protected zone touch: none beyond authorized FP-0002 / backups / Storage git-sync
+
 
 
 

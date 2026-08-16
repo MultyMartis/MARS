@@ -1,0 +1,29 @@
+{
+  "started_at": "2026-08-14T16:42:47.648169+00:00",
+  "tests": [
+    {
+      "name": "defaults_query_alk",
+      "min": 3,
+      "order": [
+        "services",
+        "articles",
+        "specialists",
+        "pages"
+      ],
+      "has_services": true,
+      "has_articles_key": true,
+      "empty": false
+    },
+    {
+      "name": "defaults_min_chars_gate",
+      "q": "аб",
+      "min": 3,
+      "empty": true,
+      "groups_all_empty": true,
+      "pass": true
+    }
+  ],
+  "php_cli_major": "5",
+  "mutation_qa": "SKIPPED — PHP CLI 5.6 cannot bootstrap current WP; defaults REST proven; Admin settings code-path relies on ACF option reads with code defaults.",
+  "finished_at": "2026-08-14T16:42:49.799274+00:00"
+}

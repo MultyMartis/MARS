@@ -1,0 +1,120 @@
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/PROJECT-STATUS.md
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E57-FIX01-lifebuoy-motion-refinement.md
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e57-fix01-lifebuoy-motion-refinement/_e57fix01_validate.cjs
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/SOURCE-AUTHORITY.md
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/acf-json/group_fp02_block_comfort_requirements.json
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/acf-json/group_fp02_block_cta_bands.json
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/acf-json/group_fp02_blog_archive_settings.json
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/acf-json/group_fp02_page_contacts.json
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/acf-json/group_fp02_page_ocentre_hub.json
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/acf-json/group_fp02_page_reviews.json
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/acf-json/group_fp02_service_relationships.json
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/acf-json/group_fp02_service_structured_sections.json
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/acf-json/group_fp02_site_options_contacts.json
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/acf-json/group_fp02_site_options_reviews.json
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/plugins/shpigovsky-core/src/Admin/OptionsPage.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/plugins/shpigovsky-core/src/Fields/FieldGroups.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/plugins/shpigovsky-core/src/Fields/RepeaterValidation.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/404.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/assets/css/fp02-lifebuoy-parallax.css
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/assets/css/v9-style.css
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/assets/js/v9-shell.js
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/front-page.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/functions.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/home.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/inc/admin-editor.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/inc/assets.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/inc/blog-helpers.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/inc/contacts-helpers.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/inc/institutional-helpers.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/inc/navigation.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/inc/program-direction-helpers.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/inc/reusable-blocks-helpers.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/inc/reviews-helpers.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/inc/service-helpers.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/inc/template-tags.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/page-templates/contacts.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/page-templates/institutional.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/page-templates/reviews.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/search.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/blog/lower-stack.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/components/final-form.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/components/internal-page-nav.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/components/program-cta-band.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/components/review-archive-card.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/components/service-card.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/contacts/location-card.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/contacts/map-body.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/home/comfort.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/home/feature-grid.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/home/founder-quote.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/home/genotyping.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/home/rehabilitation-program.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/home/rehabilitation-requirements.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/home/staff-photo.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/home/why-us.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/institutional/about-program.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/institutional/approach-band.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/institutional/infrastructure-narrative.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/institutional/who-we-treat.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/layout/footer.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/layout/global-consultation-modal.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/layout/header.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/navigation/breadcrumbs.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/navigation/offcanvas.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/navigation/primary-desktop.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/reviews/archive-list.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/service/children.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/service/mid-cta.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/service/program.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/services-hub/rehabilitation-program.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/shared/reviews-slider.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/DOCS/DEMO-CONTENT-CLEANUP-BACKLOG-v1.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/DOCS/FUTURE-TASK-SITE-SETTINGS-ADMIN-IA-AUDIT-AND-RU-UX-REBUILD-v1.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/DOCS/REVIEWS-STABLE-UID-ANCHORS-v1.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/DOCS/SERVICE-ADMIN-HIDDEN-LEGACY-GROUPS-E62C-v1.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/ACF-SOURCE-RUNTIME-DISPOSITION-FP-0002-V9-STABLE-V1.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/FREEZE-FP-0002-V9-STABLE-V1.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E58-FU01-visual-audit-operator-decision-pack.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E58-figma-visual-layout-audit.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E58-freeze-backup-and-figma-visual-audit.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E59-FIX01-comfort-contacts-footer-corrections.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E59-layout-polish-maps-footer-comfort-admin.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E60-FIX01-breadcrumb-subnav-reviews.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E60-nav-breadcrumb-cta-service-links.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E61-admin-controls-contacts-blog-reviews-ocentre-home.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E62A-404-breadcrumb-wrapper-phone-mask.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E62B-blog-reviews-pagination-seo-slider-links.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E62C-ocentre-service-admin-review-anchor-final-regression.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E62D-program-mini-descriptions-404-figma-correction.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E62E-404-decor-wordpress-search.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E62E-FIX01-search-wrapper-trigger-placement.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E63-STABLE-V1-CLOSEOUT.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/STABLE-V1/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/_e62a-backup-path.txt
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e58-current-baseline-freeze/git-push-result.csv
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e58-current-baseline-freeze/git-source-commit.txt
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e58-current-baseline-freeze/git-staged-paths.txt
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e58-figma-visual-layout-audit/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e58-fu01-visual-audit-operator-decision-pack/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e59-fix01-comfort-contacts-footer-corrections/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e59-layout-polish-maps-footer-comfort-admin/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e60-fix01-breadcrumb-subnav-reviews/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e60-nav-breadcrumb-cta-service-links/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e61-admin-controls-contacts-blog-reviews-ocentre-home/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e62a-404-breadcrumb-wrapper-phone-mask/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e62b-blog-reviews-pagination-seo-slider-links/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e62c-ocentre-service-admin-review-anchor-final-regression/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e62d-program-mini-descriptions-404-figma-correction/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e62e-404-decor-wordpress-search/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e62e-fix01-search-wrapper-trigger-placement/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e63-stable-v1-closeout/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/acf-json/group_fp02_block_founder_quote.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/acf-json/group_fp02_treatment_program_child.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/assets/css/fp02-404.css
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/assets/css/fp02-search.css
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/inc/pagination-seo.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/inc/search-helpers.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/inc/yandex-map-embed.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/searchform.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/navigation/search-panel.php

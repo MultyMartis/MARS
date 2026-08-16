@@ -56,6 +56,7 @@ if ( empty( $slides ) ) {
         <?php endforeach; ?>
       </div>
       <div class="home-gallery__pagination swiper-pagination" data-gallery-pagination></div>
+      <?php get_template_part( 'template-parts/components/fp02-slider-mobile-nav' ); ?>
     </div>
   </div>
 </section>

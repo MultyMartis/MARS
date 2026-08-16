@@ -31,7 +31,13 @@ function shpigovsky_breadcrumbs_enabled_for_context() {
 		return false;
 	}
 
-	$field_name = is_singular( 'service' ) ? 'show_breadcrumbs_services' : 'show_breadcrumbs_pages';
+	$field_name = is_singular( 'service' )
+		? 'show_breadcrumbs_services'
+		: 'show_breadcrumbs_pages';
+
+	if ( is_singular( 'specialist' ) ) {
+		$field_name = 'show_breadcrumbs_pages';
+	}
 
 	if ( ! function_exists( 'get_field' ) ) {
 		return true;

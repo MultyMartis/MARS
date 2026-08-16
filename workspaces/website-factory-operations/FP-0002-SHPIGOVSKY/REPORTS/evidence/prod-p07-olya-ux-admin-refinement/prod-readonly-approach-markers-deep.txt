@@ -1,0 +1,82 @@
+73	Зависимости	publish	service		NULL	психиатрия	функциональная терапия	комплементарная терапия	подробнее о программе ТЕСТ
+74	Лечение алкогольной зависимости	publish	service	NULL	NULL	NULL	NULL	NULL	NULL
+75	Профилактический анализ	publish	service	NULL	NULL	NULL	NULL	NULL	NULL
+77	Психическое здоровье	publish	service	a:4:{i:0;a:2:{s:5:"title";s:53:"диагностические инструменты";s:4:"text";s:192:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor";}i:1;a:2:{s:5:"title";s:20:"психиатрия";s:4:"text";s:192:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor";}i:2;a:2:{s:5:"title";s:43:"функциональная терапия";s:4:"text";s:192:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor";}i:3;a:2:{s:5:"title";s:45:"комплементарная терапия";s:4:"text";s:192:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor";}}	NULL	NULL	NULL	NULL	NULL
+78	Депрессия	publish	service	NULL	NULL	NULL	NULL	NULL	NULL
+79	ПТСР	publish	service	NULL	NULL	NULL	NULL	NULL	NULL
+80	Эмоциональное выгорание	publish	service	NULL	NULL	NULL	NULL	NULL	NULL
+81	Тревожные расстройства	publish	service	NULL	NULL	NULL	NULL	NULL	NULL
+82	Расстройства сна	publish	service	NULL	NULL	NULL	NULL	NULL	NULL
+83	Травма	publish	service	NULL	NULL	NULL	NULL	NULL	NULL
+84	Расстройства пищевого поведения	publish	service	a:4:{i:0;a:2:{s:5:"title";s:53:"диагностические инструменты";s:4:"text";s:207:"DEMO: краткий нейтральный текст раздела для демонстрации структуры блока. Замените на финальный контент в админке.";}i:1;a:2:{s:5:"title";s:20:"психиатрия";s:4:"text";s:207:"DEMO: краткий нейтральный текст раздела для демонстрации структуры блока. Замените на финальный контент в админке.";}i:2;a:2:{s:5:"title";s:43:"функциональная терапия";s:4:"text";s:207:"DEMO: краткий нейтральный текст раздела для демонстрации структуры блока. Замените на финальный контент в админке.";}i:3;a:2:{s:5:"title";s:45:"комплементарная терапия";s:4:"text";s:207:"DEMO: краткий нейтральный текст раздела для демонстрации структуры блока. Замените на финальный контент в админке.";}}	NULL	NULL	NULL	NULL	NULL
+85	Анорексия	publish	service	NULL	NULL	NULL	NULL	NULL	NULL
+86	Булимия	publish	service	NULL	NULL	NULL	NULL	NULL	NULL
+87	Компульсивное переедание	publish	service	NULL	NULL	NULL	NULL	NULL	NULL
+314	Лечение наркотической зависимости	publish	service	NULL	NULL	NULL	NULL	NULL	NULL
+315	Лечение лекарственной зависимости	publish	service	NULL	NULL	NULL	NULL	NULL	NULL
+316	Поведенческие зависимости	publish	service	NULL	NULL	NULL	NULL	NULL	NULL
+1011	Лечение солевой зависимости	publish	service	NULL	NULL	NULL	NULL	NULL	NULL
+1012	Лечение метадоновой зависимости	publish	service	NULL	NULL	NULL	NULL	NULL	NULL
+1013	Лечение героиновой зависимости	publish	service	NULL	NULL	NULL	NULL	NULL	NULL
+1016	Лечение игровой зависимости	publish	service	NULL	NULL	NULL	NULL	NULL	NULL
+1017	Интернет-зависимость	publish	service	NULL	NULL	NULL	NULL	NULL	NULL
+1018	Лечение созависимости	publish	service	NULL	NULL	NULL	NULL	NULL	NULL
+1019	Зависимость от постоянных покупок	publish	service	NULL	NULL	NULL	NULL	NULL	NULL
+1047	Компьютерная зависимость	publish	service	NULL	NULL	NULL	NULL	NULL	NULL
+1048	Лечение опиумной зависимости	publish	service	NULL	NULL	NULL	NULL	NULL	NULL
+1049	Хроническая усталость	publish	service	NULL	NULL	NULL	NULL	NULL	NULL
+1050	Стресс	publish	service	NULL	NULL	NULL	NULL	NULL	NULL
+1051	Нарциссизм	publish	service	NULL	NULL	NULL	NULL	NULL	NULL
+5	Услуги	publish	page	uslugi
+73	Зависимости	publish	service	zavisimosti
+77	Психическое здоровье	publish	service	psihicheskoe-zdorovie
+84	Расстройства пищевого поведения	publish	service	rasstroystva-pischevogo-povedeniya
+1682	Зависимости	inherit	revision	73-revision-v1
+1684	Услуги	inherit	revision	5-revision-v1
+1685	Зависимости	inherit	revision	73-revision-v1
+11	О центре	publish	about_program_intro	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+11	О центре	publish	about_program_intro2	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+11	О центре	publish	about_program_lead	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+11	О центре	publish	about_who_treat_cards_0_text	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+11	О центре	publish	about_who_treat_cards_1_text	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+11	О центре	publish	about_who_treat_cards_2_text	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+11	О центре	publish	about_who_treat_cards_3_text	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+73	Зависимости	publish	section_approach_cards_1_text	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+73	Зависимости	publish	section_approach_cards_2_text	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+73	Зависимости	publish	section_approach_cards_3_text	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+73	Зависимости	publish	section_dependencies_footer	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+73	Зависимости	publish	section_dependencies_lead	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+73	Зависимости	publish	section_nature_cards_1_text	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+73	Зависимости	publish	section_nature_genotyping_after_text	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+73	Зависимости	publish	section_nature_genotyping_text	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+73	Зависимости	publish	section_nature_lead	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+73	Зависимости	publish	section_nature_neurobiology_text	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+73	Зависимости	publish	section_program_footer_label	подробнее о программе ТЕСТ
+73	Зависимости	publish	section_program_intro	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+73	Зависимости	publish	section_program_intro_items_1_text	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+73	Зависимости	publish	section_program_intro2	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+73	Зависимости	publish	section_program_lead	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+74	Лечение алкогольной зависимости	publish	service_general_approach_cards_0_text	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+74	Лечение алкогольной зависимости	publish	service_general_approach_cards_1_text	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+74	Лечение алкогольной зависимости	publish	service_general_approach_cards_2_text	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+74	Лечение алкогольной зависимости	publish	service_general_approach_cards_3_text	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+74	Лечение алкогольной зависимости	publish	service_general_program_intro_items_0_text	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+74	Лечение алкогольной зависимости	publish	service_general_program_intro_items_1_text	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+74	Лечение алкогольной зависимости	publish	service_general_program_lead	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+74	Лечение алкогольной зависимости	publish	service_general_signs_editorial	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+77	Психическое здоровье	publish	section_dependencies_footer	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+77	Психическое здоровье	publish	section_dependencies_lead	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+77	Психическое здоровье	publish	section_nature_lead	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+77	Психическое здоровье	publish	section_program_lead	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+78	Депрессия	publish	service_short_description	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+79	ПТСР	publish	service_short_description	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+80	Эмоциональное выгорание	publish	service_short_description	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+81	Тревожные расстройства	publish	service_short_description	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+82	Расстройства сна	publish	service_short_description	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+83	Травма	publish	service_short_description	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+84	Расстройства пищевого поведения	publish	section_program_lead	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+84	Расстройства пищевого поведения	publish	service_category_section_lead	тест020 Мы работаем с тем, что лежит в основе: тревогой, перфекционизмом, нарушением образа тела (субъективное восприяти
+84	Расстройства пищевого поведения	publish	service_short_description	тест020 Взаимоотношения с едой — это отношения с собственным телом, с контролем, с ощущением себя. За ограничениями в ед
+85	Анорексия	publish	service_short_description	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+86	Булимия	publish	service_short_description	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+87	Компульсивное переедание	publish	service_short_description	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq

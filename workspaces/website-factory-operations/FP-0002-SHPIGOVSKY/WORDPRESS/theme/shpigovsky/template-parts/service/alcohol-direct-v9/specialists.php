@@ -45,6 +45,7 @@ $all_link_url   = shpigovsky_get_specialists_all_link_url();
         <?php endforeach; ?>
       </div>
       <div class="specialists__pagination swiper-pagination" data-specialists-pagination></div>
+      <?php get_template_part( 'template-parts/components/fp02-slider-mobile-nav' ); ?>
     </div>
   </div>
 </section>

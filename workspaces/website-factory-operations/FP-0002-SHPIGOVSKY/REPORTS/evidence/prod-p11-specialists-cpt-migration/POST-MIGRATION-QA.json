@@ -1,0 +1,147 @@
+{
+  "captured_at": "2026-08-14T17:15:57.670866+00:00",
+  "db_rows": {
+    "raw": [
+      "1030\tpage\t0\tspecyalisty\t0",
+      "1031\tspecialist\t0\tshipovsky\t10",
+      "1032\tspecialist\t0\tkazakov\t20",
+      "1033\tspecialist\t0\tkostyuk\t30",
+      "1097\tspecialist\t0\tshapiguzova\t40"
+    ]
+  },
+  "urls": {
+    "shipovsky": {
+      "path": "/specyalisty/shipovsky/",
+      "head": 200,
+      "get": 200,
+      "has_profile": true,
+      "has_fancybox_attr": false,
+      "has_generic_content_status": false,
+      "title_present": true
+    },
+    "kazakov": {
+      "path": "/specyalisty/kazakov/",
+      "head": 200,
+      "get": 200,
+      "has_profile": true,
+      "has_fancybox_attr": false,
+      "has_generic_content_status": false,
+      "title_present": true
+    },
+    "kostyuk": {
+      "path": "/specyalisty/kostyuk/",
+      "head": 200,
+      "get": 200,
+      "has_profile": true,
+      "has_fancybox_attr": true,
+      "has_generic_content_status": false,
+      "title_present": true
+    },
+    "shapiguzova": {
+      "path": "/specyalisty/shapiguzova/",
+      "head": 200,
+      "get": 200,
+      "has_profile": true,
+      "has_fancybox_attr": false,
+      "has_generic_content_status": false,
+      "title_present": true
+    },
+    "hub": {
+      "path": "/specyalisty/",
+      "head": 200,
+      "get": 200,
+      "has_profile": false,
+      "has_fancybox_attr": false,
+      "has_generic_content_status": true,
+      "title_present": true
+    }
+  },
+  "frontend": {
+    "kostyuk": {
+      "certs_grid": true,
+      "fancybox_group": true,
+      "portrait": true,
+      "role": true,
+      "no_page_template_generic_shell_conflict": true
+    }
+  },
+  "smart_search": {
+    "кос": {
+      "specialists_count": 1,
+      "specialist_ids": [
+        1033
+      ],
+      "page_ids_intersect_specialists": [],
+      "sample": [
+        {
+          "id": 1033,
+          "group": "specialists",
+          "title": "Дарья Владимировна Костюк",
+          "url": "http://shpigovsky.beget.tech/specyalisty/kostyuk/",
+          "snippet": "Психолог, EMDR терапевт, телесно-ориентированный терапевт"
+        }
+      ]
+    },
+    "каз": {
+      "specialists_count": 1,
+      "specialist_ids": [
+        1032
+      ],
+      "page_ids_intersect_specialists": [],
+      "sample": [
+        {
+          "id": 1032,
+          "group": "specialists",
+          "title": "Максим Михайлович Казаков",
+          "url": "http://shpigovsky.beget.tech/specyalisty/kazakov/",
+          "snippet": "Психолог, преподаватель психологии, гештальт-терапевт"
+        }
+      ]
+    },
+    "шпи": {
+      "specialists_count": 1,
+      "specialist_ids": [
+        1031
+      ],
+      "page_ids_intersect_specialists": [],
+      "sample": [
+        {
+          "id": 1031,
+          "group": "specialists",
+          "title": "Сергей Юрьевич Шпиговский",
+          "url": "http://shpigovsky.beget.tech/specyalisty/shipovsky/",
+          "snippet": "Аддиктолог, интервенционист"
+        }
+      ]
+    }
+  },
+  "sitemap": {
+    "index_has_specialists": true,
+    "specialists_urls": [
+      "http://shpigovsky.beget.tech/specyalisty/shipovsky/",
+      "http://shpigovsky.beget.tech/specyalisty/kazakov/",
+      "http://shpigovsky.beget.tech/specyalisty/kostyuk/",
+      "http://shpigovsky.beget.tech/specyalisty/shapiguzova/"
+    ],
+    "duplicate_check": {},
+    "specialists_in_pages_map": []
+  },
+  "hub": {
+    "http": 200,
+    "is_still_page_content": true
+  },
+  "wpilot": {
+    "ping": "{\"ok\":true,\"data\":{\"plugin\":\"metacode-wpilot\",\"status\":\"installed\",\"bridge_enabled\":true,\"write_enabled\":false,\"state\":\"token-generated\"},\"meta\":{\"request_id\":\"wpilot-adacfcb1-6806-4cda-b510-b3a228525298\",\"timestamp_utc\":\"2026-08-14 17:16:17\",\"endpoint\":\"ping\",\"auth_state\":\"not-required\",\"bridge_state_snapshot\":{\"state\":\"token-generated\",\"bridge_enabled\":true,\"dev_confirmed\":true,\"emergency_disabled\":false,\"write_enabled\":false}}}",
+    "write_enabled_false": true
+  },
+  "regression": {
+    "/": 200,
+    "/uslugi/": 200,
+    "/o-centre/": 200,
+    "/blog/": 200,
+    "/otzyvy/": 200
+  },
+  "permalinks_and_cards": "1031\\tspecialist\\thttp://shpigovsky.beget.tech/specyalisty/shipovsky/\\n1032\\tspecialist\\thttp://shpigovsky.beget.tech/specyalisty/kazakov/\\n1033\\tspecialist\\thttp://shpigovsky.beget.tech/specyalisty/kostyuk/\\n1097\\tspecialist\\thttp://shpigovsky.beget.tech/specyalisty/shapiguzova/\\ncards=4|Сергей Юрьевич Шпиговский=>http://shpigovsky.beget.tech/specyalisty/shipovsky/|Максим Михайлович Казаков=>http://shpigovsky.beget.tech/specyalisty/kazakov/|Дарья Владимировна Костюк=>http://shpigovsky.beget.tech/specyalisty/kostyuk/|Шапигузова Татьяна Андреевна=>http://shpigovsky.beget.tech/specyalisty/shapiguzova/",
+  "acf_location": "[[{\"param\":\"post_type\",\"operator\":\"==\",\"value\":\"specialist\"}]]",
+  "admin_cpt": "yes|Специалисты|22|"
+}

@@ -1,0 +1,14 @@
+{
+  "readable": false,
+  "reason": "ACL does not include shpigovsky_mars; mode 0600 owner shpigovsky",
+  "derived_from_db_select_instead": {
+    "DB_NAME": "shpigovsky_main",
+    "DB_USER": "shpigovsky_main",
+    "DB_HOST_operational": "localhost (SSH-local; wp-config unread)",
+    "table_prefix": "fp02_",
+    "DB_CHARSET": "utf8mb4",
+    "DB_COLLATE": "utf8mb4_unicode_ci",
+    "WP_DEBUG": "SAFE UNKNOWN (wp-config unread)"
+  },
+  "secrets_printed": 0
+}

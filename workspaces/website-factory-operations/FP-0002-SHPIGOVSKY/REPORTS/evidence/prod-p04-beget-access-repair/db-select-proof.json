@@ -1,0 +1,59 @@
+{
+  "select_proven": true,
+  "database": "shpigovsky_main",
+  "db_user_identity": "shpigovsky_main@localhost",
+  "prefix": "fp02_",
+  "charset": "utf8mb4",
+  "collation": "utf8mb4_unicode_ci",
+  "mysql_version": "8.4.8-8-beget-1-2",
+  "table_count": 14,
+  "core_tables_present": {
+    "options": true,
+    "posts": true,
+    "postmeta": true,
+    "users": true,
+    "usermeta": true,
+    "terms": true,
+    "term_taxonomy": true,
+    "term_relationships": true,
+    "comments": true,
+    "commentmeta": true
+  },
+  "wordpress": {
+    "home": "http://shpigovsky.beget.tech",
+    "siteurl": "http://shpigovsky.beget.tech",
+    "blogname": "Шпиговский — локальная разработка",
+    "blogdescription": "",
+    "template": "shpigovsky",
+    "stylesheet": "shpigovsky",
+    "db_version": "61833",
+    "active_plugins": [
+      "acf-extended-pro/acf-extended.php",
+      "advanced-custom-fields-pro/acf.php",
+      "classic-editor/classic-editor.php",
+      "metacode-wpilot/metacode-wpilot.php",
+      "shpigovsky-core/shpigovsky-core.php"
+    ],
+    "counts": {
+      "posts_all": 1085,
+      "posts_publish": 16,
+      "pages_publish": 25,
+      "all_publish": 857,
+      "users": 3
+    },
+    "acf_field_group_rows": 39,
+    "acf_unique_titles": 22
+  },
+  "wpilot_safe": {
+    "plugin_version_option": "0.3.0",
+    "schema_version": "0.2.0",
+    "bridge_enabled": true,
+    "write_enabled": false,
+    "emergency_disabled": false,
+    "dev_confirmed": true,
+    "token_hash": "PRESENT_REDACTED",
+    "schema_valid_option": "1"
+  },
+  "secrets_printed": 0,
+  "writes": 0
+}

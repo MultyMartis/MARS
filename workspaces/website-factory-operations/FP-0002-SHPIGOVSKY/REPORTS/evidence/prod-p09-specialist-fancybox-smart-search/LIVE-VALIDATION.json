@@ -1,0 +1,165 @@
+{
+  "captured_at": "2026-08-14T15:59:08.937389+00:00",
+  "checks": {
+    "rest": [
+      {
+        "label": "below3",
+        "q": "ab",
+        "http": 200,
+        "empty": true,
+        "counts": {
+          "services": 0,
+          "articles": 0,
+          "specialists": 0,
+          "pages": 0
+        },
+        "sample_titles": {
+          "services": [],
+          "articles": [],
+          "specialists": [],
+          "pages": []
+        },
+        "hardcoded_beget": false
+      },
+      {
+        "label": "service_fragment",
+        "q": "алк",
+        "http": 200,
+        "empty": false,
+        "counts": {
+          "services": 1,
+          "articles": 1,
+          "specialists": 0,
+          "pages": 0
+        },
+        "sample_titles": {
+          "services": [
+            "Лечение алкогольной зависимости"
+          ],
+          "articles": [
+            "Лечение алкогольной зависимости: почему сила воли здесь ни при чём"
+          ],
+          "specialists": [],
+          "pages": []
+        },
+        "hardcoded_beget": true
+      },
+      {
+        "label": "specialist_fragment",
+        "q": "Кост",
+        "http": 200,
+        "empty": false,
+        "counts": {
+          "services": 0,
+          "articles": 0,
+          "specialists": 1,
+          "pages": 0
+        },
+        "sample_titles": {
+          "services": [],
+          "articles": [],
+          "specialists": [
+            "Дарья Владимировна Костюк"
+          ],
+          "pages": []
+        },
+        "hardcoded_beget": true
+      },
+      {
+        "label": "article_or_mixed",
+        "q": "лече",
+        "http": 200,
+        "empty": false,
+        "counts": {
+          "services": 5,
+          "articles": 5,
+          "specialists": 0,
+          "pages": 1
+        },
+        "sample_titles": {
+          "services": [
+            "Лечение алкогольной зависимости",
+            "Лечение наркотической зависимости",
+            "Лечение лекарственной зависимости"
+          ],
+          "articles": [
+            "Лечение алкогольной зависимости: почему сила воли здесь ни при чём",
+            "Срывы и рецидивы: почему это не конец лечения, а сигнал к корректировке",
+            "Демо-статья для проверки пагинации — 01"
+          ],
+          "specialists": [],
+          "pages": [
+            "Программа лечения"
+          ]
+        },
+        "hardcoded_beget": true
+      },
+      {
+        "label": "page_fragment",
+        "q": "конта",
+        "http": 200,
+        "empty": false,
+        "counts": {
+          "services": 0,
+          "articles": 1,
+          "specialists": 0,
+          "pages": 1
+        },
+        "sample_titles": {
+          "services": [],
+          "articles": [
+            "Йога в терапии: снятие абстинентного синдрома и снижение кортизола"
+          ],
+          "specialists": [],
+          "pages": [
+            "Контакты"
+          ]
+        },
+        "hardcoded_beget": true
+      },
+      {
+        "label": "nonsense",
+        "q": "zzzqqqxyz",
+        "http": 200,
+        "empty": true,
+        "counts": {
+          "services": 0,
+          "articles": 0,
+          "specialists": 0,
+          "pages": 0
+        },
+        "sample_titles": {
+          "services": [],
+          "articles": [],
+          "specialists": [],
+          "pages": []
+        },
+        "hardcoded_beget": false
+      }
+    ],
+    "kostyuk": {
+      "http": 200,
+      "data_fancybox_specialist": true,
+      "certs_grid": true,
+      "fancybox_js": true,
+      "v9_shell": true,
+      "bind_marker_in_shell": true,
+      "shell_url": "http://shpigovsky.beget.tech/wp-content/themes/shpigovsky/assets/js/v9-shell.js?ver=1786723122",
+      "shell_http": 200,
+      "smart_search_in_shell": true
+    },
+    "home": {
+      "http": 200,
+      "smart_search_localize": true,
+      "smart_search_endpoint": true,
+      "suggest_container": true,
+      "search_panel": true
+    },
+    "existing_fancybox_binds": {
+      "comfort": true,
+      "o_centre": true,
+      "home_videos": true,
+      "specialist": true
+    }
+  }
+}

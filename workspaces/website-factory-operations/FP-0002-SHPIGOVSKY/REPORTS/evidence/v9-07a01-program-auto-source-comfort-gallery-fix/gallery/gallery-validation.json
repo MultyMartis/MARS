@@ -1,0 +1,65 @@
+[
+  {
+    "route": "uslugi",
+    "url": "http://shpigovsky.test/uslugi/",
+    "fancyboxLoaded": true,
+    "clickable": 6,
+    "decorInGallery": 0,
+    "decorOutside": 1,
+    "openOk": true,
+    "navOk": true,
+    "closeOk": false,
+    "escapeOk": false,
+    "mobileOpen": true,
+    "overflow": false,
+    "consoleErrors": []
+  },
+  {
+    "route": "zavisimosti",
+    "url": "http://shpigovsky.test/uslugi/zavisimosti/",
+    "fancyboxLoaded": true,
+    "clickable": 6,
+    "decorInGallery": 0,
+    "decorOutside": 1,
+    "openOk": true,
+    "navOk": true,
+    "closeOk": false,
+    "escapeOk": false,
+    "mobileOpen": true,
+    "overflow": false,
+    "consoleErrors": []
+  },
+  {
+    "route": "home",
+    "url": "http://shpigovsky.test/",
+    "fancyboxLoaded": true,
+    "clickable": 6,
+    "decorInGallery": 0,
+    "decorOutside": 1,
+    "openOk": true,
+    "navOk": true,
+    "closeOk": false,
+    "escapeOk": false,
+    "mobileOpen": true,
+    "overflow": false,
+    "consoleErrors": []
+  },
+  {
+    "route": "alcohol",
+    "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoj-zavisimosti/",
+    "fancyboxLoaded": false,
+    "clickable": 0,
+    "decorInGallery": 0,
+    "decorOutside": 0,
+    "openOk": false,
+    "navOk": false,
+    "closeOk": false,
+    "escapeOk": false,
+    "mobileOpen": false,
+    "overflow": false,
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ]
+  }
+]

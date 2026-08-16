@@ -1,0 +1,108 @@
+{
+  "started_utc": "2026-08-14T08:44:24.103616+00:00",
+  "secrets_meta": {
+    "wordpress_password_line": {
+      "line": 99,
+      "raw_value_len": 23,
+      "stripped_len": 22,
+      "leading_ws": 1,
+      "trailing_ws_before_eol": 0,
+      "wrapped_in_backticks": false,
+      "contains_space": false,
+      "non_ascii": false,
+      "looks_placeholder": false
+    },
+    "parse_notes": [],
+    "username": "mars",
+    "password_present": true,
+    "password_len": 22,
+    "fu02_password_len_was": 22
+  },
+  "login_variants": [
+    {
+      "variant": "beget_domain_warm",
+      "auth": "FAIL",
+      "get_status": 200,
+      "get_hints": {
+        "title": "Log In &lsaquo; Шпиговский — локальная разработка &#8212; WordPress",
+        "len": 7171,
+        "has_log_field": true,
+        "has_pwd_field": true,
+        "has_login_form": true,
+        "has_login_error": false,
+        "login_error_safe": null,
+        "has_beget_challenge": false,
+        "has_incorrect": false,
+        "has_dashboard": false,
+        "cookie_names_not_included": true
+      },
+      "post_status": 200,
+      "post_url_class": "wp-login",
+      "post_hints": {
+        "title": "Log In &lsaquo; Шпиговский — локальная разработка &#8212; WordPress",
+        "len": 7171,
+        "has_log_field": true,
+        "has_pwd_field": true,
+        "has_login_form": true,
+        "has_login_error": false,
+        "login_error_safe": null,
+        "has_beget_challenge": false,
+        "has_incorrect": false,
+        "has_dashboard": false,
+        "cookie_names_not_included": true
+      },
+      "cookie_count": 2,
+      "has_logged_in_cookie": false
+    },
+    {
+      "variant": "beget_no_domain",
+      "auth": "FAIL",
+      "get_status": 200,
+      "get_hints": {
+        "title": "Log In &lsaquo; Шпиговский — локальная разработка &#8212; WordPress",
+        "len": 7171,
+        "has_log_field": true,
+        "has_pwd_field": true,
+        "has_login_form": true,
+        "has_login_error": false,
+        "login_error_safe": null,
+        "has_beget_challenge": false,
+        "has_incorrect": false,
+        "has_dashboard": false,
+        "cookie_names_not_included": true
+      },
+      "post_status": 200,
+      "post_url_class": "wp-login",
+      "post_hints": {
+        "title": "Log In &lsaquo; Шпиговский — локальная разработка &#8212; WordPress",
+        "len": 7171,
+        "has_log_field": true,
+        "has_pwd_field": true,
+        "has_login_form": true,
+        "has_login_error": false,
+        "login_error_safe": null,
+        "has_beget_challenge": false,
+        "has_incorrect": false,
+        "has_dashboard": false,
+        "cookie_names_not_included": true
+      },
+      "cookie_count": 2,
+      "has_logged_in_cookie": false
+    }
+  ],
+  "password_vs_db": {
+    "attempted": true,
+    "user": "mars",
+    "id": 3,
+    "registered": "2026-08-14 08:00:13",
+    "hash_prefix": "$wp$",
+    "hash_len": 63,
+    "password_matches_db_hash": false,
+    "password_check_detail": "MISMATCH",
+    "hash_value_printed": false,
+    "capabilities_contains_administrator": true
+  },
+  "any_http_pass": false,
+  "mutations": 0,
+  "secrets_printed": false
+}

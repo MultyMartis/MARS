@@ -1,0 +1,530 @@
+{
+  "utc": "2026-08-16T15:41:09+00:00",
+  "home": "http://shpigovsky.beget.tech/",
+  "siteurl": "http://shpigovsky.beget.tech/",
+  "wp_version": "7.0.4",
+  "stylesheet": "shpigovsky",
+  "environment_type": "local",
+  "wp_environment_constant": "local",
+  "blog_public": "0",
+  "users": [
+    {
+      "ID": 2,
+      "login": "admin",
+      "email": "admin@localhost.test",
+      "display_name": "admin",
+      "roles": [
+        "administrator"
+      ],
+      "post_counts": {
+        "post": 2,
+        "page": 10,
+        "service": 31,
+        "specialist": 8,
+        "attachment": 43
+      }
+    },
+    {
+      "ID": 3,
+      "login": "mars",
+      "email": "support@polygon-ws.ru",
+      "display_name": "MARS MetaCODE",
+      "roles": [
+        "administrator"
+      ],
+      "post_counts": {
+        "post": 0,
+        "page": 0,
+        "service": 0,
+        "specialist": 0,
+        "attachment": 0
+      }
+    },
+    {
+      "ID": 1,
+      "login": "mli_admin_fp0002",
+      "email": "mli-fp0002@localhost.test",
+      "display_name": "mli_admin_fp0002",
+      "roles": [
+        "administrator"
+      ],
+      "post_counts": {
+        "post": 10,
+        "page": 1,
+        "service": 0,
+        "specialist": 0,
+        "attachment": 0
+      }
+    }
+  ],
+  "metacode_exists": false,
+  "mli_admin": {
+    "ID": 1,
+    "login": "mli_admin_fp0002",
+    "email": "mli-fp0002@localhost.test",
+    "display_name": "mli_admin_fp0002",
+    "roles": [
+      "administrator"
+    ],
+    "post_counts": {
+      "post": 10,
+      "page": 1,
+      "service": 0,
+      "specialist": 0,
+      "attachment": 0
+    }
+  },
+  "admin_user": {
+    "ID": 2,
+    "login": "admin",
+    "email": "admin@localhost.test",
+    "display_name": "admin",
+    "roles": [
+      "administrator"
+    ],
+    "post_counts": {
+      "post": 2,
+      "page": 10,
+      "service": 31,
+      "specialist": 8,
+      "attachment": 43
+    }
+  },
+  "social_links": [
+    {
+      "label": "Telegram",
+      "url": "https://t.me/Spigovsky_house"
+    },
+    {
+      "label": "What's up",
+      "url": "https://wa.me/89251836464"
+    }
+  ],
+  "social_platforms": null,
+  "activity_log": {
+    "table": "fp02_user_activity_log",
+    "count": 45,
+    "user0_count": 7,
+    "sample": [
+      {
+        "id": "45",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1988",
+        "object_type": "specialist",
+        "object_title": "Филиппова Мария Михайловна",
+        "created_at": "2026-08-16 17:55:04"
+      },
+      {
+        "id": "44",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1988",
+        "object_type": "specialist",
+        "object_title": "Филиппова Мария Михайловна",
+        "created_at": "2026-08-16 17:47:37"
+      },
+      {
+        "id": "43",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1988",
+        "object_type": "specialist",
+        "object_title": "Филиппова Мария Михайловна",
+        "created_at": "2026-08-16 17:46:23"
+      },
+      {
+        "id": "42",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1967",
+        "object_type": "specialist",
+        "object_title": "Ханикова Светлана Николаевна",
+        "created_at": "2026-08-16 17:39:16"
+      },
+      {
+        "id": "41",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1967",
+        "object_type": "specialist",
+        "object_title": "Ханикова Светлана Николаевна",
+        "created_at": "2026-08-16 17:34:19"
+      },
+      {
+        "id": "40",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1967",
+        "object_type": "specialist",
+        "object_title": "Ханикова Светлана Николаевна",
+        "created_at": "2026-08-16 17:33:50"
+      },
+      {
+        "id": "39",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1967",
+        "object_type": "specialist",
+        "object_title": "Ханикова Светлана Николаевна",
+        "created_at": "2026-08-16 17:32:41"
+      },
+      {
+        "id": "38",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1957",
+        "object_type": "specialist",
+        "object_title": "Поверинов Александр Константинович",
+        "created_at": "2026-08-16 17:25:29"
+      },
+      {
+        "id": "37",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1957",
+        "object_type": "specialist",
+        "object_title": "Поверинов Александр Константинович",
+        "created_at": "2026-08-16 17:25:04"
+      },
+      {
+        "id": "36",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1949",
+        "object_type": "specialist",
+        "object_title": "Литвинов Кирилл Алексеевич",
+        "created_at": "2026-08-16 17:23:34"
+      },
+      {
+        "id": "35",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1032",
+        "object_type": "specialist",
+        "object_title": "Максим Михайлович Казаков",
+        "created_at": "2026-08-16 17:19:06"
+      },
+      {
+        "id": "34",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1032",
+        "object_type": "specialist",
+        "object_title": "Максим Михайлович Казаков",
+        "created_at": "2026-08-16 17:09:33"
+      },
+      {
+        "id": "33",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1032",
+        "object_type": "specialist",
+        "object_title": "Максим Михайлович Казаков",
+        "created_at": "2026-08-16 17:08:29"
+      },
+      {
+        "id": "32",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1963",
+        "object_type": "specialist",
+        "object_title": "Филиппов Илья Владимирович",
+        "created_at": "2026-08-16 17:06:18"
+      },
+      {
+        "id": "31",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1957",
+        "object_type": "specialist",
+        "object_title": "Поверинов Александр Константинович",
+        "created_at": "2026-08-16 16:58:51"
+      }
+    ],
+    "qa_like": [
+      {
+        "id": "1",
+        "user_id": "0",
+        "action": "created",
+        "object_id": "1927",
+        "object_type": "service",
+        "object_title": "FP02 P12 QA Slug 20260816114828",
+        "created_at": "2026-08-16 14:48:28"
+      },
+      {
+        "id": "2",
+        "user_id": "0",
+        "action": "created",
+        "object_id": "1928",
+        "object_type": "service",
+        "object_title": "FP02 P12 QA Slug 20260816114828",
+        "created_at": "2026-08-16 14:48:28"
+      },
+      {
+        "id": "3",
+        "user_id": "0",
+        "action": "updated",
+        "object_id": "1927",
+        "object_type": "service",
+        "object_title": "FP02 P12 QA Slug 20260816114828",
+        "created_at": "2026-08-16 14:48:28"
+      },
+      {
+        "id": "4",
+        "user_id": "0",
+        "action": "created",
+        "object_id": "1931",
+        "object_type": "service",
+        "object_title": "FP02 P12 Collision QA",
+        "created_at": "2026-08-16 14:48:57"
+      },
+      {
+        "id": "5",
+        "user_id": "0",
+        "action": "created",
+        "object_id": "1932",
+        "object_type": "service",
+        "object_title": "FP02 P12 Collision QA",
+        "created_at": "2026-08-16 14:48:57"
+      },
+      {
+        "id": "6",
+        "user_id": "0",
+        "action": "created",
+        "object_id": "1933",
+        "object_type": "service",
+        "object_title": "FP02 P12 Collision QA",
+        "created_at": "2026-08-16 14:49:36"
+      },
+      {
+        "id": "7",
+        "user_id": "0",
+        "action": "created",
+        "object_id": "1934",
+        "object_type": "service",
+        "object_title": "FP02 P12 Collision QA",
+        "created_at": "2026-08-16 14:49:36"
+      }
+    ]
+  },
+  "plugins": [
+    "acf-extended-pro/acf-extended.php",
+    "advanced-custom-fields-pro/acf.php",
+    "classic-editor/classic-editor.php",
+    "metacode-wpilot/metacode-wpilot.php",
+    "shpigovsky-core/shpigovsky-core.php"
+  ],
+  "mu_plugins": [
+    "mars-local-runtime.php"
+  ],
+  "admin_menu_top": [
+    {
+      "title": "Журнал действий",
+      "slug": "fp02-activity-log"
+    },
+    {
+      "title": "MetaCODE WPilot",
+      "slug": "metacode-wpilot"
+    }
+  ],
+  "admin_menu_options_hits": [],
+  "cpts": [
+    {
+      "name": "post",
+      "public": true,
+      "publicly_queryable": true,
+      "has_archive": false,
+      "rewrite": false,
+      "supports": {
+        "title": true,
+        "editor": [
+          {
+            "notes": true
+          }
+        ],
+        "author": true,
+        "thumbnail": true,
+        "excerpt": true,
+        "trackbacks": true,
+        "custom-fields": true,
+        "comments": true,
+        "revisions": true,
+        "post-formats": true,
+        "autosave": true
+      }
+    },
+    {
+      "name": "page",
+      "public": true,
+      "publicly_queryable": false,
+      "has_archive": false,
+      "rewrite": false,
+      "supports": {
+        "title": true,
+        "editor": [
+          {
+            "notes": true
+          }
+        ],
+        "author": true,
+        "thumbnail": true,
+        "page-attributes": true,
+        "custom-fields": true,
+        "comments": true,
+        "revisions": true,
+        "autosave": true
+      }
+    },
+    {
+      "name": "acf-taxonomy",
+      "public": false,
+      "publicly_queryable": false,
+      "has_archive": false,
+      "rewrite": false,
+      "supports": []
+    },
+    {
+      "name": "acf-post-type",
+      "public": false,
+      "publicly_queryable": false,
+      "has_archive": false,
+      "rewrite": false,
+      "supports": []
+    },
+    {
+      "name": "acf-ui-options-page",
+      "public": false,
+      "publicly_queryable": false,
+      "has_archive": false,
+      "rewrite": false,
+      "supports": []
+    },
+    {
+      "name": "acf-field-group",
+      "public": false,
+      "publicly_queryable": false,
+      "has_archive": false,
+      "rewrite": false,
+      "supports": []
+    },
+    {
+      "name": "acf-field",
+      "public": false,
+      "publicly_queryable": false,
+      "has_archive": false,
+      "rewrite": false,
+      "supports": {
+        "title": true
+      }
+    },
+    {
+      "name": "service",
+      "public": true,
+      "publicly_queryable": true,
+      "has_archive": false,
+      "rewrite": {
+        "slug": "uslugi",
+        "with_front": false,
+        "hierarchical": true,
+        "pages": true,
+        "feeds": false,
+        "ep_mask": 1
+      },
+      "supports": {
+        "title": true,
+        "editor": true,
+        "excerpt": true,
+        "thumbnail": true,
+        "page-attributes": true,
+        "revisions": true,
+        "autosave": true
+      }
+    },
+    {
+      "name": "specialist",
+      "public": true,
+      "publicly_queryable": true,
+      "has_archive": false,
+      "rewrite": {
+        "slug": "specyalisty",
+        "with_front": false,
+        "pages": true,
+        "feeds": false,
+        "ep_mask": 1
+      },
+      "supports": {
+        "title": true,
+        "thumbnail": true,
+        "page-attributes": true
+      }
+    },
+    {
+      "name": "acfe-dbt",
+      "public": false,
+      "publicly_queryable": false,
+      "has_archive": false,
+      "rewrite": false,
+      "supports": {
+        "title": true
+      }
+    },
+    {
+      "name": "acfe-form",
+      "public": false,
+      "publicly_queryable": false,
+      "has_archive": false,
+      "rewrite": false,
+      "supports": {
+        "title": true
+      }
+    },
+    {
+      "name": "acfe-dpt",
+      "public": false,
+      "publicly_queryable": false,
+      "has_archive": false,
+      "rewrite": false,
+      "supports": {
+        "title": true
+      }
+    },
+    {
+      "name": "acfe-dt",
+      "public": false,
+      "publicly_queryable": false,
+      "has_archive": false,
+      "rewrite": false,
+      "supports": {
+        "title": true
+      }
+    },
+    {
+      "name": "acfe-dop",
+      "public": false,
+      "publicly_queryable": false,
+      "has_archive": false,
+      "rewrite": false,
+      "supports": {
+        "title": true
+      }
+    },
+    {
+      "name": "acfe-template",
+      "public": false,
+      "publicly_queryable": false,
+      "has_archive": false,
+      "rewrite": false,
+      "supports": {
+        "title": true
+      }
+    }
+  ],
+  "wpilot": {
+    "active": true,
+    "write_enabled_option": false
+  },
+  "seo_yoast": false,
+  "seo_rankmath": false,
+  "acfe_plugin": "acf-extended-pro/acf-extended.php"
+}

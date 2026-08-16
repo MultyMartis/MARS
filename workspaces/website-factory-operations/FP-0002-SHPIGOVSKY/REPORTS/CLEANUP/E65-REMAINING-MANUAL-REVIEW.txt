@@ -1,0 +1,20 @@
+# E65 Remaining Manual Review
+
+## Pre-E54 backup directories (bulk)
+Approximately 116 directories under X:\MARS-Localhost\backups\wordpress\projects\shpigovsky\
+See E65-PRE-E54-BACKUP-DISPOSITION.csv for disposition=MANUAL_REVIEW_REMAINS.
+
+Not mass-deleted in E65: conservatism — naming alone is not supersession proof; DB hashes differ across near-duplicate fw07c2b series.
+
+## Storage exports retained
+X:\AI MARS STORAGE\exports\fp-0002-shpigovsky-preview
+X:\AI MARS STORAGE\exports\fp-0002-shpigovsky-home-freeze
+
+## Local Git branches retaining E29C–E37 objects (optional future prune)
+refs/heads/fp0002/v9-06e29c-e35-fix01-persistence-20260713-032549 @ f77ee7eb
+refs/heads/fp0002/v9-06e36-e37-mobile-polish-persistence-20260713-042025 @ e93a4ca3
+(History also in Storage historical pack bundle; do not delete branches without separate charter.)
+
+## Runtime copy of video .bak (out of E65 source allowlist)
+If still present under runtime theme/uploads, may be cleaned in a future exact-path charter:
+X:\MARS-Localhost\sites\wordpress\projects\shpigovsky\wp-content\themes\shpigovsky\assets\video\sergey-shpigovsky-interview.mp4.BROKEN-MPEGTS.bak

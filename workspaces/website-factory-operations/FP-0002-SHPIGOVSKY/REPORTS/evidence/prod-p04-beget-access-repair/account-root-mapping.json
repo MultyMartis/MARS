@@ -1,0 +1,15 @@
+{
+  "date": "2026-08-13",
+  "temporary_http_host": "http://shpigovsky.beget.tech/",
+  "canonical_domain": "shpigovsky.ru",
+  "dns_cutover": "DEFERRED",
+  "classification": "WEB_VHOST_ALIAS_TO_SHPIGOVSKY_RU_SITE__SEPARATE_PLACEHOLDER_FILESYSTEM_FOR_BEGET_TECH",
+  "mapping_result": {
+    "shpigovsky.beget.tech_http": "SERVES_WORDPRESS (home/siteurl match; public WP proven P01/P03/P04 DB)",
+    "shpigovsky.beget.tech_filesystem": "SEPARATE_EMPTY_PLACEHOLDER (index.php + cgi-bin only)",
+    "shpigovsky.ru_filesystem": "REAL_WORDPRESS_DOCROOT /home/s/shpigovsky/shpigovsky.ru/public_html",
+    "ftp_user_shpigovsky_mars": "BOUND_TO_WRONG_SITE_RESOURCE (placeholder)",
+    "existing_site_ftp_acl_user": "shpigovsky__shpigovsky3ru__6s (name only; password unknown)",
+    "not": "NOT a filesystem mirror of beget.tech folder onto shpigovsky.ru"
+  }
+}

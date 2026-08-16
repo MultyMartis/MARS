@@ -1,0 +1,113 @@
+{
+  "captured_at": "2026-08-14T15:58:41.431695+00:00",
+  "files": [
+    {
+      "kind": "theme",
+      "rel": "assets/js/v9-shell.js",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/assets/js/v9-shell.js",
+      "local": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\assets\\js\\v9-shell.js",
+      "rollback_path": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p09-layer-b-pre\\theme__assets__js__v9-shell.js.prod-before",
+      "exists_on_prod_before": true,
+      "rollback_readable": true,
+      "captured_at": "2026-08-14T15:58:39.272567+00:00",
+      "verdict": "SAFE_P09_LOCAL_NEWER",
+      "local_sha256": "bf6b2cb1bf2e1d23e0380986fe0ae0f8358c8439ed548a53287155d60a2b9d42",
+      "prod_before_sha256": "36a475cddba1dd7546e8ec56a94c77c21add27e24b6d4888ef1ed762a02c0b50",
+      "git_head_sha256": "55580ca988e89eb9f456f4103fe78abaf1c752d43c87f7e927452670fc00c95d",
+      "p08_after_sha256": "36a475cddba1dd7546e8ec56a94c77c21add27e24b6d4888ef1ed762a02c0b50",
+      "detail": [
+        "production matches P08 prod-after; local is P09 delta"
+      ]
+    },
+    {
+      "kind": "theme",
+      "rel": "assets/css/fp02-search.css",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/assets/css/fp02-search.css",
+      "local": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\assets\\css\\fp02-search.css",
+      "rollback_path": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p09-layer-b-pre\\theme__assets__css__fp02-search.css.prod-before",
+      "exists_on_prod_before": true,
+      "rollback_readable": true,
+      "captured_at": "2026-08-14T15:58:39.715650+00:00",
+      "verdict": "SAFE_P09_LOCAL_NEWER",
+      "local_sha256": "4dee70a8b5bc00f5d69b19a5347bb1fc755295dd2807d77d72bff262f975fab3",
+      "prod_before_sha256": "8dd6e89f3b7373623cd3bb8718e9de0bf883a24b892ab5e6d767b7d244c01f94",
+      "git_head_sha256": null,
+      "p08_after_sha256": null,
+      "detail": [
+        "untracked file; production prefix retained in local"
+      ]
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/search-helpers.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/search-helpers.php",
+      "local": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\inc\\search-helpers.php",
+      "rollback_path": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p09-layer-b-pre\\theme__inc__search-helpers.php.prod-before",
+      "exists_on_prod_before": true,
+      "rollback_readable": true,
+      "captured_at": "2026-08-14T15:58:40.150747+00:00",
+      "verdict": "SAFE_P09_LOCAL_NEWER",
+      "local_sha256": "b5e8ce1bbca35a466e6a500d12543eef9aba4e714250a6fd040ff7e08525b069",
+      "prod_before_sha256": "4ca49021dab0ae68033e41924222321a458c848104941ebc4226e88465049839",
+      "git_head_sha256": null,
+      "p08_after_sha256": null,
+      "detail": [
+        "untracked file; production prefix retained in local"
+      ]
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/assets.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/assets.php",
+      "local": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\inc\\assets.php",
+      "rollback_path": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p09-layer-b-pre\\theme__inc__assets.php.prod-before",
+      "exists_on_prod_before": true,
+      "rollback_readable": true,
+      "captured_at": "2026-08-14T15:58:40.572324+00:00",
+      "verdict": "SAFE_P09_LOCAL_NEWER",
+      "local_sha256": "068659057854e6bbb1e6c8b9ced8cec40d428b8b181c097fa7b242584b3a788c",
+      "prod_before_sha256": "d42794bb7693e5e60e1ffac48dd2d386e835b9d3ac3d00c6e5cadb3be5396bba",
+      "git_head_sha256": "c0536bd1e4c480620879534c72ca8200bae2c8872b9536551b1b2320d4d1429e",
+      "p08_after_sha256": "d42794bb7693e5e60e1ffac48dd2d386e835b9d3ac3d00c6e5cadb3be5396bba",
+      "detail": [
+        "production matches P08 prod-after; local is P09 delta"
+      ]
+    },
+    {
+      "kind": "theme",
+      "rel": "searchform.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/searchform.php",
+      "local": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\searchform.php",
+      "rollback_path": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p09-layer-b-pre\\theme__searchform.php.prod-before",
+      "exists_on_prod_before": true,
+      "rollback_readable": true,
+      "captured_at": "2026-08-14T15:58:41.003436+00:00",
+      "verdict": "SAFE_P09_LOCAL_NEWER",
+      "local_sha256": "77760e321b0db9c4850b4c2aa6d3aa4f1e4acb4e40eb8268ef62771521ea6dcb",
+      "prod_before_sha256": "863775f60823f9bf8ca768281d4655d22f7146f305b3993fccdfbf2cd2dc56c1",
+      "git_head_sha256": null,
+      "p08_after_sha256": null,
+      "detail": [
+        "untracked file; production prefix retained in local"
+      ]
+    },
+    {
+      "kind": "theme",
+      "rel": "template-parts/navigation/search-panel.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/navigation/search-panel.php",
+      "local": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\navigation\\search-panel.php",
+      "rollback_path": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p09-layer-b-pre\\theme__template-parts__navigation__search-panel.php.prod-before",
+      "exists_on_prod_before": true,
+      "rollback_readable": true,
+      "captured_at": "2026-08-14T15:58:41.431671+00:00",
+      "verdict": "SAFE_P09_LOCAL_NEWER",
+      "local_sha256": "8023391c34a0d5a4124c74ab3cda8a8b02cf388bcede8642ed15585d2700012d",
+      "prod_before_sha256": "8eca951e7a0a634bc624394bafd62ec9ff8855b143df39841f57e14518a6f19c",
+      "git_head_sha256": null,
+      "p08_after_sha256": null,
+      "detail": [
+        "untracked file; production prefix retained in local"
+      ]
+    }
+  ]
+}

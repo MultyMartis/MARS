@@ -1,0 +1,731 @@
+{
+    "key": "group_fp02_site_options_seo_integrations",
+    "title": "SEO и интеграции",
+    "fields": [
+        {
+            "key": "field_fp02_seo_tab_sitemap",
+            "label": "Sitemap",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_fp02_sitemap_intro",
+            "label": "Sitemap",
+            "name": "sitemap_intro",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Карта сайта для Google и Яндекс. Генерация не включает сайт в поиск автоматически — индексация на временном домене может оставаться закрытой.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_sitemap_enabled",
+            "label": "Включить карту сайта",
+            "name": "sitemap_enabled",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Да — публиковать XML-карту по адресу WordPress. Нет — отключить генерацию.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Да",
+            "ui_off_text": "Нет"
+        },
+        {
+            "key": "field_fp02_sitemap_include_pages",
+            "label": "Включать страницы",
+            "name": "sitemap_include_pages",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Да",
+            "ui_off_text": "Нет"
+        },
+        {
+            "key": "field_fp02_sitemap_include_services",
+            "label": "Включать услуги",
+            "name": "sitemap_include_services",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Да",
+            "ui_off_text": "Нет"
+        },
+        {
+            "key": "field_fp02_sitemap_include_articles",
+            "label": "Включать статьи",
+            "name": "sitemap_include_articles",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Да",
+            "ui_off_text": "Нет"
+        },
+        {
+            "key": "field_fp02_sitemap_include_specialists",
+            "label": "Включать специалистов",
+            "name": "sitemap_include_specialists",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Дочерние страницы раздела «Специалисты».",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Да",
+            "ui_off_text": "Нет"
+        },
+        {
+            "key": "field_fp02_sitemap_exclude_objects",
+            "label": "Исключить из карты сайта",
+            "name": "sitemap_exclude_objects",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "Точные объекты, которые не должны попадать в XML-карту.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page",
+                "post",
+                "service"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "post_type"
+            ],
+            "return_format": "id",
+            "min": 0,
+            "max": 50,
+            "elements": ""
+        },
+        {
+            "key": "field_fp02_sitemap_urls_help",
+            "label": "Адреса карты сайта",
+            "name": "sitemap_urls_help",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Адреса появятся после сохранения настроек и при включённой карте сайта.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_yandex_webmaster_sitemap_help",
+            "label": "Яндекс Вебмастер",
+            "name": "yandex_webmaster_sitemap_help",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Для обычных страниц, разделов и услуг Яндекс принимает стандартный XML Sitemap.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_seo_tab_smart_search",
+            "label": "Умный поиск",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_fp02_smart_search_intro",
+            "label": "Умный поиск",
+            "name": "smart_search_intro",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Настройки подсказок в шапке (компьютер и телефон). Полная страница поиска по кнопке «Найти» сохраняется.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_smart_search_enable_services",
+            "label": "Искать в услугах",
+            "name": "smart_search_enable_services",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Да",
+            "ui_off_text": "Нет"
+        },
+        {
+            "key": "field_fp02_smart_search_enable_articles",
+            "label": "Искать в статьях",
+            "name": "smart_search_enable_articles",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Да",
+            "ui_off_text": "Нет"
+        },
+        {
+            "key": "field_fp02_smart_search_enable_specialists",
+            "label": "Искать в специалистах",
+            "name": "smart_search_enable_specialists",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Да",
+            "ui_off_text": "Нет"
+        },
+        {
+            "key": "field_fp02_smart_search_enable_pages",
+            "label": "Искать в страницах",
+            "name": "smart_search_enable_pages",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Да",
+            "ui_off_text": "Нет"
+        },
+        {
+            "key": "field_fp02_smart_search_min_chars",
+            "label": "Минимум символов для подсказок",
+            "name": "smart_search_min_chars",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Подсказки появляются после ввода указанного числа символов. По умолчанию 3.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 3,
+            "min": 2,
+            "max": 10,
+            "step": 1,
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_smart_search_per_group",
+            "label": "Результатов в каждой группе",
+            "name": "smart_search_per_group",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Сколько ссылок показывать в каждой группе. По умолчанию 5.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 5,
+            "min": 1,
+            "max": 20,
+            "step": 1,
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_smart_search_order_services",
+            "label": "Порядок: Услуги",
+            "name": "smart_search_order_services",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "min": 1,
+            "max": 20,
+            "step": 1,
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_smart_search_order_articles",
+            "label": "Порядок: Статьи",
+            "name": "smart_search_order_articles",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 2,
+            "min": 1,
+            "max": 20,
+            "step": 1,
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_smart_search_order_specialists",
+            "label": "Порядок: Специалисты",
+            "name": "smart_search_order_specialists",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 3,
+            "min": 1,
+            "max": 20,
+            "step": 1,
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_smart_search_order_pages",
+            "label": "Порядок: Страницы",
+            "name": "smart_search_order_pages",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 4,
+            "min": 1,
+            "max": 20,
+            "step": 1,
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_smart_search_match_intro",
+            "label": "Где искать",
+            "name": "smart_search_match_intro",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Заголовок всегда учитывается. Дополнительно можно включить краткое описание и текст страницы.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_smart_search_match_excerpt",
+            "label": "Искать в кратком описании",
+            "name": "smart_search_match_excerpt",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Да",
+            "ui_off_text": "Нет"
+        },
+        {
+            "key": "field_fp02_smart_search_match_body",
+            "label": "Искать в тексте страницы",
+            "name": "smart_search_match_body",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Да",
+            "ui_off_text": "Нет"
+        },
+        {
+            "key": "field_fp02_smart_search_exclude_objects",
+            "label": "Исключить из умного поиска",
+            "name": "smart_search_exclude_objects",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "Эти материалы не появятся в подсказках.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page",
+                "post",
+                "service"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "post_type"
+            ],
+            "return_format": "id",
+            "min": 0,
+            "max": 50,
+            "elements": ""
+        },
+        {
+            "key": "field_fp02_seo_tab_analytics",
+            "label": "Аналитика и верификация",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_fp02_analytics_intro",
+            "label": "Аналитика и верификация",
+            "name": "analytics_intro",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Пустые поля ничего не выводят на сайт. Не вставляйте пароли и секретные ключи — только публичные счётчики и коды подтверждения.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_yandex_metrica_counter_id",
+            "label": "Яндекс.Метрика — номер счётчика",
+            "name": "yandex_metrica_counter_id",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Только цифры номера счётчика. Сайт сам добавит стандартный код Метрики.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "12345678"
+        },
+        {
+            "key": "field_fp02_yandex_webmaster_verification",
+            "label": "Яндекс Вебмастер — код подтверждения",
+            "name": "yandex_webmaster_verification",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Только содержимое meta-кода подтверждения (без тега). Пусто — тег не выводится.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_google_site_verification",
+            "label": "Google Search Console — код подтверждения",
+            "name": "google_site_verification",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Только содержимое meta-кода подтверждения (без тега). Пусто — тег не выводится.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_google_analytics_measurement_id",
+            "label": "Google Analytics — Measurement ID",
+            "name": "google_analytics_measurement_id",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Формат G-XXXXXXXX. Не заполняйте, если используете только Google Tag Manager.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "G-XXXXXXXX"
+        },
+        {
+            "key": "field_fp02_google_tag_manager_id",
+            "label": "Google Tag Manager — Container ID",
+            "name": "google_tag_manager_id",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Формат GTM-XXXXXXX. Не включайте одновременно GA Measurement ID и GTM с тем же счётчиком, чтобы не считать дважды.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "GTM-XXXXXXX"
+        },
+        {
+            "key": "field_fp02_advanced_code_warning",
+            "label": "Расширенные настройки",
+            "name": "advanced_code_warning",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "<strong>Внимание:</strong> неверный код может сломать сайт. Используйте только при необходимости. Доступно администраторам.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_custom_head_code",
+            "label": "Код в <head>",
+            "name": "custom_head_code",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Произвольный HTML/скрипт перед закрытием head. Пусто — ничего не выводится.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 6,
+            "new_lines": ""
+        },
+        {
+            "key": "field_fp02_custom_body_open_code",
+            "label": "Код после открытия <body>",
+            "name": "custom_body_open_code",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Например, noscript Google Tag Manager.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
+            "key": "field_fp02_custom_footer_code",
+            "label": "Код перед закрытием <body>",
+            "name": "custom_footer_code",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Дополнительные скрипты в подвале.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 6,
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "fp02-site-settings-seo-integrations"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "FP-0002 PROD-P10 SEO / Smart Search / analytics settings.",
+    "show_in_rest": 0,
+    "modified": 1786752000
+}

@@ -1,0 +1,17 @@
+{
+  "status": "BLOCKED",
+  "reason": "WordPress filesystem not readable by current account",
+  "public_http_sample_from_p03": {
+    "match": 5,
+    "divergent": 0
+  },
+  "counts": {
+    "MATCH": "SAFE UNKNOWN (full tree unread)",
+    "KNOWN_INTENTIONAL_SOURCE_ONLY": "not re-verified on disk; 8 groups documented in ACF-SOURCE-RUNTIME-DISPOSITION",
+    "PRODUCTION_ONLY": "SAFE UNKNOWN",
+    "LOCAL_ONLY": "SAFE UNKNOWN",
+    "DIVERGENT": "SAFE UNKNOWN",
+    "UNKNOWN": "full SHA inventory"
+  },
+  "sync_performed": false
+}

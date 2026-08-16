@@ -1,0 +1,180 @@
+{
+  "created_at": "2026-08-14T15:08:23.464720+00:00",
+  "routes": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 219546,
+      "php_warning": false,
+      "has_mobile_nav_css": true,
+      "has_fp02_slider_nav": true,
+      "has_hero_slider": true,
+      "specialist_structured": false,
+      "generic_specialist_old": false,
+      "literal_nbsp_entity": true,
+      "literal_amp_nbsp_visible_risk": false
+    },
+    {
+      "path": "/uslugi/",
+      "status": 200,
+      "bytes": 136159,
+      "php_warning": false,
+      "has_mobile_nav_css": true,
+      "has_fp02_slider_nav": true,
+      "has_hero_slider": false,
+      "specialist_structured": false,
+      "generic_specialist_old": false,
+      "literal_nbsp_entity": true,
+      "literal_amp_nbsp_visible_risk": false
+    },
+    {
+      "path": "/uslugi/zavisimosti/",
+      "status": 200,
+      "bytes": 154721,
+      "php_warning": false,
+      "has_mobile_nav_css": true,
+      "has_fp02_slider_nav": true,
+      "has_hero_slider": false,
+      "specialist_structured": false,
+      "generic_specialist_old": false,
+      "literal_nbsp_entity": true,
+      "literal_amp_nbsp_visible_risk": false
+    },
+    {
+      "path": "/uslugi/zavisimosti/lechenie-alkogolnoj-zavisimosti/",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "path": "/o-centre/",
+      "status": 200,
+      "bytes": 152668,
+      "php_warning": false,
+      "has_mobile_nav_css": true,
+      "has_fp02_slider_nav": true,
+      "has_hero_slider": false,
+      "specialist_structured": false,
+      "generic_specialist_old": false,
+      "literal_nbsp_entity": true,
+      "literal_amp_nbsp_visible_risk": false
+    },
+    {
+      "path": "/o-centre/programma-lecheniya/",
+      "status": 200,
+      "bytes": 88831,
+      "php_warning": false,
+      "has_mobile_nav_css": true,
+      "has_fp02_slider_nav": false,
+      "has_hero_slider": false,
+      "specialist_structured": false,
+      "generic_specialist_old": false,
+      "literal_nbsp_entity": true,
+      "literal_amp_nbsp_visible_risk": false
+    },
+    {
+      "path": "/specyalisty/kostyuk/",
+      "status": 200,
+      "bytes": 76305,
+      "php_warning": false,
+      "has_mobile_nav_css": true,
+      "has_fp02_slider_nav": false,
+      "has_hero_slider": false,
+      "specialist_structured": true,
+      "generic_specialist_old": false,
+      "literal_nbsp_entity": false,
+      "literal_amp_nbsp_visible_risk": false
+    },
+    {
+      "path": "/specyalisty/shipovsky/",
+      "status": 200,
+      "bytes": 71607,
+      "php_warning": false,
+      "has_mobile_nav_css": true,
+      "has_fp02_slider_nav": false,
+      "has_hero_slider": false,
+      "specialist_structured": true,
+      "generic_specialist_old": false,
+      "literal_nbsp_entity": false,
+      "literal_amp_nbsp_visible_risk": false
+    },
+    {
+      "path": "/specyalisty/shapiguzova/",
+      "status": 200,
+      "bytes": 71751,
+      "php_warning": false,
+      "has_mobile_nav_css": true,
+      "has_fp02_slider_nav": false,
+      "has_hero_slider": false,
+      "specialist_structured": true,
+      "generic_specialist_old": false,
+      "literal_nbsp_entity": false,
+      "literal_amp_nbsp_visible_risk": false
+    },
+    {
+      "path": "/blog/",
+      "status": 200,
+      "bytes": 98015,
+      "php_warning": false,
+      "has_mobile_nav_css": true,
+      "has_fp02_slider_nav": false,
+      "has_hero_slider": false,
+      "specialist_structured": false,
+      "generic_specialist_old": false,
+      "literal_nbsp_entity": false,
+      "literal_amp_nbsp_visible_risk": false
+    },
+    {
+      "path": "/kontakty/",
+      "status": 200,
+      "bytes": 82502,
+      "php_warning": false,
+      "has_mobile_nav_css": true,
+      "has_fp02_slider_nav": false,
+      "has_hero_slider": false,
+      "specialist_structured": false,
+      "generic_specialist_old": false,
+      "literal_nbsp_entity": false,
+      "literal_amp_nbsp_visible_risk": false
+    }
+  ],
+  "checks": {
+    "sryvy-i-retsidivy-signal-k-korrektirovke": {
+      "path": "/blog/sryvy-i-retsidivy-signal-k-korrektirovke/",
+      "status": 200,
+      "reading_time": "5 минут на чтение"
+    },
+    "kak-prohodit-pervaya-konsultatsiya": {
+      "path": "/blog/kak-prohodit-pervaya-konsultatsiya/",
+      "status": 200,
+      "reading_time": "3 минуты на чтение"
+    },
+    "demo-pagination-article-01": {
+      "status": 200,
+      "reading_time": "1 минута на чтение",
+      "note": "manual empty -> auto expected"
+    },
+    "kostyuk": {
+      "status": 200,
+      "structured": true,
+      "has_role": true,
+      "has_experience": true,
+      "has_certs_grid": true,
+      "has_fancybox": true,
+      "empty_section_labels_visible_without_content": false,
+      "old_generic_photo_class": false
+    },
+    "shipovsky": {
+      "status": 200,
+      "structured": true,
+      "has_role": true,
+      "has_additional": true,
+      "certs_hidden": true
+    },
+    "home_sliders": {
+      "mobile_nav_css": true,
+      "fp02_nav_count": 4,
+      "hero_prev_present": true,
+      "non_hero_gallery": true,
+      "lifebuoy_js": true
+    }
+  }
+}

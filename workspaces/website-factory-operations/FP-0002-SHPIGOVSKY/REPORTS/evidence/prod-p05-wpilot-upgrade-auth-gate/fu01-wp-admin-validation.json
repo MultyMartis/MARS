@@ -1,0 +1,29 @@
+{
+  "auth": "PASS",
+  "username": "mars",
+  "login_http_status": 200,
+  "login_final_url_safe": "cookie-set-no-location",
+  "login_error_safe": null,
+  "login_method": "form-hidden-fields + no-redirect-post",
+  "administrator": true,
+  "dashboard": "PASS",
+  "plugins": "PASS",
+  "wpilot_page": "PASS",
+  "wpilot_visible": true,
+  "wpilot_versions_seen": [],
+  "plugin_active_hint": null,
+  "wpilot_page_versions_seen": [
+    "0.14.0",
+    "0.2.0",
+    "0.3.0",
+    "0.9.2"
+  ],
+  "wpilot_page_has_generate": false,
+  "wpilot_release_label_seen": false,
+  "mutations": "none (no save/update/dismiss unless later authorized step)",
+  "dashboard_title": "Dashboard &lsaquo; Шпиговский — локальная разработка &#8212; WordPress",
+  "dashboard_php_noise": false,
+  "profile": "PASS",
+  "wpilot_page_php_noise": false,
+  "verdict": "WP ADMIN AUTHENTICATION PASS"
+}

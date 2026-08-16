@@ -1,0 +1,12 @@
+{
+  "wave": "PROD-P07-FU01",
+  "date": "2026-08-14",
+  "verdict": "OPERATOR ACTION REQUIRED — CREATE FRESH POST-P07 BEGET FILES + DB BACKUP",
+  "post_p07_layer_a": "MISSING_OR_NOT_CONFIRMED",
+  "fu01_post_reimport_layer_a": "EXISTS_BUT_PREDATES_P07",
+  "p07_layer_b_exact_files": "PRESENT",
+  "p07_layer_b_path": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p07-layer-b-pre\\",
+  "mutations_allowed": false,
+  "mutations_performed": false,
+  "reason": "P07 already mutated production files+DB after FU01 Layer A; charter requires fresh post-P07 full Beget files+DB backup before FU01 residual cleanup."
+}

@@ -41,6 +41,50 @@
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0
+        },
+        {
+            "key": "field_fp02_generic_page_reusable_notice",
+            "label": "Повторно используемые блоки",
+            "name": "generic_page_reusable_notice",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Включает уже существующие общие блоки сайта. Контент блоков не копируется на страницу — редактируется в их канонических настройках (Комфорт / требования; галерея «О доме»).",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_generic_page_reusable_blocks",
+            "label": "Показать блоки на странице",
+            "name": "generic_page_reusable_blocks",
+            "aria-label": "",
+            "type": "checkbox",
+            "instructions": "Отметьте блоки, которые нужно показать под основным текстом. Порядок на странице фиксированный: сначала требования к реабилитации, затем «О доме».",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "rehab_requirements": "Что нужно для прохождения реабилитации и лечения",
+                "about_home": "О доме \/ комфорт и территория"
+            },
+            "default_value": [],
+            "return_format": "value",
+            "allow_custom": 0,
+            "layout": "vertical",
+            "toggle": 0,
+            "save_custom": 0,
+            "custom_choice_button_text": "Add new choice"
         }
     ],
     "location": [
@@ -70,7 +114,7 @@
         "send-trackbacks"
     ],
     "active": true,
-    "description": "V9-06E52 generic page ACF content source of truth (Generic Content template).",
+    "description": "V9-06E52 generic page ACF content source of truth (Generic Content template). PROD-P07: reusable shared blocks selector.",
     "show_in_rest": 0,
-    "modified": 1784452800
+    "modified": 1786700000
 }

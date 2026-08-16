@@ -1,0 +1,51 @@
+{
+  "wordpress_core": null,
+  "php_web": "PHP/8.3.20",
+  "docroot": "/home/s/shpigovsky/shpigovsky.ru/public_html",
+  "active_theme_db": "shpigovsky",
+  "active_plugins": [
+    "acf-extended-pro/acf-extended.php",
+    "advanced-custom-fields-pro/acf.php",
+    "classic-editor/classic-editor.php",
+    "metacode-wpilot/metacode-wpilot.php",
+    "shpigovsky-core/shpigovsky-core.php"
+  ],
+  "acf_plugins_present_on_fs": [
+    "acf-extended-pro",
+    "advanced-custom-fields",
+    "advanced-custom-fields-pro"
+  ],
+  "shpigovsky_core_present": true,
+  "wpilot_present": true,
+  "uploads_path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/uploads",
+  "home": "http://shpigovsky.beget.tech",
+  "siteurl": "http://shpigovsky.beget.tech",
+  "blogname": "Шпиговский — локальная разработка",
+  "blogdescription": "",
+  "permalink_structure": "/blog/%postname%/",
+  "safe_wp_config": {
+    "DB_NAME": "shpigovsky_main",
+    "DB_USER": "shpigovsky_main",
+    "DB_HOST": "localhost",
+    "DB_CHARSET": "utf8",
+    "DB_COLLATE": "",
+    "table_prefix": "fp02_",
+    "WP_DEBUG": "true",
+    "WP_DEBUG_LOG": "true",
+    "WP_DEBUG_DISPLAY": "false",
+    "SCRIPT_DEBUG": "true",
+    "DISALLOW_FILE_EDIT": "true",
+    "WP_ENVIRONMENT_TYPE": "'local'",
+    "WP_DEBUG_LOG_FILE_PRESENT": true,
+    "WP_DEBUG_LOG_FILE_LOOKS_LOCAL_PATH": true,
+    "DB_PASSWORD_PRESENT": true,
+    "AUTH_KEY_PRESENT": true,
+    "SECURE_AUTH_KEY_PRESENT": true,
+    "LOGGED_IN_KEY_PRESENT": true,
+    "NONCE_KEY_PRESENT": true,
+    "AUTH_SALT_PRESENT": true,
+    "SECURE_AUTH_SALT_PRESENT": true,
+    "LOGGED_IN_SALT_PRESENT": true,
+    "NONCE_SALT_PRESENT": true
+  }
+}
