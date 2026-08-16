@@ -148,10 +148,10 @@ Evidence: [evidence/stable-baseline-20260817/REGRESSION.json](../evidence/stable
 | Item | Value |
 |------|-------|
 | Clean worktree | `X:\AI MARS STORAGE\git-sync-iseo-sm-stable-baseline-20260817\repo` |
-| Scoped commit | `35819a63bed132f2ccdb9e2d468e3ec3de9d23fe` (freeze) · docs tip `83c8b8073b45a979b438e2fa3c31ff2fe17cbd70` |
+| Scoped commit | `35819a63bed132f2ccdb9e2d468e3ec3de9d23fe` (freeze) · tip `edfa536bf338d427a40b2a2e8efdba0fddca44ec` |
 | Message | `freeze(iseo-sales-manager): production stable baseline 2026-08-17` |
 | Pushed branch | `origin/mars/canonical-post-recovery` |
-| Canonical tip after push | `83c8b8073b45a979b438e2fa3c31ff2fe17cbd70` |
+| Canonical tip after push | `edfa536bf338d427a40b2a2e8efdba0fddca44ec` |
 | Foreign MAIN WIP | **untouched** (no pull/reset/clean/stash/restore on dirty MAIN) |
 
 **Gates:** `SM_STABLE_CANONICAL_COMMIT_CREATED` ┬╖ `SM_STABLE_CANONICAL_PUSH_PASS`
