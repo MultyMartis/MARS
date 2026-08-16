@@ -1,9 +1,10 @@
-# BASELINE — FP-0002 PRODUCTION POST-P13 (PROD-P14) + P15 ENVIRONMENT CLEAN
+# BASELINE — FP-0002 PRODUCTION POST-P13 (PROD-P14) + P15 ENVIRONMENT CLEAN + P16 TYPOGRAPHY
 
 **Baseline ID:** `FP-0002-PROD-BASELINE-2026-08-17`  
 **Established:** 2026-08-16/17 (UTC intake 2026-08-16T17:28Z)  
 **Wave:** PROD-P14 Stabilization  
-**P15 extension:** 2026-08-16/17 — environment/migration cleanup (same baseline ID; P14 backup remains rollback authority)
+**P15 extension:** 2026-08-16/17 — environment/migration cleanup (same baseline ID; P14 backup remains rollback authority)  
+**P16 extension:** 2026-08-17 — typography residual (render-time pipeline; same baseline ID)
 
 ## Runtime
 
@@ -18,13 +19,14 @@
 | DB name (no secrets) | `shpigovsky_main` |
 | DB prefix | `fp02_` |
 | Theme | Shpigovsky `0.3.0-d7a-shell` |
-| shpigovsky-core | `0.3.6-p15` (was `0.3.5-p14` at P14 freeze) |
+| shpigovsky-core | `0.3.7-p16` (was `0.3.6-p15` at P15) |
 | WPilot | 0.3.2 · writes disabled · bridge active (read) |
 | siteurl/home | http://shpigovsky.beget.tech |
 | blog_public | 0 |
 | WP_ENVIRONMENT_TYPE | **production** (P15) |
 | WP_DEBUG / DISPLAY / LOG | **false / false / false** (P15) |
 | Mail | PRE-CUTOVER suppression MU (`fp02-pre-cutover-mail-suppression.php`) |
+| Typography | ONE owner `typography.russian` — render-time HTML-aware; DB content mutations 0 |
 
 ## Content counts (publish)
 
@@ -48,16 +50,17 @@
 
 - Beget filesystem = LIVE RUNTIME TRUTH  
 - Beget DB = LIVE CONTENT / SETTINGS / USER AUTHORITY  
-- Local FP-0002 WORDPRESS = SOURCE AUTHORITY after P14/P15 reconciliation  
+- Local FP-0002 WORDPRESS = SOURCE AUTHORITY after P14/P15/P16 reconciliation  
 
 ## Parity
 
 - P14: deployable MATCH after canonization  
-- P15 touched source files: **3/3 MATCH** (core + dashboard + mail MU)
+- P15 touched source files: **3/3 MATCH** (core + dashboard + mail MU)  
+- P16 touched source files: **6/6 MATCH** (core + typography module + dashboard + search-helpers)
 
 ## Latest accepted wave
 
-**P15 environment cleanup** (closes deferred P06)
+**P16 Typography Residual**
 
 ## Backup
 
@@ -66,8 +69,9 @@
 | Type | Full files + DB via SSH (tar.gz + mysqldump.gz) |
 | Stamp | `20260816-173046` |
 | Path | `X:\AI MARS STORAGE\backups\fp-0002\prod-p14-full-20260816-173046\` |
-| Status | **PASS** — remains current full rollback baseline for P15 |
+| Status | **PASS** — remains current full rollback baseline |
 | P15 exact-file/object snapshots | `deployment-packs/fp-0002/prod-p15-layer-b-pre/` + `prod-p15-db-snapshots/` + `prod-p15-debug-archive/` |
+| P16 exact-file snapshots | `deployment-packs/fp-0002/prod-p16-layer-b-pre/` + `prod-p16-db-snapshots/` |
 
 ## Git checkpoint
 
@@ -75,11 +79,12 @@
 |-------|-------|
 | P14 commit | `9a5f671cafece716635e6fb37b984bd9009261de` |
 | P15 commit | `81912e7871bd45d75e8b02b288aaf0b6788744d6` |
+| P16 commit | *(see GIT-CHECKPOINT.json after push)* |
 | Branch | `origin/mars/canonical-post-recovery` |
 
 ## Open tails
 
-See `REPORTS/OPEN-ITEMS-FP-0002-AFTER-P15.md` — typography → PRE-CUTOVER → domain/SSL → SMTP → indexing → sitemap submissions → final crawl.
+See `REPORTS/OPEN-ITEMS-FP-0002-AFTER-P16.md` — PRE-CUTOVER → domain/DNS/SSL → SMTP → robots/indexing → sitemap submissions → final crawl.
 
 ## P15 environment-clean status
 
@@ -88,7 +93,14 @@ See `REPORTS/OPEN-ITEMS-FP-0002-AFTER-P15.md` — typography → PRE-CUTOVER →
 - Live frontend `.test`/localhost references cleared where safe  
 - Final domain cutover **not** executed  
 
+## P16 typography status
+
+- ONE HTML-aware typography owner (`typography.russian`)  
+- Render-time pipeline; DB content mutations **0**  
+- Future Olya/DOCX content follows the same pipeline  
+- Typography residual **closed**
+
 ## Required
 
 `FP-0002 NEW PRODUCTION BASELINE ESTABLISHED` (P14)  
-`FP-0002-PROD-BASELINE-2026-08-17` **+ P15 ENVIRONMENT CLEAN**
+`FP-0002-PROD-BASELINE-2026-08-17` **+ P15 ENVIRONMENT CLEAN + P16 TYPOGRAPHY**

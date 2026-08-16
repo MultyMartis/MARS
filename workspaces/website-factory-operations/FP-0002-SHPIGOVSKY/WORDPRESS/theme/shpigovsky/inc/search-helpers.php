@@ -411,6 +411,8 @@ function shpigovsky_smart_search_strlen( $text ) {
  */
 function shpigovsky_smart_search_lower( $text ) {
 	$text = (string) $text;
+	// Normalize NBSP so render-time typography cannot break query matching.
+	$text = str_replace( array( "\xC2\xA0", '&nbsp;', '&#160;', '&#xA0;', '&#xa0;' ), ' ', $text );
 
 	if ( function_exists( 'mb_strtolower' ) ) {
 		return (string) mb_strtolower( $text, 'UTF-8' );

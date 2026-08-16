@@ -1,0 +1,47 @@
+{
+  "utc": "2026-08-16T19:24:41.751144+00:00",
+  "files": [
+    {
+      "kind": "plugin",
+      "rel": "shpigovsky-core.php",
+      "local_sha256": "d02167c7a1ecbd7afefc5a47e56cbe2cd1fe0fe6ce953a6a56c26beaa8f387d8",
+      "prod_sha256": "d02167c7a1ecbd7afefc5a47e56cbe2cd1fe0fe6ce953a6a56c26beaa8f387d8",
+      "match": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/ModuleRegistry.php",
+      "local_sha256": "36b4d04f10d90cb09c86b00472a55b350c032c7a14a846dc73da3d78db387069",
+      "prod_sha256": "36b4d04f10d90cb09c86b00472a55b350c032c7a14a846dc73da3d78db387069",
+      "match": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Admin/SystemDashboard.php",
+      "local_sha256": "9d9c4330cfe469513be53270144208a300f8d1c891710e8ab4b0f6977f20e011",
+      "prod_sha256": "9d9c4330cfe469513be53270144208a300f8d1c891710e8ab4b0f6977f20e011",
+      "match": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Typography/RussianTypography.php",
+      "local_sha256": "3205ab4fccf28e0e11264132f5f68e4b5e747a85ce1aade9af3f8109d042d0da",
+      "prod_sha256": "3205ab4fccf28e0e11264132f5f68e4b5e747a85ce1aade9af3f8109d042d0da",
+      "match": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Typography/TypographyFilters.php",
+      "local_sha256": "f7d07d462f5fcec23ed35469896f4d1b73333d9c5db7b9d36b3573b586bf691a",
+      "prod_sha256": "f7d07d462f5fcec23ed35469896f4d1b73333d9c5db7b9d36b3573b586bf691a",
+      "match": true
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/search-helpers.php",
+      "local_sha256": "04e4e9f3e122815ea3963341661dbbe79f23160c89cda6e5d79493c67e783b27",
+      "prod_sha256": "04e4e9f3e122815ea3963341661dbbe79f23160c89cda6e5d79493c67e783b27",
+      "match": true
+    }
+  ]
+}

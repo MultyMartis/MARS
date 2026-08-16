@@ -1,6 +1,6 @@
 <?php
 /**
- * Dashboard widget: MetaCODE / system state — PROD-P15.
+ * Dashboard widget: MetaCODE / system state — PROD-P16.
  *
  * Canonical concise operational summary for FP-0002. No global Admin notices.
  *
@@ -29,7 +29,7 @@ final class SystemDashboard implements ModuleInterface {
 	/**
 	 * Latest accepted production wave label.
 	 */
-	const LATEST_ACCEPTED_WAVE = 'P15 environment cleanup';
+	const LATEST_ACCEPTED_WAVE = 'P16 Typography Residual';
 
 	/**
 	 * {@inheritdoc}
@@ -187,7 +187,6 @@ final class SystemDashboard implements ModuleInterface {
 
 		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'Remaining launch tails', 'shpigovsky-core' ) . '</h3>';
 		echo '<ul style="margin:0 0 12px 1.2em;">';
-		self::li( __( 'Residual typography', 'shpigovsky-core' ) );
 		self::li( 'PRE-CUTOVER' );
 		self::li( __( 'DNS / domain / SSL', 'shpigovsky-core' ) );
 		self::li( __( 'SMTP after domain/DNS', 'shpigovsky-core' ) );

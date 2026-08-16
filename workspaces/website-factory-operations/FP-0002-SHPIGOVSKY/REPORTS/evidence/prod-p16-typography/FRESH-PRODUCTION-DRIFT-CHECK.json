@@ -1,0 +1,147 @@
+{
+  "utc": "2026-08-16T19:21:04.385443+00:00",
+  "required_token": "P16 FRESH PRODUCTION DRIFT CHECK COMPLETE",
+  "pre_existing_mismatches": [
+    "inc/search-helpers.php",
+    "shpigovsky-core.php",
+    "src/ModuleRegistry.php",
+    "src/Admin/SystemDashboard.php"
+  ],
+  "prod_missing_existing_paths": [],
+  "rows": [
+    {
+      "kind": "theme",
+      "rel": "inc/search-helpers.php",
+      "status": "DRIFT",
+      "local_sha256": "91901fce48ccec22ac423cfe308e99a5b158398346b6be702159419788c88c85",
+      "prod_sha256": "49b9a5ae5b11be0c3f2dc824630bdcdd3032fc076dda0b45c64ff3f4832d9ed9"
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/blog-helpers.php",
+      "status": "MATCH",
+      "local_sha256": "59cc73cd18ef3fadceb131a955ec7e9af884110132bc28ab5164899178f845f5",
+      "prod_sha256": "59cc73cd18ef3fadceb131a955ec7e9af884110132bc28ab5164899178f845f5"
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/v9-static-content.php",
+      "status": "MATCH",
+      "local_sha256": "e986f0bbc7e9ab65352fc4287cfeb5456a64d8af0a6de274770d98f4331056ff",
+      "prod_sha256": "e986f0bbc7e9ab65352fc4287cfeb5456a64d8af0a6de274770d98f4331056ff"
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/home-fallbacks.php",
+      "status": "MATCH",
+      "local_sha256": "f1beeb2423a2619a3e0914a3a7949562d7441846073c6264ba635fa3fe51ce93",
+      "prod_sha256": "f1beeb2423a2619a3e0914a3a7949562d7441846073c6264ba635fa3fe51ce93"
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/institutional-about-v9-content.php",
+      "status": "MATCH",
+      "local_sha256": "25095b38da59b7c0b4fdee81289109f15bd0fa83c477bac4878e137021016785",
+      "prod_sha256": "25095b38da59b7c0b4fdee81289109f15bd0fa83c477bac4878e137021016785"
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/reusable-blocks-helpers.php",
+      "status": "MATCH",
+      "local_sha256": "792474faac5e61b42461c02f5b5e84a72ace89bdd4ea08bf4e160211d11499ab",
+      "prod_sha256": "792474faac5e61b42461c02f5b5e84a72ace89bdd4ea08bf4e160211d11499ab"
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/contacts-helpers.php",
+      "status": "MATCH",
+      "local_sha256": "f30a52889bb8758bf6ce697a49072b199b89284f59e20c00a1f57fb01ff9487e",
+      "prod_sha256": "f30a52889bb8758bf6ce697a49072b199b89284f59e20c00a1f57fb01ff9487e"
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/services-hub-helpers.php",
+      "status": "MATCH",
+      "local_sha256": "6e11bbc453d33f395d8bdfe7f6a00e913ce3ee0777c66d46942ff2aca391e305",
+      "prod_sha256": "6e11bbc453d33f395d8bdfe7f6a00e913ce3ee0777c66d46942ff2aca391e305"
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/service-general-helpers.php",
+      "status": "MATCH",
+      "local_sha256": "b4ac89d7d9e67d7cfabe3c06b3f9ab617863b512b3e0bf210936e73b8eb74293",
+      "prod_sha256": "b4ac89d7d9e67d7cfabe3c06b3f9ab617863b512b3e0bf210936e73b8eb74293"
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/service-section-helpers.php",
+      "status": "MATCH",
+      "local_sha256": "1c18f63832f41a5a120f44dbdf3c4c5b12fe332677d1d37acd906f9a065333f3",
+      "prod_sha256": "1c18f63832f41a5a120f44dbdf3c4c5b12fe332677d1d37acd906f9a065333f3"
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/seo-entity-meta.php",
+      "status": "MATCH",
+      "local_sha256": "2174cd86a8740812724db34931a06b2d4a35c21eefcd4a0d5e3cfa77adba7670",
+      "prod_sha256": "2174cd86a8740812724db34931a06b2d4a35c21eefcd4a0d5e3cfa77adba7670"
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/specialist-helpers.php",
+      "status": "MATCH",
+      "local_sha256": "d99102fdabf93196ab2b40cae73f2fd87b24456895263be5bfa5e9cca39e36a2",
+      "prod_sha256": "d99102fdabf93196ab2b40cae73f2fd87b24456895263be5bfa5e9cca39e36a2"
+    },
+    {
+      "kind": "theme",
+      "rel": "template-parts/generic/content-page.php",
+      "status": "MATCH",
+      "local_sha256": "37aaac70af8113e182b159fb98704240a4ec35241cc93ecceda3f9bcfee6d108",
+      "prod_sha256": "37aaac70af8113e182b159fb98704240a4ec35241cc93ecceda3f9bcfee6d108"
+    },
+    {
+      "kind": "plugin",
+      "rel": "shpigovsky-core.php",
+      "status": "DRIFT",
+      "local_sha256": "d02167c7a1ecbd7afefc5a47e56cbe2cd1fe0fe6ce953a6a56c26beaa8f387d8",
+      "prod_sha256": "7dd6b9c6dcc4701a470e85d051f6313476f1620c19c4fa9661932a3a67c9fb5e"
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/ModuleRegistry.php",
+      "status": "DRIFT",
+      "local_sha256": "36b4d04f10d90cb09c86b00472a55b350c032c7a14a846dc73da3d78db387069",
+      "prod_sha256": "82219a5e7cdf32da2e211f7893def2b4e1f376ad64f37e32e0d7975382d7f964"
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Admin/SystemDashboard.php",
+      "status": "DRIFT",
+      "local_sha256": "9d9c4330cfe469513be53270144208a300f8d1c891710e8ab4b0f6977f20e011",
+      "prod_sha256": "7094eb4c56b051f865181800bffe007e47109fd114ef00547a87b830a193dbad"
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Admin/DocxImporter.php",
+      "status": "MATCH",
+      "local_sha256": "568e6d1a5cb266c08f56077d3897820e28c4359362420f4831f9cbe999372f7d",
+      "prod_sha256": "568e6d1a5cb266c08f56077d3897820e28c4359362420f4831f9cbe999372f7d"
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Typography/RussianTypography.php",
+      "status": "PROD_MISSING_EXPECTED",
+      "local_sha256": "6cd395e9d1a0989720da4972570d1025174c1dbf1c82a83ef74e75a58de98cb3",
+      "prod_sha256": null
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Typography/TypographyFilters.php",
+      "status": "PROD_MISSING_EXPECTED",
+      "local_sha256": "f7d07d462f5fcec23ed35469896f4d1b73333d9c5db7b9d36b3573b586bf691a",
+      "prod_sha256": null
+    }
+  ],
+  "verdict": "CANONIZE_FIRST"
+}

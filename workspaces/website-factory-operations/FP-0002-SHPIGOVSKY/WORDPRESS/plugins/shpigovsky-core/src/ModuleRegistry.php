@@ -25,6 +25,7 @@ use Shpigovsky\Core\Forms\ConsultationHandler;
 use Shpigovsky\Core\Migrations\MigrationRunner;
 use Shpigovsky\Core\Permalinks\ServicePermalinks;
 use Shpigovsky\Core\Settings\SiteSettings;
+use Shpigovsky\Core\Typography\TypographyFilters;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -151,6 +152,12 @@ final class ModuleRegistry {
 		'forms.consultation'        => array(
 			'module'            => 'Forms',
 			'class'             => ConsultationHandler::class,
+			'status'            => self::ENABLED_IN_CONTENT_MODEL,
+			'runtime_delivered' => true,
+		),
+		'typography.russian'        => array(
+			'module'            => 'Typography',
+			'class'             => TypographyFilters::class,
 			'status'            => self::ENABLED_IN_CONTENT_MODEL,
 			'runtime_delivered' => true,
 		),
