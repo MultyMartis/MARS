@@ -1,0 +1,11 @@
+{
+  "baseline_id": "FP-0002-PROD-BASELINE-2026-08-17",
+  "latest_wave": "P16 Typography Residual",
+  "parity": "MATCH",
+  "verified_at": "2026-08-16 19:27 UTC",
+  "backup": "P14 full + prod-p16-layer-b-pre / prod-p16-db-snapshots",
+  "git_sha": "35666e2bb98247072a7a7972d4271eaf8d5f36aa",
+  "wave": "PROD-P15",
+  "p15_note": "Environment cleanup; mail+indexing deferred; domain not cut over",
+  "state_note": "Typography residual closed"
+}

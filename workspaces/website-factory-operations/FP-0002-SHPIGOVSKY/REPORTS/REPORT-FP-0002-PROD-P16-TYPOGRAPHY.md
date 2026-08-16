@@ -13,7 +13,7 @@
 | Source file writes | Yes — core typography module + search NBSP normalize + dashboard |
 | DB/content fields changed | **0** (render-time strategy) |
 | Skipped / manual-review | Dry-run MANUAL_REVIEW **0**; technical fields excluded **161** |
-| Git commit/push | Via clean worktree (see §15) |
+| Git commit/push | `35666e2bb98247072a7a7972d4271eaf8d5f36aa` pushed to `origin/mars/canonical-post-recovery` via clean worktree |
 | WPilot writes | **0** (`write_enabled=false`) |
 
 Acceptance token:
