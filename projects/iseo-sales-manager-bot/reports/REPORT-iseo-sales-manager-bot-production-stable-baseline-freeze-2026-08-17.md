@@ -148,10 +148,10 @@ Evidence: [evidence/stable-baseline-20260817/REGRESSION.json](../evidence/stable
 | Item | Value |
 |------|-------|
 | Clean worktree | `X:\AI MARS STORAGE\git-sync-iseo-sm-stable-baseline-20260817\repo` |
-| Scoped commit | _(filled after push)_ |
+| Scoped commit | `35819a63bed132f2ccdb9e2d468e3ec3de9d23fe` |
 | Message | `freeze(iseo-sales-manager): production stable baseline 2026-08-17` |
 | Pushed branch | `origin/mars/canonical-post-recovery` |
-| Canonical tip after push | _(filled after push)_ |
+| Canonical tip after push | `35819a63bed132f2ccdb9e2d468e3ec3de9d23fe` (pre-push tip of freeze commit; confirm after push) |
 | Foreign MAIN WIP | **untouched** (no pull/reset/clean/stash/restore on dirty MAIN) |
 
 **Gates:** `SM_STABLE_CANONICAL_COMMIT_CREATED` · `SM_STABLE_CANONICAL_PUSH_PASS`
@@ -208,7 +208,7 @@ Do not begin another phase automatically.
 | SM_STABLE_DOCS_RECONCILED | PASS |
 | SM_STABLE_FREEZE_BOUNDARY_PROVEN | PASS |
 | SM_STABLE_REGRESSION_PASS | PASS |
-| SM_STABLE_CANONICAL_COMMIT_CREATED | _(after git)_ |
-| SM_STABLE_CANONICAL_PUSH_PASS | _(after git)_ |
+| SM_STABLE_CANONICAL_COMMIT_CREATED | PASS |
+| SM_STABLE_CANONICAL_PUSH_PASS | PENDING_PUSH |
 | SM_STABLE_RELEASE_MARKER_DECISION_PROVEN | PASS |
 | SM_STABLE_PRIVACY_PASS | PASS |
