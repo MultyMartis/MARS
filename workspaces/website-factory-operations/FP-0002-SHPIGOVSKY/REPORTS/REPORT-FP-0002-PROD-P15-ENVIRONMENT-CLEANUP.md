@@ -16,7 +16,7 @@
 | Production file writes | wp-config.php; MU rename; `shpigovsky-core.php`; `SystemDashboard.php` |
 | DB/options writes | admin_email; 2 block URL options; Home #4 URL meta; 31 publish postmeta URLs; metacode meta |
 | Removed artifacts | `mars-local-runtime.php`; `_tmp-e47-fix04-val/`; debug.log webroot truncated after Storage archive |
-| Git checkpoint | pending clean-worktree (this closeout) |
+| Git checkpoint | **PASS** `81912e7871bd45d75e8b02b288aaf0b6788744d6` pushed |
 | WPilot writes | **0** (`write_enabled=false`) |
 
 ## 2. Fresh Production Check
@@ -138,7 +138,15 @@ Extended `FP-0002-PROD-BASELINE-2026-08-17` with **P15 environment-clean** secti
 
 ## 15. Git
 
-Clean-worktree checkpoint authorized for exact FP-0002 P15 scope; dirty main foreign WIP untouched. See closeout git evidence after push wave.
+| Field | Value |
+|-------|-------|
+| Commit | `81912e7871bd45d75e8b02b288aaf0b6788744d6` |
+| Short | `81912e78` |
+| Message | FP-0002: clean production environment residue |
+| Push | `origin/mars/canonical-post-recovery` |
+| Secret scan | **PASS** |
+| Dirty main foreign WIP | **untouched** |
+| Worktree | `X:\AI MARS STORAGE\git-sync-fp0002-p14-20260816-173714\repo` |
 
 ## 16. Remaining Work
 

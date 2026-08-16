@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "meta": {
+    "baseline_id": "FP-0002-PROD-BASELINE-2026-08-17",
+    "latest_wave": "P15 environment cleanup",
+    "parity": "MATCH",
+    "verified_at": "2026-08-16 18:32 UTC",
+    "backup": "2026-08-16 / Storage prod-p14-full-20260816-173046",
+    "git_sha": "81912e78",
+    "wave": "PROD-P15",
+    "p15_note": "Environment cleanup; mail+indexing deferred; domain not cut over"
+  }
+}

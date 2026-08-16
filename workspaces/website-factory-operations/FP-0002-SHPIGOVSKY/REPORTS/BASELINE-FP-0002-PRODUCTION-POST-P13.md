@@ -74,7 +74,7 @@
 | Field | Value |
 |-------|-------|
 | P14 commit | `9a5f671cafece716635e6fb37b984bd9009261de` |
-| P15 commit | see P15 git evidence after clean-worktree push |
+| P15 commit | `81912e7871bd45d75e8b02b288aaf0b6788744d6` |
 | Branch | `origin/mars/canonical-post-recovery` |
 
 ## Open tails
