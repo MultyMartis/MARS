@@ -1,0 +1,10 @@
+# REMINDER SCHEDULE EXECUTIONS v1
+
+| Date | 10:00 | 10:15 | Class |
+|---|---|---|---|
+| 2026-08-14 (pre-context) | 30813 error | 30821 error | TRIGGER_RAN, ERROR_BEFORE_EVALUATION |
+| 2026-08-15 | 31656 error | 31664 error | TRIGGER_RAN, ERROR_BEFORE_EVALUATION |
+| 2026-08-16 | 32473 error | 32481 error | TRIGGER_RAN, ERROR_BEFORE_EVALUATION |
+| 2026-08-17 | 33349 handled | 33358 handled | TRIGGER_RAN, ERROR_BEFORE_EVALUATION |
+
+No TRIGGER_MISSING. No WRONG_TIME (10:00:49 / 10:15:49 MSK). Weekend skip **not evaluated** because CONFIG failed first.
