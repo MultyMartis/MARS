@@ -1,6 +1,18 @@
+> **Phase 3H.9.2 (2026-08-17):** ACCESS live drifted to 3 after an incomplete 2026-08-16 `/moderator_remove`/`/moderator_add` cycle left MOD_A revoked. Classified `UNAUTHORIZED_STATE_DRIFT`. Restored MOD_A via existing `/moderator_add` (same profile_no 3). Live ACCESS=4 · CONFIG=4 · Operational resolver=4 · reminder resolver=4. Next natural 10:00: **2026-08-18 Europe/Moscow**. Soak not restarted. Phase 3I.1 blocked. AI OFF. No four-recipient test sends.
+
 > **Phase 3H.9 (2026-08-17):** False «Недостаточно прав» on raw lead was ACCESS/CONFIG Google Sheets `invalid_grant` mislabeled as a permission deny. Reminder 10:00 windows 15–17 Aug failed at CONFIG read with the same credential error before evaluation; 429 retry path was not applicable. Admin deny text + Sheets error classifier patched. Live Sheets OAuth reconnect by operator is still required before ADMIN_A raw retest and the next natural 4-recipient 10:00. Soak not restarted. Phase 3I.1 blocked. AI OFF.
 
 > **Phase 3H.8.2.2 (2026-08-14):** Reminder pending eligibility uses `iseo-reminder-current-state-selector-v1.0` — unique `lead_id` → authoritative current status → eligibility. First CLEAN pending row no longer wins. Production Reminder Build Claims adds no per-lead Sheets calls. Duplicate CLEAN row source forensic is deferred. Real 10:00 acceptance still pending.
+
+<!-- Phase 3H.9.2 addendum 2026-08-17 -->
+## Phase 3H.9.2 addendum
+
+- Live ACCESS staff restored to **4** (ADMIN_A, MOD_A, MOD_B, MOD_C). Do not document three-recipient as canonical.
+- Drift: MOD_A revoked 2026-08-16 19:10:18 Europe/Moscow (`/moderator_remove` exec `32815`); incomplete evening restore left MOD_A out. Classified `UNAUTHORIZED_STATE_DRIFT`.
+- Restore: existing `/moderator_add` exec `33571` · same profile_no 3 · no new profile · no historical fan-out.
+- CONFIG recipients already 4 — no CONFIG write. Resolvers 4/4. Next natural 10:00: **2026-08-18 Europe/Moscow**.
+- Soak not restarted. Phase 3I.1 blocked. AI OFF.
+- Evidence: [evidence/phase3h92/](../evidence/phase3h92/) · Report: [REPORT-iseo-sales-manager-bot-phase3h92-access-recipient-reconciliation-v1.md](../reports/REPORT-iseo-sales-manager-bot-phase3h92-access-recipient-reconciliation-v1.md)
 
 <!-- Phase 3H.8.2 addendum 2026-08-14 -->
 ## Phase 3H.8.2 addendum
