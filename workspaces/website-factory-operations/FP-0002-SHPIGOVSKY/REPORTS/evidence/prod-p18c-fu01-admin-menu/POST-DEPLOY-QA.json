@@ -1,0 +1,129 @@
+{
+  "exit": 0,
+  "stderr": "",
+  "data": {
+    "ok": true,
+    "core": "0.3.13-p18c-fu01",
+    "visible_parent": "fp02-site-settings-general",
+    "logical_parent": "fp02-site-settings",
+    "menu": {
+      "resolver_visible_parent": "fp02-site-settings-general",
+      "visible_titles": [
+        "Общие настройки",
+        "Соцсети и мессенджеры",
+        "SEO и интеграции",
+        "Почта и формы",
+        "Повторяемые блоки",
+        "Шапка",
+        "Подвал",
+        "Финальная форма",
+        "Специалисты",
+        "CTA-блоки",
+        "Комфорт — вводный блок",
+        "Комфорт — галерея",
+        "Комфорт — требования",
+        "Цитата основателя"
+      ],
+      "general_titles": [
+        "Общие настройки",
+        "Соцсети и мессенджеры",
+        "SEO и интеграции",
+        "Почта и формы",
+        "Повторяемые блоки",
+        "Шапка",
+        "Подвал",
+        "Финальная форма",
+        "Специалисты",
+        "CTA-блоки",
+        "Комфорт — вводный блок",
+        "Комфорт — галерея",
+        "Комфорт — требования",
+        "Цитата основателя"
+      ],
+      "mail_under_general": true,
+      "mail_title_visible": true,
+      "mail_under_logical_orphan": false,
+      "mail_position": 3,
+      "has_general": true,
+      "has_seo": true,
+      "dup_mail_labels": [
+        "Почта и формы"
+      ],
+      "legacy_comfort_visible": false,
+      "leads": [
+        {
+          "pos": 56,
+          "title": "Заявки",
+          "slug": "fp02-form-leads"
+        }
+      ]
+    },
+    "page": {
+      "smtp_section": true,
+      "recipients": true,
+      "metrika": true,
+      "not_configured": true,
+      "password_empty": true,
+      "leads_heading": true,
+      "dash_credentials": true,
+      "mail_contains_secret": false
+    },
+    "runtime": {
+      "smtp_state": "not_configured",
+      "smtp_label": "NOT CONFIGURED",
+      "password_configured": false,
+      "should_suppress": true,
+      "pre_wp_mail": true,
+      "blog_public": 0,
+      "guest_manage_options": false
+    },
+    "form": {
+      "submit": {
+        "raw": "{\"ok\":true,\"success\":true,\"message\":\"\\u0417\\u0430\\u044f\\u0432\\u043a\\u0430 \\u043f\\u0440\\u0438\\u043d\\u044f\\u0442\\u0430. \\u041c\\u044b \\u0441\\u0432\\u044f\\u0436\\u0435\\u043c\\u0441\\u044f \\u0441 \\u0432\\u0430\\u043c\\u0438 \\u043f\\u043e \\u0443\\u043a\\u0430\\u0437\\u0430\\u043d\\u043d\\u043e\\u043c\\u0443 \\u0442\\u0435\\u043b\\u0435\\u0444\\u043e\\u043d\\u0443.\",\"accepted\":true,\"mail_attempted\":false,\"mail_accepted\":false,\"mail_status\":\"MAIL_SUPPRESSED\",\"form_key\":\"consultation\",\"metrika_goal\":\"\",\"metrika_counter\":\"\",\"metrika_event\":\"form_submission_accepted\"}",
+        "json": {
+          "ok": true,
+          "success": true,
+          "message": "Заявка принята. Мы свяжемся с вами по указанному телефону.",
+          "accepted": true,
+          "mail_attempted": false,
+          "mail_accepted": false,
+          "mail_status": "MAIL_SUPPRESSED",
+          "form_key": "consultation",
+          "metrika_goal": "",
+          "metrika_counter": "",
+          "metrika_event": "form_submission_accepted"
+        },
+        "err": null
+      },
+      "qa_before_delete": [
+        {
+          "id": "3",
+          "delivery_status": "MAIL_SUPPRESSED",
+          "is_qa": "1"
+        }
+      ],
+      "deleted": 1,
+      "qa_left": 0
+    },
+    "meta": {
+      "baseline_id": "FP-0002-PROD-BASELINE-2026-08-19-P18C-FU01",
+      "latest_wave": "P18C-FU01 Admin menu exposure",
+      "parity": "MATCH",
+      "verified_at": "2026-08-18 19:44 UTC",
+      "backup": "FRESH BEGET BACKUP CONFIRMED BY OPERATOR",
+      "git_sha": "16706398f03825b054ce75c56e8af48ec4349329",
+      "wave": "PROD-P15",
+      "state_note": "LIVE https://shpigovsky.ru; INDEXING CLOSED; SMTP SETTINGS READY — CREDENTIALS REQUIRED; LEADS ACTIVE; ПОЧТА И ФОРМЫ VISIBLE IN SITE SETTINGS",
+      "legacy_redirects": "7/7",
+      "cutover": "DONE",
+      "ssl": "ACTIVE",
+      "dns_ns": "DONE / Beget",
+      "smtp_sender": "noreply@shpigovsky.ru",
+      "indexing": "CLOSED — WAITING FOR OLYA APPROVAL",
+      "public_origin": "ПУБЛИЧНЫЙ https://shpigovsky.ru/ СЕЙЧАС ОТДАЁТ СТАРЫЙ САЙТ (Craftum) — привязка к WordPress ещё нужна",
+      "mail": "SMTP SETTINGS READY — CREDENTIALS REQUIRED",
+      "leads": "ACTIVE",
+      "metrika_form_goals": "CONFIGURABLE"
+    }
+  }
+}

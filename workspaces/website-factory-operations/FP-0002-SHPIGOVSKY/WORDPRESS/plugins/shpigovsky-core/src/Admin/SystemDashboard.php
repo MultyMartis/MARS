@@ -27,12 +27,12 @@ final class SystemDashboard implements ModuleInterface {
 	/**
 	 * Baseline ID shown in the widget (updated by stabilization waves).
 	 */
-	const BASELINE_ID = 'FP-0002-PROD-BASELINE-2026-08-19-P18C';
+	const BASELINE_ID = 'FP-0002-PROD-BASELINE-2026-08-19-P18C-FU01';
 
 	/**
 	 * Latest accepted production wave label.
 	 */
-	const LATEST_ACCEPTED_WAVE = 'P18C SMTP / Forms Foundation';
+	const LATEST_ACCEPTED_WAVE = 'P18C-FU01 Admin menu exposure';
 
 	/**
 	 * {@inheritdoc}

@@ -1,28 +1,29 @@
 # RUNBOOK — FP-0002 PROD-P18 FINAL DOMAIN CUTOVER (CURRENT EXECUTION STATE)
 
-**Wave executed:** **P18C** — SMTP / forms Admin foundation (2026-08-19)  
+**Wave executed:** **P18C-FU01** — Admin menu exposure for Почта и формы (2026-08-19)  
 **P18 remainder:** operator SMTP credentials → verification → real form QA · public apex → WordPress bind · Olya indexing · sitemaps · crawl.
 
 Historical trigger `NS SWITCHED` and WordPress `home`/`siteurl` cutover are **complete** (operator). Do **not** wait for NS or URL cutover anymore. Do **not** open indexing automatically. Do **not** claim SMTP verified until the operator saves real settings and a later wave tests delivery.
 
 ---
 
-## Current facts (P18C verification)
+## Current facts (P18C-FU01 verification)
 
 | Surface | Value |
 |---------|--------|
 | WordPress `home` | `https://shpigovsky.ru` |
 | WordPress `siteurl` | `https://shpigovsky.ru` |
-| Core | `0.3.12-p18c` |
-| SMTP Admin | Настройки сайта → Почта и формы |
+| Core | `0.3.13-p18c-fu01` |
+| SMTP Admin | **Настройки сайта → Почта и формы** (visible left-menu item) |
 | SMTP state | **NOT CONFIGURED** (credentials not entered) |
 | Sender | `noreply@shpigovsky.ru` |
 | Mail suppression | **ON** (`delivery_active=0`) |
 | Lead registry | table `fp02_form_leads` schema v1 **ACTIVE** |
+| Leads Admin | **Заявки** top-level — reachable |
 | Metrika form goals | Admin-configurable; counter owner = SEO |
 | Indexing | **CLOSED** (`blog_public=0`) |
-| Public apex | still observed as **legacy Craftum** at P18C intake |
-| Source ↔ production | **14/14 MATCH** |
+| Public apex | still observed as **legacy Craftum** at P18C/FU01 intake |
+| Source ↔ production | **4/4 MATCH** (FU01 touched files) |
 
 **Do not revert** `home`/`siteurl` to `shpigovsky.beget.tech`.
 
@@ -62,4 +63,4 @@ Exact leftover URL objects still listed in `REPORTS/evidence/prod-p17-fu02-final
 - Temporary-host 301 if it would send users to the **legacy** origin  
 - Treating Dashboard indexing button as launch authorization
 
-P18A/P18B reports remain historical. Do not use P18A “NS pending” Dashboard copy. Do not use P18B “SMTP PENDING implementation” as if Admin SMTP owner were still missing.
+P18B reports remain historical for Dashboard/indexing. P18C remains historical for SMTP/forms internals. Do not treat P18C as proof that the left-menu item was discoverable — that gap is closed in FU01.

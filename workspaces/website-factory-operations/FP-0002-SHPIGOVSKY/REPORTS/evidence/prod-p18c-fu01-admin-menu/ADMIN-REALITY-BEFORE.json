@@ -1,0 +1,513 @@
+{
+  "utc": "2026-08-18T19:38:37.312635+00:00",
+  "required": "P18C-FU01 ADMIN REALITY VERIFIED",
+  "wp": {
+    "ok": true,
+    "wp": {
+      "core": "0.3.12-p18c",
+      "home": "https://shpigovsky.ru",
+      "siteurl": "https://shpigovsky.ru",
+      "blog_public": 0,
+      "mode": "content_model",
+      "acf": true,
+      "acf_sub": true,
+      "is_admin": true
+    },
+    "modules": {
+      "MailFormsSettings_enabled": true,
+      "LeadsAdmin_enabled": true,
+      "OptionsPage_parent": "fp02-site-settings",
+      "mail_slug": "fp02-site-settings-mail-forms",
+      "leads_slug": "fp02-form-leads",
+      "mail_cap": "manage_options"
+    },
+    "runtime": {
+      "smtp_state": "not_configured",
+      "smtp_label": "NOT CONFIGURED",
+      "password_configured": false,
+      "should_suppress": true,
+      "pre_wp_mail": true
+    },
+    "users": {
+      "mars": {
+        "exists": true,
+        "id": 3,
+        "roles": [
+          "administrator"
+        ],
+        "manage_options": true,
+        "display_name": "MARS MetaCODE",
+        "email": "support@polygon-ws.ru"
+      },
+      "admin": {
+        "exists": true,
+        "id": 2,
+        "roles": [
+          "administrator"
+        ],
+        "manage_options": true,
+        "display_name": "admin",
+        "email": "ola4seo@yandex.ru"
+      }
+    },
+    "admin_menu_hooks": [
+      {
+        "priority": 7,
+        "callback": "ACF_Admin_Field_Groups::admin_menu"
+      },
+      {
+        "priority": 8,
+        "callback": "ACF_Admin_Post_Types::admin_menu"
+      },
+      {
+        "priority": 9,
+        "callback": "ACF_Admin_Taxonomies::admin_menu"
+      },
+      {
+        "priority": 10,
+        "callback": "_add_post_type_submenus"
+      },
+      {
+        "priority": 10,
+        "callback": "ACF_Admin::admin_menu"
+      },
+      {
+        "priority": 10,
+        "callback": "Shpigovsky\\Core\\Admin\\ActivityLog::register_menu"
+      },
+      {
+        "priority": 10,
+        "callback": "Shpigovsky\\Core\\Admin\\DocxImporter::register_menu"
+      },
+      {
+        "priority": 10,
+        "callback": "Shpigovsky\\Core\\Admin\\LeadsAdmin::register_menu"
+      },
+      {
+        "priority": 10,
+        "callback": "WPilot_Admin_Page::register_menu"
+      },
+      {
+        "priority": 10,
+        "callback": "ACF_Admin_UI_Options_Pages::admin_menu"
+      },
+      {
+        "priority": 10,
+        "callback": "acfe_admin_compatibility::admin_menu"
+      },
+      {
+        "priority": 10,
+        "callback": "acfe_admin_settings_ui::admin_menu"
+      },
+      {
+        "priority": 10,
+        "callback": "acfe_field_group_category::admin_menu"
+      },
+      {
+        "priority": 10,
+        "callback": "ACFE_Updates::admin_menu"
+      },
+      {
+        "priority": 10,
+        "callback": "acfe_pro_rewrite_rules::admin_menu"
+      },
+      {
+        "priority": 10,
+        "callback": "acfe_pro_scripts::admin_menu"
+      },
+      {
+        "priority": 15,
+        "callback": "acf_admin_tools::admin_menu"
+      },
+      {
+        "priority": 20,
+        "callback": "ACF_Admin_Upgrade::admin_menu"
+      },
+      {
+        "priority": 20,
+        "callback": "ACF_Admin_Updates::admin_menu"
+      },
+      {
+        "priority": 21,
+        "callback": "Shpigovsky\\Core\\Admin\\MailFormsSettings::register_menu"
+      },
+      {
+        "priority": 99,
+        "callback": "acf_admin_options_page::admin_menu"
+      },
+      {
+        "priority": 999,
+        "callback": "acfe_third_party::cotto_submenu"
+      },
+      {
+        "priority": 999,
+        "callback": "Shpigovsky\\Core\\Admin\\OptionsPage::hide_legacy_comfort_menu"
+      },
+      {
+        "priority": 999,
+        "callback": "acfe_admin_menu::admin_menu"
+      },
+      {
+        "priority": 999,
+        "callback": "acfe_module_form::admin_menu"
+      },
+      {
+        "priority": 1000,
+        "callback": "acfe_pro_admin_menu::admin_menu"
+      },
+      {
+        "priority": 9999,
+        "callback": "Shpigovsky\\Core\\Admin\\AdminMenuHygiene::remove_raw_options_screens"
+      }
+    ],
+    "menu": {
+      "parent_logical_slug": "fp02-site-settings",
+      "parent_logical_top": null,
+      "parent_visible_slug": "fp02-site-settings-general",
+      "parent_visible_top": {
+        "title": "Настройки сайта",
+        "cap": "manage_options",
+        "slug": "fp02-site-settings-general"
+      },
+      "children_under_logical_parent": [
+        {
+          "index": 0,
+          "title": "Почта и формы",
+          "cap": "manage_options",
+          "slug": "fp02-site-settings-mail-forms",
+          "page_title": "Почта и формы"
+        }
+      ],
+      "children_under_visible_parent": [
+        {
+          "index": 0,
+          "title": "Общие настройки",
+          "cap": "manage_options",
+          "slug": "fp02-site-settings-general",
+          "page_title": "Общие настройки"
+        },
+        {
+          "index": 1,
+          "title": "Соцсети и мессенджеры",
+          "cap": "manage_options",
+          "slug": "fp02-site-settings-social",
+          "page_title": "Соцсети и мессенджеры"
+        },
+        {
+          "index": 2,
+          "title": "SEO и интеграции",
+          "cap": "manage_options",
+          "slug": "fp02-site-settings-seo-integrations",
+          "page_title": "SEO и интеграции"
+        },
+        {
+          "index": 3,
+          "title": "Повторяемые блоки",
+          "cap": "manage_options",
+          "slug": "fp02-site-settings-blocks",
+          "page_title": "Повторяемые блоки"
+        },
+        {
+          "index": 4,
+          "title": "Шапка",
+          "cap": "manage_options",
+          "slug": "fp02-block-header",
+          "page_title": "Шапка"
+        },
+        {
+          "index": 5,
+          "title": "Подвал",
+          "cap": "manage_options",
+          "slug": "fp02-block-footer",
+          "page_title": "Подвал"
+        },
+        {
+          "index": 6,
+          "title": "Финальная форма",
+          "cap": "manage_options",
+          "slug": "fp02-block-final-form",
+          "page_title": "Финальная форма"
+        },
+        {
+          "index": 7,
+          "title": "Специалисты",
+          "cap": "manage_options",
+          "slug": "fp02-block-specialists",
+          "page_title": "Специалисты"
+        },
+        {
+          "index": 8,
+          "title": "CTA-блоки",
+          "cap": "manage_options",
+          "slug": "fp02-block-cta-bands",
+          "page_title": "CTA-блоки"
+        },
+        {
+          "index": 9,
+          "title": "Комфорт — вводный блок",
+          "cap": "manage_options",
+          "slug": "fp02-block-comfort-intro",
+          "page_title": "Комфорт — вводный блок"
+        },
+        {
+          "index": 10,
+          "title": "Комфорт — галерея",
+          "cap": "manage_options",
+          "slug": "fp02-block-comfort-gallery",
+          "page_title": "Комфорт — галерея"
+        },
+        {
+          "index": 11,
+          "title": "Комфорт — требования",
+          "cap": "manage_options",
+          "slug": "fp02-block-comfort-requirements",
+          "page_title": "Комфорт — требования"
+        },
+        {
+          "index": 12,
+          "title": "Цитата основателя",
+          "cap": "manage_options",
+          "slug": "fp02-block-founder-quote",
+          "page_title": "Цитата основателя"
+        },
+        {
+          "index": 13,
+          "title": "Комфорт / преимущества",
+          "cap": "manage_options",
+          "slug": "fp02-block-comfort",
+          "page_title": "Комфорт / преимущества (архив)"
+        }
+      ],
+      "visible_child_titles": [
+        "Общие настройки",
+        "Соцсети и мессенджеры",
+        "SEO и интеграции",
+        "Повторяемые блоки",
+        "Шапка",
+        "Подвал",
+        "Финальная форма",
+        "Специалисты",
+        "CTA-блоки",
+        "Комфорт — вводный блок",
+        "Комфорт — галерея",
+        "Комфорт — требования",
+        "Цитата основателя",
+        "Комфорт / преимущества"
+      ],
+      "mail_forms_under_logical_parent": true,
+      "mail_forms_under_visible_parent": false,
+      "mail_forms_title_in_visible_menu": false,
+      "mail_forms_registered_page": true,
+      "mail_forms_hookname": "admin_page_fp02-site-settings-mail-forms",
+      "mail_forms_parent_pages": "fp02-site-settings",
+      "leads_top_level": [
+        {
+          "pos": 56,
+          "title": "Заявки",
+          "cap": "manage_options",
+          "slug": "fp02-form-leads"
+        }
+      ],
+      "leads_reachable": true
+    },
+    "capability": {
+      "mars_manage_options": true,
+      "admin_olya_manage_options": true,
+      "unauthenticated_manage_options": false
+    },
+    "direct_render": {
+      "mail_h1": true,
+      "mail_smtp_section": true,
+      "mail_recipients": true,
+      "mail_metrika": true,
+      "mail_not_configured": true,
+      "password_value_empty": true,
+      "leads_heading": true,
+      "mail_bytes": 6121,
+      "leads_bytes": 2847
+    },
+    "acf_options_pages": [
+      {
+        "slug": "fp02-site-settings",
+        "menu_slug": "fp02-site-settings-general",
+        "parent_slug": "",
+        "menu_title": "Настройки сайта",
+        "redirect": true
+      },
+      {
+        "slug": "fp02-site-settings-general",
+        "menu_slug": "fp02-site-settings-general",
+        "parent_slug": "fp02-site-settings-general",
+        "menu_title": "Общие настройки",
+        "redirect": true
+      },
+      {
+        "slug": "fp02-site-settings-social",
+        "menu_slug": "fp02-site-settings-social",
+        "parent_slug": "fp02-site-settings-general",
+        "menu_title": "Соцсети и мессенджеры",
+        "redirect": true
+      },
+      {
+        "slug": "fp02-site-settings-seo-integrations",
+        "menu_slug": "fp02-site-settings-seo-integrations",
+        "parent_slug": "fp02-site-settings-general",
+        "menu_title": "SEO и интеграции",
+        "redirect": true
+      },
+      {
+        "slug": "fp02-site-settings-blocks",
+        "menu_slug": "fp02-site-settings-blocks",
+        "parent_slug": "fp02-site-settings-general",
+        "menu_title": "Повторяемые блоки",
+        "redirect": false
+      },
+      {
+        "slug": "fp02-block-header",
+        "menu_slug": "fp02-block-header",
+        "parent_slug": "fp02-site-settings-general",
+        "menu_title": "Шапка",
+        "redirect": true
+      },
+      {
+        "slug": "fp02-block-footer",
+        "menu_slug": "fp02-block-footer",
+        "parent_slug": "fp02-site-settings-general",
+        "menu_title": "Подвал",
+        "redirect": true
+      },
+      {
+        "slug": "fp02-block-final-form",
+        "menu_slug": "fp02-block-final-form",
+        "parent_slug": "fp02-site-settings-general",
+        "menu_title": "Финальная форма",
+        "redirect": true
+      },
+      {
+        "slug": "fp02-block-consultation-modal",
+        "menu_slug": "fp02-block-consultation-modal",
+        "parent_slug": "fp02-site-settings-blocks",
+        "menu_title": "Модальное окно",
+        "redirect": true
+      },
+      {
+        "slug": "fp02-block-specialists",
+        "menu_slug": "fp02-block-specialists",
+        "parent_slug": "fp02-site-settings-general",
+        "menu_title": "Специалисты",
+        "redirect": true
+      },
+      {
+        "slug": "fp02-block-cta-bands",
+        "menu_slug": "fp02-block-cta-bands",
+        "parent_slug": "fp02-site-settings-general",
+        "menu_title": "CTA-блоки",
+        "redirect": true
+      },
+      {
+        "slug": "fp02-block-comfort-intro",
+        "menu_slug": "fp02-block-comfort-intro",
+        "parent_slug": "fp02-site-settings-general",
+        "menu_title": "Комфорт — вводный блок",
+        "redirect": true
+      },
+      {
+        "slug": "fp02-block-comfort-gallery",
+        "menu_slug": "fp02-block-comfort-gallery",
+        "parent_slug": "fp02-site-settings-general",
+        "menu_title": "Комфорт — галерея",
+        "redirect": true
+      },
+      {
+        "slug": "fp02-block-comfort-requirements",
+        "menu_slug": "fp02-block-comfort-requirements",
+        "parent_slug": "fp02-site-settings-general",
+        "menu_title": "Комфорт — требования",
+        "redirect": true
+      },
+      {
+        "slug": "fp02-block-advantages",
+        "menu_slug": "fp02-block-advantages",
+        "parent_slug": "fp02-site-settings-blocks",
+        "menu_title": "Требования и преимущества",
+        "redirect": true
+      },
+      {
+        "slug": "fp02-block-founder-quote",
+        "menu_slug": "fp02-block-founder-quote",
+        "parent_slug": "fp02-site-settings-general",
+        "menu_title": "Цитата основателя",
+        "redirect": true
+      },
+      {
+        "slug": "fp02-block-backgrounds",
+        "menu_slug": "fp02-block-backgrounds",
+        "parent_slug": "fp02-site-settings-blocks",
+        "menu_title": "Фоновые секции",
+        "redirect": true
+      },
+      {
+        "slug": "fp02-block-comfort",
+        "menu_slug": "fp02-block-comfort",
+        "parent_slug": "fp02-site-settings-general",
+        "menu_title": "Комфорт / преимущества",
+        "redirect": true
+      },
+      {
+        "slug": "fp02-reviews",
+        "menu_slug": "fp02-reviews",
+        "parent_slug": "",
+        "menu_title": "Отзывы",
+        "redirect": false
+      }
+    ]
+  },
+  "source_prod_hashes": {
+    "src/Admin/MailFormsSettings.php": {
+      "prod": "9F20E3737F02EB68530BA1E77A6C61CD69289407B0C4FE528B950EC37067E1CE",
+      "source": "9F20E3737F02EB68530BA1E77A6C61CD69289407B0C4FE528B950EC37067E1CE",
+      "match": true,
+      "prod_bytes": 24094
+    },
+    "src/Admin/LeadsAdmin.php": {
+      "prod": "E5FF935865DA5FA1B99B40439D5FA75F80B7AC215B76FCF25DF0132750238999",
+      "source": "E5FF935865DA5FA1B99B40439D5FA75F80B7AC215B76FCF25DF0132750238999",
+      "match": true,
+      "prod_bytes": 13359
+    },
+    "src/Admin/OptionsPage.php": {
+      "prod": "24E5F517B5829FFC6905098EDF9C07F95385AAA20A5B82660E02E04970CA1FA4",
+      "source": "24E5F517B5829FFC6905098EDF9C07F95385AAA20A5B82660E02E04970CA1FA4",
+      "match": true,
+      "prod_bytes": 12896
+    },
+    "src/Admin/AdminMenuHygiene.php": {
+      "prod": "DE78E2DEFFD75673EDD3DEEC21EC098F79072512BEEB8AEAF69820FD42B65AF6",
+      "source": "DE78E2DEFFD75673EDD3DEEC21EC098F79072512BEEB8AEAF69820FD42B65AF6",
+      "match": true,
+      "prod_bytes": 3384
+    },
+    "src/ModuleRegistry.php": {
+      "prod": "EA9A91311AF344CE316BD1AD0EADAEDAD753CA5E16521BC16D7F64D4EF4AB747",
+      "source": "EA9A91311AF344CE316BD1AD0EADAEDAD753CA5E16521BC16D7F64D4EF4AB747",
+      "match": true,
+      "prod_bytes": 9384
+    },
+    "shpigovsky-core.php": {
+      "prod": "C67C94C81CBF16DF9F38FF56FEBB1CC4E79CDD73D93E9308EBF4F39564D61202",
+      "source": "C67C94C81CBF16DF9F38FF56FEBB1CC4E79CDD73D93E9308EBF4F39564D61202",
+      "match": true,
+      "prod_bytes": 1787
+    }
+  },
+  "acf_admin_menu_grep": {
+    "code": 0,
+    "out": "",
+    "err": ""
+  },
+  "notes": {
+    "cli_user": "mars Administrator",
+    "no_credentials_entered": true,
+    "no_indexing_change": true
+  }
+}

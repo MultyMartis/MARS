@@ -1,0 +1,38 @@
+{
+  "utc": "2026-08-18T19:44:01Z",
+  "layer_b": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p18c-fu01-layer-b-pre",
+  "files": [
+    {
+      "rel": "src/Admin/MailFormsSettings.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Admin/MailFormsSettings.php",
+      "src_sha": "10B766F09CCBD33BAB336468130405AF6FD4DBDF46D4578D16C36AE935CD644E",
+      "prod_before_sha": "10B766F09CCBD33BAB336468130405AF6FD4DBDF46D4578D16C36AE935CD644E",
+      "prod_existed": true,
+      "src_bytes": 24260
+    },
+    {
+      "rel": "src/Admin/OptionsPage.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Admin/OptionsPage.php",
+      "src_sha": "E2ACD713F582D0815FDCAE18B93BB9D83D92BC4883312EEC3AFCFB5B0FFC8F58",
+      "prod_before_sha": "E83C5754C37A0B459FFCC4A5E43E06C341473BB4D97AE1C55C622A9092833064",
+      "prod_existed": true,
+      "src_bytes": 13815
+    },
+    {
+      "rel": "src/Admin/SystemDashboard.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Admin/SystemDashboard.php",
+      "src_sha": "C76299E47C6DD40413C37A996AB4CBC3BF5C02075B5D0816A84082BE61833A8C",
+      "prod_before_sha": "C76299E47C6DD40413C37A996AB4CBC3BF5C02075B5D0816A84082BE61833A8C",
+      "prod_existed": true,
+      "src_bytes": 11087
+    },
+    {
+      "rel": "shpigovsky-core.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/shpigovsky-core.php",
+      "src_sha": "4525594A85B471D635274318073DD93582160110C11863AA55055161BF026810",
+      "prod_before_sha": "4525594A85B471D635274318073DD93582160110C11863AA55055161BF026810",
+      "prod_existed": true,
+      "src_bytes": 1797
+    }
+  ]
+}

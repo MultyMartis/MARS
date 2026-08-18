@@ -21,6 +21,9 @@ final class OptionsPage implements ModuleInterface {
 
 	/**
 	 * Parent menu slug — stable since V9-06C.
+	 *
+	 * Logical ACF parent. With redirect=true ACF promotes the first child
+	 * as the visible WordPress top-level slug — use visible_menu_slug().
 	 */
 	public const PARENT_SLUG = 'fp02-site-settings';
 
@@ -172,10 +175,33 @@ final class OptionsPage implements ModuleInterface {
 	}
 
 	/**
+	 * Visible WordPress parent slug for Настройки сайта.
+	 *
+	 * ACF options pages with redirect=true rewrite the top-level menu_slug
+	 * to the first child. Custom add_submenu_page() must use this slug,
+	 * not PARENT_SLUG, or the item becomes an orphan submenu.
+	 *
+	 * @return string
+	 */
+	public static function visible_menu_slug() {
+		if ( function_exists( 'acf_get_options_pages' ) ) {
+			$pages = acf_get_options_pages();
+			if ( isset( $pages[ self::PARENT_SLUG ] ) && is_array( $pages[ self::PARENT_SLUG ] ) ) {
+				$slug = (string) ( $pages[ self::PARENT_SLUG ]['menu_slug'] ?? '' );
+				if ( '' !== $slug && self::PARENT_SLUG !== $slug ) {
+					return $slug;
+				}
+			}
+		}
+
+		return self::GENERAL_SLUG;
+	}
+
+	/**
 	 * Remove legacy comfort submenu after ACF registers it.
 	 */
 	public static function hide_legacy_comfort_menu() {
-		remove_submenu_page( self::PARENT_SLUG, self::COMFORT_LEGACY_SLUG );
+		remove_submenu_page( self::visible_menu_slug(), self::COMFORT_LEGACY_SLUG );
 	}
 
 	/**

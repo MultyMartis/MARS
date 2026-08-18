@@ -50,7 +50,7 @@ final class MailFormsSettings implements ModuleInterface {
 	 * {@inheritdoc}
 	 */
 	public static function register() {
-		add_action( 'admin_menu', array( __CLASS__, 'register_menu' ), 21 );
+		add_action( 'admin_menu', array( __CLASS__, 'register_menu' ), 100 );
 		add_action( 'admin_post_' . self::SAVE_ACTION, array( __CLASS__, 'handle_save' ) );
 		add_action( 'admin_post_' . self::TEST_ACTION, array( __CLASS__, 'handle_test' ) );
 		add_action( 'admin_post_' . self::ACTIVATE_ACTION, array( __CLASS__, 'handle_activate' ) );
@@ -58,16 +58,20 @@ final class MailFormsSettings implements ModuleInterface {
 	}
 
 	/**
-	 * Submenu under Настройки сайта.
+	 * Submenu under the visible Настройки сайта parent.
+	 *
+	 * Priority 100: after ACF options pages (99). Parent slug is the
+	 * resolved ACF menu slug, not the logical PARENT_SLUG.
 	 */
 	public static function register_menu() {
 		add_submenu_page(
-			OptionsPage::PARENT_SLUG,
+			OptionsPage::visible_menu_slug(),
 			__( 'Почта и формы', 'shpigovsky-core' ),
 			__( 'Почта и формы', 'shpigovsky-core' ),
 			self::CAPABILITY,
 			self::MENU_SLUG,
-			array( __CLASS__, 'render_page' )
+			array( __CLASS__, 'render_page' ),
+			3
 		);
 	}
 
