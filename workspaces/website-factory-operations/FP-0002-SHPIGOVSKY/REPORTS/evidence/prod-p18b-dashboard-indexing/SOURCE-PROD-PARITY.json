@@ -1,0 +1,43 @@
+{
+  "n": 6,
+  "matched": 6,
+  "label": "6/6 MATCH",
+  "files": [
+    {
+      "rel": "shpigovsky-core.php",
+      "src_sha": "9328b1fd51042ab619c7551d1ea80e861c8444881c9e2fcd7848a155d2a00fde",
+      "prod_after_sha": "9328b1fd51042ab619c7551d1ea80e861c8444881c9e2fcd7848a155d2a00fde",
+      "match": true
+    },
+    {
+      "rel": "src/Admin/SystemDashboard.php",
+      "src_sha": "870eb929de39bb5323f568f66a459f9f9a50adebf08402e2fe3d6928b8356a78",
+      "prod_after_sha": "870eb929de39bb5323f568f66a459f9f9a50adebf08402e2fe3d6928b8356a78",
+      "match": true
+    },
+    {
+      "rel": "src/Admin/IndexingControl.php",
+      "src_sha": "8d9e7b1bdbc6f739963f3368ed602e5ee37571be48e1e6bd82c5fc3522aee626",
+      "prod_after_sha": "8d9e7b1bdbc6f739963f3368ed602e5ee37571be48e1e6bd82c5fc3522aee626",
+      "match": true
+    },
+    {
+      "rel": "src/ModuleRegistry.php",
+      "src_sha": "9186e982cd00813be62152689981f9dd1f55b827579424e90014fa11698e7c64",
+      "prod_after_sha": "9186e982cd00813be62152689981f9dd1f55b827579424e90014fa11698e7c64",
+      "match": true
+    },
+    {
+      "rel": "src/Admin/ActivityLog.php",
+      "src_sha": "6cc7ec9a44713792d36df3d1d98b43a5a135457c290d17e56c67e85f3acb93ea",
+      "prod_after_sha": "6cc7ec9a44713792d36df3d1d98b43a5a135457c290d17e56c67e85f3acb93ea",
+      "match": true
+    },
+    {
+      "rel": "inc/seo-integrations.php",
+      "src_sha": "276858240b84070a1585b071d333b41ecc6a83e316a41e90a67241545fce0f11",
+      "prod_after_sha": "276858240b84070a1585b071d333b41ecc6a83e316a41e90a67241545fce0f11",
+      "match": true
+    }
+  ]
+}

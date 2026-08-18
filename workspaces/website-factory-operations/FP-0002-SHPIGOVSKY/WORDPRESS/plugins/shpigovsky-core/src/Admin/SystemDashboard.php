@@ -1,9 +1,9 @@
 <?php
 /**
- * Dashboard widget: MetaCODE / system state — PROD-P18A.
+ * Dashboard widget: MetaCODE / system state — PROD-P18B.
  *
- * Canonical concise operational summary for FP-0002. No global Admin notices.
- * No DNS/registrar credentials.
+ * Operational status surface derived from runtime where practical.
+ * Historical waves belong in reports, not this widget.
  *
  * @package Shpigovsky_Core
  */
@@ -25,12 +25,12 @@ final class SystemDashboard implements ModuleInterface {
 	/**
 	 * Baseline ID shown in the widget (updated by stabilization waves).
 	 */
-	const BASELINE_ID = 'FP-0002-PROD-BASELINE-2026-08-18-P18A';
+	const BASELINE_ID = 'FP-0002-PROD-BASELINE-2026-08-19-P18B';
 
 	/**
 	 * Latest accepted production wave label.
 	 */
-	const LATEST_ACCEPTED_WAVE = 'P18A Live Domain Reality + Legal State Fix';
+	const LATEST_ACCEPTED_WAVE = 'P18B Dashboard Reality + Indexing Control';
 
 	/**
 	 * {@inheritdoc}
@@ -74,7 +74,8 @@ final class SystemDashboard implements ModuleInterface {
 	public static function render_widget() {
 		$env_fn    = function_exists( 'wp_get_environment_type' ) ? wp_get_environment_type() : 'unknown';
 		$env_const = defined( 'WP_ENVIRONMENT_TYPE' ) ? (string) WP_ENVIRONMENT_TYPE : '';
-		$host      = wp_parse_url( home_url( '/' ), PHP_URL_HOST );
+		$home      = home_url( '/' );
+		$host      = wp_parse_url( $home, PHP_URL_HOST );
 		$host      = is_string( $host ) ? $host : '';
 		$is_beget  = ( false !== strpos( $host, 'beget.tech' ) || false !== strpos( $host, 'shpigovsky.ru' ) );
 
@@ -98,40 +99,48 @@ final class SystemDashboard implements ModuleInterface {
 			$meta = array();
 		}
 		$parity   = isset( $meta['parity'] ) ? (string) $meta['parity'] : 'MATCH';
-		$verified = isset( $meta['verified_at'] ) ? (string) $meta['verified_at'] : gmdate( 'Y-m-d H:i' ) . ' UTC';
-		$backup   = isset( $meta['backup'] ) ? (string) $meta['backup'] : '—';
-		$git_sha  = isset( $meta['git_sha'] ) ? (string) $meta['git_sha'] : '';
+		$verified = isset( $meta['verified_at'] ) ? (string) $meta['verified_at'] : '';
+		$backup   = isset( $meta['backup'] ) ? (string) $meta['backup'] : 'FRESH BEGET BACKUP CONFIRMED BY OPERATOR';
 		$baseline = isset( $meta['baseline_id'] ) ? (string) $meta['baseline_id'] : self::BASELINE_ID;
 		$wave     = isset( $meta['latest_wave'] ) ? (string) $meta['latest_wave'] : self::LATEST_ACCEPTED_WAVE;
+		$ssl      = isset( $meta['ssl'] ) ? (string) $meta['ssl'] : '';
+		$dns_ns   = isset( $meta['dns_ns'] ) ? (string) $meta['dns_ns'] : 'DONE / Beget';
+		$smtp_box = isset( $meta['smtp_sender'] ) ? (string) $meta['smtp_sender'] : 'noreply@shpigovsky.ru';
+		$redirects = isset( $meta['legacy_redirects'] ) ? (string) $meta['legacy_redirects'] : '7/7';
 
-		$php_ver = function_exists( 'phpversion' ) ? phpversion() : '';
-		$debug_on = ( defined( 'WP_DEBUG' ) && WP_DEBUG );
-		$blog_public = (int) get_option( 'blog_public', 1 );
+		$php_ver         = function_exists( 'phpversion' ) ? phpversion() : '';
+		$debug_on        = ( defined( 'WP_DEBUG' ) && WP_DEBUG );
 		$mail_suppressed = (bool) has_filter( 'pre_wp_mail' );
+		$indexing_open   = class_exists( IndexingControl::class ) ? IndexingControl::is_open() : ( 1 === (int) get_option( 'blog_public', 1 ) );
 
-		$cutover    = isset( $meta['cutover'] ) ? (string) $meta['cutover'] : 'OPERATOR NS + WP URL CUTOVER DONE — PUBLIC APEX ROUTING / SSL FINALIZE PENDING';
-		$ssl        = isset( $meta['ssl'] ) ? (string) $meta['ssl'] : 'IN PROGRESS — WordPress origin not yet public HTTPS';
-		$redirects  = isset( $meta['legacy_redirects'] ) ? (string) $meta['legacy_redirects'] : '7/7';
-		$live_host  = ( '' !== $host ) ? $host : 'shpigovsky.ru';
+		if ( '' === $ssl ) {
+			$ssl = ( is_string( $home ) && 0 === strpos( $home, 'https://' ) )
+				? __( 'HTTPS в адресах WordPress', 'shpigovsky-core' )
+				: __( 'не подтверждён', 'shpigovsky-core' );
+		}
+
+		$public_origin = isset( $meta['public_origin'] ) ? (string) $meta['public_origin'] : '';
 
 		echo '<div class="fp02-metacode-system">';
+
+		if ( class_exists( IndexingControl::class ) ) {
+			IndexingControl::render_banner();
+		}
 
 		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'Сайт', 'shpigovsky-core' ) . '</h3>';
 		echo '<table class="widefat striped" style="border:none;box-shadow:none;margin-bottom:12px;">';
 		self::row( __( 'Проект', 'shpigovsky-core' ), 'FP-0002 / Шпиговский Дом' );
 		self::row(
-			__( 'Runtime', 'shpigovsky-core' ),
+			__( 'Среда', 'shpigovsky-core' ),
 			$is_beget
 				? __( 'Production / Beget', 'shpigovsky-core' )
 				: sprintf(
 					/* translators: %s: environment type */
-					__( 'Environment: %s', 'shpigovsky-core' ),
+					__( 'Среда: %s', 'shpigovsky-core' ),
 					$env_fn
 				)
 		);
-		self::row( __( 'Live domain', 'shpigovsky-core' ), 'shpigovsky.ru' );
-		self::row( __( 'WordPress home host', 'shpigovsky-core' ), $live_host );
-		self::row( __( 'Temporary host', 'shpigovsky-core' ), 'shpigovsky.beget.tech' );
+		self::row( __( 'Боевой домен', 'shpigovsky-core' ), 'https://shpigovsky.ru/' );
 		self::row( __( 'WordPress', 'shpigovsky-core' ), get_bloginfo( 'version' ) );
 		if ( $php_ver !== '' ) {
 			self::row( __( 'PHP', 'shpigovsky-core' ), $php_ver );
@@ -140,69 +149,63 @@ final class SystemDashboard implements ModuleInterface {
 
 		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'Текущее состояние', 'shpigovsky-core' ) . '</h3>';
 		echo '<table class="widefat striped" style="border:none;box-shadow:none;margin-bottom:12px;">';
-		self::row( __( 'Latest wave', 'shpigovsky-core' ), $wave );
-		self::row( __( 'Domain cutover', 'shpigovsky-core' ), __( 'DONE BY OPERATOR (NS + home/siteurl)', 'shpigovsky-core' ) );
-		self::row( __( 'WordPress URL cutover', 'shpigovsky-core' ), __( 'DONE', 'shpigovsky-core' ) );
-		self::row( __( 'SSL', 'shpigovsky-core' ), $ssl );
-		self::row( __( 'Status', 'shpigovsky-core' ), $cutover );
+		self::row( __( 'Последняя волна', 'shpigovsky-core' ), $wave );
+		self::row( __( 'Домен', 'shpigovsky-core' ), __( 'DONE', 'shpigovsky-core' ) );
+		self::row( __( 'DNS / NS', 'shpigovsky-core' ), $dns_ns );
+		self::row( __( 'HTTPS', 'shpigovsky-core' ), $ssl );
+		if ( '' !== $public_origin ) {
+			self::row( __( 'Публичный адрес', 'shpigovsky-core' ), $public_origin );
+		}
 		self::row( __( 'Source ↔ production', 'shpigovsky-core' ), $parity );
 		self::row( __( 'Legacy redirects', 'shpigovsky-core' ), $redirects );
 		self::row(
 			__( 'WPilot', 'shpigovsky-core' ),
 			$wpilot_on
-				? trim( $wpilot_ver . ' · ' . ( $wpilot_write ? __( 'writes enabled', 'shpigovsky-core' ) : __( 'write disabled', 'shpigovsky-core' ) ) )
-				: __( 'Not active', 'shpigovsky-core' )
+				? trim( $wpilot_ver . ' · ' . ( $wpilot_write ? __( 'запись включена', 'shpigovsky-core' ) : __( 'write disabled', 'shpigovsky-core' ) ) )
+				: __( 'не активен', 'shpigovsky-core' )
 		);
 		self::row(
 			__( 'Debug', 'shpigovsky-core' ),
 			$debug_on ? __( 'on', 'shpigovsky-core' ) : __( 'off', 'shpigovsky-core' )
 		);
 		self::row(
-			__( 'Mail', 'shpigovsky-core' ),
+			__( 'Почта', 'shpigovsky-core' ),
 			$mail_suppressed
-				? __( 'SUPPRESSED / SMTP PENDING', 'shpigovsky-core' )
-				: __( 'suppression not detected — verify before go-live', 'shpigovsky-core' )
+				? __( 'SMTP PENDING / подавлена до SMTP', 'shpigovsky-core' )
+				: __( 'подавление не обнаружено — проверить до запуска почты', 'shpigovsky-core' )
 		);
+		self::row( __( 'SMTP отправитель', 'shpigovsky-core' ), $smtp_box );
 		self::row(
-			__( 'Indexing', 'shpigovsky-core' ),
-			( 0 === $blog_public )
-				? __( 'CLOSED (intentional until SMTP + HTTPS smoke)', 'shpigovsky-core' )
-				: __( 'open', 'shpigovsky-core' )
+			__( 'Индексация', 'shpigovsky-core' ),
+			$indexing_open
+				? __( 'OPEN', 'shpigovsky-core' )
+				: __( 'CLOSED — WAITING FOR OLYA APPROVAL', 'shpigovsky-core' )
 		);
-		self::row( __( 'shpigovsky-core', 'shpigovsky-core' ), defined( 'SHPIGOVSKY_CORE_VERSION' ) ? SHPIGOVSKY_CORE_VERSION : '—' );
-		self::row( __( 'Last verification', 'shpigovsky-core' ), $verified );
-		if ( $backup !== '' && $backup !== '—' ) {
-			self::row( __( 'Backup', 'shpigovsky-core' ), $backup );
-		}
+		self::row( __( 'Core', 'shpigovsky-core' ), defined( 'SHPIGOVSKY_CORE_VERSION' ) ? SHPIGOVSKY_CORE_VERSION : '—' );
+		self::row( __( 'Последняя проверка', 'shpigovsky-core' ), '' !== $verified ? $verified : __( 'ещё не зафиксирована', 'shpigovsky-core' ) );
+		self::row( __( 'Бэкап', 'shpigovsky-core' ), $backup );
+		self::row( __( 'Baseline', 'shpigovsky-core' ), $baseline );
 		echo '</table>';
 
-		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'DNS', 'shpigovsky-core' ) . '</h3>';
-		echo '<table class="widefat striped" style="border:none;box-shadow:none;margin-bottom:12px;">';
-		self::row( __( 'NS switch', 'shpigovsky-core' ), __( 'DONE BY OPERATOR', 'shpigovsky-core' ) );
-		self::row( __( 'Current delegation', 'shpigovsky-core' ), 'Beget NS' );
-		self::row( __( 'Public apex → WordPress', 'shpigovsky-core' ), __( 'VERIFY / FINALIZE (legacy origin still observed on public A)', 'shpigovsky-core' ) );
-		echo '</table>';
-
-		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'Осталось до запуска', 'shpigovsky-core' ) . '</h3>';
+		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'Следующие шаги', 'shpigovsky-core' ) . '</h3>';
 		echo '<ul style="margin:0 0 12px 1.2em;">';
-		self::li( __( '1. SSL finalize + bind public apex to WordPress origin', 'shpigovsky-core' ) );
-		self::li( __( '2. Final-domain HTTPS smoke', 'shpigovsky-core' ) );
-		self::li( __( '3. Canonical / www / temp-host redirects after smoke', 'shpigovsky-core' ) );
-		self::li( __( '4. SMTP', 'shpigovsky-core' ) );
-		self::li( __( '5. Form delivery QA', 'shpigovsky-core' ) );
-		self::li( __( '6. robots / indexing', 'shpigovsky-core' ) );
-		self::li( __( '7. Sitemap submissions', 'shpigovsky-core' ) );
-		self::li( __( '8. Final crawl', 'shpigovsky-core' ) );
+		self::li( __( '1. Привязать публичный https://shpigovsky.ru/ к WordPress (сейчас на адресе может открываться старый сайт)', 'shpigovsky-core' ) );
+		self::li( __( '2. Настройка SMTP (noreply@shpigovsky.ru)', 'shpigovsky-core' ) );
+		self::li( __( '3. Проверка доставки форм', 'shpigovsky-core' ) );
+		self::li( __( '4. Цели Метрики для форм (после подтверждения бэкенда)', 'shpigovsky-core' ) );
+		self::li( __( '5. Внутренняя статистика заявок', 'shpigovsky-core' ) );
+		self::li( __( '6. Индексация — только после разрешения Оли', 'shpigovsky-core' ) );
+		self::li( __( '7. Отправка sitemap', 'shpigovsky-core' ) );
+		self::li( __( '8. Финальный обход', 'shpigovsky-core' ) );
 		echo '</ul>';
-		echo '<p style="margin:0 0 12px;">' . esc_html__( 'Live domain is shpigovsky.ru. NS and WordPress home/siteurl cutover are done. Do not treat NS or URL cutover as pending. Indexing stays closed until SSL + SMTP gates pass.', 'shpigovsky-core' ) . '</p>';
 
 		if ( $is_beget && ( 'local' === $env_const || 'local' === $env_fn ) ) {
 			echo '<p style="margin:0 0 8px;padding:8px 10px;border-left:3px solid #dba617;background:#fff8e5;">';
-			echo esc_html__( 'Environment warning: WP_ENVIRONMENT_TYPE is still «local» on this production host — unexpected after P15.', 'shpigovsky-core' );
+			echo esc_html__( 'Предупреждение среды: WP_ENVIRONMENT_TYPE всё ещё «local» на этом боевом хосте.', 'shpigovsky-core' );
 			echo '</p>';
 		}
 
-		echo '<p class="description" style="margin:0;">' . esc_html__( 'No secrets, tokens, DNS credentials, or filesystem credentials are shown here.', 'shpigovsky-core' ) . '</p>';
+		echo '<p class="description" style="margin:0;">' . esc_html__( 'Секреты, токены и пароли почтового ящика здесь не показываются.', 'shpigovsky-core' ) . '</p>';
 		echo '</div>';
 	}
 

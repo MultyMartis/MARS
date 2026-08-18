@@ -1,0 +1,42 @@
+{
+  "https": {
+    "url": "https://shpigovsky.ru/robots.txt",
+    "follow": true,
+    "status": 200,
+    "final_url": "https://shpigovsky.ru/robots.txt",
+    "location": null,
+    "server": "nginx-reuseport/1.21.1",
+    "x_robots": null,
+    "content_type": "text/plain",
+    "has_wp": false,
+    "generator": null,
+    "robots_meta": null,
+    "canonical": null,
+    "body_bytes": 80,
+    "body_head": "User-agent: *\nDisallow: /\n\nSitemap: http://shpigovsky.beget.tech/wp-sitemap.xml\n",
+    "legacy_markers": {
+      "beget_abs": 1,
+      "live_abs": 0
+    }
+  },
+  "beget": {
+    "url": "http://shpigovsky.beget.tech/robots.txt",
+    "follow": true,
+    "status": 200,
+    "final_url": "http://shpigovsky.beget.tech/robots.txt",
+    "location": null,
+    "server": "nginx-reuseport/1.21.1",
+    "x_robots": null,
+    "content_type": "text/plain",
+    "has_wp": false,
+    "generator": null,
+    "robots_meta": null,
+    "canonical": null,
+    "body_bytes": 80,
+    "body_head": "User-agent: *\nDisallow: /\n\nSitemap: http://shpigovsky.beget.tech/wp-sitemap.xml\n",
+    "legacy_markers": {
+      "beget_abs": 1,
+      "live_abs": 0
+    }
+  }
+}

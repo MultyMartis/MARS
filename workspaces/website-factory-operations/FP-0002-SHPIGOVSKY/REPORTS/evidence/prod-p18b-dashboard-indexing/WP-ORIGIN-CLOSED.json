@@ -1,0 +1,50 @@
+{
+  "beget_home": {
+    "path": "/",
+    "status": 200,
+    "server": "nginx",
+    "final": "https://shpigovsky.ru/",
+    "has_wp": false,
+    "robots_meta": null,
+    "body_head": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"utf-8\"/>\n        \n            <title>Лечение алкоголизма и наркомании центр |  Лечение зависимости Москва",
+    "bytes": 531136
+  },
+  "beget_privacy": {
+    "path": "/privacy-policy/",
+    "status": 200,
+    "server": "nginx-reuseport/1.21.1",
+    "final": "http://shpigovsky.beget.tech/privacy-policy/",
+    "has_wp": true,
+    "robots_meta": "noindex, nofollow",
+    "body_head": "<!DOCTYPE html>\r\n<html lang=\"ru-RU\">\r\n<head>\r\n\t<meta charset=\"UTF-8\">\r\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n\t<script>(function(){document.documentElement.classList.add('js-enabled');})()",
+    "bytes": 71110
+  },
+  "beget_robots": {
+    "path": "/robots.txt",
+    "status": 200,
+    "server": "nginx-reuseport/1.21.1",
+    "final": "http://shpigovsky.beget.tech/robots.txt",
+    "has_wp": false,
+    "robots_meta": null,
+    "body_head": "User-agent: *\nDisallow: /\n\nSitemap: https://shpigovsky.ru/wp-sitemap.xml\n",
+    "bytes": 73
+  },
+  "beget_admin": {
+    "path": "/wp-admin/",
+    "status": 200,
+    "server": "nginx-reuseport/1.21.1",
+    "final": "http://shpigovsky.beget.tech/wp-admin/",
+    "has_wp": false,
+    "robots_meta": null,
+    "body_head": "<html><head><script>function set_cookie(){var now = new Date();var time = now.getTime();time += 19360000 * 1000;now.setTime(time);document.cookie='beget=begetok'+'; expires='+now.toGMTString()+'; path=/';}set_cookie();lo",
+    "bytes": 273
+  },
+  "state": {
+    "blog_public": 0,
+    "open": false,
+    "robots_file_exists": true,
+    "robots_disallow_all": true,
+    "robots_sitemap_host": "shpigovsky.ru"
+  },
+  "blog_public": 0
+}

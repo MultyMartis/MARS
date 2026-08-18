@@ -1,0 +1,36 @@
+{
+  "required": "ONE INDEXING STATE OWNER / ONE ADMIN OPERATION",
+  "class": "Shpigovsky\\Core\\Admin\\IndexingControl",
+  "operation": "SET SITE INDEXABILITY = OPEN / CLOSED",
+  "owners_kept_consistent": [
+    "option blog_public (core wp_robots_noindex)",
+    "physical ABSPATH/robots.txt when the file exists"
+  ],
+  "not_owners": [
+    "public nginx Craftum robots.txt on https://shpigovsky.ru/robots.txt when apex is not WordPress",
+    "theme search-helpers.php (search pages stay noindex even when OPEN — intentional)"
+  ],
+  "mutation": {
+    "method": "POST only",
+    "endpoint": "admin_post_fp02_set_indexability",
+    "nopriv": false,
+    "capability": "manage_options",
+    "nonce": "fp02_set_indexability",
+    "confirm_field": "fp02_confirm=1",
+    "browser_confirm": "window.confirm via data-fp02-confirm",
+    "get_mutation": false
+  },
+  "olya": {
+    "login": "admin",
+    "role": "administrator",
+    "manage_options": true,
+    "roles_changed": false
+  },
+  "activity_log": {
+    "actions": ["indexing_opened", "indexing_closed"],
+    "object_type": "setting",
+    "cli_qa_user_id": 0,
+    "cli_qa_rows_visible_as": "System",
+    "note": "Dashboard POST by a logged-in Administrator records that actor. CLI reversible QA ran as user 0."
+  }
+}

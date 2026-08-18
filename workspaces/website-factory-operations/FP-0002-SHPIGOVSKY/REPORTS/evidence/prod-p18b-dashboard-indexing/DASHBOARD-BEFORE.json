@@ -1,0 +1,20 @@
+{
+  "captured_from": "WP-INTAKE.json dashboard_meta before P18B deploy",
+  "stale_examples": [
+    "latest_wave = P18A Live Domain Reality + Legal State Fix",
+    "ssl = IN PROGRESS — WordPress origin not yet public HTTPS",
+    "cutover = OPERATOR NS + WP URL CUTOVER DONE — PUBLIC APEX ROUTING / SSL FINALIZE PENDING",
+    "backup still mentioned launch backup required / P14",
+    "p15_note = domain not cut over",
+    "widget source still listed Temporary host and SSL finalize next steps"
+  ],
+  "meta": {
+    "baseline_id": "FP-0002-PROD-BASELINE-2026-08-18-P18A",
+    "latest_wave": "P18A Live Domain Reality + Legal State Fix",
+    "parity": "MATCH",
+    "verified_at": "2026-08-18 14:50 UTC",
+    "backup": "P14 full; FU02 exact-file/object + obsolete tar; launch backup still required after freeze",
+    "cutover": "OPERATOR NS + WP URL CUTOVER DONE — PUBLIC APEX ROUTING / SSL FINALIZE PENDING",
+    "ssl": "IN PROGRESS — WordPress origin not yet public HTTPS"
+  }
+}

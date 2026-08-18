@@ -1,0 +1,9 @@
+=== grep Disallow /*? ===
+=== find robots.txt ===
+=== hexdump public vs docroot ===
+skip
+=== ls sites ===
+=== nginx snippets if any ===
+
+---stderr---
+ls: cannot open directory '/home/s/shpigovsky': Permission denied

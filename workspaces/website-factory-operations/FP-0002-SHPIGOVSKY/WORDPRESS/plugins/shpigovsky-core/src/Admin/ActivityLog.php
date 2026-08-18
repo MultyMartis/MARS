@@ -97,6 +97,7 @@ final class ActivityLog implements ModuleInterface {
 			'service'    => __( 'Service', 'shpigovsky-core' ),
 			'specialist' => __( 'Specialist', 'shpigovsky-core' ),
 			'review'     => __( 'Review', 'shpigovsky-core' ),
+			'setting'    => __( 'Настройка', 'shpigovsky-core' ),
 		);
 	}
 
@@ -276,6 +277,45 @@ final class ActivityLog implements ModuleInterface {
 	}
 
 	/**
+	 * Log a non-content operational action (indexing, settings).
+	 *
+	 * @param string $action Action key.
+	 * @param string $object_type Object type key.
+	 * @param string $object_title Short label, no secrets.
+	 * @param int    $object_id Optional object id.
+	 */
+	public static function log_system_event( $action, $object_type, $object_title, $object_id = 0 ) {
+		self::maybe_install_table();
+
+		$user_id = get_current_user_id();
+		$key     = sanitize_key( $action ) . ':' . sanitize_key( $object_type ) . ':' . (int) $object_id . ':' . (int) $user_id;
+
+		if ( isset( self::$logged_keys[ $key ] ) ) {
+			return;
+		}
+		self::$logged_keys[ $key ] = true;
+
+		global $wpdb;
+		$table = self::table_name();
+
+		$wpdb->insert(
+			$table,
+			array(
+				'user_id'       => (int) $user_id,
+				'action'        => sanitize_key( $action ),
+				'object_id'     => (int) $object_id,
+				'object_type'   => sanitize_key( $object_type ),
+				'object_title'  => mb_substr( wp_strip_all_tags( (string) $object_title ), 0, 255 ),
+				'object_status' => 'system',
+				'created_at'    => current_time( 'mysql' ),
+			),
+			array( '%d', '%s', '%d', '%s', '%s', '%s', '%s' )
+		);
+
+		self::maybe_prune();
+	}
+
+	/**
 	 * Retain newest N rows.
 	 */
 	private static function maybe_prune() {
@@ -305,10 +345,12 @@ final class ActivityLog implements ModuleInterface {
 	 */
 	public static function action_label( $action ) {
 		$map = array(
-			'created'  => __( 'Created', 'shpigovsky-core' ),
-			'updated'  => __( 'Updated', 'shpigovsky-core' ),
-			'trashed'  => __( 'Moved to trash', 'shpigovsky-core' ),
-			'restored' => __( 'Restored', 'shpigovsky-core' ),
+			'created'           => __( 'Created', 'shpigovsky-core' ),
+			'updated'           => __( 'Updated', 'shpigovsky-core' ),
+			'trashed'           => __( 'Moved to trash', 'shpigovsky-core' ),
+			'restored'          => __( 'Restored', 'shpigovsky-core' ),
+			'indexing_opened'   => __( 'Индексация открыта', 'shpigovsky-core' ),
+			'indexing_closed'   => __( 'Индексация закрыта', 'shpigovsky-core' ),
 		);
 		return isset( $map[ $action ] ) ? $map[ $action ] : $action;
 	}
@@ -411,7 +453,7 @@ final class ActivityLog implements ModuleInterface {
 		echo '</select> ';
 
 		echo '<select name="fp02_action"><option value="">' . esc_html__( 'Все действия', 'shpigovsky-core' ) . '</option>';
-		foreach ( array( 'created', 'updated', 'trashed', 'restored' ) as $act ) {
+		foreach ( array( 'created', 'updated', 'trashed', 'restored', 'indexing_opened', 'indexing_closed' ) as $act ) {
 			printf(
 				'<option value="%1$s"%2$s>%3$s</option>',
 				esc_attr( $act ),

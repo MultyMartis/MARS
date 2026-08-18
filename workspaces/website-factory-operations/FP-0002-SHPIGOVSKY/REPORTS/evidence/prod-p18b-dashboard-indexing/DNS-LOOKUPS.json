@@ -1,0 +1,164 @@
+{
+  "shpigovsky.ru": {
+    "host": "shpigovsky.ru",
+    "nslookup": {
+      "NS": {
+        "cmd": [
+          "nslookup",
+          "-type=NS",
+          "shpigovsky.ru",
+          "8.8.8.8"
+        ],
+        "code": 0,
+        "out": "������:  UnKnown\nAddress:  8.8.8.8\n\n",
+        "err": "*** ��� ����ᥩ name server (NS), ����㯭�� ��� shpigovsky.ru\n\n"
+      },
+      "A": {
+        "cmd": [
+          "nslookup",
+          "-type=A",
+          "shpigovsky.ru",
+          "8.8.8.8"
+        ],
+        "code": 0,
+        "out": "������:  UnKnown\nAddress:  8.8.8.8\n\n���:     shpigovsky.ru\nAddress:  45.130.41.70\n\n",
+        "err": ""
+      },
+      "AAAA": {
+        "cmd": [
+          "nslookup",
+          "-type=AAAA",
+          "shpigovsky.ru",
+          "8.8.8.8"
+        ],
+        "code": 0,
+        "out": "������:  UnKnown\nAddress:  8.8.8.8\n\n",
+        "err": "*** ��� ����ᥩ IPv6 address (AAAA), ����㯭�� ��� shpigovsky.ru\n\n"
+      },
+      "CNAME": {
+        "cmd": [
+          "nslookup",
+          "-type=CNAME",
+          "shpigovsky.ru",
+          "8.8.8.8"
+        ],
+        "code": 0,
+        "out": "������:  UnKnown\nAddress:  8.8.8.8\n\n",
+        "err": "*** ��� ����ᥩ canonical name (CNAME), ����㯭�� ��� shpigovsky.ru\n\n"
+      }
+    },
+    "socket": {
+      "addrs": [
+        "45.130.41.70"
+      ]
+    }
+  },
+  "www.shpigovsky.ru": {
+    "host": "www.shpigovsky.ru",
+    "nslookup": {
+      "NS": {
+        "cmd": [
+          "nslookup",
+          "-type=NS",
+          "www.shpigovsky.ru",
+          "8.8.8.8"
+        ],
+        "code": 0,
+        "out": "������:  UnKnown\nAddress:  8.8.8.8\n\n",
+        "err": "*** ��� ����ᥩ name server (NS), ����㯭�� ��� www.shpigovsky.ru\n\n"
+      },
+      "A": {
+        "cmd": [
+          "nslookup",
+          "-type=A",
+          "www.shpigovsky.ru",
+          "8.8.8.8"
+        ],
+        "code": 0,
+        "out": "������:  UnKnown\nAddress:  8.8.8.8\n\n���:     www.shpigovsky.ru\nAddress:  45.130.41.70\n\n",
+        "err": ""
+      },
+      "AAAA": {
+        "cmd": [
+          "nslookup",
+          "-type=AAAA",
+          "www.shpigovsky.ru",
+          "8.8.8.8"
+        ],
+        "code": 0,
+        "out": "������:  UnKnown\nAddress:  8.8.8.8\n\n",
+        "err": "*** ��� ����ᥩ IPv6 address (AAAA), ����㯭�� ��� www.shpigovsky.ru\n\n"
+      },
+      "CNAME": {
+        "cmd": [
+          "nslookup",
+          "-type=CNAME",
+          "www.shpigovsky.ru",
+          "8.8.8.8"
+        ],
+        "code": 0,
+        "out": "������:  UnKnown\nAddress:  8.8.8.8\n\n",
+        "err": "*** ��� ����ᥩ canonical name (CNAME), ����㯭�� ��� www.shpigovsky.ru\n\n"
+      }
+    },
+    "socket": {
+      "addrs": [
+        "92.255.111.71"
+      ]
+    }
+  },
+  "shpigovsky.beget.tech": {
+    "host": "shpigovsky.beget.tech",
+    "nslookup": {
+      "NS": {
+        "cmd": [
+          "nslookup",
+          "-type=NS",
+          "shpigovsky.beget.tech",
+          "8.8.8.8"
+        ],
+        "code": 0,
+        "out": "������:  UnKnown\nAddress:  8.8.8.8\n\n",
+        "err": "*** ��� ����ᥩ name server (NS), ����㯭�� ��� shpigovsky.beget.tech\n\n"
+      },
+      "A": {
+        "cmd": [
+          "nslookup",
+          "-type=A",
+          "shpigovsky.beget.tech",
+          "8.8.8.8"
+        ],
+        "code": 0,
+        "out": "������:  UnKnown\nAddress:  8.8.8.8\n\n���:     shpigovsky.beget.tech\nAddress:  91.106.207.76\n\n",
+        "err": ""
+      },
+      "AAAA": {
+        "cmd": [
+          "nslookup",
+          "-type=AAAA",
+          "shpigovsky.beget.tech",
+          "8.8.8.8"
+        ],
+        "code": 0,
+        "out": "������:  UnKnown\nAddress:  8.8.8.8\n\n",
+        "err": "*** ��� ����ᥩ IPv6 address (AAAA), ����㯭�� ��� shpigovsky.beget.tech\n\n"
+      },
+      "CNAME": {
+        "cmd": [
+          "nslookup",
+          "-type=CNAME",
+          "shpigovsky.beget.tech",
+          "8.8.8.8"
+        ],
+        "code": 0,
+        "out": "������:  UnKnown\nAddress:  8.8.8.8\n\n",
+        "err": "*** ��� ����ᥩ canonical name (CNAME), ����㯭�� ��� shpigovsky.beget.tech\n\n"
+      }
+    },
+    "socket": {
+      "addrs": [
+        "91.106.207.76"
+      ]
+    }
+  }
+}

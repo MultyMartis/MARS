@@ -1,0 +1,42 @@
+{
+  "files": {
+    "robots.txt": {
+      "exists": true,
+      "bytes": 80,
+      "sha256": "2492f7f1451552b8cbf1151fd87c6bccaf21580e5686459d7afebb5b5a9d66a5",
+      "head": "User-agent: *\nDisallow: /\n\nSitemap: http://shpigovsky.beget.tech/wp-sitemap.xml\n"
+    },
+    "dashboard": {
+      "exists": true,
+      "bytes": 10123,
+      "sha256": "ffcee2987ae374bceb3b076e6dabbc09c4ae26128de44a8338a0ede01654c7eb",
+      "head": "<?php\r\n/**\r\n * Dashboard widget: MetaCODE / system state — PROD-P18A.\r\n *\r\n * Canonical concise operational summary for FP-0002. No global Admin notices.\r\n * No DNS/registrar credentials.\r\n *\r\n * @package Shpigovsky_Core\r\n */\r\n\r\nnamespace Shpigovsky\\Core\\Admin;\r\n\r\nuse Shpigovsky\\Core\\Contracts\\ModuleInterface;\r\nuse Shpigovsky\\Core\\ModuleRegistry;\r\n\r\nif ( ! defined( 'ABSPATH' ) ) {\r\n\texit;\r\n}\r\n\r\n/**\r\n * Single non-secret system widget on the main dashboard.\r\n */\r\nfinal class SystemDashboard implements ModuleInterface {\r\n\r\n\t/**\r\n\t * Baseline ID shown in the widget (updated by stabilization waves).\r\n\t */\r\n\tconst BASELINE_ID = 'FP-0002-PROD-BASELINE-2026-08-18-P18A';\r\n\r\n\t/**\r\n\t * Latest accepted production wave label.\r\n\t */\r\n\tconst LATEST_ACCEPTED_WAVE = 'P18A Live Domain Reality + Legal State Fix';\r\n\r\n\t/**\r\n\t * {@inheritdoc}\r\n\t */\r\n\tpublic static function id() {\r\n\t\treturn 'admin.system-dashboard';\r\n\t}\r\n\r\n\t/**\r\n\t * {@inheritdoc}\r\n\t */\r\n\tpublic static function is_enabled() {\r\n\t\treturn ModuleRegistry::is_enabled( self::id() );\r\n\t}\r\n\r\n\t/**\r\n\t * {@inheritdoc}\r\n\t */\r\n\tpublic static function register() {\r\n\t\tadd_action( 'wp_dashboard_setup', array( __CLASS__, 'register_widget' ) );\r\n\t}\r\n\r\n\t/*"
+    },
+    "core_boot": {
+      "exists": true,
+      "bytes": 1787,
+      "sha256": "ec62e2490d637a66f8fa4252c30c9204d1afa239fd0f9708cae75b3b39d1e0eb",
+      "head": "<?php\r\n/**\r\n * Plugin Name: Shpigovsky Core\r\n * Plugin URI: https://example.invalid/shpigovsky-core\r\n * Description: FP-0002 functionality plugin — V9-06C.1 content model source activation gate resolved. Runtime delivery remains separate.\r\n * Version: 0.3.10-p18a\r\n * Requires at least: 6.0\r\n * Requires PHP: 8.0\r\n * Author: Forge WordPress / FP-0002\r\n * Text Domain: shpigovsky-core\r\n * License: GPL-2.0-or-later\r\n *\r\n * @package Shpigovsky_Core\r\n */\r\n\r\nif ( ! defined( 'ABSPATH' ) ) {\r\n\texit;\r\n}\r\n\r\ndefine( 'SHPIGOVSKY_CORE_VERSION', '0.3.10-p18a' );\r\ndefine( 'SHPIGOVSKY_CORE_FILE', __FILE__ );\r\ndefine( 'SHPIGOVSKY_CORE_DIR', plugin_dir_path( __FILE__ ) );\r\ndefine( 'SHPIGOVSKY_CORE_URI', plugin_dir_url( __FILE__ ) );\r\ndefine( 'SHPIGOVSKY_CORE_MODE', 'content_model' );\r\ndefine( 'SHPIGOVSKY_CORE_SKELETON', 'skeleton' === SHPIGOVSKY_CORE_MODE );\r\ndefine( 'SHPIGOVSKY_CORE_V9_06C_SOURCE_IMPLEMENTED', true );\r\ndefine( 'SHPIGOVSKY_CORE_V9_06C1_SOURCE_GATE_RESOLVED', true );\r\n\r\nrequire_once SHPIGOVSKY_CORE_DIR . 'inc/compat.php';\r\nrequire_once SHPIGOVSKY_CORE_DIR . 'src/Loader/Autoloader.php';\r\n\r\nShpigovsky\\Core\\Loader\\Autoloader::register( SHPIGOVSKY_CORE_DIR . 'src' );\r\n\r\nregister_activation"
+    },
+    "mu_mail": {
+      "exists": true,
+      "bytes": 876,
+      "sha256": "f2ba7afcec153739fac7aee154da63a67a269f9e698852f7430904ae4941a004",
+      "head": "<?php\r\n/**\r\n * Plugin Name: FP-0002 PRE-CUTOVER mail suppression\r\n * Description: Deliberate outbound mail suppression until SMTP after final domain/DNS cutover. Not a local-runtime identity claim. Runtime is Production/Beget on the temporary host.\r\n * Version: 0.3.6-p15\r\n *\r\n * @package Shpigovsky\r\n */\r\n\r\nif ( ! defined( 'ABSPATH' ) ) {\r\n\texit;\r\n}\r\n\r\n/**\r\n * PRE-CUTOVER MAIL SUPPRESSION — keep until SMTP wave after domain cutover.\r\n * Forms must not silently deliver via unintended PHP mail() paths.\r\n *\r\n * @return false Short-circuit wp_mail.\r\n */\r\nfunction fp02_p15_suppress_outgoing_mail_until_smtp() {\r\n\treturn false;\r\n}\r\nadd_filter( 'pre_wp_mail', 'fp02_p15_suppress_outgoing_mail_until_smtp', 1 );\r\n\r\n// Historical aliases (P13/P06): Admin local-runtime notices and siteurl/home write guards remain retired.\r\n// Do not re-enable outbound mail or indexing here.\r\n"
+    },
+    "htaccess": {
+      "exists": true,
+      "bytes": 847,
+      "sha256": "ec8f06028d3ecde7442701ed09fce3aa107fc74a41434647e413f4a0088d9f38",
+      "head": "# FP-0002 legacy redirects\r\n<IfModule mod_rewrite.c>\r\nRewriteEngine On\r\nRewriteRule ^yoga/?$ /o-centre/programma-lecheniya/kinezioterapiya/ [R=301,L]\r\nRewriteRule ^about/?$ /o-centre/ [R=301,L]\r\nRewriteRule ^psy/?$ /o-centre/programma-lecheniya/psihokorrektsiya/ [R=301,L]\r\nRewriteRule ^home/?$ /o-centre/programma-lecheniya/ [R=301,L]\r\nRewriteRule ^policy/?$ /privacy-policy/ [R=301,L]\r\nRewriteRule ^neuro/?$ /o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/ [R=301,L]\r\nRewriteRule ^reviews/?$ /otzyvy/ [R=301,L]\r\n</IfModule>\r\n\r\n# BEGIN WordPress\r\n<IfModule mod_rewrite.c>\r\nRewriteEngine On\r\nRewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]\r\nRewriteBase /\r\nRewriteRule ^index\\.php$ - [L]\r\nRewriteCond %{REQUEST_FILENAME} !-f\r\nRewriteCond %{REQUEST_FILENAME} !-d\r\nRewriteRule . /index.php [L]\r\n</IfModule>\r\n# END WordPress\r\n"
+    }
+  },
+  "pre_wave_parity": {
+    "dashboard_src_sha": "ffcee2987ae374bceb3b076e6dabbc09c4ae26128de44a8338a0ede01654c7eb",
+    "dashboard_prod_sha": "ffcee2987ae374bceb3b076e6dabbc09c4ae26128de44a8338a0ede01654c7eb",
+    "dashboard_match": true,
+    "core_src_sha": "ec62e2490d637a66f8fa4252c30c9204d1afa239fd0f9708cae75b3b39d1e0eb",
+    "core_prod_sha": "ec62e2490d637a66f8fa4252c30c9204d1afa239fd0f9708cae75b3b39d1e0eb",
+    "core_match": true
+  }
+}

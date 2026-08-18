@@ -1,0 +1,38 @@
+{
+  "required": "INDEXING QA COMPLETE — FINAL STATE CLOSED",
+  "final_production_state": "CLOSED",
+  "note": "Public https://shpigovsky.ru/ currently serves legacy Craftum CMS. WordPress indexing owners were verified on the WordPress origin (php8.2 + beget inner routes). Public Craftum robots.txt is a different site and is not the WP owner.",
+  "case1_closed": {
+    "dashboard": "CLOSED banner + button Открыть индексацию",
+    "blog_public": 0,
+    "origin_robots": "User-agent: * / Disallow: / / Sitemap: https://shpigovsky.ru/wp-sitemap.xml",
+    "wp_representative_meta": "http://shpigovsky.beget.tech/privacy-policy/ → noindex, nofollow",
+    "public_apex": "Craftum CMS (not used as WP proof)"
+  },
+  "case2_open_qa": {
+    "method": "CLI IndexingControl::set_site_indexability(true) — reversible, not an Olya approval",
+    "php_ok": true,
+    "blog_public": 1,
+    "origin_robots_after_open": "WP-style Disallow: /wp-admin/ (physical robots.txt on WP origin)",
+    "dashboard_would_show": "OPEN + Закрыть индексацию",
+    "sitemap_submission": "not triggered",
+    "search_console": "not configured"
+  },
+  "case3_close_again": {
+    "method": "CLI set_site_indexability(false) + emergency force-close after first-run print crash",
+    "php_ok": true,
+    "blog_public": 0,
+    "origin_robots": "Disallow: /",
+    "dashboard": "CLOSED restored"
+  },
+  "final_closed_proof": {
+    "utc": "2026-08-18T18:21Z",
+    "blog_public": 0,
+    "indexing_open": false,
+    "robots_file_exists": true,
+    "robots_disallow_all": true,
+    "robots_sitemap_host": "shpigovsky.ru",
+    "mail_suppressed": true,
+    "core": "0.3.11-p18b"
+  }
+}

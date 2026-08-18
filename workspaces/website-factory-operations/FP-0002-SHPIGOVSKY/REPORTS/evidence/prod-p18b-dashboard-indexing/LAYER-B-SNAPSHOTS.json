@@ -1,0 +1,62 @@
+{
+  "utc": "2026-08-18T18:16:03Z",
+  "layer_b": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p18b-layer-b-pre",
+  "files": [
+    {
+      "kind": "plugin",
+      "rel": "shpigovsky-core.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/shpigovsky-core.php",
+      "src_sha": "9328b1fd51042ab619c7551d1ea80e861c8444881c9e2fcd7848a155d2a00fde",
+      "prod_before_sha": "9328b1fd51042ab619c7551d1ea80e861c8444881c9e2fcd7848a155d2a00fde",
+      "prod_existed": true,
+      "src_bytes": 1787
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Admin/SystemDashboard.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Admin/SystemDashboard.php",
+      "src_sha": "870eb929de39bb5323f568f66a459f9f9a50adebf08402e2fe3d6928b8356a78",
+      "prod_before_sha": "870eb929de39bb5323f568f66a459f9f9a50adebf08402e2fe3d6928b8356a78",
+      "prod_existed": true,
+      "src_bytes": 9833
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Admin/IndexingControl.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Admin/IndexingControl.php",
+      "src_sha": "8d9e7b1bdbc6f739963f3368ed602e5ee37571be48e1e6bd82c5fc3522aee626",
+      "prod_before_sha": "8d9e7b1bdbc6f739963f3368ed602e5ee37571be48e1e6bd82c5fc3522aee626",
+      "prod_existed": true,
+      "src_bytes": 11973
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/ModuleRegistry.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/ModuleRegistry.php",
+      "src_sha": "9186e982cd00813be62152689981f9dd1f55b827579424e90014fa11698e7c64",
+      "prod_before_sha": "9186e982cd00813be62152689981f9dd1f55b827579424e90014fa11698e7c64",
+      "prod_existed": true,
+      "src_bytes": 7793
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Admin/ActivityLog.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Admin/ActivityLog.php",
+      "src_sha": "6cc7ec9a44713792d36df3d1d98b43a5a135457c290d17e56c67e85f3acb93ea",
+      "prod_before_sha": "6cc7ec9a44713792d36df3d1d98b43a5a135457c290d17e56c67e85f3acb93ea",
+      "prod_existed": true,
+      "src_bytes": 16557
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/seo-integrations.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/seo-integrations.php",
+      "src_sha": "276858240b84070a1585b071d333b41ecc6a83e316a41e90a67241545fce0f11",
+      "prod_before_sha": "276858240b84070a1585b071d333b41ecc6a83e316a41e90a67241545fce0f11",
+      "prod_existed": true,
+      "src_bytes": 15348
+    }
+  ],
+  "robots_before_sha": "4bbafe99e3337da10b1ba91545e5503d3897c3185cede083dc772abe4d1898e2",
+  "robots_before": "User-agent: *\nDisallow: /\n\nSitemap: https://shpigovsky.ru/wp-sitemap.xml\n"
+}

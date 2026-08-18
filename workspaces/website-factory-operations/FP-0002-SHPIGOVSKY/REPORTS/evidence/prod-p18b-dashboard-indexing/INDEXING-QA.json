@@ -1,0 +1,189 @@
+{
+  "utc": "2026-08-18T18:16:03Z",
+  "lint": [
+    {
+      "rel": "shpigovsky-core.php",
+      "code": 0,
+      "out": "No syntax errors detected in /tmp/fp02_p18b_lint.php\n"
+    },
+    {
+      "rel": "src/Admin/SystemDashboard.php",
+      "code": 0,
+      "out": "No syntax errors detected in /tmp/fp02_p18b_lint.php\n"
+    },
+    {
+      "rel": "src/Admin/IndexingControl.php",
+      "code": 0,
+      "out": "No syntax errors detected in /tmp/fp02_p18b_lint.php\n"
+    },
+    {
+      "rel": "src/ModuleRegistry.php",
+      "code": 0,
+      "out": "No syntax errors detected in /tmp/fp02_p18b_lint.php\n"
+    },
+    {
+      "rel": "src/Admin/ActivityLog.php",
+      "code": 0,
+      "out": "No syntax errors detected in /tmp/fp02_p18b_lint.php\n"
+    },
+    {
+      "rel": "inc/seo-integrations.php",
+      "code": 0,
+      "out": "No syntax errors detected in /tmp/fp02_p18b_lint.php\n"
+    }
+  ],
+  "parity": {
+    "n": 6,
+    "matched": 6,
+    "label": "6/6 MATCH",
+    "files": [
+      {
+        "rel": "shpigovsky-core.php",
+        "src_sha": "9328b1fd51042ab619c7551d1ea80e861c8444881c9e2fcd7848a155d2a00fde",
+        "prod_after_sha": "9328b1fd51042ab619c7551d1ea80e861c8444881c9e2fcd7848a155d2a00fde",
+        "match": true
+      },
+      {
+        "rel": "src/Admin/SystemDashboard.php",
+        "src_sha": "870eb929de39bb5323f568f66a459f9f9a50adebf08402e2fe3d6928b8356a78",
+        "prod_after_sha": "870eb929de39bb5323f568f66a459f9f9a50adebf08402e2fe3d6928b8356a78",
+        "match": true
+      },
+      {
+        "rel": "src/Admin/IndexingControl.php",
+        "src_sha": "8d9e7b1bdbc6f739963f3368ed602e5ee37571be48e1e6bd82c5fc3522aee626",
+        "prod_after_sha": "8d9e7b1bdbc6f739963f3368ed602e5ee37571be48e1e6bd82c5fc3522aee626",
+        "match": true
+      },
+      {
+        "rel": "src/ModuleRegistry.php",
+        "src_sha": "9186e982cd00813be62152689981f9dd1f55b827579424e90014fa11698e7c64",
+        "prod_after_sha": "9186e982cd00813be62152689981f9dd1f55b827579424e90014fa11698e7c64",
+        "match": true
+      },
+      {
+        "rel": "src/Admin/ActivityLog.php",
+        "src_sha": "6cc7ec9a44713792d36df3d1d98b43a5a135457c290d17e56c67e85f3acb93ea",
+        "prod_after_sha": "6cc7ec9a44713792d36df3d1d98b43a5a135457c290d17e56c67e85f3acb93ea",
+        "match": true
+      },
+      {
+        "rel": "inc/seo-integrations.php",
+        "src_sha": "276858240b84070a1585b071d333b41ecc6a83e316a41e90a67241545fce0f11",
+        "prod_after_sha": "276858240b84070a1585b071d333b41ecc6a83e316a41e90a67241545fce0f11",
+        "match": true
+      }
+    ]
+  },
+  "case1_closed": {
+    "http_home": {
+      "path": "/",
+      "status": 200,
+      "final_url": "https://shpigovsky.ru/",
+      "robots_meta": null,
+      "generator": "Craftum CMS",
+      "has_wp": false,
+      "body_head": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"utf-8\"/>\n        \n            <title>ÐÐµÑÐµÐ½Ð¸Ðµ Ð°Ð»ÐºÐ¾Ð³Ð¾Ð»Ð¸Ð·Ð¼Ð° Ð¸ Ð½Ð°ÑÐºÐ¾Ð¼Ð°Ð½Ð¸Ð¸ ÑÐµÐ½ÑÑ |  ÐÐµÑÐµÐ½Ð¸Ðµ Ð·Ð°Ð²Ð¸ÑÐ¸Ð¼Ð¾ÑÑÐ¸ ÐÐ¾ÑÐºÐ²Ð°</title>\n            <meta name=\"title\" content=\"ÐÐµÑÐµÐ½Ð¸Ðµ Ð°Ð»ÐºÐ¾Ð³Ð¾Ð»Ð¸Ð·Ð¼Ð° Ð¸ Ð½Ð°ÑÐºÐ¾Ð¼Ð°Ð½Ð¸Ð¸ ÑÐµÐ½ÑÑ |  ÐÐµÑÐµÐ½Ð¸Ðµ Ð·Ð°Ð²Ð¸ÑÐ¸Ð¼Ð¾ÑÑÐ¸ ÐÐ¾ÑÐºÐ²Ð°\"/>\n ",
+      "body_bytes": 531136
+    },
+    "http_privacy": {
+      "path": "/privacy-policy/",
+      "status": 404,
+      "final_url": "https://shpigovsky.ru/privacy-policy",
+      "robots_meta": null,
+      "generator": null,
+      "has_wp": false,
+      "body_head": "<!DOCTYPE html>\n<html lang=\"ru\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Ð¡ÑÑÐ°Ð½Ð¸ÑÐ° Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½Ð°</title>\n    <style>\n        body {\n            margin: 0;\n            padding: 0;\n        }\n        .info {\n            width: 100vw;\n            heigh",
+      "body_bytes": 3045
+    },
+    "robots": {
+      "path": "/robots.txt",
+      "status": 200,
+      "final_url": "https://shpigovsky.ru/robots.txt",
+      "robots_meta": null,
+      "generator": null,
+      "has_wp": false,
+      "body_head": "ï»¿User-agent: *\nDisallow: /*?\nSitemap: https://shpigovsky.ru/sitemap.xml\n",
+      "body_bytes": 74
+    },
+    "wp": null,
+    "state": {
+      "ok": true,
+      "mode": "read",
+      "state": {
+        "blog_public": 0,
+        "open": false,
+        "robots_file_exists": true,
+        "robots_disallow_all": true,
+        "robots_sitemap_host": "shpigovsky.ru"
+      },
+      "blog_public": 0,
+      "core": "0.3.11-p18b"
+    }
+  },
+  "case2_open": {
+    "php_ok": true,
+    "blog_public": 1,
+    "robots_head": "ï»¿User-agent: *\nDisallow: /*?\nSitemap: https://shpigovsky.ru/sitemap.xml\n",
+    "home_meta": null,
+    "privacy_meta": null
+  },
+  "case3_closed": {
+    "php_ok": true,
+    "blog_public": 0,
+    "robots_head": "ï»¿User-agent: *\nDisallow: /*?\nSitemap: https://shpigovsky.ru/sitemap.xml\n",
+    "home_meta": null,
+    "privacy_meta": null
+  },
+  "final_closed": null,
+  "dashboard": {
+    "ok": false,
+    "login": {
+      "ok": false,
+      "final_url": "https://shpigovsky.ru/wp-login.php",
+      "status": 404,
+      "user": "mars"
+    }
+  },
+  "robots_after": "User-agent: *\nDisallow: /\n\nSitemap: https://shpigovsky.ru/wp-sitemap.xml\n",
+  "meta": {
+    "ok": true,
+    "core": "0.3.11-p18b",
+    "home": "https://shpigovsky.ru",
+    "siteurl": "https://shpigovsky.ru",
+    "blog_public": 0,
+    "mail_suppressed": true,
+    "closed_sync": {
+      "ok": true,
+      "open": false,
+      "blog_public": 0,
+      "robots_ok": true,
+      "robots_disallow_all": true,
+      "robots_sitemap_host": "shpigovsky.ru"
+    },
+    "state": {
+      "blog_public": 0,
+      "open": false,
+      "robots_file_exists": true,
+      "robots_disallow_all": true,
+      "robots_sitemap_host": "shpigovsky.ru"
+    },
+    "meta": {
+      "baseline_id": "FP-0002-PROD-BASELINE-2026-08-19-P18B",
+      "latest_wave": "P18B Dashboard Reality + Indexing Control",
+      "parity": "MATCH",
+      "verified_at": "2026-08-18 18:16 UTC",
+      "backup": "FRESH BEGET BACKUP CONFIRMED BY OPERATOR",
+      "git_sha": "16706398f03825b054ce75c56e8af48ec4349329",
+      "wave": "PROD-P15",
+      "state_note": "LIVE https://shpigovsky.ru; HTTPS ACTIVE; INDEXING CLOSED; SMTP PENDING",
+      "legacy_redirects": "7/7",
+      "cutover": "DONE",
+      "ssl": "ACTIVE",
+      "dns_ns": "DONE / Beget",
+      "smtp_sender": "noreply@shpigovsky.ru",
+      "indexing": "CLOSED — WAITING FOR OLYA APPROVAL"
+    },
+    "module_present": true
+  }
+}

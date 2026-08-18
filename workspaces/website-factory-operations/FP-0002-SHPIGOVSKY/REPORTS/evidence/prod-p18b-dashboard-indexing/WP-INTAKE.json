@@ -1,0 +1,66 @@
+{
+  "generated_at": "2026-08-18T18:06:37Z",
+  "php_exit": 0,
+  "data": {
+    "ok": true,
+    "php": "8.2.28",
+    "wp_version": "7.0.4",
+    "home_url": "https://shpigovsky.ru/",
+    "site_url": "https://shpigovsky.ru/",
+    "options": {
+      "siteurl": "https://shpigovsky.ru",
+      "home": "https://shpigovsky.ru",
+      "blogname": "Шпиговский Дом",
+      "permalink_structure": "/blog/%postname%/",
+      "blog_public": "0",
+      "WPLANG": "ru_RU"
+    },
+    "blog_public": 0,
+    "mail_suppressed": true,
+    "smtp_like_plugins": [],
+    "wpilot_version": "0.3.2",
+    "wpilot_write": false,
+    "env_fn": "production",
+    "WP_ENVIRONMENT_TYPE": "production",
+    "WP_DEBUG": false,
+    "SHPIGOVSKY_CORE_VERSION": "0.3.10-p18a",
+    "dashboard_meta": {
+      "baseline_id": "FP-0002-PROD-BASELINE-2026-08-18-P18A",
+      "latest_wave": "P18A Live Domain Reality + Legal State Fix",
+      "parity": "MATCH",
+      "verified_at": "2026-08-18 14:50 UTC",
+      "backup": "P14 full; FU02 exact-file/object + obsolete tar; launch backup still required after freeze",
+      "git_sha": "16706398f03825b054ce75c56e8af48ec4349329",
+      "wave": "PROD-P15",
+      "p15_note": "Environment cleanup; mail+indexing deferred; domain not cut over",
+      "state_note": "LIVE DOMAIN shpigovsky.ru; INDEXING CLOSED; SMTP PENDING",
+      "precutover": "SUPERSEDED — NS AND WP URL CUTOVER DONE",
+      "legacy_redirects": "7/7",
+      "cutover": "OPERATOR NS + WP URL CUTOVER DONE — PUBLIC APEX ROUTING / SSL FINALIZE PENDING",
+      "ssl": "IN PROGRESS — WordPress origin not yet public HTTPS"
+    },
+    "admin_logins": [
+      "admin",
+      "mars",
+      "metacode"
+    ],
+    "robots_file_exists": true,
+    "robots_file": "User-agent: *\nDisallow: /\n\nSitemap: http://shpigovsky.beget.tech/wp-sitemap.xml\n"
+  },
+  "rest": {
+    "status": 200,
+    "name": "Шпиговский Дом",
+    "url": "https://shpigovsky.ru",
+    "home": "https://shpigovsky.ru",
+    "namespaces_sample": [
+      "oembed/1.0",
+      "wpilot/v1",
+      "shpigovsky/v1",
+      "wp/v2",
+      "wp-site-health/v1",
+      "wp-block-editor/v1",
+      "wp-abilities/v1"
+    ]
+  },
+  "ns_stdout": ""
+}

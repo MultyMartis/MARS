@@ -15,6 +15,7 @@ use Shpigovsky\Core\Admin\PermalinkSlugUX;
 use Shpigovsky\Core\Admin\ActivityLog;
 use Shpigovsky\Core\Admin\AdminMenuHygiene;
 use Shpigovsky\Core\Admin\SystemDashboard;
+use Shpigovsky\Core\Admin\IndexingControl;
 use Shpigovsky\Core\Admin\DocxImporter;
 use Shpigovsky\Core\ContentTypes\Service;
 use Shpigovsky\Core\ContentTypes\Specialist;
@@ -134,6 +135,12 @@ final class ModuleRegistry {
 		'admin.system-dashboard'    => array(
 			'module'            => 'Admin',
 			'class'             => SystemDashboard::class,
+			'status'            => self::ENABLED_IN_CONTENT_MODEL,
+			'runtime_delivered' => false,
+		),
+		'admin.indexing-control'    => array(
+			'module'            => 'Admin',
+			'class'             => IndexingControl::class,
 			'status'            => self::ENABLED_IN_CONTENT_MODEL,
 			'runtime_delivered' => false,
 		),

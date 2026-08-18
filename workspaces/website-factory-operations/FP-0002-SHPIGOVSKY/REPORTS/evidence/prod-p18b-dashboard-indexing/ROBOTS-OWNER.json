@@ -1,0 +1,55 @@
+{
+  "http": [
+    {
+      "url": "https://shpigovsky.ru/robots.txt",
+      "status": 200,
+      "final": "https://shpigovsky.ru/robots.txt",
+      "ctype": "text/plain",
+      "server": "nginx",
+      "bytes": 74,
+      "sha_head": "﻿User-agent: *\nDisallow: /*?\nSitemap: https://shpigovsky.ru/sitemap.xml\n",
+      "hex_head": "efbbbf557365722d6167656e743a202a"
+    },
+    {
+      "url": "http://shpigovsky.ru/robots.txt",
+      "status": 200,
+      "final": "https://shpigovsky.ru/robots.txt",
+      "ctype": "text/plain",
+      "server": "nginx",
+      "bytes": 74,
+      "sha_head": "﻿User-agent: *\nDisallow: /*?\nSitemap: https://shpigovsky.ru/sitemap.xml\n",
+      "hex_head": "efbbbf557365722d6167656e743a202a"
+    },
+    {
+      "url": "http://shpigovsky.beget.tech/robots.txt",
+      "status": 200,
+      "final": "http://shpigovsky.beget.tech/robots.txt",
+      "ctype": "text/plain",
+      "server": "nginx-reuseport/1.21.1",
+      "bytes": 73,
+      "sha_head": "User-agent: *\nDisallow: /\n\nSitemap: https://shpigovsky.ru/wp-sitemap.xml\n",
+      "hex_head": "557365722d6167656e743a202a0a4469"
+    }
+  ],
+  "disk_err": null,
+  "disk_bytes": 73,
+  "disk_hex_head": "557365722d6167656e743a202a0a4469",
+  "disk_text": "User-agent: *\nDisallow: /\n\nSitemap: https://shpigovsky.ru/wp-sitemap.xml\n",
+  "ls": "ls: cannot access '/home/s/shpigovsky/shpigovsky.ru/public_html/sitemap.xml': No such file or directory\nls: cannot access '/home/s/shpigovsky/shpigovsky.ru/public_html/sitemap_index.xml': No such file or directory\n-rw-------+ 1 shpigovsky newcustomers 73 Aug 18 21:16 /home/s/shpigovsky/shpigovsky.ru/public_html/robots.txt\n/home/s/shpigovsky/shpigovsky.ru/public_html/robots.txt\n/home/s/shpigovsky/shpigovsky.ru/public_html/wp-includes/robots-template.php\n",
+  "wp": {
+    "blog_public": 0,
+    "abspath": "/home/s/shpigovsky/shpigovsky.ru/public_html/",
+    "file_exists": true,
+    "file": "User-agent: *\nDisallow: /\n\nSitemap: https://shpigovsky.ru/wp-sitemap.xml\n",
+    "file_bytes": 73,
+    "seo_like_plugins": [],
+    "active_plugins": [
+      "acf-extended-pro/acf-extended.php",
+      "advanced-custom-fields-pro/acf.php",
+      "classic-editor/classic-editor.php",
+      "metacode-wpilot/metacode-wpilot.php",
+      "shpigovsky-core/shpigovsky-core.php"
+    ],
+    "has_robots_txt_filter": true
+  }
+}

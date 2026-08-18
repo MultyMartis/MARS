@@ -1,0 +1,66 @@
+/home/s/shpigovsky/shpigovsky.ru/public_html
+HOME=/home/s/shpigovsky/shpigovsky.ru/public_html
+USER=shpigovsky_mars
+total 284
+drwx------+  6 root       root          4096 Aug 18 13:25 .
+drwx------+  3 root       root          4096 Jul 23 20:06 ..
+drwx------+  2 shpigovsky newcustomers  4096 Aug 14 10:58 acf-json
+-rwx------+  1 shpigovsky newcustomers   847 Aug 18 10:23 .htaccess
+-rwx------+  1 shpigovsky newcustomers   405 Aug 14 10:58 index.php
+-rwx------+  1 shpigovsky newcustomers 19903 Aug 14 10:58 license.txt
+-rwx------+  1 shpigovsky newcustomers  7406 Aug 14 10:58 readme.html
+-rw-------+  1 shpigovsky newcustomers    73 Aug 18 21:16 robots.txt
+-rwx------+  1 shpigovsky newcustomers  7371 Aug 14 10:58 wp-activate.php
+drwx------+  9 shpigovsky newcustomers  4096 Aug 14 10:58 wp-admin
+-rwx------+  1 shpigovsky newcustomers   351 Aug 14 10:58 wp-blog-header.php
+-rwx------+  1 shpigovsky newcustomers  2323 Aug 14 10:58 wp-comments-post.php
+-rwx------+  1 shpigovsky newcustomers  3333 Aug 16 21:17 wp-config.php
+-rwx------+  1 shpigovsky newcustomers  3339 Aug 14 10:58 wp-config-sample.php
+drwx------+  9 shpigovsky newcustomers  4096 Aug 18 18:33 wp-content
+-rwx------+  1 shpigovsky newcustomers  5617 Aug 14 10:58 wp-cron.php
+drwx------+ 34 shpigovsky newcustomers 16384 Aug 14 10:58 wp-includes
+-rwx------+  1 shpigovsky newcustomers  2493 Aug 14 10:58 wp-links-opml.php
+-rwx------+  1 shpigovsky newcustomers  3937 Aug 14 10:58 wp-load.php
+-rwx------+  1 shpigovsky newcustomers 51872 Aug 14 10:58 wp-login.php
+-rwx------+  1 shpigovsky newcustomers  8727 Aug 14 10:58 wp-mail.php
+-rwx------+  1 shpigovsky newcustomers 32650 Aug 14 10:58 wp-settings.php
+-rwx------+  1 shpigovsky newcustomers 34755 Aug 14 10:58 wp-signup.php
+-rwx------+  1 shpigovsky newcustomers  5214 Aug 14 10:58 wp-trackback.php
+-rwx------+  1 shpigovsky newcustomers  3205 Aug 14 10:58 xmlrpc.php
+=== find robots ===
+/home/s/shpigovsky/shpigovsky.ru/public_html/robots.txt
+=== docroot robots xxd ===
+=== curl local host header ===
+HTTP/1.1 200 OK
+Date: Tue, 18 Aug 2026 18:18:30 GMT
+Server: Apache/2.4.63 (Unix)
+Last-Modified: Tue, 18 Aug 2026 18:16:23 GMT
+ETag: "49-6595648c3ced2"
+Accept-Ranges: bytes
+Content-Length: 73
+Content-Type: text/plain
+
+=== curl local body xxd ===
+00000000: 5573 6572 2d61 6765 6e74 3a20 2a0a 4469  User-agent: *.Di
+00000010: 7361 6c6c 6f77 3a20 2f0a 0a53 6974 656d  sallow: /..Sitem
+00000020: 6170 3a20 6874 7470 733a 2f2f 7368 7069  ap: https://shpi
+00000030: 676f 7673 6b79 2e72 752f 7770 2d73 6974  govsky.ru/wp-sit
+00000040: 656d 6170 2e78 6d6c 0a                   emap.xml.
+=== curl beget host ===
+HTTP/1.1 200 OK
+Date: Tue, 18 Aug 2026 18:18:30 GMT
+Server: Apache/2.4.63 (Unix)
+Last-Modified: Tue, 18 Aug 2026 18:16:23 GMT
+ETag: "49-6595648c3ced2"
+Accept-Ranges: bytes
+Content-Length: 73
+Content-Type: text/plain
+
+00000000: 5573 6572 2d61 6765 6e74 3a20 2a0a 4469  User-agent: *.Di
+00000010: 7361 6c6c 6f77 3a20 2f0a 0a53 6974 656d  sallow: /..Sitem
+00000020: 6170 3a20 6874 7470 733a 2f2f 7368 7069  ap: https://shpi
+00000030: 676f 7673 6b79 2e72 752f 7770 2d73 6974  govsky.ru/wp-sit
+00000040: 656d 6170 2e78 6d6c 0a                   emap.xml.
+
+---stderr---
+xxd: /home/s/shpigovsky/shpigovsky.ru/public_html/shpigovsky.ru/public_html/robots.txt: No such file or directory

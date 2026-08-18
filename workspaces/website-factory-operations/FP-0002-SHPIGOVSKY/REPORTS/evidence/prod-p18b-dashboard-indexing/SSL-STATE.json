@@ -1,0 +1,50 @@
+{
+  "shpigovsky.ru": {
+    "host": "shpigovsky.ru",
+    "port": 443,
+    "ok": true,
+    "tls": "TLSv1.3",
+    "subject": {
+      "commonName": "shpigovsky.ru"
+    },
+    "issuer": {
+      "countryName": "US",
+      "organizationName": "Let's Encrypt",
+      "commonName": "YR2"
+    },
+    "notAfter": "Nov 16 13:16:45 2026 GMT",
+    "notBefore": "Aug 18 13:16:46 2026 GMT",
+    "san": [
+      "archive.shpigovsky.ru",
+      "shpigovsky.ru",
+      "www.archive.shpigovsky.ru",
+      "www.shpigovsky.ru"
+    ]
+  },
+  "www.shpigovsky.ru": {
+    "host": "www.shpigovsky.ru",
+    "port": 443,
+    "ok": true,
+    "tls": "TLSv1.3",
+    "subject": {
+      "commonName": "shpigovsky.ru"
+    },
+    "issuer": {
+      "countryName": "US",
+      "organizationName": "Let's Encrypt",
+      "commonName": "YE2"
+    },
+    "notAfter": "Sep 25 01:20:13 2026 GMT",
+    "notBefore": "Jun 27 01:20:14 2026 GMT",
+    "san": [
+      "shpigovsky.ru",
+      "www.shpigovsky.ru"
+    ]
+  },
+  "shpigovsky.beget.tech": {
+    "host": "shpigovsky.beget.tech",
+    "port": 443,
+    "ok": false,
+    "error": "_ssl.c:1064: The handshake operation timed out"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "utc": "2026-08-18T18:01:49.473540+00:00",
+  "required": "P18B CURRENT PRODUCTION REALITY VERIFIED",
+  "live_domain": "https://shpigovsky.ru/",
+  "home": null,
+  "siteurl": null,
+  "blog_public": null,
+  "mail_suppressed": null,
+  "smtp_like_plugins": null,
+  "core": null,
+  "wp_version": null,
+  "php": null,
+  "https_cert_ok": true,
+  "https_san": [
+    "archive.shpigovsky.ru",
+    "shpigovsky.ru",
+    "www.archive.shpigovsky.ru",
+    "www.shpigovsky.ru"
+  ],
+  "https_issuer": {
+    "countryName": "US",
+    "organizationName": "Let's Encrypt",
+    "commonName": "YR2"
+  },
+  "https_notAfter": "Nov 16 13:16:45 2026 GMT",
+  "public_https_is_wordpress": true,
+  "public_https_status": 200,
+  "public_https_final": "https://shpigovsky.ru/",
+  "robots_https_head": "User-agent: *\nDisallow: /\n\nSitemap: http://shpigovsky.beget.tech/wp-sitemap.xml\n",
+  "dashboard_meta": null,
+  "backup": "FRESH BEGET BACKUP CONFIRMED BY OPERATOR",
+  "smtp_mailbox": "noreply@shpigovsky.ru (operator: created; WP SMTP PENDING)",
+  "pre_wave_dashboard_parity": {
+    "dashboard_src_sha": "ffcee2987ae374bceb3b076e6dabbc09c4ae26128de44a8338a0ede01654c7eb",
+    "dashboard_prod_sha": "ffcee2987ae374bceb3b076e6dabbc09c4ae26128de44a8338a0ede01654c7eb",
+    "dashboard_match": true,
+    "core_src_sha": "ec62e2490d637a66f8fa4252c30c9204d1afa239fd0f9708cae75b3b39d1e0eb",
+    "core_prod_sha": "ec62e2490d637a66f8fa4252c30c9204d1afa239fd0f9708cae75b3b39d1e0eb",
+    "core_match": true
+  },
+  "admin_logins_present": null
+}

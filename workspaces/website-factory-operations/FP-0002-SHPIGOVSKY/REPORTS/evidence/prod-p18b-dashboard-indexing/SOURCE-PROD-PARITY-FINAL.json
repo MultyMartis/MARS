@@ -1,0 +1,39 @@
+{
+  "n": 6,
+  "matched": 6,
+  "label": "6/6 MATCH",
+  "required": "N/N SOURCE ↔ PRODUCTION MATCH",
+  "files": [
+    {
+      "rel": "plugins/shpigovsky-core/shpigovsky-core.php",
+      "sha": "9328b1fd51042ab619c7551d1ea80e861c8444881c9e2fcd7848a155d2a00fde",
+      "match": true
+    },
+    {
+      "rel": "plugins/shpigovsky-core/src/Admin/SystemDashboard.php",
+      "sha": "d7e3c495f8b9b2cfc35a32844cc07a112f732b2f613bf3c4b4470b9e7c4609b8",
+      "match": true,
+      "note": "follow-up SHA after public-origin next-steps update"
+    },
+    {
+      "rel": "plugins/shpigovsky-core/src/Admin/IndexingControl.php",
+      "sha": "8d9e7b1bdbc6f739963f3368ed602e5ee37571be48e1e6bd82c5fc3522aee626",
+      "match": true
+    },
+    {
+      "rel": "plugins/shpigovsky-core/src/ModuleRegistry.php",
+      "sha": "9186e982cd00813be62152689981f9dd1f55b827579424e90014fa11698e7c64",
+      "match": true
+    },
+    {
+      "rel": "plugins/shpigovsky-core/src/Admin/ActivityLog.php",
+      "sha": "6cc7ec9a44713792d36df3d1d98b43a5a135457c290d17e56c67e85f3acb93ea",
+      "match": true
+    },
+    {
+      "rel": "theme/shpigovsky/inc/seo-integrations.php",
+      "sha": "276858240b84070a1585b071d333b41ecc6a83e316a41e90a67241545fce0f11",
+      "match": true
+    }
+  ]
+}

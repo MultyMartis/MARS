@@ -1,0 +1,31 @@
+{
+  "core": "0.3.11-p18b",
+  "blog_public": 0,
+  "mail_suppressed": true,
+  "home": "https://shpigovsky.ru",
+  "siteurl": "https://shpigovsky.ru",
+  "state": {
+    "blog_public": 0,
+    "open": false,
+    "robots_file_exists": true,
+    "robots_disallow_all": true,
+    "robots_sitemap_host": "shpigovsky.ru"
+  },
+  "meta": {
+    "baseline_id": "FP-0002-PROD-BASELINE-2026-08-19-P18B",
+    "latest_wave": "P18B Dashboard Reality + Indexing Control",
+    "parity": "MATCH",
+    "verified_at": "2026-08-18 18:21 UTC",
+    "backup": "FRESH BEGET BACKUP CONFIRMED BY OPERATOR",
+    "git_sha": "16706398f03825b054ce75c56e8af48ec4349329",
+    "wave": "PROD-P15",
+    "state_note": "WP URLs=https://shpigovsky.ru; INDEXING CLOSED on WordPress; public apex currently Craftum CMS",
+    "legacy_redirects": "7/7",
+    "cutover": "DONE",
+    "ssl": "LE valid; WordPress origin HTTPS works",
+    "dns_ns": "DONE / operator NS cutover",
+    "smtp_sender": "noreply@shpigovsky.ru",
+    "indexing": "CLOSED — WAITING FOR OLYA APPROVAL",
+    "public_origin": "ПУБЛИЧНЫЙ https://shpigovsky.ru/ СЕЙЧАС ОТДАЁТ СТАРЫЙ САЙТ (Craftum) — привязка к WordPress ещё нужна"
+  }
+}

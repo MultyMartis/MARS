@@ -1,0 +1,44 @@
+{
+  "exit": 0,
+  "stderr": "",
+  "data": {
+    "ok": true,
+    "core": "0.3.11-p18b",
+    "home": "https://shpigovsky.ru",
+    "siteurl": "https://shpigovsky.ru",
+    "blog_public": 0,
+    "mail_suppressed": true,
+    "closed_sync": {
+      "ok": true,
+      "open": false,
+      "blog_public": 0,
+      "robots_ok": true,
+      "robots_disallow_all": true,
+      "robots_sitemap_host": "shpigovsky.ru"
+    },
+    "state": {
+      "blog_public": 0,
+      "open": false,
+      "robots_file_exists": true,
+      "robots_disallow_all": true,
+      "robots_sitemap_host": "shpigovsky.ru"
+    },
+    "meta": {
+      "baseline_id": "FP-0002-PROD-BASELINE-2026-08-19-P18B",
+      "latest_wave": "P18B Dashboard Reality + Indexing Control",
+      "parity": "MATCH",
+      "verified_at": "2026-08-18 18:16 UTC",
+      "backup": "FRESH BEGET BACKUP CONFIRMED BY OPERATOR",
+      "git_sha": "16706398f03825b054ce75c56e8af48ec4349329",
+      "wave": "PROD-P15",
+      "state_note": "LIVE https://shpigovsky.ru; HTTPS ACTIVE; INDEXING CLOSED; SMTP PENDING",
+      "legacy_redirects": "7/7",
+      "cutover": "DONE",
+      "ssl": "ACTIVE",
+      "dns_ns": "DONE / Beget",
+      "smtp_sender": "noreply@shpigovsky.ru",
+      "indexing": "CLOSED — WAITING FOR OLYA APPROVAL"
+    },
+    "module_present": true
+  }
+}
