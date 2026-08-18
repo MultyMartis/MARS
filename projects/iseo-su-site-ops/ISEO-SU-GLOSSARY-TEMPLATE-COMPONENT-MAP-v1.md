@@ -10,7 +10,7 @@
 |---------|------------------|--------------------|
 | Document head | `header.php` | `wp_head`, favicons, LPTracker (existing) |
 | Mobile menu | `template-parts/content-mobilemenu.php` | existing |
-| Topbar | `template-parts/content-topbar.php` | existing |
+| Topbar | `template-parts/content-topbar.php` | existing; includes **Глоссарий** `/glossary/` after calculator in services submenu |
 | Footer blocks | `footer.php` + `content-footer.php` | existing Telegram / audit / footer |
 | Body modifiers | `body_class` filter | `overlay_on`, `content` (same family as legal HTML pages) |
 | Glossary hero helper | `template-parts/content-glossary-page-scene.php` | services `page_scene` copy; archive vs single via `$args['context']` |
@@ -58,7 +58,11 @@ Archive data source: dedicated `iseo_glossary_get_archive_posts()` query (not th
 
 ## CSS additions
 
-**None.** No new stylesheet, no new selectors, no inline styles in glossary templates.
+**None in glossary theme templates.** Operator manual glossary presentation tuning is in shared **`production-source/css/main.css`** (matches live `css/main.css`; promoted 2026-08-18). Reconcile production runtime→source before automation overwrites shared CSS.
+
+## Navigation
+
+Desktop header/services dropdown (shared topbar): **Глоссарий** immediately after **Калькулятор SEO (free)**. Mobile offcanvas menu remains a separate hardcoded tree (unchanged in final integration).
 
 ## JS additions
 
@@ -66,4 +70,4 @@ Glossary-only `wp_add_inline_script` on `iseoblog-common`: same 1000ms `animate`
 
 ---
 
-*Glossary template component map v1 · updated 2026-08-18 services page_scene alignment.*
+*Glossary template component map v1 · updated 2026-08-18 final integration closeout.*

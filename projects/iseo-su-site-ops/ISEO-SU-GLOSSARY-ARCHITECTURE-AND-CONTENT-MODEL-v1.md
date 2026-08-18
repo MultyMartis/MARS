@@ -174,7 +174,11 @@ Hero reused from `/services.html` `page_scene` (rates omitted). Listing/article 
 
 `page_scene`, `page_scene_inner`, `page_scene__description`, `page_scene__btns`, `page_scene__btn_order`, `page_scene__info`, `container`, `row`, `breadcrumbs`, `see_more_btn`, `content_block`, `content_block__title`, `blog_filter*`, body classes `overlay_on content`, shared header/footer. Asset: existing `/img/services_title_img.svg`.
 
-No new stylesheet, selectors, or inline styles in glossary templates.
+No new stylesheet or inline styles in glossary templates. Operator manual tuning lives in shared **`production-source/css/main.css`** (promoted from production 2026-08-18).
+
+Archive Yoast title: **Глоссарий - INTLSEO Studio** (archive-prefix stripped via `glossary-cpt.php` filters only).
+
+Desktop services submenu includes **Глоссарий** immediately after **Калькулятор SEO (free)** via shared `content-topbar.php`.
 
 ---
 
@@ -289,4 +293,4 @@ Do **not** publish until operator confirms:
 
 ---
 
-*Glossary architecture and content model v1 · updated 2026-08-18 services page_scene alignment.*
+*Glossary architecture and content model v1 · updated 2026-08-18 final integration closeout.*

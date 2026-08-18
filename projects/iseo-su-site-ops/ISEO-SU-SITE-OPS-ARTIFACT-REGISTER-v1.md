@@ -142,6 +142,17 @@ Status vocabulary: **COMPLETE** · **CREATED** · **PLANNED** · **CONDITIONAL**
 | Template component map | `ISEO-SU-GLOSSARY-TEMPLATE-COMPONENT-MAP-v1.md` | UPDATED |
 | Architecture / content model | `ISEO-SU-GLOSSARY-ARCHITECTURE-AND-CONTENT-MODEL-v1.md` | UPDATED |
 
+### Glossary final integration and closeout (2026-08-18)
+
+| Artifact | Path | Status |
+|----------|------|--------|
+| Final production baseline | `ISEO-SU-GLOSSARY-FINAL-PRODUCTION-BASELINE-v1.md` | CREATED |
+| Manual CSS promotion evidence | `ISEO-SU-GLOSSARY-MANUAL-CSS-PROMOTION-EVIDENCE-v1.md` | CREATED |
+| Promoted shared CSS source | `production-source/css/main.css` | CREATED (matches production SHA-256) |
+| Theme topbar package mirror | `wordpress/iseoblog-glossary/template-parts/content-topbar.php` | CREATED / deployed |
+| Closeout REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-FINAL-INTEGRATION-AND-CLOSEOUT.md` | COMPLETE |
+| Theme package (menu + archive title filters) | `wordpress/iseoblog-glossary/inc/glossary-cpt.php` | UPDATED / deployed |
+
 ---
 
 ## Programme foundation artifacts (this locus)
@@ -250,4 +261,4 @@ Unchanged: no tokens/credentials in Git locus; no DB dumps; no Localhost mirror;
 
 ---
 
-*Artifact Register v1 · updated 2026-08-18 glossary page_scene services alignment.*
+*Artifact Register v1 · updated 2026-08-18 glossary final integration closeout.*

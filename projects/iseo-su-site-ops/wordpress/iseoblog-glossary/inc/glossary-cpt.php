@@ -171,6 +171,75 @@ function iseo_glossary_exclude_from_yoast_sitemap( $excluded, $post_type ) {
 add_filter( 'wpseo_sitemap_exclude_post_type', 'iseo_glossary_exclude_from_yoast_sitemap', 10, 2 );
 
 /**
+ * Whether the current request is the public glossary CPT archive (not a term single).
+ *
+ * @return bool
+ */
+function iseo_glossary_is_archive_request() {
+	return is_post_type_archive( 'glossary' ) && ! is_singular();
+}
+
+/**
+ * Remove leading archive-prefix semantics from the glossary archive title only.
+ *
+ * Yoast CPT archive titles currently render as "Архив Глоссарий - INTLSEO Studio".
+ * Target is the same separator/sitename convention without the prefix.
+ * Does not alter glossary singles, blog, or other archives.
+ *
+ * @param string $title Title.
+ * @return string
+ */
+function iseo_glossary_strip_archive_title_prefix( $title ) {
+	if ( ! iseo_glossary_is_archive_request() ) {
+		return $title;
+	}
+	$title    = (string) $title;
+	$stripped = preg_replace( '/^(Архив|Archives)\s+/u', '', $title, 1 );
+	if ( ! is_string( $stripped ) || '' === trim( $stripped ) ) {
+		return $title;
+	}
+	return $stripped;
+}
+
+add_filter( 'wpseo_title', 'iseo_glossary_strip_archive_title_prefix', 20 );
+add_filter( 'wpseo_opengraph_title', 'iseo_glossary_strip_archive_title_prefix', 20 );
+add_filter( 'wpseo_twitter_title', 'iseo_glossary_strip_archive_title_prefix', 20 );
+
+/**
+ * Keep Yoast CollectionPage/WebPage schema name aligned with the HTML title.
+ *
+ * @param array $data Schema WebPage data.
+ * @return array
+ */
+function iseo_glossary_schema_webpage_title( $data ) {
+	if ( ! iseo_glossary_is_archive_request() || ! is_array( $data ) ) {
+		return $data;
+	}
+	if ( isset( $data['name'] ) ) {
+		$data['name'] = iseo_glossary_strip_archive_title_prefix( (string) $data['name'] );
+	}
+	return $data;
+}
+add_filter( 'wpseo_schema_webpage', 'iseo_glossary_schema_webpage_title' );
+
+/**
+ * Fallback if Yoast is not the title presenter.
+ *
+ * @param array $parts Title parts.
+ * @return array
+ */
+function iseo_glossary_document_title_parts( $parts ) {
+	if ( ! iseo_glossary_is_archive_request() || ! is_array( $parts ) ) {
+		return $parts;
+	}
+	if ( ! empty( $parts['title'] ) ) {
+		$parts['title'] = iseo_glossary_strip_archive_title_prefix( (string) $parts['title'] );
+	}
+	return $parts;
+}
+add_filter( 'document_title_parts', 'iseo_glossary_document_title_parts', 20 );
+
+/**
  * Body classes aligned with internal content pages.
  *
  * @param array $classes Classes.

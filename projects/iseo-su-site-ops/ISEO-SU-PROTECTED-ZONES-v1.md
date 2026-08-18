@@ -28,10 +28,10 @@ No secrets stored here.
 | Database | Beget MySQL | content/leads integrity |
 | Forms / mail | all `*__FORM.php` + service copies | lead loss / PII |
 | Shared JS | `js/common.js` | forms + calculator + tariffs |
-| Shared CSS | `css/main.css`, `css/media.css` | sitewide marketing look |
+| Shared CSS | `css/main.css`, `css/media.css` | sitewide marketing look; **`css/main.css` operator manual glossary tuning promoted to `production-source/css/main.css` — reconcile before automation overwrite** |
 | SEO calculator / tariffs | `/tariff-calc`, ACF calculator groups, `tarif-calc.php`, handlers | revenue tool |
 | Web-KP / offers | `/offers`, CPT `offer`, `single-offer.php`, ACF «Предложения» | private commercial proposals |
-| Glossary (public + drafts) | CPT `glossary`, `/glossary/`, `archive-glossary.php`, `single-glossary.php`, `template-parts/content-glossary-page-scene.php`, `inc/glossary-*.php`, non-eligible drafts | do not publish MERGED/DEFERRED/EXCLUDED; no new CSS; related links only to published eligible; hero is services `page_scene` copy without rates; exposure/rollback via launch docs |
+| Glossary (public + drafts) | CPT `glossary`, `/glossary/`, `archive-glossary.php`, `single-glossary.php`, `template-parts/content-glossary-page-scene.php`, `template-parts/content-topbar.php` (menu link), `inc/glossary-*.php`, non-eligible drafts | do not publish MERGED/DEFERRED/EXCLUDED; hero is services `page_scene` copy without rates; manual CSS authority in `production-source/css/main.css`; exposure/rollback via launch + final baseline docs |
 | Global header/footer | static HTML chrome + theme topbar/footer parts | dual-channel breakage |
 | Homepage template | `page-home.php` (+ parallel `home.html`) | primary acquisition surface |
 | Analytics / verification | `google*.html`, `yandex_*.html`, injected scripts | SEO/property proof |
@@ -74,4 +74,4 @@ Even with WPilot active (RC6 safe defaults + local token):
 
 ---
 
-*Protected zones v1 · updated glossary page_scene services alignment 2026-08-18.*
+*Protected zones v1 · updated glossary final integration closeout 2026-08-18.*
