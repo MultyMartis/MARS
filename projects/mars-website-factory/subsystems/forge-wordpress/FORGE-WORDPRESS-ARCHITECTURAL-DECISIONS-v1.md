@@ -7,6 +7,8 @@
 
 **Classification key:** ADOPT | ADAPT | DEFER | REJECT | SAFE UNKNOWN
 
+**Production ADRs (2026-08-18):** CPT vs Page, native permalinks, Site Settings SoT, render-time typography, native sitemap, Activity Log table, Dashboard widget, drift canonization, exact-file deploy, indexing-after-SMTP, physical-device QA — [knowledge/FORGE-WORDPRESS-ADR-PACK-v1.md](knowledge/FORGE-WORDPRESS-ADR-PACK-v1.md). These **add** to FW-01; they do not delete 4.1–4.5.
+
 ---
 
 ## 4.1 Theme vs functionality

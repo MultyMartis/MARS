@@ -71,4 +71,15 @@ Full frontend rules: [frontend-production-rules-v0.md](frontend-production-rules
 
 ---
 
-*Website Factory Operational Rules v1 — 2026-07-02.*
+## 6. WordPress production (WP Forge)
+
+| Gate | Authority |
+|------|-----------|
+| Next-site architecture | [WP Forge knowledge hub](subsystems/forge-wordpress/knowledge/README.md) · [blueprint](subsystems/forge-wordpress/standards/FORGE-WORDPRESS-PRODUCTION-WEBSITE-BLUEPRINT-v1.md) |
+| Site not done because FE “looks ready” | [Definition of Done](subsystems/forge-wordpress/standards/FORGE-WORDPRESS-DEFINITION-OF-DONE-v1.md) |
+| Indexing after SMTP/forms | [Launch SOP](subsystems/forge-wordpress/runbooks/FORGE-WORDPRESS-PRE-CUTOVER-AND-LAUNCH-SOP-v1.md) |
+| Physical device QA when device-specific | [Real-device QA](subsystems/forge-wordpress/standards/FORGE-WORDPRESS-REAL-DEVICE-QA-STANDARD-v1.md) |
+
+---
+
+*Website Factory Operational Rules v1 — updated 2026-08-18 (WP Forge production gates).*

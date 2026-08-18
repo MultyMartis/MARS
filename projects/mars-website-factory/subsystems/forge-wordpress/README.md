@@ -3,16 +3,20 @@
 **Canonical name:** Forge WordPress  
 **Operator alias:** WP Forge  
 **Class:** Website Factory subsystem  
-**Lifecycle:** **FOUNDATION**  
-**Runtime status:** **EXCLUDED**  
-**Agent registration:** **NOT REGISTERED** (`AG-WP-001` remains internal seed only)  
+**Lifecycle:** **FOUNDATION** (agent/runtime) + **PRODUCTION KNOWLEDGE ACTIVE** (2026-08-18)  
+**Runtime status:** **EXCLUDED** (no Forge WordPress product runtime)  
+**Agent registration:** `AG-WP-001` registered as synthetic/read-only — **NOT PRODUCTION READY**  
 **project_id:** **NOT CREATED** (subsystem under `mars-website-factory`)
+
+**Next WordPress site:** [knowledge/README.md](knowledge/README.md) — FP-0002 production lessons assimilated.
 
 ---
 
 ## What this is
 
 Documentation-first **WordPress implementation subsystem** of MARS Website Factory. It is the canonical methodology home for transforming an **approved Website Factory frontend package** into a **WordPress implementation package** for downstream handoff to **WPilot** (controlled operations).
+
+**Production operating knowledge (2026-08-18):** FP-0002 is a live reference case. Reusable standards, anti-patterns, launch SOP, and next-site blueprint live in [knowledge/README.md](knowledge/README.md). This is **not** a claim that AG-WP-001 or a Forge runtime product exists.
 
 **Entity creation does not mean implementation capability is operational.**
 

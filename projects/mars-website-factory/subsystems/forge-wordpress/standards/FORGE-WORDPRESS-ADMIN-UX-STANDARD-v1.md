@@ -1,10 +1,10 @@
 # Forge WordPress Admin UX Standard v1
 
 **Document type:** Editorial UX standard (L7)  
-**Version:** v1  
-**Date:** 2026-06-22  
-**Stage:** FW-02  
-**Rules source:** R-UX-01–04; [FORGE-WORDPRESS-ARCHITECTURAL-DECISIONS-v1.md](../FORGE-WORDPRESS-ARCHITECTURAL-DECISIONS-v1.md)
+**Version:** v1.1  
+**Date:** 2026-06-22; production addendum 2026-08-18  
+**Stage:** FW-02 + FP-0002 production proven  
+**Rules source:** R-UX-01–04; [FORGE-WORDPRESS-ARCHITECTURAL-DECISIONS-v1.md](../FORGE-WORDPRESS-ARCHITECTURAL-DECISIONS-v1.md); [knowledge hub](../knowledge/README.md)
 
 **Principle:** `Curated editor, not unrestricted editor.`
 
@@ -130,4 +130,41 @@ Mode A default: **ACF-first** — block editor secondary or disabled on curated 
 
 ---
 
-*Admin UX standard v1 — curated editor principle.*
+## 10. Production addendum (FP-0002 → WP Forge)
+
+Admin must be **editor-oriented**, localized to the project locale (Russian editors → Russian chrome), technically clean, free of irrelevant page/CPT fields, free of developer notices on every screen, free of raw Options/debug screens, and grouped logically.
+
+### 10.1 Site Settings
+
+See [SITE-SETTINGS-STANDARD](FORGE-WORDPRESS-SITE-SETTINGS-STANDARD-v1.md). One SoT for contacts/socials. Advanced raw-code fields: capability-gated, last, not mixed with ordinary editor settings.
+
+### 10.2 Custom CPT editor
+
+Hide Classic editor / excerpt / revisions / parent when ACF owns the entity. List columns: photo, title, role, order — not generic Date-only. Help text and ACF instructions in the editor locale.
+
+### 10.3 System status
+
+**SYSTEM INFORMATION BELONGS IN ONE OPERATIONS WIDGET, NOT GLOBAL ADMIN NOTICES** (AP-005).
+
+Suggested widget fields: project, runtime, environment, current host, future host, core/theme version, WPilot write state, latest production wave, source/prod parity, backup pointer, open launch tails. No secrets.
+
+### 10.4 Dangerous / Admin-only
+
+Visibility flags, raw head/body injection, Options dump, migration tools — Administrators only. Activity Log and DOCX importer: editor-capable roles as chartered, never public.
+
+### 10.5 Proven Admin surfaces (pattern, not brand)
+
+Specialists CPT cleanup; SEO & Integrations; Social/Messengers; Smart Search settings; Activity Log; DOCX importer; MetaCODE Dashboard.
+
+### 10.6 Acceptance extras
+
+| # | Check |
+|---|--------|
+| 11 | Locale packs loaded for plugin + theme |
+| 12 | No global LOCAL/MARS/debug notices |
+| 13 | Native permalink row only on public CPTs |
+| 14 | Empty settings do not render FE leftovers |
+
+---
+
+*Admin UX standard v1.1 — curated editor + production dashboard/SoT rules.*

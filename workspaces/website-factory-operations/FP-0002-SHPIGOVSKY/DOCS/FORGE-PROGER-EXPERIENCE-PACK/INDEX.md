@@ -2,7 +2,9 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Location:** `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/DOCS/FORGE-PROGER-EXPERIENCE-PACK/`  
-**Integration into Forge Proger brains/rules:** **NOT DONE** (documentation capture only)
+**Integration into Forge Proger brains/rules:** **DONE (2026-08-18)** — canonical WP Forge production brain is `projects/mars-website-factory/subsystems/forge-wordpress/knowledge/README.md`. This Experience Pack remains **project evidence / narrative**. Do not treat it as the operating standard.
+
+Canonical: [WP Forge knowledge hub](../../../../projects/mars-website-factory/subsystems/forge-wordpress/knowledge/README.md) · [assimilation index](../../../../projects/mars-website-factory/subsystems/forge-wordpress/knowledge/FP-0002-KNOWLEDGE-ASSIMILATION-INDEX.md)
 
 This master index links all Experience Pack phases and Stable v1 release documentation. Phase folders retain their original paths.
 

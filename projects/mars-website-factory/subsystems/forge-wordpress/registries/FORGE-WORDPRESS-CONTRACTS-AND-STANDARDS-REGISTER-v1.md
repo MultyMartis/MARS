@@ -31,6 +31,19 @@
 | FW-S-06 | [FORGE-WORDPRESS-PLUGIN-GOVERNANCE-STANDARD-v1.md](../standards/FORGE-WORDPRESS-PLUGIN-GOVERNANCE-STANDARD-v1.md) | Standard | BASELINE v1 | FWP-05; WV4 | Forge Architect |
 | FW-S-07 | [FORGE-WORDPRESS-CODING-AND-SECURITY-STANDARD-v1.md](../standards/FORGE-WORDPRESS-CODING-AND-SECURITY-STANDARD-v1.md) | Standard | BASELINE v1 | L8; WV2; WV4 | WordPress Validator |
 | FW-S-08 | [FORGE-WORDPRESS-VALIDATION-STANDARD-v1.md](../standards/FORGE-WORDPRESS-VALIDATION-STANDARD-v1.md) | Standard | BASELINE v1 | WV0–WV9; FWP-08–09 | WordPress Validator |
+| FW-S-09 | [FORGE-WORDPRESS-PRODUCTION-WEBSITE-BLUEPRINT-v1.md](../standards/FORGE-WORDPRESS-PRODUCTION-WEBSITE-BLUEPRINT-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | Next-site P0–P14 | Forge Architect |
+| FW-S-10 | [FORGE-WORDPRESS-CONTENT-MODEL-CPT-STANDARD-v1.md](../standards/FORGE-WORDPRESS-CONTENT-MODEL-CPT-STANDARD-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | FWP-04 | Content Modeler |
+| FW-S-11 | [FORGE-WORDPRESS-SITE-SETTINGS-STANDARD-v1.md](../standards/FORGE-WORDPRESS-SITE-SETTINGS-STANDARD-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | Admin globals | Admin UX Specialist |
+| FW-S-12 | [FORGE-WORDPRESS-SEO-AND-SITEMAP-STANDARD-v1.md](../standards/FORGE-WORDPRESS-SEO-AND-SITEMAP-STANDARD-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | SEO | Theme + plugin |
+| FW-S-13 | [FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md](../standards/FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | Forms/launch | Theme Specialist |
+| FW-S-14 | [FORGE-WORDPRESS-TYPOGRAPHY-PIPELINE-STANDARD-v1.md](../standards/FORGE-WORDPRESS-TYPOGRAPHY-PIPELINE-STANDARD-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | FE render | Theme Specialist |
+| FW-S-15 | [FORGE-WORDPRESS-NAVIGATION-STANDARD-v1.md](../standards/FORGE-WORDPRESS-NAVIGATION-STANDARD-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | Menus | Theme Specialist |
+| FW-S-16 | [FORGE-WORDPRESS-SLIDER-CAROUSEL-STANDARD-v1.md](../standards/FORGE-WORDPRESS-SLIDER-CAROUSEL-STANDARD-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | Sliders | Theme Specialist |
+| FW-S-17 | [FORGE-WORDPRESS-REAL-DEVICE-QA-STANDARD-v1.md](../standards/FORGE-WORDPRESS-REAL-DEVICE-QA-STANDARD-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | WV/device QA | WordPress Validator |
+| FW-S-18 | [FORGE-WORDPRESS-I18N-STANDARD-v1.md](../standards/FORGE-WORDPRESS-I18N-STANDARD-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | All modules | Theme Specialist |
+| FW-S-19 | [FORGE-WORDPRESS-DEFINITION-OF-DONE-v1.md](../standards/FORGE-WORDPRESS-DEFINITION-OF-DONE-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | Release | Operator |
+| FW-S-20 | [FORGE-WORDPRESS-PUBLIC-WEBROOT-HYGIENE-GATE-v1.md](../standards/FORGE-WORDPRESS-PUBLIC-WEBROOT-HYGIENE-GATE-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | Pre-cutover | Operator |
+| FW-S-21 | [FORGE-WORDPRESS-ANTI-PATTERN-REGISTRY-v1.md](../standards/FORGE-WORDPRESS-ANTI-PATTERN-REGISTRY-v1.md) | Registry | PRODUCTION KNOWLEDGE v1 | All | Forge Architect |
 
 ---
 
@@ -86,6 +99,20 @@
 |----|----------|------|--------|
 | FW-R-02 | [FORGE-WORDPRESS-TOOL-REGISTRY-v1.md](FORGE-WORDPRESS-TOOL-REGISTRY-v1.md) | Registry | BASELINE v1 |
 | FW-R-03 | [FORGE-WORDPRESS-AG-WP-001-OPERATION-REGISTRY-v1.md](FORGE-WORDPRESS-AG-WP-001-OPERATION-REGISTRY-v1.md) | Registry | BASELINE v1 (FW-07A) |
+| FW-R-04 | [FORGE-WORDPRESS-MODULE-CATALOG-v1.md](FORGE-WORDPRESS-MODULE-CATALOG-v1.md) | Registry | PRODUCTION KNOWLEDGE v1 |
+
+---
+
+## Production knowledge (2026-08-18)
+
+| ID | Document | Type | Status |
+|----|----------|------|--------|
+| FW-K-01 | [knowledge/README.md](../knowledge/README.md) | Hub | ACTIVE |
+| FW-K-02 | [knowledge/FP-0002-KNOWLEDGE-ASSIMILATION-INDEX.md](../knowledge/FP-0002-KNOWLEDGE-ASSIMILATION-INDEX.md) | Index | ACTIVE |
+| FW-RB-* | [runbooks/](../runbooks/) | SOP | ACTIVE |
+| FW-T-19 | [FORGE-WORDPRESS-NEW-SITE-STARTER-CHECKLIST-v1.md](../templates/FORGE-WORDPRESS-NEW-SITE-STARTER-CHECKLIST-v1.md) | Template | ACTIVE |
+
+*FP-0002 lessons assimilated; AG-WP-001 remains NOT PRODUCTION READY.*
 
 ---
 
@@ -131,4 +158,4 @@
 
 ---
 
-*Register v1 — subsystem local; updated FW-07B AG-WP-001 typed operations.*
+*Register v1 — subsystem local; updated 2026-08-18 WP Forge production knowledge pack (FW-S-09–21, runbooks, module catalog).*

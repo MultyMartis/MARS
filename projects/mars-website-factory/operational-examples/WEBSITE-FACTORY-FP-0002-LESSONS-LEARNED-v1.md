@@ -3,7 +3,7 @@
 **Date:** 2026-07-01  
 **Source case:** FP-0002 Shpigovsky — V8 operator-approved baseline  
 **Location:** `projects/mars-website-factory/operational-examples/`  
-**Status:** Case-derived lessons — promote via [FP-0002-TO-WEBSITE-FACTORY-RULE-PROMOTION-MATRIX-v1.md](../../workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/FP-0002-TO-WEBSITE-FACTORY-RULE-PROMOTION-MATRIX-v1.md)
+**Status:** Case-derived **frontend** lessons (V8). **WordPress production operating knowledge (2026-08-18)** lives in [WP Forge knowledge hub](../subsystems/forge-wordpress/knowledge/README.md) — use that for the next WordPress site. This file is **not** the production SOP.
 
 **Not:** Mandatory global law until promoted. **Not:** Proof of automated Factory runtime.
 

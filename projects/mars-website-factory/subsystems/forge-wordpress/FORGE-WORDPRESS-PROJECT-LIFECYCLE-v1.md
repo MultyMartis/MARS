@@ -7,7 +7,7 @@
 
 **Mapping:** Stages FWP-01–FWP-12 map to architecture layers L1–L10 — see [FORGE-WORDPRESS-ARCHITECTURE-v1.md](FORGE-WORDPRESS-ARCHITECTURE-v1.md).
 
-**FW-01 honesty:** Stages FWP-06+ are **methodologically defined** — **not executable** until FW-05 pilot charter.
+**FW-01 honesty:** Stages FWP-06+ were originally methodological. **Production operating phases** after the first live case are defined in [PRODUCTION-WEBSITE-BLUEPRINT-v1](standards/FORGE-WORDPRESS-PRODUCTION-WEBSITE-BLUEPRINT-v1.md) (P9 connection → P14 post-launch) and [PRE-CUTOVER-AND-LAUNCH-SOP](runbooks/FORGE-WORDPRESS-PRE-CUTOVER-AND-LAUNCH-SOP-v1.md). FWP-12 learning output for FP-0002 is the knowledge hub, not another client feature wave.
 
 ---
 

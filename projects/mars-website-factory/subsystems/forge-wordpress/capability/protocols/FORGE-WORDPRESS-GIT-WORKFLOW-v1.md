@@ -6,6 +6,8 @@
 
 **Does not override global MARS git policy** — extends it for WordPress project work.
 
+**Production checkpoint (2026-08-18):** dirty shared monorepo + clean worktree + exact-file staging — [FORGE-WORDPRESS-GIT-SOP-v1.md](../../runbooks/FORGE-WORDPRESS-GIT-SOP-v1.md). Never `git add .` / reset / stash / clean.
+
 ---
 
 ## Preflight status

@@ -54,6 +54,8 @@ Evaluate before CPT:
 
 **If majority = no** → prefer page + repeater, fixed template, or options — document in CONTENT-MODEL.
 
+**Production expansion (2026-08-18):** full CPT checklist, hub+CPT coexistence, native permalink rule, and “when to create a CPT” hard criteria — [FORGE-WORDPRESS-CONTENT-MODEL-CPT-STANDARD-v1.md](FORGE-WORDPRESS-CONTENT-MODEL-CPT-STANDARD-v1.md) (FW-S-10). Do not use generic Pages for staff-like public entities (AP-001).
+
 ---
 
 ## 4. Taxonomy rules
