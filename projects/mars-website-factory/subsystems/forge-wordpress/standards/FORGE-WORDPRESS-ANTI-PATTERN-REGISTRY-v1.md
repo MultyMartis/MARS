@@ -170,9 +170,9 @@ Each ID is reusable. Client facts are generalized.
 | Symptom | Domain live, robots Allow, forms not delivering |
 | Cause | “Site is up” confusion |
 | Risk | Indexed broken UX; lost leads |
-| Prevention | Indexing gate after SMTP |
-| Replacement | [LAUNCH SOP](../runbooks/FORGE-WORDPRESS-PRE-CUTOVER-AND-LAUNCH-SOP-v1.md) |
-| Evidence | P10–P17 indexing closed on purpose |
+| Prevention | Indexing gate after SMTP; explicit human OPEN; never auto-open on deploy |
+| Replacement | [LAUNCH SOP](../runbooks/FORGE-WORDPRESS-PRE-CUTOVER-AND-LAUNCH-SOP-v1.md) · [SEARCH-INDEXING-CONTROL](FORGE-WORDPRESS-SEARCH-INDEXING-CONTROL-STANDARD-v1.md) |
+| Evidence | P10–P18B indexing closed on purpose |
 
 ## AP-016 — Hardcoded future-domain redirects before cutover
 
@@ -229,11 +229,22 @@ Each ID is reusable. Client facts are generalized.
 | Replacement | [ACF FIELD MODELING](FORGE-WORDPRESS-ACF-FIELD-MODELING-STANDARD-v1.md) §6.1 |
 | Evidence | P18A legal DEMO banner |
 
+## AP-021 — Stale operator status dashboard after a major production wave
+
+| | |
+|--|--|
+| Symptom | Widget still says “future host / NS switch pending / SSL in progress” after cutover and HTTPS are live |
+| Cause | Treating the Dashboard as historical notes; updating reports but not the operator UI |
+| Risk | Olya/operator act on false remaining work; accidental re-cutover |
+| Prevention | Status panel is production state; update it in the same wave ([DoD](FORGE-WORDPRESS-DEFINITION-OF-DONE-v1.md)) |
+| Replacement | [ADMIN UX](FORGE-WORDPRESS-ADMIN-UX-STANDARD-v1.md) §10.3 · [SEARCH-INDEXING-CONTROL](FORGE-WORDPRESS-SEARCH-INDEXING-CONTROL-STANDARD-v1.md) |
+| Evidence | P18B MetaCODE Dashboard |
+
 ---
 
 ## CMS modeling namespace (`AP-CMS-*`)
 
-Do **not** reuse AP-001–020 numbers. Full entries: [CMS-ANTI-PATTERNS](FORGE-WORDPRESS-CMS-ANTI-PATTERNS-v1.md).
+Do **not** reuse AP-001–021 numbers. Full entries: [CMS-ANTI-PATTERNS](FORGE-WORDPRESS-CMS-ANTI-PATTERNS-v1.md).
 
 | ID | Title | Related ops ID |
 |----|-------|----------------|
@@ -256,4 +267,4 @@ Do **not** reuse AP-001–020 numbers. Full entries: [CMS-ANTI-PATTERNS](FORGE-W
 
 ---
 
-*FW-S-21 v1.2 — 20 operational anti-patterns + AP-CMS-001–016 index. Add IDs; do not reuse numbers.*
+*FW-S-21 v1.3 — 21 operational anti-patterns + AP-CMS-001–016 index. Add IDs; do not reuse numbers.*

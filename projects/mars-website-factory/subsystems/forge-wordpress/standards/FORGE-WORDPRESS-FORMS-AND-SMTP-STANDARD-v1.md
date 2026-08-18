@@ -55,8 +55,24 @@ Validate + accept + optional Admin log. Return success to the user only if produ
 2. Configure SMTP (plugin or host) with final domain.  
 3. Send test + one real form.  
 4. Record evidence.  
-5. Only then indexing gate.
+5. Only then indexing gate (explicit human action — [SEARCH-INDEXING-CONTROL](FORGE-WORDPRESS-SEARCH-INDEXING-CONTROL-STANDARD-v1.md)).
 
 ---
 
-*FW-S-13 v1.*
+## 5. Technical sender mailbox naming
+
+Default dedicated technical website sender:
+
+```text
+noreply@<site-domain>
+```
+
+unless the project explicitly requires another sender identity.
+
+Do **not** store mailbox passwords or SMTP credentials in Git or project docs.
+
+Example (FP-0002): mailbox `noreply@shpigovsky.ru` may exist at the host while WordPress SMTP configuration is still PENDING.
+
+---
+
+*FW-S-13 v1.1.*

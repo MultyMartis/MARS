@@ -55,6 +55,16 @@ Required **before** `blog_public=1` / robots Allow:
 
 Then: robots/indexability → Webmaster / Search Console → submit sitemap → final crawl.
 
+Indexing is **never** opened automatically. Use [SEARCH-INDEXING-CONTROL](../standards/FORGE-WORDPRESS-SEARCH-INDEXING-CONTROL-STANDARD-v1.md).
+
+---
+
+## Operator status panel
+
+Update the production Dashboard / system-status widget in the **same wave** as domain, DNS, SSL, SMTP, indexing, environment, or parity changes. Stale “NS pending / future host” after cutover is a **failed DoD**.
+
+Default SMTP technical sender mailbox: `noreply@<domain>` unless the project names another identity. Do not commit credentials.
+
 ---
 
 ## Forbidden in pre-cutover waves

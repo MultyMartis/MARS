@@ -22,13 +22,9 @@
 - [ ] Search module yes/no  
 - [ ] Native slug UX (no custom permalink UI)  
 - [ ] Typography owner (render-time)  
-- [ ] Dashboard widget planned (no global notices)  
-- [ ] Theme vs plugin vs MU decided (survival test — [CODE-OWNERSHIP](../standards/FORGE-WORDPRESS-CODE-OWNERSHIP-BOUNDARIES-STANDARD-v1.md))  
-- [ ] Design-system map started (tokens blank OK — [template](FORGE-WORDPRESS-DESIGN-SYSTEM-MAP-TEMPLATE-v1.md))  
-- [ ] Component inventory started ([template](FORGE-WORDPRESS-COMPONENT-INVENTORY-TEMPLATE-v1.md))  
-- [ ] Dependency register stub ([template](FORGE-WORDPRESS-DEPENDENCY-REGISTER-TEMPLATE-v1.md))  
-- [ ] Plugin collision table empty (SEO/cache/forms/sitemap)  
-- [ ] Second-site bootstrap shell reviewed ([BOOTSTRAP](../standards/FORGE-WORDPRESS-SECOND-SITE-BOOTSTRAP-v1.md))  
+- [ ] Dashboard widget planned (runtime status; no global notices; update in the same production wave)  
+- [ ] Indexing closed until explicit human approval; Admin control if pre-launch  
+- [ ] Default SMTP technical sender `noreply@<domain>` (no credentials in Git)  
 
 ## Before production connection
 
@@ -49,14 +45,14 @@ Complete [PRE-CUTOVER-READINESS-MATRIX](FORGE-WORDPRESS-PRE-CUTOVER-READINESS-MA
 - [ ] Redirects  
 - [ ] DNS zone inventory (mail preserved)  
 - [ ] SSL plan  
-- [ ] SMTP after domain  
-- [ ] Indexing still closed until gate  
+- [ ] SMTP after domain (`noreply@<domain>` mailbox naming)  
+- [ ] Indexing still closed until gate; Dashboard control ready; no auto-open  
 
 ## Anti-patterns to refuse
 
-AP-001…022 in [ANTI-PATTERN-REGISTRY](../standards/FORGE-WORDPRESS-ANTI-PATTERN-REGISTRY-v1.md)  
+AP-001…018 in [ANTI-PATTERN-REGISTRY](../standards/FORGE-WORDPRESS-ANTI-PATTERN-REGISTRY-v1.md)  
 AP-CMS-001…015 in [CMS-ANTI-PATTERNS](../standards/FORGE-WORDPRESS-CMS-ANTI-PATTERNS-v1.md)
 
 ---
 
-*Starter checklist v1.2 — includes P1b CMS + engineering/ops shell.*
+*Starter checklist v1.1 — includes P1b CMS / editable architecture.*

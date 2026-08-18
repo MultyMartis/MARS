@@ -5,8 +5,7 @@
 **Entry:** [knowledge/README.md](README.md)
 
 - **Ops Q1–Q3** — build / migrate / cutover (production knowledge pack).  
-- **CMS Q1–Q10** — Page/CPT/repeater/Options/design-to-schema (CMS architecture pack).  
-- **Eng Q1–Q12** — ownership, CSS/JS, media, plugins, updates, editor, regression, retirement, bootstrap, extraction.
+- **CMS Q1–Q10** — Page/CPT/repeater/Options/design-to-schema (CMS architecture pack).
 
 **Expected:** PASS if a future agent can start from the hub without inspecting FP-0002 source.
 
@@ -58,7 +57,9 @@
 
 Freeze → fresh full backup → parity → webroot/users/redirects → **inventory DNS including mail** → choose A-record vs NS → switch only when GO → verify authoritative DNS (web+mail) → SSL → home/siteurl → bounded URL migrate → smoke **with indexing still closed** → SMTP → form proof → **then** robots/indexability → consoles → sitemap submit → crawl.
 
-Do not open indexing because HTTPS works. Do not NS-switch without copying MX/SPF/DKIM. Do not hardcode final-host redirects before the final host works.
+Do not open indexing because HTTPS works. Indexing OPEN requires explicit human action ([SEARCH-INDEXING-CONTROL](../standards/FORGE-WORDPRESS-SEARCH-INDEXING-CONTROL-STANDARD-v1.md)). Update the operator Dashboard in the same wave ([DoD](../standards/FORGE-WORDPRESS-DEFINITION-OF-DONE-v1.md)). Do not NS-switch without copying MX/SPF/DKIM. Do not hardcode final-host redirects before the final host works.
+
+Default technical SMTP sender: `noreply@<domain>`.
 
 **Retrieval:** PASS
 
@@ -177,131 +178,9 @@ Do not open indexing because HTTPS works. Do not NS-switch without copying MX/SP
 | CMS Q8 | **PASS** |
 | CMS Q9 | **PASS** |
 | CMS Q10 | **PASS** |
-| Eng Q1–Q12 | see table below |
-
----
-
-## Engineering / operations retrieval (Q1–Q12)
-
-**Method:** Answers from canonical WP Forge docs only (hub + standards/runbooks/templates). FP-0002 source was not opened for these answers.
-
-### Q1 — What belongs in the theme vs functionality plugin?
-
-**Primary docs:** [CODE-OWNERSHIP-BOUNDARIES](../standards/FORGE-WORDPRESS-CODE-OWNERSHIP-BOUNDARIES-STANDARD-v1.md)
-
-**Canonical answer:** Survival test — if it must survive a theme change, it is not theme-owned. Theme: templates, component markup, FE assets, presentation JS. Functionality plugin: CPTs, taxonomies, ACF, Site Settings, SEO, search, forms business logic, Activity Log, importer, Admin modules. MU-plugin: only infrastructure-critical always-on (e.g. temporary mail suppress), never a dumping ground.
-
-**Retrieval:** PASS
-
-### Q2 — How should CSS/components be structured on a new site?
-
-**Primary docs:** [DESIGN-SYSTEM-FOUNDATION](../standards/FORGE-WORDPRESS-DESIGN-SYSTEM-FOUNDATION-v1.md) · [CSS-COMPONENT-ARCHITECTURE](../standards/FORGE-WORDPRESS-CSS-COMPONENT-ARCHITECTURE-STANDARD-v1.md) · [COMPONENT-INVENTORY](../templates/FORGE-WORDPRESS-COMPONENT-INVENTORY-TEMPLATE-v1.md)
-
-**Canonical answer:** Token architecture first (values project-specific). Layers: tokens, base, layout, components, rare page scope, justified utilities. One markup/CSS/JS/CMS owner per component. No `!important` as architecture; no duplicate cards.
-
-**Retrieval:** PASS
-
-### Q3 — What is the media architecture?
-
-**Primary docs:** [MEDIA-ARCHITECTURE](../standards/FORGE-WORDPRESS-MEDIA-ARCHITECTURE-STANDARD-v1.md)
-
-**Canonical answer:** Attachment IDs, not hardcoded host URLs. Custom sizes by category (card/portrait/hero/content/gallery) — pixels from design. srcset; one image-optimizer owner. SVG only via controlled/sanitized path. Video: poster, no unsound autoplay, no giant files without reason.
-
-**Retrieval:** PASS
-
-### Q4 — How do we decide whether to install another plugin?
-
-**Primary docs:** [PLUGIN-GOVERNANCE](../standards/FORGE-WORDPRESS-PLUGIN-GOVERNANCE-STANDARD-v1.md)
-
-**Canonical answer:** Register first. Ask: core already? Forge module already? duplicate SEO/cache/forms/sitemap? maintenance/security? editor impact? One owner per cross-cutting concern; Yoast coexistence is an explicit WAD, not silent dual output.
-
-**Retrieval:** PASS
-
-### Q5 — How do we safely update WordPress/plugins in production?
-
-**Primary docs:** [PRODUCTION-UPDATE-SOP](../runbooks/FORGE-WORDPRESS-PRODUCTION-UPDATE-SOP-v1.md)
-
-**Canonical answer:** Inventory → changelog/risk → backup → staging if available → exact named updates → smoke → rollback evidence. Never “update all” as SOP. Major WP/PHP is a HIGH/migration class, not a security click.
-
-**Retrieval:** PASS
-
-### Q6 — What exactly must a client editor be able to do after launch?
-
-**Primary docs:** [CONTENT-OPERATIONS](../standards/FORGE-WORDPRESS-CONTENT-OPERATIONS-STANDARD-v1.md) · [CLIENT-HANDOFF](../templates/FORGE-WORDPRESS-CLIENT-HANDOFF-TEMPLATE-v1.md)
-
-**Canonical answer:** Business content without a programmer: articles, services/people, contacts/social, SEO fields, reorder, hide optional sections. Must not edit raw integration code, environment, indexing, plugin internals, migration tools, or raw CSS.
-
-**Retrieval:** PASS
-
-### Q7 — What regression tests run after a frontend change?
-
-**Primary docs:** [REGRESSION-PACK](../standards/FORGE-WORDPRESS-REGRESSION-PACK-v1.md)
-
-**Canonical answer:** Representative routes (Home, Page, CPT hub/single, article, contacts) plus nav/menu/search/forms/CTA/sitemap/REST/Admin as affected. Device matrix is **risk-based** — not all devices for backend-only.
-
-**Retrieval:** PASS
-
-### Q8 — How do we retire a temporary migration tool safely?
-
-**Primary docs:** [MODULE-LIFECYCLE](../standards/FORGE-WORDPRESS-MODULE-LIFECYCLE-STANDARD-v1.md) · [TEMPORARY-TOOL-REGISTER](../templates/FORGE-WORDPRESS-TEMPORARY-TOOL-REGISTER-TEMPLATE-v1.md)
-
-**Canonical answer:** OWNER / PURPOSE / CREATED / REMOVE WHEN / REMOVAL GATE. Disabled must not leave runners, Admin menus, endpoints, cron, enqueues, public temp files, or hidden GET mutators. Webroot hygiene after delete.
-
-**Retrieval:** PASS
-
-### Q9 — What should exist before we start bespoke pages on site #2?
-
-**Primary docs:** [SECOND-SITE-BOOTSTRAP](../standards/FORGE-WORDPRESS-SECOND-SITE-BOOTSTRAP-v1.md)
-
-**Canonical answer:** Theme + functionality plugin skeletons, module registry, i18n, settings/SEO/sitemap/dashboard/typography/nav foundations; P1b docs; component inventory; design-system map; dependency register; Git/backup/authority/connection gates.
-
-**Retrieval:** PASS
-
-### Q10 — What FP-0002 modules are ready for code extraction?
-
-**Primary docs:** [EXTRACTION-ROADMAP](FORGE-WORDPRESS-REUSABLE-CODE-EXTRACTION-ROADMAP-v1.md)
-
-**Canonical answer:** **R1 (now, still not extracted this wave):** i18n bootstrap, native sitemap helpers, TOC H2 + reading time. **R2:** settings, dashboard, SEO, typography, nav, search, activity log, social, forms, DOCX. **R4:** brand, clinical IA, lifebuoy. `wp-forge-core` is THEORY. AG-WP-001 remains NOT PRODUCTION READY.
-
-**Retrieval:** PASS
-
-### Q11 — How do we stop multiple JS/CSS owners fighting over the same component?
-
-**Primary docs:** [CSS-COMPONENT-ARCHITECTURE](../standards/FORGE-WORDPRESS-CSS-COMPONENT-ARCHITECTURE-STANDARD-v1.md) · [FRONTEND-INTERACTION-OWNERSHIP](../standards/FORGE-WORDPRESS-FRONTEND-INTERACTION-OWNERSHIP-STANDARD-v1.md)
-
-**Canonical answer:** One markup + CSS + JS + CMS contract per component; inventory row. One interaction owner (menu/slider/search/modal/parallax). One composed transform owner — do not stack animation + parallax + centering + workaround transforms.
-
-**Retrieval:** PASS
-
-### Q12 — What must be tested beyond visual screenshot parity?
-
-**Primary docs:** [FRONTEND-ACCEPTANCE](../standards/FORGE-WORDPRESS-FRONTEND-ACCEPTANCE-STANDARD-v1.md) · [ACCESSIBILITY-BASELINE](../standards/FORGE-WORDPRESS-ACCESSIBILITY-BASELINE-v1.md)
-
-**Canonical answer:** Data/empty/long/short/missing media states; keyboard; responsive/chrome; editor mutation; reduced motion; stress tests (Cyrillic, unpublished relation, repeater extremes). Physical devices when the risk matrix says so.
-
-**Retrieval:** PASS
-
----
-
-## Engineering score
-
-| Question | PASS/FAIL |
-|----------|-----------|
-| Eng Q1 | **PASS** |
-| Eng Q2 | **PASS** |
-| Eng Q3 | **PASS** |
-| Eng Q4 | **PASS** |
-| Eng Q5 | **PASS** |
-| Eng Q6 | **PASS** |
-| Eng Q7 | **PASS** |
-| Eng Q8 | **PASS** |
-| Eng Q9 | **PASS** |
-| Eng Q10 | **PASS** |
-| Eng Q11 | **PASS** |
-| Eng Q12 | **PASS** |
 
 Entry point for agents: [knowledge/README.md](README.md)
 
 ---
 
-*Validation v1.2 — 2026-08-18 (engineering Q1–Q12 added).*
+*Validation v1.1 — 2026-08-18 (CMS Q1–Q10 added).*

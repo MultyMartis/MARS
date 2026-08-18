@@ -113,4 +113,10 @@ If the editor cannot predict the frontend from the field help, the field is unfi
 
 ---
 
-*FW-S-30 v1 — one owner, many consumers, empty-safe chrome.*
+## 8. SMTP technical sender identity
+
+The technical website sender mailbox defaults to `noreply@<site-domain>` ([FORMS-AND-SMTP](FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) §5). This is a **hosting identity**, not a Site Settings password field. Do not store SMTP passwords in Git.
+
+---
+
+*FW-S-30 v1.1 — one owner, many consumers, empty-safe chrome.*

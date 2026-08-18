@@ -239,10 +239,10 @@ Client-specific values are omitted. Evidence paths are under `workspaces/website
 | Field | Value |
 |-------|--------|
 | First | Global LOCAL MARS / env notices |
-| Final | One widget «MetaCODE / Состояние системы»: project, runtime, host, versions, WPilot, parity, backup, tails |
-| Lesson | Operations info ≠ every-screen notice |
+| Final | One widget «MetaCODE / Состояние системы»: project, environment, live domain, versions, WPilot, parity, backup, indexing, tails, last verification |
+| Lesson | Operations info ≠ every-screen notice; **status UI is production state** — update in the same major wave (AP-021) |
 | Class | A / E |
-| Evidence | P13; P14; P17-FU02 |
+| Evidence | P13; P14; P17-FU02; P18B |
 
 ## 23. Localization / i18n
 
@@ -332,10 +332,11 @@ Client-specific values are omitted. Evidence paths are under `workspaces/website
 
 | Field | Value |
 |-------|--------|
-| Final | `blog_public=0` + Disallow + meta noindex on temporary host |
-| Lesson | Sitemap may work while indexing stays closed |
+| Final | `blog_public=0` + Disallow + meta noindex until **explicit human OPEN**; one SET SITE INDEXABILITY owner |
+| Lesson | Sitemap may work while indexing stays closed; never auto-open on deploy |
 | Class | D / G (AP-015) |
-| Evidence | P10; P15; P17-FU02 |
+| Evidence | P10; P15; P17-FU02; P18B |
+| Rule | [SEARCH-INDEXING-CONTROL](../standards/FORGE-WORDPRESS-SEARCH-INDEXING-CONTROL-STANDARD-v1.md) |
 
 ## 33. Launch / cutover
 

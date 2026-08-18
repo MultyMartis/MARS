@@ -18,16 +18,15 @@ A WP Forge site is **not done** because the frontend “looks ready”.
 | Frontend | Templates match approved design; empty Admin data does not show demo leftovers |
 | Responsive | Desktop/tablet/mobile per design breakpoints |
 | Real devices | Physical QA for device-specific features ([FW-S-17](FORGE-WORDPRESS-REAL-DEVICE-QA-STANDARD-v1.md)) |
-| Accessibility basics | [FW-S-37](FORGE-WORDPRESS-ACCESSIBILITY-BASELINE-v1.md) — not WCAG certification |
-| Frontend acceptance | [FW-S-46](FORGE-WORDPRESS-FRONTEND-ACCEPTANCE-STANDARD-v1.md) — not screenshot parity only |
-| Client editor workflows | [FW-S-43](FORGE-WORDPRESS-CONTENT-OPERATIONS-STANDARD-v1.md) — no programmer for normal content |
+| Accessibility basics | One H1; keyboard nav; focus; form labels; `prefers-reduced-motion` |
 | SEO | Title/description owner; canonical; no duplicate SEO plugins |
 | Sitemap | Native sitemap on **final** host after cutover |
 | Forms | Handler + nonce + anti-spam |
 | SMTP | Proven delivery on final domain |
 | Redirects | Manifest PASS; no loops; query preserved |
 | Users | No leftover bootstrap/`@localhost` admins; roles correct |
-| System status | Dashboard current; WPilot write state known |
+| System status | Dashboard current; WPilot write state known; **no stale cutover/host steps** |
+| Source/prod parity | Exact-file hashes MATCH for product code |
 | Source/prod parity | Exact-file hashes MATCH for product code |
 | Backup | Named full backup at last freeze/cutover |
 | Git | Canonical checkpoint; secrets absent |
@@ -42,4 +41,26 @@ Use [QA matrix](../templates/FORGE-WORDPRESS-QA-MATRIX-v1.md) to evidence the ro
 
 ---
 
-*FW-S-19 v1.*
+## Operational status panel (MEDIUM / HIGH / CUTOVER)
+
+An operator status panel is **part of production state**, not decorative Admin UI.
+
+For waves that change operator-visible runtime state (domain, DNS, SSL, SMTP, indexing, environment, source/runtime parity, backup baseline, module lifecycle, migration, cutover):
+
+| Check | Done means |
+|-------|------------|
+| Dashboard / status panel updated in the **same wave** | PASS |
+| Stale steps removed (no “future host”, no “NS switch pending” after cutover) | PASS |
+| Actual host / environment shown | PASS |
+| Current open tails shown | PASS |
+| Last verification updated from a real check | PASS |
+
+```text
+MAJOR PRODUCTION WAVE IS NOT DONE WHILE OPERATOR STATUS UI IS STALE
+```
+
+Prefer runtime reads (WordPress/PHP versions, `home`/`siteurl`, indexing, debug, WPilot, mail suppression, core version). Use stored metadata only for wave label, backup acknowledgement, human approval, and facts that cannot be derived in-process.
+
+---
+
+*FW-S-19 v1.1 — P18B operational status panel.*

@@ -2,7 +2,7 @@
 
 **ID:** FW-S-12  
 **Status:** ACTIVE — PRODUCTION PROVEN WITH CAVEATS  
-**Date:** 2026-08-18  
+**Date:** 2026-08-18; indexing control 2026-08-19  
 **Evidence:** FP-0002 P10, P13, P15, P17-FU02
 
 ---
@@ -64,6 +64,8 @@ Do **not** open indexing because HTTPS or the domain “works”. Required first
 
 Full sequence: [PRE-CUTOVER-AND-LAUNCH-SOP](../runbooks/FORGE-WORDPRESS-PRE-CUTOVER-AND-LAUNCH-SOP-v1.md).
 
+Admin control, human approval, and one semantic owner: [SEARCH-INDEXING-CONTROL](FORGE-WORDPRESS-SEARCH-INDEXING-CONTROL-STANDARD-v1.md).
+
 ---
 
-*FW-S-12 v1.*
+*FW-S-12 v1.1.*

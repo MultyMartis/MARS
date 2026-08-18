@@ -36,7 +36,10 @@
 | Sliders: mouse/touch/trackpad; Hero exceptions; forceToAxis | A / F / H | [SLIDER-CAROUSEL-STANDARD](../standards/FORGE-WORDPRESS-SLIDER-CAROUSEL-STANDARD-v1.md) |
 | iOS lifebuoy: emulation ≠ physical Safari; bounded fallback | G / H | [REAL-DEVICE-QA-STANDARD](../standards/FORGE-WORDPRESS-REAL-DEVICE-QA-STANDARD-v1.md) |
 | Activity log dedicated table; no full content / secrets | B / E | [ACTIVITY-LOG-MODULE-SPEC](../standards/FORGE-WORDPRESS-ACTIVITY-LOG-MODULE-SPEC-v1.md) |
-| Global Admin notices vs one Dashboard widget | G → A / E | [ADMIN-UX-STANDARD](../standards/FORGE-WORDPRESS-ADMIN-UX-STANDARD-v1.md) § production |
+| Dashboard widget planned (no global notices) | A / E | [ADMIN-UX-STANDARD](../standards/FORGE-WORDPRESS-ADMIN-UX-STANDARD-v1.md) §10.3 · [DEFINITION-OF-DONE](../standards/FORGE-WORDPRESS-DEFINITION-OF-DONE-v1.md) |
+| Operator status UI must be updated in the same major production wave | C / E / G | same · AP-021 |
+| Search indexing is explicit human approval; one SET SITE INDEXABILITY owner | D / E / G | [SEARCH-INDEXING-CONTROL](../standards/FORGE-WORDPRESS-SEARCH-INDEXING-CONTROL-STANDARD-v1.md) |
+| Default technical SMTP sender `noreply@<domain>` | C | [FORMS-AND-SMTP-STANDARD](../standards/FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) §5 |
 | i18n from day 1; no mixed hardcoded Admin strings | A / E | [I18N-STANDARD](../standards/FORGE-WORDPRESS-I18N-STANDARD-v1.md) |
 | FS = runtime truth; DB = content truth; Git = code authority | C | [SOURCE-RUNTIME-AUTHORITY](../runbooks/FORGE-WORDPRESS-SOURCE-RUNTIME-AUTHORITY-STANDARD-v1.md) |
 | Exact-file deploy + hash parity; no directory mirror | C | [PRODUCTION-DEPLOYMENT-SOP](../runbooks/FORGE-WORDPRESS-PRODUCTION-DEPLOYMENT-SOP-v1.md) |
@@ -78,6 +81,7 @@
 | P17 / CONT1 | Legacy 301s; DNS inventory; mail-zone preservation; NS not switched | `REPORT-FP-0002-PROD-P17-PRE-CUTOVER.md` |
 | P17-FU02 | `mars-runtime` incident; webroot hygiene; freeze/NS runbooks; indexing still closed | `REPORT-FP-0002-PROD-P17-FU02-FINAL-PRE-CUTOVER-TAIL.md` |
 | P18A | Operator live domain intake; legal DEMO banner owner; indexing still closed | `REPORT-FP-0002-PROD-P18A-LIVE-DOMAIN-LEGAL-STATE.md` |
+| P18B | Dashboard reality sync; safe Admin indexing control; indexing remains CLOSED | `REPORT-FP-0002-PROD-P18B-DASHBOARD-INDEXING.md` |
 
 Earlier V9 Admin-parity / ACF SoT / operator-CSS canon work remains valid foundation (Experience Pack Phase 1–2). It is **historical**; production operations above supersede it for launch.
 
