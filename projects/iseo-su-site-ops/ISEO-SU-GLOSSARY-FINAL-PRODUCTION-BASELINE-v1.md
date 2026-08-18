@@ -81,11 +81,13 @@ CTA: **`Подробнее`** → `#SecondScreen` (no `modalbox`)
 
 | File | Canonical path | Production SHA-256 |
 |------|----------------|--------------------|
-| Shared marketing CSS | `production-source/css/main.css` | `8e1774ba8996ed3f8be33c6c9750c5db2db4752ff9c93bb54a46b0a5860f2580` |
+| Shared marketing CSS | `production-source/css/main.css` | `4a1202b6b122230eba2edb4c559b03198ac9bfba221a39b561f7c78bca7e453f` |
 
-Evidence: `ISEO-SU-GLOSSARY-MANUAL-CSS-PROMOTION-EVIDENCE-v1.md`
+Operator manual hunks remain. Post-launch overflow block (2026-08-18, stamp `20260818T101846Z`) adds glossary-scoped `#SecondScreen` `.row` / `.two_common_col*` rules at `max-width: 490px`. Prior operator SHA `8e1774ba…` is the backup baseline (`css/main.css.bak-glossary-overflow-20260818T101846Z`).
 
-Key glossary-facing selectors: `.glossary-template-default .breadcrumbs`, `.post-type-archive-glossary #SecondScreen … label`, `.info_span`, split `main .content` list margins.
+Evidence: `ISEO-SU-GLOSSARY-MANUAL-CSS-PROMOTION-EVIDENCE-v1.md` (operator promotion, immutable) · `ISEO-SU-FINAL-LAUNCH-CLOSEOUT-v1.md` (overflow fix)
+
+Key glossary-facing selectors: `.glossary-template-default .breadcrumbs`, `.post-type-archive-glossary #SecondScreen … label`, `.info_span`, split `main .content` list margins, glossary-scoped mobile overflow rules.
 
 ## 10. Main Menu Integration
 
@@ -143,7 +145,8 @@ See `ISEO-SU-PROTECTED-ZONES-v1.md`.
 2. Glossary visual tweaks prefer bounded edits to `production-source/css/main.css` with forensic diff evidence — not full-file replace from old snapshots.
 3. Menu changes require `content-topbar.php` (global chrome); remember static HTML includes the same part.
 4. Archive title prefix removal is implemented in `glossary-cpt.php` — do not global-strip `Архив` for other post types.
-5. Next optional work (out of scope for this baseline): custom `sitemap.xml` glossary discovery, mobile offcanvas parity, MERGED alias polish.
+5. Next optional work (out of scope for this baseline): custom `sitemap.xml` glossary discovery, mobile offcanvas parity, MERGED alias polish, archive Yoast meta description (on-page archive description already present).
+6. Mobile horizontal overflow on glossary WP pages was verified live 2026-08-18 and fixed with a glossary-scoped CSS block. Do not reintroduce global `overflow-x: hidden` on `html`/`body`.
 
 ---
 

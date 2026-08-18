@@ -1313,6 +1313,39 @@ main {
 	display: block;
 }
 
+/* Glossary WP pages: mobile horizontal overflow from shared Telegram CTA
+   (.two_common_col__title min-content at 44px) plus theme .row content-box
+   padding and .two_common_col negative side margins. Scoped to glossary
+   body classes; do not clip html/body. */
+@media only screen and (max-width: 490px) {
+	body.post-type-archive-glossary #SecondScreen .row,
+	body.single-glossary #SecondScreen .row {
+		box-sizing: border-box;
+		max-width: 100%;
+	}
+
+	body.post-type-archive-glossary #SecondScreen .two_common_col,
+	body.single-glossary #SecondScreen .two_common_col {
+		margin-left: 0;
+		margin-right: 0;
+		max-width: 100%;
+	}
+
+	body.post-type-archive-glossary #SecondScreen .two_common_col__info,
+	body.single-glossary #SecondScreen .two_common_col__info {
+		box-sizing: border-box;
+		max-width: 100%;
+		min-width: 0;
+	}
+
+	body.post-type-archive-glossary #SecondScreen .two_common_col__title,
+	body.single-glossary #SecondScreen .two_common_col__title {
+		max-width: 100%;
+		overflow-wrap: anywhere;
+		word-wrap: break-word;
+	}
+}
+
 /* Breadcrumbs */
 
 .breadcrumbs {

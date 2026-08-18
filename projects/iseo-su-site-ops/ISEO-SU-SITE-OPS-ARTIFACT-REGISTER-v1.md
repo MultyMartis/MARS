@@ -146,12 +146,20 @@ Status vocabulary: **COMPLETE** · **CREATED** · **PLANNED** · **CONDITIONAL**
 
 | Artifact | Path | Status |
 |----------|------|--------|
-| Final production baseline | `ISEO-SU-GLOSSARY-FINAL-PRODUCTION-BASELINE-v1.md` | CREATED |
+| Final production baseline | `ISEO-SU-GLOSSARY-FINAL-PRODUCTION-BASELINE-v1.md` | CREATED / UPDATED (overflow SHA) |
 | Manual CSS promotion evidence | `ISEO-SU-GLOSSARY-MANUAL-CSS-PROMOTION-EVIDENCE-v1.md` | CREATED |
-| Promoted shared CSS source | `production-source/css/main.css` | CREATED (matches production SHA-256) |
+| Promoted shared CSS source | `production-source/css/main.css` | UPDATED (overflow block; matches production SHA-256 `4a1202b6…`) |
 | Theme topbar package mirror | `wordpress/iseoblog-glossary/template-parts/content-topbar.php` | CREATED / deployed |
 | Closeout REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-FINAL-INTEGRATION-AND-CLOSEOUT.md` | COMPLETE |
 | Theme package (menu + archive title filters) | `wordpress/iseoblog-glossary/inc/glossary-cpt.php` | UPDATED / deployed |
+
+### Final post-launch and git sync closeout (2026-08-18)
+
+| Artifact | Path | Status |
+|----------|------|--------|
+| Final launch closeout | `ISEO-SU-FINAL-LAUNCH-CLOSEOUT-v1.md` | CREATED |
+| Post-launch REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-FINAL-POST-LAUNCH-AND-GIT-SYNC-CLOSEOUT.md` | COMPLETE |
+| Shared CSS overflow block | `production-source/css/main.css` | UPDATED / deployed (`20260818T101846Z`) |
 
 ---
 
@@ -261,4 +269,4 @@ Unchanged: no tokens/credentials in Git locus; no DB dumps; no Localhost mirror;
 
 ---
 
-*Artifact Register v1 · updated 2026-08-18 glossary final integration closeout.*
+*Artifact Register v1 · updated 2026-08-18 glossary post-launch closeout.*
