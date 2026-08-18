@@ -84,7 +84,7 @@
 | P15 commit | `81912e7871bd45d75e8b02b288aaf0b6788744d6` |
 | P16 commit | `35666e2bb98247072a7a7972d4271eaf8d5f36aa` |
 | P17 commit | `1b7fb5c47b2c7acd88e4313e64a15f7e59069fa6` |
-| P17-FU02 commit | *(this wave — see GIT-CHECKPOINT.json)* |
+| P17-FU02 commit | `16706398f03825b054ce75c56e8af48ec4349329` |
 | Branch | `origin/mars/canonical-post-recovery` |
 
 ## Open tails

@@ -1,0 +1,15 @@
+{
+  "after": {
+    "baseline_id": "FP-0002-PROD-BASELINE-2026-08-17",
+    "latest_wave": "P17-FU02 Final Pre-Cutover Tail Closure",
+    "parity": "MATCH",
+    "verified_at": "2026-08-18 10:33 UTC",
+    "backup": "P14 full; FU02 exact-file/object + obsolete tar; launch backup still required after freeze",
+    "git_sha": "16706398f03825b054ce75c56e8af48ec4349329",
+    "wave": "PROD-P15",
+    "p15_note": "Environment cleanup; mail+indexing deferred; domain not cut over",
+    "state_note": "READY FOR MANUAL NS SWITCH",
+    "precutover": "READY FOR MANUAL NS SWITCH",
+    "legacy_redirects": "7/7"
+  }
+}
