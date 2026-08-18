@@ -1,0 +1,49 @@
+{
+  "schema_version": "corvonero-rsy-architecture-v1",
+  "created_at": "2026-08-18T21:41:54+07:00",
+  "project": "CorvoNero / Корво Неро",
+  "programme": "mars-search-ppc-production",
+  "state": "OPERATIONAL / LAUNCHED / PERFORMANCE_OBSERVATION",
+  "pack_status": "ARCHITECTURE_PACK / NOT_AN_IMPORT_PACKAGE / NOT_LAUNCH_APPROVED",
+  "search_authority_unchanged": "V2.6 / V2.6.2",
+  "recommended_structure": "LOCAL_REMOTE_SPLIT",
+  "campaigns": [
+    "CORVONERO-RSY-LOCAL",
+    "CORVONERO-RSY-REMOTE"
+  ],
+  "directions_included": 5,
+  "logical_groups": 10,
+  "weak_nonconverting_included": true,
+  "exclude_count": 0,
+  "landing_split": "SAME_URL_FOR_LOCAL_AND_REMOTE",
+  "landings": {
+    "LP-01": "https://lk.corvonero.ru/programmist-1s/",
+    "LP-02": "https://lk.corvonero.ru/soprovozhdenie-1s/",
+    "LP-03": "https://lk.corvonero.ru/dorabotka-razrabotka-1s/",
+    "LP-04": "https://lk.corvonero.ru/integracii-1s/",
+    "LP-05": "https://lk.corvonero.ru/markirovka-chestny-znak/"
+  },
+  "groups": [
+    "01-LOCAL-PROGRAMMIST-1S",
+    "02-LOCAL-SOPROVOZHDENIE-1S",
+    "03-LOCAL-DORABOTKA-1S",
+    "04-LOCAL-INTEGRACII-1S",
+    "05-LOCAL-MARKIROVKA-CHESTNY-ZNAK",
+    "01-REMOTE-PROGRAMMIST-1S",
+    "02-REMOTE-SOPROVOZHDENIE-1S",
+    "03-REMOTE-DORABOTKA-1S",
+    "04-REMOTE-INTEGRACII-1S",
+    "05-REMOTE-MARKIROVKA-CHESTNY-ZNAK"
+  ],
+  "not_created_guard": {
+    "rsy_import_xlsx": "NOT CREATED",
+    "final_ads": "NOT CREATED",
+    "image_prompts": "NOT CREATED",
+    "images": "NOT CREATED",
+    "direct": "NOT MODIFIED",
+    "commander": "NOT MODIFIED",
+    "launch_approval": "NOT_GRANTED"
+  },
+  "storage_package": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-RSY-ARCHITECTURE-PACK-2026-08-18",
+  "report": "projects\\mars-search-ppc-production\\reports\\REPORT-corvonero-rsy-architecture-pack-v1.md"
+}
