@@ -85,6 +85,7 @@
 | P18B | Dashboard reality sync; safe Admin indexing control; indexing remains CLOSED | `REPORT-FP-0002-PROD-P18B-DASHBOARD-INDEXING.md` |
 | P18C | SMTP/forms Admin owner; lead persist-before-mail; Metrika goal after backend success; suppression remains ON | `REPORT-FP-0002-PROD-P18C-SMTP-FORMS-FOUNDATION.md` |
 | P18C-FU01 | Menu discoverability: Почта и формы visible under ACF Site Settings parent | `REPORT-FP-0002-PROD-P18C-FU01-ADMIN-MENU.md` |
+| P18C-FU02 | Multi-recipient mail settings Add/Remove UX; SMTP secret preserved | `REPORT-FP-0002-PROD-P18C-FU02-MULTI-RECIPIENTS.md` |
 
 Earlier V9 Admin-parity / ACF SoT / operator-CSS canon work remains valid foundation (Experience Pack Phase 1–2). It is **historical**; production operations above supersede it for launch.
 

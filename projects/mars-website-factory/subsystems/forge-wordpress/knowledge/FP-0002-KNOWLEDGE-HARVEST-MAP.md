@@ -150,10 +150,10 @@ Client-specific values are omitted. Evidence paths are under `workspaces/website
 | Field | Value |
 |-------|--------|
 | Residue | Local MU `pre_wp_mail` labeled as local even on Beget |
-| Final | Persist lead before mail; Admin SMTP owner; suppress until VERIFIED+ACTIVE; `noreply@<domain>` |
-| Lesson | Email is transport, not the record that a form submission existed. Saving SMTP fields ≠ verified. Password never rendered/logged/Git. |
+| Final | Persist lead before mail; Admin SMTP owner; suppress until VERIFIED+ACTIVE; `noreply@<domain>`; bounded multi-recipient list with Add/Remove |
+| Lesson | Email is transport, not the record that a form submission existed. Saving SMTP fields ≠ verified. Password never rendered/logged/Git. Recipient edits must not wipe the SMTP secret. One submission = one lead. |
 | Class | D |
-| Evidence | P15; P17-FU02; P18C |
+| Evidence | P15; P17-FU02; P18C; P18C-FU02 |
 
 ## 14. Article / blog workflow
 

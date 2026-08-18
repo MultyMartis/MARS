@@ -140,4 +140,23 @@ From = `noreply@<domain>` (or the project sender). Reply-To = visitor email **on
 
 ---
 
-*FW-S-13 v1.3 — P18C lead registry + Admin SMTP owner; P18C-FU01 discoverability.*
+## 13. MULTI-RECIPIENT MAIL SETTINGS
+
+Canonical pattern (not CRM routing):
+
+- Recipients are a **bounded repeating configuration list** (practical cap e.g. 20).
+- Each row: email + optional label.
+- Admin **Add** / **Remove** controls; do not expose raw JSON/serialized storage.
+- Server-side validation: trim, `is_email`, drop blank rows, reject invalid non-empty emails.
+- Deduplicate case-insensitively; keep the first occurrence and its label.
+- First recipient = primary; additional recipients are copies of the same mail operation.
+- Configuration readiness requires **≥1 valid recipient** plus required SMTP fields and a configured password.
+- Recipient editing must **never** touch the SMTP secret (blank password keeps the existing secret).
+- One form submission remains **one internal lead**, regardless of recipient count. One `wp_mail()` with a recipient array.
+
+Evidence: FP-0002 P18C-FU02.
+
+---
+
+*FW-S-13 v1.4 — P18C-FU02 multi-recipient Admin UX.*
+

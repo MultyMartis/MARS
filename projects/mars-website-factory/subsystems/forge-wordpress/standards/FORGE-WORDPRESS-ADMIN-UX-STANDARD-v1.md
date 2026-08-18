@@ -185,4 +185,20 @@ When attaching a custom `add_submenu_page()` under an ACF options parent with `r
 
 ---
 
-*Admin UX standard v1.2 — curated editor + production dashboard/SoT + discoverability DoD. CMS pack: [EDITOR UX](FORGE-WORDPRESS-EDITOR-UX-STANDARD-v1.md).*
+### 10.8 Repeating configuration lists (mail recipients)
+
+For bounded business lists such as form email recipients:
+
+- Render rows (value + optional label) with **Add** and **Remove**.
+- New rows get unique input indexes and remain keyboard-usable before save.
+- Do not ask the operator to edit serialized/JSON blobs.
+- Save/reload must persist the resulting list without wiping unrelated secrets.
+
+| # | Check |
+|---|--------|
+| 17 | Repeating settings lists have Add/Remove, server validation, and do not expose raw storage |
+
+---
+
+*Admin UX standard v1.3 — curated editor + production dashboard/SoT + discoverability DoD + repeating mail recipients. CMS pack: [EDITOR UX](FORGE-WORDPRESS-EDITOR-UX-STANDARD-v1.md).*
+

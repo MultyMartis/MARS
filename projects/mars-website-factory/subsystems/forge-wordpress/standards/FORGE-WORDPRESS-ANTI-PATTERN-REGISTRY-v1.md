@@ -330,6 +330,19 @@ Each ID is reusable. Client facts are generalized.
 
 ---
 
+## AP-030 — FORM-008 recipient list edits wipe the SMTP secret
+
+| | |
+|--|--|
+| Symptom | Saving recipients or adding a row clears the stored mailbox password |
+| Cause | Shared save handler treats a blank write-only password as “set empty”; or recipient POST omits SMTP fields and overwrites them |
+| Risk | Silent mail failure; operator must re-enter the secret |
+| Prevention | Blank password keeps existing secret; recipient save must not call password clear; never render the secret |
+| Replacement | [FORMS-AND-SMTP](FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) §7 and §13 |
+| Evidence | FP-0002 P18C-FU02 |
+
+---
+
 ## CMS modeling namespace (`AP-CMS-*`)
 
 Do **not** reuse AP-001–021 numbers. Full entries: [CMS-ANTI-PATTERNS](FORGE-WORDPRESS-CMS-ANTI-PATTERNS-v1.md).
@@ -355,4 +368,4 @@ Do **not** reuse AP-001–021 numbers. Full entries: [CMS-ANTI-PATTERNS](FORGE-W
 
 ---
 
-*FW-S-21 v1.5 — 29 operational anti-patterns (AP-022–028 = FORM-001–007; AP-029 Admin discoverability) + AP-CMS-001–016 index. Add IDs; do not reuse numbers.*
+*FW-S-21 v1.6 — 30 operational anti-patterns (AP-022–028 = FORM-001–007; AP-029 Admin discoverability; AP-030 recipient save vs SMTP secret) + AP-CMS-001–016 index. Add IDs; do not reuse numbers.*

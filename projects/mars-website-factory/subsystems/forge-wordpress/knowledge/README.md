@@ -71,4 +71,4 @@ FP-0002 evidence lives under `workspaces/website-factory-operations/FP-0002-SHPI
 
 CMS architecture templates live under [`templates/`](../templates/) (`CONTENT-ENTITY-MAP`, `FIELD-OWNERSHIP-MAP`, `PAGE-EDITABILITY-MAP`, `SITE-SETTINGS-MAP`, `RELATIONSHIP-MAP`, `COMPONENT-DATA-CONTRACT`, `ADMIN-INFORMATION-ARCHITECTURE`, `EDITOR-WORKFLOW-ACCEPTANCE-CHECKLIST`, `DESIGN-TO-CMS-MAPPING-WORKSHEET`, `CMS-MIGRATION-PLAN`).
 
-*WP Forge knowledge hub — 2026-08-18. One production case. CMS / editable architecture pack added the same day. Second-project validation still required where marked J.*
+*WP Forge knowledge hub — 2026-08-19 (P18C-FU02 multi-recipient mail settings). One production case. CMS / editable architecture pack added the same day. Second-project validation still required where marked J.*
