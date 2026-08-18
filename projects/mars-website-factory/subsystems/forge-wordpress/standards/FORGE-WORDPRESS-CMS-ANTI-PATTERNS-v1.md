@@ -170,6 +170,18 @@ CMS modeling anti-patterns. Map to FP-0002 evidence where a production lesson ex
 | Replacement | [EDITOR-WORKFLOW-ACCEPTANCE-CHECKLIST](../templates/FORGE-WORDPRESS-EDITOR-WORKFLOW-ACCEPTANCE-CHECKLIST-v1.md) |
 | Evidence | FW-S-05 editor simulation; real wp-admin save tests |
 
+## AP-CMS-016 — Stored false collapsed into default true
+
+| | |
+|--|--|
+| Symptom | true_false OFF in Admin; FE still uses schema default |
+| Cause | `?:` / `empty()` / ignoring the field in the template |
+| Risk | Editors cannot disable a demo/warning/feature |
+| Prevention | Unset vs false vs true; defaults only if key missing |
+| Replacement | [ACF FIELD MODELING](FORGE-WORDPRESS-ACF-FIELD-MODELING-STANDARD-v1.md) §6.1 |
+| Related | AP-020 |
+| Evidence | P18A `legal_demo_marker` |
+
 ---
 
-*FW-S-31 v1 — 15 CMS anti-patterns. Add IDs in this namespace; do not reuse AP-001–018.*
+*FW-S-31 v1.1 — 16 CMS anti-patterns. Add IDs in this namespace; do not reuse AP-001–020.*

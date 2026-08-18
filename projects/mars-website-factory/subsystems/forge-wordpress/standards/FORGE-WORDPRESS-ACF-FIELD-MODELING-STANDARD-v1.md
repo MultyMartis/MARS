@@ -159,6 +159,32 @@ Defaults may improve speed. They must **not** create visible fake content or irr
 **GOOD:** `enabled = true` where the section is part of the template; breadcrumb visibility default on.  
 **BAD:** Lorem ipsum; demo phone; demo social URL; placeholder image ID from another environment.
 
+### 6.1 true_false three-state (mandatory)
+
+ACF/WordPress booleans have **three** semantic states:
+
+| State | Typical storage | Meaning |
+|-------|-----------------|---------|
+| unset | key missing | Apply schema default / migration fallback |
+| false | `0` / `'0'` / boolean false | Editor **explicitly off** |
+| true | `1` / `'1'` / boolean true | Editor **explicitly on** |
+
+```text
+DEFAULTS APPLY ONLY TO MISSING/UNINITIALIZED STATE,
+NOT TO EXPLICIT USER FALSE.
+```
+
+**Forbidden** when false is valid:
+
+- `$value ?: $default`
+- `empty($value) ? $default : $value` for flags stored as `'0'`
+- treating `get_field()` `false` as “missing”
+- `(bool) '0'` (PHP: non-empty string is true)
+
+**Required:** `metadata_exists()` (or equivalent) to distinguish unset from stored `0`. Frontend must not hardcode a warning that an Admin checkbox claims to control.
+
+Evidence: FP-0002 P18A legal `legal_demo_marker` — Admin OFF, banner still rendered because the template ignored the field.
+
 ---
 
 ## 7. WYSIWYG policy
@@ -260,4 +286,4 @@ Templates should not duplicate fallback chains. One normalization owner per cros
 
 ---
 
-*FW-S-23 v1 — field modeling. Schema in Git. Editors see labels, not keys.*
+*FW-S-23 v1.1 — field modeling. Schema in Git. Editors see labels, not keys. Boolean three-state in §6.1.*

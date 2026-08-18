@@ -207,55 +207,33 @@ Each ID is reusable. Client facts are generalized.
 | Replacement | [GIT-SOP](../runbooks/FORGE-WORDPRESS-GIT-SOP-v1.md) |
 | Evidence | MARS rules; P14+ checkpoints |
 
-## AP-019 — Multiple CSS/JS owners for one component
+## AP-019 — Executing a stale cutover runbook after the operator already changed production
 
 | | |
 |--|--|
-| Symptom | Two headers, two card skins, slider + scrollBy |
-| Cause | Page-local copies; hotfix files |
-| Risk | Regression; iOS compositor stacks |
-| Prevention | Component inventory; one interaction owner |
-| Replacement | [CSS-COMPONENT](FORGE-WORDPRESS-CSS-COMPONENT-ARCHITECTURE-STANDARD-v1.md) · [FRONTEND-INTERACTION](FORGE-WORDPRESS-FRONTEND-INTERACTION-OWNERSHIP-STANDARD-v1.md) |
-| Evidence | FP-0002 CSS extras; INC-03 |
+| Symptom | Wave still “changes home/siteurl” or “wait for NS” after the operator already did it |
+| Cause | Plan-as-truth; no fresh intake |
+| Risk | Revert of legitimate production; dual-origin confusion |
+| Prevention | Fresh verify → accept/canonize legitimate drift → rewrite remaining steps |
+| Replacement | [SOURCE-RUNTIME-AUTHORITY](../runbooks/FORGE-WORDPRESS-SOURCE-RUNTIME-AUTHORITY-STANDARD-v1.md) · [LAUNCH SOP](../runbooks/FORGE-WORDPRESS-PRE-CUTOVER-AND-LAUNCH-SOP-v1.md) |
+| Evidence | P18A operator `home`/`siteurl` + NS |
 
-## AP-020 — MU-plugin as a feature dump
-
-| | |
-|--|--|
-| Symptom | CPT/forms/SEO in `mu-plugins` |
-| Cause | “It must always load” |
-| Risk | Undiscoverable; cannot disable safely |
-| Prevention | Survival test; MU only infrastructure-critical |
-| Replacement | [CODE-OWNERSHIP](FORGE-WORDPRESS-CODE-OWNERSHIP-BOUNDARIES-STANDARD-v1.md) |
-| Evidence | Mail suppress is the justified exception — with REMOVE WHEN |
-
-## AP-021 — Update all in production
+## AP-020 — Collapsing stored boolean false into unset/default
 
 | | |
 |--|--|
-| Symptom | One-click plugin/core bundle update |
-| Cause | Convenience |
-| Risk | Unscoped breakage; no rollback evidence |
-| Prevention | Named updates + backup + smoke |
-| Replacement | [PRODUCTION-UPDATE-SOP](../runbooks/FORGE-WORDPRESS-PRODUCTION-UPDATE-SOP-v1.md) |
-| Evidence | Operating principle (not a single FP-0002 click) |
-
-## AP-022 — Temporary tool without REMOVE WHEN
-
-| | |
-|--|--|
-| Symptom | Importer/QA PHP still in webroot after the wave |
-| Cause | “We might need it” |
-| Risk | INC-04 class mutations |
-| Prevention | Temporary-tool register; retirement checklist |
-| Replacement | [MODULE-LIFECYCLE](FORGE-WORDPRESS-MODULE-LIFECYCLE-STANDARD-v1.md) |
-| Evidence | INC-04 |
+| Symptom | Admin checkbox OFF; frontend still shows the “default on” state |
+| Cause | `$value ?: $default`; `empty()`; hardcoded template ignoring the field |
+| Risk | Editors cannot turn a warning/feature off |
+| Prevention | Three-state read (`unset` / `false` / `true`); `metadata_exists` |
+| Replacement | [ACF FIELD MODELING](FORGE-WORDPRESS-ACF-FIELD-MODELING-STANDARD-v1.md) §6.1 |
+| Evidence | P18A legal DEMO banner |
 
 ---
 
 ## CMS modeling namespace (`AP-CMS-*`)
 
-Do **not** reuse AP-001–022 numbers. Full entries: [CMS-ANTI-PATTERNS](FORGE-WORDPRESS-CMS-ANTI-PATTERNS-v1.md).
+Do **not** reuse AP-001–020 numbers. Full entries: [CMS-ANTI-PATTERNS](FORGE-WORDPRESS-CMS-ANTI-PATTERNS-v1.md).
 
 | ID | Title | Related ops ID |
 |----|-------|----------------|
@@ -274,7 +252,8 @@ Do **not** reuse AP-001–022 numbers. Full entries: [CMS-ANTI-PATTERNS](FORGE-W
 | AP-CMS-013 | Hardcoded design copied into content fields unnecessarily | — |
 | AP-CMS-014 | Relation modeled as free text | — |
 | AP-CMS-015 | No editor workflow validation before launch | — |
+| AP-CMS-016 | Stored false collapsed into default true | AP-020 |
 
 ---
 
-*FW-S-21 v1.2 — 22 operational anti-patterns + AP-CMS-001–015 index. Add IDs; do not reuse numbers.*
+*FW-S-21 v1.2 — 20 operational anti-patterns + AP-CMS-001–016 index. Add IDs; do not reuse numbers.*

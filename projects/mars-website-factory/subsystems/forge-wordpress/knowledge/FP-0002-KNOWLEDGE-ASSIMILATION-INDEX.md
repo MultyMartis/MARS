@@ -47,6 +47,8 @@
 | Legacy 301s: exact path, query preserve, no future-host hardcode pre-cutover | D | [REDIRECT-STANDARD](../runbooks/FORGE-WORDPRESS-REDIRECT-STANDARD-v1.md) |
 | NS cutover must not move mail; inventory MX/SPF/DKIM first | D / G | [DNS-NS-CUTOVER-STANDARD](../runbooks/FORGE-WORDPRESS-DNS-NS-CUTOVER-STANDARD-v1.md) |
 | Freeze → backup → NS → SSL → URLs → smoke → SMTP → indexing | D | [PRE-CUTOVER-AND-LAUNCH-SOP](../runbooks/FORGE-WORDPRESS-PRE-CUTOVER-AND-LAUNCH-SOP-v1.md) |
+| Operator already changed NS/`home`/`siteurl` — intake, do not revert | C / D | [SOURCE-RUNTIME-AUTHORITY](../runbooks/FORGE-WORDPRESS-SOURCE-RUNTIME-AUTHORITY-STANDARD-v1.md) · Launch SOP |
+| true_false false must not fall back to default; distinguish preview/autosave | A / G | [ACF-FIELD-MODELING](../standards/FORGE-WORDPRESS-ACF-FIELD-MODELING-STANDARD-v1.md) §6.1 · [EDITOR UX](../standards/FORGE-WORDPRESS-EDITOR-UX-STANDARD-v1.md) §5.1 · AP-020 / AP-CMS-016 |
 | Do not open indexing because the domain works | D / G | same § indexing gate |
 | WPilot READ; `write_enabled=false`; version ≠ option | C | [WPILOT-PRODUCTION-STANDARD](../runbooks/FORGE-WORDPRESS-WPILOT-PRODUCTION-STANDARD-v1.md) |
 | Clinical/brand/content/URLs of Shpigovsky | I | Do not copy — project LOC-ZONE only |
@@ -55,10 +57,6 @@
 | Duplicate phones / ACF-first without entity map | G | [CMS-ANTI-PATTERNS](../standards/FORGE-WORDPRESS-CMS-ANTI-PATTERNS-v1.md) AP-CMS-001–015 |
 | Featured image as portrait SoT; empty ACF hidden; Local JSON in plugin | A / E | [ACF-FIELD-MODELING](../standards/FORGE-WORDPRESS-ACF-FIELD-MODELING-STANDARD-v1.md) · [EDITOR UX](../standards/FORGE-WORDPRESS-EDITOR-UX-STANDARD-v1.md) |
 | Decorative parallax / lifebuoy | J / I | [MODULE-CATALOG](../registries/FORGE-WORDPRESS-MODULE-CATALOG-v1.md) experimental |
-| Theme vs plugin vs MU not explicit; modules without retirement | G → A | [CODE-OWNERSHIP](../standards/FORGE-WORDPRESS-CODE-OWNERSHIP-BOUNDARIES-STANDARD-v1.md) · [MODULE-LIFECYCLE](../standards/FORGE-WORDPRESS-MODULE-LIFECYCLE-STANDARD-v1.md) |
-| Duplicate CSS/JS owners; stacked transforms | G / H | [CSS-COMPONENT](../standards/FORGE-WORDPRESS-CSS-COMPONENT-ARCHITECTURE-STANDARD-v1.md) · [FRONTEND-INTERACTION](../standards/FORGE-WORDPRESS-FRONTEND-INTERACTION-OWNERSHIP-STANDARD-v1.md) |
-| Plugin collisions; update-all; no client handoff | C | [PLUGIN-GOVERNANCE](../standards/FORGE-WORDPRESS-PLUGIN-GOVERNANCE-STANDARD-v1.md) · [UPDATE SOP](../runbooks/FORGE-WORDPRESS-PRODUCTION-UPDATE-SOP-v1.md) · [CONTENT-OPERATIONS](../standards/FORGE-WORDPRESS-CONTENT-OPERATIONS-STANDARD-v1.md) |
-| Site #2 starting from blank | A | [SECOND-SITE-BOOTSTRAP](../standards/FORGE-WORDPRESS-SECOND-SITE-BOOTSTRAP-v1.md) · [EXTRACTION-ROADMAP](FORGE-WORDPRESS-REUSABLE-CODE-EXTRACTION-ROADMAP-v1.md) |
 
 ---
 
@@ -79,6 +77,7 @@
 | P16 | Render-time typography owner; 0 DB rewrites | `REPORT-FP-0002-PROD-P16-TYPOGRAPHY.md` |
 | P17 / CONT1 | Legacy 301s; DNS inventory; mail-zone preservation; NS not switched | `REPORT-FP-0002-PROD-P17-PRE-CUTOVER.md` |
 | P17-FU02 | `mars-runtime` incident; webroot hygiene; freeze/NS runbooks; indexing still closed | `REPORT-FP-0002-PROD-P17-FU02-FINAL-PRE-CUTOVER-TAIL.md` |
+| P18A | Operator live domain intake; legal DEMO banner owner; indexing still closed | `REPORT-FP-0002-PROD-P18A-LIVE-DOMAIN-LEGAL-STATE.md` |
 
 Earlier V9 Admin-parity / ACF SoT / operator-CSS canon work remains valid foundation (Experience Pack Phase 1–2). It is **historical**; production operations above supersede it for launch.
 

@@ -91,6 +91,20 @@ Where feasible, field help names the frontend surface. Known preview gaps (stagi
 
 Empty settings must not render FE leftovers (FW-S-05 acceptance extra 14).
 
+### 5.1 Published vs Preview vs autosave (QA)
+
+Admin QA must name **which** state was inspected:
+
+| State | What it is |
+|-------|------------|
+| Published | Saved canonical post the public URL renders |
+| Preview | WordPress preview of current editor/autosave (may differ from published) |
+| Autosave / revision | Not the published row; do not “fix” core revision behavior |
+
+A checkbox **OFF on the saved post** must match **published** frontend. If Preview shows unsaved autosave, document that — do not treat it as a published-state bug.
+
+Russian editor labels for business/legal fields on a Russian site (machine **names** stay English).
+
 ---
 
 ## 6. Editor acceptance gate
@@ -111,6 +125,8 @@ Minimum set:
 
 If the editor must know implementation internals, architecture is not done (AP-CMS-015).
 
+For boolean flags: published Preview of the **saved** post must match the checkbox. Do not QA only an unsaved autosave.
+
 ---
 
-*FW-S-26 v1 — editor language, editor workflows, role boundaries.*
+*FW-S-26 v1.1 — editor language, editor workflows, preview vs published.*

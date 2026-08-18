@@ -4,7 +4,7 @@
 **Status:** ACTIVE — CANONICAL LAUNCH SEQUENCE  
 **Date:** 2026-08-18  
 **Class:** D  
-**Evidence:** FP-0002 P17 / P17-FU02 open items (NS not executed in that wave)
+**Evidence:** FP-0002 P17 / P17-FU02 / P18A (operator NS + URL cutover; SSL/origin bind still open)
 
 ---
 
@@ -17,7 +17,7 @@ freeze
 → DNS / NS (or A-record)
 → authoritative DNS verification (web AND mail)
 → SSL
-→ home / siteurl
+→ home / siteurl          ← skip if operator already set them; intake instead
 → exact URL migration (bounded manifest)
 → rewrite flush / cache
 → smoke while INDEXING CLOSED
@@ -27,6 +27,8 @@ freeze
 → sitemap submissions
 → final crawl
 ```
+
+If the operator already switched NS and/or `home`/`siteurl`: **do not wait** on those steps and **do not revert** them. Continue from SSL / origin bind / HTTPS smoke.
 
 Readiness matrix: [PRE-CUTOVER-READINESS-MATRIX](../templates/FORGE-WORDPRESS-PRE-CUTOVER-READINESS-MATRIX-v1.md).
 

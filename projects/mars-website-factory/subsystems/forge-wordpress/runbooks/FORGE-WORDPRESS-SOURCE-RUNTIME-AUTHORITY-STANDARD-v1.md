@@ -18,11 +18,21 @@
 
 Local MLI copies are **dev references**. They must not automatically overwrite production.
 
-When the operator edits production files or Admin:
+When the operator edits production files or Admin **or WordPress options (home/siteurl) during an active cutover**:
 
 ```text
 PRODUCTION DRIFT MUST BE INTAKEN AND CANONIZED BEFORE THE NEXT AUTOMATED DEPLOY
+DO NOT BLINDLY EXECUTE AN OLD RUNBOOK STEP THAT WOULD REVERT A LEGITIMATE OPERATOR CHANGE
 ```
+
+Procedure for a mid-cutover manual change:
+
+1. Fresh intake (read actual options / DNS / HTTP).  
+2. Verify.  
+3. Accept and canonize if legitimate.  
+4. Rewrite the **remaining** plan (skip completed steps).
+
+Evidence: FP-0002 P18A — operator set `home`/`siteurl` to `https://shpigovsky.ru` before the planned P18 mutation.
 
 ---
 
@@ -47,4 +57,4 @@ Prefer WP Admin (or chartered WPilot write) for posts, ACF **values**, menus, me
 
 ---
 
-*FW-RB-01 v1.*
+*FW-RB-01 v1.1 — includes mid-cutover operator option intake.*
