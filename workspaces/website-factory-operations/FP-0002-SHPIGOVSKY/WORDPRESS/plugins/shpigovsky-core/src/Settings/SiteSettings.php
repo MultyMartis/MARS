@@ -58,6 +58,10 @@ final class SiteSettings implements ModuleInterface {
 	 * @return mixed
 	 */
 	public static function prevent_secret_like_options( $value, $option, $old_value ) {
+		if ( in_array( (string) $option, \Shpigovsky\Core\Mail\MailOps::allowlisted_option_names(), true ) ) {
+			return $value;
+		}
+
 		foreach ( self::get_forbidden_option_patterns() as $pattern ) {
 			if ( false !== stripos( (string) $option, $pattern ) ) {
 				return $old_value;

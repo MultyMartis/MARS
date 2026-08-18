@@ -1,6 +1,6 @@
 <?php
 /**
- * Lead form AJAX handler — pre-SMTP accept, no outbound mail.
+ * Lead form AJAX handler — persist first, then optional wp_mail.
  *
  * @package Shpigovsky_Core
  */
@@ -8,6 +8,8 @@
 namespace Shpigovsky\Core\Forms;
 
 use Shpigovsky\Core\Contracts\ModuleInterface;
+use Shpigovsky\Core\Leads\LeadRegistry;
+use Shpigovsky\Core\Mail\MailOps;
 use Shpigovsky\Core\ModuleRegistry;
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -17,9 +19,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Unified lead / consultation form submission handler (wp_ajax).
  *
- * PRE-SMTP MODE: validate + accept + optional private receipt log.
- * Does NOT call wp_mail / SMTP. Future recipient is prepared as a constant only.
- * Outbound delivery remains suppressed by MU until the SMTP cutover wave.
+ * Validate → persist lead → attempt mail → update status → JSON.
+ * Frontend success means the lead was stored, not that email was delivered.
  */
 final class ConsultationHandler implements ModuleInterface {
 
@@ -34,10 +35,10 @@ final class ConsultationHandler implements ModuleInterface {
 	public const NONCE_ACTION = 'fp02_lead_submit';
 
 	/**
-	 * Future production recipient — NOT used for sending in local mode.
-	 * Must never appear in public markup.
+	 * Historical pre-SMTP recipient constant. Recipients now come from Admin
+	 * «Почта и формы». Do not send to this address.
 	 */
-	public const FUTURE_RECIPIENT = 'client.leads@polygon-ws.ru';
+	public const FUTURE_RECIPIENT = '';
 
 	/**
 	 * Minimum seconds between form render and submit.
@@ -116,6 +117,9 @@ final class ConsultationHandler implements ModuleInterface {
 				'successMessage'         => self::message( 'local_success' ),
 				'rateLimitedMessage'     => self::message( 'rate_limited' ),
 				'duplicateMessage'       => self::message( 'duplicate' ),
+				'formKey'                => LeadRegistry::FORM_KEY,
+				'metrikaCounter'         => MailOps::metrika_counter_id(),
+				'metrikaGoal'            => MailOps::metrika_goal(),
 				'messages'               => array(
 					'local_success'  => self::message( 'local_success' ),
 					'validation'     => self::message( 'validation' ),
@@ -191,24 +195,12 @@ final class ConsultationHandler implements ModuleInterface {
 			);
 		}
 
-		// PRE-SMTP — accept only. Future recipient is recorded for operators, never mailed.
-		$receipt = array(
-			'accepted_at'      => gmdate( 'c' ),
-			'mode'             => 'pre_smtp',
-			'mail_transport'   => 'disabled',
-			'future_recipient' => self::FUTURE_RECIPIENT,
-			'ip_hash'          => hash( 'sha256', $ip . '|' . wp_salt( 'nonce' ) ),
-			'form_context'     => $payload['form_context'],
-			'lead_source'      => $payload['lead_source'],
-			'page_url'         => $payload['page_url'],
-			'name'             => self::redact_name( $payload['name'] ),
-			'phone'            => self::redact_phone( $payload['phone'] ),
-			'email'            => '' !== $payload['email'] ? self::redact_email( $payload['email'] ) : '',
-			'has_message'      => '' !== $payload['message'],
-			'consent'          => $payload['consent'],
-		);
+		$lead_id = self::persist_lead( $payload );
+		if ( $lead_id <= 0 ) {
+			self::json_response( false, self::message( 'server_error' ), 500 );
+		}
 
-		self::write_local_receipt( $receipt );
+		$mail = self::attempt_outbound_mail( $payload, $lead_id );
 		self::bump_rate_limit( $ip );
 
 		self::json_response(
@@ -216,8 +208,14 @@ final class ConsultationHandler implements ModuleInterface {
 			self::message( 'local_success' ),
 			200,
 			array(
-				'mode'           => 'pre_smtp',
-				'mail_transport' => 'disabled',
+				'accepted'        => true,
+				'mail_attempted'  => (bool) $mail['attempted'],
+				'mail_accepted'   => (bool) $mail['accepted'],
+				'mail_status'     => $mail['status'],
+				'form_key'        => LeadRegistry::FORM_KEY,
+				'metrika_goal'    => MailOps::metrika_goal(),
+				'metrika_counter' => MailOps::metrika_counter_id(),
+				'metrika_event'   => 'form_submission_accepted',
 			)
 		);
 	}
@@ -348,6 +346,13 @@ final class ConsultationHandler implements ModuleInterface {
 			'lead_source'  => self::sanitize_text( isset( $input['lead_source'] ) ? $input['lead_source'] : '', 120 ),
 			'page_url'     => self::sanitize_text( isset( $input['page_url'] ) ? $input['page_url'] : '', 500 ),
 			'page_title'   => self::sanitize_text( isset( $input['page_title'] ) ? $input['page_title'] : '', 200 ),
+			'utm_source'   => self::sanitize_text( isset( $input['utm_source'] ) ? $input['utm_source'] : '', 120 ),
+			'utm_medium'   => self::sanitize_text( isset( $input['utm_medium'] ) ? $input['utm_medium'] : '', 120 ),
+			'utm_campaign' => self::sanitize_text( isset( $input['utm_campaign'] ) ? $input['utm_campaign'] : '', 120 ),
+			'utm_content'  => self::sanitize_text( isset( $input['utm_content'] ) ? $input['utm_content'] : '', 120 ),
+			'utm_term'     => self::sanitize_text( isset( $input['utm_term'] ) ? $input['utm_term'] : '', 120 ),
+			'referrer'     => self::sanitize_text( isset( $input['referrer'] ) ? $input['referrer'] : '', 255 ),
+			'is_qa'        => ! empty( $input['fp02_qa'] ),
 		);
 	}
 
@@ -543,6 +548,190 @@ final class ConsultationHandler implements ModuleInterface {
 		$local = $parts[0];
 		$first = function_exists( 'mb_substr' ) ? mb_substr( $local, 0, 1, 'UTF-8' ) : substr( $local, 0, 1 );
 		return $first . '***@' . $parts[1];
+	}
+
+	/**
+	 * Persist lead before mail.
+	 *
+	 * @param array<string, string> $payload Payload.
+	 * @return int
+	 */
+	private static function persist_lead( array $payload ) {
+		$source = self::source_from_url( $payload['page_url'] );
+		$ua     = isset( $_SERVER['HTTP_USER_AGENT'] ) ? (string) $_SERVER['HTTP_USER_AGENT'] : '';
+
+		return LeadRegistry::insert(
+			array(
+				'form_key'        => LeadRegistry::FORM_KEY,
+				'form_context'    => $payload['form_context'],
+				'source_url'      => $payload['page_url'],
+				'source_path'     => $source['path'],
+				'source_post_id'  => $source['post_id'],
+				'visitor_name'    => $payload['name'],
+				'phone'           => $payload['phone'],
+				'email'           => $payload['email'],
+				'message'         => $payload['message'],
+				'delivery_status' => LeadRegistry::STATUS_RECEIVED,
+				'metrika_goal'    => MailOps::metrika_goal(),
+				'utm_source'      => $payload['utm_source'],
+				'utm_medium'      => $payload['utm_medium'],
+				'utm_campaign'    => $payload['utm_campaign'],
+				'utm_content'     => $payload['utm_content'],
+				'utm_term'        => $payload['utm_term'],
+				'referrer'        => $payload['referrer'],
+				'ua_class'        => LeadRegistry::ua_class_from( $ua ),
+				'is_qa'           => ! empty( $payload['is_qa'] ),
+			)
+		);
+	}
+
+	/**
+	 * Attempt wp_mail after persist. Never throws to the visitor.
+	 *
+	 * @param array<string, string> $payload Payload.
+	 * @param int                   $lead_id Lead ID.
+	 * @return array{attempted:bool,accepted:bool,status:string}
+	 */
+	private static function attempt_outbound_mail( array $payload, $lead_id ) {
+		if ( MailOps::should_suppress() ) {
+			$status = MailOps::is_complete()
+				? LeadRegistry::STATUS_SMTP_PENDING
+				: LeadRegistry::STATUS_MAIL_SUPPRESSED;
+			LeadRegistry::update_delivery(
+				$lead_id,
+				array(
+					'delivery_status' => $status,
+					'smtp_status'     => 'suppressed',
+					'attempt_count'   => 0,
+				)
+			);
+			return array(
+				'attempted' => false,
+				'accepted'  => false,
+				'status'    => $status,
+			);
+		}
+
+		if ( ! MailOps::should_attempt_mail() ) {
+			LeadRegistry::update_delivery(
+				$lead_id,
+				array(
+					'delivery_status' => LeadRegistry::STATUS_SMTP_PENDING,
+					'smtp_status'     => 'pending',
+					'attempt_count'   => 0,
+				)
+			);
+			return array(
+				'attempted' => false,
+				'accepted'  => false,
+				'status'    => LeadRegistry::STATUS_SMTP_PENDING,
+			);
+		}
+
+		$to = MailOps::recipient_emails();
+		if ( empty( $to ) ) {
+			LeadRegistry::update_delivery(
+				$lead_id,
+				array(
+					'delivery_status' => LeadRegistry::STATUS_MAIL_ERROR,
+					'smtp_status'     => 'no_recipient',
+					'error_code'      => 'no_recipient',
+					'attempt_count'   => 1,
+				)
+			);
+			return array(
+				'attempted' => true,
+				'accepted'  => false,
+				'status'    => LeadRegistry::STATUS_MAIL_ERROR,
+			);
+		}
+
+		$subject = sprintf(
+			'[%s] %s',
+			MailOps::from_name(),
+			__( 'Заявка с сайта', 'shpigovsky-core' )
+		);
+		$body    = self::build_mail_body( $payload );
+		$headers = array(
+			'Content-Type: text/plain; charset=UTF-8',
+			'From: ' . MailOps::from_name() . ' <' . MailOps::from_email() . '>',
+		);
+		if ( '' !== $payload['email'] && is_email( $payload['email'] ) ) {
+			$headers[] = 'Reply-To: ' . $payload['email'];
+		}
+
+		$sent = wp_mail( $to, $subject, $body, $headers );
+		if ( $sent ) {
+			LeadRegistry::update_delivery(
+				$lead_id,
+				array(
+					'delivery_status' => LeadRegistry::STATUS_MAIL_ACCEPTED,
+					'smtp_status'     => 'accepted',
+					'attempt_count'   => 1,
+				)
+			);
+			return array(
+				'attempted' => true,
+				'accepted'  => true,
+				'status'    => LeadRegistry::STATUS_MAIL_ACCEPTED,
+			);
+		}
+
+		global $phpmailer;
+		$raw = ( is_object( $phpmailer ) && ! empty( $phpmailer->ErrorInfo ) ) ? (string) $phpmailer->ErrorInfo : 'send_failed';
+		$cat = MailOps::sanitize_error_category( $raw );
+		LeadRegistry::update_delivery(
+			$lead_id,
+			array(
+				'delivery_status' => LeadRegistry::STATUS_MAIL_ERROR,
+				'smtp_status'     => 'error',
+				'error_code'      => $cat,
+				'attempt_count'   => 1,
+			)
+		);
+		return array(
+			'attempted' => true,
+			'accepted'  => false,
+			'status'    => LeadRegistry::STATUS_MAIL_ERROR,
+		);
+	}
+
+	/**
+	 * @param array<string, string> $payload Payload.
+	 * @return string
+	 */
+	private static function build_mail_body( array $payload ) {
+		$lines = array(
+			'Форма: consultation',
+			'Имя: ' . $payload['name'],
+			'Телефон: ' . $payload['phone'],
+			'Email: ' . ( $payload['email'] !== '' ? $payload['email'] : '—' ),
+			'Страница: ' . $payload['page_url'],
+			'Сообщение:',
+			$payload['message'],
+		);
+		return implode( "\n", $lines );
+	}
+
+	/**
+	 * @param string $url Page URL.
+	 * @return array{path:string,post_id:int}
+	 */
+	private static function source_from_url( $url ) {
+		$path = '';
+		$parsed = wp_parse_url( $url );
+		if ( is_array( $parsed ) && ! empty( $parsed['path'] ) ) {
+			$path = (string) $parsed['path'];
+		}
+		$post_id = 0;
+		$url_id  = $url ? url_to_postid( $url ) : 0;
+		if ( $url_id > 0 ) {
+			$post_id = (int) $url_id;
+		}
+		return array(
+			'path'    => $path,
+			'post_id' => $post_id,
+		);
 	}
 
 	/**

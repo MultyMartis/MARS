@@ -1,0 +1,97 @@
+{
+  "utc": "2026-08-18T19:20:26.341102+00:00",
+  "required": "P18C CURRENT FORMS / MAIL REALITY VERIFIED",
+  "wp": {
+    "ok": true,
+    "home": "https://shpigovsky.ru",
+    "siteurl": "https://shpigovsky.ru",
+    "blogname": "Шпиговский Дом",
+    "blog_public": 0,
+    "core": "0.3.11-p18b",
+    "mail_suppressed": true,
+    "pre_wp_mail_callbacks": true,
+    "smtp_like_plugins": [],
+    "wpilot_write": false,
+    "organisation_name": "Шпиговский дом",
+    "yandex_metrica_counter_id": null,
+    "handler_exists": true,
+    "future_recipient_constant": "client.leads@polygon-ws.ru",
+    "mail_ops_exists": false,
+    "lead_tables": [],
+    "lead_schema": [],
+    "mailish_options_redacted": {
+      "_options_site_email": "field_fp02_site_email",
+      "admin_email": "Info@shpigovsky.ru",
+      "admin_email_lifespan": "1797780154",
+      "auto_plugin_theme_update_emails": [],
+      "default_email_category": "1",
+      "mailserver_login": "login@example.com",
+      "mailserver_pass": "REDACTED_NAME_MATCH",
+      "mailserver_port": "110",
+      "mailserver_url": "mail.example.com",
+      "new_admin_email": "ola4seo@yandex.ru",
+      "options_site_email": "Info@shpigovsky.ru",
+      "recovery_mode_email_last_sent": "1786864667",
+      "require_name_email": "1"
+    },
+    "users_admin_logins": [
+      "admin",
+      "mars",
+      "metacode"
+    ]
+  },
+  "file_sha256": {
+    "handler": "A348677EA12604F3EF1C2A2FE2B12B56B771A5CD94DC83DE2FA7849CB291D4F7",
+    "mu_mail": "F2BA7AFCEC153739FAC7AEE154DA63A67A269F9E698852F7430904AE4941A004",
+    "dashboard": "D7E3C495F8B9B2CFC35A32844CC07A112F732B2F613BF3C4B4470B9E7C4609B8",
+    "core_boot": "9328B1FD51042AB619C7551D1EA80E861C8444881C9E2FCD7848A155D2A00FDE",
+    "shell_js": "AC584A569CBA9042127785FBB2639888FF1F0A74B2B652C0C940244EEFF64A24",
+    "modal": "7C6B9140EDB6F7670254AC721F4E7B86607BA2424CBA3B368033DA6DD60B554C"
+  },
+  "grep_mail": {
+    "code": 0,
+    "out": "",
+    "err": ""
+  },
+  "http": {
+    "home": {
+      "url": "https://shpigovsky.ru/",
+      "status": 200,
+      "final": "https://shpigovsky.ru/",
+      "len": 531136,
+      "has_lead_form": false,
+      "has_ym": true,
+      "robots_meta": false,
+      "title_head": true,
+      "title": "ÐÐµÑÐµÐ½Ð¸Ðµ Ð°Ð»ÐºÐ¾Ð³Ð¾Ð»Ð¸Ð·Ð¼Ð° Ð¸ Ð½Ð°ÑÐºÐ¾Ð¼Ð°Ð½Ð¸Ð¸ ÑÐµÐ½ÑÑ | ÐÐµÑÐµÐ½Ð¸Ðµ Ð·Ð°Ð²Ð¸ÑÐ¸Ð¼Ð¾ÑÑÐ¸ ÐÐ¾ÑÐºÐ²Ð°"
+    },
+    "beget": {
+      "url": "http://shpigovsky.beget.tech/",
+      "status": 200,
+      "final": "https://shpigovsky.ru/",
+      "len": 531136,
+      "has_lead_form": false,
+      "has_ym": true,
+      "robots_meta": false,
+      "title_head": true,
+      "title": "ÐÐµÑÐµÐ½Ð¸Ðµ Ð°Ð»ÐºÐ¾Ð³Ð¾Ð»Ð¸Ð·Ð¼Ð° Ð¸ Ð½Ð°ÑÐºÐ¾Ð¼Ð°Ð½Ð¸Ð¸ ÑÐµÐ½ÑÑ | ÐÐµÑÐµÐ½Ð¸Ðµ Ð·Ð°Ð²Ð¸ÑÐ¸Ð¼Ð¾ÑÑÐ¸ ÐÐ¾ÑÐºÐ²Ð°"
+    },
+    "beget_privacy": {
+      "url": "http://shpigovsky.beget.tech/privacy-policy/",
+      "status": 200,
+      "final": "http://shpigovsky.beget.tech/privacy-policy/",
+      "len": 71110,
+      "has_lead_form": true,
+      "has_ym": false,
+      "robots_meta": true,
+      "title_head": true,
+      "title": "Политика конфиденциальности &#8212; Шпиговский Дом"
+    }
+  },
+  "notes": {
+    "smtp_not_configured": true,
+    "mail_suppression_on": true,
+    "indexing_must_stay_closed": true,
+    "password_not_requested": true
+  }
+}

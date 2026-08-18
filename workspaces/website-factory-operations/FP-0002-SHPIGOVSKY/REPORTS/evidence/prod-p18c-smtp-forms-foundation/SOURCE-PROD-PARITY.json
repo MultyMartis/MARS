@@ -1,0 +1,91 @@
+{
+  "n": 14,
+  "matched": 14,
+  "label": "14/14 MATCH",
+  "files": [
+    {
+      "rel": "src/Mail/MailOps.php",
+      "src_sha": "f335243d5bb1eac65e03f0ad9a8ef37c0bdc36691ebfabb989920d2fd5e813c7",
+      "prod_after_sha": "f335243d5bb1eac65e03f0ad9a8ef37c0bdc36691ebfabb989920d2fd5e813c7",
+      "match": true
+    },
+    {
+      "rel": "src/Mail/SmtpTransport.php",
+      "src_sha": "b436e33fa6eae7895c57363b5f75e770f0e8d974ea38e3ab0b92a54adceb96e2",
+      "prod_after_sha": "b436e33fa6eae7895c57363b5f75e770f0e8d974ea38e3ab0b92a54adceb96e2",
+      "match": true
+    },
+    {
+      "rel": "src/Leads/LeadRegistry.php",
+      "src_sha": "b1ae65efdb2d66bf559b853bce00dadbf706bd906cadc2e6d712be8f309eccbd",
+      "prod_after_sha": "b1ae65efdb2d66bf559b853bce00dadbf706bd906cadc2e6d712be8f309eccbd",
+      "match": true
+    },
+    {
+      "rel": "src/Privacy/LeadPersonalData.php",
+      "src_sha": "41d26b1fd1f8b6cc43d0ab622c36615275312dab0cdec392c29d587953b17801",
+      "prod_after_sha": "41d26b1fd1f8b6cc43d0ab622c36615275312dab0cdec392c29d587953b17801",
+      "match": true
+    },
+    {
+      "rel": "src/Admin/MailFormsSettings.php",
+      "src_sha": "9f20e3737f02eb68530ba1e77a6c61cd69289407b0c4fe528b950ec37067e1ce",
+      "prod_after_sha": "9f20e3737f02eb68530ba1e77a6c61cd69289407b0c4fe528b950ec37067e1ce",
+      "match": true
+    },
+    {
+      "rel": "src/Admin/LeadsAdmin.php",
+      "src_sha": "e5ff935865da5fa1b99b40439d5fa75f80b7ac215b76fcf25df0132750238999",
+      "prod_after_sha": "e5ff935865da5fa1b99b40439d5fa75f80b7ac215b76fcf25df0132750238999",
+      "match": true
+    },
+    {
+      "rel": "src/Admin/SystemDashboard.php",
+      "src_sha": "0245e0575f0b92cad424a4dbd4f93e8ee1890e6001e2ade033a505a88e7e447c",
+      "prod_after_sha": "0245e0575f0b92cad424a4dbd4f93e8ee1890e6001e2ade033a505a88e7e447c",
+      "match": true
+    },
+    {
+      "rel": "src/Admin/ActivityLog.php",
+      "src_sha": "f12d676b490902a7391e29a87d4008a439bd62729d42c4e3dafe72126632944e",
+      "prod_after_sha": "f12d676b490902a7391e29a87d4008a439bd62729d42c4e3dafe72126632944e",
+      "match": true
+    },
+    {
+      "rel": "src/Settings/SiteSettings.php",
+      "src_sha": "cfd5a604532dc1a13920916f461be87cae14aa20ef8896caf9209a71e61fb262",
+      "prod_after_sha": "cfd5a604532dc1a13920916f461be87cae14aa20ef8896caf9209a71e61fb262",
+      "match": true
+    },
+    {
+      "rel": "src/Forms/ConsultationHandler.php",
+      "src_sha": "38762fd77a0f4a75d474f35cd3fc04cc025738736ff8efc4b104ed05ce1a120c",
+      "prod_after_sha": "38762fd77a0f4a75d474f35cd3fc04cc025738736ff8efc4b104ed05ce1a120c",
+      "match": true
+    },
+    {
+      "rel": "src/ModuleRegistry.php",
+      "src_sha": "ea9a91311af344ce316bd1ad0eadaedad753ca5e16521bc16d7f64d4ef4ab747",
+      "prod_after_sha": "ea9a91311af344ce316bd1ad0eadaedad753ca5e16521bc16d7f64d4ef4ab747",
+      "match": true
+    },
+    {
+      "rel": "shpigovsky-core.php",
+      "src_sha": "c67c94c81cbf16df9f38ff56febb1cc4e79cdd73d93e9308ebf4f39564d61202",
+      "prod_after_sha": "c67c94c81cbf16df9f38ff56febb1cc4e79cdd73d93e9308ebf4f39564d61202",
+      "match": true
+    },
+    {
+      "rel": "fp02-pre-cutover-mail-suppression.php",
+      "src_sha": "d725dcd63c2cf60131f7c4c72852c43312c7e8a797f48dcbc8d3ff6280d52834",
+      "prod_after_sha": "d725dcd63c2cf60131f7c4c72852c43312c7e8a797f48dcbc8d3ff6280d52834",
+      "match": true
+    },
+    {
+      "rel": "assets/js/v9-shell.js",
+      "src_sha": "efdb9aff1b5d7c5c68bddb64b563a9a0bfc3d9aaa852e6d058263576d40b95ee",
+      "prod_after_sha": "efdb9aff1b5d7c5c68bddb64b563a9a0bfc3d9aaa852e6d058263576d40b95ee",
+      "match": true
+    }
+  ]
+}

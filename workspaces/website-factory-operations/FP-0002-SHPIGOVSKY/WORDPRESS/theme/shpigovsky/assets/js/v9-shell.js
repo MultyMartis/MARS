@@ -751,7 +751,7 @@
 			recaptchaSecurityMessage:
 				'Проверка безопасности не пройдена. Обновите страницу и попробуйте снова.',
 			successMessage:
-				'Заявка принята на локальном стенде. Отправка email здесь отключена — письмо не уходило.',
+				'Заявка принята. Мы свяжемся с вами по указанному телефону.',
 		},
 		typeof window.fp02LeadForm === 'object' && window.fp02LeadForm ? window.fp02LeadForm : {}
 	);
@@ -1320,6 +1320,63 @@
 			autocomplete: 'off',
 			tabIndex: -1,
 		});
+		ensure('form_key', { name: 'form_key', value: LEAD_FORM_CONFIG.formKey || 'consultation' });
+		ensure('utm_source', { name: 'utm_source', value: '' });
+		ensure('utm_medium', { name: 'utm_medium', value: '' });
+		ensure('utm_campaign', { name: 'utm_campaign', value: '' });
+		ensure('utm_content', { name: 'utm_content', value: '' });
+		ensure('utm_term', { name: 'utm_term', value: '' });
+		ensure('referrer', { name: 'referrer', value: '' });
+	}
+
+	function readUtmState() {
+		var keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+		var out = {};
+		keys.forEach(function (key) {
+			out[key] = '';
+		});
+		try {
+			var stored = window.sessionStorage ? window.sessionStorage.getItem('fp02_utm') : '';
+			if (stored) {
+				var parsed = JSON.parse(stored);
+				if (parsed && typeof parsed === 'object') {
+					keys.forEach(function (key) {
+						if (typeof parsed[key] === 'string' && parsed[key]) {
+							out[key] = parsed[key];
+						}
+					});
+				}
+			}
+		} catch (e) {}
+		try {
+			var params = new URLSearchParams(window.location.search || '');
+			var changed = false;
+			keys.forEach(function (key) {
+				var value = params.get(key);
+				if (value) {
+					out[key] = String(value).slice(0, 120);
+					changed = true;
+				}
+			});
+			if (changed && window.sessionStorage) {
+				window.sessionStorage.setItem('fp02_utm', JSON.stringify(out));
+			}
+		} catch (e2) {}
+		return out;
+	}
+
+	function fireMetrikaGoal(data) {
+		try {
+			var goal = (data && data.metrika_goal) || LEAD_FORM_CONFIG.metrikaGoal || '';
+			var counter = (data && data.metrika_counter) || LEAD_FORM_CONFIG.metrikaCounter || '';
+			if (!goal || !counter) {
+				return;
+			}
+			if (typeof window.ym !== 'function') {
+				return;
+			}
+			window.ym(Number(counter), 'reachGoal', goal);
+		} catch (e) {}
 	}
 
 	function populateHiddenFields(form) {
@@ -1358,6 +1415,14 @@
 
 		setValue('timestamp', String(Math.floor(Date.now() / 1000)));
 		setValue('request_token', createRequestToken());
+		setValue('form_key', LEAD_FORM_CONFIG.formKey || 'consultation');
+		var utm = readUtmState();
+		setValue('utm_source', utm.utm_source || '');
+		setValue('utm_medium', utm.utm_medium || '');
+		setValue('utm_campaign', utm.utm_campaign || '');
+		setValue('utm_content', utm.utm_content || '');
+		setValue('utm_term', utm.utm_term || '');
+		setValue('referrer', document.referrer ? String(document.referrer).slice(0, 255) : '');
 	}
 
 	function setLeadSource(form, leadSource) {
@@ -1720,6 +1785,7 @@
 						'Заявка принята на локальном стенде. Отправка email здесь отключена — письмо не уходило.';
 					setLeadFormState(form, 'success');
 					showLeadFormStatus(form, 'success', successMessage);
+					fireMetrikaGoal(result.data);
 					form.reset();
 					ensureLeadSecurityFields(form);
 					populateHiddenFields(form);

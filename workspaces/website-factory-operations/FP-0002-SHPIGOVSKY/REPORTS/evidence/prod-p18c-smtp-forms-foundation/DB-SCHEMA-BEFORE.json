@@ -1,0 +1,19 @@
+{
+  "exit": 0,
+  "stderr": "",
+  "data": {
+    "prefix": "fp02_",
+    "objects": {
+      "fp02_form_leads": {
+        "exists": false,
+        "create": null
+      },
+      "fp02_user_activity_log": {
+        "exists": true,
+        "create": "CREATE TABLE `fp02_user_activity_log` (\n  `id` bigint unsigned NOT NULL AUTO_INCREMENT,\n  `user_id` bigint unsigned NOT NULL DEFAULT '0',\n  `action` varchar(32) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\n  `object_id` bigint unsigned NOT NULL DEFAULT '0',\n  `object_type` varchar(32) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\n  `object_title` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\n  `object_status` varchar(32) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\n  `created_at` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',\n  PRIMARY KEY (`id`),\n  KEY `created_at` (`created_at`),\n  KEY `user_id` (`user_id`),\n  KEY `object_type` (`object_type`),\n  KEY `action` (`action`)\n) ENGINE=InnoDB AUTO_INCREMENT=115 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci"
+      }
+    },
+    "blog_public": 0,
+    "core": "0.3.11-p18b"
+  }
+}

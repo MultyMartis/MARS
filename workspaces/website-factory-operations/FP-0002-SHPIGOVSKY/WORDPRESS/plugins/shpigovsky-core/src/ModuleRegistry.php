@@ -17,14 +17,20 @@ use Shpigovsky\Core\Admin\AdminMenuHygiene;
 use Shpigovsky\Core\Admin\SystemDashboard;
 use Shpigovsky\Core\Admin\IndexingControl;
 use Shpigovsky\Core\Admin\DocxImporter;
+use Shpigovsky\Core\Admin\MailFormsSettings;
+use Shpigovsky\Core\Admin\LeadsAdmin;
 use Shpigovsky\Core\ContentTypes\Service;
 use Shpigovsky\Core\ContentTypes\Specialist;
 use Shpigovsky\Core\Fields\AcfIntegration;
 use Shpigovsky\Core\Fields\FieldGroups;
 use Shpigovsky\Core\Fields\RepeaterValidation;
 use Shpigovsky\Core\Forms\ConsultationHandler;
+use Shpigovsky\Core\Leads\LeadRegistry;
+use Shpigovsky\Core\Mail\MailOps;
+use Shpigovsky\Core\Mail\SmtpTransport;
 use Shpigovsky\Core\Migrations\MigrationRunner;
 use Shpigovsky\Core\Permalinks\ServicePermalinks;
+use Shpigovsky\Core\Privacy\LeadPersonalData;
 use Shpigovsky\Core\Settings\SiteSettings;
 use Shpigovsky\Core\Typography\TypographyFilters;
 
@@ -149,6 +155,42 @@ final class ModuleRegistry {
 			'class'             => DocxImporter::class,
 			'status'            => self::ENABLED_IN_CONTENT_MODEL,
 			'runtime_delivered' => false,
+		),
+		'mail.ops'                  => array(
+			'module'            => 'Mail',
+			'class'             => MailOps::class,
+			'status'            => self::ENABLED_IN_CONTENT_MODEL,
+			'runtime_delivered' => true,
+		),
+		'mail.smtp-transport'       => array(
+			'module'            => 'Mail',
+			'class'             => SmtpTransport::class,
+			'status'            => self::ENABLED_IN_CONTENT_MODEL,
+			'runtime_delivered' => true,
+		),
+		'admin.mail-forms'          => array(
+			'module'            => 'Admin',
+			'class'             => MailFormsSettings::class,
+			'status'            => self::ENABLED_IN_CONTENT_MODEL,
+			'runtime_delivered' => true,
+		),
+		'leads.registry'            => array(
+			'module'            => 'Leads',
+			'class'             => LeadRegistry::class,
+			'status'            => self::ENABLED_IN_CONTENT_MODEL,
+			'runtime_delivered' => true,
+		),
+		'admin.leads'               => array(
+			'module'            => 'Admin',
+			'class'             => LeadsAdmin::class,
+			'status'            => self::ENABLED_IN_CONTENT_MODEL,
+			'runtime_delivered' => true,
+		),
+		'privacy.lead-personal-data' => array(
+			'module'            => 'Privacy',
+			'class'             => LeadPersonalData::class,
+			'status'            => self::ENABLED_IN_CONTENT_MODEL,
+			'runtime_delivered' => true,
 		),
 		'migrations.runner'         => array(
 			'module'            => 'Migrations',

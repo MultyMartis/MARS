@@ -349,8 +349,13 @@ final class ActivityLog implements ModuleInterface {
 			'updated'           => __( 'Updated', 'shpigovsky-core' ),
 			'trashed'           => __( 'Moved to trash', 'shpigovsky-core' ),
 			'restored'          => __( 'Restored', 'shpigovsky-core' ),
-			'indexing_opened'   => __( 'Индексация открыта', 'shpigovsky-core' ),
-			'indexing_closed'   => __( 'Индексация закрыта', 'shpigovsky-core' ),
+			'indexing_opened'     => __( 'Индексация открыта', 'shpigovsky-core' ),
+			'indexing_closed'     => __( 'Индексация закрыта', 'shpigovsky-core' ),
+			'smtp_config_updated' => __( 'Почта: настройки сохранены', 'shpigovsky-core' ),
+			'smtp_test_ok'        => __( 'Проверка SMTP: успех', 'shpigovsky-core' ),
+			'smtp_test_fail'      => __( 'Проверка SMTP: ошибка', 'shpigovsky-core' ),
+			'smtp_activated'      => __( 'Почта: отправка включена', 'shpigovsky-core' ),
+			'smtp_deactivated'    => __( 'Почта: отправка выключена', 'shpigovsky-core' ),
 		);
 		return isset( $map[ $action ] ) ? $map[ $action ] : $action;
 	}
@@ -453,7 +458,7 @@ final class ActivityLog implements ModuleInterface {
 		echo '</select> ';
 
 		echo '<select name="fp02_action"><option value="">' . esc_html__( 'Все действия', 'shpigovsky-core' ) . '</option>';
-		foreach ( array( 'created', 'updated', 'trashed', 'restored', 'indexing_opened', 'indexing_closed' ) as $act ) {
+		foreach ( array( 'created', 'updated', 'trashed', 'restored', 'indexing_opened', 'indexing_closed', 'smtp_config_updated', 'smtp_test_ok', 'smtp_test_fail', 'smtp_activated', 'smtp_deactivated' ) as $act ) {
 			printf(
 				'<option value="%1$s"%2$s>%3$s</option>',
 				esc_attr( $act ),

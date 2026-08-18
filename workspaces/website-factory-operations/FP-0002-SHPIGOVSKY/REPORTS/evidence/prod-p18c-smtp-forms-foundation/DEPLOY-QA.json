@@ -1,0 +1,21 @@
+{
+  "ok": true,
+  "parity": "14/14 MATCH",
+  "core": "0.3.12-p18c",
+  "lint_pass": true,
+  "qa_ok": true,
+  "secret_ok": true,
+  "indexing_closed": true,
+  "mail_state": "not_configured",
+  "suppress": true,
+  "admin_http": {
+    "ok": false,
+    "login": {
+      "ok": false,
+      "final_url": "https://shpigovsky.ru/wp-login.php",
+      "status": 200,
+      "origin": "https://shpigovsky.ru",
+      "user": "mars"
+    }
+  }
+}

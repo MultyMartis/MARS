@@ -1,0 +1,153 @@
+{
+  "exit": 0,
+  "stderr": "",
+  "stdout_head": "{\"ok\":true,\"schema\":{\"table\":\"fp02_form_leads\",\"version\":\"1\",\"create\":\"CREATE TABLE `fp02_form_leads` (\\n  `id` bigint unsigned NOT NULL AUTO_INCREMENT,\\n  `created_at` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',\\n  `form_key` varchar(32) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\\n  `form_context` varchar(64) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\\n  `source_url` varchar(500) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\\n  `source_path` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\\n  `source_post_id` bigint unsigned NOT NULL DEFAULT '0',\\n  `visitor_name` varchar(120) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\\n  `phone` varchar(40) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\\n  `email` varchar(120) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\\n  `message` text COLLATE utf8mb4_unicode_520_ci,\\n  `delivery_status` varchar(32) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\\n  `smtp_status` varchar(32) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\\n  `metrika_goal` varchar(80) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\\n  `utm_source` varchar(120) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\\n  `utm_medium` varchar(120) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\\n  `utm_campaign` varchar(120) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\\n  `utm_content` varchar(120) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\\n  `utm_term` varchar(120) COLLATE utf8mb4",
+  "data": {
+    "ok": true,
+    "schema": {
+      "table": "fp02_form_leads",
+      "version": "1",
+      "create": "CREATE TABLE `fp02_form_leads` (\n  `id` bigint unsigned NOT NULL AUTO_INCREMENT,\n  `created_at` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',\n  `form_key` varchar(32) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\n  `form_context` varchar(64) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\n  `source_url` varchar(500) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\n  `source_path` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\n  `source_post_id` bigint unsigned NOT NULL DEFAULT '0',\n  `visitor_name` varchar(120) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\n  `phone` varchar(40) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\n  `email` varchar(120) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\n  `message` text COLLATE utf8mb4_unicode_520_ci,\n  `delivery_status` varchar(32) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\n  `smtp_status` varchar(32) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\n  `metrika_goal` varchar(80) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\n  `utm_source` varchar(120) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\n  `utm_medium` varchar(120) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\n  `utm_campaign` varchar(120) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\n  `utm_content` varchar(120) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\n  `utm_term` varchar(120) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\n  `referrer` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\n  `ua_class` varchar(32) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\n  `error_code` varchar(64) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',\n  `attempt_count` smallint unsigned NOT NULL DEFAULT '0',\n  `is_qa` tinyint unsigned NOT NULL DEFAULT '0',\n  PRIMARY KEY (`id`),\n  KEY `created_at` (`created_at`),\n  KEY `form_key` (`form_key`),\n  KEY `delivery_status` (`delivery_status`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci"
+    },
+    "redaction": {
+      "password_configured": false,
+      "mail_html_has_not_configured": true,
+      "mail_html_has_configured_word": true,
+      "mail_html_password_input_empty": true,
+      "mail_html_contains_secret": false,
+      "leads_html_contains_secret": false,
+      "dash_html_contains_secret": false,
+      "dash_has_credentials_required": true,
+      "dash_has_noreply": true,
+      "dash_has_leads_active": true,
+      "dash_indexing_closed": true,
+      "leads_menu_heading": true,
+      "html_bytes": {
+        "mail": 6103,
+        "leads": 2847,
+        "dash": 5080
+      }
+    },
+    "mail": {
+      "state": "not_configured",
+      "state_label": "NOT CONFIGURED",
+      "dashboard_line": "SMTP SETTINGS READY — CREDENTIALS REQUIRED",
+      "from": "noreply@shpigovsky.ru",
+      "from_name": "Шпиговский дом",
+      "complete": false,
+      "should_suppress": true,
+      "delivery_active": 0,
+      "verified": 0,
+      "recipients": [],
+      "config_keys": [
+        "smtp_enabled",
+        "smtp_host",
+        "smtp_port",
+        "smtp_encryption",
+        "smtp_auth",
+        "smtp_username",
+        "smtp_from_email",
+        "smtp_from_name",
+        "recipients",
+        "reply_to_mode",
+        "form_metrika_goal",
+        "lead_logging",
+        "lead_retention_days",
+        "verified",
+        "verified_at",
+        "last_test_status",
+        "last_test_error_category",
+        "delivery_active"
+      ]
+    },
+    "qa": {
+      "submit": {
+        "raw": "{\"ok\":true,\"success\":true,\"message\":\"\\u0417\\u0430\\u044f\\u0432\\u043a\\u0430 \\u043f\\u0440\\u0438\\u043d\\u044f\\u0442\\u0430. \\u041c\\u044b \\u0441\\u0432\\u044f\\u0436\\u0435\\u043c\\u0441\\u044f \\u0441 \\u0432\\u0430\\u043c\\u0438 \\u043f\\u043e \\u0443\\u043a\\u0430\\u0437\\u0430\\u043d\\u043d\\u043e\\u043c\\u0443 \\u0442\\u0435\\u043b\\u0435\\u0444\\u043e\\u043d\\u0443.\",\"accepted\":true,\"mail_attempted\":false,\"mail_accepted\":false,\"mail_status\":\"MAIL_SUPPRESSED\",\"form_key\":\"consultation\",\"metrika_goal\":\"\",\"metrika_counter\":\"\",\"metrika_event\":\"form_submission_accepted\"}",
+        "json": {
+          "ok": true,
+          "success": true,
+          "message": "Заявка принята. Мы свяжемся с вами по указанному телефону.",
+          "accepted": true,
+          "mail_attempted": false,
+          "mail_accepted": false,
+          "mail_status": "MAIL_SUPPRESSED",
+          "form_key": "consultation",
+          "metrika_goal": "",
+          "metrika_counter": "",
+          "metrika_event": "form_submission_accepted"
+        },
+        "err": null
+      },
+      "duplicate": {
+        "raw": "{\"ok\":false,\"success\":false,\"message\":\"\\u042d\\u0442\\u0430 \\u0437\\u0430\\u044f\\u0432\\u043a\\u0430 \\u0443\\u0436\\u0435 \\u0431\\u044b\\u043b\\u0430 \\u043e\\u0442\\u043f\\u0440\\u0430\\u0432\\u043b\\u0435\\u043d\\u0430. \\u041e\\u0431\\u043d\\u043e\\u0432\\u0438\\u0442\\u0435 \\u0441\\u0442\\u0440\\u0430\\u043d\\u0438\\u0446\\u0443, \\u0435\\u0441\\u043b\\u0438 \\u043d\\u0443\\u0436\\u043d\\u043e \\u043e\\u0442\\u043f\\u0440\\u0430\\u0432\\u0438\\u0442\\u044c \\u043d\\u043e\\u0432\\u0443\\u044e.\"}",
+        "json": {
+          "ok": false,
+          "success": false,
+          "message": "Эта заявка уже была отправлена. Обновите страницу, если нужно отправить новую."
+        },
+        "err": null
+      },
+      "too_fast": {
+        "raw": "{\"ok\":false,\"success\":false,\"message\":\"\\u0424\\u043e\\u0440\\u043c\\u0430 \\u043e\\u0442\\u043f\\u0440\\u0430\\u0432\\u043b\\u0435\\u043d\\u0430 \\u0441\\u043b\\u0438\\u0448\\u043a\\u043e\\u043c \\u0431\\u044b\\u0441\\u0442\\u0440\\u043e. \\u041f\\u043e\\u043f\\u0440\\u043e\\u0431\\u0443\\u0439\\u0442\\u0435 \\u0435\\u0449\\u0451 \\u0440\\u0430\\u0437.\"}",
+        "json": {
+          "ok": false,
+          "success": false,
+          "message": "Форма отправлена слишком быстро. Попробуйте ещё раз."
+        },
+        "err": null
+      },
+      "rows_before_cleanup": [
+        {
+          "id": "1",
+          "form_key": "consultation",
+          "visitor_name": "P18C QA",
+          "phone": "89251836464",
+          "email": "",
+          "source_path": "/p18c-qa/",
+          "delivery_status": "MAIL_SUPPRESSED",
+          "smtp_status": "suppressed",
+          "utm_source": "p18c",
+          "utm_campaign": "smtp-foundation",
+          "metrika_goal": "",
+          "is_qa": "1"
+        }
+      ],
+      "deleted": 1,
+      "qa_left": 0
+    },
+    "wp": {
+      "core": "0.3.12-p18c",
+      "home": "https://shpigovsky.ru",
+      "siteurl": "https://shpigovsky.ru",
+      "blog_public": 0,
+      "mail_suppressed": true,
+      "modules": {
+        "MailOps": true,
+        "SmtpTransport": true,
+        "LeadRegistry": true,
+        "MailFormsSettings": true,
+        "LeadsAdmin": true
+      },
+      "meta": {
+        "baseline_id": "FP-0002-PROD-BASELINE-2026-08-19-P18C",
+        "latest_wave": "P18C SMTP / Forms Foundation",
+        "parity": "MATCH",
+        "verified_at": "2026-08-18 19:21 UTC",
+        "backup": "FRESH BEGET BACKUP CONFIRMED BY OPERATOR",
+        "git_sha": "16706398f03825b054ce75c56e8af48ec4349329",
+        "wave": "PROD-P15",
+        "state_note": "LIVE https://shpigovsky.ru; INDEXING CLOSED; SMTP SETTINGS READY — CREDENTIALS REQUIRED; LEADS ACTIVE",
+        "legacy_redirects": "7/7",
+        "cutover": "DONE",
+        "ssl": "ACTIVE",
+        "dns_ns": "DONE / Beget",
+        "smtp_sender": "noreply@shpigovsky.ru",
+        "indexing": "CLOSED — WAITING FOR OLYA APPROVAL",
+        "public_origin": "ПУБЛИЧНЫЙ https://shpigovsky.ru/ СЕЙЧАС ОТДАЁТ СТАРЫЙ САЙТ (Craftum) — привязка к WordPress ещё нужна",
+        "mail": "SMTP SETTINGS READY — CREDENTIALS REQUIRED",
+        "leads": "ACTIVE",
+        "metrika_form_goals": "CONFIGURABLE"
+      }
+    }
+  }
+}

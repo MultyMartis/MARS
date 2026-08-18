@@ -11,6 +11,8 @@
 namespace Shpigovsky\Core\Admin;
 
 use Shpigovsky\Core\Contracts\ModuleInterface;
+use Shpigovsky\Core\Leads\LeadRegistry;
+use Shpigovsky\Core\Mail\MailOps;
 use Shpigovsky\Core\ModuleRegistry;
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -25,12 +27,12 @@ final class SystemDashboard implements ModuleInterface {
 	/**
 	 * Baseline ID shown in the widget (updated by stabilization waves).
 	 */
-	const BASELINE_ID = 'FP-0002-PROD-BASELINE-2026-08-19-P18B';
+	const BASELINE_ID = 'FP-0002-PROD-BASELINE-2026-08-19-P18C';
 
 	/**
 	 * Latest accepted production wave label.
 	 */
-	const LATEST_ACCEPTED_WAVE = 'P18B Dashboard Reality + Indexing Control';
+	const LATEST_ACCEPTED_WAVE = 'P18C SMTP / Forms Foundation';
 
 	/**
 	 * {@inheritdoc}
@@ -110,7 +112,11 @@ final class SystemDashboard implements ModuleInterface {
 
 		$php_ver         = function_exists( 'phpversion' ) ? phpversion() : '';
 		$debug_on        = ( defined( 'WP_DEBUG' ) && WP_DEBUG );
-		$mail_suppressed = (bool) has_filter( 'pre_wp_mail' );
+		$mail_suppressed = class_exists( MailOps::class ) ? MailOps::should_suppress() : (bool) has_filter( 'pre_wp_mail' );
+		$mail_line       = class_exists( MailOps::class ) ? MailOps::dashboard_mail_line() : __( 'SMTP SETTINGS READY — CREDENTIALS REQUIRED', 'shpigovsky-core' );
+		$sender          = class_exists( MailOps::class ) ? MailOps::from_email() : $smtp_box;
+		$leads_active    = class_exists( LeadRegistry::class );
+		$goal_cfg        = class_exists( MailOps::class ) && '' !== MailOps::metrika_goal();
 		$indexing_open   = class_exists( IndexingControl::class ) ? IndexingControl::is_open() : ( 1 === (int) get_option( 'blog_public', 1 ) );
 
 		if ( '' === $ssl ) {
@@ -170,11 +176,19 @@ final class SystemDashboard implements ModuleInterface {
 		);
 		self::row(
 			__( 'Почта', 'shpigovsky-core' ),
-			$mail_suppressed
-				? __( 'SMTP PENDING / подавлена до SMTP', 'shpigovsky-core' )
-				: __( 'подавление не обнаружено — проверить до запуска почты', 'shpigovsky-core' )
+			$mail_line
 		);
-		self::row( __( 'SMTP отправитель', 'shpigovsky-core' ), $smtp_box );
+		self::row( __( 'SMTP отправитель', 'shpigovsky-core' ), $sender );
+		self::row(
+			__( 'Журнал заявок', 'shpigovsky-core' ),
+			$leads_active ? __( 'ACTIVE', 'shpigovsky-core' ) : __( 'не активен', 'shpigovsky-core' )
+		);
+		self::row(
+			__( 'Цели Метрики для форм', 'shpigovsky-core' ),
+			$goal_cfg
+				? __( 'задана в Почта и формы', 'shpigovsky-core' )
+				: __( 'CONFIGURABLE', 'shpigovsky-core' )
+		);
 		self::row(
 			__( 'Индексация', 'shpigovsky-core' ),
 			$indexing_open
@@ -189,11 +203,11 @@ final class SystemDashboard implements ModuleInterface {
 
 		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'Следующие шаги', 'shpigovsky-core' ) . '</h3>';
 		echo '<ul style="margin:0 0 12px 1.2em;">';
-		self::li( __( '1. Привязать публичный https://shpigovsky.ru/ к WordPress (сейчас на адресе может открываться старый сайт)', 'shpigovsky-core' ) );
-		self::li( __( '2. Настройка SMTP (noreply@shpigovsky.ru)', 'shpigovsky-core' ) );
-		self::li( __( '3. Проверка доставки форм', 'shpigovsky-core' ) );
-		self::li( __( '4. Цели Метрики для форм (после подтверждения бэкенда)', 'shpigovsky-core' ) );
-		self::li( __( '5. Внутренняя статистика заявок', 'shpigovsky-core' ) );
+		self::li( __( '1. Оператор вводит SMTP и получателей: Настройки сайта → Почта и формы', 'shpigovsky-core' ) );
+		self::li( __( '2. Сохранить. Не открывать индексацию.', 'shpigovsky-core' ) );
+		self::li( __( '3. Сообщить, что настройки сохранены — следующая волна проверит SMTP', 'shpigovsky-core' ) );
+		self::li( __( '4. После проверки SMTP — QA доставки форм', 'shpigovsky-core' ) );
+		self::li( __( '5. Привязка публичного https://shpigovsky.ru/ к WordPress, если ещё открывается старый сайт', 'shpigovsky-core' ) );
 		self::li( __( '6. Индексация — только после разрешения Оли', 'shpigovsky-core' ) );
 		self::li( __( '7. Отправка sitemap', 'shpigovsky-core' ) );
 		self::li( __( '8. Финальный обход', 'shpigovsky-core' ) );

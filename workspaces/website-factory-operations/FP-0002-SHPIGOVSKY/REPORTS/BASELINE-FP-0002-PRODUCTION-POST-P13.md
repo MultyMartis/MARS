@@ -1,13 +1,14 @@
-# BASELINE — FP-0002 PRODUCTION POST-P13 (PROD-P14) + P15 ENVIRONMENT CLEAN + P16 TYPOGRAPHY + P17 PRE-CUTOVER CONT1 + P17-FU02 + P18A LIVE DOMAIN + P18B DASHBOARD/INDEXING
+# BASELINE — FP-0002 PRODUCTION POST-P13 (PROD-P14) + P15 ENVIRONMENT CLEAN + P16 TYPOGRAPHY + P17 PRE-CUTOVER CONT1 + P17-FU02 + P18A LIVE DOMAIN + P18B DASHBOARD/INDEXING + P18C SMTP/FORMS
 
-**Baseline ID:** `FP-0002-PROD-BASELINE-2026-08-19-P18B`  
+**Baseline ID:** `FP-0002-PROD-BASELINE-2026-08-19-P18C`  
 **Established:** 2026-08-16/17 (UTC intake 2026-08-16T17:28Z)  
 **Wave:** PROD-P14 Stabilization  
 **P15 extension:** 2026-08-16/17 — environment/migration cleanup (same baseline ID; P14 backup remains rollback authority)  
 **P17 extension:** 2026-08-18 — legacy 301s + DNS/NS migration plan (NS not switched **in that wave**)  
 **P17-FU02 extension:** 2026-08-18 — internal pre-cutover tails closed; READY FOR MANUAL NS SWITCH **at that time**  
 **P18A extension:** 2026-08-18 — operator live-domain cutover canonized; legal demo banner owner fixed  
-**P18B extension:** 2026-08-19 — MetaCODE Dashboard reality model + Admin indexing control; indexing remains CLOSED
+**P18B extension:** 2026-08-19 — MetaCODE Dashboard reality model + Admin indexing control; indexing remains CLOSED  
+**P18C extension:** 2026-08-19 — SMTP/forms Admin foundation; `fp02_form_leads`; suppression ON until verified+activate
 
 ## Runtime
 
@@ -23,13 +24,13 @@
 | DB name (no secrets) | `shpigovsky_main` |
 | DB prefix | `fp02_` |
 | Theme | Shpigovsky `0.3.0-d7a-shell` |
-| shpigovsky-core | `0.3.11-p18b` |
+| shpigovsky-core | `0.3.12-p18c` |
 | WPilot | 0.3.2 · writes disabled · bridge active (read) |
 | siteurl/home | `https://shpigovsky.ru` |
 | blog_public | 0 |
 | WP_ENVIRONMENT_TYPE | **production** (P15) |
 | WP_DEBUG / DISPLAY / LOG | **false / false / false** (P15) |
-| Mail | PRE-CUTOVER suppression MU (`fp02-pre-cutover-mail-suppression.php`) |
+| Mail | PRE-CUTOVER suppression MU owned by `mail.ops` until VERIFIED/ACTIVE. Admin: Настройки сайта → Почта и формы. Sender `noreply@shpigovsky.ru`. Password write-only in `fp02_mailbox_auth` (autoload false). Leads: `fp02_form_leads` schema v1. |
 | Typography | ONE owner `typography.russian` — render-time HTML-aware; DB content mutations 0 |
 | Legal demo banner | `legal_demo_marker` explicit `0`/`1`; template does not hardcode DEMO |
 
@@ -63,16 +64,18 @@
 - P15 touched source files: **3/3 MATCH** (core + dashboard + mail MU)  
 - P16 touched source files: **6/6 MATCH** (core + typography module + dashboard + search-helpers)
 - P18A touched source files: **7/7 MATCH** (theme legal helper/template/`functions.php`; core + dashboard + FieldGroups + EditorRestrictions)
-- P18B touched source files: **6/6 MATCH** (core + dashboard + indexing control + module registry + activity log + theme seo-integrations)
+- P18C touched source files: **14/14 MATCH** (core mail/leads/admin + MU + `v9-shell.js`)
 
 ## Latest accepted wave
 
-**P18B Dashboard Reality + Indexing Control** — operator Dashboard current; indexing control LIVE; WordPress indexing **CLOSED**; public apex still observed as Craftum at latest P18B probe.
+**P18C SMTP / Forms Foundation** — Admin SMTP owner LIVE; credentials not entered; leads persisted before mail; indexing **CLOSED**; public apex still observed as Craftum at P18C intake.
 
 ## Backup
 
 | Field | Value |
 |-------|-------|
+| P18C operator Beget backup | **FRESH BEGET BACKUP CONFIRMED BY OPERATOR** (pre-wave) |
+| P18C exact-file snapshots | `deployment-packs/fp-0002/prod-p18c-layer-b-pre/` |
 | P18B operator Beget backup | **FRESH BEGET BACKUP CONFIRMED BY OPERATOR** (timestamp not safely discovered) |
 | P18B exact-file snapshots | `deployment-packs/fp-0002/prod-p18b-layer-b-pre/` |
 | Type (last MARS full dump) | Full files + DB via SSH (tar.gz + mysqldump.gz) |
