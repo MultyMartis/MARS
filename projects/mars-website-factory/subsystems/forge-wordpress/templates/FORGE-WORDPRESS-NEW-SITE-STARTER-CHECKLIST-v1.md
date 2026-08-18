@@ -7,9 +7,14 @@
 
 ## Before coding
 
-- [ ] Page vs CPT vs options decided (matrix completed)  
+- [ ] **P1b CMS pack** started: entity map, ownership map, relationships, Site Settings map, page editability ([CMS-ARCHITECTURE](../standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md))  
+- [ ] Design-to-CMS worksheet for primary templates ([worksheet](FORGE-WORDPRESS-DESIGN-TO-CMS-MAPPING-WORKSHEET-v1.md))  
+- [ ] Page vs CPT vs options vs repeater decided (matrix completed — [REPEATER-VS-ENTITY](../standards/FORGE-WORDPRESS-REPEATER-VS-ENTITY-DECISION-MATRIX-v1.md))  
 - [ ] URL map (hubs vs singles; `has_archive`)  
 - [ ] Settings SoT (one contacts/social owner)  
+- [ ] Internal CTAs = object relationship, not pasted staging URLs  
+- [ ] Component empty-state contracts named  
+- [ ] Admin IA (menu, tabs, list tables) sketched  
 - [ ] SEO owner (one)  
 - [ ] Form owner (one) + pre-SMTP policy  
 - [ ] Locale + i18n from first module  
@@ -43,8 +48,9 @@ Complete [PRE-CUTOVER-READINESS-MATRIX](FORGE-WORDPRESS-PRE-CUTOVER-READINESS-MA
 
 ## Anti-patterns to refuse
 
-AP-001…018 in [ANTI-PATTERN-REGISTRY](../standards/FORGE-WORDPRESS-ANTI-PATTERN-REGISTRY-v1.md)
+AP-001…018 in [ANTI-PATTERN-REGISTRY](../standards/FORGE-WORDPRESS-ANTI-PATTERN-REGISTRY-v1.md)  
+AP-CMS-001…015 in [CMS-ANTI-PATTERNS](../standards/FORGE-WORDPRESS-CMS-ANTI-PATTERNS-v1.md)
 
 ---
 
-*Starter checklist v1.*
+*Starter checklist v1.1 — includes P1b CMS / editable architecture.*

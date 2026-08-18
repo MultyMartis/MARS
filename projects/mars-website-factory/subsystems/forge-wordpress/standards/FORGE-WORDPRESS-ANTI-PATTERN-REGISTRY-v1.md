@@ -209,4 +209,28 @@ Each ID is reusable. Client facts are generalized.
 
 ---
 
-*FW-S-21 v1 — 18 anti-patterns. Add IDs; do not reuse numbers.*
+## CMS modeling namespace (`AP-CMS-*`)
+
+Do **not** reuse AP-001–018 numbers. Full entries: [CMS-ANTI-PATTERNS](FORGE-WORDPRESS-CMS-ANTI-PATTERNS-v1.md).
+
+| ID | Title | Related ops ID |
+|----|-------|----------------|
+| AP-CMS-001 | Everything becomes a Page | AP-001 |
+| AP-CMS-002 | Everything becomes an ACF repeater | — |
+| AP-CMS-003 | Everything is editable | — |
+| AP-CMS-004 | Same business value stored in multiple locations | AP-007, AP-008 |
+| AP-CMS-005 | Internal destination stored as absolute manual URL | — |
+| AP-CMS-006 | Editor exposed to raw CSS / classes | — |
+| AP-CMS-007 | Giant flat ACF editor | — |
+| AP-CMS-008 | Nested repeater as a pseudo-database | — |
+| AP-CMS-009 | Demo content as production fallback | AP-009 |
+| AP-CMS-010 | Frontend component without empty-state contract | AP-009 |
+| AP-CMS-011 | GUI field-schema change without source / version control | — |
+| AP-CMS-012 | WYSIWYG used instead of structured data | — |
+| AP-CMS-013 | Hardcoded design copied into content fields unnecessarily | — |
+| AP-CMS-014 | Relation modeled as free text | — |
+| AP-CMS-015 | No editor workflow validation before launch | — |
+
+---
+
+*FW-S-21 v1.1 — 18 operational anti-patterns + AP-CMS-001–015 index. Add IDs; do not reuse numbers.*

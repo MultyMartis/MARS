@@ -20,10 +20,10 @@
 
 | FP-0002 lesson | Class | Canonical WP Forge document |
 |----------------|-------|-----------------------------|
-| Child Pages used for staff-like entities; later CPT `specialist` | A / G | [CONTENT-MODEL-CPT-STANDARD](../standards/FORGE-WORDPRESS-CONTENT-MODEL-CPT-STANDARD-v1.md) |
+| Child Pages used for staff-like entities; later CPT `specialist` | A / G | [CONTENT-MODEL-CPT-STANDARD](../standards/FORGE-WORDPRESS-CONTENT-MODEL-CPT-STANDARD-v1.md) · [CMS-ARCHITECTURE](../standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md) |
 | Preserve IDs/URLs when changing post type; hub page + CPT singles | A / D | same + [ENVIRONMENT-MIGRATION](../runbooks/FORGE-WORDPRESS-ENVIRONMENT-MIGRATION-STANDARD-v1.md) |
 | Duplicate custom permalink UI vs native WP slug row | G | [ANTI-PATTERN-REGISTRY](../standards/FORGE-WORDPRESS-ANTI-PATTERN-REGISTRY-v1.md) AP-002 · CPT standard |
-| Site Settings as one SoT for header/footer/mobile/contacts | A / E | [SITE-SETTINGS-STANDARD](../standards/FORGE-WORDPRESS-SITE-SETTINGS-STANDARD-v1.md) |
+| Site Settings as one SoT for header/footer/mobile/contacts | A / E | [SITE-SETTINGS-STANDARD](../standards/FORGE-WORDPRESS-SITE-SETTINGS-STANDARD-v1.md) · [GLOBAL-SETTINGS-OWNERSHIP](../standards/FORGE-WORDPRESS-GLOBAL-SETTINGS-OWNERSHIP-STANDARD-v1.md) |
 | Social: type + URL + visibility; registry icons; empty → no render | B / E / F | [SOCIAL-CONTACT-MODULE-SPEC](../standards/FORGE-WORDPRESS-SOCIAL-CONTACT-MODULE-SPEC-v1.md) |
 | SEO meta, verification, analytics, advanced code; sitemap ≠ indexing | A / C | [SEO-AND-SITEMAP-STANDARD](../standards/FORGE-WORDPRESS-SEO-AND-SITEMAP-STANDARD-v1.md) |
 | Extend native `wp-sitemap`; do not invent a Yandex page feed | A / G | same |
@@ -50,7 +50,10 @@
 | Do not open indexing because the domain works | D / G | same § indexing gate |
 | WPilot READ; `write_enabled=false`; version ≠ option | C | [WPILOT-PRODUCTION-STANDARD](../runbooks/FORGE-WORDPRESS-WPILOT-PRODUCTION-STANDARD-v1.md) |
 | Clinical/brand/content/URLs of Shpigovsky | I | Do not copy — project LOC-ZONE only |
-| Reviews as ACF options repeater, not CPT | J / I | [CONTENT-MODEL-CPT](../standards/FORGE-WORDPRESS-CONTENT-MODEL-CPT-STANDARD-v1.md) § when not to CPT |
+| Reviews as ACF options repeater, not CPT | J / I | [CONTENT-MODEL-CPT](../standards/FORGE-WORDPRESS-CONTENT-MODEL-CPT-STANDARD-v1.md) § when not to CPT · [REPEATER-VS-ENTITY](../standards/FORGE-WORDPRESS-REPEATER-VS-ENTITY-DECISION-MATRIX-v1.md) |
+| Design/Admin fields modeled during implementation rather than as a CMS pack | G → A | [CMS-ARCHITECTURE](../standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md) P1b — do this **before** frontend WP coding |
+| Duplicate phones / ACF-first without entity map | G | [CMS-ANTI-PATTERNS](../standards/FORGE-WORDPRESS-CMS-ANTI-PATTERNS-v1.md) AP-CMS-001–015 |
+| Featured image as portrait SoT; empty ACF hidden; Local JSON in plugin | A / E | [ACF-FIELD-MODELING](../standards/FORGE-WORDPRESS-ACF-FIELD-MODELING-STANDARD-v1.md) · [EDITOR UX](../standards/FORGE-WORDPRESS-EDITOR-UX-STANDARD-v1.md) |
 | Decorative parallax / lifebuoy | J / I | [MODULE-CATALOG](../registries/FORGE-WORDPRESS-MODULE-CATALOG-v1.md) experimental |
 
 ---

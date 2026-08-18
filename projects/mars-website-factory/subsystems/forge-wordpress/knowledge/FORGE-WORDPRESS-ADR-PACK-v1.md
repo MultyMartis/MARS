@@ -74,6 +74,36 @@
 **Decision:** Physical iPhone/Android/trackpad gates for device-specific behavior.  
 **See:** [REAL-DEVICE-QA](../standards/FORGE-WORDPRESS-REAL-DEVICE-QA-STANDARD-v1.md)
 
+## ADR-P12 — Model entities before ACF fields
+
+**Context:** Implementation pressure leads to “add fields until the mockup works.”  
+**Decision:** P1b CMS pack first (entities, ownership, relations, globals). ACF is storage, not the start.  
+**See:** [CMS ARCHITECTURE](../standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md)
+
+## ADR-P13 — Repeaters are parent-owned rows
+
+**Context:** ACF Pro makes large nested lists easy.  
+**Decision:** Repeaters are not a domain database. Promote when rows behave like entities.  
+**See:** [REPEATER VS ENTITY](../standards/FORGE-WORDPRESS-REPEATER-VS-ENTITY-DECISION-MATRIX-v1.md)
+
+## ADR-P14 — Internal links are object references
+
+**Context:** Editors paste URLs, including staging hosts.  
+**Decision:** Post Object / relationship + `get_permalink()`. Free URL only for external/anchors/protocols.  
+**See:** [RELATIONSHIP MODELING](../standards/FORGE-WORDPRESS-RELATIONSHIP-MODELING-STANDARD-v1.md)
+
+## ADR-P15 — Controlled flexibility, not page builder
+
+**Context:** Flexible Content can replace the whole page.  
+**Decision:** Default = structured templates. Flex only with a named layout registry.  
+**See:** CMS Architecture §5, §8
+
+## ADR-P16 — Editor workflow is an acceptance gate
+
+**Context:** Pixel-perfect frontend can hide an unusable CMS.  
+**Decision:** Simulate real editor tasks before calling CMS architecture done.  
+**See:** [EDITOR UX](../standards/FORGE-WORDPRESS-EDITOR-UX-STANDARD-v1.md) · AP-CMS-015
+
 ---
 
-*ADR pack v1. Historical FW-01 ADRs remain in [FORGE-WORDPRESS-ARCHITECTURAL-DECISIONS-v1.md](../FORGE-WORDPRESS-ARCHITECTURAL-DECISIONS-v1.md).*
+*ADR pack v1.1. Historical FW-01 ADRs remain in [FORGE-WORDPRESS-ARCHITECTURAL-DECISIONS-v1.md](../FORGE-WORDPRESS-ARCHITECTURAL-DECISIONS-v1.md).*

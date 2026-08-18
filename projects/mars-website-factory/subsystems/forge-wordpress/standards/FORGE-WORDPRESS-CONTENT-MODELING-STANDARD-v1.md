@@ -54,7 +54,11 @@ Evaluate before CPT:
 
 **If majority = no** → prefer page + repeater, fixed template, or options — document in CONTENT-MODEL.
 
-**Production expansion (2026-08-18):** full CPT checklist, hub+CPT coexistence, native permalink rule, and “when to create a CPT” hard criteria — [FORGE-WORDPRESS-CONTENT-MODEL-CPT-STANDARD-v1.md](FORGE-WORDPRESS-CONTENT-MODEL-CPT-STANDARD-v1.md) (FW-S-10). Do not use generic Pages for staff-like public entities (AP-001).
+**Production expansion (2026-08-18):** full CPT checklist — [FORGE-WORDPRESS-CONTENT-MODEL-CPT-STANDARD-v1.md](FORGE-WORDPRESS-CONTENT-MODEL-CPT-STANDARD-v1.md) (FW-S-10).
+
+**CMS / editable architecture (2026-08-18):** deterministic Page/Post/CPT/taxonomy/Options/repeater/Flexible Content/relationship decisions, field ownership, and design-to-CMS workflow — [FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md](FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md) (FW-S-22). Repeater vs entity: [FW-S-24](FORGE-WORDPRESS-REPEATER-VS-ENTITY-DECISION-MATRIX-v1.md). Do not use generic Pages for staff-like public entities (AP-001 / AP-CMS-001).
+
+**§7 matrix note:** “Team cards on one page → repeater” and “nested services → child page” are **first-pass hints only**. Production: public people/services with URLs → CPT (FW-S-10 + FW-S-24). This older table does not override FW-S-22.
 
 ---
 
@@ -132,9 +136,11 @@ Content model must document:
 
 ## Related documents
 
+- [FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md](FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md)
 - [FORGE-WORDPRESS-ACF-ARCHITECTURE-STANDARD-v1.md](FORGE-WORDPRESS-ACF-ARCHITECTURE-STANDARD-v1.md)
 - [FORGE-WORDPRESS-FUNCTIONALITY-PLUGIN-STANDARD-v1.md](FORGE-WORDPRESS-FUNCTIONALITY-PLUGIN-STANDARD-v1.md)
 - [templates/FORGE-WORDPRESS-CPT-TAXONOMY-MAP-TEMPLATE-v1.md](../templates/FORGE-WORDPRESS-CPT-TAXONOMY-MAP-TEMPLATE-v1.md)
+- [templates/FORGE-WORDPRESS-CONTENT-ENTITY-MAP-TEMPLATE-v1.md](../templates/FORGE-WORDPRESS-CONTENT-ENTITY-MAP-TEMPLATE-v1.md)
 
 ---
 

@@ -125,8 +125,12 @@ Mode A default: **ACF-first** — block editor secondary or disabled on curated 
 
 ## Related documents
 
+- [FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md](FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md)
+- [FORGE-WORDPRESS-ADMIN-INFORMATION-ARCHITECTURE-STANDARD-v1.md](FORGE-WORDPRESS-ADMIN-INFORMATION-ARCHITECTURE-STANDARD-v1.md)
+- [FORGE-WORDPRESS-EDITOR-UX-STANDARD-v1.md](FORGE-WORDPRESS-EDITOR-UX-STANDARD-v1.md)
 - [FORGE-WORDPRESS-ACF-ARCHITECTURE-STANDARD-v1.md](FORGE-WORDPRESS-ACF-ARCHITECTURE-STANDARD-v1.md)
 - [templates/FORGE-WORDPRESS-EDITABLE-REGIONS-MAP-TEMPLATE-v1.md](../templates/FORGE-WORDPRESS-EDITABLE-REGIONS-MAP-TEMPLATE-v1.md)
+- [templates/FORGE-WORDPRESS-EDITOR-WORKFLOW-ACCEPTANCE-CHECKLIST-v1.md](../templates/FORGE-WORDPRESS-EDITOR-WORKFLOW-ACCEPTANCE-CHECKLIST-v1.md)
 
 ---
 
@@ -136,7 +140,7 @@ Admin must be **editor-oriented**, localized to the project locale (Russian edit
 
 ### 10.1 Site Settings
 
-See [SITE-SETTINGS-STANDARD](FORGE-WORDPRESS-SITE-SETTINGS-STANDARD-v1.md). One SoT for contacts/socials. Advanced raw-code fields: capability-gated, last, not mixed with ordinary editor settings.
+See [SITE-SETTINGS-STANDARD](FORGE-WORDPRESS-SITE-SETTINGS-STANDARD-v1.md) and [GLOBAL-SETTINGS-OWNERSHIP](FORGE-WORDPRESS-GLOBAL-SETTINGS-OWNERSHIP-STANDARD-v1.md). One SoT for contacts/socials. Advanced raw-code fields: capability-gated, last, not mixed with ordinary editor settings.
 
 ### 10.2 Custom CPT editor
 
@@ -164,7 +168,8 @@ Specialists CPT cleanup; SEO & Integrations; Social/Messengers; Smart Search set
 | 12 | No global LOCAL/MARS/debug notices |
 | 13 | Native permalink row only on public CPTs |
 | 14 | Empty settings do not render FE leftovers |
+| 15 | [EDITOR-WORKFLOW-ACCEPTANCE-CHECKLIST](../templates/FORGE-WORDPRESS-EDITOR-WORKFLOW-ACCEPTANCE-CHECKLIST-v1.md) tabletop or wp-admin PASS |
 
 ---
 
-*Admin UX standard v1.1 — curated editor + production dashboard/SoT rules.*
+*Admin UX standard v1.1 — curated editor + production dashboard/SoT rules. CMS pack: [EDITOR UX](FORGE-WORDPRESS-EDITOR-UX-STANDARD-v1.md).*

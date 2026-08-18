@@ -2,6 +2,7 @@
 
 **ID:** FW-S-10  
 **Extends:** [FW-S-01 Content Modeling](FORGE-WORDPRESS-CONTENT-MODELING-STANDARD-v1.md)  
+**CMS decision hub:** [FW-S-22 CMS Architecture](FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md) · [FW-S-24 Repeater vs Entity](FORGE-WORDPRESS-REPEATER-VS-ENTITY-DECISION-MATRIX-v1.md)  
 **Status:** ACTIVE — PRODUCTION PROVEN WITH CAVEATS  
 **Date:** 2026-08-18  
 **Evidence case:** FP-0002 specialists (Pages → CPT `specialist`, P11) and services CPT; permalink native UX (P13-FU01)

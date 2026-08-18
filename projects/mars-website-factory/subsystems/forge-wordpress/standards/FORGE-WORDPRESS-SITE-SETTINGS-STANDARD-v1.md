@@ -4,7 +4,7 @@
 **Status:** ACTIVE — PRODUCTION PROVEN WITH CAVEATS  
 **Date:** 2026-08-18  
 **Class:** A (SoT architecture) / E (Admin)  
-**Evidence:** FP-0002 Site Settings + P13 social/SEO sections
+**Companion:** [FW-S-30 Global Settings Ownership](FORGE-WORDPRESS-GLOBAL-SETTINGS-OWNERSHIP-STANDARD-v1.md) (ownership maps, fallbacks, consumer helpers) · [CMS ARCHITECTURE](FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md)
 
 ---
 

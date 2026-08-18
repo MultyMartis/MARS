@@ -92,8 +92,8 @@ FWP-12 Post-Handoff Learning
 | Field | Value |
 |-------|-------|
 | **Inputs** | WAD; IA; frontend block inventory |
-| **Actions** | Define CPT, taxonomies, fields, relationships, REST policy |
-| **Outputs** | `CONTENT-MODEL`; `CPT-TAXONOMY-MAP`; `ACF-SCHEMA` (conditional) |
+| **Actions** | Identify entities/relationships/globals **before** ACF; define CPT, taxonomies, fields, relationships, REST policy; fill P1b CMS pack ([CMS ARCHITECTURE](standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md)) |
+| **Outputs** | `CONTENT-MODEL`; `CONTENT-ENTITY-MAP`; `FIELD-OWNERSHIP-MAP`; `RELATIONSHIP-MAP`; `SITE-SETTINGS-MAP`; `PAGE-EDITABILITY-MAP`; `COMPONENT-DATA-CONTRACT`s; `CPT-TAXONOMY-MAP`; `ACF-SCHEMA` (conditional); `CMS-MIGRATION-PLAN` if data exists |
 | **Gate** | Part of G4 design package |
 | **Blockers** | Conflicts with WAD; unnamed editorial roles |
 | **Responsibility** | Content Modeler |
@@ -107,7 +107,7 @@ FWP-12 Post-Handoff Learning
 |-------|-------|
 | **Inputs** | WAD; content model; frontend mapping |
 | **Actions** | Theme architecture; plugin boundary; template map; admin UX map; plugin register |
-| **Outputs** | `THEME-ARCHITECTURE`; `FUNCTIONALITY-BOUNDARY`; `TEMPLATE-MAP`; `BLOCK-TO-WP-MAPPING`; `ADMIN-UX-MAP`; `EDITABLE-REGIONS-MAP`; `PLUGIN-REGISTER` |
+| **Outputs** | `THEME-ARCHITECTURE`; `FUNCTIONALITY-BOUNDARY`; `TEMPLATE-MAP`; `BLOCK-TO-WP-MAPPING`; `ADMIN-UX-MAP`; `ADMIN-INFORMATION-ARCHITECTURE`; `EDITABLE-REGIONS-MAP`; `PLUGIN-REGISTER` |
 | **Gate G4** | Design package human-approved |
 | **Blockers** | Missing editable-regions map; unapproved third-party plugins |
 | **Responsibility** | Theme + Admin UX specialists |

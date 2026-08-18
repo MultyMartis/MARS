@@ -75,7 +75,7 @@ Full frontend rules: [frontend-production-rules-v0.md](frontend-production-rules
 
 | Gate | Authority |
 |------|-----------|
-| Next-site architecture | [WP Forge knowledge hub](subsystems/forge-wordpress/knowledge/README.md) · [blueprint](subsystems/forge-wordpress/standards/FORGE-WORDPRESS-PRODUCTION-WEBSITE-BLUEPRINT-v1.md) |
+| Next-site architecture | [WP Forge knowledge hub](subsystems/forge-wordpress/knowledge/README.md) · [blueprint](subsystems/forge-wordpress/standards/FORGE-WORDPRESS-PRODUCTION-WEBSITE-BLUEPRINT-v1.md) · [CMS architecture](subsystems/forge-wordpress/standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md) |
 | Site not done because FE “looks ready” | [Definition of Done](subsystems/forge-wordpress/standards/FORGE-WORDPRESS-DEFINITION-OF-DONE-v1.md) |
 | Indexing after SMTP/forms | [Launch SOP](subsystems/forge-wordpress/runbooks/FORGE-WORDPRESS-PRE-CUTOVER-AND-LAUNCH-SOP-v1.md) |
 | Physical device QA when device-specific | [Real-device QA](subsystems/forge-wordpress/standards/FORGE-WORDPRESS-REAL-DEVICE-QA-STANDARD-v1.md) |

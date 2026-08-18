@@ -3,7 +3,7 @@
 **ID:** FW-R-04  
 **Status:** ACTIVE  
 **Date:** 2026-08-18  
-**Honesty:** FP-0002 is **one** production case. **CANONICAL DEFAULT** ≠ “copy the Shpigovsky plugin”.
+**How to choose CPT vs repeater vs Options before registering modules:** [CMS-ARCHITECTURE](../standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md). This catalog lists **modules**, not the modeling sequence.
 
 Maturity: THEORY | IMPLEMENTED ONCE | PRODUCTION PROVEN | PRODUCTION PROVEN WITH CAVEATS | NEEDS SECOND PROJECT VALIDATION | CANONICAL DEFAULT
 

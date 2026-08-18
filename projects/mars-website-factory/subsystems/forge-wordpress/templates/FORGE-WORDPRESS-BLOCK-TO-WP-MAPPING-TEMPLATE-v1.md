@@ -3,7 +3,8 @@
 **Template ID:** FW-T-14  
 **Version:** v1  
 **Artifact:** BLOCK-TO-WP-MAPPING  
-**Authority:** Theme Specialist
+**Authority:** Theme Specialist  
+**Depends on:** P1b CMS pack ([CMS ARCHITECTURE](../standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md)). Do not invent field ownership in this table.
 
 ---
 

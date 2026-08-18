@@ -18,7 +18,7 @@ Client-specific values are omitted. Evidence paths are under `workspaces/website
 | Root cause | Entity with independent lifecycle treated as nested static pages |
 | Final | Pages for hubs/static; CPT `service` and `specialist`; options for globals; Reviews as options repeater (project choice) |
 | Lesson | Choose primitive by lifecycle, URL, archive, Admin, search/sitemap — not by visual resemblance |
-| Canonical rule | [CONTENT-MODEL-CPT-STANDARD](../standards/FORGE-WORDPRESS-CONTENT-MODEL-CPT-STANDARD-v1.md) |
+| Canonical rule | [CMS-ARCHITECTURE](../standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md) · [CONTENT-MODEL-CPT-STANDARD](../standards/FORGE-WORDPRESS-CONTENT-MODEL-CPT-STANDARD-v1.md) · [REPEATER-VS-ENTITY](../standards/FORGE-WORDPRESS-REPEATER-VS-ENTITY-DECISION-MATRIX-v1.md) |
 | Applicability | A (decision matrix); Reviews-as-options = J/I |
 | Evidence | P11 report; V9 Admin-parity models in `DOCS/` |
 

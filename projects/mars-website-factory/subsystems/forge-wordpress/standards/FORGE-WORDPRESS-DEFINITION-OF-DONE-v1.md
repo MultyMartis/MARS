@@ -14,6 +14,7 @@ A WP Forge site is **not done** because the frontend “looks ready”.
 | Domain | Done means |
 |--------|------------|
 | Admin UX | Localized, curated fields, Site Settings SoT, no global debug notices, Dashboard widget |
+| **CMS / editor workflows** | P1b maps exist; [EDITOR-WORKFLOW-ACCEPTANCE-CHECKLIST](../templates/FORGE-WORDPRESS-EDITOR-WORKFLOW-ACCEPTANCE-CHECKLIST-v1.md) PASS (change phone globally, add entity, hide section, internal CTA) |
 | Frontend | Templates match approved design; empty Admin data does not show demo leftovers |
 | Responsive | Desktop/tablet/mobile per design breakpoints |
 | Real devices | Physical QA for device-specific features ([FW-S-17](FORGE-WORDPRESS-REAL-DEVICE-QA-STANDARD-v1.md)) |

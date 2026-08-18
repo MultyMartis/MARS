@@ -17,6 +17,7 @@ This blueprint is the answer to: *we are starting a new WordPress site — what 
 |------------|-------|--------|
 | Proper i18n (text domain, gettext, POT, project locale) | A | [I18N-STANDARD](FORGE-WORDPRESS-I18N-STANDARD-v1.md) |
 | Content-model registry (Page / Post / CPT / options) | A | [CONTENT-MODEL-CPT](FORGE-WORDPRESS-CONTENT-MODEL-CPT-STANDARD-v1.md) |
+| **CMS / editable architecture design (P1b pack)** | A | [CMS-ARCHITECTURE](FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md) |
 | Site Settings SoT | A | [SITE-SETTINGS-STANDARD](FORGE-WORDPRESS-SITE-SETTINGS-STANDARD-v1.md) |
 | System Dashboard widget (not global notices) | A | [ADMIN-UX](FORGE-WORDPRESS-ADMIN-UX-STANDARD-v1.md) |
 | SEO meta owner (one) | A | [SEO-AND-SITEMAP](FORGE-WORDPRESS-SEO-AND-SITEMAP-STANDARD-v1.md) |
@@ -48,6 +49,21 @@ Map to existing FWP-01–12 where useful. Production reality after FP-0002 adds 
 **Gate:** CONTENT-MODEL signed. No “we will just use Pages and see”.  
 **FP-0002:** specialists started as child Pages → CPT (P11). Do this decision in P1.
 
+### P1b CMS / Editable Architecture Design
+
+**Formal pre-frontend phase.** Frontend WordPress implementation must not begin with unresolved content ownership.
+
+**Do:** Run the [DESIGN-TO-CMS workflow](FORGE-WORDPRESS-DESIGN-TO-CMS-WORKFLOW-v1.md). Produce the CMS pack:
+
+- entity map · storage map · relationship map · Site Settings map · page field/editability map  
+- reusable component data contracts · Admin IA · editor workflow plan  
+- URL ownership · SEO ownership · migration assumptions  
+
+Use templates listed in [CMS ARCHITECTURE §18](FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md). Apply [REPEATER VS ENTITY](FORGE-WORDPRESS-REPEATER-VS-ENTITY-DECISION-MATRIX-v1.md). One owner per business value.
+
+**Gate:** P1b pack signed (tabletop editor review at minimum). ACF groups are **not** started until entities/ownership are named.  
+**Stop if:** dual owners for one value; 12 same-class cards with no CPT/repeater decision; internal CTAs planned as absolute URLs.
+
 ### P2 Admin model
 
 **Do:** Site Settings IA; CPT list columns; hide junk metaboxes; i18n strings; Dashboard widget stub; dangerous screens Admin-only.  
@@ -55,8 +71,8 @@ Map to existing FWP-01–12 where useful. Production reality after FP-0002 adds 
 
 ### P3 Frontend architecture
 
-**Do:** theme vs functionality plugin (R-TF-01/02); template map; asset owners; one transform owner; native menus.  
-**Gate:** TEMPLATE-MAP + enqueue map.
+**Do:** theme vs functionality plugin (R-TF-01/02); template map; asset owners; one transform owner; native menus. Consume **P1b contracts** — do not invent field ownership in templates.  
+**Gate:** TEMPLATE-MAP + enqueue map + component contracts referenced.
 
 ### P4 Module selection
 
@@ -142,8 +158,9 @@ WPilot                → operational READ; writes only with separate charter
 ## 4. Required reading for a new site
 
 1. This blueprint  
-2. [NEW-SITE-STARTER-CHECKLIST](../templates/FORGE-WORDPRESS-NEW-SITE-STARTER-CHECKLIST-v1.md)  
-3. [ANTI-PATTERN-REGISTRY](FORGE-WORDPRESS-ANTI-PATTERN-REGISTRY-v1.md)  
-4. [DEFINITION-OF-DONE](FORGE-WORDPRESS-DEFINITION-OF-DONE-v1.md)
+2. [CMS-ARCHITECTURE](FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md) (P1b)  
+3. [NEW-SITE-STARTER-CHECKLIST](../templates/FORGE-WORDPRESS-NEW-SITE-STARTER-CHECKLIST-v1.md)  
+4. [ANTI-PATTERN-REGISTRY](FORGE-WORDPRESS-ANTI-PATTERN-REGISTRY-v1.md) · [CMS-ANTI-PATTERNS](FORGE-WORDPRESS-CMS-ANTI-PATTERNS-v1.md)  
+5. [DEFINITION-OF-DONE](FORGE-WORDPRESS-DEFINITION-OF-DONE-v1.md)
 
-*Blueprint v1 — FP-0002 production lessons integrated. Second-case validation still required for optional modules marked J.*
+*Blueprint v1.1 — FP-0002 production lessons integrated; P1b CMS/editable architecture is a formal pre-frontend phase. Second-case validation still required for optional modules marked J.*
