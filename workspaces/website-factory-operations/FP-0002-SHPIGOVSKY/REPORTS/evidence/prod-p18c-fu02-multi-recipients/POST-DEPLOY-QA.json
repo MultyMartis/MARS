@@ -1,0 +1,213 @@
+{
+  "exit": 0,
+  "stderr": "",
+  "data": {
+    "ok": true,
+    "core": "0.3.14-p18c-fu02",
+    "case1": {
+      "count": 1,
+      "first_email": "client.leads@polygon-ws.ru",
+      "first_label": "MetaCODE",
+      "loads_in_html": true,
+      "password_configured": true
+    },
+    "case2": {
+      "add_button": true,
+      "remove_button": true,
+      "data_hook": true,
+      "template_token": true,
+      "js_handle_hint": true,
+      "initial_rows": 2
+    },
+    "case3": {
+      "save_ok": true,
+      "count": 2,
+      "has_original": true,
+      "has_qa": true,
+      "reload_original": true,
+      "reload_qa": true,
+      "password_configured": true,
+      "smtp_fingerprint_unchanged": true
+    },
+    "case4": {
+      "save_ok": true,
+      "count": 1,
+      "recipients": [
+        {
+          "email": "client.leads@polygon-ws.ru",
+          "label": "MetaCODE"
+        }
+      ],
+      "original_preserved": true,
+      "qa_removed": true,
+      "reload_original": true,
+      "reload_qa_absent": true,
+      "password_configured": true,
+      "smtp_fingerprint_unchanged": true
+    },
+    "case5": {
+      "password_configured_throughout": true,
+      "start": "YES",
+      "after_add": "YES",
+      "after_remove": "YES",
+      "final": "YES",
+      "smtp_fingerprint_final": {
+        "smtp_enabled": 1,
+        "smtp_host": "smtp.beget.com",
+        "smtp_port": 465,
+        "smtp_encryption": "none",
+        "smtp_auth": 1,
+        "smtp_username": "noreply@shpigovsky.ru",
+        "smtp_from_email": "noreply@shpigovsky.ru",
+        "smtp_from_name": "Шпиговский дом",
+        "form_metrika_goal": "",
+        "lead_retention_days": 0,
+        "verified": 0,
+        "delivery_active": 0
+      },
+      "smtp_fingerprint_match": true
+    },
+    "validation": {
+      "dedupe_ok": true,
+      "blank_dropped": true,
+      "invalid_rejected": true,
+      "invalid_preserves": true,
+      "password_after_validation": true
+    },
+    "page": {
+      "add_button": true,
+      "remove_button": true,
+      "password_empty": true,
+      "mail_contains_secret": false,
+      "dash_verification_required": true,
+      "dash_has_recipient_count": true,
+      "dash_exposes_business_email": false
+    },
+    "runtime": {
+      "smtp_state": "configured_not_verified",
+      "smtp_label": "CONFIGURED / NOT VERIFIED",
+      "is_complete": true,
+      "password_configured": "YES",
+      "should_suppress": true,
+      "pre_wp_mail": true,
+      "blog_public": 0,
+      "recipient_count": 1,
+      "dashboard_mail_line": "SMTP CONFIGURED — VERIFICATION REQUIRED"
+    },
+    "form": {
+      "submit": {
+        "raw": "{\"ok\":true,\"success\":true,\"message\":\"\\u0417\\u0430\\u044f\\u0432\\u043a\\u0430 \\u043f\\u0440\\u0438\\u043d\\u044f\\u0442\\u0430. \\u041c\\u044b \\u0441\\u0432\\u044f\\u0436\\u0435\\u043c\\u0441\\u044f \\u0441 \\u0432\\u0430\\u043c\\u0438 \\u043f\\u043e \\u0443\\u043a\\u0430\\u0437\\u0430\\u043d\\u043d\\u043e\\u043c\\u0443 \\u0442\\u0435\\u043b\\u0435\\u0444\\u043e\\u043d\\u0443.\",\"accepted\":true,\"mail_attempted\":false,\"mail_accepted\":false,\"mail_status\":\"SMTP_PENDING\",\"form_key\":\"consultation\",\"metrika_goal\":\"\",\"metrika_counter\":\"\",\"metrika_event\":\"form_submission_accepted\"}",
+        "json": {
+          "ok": true,
+          "success": true,
+          "message": "Заявка принята. Мы свяжемся с вами по указанному телефону.",
+          "accepted": true,
+          "mail_attempted": false,
+          "mail_accepted": false,
+          "mail_status": "SMTP_PENDING",
+          "form_key": "consultation",
+          "metrika_goal": "",
+          "metrika_counter": "",
+          "metrika_event": "form_submission_accepted"
+        },
+        "err": null
+      },
+      "qa_before_delete": [
+        {
+          "id": "6",
+          "delivery_status": "SMTP_PENDING",
+          "is_qa": "1"
+        }
+      ],
+      "deleted": 1,
+      "qa_left": 0
+    },
+    "activity": {
+      "rows": [
+        {
+          "user_id": "3",
+          "action": "form_recipients_updated",
+          "object_title": "Получатели форм: 2",
+          "created_at": "2026-08-19 00:07:38"
+        },
+        {
+          "user_id": "3",
+          "action": "smtp_config_updated",
+          "object_title": "Почта и формы: настройки сохранены",
+          "created_at": "2026-08-19 00:07:38"
+        },
+        {
+          "user_id": "3",
+          "action": "form_recipients_updated",
+          "object_title": "Получатели форм: 2",
+          "created_at": "2026-08-19 00:06:35"
+        },
+        {
+          "user_id": "3",
+          "action": "smtp_config_updated",
+          "object_title": "Почта и формы: настройки сохранены",
+          "created_at": "2026-08-19 00:06:35"
+        },
+        {
+          "user_id": "3",
+          "action": "form_recipients_updated",
+          "object_title": "Получатели форм: 2",
+          "created_at": "2026-08-19 00:04:16"
+        },
+        {
+          "user_id": "3",
+          "action": "smtp_config_updated",
+          "object_title": "Почта и формы: настройки сохранены",
+          "created_at": "2026-08-19 00:04:16"
+        }
+      ],
+      "contains_email": false
+    },
+    "final_recipients": [
+      {
+        "email": "client.leads@polygon-ws.ru",
+        "label": "MetaCODE"
+      }
+    ],
+    "meta": {
+      "baseline_id": "FP-0002-PROD-BASELINE-2026-08-19-P18C-FU02",
+      "latest_wave": "P18C-FU02 Multiple recipients",
+      "parity": "MATCH",
+      "verified_at": "2026-08-18 21:07 UTC",
+      "backup": "FRESH BEGET BACKUP CONFIRMED BY OPERATOR",
+      "git_sha": "16706398f03825b054ce75c56e8af48ec4349329",
+      "wave": "PROD-P15",
+      "state_note": "LIVE https://shpigovsky.ru; INDEXING CLOSED; SMTP CONFIGURED — VERIFICATION REQUIRED; MAIL SUPPRESSED; MULTI-RECIPIENT ADMIN UX",
+      "legacy_redirects": "7/7",
+      "cutover": "DONE",
+      "ssl": "ACTIVE",
+      "dns_ns": "DONE / Beget",
+      "smtp_sender": "noreply@shpigovsky.ru",
+      "indexing": "CLOSED — WAITING FOR OLYA APPROVAL",
+      "public_origin": "ПУБЛИЧНЫЙ https://shpigovsky.ru/ СЕЙЧАС ОТДАЁТ СТАРЫЙ САЙТ (Craftum) — привязка к WordPress ещё нужна",
+      "mail": "SMTP CONFIGURED — VERIFICATION REQUIRED",
+      "leads": "ACTIVE",
+      "metrika_form_goals": "CONFIGURABLE"
+    },
+    "ok_checks": {
+      "case1_load": true,
+      "add_button": true,
+      "remove_button": true,
+      "case3_save": true,
+      "case3_qa": true,
+      "case4_preserved": true,
+      "pw_throughout": true,
+      "smtp_fingerprint": true,
+      "dedupe": true,
+      "invalid": true,
+      "blog_public": true,
+      "lead_accepted": true,
+      "qa_cleaned": true,
+      "no_secret_html": true,
+      "no_dash_email": true,
+      "log_no_email": true,
+      "suppress": true,
+      "state": true
+    }
+  }
+}

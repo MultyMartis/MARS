@@ -352,6 +352,7 @@ final class ActivityLog implements ModuleInterface {
 			'indexing_opened'     => __( 'Индексация открыта', 'shpigovsky-core' ),
 			'indexing_closed'     => __( 'Индексация закрыта', 'shpigovsky-core' ),
 			'smtp_config_updated' => __( 'Почта: настройки сохранены', 'shpigovsky-core' ),
+			'form_recipients_updated' => __( 'Получатели форм обновлены', 'shpigovsky-core' ),
 			'smtp_test_ok'        => __( 'Проверка SMTP: успех', 'shpigovsky-core' ),
 			'smtp_test_fail'      => __( 'Проверка SMTP: ошибка', 'shpigovsky-core' ),
 			'smtp_activated'      => __( 'Почта: отправка включена', 'shpigovsky-core' ),

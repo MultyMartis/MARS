@@ -51,6 +51,7 @@ final class MailFormsSettings implements ModuleInterface {
 	 */
 	public static function register() {
 		add_action( 'admin_menu', array( __CLASS__, 'register_menu' ), 100 );
+		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'enqueue_assets' ) );
 		add_action( 'admin_post_' . self::SAVE_ACTION, array( __CLASS__, 'handle_save' ) );
 		add_action( 'admin_post_' . self::TEST_ACTION, array( __CLASS__, 'handle_test' ) );
 		add_action( 'admin_post_' . self::ACTIVATE_ACTION, array( __CLASS__, 'handle_activate' ) );
@@ -88,7 +89,7 @@ final class MailFormsSettings implements ModuleInterface {
 		$state_label = MailOps::state_label( $state );
 		$pw_set     = MailOps::password_is_configured();
 		$recipients = $cfg['recipients'];
-		if ( count( $recipients ) < 2 ) {
+		if ( empty( $recipients ) ) {
 			$recipients[] = array(
 				'email' => '',
 				'label' => '',
@@ -178,20 +179,26 @@ final class MailFormsSettings implements ModuleInterface {
 		echo '</table>';
 
 		echo '<h2>' . esc_html__( 'Получатели', 'shpigovsky-core' ) . '</h2>';
-		echo '<p class="description">' . esc_html__( 'Первый адрес — основной. Дополнительные строки — копия. Reply-To ставится на email посетителя только если он указал корректный адрес. Сейчас в форме консультации email необязателен.', 'shpigovsky-core' ) . '</p>';
+		echo '<p class="description">' . esc_html__( 'Первый адрес — основной. Дополнительные строки — копии той же заявки. Reply-To ставится на email посетителя только если он указал корректный адрес. Сейчас в форме консультации email необязателен.', 'shpigovsky-core' ) . '</p>';
 		if ( isset( $errors['recipients'] ) ) {
 			echo '<p class="notice notice-error">' . esc_html( $errors['recipients'] ) . '</p>';
 		}
-		echo '<table class="widefat striped" style="max-width:720px;"><thead><tr><th>' . esc_html__( 'Email', 'shpigovsky-core' ) . '</th><th>' . esc_html__( 'Подпись', 'shpigovsky-core' ) . '</th></tr></thead><tbody>';
+		echo '<div class="fp02-recipients" data-fp02-recipients data-fp02-max="' . esc_attr( (string) MailOps::MAX_RECIPIENTS ) . '">';
+		echo '<table class="widefat striped fp02-recipients__table"><thead><tr>';
+		echo '<th scope="col">' . esc_html__( 'Email', 'shpigovsky-core' ) . '</th>';
+		echo '<th scope="col">' . esc_html__( 'Подпись', 'shpigovsky-core' ) . '</th>';
+		echo '<th scope="col"><span class="screen-reader-text">' . esc_html__( 'Действия', 'shpigovsky-core' ) . '</span></th>';
+		echo '</tr></thead><tbody data-fp02-recipients-list>';
 		foreach ( $recipients as $i => $row ) {
-			printf(
-				'<tr><td><input type="email" class="regular-text" name="recipients[%1$d][email]" value="%2$s" /></td><td><input type="text" class="regular-text" name="recipients[%1$d][label]" value="%3$s" /></td></tr>',
-				(int) $i,
-				esc_attr( $row['email'] ),
-				esc_attr( $row['label'] )
-			);
+			self::render_recipient_row( (int) $i, (string) $row['email'], (string) $row['label'] );
 		}
 		echo '</tbody></table>';
+		echo '<p><button type="button" class="button" data-fp02-recipient-add>+ ' . esc_html__( 'Добавить получателя', 'shpigovsky-core' ) . '</button></p>';
+		echo '<template id="fp02-recipient-row-template">';
+		self::render_recipient_row( '__i__', '', '' );
+		echo '</template>';
+		echo '<p class="description">' . esc_html__( 'Не больше 20 получателей. Пустые строки при сохранении отбрасываются.', 'shpigovsky-core' ) . '</p>';
+		echo '</div>';
 
 		echo '<h2>' . esc_html__( 'Формы', 'shpigovsky-core' ) . '</h2>';
 		echo '<table class="form-table" role="presentation">';
@@ -426,6 +433,58 @@ final class MailFormsSettings implements ModuleInterface {
 		if ( 'POST' !== strtoupper( (string) ( $_SERVER['REQUEST_METHOD'] ?? '' ) ) ) {
 			wp_die( esc_html__( 'Только POST.', 'shpigovsky-core' ), 405 );
 		}
+	}
+
+	/**
+	 * Admin CSS/JS for the recipient repeater. Loaded only on this screen.
+	 *
+	 * @param string $hook Current admin hook.
+	 */
+	public static function enqueue_assets( $hook ) {
+		if ( ! current_user_can( self::CAPABILITY ) ) {
+			return;
+		}
+		$page = isset( $_GET['page'] ) ? sanitize_key( wp_unslash( $_GET['page'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( self::MENU_SLUG !== $page ) {
+			return;
+		}
+		wp_enqueue_style(
+			'fp02-mail-forms-admin',
+			SHPIGOVSKY_CORE_URI . 'assets/css/mail-forms-admin.css',
+			array(),
+			SHPIGOVSKY_CORE_VERSION
+		);
+		wp_enqueue_script(
+			'fp02-mail-forms-admin',
+			SHPIGOVSKY_CORE_URI . 'assets/js/mail-forms-admin.js',
+			array(),
+			SHPIGOVSKY_CORE_VERSION,
+			true
+		);
+	}
+
+	/**
+	 * One recipient row. $index may be the JS template token `__i__`.
+	 *
+	 * @param int|string $index Row index or placeholder.
+	 * @param string     $email Email.
+	 * @param string     $label Label.
+	 */
+	private static function render_recipient_row( $index, $email, $label ) {
+		$index_attr = is_int( $index ) ? (string) $index : (string) $index;
+		$email_id   = 'fp02-recipient-email-' . $index_attr;
+		$label_id   = 'fp02-recipient-label-' . $index_attr;
+		printf(
+			'<tr class="fp02-recipients__row" data-fp02-recipient-row><td><label class="screen-reader-text" for="%1$s">%2$s</label><input type="email" class="regular-text" id="%1$s" name="recipients[%3$s][email]" value="%4$s" autocomplete="off" /></td><td><label class="screen-reader-text" for="%5$s">%6$s</label><input type="text" class="regular-text" id="%5$s" name="recipients[%3$s][label]" value="%7$s" autocomplete="off" /></td><td><button type="button" class="button-link-delete" data-fp02-recipient-remove>%8$s</button></td></tr>',
+			esc_attr( $email_id ),
+			esc_html__( 'Email', 'shpigovsky-core' ),
+			esc_attr( $index_attr ),
+			esc_attr( $email ),
+			esc_attr( $label_id ),
+			esc_html__( 'Подпись', 'shpigovsky-core' ),
+			esc_attr( $label ),
+			esc_html__( 'Удалить', 'shpigovsky-core' )
+		);
 	}
 
 	/**

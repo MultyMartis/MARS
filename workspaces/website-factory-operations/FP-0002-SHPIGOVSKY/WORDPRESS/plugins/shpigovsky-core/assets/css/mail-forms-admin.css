@@ -1,0 +1,26 @@
+.fp02-recipients {
+	max-width: 860px;
+}
+
+.fp02-recipients__table {
+	margin: 0 0 12px;
+}
+
+.fp02-recipients__row td {
+	vertical-align: middle;
+}
+
+.fp02-recipients [data-fp02-recipient-remove] {
+	color: #b32d2e;
+	text-decoration: none;
+}
+
+.fp02-recipients [data-fp02-recipient-remove]:hover,
+.fp02-recipients [data-fp02-recipient-remove]:focus {
+	color: #8a2424;
+}
+
+.fp02-recipients [data-fp02-recipient-add]:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}

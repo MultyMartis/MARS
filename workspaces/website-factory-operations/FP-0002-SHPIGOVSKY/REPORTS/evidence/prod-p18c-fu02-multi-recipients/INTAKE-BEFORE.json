@@ -1,0 +1,155 @@
+{
+  "utc": "2026-08-18T20:57:17.817183+00:00",
+  "required": "CURRENT OPERATOR SMTP SETTINGS PRESERVED / RECIPIENT STORAGE OWNER IDENTIFIED",
+  "wp": {
+    "ok": true,
+    "wp": {
+      "core": "0.3.13-p18c-fu01",
+      "home": "https://shpigovsky.ru",
+      "siteurl": "https://shpigovsky.ru",
+      "blog_public": 0,
+      "blogname": "Шпиговский Дом"
+    },
+    "smtp_settings": {
+      "smtp_enabled": 1,
+      "smtp_host": "smtp.beget.com",
+      "smtp_port": 465,
+      "smtp_encryption": "none",
+      "smtp_auth": 1,
+      "smtp_username": "noreply@shpigovsky.ru",
+      "password_configured": "YES",
+      "smtp_from_email": "noreply@shpigovsky.ru",
+      "smtp_from_name": "Шпиговский дом",
+      "form_metrika_goal": "",
+      "lead_retention_days": 0,
+      "verified": 0,
+      "delivery_active": 0,
+      "last_test_status": ""
+    },
+    "runtime": {
+      "smtp_state": "configured_not_verified",
+      "smtp_label": "CONFIGURED / NOT VERIFIED",
+      "is_complete": true,
+      "should_suppress": true,
+      "pre_wp_mail": true,
+      "dashboard_mail_line": "SMTP CONFIGURED / NOT VERIFIED — подавление включено"
+    },
+    "recipient_storage": {
+      "owner_option": "fp02_mail_ops",
+      "auth_option": "fp02_mailbox_auth",
+      "owner_class": "Shpigovsky\\Core\\Mail\\MailOps",
+      "raw_recipients_type": "serialized_array_of_rows",
+      "raw_recipients": [
+        {
+          "email": "client.leads@polygon-ws.ru",
+          "label": "MetaCODE"
+        }
+      ],
+      "normalized_recipients": [
+        {
+          "email": "client.leads@polygon-ws.ru",
+          "label": "MetaCODE"
+        }
+      ],
+      "normalized_count": 1,
+      "recipient_emails": [
+        "client.leads@polygon-ws.ru"
+      ],
+      "auth_safe": {
+        "is_array": true,
+        "has_configured_key": true,
+        "configured_flag": 1,
+        "has_secret_key": true,
+        "secret_is_string": true,
+        "secret_nonempty": true,
+        "secret_len": 22
+      },
+      "raw_top_keys": [
+        "smtp_enabled",
+        "smtp_host",
+        "smtp_port",
+        "smtp_encryption",
+        "smtp_auth",
+        "smtp_username",
+        "smtp_from_email",
+        "smtp_from_name",
+        "recipients",
+        "reply_to_mode",
+        "form_metrika_goal",
+        "lead_logging",
+        "lead_retention_days",
+        "verified",
+        "verified_at",
+        "last_test_status",
+        "last_test_error_category",
+        "delivery_active"
+      ]
+    },
+    "admin_ui_before": {
+      "h1": true,
+      "recipients_heading": true,
+      "add_button": false,
+      "remove_button": false,
+      "password_empty": true,
+      "password_configured_label": true,
+      "row_count": 2,
+      "mail_bytes": 7196,
+      "state_configured_not_verified": true
+    }
+  },
+  "source_prod_hashes_before": {
+    "shpigovsky-core.php": {
+      "prod": "4525594A85B471D635274318073DD93582160110C11863AA55055161BF026810",
+      "source": "4525594A85B471D635274318073DD93582160110C11863AA55055161BF026810",
+      "match": true,
+      "prod_bytes": 1797
+    },
+    "src/Mail/MailOps.php": {
+      "prod": "F335243D5BB1EAC65E03F0AD9A8EF37C0BDC36691EBFABB989920D2FD5E813C7",
+      "source": "F335243D5BB1EAC65E03F0AD9A8EF37C0BDC36691EBFABB989920D2FD5E813C7",
+      "match": true,
+      "prod_bytes": 22220
+    },
+    "src/Mail/SmtpTransport.php": {
+      "prod": "B436E33FA6EAE7895C57363B5F75E770F0E8D974EA38E3AB0B92A54ADCEB96E2",
+      "source": "B436E33FA6EAE7895C57363B5F75E770F0E8D974EA38E3AB0B92A54ADCEB96E2",
+      "match": true,
+      "prod_bytes": 2303
+    },
+    "src/Admin/MailFormsSettings.php": {
+      "prod": "10B766F09CCBD33BAB336468130405AF6FD4DBDF46D4578D16C36AE935CD644E",
+      "source": "10B766F09CCBD33BAB336468130405AF6FD4DBDF46D4578D16C36AE935CD644E",
+      "match": true,
+      "prod_bytes": 24260
+    },
+    "src/Admin/SystemDashboard.php": {
+      "prod": "C76299E47C6DD40413C37A996AB4CBC3BF5C02075B5D0816A84082BE61833A8C",
+      "source": "C76299E47C6DD40413C37A996AB4CBC3BF5C02075B5D0816A84082BE61833A8C",
+      "match": true,
+      "prod_bytes": 11087
+    },
+    "src/Admin/LeadsAdmin.php": {
+      "prod": "E5FF935865DA5FA1B99B40439D5FA75F80B7AC215B76FCF25DF0132750238999",
+      "source": "E5FF935865DA5FA1B99B40439D5FA75F80B7AC215B76FCF25DF0132750238999",
+      "match": true,
+      "prod_bytes": 13359
+    },
+    "src/Admin/ActivityLog.php": {
+      "prod": "F12D676B490902A7391E29A87D4008A439BD62729D42C4E3DAFE72126632944E",
+      "source": "F12D676B490902A7391E29A87D4008A439BD62729D42C4E3DAFE72126632944E",
+      "match": true,
+      "prod_bytes": 17155
+    },
+    "src/Forms/ConsultationHandler.php": {
+      "prod": "38762FD77A0F4A75D474F35CD3FC04CC025738736FF8EFC4B104ED05CE1A120C",
+      "source": "38762FD77A0F4A75D474F35CD3FC04CC025738736FF8EFC4B104ED05CE1A120C",
+      "match": true,
+      "prod_bytes": 24811
+    }
+  },
+  "notes": {
+    "password_never_printed": true,
+    "no_real_smtp_test": true,
+    "no_indexing_change": true
+  }
+}

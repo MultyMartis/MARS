@@ -1,0 +1,129 @@
+{
+  "utc": "2026-08-18T21:07:20Z",
+  "n": 8,
+  "match": 8,
+  "files": [
+    {
+      "rel": "shpigovsky-core.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/shpigovsky-core.php",
+      "src_sha": "2856428EB78C0F9690E5B49A72A53395E97A3F37F21F0CD34AD4F3E326274CF0",
+      "prod_before_sha": "2856428EB78C0F9690E5B49A72A53395E97A3F37F21F0CD34AD4F3E326274CF0",
+      "prod_existed": true,
+      "src_bytes": 1797,
+      "prod_after_sha": "2856428EB78C0F9690E5B49A72A53395E97A3F37F21F0CD34AD4F3E326274CF0",
+      "match": true
+    },
+    {
+      "rel": "src/Mail/MailOps.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Mail/MailOps.php",
+      "src_sha": "E0BDBE11A36099D32BE53BD407DE045B1B7BD610E7319DDA224A4273A8E82471",
+      "prod_before_sha": "E0BDBE11A36099D32BE53BD407DE045B1B7BD610E7319DDA224A4273A8E82471",
+      "prod_existed": true,
+      "src_bytes": 24670,
+      "prod_after_sha": "E0BDBE11A36099D32BE53BD407DE045B1B7BD610E7319DDA224A4273A8E82471",
+      "match": true
+    },
+    {
+      "rel": "src/Admin/MailFormsSettings.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Admin/MailFormsSettings.php",
+      "src_sha": "22CB998BD252C2B466A979D76559CF0E1FD668047CD2DB627B4F5F520DB8D07B",
+      "prod_before_sha": "22CB998BD252C2B466A979D76559CF0E1FD668047CD2DB627B4F5F520DB8D07B",
+      "prod_existed": true,
+      "src_bytes": 27125,
+      "prod_after_sha": "22CB998BD252C2B466A979D76559CF0E1FD668047CD2DB627B4F5F520DB8D07B",
+      "match": true
+    },
+    {
+      "rel": "src/Admin/SystemDashboard.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Admin/SystemDashboard.php",
+      "src_sha": "161B0FBF6D809BDC059AD4CA3D7914D186F8BA2471611067A1002E60DF58872F",
+      "prod_before_sha": "161B0FBF6D809BDC059AD4CA3D7914D186F8BA2471611067A1002E60DF58872F",
+      "prod_existed": true,
+      "src_bytes": 11098,
+      "prod_after_sha": "161B0FBF6D809BDC059AD4CA3D7914D186F8BA2471611067A1002E60DF58872F",
+      "match": true
+    },
+    {
+      "rel": "src/Admin/ActivityLog.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Admin/ActivityLog.php",
+      "src_sha": "E322E580E3327A7632368F35F4FD1E74F5FCFCE03E3D8C89DD234664AABA4FFC",
+      "prod_before_sha": "E322E580E3327A7632368F35F4FD1E74F5FCFCE03E3D8C89DD234664AABA4FFC",
+      "prod_existed": true,
+      "src_bytes": 17265,
+      "prod_after_sha": "E322E580E3327A7632368F35F4FD1E74F5FCFCE03E3D8C89DD234664AABA4FFC",
+      "match": true
+    },
+    {
+      "rel": "src/Forms/ConsultationHandler.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Forms/ConsultationHandler.php",
+      "src_sha": "930E5694DDC341E814895A679F791C19421416277225BD0F78FB3D99CAD5BB88",
+      "prod_before_sha": "930E5694DDC341E814895A679F791C19421416277225BD0F78FB3D99CAD5BB88",
+      "prod_existed": true,
+      "src_bytes": 24890,
+      "prod_after_sha": "930E5694DDC341E814895A679F791C19421416277225BD0F78FB3D99CAD5BB88",
+      "match": true
+    },
+    {
+      "rel": "assets/js/mail-forms-admin.js",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/assets/js/mail-forms-admin.js",
+      "src_sha": "CBCD1DDF0641AA4996D3407CD589CBA95D73E5D1CDE3AB940E6A749CAF5D6E3C",
+      "prod_before_sha": "CBCD1DDF0641AA4996D3407CD589CBA95D73E5D1CDE3AB940E6A749CAF5D6E3C",
+      "prod_existed": true,
+      "src_bytes": 1969,
+      "prod_after_sha": "CBCD1DDF0641AA4996D3407CD589CBA95D73E5D1CDE3AB940E6A749CAF5D6E3C",
+      "match": true
+    },
+    {
+      "rel": "assets/css/mail-forms-admin.css",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/assets/css/mail-forms-admin.css",
+      "src_sha": "17E3C0098BA2B48B34753C65894B9C091CCC3A4DBD756DA2DD8FD3B19AA1833F",
+      "prod_before_sha": "17E3C0098BA2B48B34753C65894B9C091CCC3A4DBD756DA2DD8FD3B19AA1833F",
+      "prod_existed": true,
+      "src_bytes": 482,
+      "prod_after_sha": "17E3C0098BA2B48B34753C65894B9C091CCC3A4DBD756DA2DD8FD3B19AA1833F",
+      "match": true
+    }
+  ],
+  "lint": [
+    {
+      "rel": "shpigovsky-core.php",
+      "code": 0,
+      "out": "No syntax errors detected in /tmp/fp02_fu02_shpigovsky-core.php\n"
+    },
+    {
+      "rel": "src/Mail/MailOps.php",
+      "code": 0,
+      "out": "No syntax errors detected in /tmp/fp02_fu02_src_Mail_MailOps.php\n"
+    },
+    {
+      "rel": "src/Admin/MailFormsSettings.php",
+      "code": 0,
+      "out": "No syntax errors detected in /tmp/fp02_fu02_src_Admin_MailFormsSettings.php\n"
+    },
+    {
+      "rel": "src/Admin/SystemDashboard.php",
+      "code": 0,
+      "out": "No syntax errors detected in /tmp/fp02_fu02_src_Admin_SystemDashboard.php\n"
+    },
+    {
+      "rel": "src/Admin/ActivityLog.php",
+      "code": 0,
+      "out": "No syntax errors detected in /tmp/fp02_fu02_src_Admin_ActivityLog.php\n"
+    },
+    {
+      "rel": "src/Forms/ConsultationHandler.php",
+      "code": 0,
+      "out": "No syntax errors detected in /tmp/fp02_fu02_src_Forms_ConsultationHandler.php\n"
+    },
+    {
+      "rel": "assets/js/mail-forms-admin.js",
+      "code": 0,
+      "out": "asset"
+    },
+    {
+      "rel": "assets/css/mail-forms-admin.css",
+      "code": 0,
+      "out": "asset"
+    }
+  ]
+}

@@ -42,6 +42,7 @@ final class MailOps implements ModuleInterface {
 	public const DEFAULT_FROM_EMAIL = 'noreply@shpigovsky.ru';
 	public const DEFAULT_FROM_NAME  = 'Шпиговский Дом';
 	public const FORM_KEY           = 'consultation';
+	public const MAX_RECIPIENTS     = 20;
 
 	/**
 	 * {@inheritdoc}
@@ -198,12 +199,28 @@ final class MailOps implements ModuleInterface {
 	 */
 	public static function recipient_emails() {
 		$emails = array();
+		$seen   = array();
 		foreach ( self::get_config()['recipients'] as $row ) {
-			if ( ! empty( $row['email'] ) && is_email( $row['email'] ) ) {
-				$emails[] = $row['email'];
+			if ( empty( $row['email'] ) || ! is_email( $row['email'] ) ) {
+				continue;
 			}
+			$key = strtolower( (string) $row['email'] );
+			if ( isset( $seen[ $key ] ) ) {
+				continue;
+			}
+			$seen[ $key ] = true;
+			$emails[]     = $row['email'];
 		}
-		return array_values( array_unique( $emails ) );
+		return array_values( $emails );
+	}
+
+	/**
+	 * Count of valid configured recipients. Never returns addresses.
+	 *
+	 * @return int
+	 */
+	public static function recipient_count() {
+		return count( self::recipient_emails() );
 	}
 
 	/**
@@ -288,7 +305,7 @@ final class MailOps implements ModuleInterface {
 			return __( 'SMTP SETTINGS READY — CREDENTIALS REQUIRED', 'shpigovsky-core' );
 		}
 		if ( self::STATE_CONFIGURED_NOT_VERIFIED === $state ) {
-			return __( 'SMTP CONFIGURED / NOT VERIFIED — подавление включено', 'shpigovsky-core' );
+			return __( 'SMTP CONFIGURED — VERIFICATION REQUIRED', 'shpigovsky-core' );
 		}
 		if ( self::STATE_VERIFIED_READY === $state ) {
 			return __( 'SMTP VERIFIED — отправка ещё не активирована', 'shpigovsky-core' );
@@ -371,27 +388,12 @@ final class MailOps implements ModuleInterface {
 		$new_pass = isset( $posted['smtp_password'] ) ? (string) $posted['smtp_password'] : '';
 		$clear    = ! empty( $posted['smtp_password_clear'] );
 
-		$recipients = array();
-		$raw_rows   = isset( $posted['recipients'] ) && is_array( $posted['recipients'] ) ? $posted['recipients'] : array();
-		foreach ( $raw_rows as $row ) {
-			if ( ! is_array( $row ) ) {
-				continue;
-			}
-			$email = isset( $row['email'] ) ? sanitize_email( (string) $row['email'] ) : '';
-			$label = isset( $row['label'] ) ? sanitize_text_field( (string) $row['label'] ) : '';
-			if ( '' === $email && '' === $label ) {
-				continue;
-			}
-			if ( '' !== $email && ! is_email( $email ) ) {
-				$errors['recipients'] = __( 'Проверьте адреса получателей.', 'shpigovsky-core' );
-				continue;
-			}
-			if ( is_email( $email ) ) {
-				$recipients[] = array(
-					'email' => $email,
-					'label' => $label,
-				);
-			}
+		$parsed = self::parse_posted_recipients(
+			isset( $posted['recipients'] ) && is_array( $posted['recipients'] ) ? $posted['recipients'] : array()
+		);
+		$recipients = $parsed['recipients'];
+		if ( $parsed['invalid'] ) {
+			$errors['recipients'] = __( 'Проверьте адреса получателей.', 'shpigovsky-core' );
 		}
 
 		if ( $enabled || '' !== $host ) {
@@ -466,6 +468,16 @@ final class MailOps implements ModuleInterface {
 				'smtp_config_updated',
 				'setting',
 				'Почта и формы: настройки сохранены',
+				0
+			);
+			ActivityLog::log_system_event(
+				'form_recipients_updated',
+				'setting',
+				sprintf(
+					/* translators: %d: recipient count */
+					__( 'Получатели форм: %d', 'shpigovsky-core' ),
+					count( $recipients )
+				),
 				0
 			);
 		}
@@ -604,32 +616,95 @@ final class MailOps implements ModuleInterface {
 	}
 
 	/**
+	 * Parse Admin POST recipient rows. Blank rows dropped. Invalid non-empty
+	 * emails flagged. Duplicates kept as first occurrence (case-insensitive).
+	 * SMTP secret is never read here.
+	 *
+	 * @param array<int|string, mixed> $raw_rows Posted rows.
+	 * @return array{recipients:array<int, array{email:string,label:string}>,invalid:bool}
+	 */
+	private static function parse_posted_recipients( array $raw_rows ) {
+		$recipients = array();
+		$seen       = array();
+		$invalid    = false;
+		foreach ( $raw_rows as $row ) {
+			if ( ! is_array( $row ) ) {
+				continue;
+			}
+			$email_raw = isset( $row['email'] ) ? (string) $row['email'] : ( isset( $row['recipient_email'] ) ? (string) $row['recipient_email'] : '' );
+			$label_raw = isset( $row['label'] ) ? (string) $row['label'] : ( isset( $row['recipient_label'] ) ? (string) $row['recipient_label'] : '' );
+			$email     = sanitize_email( trim( $email_raw ) );
+			$label     = sanitize_text_field( $label_raw );
+			if ( '' === $email && '' === $label ) {
+				continue;
+			}
+			if ( '' === $email || ! is_email( $email ) ) {
+				$invalid = true;
+				continue;
+			}
+			$key = strtolower( $email );
+			if ( isset( $seen[ $key ] ) ) {
+				continue;
+			}
+			$seen[ $key ]   = true;
+			$recipients[]   = array(
+				'email' => $email,
+				'label' => $label,
+			);
+			if ( count( $recipients ) >= self::MAX_RECIPIENTS ) {
+				break;
+			}
+		}
+		return array(
+			'recipients' => $recipients,
+			'invalid'    => $invalid,
+		);
+	}
+
+	/**
+	 * Idempotent recipient list normalizer. Current owner is option
+	 * `fp02_mail_ops` → `recipients` (array of email/label rows).
+	 *
 	 * @param mixed $rows Recipients.
 	 * @return array<int, array{email:string,label:string}>
 	 */
 	private static function normalize_recipients( $rows ) {
 		$out = array();
+		if ( is_string( $rows ) ) {
+			$rows = array( array( 'email' => $rows, 'label' => '' ) );
+		}
 		if ( ! is_array( $rows ) ) {
 			return $out;
 		}
+		if ( isset( $rows['email'] ) || isset( $rows['recipient_email'] ) ) {
+			$rows = array( $rows );
+		}
+		$seen = array();
 		foreach ( $rows as $row ) {
-			if ( is_string( $row ) && is_email( $row ) ) {
-				$out[] = array(
-					'email' => $row,
-					'label' => '',
-				);
+			$email = '';
+			$label = '';
+			if ( is_string( $row ) ) {
+				$email = sanitize_email( trim( $row ) );
+			} elseif ( is_array( $row ) ) {
+				$email_raw = isset( $row['email'] ) ? (string) $row['email'] : ( isset( $row['recipient_email'] ) ? (string) $row['recipient_email'] : '' );
+				$label_raw = isset( $row['label'] ) ? (string) $row['label'] : ( isset( $row['recipient_label'] ) ? (string) $row['recipient_label'] : '' );
+				$email     = sanitize_email( trim( $email_raw ) );
+				$label     = sanitize_text_field( $label_raw );
+			}
+			if ( ! is_email( $email ) ) {
 				continue;
 			}
-			if ( ! is_array( $row ) ) {
+			$key = strtolower( $email );
+			if ( isset( $seen[ $key ] ) ) {
 				continue;
 			}
-			$email = isset( $row['email'] ) ? sanitize_email( (string) $row['email'] ) : '';
-			$label = isset( $row['label'] ) ? sanitize_text_field( (string) $row['label'] ) : '';
-			if ( is_email( $email ) ) {
-				$out[] = array(
-					'email' => $email,
-					'label' => $label,
-				);
+			$seen[ $key ] = true;
+			$out[]        = array(
+				'email' => $email,
+				'label' => $label,
+			);
+			if ( count( $out ) >= self::MAX_RECIPIENTS ) {
+				break;
 			}
 		}
 		return $out;

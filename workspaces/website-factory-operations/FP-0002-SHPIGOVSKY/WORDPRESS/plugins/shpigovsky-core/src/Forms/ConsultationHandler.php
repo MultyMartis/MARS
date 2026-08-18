@@ -628,6 +628,7 @@ final class ConsultationHandler implements ModuleInterface {
 			);
 		}
 
+		// One lead already persisted. One wp_mail() with the full recipient array.
 		$to = MailOps::recipient_emails();
 		if ( empty( $to ) ) {
 			LeadRegistry::update_delivery(

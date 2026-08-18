@@ -27,12 +27,12 @@ final class SystemDashboard implements ModuleInterface {
 	/**
 	 * Baseline ID shown in the widget (updated by stabilization waves).
 	 */
-	const BASELINE_ID = 'FP-0002-PROD-BASELINE-2026-08-19-P18C-FU01';
+	const BASELINE_ID = 'FP-0002-PROD-BASELINE-2026-08-19-P18C-FU02';
 
 	/**
 	 * Latest accepted production wave label.
 	 */
-	const LATEST_ACCEPTED_WAVE = 'P18C-FU01 Admin menu exposure';
+	const LATEST_ACCEPTED_WAVE = 'P18C-FU02 Multiple recipients';
 
 	/**
 	 * {@inheritdoc}
@@ -179,6 +179,12 @@ final class SystemDashboard implements ModuleInterface {
 			$mail_line
 		);
 		self::row( __( 'SMTP отправитель', 'shpigovsky-core' ), $sender );
+		if ( class_exists( MailOps::class ) ) {
+			self::row(
+				__( 'Получатели', 'shpigovsky-core' ),
+				(string) MailOps::recipient_count()
+			);
+		}
 		self::row(
 			__( 'Журнал заявок', 'shpigovsky-core' ),
 			$leads_active ? __( 'ACTIVE', 'shpigovsky-core' ) : __( 'не активен', 'shpigovsky-core' )
@@ -203,14 +209,13 @@ final class SystemDashboard implements ModuleInterface {
 
 		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'Следующие шаги', 'shpigovsky-core' ) . '</h3>';
 		echo '<ul style="margin:0 0 12px 1.2em;">';
-		self::li( __( '1. Оператор вводит SMTP и получателей: Настройки сайта → Почта и формы', 'shpigovsky-core' ) );
-		self::li( __( '2. Сохранить. Не открывать индексацию.', 'shpigovsky-core' ) );
-		self::li( __( '3. Сообщить, что настройки сохранены — следующая волна проверит SMTP', 'shpigovsky-core' ) );
-		self::li( __( '4. После проверки SMTP — QA доставки форм', 'shpigovsky-core' ) );
-		self::li( __( '5. Привязка публичного https://shpigovsky.ru/ к WordPress, если ещё открывается старый сайт', 'shpigovsky-core' ) );
-		self::li( __( '6. Индексация — только после разрешения Оли', 'shpigovsky-core' ) );
-		self::li( __( '7. Отправка sitemap', 'shpigovsky-core' ) );
-		self::li( __( '8. Финальный обход', 'shpigovsky-core' ) );
+		self::li( __( '1. Настройки сайта → Почта и формы: добавить нужных получателей и сохранить', 'shpigovsky-core' ) );
+		self::li( __( '2. Не открывать индексацию', 'shpigovsky-core' ) );
+		self::li( __( '3. Следующая волна: проверка SMTP + QA доставки форм', 'shpigovsky-core' ) );
+		self::li( __( '4. Привязка публичного https://shpigovsky.ru/ к WordPress, если ещё открывается старый сайт', 'shpigovsky-core' ) );
+		self::li( __( '5. Индексация — только после разрешения Оли', 'shpigovsky-core' ) );
+		self::li( __( '6. Отправка sitemap', 'shpigovsky-core' ) );
+		self::li( __( '7. Финальный обход', 'shpigovsky-core' ) );
 		echo '</ul>';
 
 		if ( $is_beget && ( 'local' === $env_const || 'local' === $env_fn ) ) {

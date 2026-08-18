@@ -1,6 +1,6 @@
-# BASELINE — FP-0002 PRODUCTION POST-P13 (PROD-P14) + P15 ENVIRONMENT CLEAN + P16 TYPOGRAPHY + P17 PRE-CUTOVER CONT1 + P17-FU02 + P18A LIVE DOMAIN + P18B DASHBOARD/INDEXING + P18C SMTP/FORMS + P18C-FU01 ADMIN MENU
+# BASELINE — FP-0002 PRODUCTION POST-P13 (PROD-P14) + P15 ENVIRONMENT CLEAN + P16 TYPOGRAPHY + P17 PRE-CUTOVER CONT1 + P17-FU02 + P18A LIVE DOMAIN + P18B DASHBOARD/INDEXING + P18C SMTP/FORMS + P18C-FU01 ADMIN MENU + P18C-FU02 MULTI-RECIPIENTS
 
-**Baseline ID:** `FP-0002-PROD-BASELINE-2026-08-19-P18C-FU01`  
+**Baseline ID:** `FP-0002-PROD-BASELINE-2026-08-19-P18C-FU02`  
 **Established:** 2026-08-16/17 (UTC intake 2026-08-16T17:28Z)  
 **Wave:** PROD-P14 Stabilization  
 **P15 extension:** 2026-08-16/17 — environment/migration cleanup (same baseline ID; P14 backup remains rollback authority)  
@@ -9,7 +9,8 @@
 **P18A extension:** 2026-08-18 — operator live-domain cutover canonized; legal demo banner owner fixed  
 **P18B extension:** 2026-08-19 — MetaCODE Dashboard reality model + Admin indexing control; indexing remains CLOSED  
 **P18C extension:** 2026-08-19 — SMTP/forms Admin foundation; `fp02_form_leads`; suppression ON until verified+activate  
-**P18C-FU01 extension:** 2026-08-19 — SMTP/forms Admin page attached to the visible Site Settings parent; credentials still not entered
+**P18C-FU01 extension:** 2026-08-19 — SMTP/forms Admin page attached to the visible Site Settings parent  
+**P18C-FU02 extension:** 2026-08-19 — multi-recipient Add/Remove UX; operator SMTP stored; not verified
 
 ## Runtime
 
@@ -25,13 +26,13 @@
 | DB name (no secrets) | `shpigovsky_main` |
 | DB prefix | `fp02_` |
 | Theme | Shpigovsky `0.3.0-d7a-shell` |
-| shpigovsky-core | `0.3.13-p18c-fu01` |
+| shpigovsky-core | `0.3.14-p18c-fu02` |
 | WPilot | 0.3.2 · writes disabled · bridge active (read) |
 | siteurl/home | `https://shpigovsky.ru` |
 | blog_public | 0 |
 | WP_ENVIRONMENT_TYPE | **production** (P15) |
 | WP_DEBUG / DISPLAY / LOG | **false / false / false** (P15) |
-| Mail | PRE-CUTOVER suppression MU owned by `mail.ops` until VERIFIED/ACTIVE. Admin: Настройки сайта → Почта и формы (**visible** after P18C-FU01). Sender `noreply@shpigovsky.ru`. Password write-only in `fp02_mailbox_auth` (autoload false). Leads: `fp02_form_leads` schema v1. |
+| Mail | PRE-CUTOVER suppression MU owned by `mail.ops` until VERIFIED/ACTIVE. Admin: Настройки сайта → Почта и формы (multi-recipient Add/Remove after P18C-FU02). Sender `noreply@shpigovsky.ru`. Password write-only in `fp02_mailbox_auth` (autoload false; **CONFIGURED**). SMTP **CONFIGURED / NOT VERIFIED**. Leads: `fp02_form_leads` schema v1. |
 | Typography | ONE owner `typography.russian` — render-time HTML-aware; DB content mutations 0 |
 | Legal demo banner | `legal_demo_marker` explicit `0`/`1`; template does not hardcode DEMO |
 
@@ -67,15 +68,17 @@
 - P18A touched source files: **7/7 MATCH** (theme legal helper/template/`functions.php`; core + dashboard + FieldGroups + EditorRestrictions)
 - P18C touched source files: **14/14 MATCH** (core mail/leads/admin + MU + `v9-shell.js`)
 - P18C-FU01 touched source files: **4/4 MATCH** (MailFormsSettings + OptionsPage + Dashboard + core bootstrap)
+- P18C-FU02 touched source files: **8/8 MATCH** (MailOps + MailFormsSettings + Dashboard + ActivityLog + ConsultationHandler + core bootstrap + admin JS/CSS)
 
 ## Latest accepted wave
 
-**P18C-FU01 Admin menu exposure** — `Настройки сайта → Почта и формы` VISIBLE; credentials not entered; leads persist; indexing **CLOSED**; public apex still observed as Craftum.
+**P18C-FU02 Multiple recipients** — Add/Remove recipient UX; operator SMTP stored and **CONFIGURED / NOT VERIFIED**; suppression ON; indexing **CLOSED**; public apex still observed as Craftum.
 
 ## Backup
 
 | Field | Value |
 |-------|-------|
+| P18C-FU02 exact-file snapshots | `deployment-packs/fp-0002/prod-p18c-fu02-layer-b-pre/` |
 | P18C-FU01 exact-file snapshots | `deployment-packs/fp-0002/prod-p18c-fu01-layer-b-pre/` |
 | P18C operator Beget backup | **FRESH BEGET BACKUP CONFIRMED BY OPERATOR** (pre-wave) |
 | P18C exact-file snapshots | `deployment-packs/fp-0002/prod-p18c-layer-b-pre/` |
@@ -105,7 +108,7 @@
 
 ## Open tails
 
-See `REPORTS/OPEN-ITEMS-FP-0002-AFTER-P18C-FU01.md` — operator SMTP credentials → verification → forms/Metrika/leads delivery → public apex → WordPress → Olya indexing → sitemaps → crawl.
+See `REPORTS/OPEN-ITEMS-FP-0002-AFTER-P18C-FU02.md` — operator remaining recipients → SMTP verification → forms delivery → public apex → WordPress → Olya indexing → sitemaps → crawl.
 
 ## P18B status
 
