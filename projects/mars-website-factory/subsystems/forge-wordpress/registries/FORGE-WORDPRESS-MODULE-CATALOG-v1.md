@@ -11,7 +11,7 @@ Source (reference, not a shared package yet):
 `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/plugins/shpigovsky-core/`  
 Theme consumers: `.../WORDPRESS/theme/shpigovsky/`
 
-Extraction status: [backlog](../knowledge/FORGE-WORDPRESS-MODULE-EXTRACTION-BACKLOG-v1.md).
+Extraction status: [roadmap](../knowledge/FORGE-WORDPRESS-REUSABLE-CODE-EXTRACTION-ROADMAP-v1.md) (R1–R4). Short table: [backlog](../knowledge/FORGE-WORDPRESS-MODULE-EXTRACTION-BACKLOG-v1.md).
 
 ---
 

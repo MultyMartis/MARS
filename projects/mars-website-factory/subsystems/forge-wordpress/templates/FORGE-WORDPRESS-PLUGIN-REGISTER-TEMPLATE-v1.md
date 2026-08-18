@@ -40,6 +40,11 @@
 | SMTP | | ☐ |
 | Cache | | ☐ |
 | Forms | | ☐ |
+| Sitemap | | ☐ |
+| Schema | | ☐ |
+| Analytics injection | | ☐ |
+| Image optimization | | ☐ |
+| Redirects | | ☐ |
 
 ---
 

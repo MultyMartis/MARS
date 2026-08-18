@@ -55,6 +55,10 @@
 | Duplicate phones / ACF-first without entity map | G | [CMS-ANTI-PATTERNS](../standards/FORGE-WORDPRESS-CMS-ANTI-PATTERNS-v1.md) AP-CMS-001–015 |
 | Featured image as portrait SoT; empty ACF hidden; Local JSON in plugin | A / E | [ACF-FIELD-MODELING](../standards/FORGE-WORDPRESS-ACF-FIELD-MODELING-STANDARD-v1.md) · [EDITOR UX](../standards/FORGE-WORDPRESS-EDITOR-UX-STANDARD-v1.md) |
 | Decorative parallax / lifebuoy | J / I | [MODULE-CATALOG](../registries/FORGE-WORDPRESS-MODULE-CATALOG-v1.md) experimental |
+| Theme vs plugin vs MU not explicit; modules without retirement | G → A | [CODE-OWNERSHIP](../standards/FORGE-WORDPRESS-CODE-OWNERSHIP-BOUNDARIES-STANDARD-v1.md) · [MODULE-LIFECYCLE](../standards/FORGE-WORDPRESS-MODULE-LIFECYCLE-STANDARD-v1.md) |
+| Duplicate CSS/JS owners; stacked transforms | G / H | [CSS-COMPONENT](../standards/FORGE-WORDPRESS-CSS-COMPONENT-ARCHITECTURE-STANDARD-v1.md) · [FRONTEND-INTERACTION](../standards/FORGE-WORDPRESS-FRONTEND-INTERACTION-OWNERSHIP-STANDARD-v1.md) |
+| Plugin collisions; update-all; no client handoff | C | [PLUGIN-GOVERNANCE](../standards/FORGE-WORDPRESS-PLUGIN-GOVERNANCE-STANDARD-v1.md) · [UPDATE SOP](../runbooks/FORGE-WORDPRESS-PRODUCTION-UPDATE-SOP-v1.md) · [CONTENT-OPERATIONS](../standards/FORGE-WORDPRESS-CONTENT-OPERATIONS-STANDARD-v1.md) |
+| Site #2 starting from blank | A | [SECOND-SITE-BOOTSTRAP](../standards/FORGE-WORDPRESS-SECOND-SITE-BOOTSTRAP-v1.md) · [EXTRACTION-ROADMAP](FORGE-WORDPRESS-REUSABLE-CODE-EXTRACTION-ROADMAP-v1.md) |
 
 ---
 

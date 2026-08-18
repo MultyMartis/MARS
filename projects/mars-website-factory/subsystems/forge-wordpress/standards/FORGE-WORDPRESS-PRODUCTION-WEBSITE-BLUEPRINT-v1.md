@@ -28,6 +28,12 @@ This blueprint is the answer to: *we are starting a new WordPress site — what 
 | Environment classification | C | [ENVIRONMENT](../runbooks/FORGE-WORDPRESS-ENVIRONMENT-MIGRATION-STANDARD-v1.md) |
 | Deployment / rollback hooks (manifests, hashes) | C | [DEPLOY](../runbooks/FORGE-WORDPRESS-PRODUCTION-DEPLOYMENT-SOP-v1.md) |
 | Standard navigation (native menus) | A | [NAVIGATION](FORGE-WORDPRESS-NAVIGATION-STANDARD-v1.md) |
+| Theme vs functionality plugin vs MU | A | [CODE-OWNERSHIP](FORGE-WORDPRESS-CODE-OWNERSHIP-BOUNDARIES-STANDARD-v1.md) |
+| Design-system token architecture | A | [DESIGN-SYSTEM-FOUNDATION](FORGE-WORDPRESS-DESIGN-SYSTEM-FOUNDATION-v1.md) |
+| Component inventory + CSS/JS owners | A | [CSS-COMPONENT](FORGE-WORDPRESS-CSS-COMPONENT-ARCHITECTURE-STANDARD-v1.md) · [FRONTEND-INTERACTION](FORGE-WORDPRESS-FRONTEND-INTERACTION-OWNERSHIP-STANDARD-v1.md) |
+| Accessibility + reduced motion | A | [ACCESSIBILITY-BASELINE](FORGE-WORDPRESS-ACCESSIBILITY-BASELINE-v1.md) |
+| Plugin one-owner (SEO/cache/forms/sitemap) | A | [PLUGIN-GOVERNANCE](FORGE-WORDPRESS-PLUGIN-GOVERNANCE-STANDARD-v1.md) |
+| Second-site engineering shell | A | [SECOND-SITE-BOOTSTRAP](FORGE-WORDPRESS-SECOND-SITE-BOOTSTRAP-v1.md) |
 
 Optional (select in P4): Smart Search, staff CPT, reviews, social registry, Activity Log, DOCX, reading time, auto TOC, consultation forms, decorative parallax, extra analytics.
 
@@ -71,8 +77,8 @@ Use templates listed in [CMS ARCHITECTURE §18](FORGE-WORDPRESS-CMS-ARCHITECTURE
 
 ### P3 Frontend architecture
 
-**Do:** theme vs functionality plugin (R-TF-01/02); template map; asset owners; one transform owner; native menus. Consume **P1b contracts** — do not invent field ownership in templates.  
-**Gate:** TEMPLATE-MAP + enqueue map + component contracts referenced.
+**Do:** [CODE-OWNERSHIP](FORGE-WORDPRESS-CODE-OWNERSHIP-BOUNDARIES-STANDARD-v1.md) survival test; [SECOND-SITE-BOOTSTRAP](FORGE-WORDPRESS-SECOND-SITE-BOOTSTRAP-v1.md) shell if greenfield; template map; [DESIGN-SYSTEM-MAP](../templates/FORGE-WORDPRESS-DESIGN-SYSTEM-MAP-TEMPLATE-v1.md); [COMPONENT-INVENTORY](../templates/FORGE-WORDPRESS-COMPONENT-INVENTORY-TEMPLATE-v1.md); one transform owner; native menus. Consume **P1b contracts** — do not invent field ownership in templates.  
+**Gate:** TEMPLATE-MAP + enqueue map + component contracts referenced + inventory started.
 
 ### P4 Module selection
 
@@ -91,12 +97,12 @@ Use templates listed in [CMS ARCHITECTURE §18](FORGE-WORDPRESS-CMS-ARCHITECTURE
 
 ### P7 Responsive / real-device QA
 
-**Do:** Chrome/Firefox; Android Chrome; **physical iPhone Safari** for device-specific motion/scroll; trackpad if sliders.  
+**Do:** [REGRESSION-PACK](FORGE-WORDPRESS-REGRESSION-PACK-v1.md) risk matrix; [FRONTEND-ACCEPTANCE](FORGE-WORDPRESS-FRONTEND-ACCEPTANCE-STANDARD-v1.md) (not screenshot-only); Chrome/Firefox; Android Chrome; **physical iPhone Safari** for device-specific motion/scroll; trackpad if sliders.  
 **Gate:** [REAL-DEVICE-QA](FORGE-WORDPRESS-REAL-DEVICE-QA-STANDARD-v1.md). Emulation is not iOS PASS.
 
 ### P8 SEO / forms / analytics
 
-**Do:** meta + sitemap + forms handler; analytics fields empty-safe. SMTP **not** required locally if mail suppressed — but production sequencing is later.  
+**Do:** meta + sitemap + forms handler + [FORMS-UX](FORGE-WORDPRESS-FORMS-UX-STANDARD-v1.md); analytics fields empty-safe; [EXTERNAL-INTEGRATION](FORGE-WORDPRESS-EXTERNAL-INTEGRATION-OWNERSHIP-STANDARD-v1.md) cards. SMTP **not** required locally if mail suppressed — but production sequencing is later.  
 **Gate:** SEO owner unique; form nonce/CSRF; sitemap generates; indexing still closed on non-final hosts.
 
 ### P9 Production connection
@@ -126,7 +132,7 @@ Use templates listed in [CMS ARCHITECTURE §18](FORGE-WORDPRESS-CMS-ARCHITECTURE
 
 ### P14 Post-launch
 
-**Do:** SMTP → form delivery proof → robots/indexability → Webmaster/Search Console → sitemap submit → final crawl.  
+**Do:** SMTP → form delivery proof → robots/indexability → Webmaster/Search Console → sitemap submit → final crawl; client handoff pack; [POST-LAUNCH-MAINTENANCE](../runbooks/FORGE-WORDPRESS-POST-LAUNCH-MAINTENANCE-STANDARD-v1.md) cadence class; [EXPERIENCE-HARVEST-LOOP](../knowledge/FORGE-WORDPRESS-EXPERIENCE-HARVEST-LOOP-v1.md).  
 **Gate:** [DEFINITION-OF-DONE](FORGE-WORDPRESS-DEFINITION-OF-DONE-v1.md).
 
 ---
@@ -151,7 +157,7 @@ WPilot                → operational READ; writes only with separate charter
 
 - Copying medical IA, brand, or copy from FP-0002
 - Claiming AG-WP-001 is production-ready (still synthetic/read-only capability)
-- Shipping an extracted shared plugin in this knowledge wave (see extraction backlog)
+- Shipping an extracted shared plugin in this knowledge wave (see [extraction roadmap](../knowledge/FORGE-WORDPRESS-REUSABLE-CODE-EXTRACTION-ROADMAP-v1.md))
 
 ---
 
@@ -159,8 +165,10 @@ WPilot                → operational READ; writes only with separate charter
 
 1. This blueprint  
 2. [CMS-ARCHITECTURE](FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md) (P1b)  
-3. [NEW-SITE-STARTER-CHECKLIST](../templates/FORGE-WORDPRESS-NEW-SITE-STARTER-CHECKLIST-v1.md)  
-4. [ANTI-PATTERN-REGISTRY](FORGE-WORDPRESS-ANTI-PATTERN-REGISTRY-v1.md) · [CMS-ANTI-PATTERNS](FORGE-WORDPRESS-CMS-ANTI-PATTERNS-v1.md)  
-5. [DEFINITION-OF-DONE](FORGE-WORDPRESS-DEFINITION-OF-DONE-v1.md)
+3. [SECOND-SITE-BOOTSTRAP](FORGE-WORDPRESS-SECOND-SITE-BOOTSTRAP-v1.md)  
+4. [CODE-OWNERSHIP](FORGE-WORDPRESS-CODE-OWNERSHIP-BOUNDARIES-STANDARD-v1.md)  
+5. [NEW-SITE-STARTER-CHECKLIST](../templates/FORGE-WORDPRESS-NEW-SITE-STARTER-CHECKLIST-v1.md)  
+6. [ANTI-PATTERN-REGISTRY](FORGE-WORDPRESS-ANTI-PATTERN-REGISTRY-v1.md) · [CMS-ANTI-PATTERNS](FORGE-WORDPRESS-CMS-ANTI-PATTERNS-v1.md)  
+7. [DEFINITION-OF-DONE](FORGE-WORDPRESS-DEFINITION-OF-DONE-v1.md)
 
-*Blueprint v1.1 — FP-0002 production lessons integrated; P1b CMS/editable architecture is a formal pre-frontend phase. Second-case validation still required for optional modules marked J.*
+*Blueprint v1.2 — engineering/operations shell added. Second-case validation still required for optional modules marked J.*

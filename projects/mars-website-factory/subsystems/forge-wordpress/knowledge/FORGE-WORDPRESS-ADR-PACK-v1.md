@@ -98,12 +98,30 @@
 **Decision:** Default = structured templates. Flex only with a named layout registry.  
 **See:** CMS Architecture §5, §8
 
-## ADR-P16 — Editor workflow is an acceptance gate
+## ADR-P17 — Theme vs plugin survival test
 
-**Context:** Pixel-perfect frontend can hide an unusable CMS.  
-**Decision:** Simulate real editor tasks before calling CMS architecture done.  
-**See:** [EDITOR UX](../standards/FORGE-WORDPRESS-EDITOR-UX-STANDARD-v1.md) · AP-CMS-015
+**Context:** Templates “need” CPT/ACF/forms nearby.  
+**Decision:** If it must survive a theme change, it lives in the functionality plugin. MU is not a dump.  
+**See:** [CODE-OWNERSHIP](../standards/FORGE-WORDPRESS-CODE-OWNERSHIP-BOUNDARIES-STANDARD-v1.md)
+
+## ADR-P18 — One owner per interaction and transform
+
+**Context:** iOS compositor bugs from stacked transform/fixed/contain.  
+**Decision:** One JS/CSS owner per interaction; one composed transform owner; physical-device QA when relevant.  
+**See:** [FRONTEND-INTERACTION](../standards/FORGE-WORDPRESS-FRONTEND-INTERACTION-OWNERSHIP-STANDARD-v1.md)
+
+## ADR-P19 — Plugin one-owner collisions
+
+**Context:** Yoast + custom SEO + cache plugins silently duplicate output.  
+**Decision:** Explicit coexistence WAD or a single owner. Silent dual output is a BLOCKER.  
+**See:** [PLUGIN-GOVERNANCE](../standards/FORGE-WORDPRESS-PLUGIN-GOVERNANCE-STANDARD-v1.md) §5.2
+
+## ADR-P20 — Harvest after every production site
+
+**Context:** Lessons stay in project reports.  
+**Decision:** FWP-12 is the experience harvest loop into the canonical hub.  
+**See:** [EXPERIENCE-HARVEST-LOOP](FORGE-WORDPRESS-EXPERIENCE-HARVEST-LOOP-v1.md)
 
 ---
 
-*ADR pack v1.1. Historical FW-01 ADRs remain in [FORGE-WORDPRESS-ARCHITECTURAL-DECISIONS-v1.md](../FORGE-WORDPRESS-ARCHITECTURAL-DECISIONS-v1.md).*
+*ADR pack v1.2. Historical FW-01 ADRs remain in [FORGE-WORDPRESS-ARCHITECTURAL-DECISIONS-v1.md](../FORGE-WORDPRESS-ARCHITECTURAL-DECISIONS-v1.md).*

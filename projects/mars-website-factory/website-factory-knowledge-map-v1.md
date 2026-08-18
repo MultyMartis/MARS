@@ -63,7 +63,7 @@
 |--------|-------|
 | Operator quickstart | [frontend-operator-quickstart-v1.md](frontend-operator-quickstart-v1.md) |
 | Session router | [OPERATIONAL-INDEX.md](OPERATIONAL-INDEX.md) |
-| **WP Forge production brain (next WordPress site)** | [subsystems/forge-wordpress/knowledge/README.md](subsystems/forge-wordpress/knowledge/README.md) · [blueprint](subsystems/forge-wordpress/standards/FORGE-WORDPRESS-PRODUCTION-WEBSITE-BLUEPRINT-v1.md) · [CMS architecture](subsystems/forge-wordpress/standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md) |
+| **WP Forge production brain (next WordPress site)** | [subsystems/forge-wordpress/knowledge/README.md](subsystems/forge-wordpress/knowledge/README.md) · [blueprint](subsystems/forge-wordpress/standards/FORGE-WORDPRESS-PRODUCTION-WEBSITE-BLUEPRINT-v1.md) · [CMS architecture](subsystems/forge-wordpress/standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md) · [code ownership](subsystems/forge-wordpress/standards/FORGE-WORDPRESS-CODE-OWNERSHIP-BOUNDARIES-STANDARD-v1.md) · [second-site bootstrap](subsystems/forge-wordpress/standards/FORGE-WORDPRESS-SECOND-SITE-BOOTSTRAP-v1.md) |
 | FP-0002 → WP Forge assimilation | [subsystems/forge-wordpress/knowledge/FP-0002-KNOWLEDGE-ASSIMILATION-INDEX.md](subsystems/forge-wordpress/knowledge/FP-0002-KNOWLEDGE-ASSIMILATION-INDEX.md) |
 | FP-0002 frontend lessons (historical V8) | [operational-examples/WEBSITE-FACTORY-FP-0002-LESSONS-LEARNED-v1.md](operational-examples/WEBSITE-FACTORY-FP-0002-LESSONS-LEARNED-v1.md) |
 | Cross-layer artefact audit | [website-factory-cross-layer-artefact-registry-v1.md](website-factory-cross-layer-artefact-registry-v1.md) |

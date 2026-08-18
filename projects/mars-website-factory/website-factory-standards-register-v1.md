@@ -62,7 +62,7 @@ Website Factory **uses** research publications produced according to **ORCA-RS-0
 
 | Subsystem | Register |
 |-----------|----------|
-| Forge WordPress | [subsystems/forge-wordpress/registries/FORGE-WORDPRESS-CONTRACTS-AND-STANDARDS-REGISTER-v1.md](subsystems/forge-wordpress/registries/FORGE-WORDPRESS-CONTRACTS-AND-STANDARDS-REGISTER-v1.md) · **production brain** [knowledge/README.md](subsystems/forge-wordpress/knowledge/README.md) · **CMS architecture** [FW-S-22](subsystems/forge-wordpress/standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md) |
+| Forge WordPress | [subsystems/forge-wordpress/registries/FORGE-WORDPRESS-CONTRACTS-AND-STANDARDS-REGISTER-v1.md](subsystems/forge-wordpress/registries/FORGE-WORDPRESS-CONTRACTS-AND-STANDARDS-REGISTER-v1.md) · **production brain** [knowledge/README.md](subsystems/forge-wordpress/knowledge/README.md) · **CMS architecture** [FW-S-22](subsystems/forge-wordpress/standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md) · **engineering/ops** [FW-S-32](subsystems/forge-wordpress/standards/FORGE-WORDPRESS-CODE-OWNERSHIP-BOUNDARIES-STANDARD-v1.md) |
 
 ---
 

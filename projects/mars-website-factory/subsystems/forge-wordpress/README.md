@@ -8,7 +8,7 @@
 **Agent registration:** `AG-WP-001` registered as synthetic/read-only — **NOT PRODUCTION READY**  
 **project_id:** **NOT CREATED** (subsystem under `mars-website-factory`)
 
-**Next WordPress site:** [knowledge/README.md](knowledge/README.md) — FP-0002 production lessons assimilated. **Internal CMS / editable architecture:** [CMS-ARCHITECTURE-STANDARD](standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md) (P1b before frontend WP coding).
+**Next WordPress site:** [knowledge/README.md](knowledge/README.md) — FP-0002 production lessons assimilated. **Internal CMS / editable architecture:** [CMS-ARCHITECTURE-STANDARD](standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md) (P1b before frontend WP coding). **Engineering / second-site shell:** [CODE-OWNERSHIP](standards/FORGE-WORDPRESS-CODE-OWNERSHIP-BOUNDARIES-STANDARD-v1.md) · [SECOND-SITE-BOOTSTRAP](standards/FORGE-WORDPRESS-SECOND-SITE-BOOTSTRAP-v1.md).
 
 ---
 

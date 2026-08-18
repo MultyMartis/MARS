@@ -2,8 +2,8 @@
 
 **Document type:** Governance standard  
 **Version:** v1  
-**Date:** 2026-06-22  
-**Stage:** FW-02  
+**Date:** 2026-06-22 (v1.1 production addendum 2026-08-18)  
+**Stage:** FW-02 + FP-0002 production lessons  
 **Validation:** WV4
 
 **Artifact:** [FORGE-WORDPRESS-PLUGIN-REGISTER-TEMPLATE-v1.md](../templates/FORGE-WORDPRESS-PLUGIN-REGISTER-TEMPLATE-v1.md)
@@ -52,6 +52,11 @@ Mandatory plugin register per project. Prevents "install because faster" without
 | **migration** | Duplicator (dev only) |
 | **operational** | metacode-wpilot |
 | **development-only** | Query Monitor — not production |
+| **required-infrastructure** | ACF Pro, SMTP (one), host-required |
+| **project-functional** | `{project}-functionality` |
+| **editor-tool** | Classic Editor — only if Mode requires |
+| **temporary-migration** | Duplicator, search-replace CLI wrappers — **REMOVE BEFORE PRODUCTION** |
+| **avoid** | second SEO, second cache, page builder as primary (Mode A) |
 
 ---
 
@@ -76,6 +81,36 @@ Mandatory plugin register per project. Prevents "install because faster" without
 | No nulled/pirated plugins | **BLOCKER** |
 | Dev-only plugins not on production | Enforced in RELEASE-MANIFEST |
 | Page builders as primary | **prohibited** Mode A — legacy Mode C only |
+
+---
+
+## 5.1 Before installing a plugin (required questions)
+
+1. Can WordPress **core** already do it (menus, sitemap, privacy, application passwords)?  
+2. Does an existing **WP Forge module** already own it?  
+3. Will it **duplicate** SEO / cache / forms / sitemap / schema / analytics injection / image optimization?  
+4. Maintenance quality (updates, WP/PHP compatibility, abandoned)?  
+5. Security / update footprint?  
+6. Client editor impact (new menus, upsell nags, capability leaks)?
+
+If two answers are “yes, someone else owns this,” **do not install**.
+
+---
+
+## 5.2 One-owner collision table
+
+Silent duplicate output is a **BLOCKER**.
+
+| Concern | One owner | If Yoast / Rank Math / other exists |
+|---------|-----------|-------------------------------------|
+| SEO titles/descriptions | WP Forge SEO module **or** SEO plugin — not both writing `<title>` | WAD: plugin owns output; Forge fields disabled **or** opposite |
+| XML sitemap | native `wp_sitemaps_*` **or** SEO plugin sitemap — not both public | Disable one; 301 the other if needed |
+| Forms | Forge handler **or** CF7/Fluent — not two AJAX owners on one form | |
+| Redirects | one redirect plugin **or** server/Forge manifest | |
+| Cache / minify | [PERFORMANCE-BASELINE](FORGE-WORDPRESS-PERFORMANCE-BASELINE-v1.md) | |
+| Schema | one JSON-LD owner | |
+| Analytics injection | Site Settings empty-safe **or** GTM plugin — not both | |
+| Image optimization | one | |
 
 ---
 
@@ -106,8 +141,10 @@ WPilot plugin is **not** a substitute for project functionality plugin.
 ## Related documents
 
 - [FORGE-WORDPRESS-FUNCTIONALITY-PLUGIN-STANDARD-v1.md](FORGE-WORDPRESS-FUNCTIONALITY-PLUGIN-STANDARD-v1.md)
-- [standards/FORGE-WORDPRESS-CODING-AND-SECURITY-STANDARD-v1.md](FORGE-WORDPRESS-CODING-AND-SECURITY-STANDARD-v1.md)
+- [FORGE-WORDPRESS-CODE-OWNERSHIP-BOUNDARIES-STANDARD-v1.md](FORGE-WORDPRESS-CODE-OWNERSHIP-BOUNDARIES-STANDARD-v1.md)
+- [FORGE-WORDPRESS-PRODUCTION-UPDATE-SOP-v1.md](../runbooks/FORGE-WORDPRESS-PRODUCTION-UPDATE-SOP-v1.md)
+- [FORGE-WORDPRESS-CODING-AND-SECURITY-STANDARD-v1.md](FORGE-WORDPRESS-CODING-AND-SECURITY-STANDARD-v1.md)
 
 ---
 
-*Plugin governance standard v1 — register mandatory.*
+*Plugin governance standard v1.1 — register mandatory; one-owner collisions explicit.*

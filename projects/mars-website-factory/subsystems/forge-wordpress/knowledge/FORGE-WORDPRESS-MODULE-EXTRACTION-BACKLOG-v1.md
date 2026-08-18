@@ -3,6 +3,8 @@
 **Date:** 2026-08-18  
 **This wave:** knowledge only — **no** large refactor of FP-0002 code.
 
+**Operating list:** [REUSABLE-CODE-EXTRACTION-ROADMAP](FORGE-WORDPRESS-REUSABLE-CODE-EXTRACTION-ROADMAP-v1.md) (R1–R4). This file is the short historical table.
+
 Reuse classes: **A** ready with parameterization · **B** after extraction · **C** concept-only · **D** project-specific
 
 | Candidate | Class | Notes |

@@ -207,11 +207,55 @@ Each ID is reusable. Client facts are generalized.
 | Replacement | [GIT-SOP](../runbooks/FORGE-WORDPRESS-GIT-SOP-v1.md) |
 | Evidence | MARS rules; P14+ checkpoints |
 
+## AP-019 — Multiple CSS/JS owners for one component
+
+| | |
+|--|--|
+| Symptom | Two headers, two card skins, slider + scrollBy |
+| Cause | Page-local copies; hotfix files |
+| Risk | Regression; iOS compositor stacks |
+| Prevention | Component inventory; one interaction owner |
+| Replacement | [CSS-COMPONENT](FORGE-WORDPRESS-CSS-COMPONENT-ARCHITECTURE-STANDARD-v1.md) · [FRONTEND-INTERACTION](FORGE-WORDPRESS-FRONTEND-INTERACTION-OWNERSHIP-STANDARD-v1.md) |
+| Evidence | FP-0002 CSS extras; INC-03 |
+
+## AP-020 — MU-plugin as a feature dump
+
+| | |
+|--|--|
+| Symptom | CPT/forms/SEO in `mu-plugins` |
+| Cause | “It must always load” |
+| Risk | Undiscoverable; cannot disable safely |
+| Prevention | Survival test; MU only infrastructure-critical |
+| Replacement | [CODE-OWNERSHIP](FORGE-WORDPRESS-CODE-OWNERSHIP-BOUNDARIES-STANDARD-v1.md) |
+| Evidence | Mail suppress is the justified exception — with REMOVE WHEN |
+
+## AP-021 — Update all in production
+
+| | |
+|--|--|
+| Symptom | One-click plugin/core bundle update |
+| Cause | Convenience |
+| Risk | Unscoped breakage; no rollback evidence |
+| Prevention | Named updates + backup + smoke |
+| Replacement | [PRODUCTION-UPDATE-SOP](../runbooks/FORGE-WORDPRESS-PRODUCTION-UPDATE-SOP-v1.md) |
+| Evidence | Operating principle (not a single FP-0002 click) |
+
+## AP-022 — Temporary tool without REMOVE WHEN
+
+| | |
+|--|--|
+| Symptom | Importer/QA PHP still in webroot after the wave |
+| Cause | “We might need it” |
+| Risk | INC-04 class mutations |
+| Prevention | Temporary-tool register; retirement checklist |
+| Replacement | [MODULE-LIFECYCLE](FORGE-WORDPRESS-MODULE-LIFECYCLE-STANDARD-v1.md) |
+| Evidence | INC-04 |
+
 ---
 
 ## CMS modeling namespace (`AP-CMS-*`)
 
-Do **not** reuse AP-001–018 numbers. Full entries: [CMS-ANTI-PATTERNS](FORGE-WORDPRESS-CMS-ANTI-PATTERNS-v1.md).
+Do **not** reuse AP-001–022 numbers. Full entries: [CMS-ANTI-PATTERNS](FORGE-WORDPRESS-CMS-ANTI-PATTERNS-v1.md).
 
 | ID | Title | Related ops ID |
 |----|-------|----------------|
@@ -233,4 +277,4 @@ Do **not** reuse AP-001–018 numbers. Full entries: [CMS-ANTI-PATTERNS](FORGE-W
 
 ---
 
-*FW-S-21 v1.1 — 18 operational anti-patterns + AP-CMS-001–015 index. Add IDs; do not reuse numbers.*
+*FW-S-21 v1.2 — 22 operational anti-patterns + AP-CMS-001–015 index. Add IDs; do not reuse numbers.*

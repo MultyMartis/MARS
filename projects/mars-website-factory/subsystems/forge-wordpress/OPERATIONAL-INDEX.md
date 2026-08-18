@@ -4,7 +4,7 @@
 **Parent:** [MARS Website Factory](../../OPERATIONAL-INDEX.md)  
 **Lane:** B — Website Factory architecture and documentation
 
-**Production knowledge brain (2026-08-18):** FP-0002 is a **production reference case**. How to build the next WordPress site: [knowledge/README.md](knowledge/README.md) · [BLUEPRINT](standards/FORGE-WORDPRESS-PRODUCTION-WEBSITE-BLUEPRINT-v1.md) · [CMS ARCHITECTURE](standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md) · [starter checklist](templates/FORGE-WORDPRESS-NEW-SITE-STARTER-CHECKLIST-v1.md). This does **not** claim AG-WP-001 is production-ready and does **not** mutate live FP-0002.
+**Production knowledge brain (2026-08-18):** FP-0002 is a **production reference case**. How to build the next WordPress site: [knowledge/README.md](knowledge/README.md) · [BLUEPRINT](standards/FORGE-WORDPRESS-PRODUCTION-WEBSITE-BLUEPRINT-v1.md) · [CMS ARCHITECTURE](standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md) · [CODE OWNERSHIP](standards/FORGE-WORDPRESS-CODE-OWNERSHIP-BOUNDARIES-STANDARD-v1.md) · [SECOND-SITE BOOTSTRAP](standards/FORGE-WORDPRESS-SECOND-SITE-BOOTSTRAP-v1.md) · [starter checklist](templates/FORGE-WORDPRESS-NEW-SITE-STARTER-CHECKLIST-v1.md). This does **not** claim AG-WP-001 is production-ready and does **not** mutate live FP-0002.
 
 ---
 
@@ -69,6 +69,7 @@ Client pilot: FP-0002 V9-06D.6 template integration planning PASS; D.5 routes HT
 | **Architecture overview** | [FORGE-WORDPRESS-ARCHITECTURE-v1.md](FORGE-WORDPRESS-ARCHITECTURE-v1.md) |
 | **Production knowledge hub (next site)** | [knowledge/README.md](knowledge/README.md) |
 | **CMS / editable architecture (P1b)** | [standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md](standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md) |
+| **Engineering / design-system / ops pack** | [CODE-OWNERSHIP](standards/FORGE-WORDPRESS-CODE-OWNERSHIP-BOUNDARIES-STANDARD-v1.md) · [SECOND-SITE-BOOTSTRAP](standards/FORGE-WORDPRESS-SECOND-SITE-BOOTSTRAP-v1.md) · [gap map](knowledge/FP-0002-REMAINING-KNOWLEDGE-GAP-MAP.md) |
 | **Contracts register** | [registries/FORGE-WORDPRESS-CONTRACTS-AND-STANDARDS-REGISTER-v1.md](registries/FORGE-WORDPRESS-CONTRACTS-AND-STANDARDS-REGISTER-v1.md) |
 | **Tool registry** | [registries/FORGE-WORDPRESS-TOOL-REGISTRY-v1.md](registries/FORGE-WORDPRESS-TOOL-REGISTRY-v1.md) |
 | **AG-WP-001 operation registry** | [registries/FORGE-WORDPRESS-AG-WP-001-OPERATION-REGISTRY-v1.md](registries/FORGE-WORDPRESS-AG-WP-001-OPERATION-REGISTRY-v1.md) + [operations/ag-wp-001/operations-v1.json](operations/ag-wp-001/operations-v1.json) |
@@ -147,6 +148,7 @@ Client pilot: FP-0002 V9-06D.6 template integration planning PASS; D.5 routes HT
 | FW-S-08 | [standards/FORGE-WORDPRESS-VALIDATION-STANDARD-v1.md](standards/FORGE-WORDPRESS-VALIDATION-STANDARD-v1.md) |
 | FW-S-09+ | Production blueprint, CPT, settings, SEO, forms, typography, nav, sliders, real-device QA, i18n, DoD, hygiene, anti-patterns — see [register](registries/FORGE-WORDPRESS-CONTRACTS-AND-STANDARDS-REGISTER-v1.md) and [knowledge hub](knowledge/README.md) |
 | FW-S-22–31 | CMS / editable architecture pack — [CMS-ARCHITECTURE](standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md) |
+| FW-S-32–47 | Engineering / operations / design-system pack — [CODE-OWNERSHIP](standards/FORGE-WORDPRESS-CODE-OWNERSHIP-BOUNDARIES-STANDARD-v1.md) |
 
 ---
 
@@ -157,6 +159,7 @@ Client pilot: FP-0002 V9-06D.6 template integration planning PASS; D.5 routes HT
 | FW-02 templates (13) | [templates/](templates/) — FW-T-01–13 |
 | FW-03 templates (5) | FW-T-14–18 — mapping, impl spec, validation plan, lessons, tooling audit |
 | Production + CMS templates | FW-T-19 starter; FW-T-20–29 CMS architecture pack |
+| Engineering / ops templates | FW-T-30–35 — design-system map, component inventory, dependency register, client handoff, environment flags, temporary tools |
 
 ---
 
@@ -285,7 +288,7 @@ Proof receipt: [FP-0002-FW-07C-2C-FILESYSTEM-DELIVERY-PROOF-RECEIPT-v1.md](proje
 
 ---
 
-*Last updated: 2026-08-18 — FP-0002 production knowledge assimilated into WP Forge canonical brain. Historical FW-07C/V9-06 blocks retained as foundation evidence.*
+*Last updated: 2026-08-18 — FP-0002 production knowledge + CMS architecture + engineering/operations assimilation into WP Forge canonical brain. Historical FW-07C/V9-06 blocks retained as foundation evidence.*
 
 
 

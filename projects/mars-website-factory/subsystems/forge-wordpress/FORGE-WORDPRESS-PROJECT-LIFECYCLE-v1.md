@@ -205,8 +205,8 @@ FWP-12 Post-Handoff Learning
 | Field | Value |
 |-------|-------|
 | **Inputs** | Handoff outcome; WPilot feedback; pilot metrics |
-| **Actions** | Lessons learned; research register update; methodology patches |
-| **Outputs** | `LESSONS-LEARNED`; optional register entries |
+| **Actions** | Run [EXPERIENCE-HARVEST-LOOP](knowledge/FORGE-WORDPRESS-EXPERIENCE-HARVEST-LOOP-v1.md): incidents → patterns → anti-patterns → maturity → module candidates → blueprint |
+| **Outputs** | `LESSONS-LEARNED`; hub/standard updates — **not** a client feature wave |
 | **Gate** | None blocking — continuous improvement |
 | **Blockers** | N/A |
 | **Responsibility** | Human operator |

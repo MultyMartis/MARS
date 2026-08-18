@@ -18,7 +18,9 @@ A WP Forge site is **not done** because the frontend “looks ready”.
 | Frontend | Templates match approved design; empty Admin data does not show demo leftovers |
 | Responsive | Desktop/tablet/mobile per design breakpoints |
 | Real devices | Physical QA for device-specific features ([FW-S-17](FORGE-WORDPRESS-REAL-DEVICE-QA-STANDARD-v1.md)) |
-| Accessibility basics | One H1; keyboard nav; focus; form labels; `prefers-reduced-motion` |
+| Accessibility basics | [FW-S-37](FORGE-WORDPRESS-ACCESSIBILITY-BASELINE-v1.md) — not WCAG certification |
+| Frontend acceptance | [FW-S-46](FORGE-WORDPRESS-FRONTEND-ACCEPTANCE-STANDARD-v1.md) — not screenshot parity only |
+| Client editor workflows | [FW-S-43](FORGE-WORDPRESS-CONTENT-OPERATIONS-STANDARD-v1.md) — no programmer for normal content |
 | SEO | Title/description owner; canonical; no duplicate SEO plugins |
 | Sitemap | Native sitemap on **final** host after cutover |
 | Forms | Handler + nonce + anti-spam |
