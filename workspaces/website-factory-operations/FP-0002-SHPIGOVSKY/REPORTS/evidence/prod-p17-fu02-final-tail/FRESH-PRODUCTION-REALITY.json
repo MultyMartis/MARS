@@ -1,0 +1,2562 @@
+{
+  "utc": "2026-08-18T10:13:23.870587+00:00",
+  "token": "P17-FU02 CURRENT PRODUCTION REALITY VERIFIED",
+  "layer_b": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p17-fu02-layer-b-pre",
+  "snapshots": [
+    {
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/.htaccess",
+      "exists": true,
+      "bytes": 847,
+      "sha256": "ec8f06028d3ecde7442701ed09fce3aa107fc74a41434647e413f4a0088d9f38",
+      "local_snap": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p17-fu02-layer-b-pre\\htaccess"
+    },
+    {
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-config.php",
+      "exists": true,
+      "bytes": 3333,
+      "sha256": "ea9a7c5b7b7221a9a668d469d921e2ff8cae26607ab59520ac47deed0819c3e5"
+    },
+    {
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/robots.txt",
+      "exists": true,
+      "bytes": 80,
+      "sha256": "2492f7f1451552b8cbf1151fd87c6bccaf21580e5686459d7afebb5b5a9d66a5",
+      "local_snap": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p17-fu02-layer-b-pre\\robots.txt"
+    },
+    {
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/mu-plugins/fp02-pre-cutover-mail-suppression.php",
+      "exists": true,
+      "bytes": 876,
+      "sha256": "f2ba7afcec153739fac7aee154da63a67a269f9e698852f7430904ae4941a004",
+      "local_snap": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p17-fu02-layer-b-pre\\mu__fp02-pre-cutover-mail-suppression.php"
+    },
+    {
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/shpigovsky-core.php",
+      "exists": true,
+      "bytes": 1783,
+      "sha256": "b64af07b402ec3fbf0d63104c7f1ef7cb88292b48b4c461bc1f292ec11736e13",
+      "local_snap": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p17-fu02-layer-b-pre\\plugin__shpigovsky-core.php"
+    },
+    {
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Admin/SystemDashboard.php",
+      "exists": true,
+      "bytes": 9124,
+      "sha256": "0074a6d793846ac585ba647f5dfee9fbc365d551042940a13600d1467660f8e2",
+      "local_snap": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p17-fu02-layer-b-pre\\plugin__SystemDashboard.php"
+    },
+    {
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Forms/ConsultationHandler.php",
+      "exists": true,
+      "bytes": 18847,
+      "sha256": "c9617766b703eb6f79cd078c4eee076d3bd7aeb1caa81c333abee57d79606e25",
+      "local_snap": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p17-fu02-layer-b-pre\\plugin__ConsultationHandler.php"
+    }
+  ],
+  "wp_config_sha256": "ea9a7c5b7b7221a9a668d469d921e2ff8cae26607ab59520ac47deed0819c3e5",
+  "wp_config_excerpt_no_secrets": {
+    "WP_ENVIRONMENT_TYPE": "'production'",
+    "WP_DEBUG": "false",
+    "WP_DEBUG_DISPLAY": "false",
+    "WP_DEBUG_LOG": "false",
+    "SCRIPT_DEBUG": "false",
+    "DISALLOW_FILE_EDIT": "true",
+    "WP_HOME": null,
+    "WP_SITEURL": null
+  },
+  "focus": [
+    {
+      "kind": "mu",
+      "rel": "fp02-pre-cutover-mail-suppression.php",
+      "prod_sha256": "f2ba7afcec153739fac7aee154da63a67a269f9e698852f7430904ae4941a004",
+      "local_sha256": "f2ba7afcec153739fac7aee154da63a67a269f9e698852f7430904ae4941a004",
+      "match": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "shpigovsky-core.php",
+      "prod_sha256": "b64af07b402ec3fbf0d63104c7f1ef7cb88292b48b4c461bc1f292ec11736e13",
+      "local_sha256": "b64af07b402ec3fbf0d63104c7f1ef7cb88292b48b4c461bc1f292ec11736e13",
+      "match": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Admin/SystemDashboard.php",
+      "prod_sha256": "0074a6d793846ac585ba647f5dfee9fbc365d551042940a13600d1467660f8e2",
+      "local_sha256": "0074a6d793846ac585ba647f5dfee9fbc365d551042940a13600d1467660f8e2",
+      "match": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Forms/ConsultationHandler.php",
+      "prod_sha256": "c9617766b703eb6f79cd078c4eee076d3bd7aeb1caa81c333abee57d79606e25",
+      "local_sha256": "c9617766b703eb6f79cd078c4eee076d3bd7aeb1caa81c333abee57d79606e25",
+      "match": true
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Admin/ActivityLog.php",
+      "prod_sha256": "44cc3447b26f4eb270525e034affb0bb7e92fc0f83ee94eb9265de63a24be3e6",
+      "local_sha256": "44cc3447b26f4eb270525e034affb0bb7e92fc0f83ee94eb9265de63a24be3e6",
+      "match": true
+    },
+    {
+      "kind": "theme",
+      "rel": "functions.php",
+      "prod_sha256": "65466663a6a1f585bd481795362d6f2190e85bc3882d649fbac51d815b7a01b0",
+      "local_sha256": "65466663a6a1f585bd481795362d6f2190e85bc3882d649fbac51d815b7a01b0",
+      "match": true
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/seo-integrations.php",
+      "prod_sha256": "038f8895977fd7ff866d128818ca21f92bdffa54ac6b1f2b2c2cec11b906a98d",
+      "local_sha256": "038f8895977fd7ff866d128818ca21f92bdffa54ac6b1f2b2c2cec11b906a98d",
+      "match": true
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/sitemap-helpers.php",
+      "prod_sha256": "999463a2d1d3b373ac3eb2af36137d88040bfc5e32f38315f39979bcbb27f60d",
+      "local_sha256": "999463a2d1d3b373ac3eb2af36137d88040bfc5e32f38315f39979bcbb27f60d",
+      "match": true
+    },
+    {
+      "kind": "theme",
+      "rel": "inc/seo-entity-meta.php",
+      "prod_sha256": "2174cd86a8740812724db34931a06b2d4a35c21eefcd4a0d5e3cfa77adba7670",
+      "local_sha256": "2174cd86a8740812724db34931a06b2d4a35c21eefcd4a0d5e3cfa77adba7670",
+      "match": true
+    },
+    {
+      "kind": "theme",
+      "rel": "style.css",
+      "prod_sha256": "82a31308ce46c143528518f1036437a28e93f14d42e2c89ad22f0bf97037750e",
+      "local_sha256": "82a31308ce46c143528518f1036437a28e93f14d42e2c89ad22f0bf97037750e",
+      "match": true
+    }
+  ],
+  "trees": {
+    "theme": {
+      "kind": "theme",
+      "match_count": 191,
+      "prod_drift_count": 1,
+      "local_only_count": 0,
+      "prod_only_count": 0,
+      "prod_drift": [
+        {
+          "rel": "template-parts/generic/content-page.php",
+          "local_sha256": "176cfa3d05c16aa6f892c26d8deddaee8600dddfd55baeecb19345ed046df916",
+          "prod_sha256": "37aaac70af8113e182b159fb98704240a4ec35241cc93ecceda3f9bcfee6d108",
+          "local_bytes": 4978,
+          "prod_bytes": 4837
+        }
+      ],
+      "local_only": [],
+      "prod_only": [],
+      "match_sample": [
+        "404.php",
+        "assets/css/admin-fp02-acf.css",
+        "assets/css/admin-home-acf.css",
+        "assets/css/foundation.css",
+        "assets/css/fp02-404.css",
+        "assets/css/fp02-floating-header.css",
+        "assets/css/fp02-lifebuoy-parallax.css",
+        "assets/css/fp02-mobile-slider-nav.css",
+        "assets/css/fp02-search.css",
+        "assets/css/fp02-specialist-profile.css",
+        "assets/css/service-child-services.css",
+        "assets/css/v9-style.css",
+        "assets/fonts/libertinus-serif/OFL.txt",
+        "assets/js/fp02-floating-header.js",
+        "assets/js/fp02-lifebuoy-parallax.js",
+        "assets/js/v9-shell.js",
+        "footer.php",
+        "front-page.php",
+        "functions.php",
+        "header.php"
+      ]
+    },
+    "plugin": {
+      "kind": "plugin",
+      "match_count": 37,
+      "prod_drift_count": 0,
+      "local_only_count": 0,
+      "prod_only_count": 0,
+      "prod_drift": [],
+      "local_only": [],
+      "prod_only": [],
+      "match_sample": [
+        "inc/compat.php",
+        "index.php",
+        "languages/shpigovsky-core-en_US.mo",
+        "languages/shpigovsky-core-en_US.po",
+        "languages/shpigovsky-core-ru_RU.mo",
+        "languages/shpigovsky-core-ru_RU.po",
+        "languages/shpigovsky-core.pot",
+        "shpigovsky-core.php",
+        "src/Admin/ActivityLog.php",
+        "src/Admin/AdminMenuHygiene.php",
+        "src/Admin/DocxImporter.php",
+        "src/Admin/EditorRestrictions.php",
+        "src/Admin/OptionsPage.php",
+        "src/Admin/PermalinkSlugUX.php",
+        "src/Admin/ServiceDuplicate.php",
+        "src/Admin/ServiceLayoutGovernance.php",
+        "src/Admin/SystemDashboard.php",
+        "src/ContentTypes/Service.php",
+        "src/ContentTypes/Specialist.php",
+        "src/Contracts/ModuleInterface.php"
+      ]
+    },
+    "mu": {
+      "kind": "mu",
+      "match_count": 1,
+      "prod_drift_count": 0,
+      "local_only_count": 0,
+      "prod_only_count": 0,
+      "prod_drift": [],
+      "local_only": [],
+      "prod_only": [],
+      "match_sample": [
+        "fp02-pre-cutover-mail-suppression.php"
+      ]
+    }
+  },
+  "fs_scan": {
+    "targets": {
+      "mars-runtime": {
+        "path": "/home/s/shpigovsky/shpigovsky.ru/public_html/mars-runtime",
+        "exists": true,
+        "is_dir": true,
+        "is_link": false,
+        "files": [
+          {
+            "rel": "scripts/fp0002-access-encoding-wpilot-task.php",
+            "size": 10499,
+            "mode": "0o100700"
+          },
+          {
+            "rel": "scripts/validate-wpilot-readonly.ps1",
+            "size": 2769,
+            "mode": "0o100700"
+          },
+          {
+            "rel": "scripts/create-foundation-002a-checkpoint.ps1",
+            "size": 6129,
+            "mode": "0o100700"
+          },
+          {
+            "rel": "scripts/populate-fp-0002-pages.php",
+            "size": 4575,
+            "mode": "0o100700"
+          },
+          {
+            "rel": "scripts/reset-to-foundation.ps1",
+            "size": 1899,
+            "mode": "0o100700"
+          },
+          {
+            "rel": "scripts/backup-runtime.ps1",
+            "size": 2417,
+            "mode": "0o100700"
+          }
+        ],
+        "file_count": 6
+      },
+      "app": {
+        "path": "/home/s/shpigovsky/shpigovsky.ru/public_html/app",
+        "exists": true,
+        "is_dir": true,
+        "is_link": false,
+        "files": [
+          {
+            "rel": "public/wp-content/themes/shpigovsky/inc/site-chrome.php",
+            "size": 5350,
+            "mode": "0o100700"
+          },
+          {
+            "rel": "public/wp-content/themes/shpigovsky/template-parts/navigation/messenger-links.php",
+            "size": 1815,
+            "mode": "0o100700"
+          },
+          {
+            "rel": "public/wp-content/themes/shpigovsky/assets/css/v9-style.css",
+            "size": 565371,
+            "mode": "0o100700"
+          },
+          {
+            "rel": "public/wp-content/themes/shpigovsky/assets/fonts/inter/INTER-FONT-PROVENANCE.md",
+            "size": 1294,
+            "mode": "0o100700"
+          },
+          {
+            "rel": "public/wp-content/themes/shpigovsky/assets/fonts/inter/inter-300.woff2",
+            "size": 7812,
+            "mode": "0o100700"
+          },
+          {
+            "rel": "public/wp-content/themes/shpigovsky/assets/fonts/inter/inter-400.woff2",
+            "size": 7712,
+            "mode": "0o100700"
+          },
+          {
+            "rel": "public/wp-content/themes/shpigovsky/assets/fonts/inter/inter-500-latin.woff2",
+            "size": 24272,
+            "mode": "0o100700"
+          },
+          {
+            "rel": "public/wp-content/themes/shpigovsky/assets/fonts/inter/inter-300-latin.woff2",
+            "size": 23916,
+            "mode": "0o100700"
+          },
+          {
+            "rel": "public/wp-content/themes/shpigovsky/assets/fonts/inter/inter-400-latin.woff2",
+            "size": 23664,
+            "mode": "0o100700"
+          },
+          {
+            "rel": "public/wp-content/themes/shpigovsky/assets/fonts/inter/inter-500.woff2",
+            "size": 7900,
+            "mode": "0o100700"
+          }
+        ],
+        "file_count": 10
+      },
+      "_tmp-e47-fix04-val": {
+        "path": "/home/s/shpigovsky/shpigovsky.ru/public_html/_tmp-e47-fix04-val",
+        "exists": false,
+        "is_dir": false,
+        "is_link": false,
+        "files": []
+      }
+    },
+    "hygiene": [
+      {
+        "rel": "wp-content/debug.log",
+        "reasons": [
+          "risky_name"
+        ],
+        "size": 0
+      },
+      {
+        "rel": "wp-content/themes/shpigovsky/assets/video/sergey-shpigovsky-interview.mp4.BROKEN-MPEGTS.bak",
+        "reasons": [
+          "risky_ext"
+        ],
+        "size": 27328432
+      },
+      {
+        "rel": "wp-content/uploads/2026/07/sergey-shpigovsky-interview.mp4.BROKEN-MPEGTS.bak",
+        "reasons": [
+          "risky_ext"
+        ],
+        "size": 27328432
+      }
+    ],
+    "docroot_top": [
+      {
+        "name": ".htaccess",
+        "is_dir": false,
+        "is_link": false,
+        "mode": "0o100700",
+        "size": 847
+      },
+      {
+        "name": "acf-json",
+        "is_dir": true,
+        "is_link": false,
+        "mode": "0o40700",
+        "size": 4096
+      },
+      {
+        "name": "app",
+        "is_dir": true,
+        "is_link": false,
+        "mode": "0o40700",
+        "size": 4096
+      },
+      {
+        "name": "index.php",
+        "is_dir": false,
+        "is_link": false,
+        "mode": "0o100700",
+        "size": 405
+      },
+      {
+        "name": "license.txt",
+        "is_dir": false,
+        "is_link": false,
+        "mode": "0o100700",
+        "size": 19903
+      },
+      {
+        "name": "mars-runtime",
+        "is_dir": true,
+        "is_link": false,
+        "mode": "0o40700",
+        "size": 4096
+      },
+      {
+        "name": "readme.html",
+        "is_dir": false,
+        "is_link": false,
+        "mode": "0o100700",
+        "size": 7406
+      },
+      {
+        "name": "robots.txt",
+        "is_dir": false,
+        "is_link": false,
+        "mode": "0o100600",
+        "size": 80
+      },
+      {
+        "name": "wp-activate.php",
+        "is_dir": false,
+        "is_link": false,
+        "mode": "0o100700",
+        "size": 7371
+      },
+      {
+        "name": "wp-admin",
+        "is_dir": true,
+        "is_link": false,
+        "mode": "0o40700",
+        "size": 4096
+      },
+      {
+        "name": "wp-blog-header.php",
+        "is_dir": false,
+        "is_link": false,
+        "mode": "0o100700",
+        "size": 351
+      },
+      {
+        "name": "wp-comments-post.php",
+        "is_dir": false,
+        "is_link": false,
+        "mode": "0o100700",
+        "size": 2323
+      },
+      {
+        "name": "wp-config-sample.php",
+        "is_dir": false,
+        "is_link": false,
+        "mode": "0o100700",
+        "size": 3339
+      },
+      {
+        "name": "wp-config.php",
+        "is_dir": false,
+        "is_link": false,
+        "mode": "0o100700",
+        "size": 3333
+      },
+      {
+        "name": "wp-content",
+        "is_dir": true,
+        "is_link": false,
+        "mode": "0o40700",
+        "size": 4096
+      },
+      {
+        "name": "wp-cron.php",
+        "is_dir": false,
+        "is_link": false,
+        "mode": "0o100700",
+        "size": 5617
+      },
+      {
+        "name": "wp-includes",
+        "is_dir": true,
+        "is_link": false,
+        "mode": "0o40700",
+        "size": 16384
+      },
+      {
+        "name": "wp-links-opml.php",
+        "is_dir": false,
+        "is_link": false,
+        "mode": "0o100700",
+        "size": 2493
+      },
+      {
+        "name": "wp-load.php",
+        "is_dir": false,
+        "is_link": false,
+        "mode": "0o100700",
+        "size": 3937
+      },
+      {
+        "name": "wp-login.php",
+        "is_dir": false,
+        "is_link": false,
+        "mode": "0o100700",
+        "size": 51872
+      },
+      {
+        "name": "wp-mail.php",
+        "is_dir": false,
+        "is_link": false,
+        "mode": "0o100700",
+        "size": 8727
+      },
+      {
+        "name": "wp-settings.php",
+        "is_dir": false,
+        "is_link": false,
+        "mode": "0o100700",
+        "size": 32650
+      },
+      {
+        "name": "wp-signup.php",
+        "is_dir": false,
+        "is_link": false,
+        "mode": "0o100700",
+        "size": 34755
+      },
+      {
+        "name": "wp-trackback.php",
+        "is_dir": false,
+        "is_link": false,
+        "mode": "0o100700",
+        "size": 5214
+      },
+      {
+        "name": "xmlrpc.php",
+        "is_dir": false,
+        "is_link": false,
+        "mode": "0o100700",
+        "size": 3205
+      }
+    ],
+    "crontab": [],
+    "debug_log_exists": true,
+    "debug_log_size": 0
+  },
+  "code_host_or_runtime_hits": [],
+  "inventory": {
+    "utc": "2026-08-18T10:13:20+00:00",
+    "env_fn": "production",
+    "constants": {
+      "WP_ENVIRONMENT_TYPE": "production",
+      "WP_DEBUG": false,
+      "WP_DEBUG_DISPLAY": false,
+      "WP_DEBUG_LOG": false,
+      "SCRIPT_DEBUG": false,
+      "DISALLOW_FILE_EDIT": true,
+      "WP_HOME": null,
+      "WP_SITEURL": null,
+      "SHPIGOVSKY_CORE_VERSION": "0.3.8-p17"
+    },
+    "options": {
+      "siteurl": "http://shpigovsky.beget.tech",
+      "home": "http://shpigovsky.beget.tech",
+      "blogname": "Шпиговский Дом",
+      "blogdescription": "",
+      "admin_email": "Info@shpigovsky.ru",
+      "WPLANG": "ru_RU",
+      "permalink_structure": "/blog/%postname%/",
+      "blog_public": "0",
+      "show_on_front": "page",
+      "page_on_front": "4",
+      "page_for_posts": "19",
+      "fp02_metacode_system_meta": {
+        "baseline_id": "FP-0002-PROD-BASELINE-2026-08-17",
+        "latest_wave": "P17 PRE-CUTOVER CONT1",
+        "parity": "MATCH",
+        "verified_at": "2026-08-18 07:36 UTC",
+        "backup": "P14 full + prod-p17-cont1-layer-b-pre",
+        "git_sha": "7098c2aa1a90c17424d17e65fcc53c02b0863398",
+        "wave": "PROD-P15",
+        "p15_note": "Environment cleanup; mail+indexing deferred; domain not cut over",
+        "state_note": "Legacy 301s live; DNS inventoried; NS deferred"
+      },
+      "fp02_activity_log_db_version": "1",
+      "users_can_register": "0",
+      "wpilot_write_enabled": false,
+      "metacode_wpilot_write_enabled": false
+    },
+    "home": "http://shpigovsky.beget.tech/",
+    "siteurl": "http://shpigovsky.beget.tech/",
+    "core_version": "0.3.8-p17",
+    "theme": {
+      "name": "Shpigovsky",
+      "version": "0.3.0-d7a-shell"
+    },
+    "mu_plugins": [
+      {
+        "name": "fp02-pre-cutover-mail-suppression.php",
+        "is_dir": false,
+        "size": 876,
+        "sha256": "f2ba7afcec153739fac7aee154da63a67a269f9e698852f7430904ae4941a004"
+      }
+    ],
+    "users": [
+      {
+        "ID": 2,
+        "login": "admin",
+        "email": "ola4seo@yandex.ru",
+        "registered": "2026-07-02 15:53:39",
+        "display_name": "admin",
+        "roles": [
+          "administrator"
+        ]
+      },
+      {
+        "ID": 3,
+        "login": "mars",
+        "email": "support@polygon-ws.ru",
+        "registered": "2026-08-14 08:00:13",
+        "display_name": "MARS MetaCODE",
+        "roles": [
+          "administrator"
+        ]
+      },
+      {
+        "ID": 4,
+        "login": "metacode",
+        "email": "metacode@polygon-ws.ru",
+        "registered": "2026-08-16 16:02:25",
+        "display_name": "MetaCODE",
+        "roles": [
+          "administrator"
+        ]
+      }
+    ],
+    "user_role_counts": {
+      "administrator": 3
+    },
+    "activity": {
+      "table": "fp02_user_activity_log",
+      "exists": true,
+      "count": 55,
+      "db_version": "1",
+      "recent": [
+        {
+          "id": "86",
+          "user_id": "2",
+          "action": "updated",
+          "object_id": "73",
+          "object_type": "service",
+          "object_title": "Зависимости",
+          "object_status": "publish",
+          "created_at": "2026-08-16 22:37:21"
+        },
+        {
+          "id": "85",
+          "user_id": "2",
+          "action": "updated",
+          "object_id": "4",
+          "object_type": "page",
+          "object_title": "Главная",
+          "object_status": "publish",
+          "created_at": "2026-08-16 22:36:09"
+        },
+        {
+          "id": "84",
+          "user_id": "2",
+          "action": "updated",
+          "object_id": "4",
+          "object_type": "page",
+          "object_title": "Главная",
+          "object_status": "publish",
+          "created_at": "2026-08-16 22:28:06"
+        },
+        {
+          "id": "83",
+          "user_id": "2",
+          "action": "updated",
+          "object_id": "1894",
+          "object_type": "service",
+          "object_title": "Генотипирование для специалистов",
+          "object_status": "publish",
+          "created_at": "2026-08-16 22:27:12"
+        },
+        {
+          "id": "82",
+          "user_id": "2",
+          "action": "updated",
+          "object_id": "1889",
+          "object_type": "service",
+          "object_title": "Генотипирование",
+          "object_status": "publish",
+          "created_at": "2026-08-16 22:26:19"
+        },
+        {
+          "id": "81",
+          "user_id": "2",
+          "action": "updated",
+          "object_id": "1031",
+          "object_type": "specialist",
+          "object_title": "Сергей Юрьевич Шпиговский",
+          "object_status": "publish",
+          "created_at": "2026-08-16 19:51:24"
+        },
+        {
+          "id": "80",
+          "user_id": "2",
+          "action": "updated",
+          "object_id": "1949",
+          "object_type": "specialist",
+          "object_title": "Литвинов Кирилл Алексеевич",
+          "object_status": "publish",
+          "created_at": "2026-08-16 19:50:47"
+        },
+        {
+          "id": "79",
+          "user_id": "2",
+          "action": "updated",
+          "object_id": "1957",
+          "object_type": "specialist",
+          "object_title": "Поверинов Александр Константинович",
+          "object_status": "publish",
+          "created_at": "2026-08-16 19:50:32"
+        },
+        {
+          "id": "78",
+          "user_id": "2",
+          "action": "updated",
+          "object_id": "1963",
+          "object_type": "specialist",
+          "object_title": "Филиппов Илья Владимирович",
+          "object_status": "publish",
+          "created_at": "2026-08-16 19:50:02"
+        },
+        {
+          "id": "77",
+          "user_id": "2",
+          "action": "updated",
+          "object_id": "1967",
+          "object_type": "specialist",
+          "object_title": "Ханикова Светлана Николаевна",
+          "object_status": "publish",
+          "created_at": "2026-08-16 19:49:46"
+        },
+        {
+          "id": "76",
+          "user_id": "2",
+          "action": "updated",
+          "object_id": "1988",
+          "object_type": "specialist",
+          "object_title": "Филиппова Мария Михайловна",
+          "object_status": "publish",
+          "created_at": "2026-08-16 19:49:30"
+        },
+        {
+          "id": "75",
+          "user_id": "2",
+          "action": "updated",
+          "object_id": "74",
+          "object_type": "service",
+          "object_title": "Лечение алкогольной зависимости",
+          "object_status": "publish",
+          "created_at": "2026-08-16 19:48:14"
+        },
+        {
+          "id": "74",
+          "user_id": "2",
+          "action": "updated",
+          "object_id": "74",
+          "object_type": "service",
+          "object_title": "Лечение алкогольной зависимости",
+          "object_status": "publish",
+          "created_at": "2026-08-16 19:48:04"
+        },
+        {
+          "id": "73",
+          "user_id": "2",
+          "action": "updated",
+          "object_id": "73",
+          "object_type": "service",
+          "object_title": "Зависимости",
+          "object_status": "publish",
+          "created_at": "2026-08-16 19:47:58"
+        },
+        {
+          "id": "72",
+          "user_id": "2",
+          "action": "updated",
+          "object_id": "74",
+          "object_type": "service",
+          "object_title": "Лечение алкогольной зависимости",
+          "object_status": "publish",
+          "created_at": "2026-08-16 19:44:45"
+        },
+        {
+          "id": "47",
+          "user_id": "2",
+          "action": "updated",
+          "object_id": "4",
+          "object_type": "page",
+          "object_title": "Главная",
+          "object_status": "publish",
+          "created_at": "2026-08-16 18:53:37"
+        },
+        {
+          "id": "46",
+          "user_id": "2",
+          "action": "updated",
+          "object_id": "4",
+          "object_type": "page",
+          "object_title": "Главная",
+          "object_status": "publish",
+          "created_at": "2026-08-16 18:52:32"
+        },
+        {
+          "id": "45",
+          "user_id": "2",
+          "action": "updated",
+          "object_id": "1988",
+          "object_type": "specialist",
+          "object_title": "Филиппова Мария Михайловна",
+          "object_status": "publish",
+          "created_at": "2026-08-16 17:55:04"
+        },
+        {
+          "id": "44",
+          "user_id": "2",
+          "action": "updated",
+          "object_id": "1988",
+          "object_type": "specialist",
+          "object_title": "Филиппова Мария Михайловна",
+          "object_status": "publish",
+          "created_at": "2026-08-16 17:47:37"
+        },
+        {
+          "id": "43",
+          "user_id": "2",
+          "action": "updated",
+          "object_id": "1988",
+          "object_type": "specialist",
+          "object_title": "Филиппова Мария Михайловна",
+          "object_status": "publish",
+          "created_at": "2026-08-16 17:46:23"
+        },
+        {
+          "id": "42",
+          "user_id": "2",
+          "action": "updated",
+          "object_id": "1967",
+          "object_type": "specialist",
+          "object_title": "Ханикова Светлана Николаевна",
+          "object_status": "publish",
+          "created_at": "2026-08-16 17:39:16"
+        },
+        {
+          "id": "41",
+          "user_id": "2",
+          "action": "updated",
+          "object_id": "1967",
+          "object_type": "specialist",
+          "object_title": "Ханикова Светлана Николаевна",
+          "object_status": "publish",
+          "created_at": "2026-08-16 17:34:19"
+        },
+        {
+          "id": "40",
+          "user_id": "2",
+          "action": "updated",
+          "object_id": "1967",
+          "object_type": "specialist",
+          "object_title": "Ханикова Светлана Николаевна",
+          "object_status": "publish",
+          "created_at": "2026-08-16 17:33:50"
+        },
+        {
+          "id": "39",
+          "user_id": "2",
+          "action": "updated",
+          "object_id": "1967",
+          "object_type": "specialist",
+          "object_title": "Ханикова Светлана Николаевна",
+          "object_status": "publish",
+          "created_at": "2026-08-16 17:32:41"
+        },
+        {
+          "id": "38",
+          "user_id": "2",
+          "action": "updated",
+          "object_id": "1957",
+          "object_type": "specialist",
+          "object_title": "Поверинов Александр Константинович",
+          "object_status": "publish",
+          "created_at": "2026-08-16 17:25:29"
+        }
+      ],
+      "qa_like": [],
+      "columns": [
+        "id",
+        "user_id",
+        "action",
+        "object_id",
+        "object_type",
+        "object_title",
+        "object_status",
+        "created_at"
+      ]
+    },
+    "temp_host_map": {
+      "options": [
+        {
+          "option_id": "2",
+          "option_name": "siteurl",
+          "bytes": "28",
+          "maybe_serialized": "0",
+          "preview": "http://shpigovsky.beget.tech",
+          "autoload": null
+        },
+        {
+          "option_id": "3",
+          "option_name": "home",
+          "bytes": "28",
+          "maybe_serialized": "0",
+          "preview": "http://shpigovsky.beget.tech",
+          "autoload": null
+        },
+        {
+          "option_id": "133",
+          "option_name": "acf_site_health",
+          "bytes": "3712",
+          "maybe_serialized": "0",
+          "preview": "{\"version\":\"6.8.5\",\"plugin_type\":\"PRO\",\"update_source\":\"ACF Direct\",\"activated\":true,\"activated_url\":\"http:\\/\\/shpigovsky.beget.tech\",\"license_type\":\"ACF PRO\",\"license_status\":\"act",
+          "autoload": null
+        },
+        {
+          "option_id": "1169",
+          "option_name": "fp02-block-specialists_specialists_all_link_url",
+          "bytes": "41",
+          "maybe_serialized": "0",
+          "preview": "http://shpigovsky.beget.tech/specyalisty/",
+          "autoload": null
+        },
+        {
+          "option_id": "1341",
+          "option_name": "fp02-block-comfort_comfort_all_link_url",
+          "bytes": "54",
+          "maybe_serialized": "0",
+          "preview": "http://shpigovsky.beget.tech/o-centre/galereya-o-dome/",
+          "autoload": null
+        }
+      ],
+      "posts": [
+        {
+          "ID": "1884",
+          "post_type": "post",
+          "post_status": "auto-draft",
+          "post_name": "",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1884"
+        },
+        {
+          "ID": "1886",
+          "post_type": "post",
+          "post_status": "auto-draft",
+          "post_name": "",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1886"
+        },
+        {
+          "ID": "1887",
+          "post_type": "service",
+          "post_status": "trash",
+          "post_name": "zavisimosti-kopiya__trashed",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/uslugi/zavisimosti-kopiya/"
+        },
+        {
+          "ID": "1888",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1887-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1888"
+        },
+        {
+          "ID": "1889",
+          "post_type": "service",
+          "post_status": "publish",
+          "post_name": "genotipirovenie",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/uslugi/"
+        },
+        {
+          "ID": "1890",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1889-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1890"
+        },
+        {
+          "ID": "1891",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1889-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1891"
+        },
+        {
+          "ID": "1892",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1889-autosave-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1892"
+        },
+        {
+          "ID": "1893",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1889-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1893"
+        },
+        {
+          "ID": "1894",
+          "post_type": "service",
+          "post_status": "publish",
+          "post_name": "analiz-dya-specialistov",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/uslugi/%d0%b3%d0%b5%d0%bd%d0%be%d1%82%d0%b8%d0%bf%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5/profilakticheskiy-analiz-kopiya/"
+        },
+        {
+          "ID": "1895",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1894-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1895"
+        },
+        {
+          "ID": "1896",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1894-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1896"
+        },
+        {
+          "ID": "1897",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1894-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1897"
+        },
+        {
+          "ID": "1898",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "75-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1898"
+        },
+        {
+          "ID": "1899",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1894-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1899"
+        },
+        {
+          "ID": "1900",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "75-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1900"
+        },
+        {
+          "ID": "1901",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "314-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1901"
+        },
+        {
+          "ID": "1902",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1013-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1902"
+        },
+        {
+          "ID": "1903",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "316-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1903"
+        },
+        {
+          "ID": "1904",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "77-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1904"
+        },
+        {
+          "ID": "1905",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "77-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1905"
+        },
+        {
+          "ID": "1906",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "78-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1906"
+        },
+        {
+          "ID": "1907",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "79-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1907"
+        },
+        {
+          "ID": "1908",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "73-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1908"
+        },
+        {
+          "ID": "1909",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "80-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1909"
+        },
+        {
+          "ID": "1910",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "77-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1910"
+        },
+        {
+          "ID": "1911",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "81-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1911"
+        },
+        {
+          "ID": "1912",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "82-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1912"
+        },
+        {
+          "ID": "1913",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "83-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1913"
+        },
+        {
+          "ID": "1914",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1049-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1914"
+        },
+        {
+          "ID": "1915",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1050-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1915"
+        },
+        {
+          "ID": "1916",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1051-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1916"
+        },
+        {
+          "ID": "1917",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "84-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1917"
+        },
+        {
+          "ID": "1918",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "85-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1918"
+        },
+        {
+          "ID": "1919",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "86-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1919"
+        },
+        {
+          "ID": "1920",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "87-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1920"
+        },
+        {
+          "ID": "1921",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "75-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1921"
+        },
+        {
+          "ID": "1922",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "77-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1922"
+        },
+        {
+          "ID": "1923",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "77-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1923"
+        },
+        {
+          "ID": "1924",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "73-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1924"
+        },
+        {
+          "ID": "1925",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "73-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1925"
+        },
+        {
+          "ID": "1926",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "73-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1926"
+        },
+        {
+          "ID": "1935",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "77-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1935"
+        },
+        {
+          "ID": "1936",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "77-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1936"
+        },
+        {
+          "ID": "1937",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "74-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1937"
+        },
+        {
+          "ID": "1938",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1053-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1938"
+        },
+        {
+          "ID": "1939",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1053-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1939"
+        },
+        {
+          "ID": "1940",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "73-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1940"
+        },
+        {
+          "ID": "1941",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "73-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1941"
+        },
+        {
+          "ID": "1942",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "73-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1942"
+        },
+        {
+          "ID": "1943",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "73-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1943"
+        },
+        {
+          "ID": "1944",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "73-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1944"
+        },
+        {
+          "ID": "1945",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "4-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1945"
+        },
+        {
+          "ID": "1946",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "4-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1946"
+        },
+        {
+          "ID": "1947",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1097-autosave-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1947"
+        },
+        {
+          "ID": "1948",
+          "post_type": "specialist",
+          "post_status": "auto-draft",
+          "post_name": "%d1%87%d0%b5%d1%80%d0%bd%d0%be%d0%b2%d0%b8%d0%ba",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?post_type=specialist&p=1948"
+        },
+        {
+          "ID": "1949",
+          "post_type": "specialist",
+          "post_status": "publish",
+          "post_name": "litvinov",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?post_type=specialist&#038;p=1949"
+        },
+        {
+          "ID": "1950",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "photo_2026-08-16-16-46-15",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/photo_2026-08-16-16.46.15.jpeg"
+        },
+        {
+          "ID": "1951",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "photo_2026-08-16-16-46-23",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/photo_2026-08-16-16.46.23.jpeg"
+        },
+        {
+          "ID": "1952",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "photo_2026-08-16-16-46-27",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/photo_2026-08-16-16.46.27.jpeg"
+        },
+        {
+          "ID": "1953",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "photo_2026-08-16-16-46-48",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/photo_2026-08-16-16.46.48.jpeg"
+        },
+        {
+          "ID": "1954",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "photo_2026-08-16-16-46-44",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/photo_2026-08-16-16.46.44.jpeg"
+        },
+        {
+          "ID": "1955",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "photo_2026-08-16-16-46-39",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/photo_2026-08-16-16.46.39.jpeg"
+        },
+        {
+          "ID": "1956",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "photo_2026-08-16-16-46-54",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/photo_2026-08-16-16.46.54.jpeg"
+        },
+        {
+          "ID": "1957",
+          "post_type": "specialist",
+          "post_status": "publish",
+          "post_name": "poverinov",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?post_type=specialist&#038;p=1957"
+        },
+        {
+          "ID": "1958",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "photo_2026-08-16-16-57-15",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/photo_2026-08-16-16.57.15.jpeg"
+        },
+        {
+          "ID": "1959",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "photo_2026-08-16-16-57-27",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/photo_2026-08-16-16.57.27.jpeg"
+        },
+        {
+          "ID": "1960",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "photo_2026-08-16-16-57-23",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/photo_2026-08-16-16.57.23.jpeg"
+        },
+        {
+          "ID": "1961",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "photo_2026-08-16-16-57-17",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/photo_2026-08-16-16.57.17.jpeg"
+        },
+        {
+          "ID": "1962",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "%d1%81%d0%bd%d0%b8%d0%bc%d0%be%d0%ba-%d1%8d%d0%ba%d1%80%d0%b0%d0%bd%d0%b0-2026-08-16-%d0%b2-16-58-02",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/Снимок-экрана-—-2026-08-16-в-16.58.02.png"
+        },
+        {
+          "ID": "1963",
+          "post_type": "specialist",
+          "post_status": "publish",
+          "post_name": "filippov",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?post_type=specialist&#038;p=1963"
+        },
+        {
+          "ID": "1964",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "%d1%81%d0%bd%d0%b8%d0%bc%d0%be%d0%ba-%d1%8d%d0%ba%d1%80%d0%b0%d0%bd%d0%b0-2026-08-16-%d0%b2-17-00-00",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/Снимок-экрана-—-2026-08-16-в-17.00.00.png"
+        },
+        {
+          "ID": "1965",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1032-autosave-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1965"
+        },
+        {
+          "ID": "1966",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "%d0%bb%d0%b8%d1%82%d0%b2%d0%b8%d0%bd%d0%be%d0%b2",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/Литвинов.jpg"
+        },
+        {
+          "ID": "1967",
+          "post_type": "specialist",
+          "post_status": "publish",
+          "post_name": "hanikova",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?post_type=specialist&#038;p=1967"
+        },
+        {
+          "ID": "1969",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "1967-autosave-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1969"
+        },
+        {
+          "ID": "1970",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "%d1%85%d0%b0%d0%bd%d0%b8%d0%ba%d0%be%d0%b2%d0%b0-2",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/Ханикова-1.jpeg"
+        },
+        {
+          "ID": "1971",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "%d0%ba%d0%bb%d0%b8%d0%bd%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b0%d1%8f-%d0%bf%d1%81%d0%b8%d1%85%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f-1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/клиническая-психология-1.jpg"
+        },
+        {
+          "ID": "1972",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "%d0%ba%d0%bb%d0%b8%d0%bd%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b5-%d0%b2%d0%be%d0%bf%d1%80%d0%be%d1%81%d1%8b-%d1%81%d0%b5%d0%ba%d1%81%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d0%b8",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/клинические-вопросы-сексологии.jpg"
+        },
+        {
+          "ID": "1973",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "%d0%bc%d0%b5%d0%bd%d0%b5%d0%b4%d0%b6%d0%bc%d0%b5%d0%bd%d1%82",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/менеджмент.jpg"
+        },
+        {
+          "ID": "1974",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "%d0%be%d1%81%d0%bd%d0%be%d0%b2%d1%8b-%d0%bf%d1%81%d0%b8%d1%85%d0%be%d1%84%d0%b0%d1%80%d0%bc%d0%b0%d0%ba",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/основы-психофармак.jpg"
+        },
+        {
+          "ID": "1975",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "%d0%bf%d1%81%d0%b8%d1%85%d0%be%d0%bb-%d0%ba%d0%be%d0%bd%d1%81%d1%83%d0%bb%d1%8c%d1%82-%d0%b2-%d1%87%d1%81",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/психол-консульт-в-ЧС.jpg"
+        },
+        {
+          "ID": "1976",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "%d0%bf%d1%81%d0%b8%d1%85%d0%be%d0%bb%d0%be%d0%b3-%d1%81%d0%b5%d0%ba%d1%81%d0%be%d0%bb%d0%be%d0%b3-1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/психолог-сексолог-1.jpg"
+        },
+        {
+          "ID": "1977",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "%d0%bf%d1%81%d0%b8%d1%85%d0%be%d1%82%d0%b5%d1%80%d0%b0%d0%bf%d0%b8%d1%8f-%d0%b8-%d0%bc%d0%b5%d0%b4-%d0%bf%d1%81%d0%b8%d1%85%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/психотерапия-и-мед.психология.jpg"
+        },
+        {
+          "ID": "1978",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "%d0%bf%d1%81%d0%b8%d1%85%d0%be%d1%82%d0%b5%d1%80%d0%b0%d0%bf%d0%b8%d1%8f-%d0%bf%d0%b0%d0%bc%d1%8f%d1%82%d0%b8-%d0%b1%d1%83%d0%b4%d1%83%d1%89%d0%b5%d0%b3%d0%be",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/Психотерапия-памяти-будущего.jpg"
+        },
+        {
+          "ID": "1979",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "%d1%81%d0%bd%d0%be%d0%b2%d0%b8%d0%b4%d0%b5%d0%bd%d0%b8%d1%8f-%d0%b2-%d0%bf%d1%81%d0%b8%d1%85%d0%be%d0%b0%d0%bd%d0%b0%d0%bb%d0%b8%d0%b7%d0%b5-%d0%b8-%d1%82%d0%b5%d1%80%d0%b0%d0%bf%d0%b8%d0%b8",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/сновидения-в-психоанализе-и-терапии.jpg"
+        },
+        {
+          "ID": "1980",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "%d1%81%d1%83%d0%b8%d1%86%d0%b8%d0%b4%d0%be%d0%be%d0%bf%d0%b0%d1%81%d0%bd%d1%8b%d0%b5",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/суицидоопасные.jpg"
+        },
+        {
+          "ID": "1981",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "%d1%83%d0%b4%d0%be%d1%81%d1%82%d0%be%d0%b2%d0%b5%d1%80%d0%b5%d0%bd%d0%b8%d0%b5-%d0%b4%d0%b5%d0%bf%d0%b0%d1%80%d1%82%d0%b0%d0%bc%d0%b5%d0%bd%d1%82",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/удостоверение-департамент.jpg"
+        },
+        {
+          "ID": "1982",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "%d0%ba%d0%bb%d0%b8%d0%bd%d0%b8%d1%87-%d0%bf%d1%81%d0%b8%d1%85%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f2",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/клинич-психология2.jpg"
+        },
+        {
+          "ID": "1983",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "%d0%b0%d0%ba%d0%ba%d1%80%d0%b5%d0%b4%d0%b8%d1%82%d0%b0%d1%86%d0%b8%d1%8f",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/аккредитация.png"
+        },
+        {
+          "ID": "1984",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "2-%d0%ba%d0%b2%d0%b0%d0%bb-%d0%ba%d0%b0%d1%82",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/2-квал-кат.jpg"
+        },
+        {
+          "ID": "1985",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "%d0%bc%d0%be%d1%82%d0%b8%d0%b2%d0%b0%d1%86-%d0%b8%d0%bd%d1%82-2019",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/мотивац-инт-2019.jpg"
+        },
+        {
+          "ID": "1986",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "%d0%bc%d0%be%d1%81%d0%ba%d0%be%d0%b2%d1%81%d0%ba%d0%b8%d0%b5-%d0%bc%d0%b0%d1%81%d1%82%d0%b5%d1%80%d0%b0-%d0%bf%d0%be-%d0%bf%d1%80%d0%be%d1%84%d0%b5%d1%81%d1%81%d0%b8%d0%b8-%d0%bf%d1%81%d0%b8%d1%85",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/московские-мастера-по-профессии-психолог.jpg"
+        },
+        {
+          "ID": "1987",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "%d1%80%d0%be%d0%bf-%d1%81%d0%b5%d1%80%d1%82%d0%b8%d1%84%d0%b8%d0%ba%d0%b0%d1%82",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/РОП-сертификат.pdf"
+        },
+        {
+          "ID": "1988",
+          "post_type": "specialist",
+          "post_status": "publish",
+          "post_name": "filippova",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?post_type=specialist&#038;p=1988"
+        },
+        {
+          "ID": "1990",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "028e5e0e-17c6-4028-8225-b29172ac0955",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/028e5e0e-17c6-4028-8225-b29172ac0955.jpg"
+        },
+        {
+          "ID": "1991",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "b28f50cf-3244-491c-8f26-79bc9b522ae5",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/b28f50cf-3244-491c-8f26-79bc9b522ae5.jpg"
+        },
+        {
+          "ID": "1992",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "c5d08037-8599-4f6d-a148-51662f97e7b9",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/c5d08037-8599-4f6d-a148-51662f97e7b9.jpg"
+        },
+        {
+          "ID": "1993",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "ce81331c-2b41-499c-b439-e00e96ed25f2",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/ce81331c-2b41-499c-b439-e00e96ed25f2.jpg"
+        },
+        {
+          "ID": "1994",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "%d1%84%d0%b8%d0%bb%d0%b8%d0%bf%d0%bf%d0%be%d0%b2%d0%b0",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/Филиппова.jpg"
+        },
+        {
+          "ID": "1995",
+          "post_type": "nav_menu_item",
+          "post_status": "publish",
+          "post_name": "1995",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1995"
+        },
+        {
+          "ID": "1996",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "%d0%ba%d0%be%d0%bc%d0%b0%d0%bd%d0%b4%d0%b0-%d1%88%d0%bf%d0%b8%d0%b3%d0%be%d0%b2%d1%81%d0%ba%d0%b8%d0%b9",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/Команда-Шпиговский.tiff"
+        },
+        {
+          "ID": "1997",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "%d0%ba%d0%be%d0%bc%d0%b0%d0%bd%d0%b4%d0%b0-%d1%88%d0%bf%d0%b8%d0%b3%d0%be%d0%b2%d1%81%d0%ba%d0%b8%d0%b9-%d0%b4%d0%be%d0%bc",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/Команда-Шпиговский-дом.webp"
+        },
+        {
+          "ID": "1998",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "4-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=1998"
+        },
+        {
+          "ID": "2009",
+          "post_type": "nav_menu_item",
+          "post_status": "publish",
+          "post_name": "2009",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=2009"
+        },
+        {
+          "ID": "2010",
+          "post_type": "nav_menu_item",
+          "post_status": "publish",
+          "post_name": "2010",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=2010"
+        },
+        {
+          "ID": "2011",
+          "post_type": "nav_menu_item",
+          "post_status": "publish",
+          "post_name": "2011",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=2011"
+        },
+        {
+          "ID": "2012",
+          "post_type": "nav_menu_item",
+          "post_status": "publish",
+          "post_name": "2012",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=2012"
+        },
+        {
+          "ID": "2013",
+          "post_type": "nav_menu_item",
+          "post_status": "publish",
+          "post_name": "2013",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=2013"
+        },
+        {
+          "ID": "2014",
+          "post_type": "nav_menu_item",
+          "post_status": "publish",
+          "post_name": "2014",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=2014"
+        },
+        {
+          "ID": "2025",
+          "post_type": "nav_menu_item",
+          "post_status": "publish",
+          "post_name": "2025",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=2025"
+        },
+        {
+          "ID": "2026",
+          "post_type": "nav_menu_item",
+          "post_status": "publish",
+          "post_name": "2026",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=2026"
+        },
+        {
+          "ID": "2027",
+          "post_type": "nav_menu_item",
+          "post_status": "publish",
+          "post_name": "2027",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=2027"
+        },
+        {
+          "ID": "2031",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "74-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=2031"
+        },
+        {
+          "ID": "2032",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "73-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=2032"
+        },
+        {
+          "ID": "2034",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "4-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=2034"
+        },
+        {
+          "ID": "2035",
+          "post_type": "attachment",
+          "post_status": "inherit",
+          "post_name": "%d0%ba%d0%be%d0%bc%d0%b0%d0%bd%d0%b4%d0%b0",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/wp-content/uploads/2026/08/команда.webp"
+        },
+        {
+          "ID": "2036",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "4-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=2036"
+        },
+        {
+          "ID": "2037",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "73-revision-v1",
+          "in_guid": "1",
+          "in_content": "0",
+          "in_excerpt": "0",
+          "guid_preview": "http://shpigovsky.beget.tech/?p=2037"
+        }
+      ],
+      "postmeta": [
+        {
+          "meta_id": "6146",
+          "post_id": "4",
+          "meta_key": "home_why_us_items_0_url",
+          "bytes": "80",
+          "preview": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"
+        },
+        {
+          "meta_id": "6152",
+          "post_id": "4",
+          "meta_key": "home_why_us_items_1_url",
+          "bytes": "48",
+          "preview": "http://shpigovsky.beget.tech/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "6158",
+          "post_id": "4",
+          "meta_key": "home_why_us_items_2_url",
+          "bytes": "48",
+          "preview": "http://shpigovsky.beget.tech/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "6164",
+          "post_id": "4",
+          "meta_key": "home_why_us_items_3_url",
+          "bytes": "48",
+          "preview": "http://shpigovsky.beget.tech/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "6216",
+          "post_id": "4",
+          "meta_key": "home_genotyping_link_url",
+          "bytes": "52",
+          "preview": "http://shpigovsky.beget.tech/uslugi/genotipirovenie/"
+        },
+        {
+          "meta_id": "14221",
+          "post_id": "73",
+          "meta_key": "section_nature_genotyping_link_url",
+          "bytes": "73",
+          "preview": "http://shpigovsky.beget.tech/uslugi/zavisimosti/profilakticheskiy-analiz/"
+        },
+        {
+          "meta_id": "14247",
+          "post_id": "73",
+          "meta_key": "section_approach_more_url",
+          "bytes": "58",
+          "preview": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+        },
+        {
+          "meta_id": "16369",
+          "post_id": "77",
+          "meta_key": "section_approach_more_url",
+          "bytes": "58",
+          "preview": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+        },
+        {
+          "meta_id": "16423",
+          "post_id": "84",
+          "meta_key": "section_approach_more_url",
+          "bytes": "58",
+          "preview": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+        },
+        {
+          "meta_id": "16503",
+          "post_id": "74",
+          "meta_key": "service_general_approach_more_url",
+          "bytes": "58",
+          "preview": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+        },
+        {
+          "meta_id": "17079",
+          "post_id": "314",
+          "meta_key": "service_general_approach_more_url",
+          "bytes": "58",
+          "preview": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+        },
+        {
+          "meta_id": "17217",
+          "post_id": "78",
+          "meta_key": "service_general_approach_more_url",
+          "bytes": "58",
+          "preview": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+        },
+        {
+          "meta_id": "17353",
+          "post_id": "81",
+          "meta_key": "service_general_approach_more_url",
+          "bytes": "58",
+          "preview": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+        },
+        {
+          "meta_id": "17495",
+          "post_id": "85",
+          "meta_key": "service_general_approach_more_url",
+          "bytes": "58",
+          "preview": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+        },
+        {
+          "meta_id": "17637",
+          "post_id": "316",
+          "meta_key": "service_general_approach_more_url",
+          "bytes": "58",
+          "preview": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+        },
+        {
+          "meta_id": "17781",
+          "post_id": "75",
+          "meta_key": "service_general_approach_more_url",
+          "bytes": "58",
+          "preview": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+        },
+        {
+          "meta_id": "17923",
+          "post_id": "1047",
+          "meta_key": "service_general_approach_more_url",
+          "bytes": "58",
+          "preview": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+        },
+        {
+          "meta_id": "18065",
+          "post_id": "1048",
+          "meta_key": "service_general_approach_more_url",
+          "bytes": "58",
+          "preview": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+        },
+        {
+          "meta_id": "18207",
+          "post_id": "79",
+          "meta_key": "service_general_approach_more_url",
+          "bytes": "58",
+          "preview": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+        },
+        {
+          "meta_id": "18349",
+          "post_id": "80",
+          "meta_key": "service_general_approach_more_url",
+          "bytes": "58",
+          "preview": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+        },
+        {
+          "meta_id": "18491",
+          "post_id": "82",
+          "meta_key": "service_general_approach_more_url",
+          "bytes": "58",
+          "preview": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+        },
+        {
+          "meta_id": "18633",
+          "post_id": "83",
+          "meta_key": "service_general_approach_more_url",
+          "bytes": "58",
+          "preview": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+        },
+        {
+          "meta_id": "18775",
+          "post_id": "1049",
+          "meta_key": "service_general_approach_more_url",
+          "bytes": "58",
+          "preview": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+        },
+        {
+          "meta_id": "18917",
+          "post_id": "1050",
+          "meta_key": "service_general_approach_more_url",
+          "bytes": "58",
+          "preview": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+        },
+        {
+          "meta_id": "19059",
+          "post_id": "1051",
+          "meta_key": "service_general_approach_more_url",
+          "bytes": "58",
+          "preview": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+        },
+        {
+          "meta_id": "19201",
+          "post_id": "86",
+          "meta_key": "service_general_approach_more_url",
+          "bytes": "58",
+          "preview": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+        },
+        {
+          "meta_id": "19343",
+          "post_id": "87",
+          "meta_key": "service_general_approach_more_url",
+          "bytes": "58",
+          "preview": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+        },
+        {
+          "meta_id": "19485",
+          "post_id": "1011",
+          "meta_key": "service_general_approach_more_url",
+          "bytes": "58",
+          "preview": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+        },
+        {
+          "meta_id": "19627",
+          "post_id": "1012",
+          "meta_key": "service_general_approach_more_url",
+          "bytes": "58",
+          "preview": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+        },
+        {
+          "meta_id": "19769",
+          "post_id": "1013",
+          "meta_key": "service_general_approach_more_url",
+          "bytes": "58",
+          "preview": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+        },
+        {
+          "meta_id": "19911",
+          "post_id": "315",
+          "meta_key": "service_general_approach_more_url",
+          "bytes": "58",
+          "preview": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+        },
+        {
+          "meta_id": "20053",
+          "post_id": "1016",
+          "meta_key": "service_general_approach_more_url",
+          "bytes": "58",
+          "preview": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+        },
+        {
+          "meta_id": "20195",
+          "post_id": "1017",
+          "meta_key": "service_general_approach_more_url",
+          "bytes": "58",
+          "preview": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+        },
+        {
+          "meta_id": "20337",
+          "post_id": "1018",
+          "meta_key": "service_general_approach_more_url",
+          "bytes": "58",
+          "preview": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+        },
+        {
+          "meta_id": "20479",
+          "post_id": "1019",
+          "meta_key": "service_general_approach_more_url",
+          "bytes": "58",
+          "preview": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+        },
+        {
+          "meta_id": "47966",
+          "post_id": "1894",
+          "meta_key": "service_general_approach_more_url",
+          "bytes": "58",
+          "preview": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+        },
+        {
+          "meta_id": "61211",
+          "post_id": "2034",
+          "meta_key": "home_why_us_items_0_url",
+          "bytes": "80",
+          "preview": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"
+        },
+        {
+          "meta_id": "61217",
+          "post_id": "2034",
+          "meta_key": "home_why_us_items_1_url",
+          "bytes": "48",
+          "preview": "http://shpigovsky.beget.tech/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "61223",
+          "post_id": "2034",
+          "meta_key": "home_why_us_items_2_url",
+          "bytes": "48",
+          "preview": "http://shpigovsky.beget.tech/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "61229",
+          "post_id": "2034",
+          "meta_key": "home_why_us_items_3_url",
+          "bytes": "48",
+          "preview": "http://shpigovsky.beget.tech/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "61281",
+          "post_id": "2034",
+          "meta_key": "home_genotyping_link_url",
+          "bytes": "52",
+          "preview": "http://shpigovsky.beget.tech/uslugi/genotipirovenie/"
+        },
+        {
+          "meta_id": "61622",
+          "post_id": "2036",
+          "meta_key": "home_why_us_items_0_url",
+          "bytes": "80",
+          "preview": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"
+        },
+        {
+          "meta_id": "61628",
+          "post_id": "2036",
+          "meta_key": "home_why_us_items_1_url",
+          "bytes": "48",
+          "preview": "http://shpigovsky.beget.tech/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "61634",
+          "post_id": "2036",
+          "meta_key": "home_why_us_items_2_url",
+          "bytes": "48",
+          "preview": "http://shpigovsky.beget.tech/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "61640",
+          "post_id": "2036",
+          "meta_key": "home_why_us_items_3_url",
+          "bytes": "48",
+          "preview": "http://shpigovsky.beget.tech/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "61692",
+          "post_id": "2036",
+          "meta_key": "home_genotyping_link_url",
+          "bytes": "52",
+          "preview": "http://shpigovsky.beget.tech/uslugi/genotipirovenie/"
+        },
+        {
+          "meta_id": "61974",
+          "post_id": "2037",
+          "meta_key": "section_nature_genotyping_link_url",
+          "bytes": "73",
+          "preview": "http://shpigovsky.beget.tech/uslugi/zavisimosti/profilakticheskiy-analiz/"
+        },
+        {
+          "meta_id": "62000",
+          "post_id": "2037",
+          "meta_key": "section_approach_more_url",
+          "bytes": "58",
+          "preview": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+        }
+      ],
+      "comments": [],
+      "usermeta": [],
+      "termmeta": [],
+      "posts_count": 119,
+      "postmeta_count": 48,
+      "comments_count": 0,
+      "usermeta_count": 0
+    },
+    "legacy_residue_counts": {
+      ".test": {
+        "options": 1,
+        "posts": 1069,
+        "postmeta": 286,
+        "users_email": 0
+      },
+      "localhost": {
+        "options": 1,
+        "posts": 2,
+        "postmeta": 0,
+        "users_email": 0
+      },
+      "127.0.0.1": {
+        "options": 0,
+        "posts": 0,
+        "postmeta": 0,
+        "users_email": 0
+      },
+      "new-site.space": {
+        "options": 0,
+        "posts": 101,
+        "postmeta": 5,
+        "users_email": 0
+      },
+      "@localhost.test": {
+        "options": 1,
+        "posts": 0,
+        "postmeta": 0,
+        "users_email": 0
+      }
+    },
+    "robots": {
+      "exists": true,
+      "size": 80,
+      "sha256": "2492f7f1451552b8cbf1151fd87c6bccaf21580e5686459d7afebb5b5a9d66a5",
+      "body": "User-agent: *\nDisallow: /\n\nSitemap: http://shpigovsky.beget.tech/wp-sitemap.xml\n"
+    },
+    "blog_public": 0,
+    "mail": {
+      "pre_wp_mail_has": true,
+      "phpmailer_init_has": false
+    },
+    "wpilot_write": false,
+    "active_plugins": [
+      "acf-extended-pro/acf-extended.php",
+      "advanced-custom-fields-pro/acf.php",
+      "classic-editor/classic-editor.php",
+      "metacode-wpilot/metacode-wpilot.php",
+      "shpigovsky-core/shpigovsky-core.php"
+    ],
+    "db_prefix": "fp02_",
+    "db_name_hint": "shpigovsky_main",
+    "php_sapi": "cli",
+    "php_version": "8.2.28"
+  },
+  "db_snapshots": [
+    {
+      "table": "fp02_options",
+      "bytes": 370903,
+      "sha256": "c449840e84e939dfed2bb4327563c4ab7098269f2db7fa142a87cac59274c97b",
+      "ok": true
+    },
+    {
+      "table": "fp02_users",
+      "bytes": 3342,
+      "sha256": "b886df8a5a51e69c5c276af184c0c80cceca0dd0cd9174bb08a482345c514a47",
+      "ok": true
+    },
+    {
+      "table": "fp02_usermeta",
+      "bytes": 8318,
+      "sha256": "ca39089a9f331f1bfc4aae53dd2e6f7499399f0a7044dfac0f5a04f097911711",
+      "ok": true
+    },
+    {
+      "table": "fp02_user_activity_log",
+      "bytes": 8707,
+      "sha256": "a3e3dbf039bf3b27ef119cf3f43e5d6c03a8ddc81e3ef5de857dde184022cbf3",
+      "ok": true
+    }
+  ]
+}

@@ -1,10 +1,11 @@
-# BASELINE — FP-0002 PRODUCTION POST-P13 (PROD-P14) + P15 ENVIRONMENT CLEAN + P16 TYPOGRAPHY + P17 PRE-CUTOVER CONT1
+# BASELINE — FP-0002 PRODUCTION POST-P13 (PROD-P14) + P15 ENVIRONMENT CLEAN + P16 TYPOGRAPHY + P17 PRE-CUTOVER CONT1 + P17-FU02
 
 **Baseline ID:** `FP-0002-PROD-BASELINE-2026-08-17`  
 **Established:** 2026-08-16/17 (UTC intake 2026-08-16T17:28Z)  
 **Wave:** PROD-P14 Stabilization  
 **P15 extension:** 2026-08-16/17 — environment/migration cleanup (same baseline ID; P14 backup remains rollback authority)  
-**P17 extension:** 2026-08-18 — legacy 301s + DNS/NS migration plan (NS not switched)
+**P17 extension:** 2026-08-18 — legacy 301s + DNS/NS migration plan (NS not switched)  
+**P17-FU02 extension:** 2026-08-18 — internal pre-cutover tails closed; READY FOR MANUAL NS SWITCH
 
 ## Runtime
 
@@ -19,7 +20,7 @@
 | DB name (no secrets) | `shpigovsky_main` |
 | DB prefix | `fp02_` |
 | Theme | Shpigovsky `0.3.0-d7a-shell` |
-| shpigovsky-core | `0.3.8-p17` (was `0.3.7-p16` at P16) |
+| shpigovsky-core | `0.3.9-p17fu02` (was `0.3.8-p17` at P17 CONT1) |
 | WPilot | 0.3.2 · writes disabled · bridge active (read) |
 | siteurl/home | http://shpigovsky.beget.tech |
 | blog_public | 0 |
@@ -60,7 +61,7 @@
 
 ## Latest accepted wave
 
-**P17 PRE-CUTOVER CONT1** (legacy redirects live; DNS inventoried; NS deferred)
+**P17-FU02 Final Pre-Cutover Tail Closure** — READY FOR MANUAL NS SWITCH
 
 ## Backup
 
@@ -69,10 +70,11 @@
 | Type | Full files + DB via SSH (tar.gz + mysqldump.gz) |
 | Stamp | `20260816-173046` |
 | Path | `X:\AI MARS STORAGE\backups\fp-0002\prod-p14-full-20260816-173046\` |
-| Status | **PASS** — remains current full rollback baseline |
+| Status | **PASS** — last complete dump; **not** sufficient for P18 (take a new one after freeze) |
 | P15 exact-file/object snapshots | `deployment-packs/fp-0002/prod-p15-layer-b-pre/` + `prod-p15-db-snapshots/` + `prod-p15-debug-archive/` |
 | P16 exact-file snapshots | `deployment-packs/fp-0002/prod-p16-layer-b-pre/` + `prod-p16-db-snapshots/` |
 | P17 CONT1 `.htaccess` snapshots | `deployment-packs/fp-0002/prod-p17-cont1-layer-b-pre/` |
+| P17-FU02 Layer B | `deployment-packs/fp-0002/prod-p17-fu02-layer-b-pre/` + `prod-p17-fu02-db-snapshots/` + obsolete tar |
 
 ## Git checkpoint
 
@@ -82,11 +84,21 @@
 | P15 commit | `81912e7871bd45d75e8b02b288aaf0b6788744d6` |
 | P16 commit | `35666e2bb98247072a7a7972d4271eaf8d5f36aa` |
 | P17 commit | `1b7fb5c47b2c7acd88e4313e64a15f7e59069fa6` |
+| P17-FU02 commit | *(this wave — see GIT-CHECKPOINT.json)* |
 | Branch | `origin/mars/canonical-post-recovery` |
 
 ## Open tails
 
-See `REPORTS/OPEN-ITEMS-FP-0002-AFTER-P17.md` — Beget zone prep → NS/SSL/siteurl → SMTP → robots/indexing → sitemap submissions → final crawl.
+See `REPORTS/OPEN-ITEMS-FP-0002-AFTER-P17-FU02.md` — MANUAL NS SWITCH → DNS → SSL/domain → SMTP → indexing → sitemaps → crawl.
+
+## P17-FU02 status
+
+- Internal pre-cutover readiness **GO**
+- `mars-runtime/` **removed** (obsolete + public PHP risk)
+- Webroot hygiene **PASS**
+- Users/admin **CLEAN**
+- Cutover DB/file plans **executable without discovery**
+- NS **not** switched
 
 ## P15 environment-clean status
 

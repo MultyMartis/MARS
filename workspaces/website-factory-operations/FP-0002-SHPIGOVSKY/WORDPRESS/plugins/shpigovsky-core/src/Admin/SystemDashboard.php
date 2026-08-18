@@ -1,8 +1,9 @@
 <?php
 /**
- * Dashboard widget: MetaCODE / system state — PROD-P16.
+ * Dashboard widget: MetaCODE / system state — PROD-P17-FU02.
  *
  * Canonical concise operational summary for FP-0002. No global Admin notices.
+ * No DNS/registrar credentials.
  *
  * @package Shpigovsky_Core
  */
@@ -29,7 +30,7 @@ final class SystemDashboard implements ModuleInterface {
 	/**
 	 * Latest accepted production wave label.
 	 */
-	const LATEST_ACCEPTED_WAVE = 'P16 Typography Residual';
+	const LATEST_ACCEPTED_WAVE = 'P17-FU02 Final Pre-Cutover Tail Closure';
 
 	/**
 	 * {@inheritdoc}
@@ -108,11 +109,14 @@ final class SystemDashboard implements ModuleInterface {
 		$blog_public = (int) get_option( 'blog_public', 1 );
 		$mail_suppressed = (bool) has_filter( 'pre_wp_mail' );
 
+		$precutover = isset( $meta['precutover'] ) ? (string) $meta['precutover'] : 'READY FOR MANUAL NS SWITCH';
+		$redirects  = isset( $meta['legacy_redirects'] ) ? (string) $meta['legacy_redirects'] : '7/7';
+
 		echo '<div class="fp02-metacode-system">';
 
 		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'Сайт', 'shpigovsky-core' ) . '</h3>';
 		echo '<table class="widefat striped" style="border:none;box-shadow:none;margin-bottom:12px;">';
-		self::row( __( 'Проект', 'shpigovsky-core' ), 'FP-0002 / Шпиговский дом' );
+		self::row( __( 'Проект', 'shpigovsky-core' ), 'FP-0002 / Шпиговский Дом' );
 		self::row(
 			__( 'Runtime', 'shpigovsky-core' ),
 			$is_beget
@@ -123,77 +127,68 @@ final class SystemDashboard implements ModuleInterface {
 					$env_fn
 				)
 		);
-		self::row( __( 'Current host', 'shpigovsky-core' ), $host !== '' ? $host : '—' );
-		self::row( __( 'Future canonical domain', 'shpigovsky-core' ), 'shpigovsky.ru' );
+		self::row( __( 'Current host', 'shpigovsky-core' ), 'shpigovsky.beget.tech' );
+		self::row( __( 'Future host', 'shpigovsky-core' ), 'https://shpigovsky.ru/' );
 		self::row( __( 'WordPress', 'shpigovsky-core' ), get_bloginfo( 'version' ) );
 		if ( $php_ver !== '' ) {
 			self::row( __( 'PHP', 'shpigovsky-core' ), $php_ver );
 		}
 		echo '</table>';
 
-		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'Environment', 'shpigovsky-core' ) . '</h3>';
+		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'Текущее состояние', 'shpigovsky-core' ) . '</h3>';
 		echo '<table class="widefat striped" style="border:none;box-shadow:none;margin-bottom:12px;">';
+		self::row( __( 'Latest wave', 'shpigovsky-core' ), $wave );
+		self::row( __( 'Status', 'shpigovsky-core' ), $precutover );
+		self::row( __( 'PRE-CUTOVER', 'shpigovsky-core' ), $precutover );
+		self::row( __( 'Source ↔ production', 'shpigovsky-core' ), $parity );
+		self::row( __( 'Legacy redirects', 'shpigovsky-core' ), $redirects );
 		self::row(
-			'WP_ENVIRONMENT_TYPE',
-			$env_const !== '' ? $env_const : $env_fn
+			__( 'WPilot', 'shpigovsky-core' ),
+			$wpilot_on
+				? trim( $wpilot_ver . ' · ' . ( $wpilot_write ? __( 'writes enabled', 'shpigovsky-core' ) : __( 'write disabled', 'shpigovsky-core' ) ) )
+				: __( 'Not active', 'shpigovsky-core' )
 		);
 		self::row(
 			__( 'Debug', 'shpigovsky-core' ),
 			$debug_on ? __( 'on', 'shpigovsky-core' ) : __( 'off', 'shpigovsky-core' )
 		);
 		self::row(
-			__( 'Indexing', 'shpigovsky-core' ),
-			( 0 === $blog_public )
-				? __( 'закрыта до cutover', 'shpigovsky-core' )
-				: __( 'open', 'shpigovsky-core' )
-		);
-		self::row(
 			__( 'Mail', 'shpigovsky-core' ),
 			$mail_suppressed
-				? __( 'SMTP / outbound delivery pending cutover', 'shpigovsky-core' )
+				? __( 'suppressed until SMTP', 'shpigovsky-core' )
 				: __( 'suppression not detected — verify before go-live', 'shpigovsky-core' )
 		);
-		echo '</table>';
-
-		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'MetaCODE', 'shpigovsky-core' ) . '</h3>';
-		echo '<table class="widefat striped" style="border:none;box-shadow:none;margin-bottom:12px;">';
+		self::row(
+			__( 'Indexing', 'shpigovsky-core' ),
+			( 0 === $blog_public )
+				? __( 'closed until launch', 'shpigovsky-core' )
+				: __( 'open', 'shpigovsky-core' )
+		);
 		self::row( __( 'shpigovsky-core', 'shpigovsky-core' ), defined( 'SHPIGOVSKY_CORE_VERSION' ) ? SHPIGOVSKY_CORE_VERSION : '—' );
-		self::row( __( 'Theme', 'shpigovsky-core' ), wp_get_theme()->get( 'Name' ) . ' ' . wp_get_theme()->get( 'Version' ) );
-		self::row(
-			__( 'WPilot', 'shpigovsky-core' ),
-			$wpilot_on
-				? trim( $wpilot_ver . ' · ' . ( $wpilot_write ? __( 'writes enabled', 'shpigovsky-core' ) : __( 'writes disabled', 'shpigovsky-core' ) ) )
-				: __( 'Not active', 'shpigovsky-core' )
-		);
-		self::row(
-			__( 'WPilot bridge', 'shpigovsky-core' ),
-			$wpilot_on ? __( 'Active (read)', 'shpigovsky-core' ) : __( 'Inactive', 'shpigovsky-core' )
-		);
-		echo '</table>';
-
-		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'Current baseline', 'shpigovsky-core' ) . '</h3>';
-		echo '<table class="widefat striped" style="border:none;box-shadow:none;margin-bottom:12px;">';
-		self::row( __( 'Latest accepted wave', 'shpigovsky-core' ), $wave );
-		self::row( __( 'Source ↔ production parity', 'shpigovsky-core' ), $parity );
 		self::row( __( 'Last verification', 'shpigovsky-core' ), $verified );
-		self::row( __( 'Production baseline', 'shpigovsky-core' ), $baseline );
 		if ( $backup !== '' && $backup !== '—' ) {
 			self::row( __( 'Backup', 'shpigovsky-core' ), $backup );
 		}
-		if ( $git_sha !== '' ) {
-			self::row( __( 'Git checkpoint', 'shpigovsky-core' ), $git_sha );
-		}
 		echo '</table>';
 
-		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'Remaining launch tails', 'shpigovsky-core' ) . '</h3>';
+		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'DNS', 'shpigovsky-core' ) . '</h3>';
+		echo '<table class="widefat striped" style="border:none;box-shadow:none;margin-bottom:12px;">';
+		self::row( __( 'NS switch', 'shpigovsky-core' ), __( 'MANUAL OPERATOR ACTION', 'shpigovsky-core' ) );
+		self::row( __( 'Current delegation', 'shpigovsky-core' ), 'REG.RU' );
+		self::row( __( 'Target', 'shpigovsky-core' ), 'Beget' );
+		echo '</table>';
+
+		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'Следующий шаг', 'shpigovsky-core' ) . '</h3>';
 		echo '<ul style="margin:0 0 12px 1.2em;">';
-		self::li( __( 'NS / DNS cutover (Beget zone first)', 'shpigovsky-core' ) );
-		self::li( __( 'SSL + home/siteurl', 'shpigovsky-core' ) );
-		self::li( __( 'SMTP after domain/DNS', 'shpigovsky-core' ) );
-		self::li( __( 'robots / indexing', 'shpigovsky-core' ) );
-		self::li( __( 'Sitemap submissions', 'shpigovsky-core' ) );
-		self::li( __( 'Final crawl', 'shpigovsky-core' ) );
+		self::li( __( '1. Manual NS switch in REG.RU', 'shpigovsky-core' ) );
+		self::li( __( '2. DNS verification', 'shpigovsky-core' ) );
+		self::li( __( '3. SSL / final domain', 'shpigovsky-core' ) );
+		self::li( __( '4. SMTP', 'shpigovsky-core' ) );
+		self::li( __( '5. Indexing', 'shpigovsky-core' ) );
+		self::li( __( '6. Sitemap submissions', 'shpigovsky-core' ) );
+		self::li( __( '7. Final crawl', 'shpigovsky-core' ) );
 		echo '</ul>';
+		echo '<p style="margin:0 0 12px;">' . esc_html__( 'Operator changes NS. Then run the final cutover execution wave (P18) after confirmation «NS SWITCHED».', 'shpigovsky-core' ) . '</p>';
 
 		if ( $is_beget && ( 'local' === $env_const || 'local' === $env_fn ) ) {
 			echo '<p style="margin:0 0 8px;padding:8px 10px;border-left:3px solid #dba617;background:#fff8e5;">';
@@ -201,7 +196,7 @@ final class SystemDashboard implements ModuleInterface {
 			echo '</p>';
 		}
 
-		echo '<p class="description" style="margin:0;">' . esc_html__( 'No secrets, tokens, or filesystem credentials are shown here.', 'shpigovsky-core' ) . '</p>';
+		echo '<p class="description" style="margin:0;">' . esc_html__( 'No secrets, tokens, DNS credentials, or filesystem credentials are shown here.', 'shpigovsky-core' ) . '</p>';
 		echo '</div>';
 	}
 

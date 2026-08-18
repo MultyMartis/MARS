@@ -1,6 +1,6 @@
 <?php
 /**
- * Lead form AJAX handler — local-mode accept, no outbound mail.
+ * Lead form AJAX handler — pre-SMTP accept, no outbound mail.
  *
  * @package Shpigovsky_Core
  */
@@ -17,8 +17,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Unified lead / consultation form submission handler (wp_ajax).
  *
- * LOCAL MODE: validate + accept + optional private receipt log.
+ * PRE-SMTP MODE: validate + accept + optional private receipt log.
  * Does NOT call wp_mail / SMTP. Future recipient is prepared as a constant only.
+ * Outbound delivery remains suppressed by MU until the SMTP cutover wave.
  */
 final class ConsultationHandler implements ModuleInterface {
 
@@ -151,7 +152,7 @@ final class ConsultationHandler implements ModuleInterface {
 		$honeypot = isset( $_POST['company_url'] ) ? trim( (string) wp_unslash( $_POST['company_url'] ) ) : '';
 		if ( '' !== $honeypot ) {
 			// Silent accept for bots — do not reveal honeypot logic.
-			self::json_response( true, self::message( 'local_success' ), 200, array( 'mode' => 'local', 'spam' => true ) );
+			self::json_response( true, self::message( 'local_success' ), 200, array( 'mode' => 'pre_smtp', 'spam' => true ) );
 		}
 
 		$timing = self::check_fill_timing( $_POST );
@@ -190,10 +191,10 @@ final class ConsultationHandler implements ModuleInterface {
 			);
 		}
 
-		// LOCAL MODE — accept only. Future recipient is recorded for operators, never mailed.
+		// PRE-SMTP — accept only. Future recipient is recorded for operators, never mailed.
 		$receipt = array(
 			'accepted_at'      => gmdate( 'c' ),
-			'mode'             => 'local',
+			'mode'             => 'pre_smtp',
 			'mail_transport'   => 'disabled',
 			'future_recipient' => self::FUTURE_RECIPIENT,
 			'ip_hash'          => hash( 'sha256', $ip . '|' . wp_salt( 'nonce' ) ),
@@ -215,7 +216,7 @@ final class ConsultationHandler implements ModuleInterface {
 			self::message( 'local_success' ),
 			200,
 			array(
-				'mode'           => 'local',
+				'mode'           => 'pre_smtp',
 				'mail_transport' => 'disabled',
 			)
 		);
@@ -237,7 +238,7 @@ final class ConsultationHandler implements ModuleInterface {
 	 */
 	public static function message( $key ) {
 		$messages = array(
-			'local_success'   => 'Заявка принята на локальном стенде. Отправка email здесь отключена — письмо не уходило.',
+			'local_success'   => 'Заявка принята. Мы свяжемся с вами по указанному телефону.',
 			'validation'      => 'Проверьте поля формы и попробуйте снова.',
 			'rate_limited'    => 'Слишком много заявок с вашего адреса. Подождите немного или позвоните нам: 8 (925) 183-64-64.',
 			'duplicate'       => 'Эта заявка уже была отправлена. Обновите страницу, если нужно отправить новую.',

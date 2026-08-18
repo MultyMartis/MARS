@@ -1,0 +1,1449 @@
+{
+  "utc": "2026-08-18T10:16:09.551687+00:00",
+  "redirects": [
+    {
+      "source": "/yoga",
+      "expected": "/o-centre/programma-lecheniya/kinezioterapiya/",
+      "first_status": 301,
+      "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/kinezioterapiya/",
+      "hops": 2,
+      "final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/kinezioterapiya/",
+      "exact_301": true,
+      "dest_match": true,
+      "final_200": true,
+      "loop": false,
+      "query_preserved": true
+    },
+    {
+      "source": "/yoga/",
+      "expected": "/o-centre/programma-lecheniya/kinezioterapiya/",
+      "first_status": 301,
+      "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/kinezioterapiya/",
+      "hops": 2,
+      "final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/kinezioterapiya/",
+      "exact_301": true,
+      "dest_match": true,
+      "final_200": true,
+      "loop": false,
+      "query_preserved": true
+    },
+    {
+      "source": "/about",
+      "expected": "/o-centre/",
+      "first_status": 301,
+      "location": "http://shpigovsky.beget.tech/o-centre/",
+      "hops": 2,
+      "final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/o-centre/",
+      "exact_301": true,
+      "dest_match": true,
+      "final_200": true,
+      "loop": false,
+      "query_preserved": true
+    },
+    {
+      "source": "/about/",
+      "expected": "/o-centre/",
+      "first_status": 301,
+      "location": "http://shpigovsky.beget.tech/o-centre/",
+      "hops": 2,
+      "final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/o-centre/",
+      "exact_301": true,
+      "dest_match": true,
+      "final_200": true,
+      "loop": false,
+      "query_preserved": true
+    },
+    {
+      "source": "/psy",
+      "expected": "/o-centre/programma-lecheniya/psihokorrektsiya/",
+      "first_status": 301,
+      "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/psihokorrektsiya/",
+      "hops": 2,
+      "final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/psihokorrektsiya/",
+      "exact_301": true,
+      "dest_match": true,
+      "final_200": true,
+      "loop": false,
+      "query_preserved": true
+    },
+    {
+      "source": "/psy/",
+      "expected": "/o-centre/programma-lecheniya/psihokorrektsiya/",
+      "first_status": 301,
+      "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/psihokorrektsiya/",
+      "hops": 2,
+      "final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/psihokorrektsiya/",
+      "exact_301": true,
+      "dest_match": true,
+      "final_200": true,
+      "loop": false,
+      "query_preserved": true
+    },
+    {
+      "source": "/home",
+      "expected": "/o-centre/programma-lecheniya/",
+      "first_status": 301,
+      "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/",
+      "hops": 2,
+      "final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/",
+      "exact_301": true,
+      "dest_match": true,
+      "final_200": true,
+      "loop": false,
+      "query_preserved": true
+    },
+    {
+      "source": "/home/",
+      "expected": "/o-centre/programma-lecheniya/",
+      "first_status": 301,
+      "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/",
+      "hops": 2,
+      "final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/",
+      "exact_301": true,
+      "dest_match": true,
+      "final_200": true,
+      "loop": false,
+      "query_preserved": true
+    },
+    {
+      "source": "/policy",
+      "expected": "/privacy-policy/",
+      "first_status": 301,
+      "location": "http://shpigovsky.beget.tech/privacy-policy/",
+      "hops": 2,
+      "final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/privacy-policy/",
+      "exact_301": true,
+      "dest_match": true,
+      "final_200": true,
+      "loop": false,
+      "query_preserved": true
+    },
+    {
+      "source": "/policy/",
+      "expected": "/privacy-policy/",
+      "first_status": 301,
+      "location": "http://shpigovsky.beget.tech/privacy-policy/",
+      "hops": 2,
+      "final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/privacy-policy/",
+      "exact_301": true,
+      "dest_match": true,
+      "final_200": true,
+      "loop": false,
+      "query_preserved": true
+    },
+    {
+      "source": "/neuro",
+      "expected": "/o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/",
+      "first_status": 301,
+      "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/",
+      "hops": 2,
+      "final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/",
+      "exact_301": true,
+      "dest_match": true,
+      "final_200": true,
+      "loop": false,
+      "query_preserved": true
+    },
+    {
+      "source": "/neuro/",
+      "expected": "/o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/",
+      "first_status": 301,
+      "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/",
+      "hops": 2,
+      "final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/",
+      "exact_301": true,
+      "dest_match": true,
+      "final_200": true,
+      "loop": false,
+      "query_preserved": true
+    },
+    {
+      "source": "/reviews",
+      "expected": "/otzyvy/",
+      "first_status": 301,
+      "location": "http://shpigovsky.beget.tech/otzyvy/",
+      "hops": 2,
+      "final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/otzyvy/",
+      "exact_301": true,
+      "dest_match": true,
+      "final_200": true,
+      "loop": false,
+      "query_preserved": true
+    },
+    {
+      "source": "/reviews/",
+      "expected": "/otzyvy/",
+      "first_status": 301,
+      "location": "http://shpigovsky.beget.tech/otzyvy/",
+      "hops": 2,
+      "final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/otzyvy/",
+      "exact_301": true,
+      "dest_match": true,
+      "final_200": true,
+      "loop": false,
+      "query_preserved": true
+    }
+  ],
+  "redirects_pass": true,
+  "token_redirects": "7/7 LEGACY REDIRECTS = 301 → VALID 200 TARGET",
+  "negative_prefix": [
+    {
+      "path": "/yoga-example/",
+      "first_status": 404,
+      "location": null
+    },
+    {
+      "path": "/about-us/",
+      "first_status": 404,
+      "location": null
+    },
+    {
+      "path": "/reviews-old/",
+      "first_status": 404,
+      "location": null
+    }
+  ],
+  "indexing": {
+    "robots_status": 200,
+    "robots_body": "User-agent: *\nDisallow: /\n\nSitemap: http://shpigovsky.beget.tech/wp-sitemap.xml\n",
+    "robots_sha256": "2492f7f1451552b8cbf1151fd87c6bccaf21580e5686459d7afebb5b5a9d66a5",
+    "home_status": 200,
+    "home_x_robots": null,
+    "home_meta_robots": "<meta name='robots' content='noindex, nofollow' />",
+    "home_canonical": "<link rel=\"canonical\" href=\"http://shpigovsky.beget.tech/\" />",
+    "sitemap_status": 200,
+    "sitemap_preview": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<?xml-stylesheet type=\"text/xsl\" href=\"http://shpigovsky.beget.tech/wp-sitemap-index.xsl\" ?>\n<sitemapindex xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\"><sitemap><loc>http://shpigovsky.beget.tech/wp-sitemap-posts-post-1.xml</loc></sitemap><sitemap><loc>http://shpigovsky.beget.tech/wp-sitemap-posts-page-1.xml</loc></sitemap><sitemap><loc>http://shpigovsky.beget.tech/wp-sitemap-posts-service-1.xml</loc></sitemap><sitemap><loc>http://shpigovsky.beget.tech/wp-sitemap-specialists-1.xml</loc></sitemap></sitemapindex>\n",
+    "home_has_noindex": true
+  },
+  "crawl": {
+    "utc": "2026-08-18T10:16:09.551660+00:00",
+    "pages_crawled": 85,
+    "status_counts": {
+      "2xx": 85,
+      "3xx": 0,
+      "4xx": 0,
+      "5xx": 0,
+      "other": 0
+    },
+    "broken": [],
+    "residue": [
+      {
+        "path": "/blog/nazvanie-stati/",
+        "match": "new-site.space"
+      },
+      {
+        "path": "/blog/nazvanie-stati/",
+        "match": "new-site.space"
+      },
+      {
+        "path": "/blog/nazvanie-stati/",
+        "match": "new-site.space"
+      },
+      {
+        "path": "/blog/nazvanie-stati/",
+        "match": "new-site.space"
+      }
+    ],
+    "residue_count": 4,
+    "beget_hardcoded_sample": [
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/uslugi/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/uslugi/zavisimosti/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/uslugi/rasstroystva-pischevogo-povedeniya/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/uslugi/genotipirovenie/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/o-centre/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/specyalisty/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/o-centre/intervyu-i-smi/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/otzyvy/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/blog/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/kontakty/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/uslugi/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/uslugi/zavisimosti/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/uslugi/rasstroystva-pischevogo-povedeniya/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/uslugi/genotipirovenie/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/o-centre/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/specyalisty/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/o-centre/intervyu-i-smi/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/otzyvy/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/blog/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/kontakty/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/uslugi/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/geroin/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/matadon/"
+      },
+      {
+        "path": "/",
+        "href": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/soli/"
+      }
+    ],
+    "beget_hardcoded_count": 5419,
+    "sitemap_url_count": 4,
+    "pages": [
+      {
+        "path": "/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/",
+        "hops": 1,
+        "title": "Шпиговский Дом",
+        "h1": "Центр профилактики и лечения зависимостей\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tШпиговский дом",
+        "canonical": "http://shpigovsky.beget.tech/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/uslugi/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/",
+        "hops": 1,
+        "title": "Услуги &#8212; Шпиговский Дом",
+        "h1": "Лечение и профилактика",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/o-centre/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/o-centre/",
+        "hops": 1,
+        "title": "О центре &#8212; Шпиговский Дом",
+        "h1": "Шпиговский дом",
+        "canonical": "http://shpigovsky.beget.tech/o-centre/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/privacy-policy/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/privacy-policy/",
+        "hops": 1,
+        "title": "Политика конфиденциальности &#8212; Шпиговский Дом",
+        "h1": "Политика конфиденциальности",
+        "canonical": "http://shpigovsky.beget.tech/privacy-policy/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/otzyvy/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/otzyvy/",
+        "hops": 1,
+        "title": "Отзывы &#8212; Шпиговский Дом",
+        "h1": "Отзывы о&nbsp;центре лечения и&nbsp;профилактики зависимостей",
+        "canonical": "http://shpigovsky.beget.tech/otzyvy/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/specyalisty/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/specyalisty/",
+        "hops": 1,
+        "title": "Специалисты &#8212; Шпиговский Дом",
+        "h1": "Специалисты",
+        "canonical": "http://shpigovsky.beget.tech/specyalisty/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/blog/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/blog/",
+        "hops": 1,
+        "title": "Статьи &#8212; Шпиговский Дом",
+        "h1": "Статьи о зависимостях, диагностике и методах лечения",
+        "canonical": "http://shpigovsky.beget.tech/blog/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/kontakty/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/kontakty/",
+        "hops": 1,
+        "title": "Контакты &#8212; Шпиговский Дом",
+        "h1": "Контакты",
+        "canonical": "http://shpigovsky.beget.tech/kontakty/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/robots.txt",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/robots.txt",
+        "hops": 1,
+        "title": "",
+        "h1": "",
+        "canonical": null,
+        "meta_robots": null,
+        "in_sitemap": false,
+        "noindex": false
+      },
+      {
+        "path": "/wp-sitemap.xml",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/wp-sitemap.xml",
+        "hops": 1,
+        "title": "",
+        "h1": "",
+        "canonical": null,
+        "meta_robots": null,
+        "in_sitemap": false,
+        "noindex": false
+      },
+      {
+        "path": "/wp-json/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/wp-json/",
+        "hops": 1,
+        "title": "",
+        "h1": "",
+        "canonical": null,
+        "meta_robots": null,
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/wp-login.php",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/wp-login.php",
+        "hops": 1,
+        "title": "",
+        "h1": "",
+        "canonical": null,
+        "meta_robots": null,
+        "in_sitemap": false,
+        "noindex": false
+      },
+      {
+        "path": "/wp-sitemap-posts-post-1.xml",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/wp-sitemap-posts-post-1.xml",
+        "hops": 1,
+        "title": "",
+        "h1": "",
+        "canonical": null,
+        "meta_robots": null,
+        "in_sitemap": true,
+        "noindex": false
+      },
+      {
+        "path": "/wp-sitemap-posts-page-1.xml",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/wp-sitemap-posts-page-1.xml",
+        "hops": 1,
+        "title": "",
+        "h1": "",
+        "canonical": null,
+        "meta_robots": null,
+        "in_sitemap": true,
+        "noindex": false
+      },
+      {
+        "path": "/wp-sitemap-posts-service-1.xml",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/wp-sitemap-posts-service-1.xml",
+        "hops": 1,
+        "title": "",
+        "h1": "",
+        "canonical": null,
+        "meta_robots": null,
+        "in_sitemap": true,
+        "noindex": false
+      },
+      {
+        "path": "/wp-sitemap-specialists-1.xml",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/wp-sitemap-specialists-1.xml",
+        "hops": 1,
+        "title": "",
+        "h1": "",
+        "canonical": null,
+        "meta_robots": null,
+        "in_sitemap": true,
+        "noindex": false
+      },
+      {
+        "path": "/uslugi/zavisimosti/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/zavisimosti/",
+        "hops": 1,
+        "title": "Зависимости &#8212; Шпиговский Дом",
+        "h1": "Зависимости",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/zavisimosti/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/uslugi/psihicheskoe-zdorovie/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/",
+        "hops": 1,
+        "title": "Психическое здоровье &#8212; Шпиговский Дом",
+        "h1": "Психическое здоровье",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/rasstroystva-pischevogo-povedeniya/",
+        "hops": 1,
+        "title": "Расстройства пищевого поведения &#8212; Шпиговский Дом",
+        "h1": "Расстройства пищевого поведения",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/rasstroystva-pischevogo-povedeniya/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/uslugi/genotipirovenie/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/genotipirovenie/",
+        "hops": 1,
+        "title": "Генотипирование &#8212; Шпиговский Дом",
+        "h1": "Генотипирование",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/genotipirovenie/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+        "hops": 1,
+        "title": "Лечение алкогольной зависимости &#8212; Шпиговский Дом",
+        "h1": "Центр лечения алкогольной зависимости",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+        "hops": 1,
+        "title": "Лечение наркотической зависимости &#8212; Шпиговский Дом",
+        "h1": "Лечение наркотической зависимости",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/",
+        "hops": 1,
+        "title": "Поведенческие зависимости &#8212; Шпиговский Дом",
+        "h1": "Поведенческие зависимости",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/o-centre/programma-lecheniya/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/",
+        "hops": 1,
+        "title": "Программа лечения &#8212; Шпиговский Дом",
+        "h1": "Программа лечения",
+        "canonical": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/o-centre/intervyu-i-smi/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/o-centre/intervyu-i-smi/",
+        "hops": 1,
+        "title": "Интервью и СМИ &#8212; Шпиговский Дом",
+        "h1": "Интервью и СМИ",
+        "canonical": "http://shpigovsky.beget.tech/o-centre/intervyu-i-smi/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/geroin/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/geroin/",
+        "hops": 1,
+        "title": "Лечение героиновой зависимости &#8212; Шпиговский Дом",
+        "h1": "Лечение героиновой зависимости",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/geroin/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/matadon/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/matadon/",
+        "hops": 1,
+        "title": "Лечение метадоновой зависимости &#8212; Шпиговский Дом",
+        "h1": "Лечение метадоновой зависимости",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/matadon/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/soli/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/soli/",
+        "hops": 1,
+        "title": "Лечение солевой зависимости &#8212; Шпиговский Дом",
+        "h1": "Лечение солевой зависимости",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/soli/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/lekarstva/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/lekarstva/",
+        "hops": 1,
+        "title": "Лечение лекарственной зависимости &#8212; Шпиговский Дом",
+        "h1": "Лечение лекарственной зависимости",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/lekarstva/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/lechenie-opiumnoy-zavisimosti/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/lechenie-opiumnoy-zavisimosti/",
+        "hops": 1,
+        "title": "Лечение опиумной зависимости &#8212; Шпиговский Дом",
+        "h1": "Лечение опиумной зависимости",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/lechenie-opiumnoy-zavisimosti/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/shopogolizm/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/shopogolizm/",
+        "hops": 1,
+        "title": "Зависимость от постоянных покупок &#8212; Шпиговский Дом",
+        "h1": "Зависимость от постоянных покупок",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/shopogolizm/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/internet-zavisimost/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/internet-zavisimost/",
+        "hops": 1,
+        "title": "Интернет-зависимость &#8212; Шпиговский Дом",
+        "h1": "Интернет-зависимость",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/internet-zavisimost/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/ludomaniya/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/ludomaniya/",
+        "hops": 1,
+        "title": "Лечение игровой зависимости &#8212; Шпиговский Дом",
+        "h1": "Лечение игровой зависимости",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/ludomaniya/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/sozavisimost/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/sozavisimost/",
+        "hops": 1,
+        "title": "Лечение созависимости &#8212; Шпиговский Дом",
+        "h1": "Лечение созависимости",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/sozavisimost/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/kompyuternaya-zavisimost/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/kompyuternaya-zavisimost/",
+        "hops": 1,
+        "title": "Компьютерная зависимость &#8212; Шпиговский Дом",
+        "h1": "Компьютерная зависимость",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/kompyuternaya-zavisimost/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/uslugi/psihicheskoe-zdorovie/depressiya/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/depressiya/",
+        "hops": 1,
+        "title": "Депрессия &#8212; Шпиговский Дом",
+        "h1": "Депрессия",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/depressiya/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/uslugi/psihicheskoe-zdorovie/ptsr/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/ptsr/",
+        "hops": 1,
+        "title": "ПТСР &#8212; Шпиговский Дом",
+        "h1": "ПТСР",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/ptsr/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/uslugi/psihicheskoe-zdorovie/emotsionalnoe-vygoranie/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/emotsionalnoe-vygoranie/",
+        "hops": 1,
+        "title": "Эмоциональное выгорание &#8212; Шпиговский Дом",
+        "h1": "Эмоциональное выгорание",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/emotsionalnoe-vygoranie/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/",
+        "hops": 1,
+        "title": "Тревожные расстройства &#8212; Шпиговский Дом",
+        "h1": "Тревожные расстройства",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/",
+        "hops": 1,
+        "title": "Расстройства сна &#8212; Шпиговский Дом",
+        "h1": "Расстройства сна",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/uslugi/psihicheskoe-zdorovie/travma/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/travma/",
+        "hops": 1,
+        "title": "Травма &#8212; Шпиговский Дом",
+        "h1": "Травма",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/travma/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/uslugi/psihicheskoe-zdorovie/hronicheskaya-ustalost/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/hronicheskaya-ustalost/",
+        "hops": 1,
+        "title": "Хроническая усталость &#8212; Шпиговский Дом",
+        "h1": "Хроническая усталость",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/hronicheskaya-ustalost/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/uslugi/psihicheskoe-zdorovie/stress/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/stress/",
+        "hops": 1,
+        "title": "Стресс &#8212; Шпиговский Дом",
+        "h1": "Стресс",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/stress/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/uslugi/psihicheskoe-zdorovie/nartsissizm/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/nartsissizm/",
+        "hops": 1,
+        "title": "Нарциссизм &#8212; Шпиговский Дом",
+        "h1": "Нарциссизм",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/psihicheskoe-zdorovie/nartsissizm/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/",
+        "hops": 1,
+        "title": "Анорексия &#8212; Шпиговский Дом",
+        "h1": "Анорексия",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/uslugi/rasstroystva-pischevogo-povedeniya/buliniya/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/rasstroystva-pischevogo-povedeniya/buliniya/",
+        "hops": 1,
+        "title": "Булимия &#8212; Шпиговский Дом",
+        "h1": "Булимия",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/rasstroystva-pischevogo-povedeniya/buliniya/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/",
+        "hops": 1,
+        "title": "Компульсивное переедание &#8212; Шпиговский Дом",
+        "h1": "Компульсивное переедание",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/uslugi/genotipirovenie/analiz-dya-specialistov/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/genotipirovenie/analiz-dya-specialistov/",
+        "hops": 1,
+        "title": "Генотипирование для специалистов &#8212; Шпиговский Дом",
+        "h1": "Генотипирование для специалистов",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/genotipirovenie/analiz-dya-specialistov/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/uslugi/genotipirovenie/profilakticheskiy-analiz/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/uslugi/genotipirovenie/profilakticheskiy-analiz/",
+        "hops": 1,
+        "title": "Профилактический анализ &#8212; Шпиговский Дом",
+        "h1": "Профилактический анализ",
+        "canonical": "http://shpigovsky.beget.tech/uslugi/genotipirovenie/profilakticheskiy-analiz/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/otzyvy/page/2/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/otzyvy/page/2/",
+        "hops": 1,
+        "title": "Отзывы &#8212; Страница 2 &#8212; Шпиговский Дом",
+        "h1": "Отзывы о&nbsp;центре лечения и&nbsp;профилактики зависимостей",
+        "canonical": "http://shpigovsky.beget.tech/otzyvy/page/2/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/o-centre/programma-lecheniya/genotipirovanie/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/genotipirovanie/",
+        "hops": 1,
+        "title": "Генотипирование &#8212; Шпиговский Дом",
+        "h1": "Генотипирование",
+        "canonical": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/genotipirovanie/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/",
+        "hops": 1,
+        "title": "Пространство восстановления &#8212; Шпиговский Дом",
+        "h1": "Пространство восстановления",
+        "canonical": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/o-centre/programma-lecheniya/psihokorrektsiya/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/psihokorrektsiya/",
+        "hops": 1,
+        "title": "Психокоррекция &#8212; Шпиговский Дом",
+        "h1": "Психокоррекция",
+        "canonical": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/psihokorrektsiya/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/o-centre/programma-lecheniya/kinezioterapiya/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/kinezioterapiya/",
+        "hops": 1,
+        "title": "Кинезиотерапия &#8212; Шпиговский Дом",
+        "h1": "Кинезиотерапия",
+        "canonical": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/kinezioterapiya/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/o-centre/galereya-o-dome/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/o-centre/galereya-o-dome/",
+        "hops": 1,
+        "title": "Галерея о доме &#8212; Шпиговский Дом",
+        "h1": "Галерея о доме",
+        "canonical": "http://shpigovsky.beget.tech/o-centre/galereya-o-dome/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/wp-content/themes/shpigovsky/assets/img/content/home-comfort/comfort-room-01.webp",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/wp-content/themes/shpigovsky/assets/img/content/home-comfort/comfort-room-01.webp",
+        "hops": 1,
+        "title": "",
+        "h1": "",
+        "canonical": null,
+        "meta_robots": null,
+        "in_sitemap": false,
+        "noindex": false
+      },
+      {
+        "path": "/wp-content/themes/shpigovsky/assets/img/content/home-comfort/comfort-room-02.webp",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/wp-content/themes/shpigovsky/assets/img/content/home-comfort/comfort-room-02.webp",
+        "hops": 1,
+        "title": "",
+        "h1": "",
+        "canonical": null,
+        "meta_robots": null,
+        "in_sitemap": false,
+        "noindex": false
+      },
+      {
+        "path": "/wp-content/themes/shpigovsky/assets/img/content/home-comfort/comfort-room-03.webp",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/wp-content/themes/shpigovsky/assets/img/content/home-comfort/comfort-room-03.webp",
+        "hops": 1,
+        "title": "",
+        "h1": "",
+        "canonical": null,
+        "meta_robots": null,
+        "in_sitemap": false,
+        "noindex": false
+      },
+      {
+        "path": "/wp-content/themes/shpigovsky/assets/img/content/home-comfort/comfort-room-04.webp",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/wp-content/themes/shpigovsky/assets/img/content/home-comfort/comfort-room-04.webp",
+        "hops": 1,
+        "title": "",
+        "h1": "",
+        "canonical": null,
+        "meta_robots": null,
+        "in_sitemap": false,
+        "noindex": false
+      },
+      {
+        "path": "/wp-content/themes/shpigovsky/assets/img/content/home-comfort/comfort-room-05.webp",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/wp-content/themes/shpigovsky/assets/img/content/home-comfort/comfort-room-05.webp",
+        "hops": 1,
+        "title": "",
+        "h1": "",
+        "canonical": null,
+        "meta_robots": null,
+        "in_sitemap": false,
+        "noindex": false
+      },
+      {
+        "path": "/wp-content/themes/shpigovsky/assets/img/content/home-comfort/comfort-room-06.webp",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/wp-content/themes/shpigovsky/assets/img/content/home-comfort/comfort-room-06.webp",
+        "hops": 1,
+        "title": "",
+        "h1": "",
+        "canonical": null,
+        "meta_robots": null,
+        "in_sitemap": false,
+        "noindex": false
+      },
+      {
+        "path": "/wp-content/uploads/2026/07/sergey-shpigovsky-interview.mp4",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/wp-content/uploads/2026/07/sergey-shpigovsky-interview.mp4",
+        "hops": 1,
+        "title": "",
+        "h1": "",
+        "canonical": null,
+        "meta_robots": null,
+        "in_sitemap": false,
+        "noindex": false
+      },
+      {
+        "path": "/wp-content/uploads/2026/07/shpigovsky-center.mp4",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/wp-content/uploads/2026/07/shpigovsky-center.mp4",
+        "hops": 1,
+        "title": "",
+        "h1": "",
+        "canonical": null,
+        "meta_robots": null,
+        "in_sitemap": false,
+        "noindex": false
+      },
+      {
+        "path": "/specyalisty/shpigovsky/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/specyalisty/shpigovsky/",
+        "hops": 1,
+        "title": "Сергей Юрьевич Шпиговский &#8212; Шпиговский Дом",
+        "h1": "Сергей Юрьевич Шпиговский",
+        "canonical": "http://shpigovsky.beget.tech/specyalisty/shpigovsky/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/specyalisty/kazakov/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/specyalisty/kazakov/",
+        "hops": 1,
+        "title": "Максим Михайлович Казаков &#8212; Шпиговский Дом",
+        "h1": "Максим Михайлович Казаков",
+        "canonical": "http://shpigovsky.beget.tech/specyalisty/kazakov/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/specyalisty/kostyuk/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/specyalisty/kostyuk/",
+        "hops": 1,
+        "title": "Дарья Владимировна Костюк &#8212; Шпиговский Дом",
+        "h1": "Дарья Владимировна Костюк",
+        "canonical": "http://shpigovsky.beget.tech/specyalisty/kostyuk/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/specyalisty/hanikova/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/specyalisty/hanikova/",
+        "hops": 1,
+        "title": "Ханикова Светлана Николаевна &#8212; Шпиговский Дом",
+        "h1": "Ханикова Светлана Николаевна",
+        "canonical": "http://shpigovsky.beget.tech/specyalisty/hanikova/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/specyalisty/shapiguzova/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/specyalisty/shapiguzova/",
+        "hops": 1,
+        "title": "Шапигузова Татьяна Андреевна &#8212; Шпиговский Дом",
+        "h1": "Шапигузова Татьяна Андреевна",
+        "canonical": "http://shpigovsky.beget.tech/specyalisty/shapiguzova/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/specyalisty/litvinov/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/specyalisty/litvinov/",
+        "hops": 1,
+        "title": "Литвинов Кирилл Алексеевич &#8212; Шпиговский Дом",
+        "h1": "Литвинов Кирилл Алексеевич",
+        "canonical": "http://shpigovsky.beget.tech/specyalisty/litvinov/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/specyalisty/poverinov/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/specyalisty/poverinov/",
+        "hops": 1,
+        "title": "Поверинов Александр Константинович &#8212; Шпиговский Дом",
+        "h1": "Поверинов Александр Константинович",
+        "canonical": "http://shpigovsky.beget.tech/specyalisty/poverinov/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/specyalisty/filippov/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/specyalisty/filippov/",
+        "hops": 1,
+        "title": "Филиппов Илья Владимирович &#8212; Шпиговский Дом",
+        "h1": "Филиппов Илья Владимирович",
+        "canonical": "http://shpigovsky.beget.tech/specyalisty/filippov/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/specyalisty/filippova/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/specyalisty/filippova/",
+        "hops": 1,
+        "title": "Филиппова Мария Михайловна &#8212; Шпиговский Дом",
+        "h1": "Филиппова Мария Михайловна",
+        "canonical": "http://shpigovsky.beget.tech/specyalisty/filippova/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/blog/nazvanie-stati/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/blog/nazvanie-stati/",
+        "hops": 1,
+        "title": "Лечение алкогольной зависимости: почему сила воли здесь ни при чём &#8212; Шпиговский Дом",
+        "h1": "Лечение алкогольной зависимости: почему сила воли здесь ни при чём",
+        "canonical": "http://shpigovsky.beget.tech/blog/nazvanie-stati/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/blog/demo-pagination-article-10/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/blog/demo-pagination-article-10/",
+        "hops": 1,
+        "title": "Демо-статья для проверки пагинации — 10 &#8212; Шпиговский Дом",
+        "h1": "Демо-статья для проверки пагинации — 10",
+        "canonical": "http://shpigovsky.beget.tech/blog/demo-pagination-article-10/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/blog/demo-pagination-article-09/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/blog/demo-pagination-article-09/",
+        "hops": 1,
+        "title": "Демо-статья для проверки пагинации — 09 &#8212; Шпиговский Дом",
+        "h1": "Демо-статья для проверки пагинации — 09",
+        "canonical": "http://shpigovsky.beget.tech/blog/demo-pagination-article-09/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/blog/demo-pagination-article-08/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/blog/demo-pagination-article-08/",
+        "hops": 1,
+        "title": "Демо-статья для проверки пагинации — 08 &#8212; Шпиговский Дом",
+        "h1": "Демо-статья для проверки пагинации — 08",
+        "canonical": "http://shpigovsky.beget.tech/blog/demo-pagination-article-08/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/blog/demo-pagination-article-07/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/blog/demo-pagination-article-07/",
+        "hops": 1,
+        "title": "Демо-статья для проверки пагинации — 07 &#8212; Шпиговский Дом",
+        "h1": "Демо-статья для проверки пагинации — 07",
+        "canonical": "http://shpigovsky.beget.tech/blog/demo-pagination-article-07/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/blog/demo-pagination-article-06/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/blog/demo-pagination-article-06/",
+        "hops": 1,
+        "title": "Демо-статья для проверки пагинации — 06 &#8212; Шпиговский Дом",
+        "h1": "Демо-статья для проверки пагинации — 06",
+        "canonical": "http://shpigovsky.beget.tech/blog/demo-pagination-article-06/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/consent-personal-data/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/consent-personal-data/",
+        "hops": 1,
+        "title": "Согласие на обработку персональных данных &#8212; Шпиговский Дом",
+        "h1": "Согласие на обработку персональных данных",
+        "canonical": "http://shpigovsky.beget.tech/consent-personal-data/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/o-centre/o-nas/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/o-centre/o-nas/",
+        "hops": 1,
+        "title": "О нас &#8212; Шпиговский Дом",
+        "h1": "О нас",
+        "canonical": "http://shpigovsky.beget.tech/o-centre/o-nas/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/o-centre/specialistam/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/o-centre/specialistam/",
+        "hops": 1,
+        "title": "Специалистам &#8212; Шпиговский Дом",
+        "h1": "Специалистам",
+        "canonical": "http://shpigovsky.beget.tech/o-centre/specialistam/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/o-centre/rodstvennikam/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/o-centre/rodstvennikam/",
+        "hops": 1,
+        "title": "Родственникам &#8212; Шпиговский Дом",
+        "h1": "Родственникам",
+        "canonical": "http://shpigovsky.beget.tech/o-centre/rodstvennikam/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/user-agreement/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/user-agreement/",
+        "hops": 1,
+        "title": "Пользовательское соглашение &#8212; Шпиговский Дом",
+        "h1": "Пользовательское соглашение",
+        "canonical": "http://shpigovsky.beget.tech/user-agreement/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/cookie-files-policy/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/cookie-files-policy/",
+        "hops": 1,
+        "title": "Политика Cookie-файлов &#8212; Шпиговский Дом",
+        "h1": "Политика Cookie-файлов",
+        "canonical": "http://shpigovsky.beget.tech/cookie-files-policy/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      },
+      {
+        "path": "/otzyvy/page/3/",
+        "status": 200,
+        "final_url": "http://shpigovsky.beget.tech/otzyvy/page/3/",
+        "hops": 1,
+        "title": "Отзывы &#8212; Страница 3 &#8212; Шпиговский Дом",
+        "h1": "Отзывы о&nbsp;центре лечения и&nbsp;профилактики зависимостей",
+        "canonical": "http://shpigovsky.beget.tech/otzyvy/page/3/",
+        "meta_robots": "noindex, nofollow",
+        "in_sitemap": false,
+        "noindex": true
+      }
+    ]
+  }
+}

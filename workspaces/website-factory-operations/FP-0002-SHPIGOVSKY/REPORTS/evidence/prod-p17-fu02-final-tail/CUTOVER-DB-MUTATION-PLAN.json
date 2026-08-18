@@ -1,0 +1,89 @@
+{
+  "wave": "P17-FU02",
+  "token": "CUTOVER DB PLAN = EXECUTABLE WITHOUT DISCOVERY",
+  "execute": false,
+  "method_rules": [
+    "exact option_name / post_id+meta_key writes via WP APIs",
+    "plain-string URLs only in class A",
+    "no broad SEARCH REPLACE SQL",
+    "skip serialized blobs unless a dedicated JSON/PHP unserialize path is used",
+    "do not mutate Olya copy except listed URL fields"
+  ],
+  "items": [
+    {
+      "id": "opt-siteurl",
+      "owner": "WordPress",
+      "table": "fp02_options",
+      "key": "siteurl",
+      "current": "http://shpigovsky.beget.tech",
+      "final": "https://shpigovsky.ru",
+      "serialization_safe_method": "update_option('siteurl', 'https://shpigovsky.ru')",
+      "rollback": "http://shpigovsky.beget.tech"
+    },
+    {
+      "id": "opt-home",
+      "owner": "WordPress",
+      "table": "fp02_options",
+      "key": "home",
+      "current": "http://shpigovsky.beget.tech",
+      "final": "https://shpigovsky.ru",
+      "serialization_safe_method": "update_option('home', 'https://shpigovsky.ru')",
+      "rollback": "http://shpigovsky.beget.tech"
+    },
+    {
+      "id": "opt-specialists-link",
+      "owner": "ACF options (fp02-block-specialists)",
+      "table": "fp02_options",
+      "key": "fp02-block-specialists_specialists_all_link_url",
+      "current": "http://shpigovsky.beget.tech/specyalisty/",
+      "final": "https://shpigovsky.ru/specyalisty/",
+      "serialization_safe_method": "update_option exact key (plain string)",
+      "rollback": "http://shpigovsky.beget.tech/specyalisty/"
+    },
+    {
+      "id": "opt-comfort-link",
+      "owner": "ACF options (fp02-block-comfort)",
+      "table": "fp02_options",
+      "key": "fp02-block-comfort_comfort_all_link_url",
+      "current": "http://shpigovsky.beget.tech/o-centre/galereya-o-dome/",
+      "final": "https://shpigovsky.ru/o-centre/galereya-o-dome/",
+      "serialization_safe_method": "update_option exact key (plain string)",
+      "rollback": "http://shpigovsky.beget.tech/o-centre/galereya-o-dome/"
+    },
+    {
+      "id": "meta-home-urls",
+      "owner": "ACF Home page #4",
+      "table": "fp02_postmeta",
+      "keys": ["home_genotyping_link_url", "home_why_us_items_0_url", "home_why_us_items_1_url", "home_why_us_items_2_url", "home_why_us_items_3_url"],
+      "post_ids": [4],
+      "serialization_safe_method": "update_post_meta / update_field per key; strings only",
+      "rollback": "restore pre-cutover Layer B DB snapshot of these meta rows"
+    },
+    {
+      "id": "meta-section-urls",
+      "owner": "ACF service sections",
+      "table": "fp02_postmeta",
+      "keys": ["section_approach_more_url", "section_nature_genotyping_link_url"],
+      "post_ids": [73, 77, 84],
+      "serialization_safe_method": "update_post_meta per existing row; skip empty",
+      "rollback": "restore listed meta_id values from P18 pre-mutation dump"
+    },
+    {
+      "id": "meta-service-approach",
+      "owner": "ACF service_general",
+      "table": "fp02_postmeta",
+      "key": "service_general_approach_more_url",
+      "post_ids": [74, 75, 78, 79, 80, 81, 82, 83, 85, 86, 87, 314, 315, 316, 1011, 1012, 1013, 1016, 1017, 1018, 1019, 1047, 1048, 1049, 1050, 1051, 1894],
+      "current_value_pattern": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/",
+      "final_value_pattern": "https://shpigovsky.ru/o-centre/programma-lecheniya/",
+      "serialization_safe_method": "update_post_meta per post_id",
+      "rollback": "restore listed rows from P18 pre-mutation dump"
+    }
+  ],
+  "explicitly_out_of_scope": [
+    {"object": "guid", "reason": "historical; media URLs are dynamic via siteurl"},
+    {"object": "acf_site_health", "reason": "plugin telemetry JSON; not public"},
+    {"object": "nav_menu_item _menu_item_url", "reason": "zero beget hits; object menus"},
+    {"object": "blog_public / robots", "reason": "PHASE C indexing, not domain mutation"}
+  ]
+}

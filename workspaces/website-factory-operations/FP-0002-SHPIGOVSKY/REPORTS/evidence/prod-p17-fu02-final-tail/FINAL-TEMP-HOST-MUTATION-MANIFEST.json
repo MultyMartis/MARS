@@ -1,0 +1,108 @@
+{
+  "wave": "P17-FU02",
+  "token": "FINAL DOMAIN MUTATION SET IS EXACT AND BOUNDED",
+  "current_host": "http://shpigovsky.beget.tech",
+  "final_host": "https://shpigovsky.ru",
+  "execute": false,
+  "class_a_must_change": [
+    {
+      "owner": "wp_options",
+      "key": "siteurl",
+      "current": "http://shpigovsky.beget.tech",
+      "final": "https://shpigovsky.ru",
+      "serialization": "plain-string",
+      "method": "update_option('siteurl', ...)",
+      "rollback": "http://shpigovsky.beget.tech"
+    },
+    {
+      "owner": "wp_options",
+      "key": "home",
+      "current": "http://shpigovsky.beget.tech",
+      "final": "https://shpigovsky.ru",
+      "serialization": "plain-string",
+      "method": "update_option('home', ...)",
+      "rollback": "http://shpigovsky.beget.tech"
+    },
+    {
+      "owner": "acf_options",
+      "key": "fp02-block-specialists_specialists_all_link_url",
+      "current": "http://shpigovsky.beget.tech/specyalisty/",
+      "final": "https://shpigovsky.ru/specyalisty/",
+      "serialization": "plain-string",
+      "method": "update_option exact key",
+      "rollback": "http://shpigovsky.beget.tech/specyalisty/"
+    },
+    {
+      "owner": "acf_options",
+      "key": "fp02-block-comfort_comfort_all_link_url",
+      "current": "http://shpigovsky.beget.tech/o-centre/galereya-o-dome/",
+      "final": "https://shpigovsky.ru/o-centre/galereya-o-dome/",
+      "serialization": "plain-string",
+      "method": "update_option exact key",
+      "rollback": "http://shpigovsky.beget.tech/o-centre/galereya-o-dome/"
+    },
+    {
+      "owner": "acf_postmeta",
+      "key": "home_genotyping_link_url",
+      "publish_post_ids": [4],
+      "revision_post_ids_optional": [2034, 2036],
+      "current": "http://shpigovsky.beget.tech/uslugi/genotipirovenie/",
+      "final": "https://shpigovsky.ru/uslugi/genotipirovenie/",
+      "serialization": "plain-string"
+    },
+    {
+      "owner": "acf_postmeta",
+      "key": "home_why_us_items_0_url",
+      "publish_post_ids": [4],
+      "revision_post_ids_optional": [2034, 2036],
+      "current": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "final": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "serialization": "plain-string"
+    },
+    {
+      "owner": "acf_postmeta",
+      "keys": ["home_why_us_items_1_url", "home_why_us_items_2_url", "home_why_us_items_3_url"],
+      "publish_post_ids": [4],
+      "revision_post_ids_optional": [2034, 2036],
+      "current": "http://shpigovsky.beget.tech/uslugi/zavisimosti/",
+      "final": "https://shpigovsky.ru/uslugi/zavisimosti/",
+      "serialization": "plain-string"
+    },
+    {
+      "owner": "acf_postmeta",
+      "key": "section_approach_more_url",
+      "publish_post_ids": [73, 77, 84],
+      "revision_post_ids_optional": [2037],
+      "current": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/",
+      "final": "https://shpigovsky.ru/o-centre/programma-lecheniya/",
+      "serialization": "plain-string"
+    },
+    {
+      "owner": "acf_postmeta",
+      "key": "section_nature_genotyping_link_url",
+      "publish_post_ids": [73],
+      "revision_post_ids_optional": [2037],
+      "current": "http://shpigovsky.beget.tech/uslugi/zavisimosti/profilakticheskiy-analiz/",
+      "final": "https://shpigovsky.ru/uslugi/zavisimosti/profilakticheskiy-analiz/",
+      "serialization": "plain-string"
+    },
+    {
+      "owner": "acf_postmeta",
+      "key": "service_general_approach_more_url",
+      "publish_post_ids": [74, 75, 78, 79, 80, 81, 82, 83, 85, 86, 87, 314, 315, 316, 1011, 1012, 1013, 1016, 1017, 1018, 1019, 1047, 1048, 1049, 1050, 1051, 1894],
+      "current": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/",
+      "final": "https://shpigovsky.ru/o-centre/programma-lecheniya/",
+      "serialization": "plain-string"
+    },
+    {
+      "owner": "robots.txt",
+      "phase": "C-indexing",
+      "current": "Sitemap: http://shpigovsky.beget.tech/wp-sitemap.xml",
+      "final": "Sitemap: https://shpigovsky.ru/wp-sitemap.xml"
+    }
+  ],
+  "class_b_dynamic": ["home_url/siteurl derived permalinks", "canonical tags", "attachment URLs via _wp_attached_file", "object-ID menus"],
+  "class_c_infra": ["shpigovsky.beget.tech vhost"],
+  "class_d_historical": ["post.guid", "shpigovsky.test GUID/ACF notices", "new-site.space revisions", "auto_core_update_notified mli-fp0002@localhost.test", "acf_site_health.activated_url"],
+  "forbidden": ["broad SQL search-replace", "serialized blind replace"]
+}

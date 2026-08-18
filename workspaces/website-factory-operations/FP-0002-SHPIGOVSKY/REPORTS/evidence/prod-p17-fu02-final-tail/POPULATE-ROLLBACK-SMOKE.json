@@ -1,0 +1,59 @@
+{
+  "utc": "2026-08-18T10:22:31.053431+00:00",
+  "smoke": [
+    {
+      "path": "/",
+      "status": 200,
+      "final": "http://shpigovsky.beget.tech/",
+      "placeholder": false
+    },
+    {
+      "path": "/uslugi/",
+      "status": 200,
+      "final": "http://shpigovsky.beget.tech/uslugi/",
+      "placeholder": false
+    },
+    {
+      "path": "/uslugi/zavisimosti/",
+      "status": 200,
+      "final": "http://shpigovsky.beget.tech/uslugi/zavisimosti/",
+      "placeholder": false
+    },
+    {
+      "path": "/o-centre/",
+      "status": 200,
+      "final": "http://shpigovsky.beget.tech/o-centre/",
+      "placeholder": false
+    },
+    {
+      "path": "/o-centre/programma-lecheniya/",
+      "status": 200,
+      "final": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/",
+      "placeholder": false
+    },
+    {
+      "path": "/privacy-policy/",
+      "status": 200,
+      "final": "http://shpigovsky.beget.tech/privacy-policy/",
+      "placeholder": false
+    },
+    {
+      "path": "/otzyvy/",
+      "status": 200,
+      "final": "http://shpigovsky.beget.tech/otzyvy/",
+      "placeholder": false
+    },
+    {
+      "path": "/blog/",
+      "status": 200,
+      "final": "http://shpigovsky.beget.tech/blog/",
+      "placeholder": false
+    },
+    {
+      "path": "/specyalisty/",
+      "status": 200,
+      "final": "http://shpigovsky.beget.tech/specyalisty/",
+      "placeholder": false
+    }
+  ]
+}

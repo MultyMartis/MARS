@@ -1,7 +1,7 @@
-# FP-0002 — P17 Cutover Runbook (PRE-CUTOVER + CONT1)
+# FP-0002 — P17 Cutover Runbook (PRE-CUTOVER + CONT1 + FU02)
 
-**Status:** PRE-CUTOVER readiness pack + legacy redirects **live**.  
-**NS / SSL / siteurl / SMTP / indexing:** **NOT authorized** until a later explicit charter.
+**Status:** PRE-CUTOVER internal tails **closed**. READY FOR MANUAL NS SWITCH.  
+**NS / SSL / siteurl / SMTP / indexing:** **NOT authorized** until operator `NS SWITCHED` + P18.
 
 ---
 
@@ -68,7 +68,15 @@ Token: `NS CUTOVER GO/NO-GO GATES READY`
 | NS16 | Fresh full backup | **NOT THIS WAVE** (P14 backup exists; take a new one before NS) |
 | NS17 | Beget FS + DB + WP Admin | **HISTORICAL PASS** + CONT1 SSH/HTTP proven for `.htaccess` |
 
-**NS cutover decision: NO-GO** until NS02, NS13, NS15, NS16 are green and a dedicated NS charter exists.
+**NS cutover decision: WAITING FOR OPERATOR** after freeze + fresh backup + Beget zone prep (NS02/NS13/NS15/NS16). Internal WordPress/MARS readiness is **GO** (P17-FU02).
+
+FU02 addenda:
+
+- Freeze: `REPORTS/RUNBOOK-FP-0002-PRE-CUTOVER-FREEZE.md`
+- NS handoff: `REPORTS/RUNBOOK-FP-0002-MANUAL-NS-SWITCH-HANDOFF.md`
+- P18 skeleton: `REPORTS/RUNBOOK-FP-0002-PROD-P18-FINAL-DOMAIN-CUTOVER.md`
+- DB plan: `REPORTS/evidence/prod-p17-fu02-final-tail/CUTOVER-DB-MUTATION-PLAN.json`
+- File plan: `REPORTS/evidence/prod-p17-fu02-final-tail/CUTOVER-FILE-MUTATION-PLAN.md`
 
 ---
 

@@ -1,8 +1,8 @@
 # FP-0002 — DNS Cutover Status v1
 
-**Wave:** PROD-P02 · **updated P17 CONT1** (inventory + plan; still no NS write)  
-**Date:** 2026-08-18 (CONT1)  
-**Status:** **`DNS_CUTOVER = DEFERRED`** — zone inventoried; NS **not** switched
+**Wave:** PROD-P02 · **updated P17-FU02** (internal tails closed; still no NS write)  
+**Date:** 2026-08-18 (FU02)  
+**Status:** **`DNS_CUTOVER = DEFERRED`** — READY FOR MANUAL NS SWITCH; NS **not** switched
 
 ---
 

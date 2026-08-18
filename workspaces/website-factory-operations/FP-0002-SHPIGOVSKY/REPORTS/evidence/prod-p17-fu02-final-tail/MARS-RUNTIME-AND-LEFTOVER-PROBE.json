@@ -1,0 +1,885 @@
+{
+  "utc": "2026-08-18T10:20:03.813311+00:00",
+  "tar": {
+    "path": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p17-fu02-layer-b-pre\\obsolete-webroot-snapshot\\obsolete-webroot-20260818-101831.tar.gz",
+    "bytes": 53421291,
+    "sha256": "199fd6bec8c4185ec6167ba94437048f629d32bd223886235a589f18e20e30c5",
+    "names": [
+      "mars-runtime",
+      "mars-runtime/scripts",
+      "mars-runtime/scripts/fp0002-access-encoding-wpilot-task.php",
+      "mars-runtime/scripts/validate-wpilot-readonly.ps1",
+      "mars-runtime/scripts/create-foundation-002a-checkpoint.ps1",
+      "mars-runtime/scripts/populate-fp-0002-pages.php",
+      "mars-runtime/scripts/reset-to-foundation.ps1",
+      "mars-runtime/scripts/backup-runtime.ps1",
+      "app",
+      "app/public",
+      "app/public/wp-content",
+      "app/public/wp-content/themes",
+      "app/public/wp-content/themes/shpigovsky",
+      "app/public/wp-content/themes/shpigovsky/inc",
+      "app/public/wp-content/themes/shpigovsky/inc/site-chrome.php",
+      "app/public/wp-content/themes/shpigovsky/template-parts",
+      "app/public/wp-content/themes/shpigovsky/template-parts/navigation",
+      "app/public/wp-content/themes/shpigovsky/template-parts/navigation/messenger-links.php",
+      "app/public/wp-content/themes/shpigovsky/assets",
+      "app/public/wp-content/themes/shpigovsky/assets/css",
+      "app/public/wp-content/themes/shpigovsky/assets/css/v9-style.css",
+      "app/public/wp-content/themes/shpigovsky/assets/fonts",
+      "app/public/wp-content/themes/shpigovsky/assets/fonts/inter",
+      "app/public/wp-content/themes/shpigovsky/assets/fonts/inter/INTER-FONT-PROVENANCE.md",
+      "app/public/wp-content/themes/shpigovsky/assets/fonts/inter/inter-300.woff2",
+      "app/public/wp-content/themes/shpigovsky/assets/fonts/inter/inter-400.woff2",
+      "app/public/wp-content/themes/shpigovsky/assets/fonts/inter/inter-500-latin.woff2",
+      "app/public/wp-content/themes/shpigovsky/assets/fonts/inter/inter-300-latin.woff2",
+      "app/public/wp-content/themes/shpigovsky/assets/fonts/inter/inter-400-latin.woff2",
+      "app/public/wp-content/themes/shpigovsky/assets/fonts/inter/inter-500.woff2",
+      "wp-content/debug.log",
+      "wp-content/themes/shpigovsky/assets/video/sergey-shpigovsky-interview.mp4.BROKEN-MPEGTS.bak",
+      "wp-content/uploads/2026/07/sergey-shpigovsky-interview.mp4.BROKEN-MPEGTS.bak"
+    ]
+  },
+  "php_notes": [
+    {
+      "rel": "mars-runtime/scripts/fp0002-access-encoding-wpilot-task.php",
+      "bytes": 10499,
+      "sha256": "6b89881675e173d015eac63ff51fbaa205b0a91c849f4a213bab6eca5f04abbc",
+      "mentions_wp_insert": false,
+      "mentions_wp_update": true,
+      "mentions_delete": false,
+      "requires_wp_load": true,
+      "preview_head": "<?php\n/**\n * FP-0002 controlled task: encoding inventory/repair, admin, WPilot config.\n * Local runtime only — not for Git.\n *\n * Usage:\n *   php fp0002-access-encoding-wpilot-task.php inventory\n *   php fp0002-access-encoding-wpilot-task.php repair\n *   php fp0002-access-encoding-wpilot-task.php configure-wpilot\n */\n\ndefine( 'WP_USE_THEMES', false );\nrequire dirname( __DIR__, 2 ) . '/wp-load.php';\n\nif ( ! defined( 'ABSPATH' ) ) {\n\tfwrite( STDERR, \"WordPress bootstrap failed\\n\" );\n\texit( 1 );\n}\n\n$mode = $argv[1] ?? 'inventory';\n\n/**\n * Authority map: slug => canonical title (V9 manifest + foundation populate script).\n *\n * @return array<string,string>\n */\nfunction fp0002_title_authority_map() {\n\treturn array(\n\t\t'glavnaya'                          => 'Главная',\n\t\t'uslugi'                            => 'Услуги',\n\t\t'zavisimosti'                       => 'Зависимости',\n\t\t'psihicheskoe-zdorovie'             => 'Психическое здоровье',\n\t\t'rasstroystva-pischevogo-povedeniya' => 'Расстройства пищевого поведения',\n\t\t'genotipirovanie'                   => 'Генотипирование',\n\t\t'specyalisty'                       => 'Специалисты',\n\t\t'o-centre'                          => 'О центре',\n\t\t'o-nas'                             => 'О нас',\n\t\t'programma-lecheniya'               => 'Программа лечения',\n\t\t'galereya-o-dome'                   => 'Галерея о доме',\n\t\t'specialistam'                      => 'Специалистам',"
+    },
+    {
+      "rel": "mars-runtime/scripts/populate-fp-0002-pages.php",
+      "bytes": 4575,
+      "sha256": "293c4aa48a8f15f82f170ca6c5cc8c4e9a69a3dc456d71ab080adfc51a8d3a6d",
+      "mentions_wp_insert": true,
+      "mentions_wp_update": true,
+      "mentions_delete": false,
+      "requires_wp_load": true,
+      "preview_head": "<?php\n/**\n * FP-0002 page skeleton population — FW-06A.\n *\n * Run: php populate-fp-0002-pages.php\n */\n\ndefine( 'WP_USE_THEMES', false );\nrequire dirname( __DIR__, 2 ) . '/wp-load.php';\n\n$placeholder = \"Заглушка локальной разработки.\\nФинальный контент и вёрстка ожидают утверждённого frontend handoff.\";\n\n/**\n * @param string $title Title.\n * @param string $slug Slug.\n * @param int    $parent Parent ID.\n * @return int\n */\nfunction fp0002_create_page( $title, $slug, $parent = 0 ) {\n\tglobal $placeholder;\n\t$existing = get_page_by_path( $slug, OBJECT, 'page' );\n\tif ( $existing ) {\n\t\treturn (int) $existing->ID;\n\t}\n\t$id = wp_insert_post(\n\t\tarray(\n\t\t\t'post_title'   => $title,\n\t\t\t'post_name'    => $slug,\n\t\t\t'post_content' => $placeholder,\n\t\t\t'post_status'  => 'publish',\n\t\t\t'post_type'    => 'page',\n\t\t\t'post_parent'  => $parent,\n\t\t),\n\t\ttrue\n\t);\n\tif ( is_wp_error( $id ) ) {\n\t\tfwrite( STDERR, $id->get_error_message() . PHP_EOL );\n\t\texit( 1 );\n\t}\n\treturn (int) $id;"
+    },
+    {
+      "rel": "app/public/wp-content/themes/shpigovsky/inc/site-chrome.php",
+      "bytes": 5350,
+      "sha256": "e5c5ba22af19b91d092acb6c4990a244c0bbdbd5a39d7afda01887720f5295d6",
+      "mentions_wp_insert": false,
+      "mentions_wp_update": false,
+      "mentions_delete": false,
+      "requires_wp_load": false,
+      "preview_head": "<?php\n/**\n * Site chrome helpers — safe ACF option reads and asset URLs.\n *\n * @package Shpigovsky\n */\n\nif ( ! defined( 'ABSPATH' ) ) {\n\texit;\n}\n\n/**\n * Read an ACF options field without fatal when ACF or value is missing.\n *\n * @param string $field_name Option field name.\n * @return string Sanitized scalar string or empty.\n */\nfunction shpigovsky_get_site_option( $field_name ) {\n\tif ( ! function_exists( 'get_field' ) ) {\n\t\treturn '';\n\t}\n\n\t$value = get_field( $field_name, 'option' );\n\n\tif ( is_array( $value ) || is_object( $value ) ) {\n\t\treturn '';\n\t}\n\n\treturn is_string( $value ) ? trim( $value ) : ( is_numeric( $value ) ? (string) $value : '' );\n}\n\n/**\n * Theme asset URI helper.\n *\n * @param string $relative_path Path relative to theme assets root.\n * @return string Escaped-ready URI.\n */\nfunction shpigovsky_asset_uri( $relative_path ) {\n\treturn trailingslashit( SHPIGOVSKY_THEME_URI ) . 'assets/' . ltrim( $relative_path, '/' );\n}"
+    },
+    {
+      "rel": "app/public/wp-content/themes/shpigovsky/template-parts/navigation/messenger-links.php",
+      "bytes": 1815,
+      "sha256": "e281d168717ef037c067d3e20a76298b925ef13aa09c2d05212da60ed600f05c",
+      "mentions_wp_insert": false,
+      "mentions_wp_update": false,
+      "mentions_delete": false,
+      "requires_wp_load": false,
+      "preview_head": "<?php\n/**\n * Messenger icon links — configured social_links or static V9 visual fallback.\n *\n * D9-B: when social_links is empty, render placeholder href=\"#\" icons for parity.\n *\n * @package Shpigovsky\n *\n * @var array<string, mixed> $args Template args.\n */\n\nif ( ! defined( 'ABSPATH' ) ) {\n\texit;\n}\n\n$context = isset( $args['context'] ) ? (string) $args['context'] : 'header';\n$rows    = shpigovsky_get_messenger_link_rows( $context );\n\nif ( empty( $rows ) ) {\n\treturn;\n}\n\n$wrapper_class = 'offcanvas' === $context || 'mobile-header' === $context ? 'offcanvas__messengers' : 'site-header__messengers';\n$link_class    = 'offcanvas' === $context || 'mobile-header' === $context ? 'offcanvas__messenger-link' : 'site-header__messenger-link';\n$icon_class    = 'offcanvas' === $context || 'mobile-header' === $context ? 'offcanvas__messenger-icon' : 'site-header__messenger-icon';\n\nif ( 'mobile-header' === $context ) {\n\t$wrapper_class = 'mobile-header__messengers';\n}\n?>\n<div class=\"<?php echo esc_attr( $wrapper_class ); ?>\">\n\t<?php foreach ( $rows as $row ) : ?>\n\t\t<?php\n\t\t$icon = isset( $row['icon'] ) && '' !== $row['icon']\n\t\t\t? (string) $row['icon']\n\t\t\t: shpigovsky_social_icon_for_label( $row['label'] );\n\t\t$label = '' !== $row['label'] ? $row['label'] : __( 'Социальная сеть', 'shpigovsky' );\n\t\t?>\n\t\t<a class=\"<?php echo esc_attr( $link_class ); ?>\" href=\"<?php echo esc_url( $row['url'] ); ?>\" aria-label=\"<?php echo esc_attr( $label ); ?>\">\n\t\t\t<?php if ( '' !== $icon ) : ?>"
+    }
+  ],
+  "db_probe": {
+    "new-site.space": {
+      "options": [],
+      "content_posts": [
+        {
+          "ID": "750",
+          "post_type": "post",
+          "post_status": "publish",
+          "post_name": "nazvanie-stati",
+          "post_title": "Лечение алкогольной зависимости: почему сила воли здесь ни при чём",
+          "in_content": "1",
+          "in_excerpt": "0"
+        },
+        {
+          "ID": "1835",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "750-autosave-v1",
+          "post_title": "Лечение алкогольной зависимости: почему сила воли здесь ни при чём",
+          "in_content": "1",
+          "in_excerpt": "0"
+        },
+        {
+          "ID": "1836",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "750-revision-v1",
+          "post_title": "Лечение алкогольной зависимости: почему сила воли здесь ни при чём",
+          "in_content": "1",
+          "in_excerpt": "0"
+        }
+      ],
+      "guid_only_count": 98,
+      "postmeta": [
+        {
+          "meta_id": "23843",
+          "post_id": "1033",
+          "meta_key": "generic_page_body",
+          "preview": "<!-- wp:paragraph -->\r\n\r\n<strong>Дарья Владимировна Костюк</strong>\r\n\r\n<!-- /wp:paragraph --><!-- wp:paragraph -->\r\n\r\nПсихолог, EMDR терапевт, телесно-ориентированный терапевт\r\n\r\n<!-- /wp:paragraph --><!-- wp:paragraph -"
+        },
+        {
+          "meta_id": "41142",
+          "post_id": "1843",
+          "meta_key": "generic_page_body",
+          "preview": "<!-- wp:paragraph -->\r\n\r\n<strong>Дарья Владимировна Костюк</strong>\r\n\r\n<!-- /wp:paragraph --><!-- wp:paragraph -->\r\n\r\nПсихолог, EMDR терапевт, телесно-ориентированный терапевт\r\n\r\n<!-- /wp:paragraph --><!-- wp:paragraph -"
+        },
+        {
+          "meta_id": "41148",
+          "post_id": "1844",
+          "meta_key": "generic_page_body",
+          "preview": "<!-- wp:paragraph -->\r\n\r\n<strong>Дарья Владимировна Костюк</strong>\r\n\r\n<!-- /wp:paragraph --><!-- wp:paragraph -->\r\n\r\nПсихолог, EMDR терапевт, телесно-ориентированный терапевт\r\n\r\n<!-- /wp:paragraph --><!-- wp:paragraph -"
+        },
+        {
+          "meta_id": "43344",
+          "post_id": "1856",
+          "meta_key": "generic_page_body",
+          "preview": "<!-- wp:paragraph -->\r\n\r\n<strong>Дарья Владимировна Костюк</strong>\r\n\r\n<!-- /wp:paragraph --><!-- wp:paragraph -->\r\n\r\nПсихолог, EMDR терапевт, телесно-ориентированный терапевт\r\n\r\n<!-- /wp:paragraph --><!-- wp:paragraph -"
+        },
+        {
+          "meta_id": "43352",
+          "post_id": "1857",
+          "meta_key": "generic_page_body",
+          "preview": "<!-- wp:paragraph -->\r\n\r\n<strong>Дарья Владимировна Костюк</strong>\r\n\r\n<!-- /wp:paragraph --><!-- wp:paragraph -->\r\n\r\nПсихолог, EMDR терапевт, телесно-ориентированный терапевт\r\n\r\n<!-- /wp:paragraph --><!-- wp:paragraph -"
+        }
+      ]
+    },
+    "@localhost.test": {
+      "options": [
+        {
+          "option_id": "1624",
+          "option_name": "auto_core_update_notified",
+          "bytes": "131",
+          "preview": "a:4:{s:4:\"type\";s:7:\"success\";s:5:\"email\";s:25:\"mli-fp0002@localhost.test\";s:7:\"version\";s:5:\"7.0.4\";s:9:\"timestamp\";i:1786550884;}"
+        }
+      ],
+      "content_posts": [],
+      "guid_only_count": 0,
+      "postmeta": []
+    },
+    "localhost": {
+      "options": [
+        {
+          "option_id": "1624",
+          "option_name": "auto_core_update_notified",
+          "bytes": "131",
+          "preview": "a:4:{s:4:\"type\";s:7:\"success\";s:5:\"email\";s:25:\"mli-fp0002@localhost.test\";s:7:\"version\";s:5:\"7.0.4\";s:9:\"timestamp\";i:1786550884;}"
+        }
+      ],
+      "content_posts": [
+        {
+          "ID": "545",
+          "post_type": "acf-field-group",
+          "post_status": "acf-disabled",
+          "post_name": "group_fp02_service_layout_hero",
+          "post_title": "Service — Layout and Hero",
+          "in_content": "1",
+          "in_excerpt": "0"
+        },
+        {
+          "ID": "714",
+          "post_type": "acf-field-group",
+          "post_status": "acf-disabled",
+          "post_name": "group_fp02_service_structured_sections",
+          "post_title": "Service — Structured Sections",
+          "in_content": "1",
+          "in_excerpt": "0"
+        }
+      ],
+      "guid_only_count": 0,
+      "postmeta": []
+    },
+    "shpigovsky.test": {
+      "options": [],
+      "content_posts": [
+        {
+          "ID": "41",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "3-revision-v1",
+          "post_title": "Политика конфиденциальности",
+          "in_content": "1",
+          "in_excerpt": "0"
+        },
+        {
+          "ID": "1510",
+          "post_type": "acf-field",
+          "post_status": "publish",
+          "post_name": "field_fp02_home_rehab_program_source_notice",
+          "post_title": "Программа / направления на главной",
+          "in_content": "1",
+          "in_excerpt": "0"
+        },
+        {
+          "ID": "1645",
+          "post_type": "acf-field",
+          "post_status": "publish",
+          "post_name": "field_fp02_services_hub_nav_notice",
+          "post_title": "Навигация по разделам",
+          "in_content": "1",
+          "in_excerpt": "0"
+        },
+        {
+          "ID": "1647",
+          "post_type": "acf-field",
+          "post_status": "publish",
+          "post_name": "field_fp02_services_hub_catalog_notice",
+          "post_title": "Каталог услуг по разделам",
+          "in_content": "1",
+          "in_excerpt": "0"
+        },
+        {
+          "ID": "1658",
+          "post_type": "acf-field",
+          "post_status": "publish",
+          "post_name": "field_fp02_services_hub_program_notice",
+          "post_title": "Программа — источник карточек",
+          "in_content": "1",
+          "in_excerpt": "0"
+        },
+        {
+          "ID": "1823",
+          "post_type": "revision",
+          "post_status": "inherit",
+          "post_name": "750-revision-v1",
+          "post_title": "Лечение алкогольной зависимости: почему сила воли здесь ни при чём",
+          "in_content": "1",
+          "in_excerpt": "0"
+        }
+      ],
+      "guid_only_count": 1063,
+      "postmeta": [
+        {
+          "meta_id": "6500",
+          "post_id": "1329",
+          "meta_key": "home_why_us_items_0_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"
+        },
+        {
+          "meta_id": "6506",
+          "post_id": "1329",
+          "meta_key": "home_why_us_items_1_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "6512",
+          "post_id": "1329",
+          "meta_key": "home_why_us_items_2_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "6518",
+          "post_id": "1329",
+          "meta_key": "home_why_us_items_3_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "6570",
+          "post_id": "1329",
+          "meta_key": "home_genotyping_link_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/profilakticheskiy-analiz/"
+        },
+        {
+          "meta_id": "6848",
+          "post_id": "1330",
+          "meta_key": "home_why_us_items_0_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"
+        },
+        {
+          "meta_id": "6854",
+          "post_id": "1330",
+          "meta_key": "home_why_us_items_1_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "6860",
+          "post_id": "1330",
+          "meta_key": "home_why_us_items_2_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "6866",
+          "post_id": "1330",
+          "meta_key": "home_why_us_items_3_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "6918",
+          "post_id": "1330",
+          "meta_key": "home_genotyping_link_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/profilakticheskiy-analiz/"
+        },
+        {
+          "meta_id": "7202",
+          "post_id": "1331",
+          "meta_key": "home_why_us_items_0_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"
+        },
+        {
+          "meta_id": "7208",
+          "post_id": "1331",
+          "meta_key": "home_why_us_items_1_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "7214",
+          "post_id": "1331",
+          "meta_key": "home_why_us_items_2_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "7220",
+          "post_id": "1331",
+          "meta_key": "home_why_us_items_3_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "7272",
+          "post_id": "1331",
+          "meta_key": "home_genotyping_link_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/profilakticheskiy-analiz/"
+        },
+        {
+          "meta_id": "7556",
+          "post_id": "1332",
+          "meta_key": "home_why_us_items_0_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"
+        },
+        {
+          "meta_id": "7562",
+          "post_id": "1332",
+          "meta_key": "home_why_us_items_1_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "7568",
+          "post_id": "1332",
+          "meta_key": "home_why_us_items_2_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "7574",
+          "post_id": "1332",
+          "meta_key": "home_why_us_items_3_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "7626",
+          "post_id": "1332",
+          "meta_key": "home_genotyping_link_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/profilakticheskiy-analiz/"
+        },
+        {
+          "meta_id": "7910",
+          "post_id": "1333",
+          "meta_key": "home_why_us_items_0_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"
+        },
+        {
+          "meta_id": "7916",
+          "post_id": "1333",
+          "meta_key": "home_why_us_items_1_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "7922",
+          "post_id": "1333",
+          "meta_key": "home_why_us_items_2_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "7928",
+          "post_id": "1333",
+          "meta_key": "home_why_us_items_3_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "7980",
+          "post_id": "1333",
+          "meta_key": "home_genotyping_link_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/profilakticheskiy-analiz/"
+        },
+        {
+          "meta_id": "8264",
+          "post_id": "1334",
+          "meta_key": "home_why_us_items_0_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"
+        },
+        {
+          "meta_id": "8270",
+          "post_id": "1334",
+          "meta_key": "home_why_us_items_1_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "8276",
+          "post_id": "1334",
+          "meta_key": "home_why_us_items_2_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "8282",
+          "post_id": "1334",
+          "meta_key": "home_why_us_items_3_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "8334",
+          "post_id": "1334",
+          "meta_key": "home_genotyping_link_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/profilakticheskiy-analiz/"
+        },
+        {
+          "meta_id": "8626",
+          "post_id": "1336",
+          "meta_key": "home_why_us_items_0_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"
+        },
+        {
+          "meta_id": "8632",
+          "post_id": "1336",
+          "meta_key": "home_why_us_items_1_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "8638",
+          "post_id": "1336",
+          "meta_key": "home_why_us_items_2_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "8644",
+          "post_id": "1336",
+          "meta_key": "home_why_us_items_3_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "8696",
+          "post_id": "1336",
+          "meta_key": "home_genotyping_link_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/profilakticheskiy-analiz/"
+        },
+        {
+          "meta_id": "8988",
+          "post_id": "1337",
+          "meta_key": "home_why_us_items_0_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"
+        },
+        {
+          "meta_id": "8994",
+          "post_id": "1337",
+          "meta_key": "home_why_us_items_1_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "9000",
+          "post_id": "1337",
+          "meta_key": "home_why_us_items_2_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "9006",
+          "post_id": "1337",
+          "meta_key": "home_why_us_items_3_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/"
+        },
+        {
+          "meta_id": "9058",
+          "post_id": "1337",
+          "meta_key": "home_genotyping_link_url",
+          "preview": "http://shpigovsky.test/uslugi/zavisimosti/profilakticheskiy-analiz/"
+        }
+      ]
+    },
+    "beget_options_full": [
+      {
+        "option_id": "2",
+        "option_name": "siteurl",
+        "option_value": "http://shpigovsky.beget.tech"
+      },
+      {
+        "option_id": "3",
+        "option_name": "home",
+        "option_value": "http://shpigovsky.beget.tech"
+      },
+      {
+        "option_id": "133",
+        "option_name": "acf_site_health",
+        "option_value": "{\"version\":\"6.8.5\",\"plugin_type\":\"PRO\",\"update_source\":\"ACF Direct\",\"activated\":true,\"activated_url\":\"http:\\/\\/shpigovsky.beget.tech\",\"license_type\":\"ACF PRO\",\"license_status\":\"active\",\"subscription_expires\":1818516358,\"wp_version\":\"7.0.4\",\"mysql_version\":\"8.4.8-8-beget-1-2\",\"is_multisite\":false,\"active_theme\":{\"name\":\"Shpigovsky\",\"version\":\"0.3.0-d7a-shell\",\"theme_uri\":\"\",\"stylesheet\":false},\"active_plugins\":{\"acf-extended-pro\\/acf-extended.php\":{\"name\":\"Advanced Custom Fields: Extended PRO\",\"version\":\"0.9.2.3\",\"plugin_uri\":\"https:\\/\\/www.acf-extended.com\"},\"advanced-custom-fields-pro\\/acf.php\":{\"name\":\"Advanced Custom Fields PRO\",\"version\":\"6.8.5\",\"plugin_uri\":\"https:\\/\\/www.advancedcustomfields.com\"},\"classic-editor\\/classic-editor.php\":{\"name\":\"Classic Editor\",\"version\":\"1.7.0\",\"plugin_uri\":\"https:\\/\\/wordpress.org\\/plugins\\/classic-editor\\/\"},\"metacode-wpilot\\/metacode-wpilot.php\":{\"name\":\"MetaCODE WPilot\",\"version\":\"0.3.2\",\"plugin_uri\":\"https:\\/\\/example.invalid\\/metacode-wpilot\"},\"shpigovsky-core\\/shpigovsky-core.php\":{\"name\":\"Shpigovsky Core\",\"version\":\"0.3.7-p16\",\"plugin_uri\":\"https:\\/\\/example.invalid\\/shpigovsky-core\"}},\"ui_field_groups\":\"11\",\"php_field_groups\":\"0\",\"json_field_groups\":\"28\",\"rest_field_groups\":\"0\",\"all_location_rules\":[\"post_type==post\",\"page_type==posts_page\",\"page_template==page-templates\\/contacts.php\",\"page_template==page-templates\\/institutional.php\",\"page==12\",\"page==13\",\"page==14\",\"page==15\",\"page==16\",\"page_template==page-templates\\/legal.php\",\"post_type==page\",\"page==11\",\"page_template==page-templates\\/reviews.php\",\"options_page==fp02-block-comfort\",\"options_page==fp02-block-comfort-gallery\",\"options_page==fp02-block-comfort-intro\",\"options_page==fp02-block-comfort-requirements\",\"options_page==fp02-block-final-form\",\"options_page==fp02-block-footer\",\"options_page==fp02-block-header\",\"options_page==fp02-block-specialists\",\"options_page==fp02-site-settings-seo-integrations\",\"post_type==service\",\"options_page==fp02-site-settings-general\",\"options_page==fp02-reviews\",\"page_template==page-templates\\/generic.php\",\"page_parent==13\",\"options_page==fp02-site-settings-social\",\"page_type==front_page\",\"page_template==page-templates\\/services-hub.php\",\"options_page==fp02-block-reviews\",\"post_type==specialist\",\"options_page==fp02-block-cta-bands\",\"options_page==fp02-block-founder-quote\"],\"field_groups_with_single_block_rule\":\"0\",\"field_groups_with_multiple_block_rules\":\"0\",\"field_groups_with_blocks_and_other_rules\":\"0\",\"number_of_fields_by_type\":{\"text\":162,\"textarea\":94,\"number\":19,\"true_false\":112,\"repeater\":66,\"relationship\":5,\"url\":16,\"message\":80,\"select\":8,\"date_picker\":1,\"image\":25,\"tab\":3,\"button_group\":6,\"email\":1,\"wysiwyg\":6,\"checkbox\":1,\"gallery\":1},\"number_of_third_party_fields_by_type\":[],\"post_types_enabled\":true,\"ui_post_types\":\"0\",\"json_post_types\":\"0\",\"ui_taxonomies\":\"0\",\"json_taxonomies\":\"0\",\"ui_options_pages_enabled\":true,\"ui_options_pages\":\"0\",\"json_options_pages\":\"0\",\"php_options_pages\":\"19\",\"rest_api_format\":\"light\",\"registered_acf_blocks\":\"0\",\"blocks_per_api_version\":[],\"blocks_per_acf_block_version\":[],\"blocks_using_post_meta\":\"0\",\"blocks_using_auto_inline_editing\":\"0\",\"preload_blocks\":true,\"admin_ui_enabled\":true,\"field_type-modal_enabled\":true,\"field_settings_tabs_enabled\":false,\"shortcode_enabled\":false,\"registered_acf_forms\":\"0\",\"json_save_paths\":1,\"json_load_paths\":2,\"ai_enabled\":false,\"schema_support\":false,\"schema_ready_objects\":{\"blocks\":0,\"post_types\":0},\"datastore_enabled\":false,\"event_first_activated\":1782228233,\"event_cli_commands\":{\"acf json status\":1783264617,\"acf json sync\":1783264726,\"acf json import\":1783447165},\"event_first_created_field_group\":1783264726,\"last_updated\":1786980358}"
+      },
+      {
+        "option_id": "1169",
+        "option_name": "fp02-block-specialists_specialists_all_link_url",
+        "option_value": "http://shpigovsky.beget.tech/specyalisty/"
+      },
+      {
+        "option_id": "1341",
+        "option_name": "fp02-block-comfort_comfort_all_link_url",
+        "option_value": "http://shpigovsky.beget.tech/o-centre/galereya-o-dome/"
+      }
+    ],
+    "beget_postmeta_full": [
+      {
+        "meta_id": "6216",
+        "post_id": "4",
+        "meta_key": "home_genotyping_link_url",
+        "meta_value": "http://shpigovsky.beget.tech/uslugi/genotipirovenie/"
+      },
+      {
+        "meta_id": "61281",
+        "post_id": "2034",
+        "meta_key": "home_genotyping_link_url",
+        "meta_value": "http://shpigovsky.beget.tech/uslugi/genotipirovenie/"
+      },
+      {
+        "meta_id": "61692",
+        "post_id": "2036",
+        "meta_key": "home_genotyping_link_url",
+        "meta_value": "http://shpigovsky.beget.tech/uslugi/genotipirovenie/"
+      },
+      {
+        "meta_id": "6146",
+        "post_id": "4",
+        "meta_key": "home_why_us_items_0_url",
+        "meta_value": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"
+      },
+      {
+        "meta_id": "61211",
+        "post_id": "2034",
+        "meta_key": "home_why_us_items_0_url",
+        "meta_value": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"
+      },
+      {
+        "meta_id": "61622",
+        "post_id": "2036",
+        "meta_key": "home_why_us_items_0_url",
+        "meta_value": "http://shpigovsky.beget.tech/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"
+      },
+      {
+        "meta_id": "6152",
+        "post_id": "4",
+        "meta_key": "home_why_us_items_1_url",
+        "meta_value": "http://shpigovsky.beget.tech/uslugi/zavisimosti/"
+      },
+      {
+        "meta_id": "61217",
+        "post_id": "2034",
+        "meta_key": "home_why_us_items_1_url",
+        "meta_value": "http://shpigovsky.beget.tech/uslugi/zavisimosti/"
+      },
+      {
+        "meta_id": "61628",
+        "post_id": "2036",
+        "meta_key": "home_why_us_items_1_url",
+        "meta_value": "http://shpigovsky.beget.tech/uslugi/zavisimosti/"
+      },
+      {
+        "meta_id": "6158",
+        "post_id": "4",
+        "meta_key": "home_why_us_items_2_url",
+        "meta_value": "http://shpigovsky.beget.tech/uslugi/zavisimosti/"
+      },
+      {
+        "meta_id": "61223",
+        "post_id": "2034",
+        "meta_key": "home_why_us_items_2_url",
+        "meta_value": "http://shpigovsky.beget.tech/uslugi/zavisimosti/"
+      },
+      {
+        "meta_id": "61634",
+        "post_id": "2036",
+        "meta_key": "home_why_us_items_2_url",
+        "meta_value": "http://shpigovsky.beget.tech/uslugi/zavisimosti/"
+      },
+      {
+        "meta_id": "6164",
+        "post_id": "4",
+        "meta_key": "home_why_us_items_3_url",
+        "meta_value": "http://shpigovsky.beget.tech/uslugi/zavisimosti/"
+      },
+      {
+        "meta_id": "61229",
+        "post_id": "2034",
+        "meta_key": "home_why_us_items_3_url",
+        "meta_value": "http://shpigovsky.beget.tech/uslugi/zavisimosti/"
+      },
+      {
+        "meta_id": "61640",
+        "post_id": "2036",
+        "meta_key": "home_why_us_items_3_url",
+        "meta_value": "http://shpigovsky.beget.tech/uslugi/zavisimosti/"
+      },
+      {
+        "meta_id": "14247",
+        "post_id": "73",
+        "meta_key": "section_approach_more_url",
+        "meta_value": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "meta_id": "16369",
+        "post_id": "77",
+        "meta_key": "section_approach_more_url",
+        "meta_value": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "meta_id": "16423",
+        "post_id": "84",
+        "meta_key": "section_approach_more_url",
+        "meta_value": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "meta_id": "62000",
+        "post_id": "2037",
+        "meta_key": "section_approach_more_url",
+        "meta_value": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "meta_id": "14221",
+        "post_id": "73",
+        "meta_key": "section_nature_genotyping_link_url",
+        "meta_value": "http://shpigovsky.beget.tech/uslugi/zavisimosti/profilakticheskiy-analiz/"
+      },
+      {
+        "meta_id": "61974",
+        "post_id": "2037",
+        "meta_key": "section_nature_genotyping_link_url",
+        "meta_value": "http://shpigovsky.beget.tech/uslugi/zavisimosti/profilakticheskiy-analiz/"
+      },
+      {
+        "meta_id": "16503",
+        "post_id": "74",
+        "meta_key": "service_general_approach_more_url",
+        "meta_value": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "meta_id": "17781",
+        "post_id": "75",
+        "meta_key": "service_general_approach_more_url",
+        "meta_value": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "meta_id": "17217",
+        "post_id": "78",
+        "meta_key": "service_general_approach_more_url",
+        "meta_value": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "meta_id": "18207",
+        "post_id": "79",
+        "meta_key": "service_general_approach_more_url",
+        "meta_value": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "meta_id": "18349",
+        "post_id": "80",
+        "meta_key": "service_general_approach_more_url",
+        "meta_value": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "meta_id": "17353",
+        "post_id": "81",
+        "meta_key": "service_general_approach_more_url",
+        "meta_value": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "meta_id": "18491",
+        "post_id": "82",
+        "meta_key": "service_general_approach_more_url",
+        "meta_value": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "meta_id": "18633",
+        "post_id": "83",
+        "meta_key": "service_general_approach_more_url",
+        "meta_value": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "meta_id": "17495",
+        "post_id": "85",
+        "meta_key": "service_general_approach_more_url",
+        "meta_value": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "meta_id": "19201",
+        "post_id": "86",
+        "meta_key": "service_general_approach_more_url",
+        "meta_value": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "meta_id": "19343",
+        "post_id": "87",
+        "meta_key": "service_general_approach_more_url",
+        "meta_value": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "meta_id": "17079",
+        "post_id": "314",
+        "meta_key": "service_general_approach_more_url",
+        "meta_value": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "meta_id": "19911",
+        "post_id": "315",
+        "meta_key": "service_general_approach_more_url",
+        "meta_value": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "meta_id": "17637",
+        "post_id": "316",
+        "meta_key": "service_general_approach_more_url",
+        "meta_value": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "meta_id": "19485",
+        "post_id": "1011",
+        "meta_key": "service_general_approach_more_url",
+        "meta_value": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "meta_id": "19627",
+        "post_id": "1012",
+        "meta_key": "service_general_approach_more_url",
+        "meta_value": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "meta_id": "19769",
+        "post_id": "1013",
+        "meta_key": "service_general_approach_more_url",
+        "meta_value": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "meta_id": "20053",
+        "post_id": "1016",
+        "meta_key": "service_general_approach_more_url",
+        "meta_value": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "meta_id": "20195",
+        "post_id": "1017",
+        "meta_key": "service_general_approach_more_url",
+        "meta_value": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "meta_id": "20337",
+        "post_id": "1018",
+        "meta_key": "service_general_approach_more_url",
+        "meta_value": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "meta_id": "20479",
+        "post_id": "1019",
+        "meta_key": "service_general_approach_more_url",
+        "meta_value": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "meta_id": "17923",
+        "post_id": "1047",
+        "meta_key": "service_general_approach_more_url",
+        "meta_value": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "meta_id": "18065",
+        "post_id": "1048",
+        "meta_key": "service_general_approach_more_url",
+        "meta_value": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "meta_id": "18775",
+        "post_id": "1049",
+        "meta_key": "service_general_approach_more_url",
+        "meta_value": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "meta_id": "18917",
+        "post_id": "1050",
+        "meta_key": "service_general_approach_more_url",
+        "meta_value": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "meta_id": "19059",
+        "post_id": "1051",
+        "meta_key": "service_general_approach_more_url",
+        "meta_value": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      },
+      {
+        "meta_id": "47966",
+        "post_id": "1894",
+        "meta_key": "service_general_approach_more_url",
+        "meta_value": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+      }
+    ],
+    "menu_urls": []
+  },
+  "http_head": [
+    {
+      "path": "/mars-runtime/scripts/validate-wpilot-readonly.ps1",
+      "method": "HEAD",
+      "status": 200,
+      "ctype": null,
+      "len": "2769"
+    },
+    {
+      "path": "/mars-runtime/scripts/create-foundation-002a-checkpoint.ps1",
+      "method": "HEAD",
+      "status": 200,
+      "ctype": null,
+      "len": "6129"
+    },
+    {
+      "path": "/mars-runtime/scripts/reset-to-foundation.ps1",
+      "method": "HEAD",
+      "status": 200,
+      "ctype": null,
+      "len": "1899"
+    },
+    {
+      "path": "/acf-json/",
+      "method": "HEAD",
+      "status": 403,
+      "ctype": "text/html; charset=iso-8859-1",
+      "len": null
+    },
+    {
+      "path": "/wp-content/debug.log",
+      "method": "HEAD",
+      "status": 200,
+      "ctype": "text/plain",
+      "len": "0"
+    }
+  ],
+  "prior_get_observed": {
+    "populate-fp-0002-pages.php": {
+      "status": 200,
+      "body": "FP-0002 pages and menus OK"
+    },
+    "fp0002-access-encoding-wpilot-task.php": {
+      "status": 200,
+      "body": "JSON wp_options dump (blogname etc)"
+    },
+    "backup-runtime.ps1": {
+      "status": 200
+    },
+    "app css": {
+      "status": 200
+    },
+    "debug.log": {
+      "status": 200,
+      "empty": true
+    },
+    "broken mpegts bak": {
+      "status": 200,
+      "downloadable": true
+    }
+  },
+  "new_site_space_html_contexts": [
+    "mg fetchpriority=\"high\" decoding=\"async\" class=\"alignnone wp-image-1709\" src=\"https://shpigovsky-wp.new-site.space/wp-content/uploads/2026/07/shpigovsky-interior-corridor-300x225.webp\" alt=\"Интерьер клиники — корид",
+    "mg fetchpriority=\"high\" decoding=\"async\" class=\"alignnone wp-image-1709\" src=\"https://shpigovsky-wp.new-site.space/wp-content/uploads/2026/07/shpigovsky-interior-corridor-300x225.webp\" alt=\"Интерьер клиники — корид",
+    "mg fetchpriority=\"high\" decoding=\"async\" class=\"alignnone wp-image-1709\" src=\"https://shpigovsky-wp.new-site.space/wp-content/uploads/2026/07/shpigovsky-interior-corridor-300x225.webp\" alt=\"Интерьер клиники — корид",
+    "mg fetchpriority=\"high\" decoding=\"async\" class=\"alignnone wp-image-1709\" src=\"https://shpigovsky-wp.new-site.space/wp-content/uploads/2026/07/shpigovsky-interior-corridor-300x225.webp\" alt=\"Интерьер клиники — корид"
+  ],
+  "token": "MARS-RUNTIME STATUS RESOLVED"
+}
