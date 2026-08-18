@@ -1,0 +1,49 @@
+{
+  "schema_version": "corvonero-rsy-generation-draft-v0.1",
+  "created_at": "2026-08-19T02:10:00+07:00",
+  "project": "CorvoNero / Корво Неро",
+  "programme": "mars-search-ppc-production",
+  "pack_status": "GENERATION_DRAFT / NOT_IMPORT_READY / NOT_LAUNCH_APPROVED",
+  "architecture_v1_checkpoint": "e89c9593d9dd70a8e12c81bbed0d470386bc51c6",
+  "architecture_v1_1_checkpoint": "70db414e542976f029579e61daaea1848086931d",
+  "structure_status": "DRAFT / APPROVAL_REQUIRED",
+  "structure_assumption": "TWO_RSY_CAMPAIGNS_LOCAL_REMOTE__EVALUATE_PACKAGE",
+  "fallback_assumption": "ONE_RSY_CAMPAIGN_TEN_GROUPS_OR_FIVE_WITH_LOCAL_REMOTE_VARIANTS",
+  "campaigns_primary": [
+    "CORVONERO-RSY-LOCAL",
+    "CORVONERO-RSY-REMOTE"
+  ],
+  "campaign_fallback": "CORVONERO-RSY",
+  "directions_included": 5,
+  "groups": [
+    "01-LOCAL-PROGRAMMIST-1S",
+    "02-LOCAL-SOPROVOZHDENIE-1S",
+    "03-LOCAL-DORABOTKA-1S",
+    "04-LOCAL-INTEGRACII-1S",
+    "05-LOCAL-MARKIROVKA-CHESTNY-ZNAK",
+    "01-REMOTE-PROGRAMMIST-1S",
+    "02-REMOTE-SOPROVOZHDENIE-1S",
+    "03-REMOTE-DORABOTKA-1S",
+    "04-REMOTE-INTEGRACII-1S",
+    "05-REMOTE-MARKIROVKA-CHESTNY-ZNAK"
+  ],
+  "weak_nonconverting_included": true,
+  "exclude_count": 0,
+  "import_ready": false,
+  "generation_draft_ready": true,
+  "launch_approved": false,
+  "utm_status": "DRAFT_APPROVAL_REQUIRED",
+  "exclusions_status": "DRAFT_REVIEW_REQUIRED",
+  "image_status": "IMAGE_REQUIRED | IMAGE_PROMPT_NOT_CREATED | IMAGE_NOT_CREATED | MANUAL_UPLOAD_LATER",
+  "budget_strategy_status": "PLACEHOLDERS_ONLY / NO_INVENTED_NUMBERS / NO_FINAL_STRATEGY",
+  "not_created_guard": {
+    "rsy_import_xlsx": "NOT CREATED",
+    "final_ads": "NOT CREATED",
+    "image_prompts": "NOT CREATED",
+    "images": "NOT CREATED",
+    "direct": "NOT MODIFIED",
+    "commander": "NOT MODIFIED"
+  },
+  "storage_package": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-RSY-GENERATION-DRAFT-PACK-2026-08-19",
+  "report": "projects\\mars-search-ppc-production\\reports\\REPORT-corvonero-rsy-generation-draft-pack-v0.1.md"
+}
