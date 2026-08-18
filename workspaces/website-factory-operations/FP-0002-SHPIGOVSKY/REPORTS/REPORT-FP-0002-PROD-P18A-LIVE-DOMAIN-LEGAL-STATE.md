@@ -191,7 +191,13 @@ Live domain `shpigovsky.ru`; cutover DONE BY OPERATOR; SSL IN PROGRESS; mail SUP
 
 ## 18. Git
 
-See evidence `GIT-CHECKPOINT.json` after checkpoint. Dirty main foreign WIP untouched. Secret scan on staged paths. Isolated worktree from `origin/mars/canonical-post-recovery`.
+| Item | Value |
+|------|--------|
+| Commit 1 | `d96dfce1f4d8e8d18ba026809923e1e1dbb067c6` — `FP-0002: intake live domain and fix legal demo state` |
+| Commit 2 | `95ade9bd4baa00f22a80c589e43c55d3ed586e8c` — `WP Forge: boolean false-is-a-value and manual cutover intake` |
+| Push | `origin/mars/canonical-post-recovery` @ `95ade9bd4baa00f22a80c589e43c55d3ed586e8c` |
+| Secret scan | PASS |
+| Foreign WIP | untouched (dirty main; isolated worktree from origin) |
 
 ---
 

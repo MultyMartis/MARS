@@ -89,6 +89,7 @@
 | P16 commit | `35666e2bb98247072a7a7972d4271eaf8d5f36aa` |
 | P17 commit | `1b7fb5c47b2c7acd88e4313e64a15f7e59069fa6` |
 | P17-FU02 commit | `16706398f03825b054ce75c56e8af48ec4349329` |
+| P18A commits | `d96dfce1f4d8e8d18ba026809923e1e1dbb067c6` · `95ade9bd4baa00f22a80c589e43c55d3ed586e8c` |
 | Branch | `origin/mars/canonical-post-recovery` |
 
 ## Open tails
