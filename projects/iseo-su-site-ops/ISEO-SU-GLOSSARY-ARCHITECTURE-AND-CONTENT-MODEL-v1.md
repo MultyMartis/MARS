@@ -140,24 +140,27 @@ Publication gate constant: `ISEO_GLOSSARY_PUBLIC_EXPOSURE` (**true** as of 2026-
 
 Implemented with existing classes only:
 
-1. H1 «Глоссарий» in `page_scene`
-2. Intro in `content_block`
-3. Alphabet nav via `blog_filter` / `blog_filter__btn` (only non-empty letters)
-4. Groups as `content_block` + plain `h2` + `ul`/`li` (privacy body-heading pattern; not `content_block__title`)
-5. Optional GET search `glossary_q` (server-side filter; no JS required)
-6. Empty / no-results copy inside `content_block` («Термины пока не добавлены.»)
-7. Single page for ~241 terms via dedicated archive query (`iseo_glossary_get_archive_posts`), not the main Loop — the main archive query can report `found_posts` without hydrating `$wp_query->posts` for mixed draft statuses
-8. Draft list URLs use `get_preview_post_link()` for users who can `edit_post`
+1. Hero is a structural copy of `/services.html` `page_scene` via `template-parts/content-glossary-page-scene.php` (`.page_scene__rates` not rendered)
+2. H1 «Глоссарий» in `page_scene`; archive description is the services-style `span` (exact operator sentence)
+3. CTA `Подробнее` → `#SecondScreen` (`page_scene__btn_order`, no `modalbox`)
+4. Alphabet nav via `blog_filter` / `blog_filter__btn` (only non-empty letters) inside `<main id="SecondScreen">`
+5. Groups as `content_block` + plain `h2` + `ul`/`li` (privacy body-heading pattern; not `content_block__title`)
+6. Optional GET search `glossary_q` (server-side filter; no JS required)
+7. Empty / no-results copy inside `content_block` («Термины пока не добавлены.»)
+8. Single page for published eligible terms via dedicated archive query (`iseo_glossary_get_archive_posts`), not the main Loop — the main archive query can report `found_posts` without hydrating `$wp_query->posts` for mixed draft statuses
+9. Draft list URLs use `get_preview_post_link()` for users who can `edit_post`
 
-Layout fix evidence: `ISEO-SU-GLOSSARY-ARCHIVE-LAYOUT-FIX-EVIDENCE-v1.md`.
+Layout fix evidence: `ISEO-SU-GLOSSARY-ARCHIVE-LAYOUT-FIX-EVIDENCE-v1.md`.  
+Hero alignment evidence: `ISEO-SU-GLOSSARY-PAGE-SCENE-SERVICES-ALIGNMENT-EVIDENCE-v1.md`.
 ---
 
 ## 10. Single Term UX
 
-`page_scene` + breadcrumbs + `content_block` article:
+Services-derived `page_scene` (shared helper) + breadcrumbs + `content_block` article:
 
-- H1 = term
-- Excerpt (if any) near top
+- H1 = canonical term title (no hero description `span`)
+- CTA `Подробнее` → `#SecondScreen`
+- Excerpt (if any) at the top of the article, not in the hero
 - Content definition
 - Synonyms block when ACF filled
 - Link back to archive
@@ -167,9 +170,9 @@ Layout fix evidence: `ISEO-SU-GLOSSARY-ARCHIVE-LAYOUT-FIX-EVIDENCE-v1.md`.
 
 ## 11. Existing Style Reuse
 
-Reused from privacy/legal and blog chrome:
+Hero reused from `/services.html` `page_scene` (rates omitted). Listing/article chrome reused from privacy/legal and blog:
 
-`page_scene`, `page_scene_inner`, `page_scene__description`, `container`, `row`, `breadcrumbs`, `see_more_btn`, `content_block`, `content_block__title`, `blog_filter*`, body classes `overlay_on content`, shared header/footer.
+`page_scene`, `page_scene_inner`, `page_scene__description`, `page_scene__btns`, `page_scene__btn_order`, `page_scene__info`, `container`, `row`, `breadcrumbs`, `see_more_btn`, `content_block`, `content_block__title`, `blog_filter*`, body classes `overlay_on content`, shared header/footer. Asset: existing `/img/services_title_img.svg`.
 
 No new stylesheet, selectors, or inline styles in glossary templates.
 
@@ -179,8 +182,9 @@ No new stylesheet, selectors, or inline styles in glossary templates.
 
 | Reference | Role |
 |-----------|------|
-| `/privacy-policy.html` | Visual SoT for internal page scene + content_block |
-| `/user-agreement.html` | Same pattern confirmation |
+| `/services.html` | Visual SoT for glossary `page_scene` hero (rates not copied) |
+| `/privacy-policy.html` | SoT for `content_block` listing/article body (not the current hero) |
+| `/user-agreement.html` | Same content_block pattern confirmation |
 | Blog `blog_filter` | Alphabet chip/nav reuse |
 | Theme `header.php` / `footer.php` | WP chrome |
 | CPT `offer` registration | CPT rewrite precedent |
@@ -285,4 +289,4 @@ Do **not** publish until operator confirms:
 
 ---
 
-*Glossary architecture and content model v1 · 2026-07-24.*
+*Glossary architecture and content model v1 · updated 2026-08-18 services page_scene alignment.*

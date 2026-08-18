@@ -1,7 +1,8 @@
 <?php
 /**
  * Single glossary term template.
- * Reuses internal-page chrome: page_scene, breadcrumbs, content_block.
+ * Hero is a structural copy of production /services.html page_scene
+ * (rates omitted; no hero description; CTA scrolls to #SecondScreen).
  * No invented dates, authors, ratings, or FAQ blocks.
  *
  * @package iseoblog
@@ -15,25 +16,15 @@ $excerpt       = trim( (string) get_the_excerpt( $term_id ) );
 $content       = trim( (string) get_post_field( 'post_content', $term_id ) );
 $archive       = get_post_type_archive_link( 'glossary' );
 $related_links = function_exists( 'iseo_glossary_get_related_public_links' ) ? iseo_glossary_get_related_public_links( $term_id ) : array();
-?>
 
-		<div class="page_scene">
-			<div class="container">
-				<div class="row">
-					<div class="page_scene_inner">
-						<div class="page_scene__description">
-							<ul class="breadcrumbs">
-								<li><a href="/">Главная</a></li>
-								<li><a href="<?php echo esc_url( $archive ); ?>">Глоссарий</a></li>
-								<li><?php the_title(); ?></li>
-							</ul>
-							<h1><?php the_title(); ?></h1>
-							<a href="#SecondScreen" class="see_more_btn" title="Далее"></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+get_template_part(
+	'template-parts/content',
+	'glossary-page-scene',
+	array(
+		'context' => 'single',
+	)
+);
+?>
 
 	</header>
 

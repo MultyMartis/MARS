@@ -457,3 +457,33 @@ function iseo_glossary_get_related_public_links( $post ) {
 
 	return $links;
 }
+
+/**
+ * Glossary-only smooth scroll for the services-style CTA.
+ *
+ * Reuses the existing production see_more_btn animation from js/common.js.
+ * Does not bind .modalbox (consultation popup). Does not change global JS.
+ */
+function iseo_glossary_enqueue_second_screen_scroll() {
+	if ( ! is_post_type_archive( 'glossary' ) && ! is_singular( 'glossary' ) ) {
+		return;
+	}
+
+	$js = <<<'JS'
+jQuery(function ($) {
+	$(".page_scene a.page_scene__btn_order[href='#SecondScreen']").on("click", function (e) {
+		var $target = $("#SecondScreen");
+		if (!$target.length) {
+			return;
+		}
+		e.preventDefault();
+		var destination = $target.offset().top - 0;
+		$("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination }, 1000);
+	});
+});
+JS;
+
+	wp_add_inline_script( 'iseoblog-common', $js );
+}
+add_action( 'wp_enqueue_scripts', 'iseo_glossary_enqueue_second_screen_scroll', 20 );
+

@@ -31,7 +31,7 @@ No secrets stored here.
 | Shared CSS | `css/main.css`, `css/media.css` | sitewide marketing look |
 | SEO calculator / tariffs | `/tariff-calc`, ACF calculator groups, `tarif-calc.php`, handlers | revenue tool |
 | Web-KP / offers | `/offers`, CPT `offer`, `single-offer.php`, ACF «Предложения» | private commercial proposals |
-| Glossary (public + drafts) | CPT `glossary`, `/glossary/`, glossary templates/includes, non-eligible drafts | do not publish MERGED/DEFERRED/EXCLUDED; no new CSS; related links only to published eligible; exposure/rollback via launch docs |
+| Glossary (public + drafts) | CPT `glossary`, `/glossary/`, `archive-glossary.php`, `single-glossary.php`, `template-parts/content-glossary-page-scene.php`, `inc/glossary-*.php`, non-eligible drafts | do not publish MERGED/DEFERRED/EXCLUDED; no new CSS; related links only to published eligible; hero is services `page_scene` copy without rates; exposure/rollback via launch docs |
 | Global header/footer | static HTML chrome + theme topbar/footer parts | dual-channel breakage |
 | Homepage template | `page-home.php` (+ parallel `home.html`) | primary acquisition surface |
 | Analytics / verification | `google*.html`, `yandex_*.html`, injected scripts | SEO/property proof |
@@ -74,4 +74,4 @@ Even with WPilot active (RC6 safe defaults + local token):
 
 ---
 
-*Protected zones v1 · updated glossary archive layout fix 2026-07-24.*
+*Protected zones v1 · updated glossary page_scene services alignment 2026-08-18.*

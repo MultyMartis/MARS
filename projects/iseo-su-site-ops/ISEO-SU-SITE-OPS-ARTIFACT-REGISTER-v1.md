@@ -132,6 +132,16 @@ Status vocabulary: **COMPLETE** · **CREATED** · **PLANNED** · **CONDITIONAL**
 | Archive empty-state / layout fix REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-ARCHIVE-EMPTY-STATE-AND-LAYOUT-FIX.md` | COMPLETE |
 | Theme package updates (archive + helpers + cpt) | `wordpress/iseoblog-glossary/` | UPDATED / deployed |
 
+### Glossary page_scene services alignment (2026-08-18)
+
+| Artifact | Path | Status |
+|----------|------|--------|
+| Page_scene services alignment evidence | `ISEO-SU-GLOSSARY-PAGE-SCENE-SERVICES-ALIGNMENT-EVIDENCE-v1.md` | CREATED |
+| Alignment REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-PAGE-SCENE-SERVICES-ALIGNMENT.md` | COMPLETE |
+| Theme package (archive/single/helper/part) | `wordpress/iseoblog-glossary/` | UPDATED / deployed |
+| Template component map | `ISEO-SU-GLOSSARY-TEMPLATE-COMPONENT-MAP-v1.md` | UPDATED |
+| Architecture / content model | `ISEO-SU-GLOSSARY-ARCHITECTURE-AND-CONTENT-MODEL-v1.md` | UPDATED |
+
 ---
 
 ## Programme foundation artifacts (this locus)
@@ -240,4 +250,4 @@ Unchanged: no tokens/credentials in Git locus; no DB dumps; no Localhost mirror;
 
 ---
 
-*Artifact Register v1 · updated 2026-07-24 Phase 6C-P / production onboarding evidence persistence.*
+*Artifact Register v1 · updated 2026-08-18 glossary page_scene services alignment.*

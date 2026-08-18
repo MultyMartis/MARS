@@ -1,8 +1,8 @@
 <?php
 /**
  * Glossary archive template.
- * Reuses internal-page structure from privacy-policy / content pages:
- * page_scene + breadcrumbs + content_block + blog_filter alphabet nav.
+ * Hero is a structural copy of production /services.html page_scene
+ * (rates omitted; CTA scrolls to #SecondScreen).
  * Letter groups use plain h2 inside content_block (privacy pattern), not
  * content_block__title (oversized section chrome).
  *
@@ -16,24 +16,15 @@ $posts       = iseo_glossary_get_archive_posts();
 $posts       = iseo_glossary_filter_posts( $posts, $search_q );
 $groups      = iseo_glossary_group_posts_by_letter( $posts );
 $archive_url = get_post_type_archive_link( 'glossary' );
-?>
 
-		<div class="page_scene">
-			<div class="container">
-				<div class="row">
-					<div class="page_scene_inner">
-						<div class="page_scene__description">
-							<ul class="breadcrumbs">
-								<li><a href="/">Главная</a></li>
-								<li>Глоссарий</li>
-							</ul>
-							<h1>Глоссарий</h1>
-							<a href="#SecondScreen" class="see_more_btn" title="Далее"></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+get_template_part(
+	'template-parts/content',
+	'glossary-page-scene',
+	array(
+		'context' => 'archive',
+	)
+);
+?>
 
 	</header>
 
@@ -42,7 +33,6 @@ $archive_url = get_post_type_archive_link( 'glossary' );
 			<div class="row">
 
 				<div class="content_block">
-					<p>Словарь терминов SEO и digital-маркетинга. Краткие определения публикуются по мере редакционной подготовки; полный разбор — на странице термина.</p>
 					<?php if ( ! iseo_glossary_is_publicly_exposed() && current_user_can( 'edit_posts' ) ) : ?>
 						<p>Служебный предпросмотр: публичная индексация отключена, меню и sitemap не подключены.</p>
 					<?php endif; ?>
