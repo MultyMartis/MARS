@@ -1,0 +1,575 @@
+{
+  "utc": "2026-08-18T07:25:47.499030+00:00",
+  "legacy_rows": [
+    {
+      "source": "/yoga",
+      "expected": "/o-centre/programma-lecheniya/kinezioterapiya/",
+      "http_status": 301,
+      "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/kinezioterapiya/",
+      "location_path": "/o-centre/programma-lecheniya/kinezioterapiya/",
+      "destination_final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/kinezioterapiya/",
+      "hop_count": 1,
+      "loop": false,
+      "pass": true,
+      "detail": {
+        "start": "http://shpigovsky.beget.tech/yoga",
+        "first_status": 301,
+        "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/kinezioterapiya/",
+        "final_status": 200,
+        "final_url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/kinezioterapiya/",
+        "hops": [
+          {
+            "url": "http://shpigovsky.beget.tech/yoga",
+            "status": 301,
+            "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/kinezioterapiya/"
+          },
+          {
+            "url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/kinezioterapiya/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "hop_count": 1,
+        "loop": false
+      }
+    },
+    {
+      "source": "/yoga/",
+      "expected": "/o-centre/programma-lecheniya/kinezioterapiya/",
+      "http_status": 301,
+      "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/kinezioterapiya/",
+      "location_path": "/o-centre/programma-lecheniya/kinezioterapiya/",
+      "destination_final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/kinezioterapiya/",
+      "hop_count": 1,
+      "loop": false,
+      "pass": true,
+      "detail": {
+        "start": "http://shpigovsky.beget.tech/yoga/",
+        "first_status": 301,
+        "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/kinezioterapiya/",
+        "final_status": 200,
+        "final_url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/kinezioterapiya/",
+        "hops": [
+          {
+            "url": "http://shpigovsky.beget.tech/yoga/",
+            "status": 301,
+            "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/kinezioterapiya/"
+          },
+          {
+            "url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/kinezioterapiya/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "hop_count": 1,
+        "loop": false
+      }
+    },
+    {
+      "source": "/about",
+      "expected": "/o-centre/",
+      "http_status": 301,
+      "location": "http://shpigovsky.beget.tech/o-centre/",
+      "location_path": "/o-centre/",
+      "destination_final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/o-centre/",
+      "hop_count": 1,
+      "loop": false,
+      "pass": true,
+      "detail": {
+        "start": "http://shpigovsky.beget.tech/about",
+        "first_status": 301,
+        "location": "http://shpigovsky.beget.tech/o-centre/",
+        "final_status": 200,
+        "final_url": "http://shpigovsky.beget.tech/o-centre/",
+        "hops": [
+          {
+            "url": "http://shpigovsky.beget.tech/about",
+            "status": 301,
+            "location": "http://shpigovsky.beget.tech/o-centre/"
+          },
+          {
+            "url": "http://shpigovsky.beget.tech/o-centre/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "hop_count": 1,
+        "loop": false
+      }
+    },
+    {
+      "source": "/about/",
+      "expected": "/o-centre/",
+      "http_status": 301,
+      "location": "http://shpigovsky.beget.tech/o-centre/",
+      "location_path": "/o-centre/",
+      "destination_final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/o-centre/",
+      "hop_count": 1,
+      "loop": false,
+      "pass": true,
+      "detail": {
+        "start": "http://shpigovsky.beget.tech/about/",
+        "first_status": 301,
+        "location": "http://shpigovsky.beget.tech/o-centre/",
+        "final_status": 200,
+        "final_url": "http://shpigovsky.beget.tech/o-centre/",
+        "hops": [
+          {
+            "url": "http://shpigovsky.beget.tech/about/",
+            "status": 301,
+            "location": "http://shpigovsky.beget.tech/o-centre/"
+          },
+          {
+            "url": "http://shpigovsky.beget.tech/o-centre/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "hop_count": 1,
+        "loop": false
+      }
+    },
+    {
+      "source": "/psy",
+      "expected": "/o-centre/programma-lecheniya/psihokorrektsiya/",
+      "http_status": 301,
+      "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/psihokorrektsiya/",
+      "location_path": "/o-centre/programma-lecheniya/psihokorrektsiya/",
+      "destination_final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/psihokorrektsiya/",
+      "hop_count": 1,
+      "loop": false,
+      "pass": true,
+      "detail": {
+        "start": "http://shpigovsky.beget.tech/psy",
+        "first_status": 301,
+        "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/psihokorrektsiya/",
+        "final_status": 200,
+        "final_url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/psihokorrektsiya/",
+        "hops": [
+          {
+            "url": "http://shpigovsky.beget.tech/psy",
+            "status": 301,
+            "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/psihokorrektsiya/"
+          },
+          {
+            "url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/psihokorrektsiya/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "hop_count": 1,
+        "loop": false
+      }
+    },
+    {
+      "source": "/psy/",
+      "expected": "/o-centre/programma-lecheniya/psihokorrektsiya/",
+      "http_status": 301,
+      "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/psihokorrektsiya/",
+      "location_path": "/o-centre/programma-lecheniya/psihokorrektsiya/",
+      "destination_final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/psihokorrektsiya/",
+      "hop_count": 1,
+      "loop": false,
+      "pass": true,
+      "detail": {
+        "start": "http://shpigovsky.beget.tech/psy/",
+        "first_status": 301,
+        "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/psihokorrektsiya/",
+        "final_status": 200,
+        "final_url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/psihokorrektsiya/",
+        "hops": [
+          {
+            "url": "http://shpigovsky.beget.tech/psy/",
+            "status": 301,
+            "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/psihokorrektsiya/"
+          },
+          {
+            "url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/psihokorrektsiya/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "hop_count": 1,
+        "loop": false
+      }
+    },
+    {
+      "source": "/home",
+      "expected": "/o-centre/programma-lecheniya/",
+      "http_status": 301,
+      "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/",
+      "location_path": "/o-centre/programma-lecheniya/",
+      "destination_final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/",
+      "hop_count": 1,
+      "loop": false,
+      "pass": true,
+      "detail": {
+        "start": "http://shpigovsky.beget.tech/home",
+        "first_status": 301,
+        "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/",
+        "final_status": 200,
+        "final_url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/",
+        "hops": [
+          {
+            "url": "http://shpigovsky.beget.tech/home",
+            "status": 301,
+            "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+          },
+          {
+            "url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "hop_count": 1,
+        "loop": false
+      }
+    },
+    {
+      "source": "/home/",
+      "expected": "/o-centre/programma-lecheniya/",
+      "http_status": 301,
+      "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/",
+      "location_path": "/o-centre/programma-lecheniya/",
+      "destination_final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/",
+      "hop_count": 1,
+      "loop": false,
+      "pass": true,
+      "detail": {
+        "start": "http://shpigovsky.beget.tech/home/",
+        "first_status": 301,
+        "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/",
+        "final_status": 200,
+        "final_url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/",
+        "hops": [
+          {
+            "url": "http://shpigovsky.beget.tech/home/",
+            "status": 301,
+            "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/"
+          },
+          {
+            "url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "hop_count": 1,
+        "loop": false
+      }
+    },
+    {
+      "source": "/policy",
+      "expected": "/privacy-policy/",
+      "http_status": 301,
+      "location": "http://shpigovsky.beget.tech/privacy-policy/",
+      "location_path": "/privacy-policy/",
+      "destination_final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/privacy-policy/",
+      "hop_count": 1,
+      "loop": false,
+      "pass": true,
+      "detail": {
+        "start": "http://shpigovsky.beget.tech/policy",
+        "first_status": 301,
+        "location": "http://shpigovsky.beget.tech/privacy-policy/",
+        "final_status": 200,
+        "final_url": "http://shpigovsky.beget.tech/privacy-policy/",
+        "hops": [
+          {
+            "url": "http://shpigovsky.beget.tech/policy",
+            "status": 301,
+            "location": "http://shpigovsky.beget.tech/privacy-policy/"
+          },
+          {
+            "url": "http://shpigovsky.beget.tech/privacy-policy/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "hop_count": 1,
+        "loop": false
+      }
+    },
+    {
+      "source": "/policy/",
+      "expected": "/privacy-policy/",
+      "http_status": 301,
+      "location": "http://shpigovsky.beget.tech/privacy-policy/",
+      "location_path": "/privacy-policy/",
+      "destination_final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/privacy-policy/",
+      "hop_count": 1,
+      "loop": false,
+      "pass": true,
+      "detail": {
+        "start": "http://shpigovsky.beget.tech/policy/",
+        "first_status": 301,
+        "location": "http://shpigovsky.beget.tech/privacy-policy/",
+        "final_status": 200,
+        "final_url": "http://shpigovsky.beget.tech/privacy-policy/",
+        "hops": [
+          {
+            "url": "http://shpigovsky.beget.tech/policy/",
+            "status": 301,
+            "location": "http://shpigovsky.beget.tech/privacy-policy/"
+          },
+          {
+            "url": "http://shpigovsky.beget.tech/privacy-policy/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "hop_count": 1,
+        "loop": false
+      }
+    },
+    {
+      "source": "/neuro",
+      "expected": "/o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/",
+      "http_status": 301,
+      "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/",
+      "location_path": "/o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/",
+      "destination_final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/",
+      "hop_count": 1,
+      "loop": false,
+      "pass": true,
+      "detail": {
+        "start": "http://shpigovsky.beget.tech/neuro",
+        "first_status": 301,
+        "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/",
+        "final_status": 200,
+        "final_url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/",
+        "hops": [
+          {
+            "url": "http://shpigovsky.beget.tech/neuro",
+            "status": 301,
+            "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/"
+          },
+          {
+            "url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "hop_count": 1,
+        "loop": false
+      }
+    },
+    {
+      "source": "/neuro/",
+      "expected": "/o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/",
+      "http_status": 301,
+      "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/",
+      "location_path": "/o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/",
+      "destination_final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/",
+      "hop_count": 1,
+      "loop": false,
+      "pass": true,
+      "detail": {
+        "start": "http://shpigovsky.beget.tech/neuro/",
+        "first_status": 301,
+        "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/",
+        "final_status": 200,
+        "final_url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/",
+        "hops": [
+          {
+            "url": "http://shpigovsky.beget.tech/neuro/",
+            "status": 301,
+            "location": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/"
+          },
+          {
+            "url": "http://shpigovsky.beget.tech/o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "hop_count": 1,
+        "loop": false
+      }
+    },
+    {
+      "source": "/reviews",
+      "expected": "/otzyvy/",
+      "http_status": 301,
+      "location": "http://shpigovsky.beget.tech/otzyvy/",
+      "location_path": "/otzyvy/",
+      "destination_final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/otzyvy/",
+      "hop_count": 1,
+      "loop": false,
+      "pass": true,
+      "detail": {
+        "start": "http://shpigovsky.beget.tech/reviews",
+        "first_status": 301,
+        "location": "http://shpigovsky.beget.tech/otzyvy/",
+        "final_status": 200,
+        "final_url": "http://shpigovsky.beget.tech/otzyvy/",
+        "hops": [
+          {
+            "url": "http://shpigovsky.beget.tech/reviews",
+            "status": 301,
+            "location": "http://shpigovsky.beget.tech/otzyvy/"
+          },
+          {
+            "url": "http://shpigovsky.beget.tech/otzyvy/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "hop_count": 1,
+        "loop": false
+      }
+    },
+    {
+      "source": "/reviews/",
+      "expected": "/otzyvy/",
+      "http_status": 301,
+      "location": "http://shpigovsky.beget.tech/otzyvy/",
+      "location_path": "/otzyvy/",
+      "destination_final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/otzyvy/",
+      "hop_count": 1,
+      "loop": false,
+      "pass": true,
+      "detail": {
+        "start": "http://shpigovsky.beget.tech/reviews/",
+        "first_status": 301,
+        "location": "http://shpigovsky.beget.tech/otzyvy/",
+        "final_status": 200,
+        "final_url": "http://shpigovsky.beget.tech/otzyvy/",
+        "hops": [
+          {
+            "url": "http://shpigovsky.beget.tech/reviews/",
+            "status": 301,
+            "location": "http://shpigovsky.beget.tech/otzyvy/"
+          },
+          {
+            "url": "http://shpigovsky.beget.tech/otzyvy/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "hop_count": 1,
+        "loop": false
+      }
+    }
+  ],
+  "legacy_source_pass": "14/14",
+  "legacy_pairs_pass_note": "14 variants = 7 paths x slash/no-slash",
+  "final_200_count": 14,
+  "loops": 0,
+  "query_string": {
+    "probe": {
+      "start": "http://shpigovsky.beget.tech/about?utm_source=test",
+      "first_status": 301,
+      "location": "http://shpigovsky.beget.tech/o-centre/?utm_source=test",
+      "final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/o-centre/?utm_source=test",
+      "hops": [
+        {
+          "url": "http://shpigovsky.beget.tech/about?utm_source=test",
+          "status": 301,
+          "location": "http://shpigovsky.beget.tech/o-centre/?utm_source=test"
+        },
+        {
+          "url": "http://shpigovsky.beget.tech/o-centre/?utm_source=test",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "hop_count": 1,
+      "loop": false
+    },
+    "location_path": "/o-centre/?utm_source=test",
+    "pass": true
+  },
+  "negatives": [
+    {
+      "source": "/yoga-example/",
+      "first_status": 404,
+      "location": null,
+      "final_status": 404,
+      "overreach": false,
+      "pass": true,
+      "detail": {
+        "start": "http://shpigovsky.beget.tech/yoga-example/",
+        "first_status": 404,
+        "location": null,
+        "final_status": 404,
+        "final_url": "http://shpigovsky.beget.tech/yoga-example/",
+        "hops": [
+          {
+            "url": "http://shpigovsky.beget.tech/yoga-example/",
+            "status": 404,
+            "location": null
+          }
+        ],
+        "hop_count": 0,
+        "loop": false
+      }
+    },
+    {
+      "source": "/about-us/",
+      "first_status": 404,
+      "location": null,
+      "final_status": 404,
+      "overreach": false,
+      "pass": true,
+      "detail": {
+        "start": "http://shpigovsky.beget.tech/about-us/",
+        "first_status": 404,
+        "location": null,
+        "final_status": 404,
+        "final_url": "http://shpigovsky.beget.tech/about-us/",
+        "hops": [
+          {
+            "url": "http://shpigovsky.beget.tech/about-us/",
+            "status": 404,
+            "location": null
+          }
+        ],
+        "hop_count": 0,
+        "loop": false
+      }
+    },
+    {
+      "source": "/reviews-old/",
+      "first_status": 404,
+      "location": null,
+      "final_status": 404,
+      "overreach": false,
+      "pass": true,
+      "detail": {
+        "start": "http://shpigovsky.beget.tech/reviews-old/",
+        "first_status": 404,
+        "location": null,
+        "final_status": 404,
+        "final_url": "http://shpigovsky.beget.tech/reviews-old/",
+        "hops": [
+          {
+            "url": "http://shpigovsky.beget.tech/reviews-old/",
+            "status": 404,
+            "location": null
+          }
+        ],
+        "hop_count": 0,
+        "loop": false
+      }
+    }
+  ],
+  "negatives_pass": true,
+  "token_live": "7/7 LEGACY REDIRECTS LIVE",
+  "token_final": "7/7 FINAL TARGETS = 200",
+  "token_loops": "NO REDIRECT LOOPS",
+  "all_pass": true
+}

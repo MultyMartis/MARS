@@ -1,0 +1,1309 @@
+{
+  "authoritative": [
+    {
+      "name": "shpigovsky.ru",
+      "type": "NS",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "SOA",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "A",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "name": "shpigovsky.ru",
+          "type": "A",
+          "ttl": 300,
+          "data": "92.255.111.71"
+        }
+      ],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "AAAA",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "MX",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "TXT",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "CAA",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "CNAME",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "www.shpigovsky.ru",
+      "type": "A",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "name": "www.shpigovsky.ru",
+          "type": "A",
+          "ttl": 300,
+          "data": "92.255.111.71"
+        }
+      ],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "www.shpigovsky.ru",
+      "type": "AAAA",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "www.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "mail.shpigovsky.ru",
+      "type": "A",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "name": "mail.shpigovsky.ru",
+          "type": "A",
+          "ttl": 300,
+          "data": "31.31.196.206"
+        }
+      ],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "mail.shpigovsky.ru",
+      "type": "AAAA",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "name": "mail.shpigovsky.ru",
+          "type": "AAAA",
+          "ttl": 300,
+          "data": "2a00:f940:2:2:1:1:0:168"
+        }
+      ],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "ftp.shpigovsky.ru",
+      "type": "A",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "name": "ftp.shpigovsky.ru",
+          "type": "A",
+          "ttl": 300,
+          "data": "31.31.196.206"
+        }
+      ],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "ftp.shpigovsky.ru",
+      "type": "AAAA",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "name": "ftp.shpigovsky.ru",
+          "type": "AAAA",
+          "ttl": 300,
+          "data": "2a00:f940:2:2:1:1:0:168"
+        }
+      ],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "smtp.shpigovsky.ru",
+      "type": "A",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "name": "smtp.shpigovsky.ru",
+          "type": "A",
+          "ttl": 300,
+          "data": "31.31.196.206"
+        }
+      ],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "smtp.shpigovsky.ru",
+      "type": "AAAA",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "name": "smtp.shpigovsky.ru",
+          "type": "AAAA",
+          "ttl": 300,
+          "data": "2a00:f940:2:2:1:1:0:168"
+        }
+      ],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "pop.shpigovsky.ru",
+      "type": "A",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "name": "pop.shpigovsky.ru",
+          "type": "A",
+          "ttl": 300,
+          "data": "31.31.196.206"
+        }
+      ],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "pop.shpigovsky.ru",
+      "type": "AAAA",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "name": "pop.shpigovsky.ru",
+          "type": "AAAA",
+          "ttl": 300,
+          "data": "2a00:f940:2:2:1:1:0:168"
+        }
+      ],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "imap.shpigovsky.ru",
+      "type": "A",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NXDOMAIN",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "imap.shpigovsky.ru",
+      "type": "AAAA",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NXDOMAIN",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "autodiscover.shpigovsky.ru",
+      "type": "A",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NXDOMAIN",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "autodiscover.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "autoconfig.shpigovsky.ru",
+      "type": "A",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NXDOMAIN",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "_dmarc.shpigovsky.ru",
+      "type": "TXT",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "webmail.shpigovsky.ru",
+      "type": "A",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NXDOMAIN",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "*.shpigovsky.ru",
+      "type": "A",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NXDOMAIN",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "default._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "default._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "mail._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "mail._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "google._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "google._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "yandex._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "yandex._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "beget._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "beget._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "reg._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "reg._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "regru._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "regru._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "hosting._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "hosting._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "server168._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "server168._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "k1._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "k1._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "s1._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "s1._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "s2._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "s2._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "selector1._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "selector1._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "selector2._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "selector2._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "31.31.194.245",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "NS",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "SOA",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "A",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "name": "shpigovsky.ru",
+          "type": "A",
+          "ttl": 295,
+          "data": "92.255.111.71"
+        }
+      ],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "AAAA",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "MX",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "TXT",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "CAA",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "CNAME",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "www.shpigovsky.ru",
+      "type": "A",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "name": "www.shpigovsky.ru",
+          "type": "A",
+          "ttl": 296,
+          "data": "92.255.111.71"
+        }
+      ],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "www.shpigovsky.ru",
+      "type": "AAAA",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "www.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "mail.shpigovsky.ru",
+      "type": "A",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "name": "mail.shpigovsky.ru",
+          "type": "A",
+          "ttl": 297,
+          "data": "31.31.196.206"
+        }
+      ],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "mail.shpigovsky.ru",
+      "type": "AAAA",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "name": "mail.shpigovsky.ru",
+          "type": "AAAA",
+          "ttl": 297,
+          "data": "2a00:f940:2:2:1:1:0:168"
+        }
+      ],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "ftp.shpigovsky.ru",
+      "type": "A",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "name": "ftp.shpigovsky.ru",
+          "type": "A",
+          "ttl": 297,
+          "data": "31.31.196.206"
+        }
+      ],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "ftp.shpigovsky.ru",
+      "type": "AAAA",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "name": "ftp.shpigovsky.ru",
+          "type": "AAAA",
+          "ttl": 297,
+          "data": "2a00:f940:2:2:1:1:0:168"
+        }
+      ],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "smtp.shpigovsky.ru",
+      "type": "A",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "name": "smtp.shpigovsky.ru",
+          "type": "A",
+          "ttl": 297,
+          "data": "31.31.196.206"
+        }
+      ],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "smtp.shpigovsky.ru",
+      "type": "AAAA",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "name": "smtp.shpigovsky.ru",
+          "type": "AAAA",
+          "ttl": 297,
+          "data": "2a00:f940:2:2:1:1:0:168"
+        }
+      ],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "pop.shpigovsky.ru",
+      "type": "A",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "name": "pop.shpigovsky.ru",
+          "type": "A",
+          "ttl": 297,
+          "data": "31.31.196.206"
+        }
+      ],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "pop.shpigovsky.ru",
+      "type": "AAAA",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "name": "pop.shpigovsky.ru",
+          "type": "AAAA",
+          "ttl": 298,
+          "data": "2a00:f940:2:2:1:1:0:168"
+        }
+      ],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "imap.shpigovsky.ru",
+      "type": "A",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NXDOMAIN",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "imap.shpigovsky.ru",
+      "type": "AAAA",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NXDOMAIN",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "autodiscover.shpigovsky.ru",
+      "type": "A",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NXDOMAIN",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "autodiscover.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "autoconfig.shpigovsky.ru",
+      "type": "A",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NXDOMAIN",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "_dmarc.shpigovsky.ru",
+      "type": "TXT",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "webmail.shpigovsky.ru",
+      "type": "A",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NXDOMAIN",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "*.shpigovsky.ru",
+      "type": "A",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NXDOMAIN",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "default._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "default._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "mail._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "mail._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "google._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "google._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "yandex._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "yandex._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "beget._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "beget._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "reg._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "reg._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "regru._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "regru._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "hosting._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "hosting._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "server168._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "server168._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "k1._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "k1._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "s1._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "s1._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "s2._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "s2._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "selector1._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "selector1._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "selector2._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    {
+      "name": "selector2._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "37.140.192.160",
+      "rd": false,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    }
+  ],
+  "parent_delegation_rd0": {
+    "tld_ns": "e.dns.ripn.net",
+    "tld_ip": "193.232.142.17",
+    "rcode": "NOERROR",
+    "flags": "QR AA RD RA",
+    "answer": [],
+    "authority": [],
+    "additional": []
+  },
+  "beget_tech": {
+    "A": {
+      "name": "shpigovsky.beget.tech",
+      "type": "A",
+      "server": "8.8.8.8",
+      "rd": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "name": "shpigovsky.beget.tech",
+          "type": "A",
+          "ttl": 300,
+          "data": "91.106.207.76"
+        }
+      ],
+      "authority": [],
+      "additional": []
+    },
+    "AAAA": {
+      "name": "shpigovsky.beget.tech",
+      "type": "AAAA",
+      "server": "8.8.8.8",
+      "rd": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    },
+    "wwwA": {
+      "name": "www.shpigovsky.beget.tech",
+      "type": "A",
+      "server": "8.8.8.8",
+      "rd": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "name": "www.shpigovsky.beget.tech",
+          "type": "A",
+          "ttl": 300,
+          "data": "91.106.207.76"
+        }
+      ],
+      "authority": [],
+      "additional": []
+    },
+    "wwwAAAA": {
+      "name": "www.shpigovsky.beget.tech",
+      "type": "AAAA",
+      "server": "8.8.8.8",
+      "rd": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "authority": [],
+      "additional": []
+    }
+  }
+}

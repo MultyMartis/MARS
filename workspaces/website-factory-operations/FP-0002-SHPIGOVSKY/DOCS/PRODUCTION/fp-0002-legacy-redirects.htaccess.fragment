@@ -1,0 +1,12 @@
+# FP-0002 legacy redirects
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^yoga/?$ /o-centre/programma-lecheniya/kinezioterapiya/ [R=301,L]
+RewriteRule ^about/?$ /o-centre/ [R=301,L]
+RewriteRule ^psy/?$ /o-centre/programma-lecheniya/psihokorrektsiya/ [R=301,L]
+RewriteRule ^home/?$ /o-centre/programma-lecheniya/ [R=301,L]
+RewriteRule ^policy/?$ /privacy-policy/ [R=301,L]
+RewriteRule ^neuro/?$ /o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/ [R=301,L]
+RewriteRule ^reviews/?$ /otzyvy/ [R=301,L]
+</IfModule>
+

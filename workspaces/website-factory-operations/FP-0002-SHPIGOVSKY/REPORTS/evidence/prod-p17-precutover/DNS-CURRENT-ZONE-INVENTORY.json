@@ -1,0 +1,2231 @@
+{
+  "utc": "2026-08-18T07:23:22.827679+00:00",
+  "domain": "shpigovsky.ru",
+  "whois_registrar": "REGRU-RU",
+  "whois_state": [
+    "REGISTERED, DELEGATED, UNVERIFIED"
+  ],
+  "whois_nserver": [
+    "ns1.hosting.reg.ru.",
+    "ns2.hosting.reg.ru."
+  ],
+  "system_ns": [
+    "ns1.hosting.reg.ru",
+    "ns2.hosting.reg.ru"
+  ],
+  "ns_ips": {
+    "ns1.hosting.reg.ru": [
+      "31.31.194.245",
+      "37.140.192.20",
+      "31.31.196.61",
+      "31.31.198.177",
+      "37.140.192.93",
+      "194.67.73.6",
+      "37.140.196.144",
+      "194.67.73.9",
+      "31.31.196.52",
+      "194.58.91.38",
+      "37.140.193.121",
+      "31.31.196.37",
+      "31.31.194.251",
+      "31.31.196.180"
+    ],
+    "ns2.hosting.reg.ru": [
+      "37.140.192.160",
+      "37.140.194.37",
+      "31.31.198.178",
+      "37.140.193.120",
+      "31.31.196.53",
+      "37.140.192.58",
+      "37.140.192.31",
+      "194.67.73.8",
+      "194.67.73.7",
+      "31.31.194.244",
+      "31.31.198.161",
+      "31.31.196.71",
+      "31.31.196.34",
+      "37.140.192.55"
+    ]
+  },
+  "parent_delegation": {
+    "ok": true,
+    "queried_tld_ns": "c.tld-servers.ru",
+    "queried_ip": "194.190.122.17",
+    "delegation": [],
+    "glue": [],
+    "rcode": "NOERROR"
+  },
+  "query_count": 147,
+  "present_count": 19,
+  "queries": [
+    {
+      "name": "shpigovsky.ru",
+      "type": "NS",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "ns1.hosting.reg.ru.",
+          "ttl": 3251,
+          "rdtype": "NS"
+        },
+        {
+          "to_text": "ns2.hosting.reg.ru.",
+          "ttl": 3251,
+          "rdtype": "NS"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "SOA",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "server168.hosting.reg.ru. support.reg.ru. 2024080622 10800 3600 604800 86400",
+          "ttl": 3301,
+          "rdtype": "SOA"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "A",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "92.255.111.71",
+          "ttl": 3600,
+          "rdtype": "A"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "AAAA",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "MX",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "20 mx2.hosting.reg.ru.",
+          "ttl": 3600,
+          "rdtype": "MX"
+        },
+        {
+          "to_text": "10 mx1.hosting.reg.ru.",
+          "ttl": 3600,
+          "rdtype": "MX"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "\"v=spf1 ip4:31.31.196.206 a mx include:_spf.hosting.reg.ru ~all\"",
+          "ttl": 3256,
+          "rdtype": "TXT"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "CAA",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru"
+    },
+    {
+      "name": "www.shpigovsky.ru",
+      "type": "A",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "92.255.111.71",
+          "ttl": 3600,
+          "rdtype": "A"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "www.shpigovsky.ru"
+    },
+    {
+      "name": "www.shpigovsky.ru",
+      "type": "AAAA",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "www.shpigovsky.ru"
+    },
+    {
+      "name": "www.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "www.shpigovsky.ru"
+    },
+    {
+      "name": "www.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "www.shpigovsky.ru"
+    },
+    {
+      "name": "www.shpigovsky.ru",
+      "type": "MX",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "www.shpigovsky.ru"
+    },
+    {
+      "name": "mail.shpigovsky.ru",
+      "type": "A",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "31.31.196.206",
+          "ttl": 3269,
+          "rdtype": "A"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "mail.shpigovsky.ru"
+    },
+    {
+      "name": "mail.shpigovsky.ru",
+      "type": "AAAA",
+      "server": "system",
+      "ok": false,
+      "rcode": "TIMEOUT",
+      "answers": []
+    },
+    {
+      "name": "mail.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "mail.shpigovsky.ru"
+    },
+    {
+      "name": "mail.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "mail.shpigovsky.ru"
+    },
+    {
+      "name": "mail.shpigovsky.ru",
+      "type": "MX",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "mail.shpigovsky.ru"
+    },
+    {
+      "name": "webmail.shpigovsky.ru",
+      "type": "A",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "webmail.shpigovsky.ru",
+      "type": "AAAA",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "webmail.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "webmail.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "webmail.shpigovsky.ru",
+      "type": "MX",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "ftp.shpigovsky.ru",
+      "type": "A",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "31.31.196.206",
+          "ttl": 3600,
+          "rdtype": "A"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "ftp.shpigovsky.ru"
+    },
+    {
+      "name": "ftp.shpigovsky.ru",
+      "type": "AAAA",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "2a00:f940:2:2:1:1:0:168",
+          "ttl": 3600,
+          "rdtype": "AAAA"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "ftp.shpigovsky.ru"
+    },
+    {
+      "name": "ftp.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "ftp.shpigovsky.ru"
+    },
+    {
+      "name": "ftp.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "ftp.shpigovsky.ru"
+    },
+    {
+      "name": "ftp.shpigovsky.ru",
+      "type": "MX",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "ftp.shpigovsky.ru"
+    },
+    {
+      "name": "smtp.shpigovsky.ru",
+      "type": "A",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "31.31.196.206",
+          "ttl": 3600,
+          "rdtype": "A"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "smtp.shpigovsky.ru"
+    },
+    {
+      "name": "smtp.shpigovsky.ru",
+      "type": "AAAA",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "2a00:f940:2:2:1:1:0:168",
+          "ttl": 3600,
+          "rdtype": "AAAA"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "smtp.shpigovsky.ru"
+    },
+    {
+      "name": "smtp.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "smtp.shpigovsky.ru"
+    },
+    {
+      "name": "smtp.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "smtp.shpigovsky.ru"
+    },
+    {
+      "name": "smtp.shpigovsky.ru",
+      "type": "MX",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "smtp.shpigovsky.ru"
+    },
+    {
+      "name": "pop.shpigovsky.ru",
+      "type": "A",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "31.31.196.206",
+          "ttl": 3600,
+          "rdtype": "A"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "pop.shpigovsky.ru"
+    },
+    {
+      "name": "pop.shpigovsky.ru",
+      "type": "AAAA",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "2a00:f940:2:2:1:1:0:168",
+          "ttl": 3600,
+          "rdtype": "AAAA"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "pop.shpigovsky.ru"
+    },
+    {
+      "name": "pop.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "pop.shpigovsky.ru"
+    },
+    {
+      "name": "pop.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "pop.shpigovsky.ru"
+    },
+    {
+      "name": "pop.shpigovsky.ru",
+      "type": "MX",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "pop.shpigovsky.ru"
+    },
+    {
+      "name": "imap.shpigovsky.ru",
+      "type": "A",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "imap.shpigovsky.ru",
+      "type": "AAAA",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "imap.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "imap.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "imap.shpigovsky.ru",
+      "type": "MX",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "autodiscover.shpigovsky.ru",
+      "type": "A",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "autodiscover.shpigovsky.ru",
+      "type": "AAAA",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "autodiscover.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "autodiscover.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "autodiscover.shpigovsky.ru",
+      "type": "MX",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "autoconfig.shpigovsky.ru",
+      "type": "A",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "autoconfig.shpigovsky.ru",
+      "type": "AAAA",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "autoconfig.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "autoconfig.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "autoconfig.shpigovsky.ru",
+      "type": "MX",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "mta-sts.shpigovsky.ru",
+      "type": "A",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "mta-sts.shpigovsky.ru",
+      "type": "AAAA",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "mta-sts.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "mta-sts.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "mta-sts.shpigovsky.ru",
+      "type": "MX",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "ns1.shpigovsky.ru",
+      "type": "A",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "ns1.shpigovsky.ru",
+      "type": "AAAA",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "ns1.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "ns1.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "ns1.shpigovsky.ru",
+      "type": "MX",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "ns2.shpigovsky.ru",
+      "type": "A",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "ns2.shpigovsky.ru",
+      "type": "AAAA",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "ns2.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "ns2.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "ns2.shpigovsky.ru",
+      "type": "MX",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "www.shpigovsky.beget.tech",
+      "type": "A",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "91.106.207.76",
+          "ttl": 368,
+          "rdtype": "A"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "www.shpigovsky.beget.tech"
+    },
+    {
+      "name": "www.shpigovsky.beget.tech",
+      "type": "AAAA",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "www.shpigovsky.beget.tech"
+    },
+    {
+      "name": "www.shpigovsky.beget.tech",
+      "type": "CNAME",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "www.shpigovsky.beget.tech"
+    },
+    {
+      "name": "www.shpigovsky.beget.tech",
+      "type": "TXT",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "\"v=spf1 redirect=beget.com\"",
+          "ttl": 300,
+          "rdtype": "TXT"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "www.shpigovsky.beget.tech"
+    },
+    {
+      "name": "www.shpigovsky.beget.tech",
+      "type": "MX",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "10 mx1.beget.com.",
+          "ttl": 300,
+          "rdtype": "MX"
+        },
+        {
+          "to_text": "20 mx2.beget.com.",
+          "ttl": 300,
+          "rdtype": "MX"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "www.shpigovsky.beget.tech"
+    },
+    {
+      "name": "shpigovsky.beget.tech",
+      "type": "A",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "91.106.207.76",
+          "ttl": 424,
+          "rdtype": "A"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.beget.tech"
+    },
+    {
+      "name": "shpigovsky.beget.tech",
+      "type": "AAAA",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.beget.tech"
+    },
+    {
+      "name": "shpigovsky.beget.tech",
+      "type": "CNAME",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.beget.tech"
+    },
+    {
+      "name": "shpigovsky.beget.tech",
+      "type": "TXT",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "\"v=spf1 redirect=beget.com\"",
+          "ttl": 300,
+          "rdtype": "TXT"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.beget.tech"
+    },
+    {
+      "name": "shpigovsky.beget.tech",
+      "type": "MX",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "20 mx2.beget.com.",
+          "ttl": 300,
+          "rdtype": "MX"
+        },
+        {
+          "to_text": "10 mx1.beget.com.",
+          "ttl": 300,
+          "rdtype": "MX"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.beget.tech"
+    },
+    {
+      "name": "_dmarc.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "_dmarc.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "_domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "_domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "_mta-sts.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "_mta-sts.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "_acme-challenge.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "_acme-challenge.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "_spf.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "_spf.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "default._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "default._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "default._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "default._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "mail._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "mail._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "google._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "google._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "k1._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "k1._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "k2._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "k2._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "s1._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "s1._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "s2._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "s2._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "selector1._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "selector1._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "selector2._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "selector2._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "dkim._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "dkim._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "yandex._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "yandex._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "mailru._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "mailru._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "beget._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "beget._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "beget1._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "beget1._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "fm1._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "fm1._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "fm2._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "fm2._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "fm3._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "fm3._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "cm._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "cm._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "s1024._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "s1024._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "s2048._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "s2048._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "protonmail._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "TIMEOUT",
+      "answers": []
+    },
+    {
+      "name": "protonmail._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "protonmail2._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "protonmail2._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "pm._domainkey.shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "pm._domainkey.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "_autodiscover._tcp.shpigovsky.ru",
+      "type": "SRV",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "_imaps._tcp.shpigovsky.ru",
+      "type": "SRV",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "_imap._tcp.shpigovsky.ru",
+      "type": "SRV",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "_submission._tcp.shpigovsky.ru",
+      "type": "SRV",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "_smtps._tcp.shpigovsky.ru",
+      "type": "SRV",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "_pop3s._tcp.shpigovsky.ru",
+      "type": "SRV",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "_caldav._tcp.shpigovsky.ru",
+      "type": "SRV",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "_carddav._tcp.shpigovsky.ru",
+      "type": "SRV",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "*.shpigovsky.ru",
+      "type": "A",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "*.shpigovsky.ru",
+      "type": "AAAA",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    },
+    {
+      "name": "*.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": false,
+      "rcode": "NXDOMAIN",
+      "answers": []
+    }
+  ],
+  "authoritative_queries": [
+    {
+      "name": "shpigovsky.ru",
+      "type": "NS",
+      "server": "31.31.194.245",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "SOA",
+      "server": "31.31.194.245",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "A",
+      "server": "31.31.194.245",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "92.255.111.71",
+          "ttl": 120,
+          "rdtype": "A"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "AAAA",
+      "server": "31.31.194.245",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "MX",
+      "server": "31.31.194.245",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "TXT",
+      "server": "31.31.194.245",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "CAA",
+      "server": "31.31.194.245",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru"
+    },
+    {
+      "name": "www.shpigovsky.ru",
+      "type": "A",
+      "server": "31.31.194.245",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "92.255.111.71",
+          "ttl": 125,
+          "rdtype": "A"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "www.shpigovsky.ru"
+    },
+    {
+      "name": "www.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "31.31.194.245",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "www.shpigovsky.ru"
+    },
+    {
+      "name": "www.shpigovsky.ru",
+      "type": "AAAA",
+      "server": "31.31.194.245",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "www.shpigovsky.ru"
+    },
+    {
+      "name": "_dmarc.shpigovsky.ru",
+      "type": "TXT",
+      "server": "31.31.194.245",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "_dmarc.shpigovsky.ru"
+    },
+    {
+      "name": "shpigovsky.beget.tech",
+      "type": "A",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "91.106.207.76",
+          "ttl": 417,
+          "rdtype": "A"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.beget.tech"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "NS",
+      "server": "37.140.192.160",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "SOA",
+      "server": "37.140.192.160",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "A",
+      "server": "37.140.192.160",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "92.255.111.71",
+          "ttl": 120,
+          "rdtype": "A"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "AAAA",
+      "server": "37.140.192.160",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "MX",
+      "server": "37.140.192.160",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "TXT",
+      "server": "37.140.192.160",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "CAA",
+      "server": "37.140.192.160",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru"
+    },
+    {
+      "name": "www.shpigovsky.ru",
+      "type": "A",
+      "server": "37.140.192.160",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "92.255.111.71",
+          "ttl": 125,
+          "rdtype": "A"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "www.shpigovsky.ru"
+    },
+    {
+      "name": "www.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "37.140.192.160",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "www.shpigovsky.ru"
+    },
+    {
+      "name": "www.shpigovsky.ru",
+      "type": "AAAA",
+      "server": "37.140.192.160",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "www.shpigovsky.ru"
+    },
+    {
+      "name": "_dmarc.shpigovsky.ru",
+      "type": "TXT",
+      "server": "37.140.192.160",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "_dmarc.shpigovsky.ru"
+    },
+    {
+      "name": "shpigovsky.beget.tech",
+      "type": "A",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "91.106.207.76",
+          "ttl": 417,
+          "rdtype": "A"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.beget.tech"
+    }
+  ],
+  "multi_resolver": [
+    {
+      "name": "shpigovsky.ru",
+      "type": "NS",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "ns2.hosting.reg.ru.",
+          "ttl": 3237,
+          "rdtype": "NS"
+        },
+        {
+          "to_text": "ns1.hosting.reg.ru.",
+          "ttl": 3237,
+          "rdtype": "NS"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru",
+      "resolver_label": "system"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "A",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "92.255.111.71",
+          "ttl": 3587,
+          "rdtype": "A"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru",
+      "resolver_label": "system"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "AAAA",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru",
+      "resolver_label": "system"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "MX",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "10 mx1.hosting.reg.ru.",
+          "ttl": 3587,
+          "rdtype": "MX"
+        },
+        {
+          "to_text": "20 mx2.hosting.reg.ru.",
+          "ttl": 3587,
+          "rdtype": "MX"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru",
+      "resolver_label": "system"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "TXT",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "\"v=spf1 ip4:31.31.196.206 a mx include:_spf.hosting.reg.ru ~all\"",
+          "ttl": 3243,
+          "rdtype": "TXT"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru",
+      "resolver_label": "system"
+    },
+    {
+      "name": "www.shpigovsky.ru",
+      "type": "A",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "92.255.111.71",
+          "ttl": 3587,
+          "rdtype": "A"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "www.shpigovsky.ru",
+      "resolver_label": "system"
+    },
+    {
+      "name": "www.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "www.shpigovsky.ru",
+      "resolver_label": "system"
+    },
+    {
+      "name": "shpigovsky.beget.tech",
+      "type": "A",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "91.106.207.76",
+          "ttl": 236,
+          "rdtype": "A"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.beget.tech",
+      "resolver_label": "system"
+    },
+    {
+      "name": "shpigovsky.beget.tech",
+      "type": "AAAA",
+      "server": "system",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.beget.tech",
+      "resolver_label": "system"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "NS",
+      "server": "8.8.8.8",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru",
+      "resolver_label": "google"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "A",
+      "server": "8.8.8.8",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "92.255.111.71",
+          "ttl": 120,
+          "rdtype": "A"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru",
+      "resolver_label": "google"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "AAAA",
+      "server": "8.8.8.8",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru",
+      "resolver_label": "google"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "MX",
+      "server": "8.8.8.8",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru",
+      "resolver_label": "google"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "TXT",
+      "server": "8.8.8.8",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru",
+      "resolver_label": "google"
+    },
+    {
+      "name": "www.shpigovsky.ru",
+      "type": "A",
+      "server": "8.8.8.8",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "92.255.111.71",
+          "ttl": 125,
+          "rdtype": "A"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "www.shpigovsky.ru",
+      "resolver_label": "google"
+    },
+    {
+      "name": "www.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "8.8.8.8",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "www.shpigovsky.ru",
+      "resolver_label": "google"
+    },
+    {
+      "name": "shpigovsky.beget.tech",
+      "type": "A",
+      "server": "8.8.8.8",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "91.106.207.76",
+          "ttl": 128,
+          "rdtype": "A"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.beget.tech",
+      "resolver_label": "google"
+    },
+    {
+      "name": "shpigovsky.beget.tech",
+      "type": "AAAA",
+      "server": "8.8.8.8",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.beget.tech",
+      "resolver_label": "google"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "NS",
+      "server": "1.1.1.1",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru",
+      "resolver_label": "cloudflare"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "A",
+      "server": "1.1.1.1",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "92.255.111.71",
+          "ttl": 120,
+          "rdtype": "A"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru",
+      "resolver_label": "cloudflare"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "AAAA",
+      "server": "1.1.1.1",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru",
+      "resolver_label": "cloudflare"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "MX",
+      "server": "1.1.1.1",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru",
+      "resolver_label": "cloudflare"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "TXT",
+      "server": "1.1.1.1",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru",
+      "resolver_label": "cloudflare"
+    },
+    {
+      "name": "www.shpigovsky.ru",
+      "type": "A",
+      "server": "1.1.1.1",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "92.255.111.71",
+          "ttl": 125,
+          "rdtype": "A"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "www.shpigovsky.ru",
+      "resolver_label": "cloudflare"
+    },
+    {
+      "name": "www.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "1.1.1.1",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "www.shpigovsky.ru",
+      "resolver_label": "cloudflare"
+    },
+    {
+      "name": "shpigovsky.beget.tech",
+      "type": "A",
+      "server": "1.1.1.1",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "91.106.207.76",
+          "ttl": 128,
+          "rdtype": "A"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.beget.tech",
+      "resolver_label": "cloudflare"
+    },
+    {
+      "name": "shpigovsky.beget.tech",
+      "type": "AAAA",
+      "server": "1.1.1.1",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.beget.tech",
+      "resolver_label": "cloudflare"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "NS",
+      "server": "9.9.9.9",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru",
+      "resolver_label": "quad9"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "A",
+      "server": "9.9.9.9",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "92.255.111.71",
+          "ttl": 120,
+          "rdtype": "A"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru",
+      "resolver_label": "quad9"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "AAAA",
+      "server": "9.9.9.9",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru",
+      "resolver_label": "quad9"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "MX",
+      "server": "9.9.9.9",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru",
+      "resolver_label": "quad9"
+    },
+    {
+      "name": "shpigovsky.ru",
+      "type": "TXT",
+      "server": "9.9.9.9",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.ru",
+      "resolver_label": "quad9"
+    },
+    {
+      "name": "www.shpigovsky.ru",
+      "type": "A",
+      "server": "9.9.9.9",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "92.255.111.71",
+          "ttl": 125,
+          "rdtype": "A"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "www.shpigovsky.ru",
+      "resolver_label": "quad9"
+    },
+    {
+      "name": "www.shpigovsky.ru",
+      "type": "CNAME",
+      "server": "9.9.9.9",
+      "ok": false,
+      "rcode": "TIMEOUT",
+      "answers": [],
+      "resolver_label": "quad9"
+    },
+    {
+      "name": "shpigovsky.beget.tech",
+      "type": "A",
+      "server": "9.9.9.9",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [
+        {
+          "to_text": "91.106.207.76",
+          "ttl": 124,
+          "rdtype": "A"
+        }
+      ],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.beget.tech",
+      "resolver_label": "quad9"
+    },
+    {
+      "name": "shpigovsky.beget.tech",
+      "type": "AAAA",
+      "server": "9.9.9.9",
+      "ok": true,
+      "rcode": "NOERROR",
+      "answers": [],
+      "cname_chain": [],
+      "canonical_name": "shpigovsky.beget.tech",
+      "resolver_label": "quad9"
+    }
+  ],
+  "token": "CURRENT DNS ZONE MUST BE INVENTORIED BEFORE NAMESERVER CUTOVER"
+}

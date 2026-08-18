@@ -1,10 +1,10 @@
-# BASELINE — FP-0002 PRODUCTION POST-P13 (PROD-P14) + P15 ENVIRONMENT CLEAN + P16 TYPOGRAPHY
+# BASELINE — FP-0002 PRODUCTION POST-P13 (PROD-P14) + P15 ENVIRONMENT CLEAN + P16 TYPOGRAPHY + P17 PRE-CUTOVER CONT1
 
 **Baseline ID:** `FP-0002-PROD-BASELINE-2026-08-17`  
 **Established:** 2026-08-16/17 (UTC intake 2026-08-16T17:28Z)  
 **Wave:** PROD-P14 Stabilization  
 **P15 extension:** 2026-08-16/17 — environment/migration cleanup (same baseline ID; P14 backup remains rollback authority)  
-**P16 extension:** 2026-08-17 — typography residual (render-time pipeline; same baseline ID)
+**P17 extension:** 2026-08-18 — legacy 301s + DNS/NS migration plan (NS not switched)
 
 ## Runtime
 
@@ -19,7 +19,7 @@
 | DB name (no secrets) | `shpigovsky_main` |
 | DB prefix | `fp02_` |
 | Theme | Shpigovsky `0.3.0-d7a-shell` |
-| shpigovsky-core | `0.3.7-p16` (was `0.3.6-p15` at P15) |
+| shpigovsky-core | `0.3.8-p17` (was `0.3.7-p16` at P16) |
 | WPilot | 0.3.2 · writes disabled · bridge active (read) |
 | siteurl/home | http://shpigovsky.beget.tech |
 | blog_public | 0 |
@@ -60,7 +60,7 @@
 
 ## Latest accepted wave
 
-**P16 Typography Residual**
+**P17 PRE-CUTOVER CONT1** (legacy redirects live; DNS inventoried; NS deferred)
 
 ## Backup
 
@@ -72,6 +72,7 @@
 | Status | **PASS** — remains current full rollback baseline |
 | P15 exact-file/object snapshots | `deployment-packs/fp-0002/prod-p15-layer-b-pre/` + `prod-p15-db-snapshots/` + `prod-p15-debug-archive/` |
 | P16 exact-file snapshots | `deployment-packs/fp-0002/prod-p16-layer-b-pre/` + `prod-p16-db-snapshots/` |
+| P17 CONT1 `.htaccess` snapshots | `deployment-packs/fp-0002/prod-p17-cont1-layer-b-pre/` |
 
 ## Git checkpoint
 
@@ -84,7 +85,7 @@
 
 ## Open tails
 
-See `REPORTS/OPEN-ITEMS-FP-0002-AFTER-P16.md` — PRE-CUTOVER → domain/DNS/SSL → SMTP → robots/indexing → sitemap submissions → final crawl.
+See `REPORTS/OPEN-ITEMS-FP-0002-AFTER-P17.md` — Beget zone prep → NS/SSL/siteurl → SMTP → robots/indexing → sitemap submissions → final crawl.
 
 ## P15 environment-clean status
 

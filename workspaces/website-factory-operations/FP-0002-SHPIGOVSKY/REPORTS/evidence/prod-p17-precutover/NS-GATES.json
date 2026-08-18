@@ -1,0 +1,23 @@
+{
+  "token": "NS CUTOVER GO/NO-GO GATES READY",
+  "ns_cutover_decision": "NO-GO",
+  "gates": {
+    "NS01": {"title": "current zone inventoried", "state": "PASS"},
+    "NS02": {"title": "target Beget zone prepared", "state": "NO-GO", "note": "manual panel"},
+    "NS03": {"title": "MX preserved", "state": "PLAN_READY"},
+    "NS04": {"title": "SPF preserved", "state": "PLAN_READY"},
+    "NS05": {"title": "DKIM preserved", "state": "PUBLIC_ABSENT_CONFIRM_PANEL"},
+    "NS06": {"title": "DMARC preserved", "state": "PUBLIC_ABSENT"},
+    "NS07": {"title": "active subdomains preserved", "state": "PLAN_READY"},
+    "NS08": {"title": "verification TXT", "state": "NONE_PUBLIC"},
+    "NS09": {"title": "apex website target prepared", "state": "IP_KNOWN_PANEL_NOT_WRITTEN", "ip": "91.106.207.76"},
+    "NS10": {"title": "www policy prepared", "state": "DOCUMENTED_WWW_TO_APEX"},
+    "NS11": {"title": "stale AAAA ruled out", "state": "PASS"},
+    "NS12": {"title": "target nameservers verified", "state": "PUBLISHED_SET_PANEL_CONFIRM"},
+    "NS13": {"title": "registrar access available", "state": "OPERATOR"},
+    "NS14": {"title": "rollback nameservers recorded", "state": "PASS", "ns": ["ns1.hosting.reg.ru", "ns2.hosting.reg.ru"]},
+    "NS15": {"title": "content freeze", "state": "NOT_ACTIVE"},
+    "NS16": {"title": "fresh full backup", "state": "NOT_THIS_WAVE"},
+    "NS17": {"title": "Beget FS+DB+WP Admin", "state": "HISTORICAL_PASS_PLUS_CONT1_SSH_HTTP"}
+  }
+}

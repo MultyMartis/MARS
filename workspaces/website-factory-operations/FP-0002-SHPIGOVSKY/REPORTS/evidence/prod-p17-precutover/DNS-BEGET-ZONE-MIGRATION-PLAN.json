@@ -1,0 +1,17 @@
+{
+  "utc": "2026-08-18T07:30:00Z",
+  "mail_provider": "REG.RU hosting mail",
+  "mx": ["10 mx1.hosting.reg.ru.", "20 mx2.hosting.reg.ru."],
+  "spf": "v=spf1 ip4:31.31.196.206 a mx include:_spf.hosting.reg.ru ~all",
+  "dkim_public": "ABSENT",
+  "dmarc_public": "ABSENT",
+  "website_target_a": "91.106.207.76",
+  "website_target_aaaa": null,
+  "current_apex_a": "92.255.111.71",
+  "current_ns": ["ns1.hosting.reg.ru", "ns2.hosting.reg.ru"],
+  "target_ns_published": ["ns1.beget.com", "ns2.beget.com", "ns1.beget.pro", "ns2.beget.pro"],
+  "target_ns_account_panel": "OPERATOR INPUT REQUIRED",
+  "beget_zone_written_this_wave": false,
+  "ns_switched_this_wave": false,
+  "token": "MAIL DNS PRESERVATION PLAN = READY BEFORE NS CUTOVER"
+}

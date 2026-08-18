@@ -1,0 +1,40 @@
+{
+  "utc": "2026-08-18T07:34:11.960054+00:00",
+  "files": [
+    {
+      "rel": "shpigovsky-core.php",
+      "match": true,
+      "sha": "b64af07b402ec3fbf0d63104c7f1ef7cb88292b48b4c461bc1f292ec11736e13"
+    },
+    {
+      "rel": "src/Admin/SystemDashboard.php",
+      "match": true,
+      "sha": "0074a6d793846ac585ba647f5dfee9fbc365d551042940a13600d1467660f8e2"
+    }
+  ],
+  "meta": {
+    "before": {
+      "baseline_id": "FP-0002-PROD-BASELINE-2026-08-17",
+      "latest_wave": "P16 Typography Residual",
+      "parity": "MATCH",
+      "verified_at": "2026-08-16 19:27 UTC",
+      "backup": "P14 full + prod-p16-layer-b-pre / prod-p16-db-snapshots",
+      "git_sha": "35666e2bb98247072a7a7972d4271eaf8d5f36aa",
+      "wave": "PROD-P15",
+      "p15_note": "Environment cleanup; mail+indexing deferred; domain not cut over",
+      "state_note": "Typography residual closed"
+    },
+    "after": {
+      "baseline_id": "FP-0002-PROD-BASELINE-2026-08-17",
+      "latest_wave": "P17 PRE-CUTOVER CONT1",
+      "parity": "MATCH",
+      "verified_at": "2026-08-18 07:34 UTC",
+      "backup": "P14 full + prod-p17-cont1-layer-b-pre",
+      "git_sha": "35666e2bb98247072a7a7972d4271eaf8d5f36aa",
+      "wave": "PROD-P15",
+      "p15_note": "Environment cleanup; mail+indexing deferred; domain not cut over",
+      "state_note": "Legacy 301s live; DNS inventoried; NS deferred"
+    },
+    "core": "0.3.8-p17"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "utc": "2026-08-18T07:25:47.499691+00:00",
+  "rows": [
+    {
+      "path": "/",
+      "first_status": 200,
+      "final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/",
+      "hop_count": 0,
+      "pass": true
+    },
+    {
+      "path": "/uslugi/",
+      "first_status": 200,
+      "final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/uslugi/",
+      "hop_count": 0,
+      "pass": true
+    },
+    {
+      "path": "/o-centre/",
+      "first_status": 200,
+      "final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/o-centre/",
+      "hop_count": 0,
+      "pass": true
+    },
+    {
+      "path": "/privacy-policy/",
+      "first_status": 200,
+      "final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/privacy-policy/",
+      "hop_count": 0,
+      "pass": true
+    },
+    {
+      "path": "/otzyvy/",
+      "first_status": 200,
+      "final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/otzyvy/",
+      "hop_count": 0,
+      "pass": true
+    },
+    {
+      "path": "/specyalisty/",
+      "first_status": 200,
+      "final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/specyalisty/",
+      "hop_count": 0,
+      "pass": true
+    },
+    {
+      "path": "/wp-login.php",
+      "first_status": 200,
+      "final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/wp-login.php",
+      "hop_count": 0,
+      "pass": true
+    },
+    {
+      "path": "/wp-sitemap.xml",
+      "first_status": 200,
+      "final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/wp-sitemap.xml",
+      "hop_count": 0,
+      "pass": true
+    },
+    {
+      "path": "/wp-json/",
+      "first_status": 200,
+      "final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/wp-json/",
+      "hop_count": 0,
+      "pass": true
+    },
+    {
+      "path": "/wp-json/shpigovsky/v1/smart-search?q=центр",
+      "first_status": 200,
+      "final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/wp-json/shpigovsky/v1/smart-search?q=центр",
+      "hop_count": 0,
+      "pass": true
+    },
+    {
+      "path": "/blog/nazvanie-stati/",
+      "first_status": 200,
+      "final_status": 200,
+      "final_url": "http://shpigovsky.beget.tech/blog/nazvanie-stati/",
+      "hop_count": 0,
+      "pass": true
+    }
+  ],
+  "article": "http://shpigovsky.beget.tech/blog/nazvanie-stati/",
+  "pass": true,
+  "token": "WORDPRESS REWRITE REGRESSION PASS"
+}

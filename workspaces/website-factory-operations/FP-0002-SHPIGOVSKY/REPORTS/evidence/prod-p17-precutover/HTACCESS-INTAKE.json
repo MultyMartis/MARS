@@ -1,0 +1,49 @@
+{
+  "utc": "2026-08-18T07:17:20.299045+00:00",
+  "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/.htaccess",
+  "bytes": 307,
+  "sha256": "eb8dff1ac965306bd374b5604032c0f1ee51a35f209fc18ee5878250f7258bf6",
+  "snapshot": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p17-cont1-layer-b-pre\\htaccess.production.before",
+  "analysis": {
+    "bytes": 307,
+    "lines": 11,
+    "begin_wordpress_line": 1,
+    "end_wordpress_line": 11,
+    "has_begin_wordpress": true,
+    "has_end_wordpress": true,
+    "has_rewriteengine": true,
+    "has_legacy_marker": false,
+    "existing_rewriterules": [
+      "RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]",
+      "RewriteRule ^index\\.php$ - [L]",
+      "RewriteRule . /index.php [L]"
+    ],
+    "custom_lines_before_wp": 0,
+    "custom_preview_before_wp": "",
+    "ambiguous_operator_rules": true,
+    "ambiguous_notes": [
+      "non-wp rewrite rules present; inspect before mutation"
+    ],
+    "non_wordpress_rewriterules": [
+      "RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]",
+      "RewriteRule ^index\\.php$ - [L]"
+    ]
+  },
+  "local_canonical_comparison": [
+    {
+      "path": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\.htaccess",
+      "exists": false
+    },
+    {
+      "path": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\.htaccess",
+      "exists": false
+    },
+    {
+      "path": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\DOCS\\PRODUCTION\\htaccess.canonical",
+      "exists": false
+    }
+  ],
+  "local_canonical_exists": false,
+  "token": "CURRENT PRODUCTION .HTACCESS PRESERVED BEFORE REDIRECT IMPLEMENTATION",
+  "targets_valid": true
+}

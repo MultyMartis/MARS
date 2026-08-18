@@ -1,0 +1,28 @@
+name,type,current_value,ttl_observed,classification,beget_target,notes
+@,NS,"ns1.hosting.reg.ru. ns2.hosting.reg.ru.",recursive~3250,DO NOT COPY,"ns1.beget.com ns2.beget.com ns1.beget.pro ns2.beget.pro","Set at REG.RU registrar only after Beget zone prepared. Published Beget KB; confirm in panel."
+@,SOA,"server168.hosting.reg.ru. support.reg.ru. 2024080622 10800 3600 604800 86400",recursive~3300,DO NOT COPY,(Beget-generated),"Do not copy REG.RU SOA."
+@,A,92.255.111.71,3600 (auth node 300),REPLACE FOR WEBSITE CUTOVER,91.106.207.76,"Evidence: shpigovsky.beget.tech A. Old hosting IP must not remain."
+@,AAAA,(none),—,KEEP / do not invent,(none unless Beget publishes AAAA),"No apex AAAA today. Do not add stale IPv6."
+www,A,92.255.111.71,3600,REPLACE FOR WEBSITE CUTOVER,91.106.207.76,"Not CNAME today. Keep A to same Beget IPv4 unless panel requires CNAME."
+www,AAAA,(none),—,KEEP / do not invent,(none),
+www,CNAME,(none),—,DO NOT COPY,(none unless Beget requires),
+@,MX,"10 mx1.hosting.reg.ru. 20 mx2.hosting.reg.ru.",3600,COPY TO BEGET,exact copy,"Mail stays on REG.RU hosting. Do not point MX at Beget merely because the website moves."
+@,TXT,"v=spf1 ip4:31.31.196.206 a mx include:_spf.hosting.reg.ru ~all",~3256,COPY TO BEGET,exact copy,"SPF includes REG.RU hosting mechanisms + ip4:31.31.196.206."
+_dmarc,TXT,(none),—,DO NOT COPY,(none),"No public DMARC. Do not invent. Operator may add later as a separate decision."
+*._domainkey,TXT/CNAME,(none discovered),—,OPERATOR DECISION,copy only if found in REG.RU mail panel,"Public selector probe found none. Confirm panel before NS switch."
+mail,A,31.31.196.206,300-3600,COPY TO BEGET,31.31.196.206,
+mail,AAAA,2a00:f940:2:2:1:1:0:168,300,COPY TO BEGET,2a00:f940:2:2:1:1:0:168,"Mail IPv6 — not website."
+ftp,A,31.31.196.206,3600,COPY TO BEGET,31.31.196.206,
+ftp,AAAA,2a00:f940:2:2:1:1:0:168,3600,COPY TO BEGET,2a00:f940:2:2:1:1:0:168,
+smtp,A,31.31.196.206,3600,COPY TO BEGET,31.31.196.206,
+smtp,AAAA,2a00:f940:2:2:1:1:0:168,3600,COPY TO BEGET,2a00:f940:2:2:1:1:0:168,
+pop,A,31.31.196.206,3600,COPY TO BEGET,31.31.196.206,
+pop,AAAA,2a00:f940:2:2:1:1:0:168,3600,COPY TO BEGET,2a00:f940:2:2:1:1:0:168,
+imap,A,(NXDOMAIN),—,OBSOLETE / PROVEN UNUSED,(do not create),
+autodiscover,A,(NXDOMAIN),—,OBSOLETE / PROVEN UNUSED,(do not create),
+autoconfig,A,(NXDOMAIN),—,OBSOLETE / PROVEN UNUSED,(do not create),
+webmail,A,(NXDOMAIN),—,OBSOLETE / PROVEN UNUSED,(do not create),
+*,A,(none),—,DO NOT COPY,(none),"No wildcard."
+@,CAA,(none),—,DO NOT COPY,(none unless operator adds),
+SRV,(none found),—,DO NOT COPY,(none),
+google/yandex verification TXT,(none),—,OPERATOR DECISION,copy only if discovered in panels,"Not in public apex TXT."

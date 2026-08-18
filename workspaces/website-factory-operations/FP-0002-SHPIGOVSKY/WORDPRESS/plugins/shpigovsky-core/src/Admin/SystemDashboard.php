@@ -187,8 +187,8 @@ final class SystemDashboard implements ModuleInterface {
 
 		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'Remaining launch tails', 'shpigovsky-core' ) . '</h3>';
 		echo '<ul style="margin:0 0 12px 1.2em;">';
-		self::li( 'PRE-CUTOVER' );
-		self::li( __( 'DNS / domain / SSL', 'shpigovsky-core' ) );
+		self::li( __( 'NS / DNS cutover (Beget zone first)', 'shpigovsky-core' ) );
+		self::li( __( 'SSL + home/siteurl', 'shpigovsky-core' ) );
 		self::li( __( 'SMTP after domain/DNS', 'shpigovsky-core' ) );
 		self::li( __( 'robots / indexing', 'shpigovsky-core' ) );
 		self::li( __( 'Sitemap submissions', 'shpigovsky-core' ) );
