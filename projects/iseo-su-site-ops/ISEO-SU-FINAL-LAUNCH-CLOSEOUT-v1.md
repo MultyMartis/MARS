@@ -100,7 +100,15 @@ Accepted range restored onto current `origin/mars/canonical-post-recovery`:
 
 ## 11. Remote Canonical Tip
 
-Recorded after push in the companion REPORT §15. Original local SHAs `f8126b03` / `ff8af69c` remain on dirty-main history; equivalent cherry-picks are on the canonical remote (original SHAs cannot be DAG-ancestors of origin without merging 68 `iseo-report-hub` commits).
+| Ref | SHA |
+|-----|-----|
+| `origin/mars/canonical-post-recovery` after closeout push | `65bf6c79` |
+| Tree restore | `94ca9e5a` |
+| Hero cherry-pick (`f8126b03`) | `7fa2bfeb` |
+| Final integration cherry-pick (`ff8af69c`) | `eb738a44` |
+| Closeout cherry-pick (`78d082a1`) | `65bf6c79` |
+
+Original local SHAs `f8126b03` / `ff8af69c` remain on dirty-main history. They cannot be DAG-ancestors of origin without merging 68 `iseo-report-hub` commits. Equivalents above are reachable from the canonical remote.
 
 ## 12. Remaining Non-Blocking Items
 

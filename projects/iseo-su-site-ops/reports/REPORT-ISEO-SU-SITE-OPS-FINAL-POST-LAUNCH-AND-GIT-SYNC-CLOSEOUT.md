@@ -165,16 +165,26 @@ Dirty main foreign WIP untouched. No `git add .` / `git reset` / `git clean` / s
 
 ## 14. Push
 
-Recorded after execution in §15. No force push. No rebase of foreign WIP.
+```
+git push origin HEAD:mars/canonical-post-recovery
+```
+
+Result: `7098c2aa..65bf6c79  HEAD -> mars/canonical-post-recovery`. No force. No rebase of foreign WIP.
 
 ## 15. Remote Verification
 
-Filled immediately after push. Expected:
+| Check | Result |
+|-------|--------|
+| `origin/mars/canonical-post-recovery` | `65bf6c79` |
+| Tree restore | `94ca9e5a` |
+| Hero (`f8126b03` → cherry-pick) | `7fa2bfeb` reachable |
+| Final (`ff8af69c` → cherry-pick) | `eb738a44` reachable |
+| Closeout (`78d082a1` → cherry-pick) | `65bf6c79` reachable |
+| Dirty main HEAD | `78d082a1` |
+| Dirty main staged | empty |
+| Foreign WIP | preserved |
 
-- `origin/mars/canonical-post-recovery` = worktree HEAD
-- cherry-pick equivalent of `ff8af69c` reachable on origin
-- overflow-fix closeout cherry-pick reachable
-- dirty main still at local closeout SHA with foreign WIP intact
+Original `ff8af69c` is not a DAG ancestor of origin (would require merging 68 report-hub commits). The canonical remote contains the equivalent patch as `eb738a44`.
 
 ## 16. Production Mutations
 
