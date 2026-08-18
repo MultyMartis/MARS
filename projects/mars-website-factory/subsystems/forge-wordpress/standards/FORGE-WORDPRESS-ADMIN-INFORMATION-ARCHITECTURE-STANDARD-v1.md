@@ -35,6 +35,8 @@ Optional, not top-level by default: Импорт из Word, Activity Log, Smart 
 
 **Do not** expose every internal module as a top-level menu. **Do not** leave `options.php`, migration runners, or debug dumps in the client menu (AP-006).
 
+A registered Admin page that the editor cannot see under the intended parent is **not shipped** (AP-029). Custom submenus under ACF Site Settings with `redirect => true` must attach to the **visible** WP parent slug (usually the first child), after ACF registers menus.
+
 CPT icons: distinct. Menu order: content first, settings next, tools last.
 
 ---
@@ -141,7 +143,9 @@ Use taxonomy / date / title where that is the real sort. Avoid a second custom o
 
 ## 8. Site Settings IA
 
-Follow [FW-S-11](FORGE-WORDPRESS-SITE-SETTINGS-STANDARD-v1.md) section order: general → contacts → social → SEO/integrations → module settings → **Advanced code last**. System status is a Dashboard widget, not a settings tab.
+Follow [FW-S-11](FORGE-WORDPRESS-SITE-SETTINGS-STANDARD-v1.md) section order: general → contacts → social → SEO/integrations → **mail/forms** → module settings → **Advanced code last**. System status is a Dashboard widget, not a settings tab.
+
+If Site Settings is an ACF options page with `redirect => true`, the WordPress left-menu parent slug is the first child, not the logical parent slug. Custom (non-ACF) settings screens must use that visible slug (AP-029).
 
 ---
 
@@ -151,4 +155,4 @@ WordPress native permalink UI is the only slug editor for public pages/posts/CPT
 
 ---
 
-*FW-S-25 v1 — business menu, short screens, three presentation contracts.*
+*FW-S-25 v1.1 — business menu, short screens, three presentation contracts; P18C-FU01 visible-parent rule.*

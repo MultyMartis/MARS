@@ -65,10 +65,10 @@ Client-specific values are omitted. Evidence paths are under `workspaces/website
 |-------|--------|
 | Problem | Developer notices, English labels, raw Options, extra page fields |
 | Final | Localized modules; hide irrelevant metaboxes; Site Settings sections; Dashboard widget; no raw debug screens for editors |
-| Lesson | Editor-oriented, locale-first, grouped, dangerous controls Admin-only |
-| Rule | [ADMIN-UX-STANDARD](../standards/FORGE-WORDPRESS-ADMIN-UX-STANDARD-v1.md) |
+| Lesson | Editor-oriented, locale-first, grouped, dangerous controls Admin-only. A feature is not done until it is visible in normal Admin IA. |
+| Rule | [ADMIN-UX-STANDARD](../standards/FORGE-WORDPRESS-ADMIN-UX-STANDARD-v1.md) §10.7 · AP-029 |
 | Class | A / E |
-| Evidence | P13; E53 admin CSS; P13-FU01 |
+| Evidence | P13; E53 admin CSS; P13-FU01; P18C-FU01 |
 
 ## 6. Frontend component architecture
 

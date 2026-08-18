@@ -130,6 +130,8 @@ Temporary MU `pre_wp_mail` is allowed until SMTP is **verified** and the operato
 
 States: NOT CONFIGURED → CONFIGURED / NOT VERIFIED → VERIFIED → VERIFIED / ACTIVE. Do not confuse configured with verified (AP-028 / FORM-007).
 
+The SMTP/forms Admin screen is not done until it is **visible** under the intended Site Settings parent (AP-029). A working callback or direct URL is not operator discoverability.
+
 ---
 
 ## 12. Reply-To / From
@@ -138,4 +140,4 @@ From = `noreply@<domain>` (or the project sender). Reply-To = visitor email **on
 
 ---
 
-*FW-S-13 v1.2 — P18C lead registry + Admin SMTP owner.*
+*FW-S-13 v1.3 — P18C lead registry + Admin SMTP owner; P18C-FU01 discoverability.*

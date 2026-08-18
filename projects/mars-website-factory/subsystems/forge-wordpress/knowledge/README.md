@@ -28,6 +28,7 @@ Do **not** reopen the full Shpigovsky chronology unless evidence is required.
 | What must not be repeated (ops + CMS) | [ANTI-PATTERN-REGISTRY](../standards/FORGE-WORDPRESS-ANTI-PATTERN-REGISTRY-v1.md) |
 | Staging → production → final domain | [ENVIRONMENT-MIGRATION](../runbooks/FORGE-WORDPRESS-ENVIRONMENT-MIGRATION-STANDARD-v1.md) · [PRE-CUTOVER-AND-LAUNCH-SOP](../runbooks/FORGE-WORDPRESS-PRE-CUTOVER-AND-LAUNCH-SOP-v1.md) |
 | Is the site actually done? | [DEFINITION-OF-DONE](../standards/FORGE-WORDPRESS-DEFINITION-OF-DONE-v1.md) |
+| Is an Admin feature actually usable? | Same DoD discoverability sequence · [ADMIN-UX](../standards/FORGE-WORDPRESS-ADMIN-UX-STANDARD-v1.md) §10.7 · AP-029 |
 | How do we open/close search indexing? | [SEARCH-INDEXING-CONTROL](../standards/FORGE-WORDPRESS-SEARCH-INDEXING-CONTROL-STANDARD-v1.md) |
 | Which modules exist | [MODULE-CATALOG](../registries/FORGE-WORDPRESS-MODULE-CATALOG-v1.md) |
 

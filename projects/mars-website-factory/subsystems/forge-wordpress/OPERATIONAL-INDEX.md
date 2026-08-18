@@ -69,6 +69,7 @@ Client pilot: FP-0002 V9-06D.6 template integration planning PASS; D.5 routes HT
 | **Architecture overview** | [FORGE-WORDPRESS-ARCHITECTURE-v1.md](FORGE-WORDPRESS-ARCHITECTURE-v1.md) |
 | **Production knowledge hub (next site)** | [knowledge/README.md](knowledge/README.md) |
 | **Live operator Dashboard / indexing gate** | [DEFINITION-OF-DONE](standards/FORGE-WORDPRESS-DEFINITION-OF-DONE-v1.md) (status panel is DoD) · [SEARCH-INDEXING-CONTROL](standards/FORGE-WORDPRESS-SEARCH-INDEXING-CONTROL-STANDARD-v1.md) · [FORMS-AND-SMTP](standards/FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) (`noreply@<domain>`) |
+| **Admin feature discoverability** | [ADMIN-UX](standards/FORGE-WORDPRESS-ADMIN-UX-STANDARD-v1.md) §10.7 · [DoD](standards/FORGE-WORDPRESS-DEFINITION-OF-DONE-v1.md) · AP-029 |
 | **CMS / editable architecture (P1b)** | [standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md](standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md) |
 | **Contracts register** | [registries/FORGE-WORDPRESS-CONTRACTS-AND-STANDARDS-REGISTER-v1.md](registries/FORGE-WORDPRESS-CONTRACTS-AND-STANDARDS-REGISTER-v1.md) |
 | **Tool registry** | [registries/FORGE-WORDPRESS-TOOL-REGISTRY-v1.md](registries/FORGE-WORDPRESS-TOOL-REGISTRY-v1.md) |

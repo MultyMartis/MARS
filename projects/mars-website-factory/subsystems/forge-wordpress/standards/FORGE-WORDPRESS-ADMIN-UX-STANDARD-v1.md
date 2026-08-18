@@ -171,7 +171,18 @@ Specialists CPT cleanup; SEO & Integrations; Social/Messengers; Smart Search set
 | 13 | Native permalink row only on public CPTs |
 | 14 | Empty settings do not render FE leftovers |
 | 15 | [EDITOR-WORKFLOW-ACCEPTANCE-CHECKLIST](../templates/FORGE-WORDPRESS-EDITOR-WORKFLOW-ACCEPTANCE-CHECKLIST-v1.md) tabletop or wp-admin PASS |
+| 16 | New Admin feature is **visible** in the intended left-menu parent (not only registered / direct URL) |
+
+### 10.7 Discoverability
+
+**AN ADMIN FEATURE IS NOT DONE BECAUSE ITS PAGE OR BACKEND EXISTS.**
+
+It is done only when the intended editor can discover, open, use, save and revisit it through the normal Admin information architecture.
+
+Required sequence: REGISTERED → VISIBLE → ACCESSIBLE → EDITABLE → SAVE/RELOAD → OPERATOR DISCOVERABLE.
+
+When attaching a custom `add_submenu_page()` under an ACF options parent with `redirect => true`, use the **resolved visible** WordPress parent slug (first child), and register **after** ACF’s `admin_menu` (typically priority 99). Do not treat `acf_get_options_page($logical)['menu_slug']` as the visible parent — inspect `acf_get_options_pages()` / `$menu` after ACF runs (AP-029).
 
 ---
 
-*Admin UX standard v1.1 — curated editor + production dashboard/SoT rules. CMS pack: [EDITOR UX](FORGE-WORDPRESS-EDITOR-UX-STANDARD-v1.md).*
+*Admin UX standard v1.2 — curated editor + production dashboard/SoT + discoverability DoD. CMS pack: [EDITOR UX](FORGE-WORDPRESS-EDITOR-UX-STANDARD-v1.md).*

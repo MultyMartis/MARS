@@ -13,7 +13,7 @@ A WP Forge site is **not done** because the frontend “looks ready”.
 
 | Domain | Done means |
 |--------|------------|
-| Admin UX | Localized, curated fields, Site Settings SoT, no global debug notices, Dashboard widget |
+| Admin UX | Localized, curated fields, Site Settings SoT, no global debug notices, Dashboard widget; **feature discoverable in normal Admin IA** |
 | **CMS / editor workflows** | P1b maps exist; [EDITOR-WORKFLOW-ACCEPTANCE-CHECKLIST](../templates/FORGE-WORDPRESS-EDITOR-WORKFLOW-ACCEPTANCE-CHECKLIST-v1.md) PASS (change phone globally, add entity, hide section, internal CTA) |
 | Frontend | Templates match approved design; empty Admin data does not show demo leftovers |
 | Responsive | Desktop/tablet/mobile per design breakpoints |
@@ -63,4 +63,24 @@ Prefer runtime reads (WordPress/PHP versions, `home`/`siteurl`, indexing, debug,
 
 ---
 
-*FW-S-19 v1.1 — P18B operational status panel.*
+## Admin feature discoverability (MEDIUM / HIGH)
+
+An Admin feature is **not done** because its page, callback, or backend exists.
+
+It is done only when the intended editor can **discover, open, use, save, and revisit** it through the normal Admin information architecture (left menu / declared Site Settings parent). Hidden URLs, source-code knowledge, and report-only paths do not count.
+
+Acceptance sequence:
+
+```text
+REGISTERED → VISIBLE → ACCESSIBLE → EDITABLE → SAVE/RELOAD → OPERATOR DISCOVERABLE
+```
+
+Do not accept a wave that only proves `render_page()` / a direct `admin.php?page=` callback. Inspect the **visible** `$submenu` of the editor-facing parent (ACF `redirect => true` may rewrite the WP parent slug).
+
+```text
+AN ADMIN FEATURE IS NOT DONE BECAUSE ITS PAGE OR BACKEND EXISTS
+```
+
+---
+
+*FW-S-19 v1.2 — P18B operational status panel; P18C-FU01 Admin discoverability.*

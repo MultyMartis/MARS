@@ -42,6 +42,8 @@ Names are roles, not ACF keys. Localize labels.
 
 Merge 4+7 if the project is small. Keep **Advanced code** visually last and dangerous.
 
+Custom (non-ACF) screens under Site Settings must appear in this same left menu. ACF `redirect => true` rewrites the WP parent slug to the first child — attach custom `add_submenu_page()` to that visible slug after ACF registers (AP-029).
+
 ---
 
 ## 3. Social / messengers (optional module, standard shape)

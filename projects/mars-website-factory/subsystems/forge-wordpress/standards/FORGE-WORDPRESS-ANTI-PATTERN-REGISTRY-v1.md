@@ -317,6 +317,17 @@ Each ID is reusable. Client facts are generalized.
 | Replacement | [FORMS-AND-SMTP](FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) §11 |
 | Evidence | FP-0002 P18C |
 
+## AP-029 — ADMIN-UX feature exists but is not reachable from normal navigation
+
+| | |
+|--|--|
+| Symptom | Report/Dashboard says the editor path exists; the left menu does not show it |
+| Cause | Page registered under a logical parent slug, hidden callback QA, or `add_submenu_page` before ACF `redirect => true` rewrites the visible parent |
+| Risk | Operator cannot use an approved feature without a hidden URL or source knowledge |
+| Prevention | Accept only REGISTERED → VISIBLE → ACCESSIBLE → EDITABLE → SAVE/RELOAD → OPERATOR DISCOVERABLE. Inspect the visible `$submenu` |
+| Replacement | [ADMIN UX](FORGE-WORDPRESS-ADMIN-UX-STANDARD-v1.md) §10.7 · [DoD](FORGE-WORDPRESS-DEFINITION-OF-DONE-v1.md) · [ADMIN IA](FORGE-WORDPRESS-ADMIN-INFORMATION-ARCHITECTURE-STANDARD-v1.md) |
+| Evidence | FP-0002 P18C-FU01 |
+
 ---
 
 ## CMS modeling namespace (`AP-CMS-*`)
@@ -344,4 +355,4 @@ Do **not** reuse AP-001–021 numbers. Full entries: [CMS-ANTI-PATTERNS](FORGE-W
 
 ---
 
-*FW-S-21 v1.4 — 28 operational anti-patterns (AP-022–028 = FORM-001–007) + AP-CMS-001–016 index. Add IDs; do not reuse numbers.*
+*FW-S-21 v1.5 — 29 operational anti-patterns (AP-022–028 = FORM-001–007; AP-029 Admin discoverability) + AP-CMS-001–016 index. Add IDs; do not reuse numbers.*
