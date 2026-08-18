@@ -17,7 +17,7 @@ At CONT1 start the git tree had **no** committed `REPORT-FP-0002-PROD-P17-*`. Th
 | DNS/NS switch | **NOT DONE** (forbidden) |
 | SSL / siteurl / SMTP / robots | **NOT DONE** (forbidden) |
 | Beget DNS panel writes | **NOT DONE** (credentials empty → manual instructions) |
-| Git | clean worktree checkpoint (see closeout) |
+| Git | `1b7fb5c47b2c7acd88e4313e64a15f7e59069fa6` on `origin/mars/canonical-post-recovery` via clean worktree |
 
 Acceptance:
 

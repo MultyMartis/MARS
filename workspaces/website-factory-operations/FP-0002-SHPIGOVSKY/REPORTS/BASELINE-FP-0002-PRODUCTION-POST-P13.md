@@ -81,6 +81,7 @@
 | P14 commit | `9a5f671cafece716635e6fb37b984bd9009261de` |
 | P15 commit | `81912e7871bd45d75e8b02b288aaf0b6788744d6` |
 | P16 commit | `35666e2bb98247072a7a7972d4271eaf8d5f36aa` |
+| P17 commit | `1b7fb5c47b2c7acd88e4313e64a15f7e59069fa6` |
 | Branch | `origin/mars/canonical-post-recovery` |
 
 ## Open tails
