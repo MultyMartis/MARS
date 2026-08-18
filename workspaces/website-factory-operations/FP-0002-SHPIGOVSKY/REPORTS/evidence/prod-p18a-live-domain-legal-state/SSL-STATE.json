@@ -1,0 +1,126 @@
+{
+  "generated_at": "2026-08-18T14:37:23Z",
+  "certs": {
+    "shpigovsky.ru": {
+      "host": "shpigovsky.ru",
+      "port": 443,
+      "ok": true,
+      "error": null,
+      "protocol": "TLSv1.3",
+      "cipher": [
+        "TLS_AES_256_GCM_SHA384",
+        "TLSv1.3",
+        256
+      ],
+      "subject": [
+        [
+          [
+            "commonName",
+            "shpigovsky.ru"
+          ]
+        ]
+      ],
+      "issuer": [
+        [
+          [
+            "countryName",
+            "US"
+          ]
+        ],
+        [
+          [
+            "organizationName",
+            "Let's Encrypt"
+          ]
+        ],
+        [
+          [
+            "commonName",
+            "YE2"
+          ]
+        ]
+      ],
+      "notBefore": "Jun 27 01:20:14 2026 GMT",
+      "notAfter": "Sep 25 01:20:13 2026 GMT",
+      "subjectAltName": [
+        [
+          "DNS",
+          "shpigovsky.ru"
+        ],
+        [
+          "DNS",
+          "www.shpigovsky.ru"
+        ]
+      ],
+      "classification": "A. VALID AND ACTIVE"
+    },
+    "www.shpigovsky.ru": {
+      "host": "www.shpigovsky.ru",
+      "port": 443,
+      "ok": true,
+      "error": null,
+      "protocol": "TLSv1.3",
+      "cipher": [
+        "TLS_AES_256_GCM_SHA384",
+        "TLSv1.3",
+        256
+      ],
+      "subject": [
+        [
+          [
+            "commonName",
+            "shpigovsky.ru"
+          ]
+        ]
+      ],
+      "issuer": [
+        [
+          [
+            "countryName",
+            "US"
+          ]
+        ],
+        [
+          [
+            "organizationName",
+            "Let's Encrypt"
+          ]
+        ],
+        [
+          [
+            "commonName",
+            "YR2"
+          ]
+        ]
+      ],
+      "notBefore": "Aug 18 13:16:46 2026 GMT",
+      "notAfter": "Nov 16 13:16:45 2026 GMT",
+      "subjectAltName": [
+        [
+          "DNS",
+          "archive.shpigovsky.ru"
+        ],
+        [
+          "DNS",
+          "shpigovsky.ru"
+        ],
+        [
+          "DNS",
+          "www.archive.shpigovsky.ru"
+        ],
+        [
+          "DNS",
+          "www.shpigovsky.ru"
+        ]
+      ],
+      "classification": "A. VALID AND ACTIVE"
+    },
+    "shpigovsky.beget.tech": {
+      "host": "shpigovsky.beget.tech",
+      "port": 443,
+      "ok": false,
+      "error": "TimeoutError: _ssl.c:1064: The handshake operation timed out",
+      "classification": "C. ISSUANCE IN PROGRESS"
+    }
+  }
+}

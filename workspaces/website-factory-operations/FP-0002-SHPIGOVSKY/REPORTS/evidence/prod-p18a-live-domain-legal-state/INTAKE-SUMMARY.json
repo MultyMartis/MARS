@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-08-18T14:37:23Z",
+  "ssl_classifications": {
+    "shpigovsky.ru": "A. VALID AND ACTIVE",
+    "www.shpigovsky.ru": "A. VALID AND ACTIVE",
+    "shpigovsky.beget.tech": "C. ISSUANCE IN PROGRESS"
+  },
+  "http_statuses": {
+    "http://shpigovsky.ru/": 301,
+    "https://shpigovsky.ru/": 200,
+    "http://www.shpigovsky.ru/": 301,
+    "https://www.shpigovsky.ru/": 301,
+    "http://shpigovsky.beget.tech/": 301,
+    "https://shpigovsky.beget.tech/": "ReadTimeout: HTTPSConnectionPool(host='shpigovsky.beget.tech', port=443): Read timed out. (read timeout=25)"
+  },
+  "operator_live_domain_intake": true,
+  "note": "Do not revert home/siteurl. SSL pending is not a WordPress regression."
+}

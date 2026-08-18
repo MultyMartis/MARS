@@ -3011,13 +3011,65 @@ final class FieldGroups implements ModuleInterface {
 	private static function page_legal() {
 		return self::group(
 			'group_fp02_page_legal',
-			'Page — Legal',
+			'Правовые документы',
 			array(
-				self::field( 'field_fp02_legal_status', 'Legal status', 'legal_status', 'select', array( 'choices' => array( 'demo' => 'Demo', 'review' => 'Review', 'production_ready' => 'Production ready' ), 'default_value' => 'demo' ) ),
-				self::field( 'field_fp02_legal_demo_marker', 'Demo marker', 'legal_demo_marker', 'true_false', array( 'default_value' => 1 ) ),
-				self::field( 'field_fp02_legal_effective_date', 'Effective date', 'legal_effective_date', 'date_picker', array( 'display_format' => 'Y-m-d', 'return_format' => 'Y-m-d' ) ),
-				self::field( 'field_fp02_legal_version', 'Version', 'legal_version', 'text' ),
-				self::field( 'field_fp02_legal_production_blocker', 'Production blocker flag', 'legal_production_blocker', 'true_false', array( 'default_value' => 1 ) ),
+				self::field(
+					'field_fp02_legal_status',
+					'Статус документа',
+					'legal_status',
+					'select',
+					array(
+						'choices'       => array(
+							'demo'             => 'Демо',
+							'review'           => 'На проверке',
+							'production_ready' => 'Готов к публикации',
+						),
+						'default_value' => 'demo',
+						'instructions'  => 'Независим от флажка «Демо-версия». «Готов к публикации» сам по себе не включает демо-предупреждение.',
+					)
+				),
+				self::field(
+					'field_fp02_legal_demo_marker',
+					'Демо-версия',
+					'legal_demo_marker',
+					'true_false',
+					array(
+						'default_value' => 1,
+						'ui'            => 1,
+						'ui_on_text'    => 'Да',
+						'ui_off_text'   => 'Нет',
+						'instructions'  => 'Вкл — показать предупреждение о демонстрационной версии. Выкл — не показывать. Сохранённое «Нет» не заменяется значением по умолчанию.',
+					)
+				),
+				self::field(
+					'field_fp02_legal_effective_date',
+					'Дата вступления в силу',
+					'legal_effective_date',
+					'date_picker',
+					array(
+						'display_format' => 'Y-m-d',
+						'return_format'  => 'Y-m-d',
+					)
+				),
+				self::field(
+					'field_fp02_legal_version',
+					'Версия документа',
+					'legal_version',
+					'text'
+				),
+				self::field(
+					'field_fp02_legal_production_blocker',
+					'Блокирует публикацию',
+					'legal_production_blocker',
+					'true_false',
+					array(
+						'default_value' => 1,
+						'ui'            => 1,
+						'ui_on_text'    => 'Да',
+						'ui_off_text'   => 'Нет',
+						'instructions'  => 'Служебный стоп-флаг. Не управляет демо-баннером на сайте.',
+					)
+				),
 			),
 			self::location( 'page_template', '==', 'page-templates/legal.php' )
 		);

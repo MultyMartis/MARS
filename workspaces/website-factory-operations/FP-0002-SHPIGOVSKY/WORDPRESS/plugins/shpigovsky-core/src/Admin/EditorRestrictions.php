@@ -165,10 +165,14 @@ final class EditorRestrictions implements ModuleInterface {
 			return;
 		}
 
-		if ( get_field( 'legal_production_blocker', $post_id ) ) {
+		$blocker_on = function_exists( 'shpigovsky_legal_production_blocker_enabled' )
+			? shpigovsky_legal_production_blocker_enabled( $post_id )
+			: (bool) get_field( 'legal_production_blocker', $post_id );
+
+		if ( $blocker_on ) {
 			printf(
 				'<div class="notice notice-warning"><p><strong>FP-0002 Legal</strong> — %s</p></div>',
-				esc_html__( 'Эта legal-страница помечена как DEMO / production blocker. Снять можно только после операторской проверки текста.', 'shpigovsky-core' )
+				esc_html__( 'Эта правовая страница помечена флагом «Блокирует публикацию». Флаг не включает демо-баннер на сайте. Снять можно после операторской проверки текста.', 'shpigovsky-core' )
 			);
 		}
 	}

@@ -1,6 +1,6 @@
 <?php
 /**
- * Dashboard widget: MetaCODE / system state — PROD-P17-FU02.
+ * Dashboard widget: MetaCODE / system state — PROD-P18A.
  *
  * Canonical concise operational summary for FP-0002. No global Admin notices.
  * No DNS/registrar credentials.
@@ -25,12 +25,12 @@ final class SystemDashboard implements ModuleInterface {
 	/**
 	 * Baseline ID shown in the widget (updated by stabilization waves).
 	 */
-	const BASELINE_ID = 'FP-0002-PROD-BASELINE-2026-08-17';
+	const BASELINE_ID = 'FP-0002-PROD-BASELINE-2026-08-18-P18A';
 
 	/**
 	 * Latest accepted production wave label.
 	 */
-	const LATEST_ACCEPTED_WAVE = 'P17-FU02 Final Pre-Cutover Tail Closure';
+	const LATEST_ACCEPTED_WAVE = 'P18A Live Domain Reality + Legal State Fix';
 
 	/**
 	 * {@inheritdoc}
@@ -109,8 +109,10 @@ final class SystemDashboard implements ModuleInterface {
 		$blog_public = (int) get_option( 'blog_public', 1 );
 		$mail_suppressed = (bool) has_filter( 'pre_wp_mail' );
 
-		$precutover = isset( $meta['precutover'] ) ? (string) $meta['precutover'] : 'READY FOR MANUAL NS SWITCH';
+		$cutover    = isset( $meta['cutover'] ) ? (string) $meta['cutover'] : 'OPERATOR NS + WP URL CUTOVER DONE — PUBLIC APEX ROUTING / SSL FINALIZE PENDING';
+		$ssl        = isset( $meta['ssl'] ) ? (string) $meta['ssl'] : 'IN PROGRESS — WordPress origin not yet public HTTPS';
 		$redirects  = isset( $meta['legacy_redirects'] ) ? (string) $meta['legacy_redirects'] : '7/7';
+		$live_host  = ( '' !== $host ) ? $host : 'shpigovsky.ru';
 
 		echo '<div class="fp02-metacode-system">';
 
@@ -127,8 +129,9 @@ final class SystemDashboard implements ModuleInterface {
 					$env_fn
 				)
 		);
-		self::row( __( 'Current host', 'shpigovsky-core' ), 'shpigovsky.beget.tech' );
-		self::row( __( 'Future host', 'shpigovsky-core' ), 'https://shpigovsky.ru/' );
+		self::row( __( 'Live domain', 'shpigovsky-core' ), 'shpigovsky.ru' );
+		self::row( __( 'WordPress home host', 'shpigovsky-core' ), $live_host );
+		self::row( __( 'Temporary host', 'shpigovsky-core' ), 'shpigovsky.beget.tech' );
 		self::row( __( 'WordPress', 'shpigovsky-core' ), get_bloginfo( 'version' ) );
 		if ( $php_ver !== '' ) {
 			self::row( __( 'PHP', 'shpigovsky-core' ), $php_ver );
@@ -138,8 +141,10 @@ final class SystemDashboard implements ModuleInterface {
 		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'Текущее состояние', 'shpigovsky-core' ) . '</h3>';
 		echo '<table class="widefat striped" style="border:none;box-shadow:none;margin-bottom:12px;">';
 		self::row( __( 'Latest wave', 'shpigovsky-core' ), $wave );
-		self::row( __( 'Status', 'shpigovsky-core' ), $precutover );
-		self::row( __( 'PRE-CUTOVER', 'shpigovsky-core' ), $precutover );
+		self::row( __( 'Domain cutover', 'shpigovsky-core' ), __( 'DONE BY OPERATOR (NS + home/siteurl)', 'shpigovsky-core' ) );
+		self::row( __( 'WordPress URL cutover', 'shpigovsky-core' ), __( 'DONE', 'shpigovsky-core' ) );
+		self::row( __( 'SSL', 'shpigovsky-core' ), $ssl );
+		self::row( __( 'Status', 'shpigovsky-core' ), $cutover );
 		self::row( __( 'Source ↔ production', 'shpigovsky-core' ), $parity );
 		self::row( __( 'Legacy redirects', 'shpigovsky-core' ), $redirects );
 		self::row(
@@ -155,13 +160,13 @@ final class SystemDashboard implements ModuleInterface {
 		self::row(
 			__( 'Mail', 'shpigovsky-core' ),
 			$mail_suppressed
-				? __( 'suppressed until SMTP', 'shpigovsky-core' )
+				? __( 'SUPPRESSED / SMTP PENDING', 'shpigovsky-core' )
 				: __( 'suppression not detected — verify before go-live', 'shpigovsky-core' )
 		);
 		self::row(
 			__( 'Indexing', 'shpigovsky-core' ),
 			( 0 === $blog_public )
-				? __( 'closed until launch', 'shpigovsky-core' )
+				? __( 'CLOSED (intentional until SMTP + HTTPS smoke)', 'shpigovsky-core' )
 				: __( 'open', 'shpigovsky-core' )
 		);
 		self::row( __( 'shpigovsky-core', 'shpigovsky-core' ), defined( 'SHPIGOVSKY_CORE_VERSION' ) ? SHPIGOVSKY_CORE_VERSION : '—' );
@@ -173,22 +178,23 @@ final class SystemDashboard implements ModuleInterface {
 
 		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'DNS', 'shpigovsky-core' ) . '</h3>';
 		echo '<table class="widefat striped" style="border:none;box-shadow:none;margin-bottom:12px;">';
-		self::row( __( 'NS switch', 'shpigovsky-core' ), __( 'MANUAL OPERATOR ACTION', 'shpigovsky-core' ) );
-		self::row( __( 'Current delegation', 'shpigovsky-core' ), 'REG.RU' );
-		self::row( __( 'Target', 'shpigovsky-core' ), 'Beget' );
+		self::row( __( 'NS switch', 'shpigovsky-core' ), __( 'DONE BY OPERATOR', 'shpigovsky-core' ) );
+		self::row( __( 'Current delegation', 'shpigovsky-core' ), 'Beget NS' );
+		self::row( __( 'Public apex → WordPress', 'shpigovsky-core' ), __( 'VERIFY / FINALIZE (legacy origin still observed on public A)', 'shpigovsky-core' ) );
 		echo '</table>';
 
-		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'Следующий шаг', 'shpigovsky-core' ) . '</h3>';
+		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'Осталось до запуска', 'shpigovsky-core' ) . '</h3>';
 		echo '<ul style="margin:0 0 12px 1.2em;">';
-		self::li( __( '1. Manual NS switch in REG.RU', 'shpigovsky-core' ) );
-		self::li( __( '2. DNS verification', 'shpigovsky-core' ) );
-		self::li( __( '3. SSL / final domain', 'shpigovsky-core' ) );
+		self::li( __( '1. SSL finalize + bind public apex to WordPress origin', 'shpigovsky-core' ) );
+		self::li( __( '2. Final-domain HTTPS smoke', 'shpigovsky-core' ) );
+		self::li( __( '3. Canonical / www / temp-host redirects after smoke', 'shpigovsky-core' ) );
 		self::li( __( '4. SMTP', 'shpigovsky-core' ) );
-		self::li( __( '5. Indexing', 'shpigovsky-core' ) );
-		self::li( __( '6. Sitemap submissions', 'shpigovsky-core' ) );
-		self::li( __( '7. Final crawl', 'shpigovsky-core' ) );
+		self::li( __( '5. Form delivery QA', 'shpigovsky-core' ) );
+		self::li( __( '6. robots / indexing', 'shpigovsky-core' ) );
+		self::li( __( '7. Sitemap submissions', 'shpigovsky-core' ) );
+		self::li( __( '8. Final crawl', 'shpigovsky-core' ) );
 		echo '</ul>';
-		echo '<p style="margin:0 0 12px;">' . esc_html__( 'Operator changes NS. Then run the final cutover execution wave (P18) after confirmation «NS SWITCHED».', 'shpigovsky-core' ) . '</p>';
+		echo '<p style="margin:0 0 12px;">' . esc_html__( 'Live domain is shpigovsky.ru. NS and WordPress home/siteurl cutover are done. Do not treat NS or URL cutover as pending. Indexing stays closed until SSL + SMTP gates pass.', 'shpigovsky-core' ) . '</p>';
 
 		if ( $is_beget && ( 'local' === $env_const || 'local' === $env_fn ) ) {
 			echo '<p style="margin:0 0 8px;padding:8px 10px;border-left:3px solid #dba617;background:#fff8e5;">';

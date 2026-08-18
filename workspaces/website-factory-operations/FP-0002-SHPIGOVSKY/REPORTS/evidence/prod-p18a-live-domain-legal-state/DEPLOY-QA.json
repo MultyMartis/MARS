@@ -1,0 +1,343 @@
+{
+  "generated_at": "2026-08-18T14:50:00Z",
+  "deploy": [
+    {
+      "kind": "theme",
+      "rel": "inc/legal-helpers.php",
+      "match": true,
+      "sha256": "4ef707db1e165926b1ed9a42007598edbd8b33f3786741e2b8887691d75e596d",
+      "prod_sha256": "4ef707db1e165926b1ed9a42007598edbd8b33f3786741e2b8887691d75e596d",
+      "lint": "No syntax errors detected in /tmp/fp02_p18a_lint.php"
+    },
+    {
+      "kind": "theme",
+      "rel": "functions.php",
+      "match": true,
+      "sha256": "9d6fb87eedd4540bd80c97e3a7b94d4995e511224a46e44a503df68d2d189003",
+      "prod_sha256": "9d6fb87eedd4540bd80c97e3a7b94d4995e511224a46e44a503df68d2d189003",
+      "lint": "No syntax errors detected in /tmp/fp02_p18a_lint.php"
+    },
+    {
+      "kind": "theme",
+      "rel": "template-parts/legal/document-page.php",
+      "match": true,
+      "sha256": "bfee01b9ce7d7fe3d435ce7a6fe983c0558c6bbeb88bac4a80901def945e4174",
+      "prod_sha256": "bfee01b9ce7d7fe3d435ce7a6fe983c0558c6bbeb88bac4a80901def945e4174",
+      "lint": "No syntax errors detected in /tmp/fp02_p18a_lint.php"
+    },
+    {
+      "kind": "plugin",
+      "rel": "shpigovsky-core.php",
+      "match": true,
+      "sha256": "ec62e2490d637a66f8fa4252c30c9204d1afa239fd0f9708cae75b3b39d1e0eb",
+      "prod_sha256": "ec62e2490d637a66f8fa4252c30c9204d1afa239fd0f9708cae75b3b39d1e0eb",
+      "lint": "No syntax errors detected in /tmp/fp02_p18a_lint.php"
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Admin/SystemDashboard.php",
+      "match": true,
+      "sha256": "ffcee2987ae374bceb3b076e6dabbc09c4ae26128de44a8338a0ede01654c7eb",
+      "prod_sha256": "ffcee2987ae374bceb3b076e6dabbc09c4ae26128de44a8338a0ede01654c7eb",
+      "lint": "No syntax errors detected in /tmp/fp02_p18a_lint.php"
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Fields/FieldGroups.php",
+      "match": true,
+      "sha256": "c6cfc56f0a997000e13eb03178d4b20aeb0fb3951011a584b38fa32fcd528e5a",
+      "prod_sha256": "c6cfc56f0a997000e13eb03178d4b20aeb0fb3951011a584b38fa32fcd528e5a",
+      "lint": "No syntax errors detected in /tmp/fp02_p18a_lint.php"
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Admin/EditorRestrictions.php",
+      "match": true,
+      "sha256": "3c11091781a2ac4a56701537b78c4061c4016d18a9909a3465d9df168dcb3a63",
+      "prod_sha256": "3c11091781a2ac4a56701537b78c4061c4016d18a9909a3465d9df168dcb3a63",
+      "lint": "No syntax errors detected in /tmp/fp02_p18a_lint.php"
+    }
+  ],
+  "acf": [
+    {
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/acf-json/group_fp02_page_legal.json",
+      "existed": false
+    },
+    {
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/acf-json/group_fp02_page_legal.json",
+      "existed": false
+    }
+  ],
+  "qa": [
+    {
+      "path": "/privacy-policy/",
+      "status": 200,
+      "location": null,
+      "x_robots": null,
+      "has_demo_notice": false,
+      "has_demo_placeholder": false,
+      "has_wp": true,
+      "canonical": "https://shpigovsky.ru/privacy-policy/",
+      "body_bytes": 71110,
+      "beget_abs": 0,
+      "live_abs": 110,
+      "case": "1_demo_off_published"
+    },
+    {
+      "path": "/user-agreement/",
+      "status": 200,
+      "location": null,
+      "x_robots": null,
+      "has_demo_notice": false,
+      "has_demo_placeholder": false,
+      "has_wp": true,
+      "canonical": "https://shpigovsky.ru/user-agreement/",
+      "body_bytes": 68477,
+      "beget_abs": 0,
+      "live_abs": 106,
+      "case": "1_demo_off_published"
+    },
+    {
+      "path": "/consent-personal-data/",
+      "status": 200,
+      "location": null,
+      "x_robots": null,
+      "has_demo_notice": false,
+      "has_demo_placeholder": false,
+      "has_wp": true,
+      "canonical": "https://shpigovsky.ru/consent-personal-data/",
+      "body_bytes": 64566,
+      "beget_abs": 0,
+      "live_abs": 104,
+      "case": "1_demo_off_published"
+    },
+    {
+      "path": "/cookie-files-policy/",
+      "status": 200,
+      "location": null,
+      "x_robots": null,
+      "has_demo_notice": false,
+      "has_demo_placeholder": true,
+      "has_wp": true,
+      "canonical": "https://shpigovsky.ru/cookie-files-policy/",
+      "body_bytes": 68525,
+      "beget_abs": 0,
+      "live_abs": 104,
+      "case": "1_demo_off_published"
+    },
+    {
+      "path": "/privacy-policy/",
+      "status": 200,
+      "location": null,
+      "x_robots": null,
+      "has_demo_notice": true,
+      "has_demo_placeholder": false,
+      "has_wp": true,
+      "canonical": "https://shpigovsky.ru/privacy-policy/",
+      "body_bytes": 71389,
+      "beget_abs": 0,
+      "live_abs": 110,
+      "case": "2_demo_on_id3"
+    },
+    {
+      "path": "/privacy-policy/",
+      "status": 200,
+      "location": null,
+      "x_robots": null,
+      "has_demo_notice": false,
+      "has_demo_placeholder": false,
+      "has_wp": true,
+      "canonical": "https://shpigovsky.ru/privacy-policy/",
+      "body_bytes": 71110,
+      "beget_abs": 0,
+      "live_abs": 110,
+      "case": "3_demo_off_again_id3"
+    },
+    {
+      "path": "/privacy-policy/",
+      "status": 200,
+      "location": null,
+      "x_robots": null,
+      "has_demo_notice": false,
+      "has_demo_placeholder": false,
+      "has_wp": true,
+      "canonical": "https://shpigovsky.ru/privacy-policy/",
+      "body_bytes": 71110,
+      "beget_abs": 0,
+      "live_abs": 110,
+      "case": "4_blocker_on_demo_off_id3"
+    }
+  ],
+  "smoke": [
+    {
+      "path": "/",
+      "status": 301,
+      "location": "https://shpigovsky.ru/",
+      "x_robots": null,
+      "has_demo_notice": false,
+      "has_demo_placeholder": false,
+      "has_wp": false,
+      "canonical": null,
+      "body_bytes": 0,
+      "beget_abs": 0,
+      "live_abs": 0,
+      "case": "smoke"
+    },
+    {
+      "path": "/uslugi/",
+      "status": 200,
+      "location": null,
+      "x_robots": null,
+      "has_demo_notice": false,
+      "has_demo_placeholder": false,
+      "has_wp": true,
+      "canonical": "https://shpigovsky.ru/uslugi/",
+      "body_bytes": 139793,
+      "beget_abs": 1,
+      "live_abs": 193,
+      "case": "smoke"
+    },
+    {
+      "path": "/specyalisty/",
+      "status": 200,
+      "location": null,
+      "x_robots": null,
+      "has_demo_notice": false,
+      "has_demo_placeholder": false,
+      "has_wp": true,
+      "canonical": "https://shpigovsky.ru/specyalisty/",
+      "body_bytes": 60842,
+      "beget_abs": 0,
+      "live_abs": 101,
+      "case": "smoke"
+    },
+    {
+      "path": "/blog/",
+      "status": 200,
+      "location": null,
+      "x_robots": null,
+      "has_demo_notice": false,
+      "has_demo_placeholder": false,
+      "has_wp": true,
+      "canonical": "https://shpigovsky.ru/blog/",
+      "body_bytes": 87176,
+      "beget_abs": 0,
+      "live_abs": 144,
+      "case": "smoke"
+    },
+    {
+      "path": "/kontakty/",
+      "status": 200,
+      "location": null,
+      "x_robots": null,
+      "has_demo_notice": false,
+      "has_demo_placeholder": false,
+      "has_wp": true,
+      "canonical": "https://shpigovsky.ru/kontakty/",
+      "body_bytes": 71629,
+      "beget_abs": 0,
+      "live_abs": 106,
+      "case": "smoke"
+    },
+    {
+      "path": "/privacy-policy/",
+      "status": 200,
+      "location": null,
+      "x_robots": null,
+      "has_demo_notice": false,
+      "has_demo_placeholder": false,
+      "has_wp": true,
+      "canonical": "https://shpigovsky.ru/privacy-policy/",
+      "body_bytes": 71110,
+      "beget_abs": 0,
+      "live_abs": 110,
+      "case": "smoke"
+    },
+    {
+      "path": "/wp-json/",
+      "status": 200,
+      "location": null,
+      "x_robots": "noindex",
+      "has_demo_notice": false,
+      "has_demo_placeholder": false,
+      "has_wp": true,
+      "canonical": null,
+      "body_bytes": 464131,
+      "beget_abs": 0,
+      "live_abs": 71,
+      "case": "smoke"
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "location": null,
+      "x_robots": null,
+      "has_demo_notice": false,
+      "has_demo_placeholder": false,
+      "has_wp": false,
+      "canonical": null,
+      "body_bytes": 80,
+      "beget_abs": 1,
+      "live_abs": 0,
+      "case": "smoke"
+    },
+    {
+      "path": "/wp-login.php",
+      "status": 200,
+      "location": null,
+      "x_robots": null,
+      "has_demo_notice": false,
+      "has_demo_placeholder": false,
+      "has_wp": false,
+      "canonical": null,
+      "body_bytes": 273,
+      "beget_abs": 0,
+      "live_abs": 0,
+      "case": "smoke"
+    }
+  ],
+  "rest": {
+    "status": 200,
+    "url": "https://shpigovsky.ru",
+    "home": "https://shpigovsky.ru",
+    "name": "Шпиговский Дом",
+    "has_smart_search": true
+  },
+  "sitemap": {
+    "status": 301,
+    "location": "https://shpigovsky.ru/wp-sitemap.xml",
+    "body": ""
+  },
+  "dashboard_meta_php": {
+    "ok": true,
+    "core": "0.3.10-p18a",
+    "home": "https://shpigovsky.ru",
+    "siteurl": "https://shpigovsky.ru",
+    "blog_public": 0,
+    "mail_suppressed": true,
+    "meta": {
+      "baseline_id": "FP-0002-PROD-BASELINE-2026-08-18-P18A",
+      "latest_wave": "P18A Live Domain Reality + Legal State Fix",
+      "parity": "MATCH",
+      "verified_at": "2026-08-18 14:50 UTC",
+      "backup": "P14 full; FU02 exact-file/object + obsolete tar; launch backup still required after freeze",
+      "git_sha": "16706398f03825b054ce75c56e8af48ec4349329",
+      "wave": "PROD-P15",
+      "p15_note": "Environment cleanup; mail+indexing deferred; domain not cut over",
+      "state_note": "LIVE DOMAIN shpigovsky.ru; INDEXING CLOSED; SMTP PENDING",
+      "precutover": "SUPERSEDED — NS AND WP URL CUTOVER DONE",
+      "legacy_redirects": "7/7",
+      "cutover": "OPERATOR NS + WP URL CUTOVER DONE — PUBLIC APEX ROUTING / SSL FINALIZE PENDING",
+      "ssl": "IN PROGRESS — WordPress origin not yet public HTTPS"
+    }
+  },
+  "dashboard_meta_exit": 0,
+  "results": {
+    "deploy_match": true,
+    "CASE1_demo_off_no_banner": true,
+    "CASE2_demo_on_banner": true,
+    "CASE3_demo_off_again": true,
+    "CASE4_blocker_on_no_demo_banner": true,
+    "DEMO_MARKER_OFF_NO_DEMO_BANNER": true
+  }
+}

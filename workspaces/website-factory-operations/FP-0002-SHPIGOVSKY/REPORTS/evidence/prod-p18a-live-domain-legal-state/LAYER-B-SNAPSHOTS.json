@@ -1,0 +1,69 @@
+{
+  "generated_at": "2026-08-18T14:37:23Z",
+  "note": "File bytes live in STORAGE Layer B; hashes only here. No wp-config in git evidence.",
+  "snaps": [
+    {
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/legal/document-page.php",
+      "exists": true,
+      "bytes": 780,
+      "sha256": "9cf8b6a4b72a3f2ea10e0ac7b3d5ca5c78d69699e0bdb7afd6bd3c9bf0e737bb",
+      "local_snap": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p18a-layer-b-pre\\theme__document-page.php"
+    },
+    {
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/page-templates/legal.php",
+      "exists": true,
+      "bytes": 441,
+      "sha256": "36dac832d6e80f93daae1fb0b3e472dfd16d6984f6f37037795986450c9f9fce",
+      "local_snap": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p18a-layer-b-pre\\theme__legal.php"
+    },
+    {
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/functions.php",
+      "exists": true,
+      "bytes": 2923,
+      "sha256": "65466663a6a1f585bd481795362d6f2190e85bc3882d649fbac51d815b7a01b0",
+      "local_snap": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p18a-layer-b-pre\\theme__functions.php"
+    },
+    {
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/shpigovsky-core.php",
+      "exists": true,
+      "bytes": 1791,
+      "sha256": "10b666b122dcd7944125755e08055604ce4b90b9bead237cb01e0448c0fd7e68",
+      "local_snap": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p18a-layer-b-pre\\plugin__shpigovsky-core.php"
+    },
+    {
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Admin/SystemDashboard.php",
+      "exists": true,
+      "bytes": 9275,
+      "sha256": "15e41e300f0ed29dd3044752bedf62721809e9531016a337f93af18e9ee6b9ce",
+      "local_snap": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p18a-layer-b-pre\\plugin__SystemDashboard.php"
+    },
+    {
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Fields/FieldGroups.php",
+      "exists": true,
+      "bytes": 159163,
+      "sha256": "b916874a60bb5c88ffc17d2e25129f3a2cd4a40e37105e91c139ae1b337c6f1e",
+      "local_snap": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p18a-layer-b-pre\\plugin__FieldGroups.php"
+    },
+    {
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/mu-plugins/fp02-pre-cutover-mail-suppression.php",
+      "exists": true,
+      "bytes": 876,
+      "sha256": "f2ba7afcec153739fac7aee154da63a67a269f9e698852f7430904ae4941a004",
+      "local_snap": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p18a-layer-b-pre\\mu__fp02-pre-cutover-mail-suppression.php"
+    },
+    {
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/robots.txt",
+      "exists": true,
+      "bytes": 80,
+      "sha256": "2492f7f1451552b8cbf1151fd87c6bccaf21580e5686459d7afebb5b5a9d66a5",
+      "local_snap": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p18a-layer-b-pre\\robots.txt"
+    },
+    {
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/.htaccess",
+      "exists": true,
+      "bytes": 847,
+      "sha256": "ec8f06028d3ecde7442701ed09fce3aa107fc74a41434647e413f4a0088d9f38",
+      "local_snap": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p18a-layer-b-pre\\htaccess"
+    }
+  ]
+}

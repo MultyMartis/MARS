@@ -1,44 +1,56 @@
-# RUNBOOK — FP-0002 PROD-P18 FINAL DOMAIN CUTOVER (SKELETON)
+# RUNBOOK — FP-0002 PROD-P18 FINAL DOMAIN CUTOVER (CURRENT EXECUTION STATE)
 
-**Status:** PREPARED — **DO NOT EXECUTE** until the operator confirms:
+**Wave executed:** **P18A** — live-domain reality intake + legal demo state (2026-08-18)  
+**P18 remainder:** SSL / public-origin bind / HTTPS smoke / redirects / SMTP / indexing — **not** this file’s remaining phases.
 
-`NS SWITCHED`
-
-**Trigger:** operator confirmation in the launch chat, not inferred DNS.
-
-This is a definition of the next wave, not an authorization to run it.
+Historical trigger `NS SWITCHED` is **complete** (operator). Do **not** wait for NS or `home`/`siteurl` cutover anymore.
 
 ---
 
-## Forbidden until trigger + DNS verification
+## Current facts (P18A intake)
 
-- WordPress `home` / `siteurl` change
-- HTTPS force / SSL attach (except after Beget DNS is authoritative)
-- SMTP configuration
-- robots / `blog_public` open
-- sitemap submission
-- registrar NS writes
+| Surface | Value |
+|---------|--------|
+| WordPress `home` | `https://shpigovsky.ru` |
+| WordPress `siteurl` | `https://shpigovsky.ru` |
+| NS | Beget set observed (`ns1/ns2.beget.com` / `.pro` / `.ru`) |
+| Public apex A (8.8.8.8) | `45.130.41.70` — **not** the Beget WP vhost `91.106.207.76` |
+| Local resolver apex A | `92.255.111.71` (legacy REG.RU IP, cache/split) |
+| Public `https://shpigovsky.ru/` | **Legacy site** (not WordPress) at intake |
+| WordPress runtime | `http://shpigovsky.beget.tech` (inner routes 200; `/` 301 → public apex) |
+| SSL on public apex | Let's Encrypt **valid** on the **legacy** origin |
+| SSL on `shpigovsky.beget.tech:443` | timeout / not usable |
+| `blog_public` | `0` |
+| Mail suppression | ON |
+
+**Do not revert** `home`/`siteurl` to `shpigovsky.beget.tech`.
 
 ---
 
-## P18 sequence (after NS SWITCHED)
+## Remaining P18 (after P18A)
 
-1. Verify actual public delegation (WHOIS + parent + 8.8.8.8 / 1.1.1.1 / 9.9.9.9).
-2. Verify authoritative Beget DNS vs inventory.
-3. Verify apex A = Beget website IP; www policy/record; MX/TXT preserved.
-4. Request/attach SSL. Verify cert subject/SAN. HTTP must still answer until cert is live.
-5. Verify HTTP and HTTPS on the final host.
-6. **Only then** enable HTTPS redirects (file plan PHASE A).
-7. **Only then** WordPress final-domain mutations (`CUTOVER-DB-MUTATION-PLAN.json` + `CUTOVER-FILE-MUTATION-PLAN.md`). Serialization-safe, no broad SQL search-replace.
-8. Host-conditional temporary-host 301 (`shpigovsky.beget.tech` → `https://shpigovsky.ru`) after final-domain smoke.
-9. Cache purge.
-10. Smoke on https://shpigovsky.ru/ while indexing still CLOSED.
-11. SMTP (PHASE B). Remove/disable `fp02-pre-cutover-mail-suppression.php` only in this phase. No PHP `mail()` fallback.
-12. Form delivery QA.
-13. Indexing open (PHASE C): `blog_public`, robots.txt, meta robots.
-14. Sitemap submissions (Yandex Webmaster + Google Search Console) — `https://shpigovsky.ru/wp-sitemap.xml`.
-15. Final crawl.
+1. Bind public apex + www so they serve **this** WordPress docroot (Beget site/domain mapping / A as Beget instructs).  
+2. Issue/attach SSL for **that** WordPress origin. Verify cert SAN, apex, www.  
+3. HTTP and HTTPS on the **WordPress** host — no loop.  
+4. Only then enable unconditional HTTP→HTTPS (if not already correct on the WP vhost).  
+5. Host-conditional `shpigovsky.beget.tech` → `https://shpigovsky.ru` after WordPress HTTPS smoke.  
+6. Bounded URL cleanup from P17-FU02 mutation plans (robots sitemap host, leftover absolute beget URLs). Serialization-safe. **No** blind search-replace.  
+7. Cache purge. Smoke while indexing **CLOSED**.  
+8. SMTP (PHASE B). Remove mail suppression only then.  
+9. Form delivery QA.  
+10. Indexing (PHASE C).  
+11. Sitemap submissions.  
+12. Final crawl.
 
-Exact objects: `REPORTS/evidence/prod-p17-fu02-final-tail/CUTOVER-DB-MUTATION-PLAN.json` and `CUTOVER-FILE-MUTATION-PLAN.md`.
+Exact leftover objects still listed in `REPORTS/evidence/prod-p17-fu02-final-tail/CUTOVER-DB-MUTATION-PLAN.json` (skip `home`/`siteurl` — already done).
 
-*P17-FU02 preparation only. P18 not started.*
+---
+
+## Forbidden until WordPress HTTPS PASS
+
+- Opening `blog_public` / robots Allow  
+- SMTP as “done”  
+- Temporary-host 301 if it would send users to the **legacy** origin  
+- Re-running old P18 step “change home/siteurl”
+
+*P18A executed. Remaining = SSL + origin bind + launch tails.*

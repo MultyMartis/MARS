@@ -52,3 +52,4 @@ require_once SHPIGOVSKY_THEME_DIR . '/inc/institutional-helpers.php';
 require_once SHPIGOVSKY_THEME_DIR . '/inc/institutional-vendors.php';
 require_once SHPIGOVSKY_THEME_DIR . '/inc/admin-options.php';
 require_once SHPIGOVSKY_THEME_DIR . '/inc/admin-editor.php';
+require_once SHPIGOVSKY_THEME_DIR . '/inc/legal-helpers.php';

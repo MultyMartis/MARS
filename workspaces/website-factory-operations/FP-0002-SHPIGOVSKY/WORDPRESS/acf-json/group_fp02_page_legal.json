@@ -1,14 +1,14 @@
 {
     "key": "group_fp02_page_legal",
-    "title": "Page — Legal",
+    "title": "Правовые документы",
     "fields": [
         {
             "key": "field_fp02_legal_status",
-            "label": "Legal status",
+            "label": "Статус документа",
             "name": "legal_status",
             "aria-label": "",
             "type": "select",
-            "instructions": "",
+            "instructions": "Независим от флажка «Демо-версия». «Готов к публикации» сам по себе не включает демо-предупреждение.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -19,18 +19,18 @@
             "default_value": "demo",
             "placeholder": "",
             "choices": {
-                "demo": "Demo",
-                "review": "Review",
-                "production_ready": "Production ready"
+                "demo": "Демо",
+                "review": "На проверке",
+                "production_ready": "Готов к публикации"
             }
         },
         {
             "key": "field_fp02_legal_demo_marker",
-            "label": "Demo marker",
+            "label": "Демо-версия",
             "name": "legal_demo_marker",
             "aria-label": "",
             "type": "true_false",
-            "instructions": "",
+            "instructions": "Вкл — показать предупреждение о демонстрационной версии. Выкл — не показывать. Сохранённое «Нет» не заменяется значением по умолчанию.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -39,11 +39,14 @@
                 "id": ""
             },
             "default_value": 1,
-            "placeholder": ""
+            "placeholder": "",
+            "ui": 1,
+            "ui_on_text": "Да",
+            "ui_off_text": "Нет"
         },
         {
             "key": "field_fp02_legal_effective_date",
-            "label": "Effective date",
+            "label": "Дата вступления в силу",
             "name": "legal_effective_date",
             "aria-label": "",
             "type": "date_picker",
@@ -62,7 +65,7 @@
         },
         {
             "key": "field_fp02_legal_version",
-            "label": "Version",
+            "label": "Версия документа",
             "name": "legal_version",
             "aria-label": "",
             "type": "text",
@@ -79,11 +82,11 @@
         },
         {
             "key": "field_fp02_legal_production_blocker",
-            "label": "Production blocker flag",
+            "label": "Блокирует публикацию",
             "name": "legal_production_blocker",
             "aria-label": "",
             "type": "true_false",
-            "instructions": "",
+            "instructions": "Служебный стоп-флаг. Не управляет демо-баннером на сайте.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -92,7 +95,10 @@
                 "id": ""
             },
             "default_value": 1,
-            "placeholder": ""
+            "placeholder": "",
+            "ui": 1,
+            "ui_on_text": "Да",
+            "ui_off_text": "Нет"
         }
     ],
     "location": [
@@ -113,5 +119,5 @@
     "active": true,
     "description": "FP-0002 V9-06C canonical source field group. Runtime registration occurs only after delivery authorization.",
     "show_in_rest": 0,
-    "modified": 1783158780
+    "modified": 1787155200
 }

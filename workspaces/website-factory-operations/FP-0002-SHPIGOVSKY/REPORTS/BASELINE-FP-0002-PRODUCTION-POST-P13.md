@@ -1,33 +1,36 @@
-# BASELINE — FP-0002 PRODUCTION POST-P13 (PROD-P14) + P15 ENVIRONMENT CLEAN + P16 TYPOGRAPHY + P17 PRE-CUTOVER CONT1 + P17-FU02
+# BASELINE — FP-0002 PRODUCTION POST-P13 (PROD-P14) + P15 ENVIRONMENT CLEAN + P16 TYPOGRAPHY + P17 PRE-CUTOVER CONT1 + P17-FU02 + P18A LIVE DOMAIN
 
-**Baseline ID:** `FP-0002-PROD-BASELINE-2026-08-17`  
+**Baseline ID:** `FP-0002-PROD-BASELINE-2026-08-18-P18A`  
 **Established:** 2026-08-16/17 (UTC intake 2026-08-16T17:28Z)  
 **Wave:** PROD-P14 Stabilization  
 **P15 extension:** 2026-08-16/17 — environment/migration cleanup (same baseline ID; P14 backup remains rollback authority)  
-**P17 extension:** 2026-08-18 — legacy 301s + DNS/NS migration plan (NS not switched)  
-**P17-FU02 extension:** 2026-08-18 — internal pre-cutover tails closed; READY FOR MANUAL NS SWITCH
+**P17 extension:** 2026-08-18 — legacy 301s + DNS/NS migration plan (NS not switched **in that wave**)  
+**P17-FU02 extension:** 2026-08-18 — internal pre-cutover tails closed; READY FOR MANUAL NS SWITCH **at that time**  
+**P18A extension:** 2026-08-18 — operator live-domain cutover canonized; legal demo banner owner fixed
 
 ## Runtime
 
 | Field | Value |
 |-------|-------|
-| Production host | http://shpigovsky.beget.tech/ |
-| Future canonical domain | shpigovsky.ru |
+| Live production domain (WordPress) | `https://shpigovsky.ru` (`home` / `siteurl`) |
+| Public apex at P18A intake | **Legacy origin** still observed (`45.130.41.70` @8.8.8.8) — not WordPress |
+| WordPress working host | `http://shpigovsky.beget.tech/` (inner routes) |
 | Docroot | `/home/s/shpigovsky/shpigovsky.ru/public_html` |
 | WordPress | 7.0.4 |
 | PHP (web) | 8.3.20 (dashboard) |
-| PHP (CLI probe) | 8.2.28 |
+| PHP (CLI probe) | 8.2 (`/usr/local/bin/php8.2`; default `php` is 5.6) |
 | DB name (no secrets) | `shpigovsky_main` |
 | DB prefix | `fp02_` |
 | Theme | Shpigovsky `0.3.0-d7a-shell` |
-| shpigovsky-core | `0.3.9-p17fu02` (was `0.3.8-p17` at P17 CONT1) |
+| shpigovsky-core | `0.3.10-p18a` |
 | WPilot | 0.3.2 · writes disabled · bridge active (read) |
-| siteurl/home | http://shpigovsky.beget.tech |
+| siteurl/home | `https://shpigovsky.ru` |
 | blog_public | 0 |
 | WP_ENVIRONMENT_TYPE | **production** (P15) |
 | WP_DEBUG / DISPLAY / LOG | **false / false / false** (P15) |
 | Mail | PRE-CUTOVER suppression MU (`fp02-pre-cutover-mail-suppression.php`) |
 | Typography | ONE owner `typography.russian` — render-time HTML-aware; DB content mutations 0 |
+| Legal demo banner | `legal_demo_marker` explicit `0`/`1`; template does not hardcode DEMO |
 
 ## Content counts (publish)
 
@@ -58,10 +61,11 @@
 - P14: deployable MATCH after canonization  
 - P15 touched source files: **3/3 MATCH** (core + dashboard + mail MU)  
 - P16 touched source files: **6/6 MATCH** (core + typography module + dashboard + search-helpers)
+- P18A touched source files: **7/7 MATCH** (theme legal helper/template/`functions.php`; core + dashboard + FieldGroups + EditorRestrictions)
 
 ## Latest accepted wave
 
-**P17-FU02 Final Pre-Cutover Tail Closure** — READY FOR MANUAL NS SWITCH
+**P18A Live Domain Reality + Legal State Fix** — NS + WordPress URL cutover **done by operator**; SSL / public-origin bind **not** final; legal DEMO banner follows `legal_demo_marker`.
 
 ## Backup
 
@@ -89,7 +93,17 @@
 
 ## Open tails
 
-See `REPORTS/OPEN-ITEMS-FP-0002-AFTER-P17-FU02.md` — MANUAL NS SWITCH → DNS → SSL/domain → SMTP → indexing → sitemaps → crawl.
+See `REPORTS/OPEN-ITEMS-FP-0002-AFTER-P18A.md` — SSL finalize → WordPress HTTPS smoke → redirects → SMTP → indexing → sitemaps → crawl.
+
+## P18A status
+
+- Operator `home`/`siteurl` = `https://shpigovsky.ru` — **canonized, not reverted**
+- NS — **Beget observed**
+- Public apex → WordPress — **not yet** (legacy origin still public)
+- SSL (WP origin) — **IN PROGRESS**
+- Legal DEMO banner — **follows `legal_demo_marker`**
+- Indexing — **CLOSED**
+- SMTP — **PENDING**
 
 ## P17-FU02 status
 

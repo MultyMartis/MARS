@@ -1,0 +1,68 @@
+{
+  "generated_at": "2026-08-18T14:37:23Z",
+  "files": [
+    {
+      "kind": "theme",
+      "rel": "template-parts/legal/document-page.php",
+      "prod_sha256": "9cf8b6a4b72a3f2ea10e0ac7b3d5ca5c78d69699e0bdb7afd6bd3c9bf0e737bb",
+      "local_sha256": "9cf8b6a4b72a3f2ea10e0ac7b3d5ca5c78d69699e0bdb7afd6bd3c9bf0e737bb",
+      "match": true,
+      "prod_bytes": 780,
+      "local_bytes": 780
+    },
+    {
+      "kind": "theme",
+      "rel": "page-templates/legal.php",
+      "prod_sha256": "36dac832d6e80f93daae1fb0b3e472dfd16d6984f6f37037795986450c9f9fce",
+      "local_sha256": "36dac832d6e80f93daae1fb0b3e472dfd16d6984f6f37037795986450c9f9fce",
+      "match": true,
+      "prod_bytes": 441,
+      "local_bytes": 441
+    },
+    {
+      "kind": "theme",
+      "rel": "functions.php",
+      "prod_sha256": "65466663a6a1f585bd481795362d6f2190e85bc3882d649fbac51d815b7a01b0",
+      "local_sha256": "65466663a6a1f585bd481795362d6f2190e85bc3882d649fbac51d815b7a01b0",
+      "match": true,
+      "prod_bytes": 2923,
+      "local_bytes": 2923
+    },
+    {
+      "kind": "plugin",
+      "rel": "shpigovsky-core.php",
+      "prod_sha256": "10b666b122dcd7944125755e08055604ce4b90b9bead237cb01e0448c0fd7e68",
+      "local_sha256": "10b666b122dcd7944125755e08055604ce4b90b9bead237cb01e0448c0fd7e68",
+      "match": true,
+      "prod_bytes": 1791,
+      "local_bytes": 1791
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Admin/SystemDashboard.php",
+      "prod_sha256": "15e41e300f0ed29dd3044752bedf62721809e9531016a337f93af18e9ee6b9ce",
+      "local_sha256": "15e41e300f0ed29dd3044752bedf62721809e9531016a337f93af18e9ee6b9ce",
+      "match": true,
+      "prod_bytes": 9275,
+      "local_bytes": 9275
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Fields/FieldGroups.php",
+      "prod_sha256": "b916874a60bb5c88ffc17d2e25129f3a2cd4a40e37105e91c139ae1b337c6f1e",
+      "local_sha256": "b916874a60bb5c88ffc17d2e25129f3a2cd4a40e37105e91c139ae1b337c6f1e",
+      "match": true,
+      "prod_bytes": 159163,
+      "local_bytes": 159163
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Admin/EditorRestrictions.php",
+      "prod_sha256": "9e314e133e5a2e71e42165a5eaf08c75da3af1cc6a0ddf9757aea095dcfed627",
+      "local_sha256": "9e314e133e5a2e71e42165a5eaf08c75da3af1cc6a0ddf9757aea095dcfed627",
+      "match": true,
+      "prod_bytes": 9592,
+      "local_bytes": 9592
+    }
+  ]
+}

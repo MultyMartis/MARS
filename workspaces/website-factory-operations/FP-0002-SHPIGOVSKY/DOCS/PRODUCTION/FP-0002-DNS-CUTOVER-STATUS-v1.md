@@ -1,44 +1,40 @@
 # FP-0002 — DNS Cutover Status v1
 
-**Wave:** PROD-P02 · **updated P17-FU02** (internal tails closed; still no NS write)  
-**Date:** 2026-08-18 (FU02)  
-**Status:** **`DNS_CUTOVER = DEFERRED`** — READY FOR MANUAL NS SWITCH; NS **not** switched
+**Wave:** PROD-P02 · **updated P18A** (operator NS + WordPress URL cutover intaken)  
+**Date:** 2026-08-18 (P18A)  
+**Status:** **`DNS_NS = OPERATOR CUTOVER PERFORMED`** — public apex **not yet** serving WordPress
+
+Historical P02/P17 text that said `DNS_CUTOVER = DEFERRED` / NS not switched is **superseded for current operations**. Those reports remain historical evidence.
 
 ---
 
 | Field | Value |
 |-------|-------|
-| Current working host | `http://shpigovsky.beget.tech/` |
-| Future canonical domain | `shpigovsky.ru` |
-| DNS for `shpigovsky.ru` | Still on **REG.RU hosting NS** `ns1.hosting.reg.ru` / `ns2.hosting.reg.ru` (P17 inventory) |
-| Beget as canonical public host | **NO** until cutover charter |
-| SSL / HTTPS on beget.tech | SAFE UNKNOWN / not usable in P01 probe |
+| WordPress home / siteurl | `https://shpigovsky.ru` |
+| Live domain (intent + WP options) | `shpigovsky.ru` |
+| Temporary WP host | `http://shpigovsky.beget.tech/` (inner routes still serve WP) |
+| Public NS (system resolver) | Beget: `ns1.beget.ru` `ns2.beget.pro` `ns1.beget.com` `ns1.beget.pro` `ns2.beget.com` `ns2.beget.ru` |
+| Apex A @8.8.8.8 | `45.130.41.70` |
+| Apex A local cache | `92.255.111.71` (legacy REG.RU website IP) |
+| `shpigovsky.beget.tech` A | `91.106.207.76` |
+| Public `https://shpigovsky.ru/` | Legacy (non-WP) HTML at P18A intake |
+| SSL public apex | Let's Encrypt valid on the **legacy** origin |
+| SSL WordPress vhost 443 | not ready (beget.tech HTTPS timeout) |
 | Agent DNS writes | **FORBIDDEN** |
-| Redirects beget.tech → shpigovsky.ru | **FORBIDDEN** now |
-| `siteurl` / `home` change to final domain | **FORBIDDEN** until cutover charter |
+| Redirects beget.tech → shpigovsky.ru | Homepage already 301s to public apex (**risk:** users hit legacy site). Inner WP paths still 200. Do not add a blanket temp-host 301 until WP is the public origin. |
+| `siteurl` / `home` | **DONE** — do not revert |
 
 ---
 
-## Risks (unchanged from P01)
+## P18A classification
 
-- Temporary host is publicly crawlable.  
-- Dual public presence until cutover.  
-- Site title still contains «локальная разработка».  
-- Some hardcoded `shpigovsky.test` CTA links remain (content residue; not repaired here).
+```text
+NS CUTOVER = DONE BY OPERATOR
+WORDPRESS URL CUTOVER = DONE BY OPERATOR
+PUBLIC APEX → WORDPRESS ORIGIN = NOT YET
+SSL (WP ORIGIN) = IN PROGRESS
+```
 
----
+Next DNS/hosting check: confirm Beget domain `shpigovsky.ru` is attached to `/home/s/shpigovsky/shpigovsky.ru/public_html` and public A/www answer that vhost.
 
-## P17 CONT1
-
-Public zone inventoried. Target Beget NS recorded from published KB (panel confirm still required). **No NS write. No SSL. No siteurl.**
-
-Evidence: `REPORTS/evidence/prod-p17-precutover/`
-
-## This wave (historical P02 note)
-
-P02: No DNS, SSL, robots, or redirect mutations.  
-P17 CONT1: legacy path 301s on the temporary host only; DNS remains deferred.
-
----
-
-*DNS Cutover Status v1 · PROD-P02.*
+Evidence: `REPORTS/evidence/prod-p18a-live-domain-legal-state/`

@@ -1,0 +1,338 @@
+{
+  "generated_at": "2026-08-18T14:37:23Z",
+  "probes": [
+    {
+      "url": "http://shpigovsky.ru/",
+      "allow_redirects": true,
+      "verify": false,
+      "error": null,
+      "status": 200,
+      "final_url": "https://shpigovsky.ru/",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "text/html"
+      },
+      "history": [
+        {
+          "status": 301,
+          "url": "http://shpigovsky.ru/",
+          "location": "https://shpigovsky.ru/"
+        }
+      ],
+      "body_bytes": 531136,
+      "body_snippet": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"utf-8\"/>\n        \n            <title>ÐÐµÑÐµÐ½Ð¸Ðµ Ð°Ð»ÐºÐ¾Ð³Ð¾Ð»Ð¸Ð·Ð¼Ð° Ð¸ Ð½Ð°ÑÐºÐ¾Ð¼Ð°Ð½Ð¸Ð¸ ÑÐµÐ½ÑÑ |  ÐÐµÑÐµÐ½Ð¸Ðµ Ð·Ð°Ð²Ð¸ÑÐ¸Ð¼Ð¾ÑÑÐ¸ ÐÐ¾ÑÐºÐ²Ð°</title>\n            <meta name=\"title\" content=\"ÐÐµÑÐµÐ½Ð¸Ðµ Ð°Ð»ÐºÐ¾Ð³Ð¾Ð»Ð¸Ð·Ð¼Ð° Ð¸ Ð½Ð°ÑÐºÐ¾Ð¼Ð°Ð½Ð¸Ð¸ ÑÐµÐ½ÑÑ |  ÐÐµÑÐµÐ½Ð¸Ðµ Ð·Ð°Ð²Ð¸ÑÐ¸Ð¼Ð¾ÑÑÐ¸ ÐÐ¾ÑÐºÐ²Ð°\"/>\n        \n        \n            <meta name=\"description\" content=\"Ð¦ÐµÐ½ÑÑ Ð»ÐµÑÐµÐ½Ð¸Ñ Ð°Ð»ÐºÐ¾Ð³Ð¾Ð»Ð¸Ð·Ð¼Ð° Ð¸ Ð½Ð°ÑÐºÐ¾Ð¼Ð°Ð½Ð¸Ð¸ Ð¿ÑÐµÐ´Ð»Ð°Ð³Ð°ÐµÑ ÐºÐ¾Ð¼Ð¿Ð»ÐµÐºÑÐ½ÑÐµ Ð¿ÑÐ¾Ð³ÑÐ°Ð¼Ð¼Ñ ÑÐµÐ°Ð±Ð¸Ð»Ð¸ÑÐ°ÑÐ¸Ð¸ Ð´Ð»Ñ ÑÑÐ¿ÐµÑÐ½Ð¾Ð³Ð¾ Ð¸Ð·Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ñ Ð¾Ñ Ð·Ð°Ð²Ð¸ÑÐ¸Ð¼Ð¾ÑÑÐµÐ¹. ÐÑÐ¾ÑÐµÑÑÐ¸Ð¾Ð½Ð°Ð»ÑÐ½Ð°Ñ Ð¿Ð¾Ð¼Ð¾ÑÑ Ð¸ Ð¿Ð¾Ð´Ð´ÐµÑÐ¶ÐºÐ° Ð½Ð° Ð¿ÑÑÐ¸ Ðº ÑÑÐµÐ·Ð²Ð¾Ñ",
+      "has_demo_notice": false,
+      "has_demo_placeholder": false,
+      "canonical_host": "shpigovsky.ru",
+      "canonical": "https://shpigovsky.ru",
+      "beget_abs_count": 0,
+      "live_abs_count": 7,
+      "rest_link": null
+    },
+    {
+      "url": "http://shpigovsky.ru/uslugi/",
+      "allow_redirects": true,
+      "verify": false,
+      "error": null,
+      "status": 404,
+      "final_url": "https://shpigovsky.ru/uslugi",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "text/html"
+      },
+      "history": [
+        {
+          "status": 301,
+          "url": "http://shpigovsky.ru/uslugi/",
+          "location": "http://shpigovsky.ru/uslugi"
+        },
+        {
+          "status": 301,
+          "url": "http://shpigovsky.ru/uslugi",
+          "location": "https://shpigovsky.ru/uslugi"
+        }
+      ],
+      "body_bytes": 3045,
+      "body_snippet": "<!DOCTYPE html>\n<html lang=\"ru\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Ð¡ÑÑÐ°Ð½Ð¸ÑÐ° Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½Ð°</title>\n    <style>\n        body {\n            margin: 0;\n            padding: 0;\n        }\n        .info {\n            width: 100vw;\n            height: 100vh;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            flex-direction: column;\n            text-align: center;\n        }\n        .info__image {\n            margin-bottom: 24px;\n        }\n        .info__title {\n            font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, ",
+      "has_demo_notice": false,
+      "has_demo_placeholder": false,
+      "canonical_host": null,
+      "beget_abs_count": 0,
+      "live_abs_count": 0,
+      "rest_link": null
+    },
+    {
+      "url": "http://shpigovsky.ru/specyalisty/",
+      "allow_redirects": true,
+      "verify": false,
+      "error": null,
+      "status": 404,
+      "final_url": "https://shpigovsky.ru/specyalisty",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "text/html"
+      },
+      "history": [
+        {
+          "status": 301,
+          "url": "http://shpigovsky.ru/specyalisty/",
+          "location": "http://shpigovsky.ru/specyalisty"
+        },
+        {
+          "status": 301,
+          "url": "http://shpigovsky.ru/specyalisty",
+          "location": "https://shpigovsky.ru/specyalisty"
+        }
+      ],
+      "body_bytes": 3045,
+      "body_snippet": "<!DOCTYPE html>\n<html lang=\"ru\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Ð¡ÑÑÐ°Ð½Ð¸ÑÐ° Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½Ð°</title>\n    <style>\n        body {\n            margin: 0;\n            padding: 0;\n        }\n        .info {\n            width: 100vw;\n            height: 100vh;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            flex-direction: column;\n            text-align: center;\n        }\n        .info__image {\n            margin-bottom: 24px;\n        }\n        .info__title {\n            font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, ",
+      "has_demo_notice": false,
+      "has_demo_placeholder": false,
+      "canonical_host": null,
+      "beget_abs_count": 0,
+      "live_abs_count": 0,
+      "rest_link": null
+    },
+    {
+      "url": "http://shpigovsky.ru/blog/",
+      "allow_redirects": true,
+      "verify": false,
+      "error": null,
+      "status": 404,
+      "final_url": "https://shpigovsky.ru/blog",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "text/html"
+      },
+      "history": [
+        {
+          "status": 301,
+          "url": "http://shpigovsky.ru/blog/",
+          "location": "http://shpigovsky.ru/blog"
+        },
+        {
+          "status": 301,
+          "url": "http://shpigovsky.ru/blog",
+          "location": "https://shpigovsky.ru/blog"
+        }
+      ],
+      "body_bytes": 3045,
+      "body_snippet": "<!DOCTYPE html>\n<html lang=\"ru\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Ð¡ÑÑÐ°Ð½Ð¸ÑÐ° Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½Ð°</title>\n    <style>\n        body {\n            margin: 0;\n            padding: 0;\n        }\n        .info {\n            width: 100vw;\n            height: 100vh;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            flex-direction: column;\n            text-align: center;\n        }\n        .info__image {\n            margin-bottom: 24px;\n        }\n        .info__title {\n            font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, ",
+      "has_demo_notice": false,
+      "has_demo_placeholder": false,
+      "canonical_host": null,
+      "beget_abs_count": 0,
+      "live_abs_count": 0,
+      "rest_link": null
+    },
+    {
+      "url": "http://shpigovsky.ru/kontakty/",
+      "allow_redirects": true,
+      "verify": false,
+      "error": null,
+      "status": 404,
+      "final_url": "https://shpigovsky.ru/kontakty",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "text/html"
+      },
+      "history": [
+        {
+          "status": 301,
+          "url": "http://shpigovsky.ru/kontakty/",
+          "location": "http://shpigovsky.ru/kontakty"
+        },
+        {
+          "status": 301,
+          "url": "http://shpigovsky.ru/kontakty",
+          "location": "https://shpigovsky.ru/kontakty"
+        }
+      ],
+      "body_bytes": 3045,
+      "body_snippet": "<!DOCTYPE html>\n<html lang=\"ru\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Ð¡ÑÑÐ°Ð½Ð¸ÑÐ° Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½Ð°</title>\n    <style>\n        body {\n            margin: 0;\n            padding: 0;\n        }\n        .info {\n            width: 100vw;\n            height: 100vh;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            flex-direction: column;\n            text-align: center;\n        }\n        .info__image {\n            margin-bottom: 24px;\n        }\n        .info__title {\n            font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, ",
+      "has_demo_notice": false,
+      "has_demo_placeholder": false,
+      "canonical_host": null,
+      "beget_abs_count": 0,
+      "live_abs_count": 0,
+      "rest_link": null
+    },
+    {
+      "url": "http://shpigovsky.ru/privacy-policy/",
+      "allow_redirects": true,
+      "verify": false,
+      "error": null,
+      "status": 404,
+      "final_url": "https://shpigovsky.ru/privacy-policy",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "text/html"
+      },
+      "history": [
+        {
+          "status": 301,
+          "url": "http://shpigovsky.ru/privacy-policy/",
+          "location": "http://shpigovsky.ru/privacy-policy"
+        },
+        {
+          "status": 301,
+          "url": "http://shpigovsky.ru/privacy-policy",
+          "location": "https://shpigovsky.ru/privacy-policy"
+        }
+      ],
+      "body_bytes": 3045,
+      "body_snippet": "<!DOCTYPE html>\n<html lang=\"ru\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Ð¡ÑÑÐ°Ð½Ð¸ÑÐ° Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½Ð°</title>\n    <style>\n        body {\n            margin: 0;\n            padding: 0;\n        }\n        .info {\n            width: 100vw;\n            height: 100vh;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            flex-direction: column;\n            text-align: center;\n        }\n        .info__image {\n            margin-bottom: 24px;\n        }\n        .info__title {\n            font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, ",
+      "has_demo_notice": false,
+      "has_demo_placeholder": false,
+      "canonical_host": null,
+      "beget_abs_count": 0,
+      "live_abs_count": 0,
+      "rest_link": null
+    },
+    {
+      "url": "http://shpigovsky.ru/wp-json/",
+      "allow_redirects": true,
+      "verify": false,
+      "error": null,
+      "status": 404,
+      "final_url": "https://shpigovsky.ru/wp-json",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "text/html"
+      },
+      "history": [
+        {
+          "status": 301,
+          "url": "http://shpigovsky.ru/wp-json/",
+          "location": "http://shpigovsky.ru/wp-json"
+        },
+        {
+          "status": 301,
+          "url": "http://shpigovsky.ru/wp-json",
+          "location": "https://shpigovsky.ru/wp-json"
+        }
+      ],
+      "body_bytes": 3045,
+      "body_snippet": "<!DOCTYPE html>\n<html lang=\"ru\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Ð¡ÑÑÐ°Ð½Ð¸ÑÐ° Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½Ð°</title>\n    <style>\n        body {\n            margin: 0;\n            padding: 0;\n        }\n        .info {\n            width: 100vw;\n            height: 100vh;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            flex-direction: column;\n            text-align: center;\n        }\n        .info__image {\n            margin-bottom: 24px;\n        }\n        .info__title {\n            font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, ",
+      "has_demo_notice": false,
+      "has_demo_placeholder": false,
+      "canonical_host": null,
+      "beget_abs_count": 0,
+      "live_abs_count": 0,
+      "rest_link": null
+    },
+    {
+      "url": "http://shpigovsky.ru/wp-sitemap.xml",
+      "allow_redirects": true,
+      "verify": false,
+      "error": null,
+      "status": 404,
+      "final_url": "https://shpigovsky.ru/wp-sitemap.xml",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "text/html"
+      },
+      "history": [
+        {
+          "status": 301,
+          "url": "http://shpigovsky.ru/wp-sitemap.xml",
+          "location": "https://shpigovsky.ru/wp-sitemap.xml"
+        }
+      ],
+      "body_bytes": 3045,
+      "body_snippet": "<!DOCTYPE html>\n<html lang=\"ru\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Ð¡ÑÑÐ°Ð½Ð¸ÑÐ° Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½Ð°</title>\n    <style>\n        body {\n            margin: 0;\n            padding: 0;\n        }\n        .info {\n            width: 100vw;\n            height: 100vh;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            flex-direction: column;\n            text-align: center;\n        }\n        .info__image {\n            margin-bottom: 24px;\n        }\n        .info__title {\n            font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, ",
+      "has_demo_notice": false,
+      "has_demo_placeholder": false,
+      "canonical_host": null,
+      "beget_abs_count": 0,
+      "live_abs_count": 0,
+      "rest_link": null
+    },
+    {
+      "url": "http://shpigovsky.ru/robots.txt",
+      "allow_redirects": true,
+      "verify": false,
+      "error": null,
+      "status": 200,
+      "final_url": "https://shpigovsky.ru/robots.txt",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "text/plain"
+      },
+      "history": [
+        {
+          "status": 301,
+          "url": "http://shpigovsky.ru/robots.txt",
+          "location": "https://shpigovsky.ru/robots.txt"
+        }
+      ],
+      "body_bytes": 74,
+      "body_snippet": "ï»¿User-agent: *\nDisallow: /*?\nSitemap: https://shpigovsky.ru/sitemap.xml\n",
+      "has_demo_notice": false,
+      "has_demo_placeholder": false,
+      "canonical_host": null,
+      "beget_abs_count": 0,
+      "live_abs_count": 1,
+      "rest_link": null
+    },
+    {
+      "url": "http://shpigovsky.ru/wp-admin/",
+      "allow_redirects": true,
+      "verify": false,
+      "error": null,
+      "status": 404,
+      "final_url": "https://shpigovsky.ru/wp-admin",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "text/html"
+      },
+      "history": [
+        {
+          "status": 301,
+          "url": "http://shpigovsky.ru/wp-admin/",
+          "location": "http://shpigovsky.ru/wp-admin"
+        },
+        {
+          "status": 301,
+          "url": "http://shpigovsky.ru/wp-admin",
+          "location": "https://shpigovsky.ru/wp-admin"
+        }
+      ],
+      "body_bytes": 3045,
+      "body_snippet": "<!DOCTYPE html>\n<html lang=\"ru\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Ð¡ÑÑÐ°Ð½Ð¸ÑÐ° Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½Ð°</title>\n    <style>\n        body {\n            margin: 0;\n            padding: 0;\n        }\n        .info {\n            width: 100vw;\n            height: 100vh;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            flex-direction: column;\n            text-align: center;\n        }\n        .info__image {\n            margin-bottom: 24px;\n        }\n        .info__title {\n            font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, ",
+      "has_demo_notice": false,
+      "has_demo_placeholder": false,
+      "canonical_host": null,
+      "beget_abs_count": 0,
+      "live_abs_count": 0,
+      "rest_link": null
+    },
+    {
+      "url": "http://shpigovsky.ru/wp-login.php",
+      "allow_redirects": true,
+      "verify": false,
+      "error": null,
+      "status": 404,
+      "final_url": "https://shpigovsky.ru/wp-login.php",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "text/html"
+      },
+      "history": [
+        {
+          "status": 301,
+          "url": "http://shpigovsky.ru/wp-login.php",
+          "location": "https://shpigovsky.ru/wp-login.php"
+        }
+      ],
+      "body_bytes": 3045,
+      "body_snippet": "<!DOCTYPE html>\n<html lang=\"ru\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Ð¡ÑÑÐ°Ð½Ð¸ÑÐ° Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½Ð°</title>\n    <style>\n        body {\n            margin: 0;\n            padding: 0;\n        }\n        .info {\n            width: 100vw;\n            height: 100vh;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            flex-direction: column;\n            text-align: center;\n        }\n        .info__image {\n            margin-bottom: 24px;\n        }\n        .info__title {\n            font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, ",
+      "has_demo_notice": false,
+      "has_demo_placeholder": false,
+      "canonical_host": null,
+      "beget_abs_count": 0,
+      "live_abs_count": 0,
+      "rest_link": null
+    }
+  ]
+}

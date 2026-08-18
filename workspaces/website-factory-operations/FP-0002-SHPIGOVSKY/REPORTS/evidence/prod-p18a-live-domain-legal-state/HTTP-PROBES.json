@@ -1,0 +1,266 @@
+{
+  "generated_at": "2026-08-18T14:37:23Z",
+  "probes": [
+    {
+      "url": "http://shpigovsky.ru/",
+      "allow_redirects": false,
+      "verify": true,
+      "error": null,
+      "status": 301,
+      "final_url": "http://shpigovsky.ru/",
+      "headers": {
+        "Location": "https://shpigovsky.ru/",
+        "Server": "nginx",
+        "Content-Type": "text/html"
+      },
+      "history": [],
+      "body_bytes": 162,
+      "body_snippet": "<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n",
+      "has_demo_notice": false,
+      "has_demo_placeholder": false,
+      "canonical_host": null,
+      "beget_abs_count": 0,
+      "live_abs_count": 0,
+      "rest_link": null,
+      "follow": {
+        "url": "http://shpigovsky.ru/",
+        "allow_redirects": true,
+        "verify": false,
+        "error": null,
+        "status": 200,
+        "final_url": "https://shpigovsky.ru/",
+        "headers": {
+          "Server": "nginx",
+          "Content-Type": "text/html"
+        },
+        "history": [
+          {
+            "status": 301,
+            "url": "http://shpigovsky.ru/",
+            "location": "https://shpigovsky.ru/"
+          }
+        ],
+        "body_bytes": 531136,
+        "body_snippet": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"utf-8\"/>\n        \n            <title>ÐÐµÑÐµÐ½Ð¸Ðµ Ð°Ð»ÐºÐ¾Ð³Ð¾Ð»Ð¸Ð·Ð¼Ð° Ð¸ Ð½Ð°ÑÐºÐ¾Ð¼Ð°Ð½Ð¸Ð¸ ÑÐµÐ½ÑÑ |  ÐÐµÑÐµÐ½Ð¸Ðµ Ð·Ð°Ð²Ð¸ÑÐ¸Ð¼Ð¾ÑÑÐ¸ ÐÐ¾ÑÐºÐ²Ð°</title>\n            <meta name=\"title\" content=\"ÐÐµÑÐµÐ½Ð¸Ðµ Ð°Ð»ÐºÐ¾Ð³Ð¾Ð»Ð¸Ð·Ð¼Ð° Ð¸ Ð½Ð°ÑÐºÐ¾Ð¼Ð°Ð½Ð¸Ð¸ ÑÐµÐ½ÑÑ |  ÐÐµÑÐµÐ½Ð¸Ðµ Ð·Ð°Ð²Ð¸ÑÐ¸Ð¼Ð¾ÑÑÐ¸ ÐÐ¾ÑÐºÐ²Ð°\"/>\n        \n        \n            <meta name=\"description\" content=\"Ð¦ÐµÐ½ÑÑ Ð»ÐµÑÐµÐ½Ð¸Ñ Ð°Ð»ÐºÐ¾Ð³Ð¾Ð»Ð¸Ð·Ð¼Ð° Ð¸ Ð½Ð°ÑÐºÐ¾Ð¼Ð°Ð½Ð¸Ð¸ Ð¿ÑÐµÐ´Ð»Ð°Ð³Ð°ÐµÑ ÐºÐ¾Ð¼Ð¿Ð»ÐµÐºÑÐ½ÑÐµ Ð¿ÑÐ¾Ð³ÑÐ°Ð¼Ð¼Ñ ÑÐµÐ°Ð±Ð¸Ð»Ð¸ÑÐ°ÑÐ¸Ð¸ Ð´Ð»Ñ ÑÑÐ¿ÐµÑÐ½Ð¾Ð³Ð¾ Ð¸Ð·Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ñ Ð¾Ñ Ð·Ð°Ð²Ð¸ÑÐ¸Ð¼Ð¾ÑÑÐµÐ¹. ÐÑÐ¾ÑÐµÑÑÐ¸Ð¾Ð½Ð°Ð»ÑÐ½Ð°Ñ Ð¿Ð¾Ð¼Ð¾ÑÑ Ð¸ Ð¿Ð¾Ð´Ð´ÐµÑÐ¶ÐºÐ° Ð½Ð° Ð¿ÑÑÐ¸ Ðº ÑÑÐµÐ·Ð²Ð¾Ñ",
+        "has_demo_notice": false,
+        "has_demo_placeholder": false,
+        "canonical_host": "shpigovsky.ru",
+        "canonical": "https://shpigovsky.ru",
+        "beget_abs_count": 0,
+        "live_abs_count": 7,
+        "rest_link": null
+      }
+    },
+    {
+      "url": "https://shpigovsky.ru/",
+      "allow_redirects": false,
+      "verify": true,
+      "error": null,
+      "status": 200,
+      "final_url": "https://shpigovsky.ru/",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "text/html"
+      },
+      "history": [],
+      "body_bytes": 531136,
+      "body_snippet": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"utf-8\"/>\n        \n            <title>ÐÐµÑÐµÐ½Ð¸Ðµ Ð°Ð»ÐºÐ¾Ð³Ð¾Ð»Ð¸Ð·Ð¼Ð° Ð¸ Ð½Ð°ÑÐºÐ¾Ð¼Ð°Ð½Ð¸Ð¸ ÑÐµÐ½ÑÑ |  ÐÐµÑÐµÐ½Ð¸Ðµ Ð·Ð°Ð²Ð¸ÑÐ¸Ð¼Ð¾ÑÑÐ¸ ÐÐ¾ÑÐºÐ²Ð°</title>\n            <meta name=\"title\" content=\"ÐÐµÑÐµÐ½Ð¸Ðµ Ð°Ð»ÐºÐ¾Ð³Ð¾Ð»Ð¸Ð·Ð¼Ð° Ð¸ Ð½Ð°ÑÐºÐ¾Ð¼Ð°Ð½Ð¸Ð¸ ÑÐµÐ½ÑÑ |  ÐÐµÑÐµÐ½Ð¸Ðµ Ð·Ð°Ð²Ð¸ÑÐ¸Ð¼Ð¾ÑÑÐ¸ ÐÐ¾ÑÐºÐ²Ð°\"/>\n        \n        \n            <meta name=\"description\" content=\"Ð¦ÐµÐ½ÑÑ Ð»ÐµÑÐµÐ½Ð¸Ñ Ð°Ð»ÐºÐ¾Ð³Ð¾Ð»Ð¸Ð·Ð¼Ð° Ð¸ Ð½Ð°ÑÐºÐ¾Ð¼Ð°Ð½Ð¸Ð¸ Ð¿ÑÐµÐ´Ð»Ð°Ð³Ð°ÐµÑ ÐºÐ¾Ð¼Ð¿Ð»ÐµÐºÑÐ½ÑÐµ Ð¿ÑÐ¾Ð³ÑÐ°Ð¼Ð¼Ñ ÑÐµÐ°Ð±Ð¸Ð»Ð¸ÑÐ°ÑÐ¸Ð¸ Ð´Ð»Ñ ÑÑÐ¿ÐµÑÐ½Ð¾Ð³Ð¾ Ð¸Ð·Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ñ Ð¾Ñ Ð·Ð°Ð²Ð¸ÑÐ¸Ð¼Ð¾ÑÑÐµÐ¹. ÐÑÐ¾ÑÐµÑÑÐ¸Ð¾Ð½Ð°Ð»ÑÐ½Ð°Ñ Ð¿Ð¾Ð¼Ð¾ÑÑ Ð¸ Ð¿Ð¾Ð´Ð´ÐµÑÐ¶ÐºÐ° Ð½Ð° Ð¿ÑÑÐ¸ Ðº ÑÑÐµÐ·Ð²Ð¾Ñ",
+      "has_demo_notice": false,
+      "has_demo_placeholder": false,
+      "canonical_host": "shpigovsky.ru",
+      "canonical": "https://shpigovsky.ru",
+      "beget_abs_count": 0,
+      "live_abs_count": 7,
+      "rest_link": null,
+      "follow": {
+        "url": "https://shpigovsky.ru/",
+        "allow_redirects": true,
+        "verify": false,
+        "error": null,
+        "status": 200,
+        "final_url": "https://shpigovsky.ru/",
+        "headers": {
+          "Server": "nginx",
+          "Content-Type": "text/html"
+        },
+        "history": [],
+        "body_bytes": 531136,
+        "body_snippet": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"utf-8\"/>\n        \n            <title>ÐÐµÑÐµÐ½Ð¸Ðµ Ð°Ð»ÐºÐ¾Ð³Ð¾Ð»Ð¸Ð·Ð¼Ð° Ð¸ Ð½Ð°ÑÐºÐ¾Ð¼Ð°Ð½Ð¸Ð¸ ÑÐµÐ½ÑÑ |  ÐÐµÑÐµÐ½Ð¸Ðµ Ð·Ð°Ð²Ð¸ÑÐ¸Ð¼Ð¾ÑÑÐ¸ ÐÐ¾ÑÐºÐ²Ð°</title>\n            <meta name=\"title\" content=\"ÐÐµÑÐµÐ½Ð¸Ðµ Ð°Ð»ÐºÐ¾Ð³Ð¾Ð»Ð¸Ð·Ð¼Ð° Ð¸ Ð½Ð°ÑÐºÐ¾Ð¼Ð°Ð½Ð¸Ð¸ ÑÐµÐ½ÑÑ |  ÐÐµÑÐµÐ½Ð¸Ðµ Ð·Ð°Ð²Ð¸ÑÐ¸Ð¼Ð¾ÑÑÐ¸ ÐÐ¾ÑÐºÐ²Ð°\"/>\n        \n        \n            <meta name=\"description\" content=\"Ð¦ÐµÐ½ÑÑ Ð»ÐµÑÐµÐ½Ð¸Ñ Ð°Ð»ÐºÐ¾Ð³Ð¾Ð»Ð¸Ð·Ð¼Ð° Ð¸ Ð½Ð°ÑÐºÐ¾Ð¼Ð°Ð½Ð¸Ð¸ Ð¿ÑÐµÐ´Ð»Ð°Ð³Ð°ÐµÑ ÐºÐ¾Ð¼Ð¿Ð»ÐµÐºÑÐ½ÑÐµ Ð¿ÑÐ¾Ð³ÑÐ°Ð¼Ð¼Ñ ÑÐµÐ°Ð±Ð¸Ð»Ð¸ÑÐ°ÑÐ¸Ð¸ Ð´Ð»Ñ ÑÑÐ¿ÐµÑÐ½Ð¾Ð³Ð¾ Ð¸Ð·Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ñ Ð¾Ñ Ð·Ð°Ð²Ð¸ÑÐ¸Ð¼Ð¾ÑÑÐµÐ¹. ÐÑÐ¾ÑÐµÑÑÐ¸Ð¾Ð½Ð°Ð»ÑÐ½Ð°Ñ Ð¿Ð¾Ð¼Ð¾ÑÑ Ð¸ Ð¿Ð¾Ð´Ð´ÐµÑÐ¶ÐºÐ° Ð½Ð° Ð¿ÑÑÐ¸ Ðº ÑÑÐµÐ·Ð²Ð¾Ñ",
+        "has_demo_notice": false,
+        "has_demo_placeholder": false,
+        "canonical_host": "shpigovsky.ru",
+        "canonical": "https://shpigovsky.ru",
+        "beget_abs_count": 0,
+        "live_abs_count": 7,
+        "rest_link": null
+      }
+    },
+    {
+      "url": "http://www.shpigovsky.ru/",
+      "allow_redirects": false,
+      "verify": true,
+      "error": null,
+      "status": 301,
+      "final_url": "http://www.shpigovsky.ru/",
+      "headers": {
+        "Location": "https://www.shpigovsky.ru/",
+        "Server": "nginx-reuseport/1.21.1",
+        "Content-Type": "text/html"
+      },
+      "history": [],
+      "body_bytes": 179,
+      "body_snippet": "<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx-reuseport/1.21.1</center>\r\n</body>\r\n</html>\r\n",
+      "has_demo_notice": false,
+      "has_demo_placeholder": false,
+      "canonical_host": null,
+      "beget_abs_count": 0,
+      "live_abs_count": 0,
+      "rest_link": null,
+      "follow": {
+        "url": "http://www.shpigovsky.ru/",
+        "allow_redirects": true,
+        "verify": false,
+        "error": null,
+        "status": 200,
+        "final_url": "https://shpigovsky.ru/",
+        "headers": {
+          "Server": "nginx",
+          "Content-Type": "text/html"
+        },
+        "history": [
+          {
+            "status": 301,
+            "url": "http://www.shpigovsky.ru/",
+            "location": "https://www.shpigovsky.ru/"
+          },
+          {
+            "status": 301,
+            "url": "https://www.shpigovsky.ru/",
+            "location": "https://shpigovsky.ru/"
+          }
+        ],
+        "body_bytes": 531136,
+        "body_snippet": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"utf-8\"/>\n        \n            <title>ÐÐµÑÐµÐ½Ð¸Ðµ Ð°Ð»ÐºÐ¾Ð³Ð¾Ð»Ð¸Ð·Ð¼Ð° Ð¸ Ð½Ð°ÑÐºÐ¾Ð¼Ð°Ð½Ð¸Ð¸ ÑÐµÐ½ÑÑ |  ÐÐµÑÐµÐ½Ð¸Ðµ Ð·Ð°Ð²Ð¸ÑÐ¸Ð¼Ð¾ÑÑÐ¸ ÐÐ¾ÑÐºÐ²Ð°</title>\n            <meta name=\"title\" content=\"ÐÐµÑÐµÐ½Ð¸Ðµ Ð°Ð»ÐºÐ¾Ð³Ð¾Ð»Ð¸Ð·Ð¼Ð° Ð¸ Ð½Ð°ÑÐºÐ¾Ð¼Ð°Ð½Ð¸Ð¸ ÑÐµÐ½ÑÑ |  ÐÐµÑÐµÐ½Ð¸Ðµ Ð·Ð°Ð²Ð¸ÑÐ¸Ð¼Ð¾ÑÑÐ¸ ÐÐ¾ÑÐºÐ²Ð°\"/>\n        \n        \n            <meta name=\"description\" content=\"Ð¦ÐµÐ½ÑÑ Ð»ÐµÑÐµÐ½Ð¸Ñ Ð°Ð»ÐºÐ¾Ð³Ð¾Ð»Ð¸Ð·Ð¼Ð° Ð¸ Ð½Ð°ÑÐºÐ¾Ð¼Ð°Ð½Ð¸Ð¸ Ð¿ÑÐµÐ´Ð»Ð°Ð³Ð°ÐµÑ ÐºÐ¾Ð¼Ð¿Ð»ÐµÐºÑÐ½ÑÐµ Ð¿ÑÐ¾Ð³ÑÐ°Ð¼Ð¼Ñ ÑÐµÐ°Ð±Ð¸Ð»Ð¸ÑÐ°ÑÐ¸Ð¸ Ð´Ð»Ñ ÑÑÐ¿ÐµÑÐ½Ð¾Ð³Ð¾ Ð¸Ð·Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ñ Ð¾Ñ Ð·Ð°Ð²Ð¸ÑÐ¸Ð¼Ð¾ÑÑÐµÐ¹. ÐÑÐ¾ÑÐµÑÑÐ¸Ð¾Ð½Ð°Ð»ÑÐ½Ð°Ñ Ð¿Ð¾Ð¼Ð¾ÑÑ Ð¸ Ð¿Ð¾Ð´Ð´ÐµÑÐ¶ÐºÐ° Ð½Ð° Ð¿ÑÑÐ¸ Ðº ÑÑÐµÐ·Ð²Ð¾Ñ",
+        "has_demo_notice": false,
+        "has_demo_placeholder": false,
+        "canonical_host": "shpigovsky.ru",
+        "canonical": "https://shpigovsky.ru",
+        "beget_abs_count": 0,
+        "live_abs_count": 7,
+        "rest_link": null
+      }
+    },
+    {
+      "url": "https://www.shpigovsky.ru/",
+      "allow_redirects": false,
+      "verify": true,
+      "error": null,
+      "status": 301,
+      "final_url": "https://www.shpigovsky.ru/",
+      "headers": {
+        "Location": "https://shpigovsky.ru/",
+        "Server": "nginx-reuseport/1.21.1",
+        "Content-Type": "text/html; charset=UTF-8"
+      },
+      "history": [],
+      "body_bytes": 0,
+      "body_snippet": "",
+      "has_demo_notice": false,
+      "has_demo_placeholder": false,
+      "canonical_host": null,
+      "beget_abs_count": 0,
+      "live_abs_count": 0,
+      "rest_link": null,
+      "follow": {
+        "url": "https://www.shpigovsky.ru/",
+        "allow_redirects": true,
+        "verify": false,
+        "error": null,
+        "status": 200,
+        "final_url": "https://shpigovsky.ru/",
+        "headers": {
+          "Server": "nginx",
+          "Content-Type": "text/html"
+        },
+        "history": [
+          {
+            "status": 301,
+            "url": "https://www.shpigovsky.ru/",
+            "location": "https://shpigovsky.ru/"
+          }
+        ],
+        "body_bytes": 531136,
+        "body_snippet": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"utf-8\"/>\n        \n            <title>ÐÐµÑÐµÐ½Ð¸Ðµ Ð°Ð»ÐºÐ¾Ð³Ð¾Ð»Ð¸Ð·Ð¼Ð° Ð¸ Ð½Ð°ÑÐºÐ¾Ð¼Ð°Ð½Ð¸Ð¸ ÑÐµÐ½ÑÑ |  ÐÐµÑÐµÐ½Ð¸Ðµ Ð·Ð°Ð²Ð¸ÑÐ¸Ð¼Ð¾ÑÑÐ¸ ÐÐ¾ÑÐºÐ²Ð°</title>\n            <meta name=\"title\" content=\"ÐÐµÑÐµÐ½Ð¸Ðµ Ð°Ð»ÐºÐ¾Ð³Ð¾Ð»Ð¸Ð·Ð¼Ð° Ð¸ Ð½Ð°ÑÐºÐ¾Ð¼Ð°Ð½Ð¸Ð¸ ÑÐµÐ½ÑÑ |  ÐÐµÑÐµÐ½Ð¸Ðµ Ð·Ð°Ð²Ð¸ÑÐ¸Ð¼Ð¾ÑÑÐ¸ ÐÐ¾ÑÐºÐ²Ð°\"/>\n        \n        \n            <meta name=\"description\" content=\"Ð¦ÐµÐ½ÑÑ Ð»ÐµÑÐµÐ½Ð¸Ñ Ð°Ð»ÐºÐ¾Ð³Ð¾Ð»Ð¸Ð·Ð¼Ð° Ð¸ Ð½Ð°ÑÐºÐ¾Ð¼Ð°Ð½Ð¸Ð¸ Ð¿ÑÐµÐ´Ð»Ð°Ð³Ð°ÐµÑ ÐºÐ¾Ð¼Ð¿Ð»ÐµÐºÑÐ½ÑÐµ Ð¿ÑÐ¾Ð³ÑÐ°Ð¼Ð¼Ñ ÑÐµÐ°Ð±Ð¸Ð»Ð¸ÑÐ°ÑÐ¸Ð¸ Ð´Ð»Ñ ÑÑÐ¿ÐµÑÐ½Ð¾Ð³Ð¾ Ð¸Ð·Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ñ Ð¾Ñ Ð·Ð°Ð²Ð¸ÑÐ¸Ð¼Ð¾ÑÑÐµÐ¹. ÐÑÐ¾ÑÐµÑÑÐ¸Ð¾Ð½Ð°Ð»ÑÐ½Ð°Ñ Ð¿Ð¾Ð¼Ð¾ÑÑ Ð¸ Ð¿Ð¾Ð´Ð´ÐµÑÐ¶ÐºÐ° Ð½Ð° Ð¿ÑÑÐ¸ Ðº ÑÑÐµÐ·Ð²Ð¾Ñ",
+        "has_demo_notice": false,
+        "has_demo_placeholder": false,
+        "canonical_host": "shpigovsky.ru",
+        "canonical": "https://shpigovsky.ru",
+        "beget_abs_count": 0,
+        "live_abs_count": 7,
+        "rest_link": null
+      }
+    },
+    {
+      "url": "http://shpigovsky.beget.tech/",
+      "allow_redirects": false,
+      "verify": true,
+      "error": null,
+      "status": 301,
+      "final_url": "http://shpigovsky.beget.tech/",
+      "headers": {
+        "Location": "https://shpigovsky.ru/",
+        "Server": "nginx-reuseport/1.21.1",
+        "Content-Type": "text/html; charset=UTF-8"
+      },
+      "history": [],
+      "body_bytes": 0,
+      "body_snippet": "",
+      "has_demo_notice": false,
+      "has_demo_placeholder": false,
+      "canonical_host": null,
+      "beget_abs_count": 0,
+      "live_abs_count": 0,
+      "rest_link": null,
+      "follow": {
+        "url": "http://shpigovsky.beget.tech/",
+        "allow_redirects": true,
+        "verify": false,
+        "error": null,
+        "status": 200,
+        "final_url": "https://shpigovsky.ru/",
+        "headers": {
+          "Server": "nginx",
+          "Content-Type": "text/html"
+        },
+        "history": [
+          {
+            "status": 301,
+            "url": "http://shpigovsky.beget.tech/",
+            "location": "https://shpigovsky.ru/"
+          }
+        ],
+        "body_bytes": 531136,
+        "body_snippet": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"utf-8\"/>\n        \n            <title>ÐÐµÑÐµÐ½Ð¸Ðµ Ð°Ð»ÐºÐ¾Ð³Ð¾Ð»Ð¸Ð·Ð¼Ð° Ð¸ Ð½Ð°ÑÐºÐ¾Ð¼Ð°Ð½Ð¸Ð¸ ÑÐµÐ½ÑÑ |  ÐÐµÑÐµÐ½Ð¸Ðµ Ð·Ð°Ð²Ð¸ÑÐ¸Ð¼Ð¾ÑÑÐ¸ ÐÐ¾ÑÐºÐ²Ð°</title>\n            <meta name=\"title\" content=\"ÐÐµÑÐµÐ½Ð¸Ðµ Ð°Ð»ÐºÐ¾Ð³Ð¾Ð»Ð¸Ð·Ð¼Ð° Ð¸ Ð½Ð°ÑÐºÐ¾Ð¼Ð°Ð½Ð¸Ð¸ ÑÐµÐ½ÑÑ |  ÐÐµÑÐµÐ½Ð¸Ðµ Ð·Ð°Ð²Ð¸ÑÐ¸Ð¼Ð¾ÑÑÐ¸ ÐÐ¾ÑÐºÐ²Ð°\"/>\n        \n        \n            <meta name=\"description\" content=\"Ð¦ÐµÐ½ÑÑ Ð»ÐµÑÐµÐ½Ð¸Ñ Ð°Ð»ÐºÐ¾Ð³Ð¾Ð»Ð¸Ð·Ð¼Ð° Ð¸ Ð½Ð°ÑÐºÐ¾Ð¼Ð°Ð½Ð¸Ð¸ Ð¿ÑÐµÐ´Ð»Ð°Ð³Ð°ÐµÑ ÐºÐ¾Ð¼Ð¿Ð»ÐµÐºÑÐ½ÑÐµ Ð¿ÑÐ¾Ð³ÑÐ°Ð¼Ð¼Ñ ÑÐµÐ°Ð±Ð¸Ð»Ð¸ÑÐ°ÑÐ¸Ð¸ Ð´Ð»Ñ ÑÑÐ¿ÐµÑÐ½Ð¾Ð³Ð¾ Ð¸Ð·Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ñ Ð¾Ñ Ð·Ð°Ð²Ð¸ÑÐ¸Ð¼Ð¾ÑÑÐµÐ¹. ÐÑÐ¾ÑÐµÑÑÐ¸Ð¾Ð½Ð°Ð»ÑÐ½Ð°Ñ Ð¿Ð¾Ð¼Ð¾ÑÑ Ð¸ Ð¿Ð¾Ð´Ð´ÐµÑÐ¶ÐºÐ° Ð½Ð° Ð¿ÑÑÐ¸ Ðº ÑÑÐµÐ·Ð²Ð¾Ñ",
+        "has_demo_notice": false,
+        "has_demo_placeholder": false,
+        "canonical_host": "shpigovsky.ru",
+        "canonical": "https://shpigovsky.ru",
+        "beget_abs_count": 0,
+        "live_abs_count": 7,
+        "rest_link": null
+      }
+    },
+    {
+      "url": "https://shpigovsky.beget.tech/",
+      "allow_redirects": false,
+      "verify": true,
+      "error": "ReadTimeout: HTTPSConnectionPool(host='shpigovsky.beget.tech', port=443): Read timed out. (read timeout=25)",
+      "follow": {
+        "url": "https://shpigovsky.beget.tech/",
+        "allow_redirects": true,
+        "verify": false,
+        "error": "ReadTimeout: HTTPSConnectionPool(host='shpigovsky.beget.tech', port=443): Read timed out. (read timeout=25)"
+      }
+    }
+  ]
+}
