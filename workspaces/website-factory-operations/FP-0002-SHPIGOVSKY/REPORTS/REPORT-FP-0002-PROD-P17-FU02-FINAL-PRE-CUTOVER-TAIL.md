@@ -203,7 +203,7 @@ Theme/plugin/MU vs origin: MATCH (dirty local `content-page.php` extra newlines 
 
 ## 23. Git
 
-Clean worktree checkpoint `16706398f03825b054ce75c56e8af48ec4349329` on `origin/mars/canonical-post-recovery`. Dirty main / foreign WIP **untouched**. Secret scan on staged paths **PASS**. No registrar/DNS/SMTP credentials.
+Clean worktree checkpoint `16706398f03825b054ce75c56e8af48ec4349329` (`FP-0002: close final pre-cutover tails`) plus follow-up `e9f623330deb58a5e928d4b457c37aff27c2132e` (`docs(fp-0002): record P17-FU02 git checkpoint`) on `origin/mars/canonical-post-recovery`. Dirty main / foreign WIP **untouched**. Secret scan on staged paths **PASS**. No registrar/DNS/SMTP credentials. Dashboard `git_sha` = `16706398f03825b054ce75c56e8af48ec4349329`.
 
 ---
 
