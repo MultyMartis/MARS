@@ -1,0 +1,47 @@
+{
+  "schema_version": "corvonero-rsy-architecture-revision-v1.1",
+  "created_at": "2026-08-19T01:30:00+07:00",
+  "project": "CorvoNero / Корво Неро",
+  "programme": "mars-search-ppc-production",
+  "state": "OPERATIONAL / LAUNCHED / PERFORMANCE_OBSERVATION",
+  "pack_status": "AMENDMENT_PACK / NOT_AN_IMPORT_PACKAGE / NOT_LAUNCH_APPROVED",
+  "amends_v1_checkpoint": "e89c9593d9dd70a8e12c81bbed0d470386bc51c6",
+  "search_authority_unchanged": "V2.6 / V2.6.2",
+  "revision_reason": "v1 LOCAL_REMOTE_SPLIT remained useful as a control split but did not account for package/portfolio strategy and the risk of independent budgets/learning pools on a limited account balance.",
+  "operator_insight_status": "OPERATOR_INSIGHT / NOT_OFFICIAL_DOC_CONFIRMED",
+  "v1_recommended_structure": "LOCAL_REMOTE_SPLIT",
+  "v1_1_recommended_structure": "TWO_RSY_CAMPAIGNS_LOCAL_REMOTE__EVALUATE_PACKAGE",
+  "fallback_structure": "ONE_RSY_CAMPAIGN_TEN_GROUPS",
+  "expansion_structure": "HYBRID_SPLIT_WINNERS_UNDER_PACKAGE",
+  "campaigns_primary": [
+    "CORVONERO-RSY-LOCAL",
+    "CORVONERO-RSY-REMOTE"
+  ],
+  "package_strategy": {
+    "evaluate_from_first_launch": true,
+    "candidate_members": [
+      "CORVONERO-RSY-LOCAL",
+      "CORVONERO-RSY-REMOTE"
+    ],
+    "do_not_assume_search_join": true,
+    "cabinet_confirmation_required": true
+  },
+  "directions_included": 5,
+  "logical_groups": 10,
+  "weak_nonconverting_included": true,
+  "exclude_count": 0,
+  "weak_directions_policy": "INCLUDED_IN_PLANNING_WITH_CONTROLLED_EXPOSURE",
+  "landing_split": "SAME_URL_FOR_LOCAL_AND_REMOTE",
+  "structure_options_evaluated": ["A", "B1_independent", "B2_package", "C", "D"],
+  "not_created_guard": {
+    "rsy_import_xlsx": "NOT CREATED",
+    "final_ads": "NOT CREATED",
+    "image_prompts": "NOT CREATED",
+    "images": "NOT CREATED",
+    "direct": "NOT MODIFIED",
+    "commander": "NOT MODIFIED",
+    "launch_approval": "NOT_GRANTED"
+  },
+  "storage_package": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-RSY-ARCHITECTURE-REVISION-PACK-2026-08-19",
+  "report": "projects\\mars-search-ppc-production\\reports\\REPORT-corvonero-rsy-architecture-revision-v1.1.md"
+}
