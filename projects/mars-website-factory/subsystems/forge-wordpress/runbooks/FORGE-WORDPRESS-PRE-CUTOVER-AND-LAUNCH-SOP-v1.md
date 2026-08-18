@@ -65,6 +65,12 @@ Update the production Dashboard / system-status widget in the **same wave** as d
 
 Default SMTP technical sender mailbox: `noreply@<domain>` unless the project names another identity. Do not commit credentials.
 
+SMTP Admin storage (WP options) is **not** a dedicated secret manager. Acceptable for studio sites if: write-only password field; blank keeps existing secret; never rendered/logged/REST/Git; autoload off.
+
+Form reliability: persist the internal lead **before** `wp_mail`. Frontend success may mean “submission accepted”, not “email delivered”. Metrika `reachGoal` fires only after backend-confirmed success.
+
+Mail suppression must have an explicit retirement path: NOT CONFIGURED → CONFIGURED/NOT VERIFIED (still suppressed) → VERIFIED → operator activates delivery. Do not auto-enable on Save. Do not leave a second competing mail switch forever.
+
 ---
 
 ## Forbidden in pre-cutover waves

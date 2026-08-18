@@ -115,8 +115,8 @@ If the editor cannot predict the frontend from the field help, the field is unfi
 
 ## 8. SMTP technical sender identity
 
-The technical website sender mailbox defaults to `noreply@<site-domain>` ([FORMS-AND-SMTP](FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) §5). This is a **hosting identity**, not a Site Settings password field. Do not store SMTP passwords in Git.
+The technical website sender mailbox defaults to `noreply@<site-domain>` ([FORMS-AND-SMTP](FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) §5). SMTP host/port/password/recipients belong in the dedicated **Почта и формы** Admin owner — not in chrome fields, Git, or ACF fields named `*password*` / `*smtp*`. WordPress DB storage of the mailbox secret is operator-entered and redacted; it is not a dedicated secret manager.
 
 ---
 
-*FW-S-30 v1.1 — one owner, many consumers, empty-safe chrome.*
+*FW-S-30 v1.2 — one owner, many consumers, empty-safe chrome; SMTP Admin owner.*

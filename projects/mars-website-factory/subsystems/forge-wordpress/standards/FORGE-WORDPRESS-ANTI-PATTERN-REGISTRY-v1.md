@@ -240,6 +240,83 @@ Each ID is reusable. Client facts are generalized.
 | Replacement | [ADMIN UX](FORGE-WORDPRESS-ADMIN-UX-STANDARD-v1.md) §10.3 · [SEARCH-INDEXING-CONTROL](FORGE-WORDPRESS-SEARCH-INDEXING-CONTROL-STANDARD-v1.md) |
 | Evidence | P18B MetaCODE Dashboard |
 
+## AP-022 — FORM-001 Successful UI depends solely on email transport
+
+| | |
+|--|--|
+| Symptom | Visitor sees error though the request existed; or success claimed only after SMTP |
+| Cause | Persist-after-mail or no persist |
+| Risk | Lost leads |
+| Prevention | Persist lead before `wp_mail`; frontend success = accepted submission |
+| Replacement | [FORMS-AND-SMTP](FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) §9 |
+| Evidence | FP-0002 P18C |
+
+## AP-023 — FORM-002 No internal record of submitted leads
+
+| | |
+|--|--|
+| Symptom | Inbox is the only history |
+| Cause | Forms treated as mail scripts |
+| Risk | Unrecoverable missed requests |
+| Prevention | Dedicated lead table; business Admin list |
+| Replacement | [FORMS-AND-SMTP](FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) §9 |
+| Evidence | FP-0002 P18C |
+
+## AP-024 — FORM-003 Metrika goal fires on button click
+
+| | |
+|--|--|
+| Symptom | Goals fire on invalid or unsent clicks |
+| Cause | `reachGoal` in submit handler before backend |
+| Risk | False conversion stats |
+| Prevention | Fire only after backend-confirmed success JSON |
+| Replacement | [FORMS-AND-SMTP](FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) §10 |
+| Evidence | FP-0002 P18C |
+
+## AP-025 — FORM-004 SMTP password stored in source/Git
+
+| | |
+|--|--|
+| Symptom | Password in wp-config, theme, reports |
+| Cause | Convenience |
+| Risk | Credential leak |
+| Prevention | Admin write-only field; never render/log/commit |
+| Replacement | [FORMS-AND-SMTP](FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) §7 |
+| Evidence | FP-0002 P18C |
+
+## AP-026 — FORM-005 Visitor email used as From
+
+| | |
+|--|--|
+| Symptom | SPF/DKIM fail; spoofed From |
+| Cause | “Reply goes to the visitor” implemented as From |
+| Risk | Spam folder; domain reputation |
+| Prevention | From = `noreply@<domain>`; Reply-To = visitor only if valid |
+| Replacement | [FORMS-AND-SMTP](FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) §12 |
+| Evidence | FP-0002 P18C |
+
+## AP-027 — FORM-006 Mail suppression left forever after launch
+
+| | |
+|--|--|
+| Symptom | MU `pre_wp_mail` still false after SMTP is live |
+| Cause | Temporary suppress without retirement |
+| Risk | Silent non-delivery |
+| Prevention | Explicit VERIFIED + activate; then retire MU |
+| Replacement | [FORMS-AND-SMTP](FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) §11 |
+| Evidence | FP-0002 P18C |
+
+## AP-028 — FORM-007 SMTP “configured” confused with SMTP “verified”
+
+| | |
+|--|--|
+| Symptom | Dashboard says SMTP ready because fields are non-empty |
+| Cause | Completeness treated as proof |
+| Risk | False launch claims |
+| Prevention | Separate states; test action; no auto-activate on Save |
+| Replacement | [FORMS-AND-SMTP](FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) §11 |
+| Evidence | FP-0002 P18C |
+
 ---
 
 ## CMS modeling namespace (`AP-CMS-*`)
@@ -267,4 +344,4 @@ Do **not** reuse AP-001–021 numbers. Full entries: [CMS-ANTI-PATTERNS](FORGE-W
 
 ---
 
-*FW-S-21 v1.3 — 21 operational anti-patterns + AP-CMS-001–016 index. Add IDs; do not reuse numbers.*
+*FW-S-21 v1.4 — 28 operational anti-patterns (AP-022–028 = FORM-001–007) + AP-CMS-001–016 index. Add IDs; do not reuse numbers.*

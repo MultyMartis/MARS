@@ -25,6 +25,9 @@
 - [ ] Dashboard widget planned (runtime status; no global notices; update in the same production wave)  
 - [ ] Indexing closed until explicit human approval; Admin control if pre-launch  
 - [ ] Default SMTP technical sender `noreply@<domain>` (no credentials in Git)  
+- [ ] Site Settings → Почта и формы as the only SMTP/recipient owner  
+- [ ] Lead table persist-before-mail; Заявки Admin  
+- [ ] Metrika counter in SEO; form stores goal only; fire after backend success  
 
 ## Before production connection
 

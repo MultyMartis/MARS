@@ -28,7 +28,7 @@
 | SEO meta, verification, analytics, advanced code; sitemap ≠ indexing | A / C | [SEO-AND-SITEMAP-STANDARD](../standards/FORGE-WORDPRESS-SEO-AND-SITEMAP-STANDARD-v1.md) |
 | Extend native `wp-sitemap`; do not invent a Yandex page feed | A / G | same |
 | Smart Search: one REST, groups, desktop+mobile, AbortController | B / F | [SMART-SEARCH-MODULE-SPEC](../standards/FORGE-WORDPRESS-SMART-SEARCH-MODULE-SPEC-v1.md) |
-| Forms: nonce, anti-spam, AJAX, no `mail()`; SMTP after domain | A / C / D | [FORMS-AND-SMTP-STANDARD](../standards/FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) |
+| Forms: nonce, anti-spam, AJAX, no `mail()`; persist lead before SMTP; Admin SMTP owner | A / C / D | [FORMS-AND-SMTP-STANDARD](../standards/FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) |
 | DOCX → draft articles, images, no auto-publish | B | [DOCX-IMPORTER-MODULE-SPEC](../standards/FORGE-WORDPRESS-DOCX-IMPORTER-MODULE-SPEC-v1.md) |
 | Article TOC from H2 only; reading time | A / B / F | [ARTICLE-SYSTEM notes in BLUEPRINT](../standards/FORGE-WORDPRESS-PRODUCTION-WEBSITE-BLUEPRINT-v1.md) §P8 |
 | Broad DB typography rewrite vs render-time pipeline | G → A | [TYPOGRAPHY-PIPELINE-STANDARD](../standards/FORGE-WORDPRESS-TYPOGRAPHY-PIPELINE-STANDARD-v1.md) |
@@ -82,6 +82,7 @@
 | P17-FU02 | `mars-runtime` incident; webroot hygiene; freeze/NS runbooks; indexing still closed | `REPORT-FP-0002-PROD-P17-FU02-FINAL-PRE-CUTOVER-TAIL.md` |
 | P18A | Operator live domain intake; legal DEMO banner owner; indexing still closed | `REPORT-FP-0002-PROD-P18A-LIVE-DOMAIN-LEGAL-STATE.md` |
 | P18B | Dashboard reality sync; safe Admin indexing control; indexing remains CLOSED | `REPORT-FP-0002-PROD-P18B-DASHBOARD-INDEXING.md` |
+| P18C | SMTP/forms Admin owner; lead persist-before-mail; Metrika goal after backend success; suppression remains ON | `REPORT-FP-0002-PROD-P18C-SMTP-FORMS-FOUNDATION.md` |
 
 Earlier V9 Admin-parity / ACF SoT / operator-CSS canon work remains valid foundation (Experience Pack Phase 1–2). It is **historical**; production operations above supersede it for launch.
 

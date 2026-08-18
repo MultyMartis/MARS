@@ -11,7 +11,7 @@ Source (reference, not a shared package yet):
 `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/plugins/shpigovsky-core/`  
 Theme consumers: `.../WORDPRESS/theme/shpigovsky/`
 
-Extraction status: [roadmap](../knowledge/FORGE-WORDPRESS-REUSABLE-CODE-EXTRACTION-ROADMAP-v1.md) (R1–R4). Short table: [backlog](../knowledge/FORGE-WORDPRESS-MODULE-EXTRACTION-BACKLOG-v1.md).
+Extraction status: [backlog](../knowledge/FORGE-WORDPRESS-MODULE-EXTRACTION-BACKLOG-v1.md).
 
 ---
 
@@ -42,7 +42,9 @@ Extraction status: [roadmap](../knowledge/FORGE-WORDPRESS-REUSABLE-CODE-EXTRACTI
 | DOCX Publisher | Draft import | PRODUCTION PROVEN WITH CAVEATS | B |
 | Reading Time | Auto WPM + override | PRODUCTION PROVEN | B |
 | Auto TOC | H2 IDs + list | PRODUCTION PROVEN | B |
-| Consultation Forms | AJAX lead | PRODUCTION PROVEN WITH CAVEATS (pre-SMTP) | B |
+| Consultation Forms | AJAX lead + persist-before-mail | PRODUCTION PROVEN WITH CAVEATS (SMTP verification still a later gate) | B |
+| SMTP Admin / PHPMailer owner | One Admin config + `phpmailer_init` | PRODUCTION PROVEN WITH CAVEATS | B |
+| Form lead registry | Dedicated table + Заявки Admin | PRODUCTION PROVEN WITH CAVEATS | B |
 | Decorative parallax | Brand motion | EXPERIMENTAL / PROJECT-SPECIFIC | I/J + **H** QA |
 | Advanced analytics | GTM/Metrica/etc. | PRODUCTION PROVEN WITH CAVEATS | B — empty-safe fields |
 

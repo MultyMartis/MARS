@@ -113,8 +113,8 @@
 ## ADR-P19 — Default technical SMTP sender `noreply@<domain>`
 
 **Context:** Hosting mailboxes are created ad hoc.  
-**Decision:** Dedicated technical sender defaults to `noreply@<site-domain>` unless the project names another identity. Credentials never in Git.  
-**See:** [FORMS-AND-SMTP](../standards/FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) §5
+**Decision:** Dedicated technical sender defaults to `noreply@<site-domain>` unless the project names another identity. Credentials never in Git. Admin write-only password. Persist leads before mail. Metrika goals fire only after backend-confirmed success.  
+**See:** [FORMS-AND-SMTP](../standards/FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md)
 
 ---
 

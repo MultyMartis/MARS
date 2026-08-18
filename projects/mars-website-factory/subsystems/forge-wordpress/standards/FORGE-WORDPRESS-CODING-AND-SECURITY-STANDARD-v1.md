@@ -92,6 +92,7 @@ AI- or scaffold-generated PHP requires **human review** before merge:
 | 2 | No unescaped output in theme templates | WV4 |
 | 3 | REST/AJAX permission callbacks | WV4 |
 | 4 | No secrets in Git | WV4 |
+| 4a | SMTP mailbox password: Admin write-only; never HTML/log/REST | WV4 |
 | 5 | Plugin register security status complete | WV4 |
 | 6 | `WP_DEBUG` false in production manifest | WV4 |
 

@@ -75,4 +75,67 @@ Example (FP-0002): mailbox `noreply@shpigovsky.ru` may exist at the host while W
 
 ---
 
-*FW-S-13 v1.1.*
+## 6. One Admin owner
+
+SMTP host/port/encryption/auth/username/password, sender, recipients, form Metrika goal, and lead retention live in **one** Admin section (Site Settings → Почта и формы). Do not scatter fields across `wp-config`, theme, handlers, and plugin files.
+
+Saving fields ≠ verified. Verified ≠ active outbound delivery.
+
+---
+
+## 7. SMTP secrets
+
+Operator-entered Admin storage (dedicated `wp_options`, autoload off) may be accepted for a typical site. It is **not** a cryptographic secret manager.
+
+Never:
+
+- commit the password
+- render it in HTML
+- show it in Dashboard / Activity Log / REST / reports
+- log PHPMailer dumps that include credentials
+
+Write-only UX: show CONFIGURED / NOT CONFIGURED; blank field keeps the existing secret.
+
+---
+
+## 8. Transport owner
+
+One PHPMailer / `phpmailer_init` owner in the functionality plugin. No competing SMTP plugin unless the project charter requires it. Forms use `wp_mail` only — never PHP `mail()`.
+
+---
+
+## 9. Lead persistence (source of truth)
+
+```text
+validate → normalize → persist lead → attempt mail → update delivery status → JSON
+```
+
+**FORM LEAD PERSISTENCE DOES NOT DEPEND ON EMAIL SUCCESS.** Email is transport. Frontend success may mean “заявка принята” after persist even if mail is suppressed or failed. Do not call SMTP acceptance “delivered to inbox”.
+
+Preferred statuses: `RECEIVED`, `MAIL_SUPPRESSED`, `SMTP_PENDING`, `MAIL_ACCEPTED`, `MAIL_ERROR`.
+
+---
+
+## 10. Analytics
+
+Yandex Metrika **counter** lives in SEO / Integrations. Form settings store only the **goal identifier**. Fire `reachGoal` only after a backend-confirmed accepted response. Never on button click. Analytics must not break submit UX if the counter is missing or blocked.
+
+Goal semantics: **FORM SUBMISSION ACCEPTED**, not **EMAIL DELIVERED**, unless the product explicitly proves mailbox delivery.
+
+---
+
+## 11. Mail suppression lifecycle
+
+Temporary MU `pre_wp_mail` is allowed until SMTP is **verified** and the operator **explicitly activates** sending. Do not auto-enable on Save. Retire the MU after the SMTP module owns production delivery (AP-027 / FORM-006).
+
+States: NOT CONFIGURED → CONFIGURED / NOT VERIFIED → VERIFIED → VERIFIED / ACTIVE. Do not confuse configured with verified (AP-028 / FORM-007).
+
+---
+
+## 12. Reply-To / From
+
+From = `noreply@<domain>` (or the project sender). Reply-To = visitor email **only** if valid. Never put the visitor address in From.
+
+---
+
+*FW-S-13 v1.2 — P18C lead registry + Admin SMTP owner.*

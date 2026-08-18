@@ -150,10 +150,10 @@ Client-specific values are omitted. Evidence paths are under `workspaces/website
 | Field | Value |
 |-------|--------|
 | Residue | Local MU `pre_wp_mail` labeled as local even on Beget |
-| Final | Reclassified PRE-CUTOVER suppress; remove only in SMTP phase |
-| Lesson | Do not send from temporary host as if final; do not open indexing first |
+| Final | Persist lead before mail; Admin SMTP owner; suppress until VERIFIED+ACTIVE; `noreply@<domain>` |
+| Lesson | Email is transport, not the record that a form submission existed. Saving SMTP fields ≠ verified. Password never rendered/logged/Git. |
 | Class | D |
-| Evidence | P15; P17-FU02 |
+| Evidence | P15; P17-FU02; P18C |
 
 ## 14. Article / blog workflow
 

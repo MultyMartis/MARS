@@ -38,6 +38,7 @@ Names are roles, not ACF keys. Localize labels.
 | 7 | **Аналитика / verification** | Metrica, GA/GTM, Webmaster, Search Console | head | — | empty → no output |
 | 8 | **Advanced code** | Extra head / body / footer HTML | theme hooks | Admin-only | capability-gated; no editor role |
 | 9 | **System status** | **Not** a settings tab — Dashboard widget | WP Dashboard | Admin | [ADMIN-UX](FORGE-WORDPRESS-ADMIN-UX-STANDARD-v1.md) |
+| 10 | **Почта и формы** | SMTP, sender `noreply@`, recipients, Metrika **goal** only, lead retention | mail transport + forms | Admin | not chrome; password write-only; [FORMS-AND-SMTP](FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) |
 
 Merge 4+7 if the project is small. Keep **Advanced code** visually last and dangerous.
 

@@ -150,7 +150,7 @@ Hide Classic editor / excerpt / revisions / parent when ACF owns the entity. Lis
 
 **SYSTEM INFORMATION BELONGS IN ONE OPERATIONS WIDGET, NOT GLOBAL ADMIN NOTICES** (AP-005).
 
-Suggested widget fields: project, environment, live domain, WordPress/PHP versions, domain/DNS/HTTPS (actual), core version, WPilot write state, latest production wave, source/prod parity, backup pointer, indexing OPEN/CLOSED, mail/SMTP pending, open launch tails, last verification. No secrets. No “future host” after the live domain is already in `home`/`siteurl`.
+Suggested widget fields: project, environment, live domain, WordPress/PHP versions, domain/DNS/HTTPS (actual), core version, WPilot write state, latest production wave, source/prod parity, backup pointer, indexing OPEN/CLOSED, mail/SMTP **state** (configured is not verified), sender `noreply@…`, lead registry, open launch tails, last verification. No secrets. No mailbox password. No “future host” after the live domain is already in `home`/`siteurl`.
 
 After major production waves the widget **must** be updated in the same wave ([DoD](FORGE-WORDPRESS-DEFINITION-OF-DONE-v1.md)). Indexing control: [SEARCH-INDEXING-CONTROL](FORGE-WORDPRESS-SEARCH-INDEXING-CONTROL-STANDARD-v1.md).
 
@@ -160,7 +160,7 @@ Visibility flags, raw head/body injection, Options dump, migration tools — Adm
 
 ### 10.5 Proven Admin surfaces (pattern, not brand)
 
-Specialists CPT cleanup; SEO & Integrations; Social/Messengers; Smart Search settings; Activity Log; DOCX importer; MetaCODE Dashboard.
+Specialists CPT cleanup; SEO & Integrations; Social/Messengers; Smart Search settings; Activity Log; DOCX importer; MetaCODE Dashboard; **Почта и формы** (one SMTP/forms owner); **Заявки** (business lead list, not a raw DB viewer).
 
 ### 10.6 Acceptance extras
 
