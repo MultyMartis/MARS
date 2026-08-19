@@ -48,7 +48,7 @@ Additional intake categories (content, branding, access, hosting, WordPress) may
 
 ## Current status
 
-**Empty** — Awaiting Phase 1 materials promotion.
+**Phase 1A (2026-08-20):** 2 files promoted to `01_DESIGN/` from Storage. See [MATERIALS-INTAKE-v1.md](../MATERIALS-INTAKE-v1.md).
 
 ---
 

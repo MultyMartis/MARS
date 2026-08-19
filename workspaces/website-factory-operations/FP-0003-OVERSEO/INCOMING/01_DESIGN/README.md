@@ -33,7 +33,12 @@
 
 ## Current status
 
-**Empty** — Awaiting Phase 1 intake.
+**Phase 1A (2026-08-20):**
+
+- `Главная страница (1).pdf` — Olga homepage mockup
+- `photo_2026-08-19_22-54-17.jpg` — «Overseo в цифрах» block export
+
+See [MATERIALS-INTAKE-v1.md](../../MATERIALS-INTAKE-v1.md).
 
 ---
 
