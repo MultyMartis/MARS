@@ -1,54 +1,53 @@
 # RUNBOOK — FP-0002 PROD-P18 FINAL DOMAIN CUTOVER (CURRENT EXECUTION STATE)
 
-**Wave executed:** **P18C-FU01** — Admin menu exposure for Почта и формы (2026-08-19)  
-**P18 remainder:** operator SMTP credentials → verification → real form QA · public apex → WordPress bind · Olya indexing · sitemaps · crawl.
+**Wave executed:** **P18D-FU01** — fresh production intake, SMTP transport correction (none→ssl/465), verification, activation, physical suppression-MU retirement, bounded post-removal form QA, exact QA cleanup, indexing re-close, Olya/Admin truth preservation (2026-08-19)  
+**P18 remainder:** public-domain finalization only if regression appears · Olya indexing approval · sitemaps · crawl.
 
-Historical trigger `NS SWITCHED` and WordPress `home`/`siteurl` cutover are **complete** (operator). Do **not** wait for NS or URL cutover anymore. Do **not** open indexing automatically. Do **not** claim SMTP verified until the operator saves real settings and a later wave tests delivery.
+Historical trigger `NS SWITCHED` and WordPress `home`/`siteurl` cutover are **complete** (operator). Do **not** wait for NS or URL cutover anymore. Do **not** open indexing automatically. Do **not** rollback current editor-owned DB content from an older backup to recover technical state.
 
 ---
 
-## Current facts (P18C-FU01 verification)
+## Current facts (P18D-FU01 closeout)
 
 | Surface | Value |
 |---------|--------|
 | WordPress `home` | `https://shpigovsky.ru` |
 | WordPress `siteurl` | `https://shpigovsky.ru` |
-| Core | `0.3.13-p18c-fu01` |
-| SMTP Admin | **Настройки сайта → Почта и формы** (visible left-menu item) |
-| SMTP state | **NOT CONFIGURED** (credentials not entered) |
+| Core target | `0.3.16-p18d-fu01` |
+| SMTP Admin | **Настройки сайта → Почта и формы** |
+| SMTP state | **VERIFIED / ACTIVE** |
+| SMTP transport | `smtp.beget.com` port `465` encryption `ssl` |
 | Sender | `noreply@shpigovsky.ru` |
-| Mail suppression | **ON** (`delivery_active=0`) |
+| Mail suppression | **OFF** (delivery_active=1 → should_suppress()=false) |
+| Suppression MU | **REMOVED** |
 | Lead registry | table `fp02_form_leads` schema v1 **ACTIVE** |
+| Form QA | PASS — MAIL_ACCEPTED status recorded |
 | Leads Admin | **Заявки** top-level — reachable |
 | Metrika form goals | Admin-configurable; counter owner = SEO |
 | Indexing | **CLOSED** (`blog_public=0`) |
-| Public apex | still observed as **legacy Craftum** at P18C/FU01 intake |
-| Source ↔ production | **4/4 MATCH** (FU01 touched files) |
+| Public apex | WordPress currently visible on `https://shpigovsky.ru/` |
+| Source ↔ production | SMTP/forms closeout surfaces verified; dashboard/core sync handled in FU01 |
 
 **Do not revert** `home`/`siteurl` to `shpigovsky.beget.tech`.
 
 ---
 
-## Operator next (this is the current handoff)
+## Operator next (P18D-FU01 complete — current handoff)
 
-1. Open **Настройки сайта → Почта и формы**.  
-2. Enter SMTP host, port, encryption, username, password, recipients.  
-3. Save. (Save does **not** verify SMTP and does **not** enable sending.)  
-4. Do **not** open indexing.  
-5. Report that settings are saved — next wave verifies real SMTP.
+1. Do **not** open indexing without Olya approval or explicit operator command.
+2. Observe public `https://shpigovsky.ru/`; if operator sees a routing regression, open a bounded public-domain finalization wave.
+3. Keep current editor/Admin DB state as content truth; do not restore an old full DB backup over live editorial changes.
 
 ---
 
-## Remaining P18 (after operator SMTP save)
+## Remaining P18 (post-P18D)
 
-1. SMTP verification test (Admin «Отправить тестовое письмо»).  
-2. Operator activates outbound delivery.  
-3. Real form delivery QA.  
-4. Bind public apex + www so they serve **this** WordPress docroot.  
-5. Confirm visitors to `https://shpigovsky.ru/` get WordPress (not Craftum).  
-6. Indexing **only** after Olya (Dashboard «Открыть индексацию») or explicit operator command.  
-7. Sitemap submissions (manual).  
-8. Final crawl.
+1. Public-domain finalization only if regression appears.
+2. Indexing **only** after Olya (Dashboard «Открыть индексацию») or explicit operator command.
+3. Sitemap submissions (manual).
+4. Final crawl.
+
+**OPEN BUSINESS DECISION:** Form lead retention period — `lead_retention_days=0` — operator sets when ready.
 
 Exact leftover URL objects still listed in `REPORTS/evidence/prod-p17-fu02-final-tail/CUTOVER-DB-MUTATION-PLAN.json` (skip `home`/`siteurl` — already done).
 
@@ -59,7 +58,7 @@ Exact leftover URL objects still listed in `REPORTS/evidence/prod-p17-fu02-final
 - Opening indexing as a deploy side effect  
 - Claiming SMTP VERIFIED because fields exist  
 - Asking for / storing the mailbox password in Cursor, Git, reports, or Dashboard  
-- Leaving two competing mail switches after VERIFIED/ACTIVE (retire the MU)  
+- Leaving two competing mail switches after VERIFIED/ACTIVE  
 - Temporary-host 301 if it would send users to the **legacy** origin  
 - Treating Dashboard indexing button as launch authorization
 

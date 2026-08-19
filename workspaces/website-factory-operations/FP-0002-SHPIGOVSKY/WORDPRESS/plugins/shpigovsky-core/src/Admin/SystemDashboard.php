@@ -27,12 +27,12 @@ final class SystemDashboard implements ModuleInterface {
 	/**
 	 * Baseline ID shown in the widget (updated by stabilization waves).
 	 */
-	const BASELINE_ID = 'FP-0002-PROD-BASELINE-2026-08-19-P18C-FU02';
+	const BASELINE_ID = 'FP-0002-PROD-BASELINE-2026-08-19-P18D-FU01';
 
 	/**
 	 * Latest accepted production wave label.
 	 */
-	const LATEST_ACCEPTED_WAVE = 'P18C-FU02 Multiple recipients';
+	const LATEST_ACCEPTED_WAVE = 'P18D-FU01 SMTP Closeout + Olya Intake';
 
 	/**
 	 * {@inheritdoc}
@@ -209,13 +209,12 @@ final class SystemDashboard implements ModuleInterface {
 
 		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'Следующие шаги', 'shpigovsky-core' ) . '</h3>';
 		echo '<ul style="margin:0 0 12px 1.2em;">';
-		self::li( __( '1. Настройки сайта → Почта и формы: добавить нужных получателей и сохранить', 'shpigovsky-core' ) );
-		self::li( __( '2. Не открывать индексацию', 'shpigovsky-core' ) );
-		self::li( __( '3. Следующая волна: проверка SMTP + QA доставки форм', 'shpigovsky-core' ) );
-		self::li( __( '4. Привязка публичного https://shpigovsky.ru/ к WordPress, если ещё открывается старый сайт', 'shpigovsky-core' ) );
-		self::li( __( '5. Индексация — только после разрешения Оли', 'shpigovsky-core' ) );
-		self::li( __( '6. Отправка sitemap', 'shpigovsky-core' ) );
-		self::li( __( '7. Финальный обход', 'shpigovsky-core' ) );
+		self::li( __( '1. SMTP VERIFIED / ACTIVE — временное pre-cutover подавление удалено', 'shpigovsky-core' ) );
+		self::li( __( '2. Публичный https://shpigovsky.ru/ уже отдаёт WordPress; финализация домена нужна только если оператор увидит регресс', 'shpigovsky-core' ) );
+		self::li( __( '3. Индексация — ТОЛЬКО после разрешения Оли или явной команды оператора', 'shpigovsky-core' ) );
+		self::li( __( '4. Отправка sitemap (после открытия индексации)', 'shpigovsky-core' ) );
+		self::li( __( '5. Финальный обход', 'shpigovsky-core' ) );
+		self::li( __( 'Открытый вопрос: срок хранения заявок — решение оператора', 'shpigovsky-core' ) );
 		echo '</ul>';
 
 		if ( $is_beget && ( 'local' === $env_const || 'local' === $env_fn ) ) {

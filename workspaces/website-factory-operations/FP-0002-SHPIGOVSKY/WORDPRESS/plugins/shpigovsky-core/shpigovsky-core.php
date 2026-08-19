@@ -2,8 +2,8 @@
 /**
  * Plugin Name: Shpigovsky Core
  * Plugin URI: https://example.invalid/shpigovsky-core
- * Description: FP-0002 functionality plugin — V9-06C.1 content model source activation gate resolved. Runtime delivery remains separate.
- * Version: 0.3.14-p18c-fu02
+ * Description: FP-0002 functionality plugin — current production truth with SMTP closeout, editorial-truth preservation, and MU suppression retirement.
+ * Version: 0.3.16-p18d-fu01
  * Requires at least: 6.0
  * Requires PHP: 8.0
  * Author: Forge WordPress / FP-0002
@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'SHPIGOVSKY_CORE_VERSION', '0.3.14-p18c-fu02' );
+define( 'SHPIGOVSKY_CORE_VERSION', '0.3.16-p18d-fu01' );
 define( 'SHPIGOVSKY_CORE_FILE', __FILE__ );
 define( 'SHPIGOVSKY_CORE_DIR', plugin_dir_path( __FILE__ ) );
 define( 'SHPIGOVSKY_CORE_URI', plugin_dir_url( __FILE__ ) );
