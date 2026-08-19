@@ -198,7 +198,8 @@ Added to anti-pattern registry and indexing standard:
 
 - Worktree: `X:\AI MARS\worktrees\fp-0002-p18j`
 - Branch: `fp-0002/prod-p18j-indexing-qa-noise`
-- Commits: see closeout git section (selective staging only)
+- Commits: `a17a4231` (FP-0002 P18J), `d50ae4c0` (WP Forge)
+- Remote HEAD: `d50ae4c0` on `origin/mars/canonical-post-recovery`
 - Dirty main: **untouched**
 - Secret scan: evidence contains no credentials; recipient counts only
 
