@@ -120,14 +120,17 @@
 
 ## 10. Git
 
-*(Completed in worktree `fp-0003-phase0b` — see commit/push outcome below.)*
-
 | Field | Value |
 |-------|-------|
 | Worktree | `X:\AI MARS\worktrees\fp-0003-phase0b` |
 | Branch | `fp-0003-overseo-phase0b` |
-| Staged scope | Phase 1A allowlist only |
-| Foreign WIP preserved | **YES** (main worktree untouched) |
+| Remote branch | `origin/fp-0003-overseo-phase0b` *(pushed)* |
+| Commit | `c86c9db7` — `website-factory: intake overseo phase 1a materials` |
+| Remote canonical HEAD | `588a78a3` (`origin/mars/canonical-post-recovery`) |
+| Staged files (exact allowlist) | `INCOMING/01_DESIGN/Главная страница (1).pdf`; `INCOMING/01_DESIGN/photo_2026-08-19_22-54-17.jpg`; `INCOMING/01_DESIGN/README.md`; `INCOMING/README.md`; `MATERIALS-INTAKE-v1.md`; `OLYA-BRIEF-SUMMARY-v1.md`; `PROJECT-STATUS.md`; `REPORTS/REPORT-OVERSEO-PHASE-1A-MATERIALS-INTAKE.md` |
+| Push | **SUCCESS** → `origin/fp-0003-overseo-phase0b` |
+| Main worktree | **Not used** — foreign WIP + unpushed commits preserved |
+| Foreign WIP preserved | **YES** |
 
 ---
 
