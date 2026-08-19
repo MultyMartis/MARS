@@ -1,20 +1,20 @@
 # RUNBOOK — FP-0002 PROD-P18 FINAL DOMAIN CUTOVER (CURRENT EXECUTION STATE)
 
-**Wave executed:** **P18D-FU01** — fresh production intake, SMTP transport correction (none→ssl/465), verification, activation, physical suppression-MU retirement, bounded post-removal form QA, exact QA cleanup, indexing re-close, Olya/Admin truth preservation (2026-08-19)  
-**Latest planning wave:** **P18E** — cookie consent / privacy controls design complete; **no runtime mutation**; implementation still unauthorized  
-**P18 remainder:** optional privacy implementation after approval · public-domain finalization only if regression appears · Olya indexing approval · sitemaps · crawl.
+**Wave executed:** **P18E-A/B** — fresh production/privacy/legal/tracker re-intake, consent foundation deploy, exact-file parity, Dashboard truth update, Admin discoverability and persistence proof, frontend no-change proof (2026-08-19)  
+**Latest planning wave:** **P18E-C/D** — public cookie notice/settings UX + real conditional Yandex Metrika loading  
+**P18 remainder:** P18E-C/D frontend gating · P18E-E/F form-goal consent + withdrawal/policy integration · public-domain finalization only if regression appears · Olya indexing approval · sitemaps · crawl.
 
 Historical trigger `NS SWITCHED` and WordPress `home`/`siteurl` cutover are **complete** (operator). Do **not** wait for NS or URL cutover anymore. Do **not** open indexing automatically. Do **not** rollback current editor-owned DB content from an older backup to recover technical state.
 
 ---
 
-## Current facts (P18D-FU01 closeout)
+## Current facts (P18E-A/B closeout)
 
 | Surface | Value |
 |---------|--------|
 | WordPress `home` | `https://shpigovsky.ru` |
 | WordPress `siteurl` | `https://shpigovsky.ru` |
-| Core target | `0.3.16-p18d-fu01` |
+| Core target | `0.3.17-p18e-ab` |
 | SMTP Admin | **Настройки сайта → Почта и формы** |
 | SMTP state | **VERIFIED / ACTIVE** |
 | SMTP transport | `smtp.beget.com` port `465` encryption `ssl` |
@@ -25,7 +25,7 @@ Historical trigger `NS SWITCHED` and WordPress `home`/`siteurl` cutover are **co
 | Form QA | PASS — MAIL_ACCEPTED status recorded |
 | Leads Admin | **Заявки** top-level — reachable |
 | Metrika form goals | Admin-configurable; counter owner = SEO |
-| Cookie/privacy controls | **DESIGN COMPLETE / NOT IMPLEMENTED** |
+| Cookie/privacy controls | **FOUNDATION READY / FRONTEND PENDING** |
 | Indexing | **CLOSED** (`blog_public=0`) |
 | Public apex | WordPress currently visible on `https://shpigovsky.ru/` |
 | Source ↔ production | SMTP/forms closeout surfaces verified; dashboard/core sync handled in FU01 |
@@ -37,7 +37,7 @@ Historical trigger `NS SWITCHED` and WordPress `home`/`siteurl` cutover are **co
 ## Operator next (P18D-FU01 complete — current handoff)
 
 1. Do **not** open indexing without Olya approval or explicit operator command.
-2. Do **not** start a cookie/privacy implementation wave without a fresh runtime intake; current P18E output is design-only.
+2. Next privacy wave starts from the deployed `PrivacyConsent` foundation; do **not** bypass it with ad-hoc banner/theme patches.
 3. Observe public `https://shpigovsky.ru/`; if operator sees a routing regression, open a bounded public-domain finalization wave.
 4. Keep current editor/Admin DB state as content truth; do not restore an old full DB backup over live editorial changes.
 
@@ -45,11 +45,12 @@ Historical trigger `NS SWITCHED` and WordPress `home`/`siteurl` cutover are **co
 
 ## Remaining P18 (post-P18D)
 
-1. Optional P18E implementation only after explicit approval and fresh intake.
-2. Public-domain finalization only if regression appears.
-3. Indexing **only** after Olya (Dashboard «Открыть индексацию») or explicit operator command.
-4. Sitemap submissions (manual).
-5. Final crawl.
+1. P18E-C/D: public cookie notice/settings + actual Yandex Metrika consent-gating.
+2. P18E-E/F: form-goal consent gating + withdrawal/policy integration.
+3. Public-domain finalization only if regression appears.
+4. Indexing **only** after Olya (Dashboard «Открыть индексацию») or explicit operator command.
+5. Sitemap submissions (manual).
+6. Final crawl.
 
 **OPEN BUSINESS DECISION:** Form lead retention period — `lead_retention_days=0` — operator sets when ready.
 

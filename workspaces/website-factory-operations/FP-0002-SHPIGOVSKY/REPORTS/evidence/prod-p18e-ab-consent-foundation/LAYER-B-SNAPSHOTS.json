@@ -1,0 +1,51 @@
+{
+  "utc": "2026-08-19T10:56:09Z",
+  "files": [
+    {
+      "kind": "plugin",
+      "rel": "shpigovsky-core.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/shpigovsky-core.php",
+      "src_sha": "8407be02c293b7575c63026d7e096ed34a5e7594b309196dcd01ebc6fc21db05",
+      "prod_before_sha": "8407be02c293b7575c63026d7e096ed34a5e7594b309196dcd01ebc6fc21db05",
+      "prod_existed": true,
+      "src_bytes": 1796
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Privacy/PrivacyConsent.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Privacy/PrivacyConsent.php",
+      "src_sha": "a91e1db96015d55a1e2c6fdfefe601334b7a5b7d85ff3a45e11c90e498fbc5c2",
+      "prod_before_sha": "a91e1db96015d55a1e2c6fdfefe601334b7a5b7d85ff3a45e11c90e498fbc5c2",
+      "prod_existed": true,
+      "src_bytes": 32800
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/ModuleRegistry.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/ModuleRegistry.php",
+      "src_sha": "9ae22c52ad2b236c31c02f01de9222a605b4763167d3dde30f2b37e31c223408",
+      "prod_before_sha": "9ae22c52ad2b236c31c02f01de9222a605b4763167d3dde30f2b37e31c223408",
+      "prod_existed": true,
+      "src_bytes": 9656
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Admin/SystemDashboard.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Admin/SystemDashboard.php",
+      "src_sha": "405a32be7800479621670e2757ccc1ab25870c9457b473640abaa9818e577634",
+      "prod_before_sha": "405a32be7800479621670e2757ccc1ab25870c9457b473640abaa9818e577634",
+      "prod_existed": true,
+      "src_bytes": 11940
+    },
+    {
+      "kind": "plugin",
+      "rel": "src/Admin/ActivityLog.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Admin/ActivityLog.php",
+      "src_sha": "3357b28d5aab05b45997dca694da01fe4ffcf1746b3e562102a4ad9c46d01a94",
+      "prod_before_sha": "3357b28d5aab05b45997dca694da01fe4ffcf1746b3e562102a4ad9c46d01a94",
+      "prod_existed": true,
+      "src_bytes": 17593
+    }
+  ],
+  "layer_b": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-p18e-ab-layer-b-pre"
+}

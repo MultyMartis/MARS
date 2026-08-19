@@ -1,0 +1,948 @@
+{
+  "utc": "2026-08-19T10:47:52.677321+00:00",
+  "activity_recent": [
+    {
+      "id": 135,
+      "created_at": "2026-08-19 13:13:25",
+      "action": "indexing_closed",
+      "object_type": "setting",
+      "object_id": 0,
+      "object_title": "Индексация: закрыта",
+      "object_status": "system",
+      "user_login": "system"
+    },
+    {
+      "id": 134,
+      "created_at": "2026-08-19 13:13:20",
+      "action": "smtp_activated",
+      "object_type": "setting",
+      "object_id": 0,
+      "object_title": "Почта: исходящая отправка активирована",
+      "object_status": "system",
+      "user_login": "system"
+    },
+    {
+      "id": 133,
+      "created_at": "2026-08-19 13:13:19",
+      "action": "smtp_test_ok",
+      "object_type": "setting",
+      "object_id": 0,
+      "object_title": "Проверка SMTP: успех",
+      "object_status": "system",
+      "user_login": "system"
+    },
+    {
+      "id": 132,
+      "created_at": "2026-08-19 13:02:51",
+      "action": "form_recipients_updated",
+      "object_type": "setting",
+      "object_id": 0,
+      "object_title": "Получатели форм: 2",
+      "object_status": "system",
+      "user_login": "metacode"
+    },
+    {
+      "id": 131,
+      "created_at": "2026-08-19 13:02:51",
+      "action": "smtp_config_updated",
+      "object_type": "setting",
+      "object_id": 0,
+      "object_title": "Почта и формы: настройки сохранены",
+      "object_status": "system",
+      "user_login": "metacode"
+    },
+    {
+      "id": 130,
+      "created_at": "2026-08-19 11:16:31",
+      "action": "indexing_opened",
+      "object_type": "setting",
+      "object_id": 0,
+      "object_title": "Индексация: открыта",
+      "object_status": "system",
+      "user_login": "admin"
+    },
+    {
+      "id": 129,
+      "created_at": "2026-08-19 08:32:42",
+      "action": "smtp_test_fail",
+      "object_type": "setting",
+      "object_id": 0,
+      "object_title": "Проверка SMTP: ошибка (send_failed)",
+      "object_status": "system",
+      "user_login": "metacode"
+    },
+    {
+      "id": 128,
+      "created_at": "2026-08-19 08:30:26",
+      "action": "smtp_test_fail",
+      "object_type": "setting",
+      "object_id": 0,
+      "object_title": "Проверка SMTP: ошибка (send_failed)",
+      "object_status": "system",
+      "user_login": "metacode"
+    },
+    {
+      "id": 127,
+      "created_at": "2026-08-19 08:27:35",
+      "action": "form_recipients_updated",
+      "object_type": "setting",
+      "object_id": 0,
+      "object_title": "Получатели форм: 2",
+      "object_status": "system",
+      "user_login": "metacode"
+    },
+    {
+      "id": 126,
+      "created_at": "2026-08-19 08:27:35",
+      "action": "smtp_config_updated",
+      "object_type": "setting",
+      "object_id": 0,
+      "object_title": "Почта и формы: настройки сохранены",
+      "object_status": "system",
+      "user_login": "metacode"
+    },
+    {
+      "id": 125,
+      "created_at": "2026-08-19 08:25:20",
+      "action": "form_recipients_updated",
+      "object_type": "setting",
+      "object_id": 0,
+      "object_title": "Получатели форм: 2",
+      "object_status": "system",
+      "user_login": "metacode"
+    },
+    {
+      "id": 124,
+      "created_at": "2026-08-19 08:25:20",
+      "action": "smtp_config_updated",
+      "object_type": "setting",
+      "object_id": 0,
+      "object_title": "Почта и формы: настройки сохранены",
+      "object_status": "system",
+      "user_login": "metacode"
+    },
+    {
+      "id": 123,
+      "created_at": "2026-08-19 00:07:38",
+      "action": "form_recipients_updated",
+      "object_type": "setting",
+      "object_id": 0,
+      "object_title": "Получатели форм: 2",
+      "object_status": "system",
+      "user_login": "mars"
+    },
+    {
+      "id": 122,
+      "created_at": "2026-08-19 00:07:38",
+      "action": "smtp_config_updated",
+      "object_type": "setting",
+      "object_id": 0,
+      "object_title": "Почта и формы: настройки сохранены",
+      "object_status": "system",
+      "user_login": "mars"
+    },
+    {
+      "id": 121,
+      "created_at": "2026-08-19 00:06:35",
+      "action": "form_recipients_updated",
+      "object_type": "setting",
+      "object_id": 0,
+      "object_title": "Получатели форм: 2",
+      "object_status": "system",
+      "user_login": "mars"
+    },
+    {
+      "id": 120,
+      "created_at": "2026-08-19 00:06:35",
+      "action": "smtp_config_updated",
+      "object_type": "setting",
+      "object_id": 0,
+      "object_title": "Почта и формы: настройки сохранены",
+      "object_status": "system",
+      "user_login": "mars"
+    },
+    {
+      "id": 119,
+      "created_at": "2026-08-19 00:04:16",
+      "action": "form_recipients_updated",
+      "object_type": "setting",
+      "object_id": 0,
+      "object_title": "Получатели форм: 2",
+      "object_status": "system",
+      "user_login": "mars"
+    },
+    {
+      "id": 118,
+      "created_at": "2026-08-19 00:04:16",
+      "action": "smtp_config_updated",
+      "object_type": "setting",
+      "object_id": 0,
+      "object_title": "Почта и формы: настройки сохранены",
+      "object_status": "system",
+      "user_login": "mars"
+    },
+    {
+      "id": 117,
+      "created_at": "2026-08-18 23:49:31",
+      "action": "smtp_config_updated",
+      "object_type": "setting",
+      "object_id": 0,
+      "object_title": "Почта и формы: настройки сохранены",
+      "object_status": "system",
+      "user_login": "metacode"
+    },
+    {
+      "id": 116,
+      "created_at": "2026-08-18 22:27:34",
+      "action": "indexing_closed",
+      "object_type": "setting",
+      "object_id": 0,
+      "object_title": "Индексация: закрыта",
+      "object_status": "system",
+      "user_login": "metacode"
+    },
+    {
+      "id": 115,
+      "created_at": "2026-08-18 22:27:26",
+      "action": "indexing_opened",
+      "object_type": "setting",
+      "object_id": 0,
+      "object_title": "Индексация: открыта",
+      "object_status": "system",
+      "user_login": "metacode"
+    },
+    {
+      "id": 114,
+      "created_at": "2026-08-18 21:16:23",
+      "action": "indexing_closed",
+      "object_type": "setting",
+      "object_id": 0,
+      "object_title": "Индексация: закрыта",
+      "object_status": "system",
+      "user_login": "system"
+    },
+    {
+      "id": 113,
+      "created_at": "2026-08-18 21:16:21",
+      "action": "indexing_opened",
+      "object_type": "setting",
+      "object_id": 0,
+      "object_title": "Индексация: открыта",
+      "object_status": "system",
+      "user_login": "system"
+    },
+    {
+      "id": 112,
+      "created_at": "2026-08-18 21:16:14",
+      "action": "indexing_closed",
+      "object_type": "setting",
+      "object_id": 0,
+      "object_title": "Индексация: закрыта",
+      "object_status": "system",
+      "user_login": "system"
+    },
+    {
+      "id": 111,
+      "created_at": "2026-08-18 21:15:10",
+      "action": "indexing_closed",
+      "object_type": "setting",
+      "object_id": 0,
+      "object_title": "Индексация: закрыта",
+      "object_status": "system",
+      "user_login": "system"
+    },
+    {
+      "id": 110,
+      "created_at": "2026-08-18 21:14:43",
+      "action": "indexing_opened",
+      "object_type": "setting",
+      "object_id": 0,
+      "object_title": "Индексация: открыта",
+      "object_status": "system",
+      "user_login": "system"
+    },
+    {
+      "id": 109,
+      "created_at": "2026-08-18 21:14:40",
+      "action": "indexing_closed",
+      "object_type": "setting",
+      "object_id": 0,
+      "object_title": "Индексация: закрыта",
+      "object_status": "system",
+      "user_login": "system"
+    },
+    {
+      "id": 108,
+      "created_at": "2026-08-18 14:49:40",
+      "action": "updated",
+      "object_type": "page",
+      "object_id": 23,
+      "object_title": "Согласие на обработку персональных данных",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 107,
+      "created_at": "2026-08-18 14:48:28",
+      "action": "updated",
+      "object_type": "page",
+      "object_id": 23,
+      "object_title": "Согласие на обработку персональных данных",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 106,
+      "created_at": "2026-08-18 14:48:05",
+      "action": "updated",
+      "object_type": "page",
+      "object_id": 23,
+      "object_title": "Согласие на обработку персональных данных",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 105,
+      "created_at": "2026-08-18 14:46:15",
+      "action": "updated",
+      "object_type": "page",
+      "object_id": 22,
+      "object_title": "Пользовательское соглашение",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 104,
+      "created_at": "2026-08-18 14:44:25",
+      "action": "updated",
+      "object_type": "page",
+      "object_id": 24,
+      "object_title": "Политика Cookie-файлов",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 103,
+      "created_at": "2026-08-18 14:42:31",
+      "action": "updated",
+      "object_type": "page",
+      "object_id": 3,
+      "object_title": "Политика конфиденциальности",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 102,
+      "created_at": "2026-08-18 14:33:19",
+      "action": "updated",
+      "object_type": "page",
+      "object_id": 3,
+      "object_title": "Политика конфиденциальности",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 101,
+      "created_at": "2026-08-18 14:32:40",
+      "action": "updated",
+      "object_type": "page",
+      "object_id": 3,
+      "object_title": "Политика конфиденциальности",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 100,
+      "created_at": "2026-08-18 14:32:20",
+      "action": "updated",
+      "object_type": "page",
+      "object_id": 3,
+      "object_title": "Политика конфиденциальности",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 99,
+      "created_at": "2026-08-18 13:25:12",
+      "action": "updated",
+      "object_type": "post",
+      "object_id": 750,
+      "object_title": "Лечение алкогольной зависимости: почему сила воли здесь ни при чём",
+      "object_status": "publish",
+      "user_login": "system"
+    },
+    {
+      "id": 86,
+      "created_at": "2026-08-16 22:37:21",
+      "action": "updated",
+      "object_type": "service",
+      "object_id": 73,
+      "object_title": "Зависимости",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 85,
+      "created_at": "2026-08-16 22:36:09",
+      "action": "updated",
+      "object_type": "page",
+      "object_id": 4,
+      "object_title": "Главная",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 84,
+      "created_at": "2026-08-16 22:28:06",
+      "action": "updated",
+      "object_type": "page",
+      "object_id": 4,
+      "object_title": "Главная",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 83,
+      "created_at": "2026-08-16 22:27:12",
+      "action": "updated",
+      "object_type": "service",
+      "object_id": 1894,
+      "object_title": "Генотипирование для специалистов",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 82,
+      "created_at": "2026-08-16 22:26:19",
+      "action": "updated",
+      "object_type": "service",
+      "object_id": 1889,
+      "object_title": "Генотипирование",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 81,
+      "created_at": "2026-08-16 19:51:24",
+      "action": "updated",
+      "object_type": "specialist",
+      "object_id": 1031,
+      "object_title": "Сергей Юрьевич Шпиговский",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 80,
+      "created_at": "2026-08-16 19:50:47",
+      "action": "updated",
+      "object_type": "specialist",
+      "object_id": 1949,
+      "object_title": "Литвинов Кирилл Алексеевич",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 79,
+      "created_at": "2026-08-16 19:50:32",
+      "action": "updated",
+      "object_type": "specialist",
+      "object_id": 1957,
+      "object_title": "Поверинов Александр Константинович",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 78,
+      "created_at": "2026-08-16 19:50:02",
+      "action": "updated",
+      "object_type": "specialist",
+      "object_id": 1963,
+      "object_title": "Филиппов Илья Владимирович",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 77,
+      "created_at": "2026-08-16 19:49:46",
+      "action": "updated",
+      "object_type": "specialist",
+      "object_id": 1967,
+      "object_title": "Ханикова Светлана Николаевна",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 76,
+      "created_at": "2026-08-16 19:49:30",
+      "action": "updated",
+      "object_type": "specialist",
+      "object_id": 1988,
+      "object_title": "Филиппова Мария Михайловна",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 75,
+      "created_at": "2026-08-16 19:48:14",
+      "action": "updated",
+      "object_type": "service",
+      "object_id": 74,
+      "object_title": "Лечение алкогольной зависимости",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 74,
+      "created_at": "2026-08-16 19:48:04",
+      "action": "updated",
+      "object_type": "service",
+      "object_id": 74,
+      "object_title": "Лечение алкогольной зависимости",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 73,
+      "created_at": "2026-08-16 19:47:58",
+      "action": "updated",
+      "object_type": "service",
+      "object_id": 73,
+      "object_title": "Зависимости",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 72,
+      "created_at": "2026-08-16 19:44:45",
+      "action": "updated",
+      "object_type": "service",
+      "object_id": 74,
+      "object_title": "Лечение алкогольной зависимости",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 47,
+      "created_at": "2026-08-16 18:53:37",
+      "action": "updated",
+      "object_type": "page",
+      "object_id": 4,
+      "object_title": "Главная",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 46,
+      "created_at": "2026-08-16 18:52:32",
+      "action": "updated",
+      "object_type": "page",
+      "object_id": 4,
+      "object_title": "Главная",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 45,
+      "created_at": "2026-08-16 17:55:04",
+      "action": "updated",
+      "object_type": "specialist",
+      "object_id": 1988,
+      "object_title": "Филиппова Мария Михайловна",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 44,
+      "created_at": "2026-08-16 17:47:37",
+      "action": "updated",
+      "object_type": "specialist",
+      "object_id": 1988,
+      "object_title": "Филиппова Мария Михайловна",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 43,
+      "created_at": "2026-08-16 17:46:23",
+      "action": "updated",
+      "object_type": "specialist",
+      "object_id": 1988,
+      "object_title": "Филиппова Мария Михайловна",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 42,
+      "created_at": "2026-08-16 17:39:16",
+      "action": "updated",
+      "object_type": "specialist",
+      "object_id": 1967,
+      "object_title": "Ханикова Светлана Николаевна",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 41,
+      "created_at": "2026-08-16 17:34:19",
+      "action": "updated",
+      "object_type": "specialist",
+      "object_id": 1967,
+      "object_title": "Ханикова Светлана Николаевна",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 40,
+      "created_at": "2026-08-16 17:33:50",
+      "action": "updated",
+      "object_type": "specialist",
+      "object_id": 1967,
+      "object_title": "Ханикова Светлана Николаевна",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 39,
+      "created_at": "2026-08-16 17:32:41",
+      "action": "updated",
+      "object_type": "specialist",
+      "object_id": 1967,
+      "object_title": "Ханикова Светлана Николаевна",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 38,
+      "created_at": "2026-08-16 17:25:29",
+      "action": "updated",
+      "object_type": "specialist",
+      "object_id": 1957,
+      "object_title": "Поверинов Александр Константинович",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 37,
+      "created_at": "2026-08-16 17:25:04",
+      "action": "updated",
+      "object_type": "specialist",
+      "object_id": 1957,
+      "object_title": "Поверинов Александр Константинович",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 36,
+      "created_at": "2026-08-16 17:23:34",
+      "action": "updated",
+      "object_type": "specialist",
+      "object_id": 1949,
+      "object_title": "Литвинов Кирилл Алексеевич",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 35,
+      "created_at": "2026-08-16 17:19:06",
+      "action": "updated",
+      "object_type": "specialist",
+      "object_id": 1032,
+      "object_title": "Максим Михайлович Казаков",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 34,
+      "created_at": "2026-08-16 17:09:33",
+      "action": "updated",
+      "object_type": "specialist",
+      "object_id": 1032,
+      "object_title": "Максим Михайлович Казаков",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 33,
+      "created_at": "2026-08-16 17:08:29",
+      "action": "updated",
+      "object_type": "specialist",
+      "object_id": 1032,
+      "object_title": "Максим Михайлович Казаков",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 32,
+      "created_at": "2026-08-16 17:06:18",
+      "action": "updated",
+      "object_type": "specialist",
+      "object_id": 1963,
+      "object_title": "Филиппов Илья Владимирович",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 31,
+      "created_at": "2026-08-16 16:58:51",
+      "action": "updated",
+      "object_type": "specialist",
+      "object_id": 1957,
+      "object_title": "Поверинов Александр Константинович",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 30,
+      "created_at": "2026-08-16 16:58:43",
+      "action": "updated",
+      "object_type": "specialist",
+      "object_id": 1957,
+      "object_title": "Поверинов Александр Константинович",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 29,
+      "created_at": "2026-08-16 16:53:05",
+      "action": "updated",
+      "object_type": "specialist",
+      "object_id": 1949,
+      "object_title": "Литвинов Кирилл Алексеевич",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 28,
+      "created_at": "2026-08-16 16:49:47",
+      "action": "updated",
+      "object_type": "specialist",
+      "object_id": 1949,
+      "object_title": "Литвинов Кирилл Алексеевич",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 27,
+      "created_at": "2026-08-16 16:49:37",
+      "action": "updated",
+      "object_type": "specialist",
+      "object_id": 1949,
+      "object_title": "Литвинов Кирилл Алексеевич",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 26,
+      "created_at": "2026-08-16 16:48:58",
+      "action": "updated",
+      "object_type": "specialist",
+      "object_id": 1949,
+      "object_title": "Литвинов Кирилл Алексеевич",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 25,
+      "created_at": "2026-08-16 16:48:36",
+      "action": "updated",
+      "object_type": "specialist",
+      "object_id": 1949,
+      "object_title": "Литвинов Кирилл Алексеевич",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 24,
+      "created_at": "2026-08-16 16:47:50",
+      "action": "updated",
+      "object_type": "specialist",
+      "object_id": 1949,
+      "object_title": "Литвинов Кирилл Алексеевич",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 23,
+      "created_at": "2026-08-16 16:40:54",
+      "action": "updated",
+      "object_type": "specialist",
+      "object_id": 1097,
+      "object_title": "Шапигузова Татьяна Андреевна",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 22,
+      "created_at": "2026-08-16 16:40:34",
+      "action": "updated",
+      "object_type": "specialist",
+      "object_id": 1097,
+      "object_title": "Шапигузова Татьяна Андреевна",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 21,
+      "created_at": "2026-08-16 16:36:52",
+      "action": "updated",
+      "object_type": "service",
+      "object_id": 73,
+      "object_title": "Зависимости",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 20,
+      "created_at": "2026-08-16 16:34:22",
+      "action": "updated",
+      "object_type": "page",
+      "object_id": 4,
+      "object_title": "Главная",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 19,
+      "created_at": "2026-08-16 16:33:19",
+      "action": "updated",
+      "object_type": "page",
+      "object_id": 4,
+      "object_title": "Главная",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 18,
+      "created_at": "2026-08-16 16:32:01",
+      "action": "updated",
+      "object_type": "service",
+      "object_id": 73,
+      "object_title": "Зависимости",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 17,
+      "created_at": "2026-08-16 16:29:49",
+      "action": "updated",
+      "object_type": "service",
+      "object_id": 73,
+      "object_title": "Зависимости",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 16,
+      "created_at": "2026-08-16 16:24:31",
+      "action": "updated",
+      "object_type": "service",
+      "object_id": 73,
+      "object_title": "Зависимости",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 15,
+      "created_at": "2026-08-16 16:21:36",
+      "action": "updated",
+      "object_type": "service",
+      "object_id": 73,
+      "object_title": "Зависимости",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 14,
+      "created_at": "2026-08-16 16:17:29",
+      "action": "updated",
+      "object_type": "service",
+      "object_id": 73,
+      "object_title": "Зависимости",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 13,
+      "created_at": "2026-08-16 15:48:37",
+      "action": "updated",
+      "object_type": "page",
+      "object_id": 1053,
+      "object_title": "Генотипирование",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 12,
+      "created_at": "2026-08-16 15:48:29",
+      "action": "updated",
+      "object_type": "page",
+      "object_id": 1053,
+      "object_title": "Генотипирование",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 11,
+      "created_at": "2026-08-16 15:47:30",
+      "action": "updated",
+      "object_type": "page",
+      "object_id": 1053,
+      "object_title": "Генотипирование",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 10,
+      "created_at": "2026-08-16 15:36:55",
+      "action": "updated",
+      "object_type": "service",
+      "object_id": 74,
+      "object_title": "Лечение алкогольной зависимости",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 9,
+      "created_at": "2026-08-16 15:33:08",
+      "action": "updated",
+      "object_type": "service",
+      "object_id": 77,
+      "object_title": "Психическое здоровье",
+      "object_status": "publish",
+      "user_login": "admin"
+    },
+    {
+      "id": 8,
+      "created_at": "2026-08-16 15:32:26",
+      "action": "updated",
+      "object_type": "service",
+      "object_id": 77,
+      "object_title": "Психическое здоровье",
+      "object_status": "publish",
+      "user_login": "admin"
+    }
+  ],
+  "legal_pages": [
+    {
+      "id": 24,
+      "slug": "cookie-files-policy",
+      "title": "Политика Cookie-файлов",
+      "status": "publish",
+      "modified_gmt": "2026-08-18 11:44:25"
+    },
+    {
+      "id": 23,
+      "slug": "consent-personal-data",
+      "title": "Согласие на обработку персональных данных",
+      "status": "publish",
+      "modified_gmt": "2026-08-18 11:49:40"
+    }
+  ],
+  "contacts_page_candidates": [
+    {
+      "id": 20,
+      "title": "Контакты",
+      "status": "publish"
+    }
+  ]
+}

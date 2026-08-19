@@ -31,6 +31,7 @@ use Shpigovsky\Core\Mail\SmtpTransport;
 use Shpigovsky\Core\Migrations\MigrationRunner;
 use Shpigovsky\Core\Permalinks\ServicePermalinks;
 use Shpigovsky\Core\Privacy\LeadPersonalData;
+use Shpigovsky\Core\Privacy\PrivacyConsent;
 use Shpigovsky\Core\Settings\SiteSettings;
 use Shpigovsky\Core\Typography\TypographyFilters;
 
@@ -189,6 +190,12 @@ final class ModuleRegistry {
 		'privacy.lead-personal-data' => array(
 			'module'            => 'Privacy',
 			'class'             => LeadPersonalData::class,
+			'status'            => self::ENABLED_IN_CONTENT_MODEL,
+			'runtime_delivered' => true,
+		),
+		'privacy.consent'           => array(
+			'module'            => 'Privacy',
+			'class'             => PrivacyConsent::class,
 			'status'            => self::ENABLED_IN_CONTENT_MODEL,
 			'runtime_delivered' => true,
 		),

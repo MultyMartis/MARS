@@ -1,0 +1,151 @@
+{
+  "ok": true,
+  "utc": "2026-08-19T10:56:09Z",
+  "core": "0.3.17-p18e-ab",
+  "menu_state": {
+    "ok": true,
+    "visible_parent": "fp02-site-settings-general",
+    "children": [
+      {
+        "title": "Общие настройки",
+        "slug": "fp02-site-settings-general"
+      },
+      {
+        "title": "Соцсети и мессенджеры",
+        "slug": "fp02-site-settings-social"
+      },
+      {
+        "title": "SEO и интеграции",
+        "slug": "fp02-site-settings-seo-integrations"
+      },
+      {
+        "title": "Почта и формы",
+        "slug": "fp02-site-settings-mail-forms"
+      },
+      {
+        "title": "Cookie и конфиденциальность",
+        "slug": "fp02-site-settings-cookie-privacy"
+      },
+      {
+        "title": "Повторяемые блоки",
+        "slug": "fp02-site-settings-blocks"
+      },
+      {
+        "title": "Шапка",
+        "slug": "fp02-block-header"
+      },
+      {
+        "title": "Подвал",
+        "slug": "fp02-block-footer"
+      },
+      {
+        "title": "Финальная форма",
+        "slug": "fp02-block-final-form"
+      },
+      {
+        "title": "Специалисты",
+        "slug": "fp02-block-specialists"
+      },
+      {
+        "title": "CTA-блоки",
+        "slug": "fp02-block-cta-bands"
+      },
+      {
+        "title": "Комфорт — вводный блок",
+        "slug": "fp02-block-comfort-intro"
+      },
+      {
+        "title": "Комфорт — галерея",
+        "slug": "fp02-block-comfort-gallery"
+      },
+      {
+        "title": "Комфорт — требования",
+        "slug": "fp02-block-comfort-requirements"
+      },
+      {
+        "title": "Цитата основателя",
+        "slug": "fp02-block-founder-quote"
+      }
+    ],
+    "cookie_menu_count": 1,
+    "cookie_menu_visible": true,
+    "render": {
+      "has_title": true,
+      "has_banner_section": true,
+      "has_categories_section": true,
+      "has_integrations_section": true,
+      "has_state_section": true,
+      "has_policy_field": true,
+      "has_version_field": true,
+      "has_no_english_debug": true
+    },
+    "_exit_code": 0
+  },
+  "save_state": {
+    "ok": true,
+    "settings": {
+      "system_enabled": true,
+      "banner_title": "Мы используем файлы cookie",
+      "banner_description": "Мы используем необходимые cookie для работы сайта и, с вашего разрешения, аналитические технологии для понимания того, как используется сайт.",
+      "policy_page_id": 24,
+      "consent_version": 1,
+      "consent_lifetime_days": 365,
+      "analytics_category_enabled": true,
+      "analytics_description": "Аналитические технологии помогают понять, как используется сайт. Сейчас эта категория относится к Яндекс Метрике.",
+      "label_accept": "Принять",
+      "label_necessary_only": "Только необходимые",
+      "label_customize": "Настроить",
+      "label_save": "Сохранить выбор"
+    },
+    "blog_public": 0,
+    "_exit_code": 0,
+    "mode": "wp_runtime_post_fallback"
+  },
+  "admin_after": {
+    "status": 0,
+    "final_url": "WP_RUNTIME_FALLBACK",
+    "persisted": {
+      "banner_title": "Мы используем файлы cookie",
+      "consent_version": "1",
+      "consent_lifetime_days": "365",
+      "label_accept": "Принять",
+      "analytics_description": "Аналитические технологии помогают понять, как используется сайт. Сейчас эта категория относится к Яндекс Метрике."
+    },
+    "checked_system_enabled": true,
+    "checked_analytics_enabled": true,
+    "no_english_cookie_consent_label": true
+  },
+  "frontend_home": {
+    "path": "/",
+    "status": 200,
+    "final_url": "https://shpigovsky.ru/",
+    "has_wp": true,
+    "has_metrika": true,
+    "has_cookie_banner_title": false,
+    "set_cookie_headers": null,
+    "response_cookies": {},
+    "body_head": "<!DOCTYPE html>\r\n<html lang=\"ru-RU\">\r\n<head>\r\n\t<meta charset=\"UTF-8\">\r\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n\t<script>(function(){document.documentElement.classList.add('js-enabled');})();</script>\n<title>Шпиговский Дом</title>\n<meta name='robots' content='noindex, nofollow' />\n<!-- Yandex.Metrika counter -->\r\n<script type=\"text/javascript\">\r\n    (function(m,e,t,r,i,k,a){\r\n        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};\r\n        m[i].l=1*new D"
+  },
+  "wp_state": {
+    "ok": true,
+    "blog_public": 0,
+    "core": "0.3.17-p18e-ab",
+    "settings": {
+      "system_enabled": true,
+      "banner_title": "Мы используем файлы cookie",
+      "banner_description": "Мы используем необходимые cookie для работы сайта и, с вашего разрешения, аналитические технологии для понимания того, как используется сайт.",
+      "policy_page_id": 24,
+      "consent_version": 1,
+      "consent_lifetime_days": 365,
+      "analytics_category_enabled": true,
+      "analytics_description": "Аналитические технологии помогают понять, как используется сайт. Сейчас эта категория относится к Яндекс Метрике.",
+      "label_accept": "Принять",
+      "label_necessary_only": "Только необходимые",
+      "label_customize": "Настроить",
+      "label_save": "Сохранить выбор"
+    },
+    "policy_status": "CURRENT / NEEDS LEGAL CONTENT REVIEW",
+    "privacy_module_present": true,
+    "_exit_code": 0
+  }
+}

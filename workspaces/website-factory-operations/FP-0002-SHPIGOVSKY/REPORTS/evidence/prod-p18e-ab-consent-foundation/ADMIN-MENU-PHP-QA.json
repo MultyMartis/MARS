@@ -1,0 +1,79 @@
+{
+  "ok": true,
+  "visible_parent": "fp02-site-settings-general",
+  "children": [
+    {
+      "title": "Общие настройки",
+      "slug": "fp02-site-settings-general"
+    },
+    {
+      "title": "Соцсети и мессенджеры",
+      "slug": "fp02-site-settings-social"
+    },
+    {
+      "title": "SEO и интеграции",
+      "slug": "fp02-site-settings-seo-integrations"
+    },
+    {
+      "title": "Почта и формы",
+      "slug": "fp02-site-settings-mail-forms"
+    },
+    {
+      "title": "Cookie и конфиденциальность",
+      "slug": "fp02-site-settings-cookie-privacy"
+    },
+    {
+      "title": "Повторяемые блоки",
+      "slug": "fp02-site-settings-blocks"
+    },
+    {
+      "title": "Шапка",
+      "slug": "fp02-block-header"
+    },
+    {
+      "title": "Подвал",
+      "slug": "fp02-block-footer"
+    },
+    {
+      "title": "Финальная форма",
+      "slug": "fp02-block-final-form"
+    },
+    {
+      "title": "Специалисты",
+      "slug": "fp02-block-specialists"
+    },
+    {
+      "title": "CTA-блоки",
+      "slug": "fp02-block-cta-bands"
+    },
+    {
+      "title": "Комфорт — вводный блок",
+      "slug": "fp02-block-comfort-intro"
+    },
+    {
+      "title": "Комфорт — галерея",
+      "slug": "fp02-block-comfort-gallery"
+    },
+    {
+      "title": "Комфорт — требования",
+      "slug": "fp02-block-comfort-requirements"
+    },
+    {
+      "title": "Цитата основателя",
+      "slug": "fp02-block-founder-quote"
+    }
+  ],
+  "cookie_menu_count": 1,
+  "cookie_menu_visible": true,
+  "render": {
+    "has_title": true,
+    "has_banner_section": true,
+    "has_categories_section": true,
+    "has_integrations_section": true,
+    "has_state_section": true,
+    "has_policy_field": true,
+    "has_version_field": true,
+    "has_no_english_debug": true
+  },
+  "_exit_code": 0
+}

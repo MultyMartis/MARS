@@ -14,6 +14,7 @@ use Shpigovsky\Core\Contracts\ModuleInterface;
 use Shpigovsky\Core\Leads\LeadRegistry;
 use Shpigovsky\Core\Mail\MailOps;
 use Shpigovsky\Core\ModuleRegistry;
+use Shpigovsky\Core\Privacy\PrivacyConsent;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -27,12 +28,12 @@ final class SystemDashboard implements ModuleInterface {
 	/**
 	 * Baseline ID shown in the widget (updated by stabilization waves).
 	 */
-	const BASELINE_ID = 'FP-0002-PROD-BASELINE-2026-08-19-P18D-FU01';
+	const BASELINE_ID = 'FP-0002-PROD-BASELINE-2026-08-19-P18E-AB';
 
 	/**
 	 * Latest accepted production wave label.
 	 */
-	const LATEST_ACCEPTED_WAVE = 'P18D-FU01 SMTP Closeout + Olya Intake';
+	const LATEST_ACCEPTED_WAVE = 'P18E-A/B Cookie Consent Foundation';
 
 	/**
 	 * {@inheritdoc}
@@ -118,6 +119,7 @@ final class SystemDashboard implements ModuleInterface {
 		$leads_active    = class_exists( LeadRegistry::class );
 		$goal_cfg        = class_exists( MailOps::class ) && '' !== MailOps::metrika_goal();
 		$indexing_open   = class_exists( IndexingControl::class ) ? IndexingControl::is_open() : ( 1 === (int) get_option( 'blog_public', 1 ) );
+		$privacy_policy  = class_exists( PrivacyConsent::class ) ? PrivacyConsent::policy_status_label( PrivacyConsent::get_policy_page() ) : 'NOT CONFIGURED';
 
 		if ( '' === $ssl ) {
 			$ssl = ( is_string( $home ) && 0 === strpos( $home, 'https://' ) )
@@ -196,6 +198,28 @@ final class SystemDashboard implements ModuleInterface {
 				: __( 'CONFIGURABLE', 'shpigovsky-core' )
 		);
 		self::row(
+			__( 'Cookie-согласие', 'shpigovsky-core' ),
+			class_exists( PrivacyConsent::class )
+				? __( 'FOUNDATION READY / FRONTEND PENDING', 'shpigovsky-core' )
+				: __( 'NOT INSTALLED', 'shpigovsky-core' )
+		);
+		self::row(
+			__( 'Категории Cookie', 'shpigovsky-core' ),
+			class_exists( PrivacyConsent::class )
+				? __( 'Necessary + Analytics', 'shpigovsky-core' )
+				: '—'
+		);
+		self::row(
+			__( 'Consent-gating Метрики', 'shpigovsky-core' ),
+			class_exists( PrivacyConsent::class )
+				? __( 'CURRENTLY NOT CONSENT-GATED — P18E-D PENDING', 'shpigovsky-core' )
+				: '—'
+		);
+		self::row(
+			__( 'Политика Cookie', 'shpigovsky-core' ),
+			$privacy_policy
+		);
+		self::row(
 			__( 'Индексация', 'shpigovsky-core' ),
 			$indexing_open
 				? __( 'OPEN', 'shpigovsky-core' )
@@ -209,12 +233,11 @@ final class SystemDashboard implements ModuleInterface {
 
 		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'Следующие шаги', 'shpigovsky-core' ) . '</h3>';
 		echo '<ul style="margin:0 0 12px 1.2em;">';
-		self::li( __( '1. SMTP VERIFIED / ACTIVE — временное pre-cutover подавление удалено', 'shpigovsky-core' ) );
-		self::li( __( '2. Публичный https://shpigovsky.ru/ уже отдаёт WordPress; финализация домена нужна только если оператор увидит регресс', 'shpigovsky-core' ) );
+		self::li( __( '1. P18E-C/D: публичное уведомление cookie + реальное условное подключение Яндекс Метрики', 'shpigovsky-core' ) );
+		self::li( __( '2. P18E-E/F: consent-aware goals форм + withdrawal / policy integration', 'shpigovsky-core' ) );
 		self::li( __( '3. Индексация — ТОЛЬКО после разрешения Оли или явной команды оператора', 'shpigovsky-core' ) );
-		self::li( __( '4. Отправка sitemap (после открытия индексации)', 'shpigovsky-core' ) );
-		self::li( __( '5. Финальный обход', 'shpigovsky-core' ) );
-		self::li( __( 'Открытый вопрос: срок хранения заявок — решение оператора', 'shpigovsky-core' ) );
+		self::li( __( '4. Cookie Policy: legal/operator review текущего контента', 'shpigovsky-core' ) );
+		self::li( __( '5. Открытые решения: срок хранения consent-choice и server-side evidence policy', 'shpigovsky-core' ) );
 		echo '</ul>';
 
 		if ( $is_beget && ( 'local' === $env_const || 'local' === $env_fn ) ) {

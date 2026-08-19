@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "php": "8.3.30",
+  "tests": [
+    {
+      "test": "necessary_only_parse",
+      "status": "PASS"
+    },
+    {
+      "test": "analytics_allowed_parse",
+      "status": "PASS"
+    },
+    {
+      "test": "undecided_parse",
+      "status": "PASS"
+    },
+    {
+      "test": "tampered_payload_to_undecided",
+      "status": "PASS"
+    },
+    {
+      "test": "necessary_false_rejected",
+      "status": "PASS"
+    },
+    {
+      "test": "invalid_timestamp_rejected",
+      "status": "PASS"
+    },
+    {
+      "test": "old_version_requires_redecision",
+      "status": "PASS"
+    },
+    {
+      "test": "current_version_accepted",
+      "status": "PASS"
+    },
+    {
+      "test": "unknown_category_rejected",
+      "status": "PASS"
+    },
+    {
+      "test": "cookie_attributes_contract",
+      "status": "PASS"
+    }
+  ]
+}

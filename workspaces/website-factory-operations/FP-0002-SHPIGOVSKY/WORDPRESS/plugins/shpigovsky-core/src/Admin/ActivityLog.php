@@ -357,6 +357,8 @@ final class ActivityLog implements ModuleInterface {
 			'smtp_test_fail'      => __( 'Проверка SMTP: ошибка', 'shpigovsky-core' ),
 			'smtp_activated'      => __( 'Почта: отправка включена', 'shpigovsky-core' ),
 			'smtp_deactivated'    => __( 'Почта: отправка выключена', 'shpigovsky-core' ),
+			'cookie_privacy_settings_updated' => __( 'Cookie / privacy: настройки сохранены', 'shpigovsky-core' ),
+			'cookie_consent_version_changed'  => __( 'Cookie / privacy: версия согласия изменена', 'shpigovsky-core' ),
 		);
 		return isset( $map[ $action ] ) ? $map[ $action ] : $action;
 	}
@@ -459,7 +461,7 @@ final class ActivityLog implements ModuleInterface {
 		echo '</select> ';
 
 		echo '<select name="fp02_action"><option value="">' . esc_html__( 'Все действия', 'shpigovsky-core' ) . '</option>';
-		foreach ( array( 'created', 'updated', 'trashed', 'restored', 'indexing_opened', 'indexing_closed', 'smtp_config_updated', 'smtp_test_ok', 'smtp_test_fail', 'smtp_activated', 'smtp_deactivated' ) as $act ) {
+		foreach ( array( 'created', 'updated', 'trashed', 'restored', 'indexing_opened', 'indexing_closed', 'smtp_config_updated', 'smtp_test_ok', 'smtp_test_fail', 'smtp_activated', 'smtp_deactivated', 'cookie_privacy_settings_updated', 'cookie_consent_version_changed' ) as $act ) {
 			printf(
 				'<option value="%1$s"%2$s>%3$s</option>',
 				esc_attr( $act ),

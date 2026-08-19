@@ -1,7 +1,7 @@
 # FP-0002 P18E Implementation Plan
 
-**Status:** planning only  
-**Wave:** prepared by PROD-P18E design; implementation not authorized
+**Status:** P18E-A/B complete; P18E-C..H pending  
+**Wave:** prepared by PROD-P18E design; PROD-P18E-A/B foundation executed on 2026-08-19
 
 ## Objective
 
@@ -21,6 +21,8 @@ Turn the P18E cookie/privacy design into a bounded production rollout without br
 
 ### P18E-A — Privacy / tracker re-intake and implementation charter
 
+**Status:** COMPLETE
+
 Deliverables:
 
 - fresh runtime tracker/storage inventory;
@@ -34,6 +36,8 @@ Gate:
 
 ### P18E-B — Core consent state + Admin owner
 
+**Status:** COMPLETE
+
 Deliverables:
 
 - `PrivacyConsent` / `CookieConsent` module skeleton;
@@ -45,6 +49,7 @@ Gate:
 
 - source review confirms no duplicate counter-id source;
 - admin discoverability proof.
+- post-deploy proof confirms no visitor-facing behavior change in this wave.
 
 ### P18E-C — Frontend notice + settings UX
 
