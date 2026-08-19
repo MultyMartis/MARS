@@ -17,8 +17,8 @@
 | **Catalog default sort (Production)** | **COMPLETE** — Run 4.176; default `pd.name ASC` in `category.php` |
 | **Catalog sort menu (Production)** | **COMPLETE** — Run 4.177; menu order in `category.twig`; «Умолчанию» removed |
 | **MARS 1C cron wrapper (Production)** | **OPERATIONAL — FIRST SCHEDULED RUN VERIFIED** — Run 4.194; automatic run SUCCESS 2026-07-06 08:00 Moscow; daily import OPERATIONAL |
-| **MARS 1C cron reports (Production)** | **CURRENT** — latest completed natural import `mars_1c_import_2026-07-30_080011.txt` / `mars-20260730-080002-810087c7` **SUCCESS** (Run **4.319**) · [forensic 4.319](../reports/SITE-002-PROD-1C-FIRST-LEVEL-CATEGORY-PLACEMENT-FORENSIC-01.md) · prior [healthcheck 4.318](../reports/SITE-002-PROD-POST-IMAGE-WAVE-VISUAL-ACCEPTANCE-AND-1C-HEALTHCHECK-01.md) |
-| **Catalog structure / 1C category mapping (Production)** | **POST-IMPORT PERSISTENCE CONFIRMED** (Run **4.299**) — natural imports SUCCESS after Run **4.297** GUID/path patch; critical stay **378/379/380/376**; map table **7/7** active; **demo Group A 154–170 deleted (Run 4.303)**; **legacy parent 153 deleted (Run 4.306)**; no redirects; sitemap live **1879**; monitor baseline file **1879** (Run **4.312**); first-level **ALL-15** (Run **4.316**) + empty-copy relocate/images (Run **4.317**, visually accepted Run **4.318** — PLP-only copy; images **82/83/85/87/89**; mega/deep/tech unchanged; HYBRID **4.314/4.315** historical); empty review **4.308**; HITL triage **4.309** · [healthcheck 4.318](../reports/SITE-002-PROD-POST-IMAGE-WAVE-VISUAL-ACCEPTANCE-AND-1C-HEALTHCHECK-01.md) · [empty-copy+images 4.317](../reports/SITE-002-PROD-EMPTY-CATEGORY-COPY-RELOCATE-AND-NEW-FIRSTLEVEL-IMAGES-01.md) · [all15 correction 4.316](../reports/SITE-002-PROD-FIRST-LEVEL-BLOCK-ALL15-CORRECTION-APPLY-01.md) · [closeout 4.315](../reports/SITE-002-PROD-FIRST-LEVEL-BLOCK-HYBRID-CLOSEOUT-01.md) · [hybrid apply 4.314](../reports/SITE-002-PROD-FIRST-LEVEL-BLOCK-HYBRID-APPLY-01.md) · [scope decision 4.313](../reports/SITE-002-PROD-FIRST-LEVEL-BLOCK-SCOPE-DECISION-01.md) · [baseline refresh 4.312](../reports/SITE-002-MONITOR-BASELINE-REFRESH-08.md) · [HITL triage 4.309](../reports/SITE-002-PROD-EMPTY-CATEGORIES-HITL-TRIAGE-01.md) · [persistence check](../reports/SITE-002-PROD-1C-POST-IMPORT-PERSISTENCE-CHECK-01.md) · [importer patch](../reports/SITE-002-PROD-1C-IMPORTER-GUID-PATH-PATCH-01.md) |
+| **MARS 1C cron reports (Production)** | **CURRENT — OFFERS STEP RECOVERED** — latest completed natural import `mars_1c_import_2026-08-19_080010.txt` / `mars-20260819-080002-61559c39` **SUCCESS**; catalog `import0_1.xml` PASS `4.07s`; offers `offers0_1.xml` PASS `3.86s`; total `7.98s`; category **364** recovered; category **95** no longer empty · [healthcheck 4.325](../reports/SITE-002-PROD-POST-1C-OFFERS-RECOVERY-AND-NEW-SECTIONS-HEALTHCHECK-01.md) · prior [forensic 4.319](../reports/SITE-002-PROD-1C-FIRST-LEVEL-CATEGORY-PLACEMENT-FORENSIC-01.md) |
+| **Catalog structure / 1C category mapping (Production)** | **POST-IMPORT PERSISTENCE CONFIRMED; OFFERS RECOVERY CONFIRMED** — natural import `2026-08-19` succeeded with real offers step after Run **4.297** GUID/path patch; sitemap live **1887** vs monitor baseline **1879**; `barnoe-oborudovanie`, `hlebopekarnoe-oborudovanie`, `holodilnoe-oborudovanie`, `posuda-i-inventar` now live in sitemap; `Упаковочное оборудование` present in XML but absent in DB/site/sitemap; monitor effective status **ONBOARDING_REQUIRED** because artifacts conflict · [healthcheck 4.325](../reports/SITE-002-PROD-POST-1C-OFFERS-RECOVERY-AND-NEW-SECTIONS-HEALTHCHECK-01.md) · [baseline refresh 4.312](../reports/SITE-002-MONITOR-BASELINE-REFRESH-08.md) · [forensic 4.319](../reports/SITE-002-PROD-1C-FIRST-LEVEL-CATEGORY-PLACEMENT-FORENSIC-01.md) |
 
 **TEST-derived knowledge classification:** Implementation evidence and reusable technical knowledge. **Not** automatic proof of current Production parity.
 
@@ -387,6 +387,21 @@ If documentation contradicts current **Production** behaviour → verify on http
 | Open | 1C `offers0_*.xml` absent (Run 4.320); placement charter (Run 4.319) |
 | Local cleanup | Inventory + charter prepared; **delete not executed** |
 | Report | [SITE-002-PROD-STABLE-CHECKPOINT-AFTER-SPAM-GUARD-AND-CLEANUP-INVENTORY-01.md](../reports/SITE-002-PROD-STABLE-CHECKPOINT-AFTER-SPAM-GUARD-AND-CLEANUP-INVENTORY-01.md) |
+
+### Offers recovery and new sections healthcheck (Run 4.325)
+
+| Item | Detail |
+|------|--------|
+| Latest import | `mars_1c_import_2026-08-19_080010.txt` / `mars-20260819-080002-61559c39` |
+| Result | `SUCCESS` — catalog PASS `4.07s`; offers PASS `3.86s`; total `7.98s` |
+| Exchange | `import0_1.xml` + `offers0_1.xml` both present/current |
+| Offers impact | products enabled `1647/1649`; `price > 0` = `1643`; non-zero qty = `537` |
+| Category recovery | `364` / `posuda-i-inventar` now enabled/visible; `95` / `holodilnoe-oborudovanie` no longer empty |
+| XML top level | `Упаковочное`, `Посуда и инвентарь`, `Холодильное`, `Нейтральное`, `Технологическое` |
+| Sitemap | live `1887` vs baseline `1879`; `/upakovochnoe-oborudovanie` absent; `/assum` present; `/brands/assum` absent |
+| Monitor | runtime healthy; artifact conflict = `run-summary.json` says `NO_ACTION_REQUIRED`, `monitor-classification.json` says `ONBOARDING_REQUIRED`; effective status = `MONITOR_ONBOARDING_REQUIRED` |
+| Next | onboarding + placement + importer-mapping charter; **do not baseline-refresh yet** |
+| Report | [SITE-002-PROD-POST-1C-OFFERS-RECOVERY-AND-NEW-SECTIONS-HEALTHCHECK-01.md](../reports/SITE-002-PROD-POST-1C-OFFERS-RECOVERY-AND-NEW-SECTIONS-HEALTHCHECK-01.md) |
 
 ### Offers missing + price-list FormData bug (Run 4.320)
 
