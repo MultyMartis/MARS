@@ -284,10 +284,13 @@ final class ActivityLog implements ModuleInterface {
 	 * @param string $object_title Short label, no secrets.
 	 * @param int    $object_id Optional object id.
 	 */
-	public static function log_system_event( $action, $object_type, $object_title, $object_id = 0 ) {
+	public static function log_system_event( $action, $object_type, $object_title, $object_id = 0, $source = '', $user_id_override = null ) {
 		self::maybe_install_table();
 
-		$user_id = get_current_user_id();
+		$user_id = null !== $user_id_override ? (int) $user_id_override : get_current_user_id();
+		if ( '' !== (string) $source ) {
+			$object_title = mb_substr( wp_strip_all_tags( (string) $object_title ) . ' · ' . sanitize_key( (string) $source ), 0, 255 );
+		}
 		$key     = sanitize_key( $action ) . ':' . sanitize_key( $object_type ) . ':' . (int) $object_id . ':' . (int) $user_id;
 
 		if ( isset( self::$logged_keys[ $key ] ) ) {
@@ -349,16 +352,21 @@ final class ActivityLog implements ModuleInterface {
 			'updated'           => __( 'Updated', 'shpigovsky-core' ),
 			'trashed'           => __( 'Moved to trash', 'shpigovsky-core' ),
 			'restored'          => __( 'Restored', 'shpigovsky-core' ),
-			'indexing_opened'     => __( 'Индексация открыта', 'shpigovsky-core' ),
-			'indexing_closed'     => __( 'Индексация закрыта', 'shpigovsky-core' ),
+			'indexing_opened'               => __( 'Индексация открыта', 'shpigovsky-core' ),
+			'indexing_closed'               => __( 'Индексация закрыта', 'shpigovsky-core' ),
+			'indexing_close_blocked'        => __( 'Закрытие индексации заблокировано', 'shpigovsky-core' ),
+			'indexing_inconsistency_detected' => __( 'Обнаружено расхождение индексации', 'shpigovsky-core' ),
+			'indexing_alert_sent'           => __( 'Отправлено критическое оповещение об индексации', 'shpigovsky-core' ),
+			'indexing_alert_error'          => __( 'Ошибка оповещения об индексации', 'shpigovsky-core' ),
+			'indexing_recovered'            => __( 'Индексация восстановлена', 'shpigovsky-core' ),
+			'cookie_privacy_settings_updated' => __( 'Cookie / privacy: настройки сохранены', 'shpigovsky-core' ),
+			'cookie_consent_version_changed'  => __( 'Cookie / privacy: версия согласия изменена', 'shpigovsky-core' ),
 			'smtp_config_updated' => __( 'Почта: настройки сохранены', 'shpigovsky-core' ),
 			'form_recipients_updated' => __( 'Получатели форм обновлены', 'shpigovsky-core' ),
 			'smtp_test_ok'        => __( 'Проверка SMTP: успех', 'shpigovsky-core' ),
 			'smtp_test_fail'      => __( 'Проверка SMTP: ошибка', 'shpigovsky-core' ),
 			'smtp_activated'      => __( 'Почта: отправка включена', 'shpigovsky-core' ),
 			'smtp_deactivated'    => __( 'Почта: отправка выключена', 'shpigovsky-core' ),
-			'cookie_privacy_settings_updated' => __( 'Cookie / privacy: настройки сохранены', 'shpigovsky-core' ),
-			'cookie_consent_version_changed'  => __( 'Cookie / privacy: версия согласия изменена', 'shpigovsky-core' ),
 		);
 		return isset( $map[ $action ] ) ? $map[ $action ] : $action;
 	}
@@ -369,9 +377,16 @@ final class ActivityLog implements ModuleInterface {
 	 * @param int $user_id User ID.
 	 * @return string
 	 */
-	public static function user_label( $user_id ) {
+	public static function user_label( $user_id, $source = '' ) {
 		$user_id = (int) $user_id;
 		if ( $user_id <= 0 ) {
+			if ( '' !== (string) $source ) {
+				return sprintf(
+					/* translators: %s: source key */
+					__( 'System (%s)', 'shpigovsky-core' ),
+					sanitize_key( (string) $source )
+				);
+			}
 			return __( 'System', 'shpigovsky-core' );
 		}
 
@@ -461,7 +476,7 @@ final class ActivityLog implements ModuleInterface {
 		echo '</select> ';
 
 		echo '<select name="fp02_action"><option value="">' . esc_html__( 'Все действия', 'shpigovsky-core' ) . '</option>';
-		foreach ( array( 'created', 'updated', 'trashed', 'restored', 'indexing_opened', 'indexing_closed', 'smtp_config_updated', 'smtp_test_ok', 'smtp_test_fail', 'smtp_activated', 'smtp_deactivated', 'cookie_privacy_settings_updated', 'cookie_consent_version_changed' ) as $act ) {
+		foreach ( array( 'created', 'updated', 'trashed', 'restored', 'indexing_opened', 'indexing_closed', 'indexing_close_blocked', 'indexing_inconsistency_detected', 'indexing_alert_sent', 'indexing_alert_error', 'indexing_recovered', 'smtp_config_updated', 'smtp_test_ok', 'smtp_test_fail', 'smtp_activated', 'smtp_deactivated', 'cookie_privacy_settings_updated', 'cookie_consent_version_changed' ) as $act ) {
 			printf(
 				'<option value="%1$s"%2$s>%3$s</option>',
 				esc_attr( $act ),

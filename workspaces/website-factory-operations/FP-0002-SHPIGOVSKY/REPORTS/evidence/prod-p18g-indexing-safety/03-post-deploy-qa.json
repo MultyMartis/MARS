@@ -1,0 +1,117 @@
+{
+  "bootstrap": {
+    "ok": true,
+    "human": {
+      "decision": "OPEN",
+      "user_id": 0,
+      "actor_login": "olya",
+      "actor_display": "Olya",
+      "source": "p18g_bootstrap",
+      "recorded_at": "2026-08-19 20:23:06",
+      "recorded_at_gmt": "2026-08-19 17:23:06 UTC"
+    },
+    "snap": {
+      "effective": "OPEN",
+      "blog_public": 1,
+      "blog_open": true,
+      "robots": {
+        "file_exists": true,
+        "owner": "physical_file",
+        "global_disallow": false,
+        "body_head": "﻿User-agent: Yandex\r\nAllow: */uploads\r\nAllow: /*/*.js\r\nAllow: /*/*.css\r\nAllow: /wp-*.png\r\nAllow: /wp-*.jpg\r\nAllow: /wp-*.jpeg\r\nAllow: /wp-*.gif\r\nAllow: /wp-admi"
+      },
+      "meta": {
+        "global_noindex": false,
+        "source": "blog_public_core_robots"
+      },
+      "signals_open": true,
+      "signals_closed": false,
+      "human_decision": "OPEN",
+      "human_actor": "Olya (olya)",
+      "human_recorded_at": "2026-08-19 20:23:06",
+      "human_source": "p18g_bootstrap",
+      "fingerprint": "e305cb991e8eeadd264eb2ca7258aa5362c10d504fa7e31277dd879034db54ba"
+    },
+    "_exit_code": 0
+  },
+  "blocked_close": {
+    "before": 1,
+    "after": 1,
+    "result": {
+      "ok": false,
+      "blocked": true,
+      "open": true,
+      "error": "close_requires_human_authorization"
+    },
+    "guard_held_open": true,
+    "_exit_code": 0
+  },
+  "admin_recipients": {
+    "count": 4,
+    "redacted": [
+      "In***@shpigovsky.ru",
+      "ol***@yandex.ru",
+      "su***@polygon-ws.ru",
+      "me***@polygon-ws.ru"
+    ],
+    "_exit_code": 0
+  },
+  "test_alert": {
+    "sent": true,
+    "recipients": 4,
+    "error": "",
+    "_exit_code": 0
+  },
+  "watchdog": {
+    "dashboard_line": "ACTIVE · последняя проверка 2026-08-19 20:23:57 · OPEN",
+    "snap": {
+      "effective": "OPEN",
+      "blog_public": 1,
+      "blog_open": true,
+      "robots": {
+        "file_exists": true,
+        "owner": "physical_file",
+        "global_disallow": false,
+        "body_head": "﻿User-agent: Yandex\r\nAllow: */uploads\r\nAllow: /*/*.js\r\nAllow: /*/*.css\r\nAllow: /wp-*.png\r\nAllow: /wp-*.jpg\r\nAllow: /wp-*.jpeg\r\nAllow: /wp-*.gif\r\nAllow: /wp-admi"
+      },
+      "meta": {
+        "global_noindex": false,
+        "source": "blog_public_core_robots"
+      },
+      "signals_open": true,
+      "signals_closed": false,
+      "human_decision": "OPEN",
+      "human_actor": "Olya (olya)",
+      "human_recorded_at": "2026-08-19 20:23:06",
+      "human_source": "p18g_bootstrap",
+      "fingerprint": "e305cb991e8eeadd264eb2ca7258aa5362c10d504fa7e31277dd879034db54ba"
+    },
+    "_exit_code": 0
+  },
+  "reconcile": {
+    "mutated": false,
+    "final": {
+      "effective": "OPEN",
+      "blog_public": 1,
+      "blog_open": true,
+      "robots": {
+        "file_exists": true,
+        "owner": "physical_file",
+        "global_disallow": false,
+        "body_head": "﻿User-agent: Yandex\r\nAllow: */uploads\r\nAllow: /*/*.js\r\nAllow: /*/*.css\r\nAllow: /wp-*.png\r\nAllow: /wp-*.jpg\r\nAllow: /wp-*.jpeg\r\nAllow: /wp-*.gif\r\nAllow: /wp-admi"
+      },
+      "meta": {
+        "global_noindex": false,
+        "source": "blog_public_core_robots"
+      },
+      "signals_open": true,
+      "signals_closed": false,
+      "human_decision": "OPEN",
+      "human_actor": "Olya (olya)",
+      "human_recorded_at": "2026-08-19 20:23:06",
+      "human_source": "p18g_bootstrap",
+      "fingerprint": "e305cb991e8eeadd264eb2ca7258aa5362c10d504fa7e31277dd879034db54ba"
+    },
+    "_exit_code": 0
+  }
+}

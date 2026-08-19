@@ -16,6 +16,8 @@ use Shpigovsky\Core\Admin\ActivityLog;
 use Shpigovsky\Core\Admin\AdminMenuHygiene;
 use Shpigovsky\Core\Admin\SystemDashboard;
 use Shpigovsky\Core\Admin\IndexingControl;
+use Shpigovsky\Core\Admin\IndexingState;
+use Shpigovsky\Core\Admin\IndexingWatchdog;
 use Shpigovsky\Core\Admin\DocxImporter;
 use Shpigovsky\Core\Admin\MailFormsSettings;
 use Shpigovsky\Core\Admin\LeadsAdmin;
@@ -150,6 +152,12 @@ final class ModuleRegistry {
 			'class'             => IndexingControl::class,
 			'status'            => self::ENABLED_IN_CONTENT_MODEL,
 			'runtime_delivered' => false,
+		),
+		'admin.indexing-watchdog' => array(
+			'module'            => 'Admin',
+			'class'             => IndexingWatchdog::class,
+			'status'            => self::ENABLED_IN_CONTENT_MODEL,
+			'runtime_delivered' => true,
 		),
 		'admin.docx-importer'       => array(
 			'module'            => 'Admin',

@@ -97,4 +97,22 @@ Opening the control is **not** authorization to launch indexing during an implem
 
 ---
 
+## 6. Operator-owned indexability (P18G — FP-0002 proven)
+
+```text
+INDEXABILITY IS OPERATOR-OWNED PRODUCTION STATE, NOT A DEPLOYMENT DEFAULT.
+```
+
+After a human opens indexing:
+
+- Technical waves **read current state first** and **preserve OPEN by default**.
+- Never restore CLOSED from old backup, baseline, runbook, staging convention, migration script, or QA closeout **without explicit current operator authorization**.
+- Non-human OPEN→CLOSED must be **blocked** with audit log + administrator alert.
+
+Charters mentioning indexing must state the above.
+
+Anti-patterns: INDEX-001 … INDEX-007 in [ANTI-PATTERN-REGISTRY](FORGE-WORDPRESS-ANTI-PATTERN-REGISTRY-v1.md).
+
+---
+
 *FW-S-32 v1.*

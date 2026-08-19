@@ -28,12 +28,12 @@ final class SystemDashboard implements ModuleInterface {
 	/**
 	 * Baseline ID shown in the widget (updated by stabilization waves).
 	 */
-	const BASELINE_ID = 'FP-0002-PROD-BASELINE-2026-08-19-P18E-EF';
+	const BASELINE_ID = 'FP-0002-PROD-BASELINE-2026-08-20-P18G';
 
 	/**
 	 * Latest accepted production wave label.
 	 */
-	const LATEST_ACCEPTED_WAVE = 'P18E-E/F Form Goal + Cookie Policy Integration';
+	const LATEST_ACCEPTED_WAVE = 'P18G Indexing Safety Guard + Critical Admin Alerts';
 
 	/**
 	 * {@inheritdoc}
@@ -118,7 +118,10 @@ final class SystemDashboard implements ModuleInterface {
 		$sender          = class_exists( MailOps::class ) ? MailOps::from_email() : $smtp_box;
 		$leads_active    = class_exists( LeadRegistry::class );
 		$goal_cfg        = class_exists( MailOps::class ) && '' !== MailOps::metrika_goal();
-		$indexing_open   = class_exists( IndexingControl::class ) ? IndexingControl::is_open() : ( 1 === (int) get_option( 'blog_public', 1 ) );
+		$indexing_open   = class_exists( IndexingState::class )
+			? ( IndexingState::STATE_OPEN === IndexingState::snapshot()['effective'] )
+			: ( class_exists( IndexingControl::class ) ? IndexingControl::is_open() : ( 1 === (int) get_option( 'blog_public', 1 ) ) );
+		$indexing_snap   = class_exists( IndexingState::class ) ? IndexingState::snapshot() : array();
 		$privacy_policy  = class_exists( PrivacyConsent::class ) ? PrivacyConsent::policy_status_label( PrivacyConsent::get_policy_page() ) : 'NOT CONFIGURED';
 
 		if ( '' === $ssl ) {
@@ -204,12 +207,6 @@ final class SystemDashboard implements ModuleInterface {
 				: __( 'NOT INSTALLED', 'shpigovsky-core' )
 		);
 		self::row(
-			__( 'Категории Cookie', 'shpigovsky-core' ),
-			class_exists( PrivacyConsent::class )
-				? __( 'Necessary + Analytics', 'shpigovsky-core' )
-				: '—'
-		);
-		self::row(
 			__( 'Consent-gating Метрики', 'shpigovsky-core' ),
 			class_exists( PrivacyConsent::class )
 				? __( 'CONSENT-GATED', 'shpigovsky-core' )
@@ -229,10 +226,30 @@ final class SystemDashboard implements ModuleInterface {
 		);
 		self::row(
 			__( 'Индексация', 'shpigovsky-core' ),
-			$indexing_open
-				? __( 'OPEN', 'shpigovsky-core' )
-				: __( 'CLOSED — WAITING FOR OLYA APPROVAL', 'shpigovsky-core' )
+			! empty( $indexing_snap['effective'] )
+				? (string) $indexing_snap['effective']
+				: ( $indexing_open ? __( 'OPEN', 'shpigovsky-core' ) : __( 'CLOSED', 'shpigovsky-core' ) )
 		);
+		if ( ! empty( $indexing_snap['human_actor'] ) ) {
+			self::row(
+				__( 'Решение об индексации', 'shpigovsky-core' ),
+				(string) $indexing_snap['human_decision'] . ' · ' . (string) $indexing_snap['human_actor']
+			);
+		}
+		if ( ! empty( $indexing_snap['robots'] ) ) {
+			self::row(
+				__( 'robots.txt', 'shpigovsky-core' ),
+				! empty( $indexing_snap['robots']['global_disallow'] )
+					? 'Disallow: / (' . (string) $indexing_snap['robots']['owner'] . ')'
+					: __( 'без глобального Disallow', 'shpigovsky-core' ) . ' (' . (string) $indexing_snap['robots']['owner'] . ')'
+			);
+		}
+		if ( class_exists( IndexingWatchdog::class ) ) {
+			self::row(
+				__( 'Watchdog индексации', 'shpigovsky-core' ),
+				IndexingWatchdog::dashboard_line()
+			);
+		}
 		self::row( __( 'Core', 'shpigovsky-core' ), defined( 'SHPIGOVSKY_CORE_VERSION' ) ? SHPIGOVSKY_CORE_VERSION : '—' );
 		self::row( __( 'Последняя проверка', 'shpigovsky-core' ), '' !== $verified ? $verified : __( 'ещё не зафиксирована', 'shpigovsky-core' ) );
 		self::row( __( 'Бэкап', 'shpigovsky-core' ), $backup );
@@ -241,10 +258,11 @@ final class SystemDashboard implements ModuleInterface {
 
 		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'Следующие шаги', 'shpigovsky-core' ) . '</h3>';
 		echo '<ul style="margin:0 0 12px 1.2em;">';
-		self::li( __( '1. Cookie Policy: final legal/operator approval of current factual wording', 'shpigovsky-core' ) );
-		self::li( __( '2. Индексация — ТОЛЬКО после разрешения Оли или явной команды оператора', 'shpigovsky-core' ) );
-		self::li( __( '3. Открытые решения: срок хранения consent-choice и server-side evidence policy', 'shpigovsky-core' ) );
-		self::li( __( '4. UTM/sessionStorage wording remains part of legal review register', 'shpigovsky-core' ) );
+		self::li( __( '1. SMTP VERIFIED / ACTIVE — временное pre-cutover подавление удалено', 'shpigovsky-core' ) );
+		self::li( __( '2. Индексация OPEN — human-approved; технические волны не должны закрывать её без явной команды', 'shpigovsky-core' ) );
+		self::li( __( '3. Отправка sitemap в Search Console / Яндекс Вебмастер', 'shpigovsky-core' ) );
+		self::li( __( '4. Финальный обход', 'shpigovsky-core' ) );
+		self::li( __( 'Открытый вопрос: срок хранения заявок — решение оператора', 'shpigovsky-core' ) );
 		echo '</ul>';
 
 		if ( $is_beget && ( 'local' === $env_const || 'local' === $env_fn ) ) {

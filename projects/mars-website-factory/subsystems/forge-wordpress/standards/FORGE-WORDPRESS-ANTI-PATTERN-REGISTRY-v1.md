@@ -328,64 +328,76 @@ Each ID is reusable. Client facts are generalized.
 | Replacement | [ADMIN UX](FORGE-WORDPRESS-ADMIN-UX-STANDARD-v1.md) §10.7 · [DoD](FORGE-WORDPRESS-DEFINITION-OF-DONE-v1.md) · [ADMIN IA](FORGE-WORDPRESS-ADMIN-INFORMATION-ARCHITECTURE-STANDARD-v1.md) |
 | Evidence | FP-0002 P18C-FU01 |
 
----
-
-## AP-030 — FORM-008 recipient list edits wipe the SMTP secret
+## INDEX-001 — Technical closeout restores historical CLOSED after human OPEN
 
 | | |
 |--|--|
-| Symptom | Saving recipients or adding a row clears the stored mailbox password |
-| Cause | Shared save handler treats a blank write-only password as “set empty”; or recipient POST omits SMTP fields and overwrites them |
-| Risk | Silent mail failure; operator must re-enter the secret |
-| Prevention | Blank password keeps existing secret; recipient save must not call password clear; never render the secret |
-| Replacement | [FORMS-AND-SMTP](FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) §7 and §13 |
-| Evidence | FP-0002 P18C-FU02 |
+| Symptom | Fresh intake finds `blog_public=1`; wave re-closes because old baseline said CLOSED |
+| Cause | Closeout script calls `set_site_indexability(false)` without human authorization |
+| Risk | Silent de-indexing; Activity Log shows «Система» |
+| Prevention | `request_state()` guard; read human-owned state first; never close as «safe default» |
+| Replacement | FW-S-32 §6 · FP-0002 P18G |
+| Evidence | FP-0002 P18D-FU01 @ 2026-08-19 13:13:25 |
 
----
-
-## AP-031 — PRIVACY-001 Decorative cookie banner without runtime gating
+## INDEX-002 — `blog_public` treated as sole indexability signal
 
 | | |
 |--|--|
-| Symptom | Visitor sees a cookie banner, but analytics already loaded before any choice |
-| Cause | UI added independently from tracker ownership |
-| Risk | False privacy control; misleading legal posture |
-| Prevention | Inventory-first design; one privacy owner; gate analytics runtime, not only UI |
-| Replacement | [COOKIE-CONSENT-AND-PRIVACY-CONTROLS](FORGE-WORDPRESS-COOKIE-CONSENT-AND-PRIVACY-CONTROLS-STANDARD-v1.md) §3–4 |
-| Evidence | FP-0002 P18E current Metrika reality |
+| Symptom | Dashboard says OPEN while robots or meta still block |
+| Cause | Single-option checks |
+| Risk | False confidence |
+| Prevention | `IndexingState` computes OPEN/CLOSED/INCONSISTENT from blog_public + robots + meta |
+| Evidence | FP-0002 P18G |
 
-## AP-032 — PRIVACY-002 Analytics loads before consent state resolves
-
-| | |
-|--|--|
-| Symptom | Metrika/analytics script flashes on first paint, then gets disabled |
-| Cause | Consent state read too late or unconditional footer/head output |
-| Risk | Tracking already occurred before refusal |
-| Prevention | Early consent read; defer third-party analytics bootstrap and noscript path until allowed |
-| Replacement | [COOKIE-CONSENT-AND-PRIVACY-CONTROLS](FORGE-WORDPRESS-COOKIE-CONSENT-AND-PRIVACY-CONTROLS-STANDARD-v1.md) §4–5 |
-| Evidence | FP-0002 P18E design |
-
-## AP-033 — PRIVACY-003 Form personal-data consent merged with analytics consent
+## INDEX-003 — Physical vs virtual robots competing ownership
 
 | | |
 |--|--|
-| Symptom | One checkbox both submits the lead and opts into analytics |
-| Cause | “One consent is easier” shortcut |
-| Risk | Invalid consent semantics; operator confusion; broken form UX |
-| Prevention | Keep form processing consent separate from analytics choice |
-| Replacement | [COOKIE-CONSENT-AND-PRIVACY-CONTROLS](FORGE-WORDPRESS-COOKIE-CONSENT-AND-PRIVACY-CONTROLS-STANDARD-v1.md) §6 |
-| Evidence | FP-0002 P18E forms/goals model |
+| Symptom | IndexingControl overwrites host-managed robots on toggle |
+| Cause | Blind physical file rewrite |
+| Risk | SEO rule loss or hidden global disallow drift |
+| Prevention | Prove runtime owner; preserve complex host robots on OPEN when no global `Disallow:/` |
+| Evidence | FP-0002 P18G pre-intake |
 
-## AP-034 — PRIVACY-004 Cookie/privacy document describes generic vendors instead of actual runtime
+## INDEX-004 — Generic system/CLI closes indexing without authorization
 
 | | |
 |--|--|
-| Symptom | Policy page names demo providers, placeholders, or future-state integrations |
-| Cause | Legal page treated as template content instead of deployed-technology disclosure |
-| Risk | Mismatch between runtime and legal text |
-| Prevention | Fresh tracker/storage intake before legal-copy finalization |
-| Replacement | [COOKIE-CONSENT-AND-PRIVACY-CONTROLS](FORGE-WORDPRESS-COOKIE-CONSENT-AND-PRIVACY-CONTROLS-STANDARD-v1.md) §3 and §9 |
-| Evidence | FP-0002 live `cookie-files-policy` placeholder and generic wording |
+| Symptom | wp_eval / WP-CLI / cron sets `blog_public=0` |
+| Cause | Unguarded `update_option` |
+| Risk | Production de-indexing |
+| Prevention | `pre_update_option_blog_public` guard + blocked close audit |
+| Evidence | FP-0002 P18G |
+
+## INDEX-005 — Indexing closure without administrator alert
+
+| | |
+|--|--|
+| Symptom | Site closes; operators learn from Search Console days later |
+| Cause | No alert path |
+| Risk | Business visibility loss |
+| Prevention | Critical email to WP administrators (not form recipients) |
+| Evidence | FP-0002 P18G |
+
+## INDEX-006 — Watchdog auto-fights human state
+
+| | |
+|--|--|
+| Symptom | Cron re-opens or re-closes indexing |
+| Cause | «Self-healing» automation |
+| Risk | Overrides human decision |
+| Prevention | Watchdog alerts only; humans mutate via Admin control |
+| Evidence | FP-0002 P18G |
+
+## INDEX-007 — Historical report state treated as runtime authority
+
+| | |
+|--|--|
+| Symptom | Runbook says CLOSED; wave closes live OPEN site |
+| Cause | Stale baseline in charter |
+| Risk | Repeat INDEX-001 |
+| Prevention | Fresh intake + human authority metadata; update current docs not historical reports |
+| Evidence | FP-0002 P18D-FU01 |
 
 ---
 
@@ -414,4 +426,4 @@ Do **not** reuse AP-001–021 numbers. Full entries: [CMS-ANTI-PATTERNS](FORGE-W
 
 ---
 
-*FW-S-21 v1.7 — 34 operational anti-patterns (AP-022–030 form/admin; AP-031–034 privacy/cookie controls) + AP-CMS-001–016 index. Add IDs; do not reuse numbers.*
+*FW-S-21 v1.5 — 29 operational anti-patterns (AP-022–028 = FORM-001–007; AP-029 Admin discoverability) + AP-CMS-001–016 index. Add IDs; do not reuse numbers.*

@@ -1,0 +1,284 @@
+{
+  "captured_at": "2026-08-19T17:24:01.268808+00:00",
+  "wp": {
+    "ok": true,
+    "home": "https://shpigovsky.ru",
+    "siteurl": "https://shpigovsky.ru",
+    "blog_public": 1,
+    "core": "0.3.17-p18g",
+    "indexing_snap": {
+      "effective": "OPEN",
+      "blog_public": 1,
+      "blog_open": true,
+      "robots": {
+        "file_exists": true,
+        "owner": "physical_file",
+        "global_disallow": false,
+        "body_head": "﻿User-agent: Yandex\r\nAllow: */uploads\r\nAllow: /*/*.js\r\nAllow: /*/*.css\r\nAllow: /wp-*.png\r\nAllow: /wp-*.jpg\r\nAllow: /wp-*.jpeg\r\nAllow: /wp-*.gif\r\nAllow: /wp-admi"
+      },
+      "meta": {
+        "global_noindex": false,
+        "source": "blog_public_core_robots"
+      },
+      "signals_open": true,
+      "signals_closed": false,
+      "human_decision": "OPEN",
+      "human_actor": "Olya (olya)",
+      "human_recorded_at": "2026-08-19 20:23:06",
+      "human_source": "p18g_bootstrap",
+      "fingerprint": "e305cb991e8eeadd264eb2ca7258aa5362c10d504fa7e31277dd879034db54ba"
+    },
+    "human_authority": {
+      "decision": "OPEN",
+      "user_id": 0,
+      "actor_login": "olya",
+      "actor_display": "Olya",
+      "source": "p18g_bootstrap",
+      "recorded_at": "2026-08-19 20:23:06",
+      "recorded_at_gmt": "2026-08-19 17:23:06 UTC"
+    },
+    "dashboard_meta": {
+      "baseline_id": "FP-0002-PROD-BASELINE-2026-08-20-P18G",
+      "latest_wave": "P18G Indexing Safety Guard + Critical Admin Alerts",
+      "parity": "MATCH",
+      "verified_at": "2026-08-19 16:18 UTC",
+      "backup": "BOUNDED PAGE SNAPSHOT / EXACT FILE DEPLOY",
+      "git_sha": "16706398f03825b054ce75c56e8af48ec4349329",
+      "wave": "PROD-P15",
+      "state_note": "COOKIE CONSENT ACTIVE; METRIKA CONSENT-GATED; FORM GOAL CONSENT-GATED; COOKIE SETTINGS REOPEN ACTIVE; INDEXING CLOSED",
+      "legacy_redirects": "7/7",
+      "cutover": "DONE",
+      "ssl": "ACTIVE",
+      "dns_ns": "DONE / Beget",
+      "smtp_sender": "noreply@shpigovsky.ru",
+      "indexing": "OPEN — HUMAN-APPROVED",
+      "public_origin": "ПУБЛИЧНЫЙ https://shpigovsky.ru/ СЕЙЧАС ОТДАЁТ СТАРЫЙ САЙТ (Craftum) — привязка к WordPress ещё нужна",
+      "mail": "SMTP CONFIGURED — VERIFICATION REQUIRED",
+      "leads": "ACTIVE",
+      "metrika_form_goals": "CONSENT-GATED"
+    },
+    "_exit_code": 0
+  },
+  "robots_physical": {
+    "path": "/home/s/shpigovsky/shpigovsky.ru/public_html/robots.txt",
+    "exists": true,
+    "sha256": "b484afdc1b196dc930dc3bbf70d5cbddd8a4b6b65df43ea9da04c6416a237616",
+    "body": "﻿User-agent: Yandex\r\nAllow: */uploads\r\nAllow: /*/*.js\r\nAllow: /*/*.css\r\nAllow: /wp-*.png\r\nAllow: /wp-*.jpg\r\nAllow: /wp-*.jpeg\r\nAllow: /wp-*.gif\r\nAllow: /wp-admin/admin-ajax.php\r\nDisallow: /cgi-bin\r\nDisallow: /?\r\nDisallow: /wp-\r\nDisallow: /wp/\r\nDisallow: *?s=\r\nDisallow: *&s=\r\nDisallow: /search/\r\nDisallow: /author/\r\nDisallow: /users/\r\nDisallow: /privacy-policy/\r\nDisallow: /user-agreement/\r\nDisallow: /consent-personal-data/\r\nDisallow: /cookie-files-policy/\r\nDisallow: */trackback\r\nDisallow: */feed\r\nDisallow: */rss\r\nDisallow: */embed\r\nDisallow: */wlwmanifest.xml\r\nDisallow: /xmlrpc.php\r\nDisallow: *utm*=\r\nDisallow: *openstat=\r\nClean-Param: utm_source&utm_medium&utm_campaign\r\nClean-param: utm\r\nClean-param: etext\r\nClean-param: pm_source\r\nClean-Param: openstat\r\n\r\n\r\nUser-agent: GoogleBot\r\nAllow: /*/*.js\r\nAllow: /*/*.css\r\nAllow: /wp-*.png\r\nAllow: /wp-*.jpg\r\nAllow: /wp-*.jpeg\r\nAllow: /wp-*.gif\r\nAllow: /wp-admin/admin-ajax.php\r\nDisallow: /cgi-bin\r\nDisallow: /?\r\nDisallow: /wp-\r\nDisallow: /wp/\r\nDisallow: *?s=\r\nDisallow: *&s=\r\nDisallow: /search/\r\nDisallow: /author/\r\nDisallow: /users/\r\nDisallow: /privacy-policy/\r\nDisallow: /user-agreement/\r\nDisallow: /consent-personal-data/\r\nDisallow: /cookie-files-policy/\r\nDisallow: */trackback\r\nDisallow: */feed\r\nDisallow: */rss\r\nDisallow: */embed\r\nDisallow: */wlwmanifest.xml\r\nDisallow: /xmlrpc.php\r\nDisallow: *utm*=\r\nDisallow: *openstat=\r\nAllow: */uploads\r\n\r\n\r\nUser-agent: Bingbot\r\nAllow: */uploads\r\nAllow: /*/*.js\r\nAllow: /*/*.css\r\nAllow: /wp-*.png\r\nAllow: /wp-*.jpg\r\nAllow: /wp-*.jpeg\r\nAllow: /wp-*.gif\r\nAllow: /wp-admin/admin-ajax.php\r\nDisallow: /cgi-bin\r\nDisallow: /?\r\nDisallow: /wp-\r\nDisallow: /wp/\r\nDisallow: *?s=\r\nDisallow: *&s=\r\nDisallow: /search/\r\nDisallow: /author/\r\nDisallow: /users/\r\nDisallow: /privacy-policy/\r\nDisallow: /user-agreement/\r\nDisallow: /consent-personal-data/\r\nDisallow: /cookie-files-policy/\r\nDisallow: */trackback\r\nDisallow: */feed\r\nDisallow: */rss\r\nDisallow: */embed\r\nDisallow: */wlwmanifest.xml\r\nDisallow: /xmlrpc.php\r\nDisallow: *utm*=\r\nDisallow: *openstat=\r\n\r\n\r\nUser-agent: *\r\nAllow: */uploads\r\nAllow: /*/*.js\r\nAllow: /*/*.css\r\nAllow: /wp-*.png\r\nAllow: /wp-*.jpg\r\nAllow: /wp-*.jpeg\r\nAllow: /wp-*.gif\r\nAllow: /wp-admin/admin-ajax.php\r\nDisallow: /cgi-bin\r\nDisallow: /?\r\nDisallow: /wp-\r\nDisallow: /wp/\r\nDisallow: *?s=\r\nDisallow: *&s=\r\nDisallow: /search/\r\nDisallow: /author/\r\nDisallow: /users/\r\nDisallow: /privacy-policy/\r\nDisallow: /user-agreement/\r\nDisallow: /consent-personal-data/\r\nDisallow: /cookie-files-policy/\r\nDisallow: */trackback\r\nDisallow: */feed\r\nDisallow: */rss\r\nDisallow: */embed\r\nDisallow: */wlwmanifest.xml\r\nDisallow: /xmlrpc.php\r\nDisallow: *utm*=\r\nDisallow: *openstat=\r\n\r\n\r\nUser-Agent: Googlebot-Image\r\nAllow: /\r\n\r\n\r\nSitemap: https://shpigovsky.ru/wp-sitemap.xml",
+    "stat": {
+      "size": 2748,
+      "mtime": 1787157000
+    }
+  },
+  "http": {
+    "robots_txt": {
+      "url": "https://shpigovsky.ru/robots.txt",
+      "status": 200,
+      "x_robots_tag": "",
+      "meta_robots_tags": [],
+      "body_has_noindex": false,
+      "body_head": "ï»¿User-agent: Yandex\r\nAllow: */uploads\r\nAllow: /*/*.js\r\nAllow: /*/*.css\r\nAllow: /wp-*.png\r\nAllow: /wp-*.jpg\r\nAllow: /wp-*.jpeg\r\nAllow: /wp-*.gif\r\nAllow: /wp-admin/admin-ajax.php\r\nDisallow: /cgi-bin\r\nDisallow: /?\r\nDisallow: /wp-\r\nDisallow: /wp/\r\nDisallow: *?s=\r\nDisallow: *&s=\r\nDisallow: /search/\r\nDisallow: /author/\r\nDisallow: /users/\r\nDisallow: /privacy-policy/\r\nDisallow: /user-agreement/\r\nDisallo"
+    },
+    "home": {
+      "url": "https://shpigovsky.ru/",
+      "status": 200,
+      "x_robots_tag": "",
+      "meta_robots_tags": [
+        "<meta name='robots' content='max-image-preview:large' />"
+      ],
+      "body_has_noindex": false,
+      "body_head": "<!DOCTYPE html>\r\n<html lang=\"ru-RU\">\r\n<head>\r\n\t<meta charset=\"UTF-8\">\r\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n\t<script>(function(){document.documentElement.classList.add('js-enabled');})();</script>\n<title>Шпиговский Дом</title>\n<meta name='robots' content='max-image-preview:large' />\n<link rel=\"alternate\" title=\"oEmbed (JSON)\" type=\"application/json+oembed\" href=\"h"
+    },
+    "uslugi": {
+      "url": "https://shpigovsky.ru/uslugi/",
+      "status": 200,
+      "x_robots_tag": "",
+      "meta_robots_tags": [
+        "<meta name='robots' content='max-image-preview:large' />"
+      ],
+      "body_has_noindex": false,
+      "body_head": "<!DOCTYPE html>\r\n<html lang=\"ru-RU\">\r\n<head>\r\n\t<meta charset=\"UTF-8\">\r\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n\t<script>(function(){document.documentElement.classList.add('js-enabled');})();</script>\n<title>Услуги &#8212; Шпиговский Дом</title>\n<meta name='robots' content='max-image-preview:large' />\n<link rel=\"alternate\" title=\"oEmbed (JSON)\" type=\"application/json+"
+    }
+  },
+  "activity_window": [
+    {
+      "id": 109,
+      "created_at": "2026-08-18 21:14:40",
+      "action": "indexing_closed",
+      "object_title": "Индексация: закрыта",
+      "user_id": 0,
+      "user_login": "system",
+      "display_name": "System"
+    },
+    {
+      "id": 110,
+      "created_at": "2026-08-18 21:14:43",
+      "action": "indexing_opened",
+      "object_title": "Индексация: открыта",
+      "user_id": 0,
+      "user_login": "system",
+      "display_name": "System"
+    },
+    {
+      "id": 111,
+      "created_at": "2026-08-18 21:15:10",
+      "action": "indexing_closed",
+      "object_title": "Индексация: закрыта",
+      "user_id": 0,
+      "user_login": "system",
+      "display_name": "System"
+    },
+    {
+      "id": 112,
+      "created_at": "2026-08-18 21:16:14",
+      "action": "indexing_closed",
+      "object_title": "Индексация: закрыта",
+      "user_id": 0,
+      "user_login": "system",
+      "display_name": "System"
+    },
+    {
+      "id": 113,
+      "created_at": "2026-08-18 21:16:21",
+      "action": "indexing_opened",
+      "object_title": "Индексация: открыта",
+      "user_id": 0,
+      "user_login": "system",
+      "display_name": "System"
+    },
+    {
+      "id": 114,
+      "created_at": "2026-08-18 21:16:23",
+      "action": "indexing_closed",
+      "object_title": "Индексация: закрыта",
+      "user_id": 0,
+      "user_login": "system",
+      "display_name": "System"
+    },
+    {
+      "id": 115,
+      "created_at": "2026-08-18 22:27:26",
+      "action": "indexing_opened",
+      "object_title": "Индексация: открыта",
+      "user_id": 4,
+      "user_login": "metacode",
+      "display_name": "MetaCODE"
+    },
+    {
+      "id": 116,
+      "created_at": "2026-08-18 22:27:34",
+      "action": "indexing_closed",
+      "object_title": "Индексация: закрыта",
+      "user_id": 4,
+      "user_login": "metacode",
+      "display_name": "MetaCODE"
+    },
+    {
+      "id": 130,
+      "created_at": "2026-08-19 11:16:31",
+      "action": "indexing_opened",
+      "object_title": "Индексация: открыта",
+      "user_id": 2,
+      "user_login": "admin",
+      "display_name": "admin"
+    },
+    {
+      "id": 131,
+      "created_at": "2026-08-19 13:02:51",
+      "action": "smtp_config_updated",
+      "object_title": "Почта и формы: настройки сохранены",
+      "user_id": 4,
+      "user_login": "metacode",
+      "display_name": "MetaCODE"
+    },
+    {
+      "id": 132,
+      "created_at": "2026-08-19 13:02:51",
+      "action": "form_recipients_updated",
+      "object_title": "Получатели форм: 2",
+      "user_id": 4,
+      "user_login": "metacode",
+      "display_name": "MetaCODE"
+    },
+    {
+      "id": 133,
+      "created_at": "2026-08-19 13:13:19",
+      "action": "smtp_test_ok",
+      "object_title": "Проверка SMTP: успех",
+      "user_id": 0,
+      "user_login": "system",
+      "display_name": "System"
+    },
+    {
+      "id": 134,
+      "created_at": "2026-08-19 13:13:20",
+      "action": "smtp_activated",
+      "object_title": "Почта: исходящая отправка активирована",
+      "user_id": 0,
+      "user_login": "system",
+      "display_name": "System"
+    },
+    {
+      "id": 135,
+      "created_at": "2026-08-19 13:13:25",
+      "action": "indexing_closed",
+      "object_title": "Индексация: закрыта",
+      "user_id": 0,
+      "user_login": "system",
+      "display_name": "System"
+    },
+    {
+      "id": 136,
+      "created_at": "2026-08-19 13:55:43",
+      "action": "cookie_privacy_settings_updated",
+      "object_title": "Cookie / privacy settings updated: policy_page",
+      "user_id": 3,
+      "user_login": "mars",
+      "display_name": "MARS MetaCODE"
+    },
+    {
+      "id": 137,
+      "created_at": "2026-08-19 13:56:21",
+      "action": "cookie_privacy_settings_updated",
+      "object_title": "Cookie / privacy settings updated: policy_page",
+      "user_id": 3,
+      "user_login": "mars",
+      "display_name": "MARS MetaCODE"
+    },
+    {
+      "id": 138,
+      "created_at": "2026-08-19 16:05:59",
+      "action": "updated",
+      "object_title": "Политика Cookie-файлов",
+      "user_id": 0,
+      "user_login": "system",
+      "display_name": "System"
+    },
+    {
+      "id": 139,
+      "created_at": "2026-08-19 19:18:26",
+      "action": "indexing_opened",
+      "object_title": "Индексация: открыта",
+      "user_id": 2,
+      "user_login": "admin",
+      "display_name": "admin"
+    },
+    {
+      "id": 155,
+      "created_at": "2026-08-19 20:23:07",
+      "action": "indexing_close_blocked",
+      "object_title": "OPEN→CLOSED отклонено: нет explicit_human_authorization · p18g_qa_guard_test · p18g_qa_guard_test",
+      "user_id": 0,
+      "user_login": "system",
+      "display_name": "System"
+    },
+    {
+      "id": 156,
+      "created_at": "2026-08-19 20:23:54",
+      "action": "indexing_close_blocked",
+      "object_title": "OPEN→CLOSED отклонено: нет explicit_human_authorization · p18g_qa_guard_test · p18g_qa_guard_test",
+      "user_id": 0,
+      "user_login": "system",
+      "display_name": "System"
+    }
+  ]
+}

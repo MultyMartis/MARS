@@ -1,9 +1,9 @@
 <?php
 /**
- * Canonical site indexability owner + Dashboard control — PROD-P18B.
+ * Canonical site indexability owner + Dashboard control — PROD-P18B / P18G guard.
  *
  * SET SITE INDEXABILITY = OPEN / CLOSED.
- * Never opened automatically. Mutation is POST + capability + nonce + confirm.
+ * Non-human OPEN→CLOSED is blocked by default (PROD-P18G).
  *
  * @package Shpigovsky_Core
  */
@@ -22,13 +22,22 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 final class IndexingControl implements ModuleInterface {
 
-	const ACTION          = 'fp02_set_indexability';
-	const NONCE           = 'fp02_set_indexability';
-	const CAPABILITY      = 'manage_options';
-	const CONFIRM_FIELD   = 'fp02_confirm';
-	const STATE_FIELD     = 'fp02_indexability';
-	const NOTICE_QUERY    = 'fp02_indexing';
-	const ROBOTS_RELATIVE = 'robots.txt';
+	const ACTION                = 'fp02_set_indexability';
+	const NONCE                 = 'fp02_set_indexability';
+	const CAPABILITY            = 'manage_options';
+	const CONFIRM_FIELD         = 'fp02_confirm';
+	const CLOSE_ACK_FIELD       = 'fp02_close_ack';
+	const STATE_FIELD           = 'fp02_indexability';
+	const NOTICE_QUERY          = 'fp02_indexing';
+	const ROBOTS_RELATIVE       = 'robots.txt';
+	const TECHNICAL_CLOSE_CONST = 'FP02_INDEXING_TECHNICAL_CLOSE_AUTHORIZED';
+
+	/**
+	 * In-request flag: authorized mutation is in progress.
+	 *
+	 * @var bool
+	 */
+	private static $authorized_mutation = false;
 
 	/**
 	 * {@inheritdoc}
@@ -50,10 +59,20 @@ final class IndexingControl implements ModuleInterface {
 	public static function register() {
 		add_action( 'admin_post_' . self::ACTION, array( __CLASS__, 'handle_admin_post' ) );
 		add_action( 'admin_notices', array( __CLASS__, 'render_admin_notice' ) );
+		add_filter( 'pre_update_option_blog_public', array( __CLASS__, 'guard_blog_public_update' ), 10, 2 );
 	}
 
 	/**
-	 * Whether WordPress currently allows search-engine indexing.
+	 * Whether authorized indexing mutation is executing.
+	 *
+	 * @return bool
+	 */
+	public static function is_authorized_mutation_in_progress() {
+		return self::$authorized_mutation;
+	}
+
+	/**
+	 * Whether WordPress currently allows search-engine indexing (blog_public only).
 	 *
 	 * @return bool
 	 */
@@ -62,31 +81,169 @@ final class IndexingControl implements ModuleInterface {
 	}
 
 	/**
-	 * SET SITE INDEXABILITY = OPEN / CLOSED.
+	 * Guard direct blog_public writes (WP-CLI, rogue update_option).
 	 *
-	 * Owners kept consistent:
-	 * - option blog_public (drives WP meta robots via core wp_robots_noindex)
-	 * - physical ABSPATH/robots.txt when present (otherwise WP virtual robots_txt)
+	 * @param mixed $value New value.
+	 * @param mixed $old Old value.
+	 * @return mixed
+	 */
+	public static function guard_blog_public_update( $value, $old ) {
+		$closing = ( '0' === (string) $value || 0 === $value );
+		if ( ! $closing ) {
+			return $value;
+		}
+		if ( self::$authorized_mutation ) {
+			return $value;
+		}
+
+		if ( class_exists( ActivityLog::class ) ) {
+			ActivityLog::log_system_event(
+				'indexing_close_blocked',
+				'setting',
+				'Заблокирована попытка blog_public=0 без явной human authorization',
+				0,
+				self::detect_unauthorized_source()
+			);
+		}
+
+		return $old;
+	}
+
+	/**
+	 * Best-effort source for unauthorized close attempts.
 	 *
-	 * Does not submit sitemaps. Does not change Search Console / Yandex.
-	 * Search-result pages remain noindex via theme wp_robots (intentional).
+	 * @return string
+	 */
+	private static function detect_unauthorized_source() {
+		if ( defined( 'WP_CLI' ) && WP_CLI ) {
+			return 'wp_cli';
+		}
+		if ( defined( 'DOING_CRON' ) && DOING_CRON ) {
+			return 'cron';
+		}
+		if ( is_admin() && is_user_logged_in() ) {
+			return 'admin_unauthorized';
+		}
+		return 'system';
+	}
+
+	/**
+	 * Canonical mutation API with human-authorization guard.
+	 *
+	 * @param bool                 $open Target state.
+	 * @param array<string, mixed> $context actor/source/explicit_human_authorization/reason/charter_id.
+	 * @return array<string, mixed>
+	 */
+	public static function request_state( $open, array $context = array() ) {
+		$open = (bool) $open;
+
+		if ( ! $open && empty( $context['explicit_human_authorization'] ) ) {
+			$allowed_technical = ! empty( $context['technical_close_authorized'] )
+				|| ( defined( self::TECHNICAL_CLOSE_CONST ) && constant( self::TECHNICAL_CLOSE_CONST ) );
+
+			if ( ! $allowed_technical ) {
+				if ( class_exists( ActivityLog::class ) ) {
+					$source = isset( $context['source'] ) ? sanitize_key( (string) $context['source'] ) : 'unknown';
+					ActivityLog::log_system_event(
+						'indexing_close_blocked',
+						'setting',
+						'OPEN→CLOSED отклонено: нет explicit_human_authorization · ' . $source,
+						0,
+						$source
+					);
+				}
+				return array(
+					'ok'      => false,
+					'blocked' => true,
+					'open'    => self::is_open(),
+					'error'   => 'close_requires_human_authorization',
+				);
+			}
+
+			if ( class_exists( ActivityLog::class ) ) {
+				ActivityLog::log_system_event(
+					'indexing_closed',
+					'setting',
+					'Техническое закрытие по явной charter authorization',
+					0,
+					isset( $context['source'] ) ? (string) $context['source'] : 'technical_charter'
+				);
+			}
+			if ( class_exists( IndexingAlerts::class ) ) {
+				IndexingAlerts::send_critical_blocked_alert(
+					array(
+						'previous_effective' => IndexingState::STATE_OPEN,
+						'source'             => isset( $context['source'] ) ? (string) $context['source'] : 'technical_charter',
+						'actor'              => isset( $context['actor'] ) ? (string) $context['actor'] : 'technical charter',
+					)
+				);
+			}
+		}
+
+		self::$authorized_mutation = true;
+		try {
+			return self::apply_state( $open, $context );
+		} finally {
+			self::$authorized_mutation = false;
+		}
+	}
+
+	/**
+	 * Back-compat wrapper — requires explicit_human_authorization for close.
 	 *
 	 * @param bool $open True = OPEN, false = CLOSED.
-	 * @return array{ok:bool,open:bool,blog_public:int,robots_ok:bool,robots_disallow_all:bool,error?:string}
+	 * @return array<string, mixed>
 	 */
 	public static function set_site_indexability( $open ) {
-		$open = (bool) $open;
+		return self::request_state(
+			(bool) $open,
+			array(
+				'source'                        => 'legacy_set_site_indexability',
+				'explicit_human_authorization'  => (bool) $open,
+			)
+		);
+	}
+
+	/**
+	 * Apply state after authorization checks.
+	 *
+	 * @param bool                 $open Open indexing.
+	 * @param array<string, mixed> $context Context.
+	 * @return array<string, mixed>
+	 */
+	private static function apply_state( $open, array $context ) {
+		$previous_snap = class_exists( IndexingState::class ) ? IndexingState::snapshot() : array();
+		$prev_effective = isset( $previous_snap['effective'] ) ? (string) $previous_snap['effective'] : '';
+
 		update_option( 'blog_public', $open ? '1' : '0' );
 
 		$robots_ok = self::sync_robots_file( $open );
 		$state     = self::read_state();
+
+		$source = isset( $context['source'] ) ? sanitize_key( (string) $context['source'] ) : 'admin_ui';
+		$user_id = isset( $context['user_id'] ) ? (int) $context['user_id'] : get_current_user_id();
 
 		if ( class_exists( ActivityLog::class ) ) {
 			ActivityLog::log_system_event(
 				$open ? 'indexing_opened' : 'indexing_closed',
 				'setting',
 				$open ? 'Индексация: открыта' : 'Индексация: закрыта',
-				0
+				0,
+				$source,
+				$user_id
+			);
+		}
+
+		if ( class_exists( IndexingState::class ) ) {
+			IndexingState::record_human_decision(
+				$open ? IndexingState::STATE_OPEN : IndexingState::STATE_CLOSED,
+				array_merge(
+					$context,
+					array(
+						'user_id' => $user_id,
+						'source'  => $source,
+					)
+				)
 			);
 		}
 
@@ -94,20 +251,64 @@ final class IndexingControl implements ModuleInterface {
 		if ( ! is_array( $meta ) ) {
 			$meta = array();
 		}
-		$meta['verified_at'] = gmdate( 'Y-m-d H:i' ) . ' UTC';
-		$meta['indexing']    = $open ? 'OPEN' : 'CLOSED — WAITING FOR OLYA APPROVAL';
+		$meta['verified_at'] = gmdate( 'Y-m-d H:i:s' ) . ' UTC';
+		$meta['indexing']    = $open ? 'OPEN — HUMAN-APPROVED' : 'CLOSED — HUMAN';
 		update_option( 'fp02_metacode_system_meta', $meta, false );
+
+		$new_snap = class_exists( IndexingState::class ) ? IndexingState::snapshot() : array();
+
+		// Alert on OPEN→CLOSED or inconsistency after close.
+		if ( class_exists( IndexingAlerts::class ) && ! $open ) {
+			if ( IndexingState::STATE_OPEN === $prev_effective || IndexingState::STATE_INCONSISTENT === $new_snap['effective'] ) {
+				IndexingAlerts::send_critical_blocked_alert(
+					array(
+						'previous_effective' => $prev_effective,
+						'source'             => $source,
+						'actor'              => self::actor_label_from_context( $context ),
+						'fingerprint'        => $new_snap['fingerprint'] ?? '',
+					)
+				);
+			}
+		}
+
+		if ( class_exists( IndexingWatchdog::class ) && class_exists( IndexingState::class ) && IndexingState::STATE_OPEN === $new_snap['effective'] ) {
+			update_option(
+				IndexingWatchdog::BASELINE_OPT,
+				array(
+					'effective'   => $new_snap['effective'],
+					'fingerprint' => $new_snap['fingerprint'],
+					'set_at'      => current_time( 'mysql' ),
+				),
+				false
+			);
+		}
 
 		$ok = ( (int) $state['blog_public'] === ( $open ? 1 : 0 ) ) && (bool) $robots_ok && ( (bool) $state['robots_disallow_all'] === ! $open );
 
 		return array(
-			'ok'                   => $ok,
-			'open'                 => $open,
-			'blog_public'          => (int) $state['blog_public'],
-			'robots_ok'            => (bool) $robots_ok,
-			'robots_disallow_all'  => (bool) $state['robots_disallow_all'],
-			'robots_sitemap_host'  => $state['robots_sitemap_host'],
+			'ok'                  => $ok,
+			'open'                => $open,
+			'blog_public'         => (int) $state['blog_public'],
+			'robots_ok'           => (bool) $robots_ok,
+			'robots_disallow_all' => (bool) $state['robots_disallow_all'],
+			'robots_sitemap_host' => $state['robots_sitemap_host'],
+			'effective'           => $new_snap['effective'] ?? '',
 		);
+	}
+
+	/**
+	 * @param array<string, mixed> $context Context.
+	 * @return string
+	 */
+	private static function actor_label_from_context( array $context ) {
+		if ( ! empty( $context['actor'] ) ) {
+			return (string) $context['actor'];
+		}
+		$user_id = isset( $context['user_id'] ) ? (int) $context['user_id'] : get_current_user_id();
+		if ( $user_id > 0 ) {
+			return ActivityLog::user_label( $user_id );
+		}
+		return __( 'System', 'shpigovsky-core' );
 	}
 
 	/**
@@ -166,8 +367,7 @@ final class IndexingControl implements ModuleInterface {
 	}
 
 	/**
-	 * Keep physical robots.txt aligned when it exists. Do not create a new file
-	 * if WordPress virtual robots.txt is already the owner.
+	 * Keep physical robots.txt aligned when it exists.
 	 *
 	 * @param bool $open Open indexing.
 	 * @return bool
@@ -180,6 +380,21 @@ final class IndexingControl implements ModuleInterface {
 			return true;
 		}
 
+		$current = file_get_contents( $path );
+		if ( ! is_string( $current ) ) {
+			return false;
+		}
+
+		// Preserve complex host-managed robots when OPEN and no global Disallow:/ exists.
+		if ( $open ) {
+			$has_global_disallow = (bool) preg_match( '/^\s*Disallow:\s*\/\s*$/mi', $current );
+			$is_our_closed       = self::normalize_robots( $current ) === self::normalize_robots( self::robots_body( false ) );
+			$is_our_open         = self::normalize_robots( $current ) === self::normalize_robots( self::robots_body( true ) );
+			if ( ! $has_global_disallow && ! $is_our_closed && ! $is_our_open ) {
+				return true;
+			}
+		}
+
 		$written = file_put_contents( $path, $body );
 		if ( false === $written ) {
 			return false;
@@ -190,8 +405,6 @@ final class IndexingControl implements ModuleInterface {
 	}
 
 	/**
-	 * Normalize robots comparison.
-	 *
 	 * @param string $text Text.
 	 * @return string
 	 */
@@ -230,16 +443,39 @@ final class IndexingControl implements ModuleInterface {
 			exit;
 		}
 
-		$result = self::set_site_indexability( 'open' === $wanted );
-		$code   = $result['ok'] ? ( 'open' === $wanted ? 'opened' : 'closed' ) : 'failed';
+		if ( 'closed' === $wanted ) {
+			$close_ack = isset( $_POST[ self::CLOSE_ACK_FIELD ] ) ? sanitize_text_field( wp_unslash( $_POST[ self::CLOSE_ACK_FIELD ] ) ) : '';
+			if ( '1' !== $close_ack ) {
+				wp_safe_redirect( self::redirect_url( 'missing_close_ack' ) );
+				exit;
+			}
+		}
+
+		$user = wp_get_current_user();
+		$result = self::request_state(
+			'open' === $wanted,
+			array(
+				'source'                       => 'admin_ui',
+				'explicit_human_authorization' => true,
+				'user_id'                      => (int) $user->ID,
+				'actor_login'                  => $user->user_login,
+				'actor_display'                => $user->display_name ? $user->display_name : $user->user_login,
+				'actor'                        => ActivityLog::user_label( (int) $user->ID ),
+			)
+		);
+
+		if ( ! empty( $result['blocked'] ) ) {
+			wp_safe_redirect( self::redirect_url( 'close_blocked' ) );
+			exit;
+		}
+
+		$code = ! empty( $result['ok'] ) ? ( 'open' === $wanted ? 'opened' : 'closed' ) : 'failed';
 
 		wp_safe_redirect( self::redirect_url( $code ) );
 		exit;
 	}
 
 	/**
-	 * Dashboard redirect with notice.
-	 *
 	 * @param string $code Notice code.
 	 * @return string
 	 */
@@ -265,11 +501,13 @@ final class IndexingControl implements ModuleInterface {
 
 		$code = sanitize_key( wp_unslash( $_GET[ self::NOTICE_QUERY ] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		$map  = array(
-			'opened'          => array( 'success', __( 'Индексация сайта разрешена. Поисковые системы могут начать обход. Отправка sitemap не выполнялась.', 'shpigovsky-core' ) ),
-			'closed'          => array( 'warning', __( 'Индексация сайта закрыта. Поисковые системы снова получают запрет на обход.', 'shpigovsky-core' ) ),
-			'failed'          => array( 'error', __( 'Не удалось полностью применить состояние индексации. Проверьте blog_public и robots.txt.', 'shpigovsky-core' ) ),
-			'missing_confirm' => array( 'error', __( 'Изменение индексации отменено: нет подтверждения.', 'shpigovsky-core' ) ),
-			'bad_state'       => array( 'error', __( 'Некорректное значение индексации.', 'shpigovsky-core' ) ),
+			'opened'           => array( 'success', __( 'Индексация сайта разрешена. Поисковые системы могут начать обход. Отправка sitemap не выполнялась.', 'shpigovsky-core' ) ),
+			'closed'           => array( 'warning', __( 'Индексация сайта закрыта. Поисковые системы снова получают запрет на обход.', 'shpigovsky-core' ) ),
+			'failed'           => array( 'error', __( 'Не удалось полностью применить состояние индексации. Проверьте blog_public и robots.txt.', 'shpigovsky-core' ) ),
+			'missing_confirm'  => array( 'error', __( 'Изменение индексации отменено: нет подтверждения.', 'shpigovsky-core' ) ),
+			'missing_close_ack'=> array( 'error', __( 'Закрытие индексации отменено: не отмечено осознанное подтверждение.', 'shpigovsky-core' ) ),
+			'close_blocked'    => array( 'error', __( 'Закрытие индексации заблокировано политикой безопасности.', 'shpigovsky-core' ) ),
+			'bad_state'        => array( 'error', __( 'Некорректное значение индексации.', 'shpigovsky-core' ) ),
 		);
 
 		if ( ! isset( $map[ $code ] ) ) {
@@ -291,32 +529,77 @@ final class IndexingControl implements ModuleInterface {
 			return;
 		}
 
-		$open    = self::is_open();
+		$snap     = class_exists( IndexingState::class ) ? IndexingState::snapshot() : array();
+		$effective = isset( $snap['effective'] ) ? (string) $snap['effective'] : ( self::is_open() ? IndexingState::STATE_OPEN : IndexingState::STATE_CLOSED );
+		$open     = ( IndexingState::STATE_OPEN === $effective );
+		$inconsistent = ( IndexingState::STATE_INCONSISTENT === $effective );
+
+		if ( $inconsistent || ( ! $open && IndexingState::STATE_CLOSED !== $effective ) ) {
+			echo '<div class="fp02-indexing-banner" style="margin:0 0 14px;padding:12px 14px;border-left:4px solid #d63638;background:#fcf0f1;">';
+			echo '<p style="margin:0 0 6px;font-weight:700;color:#8a1f1f;">' . esc_html__( '⚠️ ВНИМАНИЕ: САЙТ ОГРАНИЧЕН ДЛЯ ИНДЕКСАЦИИ', 'shpigovsky-core' ) . '</p>';
+			echo '<p style="margin:0 0 8px;">' . esc_html__( 'Сигналы индексации расходятся. Проверьте blog_public, robots.txt и глобальные meta robots.', 'shpigovsky-core' ) . '</p>';
+			if ( ! empty( $snap ) ) {
+				echo '<ul style="margin:0 0 8px 1.2em;font-size:12px;">';
+				printf( '<li>blog_public=%d</li>', (int) $snap['blog_public'] );
+				printf(
+					'<li>robots: %s (%s)</li>',
+					esc_html( ! empty( $snap['robots']['global_disallow'] ) ? 'Disallow: /' : 'OK' ),
+					esc_html( (string) ( $snap['robots']['owner'] ?? '' ) )
+				);
+				printf(
+					'<li>meta: %s</li>',
+					esc_html( ! empty( $snap['meta']['global_noindex'] ) ? 'global noindex' : 'OK' )
+				);
+				echo '</ul>';
+			}
+		} elseif ( $open ) {
+			echo '<div class="fp02-indexing-banner" style="margin:0 0 14px;padding:12px 14px;border-left:4px solid #00a32a;background:#edfaef;">';
+			echo '<p style="margin:0 0 8px;font-weight:600;">' . esc_html__( 'Индексация сайта разрешена (OPEN).', 'shpigovsky-core' ) . '</p>';
+			if ( ! empty( $snap['human_actor'] ) ) {
+				printf(
+					'<p class="description" style="margin:0 0 8px;">%s</p>',
+					esc_html(
+						sprintf(
+							/* translators: 1: actor, 2: datetime */
+							__( 'Последнее решение: OPEN · %1$s · %2$s', 'shpigovsky-core' ),
+							(string) $snap['human_actor'],
+							(string) $snap['human_recorded_at']
+						)
+					)
+				);
+			}
+		} else {
+			echo '<div class="fp02-indexing-banner" style="margin:0 0 14px;padding:12px 14px;border-left:4px solid #d63638;background:#fcf0f1;">';
+			echo '<p style="margin:0 0 6px;font-weight:700;">' . esc_html__( 'Сайт закрыт от индексации поисковыми системами (CLOSED).', 'shpigovsky-core' ) . '</p>';
+			echo '<p style="margin:0 0 8px;">' . esc_html__( 'Обход и добавление страниц в поиск намеренно запрещены.', 'shpigovsky-core' ) . '</p>';
+		}
+
 		$action  = $open ? 'closed' : 'open';
-		$confirm = $open
-			? __( 'Вы уверены, что хотите закрыть сайт от индексации поисковыми системами?', 'shpigovsky-core' )
-			: __( 'Вы уверены, что хотите разрешить поисковым системам индексировать сайт? После открытия поисковые системы смогут начать обход и добавление страниц в поиск.', 'shpigovsky-core' );
 		$button  = $open
 			? __( 'Закрыть индексацию', 'shpigovsky-core' )
 			: __( 'Открыть индексацию', 'shpigovsky-core' );
 		$btn_cls = $open ? 'button' : 'button button-primary';
 
-		$border = $open ? '#00a32a' : '#dba617';
-		$bg     = $open ? '#edfaef' : '#fff8e5';
-
-		echo '<div class="fp02-indexing-banner" style="margin:0 0 14px;padding:12px 14px;border-left:4px solid ' . esc_attr( $border ) . ';background:' . esc_attr( $bg ) . ';">';
-
 		if ( $open ) {
-			echo '<p style="margin:0 0 8px;font-weight:600;">' . esc_html__( 'Индексация сайта разрешена.', 'shpigovsky-core' ) . '</p>';
+			$confirm_msg = __( 'Вы уверены, что хотите закрыть сайт от индексации поисковыми системами?', 'shpigovsky-core' );
 		} else {
-			echo '<p style="margin:0 0 6px;font-weight:600;">' . esc_html__( 'Сайт закрыт от индексации поисковыми системами.', 'shpigovsky-core' ) . '</p>';
-			echo '<p style="margin:0 0 8px;">' . esc_html__( 'Сайт работает, но обход и добавление страниц в поиск намеренно запрещены. Открывать индексацию может Оля или оператор по явной команде.', 'shpigovsky-core' ) . '</p>';
+			$confirm_msg = __( 'Вы уверены, что хотите разрешить поисковым системам индексировать сайт?', 'shpigovsky-core' );
 		}
 
-		echo '<form method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '" data-fp02-confirm="' . esc_attr( $confirm ) . '" onsubmit="return window.confirm(this.getAttribute(\'data-fp02-confirm\'));">';
+		echo '<form method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '" data-fp02-confirm="' . esc_attr( $confirm_msg ) . '" onsubmit="return window.confirm(this.getAttribute(\'data-fp02-confirm\'));">';
 		echo '<input type="hidden" name="action" value="' . esc_attr( self::ACTION ) . '" />';
 		echo '<input type="hidden" name="' . esc_attr( self::STATE_FIELD ) . '" value="' . esc_attr( $action ) . '" />';
 		echo '<input type="hidden" name="' . esc_attr( self::CONFIRM_FIELD ) . '" value="1" />';
+
+		if ( $open ) {
+			echo '<div style="margin:0 0 10px;padding:10px;border:1px solid #dba617;background:#fff8e5;">';
+			echo '<p style="margin:0 0 6px;font-weight:600;">' . esc_html__( 'ВНИМАНИЕ', 'shpigovsky-core' ) . '</p>';
+			echo '<p style="margin:0 0 8px;">' . esc_html__( 'Закрытие индексации может привести к исключению страниц сайта из поисковой выдачи. Используйте это действие только осознанно.', 'shpigovsky-core' ) . '</p>';
+			echo '<label><input type="checkbox" name="' . esc_attr( self::CLOSE_ACK_FIELD ) . '" value="1" required /> ';
+			echo esc_html__( 'Я понимаю последствия и хочу закрыть индексацию', 'shpigovsky-core' ) . '</label>';
+			echo '</div>';
+		}
+
 		wp_nonce_field( self::NONCE );
 		printf(
 			'<button type="submit" class="%1$s">%2$s</button>',
