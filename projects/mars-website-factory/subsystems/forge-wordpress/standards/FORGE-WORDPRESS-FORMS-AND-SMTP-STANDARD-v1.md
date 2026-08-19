@@ -119,13 +119,6 @@ QA data rule:
 - QA rows must be explicitly identifiable by a field such as `is_qa`, a known task marker, or an exact evidence-backed ID list;
 - never delete production rows merely because they were created near a test window or "look like a test".
 
-**Lead retention (P18H / FORM-RETENTION-001–002):**
-
-- `lead_retention_days=0` means auto-deletion is **off** — not a neutral default;
-- recommend an explicit purpose-bound period (FP-0002: **730 days** for consultation leads) documented in project DECISIONS;
-- introducing a retention setting must **not** silently purge historical real leads in the same wave;
-- align Privacy Policy retention wording when the Admin value is applied.
-
 ---
 
 ## 10. Analytics
@@ -186,4 +179,18 @@ PHPMailer behavior:
 
 ---
 
-*FW-S-13 v1.4 — P18D: provider parameter verification, SMTP state machine, anti-patterns SMTP-001–005.*
+## 14. Form notification mail UX (P23 lesson)
+
+Operational form emails are **product UI**, not debug output.
+
+| Rule | ID | Requirement |
+|------|-----|-------------|
+| Human-readable presentation | MAIL-UX-001 | Recipient-facing mail must read as a polished notification, not a dump of internal field keys or raw arrays |
+| Localized labels at boundary | MAIL-UX-002 | Machine form identifiers (`consultation`, etc.) stay internal; Russian labels are applied at the presentation layer only |
+| Scoped HTML template | MAIL-UX-003 | Form notifications may use simple inline HTML with escaped user content; no remote images, tracking pixels, or JS |
+| No global content-type drift | MAIL-UX-004 | Do not change WordPress global mail content type merely to style one form subsystem |
+| Persistence independent of mail | MAIL-UX-005 | Lead persist → mail attempt ordering and `MAIL_ACCEPTED` semantics must not depend on notification presentation |
+
+---
+
+*FW-S-13 v1.5 — P23: MAIL-UX-001–005 form notification presentation rules.*

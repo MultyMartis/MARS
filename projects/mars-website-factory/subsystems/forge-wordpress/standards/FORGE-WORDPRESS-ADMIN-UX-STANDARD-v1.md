@@ -150,7 +150,22 @@ Hide Classic editor / excerpt / revisions / parent when ACF owns the entity. Lis
 
 **SYSTEM INFORMATION BELONGS IN ONE OPERATIONS WIDGET, NOT GLOBAL ADMIN NOTICES** (AP-005).
 
-Suggested widget fields: project, environment, live domain, WordPress/PHP versions, domain/DNS/HTTPS (actual), core version, WPilot write state, latest production wave, source/prod parity, backup pointer, indexing OPEN/CLOSED, mail/SMTP **state** (configured is not verified), sender `noreply@…`, lead registry, open launch tails, last verification. No secrets. No mailbox password. No “future host” after the live domain is already in `home`/`siteurl`.
+The widget has **two audiences**:
+
+1. **Site owner / operator (Olya, client admin)** — human-readable summary, actionable tails, indexing control. No engineering telemetry dump.
+2. **Technical operator (MetaCODE / maintenance)** — deeper signals live in reports, activity log, WPilot, parity tooling — **not** in the client-facing widget body.
+
+**Client-facing widget content (default for production maintenance sites):**
+
+- Indexing state + safe human control (OPEN/CLOSED banner, confirm, close ack when OPEN).
+- High-value business/admin chips: site live, production domain, leads, mail state, cookie/privacy, sitemap readiness, project phase (e.g. support/maintenance).
+- Short “Важно” / next actions (3–5 items max).
+- Light attribution footer (development credit link if chartered — e.g. Overseo); avoid internal platform/support marketing lines in the client widget.
+- Scheme-aware styling via WP admin CSS variables / scoped widget CSS — not a hardcoded unrelated palette.
+
+**Do not show in the client-facing widget** unless explicitly chartered for a technical operator role: PHP/WP core versions, WPilot internals, source↔production parity, baseline IDs, wave labels, legacy redirect counts, debug flags, recipient counts, Metrika goal wiring, robots debug rows (except inside indexing **inconsistency** safety banner).
+
+Suggested **internal-only** fields (reports / technical dashboard variant): project id, environment, WordPress/PHP versions, domain/DNS/HTTPS (actual), core version, WPilot write state, latest production wave, source/prod parity, backup pointer, mail technical state lines, lead registry technical flags, last verification hash. No secrets. No mailbox password. No “future host” after the live domain is already in `home`/`siteurl`.
 
 After major production waves the widget **must** be updated in the same wave ([DoD](FORGE-WORDPRESS-DEFINITION-OF-DONE-v1.md)). Indexing control: [SEARCH-INDEXING-CONTROL](FORGE-WORDPRESS-SEARCH-INDEXING-CONTROL-STANDARD-v1.md).
 
@@ -185,20 +200,4 @@ When attaching a custom `add_submenu_page()` under an ACF options parent with `r
 
 ---
 
-### 10.8 Repeating configuration lists (mail recipients)
-
-For bounded business lists such as form email recipients:
-
-- Render rows (value + optional label) with **Add** and **Remove**.
-- New rows get unique input indexes and remain keyboard-usable before save.
-- Do not ask the operator to edit serialized/JSON blobs.
-- Save/reload must persist the resulting list without wiping unrelated secrets.
-
-| # | Check |
-|---|--------|
-| 17 | Repeating settings lists have Add/Remove, server validation, and do not expose raw storage |
-
----
-
-*Admin UX standard v1.3 — curated editor + production dashboard/SoT + discoverability DoD + repeating mail recipients. CMS pack: [EDITOR UX](FORGE-WORDPRESS-EDITOR-UX-STANDARD-v1.md).*
-
+*Admin UX standard v1.3 — client-facing vs internal dashboard widget split (P18J). CMS pack: [EDITOR UX](FORGE-WORDPRESS-EDITOR-UX-STANDARD-v1.md).*

@@ -9,6 +9,7 @@ namespace Shpigovsky\Core\Forms;
 
 use Shpigovsky\Core\Contracts\ModuleInterface;
 use Shpigovsky\Core\Leads\LeadRegistry;
+use Shpigovsky\Core\Mail\FormLeadMailPresenter;
 use Shpigovsky\Core\Mail\MailOps;
 use Shpigovsky\Core\ModuleRegistry;
 
@@ -647,21 +648,24 @@ final class ConsultationHandler implements ModuleInterface {
 			);
 		}
 
-		$subject = sprintf(
-			'[%s] %s',
-			MailOps::from_name(),
-			__( 'Заявка с сайта', 'shpigovsky-core' )
-		);
-		$body    = self::build_mail_body( $payload );
-		$headers = array(
-			'Content-Type: text/plain; charset=UTF-8',
-			'From: ' . MailOps::from_name() . ' <' . MailOps::from_email() . '>',
-		);
-		if ( '' !== $payload['email'] && is_email( $payload['email'] ) ) {
-			$headers[] = 'Reply-To: ' . $payload['email'];
-		}
+		$mail_pack = FormLeadMailPresenter::build( LeadRegistry::FORM_KEY, $payload );
+		$subject   = $mail_pack['subject'];
+		$body      = $mail_pack['html'];
+		$headers   = $mail_pack['headers'];
+
+		$alt_body_setter = static function ( $phpmailer ) use ( $mail_pack ) {
+			if ( is_object( $phpmailer ) && method_exists( $phpmailer, 'isHTML' ) ) {
+				$phpmailer->isHTML( true );
+			}
+			if ( is_object( $phpmailer ) && property_exists( $phpmailer, 'AltBody' ) ) {
+				$phpmailer->AltBody = $mail_pack['plain'];
+			}
+		};
+		add_action( 'phpmailer_init', $alt_body_setter, 20, 1 );
 
 		$sent = wp_mail( $to, $subject, $body, $headers );
+
+		remove_action( 'phpmailer_init', $alt_body_setter, 20 );
 		if ( $sent ) {
 			LeadRegistry::update_delivery(
 				$lead_id,
@@ -695,23 +699,6 @@ final class ConsultationHandler implements ModuleInterface {
 			'accepted'  => false,
 			'status'    => LeadRegistry::STATUS_MAIL_ERROR,
 		);
-	}
-
-	/**
-	 * @param array<string, string> $payload Payload.
-	 * @return string
-	 */
-	private static function build_mail_body( array $payload ) {
-		$lines = array(
-			'Форма: consultation',
-			'Имя: ' . $payload['name'],
-			'Телефон: ' . $payload['phone'],
-			'Email: ' . ( $payload['email'] !== '' ? $payload['email'] : '—' ),
-			'Страница: ' . $payload['page_url'],
-			'Сообщение:',
-			$payload['message'],
-		);
-		return implode( "\n", $lines );
 	}
 
 	/**

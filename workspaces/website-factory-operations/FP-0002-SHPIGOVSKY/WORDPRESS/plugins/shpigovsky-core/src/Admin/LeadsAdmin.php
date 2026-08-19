@@ -307,9 +307,6 @@ final class LeadsAdmin implements ModuleInterface {
 	 * @return string
 	 */
 	private static function form_label( $key ) {
-		if ( 'consultation' === $key ) {
-			return __( 'Консультация', 'shpigovsky-core' );
-		}
-		return $key;
+		return \Shpigovsky\Core\Mail\FormTypeLabels::label( $key );
 	}
 }

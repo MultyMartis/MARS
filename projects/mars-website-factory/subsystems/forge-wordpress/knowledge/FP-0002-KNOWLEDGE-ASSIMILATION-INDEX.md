@@ -37,6 +37,11 @@
 | iOS lifebuoy: emulation ≠ physical Safari; bounded fallback | G / H | [REAL-DEVICE-QA-STANDARD](../standards/FORGE-WORDPRESS-REAL-DEVICE-QA-STANDARD-v1.md) |
 | Activity log dedicated table; no full content / secrets | B / E | [ACTIVITY-LOG-MODULE-SPEC](../standards/FORGE-WORDPRESS-ACTIVITY-LOG-MODULE-SPEC-v1.md) |
 | Dashboard widget planned (no global notices) | A / E | [ADMIN-UX-STANDARD](../standards/FORGE-WORDPRESS-ADMIN-UX-STANDARD-v1.md) §10.3 · [DEFINITION-OF-DONE](../standards/FORGE-WORDPRESS-DEFINITION-OF-DONE-v1.md) |
+| Client-facing dashboard widget: role-appropriate summary; no internal telemetry dump | E / G | [ADMIN-UX-STANDARD](../standards/FORGE-WORDPRESS-ADMIN-UX-STANDARD-v1.md) §10.3 · FP-0002 P18J evidence |
+| Dashboard attribution: Overseo dev credit only; no MetaCODE support marketing in client footer | E / G | [ADMIN-UX-STANDARD](../standards/FORGE-WORDPRESS-ADMIN-UX-STANDARD-v1.md) §10.3 · FP-0002 P23 evidence |
+| Form notification mail: Russian labels, scoped HTML, machine keys internal | C / E | [FORMS-AND-SMTP-STANDARD](../standards/FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) §14 · MAIL-UX-001–005 |
+| Dashboard attribution: development credit only; no internal support/platform footer | E / G | [ADMIN-UX-STANDARD](../standards/FORGE-WORDPRESS-ADMIN-UX-STANDARD-v1.md) §10.3 · FP-0002 P23 evidence |
+| Form notification mail: localized Russian HTML + plain; machine keys internal | C / E | [FORMS-AND-SMTP-STANDARD](../standards/FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) §14 · MAIL-UX-001–005 |
 | Operator status UI must be updated in the same major production wave | C / E / G | same · AP-021 |
 | Admin feature not done until discoverable in normal left-menu IA | E / G | [ADMIN-UX-STANDARD](../standards/FORGE-WORDPRESS-ADMIN-UX-STANDARD-v1.md) §10.7 · [DoD](../standards/FORGE-WORDPRESS-DEFINITION-OF-DONE-v1.md) · AP-029 |
 | Search indexing is explicit human approval; one SET SITE INDEXABILITY owner | D / E / G | [SEARCH-INDEXING-CONTROL](../standards/FORGE-WORDPRESS-SEARCH-INDEXING-CONTROL-STANDARD-v1.md) |
@@ -85,10 +90,7 @@
 | P18B | Dashboard reality sync; safe Admin indexing control; indexing remains CLOSED | `REPORT-FP-0002-PROD-P18B-DASHBOARD-INDEXING.md` |
 | P18C | SMTP/forms Admin owner; lead persist-before-mail; Metrika goal after backend success; suppression remains ON | `REPORT-FP-0002-PROD-P18C-SMTP-FORMS-FOUNDATION.md` |
 | P18C-FU01 | Menu discoverability: Почта и формы visible under ACF Site Settings parent | `REPORT-FP-0002-PROD-P18C-FU01-ADMIN-MENU.md` |
-| P18G | Indexing safety guard; human OPEN preserved; non-human close blocked | `REPORT-FP-0002-PROD-P18G-INDEXING-SAFETY.md` |
-| P18H | Privacy/retention decisions; browser-only consent; 730d lead retention recommend; launch-tail readiness | `REPORT-FP-0002-PROD-P18H-PRIVACY-RETENTION-DECISIONS.md` |
-| PRIVACY-027–030 | Separate law vs product recommendation; no server consent log without necessity; consent lifetime as product policy; disclose sessionStorage attribution | `FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md` · P18H evidence |
-| P18C-FU02 | Multi-recipient mail settings Add/Remove UX; SMTP secret preserved | `REPORT-FP-0002-PROD-P18C-FU02-MULTI-RECIPIENTS.md` |
+| P18J | Dashboard widget client UX rework — concise owner-facing summary; indexing safety preserved | `REPORT-FP-0002-PROD-P18J-DASHBOARD-WIDGET-UX.md` |
 
 Earlier V9 Admin-parity / ACF SoT / operator-CSS canon work remains valid foundation (Experience Pack Phase 1–2). It is **historical**; production operations above supersede it for launch.
 

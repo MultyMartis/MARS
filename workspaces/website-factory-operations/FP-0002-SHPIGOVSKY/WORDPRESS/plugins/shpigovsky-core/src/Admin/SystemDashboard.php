@@ -1,343 +1,484 @@
 <?php
+
 /**
- * Dashboard widget: MetaCODE / system state — PROD-P18B.
+
+ * Dashboard widget: MetaCODE / system state — client-facing PROD-P18J.
+
  *
- * Operational status surface derived from runtime where practical.
- * Historical waves belong in reports, not this widget.
+
+ * Compact operator summary for site owners. Internal engineering telemetry
+
+ * belongs in reports, not this widget.
+
  *
+
  * @package Shpigovsky_Core
+
  */
+
+
 
 namespace Shpigovsky\Core\Admin;
 
+
+
 use Shpigovsky\Core\Contracts\ModuleInterface;
+
 use Shpigovsky\Core\Leads\LeadRegistry;
+
 use Shpigovsky\Core\Mail\MailOps;
+
 use Shpigovsky\Core\ModuleRegistry;
+
 use Shpigovsky\Core\Privacy\PrivacyConsent;
 
+
+
 if ( ! defined( 'ABSPATH' ) ) {
+
 	exit;
+
 }
 
+
+
 /**
+
  * Single non-secret system widget on the main dashboard.
+
  */
+
 final class SystemDashboard implements ModuleInterface {
 
-	/**
-	 * Baseline ID shown in the widget (updated by stabilization waves).
-	 */
-	const BASELINE_ID = 'FP-0002-PRODUCTION-MAINTENANCE-2026-08-20-P18J';
+
 
 	/**
-	 * Latest accepted production wave label.
+
+	 * Baseline ID (internal bookkeeping — not shown in client widget).
+
 	 */
-	const LATEST_ACCEPTED_WAVE = 'P18J Indexing QA Noise Cleanup';
+
+	const BASELINE_ID = 'FP-0002-PROD-BASELINE-2026-08-20-P23';
+
+
 
 	/**
+
+	 * Latest accepted production wave label (internal bookkeeping).
+
+	 */
+
+	const LATEST_ACCEPTED_WAVE = 'P23 Dashboard attribution + form mail UX';
+
+
+
+	/**
+
 	 * {@inheritdoc}
+
 	 */
+
 	public static function id() {
+
 		return 'admin.system-dashboard';
+
 	}
 
+
+
 	/**
+
 	 * {@inheritdoc}
+
 	 */
+
 	public static function is_enabled() {
+
 		return ModuleRegistry::is_enabled( self::id() );
+
 	}
 
+
+
 	/**
+
 	 * {@inheritdoc}
+
 	 */
+
 	public static function register() {
+
 		add_action( 'wp_dashboard_setup', array( __CLASS__, 'register_widget' ) );
+
+		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'enqueue_assets' ) );
+
 	}
 
+
+
 	/**
-	 * Register the dashboard widget.
+
+	 * Scheme-aware widget styles on the main dashboard only.
+
+	 *
+
+	 * @param string $hook Current admin hook.
+
 	 */
-	public static function register_widget() {
-		if ( ! current_user_can( 'manage_options' ) ) {
+
+	public static function enqueue_assets( $hook ) {
+
+		if ( 'index.php' !== $hook || ! current_user_can( 'manage_options' ) ) {
+
 			return;
+
 		}
+
+
+
+		wp_enqueue_style(
+
+			'fp02-system-dashboard-widget',
+
+			SHPIGOVSKY_CORE_URI . 'assets/css/system-dashboard-widget.css',
+
+			array(),
+
+			SHPIGOVSKY_CORE_VERSION
+
+		);
+
+	}
+
+
+
+	/**
+
+	 * Register the dashboard widget.
+
+	 */
+
+	public static function register_widget() {
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+
+			return;
+
+		}
+
+
 
 		wp_add_dashboard_widget(
+
 			'fp02_metacode_system_state',
+
 			__( 'MetaCODE / Состояние системы', 'shpigovsky-core' ),
+
 			array( __CLASS__, 'render_widget' )
+
 		);
+
 	}
 
+
+
 	/**
-	 * Widget body.
+
+	 * Widget body — client-facing summary.
+
 	 */
+
 	public static function render_widget() {
-		$env_fn    = function_exists( 'wp_get_environment_type' ) ? wp_get_environment_type() : 'unknown';
-		$env_const = defined( 'WP_ENVIRONMENT_TYPE' ) ? (string) WP_ENVIRONMENT_TYPE : '';
-		$home      = home_url( '/' );
-		$host      = wp_parse_url( $home, PHP_URL_HOST );
-		$host      = is_string( $host ) ? $host : '';
-		$is_beget  = ( false !== strpos( $host, 'beget.tech' ) || false !== strpos( $host, 'shpigovsky.ru' ) );
 
-		$wpilot_write = get_option( 'wpilot_write_enabled', get_option( 'metacode_wpilot_write_enabled', false ) );
-		$wpilot_opts  = get_option( 'metacode_wpilot', get_option( 'wpilot', array() ) );
-		if ( is_array( $wpilot_opts ) && array_key_exists( 'write_enabled', $wpilot_opts ) ) {
-			$wpilot_write = (bool) $wpilot_opts['write_enabled'];
-		}
-		$wpilot_on = self::plugin_active_prefix( 'metacode-wpilot' ) || self::plugin_active_prefix( 'wpilot' );
-		$wpilot_ver = '';
-		if ( defined( 'METACODE_WPILOT_VERSION' ) ) {
-			$wpilot_ver = (string) METACODE_WPILOT_VERSION;
-		} elseif ( defined( 'WPILOT_VERSION' ) ) {
-			$wpilot_ver = (string) WPILOT_VERSION;
-		} elseif ( is_array( $wpilot_opts ) && ! empty( $wpilot_opts['version'] ) ) {
-			$wpilot_ver = (string) $wpilot_opts['version'];
-		}
+		$summary = self::client_summary();
 
-		$meta = get_option( 'fp02_metacode_system_meta', array() );
-		if ( ! is_array( $meta ) ) {
-			$meta = array();
-		}
-		$parity   = isset( $meta['parity'] ) ? (string) $meta['parity'] : 'MATCH';
-		$verified = isset( $meta['verified_at'] ) ? (string) $meta['verified_at'] : '';
-		$backup   = isset( $meta['backup'] ) ? (string) $meta['backup'] : 'FRESH BEGET BACKUP CONFIRMED BY OPERATOR';
-		$baseline = isset( $meta['baseline_id'] ) ? (string) $meta['baseline_id'] : self::BASELINE_ID;
-		$wave     = isset( $meta['latest_wave'] ) ? (string) $meta['latest_wave'] : self::LATEST_ACCEPTED_WAVE;
-		$ssl      = isset( $meta['ssl'] ) ? (string) $meta['ssl'] : '';
-		$dns_ns   = isset( $meta['dns_ns'] ) ? (string) $meta['dns_ns'] : 'DONE / Beget';
-		$smtp_box = isset( $meta['smtp_sender'] ) ? (string) $meta['smtp_sender'] : 'noreply@shpigovsky.ru';
-		$redirects = isset( $meta['legacy_redirects'] ) ? (string) $meta['legacy_redirects'] : '7/7';
 
-		$php_ver         = function_exists( 'phpversion' ) ? phpversion() : '';
-		$debug_on        = ( defined( 'WP_DEBUG' ) && WP_DEBUG );
-		$mail_suppressed = class_exists( MailOps::class ) ? MailOps::should_suppress() : (bool) has_filter( 'pre_wp_mail' );
-		$mail_line       = class_exists( MailOps::class ) ? MailOps::dashboard_mail_line() : __( 'SMTP SETTINGS READY — CREDENTIALS REQUIRED', 'shpigovsky-core' );
-		$sender          = class_exists( MailOps::class ) ? MailOps::from_email() : $smtp_box;
-		$leads_active    = class_exists( LeadRegistry::class );
-		$goal_cfg        = class_exists( MailOps::class ) && '' !== MailOps::metrika_goal();
-		$indexing_open   = class_exists( IndexingState::class )
-			? ( IndexingState::STATE_OPEN === IndexingState::snapshot()['effective'] )
-			: ( class_exists( IndexingControl::class ) ? IndexingControl::is_open() : ( 1 === (int) get_option( 'blog_public', 1 ) ) );
-		$indexing_snap   = class_exists( IndexingState::class ) ? IndexingState::snapshot() : array();
-		$privacy_policy  = class_exists( PrivacyConsent::class ) ? PrivacyConsent::policy_status_label( PrivacyConsent::get_policy_page() ) : 'NOT CONFIGURED';
-
-		if ( '' === $ssl ) {
-			$ssl = ( is_string( $home ) && 0 === strpos( $home, 'https://' ) )
-				? __( 'HTTPS в адресах WordPress', 'shpigovsky-core' )
-				: __( 'не подтверждён', 'shpigovsky-core' );
-		}
-
-		$public_origin = isset( $meta['public_origin'] ) ? (string) $meta['public_origin'] : '';
 
 		echo '<div class="fp02-metacode-system">';
 
+
+
 		if ( class_exists( IndexingControl::class ) ) {
+
 			IndexingControl::render_banner();
+
 		}
 
-		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'Сайт', 'shpigovsky-core' ) . '</h3>';
-		echo '<table class="widefat striped" style="border:none;box-shadow:none;margin-bottom:12px;">';
-		self::row( __( 'Проект', 'shpigovsky-core' ), 'FP-0002 / Шпиговский Дом' );
-		self::row(
-			__( 'Среда', 'shpigovsky-core' ),
-			$is_beget
-				? __( 'Production / Beget', 'shpigovsky-core' )
-				: sprintf(
-					/* translators: %s: environment type */
-					__( 'Среда: %s', 'shpigovsky-core' ),
-					$env_fn
-				)
-		);
-		self::row( __( 'Боевой домен', 'shpigovsky-core' ), 'https://shpigovsky.ru/' );
-		self::row( __( 'WordPress', 'shpigovsky-core' ), get_bloginfo( 'version' ) );
-		if ( $php_ver !== '' ) {
-			self::row( __( 'PHP', 'shpigovsky-core' ), $php_ver );
-		}
-		echo '</table>';
 
-		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'Текущее состояние', 'shpigovsky-core' ) . '</h3>';
-		echo '<table class="widefat striped" style="border:none;box-shadow:none;margin-bottom:12px;">';
-		self::row( __( 'Последняя волна', 'shpigovsky-core' ), $wave );
-		self::row( __( 'Домен', 'shpigovsky-core' ), __( 'DONE', 'shpigovsky-core' ) );
-		self::row( __( 'DNS / NS', 'shpigovsky-core' ), $dns_ns );
-		self::row( __( 'HTTPS', 'shpigovsky-core' ), $ssl );
-		if ( '' !== $public_origin ) {
-			self::row( __( 'Публичный адрес', 'shpigovsky-core' ), $public_origin );
-		}
-		self::row( __( 'Source ↔ production', 'shpigovsky-core' ), $parity );
-		self::row( __( 'Legacy redirects', 'shpigovsky-core' ), $redirects );
-		self::row(
-			__( 'WPilot', 'shpigovsky-core' ),
-			$wpilot_on
-				? trim( $wpilot_ver . ' · ' . ( $wpilot_write ? __( 'запись включена', 'shpigovsky-core' ) : __( 'write disabled', 'shpigovsky-core' ) ) )
-				: __( 'не активен', 'shpigovsky-core' )
-		);
-		self::row(
-			__( 'Debug', 'shpigovsky-core' ),
-			$debug_on ? __( 'on', 'shpigovsky-core' ) : __( 'off', 'shpigovsky-core' )
-		);
-		self::row(
-			__( 'Почта', 'shpigovsky-core' ),
-			$mail_line
-		);
-		self::row( __( 'SMTP отправитель', 'shpigovsky-core' ), $sender );
-		if ( class_exists( MailOps::class ) ) {
-			self::row(
-				__( 'Получатели', 'shpigovsky-core' ),
-				(string) MailOps::recipient_count()
-			);
-		}
-		self::row(
-			__( 'Журнал заявок', 'shpigovsky-core' ),
-			$leads_active ? __( 'ACTIVE', 'shpigovsky-core' ) : __( 'не активен', 'shpigovsky-core' )
-		);
-		self::row(
-			__( 'Цели Метрики для форм', 'shpigovsky-core' ),
-			$goal_cfg
-				? __( 'задана в Почта и формы', 'shpigovsky-core' )
-				: __( 'CONFIGURABLE', 'shpigovsky-core' )
-		);
-		self::row(
-			__( 'Cookie-согласие', 'shpigovsky-core' ),
-			class_exists( PrivacyConsent::class )
-				? __( 'ACTIVE', 'shpigovsky-core' )
-				: __( 'NOT INSTALLED', 'shpigovsky-core' )
-		);
-		self::row(
-			__( 'Consent-gating Метрики', 'shpigovsky-core' ),
-			class_exists( PrivacyConsent::class )
-				? __( 'CONSENT-GATED', 'shpigovsky-core' )
-				: '—'
-		);
-		self::row(
-			__( 'Form goal consent integration', 'shpigovsky-core' ),
-			__( 'CONSENT-GATED', 'shpigovsky-core' )
-		);
-		self::row(
-			__( 'Cookie settings reopen', 'shpigovsky-core' ),
-			__( 'ACTIVE', 'shpigovsky-core' )
-		);
-		self::row(
-			__( 'Политика Cookie', 'shpigovsky-core' ),
-			$privacy_policy
-		);
-		self::row(
-			__( 'Cookie Policy legal review', 'shpigovsky-core' ),
-			class_exists( PrivacyConsent::class )
-				? __( 'PENDING FINAL LEGAL SIGN-OFF (factually current)', 'shpigovsky-core' )
-				: '—'
-		);
-		self::row(
-			__( 'Consent evidence model', 'shpigovsky-core' ),
-			class_exists( PrivacyConsent::class )
-				? __( 'BROWSER-ONLY (server log deferred)', 'shpigovsky-core' )
-				: '—'
-		);
-		$retention_days = class_exists( MailOps::class ) ? (int) MailOps::get_config()['lead_retention_days'] : 0;
-		self::row(
-			__( 'Lead retention (configured)', 'shpigovsky-core' ),
-			$retention_days > 0
-				? sprintf(
-					/* translators: %d: retention days */
-					__( '%d days — auto-delete when implemented', 'shpigovsky-core' ),
-					$retention_days
-				)
-				: __( '0 — auto-delete off; recommended 730 (operator applies)', 'shpigovsky-core' )
-		);
-		self::row(
-			__( 'Sitemap submissions', 'shpigovsky-core' ),
-			isset( $meta['sitemap_submissions'] ) ? (string) $meta['sitemap_submissions'] : __( 'P18I — see final closeout report', 'shpigovsky-core' )
-		);
-		self::row(
-			__( 'Индексация', 'shpigovsky-core' ),
-			! empty( $indexing_snap['effective'] )
-				? (string) $indexing_snap['effective']
-				: ( $indexing_open ? __( 'OPEN', 'shpigovsky-core' ) : __( 'CLOSED', 'shpigovsky-core' ) )
-		);
-		if ( ! empty( $indexing_snap['human_actor'] ) ) {
-			self::row(
-				__( 'Решение об индексации', 'shpigovsky-core' ),
-				(string) $indexing_snap['human_decision'] . ' · ' . (string) $indexing_snap['human_actor']
-			);
-		}
-		if ( ! empty( $indexing_snap['robots'] ) ) {
-			self::row(
-				__( 'robots.txt', 'shpigovsky-core' ),
-				! empty( $indexing_snap['robots']['global_disallow'] )
-					? 'Disallow: / (' . (string) $indexing_snap['robots']['owner'] . ')'
-					: __( 'без глобального Disallow', 'shpigovsky-core' ) . ' (' . (string) $indexing_snap['robots']['owner'] . ')'
-			);
-		}
-		if ( class_exists( IndexingWatchdog::class ) ) {
-			self::row(
-				__( 'Watchdog индексации', 'shpigovsky-core' ),
-				IndexingWatchdog::dashboard_line()
-			);
-		}
-		self::row( __( 'Core', 'shpigovsky-core' ), defined( 'SHPIGOVSKY_CORE_VERSION' ) ? SHPIGOVSKY_CORE_VERSION : '—' );
-		self::row( __( 'Последняя проверка', 'shpigovsky-core' ), '' !== $verified ? $verified : __( 'ещё не зафиксирована', 'shpigovsky-core' ) );
-		self::row( __( 'Бэкап', 'shpigovsky-core' ), $backup );
-		self::row( __( 'Baseline', 'shpigovsky-core' ), $baseline );
-		echo '</table>';
 
-		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'Следующие шаги', 'shpigovsky-core' ) . '</h3>';
-		echo '<ul style="margin:0 0 12px 1.2em;">';
-		self::li( __( '1. PRODUCTION / MAINTENANCE — launch closeout complete; editor changes via Admin are normal production truth', 'shpigovsky-core' ) );
-		self::li( __( '2. Индексация OPEN — human-approved; технические волны не должны закрывать её без явной команды', 'shpigovsky-core' ) );
-		self::li( __( '3. Оператор: финальный legal sign-off Cookie Policy (non-blocking)', 'shpigovsky-core' ) );
-		self::li( __( '4. Оператор: при необходимости выставить lead_retention_days=730 и согласовать Privacy Policy', 'shpigovsky-core' ) );
-		self::li( __( '5. Мониторинг Search Console / Яндекс Вебмастер после отправки sitemap', 'shpigovsky-core' ) );
-		echo '</ul>';
+		echo '<div class="fp02-metacode-system__grid" role="list">';
 
-		if ( $is_beget && ( 'local' === $env_const || 'local' === $env_fn ) ) {
-			echo '<p style="margin:0 0 8px;padding:8px 10px;border-left:3px solid #dba617;background:#fff8e5;">';
-			echo esc_html__( 'Предупреждение среды: WP_ENVIRONMENT_TYPE всё ещё «local» на этом боевом хосте.', 'shpigovsky-core' );
-			echo '</p>';
+		foreach ( $summary['chips'] as $chip ) {
+
+			self::render_chip( $chip['label'], $chip['value'], ! empty( $chip['html'] ) );
+
 		}
 
-		echo '<p class="description" style="margin:0;">' . esc_html__( 'Секреты, токены и пароли почтового ящика здесь не показываются.', 'shpigovsky-core' ) . '</p>';
 		echo '</div>';
-	}
 
-	/**
-	 * Table row.
-	 *
-	 * @param string $label Label.
-	 * @param string $value Value.
-	 */
-	private static function row( $label, $value ) {
-		printf(
-			'<tr><th style="width:38%%;text-align:left;">%s</th><td>%s</td></tr>',
-			esc_html( $label ),
-			esc_html( $value )
-		);
-	}
 
-	/**
-	 * List item.
-	 *
-	 * @param string $text Text.
-	 */
-	private static function li( $text ) {
-		echo '<li>' . esc_html( $text ) . '</li>';
-	}
 
-	/**
-	 * Whether an active plugin path starts with a prefix.
-	 *
-	 * @param string $prefix Prefix.
-	 * @return bool
-	 */
-	private static function plugin_active_prefix( $prefix ) {
-		$plugins = (array) get_option( 'active_plugins', array() );
-		foreach ( $plugins as $plugin ) {
-			if ( 0 === strpos( (string) $plugin, $prefix ) ) {
-				return true;
+		if ( ! empty( $summary['actions'] ) ) {
+
+			echo '<div class="fp02-metacode-system__section">';
+
+			echo '<h4 class="fp02-metacode-system__section-title">' . esc_html__( 'Важно', 'shpigovsky-core' ) . '</h4>';
+
+			echo '<ul class="fp02-metacode-system__actions">';
+
+			foreach ( $summary['actions'] as $action ) {
+
+				echo '<li>' . esc_html( $action ) . '</li>';
+
 			}
+
+			echo '</ul>';
+
+			echo '</div>';
+
 		}
-		return false;
+
+
+
+		echo '<footer class="fp02-metacode-system__footer">';
+
+		printf(
+
+			'<p style="margin:0;">%s <a href="%s" target="_blank" rel="noopener noreferrer">Overseo</a></p>',
+
+			esc_html__( 'Разработка:', 'shpigovsky-core' ),
+
+			esc_url( 'https://overseo.ru/' )
+
+		);
+
+		echo '</footer>';
+
+
+
+		echo '<p class="fp02-metacode-system__note" style="margin-top:10px;">';
+
+		echo esc_html__( 'Пароли, токены и другие секреты здесь не показываются.', 'shpigovsky-core' );
+
+		echo '</p>';
+
+
+
+		echo '</div>';
+
 	}
+
+
+
+	/**
+
+	 * Client-facing status model.
+
+	 *
+
+	 * @return array<string, mixed>
+
+	 */
+
+	private static function client_summary() {
+
+		$mail_label    = self::client_mail_label();
+
+		$leads_label   = class_exists( LeadRegistry::class )
+
+			? __( 'принимаются', 'shpigovsky-core' )
+
+			: __( 'не активны', 'shpigovsky-core' );
+
+		$privacy_label = class_exists( PrivacyConsent::class )
+
+			? __( 'активно', 'shpigovsky-core' )
+
+			: __( 'не установлено', 'shpigovsky-core' );
+
+
+
+		$chips = array(
+
+			array(
+
+				'label' => __( 'Сайт', 'shpigovsky-core' ),
+
+				'value' => __( 'Работает в боевом режиме', 'shpigovsky-core' ),
+
+			),
+
+			array(
+
+				'label' => __( 'Боевой домен', 'shpigovsky-core' ),
+
+				'value' => sprintf(
+
+					'<a href="%1$s" target="_blank" rel="noopener noreferrer">%2$s</a>',
+
+					esc_url( 'https://shpigovsky.ru/' ),
+
+					esc_html( 'shpigovsky.ru' )
+
+				),
+
+				'html'  => true,
+
+			),
+
+			array(
+
+				'label' => __( 'Заявки', 'shpigovsky-core' ),
+
+				'value' => $leads_label,
+
+			),
+
+			array(
+
+				'label' => __( 'Почта', 'shpigovsky-core' ),
+
+				'value' => $mail_label,
+
+			),
+
+			array(
+
+				'label' => __( 'Cookie / конфиденциальность', 'shpigovsky-core' ),
+
+				'value' => $privacy_label,
+
+			),
+
+			array(
+
+				'label' => __( 'Sitemap', 'shpigovsky-core' ),
+
+				'value' => __( 'готов', 'shpigovsky-core' ),
+
+			),
+
+			array(
+
+				'label' => __( 'Статус проекта', 'shpigovsky-core' ),
+
+				'value' => __( 'поддержка / сопровождение', 'shpigovsky-core' ),
+
+			),
+
+		);
+
+
+
+		$actions = array(
+
+			__( 'Проверить отправку sitemap в Google Search Console и Яндекс Вебмастер', 'shpigovsky-core' ),
+
+			__( 'При необходимости настроить срок хранения заявок', 'shpigovsky-core' ),
+
+			__( 'При необходимости согласовать финальную юридическую формулировку Cookie Policy', 'shpigovsky-core' ),
+
+		);
+
+
+
+		return array(
+
+			'chips'   => $chips,
+
+			'actions' => $actions,
+
+		);
+
+	}
+
+
+
+	/**
+
+	 * Human-readable mail status for site owners.
+
+	 *
+
+	 * @return string
+
+	 */
+
+	private static function client_mail_label() {
+
+		if ( ! class_exists( MailOps::class ) ) {
+
+			return __( 'требует настройки', 'shpigovsky-core' );
+
+		}
+
+
+
+		$state = MailOps::state();
+
+		if ( MailOps::STATE_VERIFIED_ACTIVE === $state || MailOps::STATE_VERIFIED_READY === $state ) {
+
+			return __( 'настроена', 'shpigovsky-core' );
+
+		}
+
+		if ( MailOps::STATE_CONFIGURED_NOT_VERIFIED === $state ) {
+
+			return __( 'требует проверки', 'shpigovsky-core' );
+
+		}
+
+		if ( MailOps::STATE_ERROR === $state ) {
+
+			return __( 'ошибка — свяжитесь с поддержкой', 'shpigovsky-core' );
+
+		}
+
+
+
+		return __( 'требует настройки', 'shpigovsky-core' );
+
+	}
+
+
+
+	/**
+
+	 * Compact status chip.
+
+	 *
+
+	 * @param string $label Label.
+
+	 * @param string $value Value (plain or safe HTML when $is_html).
+
+	 * @param bool   $is_html Whether value is pre-escaped HTML.
+
+	 */
+
+	private static function render_chip( $label, $value, $is_html = false ) {
+
+		echo '<div class="fp02-metacode-system__chip" role="listitem">';
+
+		echo '<span class="fp02-metacode-system__chip-label">' . esc_html( $label ) . '</span>';
+
+		echo '<span class="fp02-metacode-system__chip-value">';
+
+		if ( $is_html ) {
+
+			echo $value; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- built with esc_url/esc_html.
+
+		} else {
+
+			echo esc_html( $value );
+
+		}
+
+		echo '</span>';
+
+		echo '</div>';
+
+	}
+
 }
+

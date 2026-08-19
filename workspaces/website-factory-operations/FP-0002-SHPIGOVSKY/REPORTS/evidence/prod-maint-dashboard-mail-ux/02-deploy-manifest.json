@@ -1,0 +1,50 @@
+[
+  {
+    "rel": "shpigovsky-core.php",
+    "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/shpigovsky-core.php",
+    "local_sha256": "357b2ab1e119a327df00bb60274ee32eb06c3f53a8465801660deee6862feca9",
+    "before_sha256": "5162a45ca64f468156e1d6008821c5894e4e27fdf07550946e278c69113b8654",
+    "after_sha256": "357b2ab1e119a327df00bb60274ee32eb06c3f53a8465801660deee6862feca9",
+    "match": true
+  },
+  {
+    "rel": "src/Admin/SystemDashboard.php",
+    "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Admin/SystemDashboard.php",
+    "local_sha256": "e5a56abfc9e12958e17ce7c646b373df5dc0a2d5cd862927be61b5d5ec462201",
+    "before_sha256": "65d5e652cfce02da5f747d2c5a0e140aa6bc016cabcf16e9b18a7deca144e327",
+    "after_sha256": "e5a56abfc9e12958e17ce7c646b373df5dc0a2d5cd862927be61b5d5ec462201",
+    "match": true
+  },
+  {
+    "rel": "src/Admin/LeadsAdmin.php",
+    "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Admin/LeadsAdmin.php",
+    "local_sha256": "5107355c7469a9df5db593a490c3dcfd8d47c148177df06080b0baba13ba1a0e",
+    "before_sha256": "e5ff935865da5fa1b99b40439d5fa75f80b7ac215b76fcf25df0132750238999",
+    "after_sha256": "5107355c7469a9df5db593a490c3dcfd8d47c148177df06080b0baba13ba1a0e",
+    "match": true
+  },
+  {
+    "rel": "src/Forms/ConsultationHandler.php",
+    "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Forms/ConsultationHandler.php",
+    "local_sha256": "e232168b42f7b9c66ac494e247845255c54a217fa85952e8b02f6b7ce0db2888",
+    "before_sha256": "930e5694ddc341e814895a679f791c19421416277225bd0f78fb3d99cad5bb88",
+    "after_sha256": "e232168b42f7b9c66ac494e247845255c54a217fa85952e8b02f6b7ce0db2888",
+    "match": true
+  },
+  {
+    "rel": "src/Mail/FormTypeLabels.php",
+    "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Mail/FormTypeLabels.php",
+    "local_sha256": "7d44a4dd7b449da745a631b2124558ddb0ea8ce3a74f27525e41868c5224e024",
+    "before_sha256": null,
+    "after_sha256": "7d44a4dd7b449da745a631b2124558ddb0ea8ce3a74f27525e41868c5224e024",
+    "match": true
+  },
+  {
+    "rel": "src/Mail/FormLeadMailPresenter.php",
+    "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Mail/FormLeadMailPresenter.php",
+    "local_sha256": "697162ea66f3e2729213a2ea8a7189466ec28a0ab69d6776f3f93072891874cc",
+    "before_sha256": null,
+    "after_sha256": "697162ea66f3e2729213a2ea8a7189466ec28a0ab69d6776f3f93072891874cc",
+    "match": true
+  }
+]
