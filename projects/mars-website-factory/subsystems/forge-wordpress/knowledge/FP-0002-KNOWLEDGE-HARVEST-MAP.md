@@ -366,6 +366,19 @@ Client-specific values are omitted. Evidence paths are under `workspaces/website
 | Class | C |
 | Evidence | P05-FU01; P13 dashboard |
 
+## 36. Cookie consent / third-party Yandex gating
+
+| Field | Value |
+|-------|--------|
+| Problem | A real privacy control was needed while production already leaked Yandex analytics through multiple owners |
+| First | P18E-A/B foundation only: states, version, Admin owner, browser-record contract |
+| Failure | Public HTML still initialized Metrika from operator custom code; later browser QA found `mc.yandex.ru` requests from Yandex map constructor embeds on Contacts even after Metrika bootstrap removal |
+| Final | One canonical consent owner for state/UI/runtime; render-time stripping of legacy Metrika snippets from custom code; idempotent frontend loader only after explicit analytics consent; privacy-safe explicit-open fallback for Yandex map embeds instead of background auto-load |
+| Lesson | Do not stop at the obvious tracker snippet. Browser-level QA must enumerate other Yandex embeds because they can still generate `mc.yandex.ru` traffic and break “analytics-free before consent”. |
+| Rule | Cookie/privacy controls standard + site settings ownership + real-device/browser validation discipline |
+| Class | A / C / D / H |
+| Evidence | P18E-A/B; P18E-C/D |
+
 ---
 
-*Harvest map v1 — 35 areas. Promote via standards/runbooks, not by citing this map alone.*
+*Harvest map v1 — 36 areas. Promote via standards/runbooks, not by citing this map alone.*
