@@ -119,6 +119,13 @@ QA data rule:
 - QA rows must be explicitly identifiable by a field such as `is_qa`, a known task marker, or an exact evidence-backed ID list;
 - never delete production rows merely because they were created near a test window or "look like a test".
 
+**Lead retention (P18H / FORM-RETENTION-001–002):**
+
+- `lead_retention_days=0` means auto-deletion is **off** — not a neutral default;
+- recommend an explicit purpose-bound period (FP-0002: **730 days** for consultation leads) documented in project DECISIONS;
+- introducing a retention setting must **not** silently purge historical real leads in the same wave;
+- align Privacy Policy retention wording when the Admin value is applied.
+
 ---
 
 ## 10. Analytics
