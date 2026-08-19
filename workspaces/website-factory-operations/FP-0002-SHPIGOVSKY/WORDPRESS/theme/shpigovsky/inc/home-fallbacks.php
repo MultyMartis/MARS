@@ -21,7 +21,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 function shpigovsky_home_text_or_fallback( $field_name, $fallback ) {
 	$value = shpigovsky_get_home_field( $field_name );
 
-	return '' !== $value ? $value : $fallback;
+	$resolved = '' !== $value ? $value : $fallback;
+
+	if ( is_string( $resolved ) && ( false !== strpos( $field_name, '_url' ) || 0 === strpos( $resolved, 'http' ) ) ) {
+		$resolved = shpigovsky_normalize_public_url( $resolved );
+	}
+
+	return $resolved;
 }
 
 /**

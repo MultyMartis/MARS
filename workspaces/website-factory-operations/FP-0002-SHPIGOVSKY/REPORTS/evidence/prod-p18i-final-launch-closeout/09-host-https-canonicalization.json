@@ -1,0 +1,36 @@
+{
+  "rows": [
+    {
+      "url": "http://shpigovsky.ru/",
+      "status": 200,
+      "final_url": "https://shpigovsky.ru/",
+      "redirects": [
+        "http://shpigovsky.ru/"
+      ]
+    },
+    {
+      "url": "https://shpigovsky.ru/",
+      "status": 200,
+      "final_url": "https://shpigovsky.ru/",
+      "redirects": []
+    },
+    {
+      "url": "http://www.shpigovsky.ru/",
+      "status": 200,
+      "final_url": "https://shpigovsky.ru/",
+      "redirects": [
+        "http://www.shpigovsky.ru/",
+        "https://www.shpigovsky.ru/"
+      ]
+    },
+    {
+      "url": "https://www.shpigovsky.ru/",
+      "status": 200,
+      "final_url": "https://shpigovsky.ru/",
+      "redirects": [
+        "https://www.shpigovsky.ru/"
+      ]
+    }
+  ],
+  "canonical_host": "shpigovsky.ru"
+}

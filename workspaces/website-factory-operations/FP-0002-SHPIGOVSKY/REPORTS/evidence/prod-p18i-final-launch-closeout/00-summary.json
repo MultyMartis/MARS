@@ -1,0 +1,32 @@
+{
+  "captured_at": "2026-08-19T18:48:29.874260+00:00",
+  "wave": "P18I",
+  "verdict": "CLEAN",
+  "indexability_open": true,
+  "sitemap_url_count": 58,
+  "crawl_url_count": 107,
+  "http_summary": {
+    "200": 106,
+    "405": 1
+  },
+  "severity_summary": {
+    "MINOR": 110,
+    "MAJOR": 1,
+    "INTENTIONAL": 1
+  },
+  "unresolved_critical_count": 0,
+  "parity_all_match": true,
+  "required_tokens": {
+    "olya_truth": "P18I CURRENT OLYA / ADMIN PRODUCTION TRUTH VERIFIED",
+    "indexability": "P18I GLOBAL INDEXABILITY OPEN / CONSISTENT",
+    "sitemap_structure": "FINAL PRODUCTION SITEMAP STRUCTURE VERIFIED",
+    "sitemap_sanity": "SITEMAP CONTAINS NO KNOWN STAGING / BROKEN / GLOBAL-NOINDEX CONFLICTS",
+    "url_inventory": "FINAL PRODUCTION URL INVENTORY CREATED FROM CURRENT LIVE SITE",
+    "http": "NO UNRESOLVED LAUNCH-CRITICAL HTTP ERRORS",
+    "redirects": "LEGACY REDIRECT SET STILL FUNCTIONS ON PRODUCTION",
+    "canonicals": "CANONICAL SIGNALS ALIGN WITH CURRENT PRODUCTION URLS",
+    "robots": "GLOBAL INDEXING OPEN WHILE VALID PAGE-LEVEL EXCLUSIONS REMAIN INTACT",
+    "coverage": "SITEMAP COVERAGE HAS NO UNRESOLVED CRITICAL CONTRADICTIONS",
+    "parity": "FINAL SOURCE / PRODUCTION PARITY PASS"
+  }
+}

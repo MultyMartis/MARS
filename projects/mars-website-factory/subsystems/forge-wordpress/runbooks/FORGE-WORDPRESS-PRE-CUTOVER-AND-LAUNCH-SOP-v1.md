@@ -80,3 +80,17 @@ NS switch without freeze+backup; SSL before DNS; home/siteurl to final host befo
 ---
 
 *FW-RB-08 v1.*
+
+---
+
+## Proven launch lessons (FP-0002 P18I)
+
+| ID | Lesson |
+|----|--------|
+| **LAUNCH-002** | Final crawl must use **current production/editorial truth**, not old implementation inventory. |
+| **LAUNCH-003** | Search-engine sitemap submission occurs only after human-owned **OPEN** indexing is verified across effective signals. |
+| **LAUNCH-004** | Launch closeout requires current Dashboard + source/runtime parity + bounded evidence — not merely a successful deploy. |
+| **LAUNCH-005** | Non-blocking legal/product notes must not remain disguised as technical launch blockers. |
+| **LAUNCH-006** | A finished site transitions explicitly into **maintenance**; launch runbooks must stop mutating historical production defaults afterward. |
+
+**Post-launch:** FP-0002 is in **PRODUCTION / MAINTENANCE** as of 2026-08-20 (P18I). Do not re-run cutover/indexing-close sequences from this SOP unless a new human charter explicitly authorizes recovery work.

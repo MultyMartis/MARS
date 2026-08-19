@@ -3,13 +3,45 @@
 **Factory Project:** FP-0002 — Shpigovsky.ru  
 **Format:** ADR (Architecture Decision Record)  
 **Created:** 2026-06-11  
-**Updated:** 2026-08-20 (P18H privacy/retention decisions)
+**Updated:** 2026-08-20 (P18I final launch closeout)
 
 ---
 
 ## Purpose
 
 Journal for **operator-declared** architectural and production decisions during the Factory track.
+
+---
+
+## Decisions (P18I)
+
+### ADR-P18I-A — Launch closeout against live editorial truth
+
+**Status:** Accepted
+
+**Decision:** Final crawl and closeout use **current production DB/editorial state** after Olya/Admin edits, not a frozen implementation inventory.
+
+**Evidence:** `REPORTS/evidence/prod-p18i-final-launch-closeout/01-olya-admin-intake.json`
+
+---
+
+### ADR-P18I-B — Staging URL normalization (bounded)
+
+**Status:** Accepted
+
+**Decision:** Rewrite legacy `shpigovsky.beget.tech` / `.test` hosts at render time via `shpigovsky_normalize_public_url()` and public HTML output buffer; do not mass-rewrite editorial DB in P18I.
+
+**Evidence:** `REPORTS/evidence/prod-p18i-final-launch-closeout/11-deploy-fix-manifest.json`
+
+---
+
+### ADR-P18I-C — Maintenance transition
+
+**Status:** Accepted
+
+**Decision:** FP-0002 enters **PRODUCTION / MAINTENANCE** after P18I CLEAN crawl; launch runbooks stop mutating production defaults.
+
+**Evidence:** `REPORTS/FP-0002-FINAL-LAUNCH-CLOSEOUT-v1.md`
 
 ---
 

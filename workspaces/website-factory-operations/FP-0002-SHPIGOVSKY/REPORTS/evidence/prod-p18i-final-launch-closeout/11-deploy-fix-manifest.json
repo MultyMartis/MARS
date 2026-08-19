@@ -1,0 +1,42 @@
+{
+  "deployed_at": "2026-08-19T18:45:43.375353+00:00",
+  "files": [
+    {
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/shpigovsky-core.php",
+      "local": "WORDPRESS\\plugins\\shpigovsky-core\\shpigovsky-core.php",
+      "sha256": "bcd5b0725efbd1d5f9b607b2b7e8de6053927a9fffe78625add1435a198418f4",
+      "bytes": 1764
+    },
+    {
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Admin/SystemDashboard.php",
+      "local": "WORDPRESS\\plugins\\shpigovsky-core\\src\\Admin\\SystemDashboard.php",
+      "sha256": "74767c5da1241b2944dd19a58685d5630ea35238db4b4a703755922f476595f6",
+      "bytes": 14184
+    },
+    {
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/template-tags.php",
+      "local": "WORDPRESS\\theme\\shpigovsky\\inc\\template-tags.php",
+      "sha256": "c0e7ea2f5b0bd8842cf4fa60e4aea7e151340fe57e175a381f5e2c540e148273",
+      "bytes": 7617
+    },
+    {
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/home-fallbacks.php",
+      "local": "WORDPRESS\\theme\\shpigovsky\\inc\\home-fallbacks.php",
+      "sha256": "440538cba0b2c1b72b266c462a769e80ef925431462da29026ea6bf81f489a3c",
+      "bytes": 27832
+    },
+    {
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/home-helpers.php",
+      "local": "WORDPRESS\\theme\\shpigovsky\\inc\\home-helpers.php",
+      "sha256": "548d4d2409d0eeebef80accc0c26e75e799b9755012ccf825be6c4db760360d3",
+      "bytes": 18371
+    },
+    {
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/reusable-blocks-helpers.php",
+      "local": "WORDPRESS\\theme\\shpigovsky\\inc\\reusable-blocks-helpers.php",
+      "sha256": "183a6660041e2d0f79278c4c15650b07af247cd72b39a44935a804e8ec74ad7b",
+      "bytes": 36447
+    }
+  ],
+  "meta_update": "{\"core\":\"0.3.21-p18i\",\"blog_public\":1,\"meta\":{\"baseline_id\":\"FP-0002-PRODUCTION-FINAL-2026-08-20-P18I\",\"latest_wave\":\"P18I Final Launch Closeout\",\"parity\":\"MATCH\",\"verified_at\":\"2026-08-19 18:45 UTC\",\"backup\":\"BOUNDED PAGE SNAPSHOT \\/ EXACT FILE DEPLOY\",\"git_sha\":\"16706398f03825b054ce75c56e8af48ec4349329\",\"wave\":\"PROD-P15\",\"state_note\":\"COOKIE CONSENT ACTIVE; METRIKA CONSENT-GATED; FORM GOAL CONSENT-GATED; COOKIE SETTINGS REOPEN ACTIVE; INDEXING CLOSED\",\"legacy_redirects\":\"7\\/7\",\"cutover\":\"DONE\",\"ssl\":\"ACTIVE\",\"dns_ns\":\"DONE \\/ Beget\",\"smtp_sender\":\"noreply@shpigovsky.ru\",\"indexing\":\"OPEN — HUMAN-APPROVED\",\"public_origin\":\"https:\\/\\/shpigovsky.ru\\/ — WordPress production\",\"mail\":\"SMTP CONFIGURED — VERIFICATION REQUIRED\",\"leads\":\"ACTIVE\",\"metrika_form_goals\":\"CONSENT-GATED\",\"sitemap_submissions\":\"P18I closeout — see REPORT\"}}"
+}

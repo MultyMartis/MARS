@@ -200,3 +200,100 @@ function shpigovsky_render_placeholder_notice( $context = 'default' ) {
 	set_query_var( 'shpigovsky_placeholder_context', $context );
 	get_template_part( 'template-parts/page/placeholder-notice' );
 }
+
+/**
+ * Rewrite legacy dev/staging hosts to the current production home URL.
+ *
+ * @param string $url Raw URL.
+ * @return string
+ */
+function shpigovsky_normalize_public_url( $url ) {
+	if ( ! is_string( $url ) || '' === $url ) {
+		return $url;
+	}
+
+	$home = home_url( '/' );
+	$home = is_string( $home ) ? rtrim( $home, '/' ) : '';
+
+	if ( '' === $home ) {
+		return $url;
+	}
+
+	$legacy_hosts = array(
+		'http://shpigovsky.beget.tech',
+		'https://shpigovsky.beget.tech',
+		'http://shpigovsky.test',
+		'https://shpigovsky.test',
+	);
+
+	foreach ( $legacy_hosts as $legacy ) {
+		if ( 0 === strpos( $url, $legacy ) ) {
+			return $home . substr( $url, strlen( $legacy ) );
+		}
+	}
+
+	return $url;
+}
+
+/**
+ * Filter callback for core permalink filters.
+ *
+ * @param string $url Generated URL.
+ * @return string
+ */
+function shpigovsky_filter_normalize_public_url( $url ) {
+	return shpigovsky_normalize_public_url( $url );
+}
+
+add_filter( 'post_link', 'shpigovsky_filter_normalize_public_url', 20 );
+add_filter( 'page_link', 'shpigovsky_filter_normalize_public_url', 20 );
+add_filter( 'post_type_link', 'shpigovsky_filter_normalize_public_url', 20 );
+
+/**
+ * Rewrite legacy dev/staging hostnames in final public HTML.
+ *
+ * @param string $html Buffered HTML.
+ * @return string
+ */
+function shpigovsky_rewrite_legacy_hosts_in_html( $html ) {
+	if ( ! is_string( $html ) || '' === $html ) {
+		return $html;
+	}
+
+	$home = home_url( '/' );
+	$home = is_string( $home ) ? rtrim( $home, '/' ) : '';
+
+	if ( '' === $home ) {
+		return $html;
+	}
+
+	$legacy_hosts = array(
+		'http://shpigovsky.beget.tech',
+		'https://shpigovsky.beget.tech',
+		'http://shpigovsky.test',
+		'https://shpigovsky.test',
+	);
+
+	foreach ( $legacy_hosts as $legacy ) {
+		if ( false !== strpos( $html, $legacy ) ) {
+			$html = str_replace( $legacy, $home, $html );
+		}
+	}
+
+	return $html;
+}
+
+/**
+ * Start output buffering for legacy host rewrite on public templates.
+ *
+ * @return void
+ */
+function shpigovsky_legacy_host_output_buffer_start() {
+	if ( is_admin() || wp_doing_ajax() || ( defined( 'REST_REQUEST' ) && REST_REQUEST ) ) {
+		return;
+	}
+
+	ob_start( 'shpigovsky_rewrite_legacy_hosts_in_html' );
+}
+
+add_action( 'template_redirect', 'shpigovsky_legacy_host_output_buffer_start', 0 );

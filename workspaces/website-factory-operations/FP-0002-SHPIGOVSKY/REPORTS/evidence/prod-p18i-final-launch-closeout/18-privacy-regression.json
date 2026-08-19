@@ -1,0 +1,22 @@
+{
+  "captured_at": "2026-08-19T18:50:15.255Z",
+  "required": "P18E PRIVACY RUNTIME SURVIVES FINAL LAUNCH AUDIT",
+  "all_pass": true,
+  "results": [
+    {
+      "name": "UNDECIDED — banner visible, no Metrika",
+      "status": "PASS",
+      "metrika": 0
+    },
+    {
+      "name": "NECESSARY_ONLY — no Metrika",
+      "status": "PASS",
+      "metrika": 0
+    },
+    {
+      "name": "ANALYTICS_ALLOWED — Metrika loads",
+      "status": "PASS",
+      "metrika": 2
+    }
+  ]
+}

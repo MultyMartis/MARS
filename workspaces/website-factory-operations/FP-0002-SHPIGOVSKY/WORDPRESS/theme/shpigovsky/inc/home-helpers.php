@@ -375,7 +375,7 @@ function shpigovsky_build_home_accordion_item( $service ) {
 	$title = get_the_title( $service );
 	$url   = get_permalink( $service );
 	$title = is_string( $title ) ? trim( $title ) : '';
-	$url   = is_string( $url ) ? trim( $url ) : '';
+	$url   = is_string( $url ) ? shpigovsky_normalize_public_url( trim( $url ) ) : '';
 
 	if ( '' === $title || '' === $url ) {
 		return null;
@@ -392,7 +392,7 @@ function shpigovsky_build_home_accordion_item( $service ) {
 		$child_title = get_the_title( $child );
 		$child_url   = get_permalink( $child );
 		$child_title = is_string( $child_title ) ? trim( $child_title ) : '';
-		$child_url   = is_string( $child_url ) ? trim( $child_url ) : '';
+		$child_url   = is_string( $child_url ) ? shpigovsky_normalize_public_url( trim( $child_url ) ) : '';
 
 		if ( '' === $child_title || '' === $child_url ) {
 			continue;

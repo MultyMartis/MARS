@@ -1,0 +1,42 @@
+{
+  "all_match": true,
+  "files": [
+    {
+      "file": "shpigovsky-core.php",
+      "local_sha256": "bcd5b0725efbd1d5f9b607b2b7e8de6053927a9fffe78625add1435a198418f4",
+      "remote_sha256": "bcd5b0725efbd1d5f9b607b2b7e8de6053927a9fffe78625add1435a198418f4",
+      "match": true
+    },
+    {
+      "file": "src/Admin/SystemDashboard.php",
+      "local_sha256": "74767c5da1241b2944dd19a58685d5630ea35238db4b4a703755922f476595f6",
+      "remote_sha256": "74767c5da1241b2944dd19a58685d5630ea35238db4b4a703755922f476595f6",
+      "match": true
+    },
+    {
+      "file": "src/Admin/IndexingControl.php",
+      "local_sha256": "0edf0166eb4cb8031f137d2748b2324a4701b01fb1b68c897541f925c4146d91",
+      "remote_sha256": "0edf0166eb4cb8031f137d2748b2324a4701b01fb1b68c897541f925c4146d91",
+      "match": true
+    },
+    {
+      "file": "src/Admin/IndexingState.php",
+      "local_sha256": "3e246be5e7f878d9e91814c564292b1ab37f10964591e67420b6dc5529a8121a",
+      "remote_sha256": "3e246be5e7f878d9e91814c564292b1ab37f10964591e67420b6dc5529a8121a",
+      "match": true
+    },
+    {
+      "file": "src/Admin/IndexingAlerts.php",
+      "local_sha256": "2764e74026642c1fc1798eb9700e34c535bcbe459205cb5f2f460274d41a19f7",
+      "remote_sha256": "2764e74026642c1fc1798eb9700e34c535bcbe459205cb5f2f460274d41a19f7",
+      "match": true
+    },
+    {
+      "file": "src/Admin/IndexingWatchdog.php",
+      "local_sha256": "cd519bc807833e1a8f71ff5ddea064e90aa9765519d85075b5ff8e5e87e6fdd2",
+      "remote_sha256": "cd519bc807833e1a8f71ff5ddea064e90aa9765519d85075b5ff8e5e87e6fdd2",
+      "match": true
+    }
+  ],
+  "checked_at": "2026-08-19T18:46:03.486056+00:00"
+}

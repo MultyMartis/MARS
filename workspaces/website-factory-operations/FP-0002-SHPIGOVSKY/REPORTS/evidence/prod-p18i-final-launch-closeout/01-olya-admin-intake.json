@@ -1,0 +1,186 @@
+{
+  "generated_at": "2026-08-19T18:45:59+00:00",
+  "wave": "P18I",
+  "options": {
+    "home": "https://shpigovsky.ru",
+    "siteurl": "https://shpigovsky.ru",
+    "blog_public": 1
+  },
+  "core": "0.3.21-p18i",
+  "privacy_settings": {
+    "system_enabled": true,
+    "banner_title": "Мы используем файлы cookie",
+    "banner_description": "Мы используем необходимые cookie для работы сайта и, с вашего разрешения, аналитические технологии для понимания того, как используется сайт.",
+    "policy_page_id": 24,
+    "consent_version": 1,
+    "consent_lifetime_days": 365,
+    "analytics_category_enabled": true,
+    "analytics_description": "Аналитические технологии помогают понять, как используется сайт. Сейчас эта категория относится к Яндекс Метрике.",
+    "label_accept": "Принять",
+    "label_necessary_only": "Только необходимые",
+    "label_customize": "Настроить",
+    "label_save": "Сохранить выбор"
+  },
+  "mail_settings_redacted": [],
+  "system_meta": {
+    "baseline_id": "FP-0002-PRODUCTION-FINAL-2026-08-20-P18I",
+    "latest_wave": "P18I Final Launch Closeout",
+    "parity": "MATCH",
+    "verified_at": "2026-08-19 18:45 UTC",
+    "backup": "BOUNDED PAGE SNAPSHOT / EXACT FILE DEPLOY",
+    "git_sha": "16706398f03825b054ce75c56e8af48ec4349329",
+    "wave": "PROD-P15",
+    "state_note": "COOKIE CONSENT ACTIVE; METRIKA CONSENT-GATED; FORM GOAL CONSENT-GATED; COOKIE SETTINGS REOPEN ACTIVE; INDEXING CLOSED",
+    "legacy_redirects": "7/7",
+    "cutover": "DONE",
+    "ssl": "ACTIVE",
+    "dns_ns": "DONE / Beget",
+    "smtp_sender": "noreply@shpigovsky.ru",
+    "indexing": "OPEN — HUMAN-APPROVED",
+    "public_origin": "https://shpigovsky.ru/ — WordPress production",
+    "mail": "SMTP CONFIGURED — VERIFICATION REQUIRED",
+    "leads": "ACTIVE",
+    "metrika_form_goals": "CONSENT-GATED",
+    "sitemap_submissions": "P18I closeout — see REPORT"
+  },
+  "indexing": {
+    "blog_public": 1,
+    "snapshot": {
+      "effective": "OPEN",
+      "blog_public": 1,
+      "blog_open": true,
+      "robots": {
+        "file_exists": true,
+        "owner": "physical_file",
+        "global_disallow": false,
+        "body_head": "﻿User-agent: Yandex\r\nAllow: */uploads\r\nAllow: /*/*.js\r\nAllow: /*/*.css\r\nAllow: /wp-*.png\r\nAllow: /wp-*.jpg\r\nAllow: /wp-*.jpeg\r\nAllow: /wp-*.gif\r\nAllow: /wp-admi"
+      },
+      "meta": {
+        "global_noindex": false,
+        "source": "blog_public_core_robots"
+      },
+      "signals_open": true,
+      "signals_closed": false,
+      "human_decision": "OPEN",
+      "human_actor": "Olya (olya)",
+      "human_recorded_at": "2026-08-19 20:23:06",
+      "human_source": "p18g_bootstrap",
+      "fingerprint": "e305cb991e8eeadd264eb2ca7258aa5362c10d504fa7e31277dd879034db54ba"
+    }
+  },
+  "content_counts": {
+    "pages": 21,
+    "posts": 1,
+    "services": 31,
+    "specialists": 9
+  },
+  "recent_content": [
+    {
+      "ID": "24",
+      "post_title": "Политика Cookie-файлов",
+      "post_name": "cookie-files-policy",
+      "post_modified_gmt": "2026-08-19 13:05:59",
+      "post_author": "2"
+    },
+    {
+      "ID": "23",
+      "post_title": "Согласие на обработку персональных данных",
+      "post_name": "consent-personal-data",
+      "post_modified_gmt": "2026-08-18 11:49:40",
+      "post_author": "2"
+    },
+    {
+      "ID": "22",
+      "post_title": "Пользовательское соглашение",
+      "post_name": "user-agreement",
+      "post_modified_gmt": "2026-08-18 11:46:15",
+      "post_author": "2"
+    },
+    {
+      "ID": "3",
+      "post_title": "Политика конфиденциальности",
+      "post_name": "privacy-policy",
+      "post_modified_gmt": "2026-08-18 11:42:31",
+      "post_author": "2"
+    },
+    {
+      "ID": "750",
+      "post_title": "Лечение алкогольной зависимости: почему сила воли здесь ни при чём",
+      "post_name": "nazvanie-stati",
+      "post_modified_gmt": "2026-08-18 10:25:12",
+      "post_author": "2"
+    },
+    {
+      "ID": "73",
+      "post_title": "Зависимости",
+      "post_name": "zavisimosti",
+      "post_modified_gmt": "2026-08-16 19:37:21",
+      "post_author": "2"
+    },
+    {
+      "ID": "4",
+      "post_title": "Главная",
+      "post_name": "glavnaya",
+      "post_modified_gmt": "2026-08-16 19:36:09",
+      "post_author": "2"
+    },
+    {
+      "ID": "1894",
+      "post_title": "Генотипирование для специалистов",
+      "post_name": "analiz-dya-specialistov",
+      "post_modified_gmt": "2026-08-16 19:27:12",
+      "post_author": "2"
+    },
+    {
+      "ID": "1889",
+      "post_title": "Генотипирование",
+      "post_name": "genotipirovenie",
+      "post_modified_gmt": "2026-08-16 19:26:19",
+      "post_author": "2"
+    },
+    {
+      "ID": "1031",
+      "post_title": "Сергей Юрьевич Шпиговский",
+      "post_name": "shpigovsky",
+      "post_modified_gmt": "2026-08-16 16:51:24",
+      "post_author": "2"
+    },
+    {
+      "ID": "1949",
+      "post_title": "Литвинов Кирилл Алексеевич",
+      "post_name": "litvinov",
+      "post_modified_gmt": "2026-08-16 16:50:47",
+      "post_author": "2"
+    },
+    {
+      "ID": "1957",
+      "post_title": "Поверинов Александр Константинович",
+      "post_name": "poverinov",
+      "post_modified_gmt": "2026-08-16 16:50:32",
+      "post_author": "2"
+    },
+    {
+      "ID": "1963",
+      "post_title": "Филиппов Илья Владимирович",
+      "post_name": "filippov",
+      "post_modified_gmt": "2026-08-16 16:50:02",
+      "post_author": "2"
+    },
+    {
+      "ID": "1967",
+      "post_title": "Ханикова Светлана Николаевна",
+      "post_name": "hanikova",
+      "post_modified_gmt": "2026-08-16 16:49:46",
+      "post_author": "2"
+    },
+    {
+      "ID": "1988",
+      "post_title": "Филиппова Мария Михайловна",
+      "post_name": "filippova",
+      "post_modified_gmt": "2026-08-16 16:49:30",
+      "post_author": "2"
+    }
+  ],
+  "activity_log_recent": [],
+  "_exit_code": 0
+}

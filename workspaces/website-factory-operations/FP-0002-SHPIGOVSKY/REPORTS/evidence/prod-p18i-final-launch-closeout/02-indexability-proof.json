@@ -1,0 +1,34 @@
+{
+  "required": "P18I GLOBAL INDEXABILITY OPEN / CONSISTENT",
+  "blog_public": 1,
+  "indexing_snapshot": {
+    "blog_public": 1,
+    "snapshot": {
+      "effective": "OPEN",
+      "blog_public": 1,
+      "blog_open": true,
+      "robots": {
+        "file_exists": true,
+        "owner": "physical_file",
+        "global_disallow": false,
+        "body_head": "﻿User-agent: Yandex\r\nAllow: */uploads\r\nAllow: /*/*.js\r\nAllow: /*/*.css\r\nAllow: /wp-*.png\r\nAllow: /wp-*.jpg\r\nAllow: /wp-*.jpeg\r\nAllow: /wp-*.gif\r\nAllow: /wp-admi"
+      },
+      "meta": {
+        "global_noindex": false,
+        "source": "blog_public_core_robots"
+      },
+      "signals_open": true,
+      "signals_closed": false,
+      "human_decision": "OPEN",
+      "human_actor": "Olya (olya)",
+      "human_recorded_at": "2026-08-19 20:23:06",
+      "human_source": "p18g_bootstrap",
+      "fingerprint": "e305cb991e8eeadd264eb2ca7258aa5362c10d504fa7e31277dd879034db54ba"
+    }
+  },
+  "robots_status": 200,
+  "robots_global_disallow": false,
+  "robots_sitemap_line": true,
+  "homepage_noindex": false,
+  "homepage_x_robots": ""
+}

@@ -173,7 +173,7 @@ function shpigovsky_get_specialists_all_link_url( $static_fallback = '' ) {
 	$block = shpigovsky_get_block_option_scalar( 'specialists_all_link_url', shpigovsky_get_specialists_block_context() );
 
 	if ( '' !== $block ) {
-		return $block;
+		return shpigovsky_normalize_public_url( $block );
 	}
 
 	if ( '' === $static_fallback ) {
@@ -181,7 +181,7 @@ function shpigovsky_get_specialists_all_link_url( $static_fallback = '' ) {
 		$static_fallback = $parent_id > 0 ? get_permalink( $parent_id ) : home_url( '/specyalisty/' );
 	}
 
-	return $static_fallback;
+	return shpigovsky_normalize_public_url( $static_fallback );
 }
 
 /**
@@ -710,14 +710,14 @@ function shpigovsky_get_comfort_all_link_url( $static_fallback = '' ) {
 	$block = shpigovsky_get_block_option_scalar( 'comfort_all_link_url', shpigovsky_get_comfort_block_context() );
 
 	if ( '' !== $block ) {
-		return $block;
+		return shpigovsky_normalize_public_url( $block );
 	}
 
 	if ( '' === $static_fallback ) {
 		$static_fallback = home_url( '/o-centre/galereya-o-dome/' );
 	}
 
-	return $static_fallback;
+	return shpigovsky_normalize_public_url( $static_fallback );
 }
 
 /**

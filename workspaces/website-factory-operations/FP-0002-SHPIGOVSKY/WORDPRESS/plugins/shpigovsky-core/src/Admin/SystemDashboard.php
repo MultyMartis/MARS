@@ -28,12 +28,12 @@ final class SystemDashboard implements ModuleInterface {
 	/**
 	 * Baseline ID shown in the widget (updated by stabilization waves).
 	 */
-	const BASELINE_ID = 'FP-0002-PROD-BASELINE-2026-08-20-P18H';
+	const BASELINE_ID = 'FP-0002-PRODUCTION-FINAL-2026-08-20-P18I';
 
 	/**
 	 * Latest accepted production wave label.
 	 */
-	const LATEST_ACCEPTED_WAVE = 'P18H Privacy / Retention Decisions + Launch-Tail Readiness';
+	const LATEST_ACCEPTED_WAVE = 'P18I Final Launch Closeout';
 
 	/**
 	 * {@inheritdoc}
@@ -245,7 +245,11 @@ final class SystemDashboard implements ModuleInterface {
 					__( '%d days — auto-delete when implemented', 'shpigovsky-core' ),
 					$retention_days
 				)
-				: __( '0 — auto-delete off; P18H recommends 730 (operator applies)', 'shpigovsky-core' )
+				: __( '0 — auto-delete off; recommended 730 (operator applies)', 'shpigovsky-core' )
+		);
+		self::row(
+			__( 'Sitemap submissions', 'shpigovsky-core' ),
+			isset( $meta['sitemap_submissions'] ) ? (string) $meta['sitemap_submissions'] : __( 'P18I — see final closeout report', 'shpigovsky-core' )
 		);
 		self::row(
 			__( 'Индексация', 'shpigovsky-core' ),
@@ -281,11 +285,11 @@ final class SystemDashboard implements ModuleInterface {
 
 		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'Следующие шаги', 'shpigovsky-core' ) . '</h3>';
 		echo '<ul style="margin:0 0 12px 1.2em;">';
-		self::li( __( '1. SMTP VERIFIED / ACTIVE — временное pre-cutover подавление удалено', 'shpigovsky-core' ) );
+		self::li( __( '1. PRODUCTION / MAINTENANCE — launch closeout complete; editor changes via Admin are normal production truth', 'shpigovsky-core' ) );
 		self::li( __( '2. Индексация OPEN — human-approved; технические волны не должны закрывать её без явной команды', 'shpigovsky-core' ) );
-		self::li( __( '3. P18I: отправка sitemap в Search Console / Яндекс Вебмастер', 'shpigovsky-core' ) );
-		self::li( __( '4. P18I: финальный обход + launch closeout', 'shpigovsky-core' ) );
-		self::li( __( '5. Оператор: финальный legal sign-off Cookie Policy; при необходимости — выставить lead_retention_days=730', 'shpigovsky-core' ) );
+		self::li( __( '3. Оператор: финальный legal sign-off Cookie Policy (non-blocking)', 'shpigovsky-core' ) );
+		self::li( __( '4. Оператор: при необходимости выставить lead_retention_days=730 и согласовать Privacy Policy', 'shpigovsky-core' ) );
+		self::li( __( '5. Мониторинг Search Console / Яндекс Вебмастер после отправки sitemap', 'shpigovsky-core' ) );
 		echo '</ul>';
 
 		if ( $is_beget && ( 'local' === $env_const || 'local' === $env_fn ) ) {

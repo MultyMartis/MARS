@@ -1,68 +1,59 @@
-# RUNBOOK — FP-0002 PROD-P18 FINAL DOMAIN CUTOVER (CURRENT EXECUTION STATE)
+# RUNBOOK — FP-0002 PROD-P18 (MAINTENANCE STATE)
 
-**Wave executed:** **P18H** — privacy/retention decisions + launch-tail readiness (2026-08-20)  
-**Prior:** **P18G** indexing safety · **P18E** cookie/consent · **P18D-FU01** SMTP closeout  
-**P18 remainder:** sitemap submissions · final crawl · launch closeout (P18I).
+**Wave executed:** **P18I** — final launch closeout (2026-08-20)  
+**Prior:** **P18H** privacy · **P18G** indexing safety · **P18E** cookie/consent · **P18D-FU01** SMTP closeout  
+**Phase:** **PRODUCTION / MAINTENANCE** — launch implementation **closed**.
 
-Historical trigger `NS SWITCHED` and WordPress `home`/`siteurl` cutover are **complete** (operator). **Indexing is OPEN — human-approved (Olya/admin); do not close without explicit human command.**
+**Indexing is OPEN — human-approved (Olya/admin); do not close without explicit human command.**
 
 ---
 
-## Current facts (P18D-FU01 closeout)
+## Current facts (P18I final baseline)
 
 | Surface | Value |
 |---------|--------|
-| WordPress `home` | `https://shpigovsky.ru` |
-| WordPress `siteurl` | `https://shpigovsky.ru` |
-| Core target | `0.3.16-p18d-fu01` |
-| SMTP Admin | **Настройки сайта → Почта и формы** |
-| SMTP state | **VERIFIED / ACTIVE** |
-| SMTP transport | `smtp.beget.com` port `465` encryption `ssl` |
-| Sender | `noreply@shpigovsky.ru` |
-| Mail suppression | **OFF** (delivery_active=1 → should_suppress()=false) |
-| Suppression MU | **REMOVED** |
-| Lead registry | table `fp02_form_leads` schema v1 **ACTIVE** |
-| Form QA | PASS — MAIL_ACCEPTED status recorded |
-| Leads Admin | **Заявки** top-level — reachable |
-| Metrika form goals | Admin-configurable; counter owner = SEO |
-| Indexing | **OPEN** (`blog_public=1`) — **HUMAN-APPROVED**; P18G guard active |
-| Public apex | WordPress currently visible on `https://shpigovsky.ru/` |
-| Source ↔ production | SMTP/forms closeout surfaces verified; dashboard/core sync handled in FU01 |
+| WordPress `home` / `siteurl` | `https://shpigovsky.ru` |
+| Core | `0.3.21-p18i` |
+| Baseline ID | `FP-0002-PRODUCTION-FINAL-2026-08-20-P18I` |
+| SMTP | **VERIFIED / ACTIVE** |
+| Forms / leads | **ACTIVE** |
+| Cookie consent / Metrika | **ACTIVE / CONSENT-GATED** |
+| Indexing | **OPEN** — **HUMAN-APPROVED**; P18G guard **ACTIVE** |
+| Sitemap | `https://shpigovsky.ru/wp-sitemap.xml` (valid) |
+| Final crawl | **CLEAN** (2026-08-19 UTC) |
 
-**Do not revert** `home`/`siteurl` to `shpigovsky.beget.tech`.
+**Do not revert** `home`/`siteurl` to `shpigovsky.beget.tech`.  
+**Do not** run legacy launch scripts that close indexing.
 
 ---
 
-## Operator next (post-P18H)
+## Maintenance operations
 
-1. **Do not close indexing** without explicit human command — current truth: **OPEN — HUMAN-APPROVED**; P18G guard active.
-2. Optional: final legal sign-off on Cookie Policy (factually current).
-3. Optional: set `lead_retention_days=730` in **Настройки сайта → Почта и формы** when operator accepts P18H recommendation (no auto-purge of historical leads).
-4. **P18I:** submit sitemap to Search Console / Yandex Webmaster; run final crawl.
-
----
-
-## Remaining P18 (post-P18H)
-
-1. **P18I** — sitemap submissions + final production crawl + launch closeout.
-2. Operator legal sign-off on Cookie Policy (non-blocking for P18I).
-3. Privacy Policy retention wording alignment when lead retention is enabled.
-
-**P18H RECOMMENDATION:** Form lead retention **730 days** — production config remains `0` until operator saves Admin.
-
-**OPEN BUSINESS DECISION (narrow):** Apply recommended `lead_retention_days=730` + align Privacy Policy retention sentence.
-
-Exact leftover URL objects still listed in `REPORTS/evidence/prod-p17-fu02-final-tail/CUTOVER-DB-MUTATION-PLAN.json` (skip `home`/`siteurl` — already done).
+1. **Editor changes** via WordPress Admin are normal production truth.
+2. **Technical waves** start with fresh production intake — never overwrite live editorial content from old baselines.
+3. **Indexing** remains human-owned; P18G guard stays active.
+4. **Backups** at meaningful milestones or before risky changes.
+5. **New features** → new bounded waves with separate reports.
 
 ---
 
-## Forbidden
+## Operator follow-ups (non-blocking)
 
-- Opening indexing as a deploy side effect  
-- Claiming SMTP VERIFIED because fields exist  
-- Asking for / storing the mailbox password in Cursor, Git, reports, or Dashboard  
-- Leaving two competing mail switches after VERIFIED/ACTIVE  
-- Temporary-host 301 if it would send users to the **legacy** origin  
-- Treating Dashboard indexing button as launch authorization
+1. Submit sitemap in **Google Search Console** and **Yandex Webmaster** (agent auth blocker in P18I).
+2. Optional: Cookie Policy legal sign-off.
+3. Optional: `lead_retention_days=730` + Privacy Policy alignment.
 
-P18B reports remain historical for Dashboard/indexing. P18C remains historical for SMTP/forms internals. Do not treat P18C as proof that the left-menu item was discoverable — that gap is closed in FU01.
+See `REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md`.
+
+---
+
+## Forbidden in maintenance (unless explicit new charter)
+
+- Closing indexing without human command
+- Global `Disallow: /` or mass noindex
+- Restoring pre-cutover launch defaults over live DB
+- Broad DB purge / migration without backup + charter
+
+---
+
+*Historical cutover steps remain in git history and P17–P18A reports; do not re-execute.*
