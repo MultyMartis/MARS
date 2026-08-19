@@ -120,7 +120,7 @@ final class MailFormsSettings implements ModuleInterface {
 
 		if ( 0 === (int) $cfg['lead_retention_days'] ) {
 			echo '<div class="notice notice-warning"><p><strong>' . esc_html__( 'FORM LEAD RETENTION PERIOD — OPERATOR DECISION REQUIRED', 'shpigovsky-core' ) . '</strong> ';
-			echo esc_html__( 'Заявки сохраняются. Срок хранения ещё не задан — автоудаление не выполняется.', 'shpigovsky-core' ) . '</p></div>';
+			echo esc_html__( 'Заявки сохраняются. Срок хранения ещё не задан — автоудаление не выполняется. P18H рекомендует 730 дней для заявок с форм (см. DECISION-MATRIX); включение не удаляет исторические заявки автоматически в этой волне.', 'shpigovsky-core' ) . '</p></div>';
 		}
 
 		if ( ! empty( $errors ) ) {

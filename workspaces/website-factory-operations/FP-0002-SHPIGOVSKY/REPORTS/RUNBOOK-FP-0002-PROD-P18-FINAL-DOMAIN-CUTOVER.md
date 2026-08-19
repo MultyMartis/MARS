@@ -1,9 +1,10 @@
 # RUNBOOK — FP-0002 PROD-P18 FINAL DOMAIN CUTOVER (CURRENT EXECUTION STATE)
 
-**Wave executed:** **P18D-FU01** — fresh production intake, SMTP transport correction (none→ssl/465), verification, activation, physical suppression-MU retirement, bounded post-removal form QA, exact QA cleanup, indexing re-close, Olya/Admin truth preservation (2026-08-19)  
-**P18 remainder:** public-domain finalization only if regression appears · Olya indexing approval · sitemaps · crawl.
+**Wave executed:** **P18H** — privacy/retention decisions + launch-tail readiness (2026-08-20)  
+**Prior:** **P18G** indexing safety · **P18E** cookie/consent · **P18D-FU01** SMTP closeout  
+**P18 remainder:** sitemap submissions · final crawl · launch closeout (P18I).
 
-Historical trigger `NS SWITCHED` and WordPress `home`/`siteurl` cutover are **complete** (operator). Do **not** wait for NS or URL cutover anymore. Do **not** open indexing automatically. Do **not** rollback current editor-owned DB content from an older backup to recover technical state.
+Historical trigger `NS SWITCHED` and WordPress `home`/`siteurl` cutover are **complete** (operator). **Indexing is OPEN — human-approved (Olya/admin); do not close without explicit human command.**
 
 ---
 
@@ -32,22 +33,24 @@ Historical trigger `NS SWITCHED` and WordPress `home`/`siteurl` cutover are **co
 
 ---
 
-## Operator next (P18D-FU01 complete — current handoff)
+## Operator next (post-P18H)
 
-1. Do **not** open indexing without Olya approval or explicit operator command.
-2. Observe public `https://shpigovsky.ru/`; if operator sees a routing regression, open a bounded public-domain finalization wave.
-3. Keep current editor/Admin DB state as content truth; do not restore an old full DB backup over live editorial changes.
+1. **Do not close indexing** without explicit human command — current truth: **OPEN — HUMAN-APPROVED**; P18G guard active.
+2. Optional: final legal sign-off on Cookie Policy (factually current).
+3. Optional: set `lead_retention_days=730` in **Настройки сайта → Почта и формы** when operator accepts P18H recommendation (no auto-purge of historical leads).
+4. **P18I:** submit sitemap to Search Console / Yandex Webmaster; run final crawl.
 
 ---
 
-## Remaining P18 (post-P18D)
+## Remaining P18 (post-P18H)
 
-1. Public-domain finalization only if regression appears.
-2. Indexing **only** after Olya (Dashboard «Открыть индексацию») or explicit operator command.
-3. Sitemap submissions (manual).
-4. Final crawl.
+1. **P18I** — sitemap submissions + final production crawl + launch closeout.
+2. Operator legal sign-off on Cookie Policy (non-blocking for P18I).
+3. Privacy Policy retention wording alignment when lead retention is enabled.
 
-**OPEN BUSINESS DECISION:** Form lead retention period — `lead_retention_days=0` — operator sets when ready.
+**P18H RECOMMENDATION:** Form lead retention **730 days** — production config remains `0` until operator saves Admin.
+
+**OPEN BUSINESS DECISION (narrow):** Apply recommended `lead_retention_days=730` + align Privacy Policy retention sentence.
 
 Exact leftover URL objects still listed in `REPORTS/evidence/prod-p17-fu02-final-tail/CUTOVER-DB-MUTATION-PLAN.json` (skip `home`/`siteurl` — already done).
 

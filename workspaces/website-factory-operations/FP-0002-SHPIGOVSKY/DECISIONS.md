@@ -3,6 +3,7 @@
 **Factory Project:** FP-0002 — Shpigovsky.ru  
 **Format:** ADR (Architecture Decision Record)  
 **Created:** 2026-06-11  
+**Updated:** 2026-08-20 (P18H privacy/retention decisions)
 
 ---
 
@@ -10,69 +11,67 @@
 
 Journal for **operator-declared** architectural and production decisions during the Factory track.
 
-This file is **not** a substitute for Playbook 04 declarations (POC-06) or Engine state indexes. ADRs here capture rationale; authoritative Factory truth lives in the RT-G04 substrate after onboarding.
+---
+
+## Decisions (P18H)
+
+### ADR-P18H-A — Cookie Policy factual status
+
+**Status:** Accepted (factual); legal sign-off pending
+
+**Decision:** Live Cookie Policy at `/cookie-files-policy/` is **factually complete** vs current runtime. Final legal sign-off remains operator/legal.
+
+**Reason:** P18H audit matched all consent, Metrika, UTM, and form-separation statements to deployed code.
+
+**Evidence:** `REPORTS/evidence/prod-p18h-privacy-decisions/COOKIE-POLICY-FACTUAL-AUDIT.md`
 
 ---
 
-## ADR template
+### ADR-P18H-B — Consent evidence model
 
-Each decision uses the following structure:
+**Status:** Accepted
 
-```markdown
-### ADR-XXX — [Short title]
+**Decision:** Retain **browser-only** consent record (`fp02_cookie_consent`). Do not add server-side consent event store in P18H.
 
-**Status:** [Proposed | Accepted | Deprecated | Superseded by ADR-YYY]
+**Reason:** 152-FZ Art. 9 confirmation burden does not mandate server DB for this analytics model in bounded review; server log adds PD surface.
 
-**Decision:**  
-[What was decided.]
-
-**Reason:**  
-[Why this decision was made.]
-
-**Evidence:**  
-[Evidence references — EV-*, AT-*, file paths, operator attestation.]
-
-**Impact:**  
-[What this affects — scope, lanes, dependencies, SAFE UNKNOWN resolution.]
-```
+**Evidence:** `REPORTS/evidence/prod-p18h-privacy-decisions/CONSENT-EVIDENCE-COMPARISON.md`
 
 ---
 
-## Decisions
-
-### ADR-001 — Cookie consent evidence store remains browser-foundation-only in P18E-A/B
+### ADR-P18H-C — Consent lifetime
 
 **Status:** Accepted
 
-**Decision:**  
-P18E-A/B implements the browser consent-state foundation only. No new server-side visitor-consent evidence table, audit stream, or shadow tracking store is introduced in this wave.
+**Decision:** **365 days** product lifetime; re-prompt on version bump, expiry, tampered state, or material provider/purpose change.
 
-**Reason:**  
-Fresh legal/provider recheck did not surface a direct blocker that would force immediate server-side consent evidence for this specific site. The approved architecture already marked evidence storage as a legal/operator decision gate, and the current wave was explicitly bounded to foundation work without expanding tracking scope.
+**Reason:** No statutory exact period; 365 matches Admin default and balances UX vs refresh.
 
-**Evidence:**  
-`REPORTS/evidence/prod-p18e-ab-consent-foundation/LEGAL-PROVIDER-RECHECK.md`  
-`REPORTS/evidence/prod-p18e-ab-consent-foundation/POST-DEPLOY-QA.json`
+**Evidence:** `REPORTS/evidence/prod-p18h-privacy-decisions/DECISION-MATRIX.md`
 
-**Impact:**  
-`PrivacyConsent` owns machine state, version, browser contract, Admin settings, and integration mapping. Future server-side evidence retention, retention windows, and related privacy policy wording remain open decisions.
+---
 
-### ADR-002 — Consent lifetime defaults to configurable product value, not legal hardcode
+### ADR-P18H-D — UTM sessionStorage
 
 **Status:** Accepted
 
-**Decision:**  
-The consent lifetime is implemented as a bounded configurable Admin value with default `365` days, explicitly treated as a product default rather than a legal requirement.
+**Decision:** Document `sessionStorage['fp02_utm']` in Cookie Policy (done); treat as bounded session attribution; submit to lead registry on form post.
 
-**Reason:**  
-The approved P18E design left lifetime as a product/legal policy decision. Shipping a configurable bounded value lets the foundation work proceed without hardcoding legal copy or pretending a statutory period exists.
+**Reason:** Matches `v9-shell.js` implementation; whitelisted keys + 120-char cap.
 
-**Evidence:**  
-`REPORTS/evidence/prod-p18e-ab-consent-foundation/ADMIN-SAVE.json`  
-`REPORTS/evidence/prod-p18e-ab-consent-foundation/POST-DEPLOY-QA.json`
+**Evidence:** `REPORTS/evidence/prod-p18h-privacy-decisions/UTM-SESSION-STORAGE-ANALYSIS.md`
 
-**Impact:**  
-Future legal/operator review can change the value without re-architecting the consent module or public UI.
+---
+
+### ADR-P18H-E — Form lead retention
+
+**Status:** Accepted (recommendation); production config pending operator
+
+**Decision:** Recommend **730 days** default retention for consultation leads. P18H does **not** change production `lead_retention_days` (remains 0) and does **not** purge historical leads.
+
+**Reason:** 152-FZ Art. 5 p.7 purpose limitation; indefinite storage is not neutral.
+
+**Evidence:** `REPORTS/evidence/prod-p18h-privacy-decisions/LEAD-RETENTION-ANALYSIS.md`
 
 ---
 
@@ -80,27 +79,12 @@ Future legal/operator review can change the value without re-architecting the co
 
 | ADR | Title | Status |
 |-----|-------|--------|
-| ADR-001 | Browser-only consent evidence in P18E-A/B | Accepted |
-| ADR-002 | Configurable consent lifetime default | Accepted |
-| ADR-003 | Form analytics goals reuse canonical analytics consent gate | Accepted |
-
-### ADR-003 — Form analytics goals reuse canonical analytics consent gate
-
-**Status:** Accepted
-
-**Decision:**  
-P18E-E/F keeps one analytics-permission owner in the browser: `PrivacyConsent`. Frontend form-goal delivery may attempt Yandex Metrika `reachGoal` only after backend-confirmed success and only when `PrivacyConsent` reports analytics allowed. Missing Metrika, blank goal config, or analytics revocation must remain a harmless no-op for form success.
-
-**Reason:**  
-The site already moved Yandex Metrika loading behind explicit analytics consent in P18E-C/D. Leaving conversion goals outside that same gate would create a second analytics path and make business-form success depend on an optional third-party runtime. Reusing the existing consent API preserves one source of truth and keeps personal-data form consent separate from analytics consent.
-
-**Evidence:**  
-`REPORTS/evidence/prod-p18e-ef-form-goal-policy-integration/03-live-qa.json`  
-`REPORTS/REPORT-FP-0002-PROD-P18E-EF-FORM-GOAL-POLICY-INTEGRATION.md`
-
-**Impact:**  
-Future analytics integrations must obey the same privacy gate as analytics loading. Withdrawal blocks both future page analytics and future form-goal attempts, while the browser-only evidence decision remains unchanged.
+| P18H-A | Cookie Policy factual status | Accepted / legal pending |
+| P18H-B | Consent evidence browser-only | Accepted |
+| P18H-C | Consent lifetime 365d | Accepted |
+| P18H-D | UTM sessionStorage disclosure | Accepted |
+| P18H-E | Lead retention 730d recommend | Accepted / config pending |
 
 ---
 
-*Append-only discipline recommended. Supersede, do not silently overwrite.*
+*Append-only discipline. Supersede, do not silently overwrite.*

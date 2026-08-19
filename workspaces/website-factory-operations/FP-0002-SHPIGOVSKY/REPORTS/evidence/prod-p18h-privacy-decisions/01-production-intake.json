@@ -1,0 +1,87 @@
+{
+  "captured_at": "2026-08-19T18:09:28.862841+00:00",
+  "wave": "P18H",
+  "required": "P18H CURRENT PRODUCTION / EDITORIAL TRUTH VERIFIED",
+  "sources": [
+    "prod-p18e-ef 01-olya-admin-intake.json (fresh SSH 2026-08-19T18:09 UTC)",
+    "prod-p18g-indexing-safety runtime (fresh SSH 2026-08-19T18:09 UTC)",
+    "public HTTP probes (2026-08-19T18:08 UTC)"
+  ],
+  "wp": {
+    "home": "https://shpigovsky.ru",
+    "siteurl": "https://shpigovsky.ru",
+    "blog_public": 1,
+    "core": "0.3.20-p18g",
+    "privacy_settings": {
+      "system_enabled": true,
+      "policy_page_id": 24,
+      "consent_version": 1,
+      "consent_lifetime_days": 365,
+      "cookie_name": "fp02_cookie_consent"
+    },
+    "mail_ops": {
+      "lead_retention_days": 0,
+      "lead_logging": 1,
+      "note": "fp02_mail_ops option; retention 0 = auto-deletion disabled"
+    },
+    "seo": {
+      "yandex_metrica_counter_id": "98284776"
+    },
+    "indexing": {
+      "effective": "OPEN",
+      "human_decision": "OPEN",
+      "human_actor": "Olya (olya)",
+      "guard": "ACTIVE",
+      "robots_global_disallow": false
+    },
+    "lead_registry": {
+      "table": "wp_fp02_form_leads",
+      "schema_version": "1",
+      "fields": [
+        "visitor_name",
+        "phone",
+        "email",
+        "message",
+        "source_url",
+        "source_path",
+        "utm_source",
+        "utm_medium",
+        "utm_campaign",
+        "utm_content",
+        "utm_term",
+        "referrer",
+        "delivery_status",
+        "created_at",
+        "is_qa"
+      ]
+    }
+  },
+  "public": {
+    "home": {
+      "status": 200,
+      "robots_noindex": false,
+      "has_cookie_settings": true,
+      "has_fp02_consent_ui": true,
+      "metrika_loader_without_consent": false
+    },
+    "cookie_policy": {
+      "status": 200,
+      "url": "https://shpigovsky.ru/cookie-files-policy/",
+      "robots_noindex": false
+    },
+    "privacy_policy": {
+      "status": 200,
+      "url": "https://shpigovsky.ru/privacy-policy/"
+    },
+    "robots_txt": {
+      "status": 200,
+      "sitemap_line": "Sitemap: https://shpigovsky.ru/wp-sitemap.xml",
+      "global_disallow": false
+    },
+    "sitemap": {
+      "status": 200,
+      "url": "https://shpigovsky.ru/wp-sitemap.xml"
+    }
+  },
+  "olya_preservation": "No legal/editorial mutations in P18H; page IDs and modified_gmt unchanged from P18E-F intake"
+}

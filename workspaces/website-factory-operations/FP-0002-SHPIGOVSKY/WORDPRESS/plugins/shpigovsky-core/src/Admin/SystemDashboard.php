@@ -28,12 +28,12 @@ final class SystemDashboard implements ModuleInterface {
 	/**
 	 * Baseline ID shown in the widget (updated by stabilization waves).
 	 */
-	const BASELINE_ID = 'FP-0002-PROD-BASELINE-2026-08-20-P18G';
+	const BASELINE_ID = 'FP-0002-PROD-BASELINE-2026-08-20-P18H';
 
 	/**
 	 * Latest accepted production wave label.
 	 */
-	const LATEST_ACCEPTED_WAVE = 'P18G Indexing Safety Guard + Critical Admin Alerts';
+	const LATEST_ACCEPTED_WAVE = 'P18H Privacy / Retention Decisions + Launch-Tail Readiness';
 
 	/**
 	 * {@inheritdoc}
@@ -225,6 +225,29 @@ final class SystemDashboard implements ModuleInterface {
 			$privacy_policy
 		);
 		self::row(
+			__( 'Cookie Policy legal review', 'shpigovsky-core' ),
+			class_exists( PrivacyConsent::class )
+				? __( 'PENDING FINAL LEGAL SIGN-OFF (factually current)', 'shpigovsky-core' )
+				: '—'
+		);
+		self::row(
+			__( 'Consent evidence model', 'shpigovsky-core' ),
+			class_exists( PrivacyConsent::class )
+				? __( 'BROWSER-ONLY (server log deferred)', 'shpigovsky-core' )
+				: '—'
+		);
+		$retention_days = class_exists( MailOps::class ) ? (int) MailOps::get_config()['lead_retention_days'] : 0;
+		self::row(
+			__( 'Lead retention (configured)', 'shpigovsky-core' ),
+			$retention_days > 0
+				? sprintf(
+					/* translators: %d: retention days */
+					__( '%d days — auto-delete when implemented', 'shpigovsky-core' ),
+					$retention_days
+				)
+				: __( '0 — auto-delete off; P18H recommends 730 (operator applies)', 'shpigovsky-core' )
+		);
+		self::row(
 			__( 'Индексация', 'shpigovsky-core' ),
 			! empty( $indexing_snap['effective'] )
 				? (string) $indexing_snap['effective']
@@ -260,9 +283,9 @@ final class SystemDashboard implements ModuleInterface {
 		echo '<ul style="margin:0 0 12px 1.2em;">';
 		self::li( __( '1. SMTP VERIFIED / ACTIVE — временное pre-cutover подавление удалено', 'shpigovsky-core' ) );
 		self::li( __( '2. Индексация OPEN — human-approved; технические волны не должны закрывать её без явной команды', 'shpigovsky-core' ) );
-		self::li( __( '3. Отправка sitemap в Search Console / Яндекс Вебмастер', 'shpigovsky-core' ) );
-		self::li( __( '4. Финальный обход', 'shpigovsky-core' ) );
-		self::li( __( 'Открытый вопрос: срок хранения заявок — решение оператора', 'shpigovsky-core' ) );
+		self::li( __( '3. P18I: отправка sitemap в Search Console / Яндекс Вебмастер', 'shpigovsky-core' ) );
+		self::li( __( '4. P18I: финальный обход + launch closeout', 'shpigovsky-core' ) );
+		self::li( __( '5. Оператор: финальный legal sign-off Cookie Policy; при необходимости — выставить lead_retention_days=730', 'shpigovsky-core' ) );
 		echo '</ul>';
 
 		if ( $is_beget && ( 'local' === $env_const || 'local' === $env_fn ) ) {
