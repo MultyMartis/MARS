@@ -128,7 +128,8 @@ Future reservations documented only:
 | Worktree | `X:\AI MARS\worktrees\fp-0003-phase0b` |
 | Branch | `fp-0003-overseo-phase0b` |
 | Registration commit | `776b8d121bf3cc62ed455289067d152d20425cf6` |
-| Report commit | *(see push wave)* |
+| Report commit | `cbdf7620a7d2b53210f8544b12d7c41cc1ce2c13` |
+| Remote HEAD after push | `cbdf7620a7d2b53210f8544b12d7c41cc1ce2c13` on `origin/mars/canonical-post-recovery` |
 | Staged files (registration) | 8 paths — exact allowlist only |
 | Push target | `origin/mars/canonical-post-recovery` |
 | Foreign WIP preservation | Main worktree dirty state **unchanged** |
