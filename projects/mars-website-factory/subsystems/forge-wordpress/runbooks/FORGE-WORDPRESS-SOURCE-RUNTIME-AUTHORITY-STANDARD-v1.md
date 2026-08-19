@@ -55,6 +55,16 @@ Never: theme directory mirror, `robocopy /MIR`, stale source, uploads overwrite,
 
 Prefer WP Admin (or chartered WPilot write) for posts, ACF **values**, menus, media, forms, SEO values. If a value has a Git representation, canonize back.
 
+Explicit rule:
+
+```text
+EDITORIAL DB CHANGE THROUGH NORMAL WORDPRESS ADMIN
+≠
+UNCONTROLLED CODE DRIFT
+```
+
+Do not restore an older full DB snapshot over live editorial/Admin work merely to recover a technical configuration. Technical rollback must use the smallest scoped object/file restore that resolves the fault.
+
 ---
 
-*FW-RB-01 v1.1 — includes mid-cutover operator option intake.*
+*FW-RB-01 v1.2 — includes editorial/Admin truth distinction for technical closeout waves.*

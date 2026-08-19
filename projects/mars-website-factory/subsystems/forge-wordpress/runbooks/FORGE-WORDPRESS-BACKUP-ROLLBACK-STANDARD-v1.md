@@ -26,6 +26,12 @@ Operator override “full backup not required this wave” is **wave-local**, no
 
 Replace the “last complete dump” after content freeze before NS (P17-FU02 lesson).
 
+Critical clarification:
+
+- an old full backup is a **rollback artifact**, not automatic proof of current editorial truth;
+- after editors keep working in production, full DB rollback requires impact review of content loss;
+- when the issue is technical (SMTP, indexing, one option group, one plugin file), restore the smallest required scope instead of reverting the whole live DB.
+
 ---
 
 ## Rollback manifest format
@@ -43,4 +49,4 @@ Forbidden: git reset, restore of unrelated WIP
 
 ---
 
-*FW-RB-03 v1.*
+*FW-RB-03 v1.1 — clarifies rollback artifact vs current editorial truth.*

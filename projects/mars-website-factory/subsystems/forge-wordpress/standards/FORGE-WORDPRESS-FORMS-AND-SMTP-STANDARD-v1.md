@@ -1,9 +1,9 @@
 # Forge WordPress — Forms and SMTP Standard v1
 
 **ID:** FW-S-13  
-**Status:** ACTIVE — PRODUCTION PROVEN WITH CAVEATS  
-**Date:** 2026-08-18  
-**Evidence:** FP-0002 ConsultationHandler; P15 mail suppress; P17-FU02 sequencing
+**Status:** ACTIVE — PRODUCTION PROVEN  
+**Date:** 2026-08-19  
+**Evidence:** FP-0002 ConsultationHandler; P15 mail suppress; P17-FU02 sequencing; P18D SMTP verification + activation
 
 ---
 
@@ -114,6 +114,11 @@ validate → normalize → persist lead → attempt mail → update delivery sta
 
 Preferred statuses: `RECEIVED`, `MAIL_SUPPRESSED`, `SMTP_PENDING`, `MAIL_ACCEPTED`, `MAIL_ERROR`.
 
+QA data rule:
+
+- QA rows must be explicitly identifiable by a field such as `is_qa`, a known task marker, or an exact evidence-backed ID list;
+- never delete production rows merely because they were created near a test window or "look like a test".
+
 ---
 
 ## 10. Analytics
@@ -140,23 +145,38 @@ From = `noreply@<domain>` (or the project sender). Reply-To = visitor email **on
 
 ---
 
-## 13. MULTI-RECIPIENT MAIL SETTINGS
+---
 
-Canonical pattern (not CRM routing):
+## 13. SMTP Provider Parameter Verification (P18D lesson)
 
-- Recipients are a **bounded repeating configuration list** (practical cap e.g. 20).
-- Each row: email + optional label.
-- Admin **Add** / **Remove** controls; do not expose raw JSON/serialized storage.
-- Server-side validation: trim, `is_email`, drop blank rows, reject invalid non-empty emails.
-- Deduplicate case-insensitively; keep the first occurrence and its label.
-- First recipient = primary; additional recipients are copies of the same mail operation.
-- Configuration readiness requires **≥1 valid recipient** plus required SMTP fields and a configured password.
-- Recipient editing must **never** touch the SMTP secret (blank password keeps the existing secret).
-- One form submission remains **one internal lead**, regardless of recipient count. One `wp_mail()` with a recipient array.
+**Always verify SMTP transport parameters from the provider's authoritative documentation before marking any configuration "correct".**
 
-Evidence: FP-0002 P18C-FU02.
+Do **not** assume:
+- Port 465 = any encryption is acceptable
+- Default encryption (none) passes just because the host and port fields are filled
+
+Port semantics:
+- `465` = **implicit SSL** (SSL handshake BEFORE any protocol exchange) — use `smtp_encryption=ssl`
+- `587` = **STARTTLS** — use `smtp_encryption=tls`
+- `25` / `2525` = plaintext or opportunistic STARTTLS — provider-specific
+
+PHPMailer behavior:
+- `SMTPSecure=''` + `SMTPAutoTLS=true` on port 465 will attempt STARTTLS upgrade, **not** implicit SSL.
+- Beget port 465 requires `SMTPSecure='ssl'` (implicit TLS).
+- Result of wrong setting: connection failure or TLS negotiation failure, no mail, no useful Admin error.
+
+**Anti-patterns (SMTP):**
+
+| Code | Description |
+|------|-------------|
+| SMTP-001 | Guessing provider port/encryption without verifying from authoritative source |
+| SMTP-002 | Marking configured settings as verified without running an actual SMTP test |
+| SMTP-003 | Leaving pre-cutover suppression MU active after SMTP activation |
+| SMTP-004 | Calling SMTP acceptance "delivery" — use MAIL_ACCEPTED not MAIL_DELIVERED |
+| SMTP-005 | Enabling production mail before controlled verification |
+
+**CONFIGURED ≠ VERIFIED ≠ ACTIVE** — these are three distinct states in the lifecycle.
 
 ---
 
-*FW-S-13 v1.4 — P18C-FU02 multi-recipient Admin UX.*
-
+*FW-S-13 v1.4 — P18D: provider parameter verification, SMTP state machine, anti-patterns SMTP-001–005.*
