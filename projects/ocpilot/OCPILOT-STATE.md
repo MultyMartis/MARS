@@ -1,5 +1,6 @@
 
 
+**SITE-002 Run 4.333 (2026-08-20):** Monitor runtime checkout sync **COMPLETE** — runtime checkout synced `8d6cd285` → `df240710`; Wave C2 code present; dirty D6G1A runner patch preserved in Storage; scheduler unchanged; next scheduled run `2026-08-20 12:30:30`; baseline refresh still blocked; next = wait for post-C2 scheduled validation. Report: [SITE-002-MONITOR-RUNTIME-CHECKOUT-SYNC-01.md](sites/site-002/reports/SITE-002-MONITOR-RUNTIME-CHECKOUT-SYNC-01.md).
 **SITE-002 Run 4.332 (2026-08-20):** Post-C2 monitor validation **PENDING** — no post-C2 scheduled full run yet; runtime checkout stale at `8d6cd285` (no C2 code); last scheduled run `2026-08-19_12-30-05` pre-C2; artifact agreement + semantic diff live validation deferred; baseline refresh still blocked; next = runtime checkout sync + wait for scheduled run. Report: [SITE-002-PROD-POST-C2-MONITOR-VALIDATION-01.md](sites/site-002/reports/SITE-002-PROD-POST-C2-MONITOR-VALIDATION-01.md).
 **SITE-002 Run 4.331 (2026-08-20):** New sections Wave C2 monitor fix apply **COMPLETE** — runner merge precedence fixed; semantic route-churn layer added; exact vs semantic delta split; `ONBOARDED_CATEGORY_PATHS` root aliases expanded; fixture regression PASS; baseline refresh still blocked; runtime scheduled validation pending. Report: [SITE-002-PROD-NEW-SECTIONS-WAVE-C2-MONITOR-FIX-APPLY-01.md](sites/site-002/reports/SITE-002-PROD-NEW-SECTIONS-WAVE-C2-MONITOR-FIX-APPLY-01.md).
 **SITE-002 Run 4.330 (2026-08-19):** New sections Wave C monitor diagnostic **COMPLETE** — route churn explains raw diff 1873/1865 with net +8; `monitor-classification.json` authoritative (`ONBOARDING_REQUIRED`); `run-summary.json` wrong due to runner merge bug; raw onboarding 219 inflated (≤10 real); baseline refresh still blocked; next = Wave C2 monitor fix after approval. Report: [SITE-002-PROD-NEW-SECTIONS-WAVE-C-MONITOR-DIAGNOSTIC-01.md](sites/site-002/reports/SITE-002-PROD-NEW-SECTIONS-WAVE-C-MONITOR-DIAGNOSTIC-01.md).
@@ -18,7 +19,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-08-20
-**Evidence cutoff:** 2026-08-20 (SITE-002 Run **4.332** / `SITE-002-PROD-POST-C2-MONITOR-VALIDATION-01` — post-C2 monitor validation pending; no post-C2 scheduled run; runtime checkout stale; baseline refresh still blocked; next = runtime checkout sync to `59b306b5` + wait for scheduled run + observe next 1C import for `95`/`364`)
+**Evidence cutoff:** 2026-08-20 (SITE-002 Run **4.333** / `SITE-002-MONITOR-RUNTIME-CHECKOUT-SYNC-01` — runtime checkout synced to `df240710` with Wave C2 code; ready for next scheduled monitor validation; baseline refresh still blocked; next = wait for `2026-08-20 12:30:30` scheduled run + observe next 1C import for `95`/`364`)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -32,7 +33,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Post-C2 monitor validation pending (Run 4.332)** — no post-C2 scheduled run; runtime checkout stale (`8d6cd285`); live artifact agreement + semantic diff deferred; baseline refresh still blocked; next = runtime checkout sync + scheduled run + observe next 1C import for `95`/`364` · [validation 4.332](sites/site-002/reports/SITE-002-PROD-POST-C2-MONITOR-VALIDATION-01.md) · [apply 4.331](sites/site-002/reports/SITE-002-PROD-NEW-SECTIONS-WAVE-C2-MONITOR-FIX-APPLY-01.md) · [diagnostic 4.330](sites/site-002/reports/SITE-002-PROD-NEW-SECTIONS-WAVE-C-MONITOR-DIAGNOSTIC-01.md) |
+| Current SITE-002 focus | **Post-C2 scheduled monitor validation pending (Run 4.333 sync complete)** — runtime checkout synced to `df240710` with C2 code; wait for scheduled run `2026-08-20 12:30:30`; live artifact agreement + semantic diff deferred; baseline refresh still blocked · [sync 4.333](sites/site-002/reports/SITE-002-MONITOR-RUNTIME-CHECKOUT-SYNC-01.md) · [validation 4.332](sites/site-002/reports/SITE-002-PROD-POST-C2-MONITOR-VALIDATION-01.md) · [apply 4.331](sites/site-002/reports/SITE-002-PROD-NEW-SECTIONS-WAVE-C2-MONITOR-FIX-APPLY-01.md) |
 
 ### Git authority note (SITE-002 Wave E — 2026-07-10)
 
