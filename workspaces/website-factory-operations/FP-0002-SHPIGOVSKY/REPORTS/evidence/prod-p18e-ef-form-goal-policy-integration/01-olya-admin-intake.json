@@ -1,0 +1,1242 @@
+{
+  "utc": "2026-08-19T13:01:46.299250+00:00",
+  "required": "P18E-E/F CURRENT OLYA / ADMIN PRODUCTION TRUTH VERIFIED",
+  "wp": {
+    "generated_at": "2026-08-19T13:01:43+00:00",
+    "options": {
+      "home": "https://shpigovsky.ru",
+      "siteurl": "https://shpigovsky.ru",
+      "blog_public": 0,
+      "wp_page_for_privacy_policy": 3
+    },
+    "constants": {
+      "WP_ENVIRONMENT_TYPE": "production",
+      "WP_DEBUG": false,
+      "SHPIGOVSKY_CORE_VERSION": "0.3.18-p18e-cd"
+    },
+    "privacy_settings": {
+      "system_enabled": true,
+      "banner_title": "Мы используем файлы cookie",
+      "banner_description": "Мы используем необходимые cookie для работы сайта и, с вашего разрешения, аналитические технологии для понимания того, как используется сайт.",
+      "policy_page_id": 24,
+      "consent_version": 1,
+      "consent_lifetime_days": 365,
+      "analytics_category_enabled": true,
+      "analytics_description": "Аналитические технологии помогают понять, как используется сайт. Сейчас эта категория относится к Яндекс Метрике.",
+      "label_accept": "Принять",
+      "label_necessary_only": "Только необходимые",
+      "label_customize": "Настроить",
+      "label_save": "Сохранить выбор"
+    },
+    "mail_settings_redacted": [],
+    "system_meta": {
+      "baseline_id": "FP-0002-PROD-BASELINE-2026-08-19-P18E-CD",
+      "latest_wave": "P18E-C/D Cookie UI + Metrika Gating",
+      "parity": "MATCH",
+      "verified_at": "2026-08-19 12:22 UTC",
+      "backup": "BOUNDED OPTION SNAPSHOT / EXACT FILE DEPLOY",
+      "git_sha": "16706398f03825b054ce75c56e8af48ec4349329",
+      "wave": "PROD-P15",
+      "state_note": "COOKIE CONSENT ACTIVE; METRIKA CONSENT-GATED; FORM GOAL CONSENT INTEGRATION PENDING P18E-E; INDEXING CLOSED",
+      "legacy_redirects": "7/7",
+      "cutover": "DONE",
+      "ssl": "ACTIVE",
+      "dns_ns": "DONE / Beget",
+      "smtp_sender": "noreply@shpigovsky.ru",
+      "indexing": "CLOSED — WAITING FOR OLYA APPROVAL",
+      "public_origin": "ПУБЛИЧНЫЙ https://shpigovsky.ru/ СЕЙЧАС ОТДАЁТ СТАРЫЙ САЙТ (Craftum) — привязка к WordPress ещё нужна",
+      "mail": "SMTP CONFIGURED — VERIFICATION REQUIRED",
+      "leads": "ACTIVE",
+      "metrika_form_goals": "CONFIGURABLE"
+    },
+    "wpilot_write": false,
+    "seo": {
+      "yandex_metrica_counter_id": "98284776",
+      "google_tag_manager_id": "",
+      "google_analytics_measurement_id": ""
+    },
+    "pages": {
+      "privacy_policy": {
+        "ID": 3,
+        "title": "Политика конфиденциальности",
+        "slug": "privacy-policy",
+        "status": "publish",
+        "modified_gmt": "2026-08-18 11:42:31",
+        "template": "page-templates/legal.php",
+        "permalink": "https://shpigovsky.ru/privacy-policy/",
+        "content_bytes": 10872,
+        "content_excerpt": "Настоящая Политика конфиденциальности (далее — Политика) разработана в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных» и определяет порядок обработки персональных данных и меры по их защите на сайте shpigovsky.ru, принадлежащем Шпиговскому Сергею Юрьевичу (далее — Оператор).\r\n\r\nЦелью настоящей Политики является обеспечение защиты прав и свобод человека и гражданина при обработке его персональных данных, включая защиту права на неприкосновенность частной жизни...[truncated]"
+      },
+      "personal_data_consent": {
+        "ID": 23,
+        "title": "Согласие на обработку персональных данных",
+        "slug": "consent-personal-data",
+        "status": "publish",
+        "modified_gmt": "2026-08-18 11:49:40",
+        "template": "page-templates/legal.php",
+        "permalink": "https://shpigovsky.ru/consent-personal-data/",
+        "content_bytes": 4500,
+        "content_excerpt": "Я, заполняя формы на сайте shpigovsky.ru, даю своё согласие Шпиговскому Сергею Юрьевичу (далее — Оператор) на обработку моих персональных данных в соответствии с Федеральным законом № 152-ФЗ «О персональных данных».\r\n\r\nЯ даю согласие на обработку следующих персональных данных:\r\n<ul>\r\n \t<li>фамилия, имя, отчество;</li>\r\n \t<li>номер телефона;</li>\r\n \t<li>адрес электронной почты;</li>\r\n \t<li>содержание обращения, переданное через формы сайта;</li>\r\n \t<li>иные данные, переданные мной через формы сайта.</li>\r\n</ul>\r\n<h2>Цели обработк?...[truncated]"
+      },
+      "user_agreement": {
+        "ID": 22,
+        "title": "Пользовательское соглашение",
+        "slug": "user-agreement",
+        "status": "publish",
+        "modified_gmt": "2026-08-18 11:46:15",
+        "template": "page-templates/legal.php",
+        "permalink": "https://shpigovsky.ru/user-agreement/",
+        "content_bytes": 8525,
+        "content_excerpt": "Настоящее Пользовательское соглашение (далее — Соглашение) регулирует отношения между Шпиговским Сергеем Юрьевичем (далее — Администрация) с одной стороны и пользователем сайта shpigovsky.ru с другой.\r\n\r\nСайт shpigovsky.ru не является средством массовой информации.\r\n\r\nИспользуя сайт, Вы соглашаетесь с условиями данного соглашения.\r\n\r\nЕсли Вы не согласны с условиями данного соглашения, не используйте сайт shpigovsky.ru.\r\n<h2>Назначение сайта</h2>\r\nСайт предназначен для предоставления информации об услугах ?...[truncated]"
+      },
+      "cookie_policy_selected": {
+        "ID": 24,
+        "title": "Политика Cookie-файлов",
+        "slug": "cookie-files-policy",
+        "status": "publish",
+        "modified_gmt": "2026-08-18 11:44:25",
+        "template": "page-templates/legal.php",
+        "permalink": "https://shpigovsky.ru/cookie-files-policy/",
+        "content_bytes": 8624,
+        "content_excerpt": "Настоящая Политика Cookie-файлов (далее — Политика) описывает, какие cookie могут использоваться на сайте shpigovsky.ru, принадлежащем Шпиговскому Сергею Юрьевичу (далее — Оператор), и как Пользователь может управлять ими.\r\n\r\nПолитика дополняет <a href=\"/privacy-policy/\">Политику конфиденциальности</a> и применяется совместно с <a href=\"/consent-personal-data/\">Согласием на обработку персональных данных</a>.\r\n<h2>1. Что такое cookie</h2>\r\n<strong>Cookie</strong> — небольшие текстовые файлы, которые сайт или связанные с ним сервисы сохраняют в ?...[truncated]"
+      },
+      "cookie_files_policy": {
+        "ID": 24,
+        "title": "Политика Cookie-файлов",
+        "slug": "cookie-files-policy",
+        "status": "publish",
+        "modified_gmt": "2026-08-18 11:44:25",
+        "template": "page-templates/legal.php",
+        "permalink": "https://shpigovsky.ru/cookie-files-policy/",
+        "content_bytes": 8624,
+        "content_excerpt": "Настоящая Политика Cookie-файлов (далее — Политика) описывает, какие cookie могут использоваться на сайте shpigovsky.ru, принадлежащем Шпиговскому Сергею Юрьевичу (далее — Оператор), и как Пользователь может управлять ими.\r\n\r\nПолитика дополняет <a href=\"/privacy-policy/\">Политику конфиденциальности</a> и применяется совместно с <a href=\"/consent-personal-data/\">Согласием на обработку персональных данных</a>.\r\n<h2>1. Что такое cookie</h2>\r\n<strong>Cookie</strong> — небольшие текстовые файлы, которые сайт или связанные с ним сервисы сохраняют в ?...[truncated]"
+      },
+      "cookie_policy_slug_candidate": null
+    },
+    "policy_page_id": 24,
+    "menus": {
+      "legal": {
+        "menu_id": 4,
+        "menu_name": "Legal",
+        "items": [
+          {
+            "ID": 37,
+            "title": "Политика конфиденциальности",
+            "url": "https://shpigovsky.ru/privacy-policy/",
+            "object": "page",
+            "object_id": 3,
+            "status": "publish"
+          },
+          {
+            "ID": 38,
+            "title": "Пользовательское соглашение",
+            "url": "https://shpigovsky.ru/user-agreement/",
+            "object": "page",
+            "object_id": 22,
+            "status": "publish"
+          },
+          {
+            "ID": 39,
+            "title": "Согласие на обработку персональных данных",
+            "url": "https://shpigovsky.ru/consent-personal-data/",
+            "object": "page",
+            "object_id": 23,
+            "status": "publish"
+          },
+          {
+            "ID": 40,
+            "title": "Политика Cookie-файлов",
+            "url": "https://shpigovsky.ru/cookie-files-policy/",
+            "object": "page",
+            "object_id": 24,
+            "status": "publish"
+          }
+        ]
+      },
+      "footer_services": {
+        "menu_id": 0,
+        "menu_name": null,
+        "items": []
+      },
+      "footer_o_centre": {
+        "menu_id": 0,
+        "menu_name": null,
+        "items": []
+      },
+      "primary": {
+        "menu_id": 2,
+        "menu_name": "Primary",
+        "items": [
+          {
+            "ID": 27,
+            "title": "Лечение и профилактика",
+            "url": "https://shpigovsky.ru/uslugi/",
+            "object": "page",
+            "object_id": 5,
+            "status": "publish"
+          },
+          {
+            "ID": 2012,
+            "title": "Зависимости",
+            "url": "https://shpigovsky.ru/uslugi/zavisimosti/",
+            "object": "service",
+            "object_id": 73,
+            "status": "publish"
+          },
+          {
+            "ID": 2013,
+            "title": "Психическое здоровье",
+            "url": "https://shpigovsky.ru/uslugi/psihicheskoe-zdorovie/",
+            "object": "service",
+            "object_id": 77,
+            "status": "publish"
+          },
+          {
+            "ID": 2014,
+            "title": "Расстройства пищевого поведения",
+            "url": "https://shpigovsky.ru/uslugi/rasstroystva-pischevogo-povedeniya/",
+            "object": "service",
+            "object_id": 84,
+            "status": "publish"
+          },
+          {
+            "ID": 2011,
+            "title": "Генотипирование",
+            "url": "https://shpigovsky.ru/uslugi/genotipirovenie/",
+            "object": "service",
+            "object_id": 1889,
+            "status": "publish"
+          },
+          {
+            "ID": 301,
+            "title": "Зависимости",
+            "url": "/uslugi/zavisimosti/",
+            "object": "custom",
+            "object_id": 301,
+            "status": "publish"
+          },
+          {
+            "ID": 2025,
+            "title": "Лечение алкогольной зависимости",
+            "url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+            "object": "service",
+            "object_id": 74,
+            "status": "publish"
+          },
+          {
+            "ID": 2026,
+            "title": "Лечение наркотической зависимости",
+            "url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+            "object": "service",
+            "object_id": 314,
+            "status": "publish"
+          },
+          {
+            "ID": 2027,
+            "title": "Поведенческие зависимости",
+            "url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/",
+            "object": "service",
+            "object_id": 316,
+            "status": "publish"
+          },
+          {
+            "ID": 29,
+            "title": "О центре",
+            "url": "https://shpigovsky.ru/o-centre/",
+            "object": "page",
+            "object_id": 11,
+            "status": "publish"
+          },
+          {
+            "ID": 2009,
+            "title": "Программа лечения",
+            "url": "https://shpigovsky.ru/o-centre/programma-lecheniya/",
+            "object": "page",
+            "object_id": 13,
+            "status": "publish"
+          },
+          {
+            "ID": 1995,
+            "title": "Специалисты",
+            "url": "https://shpigovsky.ru/specyalisty/",
+            "object": "page",
+            "object_id": 1030,
+            "status": "publish"
+          },
+          {
+            "ID": 2010,
+            "title": "Интервью и СМИ",
+            "url": "https://shpigovsky.ru/o-centre/intervyu-i-smi/",
+            "object": "page",
+            "object_id": 1039,
+            "status": "publish"
+          },
+          {
+            "ID": 30,
+            "title": "Отзывы",
+            "url": "https://shpigovsky.ru/otzyvy/",
+            "object": "page",
+            "object_id": 18,
+            "status": "publish"
+          },
+          {
+            "ID": 31,
+            "title": "Статьи",
+            "url": "https://shpigovsky.ru/blog/",
+            "object": "page",
+            "object_id": 19,
+            "status": "publish"
+          },
+          {
+            "ID": 32,
+            "title": "Контакты",
+            "url": "https://shpigovsky.ru/kontakty/",
+            "object": "page",
+            "object_id": 20,
+            "status": "publish"
+          }
+        ]
+      }
+    },
+    "activity_log_recent": [
+      {
+        "id": "137",
+        "user_id": "3",
+        "action": "cookie_privacy_settings_updated",
+        "object_id": "0",
+        "object_type": "setting",
+        "object_title": "Cookie / privacy settings updated: policy_page",
+        "object_status": "system",
+        "created_at": "2026-08-19 13:56:21",
+        "user_login": "mars"
+      },
+      {
+        "id": "136",
+        "user_id": "3",
+        "action": "cookie_privacy_settings_updated",
+        "object_id": "0",
+        "object_type": "setting",
+        "object_title": "Cookie / privacy settings updated: policy_page",
+        "object_status": "system",
+        "created_at": "2026-08-19 13:55:43",
+        "user_login": "mars"
+      },
+      {
+        "id": "135",
+        "user_id": "0",
+        "action": "indexing_closed",
+        "object_id": "0",
+        "object_type": "setting",
+        "object_title": "Индексация: закрыта",
+        "object_status": "system",
+        "created_at": "2026-08-19 13:13:25",
+        "user_login": ""
+      },
+      {
+        "id": "134",
+        "user_id": "0",
+        "action": "smtp_activated",
+        "object_id": "0",
+        "object_type": "setting",
+        "object_title": "Почта: исходящая отправка активирована",
+        "object_status": "system",
+        "created_at": "2026-08-19 13:13:20",
+        "user_login": ""
+      },
+      {
+        "id": "133",
+        "user_id": "0",
+        "action": "smtp_test_ok",
+        "object_id": "0",
+        "object_type": "setting",
+        "object_title": "Проверка SMTP: успех",
+        "object_status": "system",
+        "created_at": "2026-08-19 13:13:19",
+        "user_login": ""
+      },
+      {
+        "id": "132",
+        "user_id": "4",
+        "action": "form_recipients_updated",
+        "object_id": "0",
+        "object_type": "setting",
+        "object_title": "Получатели форм: 2",
+        "object_status": "system",
+        "created_at": "2026-08-19 13:02:51",
+        "user_login": "metacode"
+      },
+      {
+        "id": "131",
+        "user_id": "4",
+        "action": "smtp_config_updated",
+        "object_id": "0",
+        "object_type": "setting",
+        "object_title": "Почта и формы: настройки сохранены",
+        "object_status": "system",
+        "created_at": "2026-08-19 13:02:51",
+        "user_login": "metacode"
+      },
+      {
+        "id": "130",
+        "user_id": "2",
+        "action": "indexing_opened",
+        "object_id": "0",
+        "object_type": "setting",
+        "object_title": "Индексация: открыта",
+        "object_status": "system",
+        "created_at": "2026-08-19 11:16:31",
+        "user_login": "admin"
+      },
+      {
+        "id": "129",
+        "user_id": "4",
+        "action": "smtp_test_fail",
+        "object_id": "0",
+        "object_type": "setting",
+        "object_title": "Проверка SMTP: ошибка (send_failed)",
+        "object_status": "system",
+        "created_at": "2026-08-19 08:32:42",
+        "user_login": "metacode"
+      },
+      {
+        "id": "128",
+        "user_id": "4",
+        "action": "smtp_test_fail",
+        "object_id": "0",
+        "object_type": "setting",
+        "object_title": "Проверка SMTP: ошибка (send_failed)",
+        "object_status": "system",
+        "created_at": "2026-08-19 08:30:26",
+        "user_login": "metacode"
+      },
+      {
+        "id": "127",
+        "user_id": "4",
+        "action": "form_recipients_updated",
+        "object_id": "0",
+        "object_type": "setting",
+        "object_title": "Получатели форм: 2",
+        "object_status": "system",
+        "created_at": "2026-08-19 08:27:35",
+        "user_login": "metacode"
+      },
+      {
+        "id": "126",
+        "user_id": "4",
+        "action": "smtp_config_updated",
+        "object_id": "0",
+        "object_type": "setting",
+        "object_title": "Почта и формы: настройки сохранены",
+        "object_status": "system",
+        "created_at": "2026-08-19 08:27:35",
+        "user_login": "metacode"
+      },
+      {
+        "id": "125",
+        "user_id": "4",
+        "action": "form_recipients_updated",
+        "object_id": "0",
+        "object_type": "setting",
+        "object_title": "Получатели форм: 2",
+        "object_status": "system",
+        "created_at": "2026-08-19 08:25:20",
+        "user_login": "metacode"
+      },
+      {
+        "id": "124",
+        "user_id": "4",
+        "action": "smtp_config_updated",
+        "object_id": "0",
+        "object_type": "setting",
+        "object_title": "Почта и формы: настройки сохранены",
+        "object_status": "system",
+        "created_at": "2026-08-19 08:25:20",
+        "user_login": "metacode"
+      },
+      {
+        "id": "123",
+        "user_id": "3",
+        "action": "form_recipients_updated",
+        "object_id": "0",
+        "object_type": "setting",
+        "object_title": "Получатели форм: 2",
+        "object_status": "system",
+        "created_at": "2026-08-19 00:07:38",
+        "user_login": "mars"
+      },
+      {
+        "id": "122",
+        "user_id": "3",
+        "action": "smtp_config_updated",
+        "object_id": "0",
+        "object_type": "setting",
+        "object_title": "Почта и формы: настройки сохранены",
+        "object_status": "system",
+        "created_at": "2026-08-19 00:07:38",
+        "user_login": "mars"
+      },
+      {
+        "id": "121",
+        "user_id": "3",
+        "action": "form_recipients_updated",
+        "object_id": "0",
+        "object_type": "setting",
+        "object_title": "Получатели форм: 2",
+        "object_status": "system",
+        "created_at": "2026-08-19 00:06:35",
+        "user_login": "mars"
+      },
+      {
+        "id": "120",
+        "user_id": "3",
+        "action": "smtp_config_updated",
+        "object_id": "0",
+        "object_type": "setting",
+        "object_title": "Почта и формы: настройки сохранены",
+        "object_status": "system",
+        "created_at": "2026-08-19 00:06:35",
+        "user_login": "mars"
+      },
+      {
+        "id": "119",
+        "user_id": "3",
+        "action": "form_recipients_updated",
+        "object_id": "0",
+        "object_type": "setting",
+        "object_title": "Получатели форм: 2",
+        "object_status": "system",
+        "created_at": "2026-08-19 00:04:16",
+        "user_login": "mars"
+      },
+      {
+        "id": "118",
+        "user_id": "3",
+        "action": "smtp_config_updated",
+        "object_id": "0",
+        "object_type": "setting",
+        "object_title": "Почта и формы: настройки сохранены",
+        "object_status": "system",
+        "created_at": "2026-08-19 00:04:16",
+        "user_login": "mars"
+      },
+      {
+        "id": "117",
+        "user_id": "4",
+        "action": "smtp_config_updated",
+        "object_id": "0",
+        "object_type": "setting",
+        "object_title": "Почта и формы: настройки сохранены",
+        "object_status": "system",
+        "created_at": "2026-08-18 23:49:31",
+        "user_login": "metacode"
+      },
+      {
+        "id": "116",
+        "user_id": "4",
+        "action": "indexing_closed",
+        "object_id": "0",
+        "object_type": "setting",
+        "object_title": "Индексация: закрыта",
+        "object_status": "system",
+        "created_at": "2026-08-18 22:27:34",
+        "user_login": "metacode"
+      },
+      {
+        "id": "115",
+        "user_id": "4",
+        "action": "indexing_opened",
+        "object_id": "0",
+        "object_type": "setting",
+        "object_title": "Индексация: открыта",
+        "object_status": "system",
+        "created_at": "2026-08-18 22:27:26",
+        "user_login": "metacode"
+      },
+      {
+        "id": "114",
+        "user_id": "0",
+        "action": "indexing_closed",
+        "object_id": "0",
+        "object_type": "setting",
+        "object_title": "Индексация: закрыта",
+        "object_status": "system",
+        "created_at": "2026-08-18 21:16:23",
+        "user_login": ""
+      },
+      {
+        "id": "113",
+        "user_id": "0",
+        "action": "indexing_opened",
+        "object_id": "0",
+        "object_type": "setting",
+        "object_title": "Индексация: открыта",
+        "object_status": "system",
+        "created_at": "2026-08-18 21:16:21",
+        "user_login": ""
+      },
+      {
+        "id": "112",
+        "user_id": "0",
+        "action": "indexing_closed",
+        "object_id": "0",
+        "object_type": "setting",
+        "object_title": "Индексация: закрыта",
+        "object_status": "system",
+        "created_at": "2026-08-18 21:16:14",
+        "user_login": ""
+      },
+      {
+        "id": "111",
+        "user_id": "0",
+        "action": "indexing_closed",
+        "object_id": "0",
+        "object_type": "setting",
+        "object_title": "Индексация: закрыта",
+        "object_status": "system",
+        "created_at": "2026-08-18 21:15:10",
+        "user_login": ""
+      },
+      {
+        "id": "110",
+        "user_id": "0",
+        "action": "indexing_opened",
+        "object_id": "0",
+        "object_type": "setting",
+        "object_title": "Индексация: открыта",
+        "object_status": "system",
+        "created_at": "2026-08-18 21:14:43",
+        "user_login": ""
+      },
+      {
+        "id": "109",
+        "user_id": "0",
+        "action": "indexing_closed",
+        "object_id": "0",
+        "object_type": "setting",
+        "object_title": "Индексация: закрыта",
+        "object_status": "system",
+        "created_at": "2026-08-18 21:14:40",
+        "user_login": ""
+      },
+      {
+        "id": "108",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "23",
+        "object_type": "page",
+        "object_title": "Согласие на обработку персональных данных",
+        "object_status": "publish",
+        "created_at": "2026-08-18 14:49:40",
+        "user_login": "admin"
+      },
+      {
+        "id": "107",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "23",
+        "object_type": "page",
+        "object_title": "Согласие на обработку персональных данных",
+        "object_status": "publish",
+        "created_at": "2026-08-18 14:48:28",
+        "user_login": "admin"
+      },
+      {
+        "id": "106",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "23",
+        "object_type": "page",
+        "object_title": "Согласие на обработку персональных данных",
+        "object_status": "publish",
+        "created_at": "2026-08-18 14:48:05",
+        "user_login": "admin"
+      },
+      {
+        "id": "105",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "22",
+        "object_type": "page",
+        "object_title": "Пользовательское соглашение",
+        "object_status": "publish",
+        "created_at": "2026-08-18 14:46:15",
+        "user_login": "admin"
+      },
+      {
+        "id": "104",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "24",
+        "object_type": "page",
+        "object_title": "Политика Cookie-файлов",
+        "object_status": "publish",
+        "created_at": "2026-08-18 14:44:25",
+        "user_login": "admin"
+      },
+      {
+        "id": "103",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "3",
+        "object_type": "page",
+        "object_title": "Политика конфиденциальности",
+        "object_status": "publish",
+        "created_at": "2026-08-18 14:42:31",
+        "user_login": "admin"
+      },
+      {
+        "id": "102",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "3",
+        "object_type": "page",
+        "object_title": "Политика конфиденциальности",
+        "object_status": "publish",
+        "created_at": "2026-08-18 14:33:19",
+        "user_login": "admin"
+      },
+      {
+        "id": "101",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "3",
+        "object_type": "page",
+        "object_title": "Политика конфиденциальности",
+        "object_status": "publish",
+        "created_at": "2026-08-18 14:32:40",
+        "user_login": "admin"
+      },
+      {
+        "id": "100",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "3",
+        "object_type": "page",
+        "object_title": "Политика конфиденциальности",
+        "object_status": "publish",
+        "created_at": "2026-08-18 14:32:20",
+        "user_login": "admin"
+      },
+      {
+        "id": "99",
+        "user_id": "0",
+        "action": "updated",
+        "object_id": "750",
+        "object_type": "post",
+        "object_title": "Лечение алкогольной зависимости: почему сила воли здесь ни при чём",
+        "object_status": "publish",
+        "created_at": "2026-08-18 13:25:12",
+        "user_login": ""
+      },
+      {
+        "id": "86",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "73",
+        "object_type": "service",
+        "object_title": "Зависимости",
+        "object_status": "publish",
+        "created_at": "2026-08-16 22:37:21",
+        "user_login": "admin"
+      },
+      {
+        "id": "85",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "4",
+        "object_type": "page",
+        "object_title": "Главная",
+        "object_status": "publish",
+        "created_at": "2026-08-16 22:36:09",
+        "user_login": "admin"
+      },
+      {
+        "id": "84",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "4",
+        "object_type": "page",
+        "object_title": "Главная",
+        "object_status": "publish",
+        "created_at": "2026-08-16 22:28:06",
+        "user_login": "admin"
+      },
+      {
+        "id": "83",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1894",
+        "object_type": "service",
+        "object_title": "Генотипирование для специалистов",
+        "object_status": "publish",
+        "created_at": "2026-08-16 22:27:12",
+        "user_login": "admin"
+      },
+      {
+        "id": "82",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1889",
+        "object_type": "service",
+        "object_title": "Генотипирование",
+        "object_status": "publish",
+        "created_at": "2026-08-16 22:26:19",
+        "user_login": "admin"
+      },
+      {
+        "id": "81",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1031",
+        "object_type": "specialist",
+        "object_title": "Сергей Юрьевич Шпиговский",
+        "object_status": "publish",
+        "created_at": "2026-08-16 19:51:24",
+        "user_login": "admin"
+      },
+      {
+        "id": "80",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1949",
+        "object_type": "specialist",
+        "object_title": "Литвинов Кирилл Алексеевич",
+        "object_status": "publish",
+        "created_at": "2026-08-16 19:50:47",
+        "user_login": "admin"
+      },
+      {
+        "id": "79",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1957",
+        "object_type": "specialist",
+        "object_title": "Поверинов Александр Константинович",
+        "object_status": "publish",
+        "created_at": "2026-08-16 19:50:32",
+        "user_login": "admin"
+      },
+      {
+        "id": "78",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1963",
+        "object_type": "specialist",
+        "object_title": "Филиппов Илья Владимирович",
+        "object_status": "publish",
+        "created_at": "2026-08-16 19:50:02",
+        "user_login": "admin"
+      },
+      {
+        "id": "77",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1967",
+        "object_type": "specialist",
+        "object_title": "Ханикова Светлана Николаевна",
+        "object_status": "publish",
+        "created_at": "2026-08-16 19:49:46",
+        "user_login": "admin"
+      },
+      {
+        "id": "76",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1988",
+        "object_type": "specialist",
+        "object_title": "Филиппова Мария Михайловна",
+        "object_status": "publish",
+        "created_at": "2026-08-16 19:49:30",
+        "user_login": "admin"
+      },
+      {
+        "id": "75",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "74",
+        "object_type": "service",
+        "object_title": "Лечение алкогольной зависимости",
+        "object_status": "publish",
+        "created_at": "2026-08-16 19:48:14",
+        "user_login": "admin"
+      },
+      {
+        "id": "74",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "74",
+        "object_type": "service",
+        "object_title": "Лечение алкогольной зависимости",
+        "object_status": "publish",
+        "created_at": "2026-08-16 19:48:04",
+        "user_login": "admin"
+      },
+      {
+        "id": "73",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "73",
+        "object_type": "service",
+        "object_title": "Зависимости",
+        "object_status": "publish",
+        "created_at": "2026-08-16 19:47:58",
+        "user_login": "admin"
+      },
+      {
+        "id": "72",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "74",
+        "object_type": "service",
+        "object_title": "Лечение алкогольной зависимости",
+        "object_status": "publish",
+        "created_at": "2026-08-16 19:44:45",
+        "user_login": "admin"
+      },
+      {
+        "id": "47",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "4",
+        "object_type": "page",
+        "object_title": "Главная",
+        "object_status": "publish",
+        "created_at": "2026-08-16 18:53:37",
+        "user_login": "admin"
+      },
+      {
+        "id": "46",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "4",
+        "object_type": "page",
+        "object_title": "Главная",
+        "object_status": "publish",
+        "created_at": "2026-08-16 18:52:32",
+        "user_login": "admin"
+      },
+      {
+        "id": "45",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1988",
+        "object_type": "specialist",
+        "object_title": "Филиппова Мария Михайловна",
+        "object_status": "publish",
+        "created_at": "2026-08-16 17:55:04",
+        "user_login": "admin"
+      },
+      {
+        "id": "44",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1988",
+        "object_type": "specialist",
+        "object_title": "Филиппова Мария Михайловна",
+        "object_status": "publish",
+        "created_at": "2026-08-16 17:47:37",
+        "user_login": "admin"
+      },
+      {
+        "id": "43",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1988",
+        "object_type": "specialist",
+        "object_title": "Филиппова Мария Михайловна",
+        "object_status": "publish",
+        "created_at": "2026-08-16 17:46:23",
+        "user_login": "admin"
+      },
+      {
+        "id": "42",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1967",
+        "object_type": "specialist",
+        "object_title": "Ханикова Светлана Николаевна",
+        "object_status": "publish",
+        "created_at": "2026-08-16 17:39:16",
+        "user_login": "admin"
+      },
+      {
+        "id": "41",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1967",
+        "object_type": "specialist",
+        "object_title": "Ханикова Светлана Николаевна",
+        "object_status": "publish",
+        "created_at": "2026-08-16 17:34:19",
+        "user_login": "admin"
+      },
+      {
+        "id": "40",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1967",
+        "object_type": "specialist",
+        "object_title": "Ханикова Светлана Николаевна",
+        "object_status": "publish",
+        "created_at": "2026-08-16 17:33:50",
+        "user_login": "admin"
+      },
+      {
+        "id": "39",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1967",
+        "object_type": "specialist",
+        "object_title": "Ханикова Светлана Николаевна",
+        "object_status": "publish",
+        "created_at": "2026-08-16 17:32:41",
+        "user_login": "admin"
+      },
+      {
+        "id": "38",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1957",
+        "object_type": "specialist",
+        "object_title": "Поверинов Александр Константинович",
+        "object_status": "publish",
+        "created_at": "2026-08-16 17:25:29",
+        "user_login": "admin"
+      },
+      {
+        "id": "37",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1957",
+        "object_type": "specialist",
+        "object_title": "Поверинов Александр Константинович",
+        "object_status": "publish",
+        "created_at": "2026-08-16 17:25:04",
+        "user_login": "admin"
+      },
+      {
+        "id": "36",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1949",
+        "object_type": "specialist",
+        "object_title": "Литвинов Кирилл Алексеевич",
+        "object_status": "publish",
+        "created_at": "2026-08-16 17:23:34",
+        "user_login": "admin"
+      },
+      {
+        "id": "35",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1032",
+        "object_type": "specialist",
+        "object_title": "Максим Михайлович Казаков",
+        "object_status": "publish",
+        "created_at": "2026-08-16 17:19:06",
+        "user_login": "admin"
+      },
+      {
+        "id": "34",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1032",
+        "object_type": "specialist",
+        "object_title": "Максим Михайлович Казаков",
+        "object_status": "publish",
+        "created_at": "2026-08-16 17:09:33",
+        "user_login": "admin"
+      },
+      {
+        "id": "33",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1032",
+        "object_type": "specialist",
+        "object_title": "Максим Михайлович Казаков",
+        "object_status": "publish",
+        "created_at": "2026-08-16 17:08:29",
+        "user_login": "admin"
+      },
+      {
+        "id": "32",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1963",
+        "object_type": "specialist",
+        "object_title": "Филиппов Илья Владимирович",
+        "object_status": "publish",
+        "created_at": "2026-08-16 17:06:18",
+        "user_login": "admin"
+      },
+      {
+        "id": "31",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1957",
+        "object_type": "specialist",
+        "object_title": "Поверинов Александр Константинович",
+        "object_status": "publish",
+        "created_at": "2026-08-16 16:58:51",
+        "user_login": "admin"
+      },
+      {
+        "id": "30",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1957",
+        "object_type": "specialist",
+        "object_title": "Поверинов Александр Константинович",
+        "object_status": "publish",
+        "created_at": "2026-08-16 16:58:43",
+        "user_login": "admin"
+      },
+      {
+        "id": "29",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1949",
+        "object_type": "specialist",
+        "object_title": "Литвинов Кирилл Алексеевич",
+        "object_status": "publish",
+        "created_at": "2026-08-16 16:53:05",
+        "user_login": "admin"
+      },
+      {
+        "id": "28",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1949",
+        "object_type": "specialist",
+        "object_title": "Литвинов Кирилл Алексеевич",
+        "object_status": "publish",
+        "created_at": "2026-08-16 16:49:47",
+        "user_login": "admin"
+      },
+      {
+        "id": "27",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1949",
+        "object_type": "specialist",
+        "object_title": "Литвинов Кирилл Алексеевич",
+        "object_status": "publish",
+        "created_at": "2026-08-16 16:49:37",
+        "user_login": "admin"
+      },
+      {
+        "id": "26",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1949",
+        "object_type": "specialist",
+        "object_title": "Литвинов Кирилл Алексеевич",
+        "object_status": "publish",
+        "created_at": "2026-08-16 16:48:58",
+        "user_login": "admin"
+      },
+      {
+        "id": "25",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1949",
+        "object_type": "specialist",
+        "object_title": "Литвинов Кирилл Алексеевич",
+        "object_status": "publish",
+        "created_at": "2026-08-16 16:48:36",
+        "user_login": "admin"
+      },
+      {
+        "id": "24",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1949",
+        "object_type": "specialist",
+        "object_title": "Литвинов Кирилл Алексеевич",
+        "object_status": "publish",
+        "created_at": "2026-08-16 16:47:50",
+        "user_login": "admin"
+      },
+      {
+        "id": "23",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1097",
+        "object_type": "specialist",
+        "object_title": "Шапигузова Татьяна Андреевна",
+        "object_status": "publish",
+        "created_at": "2026-08-16 16:40:54",
+        "user_login": "admin"
+      },
+      {
+        "id": "22",
+        "user_id": "2",
+        "action": "updated",
+        "object_id": "1097",
+        "object_type": "specialist",
+        "object_title": "Шапигузова Татьяна Андреевна",
+        "object_status": "publish",
+        "created_at": "2026-08-16 16:40:34",
+        "user_login": "admin"
+      }
+    ],
+    "lead_probe": {
+      "exists": false,
+      "recent": []
+    }
+  },
+  "public": {
+    "home": {
+      "url": "https://shpigovsky.ru/",
+      "final_url": "https://shpigovsky.ru/",
+      "status": 200,
+      "title": "Шпиговский Дом",
+      "has_cookie_settings_label": true,
+      "has_cookie_policy_link": true,
+      "has_privacy_modal_root": true,
+      "has_privacy_script": true,
+      "has_metrika_loader": false,
+      "robots_noindex": true,
+      "snippet": "<!DOCTYPE html>\r\n<html lang=\"ru-RU\">\r\n<head>\r\n\t<meta charset=\"UTF-8\">\r\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n\t<script>(function(){document.documentElement.classList.add('js-enabled');})();</script>\n<title>Шпиговский Дом</title>\n<meta name='robots' content='noindex, nofollow' />\n<link rel=\"alternate\" title=\"oEmbed (JSON)\" type=\"application/json+oembed\" href=\"https://shpigovsky.ru/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fshpigovsky.ru%2F\" />\n<link rel=\"alternate\" title=\"oEmbed (XML)\" type=\"text/xml+oembed\" href=\"https://shpigovsky.ru/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fshpigovsky.ru%2F&#038;format=xml\" />\n<style id=\"wp-img-auto-sizes-contain-inline-css\">\nimg:is([sizes=auto i],[sizes^=\"auto,\" i]){contain-intrinsic-size:3000px 1500px}\n/*# sourceURL=wp-img-auto-sizes-contain-inline-css */\n</style>\n<style id=\"wp-emoji-styles-inline-css\">\n\n\timg.wp-smiley, img.emoji {\n\t\tdisplay: inline !important;\n\t\tborder: none !important;\n\t\tbox-shadow: none !important;\n\t\theight: 1em !important;\n\t\twidth: 1em !important;\n\t\tmargin: 0 0.07em !important;\n\t\tvertical-align: -0.1em !important;\n\t\tbackground: none !important;\n\t\tpadding: 0 !important;\n\t}\n/*# sourceURL=wp-emoji-styles-inline-css */\n</style>\n<style id=\"wp-block-library-inline-css\">\n:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{colo"
+    },
+    "cookie_policy": {
+      "url": "https://shpigovsky.ru/cookie-files-policy/",
+      "final_url": "https://shpigovsky.ru/cookie-files-policy/",
+      "status": 200,
+      "title": "Политика Cookie-файлов &#8212; Шпиговский Дом",
+      "has_cookie_settings_label": true,
+      "has_cookie_policy_link": true,
+      "has_privacy_modal_root": true,
+      "has_privacy_script": true,
+      "has_metrika_loader": false,
+      "robots_noindex": true,
+      "snippet": "<!DOCTYPE html>\r\n<html lang=\"ru-RU\">\r\n<head>\r\n\t<meta charset=\"UTF-8\">\r\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n\t<script>(function(){document.documentElement.classList.add('js-enabled');})();</script>\n<title>Политика Cookie-файлов &#8212; Шпиговский Дом</title>\n<meta name='robots' content='noindex, nofollow' />\n<link rel=\"alternate\" title=\"oEmbed (JSON)\" type=\"application/json+oembed\" href=\"https://shpigovsky.ru/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fshpigovsky.ru%2Fcookie-files-policy%2F\" />\n<link rel=\"alternate\" title=\"oEmbed (XML)\" type=\"text/xml+oembed\" href=\"https://shpigovsky.ru/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fshpigovsky.ru%2Fcookie-files-policy%2F&#038;format=xml\" />\n<style id=\"wp-img-auto-sizes-contain-inline-css\">\nimg:is([sizes=auto i],[sizes^=\"auto,\" i]){contain-intrinsic-size:3000px 1500px}\n/*# sourceURL=wp-img-auto-sizes-contain-inline-css */\n</style>\n<style id=\"wp-emoji-styles-inline-css\">\n\n\timg.wp-smiley, img.emoji {\n\t\tdisplay: inline !important;\n\t\tborder: none !important;\n\t\tbox-shadow: none !important;\n\t\theight: 1em !important;\n\t\twidth: 1em !important;\n\t\tmargin: 0 0.07em !important;\n\t\tvertical-align: -0.1em !important;\n\t\tbackground: none !important;\n\t\tpadding: 0 !important;\n\t}\n/*# sourceURL=wp-emoji-styles-inline-css */\n</style>\n<style id=\"wp-block-library-inline-css\">\n:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-back"
+    },
+    "privacy_policy": {
+      "url": "https://shpigovsky.ru/privacy-policy/",
+      "final_url": "https://shpigovsky.ru/privacy-policy/",
+      "status": 200,
+      "title": "Политика конфиденциальности &#8212; Шпиговский Дом",
+      "has_cookie_settings_label": true,
+      "has_cookie_policy_link": true,
+      "has_privacy_modal_root": true,
+      "has_privacy_script": true,
+      "has_metrika_loader": false,
+      "robots_noindex": true,
+      "snippet": "<!DOCTYPE html>\r\n<html lang=\"ru-RU\">\r\n<head>\r\n\t<meta charset=\"UTF-8\">\r\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n\t<script>(function(){document.documentElement.classList.add('js-enabled');})();</script>\n<title>Политика конфиденциальности &#8212; Шпиговский Дом</title>\n<meta name='robots' content='noindex, nofollow' />\n<link rel=\"alternate\" type=\"application/rss+xml\" title=\"Шпиговский Дом &raquo; Лента комментариев к &laquo;Политика конфиденциальности&raquo;\" href=\"https://shpigovsky.ru/privacy-policy/feed/\" />\n<link rel=\"alternate\" title=\"oEmbed (JSON)\" type=\"application/json+oembed\" href=\"https://shpigovsky.ru/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fshpigovsky.ru%2Fprivacy-policy%2F\" />\n<link rel=\"alternate\" title=\"oEmbed (XML)\" type=\"text/xml+oembed\" href=\"https://shpigovsky.ru/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fshpigovsky.ru%2Fprivacy-policy%2F&#038;format=xml\" />\n<style id=\"wp-img-auto-sizes-contain-inline-css\">\nimg:is([sizes=auto i],[sizes^=\"auto,\" i]){contain-intrinsic-size:3000px 1500px}\n/*# sourceURL=wp-img-auto-sizes-contain-inline-css */\n</style>\n<style id=\"wp-emoji-styles-inline-css\">\n\n\timg.wp-smiley, img.emoji {\n\t\tdisplay: inline !important;\n\t\tborder: none !important;\n\t\tbox-shadow: none !important;\n\t\theight: 1em !important;\n\t\twidth: 1em !important;\n\t\tmargin: 0 0.07em !important;\n\t\tvertical-align: -0.1em !important;\n\t\tbackground: none !important;\n\t\tpadding: 0 !important;\n\t}\n/*# sourceURL=wp-emoji-styles-inline-css */\n</style>\n<style id=\"wp-block-library-inline-css\">\n:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-r"
+    },
+    "personal_data_consent": {
+      "url": "https://shpigovsky.ru/consent-personal-data/",
+      "final_url": "https://shpigovsky.ru/consent-personal-data/",
+      "status": 200,
+      "title": "Согласие на обработку персональных данных &#8212; Шпиговский Дом",
+      "has_cookie_settings_label": true,
+      "has_cookie_policy_link": true,
+      "has_privacy_modal_root": true,
+      "has_privacy_script": true,
+      "has_metrika_loader": false,
+      "robots_noindex": true,
+      "snippet": "<!DOCTYPE html>\r\n<html lang=\"ru-RU\">\r\n<head>\r\n\t<meta charset=\"UTF-8\">\r\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n\t<script>(function(){document.documentElement.classList.add('js-enabled');})();</script>\n<title>Согласие на обработку персональных данных &#8212; Шпиговский Дом</title>\n<meta name='robots' content='noindex, nofollow' />\n<link rel=\"alternate\" title=\"oEmbed (JSON)\" type=\"application/json+oembed\" href=\"https://shpigovsky.ru/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fshpigovsky.ru%2Fconsent-personal-data%2F\" />\n<link rel=\"alternate\" title=\"oEmbed (XML)\" type=\"text/xml+oembed\" href=\"https://shpigovsky.ru/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fshpigovsky.ru%2Fconsent-personal-data%2F&#038;format=xml\" />\n<style id=\"wp-img-auto-sizes-contain-inline-css\">\nimg:is([sizes=auto i],[sizes^=\"auto,\" i]){contain-intrinsic-size:3000px 1500px}\n/*# sourceURL=wp-img-auto-sizes-contain-inline-css */\n</style>\n<style id=\"wp-emoji-styles-inline-css\">\n\n\timg.wp-smiley, img.emoji {\n\t\tdisplay: inline !important;\n\t\tborder: none !important;\n\t\tbox-shadow: none !important;\n\t\theight: 1em !important;\n\t\twidth: 1em !important;\n\t\tmargin: 0 0.07em !important;\n\t\tvertical-align: -0.1em !important;\n\t\tbackground: none !important;\n\t\tpadding: 0 !important;\n\t}\n/*# sourceURL=wp-emoji-styles-inline-css */\n</style>\n<style id=\"wp-block-library-inline-css\">\n:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root ."
+    }
+  }
+}

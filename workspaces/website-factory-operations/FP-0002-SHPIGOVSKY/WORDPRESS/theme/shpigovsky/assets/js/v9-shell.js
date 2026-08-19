@@ -1365,18 +1365,50 @@
 		return out;
 	}
 
-	function fireMetrikaGoal(data) {
+	function isAnalyticsConsentAllowed() {
 		try {
+			return !!(
+				window.FP02PrivacyConsent
+				&& typeof window.FP02PrivacyConsent.isAllowed === 'function'
+				&& window.FP02PrivacyConsent.isAllowed('analytics')
+			);
+		} catch (e) {}
+
+		return false;
+	}
+
+	function fireMetrikaGoal(form, data, submissionToken) {
+		try {
+			if (!isAnalyticsConsentAllowed()) {
+				return false;
+			}
+
+			if (
+				form
+				&& submissionToken
+				&& form.getAttribute('data-lead-goal-token') === submissionToken
+			) {
+				return false;
+			}
+
 			var goal = (data && data.metrika_goal) || LEAD_FORM_CONFIG.metrikaGoal || '';
 			var counter = (data && data.metrika_counter) || LEAD_FORM_CONFIG.metrikaCounter || '';
 			if (!goal || !counter) {
-				return;
+				return false;
 			}
 			if (typeof window.ym !== 'function') {
-				return;
+				return false;
 			}
+
+			if (form && submissionToken) {
+				form.setAttribute('data-lead-goal-token', submissionToken);
+			}
+
 			window.ym(Number(counter), 'reachGoal', goal);
+			return true;
 		} catch (e) {}
+
+		return false;
 	}
 
 	function populateHiddenFields(form) {
@@ -1785,7 +1817,7 @@
 						'Заявка принята на локальном стенде. Отправка email здесь отключена — письмо не уходило.';
 					setLeadFormState(form, 'success');
 					showLeadFormStatus(form, 'success', successMessage);
-					fireMetrikaGoal(result.data);
+					fireMetrikaGoal(form, result.data, payload.request_token || '');
 					form.reset();
 					ensureLeadSecurityFields(form);
 					populateHiddenFields(form);

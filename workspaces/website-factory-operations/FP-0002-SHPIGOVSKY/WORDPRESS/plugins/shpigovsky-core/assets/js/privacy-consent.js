@@ -186,12 +186,14 @@
 		}
 	}
 
-	function openSettings() {
+	function openSettings(preserveExistingFocus) {
 		if (!settingsPanel || !notice) {
 			return;
 		}
 
-		lastFocusedElement = document.activeElement;
+		if (!preserveExistingFocus) {
+			lastFocusedElement = document.activeElement;
+		}
 		notice.hidden = true;
 		settingsPanel.hidden = false;
 		if (customizeButton) {
@@ -425,6 +427,20 @@
 			openSettings();
 		});
 
+		document.addEventListener('click', function (event) {
+			var trigger = event.target && event.target.closest
+				? event.target.closest('[data-fp02-cookie-settings-open]')
+				: null;
+			if (!trigger) {
+				return;
+			}
+
+			event.preventDefault();
+			lastFocusedElement = trigger;
+			showRoot();
+			openSettings(true);
+		});
+
 		document.addEventListener('keydown', function (event) {
 			if (event.key === 'Escape' && settingsPanel && !settingsPanel.hidden) {
 				closeSettings(true);
@@ -455,6 +471,15 @@
 			},
 			getState: function () {
 				return currentConsent();
+			},
+			isAllowed: function (category) {
+				if (category === 'necessary') {
+					return true;
+				}
+				if (category !== 'analytics') {
+					return false;
+				}
+				return analyticsAllowed(currentConsent());
 			}
 		};
 

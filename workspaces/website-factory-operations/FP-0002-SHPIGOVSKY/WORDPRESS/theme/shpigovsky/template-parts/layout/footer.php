@@ -146,6 +146,16 @@ $footer_copyright_suffix = shpigovsky_get_footer_copyright_suffix();
 					)
 				);
 				?>
+				<ul class="site-footer__nav-list">
+					<li class="site-footer__nav-item">
+						<button
+							type="button"
+							class="site-footer__nav-link site-footer__nav-link--button"
+							data-fp02-cookie-settings-open
+							aria-controls="fp02-cookie-consent-settings"
+						><?php esc_html_e( 'Настройки cookie', 'shpigovsky' ); ?></button>
+					</li>
+				</ul>
 			</nav>
 		</div>
 		<div class="site-footer__legal">

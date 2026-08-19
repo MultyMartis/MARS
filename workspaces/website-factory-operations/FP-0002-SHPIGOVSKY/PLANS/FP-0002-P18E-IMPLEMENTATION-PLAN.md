@@ -1,7 +1,7 @@
 # FP-0002 P18E Implementation Plan
 
-**Status:** P18E-A/B complete; P18E-C..H pending  
-**Wave:** prepared by PROD-P18E design; PROD-P18E-A/B foundation executed on 2026-08-19
+**Status:** P18E-A/B complete; P18E-C/D complete; P18E-E/F complete; P18E-G/H functionally complete with legal review tail pending  
+**Wave:** prepared by PROD-P18E design; executed through PROD-P18E-E/F on 2026-08-19
 
 ## Objective
 
@@ -82,6 +82,8 @@ Gate:
 
 ### P18E-E — Form goal consent integration
 
+**Status:** COMPLETE
+
 Deliverables:
 
 - `reachGoal` guarded by analytics consent;
@@ -95,6 +97,8 @@ Gate:
 
 ### P18E-F — Cookie policy and withdrawal surfaces
 
+**Status:** COMPLETE WITH LEGAL REVIEW PENDING
+
 Deliverables:
 
 - factual cookie-policy update or dedicated approved page;
@@ -106,6 +110,8 @@ Gate:
 - operator/legal copy approval for factual legal text.
 
 ### P18E-G — Accessibility / mobile / cache / performance QA
+
+**Status:** COMPLETE
 
 Deliverables:
 
@@ -119,6 +125,8 @@ Gate:
 - acceptance matrix PASS.
 
 ### P18E-H — Deployment + evidence + dashboard sync + canonical sync
+
+**Status:** COMPLETE WITH LEGAL / INDEXING TAILS OPEN
 
 Deliverables:
 

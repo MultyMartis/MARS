@@ -1,21 +1,17 @@
 <?php
 /**
- * Cookie consent / privacy controls foundation — PROD-P18E-A/B.
+ * Cookie consent / privacy controls owner — PROD-P18E-A through P18E-F.
  *
- * Foundation only:
- * - explicit machine states
- * - consent version
- * - browser record contract
- * - admin owner under Site Settings
- * - integration registry
- * - truthful status surface
+ * Implemented here:
+ * - browser consent record contract
+ * - public banner + settings UI
+ * - consent-gated Yandex Metrika bootstrap
+ * - canonical frontend API for consent-aware modules
+ * - policy page selection / status surface
  *
- * Not implemented in this wave:
- * - public banner UI
- * - public settings modal
- * - Metrika runtime gating
- * - form goal consent gating
- * - server-side consent evidence store
+ * Deferred:
+ * - server-side visitor consent evidence storage
+ * - legal approval of final policy wording
  *
  * @package Shpigovsky_Core
  */
@@ -125,6 +121,8 @@ final class PrivacyConsent implements ModuleInterface {
 		echo '<p><strong>' . esc_html__( 'Техническая основа:', 'shpigovsky-core' ) . '</strong> <code>ACTIVE</code></p>';
 		echo '<p><strong>' . esc_html__( 'Публичное уведомление:', 'shpigovsky-core' ) . '</strong> <code>ACTIVE</code></p>';
 		echo '<p><strong>' . esc_html__( 'Consent-gating Метрики:', 'shpigovsky-core' ) . '</strong> <code>CONSENT-GATED</code></p>';
+		echo '<p><strong>' . esc_html__( 'Form goals:', 'shpigovsky-core' ) . '</strong> <code>CONSENT-GATED</code></p>';
+		echo '<p><strong>' . esc_html__( 'Повторное открытие настроек:', 'shpigovsky-core' ) . '</strong> <code>ACTIVE</code></p>';
 		echo '</div>';
 
 		echo '<form method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '" autocomplete="off">';
@@ -223,7 +221,10 @@ final class PrivacyConsent implements ModuleInterface {
 		self::row_html( __( 'Техническая основа', 'shpigovsky-core' ), '<code>ACTIVE</code>' );
 		self::row_html( __( 'Публичное уведомление', 'shpigovsky-core' ), '<code>ACTIVE</code>' );
 		self::row_html( __( 'Consent-gating Метрики', 'shpigovsky-core' ), '<code>CONSENT-GATED</code>' );
+		self::row_html( __( 'Form goals', 'shpigovsky-core' ), '<code>CONSENT-GATED</code>' );
+		self::row_html( __( 'Повторное открытие настроек', 'shpigovsky-core' ), '<code>ACTIVE</code>' );
 		self::row_html( __( 'Политика Cookie', 'shpigovsky-core' ), '<code>' . esc_html( $policy_status ) . '</code>' );
+		self::row_html( __( 'Legal review', 'shpigovsky-core' ), 'CURRENT' === $policy_status ? '<code>PENDING FINAL LEGAL REVIEW</code>' : '<code>REQUIRED BEFORE LEGAL COMPLETE</code>' );
 		self::row_html( __( 'Хранилище доказательств согласия', 'shpigovsky-core' ), '<code>' . esc_html__( 'BROWSER STATE FOUNDATION ONLY / SERVER EVIDENCE DEFERRED', 'shpigovsky-core' ) . '</code>' );
 		self::row_html( __( 'Ключ browser record', 'shpigovsky-core' ), '<code>' . esc_html( self::COOKIE_NAME ) . '</code>' );
 		self::row_html( __( 'Категории v1', 'shpigovsky-core' ), '<code>necessary</code> + <code>analytics</code>' );
@@ -304,7 +305,7 @@ final class PrivacyConsent implements ModuleInterface {
 		}
 
 		echo '<div class="notice notice-success is-dismissible"><p>'
-			. esc_html__( 'Настройки Cookie и конфиденциальности сохранены. Публичный баннер и runtime gating ещё не включены в этой волне.', 'shpigovsky-core' )
+			. esc_html__( 'Настройки Cookie и конфиденциальности сохранены. Публичный banner/settings, consent-gated Метрика и reopen path активны; финальная legal формулировка policy остаётся отдельным review-этапом.', 'shpigovsky-core' )
 			. '</p></div>';
 	}
 
@@ -684,7 +685,7 @@ final class PrivacyConsent implements ModuleInterface {
 			|| false !== strpos( $lower, 'баннер' )
 			|| false !== strpos( $lower, 'панел');
 
-		return $needs_review ? 'CURRENT / NEEDS LEGAL CONTENT REVIEW' : 'CURRENT';
+		return $needs_review ? 'CURRENT / NEEDS LEGAL REVIEW' : 'CURRENT';
 	}
 
 	/**

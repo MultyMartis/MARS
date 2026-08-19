@@ -1,0 +1,319 @@
+{
+  "reopen": {
+    "footerTriggerText": "Настройки cookie",
+    "toggleCheckedForNecessary": false,
+    "visible": true
+  },
+  "necessaryOnly": {
+    "marker": "necessary-1787145123204",
+    "ymCalls": [],
+    "metrikaRequests": [],
+    "pageErrors": [],
+    "successText": "Заявка принята. Мы свяжемся с вами по указанному телефону."
+  },
+  "analyticsAllowed": {
+    "marker": "analytics-1787145131961",
+    "ymCalls": [],
+    "metrikaRequests": [
+      {
+        "url": "https://mc.yandex.ru/metrika/tag.js",
+        "method": "GET",
+        "resourceType": "script",
+        "ts": 1787145133104
+      },
+      {
+        "url": "https://mc.yandex.ru/metrika/advert.gif?t=gdpr(14)ti(4)",
+        "method": "GET",
+        "resourceType": "image",
+        "ts": 1787145133561
+      },
+      {
+        "url": "https://mc.yandex.ru/watch/98284776?wmode=7&page-url=https%3A%2F%2Fshpigovsky.ru%2Fkontakty%2F&charset=utf-8&uah=chu%0A%22Not%3DA%3FBrand%22%3Bv%3D%2299%22%2C%22HeadlessChrome%22%3Bv%3D%22151%22%2C%22Chromium%22%3Bv%3D%22151%22%0Acha%0Ax86%0Achb%0A64%0Achf%0A151.0.7922.34%0Achl%0A%22Not%3DA%3FBrand%22%3Bv%3D%2299.0.0.0%22%2C%22HeadlessChrome%22%3Bv%3D%22151.0.7922.34%22%2C%22Chromium%22%3Bv%3D%22151.0.7922.34%22%0Achm%0A%3F0%0Achp%0AWindows%0Achv%0A10.0.0&browser-info=pv%3A1%3Avf%3A4uoujm0trtfzam26nf44fkb1vz8frz%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2621%3Acn%3A1%3Adp%3A0%3Als%3A670215993536%3Ahid%3A880487119%3Az%3A420%3Ai%3A20260819201213%3Aet%3A1787145134%3Ac%3A1%3Arn%3A168936675%3Arqn%3A1%3Au%3A1787145134463886175%3Aw%3A1280x920%3As%3A1280x920x24%3Ask%3A1%3Afp%3A844%3Awv%3A2%3Ads%3A3%2C146%2C312%2C1%2C0%2C0%2C%2C391%2C5%2C%2C%2C%2C858%3Aco%3A0%3Ahdl%3A1%3Antf%3A1%3Ans%3A1787145132238%3Arqnl%3A1%3Ast%3A1787145134%3At%3A%D0%9A%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82%D1%8B%20%E2%80%94%20%D0%A8%D0%BF%D0%B8%D0%B3%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%20%D0%94%D0%BE%D0%BC&t=clt(443)gdpr(14)clc(0-0-0)rqnt(1)rfs(1)ufs(1)aw(1)rcm(1)cdl(na)eco(42013220)ti(1)",
+        "method": "GET",
+        "resourceType": "fetch",
+        "ts": 1787145133563
+      },
+      {
+        "url": "https://mc.yandex.ru/watch/98284776/1?wmode=7&page-url=https%3A%2F%2Fshpigovsky.ru%2Fkontakty%2F&charset=utf-8&uah=chu%0A%22Not%3DA%3FBrand%22%3Bv%3D%2299%22%2C%22HeadlessChrome%22%3Bv%3D%22151%22%2C%22Chromium%22%3Bv%3D%22151%22%0Acha%0Ax86%0Achb%0A64%0Achf%0A151.0.7922.34%0Achl%0A%22Not%3DA%3FBrand%22%3Bv%3D%2299.0.0.0%22%2C%22HeadlessChrome%22%3Bv%3D%22151.0.7922.34%22%2C%22Chromium%22%3Bv%3D%22151.0.7922.34%22%0Achm%0A%3F0%0Achp%0AWindows%0Achv%0A10.0.0&browser-info=pv%3A1%3Avf%3A4uoujm0trtfzam26nf44fkb1vz8frz%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2621%3Acn%3A1%3Adp%3A0%3Als%3A670215993536%3Ahid%3A880487119%3Az%3A420%3Ai%3A20260819201213%3Aet%3A1787145134%3Ac%3A1%3Arn%3A168936675%3Arqn%3A1%3Au%3A1787145134463886175%3Aw%3A1280x920%3As%3A1280x920x24%3Ask%3A1%3Afp%3A844%3Awv%3A2%3Ads%3A3%2C146%2C312%2C1%2C0%2C0%2C%2C391%2C5%2C%2C%2C%2C858%3Aco%3A0%3Ahdl%3A1%3Antf%3A1%3Ans%3A1787145132238%3Arqnl%3A1%3Ast%3A1787145134%3At%3A%D0%9A%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82%D1%8B%20%E2%80%94%20%D0%A8%D0%BF%D0%B8%D0%B3%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%20%D0%94%D0%BE%D0%BC&t=clt%28443%29gdpr%2814%29clc%280-0-0%29rqnt%281%29rfs%281%29ufs%281%29aw%281%29rcm%281%29cdl%28na%29eco%2842013220%29ti%281%29&redirnss=1",
+        "method": "GET",
+        "resourceType": "fetch",
+        "ts": 1787145133626
+      },
+      {
+        "url": "https://mc.yandex.ru/metrika/tag_phono.js",
+        "method": "GET",
+        "resourceType": "script",
+        "ts": 1787145134004
+      },
+      {
+        "url": "https://mc.yandex.ru/metrika/match.html",
+        "method": "GET",
+        "resourceType": "document",
+        "ts": 1787145134106
+      },
+      {
+        "url": "https://mc.yandex.ru/clmap/98284776?page-url=https%3A%2F%2Fshpigovsky.ru%2Fkontakty%2F&pointer-click=rn%3A767362987%3Ax%3A32548%3Ay%3A32767%3At%3A23%3Ap%3A%3FA2A1A%7FA1%3AX%3A1122%3AY%3A65&hidv2=4791450664483946811&browser-info=u%3A1787145134463886175%3Av%3A2621%3Avf%3A4uoujm0trtfzam26nf44fkb1vz8frz%3Arqnl%3A1%3Ast%3A1787145136&t=gdpr(14)ti(1)",
+        "method": "GET",
+        "resourceType": "fetch",
+        "ts": 1787145135881
+      },
+      {
+        "url": "https://mc.yandex.ru/watch/98284776/1?page-url=https%3A%2F%2Fshpigovsky.ru%2Fkontakty%2F&charset=utf-8&uah=chu%0A%22Not%3DA%3FBrand%22%3Bv%3D%2299%22%2C%22HeadlessChrome%22%3Bv%3D%22151%22%2C%22Chromium%22%3Bv%3D%22151%22%0Acha%0Ax86%0Achb%0A64%0Achf%0A151.0.7922.34%0Achl%0A%22Not%3DA%3FBrand%22%3Bv%3D%2299.0.0.0%22%2C%22HeadlessChrome%22%3Bv%3D%22151.0.7922.34%22%2C%22Chromium%22%3Bv%3D%22151.0.7922.34%22%0Achm%0A%3F0%0Achp%0AWindows%0Achv%0A10.0.0&hidv2=4791450664483946811&hittoken=1787145133_c4a7e6188b4ad7f2e00caf350408af112904e35c7af1a4237c056cc5a18cbd69&browser-info=pa%3A1%3Aar%3A1%3Avf%3A4uoujm0trtfzam26nf44fkb1vz8frz%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2621%3Acn%3A1%3Adp%3A1%3Als%3A670215993536%3Ahid%3A880487119%3Az%3A420%3Ai%3A20260819201216%3Aet%3A1787145136%3Ac%3A1%3Arn%3A783637488%3Arqn%3A2%3Au%3A1787145134463886175%3Aw%3A1280x920%3As%3A1280x920x24%3Ask%3A1%3Awv%3A2%3Ads%3A%2C%2C%2C%2C%2C%2C%2C%2C%2C1386%2C1386%2C0%2C%3Aco%3A0%3Ahdl%3A1%3Antf%3A1%3Aeu%3A0%3Ans%3A1787145132238%3Amdd%3A1%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1787145136&t=gdpr(14)clc(1-1122-65)rqnt(2)rfs(1)ufs(1)aw(1)rcm(1)csu(0)cdl(na)eco(42013220)prs(2)cac(2)wss(2)w2s(16)evt(158)ti(0)&force-urlencoded=1&site-info=%7B%22__ym%22%3A%7B%22fi%22%3A%22a(0)b(PA1A1FA1A2)c(6glEzOCI2iws2RowD1SAv1%2BFU9Lb1NTZtfs08Znv3GM%3D)%22%2C%22fit%22%3A1%2C%22mfpd%22%3A%22p%3A*******6464%22%7D%7D",
+        "method": "POST",
+        "resourceType": "ping",
+        "ts": 1787145136027
+      },
+      {
+        "url": "https://mc.yandex.ru/clmap/98284776?page-url=https%3A%2F%2Fshpigovsky.ru%2Fkontakty%2F&pointer-click=rn%3A547651783%3Ax%3A29490%3Ay%3A29490%3At%3A27%3Ap%3APsFA1A2%3AX%3A417%3AY%3A566&hidv2=4791450664483946811&browser-info=u%3A1787145134463886175%3Av%3A2621%3Avf%3A4uoujm0trtfzam26nf44fkb1vz8frz%3Arqnl%3A1%3Ast%3A1787145136&t=gdpr(14)ti(1)",
+        "method": "GET",
+        "resourceType": "fetch",
+        "ts": 1787145136296
+      },
+      {
+        "url": "https://mc.yandex.ru/clmap/98284776?page-url=https%3A%2F%2Fshpigovsky.ru%2Fkontakty%2F&pointer-click=rn%3A31218748%3Ax%3A32556%3Ay%3A31129%3At%3A59%3Ap%3A%3FFA1A2%3AX%3A562%3AY%3A661&hidv2=4791450664483946811&browser-info=u%3A1787145134463886175%3Av%3A2621%3Avf%3A4uoujm0trtfzam26nf44fkb1vz8frz%3Arqnl%3A1%3Ast%3A1787145140&t=gdpr(14)ti(1)",
+        "method": "GET",
+        "resourceType": "fetch",
+        "ts": 1787145139535
+      },
+      {
+        "url": "https://mc.yandex.ru/watch/98284776/1?page-url=form%3A%2F%2Fshpigovsky.ru%2F%3Fp%3DFA1A2&page-ref=https%3A%2F%2Fshpigovsky.ru%2Fkontakty%2F&charset=utf-8&uah=chu%0A%22Not%3DA%3FBrand%22%3Bv%3D%2299%22%2C%22HeadlessChrome%22%3Bv%3D%22151%22%2C%22Chromium%22%3Bv%3D%22151%22%0Acha%0Ax86%0Achb%0A64%0Achf%0A151.0.7922.34%0Achl%0A%22Not%3DA%3FBrand%22%3Bv%3D%2299.0.0.0%22%2C%22HeadlessChrome%22%3Bv%3D%22151.0.7922.34%22%2C%22Chromium%22%3Bv%3D%22151.0.7922.34%22%0Achm%0A%3F0%0Achp%0AWindows%0Achv%0A10.0.0&hidv2=4791450664483946811&hittoken=1787145133_c4a7e6188b4ad7f2e00caf350408af112904e35c7af1a4237c056cc5a18cbd69&browser-info=ar%3A1%3Avf%3A4uoujm0trtfzam26nf44fkb1vz8frz%3Afu%3A3%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2621%3Acn%3A1%3Adp%3A1%3Als%3A670215993536%3Ahid%3A880487119%3Az%3A420%3Ai%3A20260819201219%3Aet%3A1787145140%3Ac%3A1%3Arn%3A105670090%3Arqn%3A3%3Au%3A1787145134463886175%3Aw%3A1280x920%3As%3A1280x920x24%3Ask%3A1%3Awv%3A2%3Aco%3A0%3Ahdl%3A1%3Antf%3A1%3Aeu%3A0%3Ans%3A1787145132238%3Amdd%3A1%3Aadb%3A2%3App%3A3629563401%3Arqnl%3A1%3Ast%3A1787145140%3At%3A%D0%9A%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82%D1%8B%20%E2%80%94%20%D0%A8%D0%BF%D0%B8%D0%B3%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%20%D0%94%D0%BE%D0%BC&t=gdpr(14)mc(p-1)clc(3-700-430)rqnt(3)rfs(1)ufs(1)aw(1)rcm(1)csu(0)cdl(na)eco(42013220)prs(2)cac(2)wss(2)w2s(16)evt(158)fid(170)ti(0)&force-urlencoded=1&site-info=%7B%22__ym%22%3A%7B%22ite%22%3A1%7D%7D",
+        "method": "POST",
+        "resourceType": "ping",
+        "ts": 1787145139536
+      },
+      {
+        "url": "https://mc.yandex.ru/webvisor/98284776?wv-part=1&wv-check=1026&wv-type=0&wmode=0&wv-hit=880487119&page-url=https%3A%2F%2Fshpigovsky.ru%2Fkontakty%2F&rn=708454719&hidv2=4791450664483946811&browser-info=we%3A1%3Aet%3A1787145140%3Aw%3A1280x920%3Av%3A2621%3Az%3A420%3Ai%3A20260819201219%3Au%3A1787145134463886175%3Avf%3A4uoujm0trtfzam26nf44fkb1vz8frz%3Ast%3A1787145140&t=gdpr(14)ti(1)",
+        "method": "POST",
+        "resourceType": "fetch",
+        "ts": 1787145139536
+      },
+      {
+        "url": "https://mc.yandex.ru/watch/98284776/1?page-url=https%3A%2F%2Fshpigovsky.ru%2Fkontakty%2F&charset=utf-8&uah=chu%0A%22Not%3DA%3FBrand%22%3Bv%3D%2299%22%2C%22HeadlessChrome%22%3Bv%3D%22151%22%2C%22Chromium%22%3Bv%3D%22151%22%0Acha%0Ax86%0Achb%0A64%0Achf%0A151.0.7922.34%0Achl%0A%22Not%3DA%3FBrand%22%3Bv%3D%2299.0.0.0%22%2C%22HeadlessChrome%22%3Bv%3D%22151.0.7922.34%22%2C%22Chromium%22%3Bv%3D%22151.0.7922.34%22%0Achm%0A%3F0%0Achp%0AWindows%0Achv%0A10.0.0&hidv2=4791450664483946811&hittoken=1787145133_c4a7e6188b4ad7f2e00caf350408af112904e35c7af1a4237c056cc5a18cbd69&browser-info=pa%3A1%3Aar%3A1%3Avf%3A4uoujm0trtfzam26nf44fkb1vz8frz%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2621%3Acn%3A1%3Adp%3A1%3Als%3A670215993536%3Ahid%3A880487119%3Az%3A420%3Ai%3A20260819201219%3Aet%3A1787145140%3Ac%3A1%3Arn%3A988824461%3Arqn%3A4%3Au%3A1787145134463886175%3Aw%3A1280x920%3As%3A1280x920x24%3Ask%3A1%3Awv%3A2%3Aco%3A0%3Ahdl%3A1%3Antf%3A1%3Aeu%3A0%3Ans%3A1787145132238%3Amdd%3A1%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1787145140&t=gdpr(14)mc(p-1)clc(3-700-430)rqnt(4)rfs(1)ufs(1)aw(1)rcm(1)csu(0)cdl(na)eco(42013220)prs(2)cac(2)wss(2)w2s(16)evt(158)ti(0)&force-urlencoded=1&site-info=%7B%22__ym%22%3A%7B%22fi%22%3A%22a(0)b(PA1A1FA1A2)c(6glEzOCI2iws2RowD1SAv1%2BFU9Lb1NTZtfs08Znv3GM%3D)e(1)%22%2C%22fit%22%3A1%2C%22ite%22%3A1%2C%22mfpd%22%3A%22p%3A*******6464%22%7D%7D",
+        "method": "POST",
+        "resourceType": "ping",
+        "ts": 1787145139543
+      }
+    ],
+    "pageErrors": [],
+    "scriptTagCount": 1
+  },
+  "noMetrikaFailure": {
+    "marker": "blocked-1787145141133",
+    "ymCalls": [],
+    "metrikaRequests": [
+      {
+        "url": "https://mc.yandex.ru/metrika/tag.js",
+        "method": "GET",
+        "resourceType": "script",
+        "ts": 1787145142382
+      }
+    ],
+    "pageErrors": [],
+    "successText": "Заявка принята. Мы свяжемся с вами по указанному телефону."
+  },
+  "withdrawal": {
+    "initialToggleChecked": true,
+    "marker": "withdraw-1787145150048",
+    "cookieValue": [
+      {
+        "name": "yabs-sid",
+        "value": "1030120551787145151",
+        "domain": "mc.yandex.ru",
+        "path": "/",
+        "expires": -1,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+      },
+      {
+        "name": "i",
+        "value": "6a4rhW7mRlXQt3x13TGdhLSksAh9A4Vqrc2LuPxyD6kTwveM1w1hxS+PZLYSo5p5+mloY+QfImF8UQ9cd7CoBd+IJXM=",
+        "domain": ".yandex.ru",
+        "path": "/",
+        "expires": 1821705151.801189,
+        "httpOnly": true,
+        "secure": true,
+        "sameSite": "None"
+      },
+      {
+        "name": "yandexuid",
+        "value": "3770072831787145151",
+        "domain": ".yandex.ru",
+        "path": "/",
+        "expires": 1821705151.801223,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+      },
+      {
+        "name": "yuidss",
+        "value": "3770072831787145151",
+        "domain": ".yandex.ru",
+        "path": "/",
+        "expires": 1821705151.801248,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+      },
+      {
+        "name": "ymex",
+        "value": "2102505151.yrts.1787145151#2102505151.yrtsi.1787145151",
+        "domain": ".yandex.ru",
+        "path": "/",
+        "expires": 1818681151,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+      },
+      {
+        "name": "bh",
+        "value": "EkIiTm90PUE/QnJhbmQiO3Y9Ijk5IiwgIkhlYWRsZXNzQ2hyb21lIjt2PSIxNTEiLCAiQ2hyb21pdW0iO3Y9IjE1MSIaA3g4NiINMTUxLjAuNzkyMi4zNCoCPzA6CSJXaW5kb3dzIkIGMTAuMC4wSgI2NFJaIk5vdD1BP0JyYW5kIjt2PSI5OS4wLjAuMCIsIkhlYWRsZXNzQ2hyb21lIjt2PSIxNTEuMC43OTIyLjM0IiwiQ2hyb21pdW0iO3Y9IjE1MS4wLjc5MjIuMzQiYL/XltQGah7cyuH/CJLYobEDn8/h6gP7+vDnDev//fYPyZvNhwg=",
+        "domain": ".yandex.ru",
+        "path": "/",
+        "expires": 1821705151,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+      },
+      {
+        "name": "mdd",
+        "value": "1",
+        "domain": ".shpigovsky.ru",
+        "path": "/",
+        "expires": 1787231552,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+      },
+      {
+        "name": "fp02_cookie_consent",
+        "value": "%7B%22version%22%3A1%2C%22necessary%22%3Atrue%2C%22analytics%22%3Afalse%2C%22decided_at%22%3A%222026-08-19T13%3A12%3A34.042Z%22%7D",
+        "domain": "shpigovsky.ru",
+        "path": "/",
+        "expires": 1818681154.042988,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "Lax"
+      }
+    ],
+    "ymCalls": [],
+    "metrikaRequests": [
+      {
+        "url": "https://mc.yandex.ru/metrika/tag.js",
+        "method": "GET",
+        "resourceType": "script",
+        "ts": 1787145151237
+      },
+      {
+        "url": "https://mc.yandex.ru/metrika/advert.gif?t=gdpr(14)ti(4)",
+        "method": "GET",
+        "resourceType": "image",
+        "ts": 1787145151740
+      },
+      {
+        "url": "https://mc.yandex.ru/watch/98284776?wmode=7&page-url=https%3A%2F%2Fshpigovsky.ru%2Fkontakty%2F&charset=utf-8&uah=chu%0A%22Not%3DA%3FBrand%22%3Bv%3D%2299%22%2C%22HeadlessChrome%22%3Bv%3D%22151%22%2C%22Chromium%22%3Bv%3D%22151%22%0Acha%0Ax86%0Achb%0A64%0Achf%0A151.0.7922.34%0Achl%0A%22Not%3DA%3FBrand%22%3Bv%3D%2299.0.0.0%22%2C%22HeadlessChrome%22%3Bv%3D%22151.0.7922.34%22%2C%22Chromium%22%3Bv%3D%22151.0.7922.34%22%0Achm%0A%3F0%0Achp%0AWindows%0Achv%0A10.0.0&browser-info=pv%3A1%3Avf%3A4uoujm0trtfzam26nf44fkb1vz8frz%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2621%3Acn%3A1%3Adp%3A0%3Als%3A137180749267%3Ahid%3A141647547%3Az%3A420%3Ai%3A20260819201231%3Aet%3A1787145152%3Ac%3A1%3Arn%3A204390695%3Arqn%3A1%3Au%3A1787145152518873713%3Aw%3A1280x920%3As%3A1280x920x24%3Ask%3A1%3Afp%3A900%3Awv%3A2%3Ads%3A4%2C141%2C345%2C5%2C0%2C0%2C%2C407%2C5%2C%2C%2C%2C905%3Aco%3A0%3Ahdl%3A1%3Antf%3A1%3Ans%3A1787145150321%3Anp%3AV2luMzI%3D%3Arqnl%3A1%3Ast%3A1787145152%3At%3A%D0%9A%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82%D1%8B%20%E2%80%94%20%D0%A8%D0%BF%D0%B8%D0%B3%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%20%D0%94%D0%BE%D0%BC&t=clt(492)gdpr(14)clc(0-0-0)rqnt(1)rfs(1)ufs(1)aw(1)rcm(1)cdl(na)eco(42013220)ti(1)",
+        "method": "GET",
+        "resourceType": "fetch",
+        "ts": 1787145151742
+      },
+      {
+        "url": "https://mc.yandex.ru/watch/98284776/1?wmode=7&page-url=https%3A%2F%2Fshpigovsky.ru%2Fkontakty%2F&charset=utf-8&uah=chu%0A%22Not%3DA%3FBrand%22%3Bv%3D%2299%22%2C%22HeadlessChrome%22%3Bv%3D%22151%22%2C%22Chromium%22%3Bv%3D%22151%22%0Acha%0Ax86%0Achb%0A64%0Achf%0A151.0.7922.34%0Achl%0A%22Not%3DA%3FBrand%22%3Bv%3D%2299.0.0.0%22%2C%22HeadlessChrome%22%3Bv%3D%22151.0.7922.34%22%2C%22Chromium%22%3Bv%3D%22151.0.7922.34%22%0Achm%0A%3F0%0Achp%0AWindows%0Achv%0A10.0.0&browser-info=pv%3A1%3Avf%3A4uoujm0trtfzam26nf44fkb1vz8frz%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2621%3Acn%3A1%3Adp%3A0%3Als%3A137180749267%3Ahid%3A141647547%3Az%3A420%3Ai%3A20260819201231%3Aet%3A1787145152%3Ac%3A1%3Arn%3A204390695%3Arqn%3A1%3Au%3A1787145152518873713%3Aw%3A1280x920%3As%3A1280x920x24%3Ask%3A1%3Afp%3A900%3Awv%3A2%3Ads%3A4%2C141%2C345%2C5%2C0%2C0%2C%2C407%2C5%2C%2C%2C%2C905%3Aco%3A0%3Ahdl%3A1%3Antf%3A1%3Ans%3A1787145150321%3Anp%3AV2luMzI%3D%3Arqnl%3A1%3Ast%3A1787145152%3At%3A%D0%9A%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82%D1%8B%20%E2%80%94%20%D0%A8%D0%BF%D0%B8%D0%B3%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%20%D0%94%D0%BE%D0%BC&t=clt%28492%29gdpr%2814%29clc%280-0-0%29rqnt%281%29rfs%281%29ufs%281%29aw%281%29rcm%281%29cdl%28na%29eco%2842013220%29ti%281%29&redirnss=1",
+        "method": "GET",
+        "resourceType": "fetch",
+        "ts": 1787145151803
+      },
+      {
+        "url": "https://mc.yandex.ru/metrika/tag_phono.js",
+        "method": "GET",
+        "resourceType": "script",
+        "ts": 1787145152058
+      },
+      {
+        "url": "https://mc.yandex.ru/metrika/match.html",
+        "method": "GET",
+        "resourceType": "document",
+        "ts": 1787145152163
+      },
+      {
+        "url": "https://mc.yandex.ru/clmap/98284776?page-url=https%3A%2F%2Fshpigovsky.ru%2Fkontakty%2F&pointer-click=rn%3A969679064%3Ax%3A32351%3Ay%3A32767%3At%3A22%3Ap%3A%3FQd1%C2%822A1A~A1%3AX%3A1074%3AY%3A3909&hidv2=4791455428735664379&browser-info=u%3A1787145152518873713%3Av%3A2621%3Avf%3A4uoujm0trtfzam26nf44fkb1vz8frz%3Arqnl%3A1%3Ast%3A1787145154&t=gdpr(14)ti(1)",
+        "method": "GET",
+        "resourceType": "fetch",
+        "ts": 1787145153988
+      },
+      {
+        "url": "https://mc.yandex.ru/clmap/98284776?page-url=https%3A%2F%2Fshpigovsky.ru%2Fkontakty%2F&pointer-click=rn%3A478244356%3Ax%3A32767%3Ay%3A32767%3At%3A23%3Ap%3A%3FA3%C2%84AA3%3AX%3A270%3AY%3A3988&hidv2=4791455428735664379&browser-info=u%3A1787145152518873713%3Av%3A2621%3Avf%3A4uoujm0trtfzam26nf44fkb1vz8frz%3Arqnl%3A1%3Ast%3A1787145154&t=gdpr(14)ti(1)",
+        "method": "GET",
+        "resourceType": "fetch",
+        "ts": 1787145154046
+      }
+    ],
+    "pageErrors": []
+  },
+  "regrant": {
+    "metrikaRequests": [
+      {
+        "url": "https://mc.yandex.ru/metrika/tag.js",
+        "method": "GET",
+        "resourceType": "script",
+        "ts": 1787145166047
+      },
+      {
+        "url": "https://mc.yandex.ru/metrika/advert.gif?t=gdpr(14)ti(4)",
+        "method": "GET",
+        "resourceType": "image",
+        "ts": 1787145166491
+      },
+      {
+        "url": "https://mc.yandex.ru/watch/98284776?wmode=7&page-url=https%3A%2F%2Fshpigovsky.ru%2F&charset=utf-8&uah=chu%0A%22Not%3DA%3FBrand%22%3Bv%3D%2299%22%2C%22HeadlessChrome%22%3Bv%3D%22151%22%2C%22Chromium%22%3Bv%3D%22151%22%0Acha%0Ax86%0Achb%0A64%0Achf%0A151.0.7922.34%0Achl%0A%22Not%3DA%3FBrand%22%3Bv%3D%2299.0.0.0%22%2C%22HeadlessChrome%22%3Bv%3D%22151.0.7922.34%22%2C%22Chromium%22%3Bv%3D%22151.0.7922.34%22%0Achm%0A%3F0%0Achp%0AWindows%0Achv%0A10.0.0&browser-info=pv%3A1%3Avf%3A4uoujm0trtfzam26nf44fkb1vz8frz%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2621%3Acn%3A1%3Adp%3A0%3Als%3A331878041659%3Ahid%3A442038786%3Az%3A420%3Ai%3A20260819201246%3Aet%3A1787145166%3Ac%3A1%3Arn%3A70806274%3Arqn%3A1%3Au%3A1787145166509566433%3Aw%3A1280x920%3As%3A1280x920x24%3Ask%3A1%3Afp%3A1192%3Awv%3A2%3Ads%3A3%2C148%2C620%2C54%2C0%2C0%2C%2C420%2C45%2C1909%2C1909%2C9%2C1253%3Aco%3A0%3Ahdl%3A1%3Antf%3A1%3Ans%3A1787145162292%3Arqnl%3A1%3Ast%3A1787145166%3At%3A%D0%A8%D0%BF%D0%B8%D0%B3%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%20%D0%94%D0%BE%D0%BC&t=clt(429)gdpr(14)clc(0-0-0)rqnt(1)rfs(1)ufs(1)aw(1)rcm(1)cdl(na)eco(42013220)ti(1)",
+        "method": "GET",
+        "resourceType": "fetch",
+        "ts": 1787145166496
+      },
+      {
+        "url": "https://mc.yandex.ru/watch/98284776/1?wmode=7&page-url=https%3A%2F%2Fshpigovsky.ru%2F&charset=utf-8&uah=chu%0A%22Not%3DA%3FBrand%22%3Bv%3D%2299%22%2C%22HeadlessChrome%22%3Bv%3D%22151%22%2C%22Chromium%22%3Bv%3D%22151%22%0Acha%0Ax86%0Achb%0A64%0Achf%0A151.0.7922.34%0Achl%0A%22Not%3DA%3FBrand%22%3Bv%3D%2299.0.0.0%22%2C%22HeadlessChrome%22%3Bv%3D%22151.0.7922.34%22%2C%22Chromium%22%3Bv%3D%22151.0.7922.34%22%0Achm%0A%3F0%0Achp%0AWindows%0Achv%0A10.0.0&browser-info=pv%3A1%3Avf%3A4uoujm0trtfzam26nf44fkb1vz8frz%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2621%3Acn%3A1%3Adp%3A0%3Als%3A331878041659%3Ahid%3A442038786%3Az%3A420%3Ai%3A20260819201246%3Aet%3A1787145166%3Ac%3A1%3Arn%3A70806274%3Arqn%3A1%3Au%3A1787145166509566433%3Aw%3A1280x920%3As%3A1280x920x24%3Ask%3A1%3Afp%3A1192%3Awv%3A2%3Ads%3A3%2C148%2C620%2C54%2C0%2C0%2C%2C420%2C45%2C1909%2C1909%2C9%2C1253%3Aco%3A0%3Ahdl%3A1%3Antf%3A1%3Ans%3A1787145162292%3Arqnl%3A1%3Ast%3A1787145166%3At%3A%D0%A8%D0%BF%D0%B8%D0%B3%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%20%D0%94%D0%BE%D0%BC&t=clt%28429%29gdpr%2814%29clc%280-0-0%29rqnt%281%29rfs%281%29ufs%281%29aw%281%29rcm%281%29cdl%28na%29eco%2842013220%29ti%281%29&redirnss=1",
+        "method": "GET",
+        "resourceType": "fetch",
+        "ts": 1787145166750
+      },
+      {
+        "url": "https://mc.yandex.ru/metrika/tag_phono.js",
+        "method": "GET",
+        "resourceType": "script",
+        "ts": 1787145166892
+      },
+      {
+        "url": "https://mc.yandex.ru/metrika/match.html",
+        "method": "GET",
+        "resourceType": "document",
+        "ts": 1787145167073
+      }
+    ],
+    "scriptTagCount": 1
+  },
+  "accessibility": {
+    "focusAfterEscape": "Настройки cookie",
+    "settingsVisibleAfterEscape": false
+  },
+  "mobile": {
+    "320": {
+      "triggerText": "Настройки cookie",
+      "noOverflow": true,
+      "settingsVisible": true
+    },
+    "360": {
+      "triggerText": "Настройки cookie",
+      "noOverflow": true,
+      "settingsVisible": true
+    },
+    "393": {
+      "triggerText": "Настройки cookie",
+      "noOverflow": true,
+      "settingsVisible": true
+    },
+    "1280": {
+      "triggerText": "Настройки cookie",
+      "noOverflow": true,
+      "settingsVisible": true
+    }
+  }
+}

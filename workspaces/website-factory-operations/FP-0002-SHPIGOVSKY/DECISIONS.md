@@ -82,6 +82,24 @@ Future legal/operator review can change the value without re-architecting the co
 |-----|-------|--------|
 | ADR-001 | Browser-only consent evidence in P18E-A/B | Accepted |
 | ADR-002 | Configurable consent lifetime default | Accepted |
+| ADR-003 | Form analytics goals reuse canonical analytics consent gate | Accepted |
+
+### ADR-003 — Form analytics goals reuse canonical analytics consent gate
+
+**Status:** Accepted
+
+**Decision:**  
+P18E-E/F keeps one analytics-permission owner in the browser: `PrivacyConsent`. Frontend form-goal delivery may attempt Yandex Metrika `reachGoal` only after backend-confirmed success and only when `PrivacyConsent` reports analytics allowed. Missing Metrika, blank goal config, or analytics revocation must remain a harmless no-op for form success.
+
+**Reason:**  
+The site already moved Yandex Metrika loading behind explicit analytics consent in P18E-C/D. Leaving conversion goals outside that same gate would create a second analytics path and make business-form success depend on an optional third-party runtime. Reusing the existing consent API preserves one source of truth and keeps personal-data form consent separate from analytics consent.
+
+**Evidence:**  
+`REPORTS/evidence/prod-p18e-ef-form-goal-policy-integration/03-live-qa.json`  
+`REPORTS/REPORT-FP-0002-PROD-P18E-EF-FORM-GOAL-POLICY-INTEGRATION.md`
+
+**Impact:**  
+Future analytics integrations must obey the same privacy gate as analytics loading. Withdrawal blocks both future page analytics and future form-goal attempts, while the browser-only evidence decision remains unchanged.
 
 ---
 
