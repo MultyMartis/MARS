@@ -1,0 +1,26 @@
+# CORVONERO — РСЯ targeting candidates v0.2
+
+**Status:** CANDIDATE_FOR_REVIEW / NOT_A_DIRECT_SETTING  
+**Cold RSY:** main initial path  
+**RETARGETING_STATUS:** FUTURE_SEPARATE / METRICA_AUDIENCE_CHECK_REQUIRED  
+**GOAL_MAPPING_TO_DIRECT:** CHECK_REQUIRED  
+**Goals operator-confirmed available:** form; calls
+
+Shared B2B: владельцы / ИП, директора, главбухи и бухгалтеры 1С, руководители операций, IT-ответственные, пользователи 1С в компании (не соискатели).
+
+Do not target as primary: соискатели, курсы, how-to без услуги, покупатели лицензий 1С, чужая вендорская поддержка.
+
+| group_code | direction | mode | priority | thematic interests/keywords | service/landing themes | geo working assumption | exact geo | retargeting | goal mapping | exact Direct fields | status |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 01-LOCAL-PROGRAMMIST-1S | Программист 1С | LOCAL | HIGH | тематика «программист 1С», «специалист 1С», услуги 1С для бизнеса; интересы учёта/ERP на уровне концепции | service intent + landing/content themes; cold RSY main path | Новосибирск / Новосибирская область candidate | CHECK_REQUIRED | FUTURE_SEPARATE / METRICA_AUDIENCE_CHECK_REQUIRED | CHECK_REQUIRED | SAFE UNKNOWN / DIRECT_CONFIRMATION_REQUIRED | CANDIDATE_FOR_REVIEW / NOT_A_DIRECT_SETTING |
+| 02-LOCAL-SOPROVOZHDENIE-1S | Сопровождение 1С / техподдержка / ошибки 1С | LOCAL | HIGH | тематика сопровождения 1С, техподдержки, ошибок 1С, обслуживания рабочей базы | service intent + landing/content themes; cold RSY main path | Новосибирск / Новосибирская область candidate | CHECK_REQUIRED | FUTURE_SEPARATE / METRICA_AUDIENCE_CHECK_REQUIRED | CHECK_REQUIRED | SAFE UNKNOWN / DIRECT_CONFIRMATION_REQUIRED | CANDIDATE_FOR_REVIEW / NOT_A_DIRECT_SETTING |
+| 03-LOCAL-DORABOTKA-1S | Доработка / разработка 1С | LOCAL | TEST | тематика доработки/разработки 1С, доработки типовой конфигурации как услуги | service intent + landing/content themes; cold RSY main path | Новосибирск / Новосибирская область candidate | CHECK_REQUIRED | FUTURE_SEPARATE / METRICA_AUDIENCE_CHECK_REQUIRED | CHECK_REQUIRED | SAFE UNKNOWN / DIRECT_CONFIRMATION_REQUIRED | CANDIDATE_FOR_REVIEW / NOT_A_DIRECT_SETTING |
+| 04-LOCAL-INTEGRACII-1S | Интеграции 1С | LOCAL | TEST | тематика интеграций 1С, обмена, связи с сайтом/CRM как услуги, не how-to | service intent + landing/content themes; cold RSY main path | Новосибирск / Новосибирская область candidate | CHECK_REQUIRED | FUTURE_SEPARATE / METRICA_AUDIENCE_CHECK_REQUIRED | CHECK_REQUIRED | SAFE UNKNOWN / DIRECT_CONFIRMATION_REQUIRED | CANDIDATE_FOR_REVIEW / NOT_A_DIRECT_SETTING |
+| 05-LOCAL-MARKIROVKA-CHESTNY-ZNAK | Маркировка / Честный знак | LOCAL | HIGH | тематика маркировки, Честного знака, настройки 1С под маркировку как услуги | service intent + landing/content themes; cold RSY main path | Новосибирск / Новосибирская область candidate | CHECK_REQUIRED | FUTURE_SEPARATE / METRICA_AUDIENCE_CHECK_REQUIRED | CHECK_REQUIRED | SAFE UNKNOWN / DIRECT_CONFIRMATION_REQUIRED | CANDIDATE_FOR_REVIEW / NOT_A_DIRECT_SETTING |
+| 01-REMOTE-PROGRAMMIST-1S | Программист 1С | REMOTE | MEDIUM | тематика удалённого программиста 1С / специалиста 1С по России | service intent + landing/content themes; cold RSY main path | Россия candidate; Новосибирск / область exclusion candidate | CHECK_REQUIRED | FUTURE_SEPARATE / METRICA_AUDIENCE_CHECK_REQUIRED | CHECK_REQUIRED | SAFE UNKNOWN / DIRECT_CONFIRMATION_REQUIRED | CANDIDATE_FOR_REVIEW / NOT_A_DIRECT_SETTING |
+| 02-REMOTE-SOPROVOZHDENIE-1S | Сопровождение 1С / техподдержка / ошибки 1С | REMOTE | HIGH | тематика удалённого сопровождения 1С, ошибок, техподдержки рабочей базы | service intent + landing/content themes; cold RSY main path | Россия candidate; Новосибирск / область exclusion candidate | CHECK_REQUIRED | FUTURE_SEPARATE / METRICA_AUDIENCE_CHECK_REQUIRED | CHECK_REQUIRED | SAFE UNKNOWN / DIRECT_CONFIRMATION_REQUIRED | CANDIDATE_FOR_REVIEW / NOT_A_DIRECT_SETTING |
+| 03-REMOTE-DORABOTKA-1S | Доработка / разработка 1С | REMOTE | MEDIUM | тематика удалённой доработки/разработки 1С как услуги | service intent + landing/content themes; cold RSY main path | Россия candidate; Новосибирск / область exclusion candidate | CHECK_REQUIRED | FUTURE_SEPARATE / METRICA_AUDIENCE_CHECK_REQUIRED | CHECK_REQUIRED | SAFE UNKNOWN / DIRECT_CONFIRMATION_REQUIRED | CANDIDATE_FOR_REVIEW / NOT_A_DIRECT_SETTING |
+| 04-REMOTE-INTEGRACII-1S | Интеграции 1С | REMOTE | MEDIUM | тематика интеграций 1С как услуги; избегать DIY «как интегрировать» | service intent + landing/content themes; cold RSY main path | Россия candidate; Новосибирск / область exclusion candidate | CHECK_REQUIRED | FUTURE_SEPARATE / METRICA_AUDIENCE_CHECK_REQUIRED | CHECK_REQUIRED | SAFE UNKNOWN / DIRECT_CONFIRMATION_REQUIRED | CANDIDATE_FOR_REVIEW / NOT_A_DIRECT_SETTING |
+| 05-REMOTE-MARKIROVKA-CHESTNY-ZNAK | Маркировка / Честный знак | REMOTE | MEDIUM | тематика удалённой настройки Честного знака / маркировки в 1С как услуги | service intent + landing/content themes; cold RSY main path | Россия candidate; Новосибирск / область exclusion candidate | CHECK_REQUIRED | FUTURE_SEPARATE / METRICA_AUDIENCE_CHECK_REQUIRED | CHECK_REQUIRED | SAFE UNKNOWN / DIRECT_CONFIRMATION_REQUIRED | CANDIDATE_FOR_REVIEW / NOT_A_DIRECT_SETTING |
+
+Exact Direct Networks fields remain **CHECK_REQUIRED**.
