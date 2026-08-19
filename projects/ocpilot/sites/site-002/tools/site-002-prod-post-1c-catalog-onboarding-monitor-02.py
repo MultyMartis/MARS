@@ -91,7 +91,28 @@ ONBOARDED_CATEGORY_PATHS = {
     "tehnologicheskoe-oborudovanie/teplovoe/grili-kontaktnye",
     "tehnologicheskoe-oborudovanie/teplovoe/risovarki",
     "tehnologicheskoe-oborudovanie/teplovoe/vodonagrevateli",
+    # Root-level pretty URL equivalents (Wave C2 route migration semantics)
+    "nejtralnoe-oborudovanie/konditerskiy-inventar",
+    "nejtralnoe-oborudovanie/konditerskiy-inventar/formy-konditerskie",
+    "nejtralnoe-oborudovanie/shkafy-i-lari/lari",
+    "nejtralnoe-oborudovanie/shkafy-i-lari/lari/proizvodstvennye-lari",
+    "nejtralnoe-oborudovanie/shkafy-i-lari/lari/skladskie-lari",
+    "nejtralnoe-oborudovanie/shkafy-i-lari/shkafy-dlya-hleba",
+    "nejtralnoe-oborudovanie/stellazhi/stellazhi-premium-3/stellazhi-premium-3-vysota-1600",
+    "nejtralnoe-oborudovanie/stellazhi/stellazhi-premium/stellazhi-premium-vysota-1600",
+    "nejtralnoe-oborudovanie/stellazhi/stellazhi-standart/stellazhi-standart-vysota-1600",
+    "tehnologicheskoe-oborudovanie",
+    "tehnologicheskoe-oborudovanie/posuda-i-inventar",
+    "holodilnoe-oborudovanie",
+    "hlebopekarnoe-oborudovanie",
+    "assum",
+    "brands/assum",
 }
+
+ROUTE_CHURN_FIXTURE_BASELINE = Path(
+    r"X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\deployments"
+    r"\SITE-002-PROD-POST-1C-CATALOG-ONBOARDING-MONITOR-01\current\sitemap-current-urls.json"
+)
 
 TECHNICAL_QUERY_PATTERNS = (
     r"[?&]sort=",
@@ -348,6 +369,132 @@ def url_path_key(url: str) -> str:
     return "/".join(path_parts(url))
 
 
+def semantic_path_key(url: str) -> str:
+    """Canonical path key for route-migration-aware sitemap comparison."""
+    parts = path_parts(url)
+    if not parts:
+        return ""
+    if parts[0] == "katalog" and len(parts) > 1:
+        return "/".join(parts[1:])
+    if parts[0] == "brands" and len(parts) > 1:
+        return "/".join(parts[1:])
+    return "/".join(parts)
+
+
+def path_key_aliases(path_key: str) -> set[str]:
+    aliases = {path_key}
+    if path_key.startswith("katalog/"):
+        aliases.add(path_key[len("katalog/"):])
+    else:
+        aliases.add(f"katalog/{path_key}")
+    if path_key.startswith("brands/"):
+        aliases.add(path_key[len("brands/"):])
+    else:
+        aliases.add(f"brands/{path_key}")
+    return aliases
+
+
+def is_onboarded_path(path_key: str) -> bool:
+    return bool(path_key_aliases(path_key) & ONBOARDED_CATEGORY_PATHS)
+
+
+def route_migration_type(removed_url: str) -> str:
+    parts = path_parts(removed_url)
+    if parts and parts[0] == "katalog":
+        return "katalog_to_root"
+    if parts and parts[0] == "brands":
+        return "brands_to_root"
+    return "route_swap"
+
+
+def is_route_migration_pair(removed_url: str, added_url: str) -> bool:
+    return (
+        semantic_path_key(removed_url) == semantic_path_key(added_url)
+        and normalize_url(removed_url) != normalize_url(added_url)
+    )
+
+
+def apply_route_migration_preview(url: str) -> str:
+    """Preview URL after known /katalog/ or /brands/ prefix strip (fixture helper)."""
+    parsed = urllib.parse.urlparse(url)
+    parts = path_parts(url)
+    if parts and parts[0] == "katalog" and len(parts) > 1:
+        new_path = "/" + "/".join(parts[1:])
+    elif parts and parts[0] == "brands" and len(parts) > 1:
+        new_path = "/" + "/".join(parts[1:])
+    else:
+        new_path = parsed.path.rstrip("/") or "/"
+    return urllib.parse.urlunparse((parsed.scheme, parsed.netloc, new_path, "", "", ""))
+
+
+def compute_semantic_delta(baseline: list[str], current: list[str]) -> dict[str, Any]:
+    base_set = set(baseline)
+    curr_set = set(current)
+    exact_added = sorted(curr_set - base_set)
+    exact_removed = sorted(base_set - curr_set)
+    exact_unchanged = len(base_set & curr_set)
+
+    base_sem: dict[str, list[str]] = defaultdict(list)
+    for url in baseline:
+        base_sem[semantic_path_key(url)].append(url)
+    curr_sem: dict[str, list[str]] = defaultdict(list)
+    for url in current:
+        curr_sem[semantic_path_key(url)].append(url)
+
+    sem_base = set(base_sem)
+    sem_curr = set(curr_sem)
+    semantic_added_keys = sorted(sem_curr - sem_base)
+    semantic_removed_keys = sorted(sem_base - sem_curr)
+    semantic_unchanged_keys = sem_base & sem_curr
+
+    migration_pairs: list[dict[str, str]] = []
+    migration_added_urls: set[str] = set()
+    migration_removed_urls: set[str] = set()
+    for sem_key in semantic_unchanged_keys:
+        removed_candidates = [u for u in exact_removed if semantic_path_key(u) == sem_key]
+        added_candidates = [u for u in exact_added if semantic_path_key(u) == sem_key]
+        for removed_url in removed_candidates:
+            for added_url in added_candidates:
+                if is_route_migration_pair(removed_url, added_url):
+                    migration_pairs.append({
+                        "semantic_key": sem_key,
+                        "removed_url": removed_url,
+                        "added_url": added_url,
+                        "migration_type": route_migration_type(removed_url),
+                    })
+                    migration_removed_urls.add(removed_url)
+                    migration_added_urls.add(added_url)
+
+    genuine_semantic_added = [
+        url for key in semantic_added_keys for url in curr_sem[key]
+    ]
+    genuine_semantic_removed = [
+        url for key in semantic_removed_keys for url in base_sem[key]
+    ]
+
+    return {
+        "exact_added": exact_added,
+        "exact_removed": exact_removed,
+        "exact_added_count": len(exact_added),
+        "exact_removed_count": len(exact_removed),
+        "exact_unchanged_count": exact_unchanged,
+        "semantic_added_count": len(semantic_added_keys),
+        "semantic_removed_count": len(semantic_removed_keys),
+        "semantic_unchanged_count": len(semantic_unchanged_keys),
+        "semantic_net_delta": len(current) - len(baseline),
+        "route_migration_pair_count": len(migration_pairs),
+        "route_migration_added_url_count": len(migration_added_urls),
+        "route_migration_removed_url_count": len(migration_removed_urls),
+        "route_migration_pairs": migration_pairs,
+        "route_migration_pairs_sample": migration_pairs[:100],
+        "route_migration_pairs_truncated": len(migration_pairs) > 100,
+        "genuine_semantic_added_urls": genuine_semantic_added,
+        "genuine_semantic_removed_urls": genuine_semantic_removed,
+        "genuine_semantic_added_count": len(genuine_semantic_added),
+        "genuine_semantic_removed_count": len(genuine_semantic_removed),
+    }
+
+
 def is_product_pdp_path(url: str) -> bool:
     parts = path_parts(url)
     return len(parts) >= 5 and parts[0] == "katalog"
@@ -555,7 +702,12 @@ def classify_monitor_run(
     hygiene_flags_count: int,
     sitemap_fetch_ok: bool,
     parse_ok: bool,
+    semantic_added_count: int | None = None,
+    semantic_removed_count: int | None = None,
+    route_migration_pair_count: int = 0,
 ) -> tuple[str, str]:
+    semantic_added = added_count if semantic_added_count is None else semantic_added_count
+    semantic_removed = removed_count if semantic_removed_count is None else semantic_removed_count
     if (
         monitor_status != "success"
         or not sitemap_fetch_ok
@@ -577,10 +729,25 @@ def classify_monitor_run(
             "ONBOARDING_REQUIRED",
             "Review category-onboarding-needs and plan SITE-002 onboarding charter.",
         )
-    if added_count > 0 or removed_count > 0 or hygiene_flags_count > 0:
+    if semantic_added > 0 or semantic_removed > 0 or hygiene_flags_count > 0:
+        if (
+            route_migration_pair_count > 0
+            and semantic_added == 0
+            and semantic_removed == 0
+            and hygiene_flags_count == 0
+        ):
+            return (
+                "ROUTE_NORMALIZATION_REVIEW",
+                "Exact URL churn is route migration only; review SEO redirects before baseline refresh.",
+            )
         return (
             "HYGIENE_REVIEW_REQUIRED",
             "Review added/removed URL lists and hygiene flags; no onboarding charter required yet.",
+        )
+    if added_count > 0 or removed_count > 0:
+        return (
+            "ROUTE_NORMALIZATION_REVIEW",
+            "Exact URL churn with stable semantic delta; review route migration before baseline refresh.",
         )
     return (
         "NO_ACTION_REQUIRED",
@@ -697,15 +864,26 @@ def find_exact_duplicates(urls: list[str]) -> list[dict[str, str]]:
     return [{"url": u, "count": str(c)} for u, c in sorted(counts.items()) if c > 1]
 
 
-def classify_delta_scale(added: int, removed: int, baseline: int) -> str:
-    if added == 0 and removed == 0:
-        return "NO_CHANGE"
-    if removed > 0 and added == 0:
+def classify_delta_scale(
+    added: int,
+    removed: int,
+    baseline: int,
+    *,
+    semantic_added: int | None = None,
+    semantic_removed: int | None = None,
+) -> str:
+    sa = added if semantic_added is None else semantic_added
+    sr = removed if semantic_removed is None else semantic_removed
+    if sa == 0 and sr == 0:
+        if added == 0 and removed == 0:
+            return "NO_CHANGE"
+        return "ROUTE_NORMALIZATION_REVIEW"
+    if sr > 0 and sa == 0:
         return "SHRINKAGE_REVIEW"
-    growth_pct = (added / baseline * 100) if baseline else 0
-    if added <= 80 and removed <= 5:
+    growth_pct = (sa / baseline * 100) if baseline else 0
+    if sa <= 80 and sr <= 5:
         return "SMALL_EXPECTED_GROWTH"
-    if growth_pct <= 15 and removed <= 10:
+    if growth_pct <= 15 and sr <= 10:
         return "LARGE_EXPECTED_GROWTH"
     if growth_pct > 25:
         return "SUSPICIOUS_GROWTH"
@@ -878,14 +1056,20 @@ def phase2_current() -> tuple[list[str], dict[str, Any], str, str]:
 
 def phase3_delta(baseline: list[str], current: list[str]) -> dict[str, Any]:
     print("Phase 3: sitemap delta...")
-    base_set = set(baseline)
-    curr_set = set(current)
-    added = sorted(curr_set - base_set)
-    removed = sorted(base_set - curr_set)
-    unchanged_count = len(base_set & curr_set)
+    semantic = compute_semantic_delta(baseline, current)
+    added = semantic["exact_added"]
+    removed = semantic["exact_removed"]
+    unchanged_count = semantic["exact_unchanged_count"]
     exact_dups = find_exact_duplicates(current)
     norm_dups = find_normalized_duplicates(current)
-    scale = classify_delta_scale(len(added), len(removed), len(baseline))
+    scale_exact = classify_delta_scale(len(added), len(removed), len(baseline))
+    scale = classify_delta_scale(
+        len(added),
+        len(removed),
+        len(baseline),
+        semantic_added=semantic["semantic_added_count"],
+        semantic_removed=semantic["semantic_removed_count"],
+    )
     summary = {
         "baseline_count": len(baseline),
         "current_count": len(current),
@@ -895,6 +1079,16 @@ def phase3_delta(baseline: list[str], current: list[str]) -> dict[str, Any]:
         "exact_duplicate_count": len(exact_dups),
         "normalized_duplicate_groups": len(norm_dups),
         "delta_scale": scale,
+        "delta_scale_exact": scale_exact,
+        "semantic_added_count": semantic["semantic_added_count"],
+        "semantic_removed_count": semantic["semantic_removed_count"],
+        "semantic_unchanged_count": semantic["semantic_unchanged_count"],
+        "semantic_net_delta": semantic["semantic_net_delta"],
+        "route_migration_pair_count": semantic["route_migration_pair_count"],
+        "route_migration_added_url_count": semantic["route_migration_added_url_count"],
+        "route_migration_removed_url_count": semantic["route_migration_removed_url_count"],
+        "genuine_semantic_added_count": semantic["genuine_semantic_added_count"],
+        "genuine_semantic_removed_count": semantic["genuine_semantic_removed_count"],
         "captured_at": utc_now(),
     }
     write_csv(DEPLOYMENT_ROOT / "delta" / "added.csv", [{"url": u} for u in added], ["url"])
@@ -904,6 +1098,14 @@ def phase3_delta(baseline: list[str], current: list[str]) -> dict[str, Any]:
     write_csv(DEPLOYMENT_ROOT / "delta" / "duplicates.csv", exact_dups)
     write_csv(DEPLOYMENT_ROOT / "delta" / "normalized-duplicates.csv", norm_dups)
     write_json(DEPLOYMENT_ROOT / "delta" / "delta-summary.json", summary)
+    write_json(
+        DEPLOYMENT_ROOT / "delta" / "semantic-delta-summary.json",
+        {k: v for k, v in semantic.items() if k not in ("exact_added", "exact_removed", "route_migration_pairs")},
+    )
+    write_json(
+        DEPLOYMENT_ROOT / "delta" / "route-migration-pairs.json",
+        semantic["route_migration_pairs_sample"],
+    )
     write_text(
         DEPLOYMENT_ROOT / "delta" / "delta-summary.md",
         "\n".join([
@@ -911,13 +1113,15 @@ def phase3_delta(baseline: list[str], current: list[str]) -> dict[str, Any]:
             "",
             f"- Baseline: **{len(baseline)}**",
             f"- Current: **{len(current)}**",
-            f"- Added: **{len(added)}**",
-            f"- Removed: **{len(removed)}**",
-            f"- Unchanged: **{unchanged_count}**",
-            f"- Delta scale: **{scale}**",
+            f"- Exact added / removed: **{len(added)} / {len(removed)}**",
+            f"- Exact unchanged: **{unchanged_count}**",
+            f"- Semantic added / removed: **{semantic['semantic_added_count']} / {semantic['semantic_removed_count']}**",
+            f"- Route migration pairs: **{semantic['route_migration_pair_count']}**",
+            f"- Delta scale (semantic): **{scale}**",
+            f"- Delta scale (exact): **{scale_exact}**",
         ]) + "\n",
     )
-    return {**summary, "added": added, "removed": removed}
+    return {**summary, "added": added, "removed": removed, **semantic}
 
 
 def crawl_row(url: str) -> dict[str, Any]:
@@ -987,21 +1191,27 @@ def write_classification(rows: list[dict[str, Any]], prefix: str, title: str) ->
     write_text(DEPLOYMENT_ROOT / "classification" / f"{prefix}-url-classification.md", "\n".join(lines) + "\n")
 
 
-def phase5_category_onboarding(added_rows: list[dict[str, Any]], current_urls: list[str]) -> list[dict[str, Any]]:
+def phase5_category_onboarding(
+    added_rows: list[dict[str, Any]],
+    current_urls: list[str],
+    baseline_urls: list[str] | None = None,
+) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     print("Phase 5: category onboarding needs...")
     needs: list[dict[str, Any]] = []
+    raw_route_migration_skipped = 0
     category_types = {"CATEGORY_PLP", "CATEGORY_HUB", "LEGACY_HUB"}
+    baseline_sem = {semantic_path_key(u) for u in (baseline_urls or [])}
     titles_by_branch: dict[str, list[str]] = defaultdict(list)
     descs_by_branch: dict[str, list[str]] = defaultdict(list)
 
     for row in added_rows:
         if row.get("page_type") not in category_types:
             continue
-        branch = url_path_key(row["url"])
         titles_by_branch[row.get("branch", "")].append(row.get("title", ""))
         descs_by_branch[row.get("branch", "")].append(row.get("meta_description", ""))
 
     def assess_row(row: dict[str, Any], from_added: bool) -> None:
+        nonlocal raw_route_migration_skipped
         if row.get("page_type") not in category_types:
             return
         if row.get("http_status") != 200 or not row.get("indexable"):
@@ -1011,6 +1221,10 @@ def phase5_category_onboarding(added_rows: list[dict[str, Any]], current_urls: l
         desc = row.get("meta_description", "")
         desc_len = len(desc)
         path_key = url_path_key(row["url"])
+        sem_key = semantic_path_key(row["url"])
+        route_migrated = from_added and sem_key in baseline_sem
+        if route_migrated and not is_onboarded_path(path_key):
+            raw_route_migration_skipped += 1
         if row.get("forbidden_bzpm_count", 0) > 0:
             issues.append("forbidden brand БЗПМ")
             priority = "P1 critical"
@@ -1020,10 +1234,13 @@ def phase5_category_onboarding(added_rows: list[dict[str, Any]], current_urls: l
         elif desc_len < 90:
             issues.append(f"weak description ({desc_len} chars)")
             priority = "P2 onboarding" if priority != "P1 critical" else priority
-        if path_key not in ONBOARDED_CATEGORY_PATHS and from_added:
+        if from_added and not route_migrated and not is_onboarded_path(path_key):
             issues.append("newly added category branch not documented")
             if priority == "P3 monitor":
                 priority = "P2 onboarding"
+        elif from_added and route_migrated:
+            if not issues:
+                return
         title = row.get("title", "")
         branch = row.get("branch", "")
         if title and titles_by_branch.get(branch, []).count(title) > 1:
@@ -1049,11 +1266,17 @@ def phase5_category_onboarding(added_rows: list[dict[str, Any]], current_urls: l
             "suggested_copy_seed": "",
             "authority_guess": "ADMIN_CATEGORY",
             "from_added_delta": from_added,
+            "route_migration_suppressed": route_migrated,
         })
 
     for row in added_rows:
         assess_row(row, from_added=True)
 
+    stats = {
+        "onboarding_needs_count": len(needs),
+        "raw_route_migration_skipped_count": raw_route_migration_skipped,
+        "semantic_onboarding_needs_count": len(needs),
+    }
     write_csv(DEPLOYMENT_ROOT / "quality" / "category-onboarding-needs.csv", needs)
     write_json(DEPLOYMENT_ROOT / "quality" / "category-onboarding-needs.json", needs)
     write_text(
@@ -1061,12 +1284,13 @@ def phase5_category_onboarding(added_rows: list[dict[str, Any]], current_urls: l
         "\n".join([
             "# Category onboarding needs",
             "",
-            f"- Items: **{len(needs)}**",
+            f"- Items (semantic): **{len(needs)}**",
+            f"- Route-migration suppressed (raw): **{raw_route_migration_skipped}**",
             f"- P1: **{sum(1 for n in needs if n['priority'] == 'P1 critical')}**",
             f"- P2: **{sum(1 for n in needs if n['priority'] == 'P2 onboarding')}**",
         ]) + "\n",
     )
-    return needs
+    return needs, stats
 
 
 def phase6_product_pdp_sanity(added_rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -1442,6 +1666,15 @@ def export_scheduled_artifacts(
         "added_count": len(added),
         "removed_count": len(removed),
         "delta_scale": delta.get("delta_scale"),
+        "delta_scale_exact": delta.get("delta_scale_exact"),
+        "semantic_added_count": delta.get("semantic_added_count"),
+        "semantic_removed_count": delta.get("semantic_removed_count"),
+        "semantic_net_delta": delta.get("semantic_net_delta"),
+        "route_migration_pair_count": delta.get("route_migration_pair_count"),
+        "route_migration_added_url_count": delta.get("route_migration_added_url_count"),
+        "route_migration_removed_url_count": delta.get("route_migration_removed_url_count"),
+        "genuine_semantic_added_count": delta.get("genuine_semantic_added_count"),
+        "genuine_semantic_removed_count": delta.get("genuine_semantic_removed_count"),
         "added_page_types": dict(Counter(r.get("page_type", "unknown") for r in added_rows)),
         "captured_at": utc_now(),
     }
@@ -1453,9 +1686,11 @@ def export_scheduled_artifacts(
             "",
             f"- Baseline URLs: **{changed_summary['baseline_url_count']}**",
             f"- Current URLs: **{changed_summary['current_url_count']}**",
-            f"- Added: **{changed_summary['added_count']}**",
-            f"- Removed: **{changed_summary['removed_count']}**",
-            f"- Delta scale: **{changed_summary['delta_scale']}**",
+            f"- Added / removed (exact): **{changed_summary['added_count']} / {changed_summary['removed_count']}**",
+            f"- Semantic added / removed: **{changed_summary['semantic_added_count']} / {changed_summary['semantic_removed_count']}**",
+            f"- Route migration pairs: **{changed_summary['route_migration_pair_count']}**",
+            f"- Delta scale (semantic): **{changed_summary['delta_scale']}**",
+            f"- Delta scale (exact): **{changed_summary['delta_scale_exact']}**",
         ]) + "\n",
     )
 
@@ -1491,6 +1726,11 @@ def export_scheduled_artifacts(
         "next_action": next_action,
         "added_count": len(added),
         "removed_count": len(removed),
+        "semantic_added_count": delta.get("semantic_added_count"),
+        "semantic_removed_count": delta.get("semantic_removed_count"),
+        "route_migration_pair_count": delta.get("route_migration_pair_count"),
+        "delta_scale": delta.get("delta_scale"),
+        "delta_scale_exact": delta.get("delta_scale_exact"),
         "onboarding_needs_count": len(onboarding_needs),
         "strict_garbage_hits_count": len(garbage_hits),
         "hygiene_flags_count": len(hygiene_rows),
@@ -1540,6 +1780,11 @@ def export_scheduled_artifacts(
         "current_url_count": len(current_urls),
         "added_count": len(added),
         "removed_count": len(removed),
+        "semantic_added_count": delta.get("semantic_added_count"),
+        "semantic_removed_count": delta.get("semantic_removed_count"),
+        "route_migration_pair_count": delta.get("route_migration_pair_count"),
+        "delta_scale": delta.get("delta_scale"),
+        "delta_scale_exact": delta.get("delta_scale_exact"),
         "onboarding_needs_count": len(onboarding_needs),
         "hygiene_flags_count": len(hygiene_rows),
         "strict_garbage_hits_count": len(garbage_hits),
@@ -1559,12 +1804,129 @@ def export_scheduled_artifacts(
             f"- **Next action:** {next_action}",
             f"- Duration: **{run_summary['duration_human']}** ({run_summary['duration_seconds']}s)",
             f"- Baseline → current: **{len(baseline_urls)} → {len(current_urls)}**",
-            f"- Added / removed: **{len(added)} / {len(removed)}**",
+            f"- Added / removed (exact): **{len(added)} / {len(removed)}**",
+            f"- Semantic added / removed: **{delta.get('semantic_added_count')} / {delta.get('semantic_removed_count')}**",
+            f"- Route migration pairs: **{delta.get('route_migration_pair_count')}**",
             f"- Strict garbage hits: **{len(garbage_hits)}**",
             f"- Onboarding needs: **{len(onboarding_needs)}**",
         ]) + "\n",
     )
     return run_summary
+
+
+def run_route_churn_fixture_regression() -> dict[str, Any]:
+    """Offline regression for baseline 1879 vs route-migrated current shape."""
+    if not ROUTE_CHURN_FIXTURE_BASELINE.exists():
+        return {
+            "status": "skipped",
+            "reason": f"Baseline fixture missing: {ROUTE_CHURN_FIXTURE_BASELINE}",
+            "passed": False,
+        }
+
+    ensure_layout()
+    baseline_urls = sorted(set(json.loads(ROUTE_CHURN_FIXTURE_BASELINE.read_text(encoding="utf-8"))))
+    current_urls = sorted({
+        apply_route_migration_preview(url) for url in baseline_urls
+    })
+    # Simulate net +8 growth and a genuinely new branch not in baseline semantics.
+    current_urls.extend([
+        "https://bzpm.ru/barnoe-oborudovanie",
+        "https://bzpm.ru/barnoe-oborudovanie/podkategoriya-demo",
+        "https://bzpm.ru/upakovochnoe-oborudovanie",
+        "https://bzpm.ru/new-info-page-wave-c2-fixture",
+        "https://bzpm.ru/extra-a",
+        "https://bzpm.ru/extra-b",
+        "https://bzpm.ru/extra-c",
+        "https://bzpm.ru/extra-d",
+    ])
+    current_urls = sorted(set(current_urls))
+
+    semantic = compute_semantic_delta(baseline_urls, current_urls)
+    scale_exact = classify_delta_scale(
+        semantic["exact_added_count"],
+        semantic["exact_removed_count"],
+        len(baseline_urls),
+    )
+    scale_semantic = classify_delta_scale(
+        semantic["exact_added_count"],
+        semantic["exact_removed_count"],
+        len(baseline_urls),
+        semantic_added=semantic["semantic_added_count"],
+        semantic_removed=semantic["semantic_removed_count"],
+    )
+
+    synthetic_category_rows = [
+        {
+            "url": "https://bzpm.ru/barnoe-oborudovanie",
+            "page_type": "CATEGORY_PLP",
+            "http_status": 200,
+            "indexable": True,
+            "meta_description": "",
+            "title": "Барное оборудование",
+            "branch": "barnoe-oborudovanie",
+            "forbidden_bzpm_count": 0,
+        },
+        {
+            "url": "https://bzpm.ru/katalog/barnoe-oborudovanie",
+            "page_type": "CATEGORY_PLP",
+            "http_status": 200,
+            "indexable": True,
+            "meta_description": "legacy",
+            "title": "Legacy barnoe",
+            "branch": "katalog/barnoe-oborudovanie",
+            "forbidden_bzpm_count": 0,
+        },
+    ]
+    needs, onboarding_stats = phase5_category_onboarding(
+        synthetic_category_rows,
+        current_urls,
+        baseline_urls,
+    )
+    classification, _ = classify_monitor_run(
+        monitor_status="success",
+        added_count=semantic["exact_added_count"],
+        removed_count=semantic["exact_removed_count"],
+        onboarding_needs_count=len(needs),
+        strict_garbage_hits_count=0,
+        brand_violations=0,
+        hygiene_flags_count=0,
+        sitemap_fetch_ok=True,
+        parse_ok=True,
+        semantic_added_count=semantic["semantic_added_count"],
+        semantic_removed_count=semantic["semantic_removed_count"],
+        route_migration_pair_count=semantic["route_migration_pair_count"],
+    )
+
+    checks = {
+        "baseline_count_is_1879": len(baseline_urls) == 1879,
+        "exact_churn_high": semantic["exact_added_count"] >= 1500,
+        "route_migration_pairs_present": semantic["route_migration_pair_count"] >= 100,
+        "semantic_churn_low_vs_exact": semantic["semantic_added_count"] <= 20,
+        "delta_scale_exact_suspicious": scale_exact == "SUSPICIOUS_GROWTH",
+        "delta_scale_semantic_not_suspicious": scale_semantic != "SUSPICIOUS_GROWTH",
+        "classification_not_no_action_when_onboarding": classification != "NO_ACTION_REQUIRED",
+        "onboarding_inflation_reduced": len(needs) <= 5,
+        "route_migration_suppressed": onboarding_stats["raw_route_migration_skipped_count"] >= 1,
+    }
+    passed = all(checks.values())
+    return {
+        "fixture": "wave-c2-route-churn-1879-1887",
+        "baseline_count": len(baseline_urls),
+        "current_count": len(current_urls),
+        "exact_added_count": semantic["exact_added_count"],
+        "exact_removed_count": semantic["exact_removed_count"],
+        "semantic_added_count": semantic["semantic_added_count"],
+        "semantic_removed_count": semantic["semantic_removed_count"],
+        "route_migration_pair_count": semantic["route_migration_pair_count"],
+        "delta_scale_exact": scale_exact,
+        "delta_scale_semantic": scale_semantic,
+        "classification": classification,
+        "onboarding_needs_count": len(needs),
+        "raw_route_migration_skipped_count": onboarding_stats["raw_route_migration_skipped_count"],
+        "checks": checks,
+        "passed": passed,
+        "captured_at": utc_now(),
+    }
 
 
 def main() -> int:
@@ -1582,10 +1944,15 @@ def main() -> int:
         help="Run local garbage marker fixture regression only (no HTTP)",
     )
     parser.add_argument(
+        "--fixture-route-churn-test",
+        action="store_true",
+        help="Run offline route-churn regression fixture (baseline 1879 vs migrated current)",
+    )
+    parser.add_argument(
         "--fixture-output",
         type=Path,
         default=None,
-        help="Optional JSON output path for --fixture-garbage-test",
+        help="Optional JSON output path for --fixture-garbage-test or --fixture-route-churn-test",
     )
     args = parser.parse_args()
 
@@ -1597,6 +1964,17 @@ def main() -> int:
         write_json(out, payload)
         print(json.dumps(payload, ensure_ascii=False, indent=2))
         return 0 if payload["failed"] == 0 else 1
+
+    if args.fixture_route_churn_test:
+        payload = run_route_churn_fixture_regression()
+        out = args.fixture_output or (
+            DEPLOYMENT_ROOT / "verification" / "route-churn-fixture-results.json"
+        )
+        write_json(out, payload)
+        print(json.dumps(payload, ensure_ascii=False, indent=2))
+        if payload.get("status") == "skipped":
+            return 2
+        return 0 if payload.get("passed") else 1
 
     started_mono = time.monotonic()
     started_at = utc_now()
@@ -1636,7 +2014,9 @@ def main() -> int:
                 f"# Removed URL classification\n\n- Removed count: **{len(delta['removed'])}**\n",
             )
 
-        onboarding_needs = phase5_category_onboarding(added_rows, current_urls)
+        onboarding_needs, onboarding_stats = phase5_category_onboarding(
+            added_rows, current_urls, baseline_urls
+        )
         pdp_sanity = phase6_product_pdp_sanity(added_rows)
         garbage_hits = phase7_test_garbage_audit(added_rows, "added")
         if removed_rows:
@@ -1671,6 +2051,9 @@ def main() -> int:
             hygiene_flags_count=hygiene_flag_count,
             sitemap_fetch_ok=sitemap_fetch_ok,
             parse_ok=parse_ok,
+            semantic_added_count=delta.get("semantic_added_count"),
+            semantic_removed_count=delta.get("semantic_removed_count"),
+            route_migration_pair_count=delta.get("route_migration_pair_count", 0),
         )
 
         # Legacy loose markers would have flagged demo asset paths and «Пример эксплуатации»
@@ -1690,7 +2073,12 @@ def main() -> int:
             "added_count": delta.get("added_count"),
             "removed_count": delta.get("removed_count"),
             "delta_scale": delta.get("delta_scale"),
+            "delta_scale_exact": delta.get("delta_scale_exact"),
             "onboarding_needs_count": len(onboarding_needs),
+            "raw_route_migration_skipped_count": onboarding_stats.get("raw_route_migration_skipped_count", 0),
+            "semantic_added_count": delta.get("semantic_added_count"),
+            "semantic_removed_count": delta.get("semantic_removed_count"),
+            "route_migration_pair_count": delta.get("route_migration_pair_count"),
             "pdp_sanity_fail": sum(1 for r in pdp_sanity if r.get("status") == "FAIL"),
             "garbage_hits": len(garbage_hits),
             "strict_garbage_hits_count": len(garbage_hits),

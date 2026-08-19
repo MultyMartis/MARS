@@ -168,8 +168,9 @@ function Finish-Summary {
     if (-not $summary.status -or $summary.status -eq 'pending') {
         $summary.status = if ($ExitCode -eq 0) { 'success' } else { 'failed' }
     }
+    $runnerDefaultClassification = if ($ExitCode -eq 0) { 'NO_ACTION_REQUIRED' } else { 'FAILURE_REVIEW_REQUIRED' }
     if (-not $summary.classification) {
-        $summary.classification = if ($ExitCode -eq 0) { 'NO_ACTION_REQUIRED' } else { 'FAILURE_REVIEW_REQUIRED' }
+        $summary.classification = $runnerDefaultClassification
     }
     if (-not $summary.next_action) {
         $summary.next_action = if ($ExitCode -eq 0) {
@@ -179,17 +180,34 @@ function Finish-Summary {
         }
     }
 
-  # Merge monitor-written run-summary if present (richer fields)
+    # Merge monitor-written run-summary if present (richer fields).
+    # monitor-classification.json is authoritative for final classification.
     $monitorSummaryPath = Join-Path $runDir 'run-summary.json'
+    $monitorClassificationPath = Join-Path $runDir 'monitor-classification.json'
     $merged = @{}
     foreach ($key in $summary.Keys) { $merged[$key] = $summary[$key] }
+    $monitorClassification = $null
+    if (Test-Path -LiteralPath $monitorClassificationPath) {
+        try {
+            $monitorClassification = Get-Content -LiteralPath $monitorClassificationPath -Raw -Encoding UTF8 | ConvertFrom-Json
+        } catch {
+            $merged['monitor_classification_merge_error'] = $_.Exception.Message
+        }
+    }
     if (Test-Path -LiteralPath $monitorSummaryPath) {
         try {
             $monitorSummary = Get-Content -LiteralPath $monitorSummaryPath -Raw -Encoding UTF8 | ConvertFrom-Json
             $monitorSummary.PSObject.Properties | ForEach-Object {
                 $merged[$_.Name] = $_.Value
             }
-            foreach ($key in $summary.Keys) {
+            $runnerPreserveKeys = @(
+                'run_id', 'operation_id', 'runner_script', 'monitor_script', 'mode',
+                'production_url', 'repo_root', 'run_directory', 'started_at_local',
+                'timezone_id', 'timezone_display', 'python', 'monitor_script_exists',
+                'monitor_script_path_single_argument', 'exit_code', 'status',
+                'dry_run_sitemap_probe', 'error'
+            )
+            foreach ($key in $runnerPreserveKeys) {
                 if ($null -ne $summary[$key]) { $merged[$key] = $summary[$key] }
             }
             $merged['duration_seconds'] = [math]::Round($durationSeconds, 3)
@@ -198,6 +216,35 @@ function Finish-Summary {
         } catch {
             $merged['monitor_summary_merge_error'] = $_.Exception.Message
         }
+    }
+    if ($monitorClassification) {
+        $merged['monitor_classification'] = $monitorClassification.classification
+        $merged['final_classification'] = $monitorClassification.classification
+        $merged['classification'] = $monitorClassification.classification
+        $merged['classification_source'] = 'monitor-classification.json'
+        if ($monitorClassification.next_action) {
+            $merged['next_action'] = $monitorClassification.next_action
+        }
+        foreach ($field in @(
+                'onboarding_needs_count', 'strict_garbage_hits_count', 'hygiene_flags_count',
+                'brand_violations', 'added_count', 'removed_count', 'false_positive_suppressed_count'
+            )) {
+            if ($null -ne $monitorClassification.$field) {
+                $merged[$field] = $monitorClassification.$field
+            }
+        }
+        if ($summary.classification -and $summary.classification -ne $monitorClassification.classification) {
+            $merged['runner_default_classification'] = $summary.classification
+            $merged['classification_merge_warning'] = 'Runner default overwritten by monitor-classification.json'
+        }
+    } elseif ($merged.classification) {
+        $merged['final_classification'] = $merged.classification
+        $merged['classification_source'] = 'monitor-run-summary.json'
+    } else {
+        $merged['final_classification'] = $runnerDefaultClassification
+        $merged['classification'] = $runnerDefaultClassification
+        $merged['classification_source'] = 'runner-default'
+        $merged['runner_default_classification'] = $runnerDefaultClassification
     }
     Write-JsonFile -Path $summaryJsonPath -Data $merged
     $md = @(

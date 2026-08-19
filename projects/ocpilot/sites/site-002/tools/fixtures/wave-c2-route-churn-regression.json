@@ -1,0 +1,11 @@
+{
+  "fixture_id": "wave-c2-route-churn-1879-1887",
+  "description": "Regression fixture for SITE-002 baseline 1879 /katalog/ sitemap vs root pretty URL route migration.",
+  "baseline_artifact": "X:\\AI MARS STORAGE\\ocpilot\\project-sites\\site-002\\production\\deployments\\SITE-002-PROD-POST-1C-CATALOG-ONBOARDING-MONITOR-01\\current\\sitemap-current-urls.json",
+  "baseline_count_expected": 1879,
+  "current_count_latest_known": 1887,
+  "wave_c_exact_added": 1873,
+  "wave_c_exact_removed": 1865,
+  "wave_c_route_migration_pairs_min": 100,
+  "monitor_test_flag": "--fixture-route-churn-test"
+}
