@@ -33,6 +33,7 @@ Bounded Factory Source-of-Truth filesystem root. All Factory structured records 
 | Factory Project ID | Name | Path | Status |
 |--------------------|------|------|--------|
 | **FP-0002** | Shpigovsky.ru | [FP-0002-SHPIGOVSKY/](FP-0002-SHPIGOVSKY/) | Foundation material active; **not** catalog-enrolled — operator decision pending (Awareness Alignment 2026-06) |
+| **FP-0003** | OVERSEO (`overseo.ru`) | [FP-0003-OVERSEO/](FP-0003-OVERSEO/) | **PHASE 0B** — registered 2026-08-20; materials intake ready; **not** catalog-enrolled |
 
 ### Internal agent seeds (not `agents/registry.md` rows)
 
