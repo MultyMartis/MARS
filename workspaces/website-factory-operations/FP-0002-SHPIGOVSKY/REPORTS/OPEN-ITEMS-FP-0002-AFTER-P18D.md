@@ -1,55 +1,52 @@
-# OPEN-ITEMS — FP-0002 AFTER PROD-P18D
+# OPEN-ITEMS — FP-0002 AFTER PROD-P18D-FU01
 
-Statuses reflect P18D SMTP Verification + Activation (2026-08-19).
+Statuses reflect fresh runtime intake plus actual FU01 closeout on 2026-08-19.
 
-P18C built SMTP/forms/leads internals. P18C-FU01 exposed the Admin menu. P18C-FU02 added multi-recipient UX. **P18D** corrected Beget SMTP transport parameters (none→ssl on port 465), verified and activated production outbound mail, ran real form delivery QA. Do **not** reopen completed NS, `home`/`siteurl`, legal DEMO owner, indexing-control implementation, or lead-table schema.
-
-## DONE / ACCEPTED (this wave)
+## DONE / ACCEPTED
 
 | Item | Status |
 |------|--------|
-| Beget SMTP parameters verified from authoritative source | VERIFIED |
-| Config mismatch corrected: `encryption=none→ssl` on port 465 | CORRECTED |
-| SMTP transport test (p18d-smtp-correct-and-verify.php) | PASS |
-| SMTP state → VERIFIED/NOT ACTIVE | ACHIEVED |
-| Delivery activated (p18d-activate-delivery.php or Admin) | ACTIVATED |
-| SMTP state → VERIFIED/ACTIVE | ACHIEVED |
-| Temporary suppression MU: inert (defers to MailOps delivery_active=1) | VERIFIED |
-| MU retirement instructions issued | DONE |
-| Real form delivery QA (p18d-form-qa.php) | PASS |
-| Lead registry: QA lead persisted with MAIL_ACCEPTED status | VERIFIED |
-| Lead persistence independent of SMTP | VERIFIED |
-| Multiple-recipient routing: structurally ready; proven with configured recipients | VERIFIED |
-| Reply-To safe (visitor email only if valid; From never visitor) | VERIFIED |
-| SMTP secret never exposed in wave | VERIFIED |
-| Indexing CLOSED | VERIFIED |
-| Core `0.3.15-p18d` | DEPLOYED |
+| Olya/Admin editorial DB changes treated as current production truth | VERIFIED |
+| Fresh production file/code intake performed before mutation | VERIFIED |
+| SMTP transport mismatch corrected: `none -> ssl` on port `465` | CORRECTED |
+| SMTP test pass | VERIFIED |
+| SMTP state `VERIFIED / ACTIVE` | ACHIEVED |
+| Pre-cutover suppression MU physically removed | DONE |
+| Post-removal QA form/mail smoke | PASS |
+| Exact QA lead cleanup | DONE |
+| Indexing re-closed after fresh intake detected live `blog_public=1` | DONE |
+| Public `https://shpigovsky.ru/` currently serves WordPress | VERIFIED |
 
-## REMAINING operational sequence
+## Remaining operational sequence
 
 | # | Item | Status |
 |---|------|--------|
-| 1 | Remove MU file `fp02-pre-cutover-mail-suppression.php` from production server | **OPERATOR ACTION** — run p18d-retire-suppression-mu.php first to verify readiness |
-| 2 | Bind public `https://shpigovsky.ru/` to **this** WordPress origin (apex still may show Craftum CMS in some resolver paths) | OPEN — public-origin smoke |
-| 3 | Indexing open | **ONLY after Olya approval** or explicit operator command |
-| 4 | Sitemap submissions | AFTER indexing open — not automatic |
-| 5 | Final crawl | LAST |
+| 1 | Public-domain finalization | OPEN only if operator later sees a routing regression |
+| 2 | Olya indexing approval | REQUIRED before any opening |
+| 3 | Sitemap submissions | AFTER indexing opens |
+| 4 | Final crawl | LAST |
 
-## Intentionally retained
+## Open business decision
+
+| Item | Status |
+|------|--------|
+| Form lead retention days (`lead_retention_days=0`) | OPERATOR DECISION REQUIRED |
+
+## Intentionally preserved
 
 | Item | Until |
 |------|-------|
-| `blog_public=0` + WP origin robots `Disallow: /` | Olya / explicit operator indexing approval |
-| Temporary-host → final-domain 301 | after public apex stably serves WordPress |
-| Cookie page `#24` analytics DEMO copy | OPERATOR CONTENT REQUIRED |
-| Form lead retention days = 0 | OPERATOR DECISION REQUIRED |
-| Personal-data export/erase by **email** | implemented; phone-only leads = follow-up |
+| `blog_public=0` + `robots.txt` `Disallow: /` | Olya / explicit operator indexing approval |
+| Current Admin-managed recipients | changed only by operator/editor intent |
+| Current editorial/legal/services/specialists DB content | live production truth |
 
 ## Sequence now
 
-P18C foundation + P18C-FU01 menu + P18C-FU02 multi-recipient UX + P18D SMTP verified/active DONE  
-→ operator removes suppression MU (optional cleanup)  
-→ public-domain final smoke if still needed  
+P18C foundation  
+→ P18C-FU01 admin menu  
+→ P18C-FU02 recipient UX  
+→ P18D technical intent  
+→ **P18D-FU01 actual runtime closeout**  
 → Olya indexing approval  
 → sitemap submissions  
 → final crawl

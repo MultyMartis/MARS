@@ -1,0 +1,64 @@
+{
+  "ok": true,
+  "utc": "2026-08-19T10:13:25+00:00",
+  "home": "https://shpigovsky.ru",
+  "siteurl": "https://shpigovsky.ru",
+  "blog_public": 0,
+  "mail": {
+    "state": "verified_active",
+    "state_label": "VERIFIED / ACTIVE",
+    "is_complete": true,
+    "verified": 1,
+    "verified_at": "2026-08-19 10:13:19 UTC",
+    "delivery_active": 1,
+    "should_suppress": false,
+    "should_attempt_mail": true,
+    "smtp_host": "smtp.beget.com",
+    "smtp_port": 465,
+    "smtp_encryption": "ssl",
+    "smtp_auth": 1,
+    "smtp_username": "noreply@shpigovsky.ru",
+    "smtp_from_email": "noreply@shpigovsky.ru",
+    "smtp_from_name": "Шпиговский дом",
+    "password_configured": true,
+    "recipient_count": 2,
+    "recipient_labels": [
+      "Андрей Русецкий",
+      "Ольга Дягилева"
+    ],
+    "form_metrika_goal": "",
+    "lead_retention_days": 0,
+    "last_test_status": "ok",
+    "last_test_error_category": ""
+  },
+  "dashboard": {
+    "baseline_id": "FP-0002-PROD-BASELINE-2026-08-19-P18C-FU02",
+    "latest_wave": "P18C-FU02 Multiple recipients",
+    "meta": {
+      "baseline_id": "FP-0002-PROD-BASELINE-2026-08-19-P18C-FU02",
+      "latest_wave": "P18C-FU02 Multiple recipients",
+      "parity": "MATCH",
+      "verified_at": "2026-08-19 10:13 UTC",
+      "backup": "FRESH BEGET BACKUP CONFIRMED BY OPERATOR",
+      "git_sha": "16706398f03825b054ce75c56e8af48ec4349329",
+      "wave": "PROD-P15",
+      "state_note": "LIVE https://shpigovsky.ru; INDEXING CLOSED; SMTP CONFIGURED — VERIFICATION REQUIRED; MAIL SUPPRESSED; MULTI-RECIPIENT ADMIN UX",
+      "legacy_redirects": "7/7",
+      "cutover": "DONE",
+      "ssl": "ACTIVE",
+      "dns_ns": "DONE / Beget",
+      "smtp_sender": "noreply@shpigovsky.ru",
+      "indexing": "CLOSED — WAITING FOR OLYA APPROVAL",
+      "public_origin": "ПУБЛИЧНЫЙ https://shpigovsky.ru/ СЕЙЧАС ОТДАЁТ СТАРЫЙ САЙТ (Craftum) — привязка к WordPress ещё нужна",
+      "mail": "SMTP CONFIGURED — VERIFICATION REQUIRED",
+      "leads": "ACTIVE",
+      "metrika_form_goals": "CONFIGURABLE"
+    }
+  },
+  "lead_registry_active": true,
+  "pre_wp_mail": {
+    "has_filter": false,
+    "callbacks": []
+  },
+  "_exit_code": 0
+}

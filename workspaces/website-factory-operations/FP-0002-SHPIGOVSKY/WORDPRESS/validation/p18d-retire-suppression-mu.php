@@ -24,16 +24,14 @@ if ( ! class_exists( '\Shpigovsky\Core\Mail\MailOps' ) ) {
 	die( "[P18D] ERROR: MailOps class not found.\n" );
 }
 
-use Shpigovsky\Core\Mail\MailOps;
-
-$state = MailOps::state();
-$suppressed = MailOps::should_suppress();
+$state = \Shpigovsky\Core\Mail\MailOps::state();
+$suppressed = \Shpigovsky\Core\Mail\MailOps::should_suppress();
 
 echo "[P18D RETIRE-MU] Current SMTP state: " . $state . "\n";
 echo "[P18D RETIRE-MU] should_suppress(): " . ( $suppressed ? 'true (mail blocked)' : 'false (mail flows)' ) . "\n";
 echo "\n";
 
-if ( MailOps::STATE_VERIFIED_ACTIVE !== $state ) {
+if ( \Shpigovsky\Core\Mail\MailOps::STATE_VERIFIED_ACTIVE !== $state ) {
 	echo "[P18D RETIRE-MU] NOT READY: SMTP must be VERIFIED/ACTIVE before retiring suppression MU.\n";
 	exit( 1 );
 }

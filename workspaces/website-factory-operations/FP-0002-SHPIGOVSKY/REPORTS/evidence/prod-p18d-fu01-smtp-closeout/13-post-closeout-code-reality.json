@@ -1,0 +1,101 @@
+{
+  "files": {
+    "mu_pre_cutover": {
+      "exists": false,
+      "remote_path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/mu-plugins/fp02-pre-cutover-mail-suppression.php"
+    },
+    "mail_ops": {
+      "exists": true,
+      "remote_path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Mail/MailOps.php",
+      "bytes": 24670,
+      "sha256": "e0bdbe11a36099d32be53bd407de045b1b7bd610e7319dda224a4273a8e82471",
+      "head": "<?php\r\n/**\r\n * SMTP / form delivery configuration owner — PROD-P18C.\r\n *\r\n * Option names are allowlisted and must not contain smtp/password fragments\r\n * (see SiteSettings::prevent_secret_like_options). Nested keys may be technical.\r\n * The mailbox secret is never returned to Admin, REST, Dashboard, or logs.\r\n *\r\n * WordPress DB storage is not a dedicated secret manager.\r\n *\r\n * @package Shpigovsky_Core\r\n */\r\n\r\nnamespace Shpigovsky\\Core\\Mail;\r\n\r\nuse Shpigovsky\\Core\\Admin\\ActivityLog;\r\nuse Shpigovsky\\Core\\Contracts\\ModuleInterface;\r\nuse Shpigovsky\\Core\\ModuleRegistry;\r\n\r\nif ( ! defined( 'ABSPATH' ) ) {\r\n\texit;\r\n}\r\n\r\n/**\r\n * Canonical mail operations settings + readiness state.\r\n */\r\nfinal class MailOps implements ModuleInterface {\r\n\r\n\tpublic const OPTION_CONFIG = 'fp02_mail_ops';\r\n\tpublic const OPTION_AUTH   = 'fp02_mailbox_auth';\r\n\r\n\tpublic const STATE_NOT_CONFIGURED          = 'not_configured';\r\n\tpublic const STATE_CONFIGURED_NOT_VERIFIED = 'configured_not_verified';\r\n\tpublic const STATE_VERIFIED_READY          = 'verified_ready';\r\n\tpublic const STATE_VERIFIED_ACTIVE         = 'verified_active';\r\n\tpublic const STATE_ERROR                   = 'error';\r\n\r\n\tpublic const ENCRYPTION_N"
+    },
+    "smtp_transport": {
+      "exists": true,
+      "remote_path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Mail/SmtpTransport.php",
+      "bytes": 2303,
+      "sha256": "b436e33fa6eae7895c57363b5f75e770f0e8d974ea38e3ab0b92a54adceb96e2",
+      "head": "<?php\r\n/**\r\n * Single SMTP transport owner — PHPMailer via phpmailer_init.\r\n *\r\n * Do not install a competing SMTP plugin for FP-0002.\r\n *\r\n * @package Shpigovsky_Core\r\n */\r\n\r\nnamespace Shpigovsky\\Core\\Mail;\r\n\r\nuse Shpigovsky\\Core\\Contracts\\ModuleInterface;\r\nuse Shpigovsky\\Core\\ModuleRegistry;\r\n\r\nif ( ! defined( 'ABSPATH' ) ) {\r\n\texit;\r\n}\r\n\r\n/**\r\n * Configures PHPMailer from MailOps settings.\r\n */\r\nfinal class SmtpTransport implements ModuleInterface {\r\n\r\n\t/**\r\n\t * {@inheritdoc}\r\n\t */\r\n\tpublic static function id() {\r\n\t\treturn 'mail.smtp-transport';\r\n\t}\r\n\r\n\t/**\r\n\t * {@inheritdoc}\r\n\t */\r\n\tpublic static function is_enabled() {\r\n\t\treturn ModuleRegistry::is_enabled( self::id() );\r\n\t}\r\n\r\n\t/**\r\n\t * {@inheritdoc}\r\n\t */\r\n\tpublic static function register() {\r\n\t\tadd_action( 'phpmailer_init', array( __CLASS__, 'configure_phpmailer' ) );\r\n\t}\r\n\r\n\t/**\r\n\t * Apply stored SMTP settings to PHPMailer.\r\n\t *\r\n\t * @param \\PHPMailer\\PHPMailer\\PHPMailer $phpmailer Mailer.\r\n\t */\r\n\tpublic static function configure_phpmailer( $phpmailer ) {\r\n\t\tif ( ! is_object( $phpmailer ) || ! method_exists( $phpmailer, 'isSMTP' ) ) {\r\n\t\t\treturn;\r\n\t\t}\r\n\r\n\t\tif ( ! MailOps::is_complete() ) {\r\n\t\t\treturn;\r\n\t\t}\r\n\r\n\t\t$cfg = MailO"
+    },
+    "consultation_handler": {
+      "exists": true,
+      "remote_path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Forms/ConsultationHandler.php",
+      "bytes": 24890,
+      "sha256": "930e5694ddc341e814895a679f791c19421416277225bd0f78fb3d99cad5bb88",
+      "head": "<?php\r\n/**\r\n * Lead form AJAX handler — persist first, then optional wp_mail.\r\n *\r\n * @package Shpigovsky_Core\r\n */\r\n\r\nnamespace Shpigovsky\\Core\\Forms;\r\n\r\nuse Shpigovsky\\Core\\Contracts\\ModuleInterface;\r\nuse Shpigovsky\\Core\\Leads\\LeadRegistry;\r\nuse Shpigovsky\\Core\\Mail\\MailOps;\r\nuse Shpigovsky\\Core\\ModuleRegistry;\r\n\r\nif ( ! defined( 'ABSPATH' ) ) {\r\n\texit;\r\n}\r\n\r\n/**\r\n * Unified lead / consultation form submission handler (wp_ajax).\r\n *\r\n * Validate → persist lead → attempt mail → update status → JSON.\r\n * Frontend success means the lead was stored, not that email was delivered.\r\n */\r\nfinal class ConsultationHandler implements ModuleInterface {\r\n\r\n\t/**\r\n\t * AJAX action name (also FormData action field).\r\n\t */\r\n\tpublic const AJAX_ACTION = 'fp02_lead_submit';\r\n\r\n\t/**\r\n\t * Nonce action.\r\n\t */\r\n\tpublic const NONCE_ACTION = 'fp02_lead_submit';\r\n\r\n\t/**\r\n\t * Historical pre-SMTP recipient constant. Recipients now come from Admin\r\n\t * «Почта и формы». Do not send to this address.\r\n\t */\r\n\tpublic const FUTURE_RECIPIENT = '';\r\n\r\n\t/**\r\n\t * Minimum seconds between form render and submit.\r\n\t */\r\n\tpublic const MIN_FILL_SECONDS = 3;\r\n\r\n\t/**\r\n\t * Maximum form session age (seconds).\r\n\t */\r\n\tpublic cons"
+    },
+    "system_dashboard": {
+      "exists": true,
+      "remote_path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Admin/SystemDashboard.php",
+      "bytes": 11098,
+      "sha256": "161b0fbf6d809bdc059ad4ca3d7914d186f8ba2471611067a1002e60df58872f",
+      "head": "<?php\r\n/**\r\n * Dashboard widget: MetaCODE / system state — PROD-P18B.\r\n *\r\n * Operational status surface derived from runtime where practical.\r\n * Historical waves belong in reports, not this widget.\r\n *\r\n * @package Shpigovsky_Core\r\n */\r\n\r\nnamespace Shpigovsky\\Core\\Admin;\r\n\r\nuse Shpigovsky\\Core\\Contracts\\ModuleInterface;\r\nuse Shpigovsky\\Core\\Leads\\LeadRegistry;\r\nuse Shpigovsky\\Core\\Mail\\MailOps;\r\nuse Shpigovsky\\Core\\ModuleRegistry;\r\n\r\nif ( ! defined( 'ABSPATH' ) ) {\r\n\texit;\r\n}\r\n\r\n/**\r\n * Single non-secret system widget on the main dashboard.\r\n */\r\nfinal class SystemDashboard implements ModuleInterface {\r\n\r\n\t/**\r\n\t * Baseline ID shown in the widget (updated by stabilization waves).\r\n\t */\r\n\tconst BASELINE_ID = 'FP-0002-PROD-BASELINE-2026-08-19-P18C-FU02';\r\n\r\n\t/**\r\n\t * Latest accepted production wave label.\r\n\t */\r\n\tconst LATEST_ACCEPTED_WAVE = 'P18C-FU02 Multiple recipients';\r\n\r\n\t/**\r\n\t * {@inheritdoc}\r\n\t */\r\n\tpublic static function id() {\r\n\t\treturn 'admin.system-dashboard';\r\n\t}\r\n\r\n\t/**\r\n\t * {@inheritdoc}\r\n\t */\r\n\tpublic static function is_enabled() {\r\n\t\treturn ModuleRegistry::is_enabled( self::id() );\r\n\t}\r\n\r\n\t/**\r\n\t * {@inheritdoc}\r\n\t */\r\n\tpublic static function register() {\r\n\t\tadd_a"
+    },
+    "activity_log": {
+      "exists": true,
+      "remote_path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Admin/ActivityLog.php",
+      "bytes": 17265,
+      "sha256": "e322e580e3327a7632368f35f4fd1e74f5fcfce03e3d8c89dd234664aaba4ffc",
+      "head": "<?php\r\n/**\r\n * Bounded WordPress user activity log — PROD-P12.\r\n *\r\n * Stores create/update events for editable content types.\r\n * Not an enterprise SIEM; Administrator-only Admin UI.\r\n *\r\n * @package Shpigovsky_Core\r\n */\r\n\r\nnamespace Shpigovsky\\Core\\Admin;\r\n\r\nuse Shpigovsky\\Core\\ContentTypes\\Service;\r\nuse Shpigovsky\\Core\\ContentTypes\\Specialist;\r\nuse Shpigovsky\\Core\\Contracts\\ModuleInterface;\r\nuse Shpigovsky\\Core\\ModuleRegistry;\r\n\r\nif ( ! defined( 'ABSPATH' ) ) {\r\n\texit;\r\n}\r\n\r\n/**\r\n * Activity log storage + Admin page.\r\n */\r\nfinal class ActivityLog implements ModuleInterface {\r\n\r\n\tpublic const DB_VERSION      = '1';\r\n\tpublic const DB_VERSION_KEY  = 'fp02_activity_log_db_version';\r\n\tpublic const RETENTION_MAX   = 8000;\r\n\tpublic const MENU_SLUG       = 'fp02-activity-log';\r\n\tpublic const PER_PAGE        = 50;\r\n\r\n\t/**\r\n\t * In-request de-dupe keys.\r\n\t *\r\n\t * @var array<string, bool>\r\n\t */\r\n\tprivate static $logged_keys = array();\r\n\r\n\t/**\r\n\t * {@inheritdoc}\r\n\t */\r\n\tpublic static function id() {\r\n\t\treturn 'admin.activity-log';\r\n\t}\r\n\r\n\t/**\r\n\t * {@inheritdoc}\r\n\t */\r\n\tpublic static function is_enabled() {\r\n\t\treturn ModuleRegistry::is_enabled( self::id() );\r\n\t}\r\n\r\n\t/**\r\n\t * {@inheritdoc}\r\n\t "
+    },
+    "lead_registry": {
+      "exists": true,
+      "remote_path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Leads/LeadRegistry.php",
+      "bytes": 12629,
+      "sha256": "b1ae65efdb2d66bf559b853bce00dadbf706bd906cadc2e6d712be8f309eccbd",
+      "head": "<?php\r\n/**\r\n * Internal form lead registry — dedicated table, persist before mail.\r\n *\r\n * Email is transport, not the source of truth for whether a submission existed.\r\n *\r\n * @package Shpigovsky_Core\r\n */\r\n\r\nnamespace Shpigovsky\\Core\\Leads;\r\n\r\nuse Shpigovsky\\Core\\Contracts\\ModuleInterface;\r\nuse Shpigovsky\\Core\\Mail\\MailOps;\r\nuse Shpigovsky\\Core\\ModuleRegistry;\r\n\r\nif ( ! defined( 'ABSPATH' ) ) {\r\n\texit;\r\n}\r\n\r\n/**\r\n * Form lead storage.\r\n */\r\nfinal class LeadRegistry implements ModuleInterface {\r\n\r\n\tpublic const DB_VERSION     = '1';\r\n\tpublic const DB_VERSION_KEY = 'fp02_form_leads_schema';\r\n\tpublic const FORM_KEY       = 'consultation';\r\n\r\n\tpublic const STATUS_RECEIVED        = 'RECEIVED';\r\n\tpublic const STATUS_MAIL_SUPPRESSED = 'MAIL_SUPPRESSED';\r\n\tpublic const STATUS_SMTP_PENDING    = 'SMTP_PENDING';\r\n\tpublic const STATUS_MAIL_ACCEPTED   = 'MAIL_ACCEPTED';\r\n\tpublic const STATUS_MAIL_ERROR      = 'MAIL_ERROR';\r\n\r\n\t/**\r\n\t * {@inheritdoc}\r\n\t */\r\n\tpublic static function id() {\r\n\t\treturn 'leads.registry';\r\n\t}\r\n\r\n\t/**\r\n\t * {@inheritdoc}\r\n\t */\r\n\tpublic static function is_enabled() {\r\n\t\treturn ModuleRegistry::is_enabled( self::id() );\r\n\t}\r\n\r\n\t/**\r\n\t * {@inheritdoc}\r\n\t */\r\n\tpublic static"
+    },
+    "core_bootstrap": {
+      "exists": true,
+      "remote_path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/shpigovsky-core.php",
+      "bytes": 1797,
+      "sha256": "2856428eb78c0f9690e5b49a72a53395e97a3f37f21f0cd34ad4f3e326274cf0",
+      "head": "<?php\r\n/**\r\n * Plugin Name: Shpigovsky Core\r\n * Plugin URI: https://example.invalid/shpigovsky-core\r\n * Description: FP-0002 functionality plugin — V9-06C.1 content model source activation gate resolved. Runtime delivery remains separate.\r\n * Version: 0.3.14-p18c-fu02\r\n * Requires at least: 6.0\r\n * Requires PHP: 8.0\r\n * Author: Forge WordPress / FP-0002\r\n * Text Domain: shpigovsky-core\r\n * License: GPL-2.0-or-later\r\n *\r\n * @package Shpigovsky_Core\r\n */\r\n\r\nif ( ! defined( 'ABSPATH' ) ) {\r\n\texit;\r\n}\r\n\r\ndefine( 'SHPIGOVSKY_CORE_VERSION', '0.3.14-p18c-fu02' );\r\ndefine( 'SHPIGOVSKY_CORE_FILE', __FILE__ );\r\ndefine( 'SHPIGOVSKY_CORE_DIR', plugin_dir_path( __FILE__ ) );\r\ndefine( 'SHPIGOVSKY_CORE_URI', plugin_dir_url( __FILE__ ) );\r\ndefine( 'SHPIGOVSKY_CORE_MODE', 'content_model' );\r\ndefine( 'SHPIGOVSKY_CORE_SKELETON', 'skeleton' === SHPIGOVSKY_CORE_MODE );\r\ndefine( 'SHPIGOVSKY_CORE_V9_06C_SOURCE_IMPLEMENTED', true );\r\ndefine( 'SHPIGOVSKY_CORE_V9_06C1_SOURCE_GATE_RESOLVED', true );\r\n\r\nrequire_once SHPIGOVSKY_CORE_DIR . 'inc/compat.php';\r\nrequire_once SHPIGOVSKY_CORE_DIR . 'src/Loader/Autoloader.php';\r\n\r\nShpigovsky\\Core\\Loader\\Autoloader::register( SHPIGOVSKY_CORE_DIR . 'src' );\r\n\r\nregister_"
+    }
+  },
+  "parity": {
+    "mail_ops": {
+      "local_path": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\plugins\\shpigovsky-core\\src\\Mail\\MailOps.php",
+      "local_sha256": "e0bdbe11a36099d32be53bd407de045b1b7bd610e7319dda224a4273a8e82471",
+      "remote_sha256": "e0bdbe11a36099d32be53bd407de045b1b7bd610e7319dda224a4273a8e82471",
+      "match": true
+    },
+    "smtp_transport": {
+      "local_path": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\plugins\\shpigovsky-core\\src\\Mail\\SmtpTransport.php",
+      "local_sha256": "b436e33fa6eae7895c57363b5f75e770f0e8d974ea38e3ab0b92a54adceb96e2",
+      "remote_sha256": "b436e33fa6eae7895c57363b5f75e770f0e8d974ea38e3ab0b92a54adceb96e2",
+      "match": true
+    },
+    "consultation_handler": {
+      "local_path": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\plugins\\shpigovsky-core\\src\\Forms\\ConsultationHandler.php",
+      "local_sha256": "930e5694ddc341e814895a679f791c19421416277225bd0f78fb3d99cad5bb88",
+      "remote_sha256": "930e5694ddc341e814895a679f791c19421416277225bd0f78fb3d99cad5bb88",
+      "match": true
+    },
+    "system_dashboard": {
+      "local_path": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\plugins\\shpigovsky-core\\src\\Admin\\SystemDashboard.php",
+      "local_sha256": "a51dafcc1e587711f0ab4156af4ce6a57ce5c27ade4ff8c01242e39c3b5afc96",
+      "remote_sha256": "161b0fbf6d809bdc059ad4ca3d7914d186f8ba2471611067a1002e60df58872f",
+      "match": false
+    },
+    "activity_log": {
+      "local_path": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\plugins\\shpigovsky-core\\src\\Admin\\ActivityLog.php",
+      "local_sha256": "e322e580e3327a7632368f35f4fd1e74f5fcfce03e3d8c89dd234664aaba4ffc",
+      "remote_sha256": "e322e580e3327a7632368f35f4fd1e74f5fcfce03e3d8c89dd234664aaba4ffc",
+      "match": true
+    },
+    "lead_registry": {
+      "local_path": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\plugins\\shpigovsky-core\\src\\Leads\\LeadRegistry.php",
+      "local_sha256": "b1ae65efdb2d66bf559b853bce00dadbf706bd906cadc2e6d712be8f309eccbd",
+      "remote_sha256": "b1ae65efdb2d66bf559b853bce00dadbf706bd906cadc2e6d712be8f309eccbd",
+      "match": true
+    },
+    "core_bootstrap": {
+      "local_path": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\plugins\\shpigovsky-core\\shpigovsky-core.php",
+      "local_sha256": "1ab4cefe3eb4b8533b1ed69a798f1bea9ac4f081a3ed9f171c41737d0915f112",
+      "remote_sha256": "2856428eb78c0f9690e5b49a72a53395e97a3f37f21f0cd34ad4f3e326274cf0",
+      "match": false
+    }
+  }
+}

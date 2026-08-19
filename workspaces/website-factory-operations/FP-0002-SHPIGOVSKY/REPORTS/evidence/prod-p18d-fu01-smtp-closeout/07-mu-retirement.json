@@ -1,0 +1,79 @@
+{
+  "utc": "2026-08-19T10:13:21.420793+00:00",
+  "ready_before": true,
+  "mail_state_before": {
+    "state": "verified_active",
+    "state_label": "VERIFIED / ACTIVE",
+    "is_complete": true,
+    "verified": 1,
+    "verified_at": "2026-08-19 10:13:19 UTC",
+    "delivery_active": 1,
+    "should_suppress": false,
+    "should_attempt_mail": true,
+    "smtp_host": "smtp.beget.com",
+    "smtp_port": 465,
+    "smtp_encryption": "ssl",
+    "smtp_auth": 1,
+    "smtp_username": "noreply@shpigovsky.ru",
+    "smtp_from_email": "noreply@shpigovsky.ru",
+    "smtp_from_name": "Шпиговский дом",
+    "password_configured": true,
+    "recipient_count": 2,
+    "recipient_labels": [
+      "Андрей Русецкий",
+      "Ольга Дягилева"
+    ],
+    "form_metrika_goal": "",
+    "lead_retention_days": 0,
+    "last_test_status": "ok",
+    "last_test_error_category": ""
+  },
+  "pre_wp_mail_before": {
+    "has_filter": true,
+    "callbacks": [
+      {
+        "priority": 1,
+        "callback": "fp02_p15_suppress_outgoing_mail_until_smtp"
+      }
+    ]
+  },
+  "mu_before": {
+    "exists": true,
+    "sha256": "d725dcd63c2cf60131f7c4c72852c43312c7e8a797f48dcbc8d3ff6280d52834",
+    "bytes": 1291,
+    "head": "<?php\r\n/**\r\n * Plugin Name: FP-0002 PRE-CUTOVER mail suppression\r\n * Description: Outbound mail suppression until SMTP is verified and operator activates sending. Owner: Shpigovsky Core mail.ops. Temporary MU — retire after VERIFIED/ACTIVE.\r\n * Version: 0.3.12-p18c\r\n *\r\n * @package Shpigovsky\r\n */\r\n\r\nif ( ! defined( 'ABSPATH' ) ) {\r\n\texit;\r\n}\r\n\r\n/**\r\n * Suppress wp_mail unless SMTP delivery is explicitly active or a one-shot test is running.\r\n *\r\n * @param mixed $pre Current short-circuit value.\r\n * @return mixed Null to continue, false to suppress.\r\n */\r\nfunction fp02_p15_suppress_outgoing_mail_until_smtp( $pre = null ) {\r\n\tif ( defined( 'FP02_MAIL_ALLOW_ONCE' ) && FP02_MAIL_ALLOW_ONCE ) {\r\n\t\treturn $pre;\r\n\t}\r\n\r\n\tif ( class_exists( '\\Shpigovsky\\Core\\Mail\\MailOps' ) ) {\r\n\t\treturn \\Shpigovsky\\Core\\Mail\\MailOps::should_suppress() ? false : $pre;\r\n\t}\r\n\r\n\t$ops = get_option( 'fp02_mail_ops', array() );\r\n\tif ( is_array( $ops ) && ! empty( $ops['delivery_active'] ) ) {\r\n\t\treturn $pre;\r\n\t}\r\n\r\n\treturn false;\r\n}\r\nadd_filter( 'pre_wp_mail', 'fp02_p15_suppress_outgoing_mail_until_smtp', 1, 1 );\r\n\r\n// Historical aliases (P13/P06): Admin local-runtime notices and siteurl/home write guards remain retired.\r\n// Do not open indexing here. Do not treat saving SMTP fields as activation.\r\n"
+  },
+  "removed": true,
+  "mail_state_after": {
+    "state": "verified_active",
+    "state_label": "VERIFIED / ACTIVE",
+    "is_complete": true,
+    "verified": 1,
+    "verified_at": "2026-08-19 10:13:19 UTC",
+    "delivery_active": 1,
+    "should_suppress": false,
+    "should_attempt_mail": true,
+    "smtp_host": "smtp.beget.com",
+    "smtp_port": 465,
+    "smtp_encryption": "ssl",
+    "smtp_auth": 1,
+    "smtp_username": "noreply@shpigovsky.ru",
+    "smtp_from_email": "noreply@shpigovsky.ru",
+    "smtp_from_name": "Шпиговский дом",
+    "password_configured": true,
+    "recipient_count": 2,
+    "recipient_labels": [
+      "Андрей Русецкий",
+      "Ольга Дягилева"
+    ],
+    "form_metrika_goal": "",
+    "lead_retention_days": 0,
+    "last_test_status": "ok",
+    "last_test_error_category": ""
+  },
+  "pre_wp_mail_after": {
+    "has_filter": false,
+    "callbacks": []
+  },
+  "mu_after_exists": false
+}

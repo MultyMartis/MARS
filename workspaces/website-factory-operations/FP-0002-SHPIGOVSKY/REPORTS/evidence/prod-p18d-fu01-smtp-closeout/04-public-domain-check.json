@@ -1,0 +1,49 @@
+{
+  "utc": "2026-08-19T10:13:18.562455+00:00",
+  "probes": [
+    {
+      "url": "https://shpigovsky.ru/",
+      "status": 200,
+      "final_url": "https://shpigovsky.ru/",
+      "server": "nginx-reuseport/1.21.1",
+      "content_type": "text/html; charset=UTF-8",
+      "x_robots": null,
+      "has_wp_markers": true,
+      "has_craftum_markers": false,
+      "body_head": "<!DOCTYPE html>\r\n<html lang=\"ru-RU\">\r\n<head>\r\n\t<meta charset=\"UTF-8\">\r\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n\t<script>(function(){document.documentElement.classList.add('js-enabled');})();</script>\n<title>Шпиговский Дом</title>\n<meta name='robots' content='max-image-preview:large' />\n<!-- Yandex.Metrika counter -->\r\n<script type=\"text/javascript\">\r\n    (function(m,e,t,r,i,k,a){\r\n        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};\r\n        m[i].l=1*new Date();\r\n        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src"
+    },
+    {
+      "url": "https://shpigovsky.ru/robots.txt",
+      "status": 200,
+      "final_url": "https://shpigovsky.ru/robots.txt",
+      "server": "nginx-reuseport/1.21.1",
+      "content_type": "text/plain",
+      "x_robots": null,
+      "has_wp_markers": false,
+      "has_craftum_markers": false,
+      "body_head": "User-agent: *\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\n\nSitemap: https://shpigovsky.ru/wp-sitemap.xml\n"
+    },
+    {
+      "url": "https://shpigovsky.ru/wp-json/",
+      "status": 200,
+      "final_url": "https://shpigovsky.ru/wp-json/",
+      "server": "nginx-reuseport/1.21.1",
+      "content_type": "application/json; charset=UTF-8",
+      "x_robots": "noindex",
+      "has_wp_markers": true,
+      "has_craftum_markers": false,
+      "body_head": "{\"name\":\"\\u0428\\u043f\\u0438\\u0433\\u043e\\u0432\\u0441\\u043a\\u0438\\u0439 \\u0414\\u043e\\u043c\",\"description\":\"\",\"url\":\"https:\\/\\/shpigovsky.ru\",\"home\":\"https:\\/\\/shpigovsky.ru\",\"gmt_offset\":3,\"timezone_string\":\"Europe\\/Moscow\",\"page_for_posts\":19,\"page_on_front\":4,\"show_on_front\":\"page\",\"namespaces\":[\"oembed\\/1.0\",\"wpilot\\/v1\",\"shpigovsky\\/v1\",\"wp\\/v2\",\"wp-site-health\\/v1\",\"wp-block-editor\\/v1\",\"wp-abilities\\/v1\"],\"authentication\":{\"application-passwords\":{\"endpoints\":{\"authorization\":\"https:\\/\\/shpigovsky.ru\\/wp-admin\\/authorize-application.php\"}}},\"routes\":{\"\\/\":{\"namespace\":\"\",\"methods\":[\"GET\"],"
+    },
+    {
+      "url": "http://shpigovsky.beget.tech/",
+      "status": 200,
+      "final_url": "https://shpigovsky.ru/",
+      "server": "nginx-reuseport/1.21.1",
+      "content_type": "text/html; charset=UTF-8",
+      "x_robots": null,
+      "has_wp_markers": true,
+      "has_craftum_markers": false,
+      "body_head": "<!DOCTYPE html>\r\n<html lang=\"ru-RU\">\r\n<head>\r\n\t<meta charset=\"UTF-8\">\r\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n\t<script>(function(){document.documentElement.classList.add('js-enabled');})();</script>\n<title>Шпиговский Дом</title>\n<meta name='robots' content='max-image-preview:large' />\n<!-- Yandex.Metrika counter -->\r\n<script type=\"text/javascript\">\r\n    (function(m,e,t,r,i,k,a){\r\n        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};\r\n        m[i].l=1*new Date();\r\n        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src"
+    }
+  ]
+}

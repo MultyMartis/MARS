@@ -1,0 +1,21 @@
+{
+  "ok": true,
+  "mail_state": "verified_active",
+  "recipient_count": 2,
+  "lead_id": 7,
+  "mail_attempted": true,
+  "mail_accepted": true,
+  "delivery_status": "MAIL_ACCEPTED",
+  "error_code": "",
+  "row": {
+    "id": 7,
+    "created_at": "2026-08-19 13:13:24",
+    "form_context": "p18d-fu01-qa",
+    "delivery_status": "MAIL_ACCEPTED",
+    "smtp_status": "accepted",
+    "attempt_count": 1,
+    "is_qa": 1,
+    "utm_source": "p18d-fu01-qa"
+  },
+  "_exit_code": 0
+}

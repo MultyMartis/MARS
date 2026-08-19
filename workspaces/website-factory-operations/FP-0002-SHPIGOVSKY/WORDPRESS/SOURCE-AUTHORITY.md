@@ -47,6 +47,28 @@ WORDPRESS/acf-json/          fp-0002-acf-json-foundation-*     wp-content/acf-js
 
 Foundation baseline scanned at capture; no secrets detected in theme/plugin source files.
 
+## PROD-P18D-FU01 editorial/Admin truth intake (2026-08-19)
+
+Fresh production intake established an explicit split:
+
+- **Git `WORDPRESS/`** = code authority after drift intake
+- **current Beget DB values changed through normal Admin** = editorial/Admin production truth
+
+Rule:
+
+```text
+EDITORIAL DB CHANGE THROUGH NORMAL WORDPRESS ADMIN
+≠
+UNCONTROLLED CODE DRIFT
+```
+
+Operational consequence:
+
+- preserve Olya/Admin content and setting changes that belong to normal editor/Admin workflows;
+- do not restore an old full DB snapshot over active editorial work just to recover technical SMTP/indexing state;
+- use the smallest technical mutation scope possible for closeout waves;
+- classify QA deletion only from explicit markers such as `is_qa`, known IDs, or task evidence.
+
 ## V9-06D7-F final route QA (2026-07-05)
 
 Read-only QA PASS after D7-A–D7-E runtime deliveries. Evidence: `validation/v9-06d7f-final-route-qa/`. No runtime/source/DB mutations. Recommended next: D8 content seed planning.

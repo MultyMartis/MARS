@@ -25,35 +25,32 @@ if ( ! class_exists( '\Shpigovsky\Core\Leads\LeadRegistry' ) ) {
 	die( "[P18D] ERROR: LeadRegistry class not found.\n" );
 }
 
-use Shpigovsky\Core\Mail\MailOps;
-use Shpigovsky\Core\Leads\LeadRegistry;
-
 // Pre-flight.
-$state = MailOps::state();
+$state = \Shpigovsky\Core\Mail\MailOps::state();
 echo "[P18D QA] SMTP state: " . $state . "\n";
-if ( MailOps::STATE_VERIFIED_ACTIVE !== $state ) {
+if ( \Shpigovsky\Core\Mail\MailOps::STATE_VERIFIED_ACTIVE !== $state ) {
 	echo "[P18D QA] WARNING: delivery not yet VERIFIED/ACTIVE. Mail will not be attempted.\n";
 }
 
-$recipients = MailOps::recipient_emails();
+$recipients = \Shpigovsky\Core\Mail\MailOps::recipient_emails();
 echo "[P18D QA] Recipients: " . count( $recipients ) . "\n";
 
 // ─── 1. PERSIST QA LEAD ───────────────────────────────────────────────────────
 
 $qa_timestamp = gmdate( 'Y-m-d H:i:s' ) . ' UTC';
-$lead_id = LeadRegistry::insert(
+$lead_id = \Shpigovsky\Core\Leads\LeadRegistry::insert(
 	array(
-		'form_key'        => LeadRegistry::FORM_KEY,
+		'form_key'        => \Shpigovsky\Core\Leads\LeadRegistry::FORM_KEY,
 		'form_context'    => 'p18d-qa',
 		'source_url'      => 'https://shpigovsky.ru/?fp02_qa=p18d',
 		'source_path'     => '/',
 		'source_post_id'  => 0,
 		'visitor_name'    => 'QA-P18D Test',
 		'phone'           => '+7 000 000-00-00',
-		'email'           => MailOps::from_email(),
+		'email'           => \Shpigovsky\Core\Mail\MailOps::from_email(),
 		'message'         => '[P18D QA] Controlled SMTP verification test. Timestamp: ' . $qa_timestamp . ' This is not a real client request.',
 		'delivery_status' => LeadRegistry::STATUS_RECEIVED,
-		'metrika_goal'    => MailOps::metrika_goal(),
+		'metrika_goal'    => \Shpigovsky\Core\Mail\MailOps::metrika_goal(),
 		'utm_source'      => 'p18d-qa',
 		'utm_medium'      => 'internal-test',
 		'utm_campaign'    => 'smtp-verification',
@@ -78,18 +75,18 @@ $mail_attempted = false;
 $mail_accepted  = false;
 $mail_status    = '';
 
-if ( MailOps::should_attempt_mail() ) {
+if ( \Shpigovsky\Core\Mail\MailOps::should_attempt_mail() ) {
 	$to      = $recipients;
 	$subject = '[FP-0002 P18D QA] Form delivery test ' . gmdate( 'Y-m-d H:i:s' ) . ' UTC';
 	$body    = "FP-0002 P18D Form QA\n";
 	$body   .= "This is a controlled test submission — not a real client lead.\n";
 	$body   .= "Timestamp: " . gmdate( 'c' ) . "\n";
 	$body   .= "Lead ID: " . $lead_id . "\n";
-	$body   .= "Sender: " . MailOps::from_email() . "\n";
+	$body   .= "Sender: " . \Shpigovsky\Core\Mail\MailOps::from_email() . "\n";
 	$headers = array(
 		'Content-Type: text/plain; charset=UTF-8',
-		'From: ' . MailOps::from_name() . ' <' . MailOps::from_email() . '>',
-		'Reply-To: ' . MailOps::from_email(),
+		'From: ' . \Shpigovsky\Core\Mail\MailOps::from_name() . ' <' . \Shpigovsky\Core\Mail\MailOps::from_email() . '>',
+		'Reply-To: ' . \Shpigovsky\Core\Mail\MailOps::from_email(),
 	);
 
 	$sent = wp_mail( $to, $subject, $body, $headers );
@@ -97,8 +94,8 @@ if ( MailOps::should_attempt_mail() ) {
 
 	if ( $sent ) {
 		$mail_accepted = true;
-		$mail_status   = LeadRegistry::STATUS_MAIL_ACCEPTED;
-		LeadRegistry::update_delivery(
+		$mail_status   = \Shpigovsky\Core\Leads\LeadRegistry::STATUS_MAIL_ACCEPTED;
+		\Shpigovsky\Core\Leads\LeadRegistry::update_delivery(
 			$lead_id,
 			array(
 				'delivery_status' => $mail_status,
@@ -113,9 +110,9 @@ if ( MailOps::should_attempt_mail() ) {
 	} else {
 		global $phpmailer;
 		$raw = ( is_object( $phpmailer ) && ! empty( $phpmailer->ErrorInfo ) ) ? (string) $phpmailer->ErrorInfo : 'send_failed';
-		$cat = MailOps::sanitize_error_category( $raw );
-		$mail_status = LeadRegistry::STATUS_MAIL_ERROR;
-		LeadRegistry::update_delivery(
+		$cat = \Shpigovsky\Core\Mail\MailOps::sanitize_error_category( $raw );
+		$mail_status = \Shpigovsky\Core\Leads\LeadRegistry::STATUS_MAIL_ERROR;
+		\Shpigovsky\Core\Leads\LeadRegistry::update_delivery(
 			$lead_id,
 			array(
 				'delivery_status' => $mail_status,
@@ -127,8 +124,8 @@ if ( MailOps::should_attempt_mail() ) {
 		echo "[P18D QA] MAIL FAILED. Error category: " . $cat . "\n";
 	}
 } else {
-	$mail_status = MailOps::is_complete() ? LeadRegistry::STATUS_SMTP_PENDING : LeadRegistry::STATUS_MAIL_SUPPRESSED;
-	LeadRegistry::update_delivery(
+	$mail_status = \Shpigovsky\Core\Mail\MailOps::is_complete() ? \Shpigovsky\Core\Leads\LeadRegistry::STATUS_SMTP_PENDING : \Shpigovsky\Core\Leads\LeadRegistry::STATUS_MAIL_SUPPRESSED;
+	\Shpigovsky\Core\Leads\LeadRegistry::update_delivery(
 		$lead_id,
 		array(
 			'delivery_status' => $mail_status,
