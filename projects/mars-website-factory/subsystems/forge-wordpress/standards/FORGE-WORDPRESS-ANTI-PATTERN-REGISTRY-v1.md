@@ -399,6 +399,56 @@ Each ID is reusable. Client facts are generalized.
 | Prevention | Fresh intake + human authority metadata; update current docs not historical reports |
 | Evidence | FP-0002 P18D-FU01 |
 
+## INDEX-008 — Synthetic guard tests indistinguishable from real production incidents
+
+| | |
+|--|--|
+| Symptom | Activity Log shows «Закрытие индексации заблокировано» from QA harness |
+| Cause | Guard QA calls `request_state(false)` without QA classification |
+| Risk | Operators treat synthetic validation as live incident |
+| Prevention | Explicit QA context; bounded QA evidence sink; presentation label for historical QA rows |
+| Evidence | FP-0002 P18G/P18J |
+
+## INDEX-009 — QA suppression hides real CLOSED or INCONSISTENT state
+
+| | |
+|--|--|
+| Symptom | Critical alert suppressed while site is actually de-indexed |
+| Cause | Blanket «test mode» on all indexing events |
+| Risk | Real outage invisible to administrators |
+| Prevention | Suppress alerts/logs for QA **only** when guard blocks close **and** effective state remains OPEN |
+| Evidence | FP-0002 P18J |
+
+## INDEX-010 — Watchdog generates synthetic destructive close requests
+
+| | |
+|--|--|
+| Symptom | Scheduled job calls `request_state(false)` to «prove» guard |
+| Cause | Monitoring conflated with mutation testing |
+| Risk | Log noise, false incidents, accidental close paths |
+| Prevention | Watchdog observes effective indexability only; guard QA is explicit harness |
+| Evidence | FP-0002 P18G/P18J |
+
+## OBSERVABILITY-001 — Synthetic QA events pollute operator incident channels
+
+| | |
+|--|--|
+| Symptom | Repeated critical-looking Activity Log rows from deploy QA |
+| Cause | Same logging path as real unauthorized close |
+| Risk | Alert fatigue; missed real incidents |
+| Prevention | `source=qa_test` + `test_id`; separate evidence store; non-alarming display |
+| Evidence | FP-0002 P18J |
+
+## OBSERVABILITY-002 — Destructive audit history cleanup for noisy synthetic rows
+
+| | |
+|--|--|
+| Symptom | Deleting or rewriting Activity Log rows after QA |
+| Cause | Treating audit trail as UI cleanup target |
+| Risk | Lost forensic chain |
+| Prevention | Preserve raw events; fix classification/rendering; document synthetic origin |
+| Evidence | FP-0002 P18J |
+
 ---
 
 ## CMS modeling namespace (`AP-CMS-*`)

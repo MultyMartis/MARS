@@ -111,8 +111,16 @@ After a human opens indexing:
 
 Charters mentioning indexing must state the above.
 
-Anti-patterns: INDEX-001 … INDEX-007 in [ANTI-PATTERN-REGISTRY](FORGE-WORDPRESS-ANTI-PATTERN-REGISTRY-v1.md).
+Anti-patterns: INDEX-001 … INDEX-010 and OBSERVABILITY-001 … OBSERVABILITY-002 in [ANTI-PATTERN-REGISTRY](FORGE-WORDPRESS-ANTI-PATTERN-REGISTRY-v1.md).
+
+### Synthetic guard QA (P18J — FP-0002 proven)
+
+- Guard validation must use an **explicit internal QA authorization** (not spoofable from public/admin HTTP alone).
+- Synthetic blocked-close attempts: **bounded QA evidence**; do **not** emit repeated production incident rows.
+- Historical QA rows in Activity Log: **presentation normalization** only — raw audit data preserved.
+- QA alert/log suppression applies **only** when the guard blocks the close **and** effective indexability remains OPEN.
+- Watchdog **observes** state; it does **not** simulate close requests.
 
 ---
 
-*FW-S-32 v1.*
+*FW-S-32 v1.1 — P18J synthetic QA observability addendum.*
