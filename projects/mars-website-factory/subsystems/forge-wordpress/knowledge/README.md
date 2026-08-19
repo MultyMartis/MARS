@@ -20,6 +20,7 @@ Do **not** reopen the full Shpigovsky chronology unless evidence is required.
 | Page vs CPT vs Post vs taxonomy vs Options vs repeater | [CMS-ARCHITECTURE](../standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md) · [CONTENT-MODEL-CPT](../standards/FORGE-WORDPRESS-CONTENT-MODEL-CPT-STANDARD-v1.md) · [REPEATER-VS-ENTITY](../standards/FORGE-WORDPRESS-REPEATER-VS-ENTITY-DECISION-MATRIX-v1.md) |
 | Figma → field schema before coding | [DESIGN-TO-CMS-WORKFLOW](../standards/FORGE-WORDPRESS-DESIGN-TO-CMS-WORKFLOW-v1.md) · [worksheet](../templates/FORGE-WORDPRESS-DESIGN-TO-CMS-MAPPING-WORKSHEET-v1.md) |
 | Global phone/social ownership | [GLOBAL-SETTINGS-OWNERSHIP](../standards/FORGE-WORDPRESS-GLOBAL-SETTINGS-OWNERSHIP-STANDARD-v1.md) · [SITE-SETTINGS-STANDARD](../standards/FORGE-WORDPRESS-SITE-SETTINGS-STANDARD-v1.md) |
+| Cookie/privacy controls for a small Russian production site | [COOKIE-CONSENT-AND-PRIVACY-CONTROLS](../standards/FORGE-WORDPRESS-COOKIE-CONSENT-AND-PRIVACY-CONTROLS-STANDARD-v1.md) · [FORMS-AND-SMTP](../standards/FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) |
 | ACF fields, naming, JSON, CTA conditionals | [ACF-FIELD-MODELING](../standards/FORGE-WORDPRESS-ACF-FIELD-MODELING-STANDARD-v1.md) |
 | Admin menus / tabs / list tables | [ADMIN-INFORMATION-ARCHITECTURE](../standards/FORGE-WORDPRESS-ADMIN-INFORMATION-ARCHITECTURE-STANDARD-v1.md) · [ADMIN-UX-STANDARD](../standards/FORGE-WORDPRESS-ADMIN-UX-STANDARD-v1.md) |
 | Component empty states / data contracts | [COMPONENT-DATA-CONTRACT](../standards/FORGE-WORDPRESS-COMPONENT-DATA-CONTRACT-STANDARD-v1.md) |
@@ -71,4 +72,4 @@ FP-0002 evidence lives under `workspaces/website-factory-operations/FP-0002-SHPI
 
 CMS architecture templates live under [`templates/`](../templates/) (`CONTENT-ENTITY-MAP`, `FIELD-OWNERSHIP-MAP`, `PAGE-EDITABILITY-MAP`, `SITE-SETTINGS-MAP`, `RELATIONSHIP-MAP`, `COMPONENT-DATA-CONTRACT`, `ADMIN-INFORMATION-ARCHITECTURE`, `EDITOR-WORKFLOW-ACCEPTANCE-CHECKLIST`, `DESIGN-TO-CMS-MAPPING-WORKSHEET`, `CMS-MIGRATION-PLAN`).
 
-*WP Forge knowledge hub — 2026-08-19 (P18C-FU02 multi-recipient mail settings). One production case. CMS / editable architecture pack added the same day. Second-project validation still required where marked J.*
+*WP Forge knowledge hub — 2026-08-19 (P18E privacy/cookie-controls standard added on top of the prior P18C/P18D production knowledge pack). One production case. Second-project validation still required where marked J.*

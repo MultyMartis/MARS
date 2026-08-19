@@ -55,6 +55,7 @@
 | FW-S-30 | [FORGE-WORDPRESS-GLOBAL-SETTINGS-OWNERSHIP-STANDARD-v1.md](../standards/FORGE-WORDPRESS-GLOBAL-SETTINGS-OWNERSHIP-STANDARD-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | Site Settings | Admin UX Specialist |
 | FW-S-31 | [FORGE-WORDPRESS-CMS-ANTI-PATTERNS-v1.md](../standards/FORGE-WORDPRESS-CMS-ANTI-PATTERNS-v1.md) | Registry | PRODUCTION KNOWLEDGE v1 | All | Forge Architect |
 | FW-S-32 | [FORGE-WORDPRESS-SEARCH-INDEXING-CONTROL-STANDARD-v1.md](../standards/FORGE-WORDPRESS-SEARCH-INDEXING-CONTROL-STANDARD-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | Launch/Admin | Operator |
+| FW-S-33 | [FORGE-WORDPRESS-COOKIE-CONSENT-AND-PRIVACY-CONTROLS-STANDARD-v1.md](../standards/FORGE-WORDPRESS-COOKIE-CONSENT-AND-PRIVACY-CONTROLS-STANDARD-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | Privacy/cookie controls | Forge Architect |
 
 ---
 
@@ -134,7 +135,7 @@
 | FW-RB-* | [runbooks/](../runbooks/) | SOP | ACTIVE |
 | FW-T-19 | [FORGE-WORDPRESS-NEW-SITE-STARTER-CHECKLIST-v1.md](../templates/FORGE-WORDPRESS-NEW-SITE-STARTER-CHECKLIST-v1.md) | Template | ACTIVE |
 | FW-K-03 | [knowledge/KNOWLEDGE-RETRIEVAL-VALIDATION.md](../knowledge/KNOWLEDGE-RETRIEVAL-VALIDATION.md) | Validation | ACTIVE (ops Q1–Q3 + CMS Q1–Q10) |
-| FW-S-22–31 | CMS / editable architecture pack | Standard | ACTIVE |
+| FW-S-22–33 | CMS / editable architecture pack + privacy/cookie controls | Standard | ACTIVE |
 
 *FP-0002 lessons assimilated; CMS architecture pack 2026-08-18; AG-WP-001 remains NOT PRODUCTION READY.*
 
@@ -182,4 +183,4 @@
 
 ---
 
-*Register v1 — subsystem local; updated 2026-08-18 WP Forge production knowledge pack (FW-S-09–21) and CMS/editable architecture pack (FW-S-22–31, FW-T-20–29).*
+*Register v1 — subsystem local; updated 2026-08-19 with FW-S-33 privacy/cookie controls standard on top of the 2026-08-18 production knowledge pack.*

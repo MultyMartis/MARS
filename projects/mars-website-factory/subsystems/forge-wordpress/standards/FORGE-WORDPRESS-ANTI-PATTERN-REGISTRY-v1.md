@@ -343,6 +343,52 @@ Each ID is reusable. Client facts are generalized.
 
 ---
 
+## AP-031 — PRIVACY-001 Decorative cookie banner without runtime gating
+
+| | |
+|--|--|
+| Symptom | Visitor sees a cookie banner, but analytics already loaded before any choice |
+| Cause | UI added independently from tracker ownership |
+| Risk | False privacy control; misleading legal posture |
+| Prevention | Inventory-first design; one privacy owner; gate analytics runtime, not only UI |
+| Replacement | [COOKIE-CONSENT-AND-PRIVACY-CONTROLS](FORGE-WORDPRESS-COOKIE-CONSENT-AND-PRIVACY-CONTROLS-STANDARD-v1.md) §3–4 |
+| Evidence | FP-0002 P18E current Metrika reality |
+
+## AP-032 — PRIVACY-002 Analytics loads before consent state resolves
+
+| | |
+|--|--|
+| Symptom | Metrika/analytics script flashes on first paint, then gets disabled |
+| Cause | Consent state read too late or unconditional footer/head output |
+| Risk | Tracking already occurred before refusal |
+| Prevention | Early consent read; defer third-party analytics bootstrap and noscript path until allowed |
+| Replacement | [COOKIE-CONSENT-AND-PRIVACY-CONTROLS](FORGE-WORDPRESS-COOKIE-CONSENT-AND-PRIVACY-CONTROLS-STANDARD-v1.md) §4–5 |
+| Evidence | FP-0002 P18E design |
+
+## AP-033 — PRIVACY-003 Form personal-data consent merged with analytics consent
+
+| | |
+|--|--|
+| Symptom | One checkbox both submits the lead and opts into analytics |
+| Cause | “One consent is easier” shortcut |
+| Risk | Invalid consent semantics; operator confusion; broken form UX |
+| Prevention | Keep form processing consent separate from analytics choice |
+| Replacement | [COOKIE-CONSENT-AND-PRIVACY-CONTROLS](FORGE-WORDPRESS-COOKIE-CONSENT-AND-PRIVACY-CONTROLS-STANDARD-v1.md) §6 |
+| Evidence | FP-0002 P18E forms/goals model |
+
+## AP-034 — PRIVACY-004 Cookie/privacy document describes generic vendors instead of actual runtime
+
+| | |
+|--|--|
+| Symptom | Policy page names demo providers, placeholders, or future-state integrations |
+| Cause | Legal page treated as template content instead of deployed-technology disclosure |
+| Risk | Mismatch between runtime and legal text |
+| Prevention | Fresh tracker/storage intake before legal-copy finalization |
+| Replacement | [COOKIE-CONSENT-AND-PRIVACY-CONTROLS](FORGE-WORDPRESS-COOKIE-CONSENT-AND-PRIVACY-CONTROLS-STANDARD-v1.md) §3 and §9 |
+| Evidence | FP-0002 live `cookie-files-policy` placeholder and generic wording |
+
+---
+
 ## CMS modeling namespace (`AP-CMS-*`)
 
 Do **not** reuse AP-001–021 numbers. Full entries: [CMS-ANTI-PATTERNS](FORGE-WORDPRESS-CMS-ANTI-PATTERNS-v1.md).
@@ -368,4 +414,4 @@ Do **not** reuse AP-001–021 numbers. Full entries: [CMS-ANTI-PATTERNS](FORGE-W
 
 ---
 
-*FW-S-21 v1.6 — 30 operational anti-patterns (AP-022–028 = FORM-001–007; AP-029 Admin discoverability; AP-030 recipient save vs SMTP secret) + AP-CMS-001–016 index. Add IDs; do not reuse numbers.*
+*FW-S-21 v1.7 — 34 operational anti-patterns (AP-022–030 form/admin; AP-031–034 privacy/cookie controls) + AP-CMS-001–016 index. Add IDs; do not reuse numbers.*

@@ -45,6 +45,7 @@ Extraction status: [backlog](../knowledge/FORGE-WORDPRESS-MODULE-EXTRACTION-BACK
 | Consultation Forms | AJAX lead + persist-before-mail | PRODUCTION PROVEN WITH CAVEATS (SMTP verification still a later gate) | B |
 | SMTP Admin / PHPMailer owner | One Admin config + `phpmailer_init` | PRODUCTION PROVEN WITH CAVEATS | B |
 | Form lead registry | Dedicated table + Заявки Admin | PRODUCTION PROVEN WITH CAVEATS | B |
+| Cookie / Privacy Controls | Small first-party consent owner, categories, gating, withdrawal, policy-link owner | PRODUCTION-INFORMED SPECIFICATION ONLY | B / J until second implementation |
 | Decorative parallax | Brand motion | EXPERIMENTAL / PROJECT-SPECIFIC | I/J + **H** QA |
 | Advanced analytics | GTM/Metrica/etc. | PRODUCTION PROVEN WITH CAVEATS | B — empty-safe fields |
 
@@ -67,6 +68,7 @@ Extraction status: [backlog](../knowledge/FORGE-WORDPRESS-MODULE-EXTRACTION-BACK
 - [Activity Log](../standards/FORGE-WORDPRESS-ACTIVITY-LOG-MODULE-SPEC-v1.md)
 - [DOCX](../standards/FORGE-WORDPRESS-DOCX-IMPORTER-MODULE-SPEC-v1.md)
 - [Social](../standards/FORGE-WORDPRESS-SOCIAL-CONTACT-MODULE-SPEC-v1.md)
+- [Cookie / Privacy Controls](../standards/FORGE-WORDPRESS-COOKIE-CONSENT-AND-PRIVACY-CONTROLS-STANDARD-v1.md)
 
 ---
 
