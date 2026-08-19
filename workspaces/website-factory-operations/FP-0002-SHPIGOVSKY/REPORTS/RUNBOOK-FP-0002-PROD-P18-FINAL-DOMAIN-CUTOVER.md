@@ -1,7 +1,8 @@
 # RUNBOOK — FP-0002 PROD-P18 FINAL DOMAIN CUTOVER (CURRENT EXECUTION STATE)
 
 **Wave executed:** **P18D-FU01** — fresh production intake, SMTP transport correction (none→ssl/465), verification, activation, physical suppression-MU retirement, bounded post-removal form QA, exact QA cleanup, indexing re-close, Olya/Admin truth preservation (2026-08-19)  
-**P18 remainder:** public-domain finalization only if regression appears · Olya indexing approval · sitemaps · crawl.
+**Latest planning wave:** **P18E** — cookie consent / privacy controls design complete; **no runtime mutation**; implementation still unauthorized  
+**P18 remainder:** optional privacy implementation after approval · public-domain finalization only if regression appears · Olya indexing approval · sitemaps · crawl.
 
 Historical trigger `NS SWITCHED` and WordPress `home`/`siteurl` cutover are **complete** (operator). Do **not** wait for NS or URL cutover anymore. Do **not** open indexing automatically. Do **not** rollback current editor-owned DB content from an older backup to recover technical state.
 
@@ -24,6 +25,7 @@ Historical trigger `NS SWITCHED` and WordPress `home`/`siteurl` cutover are **co
 | Form QA | PASS — MAIL_ACCEPTED status recorded |
 | Leads Admin | **Заявки** top-level — reachable |
 | Metrika form goals | Admin-configurable; counter owner = SEO |
+| Cookie/privacy controls | **DESIGN COMPLETE / NOT IMPLEMENTED** |
 | Indexing | **CLOSED** (`blog_public=0`) |
 | Public apex | WordPress currently visible on `https://shpigovsky.ru/` |
 | Source ↔ production | SMTP/forms closeout surfaces verified; dashboard/core sync handled in FU01 |
@@ -35,17 +37,19 @@ Historical trigger `NS SWITCHED` and WordPress `home`/`siteurl` cutover are **co
 ## Operator next (P18D-FU01 complete — current handoff)
 
 1. Do **not** open indexing without Olya approval or explicit operator command.
-2. Observe public `https://shpigovsky.ru/`; if operator sees a routing regression, open a bounded public-domain finalization wave.
-3. Keep current editor/Admin DB state as content truth; do not restore an old full DB backup over live editorial changes.
+2. Do **not** start a cookie/privacy implementation wave without a fresh runtime intake; current P18E output is design-only.
+3. Observe public `https://shpigovsky.ru/`; if operator sees a routing regression, open a bounded public-domain finalization wave.
+4. Keep current editor/Admin DB state as content truth; do not restore an old full DB backup over live editorial changes.
 
 ---
 
 ## Remaining P18 (post-P18D)
 
-1. Public-domain finalization only if regression appears.
-2. Indexing **only** after Olya (Dashboard «Открыть индексацию») or explicit operator command.
-3. Sitemap submissions (manual).
-4. Final crawl.
+1. Optional P18E implementation only after explicit approval and fresh intake.
+2. Public-domain finalization only if regression appears.
+3. Indexing **only** after Olya (Dashboard «Открыть индексацию») or explicit operator command.
+4. Sitemap submissions (manual).
+5. Final crawl.
 
 **OPEN BUSINESS DECISION:** Form lead retention period — `lead_retention_days=0` — operator sets when ready.
 
@@ -56,6 +60,7 @@ Exact leftover URL objects still listed in `REPORTS/evidence/prod-p17-fu02-final
 ## Forbidden
 
 - Opening indexing as a deploy side effect  
+- Treating P18E design as if the cookie/privacy control is already live  
 - Claiming SMTP VERIFIED because fields exist  
 - Asking for / storing the mailbox password in Cursor, Git, reports, or Dashboard  
 - Leaving two competing mail switches after VERIFIED/ACTIVE  

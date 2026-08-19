@@ -21,16 +21,19 @@ Statuses reflect fresh runtime intake plus actual FU01 closeout on 2026-08-19.
 
 | # | Item | Status |
 |---|------|--------|
-| 1 | Public-domain finalization | OPEN only if operator later sees a routing regression |
-| 2 | Olya indexing approval | REQUIRED before any opening |
-| 3 | Sitemap submissions | AFTER indexing opens |
-| 4 | Final crawl | LAST |
+| 1 | P18E implementation charter from fresh runtime intake | READY AFTER operator/legal approval of P18E design |
+| 2 | Public-domain finalization | OPEN only if operator later sees a routing regression |
+| 3 | Olya indexing approval | REQUIRED before any opening |
+| 4 | Sitemap submissions | AFTER indexing opens |
+| 5 | Final crawl | LAST |
 
 ## Open business decision
 
 | Item | Status |
 |------|--------|
 | Form lead retention days (`lead_retention_days=0`) | OPERATOR DECISION REQUIRED |
+| Cookie/privacy implementation evidence model (browser-only vs hybrid/server event) | LEGAL / OPERATOR REVIEW REQUIRED |
+| Consent lifetime / re-prompt policy | PRODUCT / LEGAL POLICY DECISION REQUIRED |
 
 ## Intentionally preserved
 
@@ -39,6 +42,7 @@ Statuses reflect fresh runtime intake plus actual FU01 closeout on 2026-08-19.
 | `blog_public=0` + `robots.txt` `Disallow: /` | Olya / explicit operator indexing approval |
 | Current Admin-managed recipients | changed only by operator/editor intent |
 | Current editorial/legal/services/specialists DB content | live production truth |
+| Current SEO/Metrika settings owner | preserved until an explicit P18E implementation wave |
 
 ## Sequence now
 
@@ -47,6 +51,8 @@ P18C foundation
 → P18C-FU02 recipient UX  
 → P18D technical intent  
 → **P18D-FU01 actual runtime closeout**  
+→ **P18E consent/privacy design complete (no runtime mutation)**  
+→ operator/legal approval for P18E implementation scope  
 → Olya indexing approval  
 → sitemap submissions  
 → final crawl
