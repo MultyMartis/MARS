@@ -1,0 +1,35 @@
+{
+  "utc": "2026-08-19T12:21:50Z",
+  "rows": [
+    {
+      "rel": "shpigovsky-core.php",
+      "exit_code": 0,
+      "stdout": "No syntax errors detected in /tmp/fp02_lint_shpigovsky-core.php\n",
+      "stderr": ""
+    },
+    {
+      "rel": "src/Admin/SystemDashboard.php",
+      "exit_code": 0,
+      "stdout": "No syntax errors detected in /tmp/fp02_lint_SystemDashboard.php\n",
+      "stderr": ""
+    },
+    {
+      "rel": "src/Privacy/PrivacyConsent.php",
+      "exit_code": 0,
+      "stdout": "No syntax errors detected in /tmp/fp02_lint_PrivacyConsent.php\n",
+      "stderr": ""
+    },
+    {
+      "rel": "inc/seo-integrations.php",
+      "exit_code": 0,
+      "stdout": "No syntax errors detected in /tmp/fp02_lint_seo-integrations.php\n",
+      "stderr": ""
+    },
+    {
+      "rel": "template-parts/contacts/location-card.php",
+      "exit_code": 0,
+      "stdout": "No syntax errors detected in /tmp/fp02_lint_location-card.php\n",
+      "stderr": ""
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "undecided": {
+    "banner_visible": true,
+    "cookie_value": null,
+    "metrika_requests": 0
+  },
+  "accept": {
+    "cookie_value": "%7B%22version%22%3A1%2C%22necessary%22%3Atrue%2C%22analytics%22%3Atrue%2C%22decided_at%22%3A%222026-08-19T12%3A22%3A44.616Z%22%7D",
+    "banner_visible_after": false,
+    "metrika_requests": 6
+  },
+  "necessary_only": {
+    "cookie_value": "%7B%22version%22%3A1%2C%22necessary%22%3Atrue%2C%22analytics%22%3Afalse%2C%22decided_at%22%3A%222026-08-19T12%3A22%3A51.928Z%22%7D",
+    "banner_visible_after": false,
+    "metrika_requests": 0
+  },
+  "custom_on": {
+    "cookie_value": "%7B%22version%22%3A1%2C%22necessary%22%3Atrue%2C%22analytics%22%3Atrue%2C%22decided_at%22%3A%222026-08-19T12%3A22%3A58.796Z%22%7D",
+    "metrika_requests": 6
+  },
+  "custom_off": {
+    "cookie_value": "%7B%22version%22%3A1%2C%22necessary%22%3Atrue%2C%22analytics%22%3Afalse%2C%22decided_at%22%3A%222026-08-19T12%3A23%3A05.941Z%22%7D",
+    "metrika_requests": 0
+  },
+  "persistence": {
+    "accept": {
+      "cookie_value": "%7B%22version%22%3A1%2C%22necessary%22%3Atrue%2C%22analytics%22%3Atrue%2C%22decided_at%22%3A%222026-08-19T12%3A23%3A12.461Z%22%7D",
+      "banner_visible_on_contacts": false,
+      "new_requests_after_nav": 3
+    },
+    "necessary_only": {
+      "cookie_value": "%7B%22version%22%3A1%2C%22necessary%22%3Atrue%2C%22analytics%22%3Afalse%2C%22decided_at%22%3A%222026-08-19T12%3A23%3A21.461Z%22%7D",
+      "banner_visible_on_contacts": false,
+      "new_requests_after_nav": 0
+    }
+  },
+  "tampered": {
+    "banner_visible": true,
+    "metrika_requests": 0
+  },
+  "old_version": {
+    "banner_visible": true,
+    "metrika_requests": 0
+  },
+  "revoke": {
+    "cookie_value": "%7B%22version%22%3A1%2C%22necessary%22%3Atrue%2C%22analytics%22%3Afalse%2C%22decided_at%22%3A%222026-08-19T12%3A23%3A41.528Z%22%7D",
+    "new_requests_after_revoke": 3,
+    "new_requests_after_post_revoke_nav": 0
+  },
+  "js_disabled": {
+    "metrika_requests": 0
+  },
+  "accessibility": {
+    "first_focus_text": "",
+    "settings_visible": true,
+    "settings_visible_after_escape": false
+  },
+  "mobile": {
+    "320": {
+      "scrollWidth": 320,
+      "innerWidth": 320,
+      "noOverflow": true
+    },
+    "360": {
+      "scrollWidth": 345,
+      "innerWidth": 360,
+      "noOverflow": true
+    },
+    "390": {
+      "scrollWidth": 375,
+      "innerWidth": 390,
+      "noOverflow": true
+    },
+    "768": {
+      "scrollWidth": 753,
+      "innerWidth": 768,
+      "noOverflow": true
+    },
+    "1280": {
+      "scrollWidth": 1265,
+      "innerWidth": 1280,
+      "noOverflow": true
+    }
+  }
+}

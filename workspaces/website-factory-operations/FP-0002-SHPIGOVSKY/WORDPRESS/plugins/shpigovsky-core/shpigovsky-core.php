@@ -2,8 +2,8 @@
 /**
  * Plugin Name: Shpigovsky Core
  * Plugin URI: https://example.invalid/shpigovsky-core
- * Description: FP-0002 functionality plugin — cookie consent foundation, truthful Admin status, and preserved production editorial reality.
- * Version: 0.3.17-p18e-ab
+ * Description: FP-0002 functionality plugin — public cookie consent controls, consent-gated analytics, and preserved production editorial reality.
+ * Version: 0.3.18-p18e-cd
  * Requires at least: 6.0
  * Requires PHP: 8.0
  * Author: Forge WordPress / FP-0002
@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'SHPIGOVSKY_CORE_VERSION', '0.3.17-p18e-ab' );
+define( 'SHPIGOVSKY_CORE_VERSION', '0.3.18-p18e-cd' );
 define( 'SHPIGOVSKY_CORE_FILE', __FILE__ );
 define( 'SHPIGOVSKY_CORE_DIR', plugin_dir_path( __FILE__ ) );
 define( 'SHPIGOVSKY_CORE_URI', plugin_dir_url( __FILE__ ) );

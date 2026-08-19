@@ -29,6 +29,7 @@ $map_embed        = isset( $location['map_embed'] ) ? trim( (string) $location['
 $map_embed_code   = isset( $location['map_embed_code'] ) ? (string) $location['map_embed_code'] : '';
 $map_script       = '' !== trim( $map_embed_code ) ? shpigovsky_sanitize_yandex_constructor_embed( $map_embed_code ) : '';
 $map_alt          = isset( $location['map_alt'] ) ? trim( (string) $location['map_alt'] ) : '';
+$map_fallback_url = '' !== $address ? 'https://yandex.ru/maps/?text=' . rawurlencode( $address ) : home_url( '/kontakty/' );
 $simplified    = ! empty( $location['simplified'] );
 
 if ( '' === $title && '' === $address ) {
@@ -92,13 +93,7 @@ if ( '' === $title && '' === $address ) {
 		</ul>
 	<?php endif; ?>
 
-	<?php if ( '' !== $map_script ) : ?>
-		<figure class="contacts-location__map contacts-location__map--constructor">
-			<div class="contacts-location__map-embed contacts-location__map-embed--constructor">
-				<?php echo $map_script; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- sanitized Yandex Constructor script. ?>
-			</div>
-		</figure>
-	<?php elseif ( '' !== $map_image ) : ?>
+	<?php if ( '' !== $map_image ) : ?>
 		<figure class="contacts-location__map">
 			<img
 				class="contacts-location__map-image"
@@ -111,15 +106,20 @@ if ( '' === $title && '' === $address ) {
 			>
 		</figure>
 	<?php elseif ( '' !== $map_embed && shpigovsky_is_allowed_map_embed_url( $map_embed ) ) : ?>
-		<figure class="contacts-location__map">
-			<iframe
-				class="contacts-location__map-embed"
-				src="<?php echo esc_url( $map_embed ); ?>"
-				title="<?php echo esc_attr( $map_alt ); ?>"
-				loading="lazy"
-				referrerpolicy="no-referrer-when-downgrade"
-				allowfullscreen
-			></iframe>
+		<figure class="contacts-location__map contacts-location__map--privacy-safe">
+			<div class="contacts-location__map-fallback">
+				<p class="contacts-location__map-fallback-title"><?php echo esc_html( $map_alt ); ?></p>
+				<p class="contacts-location__map-fallback-text"><?php esc_html_e( 'Интерактивная карта открывается по вашему запросу, чтобы сторонний сервис не загружался автоматически.', 'shpigovsky' ); ?></p>
+				<a class="btn btn_dark btn--primary contacts-location__map-fallback-link" href="<?php echo esc_url( $map_fallback_url ); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Открыть карту', 'shpigovsky' ); ?></a>
+			</div>
+		</figure>
+	<?php elseif ( '' !== $map_script ) : ?>
+		<figure class="contacts-location__map contacts-location__map--privacy-safe">
+			<div class="contacts-location__map-fallback">
+				<p class="contacts-location__map-fallback-title"><?php echo esc_html( $map_alt ); ?></p>
+				<p class="contacts-location__map-fallback-text"><?php esc_html_e( 'Интерактивная карта Яндекса открывается отдельно по вашему запросу, без автоматической загрузки стороннего embed.', 'shpigovsky' ); ?></p>
+				<a class="btn btn_dark btn--primary contacts-location__map-fallback-link" href="<?php echo esc_url( $map_fallback_url ); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Открыть карту в Яндекс Картах', 'shpigovsky' ); ?></a>
+			</div>
 		</figure>
 	<?php endif; ?>
 </article>

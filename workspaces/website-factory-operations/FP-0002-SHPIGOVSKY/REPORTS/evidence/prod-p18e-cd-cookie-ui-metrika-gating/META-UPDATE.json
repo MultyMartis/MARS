@@ -1,0 +1,26 @@
+{
+  "ok": true,
+  "core": "0.3.18-p18e-cd",
+  "blog_public": 0,
+  "meta": {
+    "baseline_id": "FP-0002-PROD-BASELINE-2026-08-19-P18E-CD",
+    "latest_wave": "P18E-C/D Cookie UI + Metrika Gating",
+    "parity": "MATCH",
+    "verified_at": "2026-08-19 12:22 UTC",
+    "backup": "BOUNDED OPTION SNAPSHOT / EXACT FILE DEPLOY",
+    "git_sha": "16706398f03825b054ce75c56e8af48ec4349329",
+    "wave": "PROD-P15",
+    "state_note": "COOKIE CONSENT ACTIVE; METRIKA CONSENT-GATED; FORM GOAL CONSENT INTEGRATION PENDING P18E-E; INDEXING CLOSED",
+    "legacy_redirects": "7/7",
+    "cutover": "DONE",
+    "ssl": "ACTIVE",
+    "dns_ns": "DONE / Beget",
+    "smtp_sender": "noreply@shpigovsky.ru",
+    "indexing": "CLOSED — WAITING FOR OLYA APPROVAL",
+    "public_origin": "ПУБЛИЧНЫЙ https://shpigovsky.ru/ СЕЙЧАС ОТДАЁТ СТАРЫЙ САЙТ (Craftum) — привязка к WordPress ещё нужна",
+    "mail": "SMTP CONFIGURED — VERIFICATION REQUIRED",
+    "leads": "ACTIVE",
+    "metrika_form_goals": "CONFIGURABLE"
+  },
+  "_exit_code": 0
+}

@@ -28,12 +28,12 @@ final class SystemDashboard implements ModuleInterface {
 	/**
 	 * Baseline ID shown in the widget (updated by stabilization waves).
 	 */
-	const BASELINE_ID = 'FP-0002-PROD-BASELINE-2026-08-19-P18E-AB';
+	const BASELINE_ID = 'FP-0002-PROD-BASELINE-2026-08-19-P18E-CD';
 
 	/**
 	 * Latest accepted production wave label.
 	 */
-	const LATEST_ACCEPTED_WAVE = 'P18E-A/B Cookie Consent Foundation';
+	const LATEST_ACCEPTED_WAVE = 'P18E-C/D Cookie UI + Metrika Gating';
 
 	/**
 	 * {@inheritdoc}
@@ -200,7 +200,7 @@ final class SystemDashboard implements ModuleInterface {
 		self::row(
 			__( 'Cookie-согласие', 'shpigovsky-core' ),
 			class_exists( PrivacyConsent::class )
-				? __( 'FOUNDATION READY / FRONTEND PENDING', 'shpigovsky-core' )
+				? __( 'ACTIVE', 'shpigovsky-core' )
 				: __( 'NOT INSTALLED', 'shpigovsky-core' )
 		);
 		self::row(
@@ -212,8 +212,12 @@ final class SystemDashboard implements ModuleInterface {
 		self::row(
 			__( 'Consent-gating Метрики', 'shpigovsky-core' ),
 			class_exists( PrivacyConsent::class )
-				? __( 'CURRENTLY NOT CONSENT-GATED — P18E-D PENDING', 'shpigovsky-core' )
+				? __( 'CONSENT-GATED', 'shpigovsky-core' )
 				: '—'
+		);
+		self::row(
+			__( 'Form goal consent integration', 'shpigovsky-core' ),
+			__( 'PENDING P18E-E', 'shpigovsky-core' )
 		);
 		self::row(
 			__( 'Политика Cookie', 'shpigovsky-core' ),
@@ -233,11 +237,10 @@ final class SystemDashboard implements ModuleInterface {
 
 		echo '<h3 style="margin:0 0 6px;">' . esc_html__( 'Следующие шаги', 'shpigovsky-core' ) . '</h3>';
 		echo '<ul style="margin:0 0 12px 1.2em;">';
-		self::li( __( '1. P18E-C/D: публичное уведомление cookie + реальное условное подключение Яндекс Метрики', 'shpigovsky-core' ) );
-		self::li( __( '2. P18E-E/F: consent-aware goals форм + withdrawal / policy integration', 'shpigovsky-core' ) );
-		self::li( __( '3. Индексация — ТОЛЬКО после разрешения Оли или явной команды оператора', 'shpigovsky-core' ) );
-		self::li( __( '4. Cookie Policy: legal/operator review текущего контента', 'shpigovsky-core' ) );
-		self::li( __( '5. Открытые решения: срок хранения consent-choice и server-side evidence policy', 'shpigovsky-core' ) );
+		self::li( __( '1. P18E-E/F: consent-aware goals форм + permanent footer entry + withdrawal / policy integration', 'shpigovsky-core' ) );
+		self::li( __( '2. Индексация — ТОЛЬКО после разрешения Оли или явной команды оператора', 'shpigovsky-core' ) );
+		self::li( __( '3. Cookie Policy: legal/operator review текущего контента', 'shpigovsky-core' ) );
+		self::li( __( '4. Открытые решения: срок хранения consent-choice и server-side evidence policy', 'shpigovsky-core' ) );
 		echo '</ul>';
 
 		if ( $is_beget && ( 'local' === $env_const || 'local' === $env_fn ) ) {

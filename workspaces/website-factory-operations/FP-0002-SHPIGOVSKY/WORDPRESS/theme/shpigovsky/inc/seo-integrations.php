@@ -125,6 +125,38 @@ function shpigovsky_seo_sanitize_public_id( $value, $pattern = 'A-Za-z0-9_-' ) {
 }
 
 /**
+ * Strip direct Yandex Metrika snippets from operator custom code.
+ *
+ * P18E-C/D keeps one canonical analytics owner: PrivacyConsent runtime.
+ * We preserve custom code fields, but prevent direct Metrika bootstrap or
+ * noscript watch pixels there from bypassing consent.
+ *
+ * @param string $html Raw custom code.
+ * @return string
+ */
+function shpigovsky_seo_strip_metrika_from_custom_code( $html ) {
+	$html = (string) $html;
+	if ( '' === trim( $html ) ) {
+		return '';
+	}
+
+	$patterns = array(
+		'/<!--\s*Yandex\.Metrika counter\s*-->/i',
+		'/<!--\s*\/Yandex\.Metrika counter\s*-->/i',
+		'/<script\b[^>]*>[\s\S]*?mc\.yandex\.ru\/metrika\/tag\.js[\s\S]*?<\/script>/i',
+		'/<noscript>[\s\S]*?mc\.yandex\.ru\/watch\/[\s\S]*?<\/noscript>/i',
+		'/<img\b[^>]*mc\.yandex\.ru\/watch\/[^>]*>/i',
+	);
+
+	$clean = preg_replace( $patterns, '', $html );
+	if ( ! is_string( $clean ) ) {
+		return '';
+	}
+
+	return trim( $clean );
+}
+
+/**
  * Whether sitemap generation is enabled (independent of blog_public indexing).
  *
  * @return bool
@@ -315,6 +347,10 @@ function shpigovsky_seo_output_head_integrations() {
 
 	$head = (string) get_option( 'options_custom_head_code', '' );
 	if ( is_string( $head ) && '' !== trim( $head ) ) {
+		$head = shpigovsky_seo_strip_metrika_from_custom_code( $head );
+	}
+
+	if ( '' !== $head ) {
 		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- trusted Administrator option.
 		echo $head . "\n";
 	}
@@ -336,6 +372,10 @@ function shpigovsky_seo_output_body_open() {
 
 	$body = (string) get_option( 'options_custom_body_open_code', '' );
 	if ( is_string( $body ) && '' !== trim( $body ) ) {
+		$body = shpigovsky_seo_strip_metrika_from_custom_code( $body );
+	}
+
+	if ( '' !== $body ) {
 		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- trusted Administrator option.
 		echo $body . "\n";
 	}
@@ -348,22 +388,12 @@ add_action( 'wp_body_open', 'shpigovsky_seo_output_body_open', 1 );
  * @return void
  */
 function shpigovsky_seo_output_footer_integrations() {
-	$metrica = shpigovsky_seo_sanitize_public_id( (string) shpigovsky_seo_get_option( 'yandex_metrica_counter_id', '' ), '0-9' );
-	if ( '' !== $metrica ) {
-		// phpcs:ignore WordPress.WP.EnqueuedResources.NonEnqueuedScript -- standard Yandex.Metrica bootstrap from counter ID.
-		echo "<!-- Yandex.Metrika counter -->\n<script type=\"text/javascript\">\n"
-			. "(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};\n"
-			. "m[i].l=1*new Date();"
-			. "for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}\n"
-			. "k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})\n"
-			. "(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');\n"
-			. "ym(" . esc_js( $metrica ) . ", 'init', {clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true});\n"
-			. "</script>\n<noscript><div><img src=\"https://mc.yandex.ru/watch/" . esc_attr( $metrica ) . "\" style=\"position:absolute; left:-9999px;\" alt=\"\" /></div></noscript>\n"
-			. "<!-- /Yandex.Metrika counter -->\n";
-	}
-
 	$footer = (string) get_option( 'options_custom_footer_code', '' );
 	if ( is_string( $footer ) && '' !== trim( $footer ) ) {
+		$footer = shpigovsky_seo_strip_metrika_from_custom_code( $footer );
+	}
+
+	if ( '' !== $footer ) {
 		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- trusted Administrator option.
 		echo $footer . "\n";
 	}

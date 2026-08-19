@@ -81,6 +81,8 @@ final class PrivacyConsent implements ModuleInterface {
 		add_action( 'admin_menu', array( __CLASS__, 'register_menu' ), 100 );
 		add_action( 'admin_post_' . self::SAVE_ACTION, array( __CLASS__, 'handle_save' ) );
 		add_action( 'admin_notices', array( __CLASS__, 'render_notice' ) );
+		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_frontend_assets' ), 40 );
+		add_action( 'wp_footer', array( __CLASS__, 'render_frontend_markup' ), 5 );
 	}
 
 	/**
@@ -117,12 +119,12 @@ final class PrivacyConsent implements ModuleInterface {
 
 		echo '<div class="wrap fp02-cookie-privacy">';
 		echo '<h1>' . esc_html__( 'Cookie и конфиденциальность', 'shpigovsky-core' ) . '</h1>';
-		echo '<p>' . esc_html__( 'Техническая основа cookie-согласия. В этой волне публичный баннер и реальное consent-gating аналитики ещё не включены.', 'shpigovsky-core' ) . '</p>';
+		echo '<p>' . esc_html__( 'Единый owner cookie-согласия: настройки, browser record, публичный notice и consent-gated аналитика.', 'shpigovsky-core' ) . '</p>';
 
 		echo '<div class="notice notice-info" style="padding:12px;">';
-		echo '<p><strong>' . esc_html__( 'Техническая основа:', 'shpigovsky-core' ) . '</strong> <code>READY</code></p>';
-		echo '<p><strong>' . esc_html__( 'Публичное уведомление:', 'shpigovsky-core' ) . '</strong> <code>NOT IMPLEMENTED</code></p>';
-		echo '<p><strong>' . esc_html__( 'Consent-gating Метрики:', 'shpigovsky-core' ) . '</strong> <code>NOT IMPLEMENTED</code></p>';
+		echo '<p><strong>' . esc_html__( 'Техническая основа:', 'shpigovsky-core' ) . '</strong> <code>ACTIVE</code></p>';
+		echo '<p><strong>' . esc_html__( 'Публичное уведомление:', 'shpigovsky-core' ) . '</strong> <code>ACTIVE</code></p>';
+		echo '<p><strong>' . esc_html__( 'Consent-gating Метрики:', 'shpigovsky-core' ) . '</strong> <code>CONSENT-GATED</code></p>';
 		echo '</div>';
 
 		echo '<form method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '" autocomplete="off">';
@@ -135,7 +137,7 @@ final class PrivacyConsent implements ModuleInterface {
 			'system_enabled',
 			__( 'Система cookie-согласия', 'shpigovsky-core' ),
 			(bool) $settings['system_enabled'],
-			__( 'Подготавливает систему и настройки. Публичный баннер в этой волне ещё не показывается.', 'shpigovsky-core' )
+			__( 'Если отключить эту UI-систему, публичный banner/settings не рендерятся, но аналитика всё равно не должна включаться автоматически.', 'shpigovsky-core' )
 		);
 		self::row_text(
 			'banner_title',
@@ -189,7 +191,7 @@ final class PrivacyConsent implements ModuleInterface {
 			'analytics_category_enabled',
 			__( 'Аналитика доступна для выбора', 'shpigovsky-core' ),
 			(bool) $settings['analytics_category_enabled'],
-			__( 'Категория остаётся отдельной от Necessary. Это не включает фактическую загрузку аналитики в текущей волне.', 'shpigovsky-core' )
+			__( 'Категория остаётся отдельной от Necessary. Фактическая загрузка Метрики происходит только после разрешения аналитики.', 'shpigovsky-core' )
 		);
 		self::row_textarea(
 			'analytics_description',
@@ -218,9 +220,9 @@ final class PrivacyConsent implements ModuleInterface {
 
 		echo '<h2>' . esc_html__( 'Состояние', 'shpigovsky-core' ) . '</h2>';
 		echo '<table class="form-table" role="presentation">';
-		self::row_html( __( 'Техническая основа', 'shpigovsky-core' ), '<code>READY</code>' );
-		self::row_html( __( 'Публичное уведомление', 'shpigovsky-core' ), '<code>NOT IMPLEMENTED</code>' );
-		self::row_html( __( 'Consent-gating Метрики', 'shpigovsky-core' ), '<code>NOT IMPLEMENTED</code>' );
+		self::row_html( __( 'Техническая основа', 'shpigovsky-core' ), '<code>ACTIVE</code>' );
+		self::row_html( __( 'Публичное уведомление', 'shpigovsky-core' ), '<code>ACTIVE</code>' );
+		self::row_html( __( 'Consent-gating Метрики', 'shpigovsky-core' ), '<code>CONSENT-GATED</code>' );
 		self::row_html( __( 'Политика Cookie', 'shpigovsky-core' ), '<code>' . esc_html( $policy_status ) . '</code>' );
 		self::row_html( __( 'Хранилище доказательств согласия', 'shpigovsky-core' ), '<code>' . esc_html__( 'BROWSER STATE FOUNDATION ONLY / SERVER EVIDENCE DEFERRED', 'shpigovsky-core' ) . '</code>' );
 		self::row_html( __( 'Ключ browser record', 'shpigovsky-core' ), '<code>' . esc_html( self::COOKIE_NAME ) . '</code>' );
@@ -700,6 +702,178 @@ final class PrivacyConsent implements ModuleInterface {
 	}
 
 	/**
+	 * Whether the public runtime is enabled.
+	 *
+	 * @return bool
+	 */
+	public static function frontend_runtime_enabled() {
+		$settings = self::get_settings();
+		return ! is_admin() && ! wp_doing_ajax() && ! empty( $settings['system_enabled'] );
+	}
+
+	/**
+	 * Register and localize public assets.
+	 *
+	 * @return void
+	 */
+	public static function enqueue_frontend_assets() {
+		if ( ! self::frontend_runtime_enabled() ) {
+			return;
+		}
+
+		$style_deps = array();
+		if ( wp_style_is( 'shpigovsky-v9', 'registered' ) || wp_style_is( 'shpigovsky-v9', 'enqueued' ) ) {
+			$style_deps[] = 'shpigovsky-v9';
+		}
+
+		$script_deps = array();
+		if ( wp_script_is( 'shpigovsky-v9-shell', 'registered' ) || wp_script_is( 'shpigovsky-v9-shell', 'enqueued' ) ) {
+			$script_deps[] = 'shpigovsky-v9-shell';
+		}
+
+		wp_enqueue_style(
+			'fp02-privacy-consent',
+			SHPIGOVSKY_CORE_URI . 'assets/css/privacy-consent.css',
+			$style_deps,
+			self::asset_version( 'assets/css/privacy-consent.css' )
+		);
+
+		wp_enqueue_script(
+			'fp02-privacy-consent',
+			SHPIGOVSKY_CORE_URI . 'assets/js/privacy-consent.js',
+			$script_deps,
+			self::asset_version( 'assets/js/privacy-consent.js' ),
+			true
+		);
+
+		wp_localize_script(
+			'fp02-privacy-consent',
+			'fp02PrivacyConsent',
+			self::public_runtime_config()
+		);
+	}
+
+	/**
+	 * Render the shared banner/settings markup.
+	 *
+	 * Same HTML can be cached for all visitors; browser state is resolved client-side.
+	 *
+	 * @return void
+	 */
+	public static function render_frontend_markup() {
+		if ( ! self::frontend_runtime_enabled() ) {
+			return;
+		}
+
+		$settings   = self::get_settings();
+		$policy     = self::get_policy_page();
+		$policy_url = $policy instanceof \WP_Post ? get_permalink( $policy ) : '';
+		?>
+		<div
+			class="fp02-cookie-consent"
+			data-fp02-cookie-consent
+			hidden
+			aria-hidden="true"
+		>
+			<div class="fp02-cookie-consent__card" role="region" aria-labelledby="fp02-cookie-consent-title">
+				<div class="fp02-cookie-consent__notice" data-fp02-consent-notice>
+					<h2 class="fp02-cookie-consent__title" id="fp02-cookie-consent-title"><?php echo esc_html( (string) $settings['banner_title'] ); ?></h2>
+					<p class="fp02-cookie-consent__text"><?php echo esc_html( (string) $settings['banner_description'] ); ?></p>
+					<?php if ( is_string( $policy_url ) && '' !== $policy_url ) : ?>
+						<p class="fp02-cookie-consent__policy">
+							<a href="<?php echo esc_url( $policy_url ); ?>"><?php esc_html_e( 'Подробнее в политике cookie', 'shpigovsky-core' ); ?></a>
+						</p>
+					<?php endif; ?>
+					<div class="fp02-cookie-consent__actions">
+						<button type="button" class="btn btn_dark btn--primary fp02-cookie-consent__action" data-fp02-consent-accept><?php echo esc_html( (string) $settings['label_accept'] ); ?></button>
+						<button type="button" class="btn fp02-cookie-consent__action fp02-cookie-consent__action--secondary" data-fp02-consent-necessary><?php echo esc_html( (string) $settings['label_necessary_only'] ); ?></button>
+						<button type="button" class="fp02-cookie-consent__link-button" data-fp02-consent-customize aria-expanded="false" aria-controls="fp02-cookie-consent-settings"><?php echo esc_html( (string) $settings['label_customize'] ); ?></button>
+					</div>
+				</div>
+
+				<section
+					class="fp02-cookie-consent__settings"
+					id="fp02-cookie-consent-settings"
+					data-fp02-consent-settings
+					hidden
+					aria-labelledby="fp02-cookie-consent-settings-title"
+				>
+					<div class="fp02-cookie-consent__settings-head">
+						<h3 class="fp02-cookie-consent__settings-title" id="fp02-cookie-consent-settings-title"><?php esc_html_e( 'Настройки cookie', 'shpigovsky-core' ); ?></h3>
+						<button type="button" class="fp02-cookie-consent__close" data-fp02-consent-close-settings aria-label="<?php esc_attr_e( 'Закрыть настройки cookie', 'shpigovsky-core' ); ?>">
+							<span aria-hidden="true">×</span>
+						</button>
+					</div>
+
+					<div class="fp02-cookie-consent__group">
+						<div class="fp02-cookie-consent__group-copy">
+							<h4 class="fp02-cookie-consent__group-title"><?php esc_html_e( 'Необходимые', 'shpigovsky-core' ); ?></h4>
+							<p class="fp02-cookie-consent__group-text"><?php esc_html_e( 'Всегда включены', 'shpigovsky-core' ); ?></p>
+						</div>
+						<span class="fp02-cookie-consent__badge"><?php esc_html_e( 'Всегда включены', 'shpigovsky-core' ); ?></span>
+					</div>
+
+					<div class="fp02-cookie-consent__group">
+						<div class="fp02-cookie-consent__group-copy">
+							<h4 class="fp02-cookie-consent__group-title"><?php esc_html_e( 'Аналитика', 'shpigovsky-core' ); ?></h4>
+							<p class="fp02-cookie-consent__group-text"><?php echo esc_html( (string) $settings['analytics_description'] ); ?></p>
+							<p class="fp02-cookie-consent__provider"><?php esc_html_e( 'Провайдер: Яндекс Метрика', 'shpigovsky-core' ); ?></p>
+						</div>
+						<label class="fp02-cookie-consent__toggle">
+							<input type="checkbox" class="fp02-cookie-consent__toggle-input" data-fp02-consent-analytics />
+							<span class="fp02-cookie-consent__toggle-ui" aria-hidden="true"></span>
+							<span class="screen-reader-text"><?php esc_html_e( 'Разрешить аналитические cookie', 'shpigovsky-core' ); ?></span>
+						</label>
+					</div>
+
+					<div class="fp02-cookie-consent__actions fp02-cookie-consent__actions--settings">
+						<button type="button" class="btn btn_dark btn--primary fp02-cookie-consent__action" data-fp02-consent-save><?php echo esc_html( (string) $settings['label_save'] ); ?></button>
+					</div>
+				</section>
+			</div>
+		</div>
+		<?php
+	}
+
+	/**
+	 * Public-safe runtime config for the browser owner.
+	 *
+	 * @return array<string, mixed>
+	 */
+	public static function public_runtime_config() {
+		$settings   = self::get_settings();
+		$policy     = self::get_policy_page();
+		$policy_url = $policy instanceof \WP_Post ? get_permalink( $policy ) : '';
+		$attrs      = self::cookie_attributes();
+
+		return array(
+			'cookieName'                => self::COOKIE_NAME,
+			'currentVersion'            => self::current_version(),
+			'systemEnabled'             => ! empty( $settings['system_enabled'] ),
+			'analyticsCategoryEnabled'  => ! empty( $settings['analytics_category_enabled'] ),
+			'metrikaCounterId'          => self::metrika_counter_id(),
+			'policyUrl'                 => is_string( $policy_url ) ? $policy_url : '',
+			'cookie'                    => array(
+				'path'    => (string) ( $attrs['path'] ?? '/' ),
+				'maxAge'  => (int) ( $attrs['max_age'] ?? DAY_IN_SECONDS * self::lifetime_days() ),
+				'secure'  => ! empty( $attrs['secure'] ),
+				'sameSite'=> (string) ( $attrs['samesite'] ?? 'Lax' ),
+			),
+			'states'                    => array(
+				'undecided'        => self::STATE_UNDECIDED,
+				'necessaryOnly'    => self::STATE_NECESSARY_ONLY,
+				'analyticsAllowed' => self::STATE_ANALYTICS_ALLOWED,
+			),
+			'events'                    => array(
+				'updated'          => 'fp02:privacy-consent-updated',
+				'openSettings'     => 'fp02:privacy-consent-open',
+				'analyticsGranted' => 'analytics_granted',
+				'analyticsRevoked' => 'analytics_revoked',
+			),
+		);
+	}
+
+	/**
 	 * Default policy page if present.
 	 *
 	 * @return int
@@ -707,6 +881,21 @@ final class PrivacyConsent implements ModuleInterface {
 	private static function default_policy_page_id() {
 		$page = get_page_by_path( 'cookie-files-policy', OBJECT, 'page' );
 		return ( $page instanceof \WP_Post ) ? (int) $page->ID : 0;
+	}
+
+	/**
+	 * Version string for plugin assets.
+	 *
+	 * @param string $relative_path Relative path from plugin root.
+	 * @return string
+	 */
+	private static function asset_version( $relative_path ) {
+		$path = SHPIGOVSKY_CORE_DIR . ltrim( $relative_path, '/\\' );
+		if ( is_readable( $path ) ) {
+			return (string) filemtime( $path );
+		}
+
+		return defined( 'SHPIGOVSKY_CORE_VERSION' ) ? SHPIGOVSKY_CORE_VERSION : '1';
 	}
 
 	/**
