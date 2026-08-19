@@ -1,0 +1,251 @@
+{
+  "created_at": "2026-08-19T17:33:00+07:00",
+  "project": "CorvoNero / Корво Неро",
+  "programme": "mars-search-ppc-production",
+  "version": "v0.3",
+  "campaign": "CORVONERO-RSY",
+  "groups": [
+    {
+      "group_code": "01-LOCAL-PROGRAMMIST-1S",
+      "direction": "Программист 1С",
+      "mode": "LOCAL",
+      "priority": "HIGH",
+      "theme": "Программист 1С для бизнеса в Новосибирске.",
+      "service_direction": "подключение специалиста 1С к задачам бизнеса, донастройка, консультация по рабочим вопросам",
+      "local_remote_nuance": "локальный акцент: Новосибирск / Новосибирская область, без обещания выезда и без обязательной привязки к конкретной улице или офисному зданию",
+      "visual_concepts": "local business office, accountant/director and 1C specialist discussing system task, laptop, calm service scene, city/local nuance abstract but no specific landmark required",
+      "avoid": "official 1C partner claim, certificate, fake office badge",
+      "text_candidates": [
+        "Программист 1С в Новосибирске",
+        "Помощь с 1С для бизнеса",
+        "Когда нужен специалист 1С"
+      ],
+      "business_situation": "директор или бухгалтер обсуждает с приглашённым специалистом 1С рабочую задачу компании",
+      "emotion": "спокойная уверенность, деловой порядок, доверие без нажима",
+      "color_style": "тёмный графит, приглушённый синий, светлый фон, чистая B2B-технологичная подача",
+      "composition_notes": "два человека в деловом диалоге рядом с ноутбуком, документы без читаемых данных, свободная зона под рекламный текст"
+    },
+    {
+      "group_code": "02-LOCAL-SOPROVOZHDENIE-1S",
+      "direction": "Сопровождение 1С / техподдержка / ошибки 1С",
+      "mode": "LOCAL",
+      "priority": "HIGH",
+      "theme": "локальная поддержка, сопровождение, ошибки 1С.",
+      "service_direction": "сопровождение 1С, разбор ошибок, рабочая поддержка пользователей и бухгалтерии",
+      "local_remote_nuance": "локальная поддержка для бизнеса в Новосибирске, без ложных обещаний 24/7 и без официального ИТС-статуса",
+      "visual_concepts": "business team working calmly after problem resolved, support specialist near laptop, accounting workflow, clean dashboard abstraction",
+      "avoid": "24/7 badge, official support seal, fake vendor support screen",
+      "text_candidates": [
+        "Сопровождение 1С",
+        "Поддержка и ошибки 1С",
+        "1С мешает работе? Поможем разобраться"
+      ],
+      "business_situation": "после устранения ошибки команда вернулась к спокойной работе, специалист поддержки рядом с ноутбуком",
+      "emotion": "облегчение, контроль ситуации, профессиональная помощь",
+      "color_style": "чистый светлый фон, графитовые и синие акценты, аккуратная визуальная аналитика",
+      "composition_notes": "специалист и сотрудник рядом с ноутбуком, ненавязчивые абстрактные панели, место под короткий оффер"
+    },
+    {
+      "group_code": "03-LOCAL-DORABOTKA-1S",
+      "direction": "Доработка / разработка 1С",
+      "mode": "LOCAL",
+      "priority": "TEST",
+      "theme": "доработка 1С под процессы компании.",
+      "service_direction": "адаптация 1С под процессы компании, доработка конфигурации, проектирование рабочих сценариев",
+      "local_remote_nuance": "локальный подрядчик для бизнеса Новосибирска, без обещаний срока и фиксированной цены",
+      "visual_concepts": "business process diagram, laptop, manager and specialist aligning workflow, modular blocks, no code overload",
+      "avoid": "deadline guarantee, overloaded code screen, startup hacker aesthetics",
+      "text_candidates": [
+        "Доработка 1С под бизнес",
+        "Настроим 1С под процессы",
+        "Когда типовой 1С не хватает"
+      ],
+      "business_situation": "менеджер и специалист согласуют бизнес-процесс и необходимые доработки системы",
+      "emotion": "спокойная предметность, рациональность, профессиональное планирование",
+      "color_style": "светлый технологичный фон, графитовые блоки, сдержанные синие элементы",
+      "composition_notes": "схема процесса, ноутбук, два участника обсуждения, свободное поле под текст"
+    },
+    {
+      "group_code": "04-LOCAL-INTEGRACII-1S",
+      "direction": "Интеграции 1С",
+      "mode": "LOCAL",
+      "priority": "TEST",
+      "theme": "интеграция 1С с сайтом/CRM/сервисами.",
+      "service_direction": "связывание 1С с CRM, сайтом, складом и внешними сервисами без ручного переноса данных",
+      "local_remote_nuance": "локальный B2B-контекст для Новосибирска, без логотипов CMS/CRM и без заявлений о партнёрстве",
+      "visual_concepts": "connected systems diagram, website/CRM/warehouse/accounting blocks linked to central system, clean data flow, office context",
+      "avoid": "partner logos, brand lockups, fake exact UI of third-party systems",
+      "text_candidates": [
+        "Интеграции 1С",
+        "Свяжем 1С с сайтом и CRM",
+        "Данные без ручного переноса"
+      ],
+      "business_situation": "компания хочет убрать ручной перенос данных между 1С и внешними системами",
+      "emotion": "порядок, связность, надёжный рабочий контур",
+      "color_style": "светлый фон, графит, приглушённый синий, аккуратные линии связей",
+      "composition_notes": "центральный системный блок с мягкой схемой связей, деловой офисный контекст, запас под заголовок"
+    },
+    {
+      "group_code": "05-LOCAL-MARKIROVKA-CHESTNY-ZNAK",
+      "direction": "Маркировка / Честный знак",
+      "mode": "LOCAL",
+      "priority": "HIGH",
+      "theme": "маркировка, Честный знак, настройка обмена.",
+      "service_direction": "помощь с настройкой маркировки и рабочими процессами в 1С для бизнеса",
+      "local_remote_nuance": "локальный бизнес-контекст, без официального логотипа Честного знака, без госсимволики и юридических гарантий",
+      "visual_concepts": "product boxes with abstract barcode/marking symbols, accountant laptop, compliance workflow, clean warehouse/office context",
+      "avoid": "official Честный знак logo, government seals, guarantee/legal claim",
+      "text_candidates": [
+        "Маркировка и 1С",
+        "Настройка Честного знака",
+        "Помощь с маркировкой в 1С"
+      ],
+      "business_situation": "бухгалтерия и склад решают задачу маркировки и обмена данными в рабочем контуре",
+      "emotion": "контроль, аккуратность, рабочее спокойствие",
+      "color_style": "светлый фон, нейтральный графит, мягкие синие акценты, без красных тревожных сигналов",
+      "composition_notes": "коробки с абстрактной маркировкой, ноутбук, рабочий офисно-складской контекст, зона под короткий текст"
+    },
+    {
+      "group_code": "01-REMOTE-PROGRAMMIST-1S",
+      "direction": "Программист 1С",
+      "mode": "REMOTE",
+      "priority": "MEDIUM",
+      "theme": "удалённый программист 1С по России.",
+      "service_direction": "удалённое подключение специалиста 1С к задачам компании по России",
+      "local_remote_nuance": "удалённый формат по России, без указания конкретного города и без обещаний мгновенного подключения",
+      "visual_concepts": "remote support call, specialist connected online, map/network abstraction, business user at laptop, no specific city",
+      "avoid": "map with claims of instant coverage, flashy cyberpunk screens, fake national certificates",
+      "text_candidates": [
+        "Программист 1С удалённо",
+        "Помощь с 1С по России",
+        "Специалист 1С без привязки к офису"
+      ],
+      "business_situation": "бизнес-пользователь связывается со специалистом 1С онлайн для решения рабочей задачи",
+      "emotion": "доступность, деловая ясность, уверенная дистанционная помощь",
+      "color_style": "графит, мягкий синий, светлые интерфейсные плоскости, чистая коммерческая иллюстративность",
+      "composition_notes": "онлайн-связь, ноутбук, спокойная абстракция сетевого охвата, место под лаконичный оффер"
+    },
+    {
+      "group_code": "02-REMOTE-SOPROVOZHDENIE-1S",
+      "direction": "Сопровождение 1С / техподдержка / ошибки 1С",
+      "mode": "REMOTE",
+      "priority": "HIGH",
+      "theme": "удалённое сопровождение и поддержка 1С.",
+      "service_direction": "удалённая поддержка рабочей базы, разбор ошибок, сопровождение пользователей",
+      "local_remote_nuance": "дистанционная помощь по России, без обещаний 24/7 и без подмены вендорской поддержки",
+      "visual_concepts": "remote helpdesk, video call, resolved issue, support flow, calm business service",
+      "avoid": "24/7 neon support icon, panic error scene, fake official dashboards",
+      "text_candidates": [
+        "Сопровождение 1С удалённо",
+        "Поддержка 1С по России",
+        "Ошибки 1С — разберёмся дистанционно"
+      ],
+      "business_situation": "пользователь получает удалённую помощь, проблема решается без драматизации",
+      "emotion": "спокойствие после разбора проблемы, надёжная помощь, порядок",
+      "color_style": "светлый офисный фон, графитовые и синие акценты, минималистичные экраны",
+      "composition_notes": "видеозвонок или удалённая сессия, специалист и пользователь в деловом окружении, запас под одну фразу"
+    },
+    {
+      "group_code": "03-REMOTE-DORABOTKA-1S",
+      "direction": "Доработка / разработка 1С",
+      "mode": "REMOTE",
+      "priority": "MEDIUM",
+      "theme": "удалённая доработка 1С.",
+      "service_direction": "дистанционная доработка 1С под бизнес-процессы компании",
+      "local_remote_nuance": "удалённая совместная работа без обещаний фикс-сметы и точного срока",
+      "visual_concepts": "remote specialist customizing workflow, screens with abstract blocks, collaborative online planning",
+      "avoid": "fake code overload, hard deadline badge, cheap outsourcing stereotype",
+      "text_candidates": [
+        "Доработка 1С удалённо",
+        "Настройка 1С под процессы",
+        "Удалённая разработка 1С"
+      ],
+      "business_situation": "специалист и клиент онлайн согласуют будущую доработку рабочих сценариев",
+      "emotion": "деловая собранность, аналитичность, спокойное сотрудничество",
+      "color_style": "графитовые блоки, светлая подложка, мягкие синие акценты",
+      "composition_notes": "абстрактные модули на экране, человек на видеосвязи, место под текстовый оффер"
+    },
+    {
+      "group_code": "04-REMOTE-INTEGRACII-1S",
+      "direction": "Интеграции 1С",
+      "mode": "REMOTE",
+      "priority": "MEDIUM",
+      "theme": "удалённые интеграции 1С.",
+      "service_direction": "удалённая настройка обмена между 1С, CRM, сайтом и сервисами",
+      "local_remote_nuance": "удалённая работа по России, без чужих логотипов и без claims про любую систему без ограничений",
+      "visual_concepts": "cloud/data flow between online services, CRM, website, 1C abstraction, remote specialist",
+      "avoid": "protected logos, fake UI screenshots, exaggerated cloud sci-fi",
+      "text_candidates": [
+        "Интеграции 1С удалённо",
+        "Свяжем 1С с сервисами",
+        "Обмен данными без ручной работы"
+      ],
+      "business_situation": "компания хочет наладить обмен данными между онлайн-сервисами и учётной системой",
+      "emotion": "связность, предсказуемость, технологичная надёжность",
+      "color_style": "чистый светлый фон, графит и muted blue, аккуратная абстракция потоков данных",
+      "composition_notes": "облачные и системные блоки соединены понятными линиями, деловой удалённый контекст, свободное поле под текст"
+    },
+    {
+      "group_code": "05-REMOTE-MARKIROVKA-CHESTNY-ZNAK",
+      "direction": "Маркировка / Честный знак",
+      "mode": "REMOTE",
+      "priority": "MEDIUM",
+      "theme": "удалённая настройка маркировки и Честного знака.",
+      "service_direction": "дистанционная помощь с маркировкой и настройкой процессов в 1С",
+      "local_remote_nuance": "по России, без официальных логотипов и без обещаний юридического результата",
+      "visual_concepts": "remote compliance setup, product marking workflow, laptop, warehouse/accounting context, abstract barcode",
+      "avoid": "official seals, government marks, guarantee claims, logo lockups",
+      "text_candidates": [
+        "Маркировка в 1С удалённо",
+        "Настройка Честного знака",
+        "Помощь с маркировкой по России"
+      ],
+      "business_situation": "удалённый специалист помогает компании наладить рабочий контур маркировки и учёта",
+      "emotion": "спокойный контроль, аккуратность, прикладная польза",
+      "color_style": "светлый фон, графитовые рабочие элементы, приглушённые синие акценты",
+      "composition_notes": "ноутбук, абстрактная маркировка на товарах, удалённый рабочий контакт, место под короткий текст"
+    }
+  ],
+  "prompt_counts": {
+    "total_prompt_variants": 50,
+    "primary_variants": 20,
+    "safer_conservative_variants": 10,
+    "minimal_text_free_variants": 10,
+    "optional_text_on_image_variants": 10
+  },
+  "text_on_image_counts": {
+    "group_primary_candidates": 10,
+    "group_secondary_candidates": 10,
+    "group_no_text_options": 10
+  },
+  "roman_photo_future_status": "WAITING_FOR_REAL_ROMAN_PHOTO",
+  "brand_status": "SAFE UNKNOWN",
+  "logo_status": "NOT_PROVIDED / OPTIONAL_LATER",
+  "image_status": "NOT_CREATED",
+  "upload_status": "MANUAL_LATER / NOT_PERFORMED",
+  "launch_status": "NOT_APPROVED",
+  "source_refs": [
+    "projects/mars-search-ppc-production/pilots/corvonero/rsy/import-candidate/CORVONERO-RSY-IMPORT-CANDIDATE-v0.2.md",
+    "projects/mars-search-ppc-production/pilots/corvonero/rsy/import-candidate/CORVONERO-RSY-CAMPAIGN-GROUPS-v0.2.md",
+    "projects/mars-search-ppc-production/pilots/corvonero/rsy/import-candidate/CORVONERO-RSY-AD-CANDIDATES-v0.2.md",
+    "projects/mars-search-ppc-production/pilots/corvonero/rsy/import-candidate/CORVONERO-RSY-IMAGE-REQUIREMENTS-v0.2.md",
+    "projects/mars-search-ppc-production/pilots/corvonero/rsy/import-candidate/CORVONERO-RSY-NOT-UPLOAD-READY-v0.2.md",
+    "projects/mars-search-ppc-production/reports/REPORT-corvonero-rsy-import-candidate-v0.2.md",
+    "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-RSY-GENERATION-DRAFT-PACK-2026-08-19",
+    "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-RSY-IMPORT-CANDIDATE-v0.2-2026-08-19"
+  ],
+  "safe_unknowns": [
+    "BRAND_COLOR_STATUS: SAFE UNKNOWN",
+    "Exact brandbook is not provided.",
+    "LOGO_STATUS: NOT_PROVIDED / OPTIONAL_LATER",
+    "Exact Yandex Direct image ratio/format requirements were not revalidated in this task.",
+    "Real Roman photo is not available yet."
+  ],
+  "not_created_guard": {
+    "images": "NOT_CREATED",
+    "image_files": "NOT_CREATED",
+    "roman_variants": "NOT_CREATED",
+    "direct_import_package": "NOT_CREATED",
+    "direct_upload": "NOT_PERFORMED"
+  }
+}
