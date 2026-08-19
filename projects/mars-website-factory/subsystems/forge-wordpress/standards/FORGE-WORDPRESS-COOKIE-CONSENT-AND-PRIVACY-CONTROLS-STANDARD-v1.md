@@ -1,7 +1,7 @@
 # Forge WordPress — Cookie Consent and Privacy Controls Standard v1
 
 **ID:** FW-S-33  
-**Status:** ACTIVE — PRODUCTION-INFORMED / SPECIFICATION-FIRST  
+**Status:** ACTIVE — PRODUCTION-INFORMED / FOUNDATION IMPLEMENTED ONCE  
 **Date:** 2026-08-19  
 **Evidence:** FP-0002 PROD-P18E design; FP-0002 live Metrika/forms/legal reality  
 **Companions:** [FORMS-AND-SMTP](FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) · [SITE-SETTINGS](FORGE-WORDPRESS-SITE-SETTINGS-STANDARD-v1.md) · [GLOBAL-SETTINGS-OWNERSHIP](FORGE-WORDPRESS-GLOBAL-SETTINGS-OWNERSHIP-STANDARD-v1.md) · [ADMIN-IA](FORGE-WORDPRESS-ADMIN-INFORMATION-ARCHITECTURE-STANDARD-v1.md)
@@ -273,6 +273,10 @@ Related anti-patterns:
 - `PRIVACY-008` Russian-law/regulator evidence over copied GDPR assumptions
 - `PRIVACY-009` editorial/Admin truth preserved
 - `PRIVACY-010` Metrika goals respect analytics consent and avoid identifying payloads by default
+- `PRIVACY-011` consent systems need an explicit machine-state/version contract before frontend UI
+- `PRIVACY-012` Admin must show foundation truthfully and not label consent ACTIVE before runtime gating exists
+- `PRIVACY-013` browser consent state cannot authorize privileged server behavior
+- `PRIVACY-014` integration classification is technical configuration, not ordinary editorial content
 
 ---
 

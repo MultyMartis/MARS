@@ -45,7 +45,7 @@ Extraction status: [backlog](../knowledge/FORGE-WORDPRESS-MODULE-EXTRACTION-BACK
 | Consultation Forms | AJAX lead + persist-before-mail | PRODUCTION PROVEN WITH CAVEATS (SMTP verification still a later gate) | B |
 | SMTP Admin / PHPMailer owner | One Admin config + `phpmailer_init` | PRODUCTION PROVEN WITH CAVEATS | B |
 | Form lead registry | Dedicated table + Заявки Admin | PRODUCTION PROVEN WITH CAVEATS | B |
-| Cookie / Privacy Controls | Small first-party consent owner, categories, gating, withdrawal, policy-link owner | PRODUCTION-INFORMED SPECIFICATION ONLY | B / J until second implementation |
+| Cookie / Privacy Controls | Small first-party consent owner, categories, gating, withdrawal, policy-link owner | IMPLEMENTED ONCE (foundation) / PRODUCTION PROVEN WITH CAVEATS | B / J until second implementation |
 | Decorative parallax | Brand motion | EXPERIMENTAL / PROJECT-SPECIFIC | I/J + **H** QA |
 | Advanced analytics | GTM/Metrica/etc. | PRODUCTION PROVEN WITH CAVEATS | B — empty-safe fields |
 
