@@ -1,0 +1,100 @@
+{
+  "qa_guard": {
+    "before": 1,
+    "after": 1,
+    "result": {
+      "ok": false,
+      "blocked": true,
+      "open": true,
+      "error": "close_requires_human_authorization"
+    },
+    "guard_held_open": true,
+    "activity_blocked_rows_delta": 0,
+    "qa_evidence_tail": [
+      {
+        "at": "2026-08-19 22:34:11",
+        "at_gmt": "2026-08-19 19:34:11 UTC",
+        "test_id": "p18j_qa_guard_test",
+        "kind": "guard_blocked_close",
+        "result": "PASS",
+        "blocked": true,
+        "blog_public_before": 1,
+        "blog_public_after": 1,
+        "effective": "OPEN"
+      }
+    ],
+    "_exit_code": 0
+  },
+  "spoof_without_const": {
+    "before": 1,
+    "after": 1,
+    "result": {
+      "ok": false,
+      "blocked": true,
+      "open": true,
+      "error": "close_requires_human_authorization"
+    },
+    "spoof_suppressed_qa_mode": true,
+    "activity_blocked_rows_delta_without_const": 1,
+    "note": "Without FP02_INDEXING_QA_MODE_AUTHORIZED, spoof must log real incident row",
+    "_exit_code": 0
+  },
+  "test_alert": {
+    "sent": true,
+    "recipients": 4,
+    "error": "",
+    "_exit_code": 0
+  },
+  "watchdog": {
+    "dashboard_line": "ACTIVE · последняя проверка 2026-08-19 22:34:14 · OPEN",
+    "snap": {
+      "effective": "OPEN",
+      "blog_public": 1,
+      "blog_open": true,
+      "robots": {
+        "file_exists": true,
+        "owner": "physical_file",
+        "global_disallow": false,
+        "body_head": "﻿User-agent: Yandex\r\nAllow: */uploads\r\nAllow: /*/*.js\r\nAllow: /*/*.css\r\nAllow: /wp-*.png\r\nAllow: /wp-*.jpg\r\nAllow: /wp-*.jpeg\r\nAllow: /wp-*.gif\r\nAllow: /wp-admi"
+      },
+      "meta": {
+        "global_noindex": false,
+        "source": "blog_public_core_robots"
+      },
+      "signals_open": true,
+      "signals_closed": false,
+      "human_decision": "OPEN",
+      "human_actor": "Olya (olya)",
+      "human_recorded_at": "2026-08-19 20:23:06",
+      "human_source": "p18g_bootstrap",
+      "fingerprint": "e305cb991e8eeadd264eb2ca7258aa5362c10d504fa7e31277dd879034db54ba"
+    },
+    "_exit_code": 0
+  },
+  "meta_update": {
+    "ok": true,
+    "core": "0.3.22-p18j",
+    "meta": {
+      "baseline_id": "FP-0002-PRODUCTION-MAINTENANCE-2026-08-20-P18J",
+      "latest_wave": "P18J Indexing QA Noise Cleanup",
+      "parity": "MATCH",
+      "verified_at": "2026-08-19 19:34:15 UTC",
+      "backup": "BOUNDED PAGE SNAPSHOT / EXACT FILE DEPLOY",
+      "git_sha": "16706398f03825b054ce75c56e8af48ec4349329",
+      "wave": "PROD-P15",
+      "state_note": "COOKIE CONSENT ACTIVE; METRIKA CONSENT-GATED; FORM GOAL CONSENT-GATED; COOKIE SETTINGS REOPEN ACTIVE; INDEXING CLOSED",
+      "legacy_redirects": "7/7",
+      "cutover": "DONE",
+      "ssl": "ACTIVE",
+      "dns_ns": "DONE / Beget",
+      "smtp_sender": "noreply@shpigovsky.ru",
+      "indexing": "OPEN — HUMAN-APPROVED",
+      "public_origin": "https://shpigovsky.ru/ — WordPress production",
+      "mail": "SMTP CONFIGURED — VERIFICATION REQUIRED",
+      "leads": "ACTIVE",
+      "metrika_form_goals": "CONSENT-GATED",
+      "sitemap_submissions": "P18I closeout — see REPORT"
+    },
+    "_exit_code": 0
+  }
+}

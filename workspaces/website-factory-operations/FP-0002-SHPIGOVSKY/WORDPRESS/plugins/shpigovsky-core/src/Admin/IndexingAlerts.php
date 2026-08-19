@@ -59,6 +59,19 @@ final class IndexingAlerts {
 	}
 
 	/**
+	 * Whether critical alerts should be suppressed for authorized QA context.
+	 *
+	 * @param array<string, mixed> $context Context.
+	 * @return bool
+	 */
+	public static function should_suppress_for_qa_context( array $context ) {
+		if ( ! class_exists( IndexingQaContext::class ) ) {
+			return false;
+		}
+		return IndexingQaContext::may_suppress_critical_alert( $context );
+	}
+
+	/**
 	 * Send critical closed/blocked alert.
 	 *
 	 * @param array<string, mixed> $context Event context.

@@ -1,6 +1,6 @@
 # OPEN ITEMS — FP-0002 Production Maintenance
 
-**Phase:** PRODUCTION / MAINTENANCE (post-P18I)  
+**Phase:** PRODUCTION / MAINTENANCE (post-P18J)  
 **Updated:** 2026-08-20
 
 Launch implementation tasks are **closed**. Only maintenance and operator follow-ups remain.
@@ -21,7 +21,7 @@ Launch implementation tasks are **closed**. Only maintenance and operator follow
 
 ## Closed (do not reopen as launch blockers)
 
-- Indexing approval — **OPEN — human-approved**; P18G guard active
+- Indexing approval — **OPEN — human-approved**; P18G guard active; P18J synthetic QA separated from production incident stream
 - SMTP verification — **done** (P18D-FU01)
 - Privacy / cookie runtime — **done** (P18E)
 - Pre-cutover / cutover / launch crawl — **done** (P18I)
@@ -34,13 +34,14 @@ Launch implementation tasks are **closed**. Only maintenance and operator follow
 1. **Editorial truth** = current production DB (Olya/Admin edits).
 2. Technical waves start with **fresh intake** — do not restore old launch baselines over live content.
 3. **Indexing is human-owned** — agents must not close without explicit command.
-4. P18G guard remains active.
+4. P18G guard remains active; synthetic guard QA must use authorized QA context only (P18J).
 5. New features → new bounded waves with their own reports.
 
 ---
 
 ## References
 
+- P18J report: `REPORTS/REPORT-FP-0002-PROD-P18J-INDEXING-QA-NOISE-CLEANUP.md`
 - Final baseline: `REPORTS/BASELINE-FP-0002-PRODUCTION-FINAL.md`
 - Closeout report: `REPORTS/REPORT-FP-0002-PROD-P18I-FINAL-LAUNCH-CLOSEOUT.md`
 - Closeout charter summary: `REPORTS/FP-0002-FINAL-LAUNCH-CLOSEOUT-v1.md`

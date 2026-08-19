@@ -28,12 +28,12 @@ final class SystemDashboard implements ModuleInterface {
 	/**
 	 * Baseline ID shown in the widget (updated by stabilization waves).
 	 */
-	const BASELINE_ID = 'FP-0002-PRODUCTION-FINAL-2026-08-20-P18I';
+	const BASELINE_ID = 'FP-0002-PRODUCTION-MAINTENANCE-2026-08-20-P18J';
 
 	/**
 	 * Latest accepted production wave label.
 	 */
-	const LATEST_ACCEPTED_WAVE = 'P18I Final Launch Closeout';
+	const LATEST_ACCEPTED_WAVE = 'P18J Indexing QA Noise Cleanup';
 
 	/**
 	 * {@inheritdoc}

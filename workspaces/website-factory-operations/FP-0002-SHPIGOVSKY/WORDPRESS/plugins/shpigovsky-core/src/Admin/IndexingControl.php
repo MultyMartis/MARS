@@ -96,13 +96,21 @@ final class IndexingControl implements ModuleInterface {
 			return $value;
 		}
 
-		if ( class_exists( ActivityLog::class ) ) {
+		$source = self::detect_unauthorized_source();
+		$qa_ctx = array(
+			'source'  => $source,
+			'qa_test' => true,
+			'test_id' => 'blog_public_filter',
+		);
+		if ( class_exists( IndexingQaContext::class ) && IndexingQaContext::is_authorized( $qa_ctx ) ) {
+			IndexingQaContext::record_guard_blocked_pass( $qa_ctx, array( 'blocked' => true ) );
+		} elseif ( class_exists( ActivityLog::class ) ) {
 			ActivityLog::log_system_event(
 				'indexing_close_blocked',
 				'setting',
 				'Заблокирована попытка blog_public=0 без явной human authorization',
 				0,
-				self::detect_unauthorized_source()
+				$source
 			);
 		}
 
@@ -142,22 +150,15 @@ final class IndexingControl implements ModuleInterface {
 				|| ( defined( self::TECHNICAL_CLOSE_CONST ) && constant( self::TECHNICAL_CLOSE_CONST ) );
 
 			if ( ! $allowed_technical ) {
-				if ( class_exists( ActivityLog::class ) ) {
-					$source = isset( $context['source'] ) ? sanitize_key( (string) $context['source'] ) : 'unknown';
-					ActivityLog::log_system_event(
-						'indexing_close_blocked',
-						'setting',
-						'OPEN→CLOSED отклонено: нет explicit_human_authorization · ' . $source,
-						0,
-						$source
-					);
-				}
-				return array(
+				$source = isset( $context['source'] ) ? sanitize_key( (string) $context['source'] ) : 'unknown';
+				$result = array(
 					'ok'      => false,
 					'blocked' => true,
 					'open'    => self::is_open(),
 					'error'   => 'close_requires_human_authorization',
 				);
+				self::log_blocked_close_attempt( $context, $source, $result );
+				return $result;
 			}
 
 			if ( class_exists( ActivityLog::class ) ) {
@@ -170,13 +171,15 @@ final class IndexingControl implements ModuleInterface {
 				);
 			}
 			if ( class_exists( IndexingAlerts::class ) ) {
-				IndexingAlerts::send_critical_blocked_alert(
-					array(
-						'previous_effective' => IndexingState::STATE_OPEN,
-						'source'             => isset( $context['source'] ) ? (string) $context['source'] : 'technical_charter',
-						'actor'              => isset( $context['actor'] ) ? (string) $context['actor'] : 'technical charter',
-					)
-				);
+				if ( ! IndexingAlerts::should_suppress_for_qa_context( $context ) ) {
+					IndexingAlerts::send_critical_blocked_alert(
+						array(
+							'previous_effective' => IndexingState::STATE_OPEN,
+							'source'             => isset( $context['source'] ) ? (string) $context['source'] : 'technical_charter',
+							'actor'              => isset( $context['actor'] ) ? (string) $context['actor'] : 'technical charter',
+						)
+					);
+				}
 			}
 		}
 
@@ -185,6 +188,30 @@ final class IndexingControl implements ModuleInterface {
 			return self::apply_state( $open, $context );
 		} finally {
 			self::$authorized_mutation = false;
+		}
+	}
+
+	/**
+	 * Log or record a blocked unauthorized close attempt.
+	 *
+	 * @param array<string, mixed> $context Context.
+	 * @param string               $source Source key.
+	 * @param array<string, mixed> $result Guard result.
+	 */
+	private static function log_blocked_close_attempt( array $context, $source, array $result ) {
+		if ( class_exists( IndexingQaContext::class ) && IndexingQaContext::is_authorized( $context ) ) {
+			IndexingQaContext::record_guard_blocked_pass( $context, $result );
+			return;
+		}
+
+		if ( class_exists( ActivityLog::class ) ) {
+			ActivityLog::log_system_event(
+				'indexing_close_blocked',
+				'setting',
+				'OPEN→CLOSED отклонено: нет explicit_human_authorization',
+				0,
+				$source
+			);
 		}
 	}
 
@@ -260,14 +287,16 @@ final class IndexingControl implements ModuleInterface {
 		// Alert on OPEN→CLOSED or inconsistency after close.
 		if ( class_exists( IndexingAlerts::class ) && ! $open ) {
 			if ( IndexingState::STATE_OPEN === $prev_effective || IndexingState::STATE_INCONSISTENT === $new_snap['effective'] ) {
-				IndexingAlerts::send_critical_blocked_alert(
-					array(
-						'previous_effective' => $prev_effective,
-						'source'             => $source,
-						'actor'              => self::actor_label_from_context( $context ),
-						'fingerprint'        => $new_snap['fingerprint'] ?? '',
-					)
-				);
+				if ( ! IndexingAlerts::should_suppress_for_qa_context( $context ) ) {
+					IndexingAlerts::send_critical_blocked_alert(
+						array(
+							'previous_effective' => $prev_effective,
+							'source'             => $source,
+							'actor'              => self::actor_label_from_context( $context ),
+							'fingerprint'        => $new_snap['fingerprint'] ?? '',
+						)
+					);
+				}
 			}
 		}
 

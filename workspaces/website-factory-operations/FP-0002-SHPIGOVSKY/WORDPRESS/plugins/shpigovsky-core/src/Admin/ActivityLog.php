@@ -355,6 +355,7 @@ final class ActivityLog implements ModuleInterface {
 			'indexing_opened'               => __( 'Индексация открыта', 'shpigovsky-core' ),
 			'indexing_closed'               => __( 'Индексация закрыта', 'shpigovsky-core' ),
 			'indexing_close_blocked'        => __( 'Закрытие индексации заблокировано', 'shpigovsky-core' ),
+			'indexing_qa_pass'              => __( 'QA: защита индексации проверена — PASS', 'shpigovsky-core' ),
 			'indexing_inconsistency_detected' => __( 'Обнаружено расхождение индексации', 'shpigovsky-core' ),
 			'indexing_alert_sent'           => __( 'Отправлено критическое оповещение об индексации', 'shpigovsky-core' ),
 			'indexing_alert_error'          => __( 'Ошибка оповещения об индексации', 'shpigovsky-core' ),
@@ -369,6 +370,33 @@ final class ActivityLog implements ModuleInterface {
 			'smtp_deactivated'    => __( 'Почта: отправка выключена', 'shpigovsky-core' ),
 		);
 		return isset( $map[ $action ] ) ? $map[ $action ] : $action;
+	}
+
+	/**
+	 * Presentation label for a log row (historical QA normalization).
+	 *
+	 * @param object $row DB row.
+	 * @return string
+	 */
+	public static function display_action_label( $row ) {
+		if ( class_exists( IndexingQaContext::class ) && IndexingQaContext::is_historical_qa_activity_row( $row ) ) {
+			return __( 'QA: защита индексации проверена — PASS', 'shpigovsky-core' );
+		}
+		return self::action_label( isset( $row->action ) ? (string) $row->action : '' );
+	}
+
+	/**
+	 * Presentation object title for a log row.
+	 *
+	 * @param object $row DB row.
+	 * @return string
+	 */
+	public static function display_object_title( $row ) {
+		$title = isset( $row->object_title ) ? (string) $row->object_title : '';
+		if ( class_exists( IndexingQaContext::class ) && IndexingQaContext::is_historical_qa_activity_row( $row ) ) {
+			return __( 'Синтетическая проверка: guard отклонил OPEN→CLOSED, индексация осталась OPEN', 'shpigovsky-core' );
+		}
+		return $title;
 	}
 
 	/**
@@ -476,7 +504,7 @@ final class ActivityLog implements ModuleInterface {
 		echo '</select> ';
 
 		echo '<select name="fp02_action"><option value="">' . esc_html__( 'Все действия', 'shpigovsky-core' ) . '</option>';
-		foreach ( array( 'created', 'updated', 'trashed', 'restored', 'indexing_opened', 'indexing_closed', 'indexing_close_blocked', 'indexing_inconsistency_detected', 'indexing_alert_sent', 'indexing_alert_error', 'indexing_recovered', 'smtp_config_updated', 'smtp_test_ok', 'smtp_test_fail', 'smtp_activated', 'smtp_deactivated', 'cookie_privacy_settings_updated', 'cookie_consent_version_changed' ) as $act ) {
+		foreach ( array( 'created', 'updated', 'trashed', 'restored', 'indexing_opened', 'indexing_closed', 'indexing_close_blocked', 'indexing_qa_pass', 'indexing_inconsistency_detected', 'indexing_alert_sent', 'indexing_alert_error', 'indexing_recovered', 'smtp_config_updated', 'smtp_test_ok', 'smtp_test_fail', 'smtp_activated', 'smtp_deactivated', 'cookie_privacy_settings_updated', 'cookie_consent_version_changed' ) as $act ) {
 			printf(
 				'<option value="%1$s"%2$s>%3$s</option>',
 				esc_attr( $act ),
@@ -514,12 +542,19 @@ final class ActivityLog implements ModuleInterface {
 				$user_label = self::user_label( (int) $row->user_id );
 				$type_label = isset( $type_labels[ $row->object_type ] ) ? $type_labels[ $row->object_type ] : $row->object_type;
 				$edit_link  = get_edit_post_link( (int) $row->object_id, 'raw' );
-				$title      = $row->object_title !== '' ? $row->object_title : ( '#' . (int) $row->object_id );
+				$title      = self::display_object_title( $row );
+				if ( '' === $title ) {
+					$title = '#' . (int) $row->object_id;
+				}
+				$action_label = self::display_action_label( $row );
+				$row_class    = ( class_exists( IndexingQaContext::class ) && IndexingQaContext::is_historical_qa_activity_row( $row ) )
+					? 'fp02-activity-log-qa-row'
+					: '';
 
-				echo '<tr>';
+				echo '<tr class="' . esc_attr( trim( $row_class ) ) . '">';
 				echo '<td>' . esc_html( $row->created_at ) . '</td>';
 				echo '<td>' . esc_html( $user_label ) . '</td>';
-				echo '<td>' . esc_html( self::action_label( $row->action ) ) . '</td>';
+				echo '<td>' . esc_html( $action_label ) . '</td>';
 				echo '<td>' . esc_html( $type_label ) . '</td>';
 				echo '<td>';
 				if ( $edit_link ) {
