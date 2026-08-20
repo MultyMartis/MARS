@@ -182,14 +182,14 @@ Updated CURRENT surfaces for WPilot contract + INVALID EVIDENCE classification:
 
 Recorded after push in §16–17 and `07-wpilot-auth-fix-git-census.json` / `05-git-after.json` update.
 
-**Required:** FP-0002 HAS A VERIFIED REMOTE CANONICAL RECOVERY POINT — **PASS** — `efa35877954cdb59219e8310ae589c643d7bf282`
+**Required:** FP-0002 HAS A VERIFIED REMOTE CANONICAL RECOVERY POINT — **PASS** — `1040a868d13ebbfe55a553cf185c1e71fae28a42`
 
 ---
 
 ## 16. Stabilization Commit
 
 - `73e771766ea301d878c5e92f64b2232d7178c576` — FP-0002: correct WPilot probe auth and classify invalid evidence
-- `efa35877954cdb59219e8310ae589c643d7bf282` — FP-0002: record WPilot auth-fix recovery SHA
+- `1040a868d13ebbfe55a553cf185c1e71fae28a42` — FP-0002: record WPilot auth-fix recovery SHA
 
 
 ---
