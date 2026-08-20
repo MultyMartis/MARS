@@ -126,7 +126,15 @@ Bounded to temporary `iseo-form-config.php` test_mode toggle + ephemeral rate-li
 
 ## 20. Git Persistence
 
-Scoped commit on allowlisted i-seo paths only; foreign WIP excluded. Remote sync to `origin/mars/canonical-post-recovery` via clean worktree if dirty-main lineage requires it (no force push).
+Scoped commit on allowlisted i-seo paths only; foreign WIP excluded.
+
+| Item | Value |
+|------|-------|
+| Local commit (dirty-main lineage) | `adac09ee` |
+| Remote synced commit | `1ed12d5f` |
+| Method | clean worktree + cherry-pick onto origin tip `1b29e932` (no force push) |
+| Remote | `origin/mars/canonical-post-recovery` |
+| Reachability | `git ls-remote` = `1ed12d5f` |
 
 ## 21. Open Blockers
 
@@ -165,5 +173,5 @@ SERVER VALIDATION ACTIVE: YES
 PRODUCTION/SOURCE ALIGNED: YES
 SFTP/VPN INCIDENTS: 0 (final state)
 OPEN BLOCKERS: 0
-REMOTE SYNC: (pending commit wave)
+REMOTE SYNC: COMPLETE (1ed12d5f on origin/mars/canonical-post-recovery)
 ```
