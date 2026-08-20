@@ -14,7 +14,7 @@
 | Handler | One named AJAX/REST owner in functionality plugin |
 | Validation | Server-side required; client UX is extra |
 | CSRF | WordPress nonce; fail closed |
-| Anti-spam | Honeypot and/or min-fill time, rate limit, duplicate token |
+| Anti-spam | Layered first-party controls — see §15 FORM-SPAM; **no** external CAPTCHA by default |
 | Success/error UX | Visible without SMTP being live (accept vs send) |
 | Recipient | Options or named constant — **never** in public HTML |
 | From | Domain-aligned after SMTP; not a random `@localhost` |
@@ -193,4 +193,25 @@ Operational form emails are **product UI**, not debug output.
 
 ---
 
-*FW-S-13 v1.5 — P23: MAIL-UX-001–005 form notification presentation rules.*
+## 15. Native form anti-spam (FP-0002 lesson)
+
+Prefer **layered first-party** controls over a single external CAPTCHA provider.
+
+| Rule | ID | Requirement |
+|------|-----|-------------|
+| Layered controls | FORM-SPAM-001 | Combine honeypot + signed timing + rate limit + replay + heuristics; do not depend on one mechanism |
+| Before persistence | FORM-SPAM-002 | Spam validation is server-side and runs **before** real lead persistence |
+| Honeypot backend | FORM-SPAM-003 | Honeypots are useful only when the backend rejects non-empty values (never silent “fake success”) |
+| Signed timing | FORM-SPAM-004 | Time-to-submit must use server-signed state; raw hidden client timestamps are bypassable |
+| Business-safe rate | FORM-SPAM-005 | Rate limiting must be bounded and NAT/business-safe (tolerate correction / shared IP) |
+| Idempotency | FORM-SPAM-006 | Replay / request-token protection is part of spam/abuse resilience |
+| Conservative heuristics | FORM-SPAM-007 | Weak content heuristics stay conservative to avoid false positives on real language (incl. Russian) |
+| Privacy in logs | FORM-SPAM-008 | Anti-spam logs must avoid payload bodies, raw IP retention, and unnecessary PII |
+| JS bypass | FORM-SPAM-009 | Direct POST / JS bypass must not bypass server controls |
+| No spam side effects | FORM-SPAM-010 | Rejected spam must not create real leads, send lead mail, or trigger conversion goals |
+
+**Anti-patterns:** external CAPTCHA by default; client-only timing; honeypot with `ok:true`; exposing reason codes to visitors; permanent raw-IP anti-spam storage.
+
+---
+
+*FW-S-13 v1.6 — FORM-SPAM-001–010 native layered anti-spam; no external CAPTCHA by default.*
