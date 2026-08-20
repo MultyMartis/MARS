@@ -1,8 +1,9 @@
 # ISEO-SU SITE OPS — Operational Index
 
-**Lane:** A — Existing Site Operations / Integration
-**Classification:** documentation-first programme locus
-**Domain root:** [README.md](README.md)
+**Lane:** A — Existing Site Operations / Integration  
+**Classification:** documentation-first programme locus  
+**Domain root:** [README.md](README.md)  
+**Project brain:** [ISEO-SU-CURRENT-STATE-v1.md](ISEO-SU-CURRENT-STATE-v1.md)
 
 ---
 
@@ -24,29 +25,46 @@
 
 | Field | Value |
 |-------|-------|
-| **Lifecycle** | **ISEO-SU POST-LAUNCH VERIFIED / CANONICAL REMOTE SYNCED / SITE OPS CLOSEOUT COMPLETE** |
+| **Lifecycle** | **COMPLETE — ISEO-SU SITE OPS STABILIZED / WORKSPACE CLEAN / MARS BRAIN CURRENT / GIT CLOSED** |
 | **Project status** | Glossary public: **184** published eligible; **57** non-eligible drafts; `/glossary/` **200**; archive/single services `page_scene` hero; desktop submenu **Глоссарий** after calculator; archive title **Глоссарий - INTLSEO Studio**; Yoast glossary sitemap **184**; custom `sitemap.xml` unchanged; mobile overflow **fixed** (glossary-scoped CSS, SHA `4a1202b6…`); mobile offcanvas **intentionally unchanged**; WPilot bridge/writes/REST still gated |
 | **Architecture knowledge** | **COMPLETE** — knowledge base + route matrix + task routing guide |
-| **Glossary** | Foundation + Batches 01–04 content + **controlled public launch 2026-07-26** |
+| **Glossary** | Foundation + Batches 01–04 content + **controlled public launch 2026-07-26** + final integration/post-launch closeout **2026-08-18** |
 | **Current phase (WPilot)** | **PHASE 6D — BLOCKED** (bridge/smoke awaiting exact approval + backup lines) — **not required** for ordinary site content/file tasks |
 | **Accepted WPilot baseline** | **PHASE 6C — TOKEN CREATED / RC6 SAFE DEFAULTS** |
 | **Access files** | **LOCAL-ONLY FILLED / VALIDATED** (Git-ignored) |
 | **WPilot** | **ACTIVE** RC6; bridge **DISABLED**; writes **DISABLED**; token **LOCAL-ONLY**; REST **NOT RUN** |
-| **Next operator action (site work)** | Optional only: custom `sitemap.xml` glossary inclusion; mobile offcanvas nav parity; MERGED alias search polish; archive Yoast meta description — all require separate charters |
+| **Open blockers / open required** | **0 / 0** |
+| **Next operator action (site work)** | Optional only: mobile offcanvas nav parity; archive Yoast meta description; MERGED alias search polish; custom `sitemap.xml` glossary inclusion (**NOT RECOMMENDED**) — all require separate charters |
 | **Next operator action (WPilot 6D)** | Exact lines `APPROVE ISEO-SU WPILOT BRIDGE AND READ-ONLY SMOKE 6D` + `CONFIRM ISEO-SU FRESH BEGET BACKUP FOR WPILOT 6D` |
 
 Hosting: **Beget**. WordPress Admin: `https://i-seo.su/wp-admin/`. Staging: **absent**. Architecture: **hybrid** — see knowledge base.
 
 ---
 
+## Current authority order (start here)
+
+1. [ISEO-SU-CURRENT-STATE-v1.md](ISEO-SU-CURRENT-STATE-v1.md) — project brain  
+2. [ISEO-SU-FINAL-LAUNCH-CLOSEOUT-v1.md](ISEO-SU-FINAL-LAUNCH-CLOSEOUT-v1.md)  
+3. [ISEO-SU-GLOSSARY-FINAL-PRODUCTION-BASELINE-v1.md](ISEO-SU-GLOSSARY-FINAL-PRODUCTION-BASELINE-v1.md)  
+4. [ISEO-SU-TASK-ROUTING-GUIDE-v1.md](ISEO-SU-TASK-ROUTING-GUIDE-v1.md)  
+5. [ISEO-SU-PRODUCTION-ARCHITECTURE-KNOWLEDGE-BASE-v1.md](ISEO-SU-PRODUCTION-ARCHITECTURE-KNOWLEDGE-BASE-v1.md) + [route matrix](ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md)  
+6. [ISEO-SU-PROTECTED-ZONES-v1.md](ISEO-SU-PROTECTED-ZONES-v1.md)  
+7. [ISEO-SU-SITE-OPS-ARTIFACT-REGISTER-v1.md](ISEO-SU-SITE-OPS-ARTIFACT-REGISTER-v1.md)  
+8. Historical REPORTs (immutable evidence only)
+
+Stabilization closeout: [ISEO-SU-STABILIZATION-CLOSEOUT-v1.md](ISEO-SU-STABILIZATION-CLOSEOUT-v1.md)
+
+---
+
 ## Knowledge authority order (site tasks)
 
-1. Task-specific accepted production evidence
-2. [ISEO-SU-TASK-ROUTING-GUIDE-v1.md](ISEO-SU-TASK-ROUTING-GUIDE-v1.md)
-3. [ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md](ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md)
-4. [ISEO-SU-PRODUCTION-ARCHITECTURE-KNOWLEDGE-BASE-v1.md](ISEO-SU-PRODUCTION-ARCHITECTURE-KNOWLEDGE-BASE-v1.md)
-5. Component maps (page/source, WP objects, static PHP, forms/web-KP, global components)
-6. Historical intake / Phase 0–6C-P reports (immutable)
+1. Task-specific accepted production evidence  
+2. [ISEO-SU-CURRENT-STATE-v1.md](ISEO-SU-CURRENT-STATE-v1.md)  
+3. [ISEO-SU-TASK-ROUTING-GUIDE-v1.md](ISEO-SU-TASK-ROUTING-GUIDE-v1.md)  
+4. [ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md](ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md)  
+5. [ISEO-SU-PRODUCTION-ARCHITECTURE-KNOWLEDGE-BASE-v1.md](ISEO-SU-PRODUCTION-ARCHITECTURE-KNOWLEDGE-BASE-v1.md)  
+6. Component maps (page/source, WP objects, static PHP, forms/web-KP, global components)  
+7. Historical intake / Phase 0–6C-P / launch REPORTs (immutable)
 
 ---
 
@@ -79,7 +97,7 @@ Hosting: **Beget**. WordPress Admin: `https://i-seo.su/wp-admin/`. Staging: **ab
 
 | Step | Action |
 |------|--------|
-| 1 | Read this OPERATIONAL-INDEX |
+| 1 | Read [CURRENT STATE](ISEO-SU-CURRENT-STATE-v1.md) then this OPERATIONAL-INDEX |
 | 2 | Confirm fresh Beget backup for mutation tasks |
 | 3 | Open Task Routing Guide + Route Ownership Matrix |
 | 4 | Classify target; identify SoT and protected deps |
@@ -108,18 +126,22 @@ Hosting: **Beget**. WordPress Admin: `https://i-seo.su/wp-admin/`. Staging: **ab
 
 ## Next authorized task
 
-**Glossary:** public launch complete (**184** published eligible; **57** non-eligible drafts). Final integration + post-launch verification complete (2026-08-18): mobile overflow fixed; SEO/indexability smoke passed; custom sitemap unchanged; accepted MARS history restored to canonical remote. Baseline: `ISEO-SU-GLOSSARY-FINAL-PRODUCTION-BASELINE-v1.md`. Closeout: `ISEO-SU-FINAL-LAUNCH-CLOSEOUT-v1.md`. Do not publish non-eligible without a new charter.
+**Glossary / site-ops programme:** **closed and stabilized** (2026-08-20). No open required glossary launch work. Do not publish non-eligible without a new charter. Do not restart glossary development without a new charter.
 
-**Ordinary site work:** additional concrete tasks after fresh Beget backup; MARS follows Task Routing Guide.
+**Ordinary site work:** additional concrete tasks after fresh Beget backup; start from Current State + Task Routing Guide.
 
 **Optional parallel gate:** Phase 6D WPilot bridge + read-only smoke — only after both exact approval lines (does not block site-content tasks).
 
 ---
 
-## Artifact navigation (architecture package)
+## Artifact navigation (current first)
 
 | Artifact | Path |
 |----------|------|
+| **Current state (brain)** | [ISEO-SU-CURRENT-STATE-v1.md](ISEO-SU-CURRENT-STATE-v1.md) |
+| **Stabilization closeout** | [ISEO-SU-STABILIZATION-CLOSEOUT-v1.md](ISEO-SU-STABILIZATION-CLOSEOUT-v1.md) |
+| Final launch closeout | [ISEO-SU-FINAL-LAUNCH-CLOSEOUT-v1.md](ISEO-SU-FINAL-LAUNCH-CLOSEOUT-v1.md) |
+| Glossary final production baseline | [ISEO-SU-GLOSSARY-FINAL-PRODUCTION-BASELINE-v1.md](ISEO-SU-GLOSSARY-FINAL-PRODUCTION-BASELINE-v1.md) |
 | Glossary architecture / content model | [ISEO-SU-GLOSSARY-ARCHITECTURE-AND-CONTENT-MODEL-v1.md](ISEO-SU-GLOSSARY-ARCHITECTURE-AND-CONTENT-MODEL-v1.md) |
 | Glossary final corpus | [ISEO-SU-GLOSSARY-FINAL-CORPUS-v1.md](ISEO-SU-GLOSSARY-FINAL-CORPUS-v1.md) |
 | Glossary Batch 01 manifest | [ISEO-SU-GLOSSARY-BATCH-01-MANIFEST-v1.md](ISEO-SU-GLOSSARY-BATCH-01-MANIFEST-v1.md) |
@@ -141,8 +163,6 @@ Hosting: **Beget**. WordPress Admin: `https://i-seo.su/wp-admin/`. Staging: **ab
 | Glossary materials README | [materials/glossary/README.md](materials/glossary/README.md) |
 | Glossary template component map | [ISEO-SU-GLOSSARY-TEMPLATE-COMPONENT-MAP-v1.md](ISEO-SU-GLOSSARY-TEMPLATE-COMPONENT-MAP-v1.md) |
 | Glossary page_scene services alignment evidence | [ISEO-SU-GLOSSARY-PAGE-SCENE-SERVICES-ALIGNMENT-EVIDENCE-v1.md](ISEO-SU-GLOSSARY-PAGE-SCENE-SERVICES-ALIGNMENT-EVIDENCE-v1.md) |
-| Glossary final production baseline | [ISEO-SU-GLOSSARY-FINAL-PRODUCTION-BASELINE-v1.md](ISEO-SU-GLOSSARY-FINAL-PRODUCTION-BASELINE-v1.md) |
-| Final launch closeout | [ISEO-SU-FINAL-LAUNCH-CLOSEOUT-v1.md](ISEO-SU-FINAL-LAUNCH-CLOSEOUT-v1.md) |
 | Glossary manual CSS promotion evidence | [ISEO-SU-GLOSSARY-MANUAL-CSS-PROMOTION-EVIDENCE-v1.md](ISEO-SU-GLOSSARY-MANUAL-CSS-PROMOTION-EVIDENCE-v1.md) |
 | Glossary archive layout fix evidence | [ISEO-SU-GLOSSARY-ARCHIVE-LAYOUT-FIX-EVIDENCE-v1.md](ISEO-SU-GLOSSARY-ARCHIVE-LAYOUT-FIX-EVIDENCE-v1.md) |
 | Task routing guide | [ISEO-SU-TASK-ROUTING-GUIDE-v1.md](ISEO-SU-TASK-ROUTING-GUIDE-v1.md) |
@@ -166,6 +186,7 @@ Additional historical artifacts remain listed in the Artifact Register.
 
 | Report | Status |
 |--------|--------|
+| [Final stabilization and housekeeping](reports/REPORT-ISEO-SU-SITE-OPS-FINAL-STABILIZATION-AND-HOUSEKEEPING.md) | **COMPLETE — ISEO-SU SITE OPS STABILIZED / WORKSPACE CLEAN / MARS BRAIN CURRENT / GIT CLOSED** |
 | [Final post-launch and git sync closeout](reports/REPORT-ISEO-SU-SITE-OPS-FINAL-POST-LAUNCH-AND-GIT-SYNC-CLOSEOUT.md) | **COMPLETE — ISEO-SU POST-LAUNCH VERIFIED / CANONICAL REMOTE SYNCED / SITE OPS CLOSEOUT COMPLETE** |
 | [Glossary final integration and closeout](reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-FINAL-INTEGRATION-AND-CLOSEOUT.md) | **COMPLETE — GLOSSARY FINAL INTEGRATION COMPLETE / PRODUCTION BASELINE FROZEN** |
 | [Glossary page_scene services alignment](reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-PAGE-SCENE-SERVICES-ALIGNMENT.md) | **COMPLETE — GLOSSARY HERO ALIGNED TO SERVICES / SECOND-SCREEN CTA WORKING** |
@@ -184,4 +205,4 @@ Additional historical artifacts remain listed in the Artifact Register.
 
 ---
 
-*ISEO-SU-SITE-OPS Operational Index · Post-launch closeout 2026-08-18 · glossary production frozen · WPilot RC6 safe defaults · token local-only · bridge/writes disabled.*
+*ISEO-SU-SITE-OPS Operational Index · Stabilization 2026-08-20 · glossary production frozen · WPilot RC6 safe defaults · token local-only · bridge/writes disabled.*
