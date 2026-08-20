@@ -84,7 +84,7 @@
 | Core | `0.3.24-antispam` |
 | Indexing | **OPEN — HUMAN-APPROVED** |
 | WPilot auth | **`X-WPilot-Token`** (not Bearer) |
-| | Canonical source | `origin/mars/canonical-post-recovery` @ `efa35877954cdb59219e8310ae589c643d7bf282` |
+| | Canonical source | `origin/mars/canonical-post-recovery` @ `f064a6b7af6af0c0e9e3d02996a4fb3460fc0a6d` |
 | Operational locus | `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/` |
 | Status authority | [PROJECT-STATUS.md](PROJECT-STATUS.md) |
 | Open items | [REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md](REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md) |
