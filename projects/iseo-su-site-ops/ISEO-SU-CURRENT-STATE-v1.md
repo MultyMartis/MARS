@@ -2,14 +2,15 @@
 
 **Programme:** ISEO-SU-SITE-OPS  
 **Canonical locus:** `X:\AI MARS\projects\iseo-su-site-ops\`  
-**Updated:** 2026-08-20 (form anti-spam + validation harden)  
+**Updated:** 2026-08-21 (all-forms isolated mail acceptance)  
 **Authority rank:** primary project brain for ordinary next tasks
 
 ---
 
 ## 1. Project Status
 
-**COMPLETE — ISEO-SU FORMS HARDENED / EMPTY SUBMISSIONS BLOCKED / ANTISPAM ACTIVE / MAIL ROUTING RESTORED**
+**COMPLETE — ISEO-SU FORMS HARDENED / EMPTY SUBMISSIONS BLOCKED / ANTISPAM ACTIVE / MAIL ROUTING RESTORED**  
+**All-forms isolated mail acceptance:** **COMPLETE** (operator-only test routing proven; normal recipients restored).
 
 Glossary/site-ops stabilization remains accepted. Public form anti-spam/validation charter is **closed**. Ordinary future work starts from this file + Task Routing Guide + Protected Zones + Form Security Baseline.
 

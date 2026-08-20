@@ -2,12 +2,13 @@
 
 **Programme:** ISEO-SU-SITE-OPS  
 **Task:** ISEO-SU-SITE-OPS-FORMS-ANTISPAM-AND-VALIDATION-01  
-**Updated:** 2026-08-20  
+**Updated:** 2026-08-21  
 **Authority:** current form/security operating baseline for public leads on `https://i-seo.su/`
 
 ## 1. Status
 
-**COMPLETE — ISEO-SU FORMS HARDENED / EMPTY SUBMISSIONS BLOCKED / ANTISPAM ACTIVE / MAIL ROUTING RESTORED**
+**COMPLETE — ISEO-SU FORMS HARDENED / EMPTY SUBMISSIONS BLOCKED / ANTISPAM ACTIVE / MAIL ROUTING RESTORED**  
+**All-forms isolated mail acceptance (2026-08-21):** **COMPLETE** — see `ISEO-SU-FORM-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-EVIDENCE-v1.md`.
 
 Server-side validation and layered anti-spam are authoritative. Client `required` attributes are convenience only. Temporary mail test mode is **OFF**. Operator address `im.work@nail.ru` is permanently included in the production recipient set.
 

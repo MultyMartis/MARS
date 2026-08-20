@@ -16,6 +16,13 @@ Status vocabulary: **CURRENT** · **CANONICAL** · **HISTORICAL** · **SUPERSEDE
 | Shared forms JS | `production-source/js/common.js` | CANONICAL |
 | Form anti-spam REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-FORM-ANTISPAM-AND-VALIDATION-01.md` | CURRENT |
 
+### All-forms isolated mail acceptance (2026-08-21) — CURRENT
+
+| Artifact | Path | Class |
+|----------|------|-------|
+| All-forms isolated mail acceptance evidence | `ISEO-SU-FORM-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-EVIDENCE-v1.md` | CURRENT |
+| All-forms isolated mail acceptance REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-01.md` | CURRENT |
+
 ### Current brain / stabilization (2026-08-20) — CURRENT
 
 | Artifact | Path | Class |
