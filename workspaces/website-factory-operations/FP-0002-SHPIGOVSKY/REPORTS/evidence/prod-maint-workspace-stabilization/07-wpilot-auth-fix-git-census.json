@@ -2,7 +2,7 @@
   "timestamp_utc": "2026-08-20T14:05:22.3087176Z",
   "worktree": "X:/AI MARS/worktrees/fp-0002-prod-maint-stabilize",
   "branch": "fp-0002/prod-maint-stabilize-2026-08-20",
-  "HEAD": "73e771766ea301d878c5e92f64b2232d7178c576",
+  "HEAD": "efa35877954cdb59219e8310ae589c643d7bf282",
   "origin_mars": "445dce87819971daea56a4b4d219004d6eb62e7e",
   "fp0002_worktrees_active": [
     "X:/AI MARS/worktrees/fp-0002-prod-maint-stabilize"
@@ -10,5 +10,6 @@
   "safety_branch_deleted": "safety/fp-0002-e29b-fix2c-local-21549cf1",
   "remote_temp_branch_retained": "origin/fp-0002/prod-maint-dashboard-mail-ux (ancestor of canon; not deleted \u2014 conservative)",
   "foreign_main_untouched": true,
-  "commit_subject": "FP-0002: correct WPilot probe auth and classify invalid evidence"
+  "commit_subject": "FP-0002: correct WPilot probe auth and classify invalid evidence",
+  "recovery_point": "efa35877954cdb59219e8310ae589c643d7bf282"
 }
