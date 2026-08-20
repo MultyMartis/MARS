@@ -1,5 +1,7 @@
 # REPORT — ISEO-SU SITE OPS ALL-FORMS ISOLATED MAIL ACCEPTANCE 01
 
+> **SUPERSESSION (2026-08-21):** Recipient / operator-mailbox evidence in this REPORT is **SUPERSEDED BY ACCEPTANCE 02** (`im.work@mail.ru`). Historical contents below remain as the factual record of the typo address `im.work@nail.ru` used during Acceptance 01. Anti-spam implementation results are not voided by this supersession.
+
 **Task ID:** ISEO-SU-SITE-OPS-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-01  
 **Date:** 2026-08-21  
 **Site:** https://i-seo.su/

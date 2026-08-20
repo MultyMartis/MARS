@@ -11,12 +11,12 @@ return array(
     // TEMPORARY: true during controlled mail tests only.
     "test_mode" => false,
 
-    "test_recipients" => array("im.work@nail.ru"),
+    "test_recipients" => array("im.work@mail.ru"),
 
     // Normal production recipients (existing + operator).
     "production_recipients" => array(
         "nikel007i33@yandex.ru",
-        "im.work@nail.ru",
+        "im.work@mail.ru",
     ),
 
     "from_email" => "noreply@i-seo.su",

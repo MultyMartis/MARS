@@ -1,5 +1,7 @@
 # ISEO-SU FORM ANTISPAM VALIDATION EVIDENCE v1
 
+> **Recipient note (2026-08-21):** Historical test/production operator address recorded here is the typo `im.work@nail.ru`. Current authority: `im.work@mail.ru` (Acceptance 02). Anti-spam validation results remain accepted.
+
 **Programme:** ISEO-SU-SITE-OPS  
 **Task:** ISEO-SU-SITE-OPS-FORMS-ANTISPAM-AND-VALIDATION-01  
 **Date:** 2026-08-20  

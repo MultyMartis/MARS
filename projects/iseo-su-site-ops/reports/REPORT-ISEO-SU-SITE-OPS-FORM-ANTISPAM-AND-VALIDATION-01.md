@@ -1,5 +1,7 @@
 # REPORT — ISEO-SU SITE OPS FORM ANTISPAM AND VALIDATION 01
 
+> **Recipient note (2026-08-21):** Operator mailbox in this historical REPORT is the typo `im.work@nail.ru`. Current recipient authority is `im.work@mail.ru` per Acceptance 02. Anti-spam implementation evidence remains accepted.
+
 **Task ID:** ISEO-SU-SITE-OPS-FORMS-ANTISPAM-AND-VALIDATION-01  
 **Date:** 2026-08-20  
 **Site:** https://i-seo.su/

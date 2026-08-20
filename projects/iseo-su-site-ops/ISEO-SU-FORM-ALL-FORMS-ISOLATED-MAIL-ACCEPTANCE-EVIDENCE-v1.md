@@ -1,5 +1,7 @@
 # ISEO-SU FORM ALL-FORMS ISOLATED MAIL ACCEPTANCE EVIDENCE v1
 
+> **SUPERSESSION (2026-08-21):** Recipient evidence superseded by `ISEO-SU-FORM-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-EVIDENCE-v2.md` / Acceptance 02 (`im.work@mail.ru`). This file retains the factual Acceptance 01 record that used the operator typo `im.work@nail.ru`.
+
 **Programme:** ISEO-SU-SITE-OPS  
 **Task:** ISEO-SU-SITE-OPS-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-01  
 **Date:** 2026-08-21  

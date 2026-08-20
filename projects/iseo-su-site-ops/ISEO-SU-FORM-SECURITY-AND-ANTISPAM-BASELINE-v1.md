@@ -2,15 +2,15 @@
 
 **Programme:** ISEO-SU-SITE-OPS  
 **Task:** ISEO-SU-SITE-OPS-FORMS-ANTISPAM-AND-VALIDATION-01  
-**Updated:** 2026-08-21  
+**Updated:** 2026-08-21 (correct-operator mailbox acceptance 02)  
 **Authority:** current form/security operating baseline for public leads on `https://i-seo.su/`
 
 ## 1. Status
 
 **COMPLETE — ISEO-SU FORMS HARDENED / EMPTY SUBMISSIONS BLOCKED / ANTISPAM ACTIVE / MAIL ROUTING RESTORED**  
-**All-forms isolated mail acceptance (2026-08-21):** **COMPLETE** — see `ISEO-SU-FORM-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-EVIDENCE-v1.md`.
+**All-forms isolated mail acceptance:** **COMPLETE** with correct operator mailbox — see `ISEO-SU-FORM-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-EVIDENCE-v2.md` (Acceptance 01 recipient evidence **SUPERSEDED** due to operator typo `im.work@nail.ru`).
 
-Server-side validation and layered anti-spam are authoritative. Client `required` attributes are convenience only. Temporary mail test mode is **OFF**. Operator address `im.work@nail.ru` is permanently included in the production recipient set.
+Server-side validation and layered anti-spam are authoritative. Client `required` attributes are convenience only. Temporary mail test mode is **OFF**. Operator address `im.work@mail.ru` is permanently included in the production recipient set. Typo `im.work@nail.ru` is **absent**.
 
 ## 2. Form Inventory
 
@@ -108,7 +108,7 @@ After successful mail, same normalized payload fingerprint from same source supp
 
 Single config: `iseo-form-config.php`.
 
-- `production_recipients` — normal routing (includes prior primary + `im.work@nail.ru`)  
+- `production_recipients` — normal routing (includes prior primary + `im.work@mail.ru`)  
 - `test_recipients` — only used when `test_mode === true`  
 - Do **not** hardcode recipients inside every handler.
 
@@ -117,7 +117,7 @@ Do not print full recipient lists in public REPORT/docs beyond operator-supplied
 ## 12. Test Mail Mode
 
 Set `"test_mode" => true` only for controlled tests.  
-While ON: mail **only** to `im.work@nail.ru` (no CC/BCC to production recipients).  
+While ON: mail **only** to `im.work@mail.ru` (no CC/BCC to production recipients).  
 Must be reverted to `false` before declaring COMPLETE.  
 Do not commit active test mode as final production state.
 
@@ -126,7 +126,8 @@ Do not commit active test mode as final production state.
 | Field | Value |
 |-------|-------|
 | test_mode | **false** |
-| im.work@nail.ru in production_recipients | **YES** |
+| im.work@mail.ru in production_recipients | **YES** |
+| im.work@nail.ru in production_recipients | **NO** (operator typo; removed) |
 | Prior legitimate recipients | **preserved** |
 | CAPTCHA | **not installed** |
 

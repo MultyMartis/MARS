@@ -16,12 +16,14 @@ Status vocabulary: **CURRENT** · **CANONICAL** · **HISTORICAL** · **SUPERSEDE
 | Shared forms JS | `production-source/js/common.js` | CANONICAL |
 | Form anti-spam REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-FORM-ANTISPAM-AND-VALIDATION-01.md` | CURRENT |
 
-### All-forms isolated mail acceptance (2026-08-21) — CURRENT
+### All-forms isolated mail acceptance — correct operator (2026-08-21) — CURRENT
 
 | Artifact | Path | Class |
 |----------|------|-------|
-| All-forms isolated mail acceptance evidence | `ISEO-SU-FORM-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-EVIDENCE-v1.md` | CURRENT |
-| All-forms isolated mail acceptance REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-01.md` | CURRENT |
+| All-forms isolated mail acceptance evidence v2 | `ISEO-SU-FORM-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-EVIDENCE-v2.md` | CURRENT |
+| All-forms isolated mail acceptance REPORT 02 | `reports/REPORT-ISEO-SU-SITE-OPS-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-02.md` | CURRENT |
+| Acceptance evidence v1 (typo address) | `ISEO-SU-FORM-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-EVIDENCE-v1.md` | HISTORICAL / SUPERSEDED (recipient evidence) |
+| Acceptance REPORT 01 (typo address) | `reports/REPORT-ISEO-SU-SITE-OPS-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-01.md` | HISTORICAL / SUPERSEDED (recipient evidence) |
 
 ### Current brain / stabilization (2026-08-20) — CURRENT
 
