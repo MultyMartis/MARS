@@ -218,6 +218,8 @@ Forge WordPress **produces** packages. **WPilot operates** sites — [FORGE-WORD
 
 WPilot does **not** own theme/content architecture.
 
+**Auth / probe discipline (FP-0002 proven):** MetaCODE WPilot uses header **`X-WPilot-Token`** — do **not** assume `Authorization: Bearer`. Transport/TLS failure or wrong-auth 401 is **INVALID EVIDENCE**, not a production outage until a correct bounded probe returns `VALID_RUNTIME_RESPONSE`. Anti-patterns: [ANTI-PATTERN-REGISTRY](standards/FORGE-WORDPRESS-ANTI-PATTERN-REGISTRY-v1.md) **WPILOT-001…003**.
+
 ---
 
 ## First probable pilot / production reference

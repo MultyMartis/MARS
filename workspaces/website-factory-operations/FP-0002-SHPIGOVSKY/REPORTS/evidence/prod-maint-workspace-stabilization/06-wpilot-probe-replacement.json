@@ -1,0 +1,66 @@
+{
+  "timestamp_utc": "2026-08-20T14:05:22.2712658Z",
+  "auth_contract": "X-WPilot-Token",
+  "auth_value": "REDACTED",
+  "homepage": {
+    "url": "https://shpigovsky.ru/",
+    "http": 200,
+    "noindex": false
+  },
+  "robots_txt": {
+    "crawlable": true,
+    "sitemap": "https://shpigovsky.ru/wp-sitemap.xml"
+  },
+  "endpoints": {
+    "ping": {
+      "class": "VALID_RUNTIME_RESPONSE",
+      "status": 200,
+      "note": "auth not required"
+    },
+    "plugins": {
+      "shpigovsky_core": "0.3.24-antispam",
+      "class": "VALID_RUNTIME_RESPONSE",
+      "status": 200,
+      "metacode_wpilot": "0.3.2"
+    },
+    "site-info": {
+      "auth": "X-WPilot-Token",
+      "class": "VALID_RUNTIME_RESPONSE",
+      "status": 200
+    }
+  },
+  "auth_contrast": {
+    "site_info_with_x_wpilot_token": {
+      "status": 200,
+      "class": "VALID_RUNTIME_RESPONSE"
+    },
+    "site_info_with_bearer_wrong_token": {
+      "status": 401,
+      "class": "AUTH_ERROR"
+    }
+  },
+  "forms_markers": {
+    "honeypot": true,
+    "fp02_fs": true
+  },
+  "wpilot": {
+    "bridge_enabled": true,
+    "write_enabled": false
+  },
+  "prior_invalid_probe": {
+    "auth": "Authorization: Bearer",
+    "classification": "INVALID EVIDENCE",
+    "transport": "TLS disconnect / timeout",
+    "not": [
+      "production outage",
+      "WPilot outage",
+      "indexing issue",
+      "runtime regression"
+    ]
+  },
+  "indexing": {
+    "effective": "OPEN — HUMAN APPROVED",
+    "blog_public": "1 (prior verified; this probe: no noindex + open robots)",
+    "guard": "P18G ACTIVE (documented)"
+  }
+}

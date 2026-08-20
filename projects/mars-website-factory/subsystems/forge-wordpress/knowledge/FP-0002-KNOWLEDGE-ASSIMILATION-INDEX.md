@@ -31,6 +31,8 @@
 | First-party layered anti-spam (honeypot + signed timing + replay + rate + heuristics) | A / C | same §15 · FORM-SPAM-001–010 |
 | Do not add external CAPTCHA by default | G / C | same §15 |
 | Synthetic QA must not look like a production incident | G / E | [ACTIVITY-LOG-MODULE-SPEC](../standards/FORGE-WORDPRESS-ACTIVITY-LOG-MODULE-SPEC-v1.md) · SEARCH-INDEXING-CONTROL |
+| WPilot auth is project-contract-specific — FP-0002 / MetaCODE uses **`X-WPilot-Token`**, not Bearer | C / G | [ANTI-PATTERN-REGISTRY](../standards/FORGE-WORDPRESS-ANTI-PATTERN-REGISTRY-v1.md) **WPILOT-001** · plugin README |
+| TLS/transport or wrong-auth probe ≠ runtime outage; classify INVALID EVIDENCE; replace with correct probe | G / E | **WPILOT-002** · **WPILOT-003** (`TRANSPORT_ERROR` / `AUTH_ERROR` / `VALID_RUNTIME_RESPONSE`) |
 | Dirty monorepo foreign WIP ≠ project Git tail; clean worktree + remote authority | C | [GIT-SOP](../runbooks/FORGE-WORDPRESS-GIT-SOP-v1.md) · GIT-WORKFLOW |
 | Child Pages used for staff-like entities; later CPT `specialist` | A / G | [CONTENT-MODEL-CPT-STANDARD](../standards/FORGE-WORDPRESS-CONTENT-MODEL-CPT-STANDARD-v1.md) · [CMS-ARCHITECTURE](../standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md) |
 | Preserve IDs/URLs when changing post type; hub page + CPT singles | A / D | same + [ENVIRONMENT-MIGRATION](../runbooks/FORGE-WORDPRESS-ENVIRONMENT-MIGRATION-STANDARD-v1.md) |

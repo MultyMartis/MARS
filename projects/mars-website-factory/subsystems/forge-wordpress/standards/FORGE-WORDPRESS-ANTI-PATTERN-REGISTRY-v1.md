@@ -449,6 +449,37 @@ Each ID is reusable. Client facts are generalized.
 | Prevention | Preserve raw events; fix classification/rendering; document synthetic origin |
 | Evidence | FP-0002 P18J |
 
+## WPILOT-001 — Assume `Authorization: Bearer` for WPilot probes
+
+| | |
+|--|--|
+| Symptom | Authenticated WPilot reads return 401 / empty; agents invent “outage” |
+| Cause | Generic HTTP client habit (`Authorization: Bearer`) instead of site contract |
+| Risk | False production incidents; wasted remediation |
+| Prevention | Read site/project auth contract first; MetaCODE WPilot uses **`X-WPilot-Token`** (`TOKEN_HEADER_NAME`) |
+| Replacement | Documented header only; never log token values |
+| Evidence | FP-0002 PROD-MAINT WPilot probe correction 2026-08-20 |
+
+## WPILOT-002 — Treat TLS/transport failure from a wrong-auth probe as runtime outage
+
+| | |
+|--|--|
+| Symptom | CURRENT status shows “site down” after timeout on a Bearer probe |
+| Cause | Transport error + wrong auth conflated with application health |
+| Risk | Operator noise; incorrect launch/maintenance decisions |
+| Prevention | Classify as **INVALID EVIDENCE**; replace with correct-auth bounded probe |
+| Evidence | FP-0002 PROD-MAINT (Bearer/TLS probe → INVALID; `X-WPilot-Token` recheck PASS) |
+
+## WPILOT-003 — Health evidence without TRANSPORT / AUTH / APPLICATION split
+
+| | |
+|--|--|
+| Symptom | One “FAIL” label for disconnect, 401, and business error |
+| Cause | Probe scripts dump status without classification |
+| Risk | Wrong escalation; cannot supersede invalid probes |
+| Prevention | Use `TRANSPORT_ERROR` · `AUTH_ERROR` · `APPLICATION_ERROR` · `VALID_RUNTIME_RESPONSE` |
+| Evidence | FP-0002 PROD-MAINT workspace stabilization evidence pack |
+
 ---
 
 ## CMS modeling namespace (`AP-CMS-*`)
@@ -476,4 +507,4 @@ Do **not** reuse AP-001–021 numbers. Full entries: [CMS-ANTI-PATTERNS](FORGE-W
 
 ---
 
-*FW-S-21 v1.5 — 29 operational anti-patterns (AP-022–028 = FORM-001–007; AP-029 Admin discoverability) + AP-CMS-001–016 index. Add IDs; do not reuse numbers.*
+*FW-S-21 v1.6 — prior AP/INDEX/OBSERVABILITY entries + **WPILOT-001–003** (auth/probe evidence discipline) + AP-CMS-001–016 index. Add IDs; do not reuse numbers.*

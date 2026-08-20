@@ -33,14 +33,19 @@
 
 | Field | Value |
 |-------|-------|
-| Factory Project ID | **FP-0002** — Shpigovsky.ru |
-| Active workspace | `workspaces/fp-0002-shpigovsky-v8/` |
+| Factory Project ID | **FP-0002** — Shpigovsky.ru / Шпиговский |
+| **Current phase** | **PRODUCTION / MAINTENANCE — STABLE** |
+| Production | https://shpigovsky.ru/ · core `0.3.24-antispam` · indexing OPEN (human-owned) |
+| Canonical ops locus | `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/` |
 | Ops status | [PROJECT-STATUS.md](../../workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/PROJECT-STATUS.md) |
+| WPilot auth (FP-0002) | **`X-WPilot-Token`** — not Bearer |
+| Historical frontend workspace | `workspaces/fp-0002-shpigovsky-v8/` (launch-era; not CURRENT ops SoT) |
 | V8 documentation | [FP-0002-V8-IMPLEMENTATION-GUIDE-v1.md](../../workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/FP-0002-V8-IMPLEMENTATION-GUIDE-v1.md) · [Phase 07B report](../../workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORT-FP-0002-V8-PHASE-07B-DOCUMENTATION-AND-LESSONS-LEARNED-v1.md) |
 | WF lessons | [WEBSITE-FACTORY-FP-0002-LESSONS-LEARNED-v1.md](operational-examples/WEBSITE-FACTORY-FP-0002-LESSONS-LEARNED-v1.md) |
-| **Priority visual protocol (ACTIVE)** | [FP-0002-PRIORITY-VISUAL-IMPLEMENTATION-PROTOCOL.md](../../workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/FP-0002-PRIORITY-VISUAL-IMPLEMENTATION-PROTOCOL.md) — **read before any FP-0002 frontend task** |
-| Visual PASS | OPERATOR ONLY |
-| Commit before operator visual approval | PROHIBITED |
+| WP Forge assimilation | [FP-0002-KNOWLEDGE-ASSIMILATION-INDEX.md](subsystems/forge-wordpress/knowledge/FP-0002-KNOWLEDGE-ASSIMILATION-INDEX.md) |
+| **Priority visual protocol** | [FP-0002-PRIORITY-VISUAL-IMPLEMENTATION-PROTOCOL.md](../../workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/FP-0002-PRIORITY-VISUAL-IMPLEMENTATION-PROTOCOL.md) — for frontend tasks only |
+| Visual PASS | OPERATOR ONLY (frontend waves) |
+| Commit before operator visual approval | PROHIBITED (frontend waves) |
 
 ---
 

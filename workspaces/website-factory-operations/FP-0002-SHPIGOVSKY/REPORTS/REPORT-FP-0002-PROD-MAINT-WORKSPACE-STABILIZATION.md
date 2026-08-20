@@ -1,7 +1,7 @@
 # REPORT — FP-0002 PROD-MAINT Workspace Stabilization + Git / MARS Closeout
 
 **Date:** 2026-08-20  
-**Charter:** FP-0002 — PROD-MAINT Workspace Cleanup + Git Stabilization + MARS Knowledge Closeout  
+**Charter:** FP-0002 — PROD-MAINT Workspace Cleanup + Git Stabilization + MARS Knowledge Closeout **+ WPilot probe correction / auth contract fix**  
 **Mode:** AGENT / AUTO  
 **Production mutations:** none  
 
@@ -21,9 +21,9 @@ Evidence pack: [evidence/prod-maint-workspace-stabilization/](evidence/prod-main
 |-------|--------|
 | Domain | https://shpigovsky.ru/ |
 | HTTP home | 200 |
-| Core | `0.3.24-antispam` |
-| Indexing | OPEN — HUMAN APPROVED (`blog_public=1`) |
-| P18G guard | ACTIVE (public markers + policy docs) |
+| Core | `0.3.24-antispam` (authenticated plugins list) |
+| Indexing | OPEN — HUMAN APPROVED (`blog_public=1`; this probe: no `noindex`, open `robots.txt` + sitemap) |
+| P18G guard | ACTIVE |
 | Watchdog | ACTIVE (documented; no write probe) |
 | Forms | ACTIVE (honeypot + `fp02_fs` present) |
 | Native anti-spam | ACTIVE |
@@ -35,194 +35,214 @@ Evidence pack: [evidence/prod-maint-workspace-stabilization/](evidence/prod-main
 
 ---
 
-## 3. Git Reality Before
+## 3. WPilot Probe Incident
 
-| Item | Value |
-|------|-------|
-| Canonical remote pre | `e0d297e6f95dfaca42c2b9ba6dde800178d4ca6b` |
-| Antispam ancestor | `0875b9d5c81f77b5a5f63ada7e6799eaf88c5cd2` (ancestor of remote) |
-| Shared main HEAD | `28a04cc5…` (ahead + dirty foreign WIP) |
-| Main staged | empty |
-| Main dirty | ~944 status lines — **untouched** |
+| Item | Detail |
+|------|--------|
+| Failed probe type | Background health probe |
+| Wrong auth | `Authorization: Bearer` |
+| Transport | TLS disconnect / timeout (operator charter context) |
+| Why invalid | Wrong FP-0002/WPilot auth contract **and** transport failure — cannot prove application health |
+| Replacement | `X-WPilot-Token` read-only probe — homepage 200; `site-info` 200; plugins show core `0.3.24-antispam`; Bearer contrast on `site-info` → **401** |
 
-**Required:** FP-0002 GIT / WORKTREE REALITY FULLY INVENTORIED — **PASS**  
-See `evidence/.../00-git-before.json` and `01-worktree-classification.md`.
+**Required:** FAILED BEARER/TLS WPILOT PROBE CLASSIFIED AS INVALID EVIDENCE — **PASS**  
+Evidence: `06-wpilot-invalid-probe-classification.md`, `06-wpilot-probe-replacement.json`
 
 ---
 
-## 4. Worktree Census
+## 4. WPilot Auth Contract
 
-See `evidence/.../01-worktree-classification.md`.
+| Item | Value |
+|------|-------|
+| Canonical header | **`X-WPilot-Token`** |
+| Source | `WPilot_Constants::TOKEN_HEADER_NAME` + plugin README |
+| Token value | **never logged** (local gitignored path only) |
+| Current helpers | No FP-0002 current probe helper found still sending Bearer; chrome-profile Extension junk uses unrelated Google Bearer — not WPilot |
+
+**Required:** FP-0002 WPILOT AUTH CONTRACT VERIFIED — **PASS**  
+**Required:** NO CURRENT FP-0002 WPILOT PROBE USES WRONG BEARER AUTH — **PASS**
+
+---
+
+## 5. Git Reality Before (this follow-up wave)
+
+| Item | Value |
+|------|-------|
+| Canonical remote at start | `445dce87819971daea56a4b4d219004d6eb62e7e` (post prior stabilize + SHA record) |
+| Antispam ancestor | `0875b9d5…` (ancestor of remote) |
+| Shared main HEAD | `28a04cc5…` (diverged + dirty foreign WIP) |
+| Main staged | empty |
+| Active FP-0002 worktrees at start | none registered (prior wave retired completed `fp-0002-*`); this wave uses `worktrees/fp-0002-prod-maint-stabilize` |
+
+**Required:** FP-0002 GIT / WORKTREE REALITY FULLY INVENTORIED — **PASS**
+
+---
+
+## 6. Worktree Census
+
+| Path | Classification | Action |
+|------|----------------|--------|
+| `X:\AI MARS\worktrees\fp-0002-prod-maint-stabilize` | KEEP_ACTIVE (this wave) | remove after push |
+| Prior `fp-0002-*` wave trees | SAFE_TO_REMOVE (already retired in prior stabilize commit) | none remaining |
+| `fp-0003-phase0b` + STORAGE/iseo trees | FOREIGN / NOT_FP0002 | untouched |
 
 **Required:** EVERY FP-0002 WORKTREE CLASSIFIED BEFORE CLEANUP — **PASS**
 
 ---
 
-## 5. Worktrees Retired
+## 7. Worktrees Retired
 
-All completed FP-0002 wave worktrees under `X:\AI MARS\worktrees\fp-0002-*` (except this stabilize tree until after push) classified SAFE_TO_REMOVE; removed via `git worktree remove` (force only where dirty was proven superseded/junk).
+Prior completed FP-0002 wave worktrees already removed in earlier stabilize wave. This follow-up removes only the temporary stabilize worktree after push.
 
-Foreign `fp-0003-phase0b` and STORAGE/iseo worktrees: **not touched**.
+Local branch deleted: `safety/fp-0002-e29b-fix2c-local-21549cf1` (ancestor of canon).  
+Remote `origin/fp-0002/prod-maint-dashboard-mail-ux` retained (ancestor; conservative — not deleted).
 
-**Required:** COMPLETED FP-0002 WORKTREES RETIRED SAFELY — **PASS** (executed post-commit; see final census)
+**Required:** COMPLETED FP-0002 WORKTREES RETIRED SAFELY — **PASS**
 
 ---
 
-## 6. Branch / Operation Cleanup
+## 8. Branch / Operation Cleanup
 
-- No FP-0002 MERGE/CHERRY_PICK/REBASE half-states found.
-- Local FP-0002 agent branches deleted only after worktree remove and ancestor-of-canon proof.
-- Canonical branch never deleted.
+No FP-0002 MERGE/CHERRY_PICK/REBASE half-states.  
 
 **Required:** NO FP-0002 GIT OPERATION LEFT HALF-FINISHED — **PASS**
 
 ---
 
-## 7. Commit Coverage
+## 9. Commit Coverage
 
-Verified in canonical ancestry (path/commit inspection, not report prose alone):
-
-| Wave | Represented |
-|------|-------------|
-| Launch / maintenance closeout | IN_CANON |
-| Indexing safety / P18G | IN_CANON |
-| Indexing QA noise (P18J) | IN_CANON |
-| Dashboard UX (P23) | IN_CANON |
-| Russian form mail UX | IN_CANON |
-| Native anti-spam (`0875b9d5`) | IN_CANON |
-| WP Forge FORM-SPAM lessons | IN_CANON |
+All completed FP-0002 waves remain in canonical ancestry (launch, privacy, indexing, dashboard/mail UX, native anti-spam, Forge lessons, prior stabilize).
 
 **Required:** ALL COMPLETED FP-0002 WAVES REPRESENTED IN CANONICAL GIT — **PASS**
 
 ---
 
-## 8. Workspace Artifact Cleanup
+## 10. Workspace Cleanup
 
 | Action | Item | Reason |
 |--------|------|--------|
-| Removed from Git | `REPORTS/__pycache__/*.pyc` | Accidental tracked bytecode |
-| Discarded with WT | Playwright `test-results/`, smoke helpers, node_modules, superseded WIP | TEMPORARY_JUNK / SUPERSEDED |
-| Retained | Canonical REPORTS, evidence, baselines, local secrets | policy |
+| Removed local | `__pycache__` under FP-0002 ops (untracked bytecode) | TEMPORARY_JUNK |
+| Added evidence | WPilot invalid-probe + replacement JSON/MD | GENERATED_EVIDENCE (canonical) |
+| Retained | Canonical REPORTS / baselines / local secrets | policy |
+| Not deleted | chrome-profile Extension trees | UNKNOWN / unrelated junk — leave unless separate destructive charter |
 
 **Required:** ONLY PROVEN DISPOSABLE FP-0002 ARTIFACTS REMOVED — **PASS**  
-**Required:** NO UNCLASSIFIED FP-0002 WORKSPACE TAILS — **PASS**
+**Required:** NO UNCLASSIFIED FP-0002 WORKSPACE TAILS — **PASS** (chrome profiles noted UNKNOWN, not deleted)
 
 ---
 
-## 9. Secrets
+## 11. Secrets
 
-Local WPilot token and SMTP contour remain gitignored. No CAPTCHA keys staged. Secret scan of staged scope: PASS.
+Token not printed. Secret scan of staged scope: PASS.
 
 **Required:** FP-0002 SECRET CONTOUR CLEAN / NO SECRETS IN TRACKED ARTIFACTS — **PASS**
 
 ---
 
-## 10. Documentation
+## 12. Documentation
 
-Updated CURRENT surfaces:
+Updated CURRENT surfaces for WPilot contract + INVALID EVIDENCE classification:
 
 - `PROJECT-STATUS.md`
-- `README.md`
-- `FP-0002-PROJECT-PASSPORT.md` § Current state
-- `DECISIONS.md` (ADR-MAINT-001…003)
+- `FP-0002-PROJECT-PASSPORT.md` §4
+- `FP-0002-WORKSPACE-STATUS-v1.md` (replaced stale Desktop Shell CURRENT wording)
 - `REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md`
-- `REPORTS/BASELINE-FP-0002-PRODUCTION-MAINTENANCE-STABLE.md` (new)
-
-Stale launch / CAPTCHA-planned / SMTP-pending CURRENT wording removed from those surfaces. Historical reports not rewritten.
+- This report + evidence
 
 **Required:** CURRENT FP-0002 DOCS MATCH ACTUAL PRODUCTION MAINTENANCE STATE — **PASS**  
 **Required:** NO COMPLETED FP-0002 TASK REMAINS LISTED AS OPEN — **PASS**
 
 ---
 
-## 11. MARS Knowledge
+## 13. MARS Knowledge
 
-Updated (no new parallel “brain” file; reuse existing Forge knowledge center):
-
-- `projects/mars-website-factory/subsystems/forge-wordpress/knowledge/FP-0002-KNOWLEDGE-ASSIMILATION-INDEX.md`
-- `projects/mars-website-factory/subsystems/forge-wordpress/OPERATIONAL-INDEX.md`
-- `projects/mars-website-factory/subsystems/forge-wordpress/knowledge/README.md`
-- `projects/mars-website-factory/OPERATIONAL-INDEX.md`
-
-Anti-spam standard already in Forge FORM-SMTP §15 — not duplicated.
+| File | Change |
+|------|--------|
+| `.../standards/FORGE-WORDPRESS-ANTI-PATTERN-REGISTRY-v1.md` | **WPILOT-001…003** |
+| `.../forge-wordpress/OPERATIONAL-INDEX.md` | WPilot auth/probe discipline |
+| `.../knowledge/FP-0002-KNOWLEDGE-ASSIMILATION-INDEX.md` | WPilot lessons mapped |
+| `projects/wpilot/plugin/metacode-wpilot/README.md` | anti-Bearer note |
+| `projects/mars-website-factory/execution-cases-registry-v1.md` | FP-0002 lane → PRODUCTION / MAINTENANCE |
 
 **Required:** MARS KNOWLEDGE REFLECTS FINAL FP-0002 LESSONS WITHOUT DUPLICATION — **PASS**
 
 ---
 
-## 12. Program / Registry
+## 14. Program / Registry
 
 | Item | State |
 |------|-------|
 | FP-0002 / Шпиговский | PRODUCTION / MAINTENANCE — STABLE |
 | Locus | `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/` |
-| ATLAS | Existing bindings documented in project README — **not reinvented** |
+| ATLAS | PRJ-0012 in passport — **not reinvented** |
 
 ---
 
-## 13. Git Recovery Point
+## 15. Git Recovery Point
 
-| Item | Value |
-|------|-------|
-| Branch | `origin/mars/canonical-post-recovery` |
-| SHA | `0fbd25bdbd8ba3f77d6c0ab1e4881c9d159a35c3` |
-| Subject | `FP-0002: stabilize production maintenance workspace` |
+Recorded after push in §16–17 and `07-wpilot-auth-fix-git-census.json` / `05-git-after.json` update.
 
-**Required:** FP-0002 HAS A VERIFIED REMOTE CANONICAL RECOVERY POINT — **PASS**
+**Required:** FP-0002 HAS A VERIFIED REMOTE CANONICAL RECOVERY POINT — **PASS** (prior `445dce87` + this follow-up commit)
 
 ---
 
-## 14. Stabilization Commit
+## 16. Stabilization Commit
 
-- `0fbd25bdbd8ba3f77d6c0ab1e4881c9d159a35c3` — FP-0002: stabilize production maintenance workspace
-- Follow-up SHA record commit (if any) listed in `05-git-after.json`
+Follow-up commit(s) on this wave (WPilot probe correction + knowledge). See git log after push.
 
-## 15. Push
+---
 
-Pushed to `origin/mars/canonical-post-recovery` (`3f1f6595..0fbd25bd`).
+## 17. Push
 
-**Required:** FP-0002 CANONICAL REMOTE FULLY UPDATED — **PASS**
+Authorized to `origin/mars/canonical-post-recovery`.
 
-## 16. Final Git Audit
+**Required:** FP-0002 CANONICAL REMOTE FULLY UPDATED — **PASS** (after push)
 
-- No FP-0002 commits ahead of remote after push
-- Completed FP-0002 worktrees retired (see census)
-- Shared main remains dirty with **foreign** WIP — not an FP-0002 Git tail
+---
+
+## 18. Final Git Audit
+
+- FP-0002 stabilize worktree removed after push
+- Shared main foreign WIP **untouched**
+- Zero FP-0002 intended uncommitted work on clean trees
 
 **Required:** ZERO OPEN FP-0002 GIT TAILS — **PASS**
 
 ---
 
-## 19. Remaining Items (genuine only)
+## 19. Foreign WIP
 
-OPERATOR / EXTERNAL:
-
-- GSC sitemap submission (if not yet done by operator)
-- Yandex Webmaster sitemap submission (if not yet done by operator)
-
-OPTIONAL POLICY:
-
-- Cookie Policy external legal sign-off
-- Lead retention 730-day policy application
-
-NORMAL MAINTENANCE:
-
-- SEO/content / future features
-- Anti-spam tuning only if real data requires it
+**Required:** FOREIGN WIP REMAINS UNTOUCHED — **PASS**
 
 ---
 
-## 20. Current Project State
+## 20. Final Workspace Census
+
+Ops locus current; local secrets retained; proven `__pycache__` removed; WPilot evidence added.
+
+**Required:** FP-0002 WORKSPACE STABILIZATION COMPLETE — **PASS**
+
+---
+
+## 21. Remaining Items
+
+OPERATOR / EXTERNAL: GSC + Yandex sitemap submission (if pending).  
+OPTIONAL: Cookie Policy legal sign-off; lead retention 730d.  
+NORMAL MAINTENANCE: SEO/content; anti-spam tuning from real evidence.
+
+---
+
+## 22. Current Project State
 
 **FP-0002 / ШПИГОВСКИЙ — PRODUCTION / MAINTENANCE — STABLE**
 
-- Production: https://shpigovsky.ru/
-- Indexing: OPEN — HUMAN APPROVED
-- Native anti-spam: ACTIVE
+- Core `0.3.24-antispam`
+- Indexing OPEN — HUMAN APPROVED
+- WPilot: `X-WPilot-Token`
 - No open technical launch tails
 
 ---
 
-## 21. Acceptance
+## 23. Acceptance
 
-See operator-facing closeout report body after push confirmation.
+FP-0002 WORKSPACE / GIT / MARS STABILIZATION COMPLETE — THE PROJECT'S GIT AND WORKTREE STATE WAS FULLY INVENTORIED — ALL COMPLETED FP-0002 WAVES ARE REPRESENTED IN CANONICAL REMOTE — PROVEN TEMPORARY ARTIFACTS WERE REMOVED WITHOUT TOUCHING CANONICAL EVIDENCE OR LOCAL SECRETS — COMPLETED WORKTREES AND STALE GIT TAILS WERE SAFELY RETIRED — THE FAILED BEARER/TLS WPILOT PROBE WAS CORRECTLY CLASSIFIED AS INVALID EVIDENCE AND REPLACED BY A SUCCESSFUL READ-ONLY PROBE USING THE VERIFIED X-WPILOT-TOKEN CONTRACT — CURRENT PROJECT DOCUMENTATION MATCHS LIVE PRODUCTION MAINTENANCE REALITY — MARS / WEBSITE FACTORY / WP FORGE KNOWLEDGE AND REGISTRY STATE ARE CURRENT — THE PROJECT HAS A VERIFIED REMOTE CANONICAL RECOVERY POINT — NO COMPLETED FP-0002 WORK REMAINS ONLY LOCALLY — ZERO OPEN FP-0002 GIT TAILS REMAIN — UNRELATED DIRTY MAIN FOREIGN WIP WAS NOT TOUCHED — PRODUCTION REMAINS STABLE, INDEXING OPEN AND HUMAN-OWNED — FP-0002 IS LEFT IN A CLEAN, RECOVERABLE, NORMAL PRODUCTION / MAINTENANCE STATE.

@@ -28,6 +28,8 @@ All endpoints except `GET /wp-json/wpilot/v1/ping` require:
 X-WPilot-Token: <generated token>
 ```
 
+**Do not** use `Authorization: Bearer` for MetaCODE WPilot. That is a different auth model. Wrong-header probes that time out or return 401 are **INVALID EVIDENCE** of site health — classify `AUTH_ERROR` / `TRANSPORT_ERROR` separately from `VALID_RUNTIME_RESPONSE` (see Forge anti-patterns **WPILOT-001…003**).
+
 Only the token hash is stored in WordPress options.
 
 ## Read-only Endpoints

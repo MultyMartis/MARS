@@ -1,9 +1,9 @@
 # OPEN ITEMS — FP-0002 Production Maintenance
 
 **Phase:** PRODUCTION / MAINTENANCE — STABLE  
-**Updated:** 2026-08-20 (workspace / Git / MARS closeout)
+**Updated:** 2026-08-20 (workspace / Git / MARS closeout + WPilot probe/auth correction)
 
-Launch implementation tasks are **closed**. Git/worktree housekeeping for completed FP-0002 waves is **closed**. Only maintenance and operator follow-ups remain.
+Launch implementation tasks are **closed**. Git/worktree housekeeping for completed FP-0002 waves is **closed**. WPilot Bearer/TLS mis-probe is **INVALID EVIDENCE** (closed — not an open incident). Only maintenance and operator follow-ups remain.
 
 ---
 
@@ -30,6 +30,7 @@ Launch implementation tasks are **closed**. Git/worktree housekeeping for comple
 - Native form anti-spam v1 — **done** (honeypot + signed timing + rate + replay + heuristics; no external CAPTCHA)
 - Dashboard / Russian mail UX polish — **done** (P23)
 - Workspace / Git / MARS stabilization closeout — **done** (this wave)
+- WPilot Bearer/TLS background probe — **INVALID EVIDENCE**; replaced by successful `X-WPilot-Token` read-only probe — **done** (not a runtime failure)
 
 ---
 
@@ -41,6 +42,7 @@ Launch implementation tasks are **closed**. Git/worktree housekeeping for comple
 4. P18G guard remains active; synthetic guard QA must use authorized QA context only (P18J).
 5. New features → new bounded waves with their own reports.
 6. Form spam controls stay **first-party** unless a new charter authorizes an external CAPTCHA provider.
+7. WPilot probes use **`X-WPilot-Token`** only; never assume Bearer. Distinguish `TRANSPORT_ERROR` / `AUTH_ERROR` / `VALID_RUNTIME_RESPONSE`.
 
 ---
 

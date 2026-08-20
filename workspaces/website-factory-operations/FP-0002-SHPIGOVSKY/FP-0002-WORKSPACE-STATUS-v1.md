@@ -1,134 +1,36 @@
 # FP-0002 — Workspace Status v1
 
-**Document type:** Workspace lifecycle status — production cycle v2  
-**Date:** 2026-06-14  
-**Factory Project:** FP-0002 — Shpigovsky.ru
+**Document type:** Workspace lifecycle status  
+**Date:** 2026-08-20  
+**Factory Project:** FP-0002 — Shpigovsky.ru / Шпиговский
 
 ---
 
-## Project
-
-**FP-0002** — Shpigovsky.ru
-
----
-
-## Current Phase
-
-**C — Desktop Shell**
-
----
-
-## Status
-
-**READY TO START**
-
----
-
-## Active Workspace (canonical — V8)
+## Current phase (authoritative)
 
 | Field | Value |
 |-------|-------|
-| Path | `workspaces/fp-0002-shpigovsky-v8/` |
-| Full path | `X:\AI MARS\workspaces\fp-0002-shpigovsky-v8\` |
-| Lifecycle | **ACTIVE** · **CANONICAL** · **CONSOLIDATION** |
-| Fallback workspace | `workspaces/fp-0002-shpigovsky-v7/` (`IMMUTABLE_STABLE_FALLBACK`) |
-| Bootstrap baseline | Four-template authority `6eb493e9` · tag `fp-0002-v7-four-template-canonical-demo-baseline-01` |
+| Phase | **PRODUCTION / MAINTENANCE — STABLE** |
+| Ops locus | `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/` |
+| Production | https://shpigovsky.ru/ |
+| Core | `0.3.24-antispam` |
+| Indexing | OPEN — HUMAN APPROVED |
+| WPilot auth | `X-WPilot-Token` |
+| CURRENT SoT | [PROJECT-STATUS.md](PROJECT-STATUS.md) · [OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md](REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md) |
 
-## Superseded workspaces
-
-| Workspace | Role | Full path |
-|-----------|------|-----------|
-| `fp-0002-shpigovsky-v7` | Immutable stable fallback | `X:\AI MARS\workspaces\fp-0002-shpigovsky-v7\` |
-| `fp-0002-shpigovsky-frontend` | Cycle v2 (superseded) | `X:\AI MARS\workspaces\fp-0002-shpigovsky-frontend\` (if present) |
-
-## Archive Workspace
-
-| Field | Value |
-|-------|-------|
-| Path | `X:\AI MARS STORAGE\website-factory\archive\fp-0002-shpigovsky-frontend-pre-v2\` |
-| Lifecycle | **ARCHIVED** · **READ ONLY** · **REFERENCE ONLY** |
-| Former phase | M2 Foundation Extraction (pre-v2 residue) |
-| Marker | `ARCHIVED.md` in archive root |
+This file previously described Phase C Desktop Shell (2026-06). That wording is **historical only**. Do not treat “READY TO START / Desktop Shell” as CURRENT.
 
 ---
 
-## Design sources (canonical — not in workspace)
+## Historical frontend workspaces (not CURRENT ops SoT)
 
-| Source | Path |
-|--------|------|
-| Design PDFs | `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/INCOMING/01_DESIGN/` |
-| Content / IA XLSX | `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/INCOMING/02_CONTENT/Предварит структура и спрос.xlsx` |
-
-Workspace **does not** duplicate intake; references operations pack only.
-
----
-
-## Authority chain
-
-| Layer | Document |
-|-------|----------|
-| A0 Source Discovery | [REPORTS/FP-0002-SOURCE-DISCOVERY-REPORT-v1.md](REPORTS/FP-0002-SOURCE-DISCOVERY-REPORT-v1.md) |
-| A1 Design Audit | [REPORTS/FP-0002-DESIGN-AUDIT-v1.md](REPORTS/FP-0002-DESIGN-AUDIT-v1.md) |
-| Design Approval Sheet | [REPORTS/FP-0002-DESIGN-APPROVAL-SHEET-v1.md](REPORTS/FP-0002-DESIGN-APPROVAL-SHEET-v1.md) |
-| Operator Visual Approval Law | [operator-visual-approval-law-v1.md](../../../projects/mars-website-factory/operator-visual-approval-law-v1.md) |
-| Production Roadmap v2 | [website-factory-production-roadmap-v2-draft.md](../../../projects/mars-website-factory/website-factory-production-roadmap-v2-draft.md) |
-| Production Standards SSOT | [FP-0002-PRODUCTION-STANDARDS-APPROVAL-v3.md](FP-0002-PRODUCTION-STANDARDS-APPROVAL-v3.md) |
-| Workspace Archive Rule | [workspace-reset-governance.md](../../../projects/mars-website-factory/workspace-reset-governance.md) §9 |
-
----
-
-## Operator decisions (shell start)
-
-| Decision | Value | Basis |
-|----------|-------|-------|
-| **D-021** | **Variant A** — Production Standards v3 authority for Desktop Shell | Recommended in Design Approval Sheet; consistent with **APPROVED** Production Standards v3 (Lead sign-off 2026-06-13) |
-
-Shell builds per **Production Standards v3**, not PDF pixel tokens where conflicts remain open (D-007…D-011 deferred to UI Demo phase).
-
----
-
-## Explicit exclusions (this cycle start)
-
-| Item | Started |
-|------|---------|
-| FP-0002 Desktop Shell (header/footer per PDF + v3) | **NO** |
-| FP-0002 UI Demo | **NO** |
-| Home / PG-001 | **NO** |
-| `src/assets/design/` intake copy | **NO** (sources stay in INCOMING) |
-
-Starter template demo pages may exist from gulp-starter copy — **not** FP-0002 production deliverables.
+| Workspace | Role |
+|-----------|------|
+| `workspaces/fp-0002-shpigovsky-v8/` | Launch-era frontend (reference) |
+| `workspaces/fp-0002-shpigovsky-v7/` | Immutable stable fallback |
 
 ---
 
 ## Next action
 
-**Phase C — Desktop Shell** per [website-factory-production-roadmap-v2-draft.md](../../../projects/mars-website-factory/website-factory-production-roadmap-v2-draft.md) and [FP-0002-FRONTEND-START-SEQUENCE-v1.md](FP-0002-FRONTEND-START-SEQUENCE-v1.md).
-
----
-
-## V7 / V8 transition (2026-06-28)
-
-| Layer | Status |
-|-------|--------|
-| V7 workspace | `IMMUTABLE_STABLE_FALLBACK` — source frozen |
-| V7 static demo | `fp-0002-v7-static-client-demo-stable-02` — deployed demo unchanged |
-| V8 workspace | Bootstrap reconciliation complete; Git whitelist enabled |
-| V8 baseline | Four-template authority `6eb493e9` |
-| Browser parity | PASS (V7 reference dist vs V8 dist) |
-| Component audit | COMPLETE |
-| CF-003 Upper Navigation | COMPLETE (2026-06-28) |
-| CF-004 Founder Quote | COMPLETE (2026-06-28) |
-| CF-005 Specialists | COMPLETE (2026-06-28) |
-| CF-006 Comfort gallery | COMPLETE (2026-06-28) |
-| CF-007 Reviews | COMPLETE (2026-06-28) |
-| CF-008 FAQ | COMPLETE (2026-06-28) |
-| Shared component audit | COMPLETE — next wave CF-009 final form (NOT AUTHORIZED) |
-| About (`o-centre`) | Content blockers RESOLVED 2026-06-29 — implementation NOT STARTED; gate: READY_FOR_IMPLEMENTATION_PROMPT |
-
----
-
-## Changelog
-
-| Version | Date | Notes |
-|---------|------|-------|
-| v1 | 2026-06-14 | Cycle v2 workspace reset; archive pre-v2; active workspace from gulp-starter |
+Normal production maintenance only (operator GSC/Yandex sitemap if pending; optional legal/retention; SEO/content). No open technical launch tails.
