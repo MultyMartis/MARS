@@ -1,3 +1,5 @@
+> **Phase 3H.10 (2026-08-20):** Wait/429 reminder delivery repair + actionable digest UX. Active recipients **3** (MOD_A intentionally revoked). Natural acceptance **2026-08-21 10:00 Europe/Moscow**. Soak interrupted until natural PASS. Phase 3I.1 blocked. AI OFF. See [evidence/phase3h10/](evidence/phase3h10/) and phase 3H.10 report.
+
 > **Phase 3H.9.2 (2026-08-17):** ACCESS live drifted to 3 after an incomplete 2026-08-16 `/moderator_remove`/`/moderator_add` cycle left MOD_A revoked. Classified `UNAUTHORIZED_STATE_DRIFT`. Restored MOD_A via existing `/moderator_add` (same profile_no 3). Live ACCESS=4 · CONFIG=4 · Operational resolver=4 · reminder resolver=4. Next natural 10:00: **2026-08-18 Europe/Moscow**. Soak not restarted. Phase 3I.1 blocked. AI OFF. No four-recipient test sends.
 
 > **Phase 3H.9 (2026-08-17):** False «Недостаточно прав» on raw lead was ACCESS/CONFIG Google Sheets `invalid_grant` mislabeled as a permission deny. Reminder 10:00 windows 15–17 Aug failed at CONFIG read with the same credential error before evaluation; 429 retry path was not applicable. Admin deny text + Sheets error classifier patched. Live Sheets OAuth reconnect by operator is still required before ADMIN_A raw retest and the next natural 4-recipient 10:00. Soak not restarted. Phase 3I.1 blocked. AI OFF.
@@ -23,7 +25,7 @@
 | **Raw source** | Literal Gmail/intake body via `📄 Исходная заявка` · filtered RAW lookup · legacy READ-only Gmail fallback |
 | **Runtime** | External n8n (`n8n.ai-metacode.com`) — **not** executed from MARS |
 | **Registry** | `project_id` **iseo-sales-manager-bot** (documentation registration; live product is external) |
-| **Next** | Observe natural **2026-08-18 10:00 Europe/Moscow** four-recipient reminder (pending≥1). Soak not restarted. Phase 3I.1 blocked. Any behavior change = **new explicit phase** |
+| **Next** | Observe natural **2026-08-21 10:00 Europe/Moscow** three-recipient actionable digest (pending≥1; MOD_A intentionally inactive). Soak not restarted until natural PASS. Phase 3I.1 blocked. Any behavior change = **new explicit phase** |
 
 **Supersession:** Older “planned / Phase 3A / Phase 3B NEXT / live parity SAFE UNKNOWN” index rows are historical relative to the 2026-08-17 stable freeze. Do not treat them as current production truth.
 
