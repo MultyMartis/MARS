@@ -121,7 +121,15 @@ Restore files from `_form-antispam-01-tmp/backups/` (scoped per-file backups). R
 
 ## 24. Git Persistence
 
-Scoped commit on allowlisted paths only; foreign WIP excluded. Remote sync to `origin/mars/canonical-post-recovery` via clean worktree (no force).
+Scoped commit on allowlisted paths only; foreign WIP excluded.
+
+| Item | Value |
+|------|-------|
+| Local commit (dirty-main lineage) | `444d8a45` |
+| Remote synced commit | `cee143df` |
+| Method | clean worktree + cherry-pick onto remote tip `dd59de28` (histories had diverged; no force push) |
+| Remote | `origin/mars/canonical-post-recovery` |
+| Reachability | `git ls-remote` = `cee143df` |
 
 ## 25. Remaining Risks
 
@@ -157,5 +165,5 @@ im.work@nail.ru IN FINAL RECIPIENT SET: YES
 PRODUCTION/SOURCE ALIGNED: YES
 OPEN BLOCKERS: 0
 PRODUCTION MUTATIONS: YES (bounded form/security/JS)
-REMOTE SYNC: (filled after push)
+REMOTE SYNC: COMPLETE (cee143df on origin/mars/canonical-post-recovery)
 ```
