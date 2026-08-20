@@ -1,0 +1,8 @@
+{
+  "lint_code": 255,
+  "lint": "Errors parsing /home/s/shpigovsky/shpigovsky.ru/public_html/_fp02_as_qahead_dbg.php\n",
+  "run_code": 0,
+  "out": "EXIT:255\n",
+  "err": "",
+  "php_head": "<?php\nchdir('/home/s/shpigovsky/shpigovsky.ru/public_html');\nrequire '/home/s/shpigovsky/shpigovsky.ru/public_html/wp-load.php';\nnocache_headers();\n\nadd_filter('wp_die_handler', static function () {\n  return static function ($message = '', $title = '', $args = array()) {\n    // Keep output; do not terminate multi-case CLI harness.\n  };\n});\n\nfunction fp02_as_post($fields) {\n  $_POST = $fields;\n  $_"
+}

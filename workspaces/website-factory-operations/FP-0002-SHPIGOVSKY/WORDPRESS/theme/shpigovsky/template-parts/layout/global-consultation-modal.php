@@ -38,13 +38,11 @@ $privacy_url = home_url( '/privacy-policy/' );
 				<input type="hidden" name="lead_source" data-lead-hidden="lead_source" value="">
 				<input type="hidden" name="page_url" data-lead-hidden="page_url" value="">
 				<input type="hidden" name="page_title" data-lead-hidden="page_title" value="">
-				<input type="hidden" name="form_started_at" data-lead-hidden="form_started_at" value="">
-				<input type="hidden" name="timestamp" data-lead-hidden="timestamp" value="">
+				<input type="hidden" name="fp02_fs" data-lead-hidden="fp02_fs" value="<?php echo esc_attr( class_exists( '\\Shpigovsky\\Core\\Forms\\AntiSpam' ) ? \Shpigovsky\Core\Forms\AntiSpam::issue_token( 'consultation', 'modal' ) : '' ); ?>">
 				<input type="hidden" name="request_token" data-lead-hidden="request_token" value="">
-				<input type="hidden" name="g-recaptcha-response" data-lead-hidden="g-recaptcha-response" value="">
-				<label class="modal-consultation__honeypot" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;">
+				<label class="modal-consultation__honeypot" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
 					<span><?php esc_html_e( 'Не заполняйте это поле', 'shpigovsky' ); ?></span>
-					<input type="text" name="company_url" data-lead-hidden="company_url" value="" tabindex="-1" autocomplete="off">
+					<input type="text" name="company_url" data-lead-hidden="company_url" value="" tabindex="-1" autocomplete="new-password">
 				</label>
 			</div>
 			<div class="modal-consultation__row">

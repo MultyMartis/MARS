@@ -1,0 +1,97 @@
+{
+  "ok": true,
+  "data": {
+    "valid_human": {
+      "ok": true,
+      "mail_accepted": true,
+      "mail_status": "MAIL_ACCEPTED",
+      "message": "Заявка принята. Мы свяжемся с вами по указанному телефону."
+    },
+    "honeypot": {
+      "rejected": true,
+      "accepted": false,
+      "message": null
+    },
+    "too_fast": {
+      "rejected": true,
+      "accepted": false,
+      "message": null
+    },
+    "tampered_token": {
+      "rejected": true,
+      "accepted": false
+    },
+    "expired_token": {
+      "rejected": true,
+      "accepted": false,
+      "message": null
+    },
+    "replay": {
+      "first_accepted": true,
+      "second_rejected": true,
+      "second_message": null,
+      "first_message": "Заявка принята. Мы свяжемся с вами по указанному телефону."
+    },
+    "heuristics": {
+      "A_normal_ru": {
+        "ok": true,
+        "reason": "PASS"
+      },
+      "B_multiline": {
+        "ok": true,
+        "reason": "PASS"
+      },
+      "C_one_url": {
+        "ok": true,
+        "reason": "PASS"
+      },
+      "D_spam_urls": {
+        "ok": false,
+        "reason": "PAYLOAD_STRONG_SPAM_SIGNAL"
+      },
+      "E_giant": {
+        "ok": false,
+        "reason": "PAYLOAD_STRONG_SPAM_SIGNAL"
+      },
+      "F_script": {
+        "ok": false,
+        "reason": "PAYLOAD_STRONG_SPAM_SIGNAL"
+      },
+      "G_cyrillic": {
+        "ok": true,
+        "reason": "PASS"
+      },
+      "H_intl_phone_ok": {
+        "ok": true,
+        "reason": "PASS"
+      }
+    },
+    "direct_missing_token": {
+      "rejected": true,
+      "accepted": false
+    },
+    "cleanup": {
+      "deleted": 24
+    },
+    "indexing": {
+      "blog_public": 1,
+      "effective": "OPEN"
+    },
+    "core": "0.3.24-antispam",
+    "antispam_admin": {
+      "active": true,
+      "layers": [
+        "скрытая проверка формы",
+        "защита от слишком быстрых отправок",
+        "ограничение частоты",
+        "защита от повторов"
+      ],
+      "rejected_24h": 25,
+      "rejected_7d": 25
+    },
+    "smtp_recipients": 2,
+    "mail_state": "verified_active"
+  },
+  "exit_code": 0,
+  "stderr_head": "[fp02-antispam] reject reason=honeypot_filled form=consultation\n[fp02-antispam] reject reason=timing_too_fast form=consultation\n[fp02-antispam] reject reason=token_invalid form=consultation\n[fp02-antispam] reject reason=token_expired form=consultation\n[fp02-antispam] reject reason=payload_strong_spam_signal form=consultation\n[fp02-antispam] reject reason=payload_strong_spam_signal form=consultation\n[fp02-antispam] reject reason=payload_strong_spam_signal form=consultation\n[fp02-antispam] reject reason=token_invalid form=consultation\n"
+}

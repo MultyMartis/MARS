@@ -1,0 +1,38 @@
+{
+  "ok": true,
+  "data": {
+    "core": "0.3.24-antispam",
+    "blog_public": 1,
+    "handler": true,
+    "antispam": true,
+    "ajax_action": "fp02_lead_submit",
+    "mail_state": "verified_active",
+    "metrika_goal": "",
+    "recipients_count": 2,
+    "indexing": {
+      "effective": "OPEN",
+      "blog_public": 1,
+      "blog_open": true,
+      "robots": {
+        "file_exists": true,
+        "owner": "physical_file",
+        "global_disallow": false,
+        "body_head": "User-agent: *\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\n\nSitemap: https://shpigovsky.ru/wp-sitemap.xml"
+      },
+      "meta": {
+        "global_noindex": false,
+        "source": "blog_public_core_robots"
+      },
+      "signals_open": true,
+      "signals_closed": false,
+      "human_decision": "OPEN",
+      "human_actor": "MetaCODE (metacode)",
+      "human_recorded_at": "2026-08-20 00:05:02",
+      "human_source": "admin_ui",
+      "fingerprint": "e305cb991e8eeadd264eb2ca7258aa5362c10d504fa7e31277dd879034db54ba"
+    },
+    "watchdog_enabled": true
+  },
+  "exit_code": 0,
+  "stderr_head": ""
+}

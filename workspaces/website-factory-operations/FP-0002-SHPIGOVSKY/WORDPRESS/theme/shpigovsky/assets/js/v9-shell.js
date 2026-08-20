@@ -1307,17 +1307,16 @@
 			name: LEAD_FORM_CONFIG.nonceField || 'fp02_lead_nonce',
 			value: LEAD_FORM_CONFIG.nonce || '',
 		}).setAttribute('data-lead-hidden', LEAD_FORM_CONFIG.nonceField || 'fp02_lead_nonce');
-		ensure('form_started_at', {
-			name: 'form_started_at',
-			value: String(Math.floor(Date.now() / 1000)),
-		});
-		ensure('timestamp', { name: 'timestamp', value: '' });
+		ensure(LEAD_FORM_CONFIG.formSessionField || 'fp02_fs', {
+			name: LEAD_FORM_CONFIG.formSessionField || 'fp02_fs',
+			value: LEAD_FORM_CONFIG.formSession || '',
+		}).setAttribute('data-lead-hidden', LEAD_FORM_CONFIG.formSessionField || 'fp02_fs');
 		ensure('request_token', { name: 'request_token', value: createRequestToken() });
 		ensure('company_url', {
 			type: 'text',
 			name: 'company_url',
 			value: '',
-			autocomplete: 'off',
+			autocomplete: 'new-password',
 			tabIndex: -1,
 		});
 		ensure('form_key', { name: 'form_key', value: LEAD_FORM_CONFIG.formKey || 'consultation' });
@@ -1440,12 +1439,12 @@
 			setValue('action', LEAD_FORM_CONFIG.action);
 		}
 
-		var started = container.querySelector('[data-lead-hidden="form_started_at"]');
-		if (started && !started.value) {
-			started.value = String(Math.floor(Date.now() / 1000));
+		var sessionField = LEAD_FORM_CONFIG.formSessionField || 'fp02_fs';
+		var sessionInput = container.querySelector('[data-lead-hidden="' + sessionField + '"]');
+		if (sessionInput && LEAD_FORM_CONFIG.formSession && !sessionInput.value) {
+			sessionInput.value = LEAD_FORM_CONFIG.formSession;
 		}
 
-		setValue('timestamp', String(Math.floor(Date.now() / 1000)));
 		setValue('request_token', createRequestToken());
 		setValue('form_key', LEAD_FORM_CONFIG.formKey || 'consultation');
 		var utm = readUtmState();
@@ -1686,7 +1685,7 @@
 			}
 		}
 
-		return appendRecaptchaToken(form, formData)
+		return Promise.resolve()
 			.then(function () {
 				return fetch(LEAD_FORM_CONFIG.endpoint, {
 					method: 'POST',
@@ -1716,6 +1715,14 @@
 								(typeof data.message === 'string' && data.message) ||
 								'Не удалось отправить заявку. Позвоните нам или попробуйте ещё раз.';
 							throw fail;
+						}
+
+						if (data && data.accepted !== true) {
+							var notAccepted = new Error('form_submit_failed');
+							notAccepted.userMessage =
+								(typeof data.message === 'string' && data.message) ||
+								'Не удалось отправить заявку. Позвоните нам или попробуйте ещё раз.';
+							throw notAccepted;
 						}
 
 						return { ok: true, data: data };

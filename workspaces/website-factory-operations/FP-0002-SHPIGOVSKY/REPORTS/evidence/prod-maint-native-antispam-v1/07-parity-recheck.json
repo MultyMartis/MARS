@@ -1,0 +1,44 @@
+[
+  {
+    "rel": "shpigovsky-core.php",
+    "match": true,
+    "local_sha256": "4d8bdf57aaed7100c13c1a2632528eb16188801a199925a25033bd4a844131d7",
+    "prod_sha256": "4d8bdf57aaed7100c13c1a2632528eb16188801a199925a25033bd4a844131d7"
+  },
+  {
+    "rel": "src/Forms/AntiSpam.php",
+    "match": true,
+    "local_sha256": "f711f3817d4ace9558fd9240deccf70b56a18a61f37a753765dd94aa2033f28b",
+    "prod_sha256": "f711f3817d4ace9558fd9240deccf70b56a18a61f37a753765dd94aa2033f28b"
+  },
+  {
+    "rel": "src/Forms/ConsultationHandler.php",
+    "match": true,
+    "local_sha256": "faca4f03cbd8af72ec29d077271d5b5f963ccff70dbc90cd8b29db9d16768e98",
+    "prod_sha256": "faca4f03cbd8af72ec29d077271d5b5f963ccff70dbc90cd8b29db9d16768e98"
+  },
+  {
+    "rel": "src/Admin/MailFormsSettings.php",
+    "match": true,
+    "local_sha256": "62d9f26bab98196d88ec095235b6db884336e66bb2754c3a1f0f8a9de19f2daf",
+    "prod_sha256": "62d9f26bab98196d88ec095235b6db884336e66bb2754c3a1f0f8a9de19f2daf"
+  },
+  {
+    "rel": "theme:template-parts/components/final-form.php",
+    "match": true,
+    "local_sha256": "1a3ee8d047d6f309ab72347e363e554899fdb56fe2fa4e5c2d1bd47759067021",
+    "prod_sha256": "1a3ee8d047d6f309ab72347e363e554899fdb56fe2fa4e5c2d1bd47759067021"
+  },
+  {
+    "rel": "theme:template-parts/layout/global-consultation-modal.php",
+    "match": true,
+    "local_sha256": "2ace16e958963c41cd709ec573a793f98e42f48f5db21caadbb12dd510256e16",
+    "prod_sha256": "2ace16e958963c41cd709ec573a793f98e42f48f5db21caadbb12dd510256e16"
+  },
+  {
+    "rel": "theme:assets/js/v9-shell.js",
+    "match": true,
+    "local_sha256": "b950c6e32bed04eea25b011ac8db191261b65db58b056643be734df58bc9ed33",
+    "prod_sha256": "b950c6e32bed04eea25b011ac8db191261b65db58b056643be734df58bc9ed33"
+  }
+]

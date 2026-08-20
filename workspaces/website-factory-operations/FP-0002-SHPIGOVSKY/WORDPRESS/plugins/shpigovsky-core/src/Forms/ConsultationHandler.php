@@ -1,6 +1,6 @@
 <?php
 /**
- * Lead form AJAX handler — persist first, then optional wp_mail.
+ * Lead form AJAX handler — anti-spam first, persist, then optional wp_mail.
  *
  * @package Shpigovsky_Core
  */
@@ -20,8 +20,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Unified lead / consultation form submission handler (wp_ajax).
  *
- * Validate → persist lead → attempt mail → update status → JSON.
+ * Validate → anti-spam → persist lead → attempt mail → JSON.
  * Frontend success means the lead was stored, not that email was delivered.
+ * Spam is rejected before real lead persistence.
  */
 final class ConsultationHandler implements ModuleInterface {
 
@@ -40,26 +41,6 @@ final class ConsultationHandler implements ModuleInterface {
 	 * «Почта и формы». Do not send to this address.
 	 */
 	public const FUTURE_RECIPIENT = '';
-
-	/**
-	 * Minimum seconds between form render and submit.
-	 */
-	public const MIN_FILL_SECONDS = 3;
-
-	/**
-	 * Maximum form session age (seconds).
-	 */
-	public const MAX_FILL_SECONDS = 86400;
-
-	/**
-	 * Per-IP rate limit window (seconds).
-	 */
-	public const RATE_LIMIT_WINDOW = 3600;
-
-	/**
-	 * Max accepted submissions per IP per window.
-	 */
-	public const RATE_LIMIT_MAX = 8;
 
 	/**
 	 * Duplicate request token TTL (seconds).
@@ -94,7 +75,7 @@ final class ConsultationHandler implements ModuleInterface {
 	}
 
 	/**
-	 * Localize endpoint / nonce / messages onto theme shell script.
+	 * Localize endpoint / nonce / signed token / messages onto theme shell script.
 	 */
 	public static function localize_lead_form_script() {
 		if ( ! wp_script_is( 'shpigovsky-v9-shell', 'enqueued' ) && ! wp_script_is( 'shpigovsky-v9-shell', 'registered' ) ) {
@@ -109,28 +90,27 @@ final class ConsultationHandler implements ModuleInterface {
 				'action'                 => self::AJAX_ACTION,
 				'nonce'                  => wp_create_nonce( self::NONCE_ACTION ),
 				'nonceField'             => 'fp02_lead_nonce',
+				'formSessionField'       => AntiSpam::TOKEN_FIELD,
+				'formSession'            => AntiSpam::issue_token( LeadRegistry::FORM_KEY, '' ),
 				'phoneMask'              => '+7 999 999 - 99 - 99',
-				'recaptchaAction'        => 'form_lead',
 				'siteConfigEndpoint'     => '',
 				'backendBlockedMessage'  => self::message( 'backend_blocked' ),
 				'validationErrorMessage' => self::message( 'validation' ),
-				'recaptchaSecurityMessage' => self::message( 'recaptcha' ),
 				'successMessage'         => self::message( 'local_success' ),
-				'rateLimitedMessage'     => self::message( 'rate_limited' ),
+				'rateLimitedMessage'     => AntiSpam::visitor_message( AntiSpam::REASON_RATE ),
 				'duplicateMessage'       => self::message( 'duplicate' ),
 				'formKey'                => LeadRegistry::FORM_KEY,
 				'metrikaCounter'         => MailOps::metrika_counter_id(),
 				'metrikaGoal'            => MailOps::metrika_goal(),
 				'messages'               => array(
-					'local_success'  => self::message( 'local_success' ),
-					'validation'     => self::message( 'validation' ),
-					'rate_limited'   => self::message( 'rate_limited' ),
-					'duplicate'      => self::message( 'duplicate' ),
-					'honeypot'       => self::message( 'honeypot' ),
-					'too_fast'       => self::message( 'too_fast' ),
-					'stale'          => self::message( 'stale' ),
-					'server_error'   => self::message( 'server_error' ),
-					'backend_blocked'=> self::message( 'backend_blocked' ),
+					'local_success'   => self::message( 'local_success' ),
+					'validation'      => self::message( 'validation' ),
+					'rate_limited'    => AntiSpam::visitor_message( AntiSpam::REASON_RATE ),
+					'duplicate'       => self::message( 'duplicate' ),
+					'stale'           => AntiSpam::visitor_message( AntiSpam::REASON_TOKEN_EXP ),
+					'server_error'    => self::message( 'server_error' ),
+					'backend_blocked' => self::message( 'backend_blocked' ),
+					'antispam'        => AntiSpam::visitor_message( AntiSpam::REASON_TOKEN_BAD ),
 				),
 			)
 		);
@@ -154,20 +134,10 @@ final class ConsultationHandler implements ModuleInterface {
 			self::json_response( false, self::message( 'nonce' ), 403 );
 		}
 
-		$honeypot = isset( $_POST['company_url'] ) ? trim( (string) wp_unslash( $_POST['company_url'] ) ) : '';
-		if ( '' !== $honeypot ) {
-			// Silent accept for bots — do not reveal honeypot logic.
-			self::json_response( true, self::message( 'local_success' ), 200, array( 'mode' => 'pre_smtp', 'spam' => true ) );
-		}
-
-		$timing = self::check_fill_timing( $_POST );
-		if ( ! $timing['ok'] ) {
-			self::json_response( false, $timing['message'], 422 );
-		}
-
-		$ip = self::client_ip();
-		if ( ! self::check_rate_limit( $ip ) ) {
-			self::json_response( false, self::message( 'rate_limited' ), 429 );
+		// Anti-spam layers (honeypot / signed timing / rate) before persistence.
+		$spam_early = AntiSpam::evaluate( $_POST, array() );
+		if ( ! $spam_early['ok'] ) {
+			self::json_response( false, $spam_early['message'], 422 );
 		}
 
 		$request_token = isset( $_POST['request_token'] )
@@ -196,13 +166,19 @@ final class ConsultationHandler implements ModuleInterface {
 			);
 		}
 
+		$spam_payload = AntiSpam::evaluate( $_POST, $payload );
+		if ( ! $spam_payload['ok'] ) {
+			self::json_response( false, $spam_payload['message'], 422 );
+		}
+
 		$lead_id = self::persist_lead( $payload );
 		if ( $lead_id <= 0 ) {
 			self::json_response( false, self::message( 'server_error' ), 500 );
 		}
 
+		AntiSpam::bump_attempt();
+
 		$mail = self::attempt_outbound_mail( $payload, $lead_id );
-		self::bump_rate_limit( $ip );
 
 		self::json_response(
 			true,
@@ -239,81 +215,14 @@ final class ConsultationHandler implements ModuleInterface {
 		$messages = array(
 			'local_success'   => 'Заявка принята. Мы свяжемся с вами по указанному телефону.',
 			'validation'      => 'Проверьте поля формы и попробуйте снова.',
-			'rate_limited'    => 'Слишком много заявок с вашего адреса. Подождите немного или позвоните нам: 8 (925) 183-64-64.',
 			'duplicate'       => 'Эта заявка уже была отправлена. Обновите страницу, если нужно отправить новую.',
-			'honeypot'        => 'Заявка отклонена.',
-			'too_fast'        => 'Форма отправлена слишком быстро. Попробуйте ещё раз.',
-			'stale'           => 'Сессия формы устарела. Обновите страницу и отправьте снова.',
 			'nonce'           => 'Сессия безопасности устарела. Обновите страницу и попробуйте снова.',
 			'method'          => 'Метод не поддерживается.',
 			'server_error'    => 'Не удалось принять заявку. Позвоните нам: 8 (925) 183-64-64.',
 			'backend_blocked' => 'Отправка заявки пока недоступна. Позвоните нам по телефону 8 (925) 183-64-64.',
-			'recaptcha'       => 'Проверка безопасности не пройдена. Обновите страницу и попробуйте снова.',
 		);
 
 		return isset( $messages[ $key ] ) ? $messages[ $key ] : $messages['server_error'];
-	}
-
-	/**
-	 * @param array<string,mixed> $input Raw POST.
-	 * @return array{ok:bool,message:string}
-	 */
-	private static function check_fill_timing( array $input ) {
-		$started_raw   = isset( $input['form_started_at'] ) ? (string) wp_unslash( $input['form_started_at'] ) : '';
-		$submitted_raw = isset( $input['timestamp'] ) ? (string) wp_unslash( $input['timestamp'] ) : '';
-
-		$started_at   = self::parse_time( $started_raw );
-		$submitted_at = self::parse_time( $submitted_raw );
-
-		if ( null === $started_at || null === $submitted_at ) {
-			return array(
-				'ok'      => false,
-				'message' => self::message( 'validation' ),
-			);
-		}
-
-		$delta = $submitted_at - $started_at;
-
-		if ( $delta < self::MIN_FILL_SECONDS ) {
-			return array(
-				'ok'      => false,
-				'message' => self::message( 'too_fast' ),
-			);
-		}
-
-		if ( $delta > self::MAX_FILL_SECONDS ) {
-			return array(
-				'ok'      => false,
-				'message' => self::message( 'stale' ),
-			);
-		}
-
-		return array(
-			'ok'      => true,
-			'message' => '',
-		);
-	}
-
-	/**
-	 * @param string $value Time string or unix epoch.
-	 * @return int|null
-	 */
-	private static function parse_time( $value ) {
-		$value = trim( (string) $value );
-		if ( '' === $value ) {
-			return null;
-		}
-
-		if ( preg_match( '/^\d{10,13}$/', $value ) ) {
-			$ts = (int) $value;
-			if ( $ts > 20000000000 ) {
-				$ts = (int) floor( $ts / 1000 );
-			}
-			return $ts > 0 ? $ts : null;
-		}
-
-		$parsed = strtotime( $value );
-		return false === $parsed ? null : $parsed;
 	}
 
 	/**
@@ -415,25 +324,6 @@ final class ConsultationHandler implements ModuleInterface {
 	}
 
 	/**
-	 * @param string $ip Client IP.
-	 * @return bool
-	 */
-	private static function check_rate_limit( $ip ) {
-		$key   = 'fp02_lead_rl_' . md5( $ip );
-		$count = (int) get_transient( $key );
-		return $count < self::RATE_LIMIT_MAX;
-	}
-
-	/**
-	 * @param string $ip Client IP.
-	 */
-	private static function bump_rate_limit( $ip ) {
-		$key   = 'fp02_lead_rl_' . md5( $ip );
-		$count = (int) get_transient( $key );
-		set_transient( $key, $count + 1, self::RATE_LIMIT_WINDOW );
-	}
-
-	/**
 	 * Claim one-time request token via transient.
 	 *
 	 * @param string $token Token.
@@ -446,109 +336,6 @@ final class ConsultationHandler implements ModuleInterface {
 		}
 		set_transient( $key, 1, self::DUPLICATE_TOKEN_TTL );
 		return true;
-	}
-
-	/**
-	 * @return string
-	 */
-	private static function client_ip() {
-		$candidates = array(
-			isset( $_SERVER['HTTP_CF_CONNECTING_IP'] ) ? $_SERVER['HTTP_CF_CONNECTING_IP'] : null,
-			isset( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : null,
-			isset( $_SERVER['REMOTE_ADDR'] ) ? $_SERVER['REMOTE_ADDR'] : null,
-		);
-
-		foreach ( $candidates as $candidate ) {
-			if ( ! is_string( $candidate ) || '' === $candidate ) {
-				continue;
-			}
-			$parts = explode( ',', $candidate );
-			$ip    = trim( $parts[0] );
-			if ( filter_var( $ip, FILTER_VALIDATE_IP ) ) {
-				return $ip;
-			}
-		}
-
-		return '0.0.0.0';
-	}
-
-	/**
-	 * Write redacted local receipt under uploads (not in git).
-	 *
-	 * @param array<string,mixed> $receipt Receipt payload.
-	 */
-	private static function write_local_receipt( array $receipt ) {
-		$uploads = wp_upload_dir();
-		if ( ! empty( $uploads['error'] ) || empty( $uploads['basedir'] ) ) {
-			error_log( '[fp02-lead-local] accepted mode=local mail=disabled (uploads unavailable)' ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
-			return;
-		}
-
-		$dir = trailingslashit( $uploads['basedir'] ) . 'fp02-leads-local';
-		if ( ! is_dir( $dir ) ) {
-			wp_mkdir_p( $dir );
-		}
-
-		$htaccess = $dir . '/.htaccess';
-		if ( ! file_exists( $htaccess ) ) {
-			file_put_contents( $htaccess, "Require all denied\nDeny from all\n" );
-		}
-
-		$index = $dir . '/index.php';
-		if ( ! file_exists( $index ) ) {
-			file_put_contents( $index, "<?php\n// Silence is golden.\n" );
-		}
-
-		$file = $dir . '/receipt-' . gmdate( 'Ymd-His' ) . '-' . wp_generate_password( 6, false, false ) . '.json';
-		file_put_contents( $file, wp_json_encode( $receipt, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT ) );
-
-		error_log( // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
-			sprintf(
-				'[fp02-lead-local] accepted context=%s source=%s mail=disabled',
-				$receipt['form_context'],
-				$receipt['lead_source']
-			)
-		);
-	}
-
-	/**
-	 * @param string $name Name.
-	 * @return string
-	 */
-	private static function redact_name( $name ) {
-		$len = function_exists( 'mb_strlen' ) ? mb_strlen( $name, 'UTF-8' ) : strlen( $name );
-		if ( $len <= 1 ) {
-			return '*';
-		}
-		$first = function_exists( 'mb_substr' ) ? mb_substr( $name, 0, 1, 'UTF-8' ) : substr( $name, 0, 1 );
-		return $first . str_repeat( '*', min( 8, $len - 1 ) );
-	}
-
-	/**
-	 * @param string $phone Phone.
-	 * @return string
-	 */
-	private static function redact_phone( $phone ) {
-		$digits = preg_replace( '/\D+/', '', $phone );
-		$digits = is_string( $digits ) ? $digits : '';
-		if ( strlen( $digits ) < 4 ) {
-			return '****';
-		}
-		return str_repeat( '*', max( 0, strlen( $digits ) - 4 ) ) . substr( $digits, -4 );
-	}
-
-	/**
-	 * @param string $email Email.
-	 * @return string
-	 */
-	private static function redact_email( $email ) {
-		$parts = explode( '@', $email, 2 );
-		if ( 2 !== count( $parts ) ) {
-			return '***';
-		}
-		$local = $parts[0];
-		$first = function_exists( 'mb_substr' ) ? mb_substr( $local, 0, 1, 'UTF-8' ) : substr( $local, 0, 1 );
-		return $first . '***@' . $parts[1];
 	}
 
 	/**

@@ -3,13 +3,25 @@
 **Factory Project:** FP-0002 — Shpigovsky.ru  
 **Format:** ADR (Architecture Decision Record)  
 **Created:** 2026-06-11  
-**Updated:** 2026-08-20 (P18I final launch closeout)
+**Updated:** 2026-08-20 (native form anti-spam v1)
 
 ---
 
 ## Purpose
 
 Journal for **operator-declared** architectural and production decisions during the Factory track.
+
+---
+
+## Decisions (Native Anti-Spam v1)
+
+### ADR-AS-001 — First-party layered anti-spam (no external CAPTCHA)
+
+**Status:** Accepted
+
+**Decision:** Public lead forms use layered first-party controls (honeypot, server-signed timing, rate limit, replay/idempotency, conservative heuristics). Do **not** integrate Google reCAPTCHA, Yandex SmartCaptcha, or other external CAPTCHA providers in v1.
+
+**Evidence:** `REPORTS/REPORT-FP-0002-PROD-MAINT-NATIVE-ANTISPAM-V1.md`
 
 ---
 

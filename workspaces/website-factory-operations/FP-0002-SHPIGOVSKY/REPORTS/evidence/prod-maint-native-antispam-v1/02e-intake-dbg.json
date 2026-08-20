@@ -1,0 +1,8 @@
+{
+  "lint_code": 255,
+  "lint": "Errors parsing /home/s/shpigovsky/shpigovsky.ru/public_html/_fp02_as_intake_dbg.php\n",
+  "run_code": 0,
+  "out": "EXIT:255\n",
+  "err": "",
+  "php_head": "<?php\nchdir('/home/s/shpigovsky/shpigovsky.ru/public_html');\nrequire '/home/s/shpigovsky/shpigovsky.ru/public_html/wp-load.php';\n$out = array(\n  'core' => defined('SHPIGOVSKY_CORE_VERSION') ? SHPIGOVSKY_CORE_VERSION : null,\n  'blog_public' => (int) get_option('blog_public'),\n  'handler' => class_exists('\\\\Shpigovsky\\\\Core\\\\Forms\\\\ConsultationHandler'),\n  'antispam' => class_exists('\\\\Shpigovsky\\\\C"
+}

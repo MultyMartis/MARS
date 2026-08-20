@@ -214,6 +214,26 @@ final class MailFormsSettings implements ModuleInterface {
 			__( 'Журнал заявок', 'shpigovsky-core' ),
 			esc_html__( 'Включён системой. Заявка сохраняется до попытки отправить письмо.', 'shpigovsky-core' )
 		);
+
+		$as = class_exists( '\\Shpigovsky\\Core\\Forms\\AntiSpam' )
+			? \Shpigovsky\Core\Forms\AntiSpam::admin_status()
+			: array( 'active' => false, 'layers' => array(), 'rejected_24h' => 0, 'rejected_7d' => 0 );
+		$as_html  = '<strong>' . esc_html__( 'Антиспам: Активен', 'shpigovsky-core' ) . '</strong>';
+		$as_html .= '<ul style="margin:8px 0 0 1.2em;list-style:disc;">';
+		foreach ( (array) $as['layers'] as $layer ) {
+			$as_html .= '<li>' . esc_html( (string) $layer ) . '</li>';
+		}
+		$as_html .= '</ul>';
+		$as_html .= '<p class="description">' . esc_html(
+			sprintf(
+				/* translators: 1: 24h count, 2: 7d count */
+				__( 'Отклонено (без персональных данных): за 24 ч — %1$d, за 7 дн. — %2$d. Внешние CAPTCHA не используются.', 'shpigovsky-core' ),
+				(int) $as['rejected_24h'],
+				(int) $as['rejected_7d']
+			)
+		) . '</p>';
+		self::row_html( __( 'Антиспам', 'shpigovsky-core' ), $as_html );
+
 		self::row_text(
 			'form_metrika_goal',
 			__( 'Цель Яндекс.Метрики', 'shpigovsky-core' ),

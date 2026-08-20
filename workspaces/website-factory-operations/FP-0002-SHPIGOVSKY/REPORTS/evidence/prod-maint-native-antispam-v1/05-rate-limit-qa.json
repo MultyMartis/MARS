@@ -1,0 +1,61 @@
+{
+  "ok": true,
+  "data": {
+    "bursts": [
+      {
+        "i": 0,
+        "ok": true,
+        "reason": "PASS"
+      },
+      {
+        "i": 1,
+        "ok": true,
+        "reason": "PASS"
+      },
+      {
+        "i": 2,
+        "ok": true,
+        "reason": "PASS"
+      },
+      {
+        "i": 3,
+        "ok": true,
+        "reason": "PASS"
+      },
+      {
+        "i": 4,
+        "ok": true,
+        "reason": "PASS"
+      },
+      {
+        "i": 5,
+        "ok": true,
+        "reason": "PASS"
+      },
+      {
+        "i": 6,
+        "ok": false,
+        "reason": "RATE_LIMIT"
+      },
+      {
+        "i": 7,
+        "ok": false,
+        "reason": "RATE_LIMIT"
+      },
+      {
+        "i": 8,
+        "ok": false,
+        "reason": "RATE_LIMIT"
+      },
+      {
+        "i": 9,
+        "ok": false,
+        "reason": "RATE_LIMIT"
+      }
+    ],
+    "cleaned": true,
+    "saw_rate_limit": true
+  },
+  "exit_code": 0,
+  "stderr_head": "[fp02-antispam] reject reason=rate_limit form=consultation\n[fp02-antispam] reject reason=rate_limit form=consultation\n[fp02-antispam] reject reason=rate_limit form=consultation\n[fp02-antispam] reject reason=rate_limit form=consultation\n"
+}
