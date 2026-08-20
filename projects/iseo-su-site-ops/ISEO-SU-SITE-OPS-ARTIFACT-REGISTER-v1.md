@@ -5,6 +5,17 @@
 
 Status vocabulary: **CURRENT** · **CANONICAL** · **HISTORICAL** · **SUPERSEDED** · **SCRATCH_REMOVED** · **COMPLETE** · **CREATED** · **PLANNED** · **CONDITIONAL** · **DEFERRED** · **NOT AUTHORIZED** · **OPEN** · **BLOCKED**
 
+
+### Form anti-spam and validation (2026-08-20) — CURRENT / CANONICAL
+
+| Artifact | Path | Class |
+|----------|------|-------|
+| Form security baseline | `ISEO-SU-FORM-SECURITY-AND-ANTISPAM-BASELINE-v1.md` | CURRENT / CANONICAL |
+| Form anti-spam evidence | `ISEO-SU-FORM-ANTISPAM-VALIDATION-EVIDENCE-v1.md` | CURRENT |
+| Form handlers + security libs | `production-source/forms/` | CANONICAL |
+| Shared forms JS | `production-source/js/common.js` | CANONICAL |
+| Form anti-spam REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-FORM-ANTISPAM-AND-VALIDATION-01.md` | CURRENT |
+
 ### Current brain / stabilization (2026-08-20) — CURRENT
 
 | Artifact | Path | Class |
@@ -126,4 +137,4 @@ Unchanged: no tokens/credentials in Git locus; no DB dumps; no Localhost mirror;
 
 ---
 
-*Artifact Register v1 · updated 2026-08-20 stabilization / housekeeping.*
+*Artifact Register v1 · updated 2026-08-20 form anti-spam harden.*

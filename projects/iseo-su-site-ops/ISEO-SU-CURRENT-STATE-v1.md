@@ -2,16 +2,16 @@
 
 **Programme:** ISEO-SU-SITE-OPS  
 **Canonical locus:** `X:\AI MARS\projects\iseo-su-site-ops\`  
-**Updated:** 2026-08-20 (final stabilization / housekeeping)  
+**Updated:** 2026-08-20 (form anti-spam + validation harden)  
 **Authority rank:** primary project brain for ordinary next tasks
 
 ---
 
 ## 1. Project Status
 
-**COMPLETE — ISEO-SU SITE OPS STABILIZED / WORKSPACE CLEAN / MARS BRAIN CURRENT / GIT CLOSED**
+**COMPLETE — ISEO-SU FORMS HARDENED / EMPTY SUBMISSIONS BLOCKED / ANTISPAM ACTIVE / MAIL ROUTING RESTORED**
 
-Glossary/site-ops production work is **accepted**. No active launch or publication programme remains open. Ordinary future work starts from this file + Task Routing Guide + Protected Zones.
+Glossary/site-ops stabilization remains accepted. Public form anti-spam/validation charter is **closed**. Ordinary future work starts from this file + Task Routing Guide + Protected Zones + Form Security Baseline.
 
 ## 2. Production Status
 
@@ -21,7 +21,7 @@ Glossary/site-ops production work is **accepted**. No active launch or publicati
 | Glossary public | **healthy / accepted** |
 | `/glossary/` | HTTP **200** |
 | Active site blocker | **none** |
-| Production mutations in stabilization task | **0** |
+| Production mutations in form anti-spam task | **YES** (bounded form/security/JS only) |
 
 ## 3. Architecture Authority
 

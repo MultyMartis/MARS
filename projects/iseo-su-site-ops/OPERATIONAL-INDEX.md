@@ -25,7 +25,7 @@
 
 | Field | Value |
 |-------|-------|
-| **Lifecycle** | **COMPLETE — ISEO-SU SITE OPS STABILIZED / WORKSPACE CLEAN / MARS BRAIN CURRENT / GIT CLOSED** |
+| **Lifecycle** | **COMPLETE — ISEO-SU FORMS HARDENED / EMPTY SUBMISSIONS BLOCKED / ANTISPAM ACTIVE / MAIL ROUTING RESTORED** |
 | **Project status** | Glossary public: **184** published eligible; **57** non-eligible drafts; `/glossary/` **200**; archive/single services `page_scene` hero; desktop submenu **Глоссарий** after calculator; archive title **Глоссарий - INTLSEO Studio**; Yoast glossary sitemap **184**; custom `sitemap.xml` unchanged; mobile overflow **fixed** (glossary-scoped CSS, SHA `4a1202b6…`); mobile offcanvas **intentionally unchanged**; WPilot bridge/writes/REST still gated |
 | **Architecture knowledge** | **COMPLETE** — knowledge base + route matrix + task routing guide |
 | **Glossary** | Foundation + Batches 01–04 content + **controlled public launch 2026-07-26** + final integration/post-launch closeout **2026-08-18** |
@@ -34,7 +34,7 @@
 | **Access files** | **LOCAL-ONLY FILLED / VALIDATED** (Git-ignored) |
 | **WPilot** | **ACTIVE** RC6; bridge **DISABLED**; writes **DISABLED**; token **LOCAL-ONLY**; REST **NOT RUN** |
 | **Open blockers / open required** | **0 / 0** |
-| **Next operator action (site work)** | Optional only: mobile offcanvas nav parity; archive Yoast meta description; MERGED alias search polish; custom `sitemap.xml` glossary inclusion (**NOT RECOMMENDED**) — all require separate charters |
+| **Next operator action (site work)** | Forms hardened — no further anti-spam required unless flood returns. Optional polish only (offcanvas, Yoast archive meta, etc.) under separate charters |
 | **Next operator action (WPilot 6D)** | Exact lines `APPROVE ISEO-SU WPILOT BRIDGE AND READ-ONLY SMOKE 6D` + `CONFIRM ISEO-SU FRESH BEGET BACKUP FOR WPILOT 6D` |
 
 Hosting: **Beget**. WordPress Admin: `https://i-seo.su/wp-admin/`. Staging: **absent**. Architecture: **hybrid** — see knowledge base.
@@ -53,6 +53,8 @@ Hosting: **Beget**. WordPress Admin: `https://i-seo.su/wp-admin/`. Staging: **ab
 8. Historical REPORTs (immutable evidence only)
 
 Stabilization closeout: [ISEO-SU-STABILIZATION-CLOSEOUT-v1.md](ISEO-SU-STABILIZATION-CLOSEOUT-v1.md)
+
+Form security: [ISEO-SU-FORM-SECURITY-AND-ANTISPAM-BASELINE-v1.md](ISEO-SU-FORM-SECURITY-AND-ANTISPAM-BASELINE-v1.md) · evidence [ISEO-SU-FORM-ANTISPAM-VALIDATION-EVIDENCE-v1.md](ISEO-SU-FORM-ANTISPAM-VALIDATION-EVIDENCE-v1.md) · REPORT [reports/REPORT-ISEO-SU-SITE-OPS-FORM-ANTISPAM-AND-VALIDATION-01.md](reports/REPORT-ISEO-SU-SITE-OPS-FORM-ANTISPAM-AND-VALIDATION-01.md)
 
 ---
 

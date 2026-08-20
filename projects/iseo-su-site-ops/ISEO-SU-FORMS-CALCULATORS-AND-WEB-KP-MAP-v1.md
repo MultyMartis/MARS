@@ -1,25 +1,27 @@
 # ISEO-SU FORMS, CALCULATORS, AND WEB-KP MAP v1
 
 **Programme:** ISEO-SU-SITE-OPS  
-**Date:** 2026-07-24  
-**Rule:** Structural map only. No customer proposal bodies, no recipient emails, no live form submits.
+**Date:** 2026-07-24 (structural); **security posture updated 2026-08-20**  
+**Rule:** Structural map + current anti-spam posture. No customer proposal bodies, no recipient emails, no live form submits in audits.
+
+**Security authority:** `ISEO-SU-FORM-SECURITY-AND-ANTISPAM-BASELINE-v1.md`. Shared libs: `iseo-form-security.php` / `iseo-form-config.php`. MARS mirror: `production-source/forms/`.
 
 ## Forms (structural)
 
 | Route / surface | Purpose | Front-end | JS | Server handler | Mail | Validation | Thank-you | Spam | Shared risk |
 |-----------------|---------|-----------|----|----------------|------|------------|-----------|------|-------------|
-| Marketing pages / home | Callback | markup + popups | `js/common.js` | `callback__FORM.php` | `mail()` | JS + PHP fields | in-page / JS | Akismet inactive | root vs services copies |
-| Marketing pages | Generic page form | markup | common.js | `page__FORM.php` | mail | fields `pf_*` | JS | weak | same |
-| Audit CTAs | Audit request | markup | common.js | `audit__FORM.php` | mail | fields | JS | weak | same |
-| Calculator | SEO calc lead | calc UI | common.js | `calc__FORM.php` | mail | `radio_st_01..05`, `calc_*` | JS | weak | revenue-critical |
-| Tariff cards | Tariff lead | `#tariffs_slider` etc. | common.js | `tariff_1..4__FORM.php` | mail | `cf_*` | JS | weak | revenue-critical |
-| Bonuses | Bonus form | page | common.js | `bonus__FORM.php` | mail | — | JS | weak | copies |
-| Career | Career form | page | common.js | `career__FORM.php` | mail | — | JS | weak | copies |
-| Partners | Partners form | page | common.js | `partners__FORM.php` | mail | — | JS | weak | copies |
-| Reviews | Review form | page | common.js | `review__FORM.php` | mail | — | JS | weak | copies |
-| WP blog chrome | May expose same JS forms | theme | common.js enqueued | root handlers | mail | — | JS | weak | theme+static dual |
+| Marketing pages / home | Callback | markup + popups | `js/common.js` | `callback__FORM.php` | `mail()` | server `iseo-form-security` + JS | in-page / JS | honeypot+token+rate+dup | root vs services copies |
+| Marketing pages | Generic page form | markup | common.js | `page__FORM.php` | mail | server + JS | JS | honeypot+token+rate+dup | same |
+| Audit CTAs | Audit request | markup | common.js | `audit__FORM.php` | mail | server + JS | JS | honeypot+token+rate+dup | same |
+| Calculator | SEO calc lead | calc UI | common.js | `calc__FORM.php` | mail | server + JS | JS | honeypot+token+rate+dup | revenue-critical |
+| Tariff cards | Tariff lead | `#tariffs_slider` etc. | common.js | `tariff_1..4__FORM.php` | mail | server + JS | JS | honeypot+token+rate+dup | revenue-critical |
+| Bonuses | Bonus form | page | common.js | `bonus__FORM.php` | mail | server + JS | JS | honeypot+token+rate+dup | copies |
+| Career | Career form | page | common.js | `career__FORM.php` | mail | server + JS | JS | honeypot+token+rate+dup | copies |
+| Partners | Partners form | page | common.js | `partners__FORM.php` | mail | server + JS | JS | honeypot+token+rate+dup | copies |
+| Reviews | Review form | page | common.js | `review__FORM.php` | mail | server + JS | JS | honeypot+token+rate+dup | copies |
+| WP blog chrome | May expose same JS forms | theme | common.js enqueued | root handlers | mail | server + JS | JS | honeypot+token+rate+dup | theme+static dual |
 
-**Do not** submit forms during audits. SMTP vs host `mail()` delivery path remains SAFE UNKNOWN.
+**Do not** submit forms during audits unless under an explicit test charter with `test_mode`. SMTP vs host `mail()` delivery path remains SAFE UNKNOWN. Empty submissions must not mail (server authoritative).
 
 ## Calculator / tariffs
 
@@ -53,4 +55,4 @@
 
 ---
 
-*Forms / calculators / web-KP map v1 · 2026-07-24 · no private content.*
+*Forms / calculators / web-KP map v1 · security posture 2026-08-20 · no private content.*

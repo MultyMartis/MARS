@@ -1,7 +1,7 @@
 # ISEO-SU PROTECTED ZONES v1
 
 **Programme:** ISEO-SU-SITE-OPS  
-**Updated:** 2026-07-24 architecture knowledge capture  
+**Updated:** 2026-08-20 form anti-spam baseline  
 **Policy:** Default **protect-all** until an exact task charter names paths/surfaces.
 
 No secrets stored here.
@@ -26,8 +26,8 @@ No secrets stored here.
 | Config secrets | `wp-config.php` | DB credentials, salts |
 | Routing | `.htaccess` | HTTPS, www, HTML-as-PHP, WP rewrite |
 | Database | Beget MySQL | content/leads integrity |
-| Forms / mail | all `*__FORM.php` + service copies | lead loss / PII |
-| Shared JS | `js/common.js` | forms + calculator + tariffs |
+| Forms / mail | all `*__FORM.php` + service copies + `iseo-form-*.php` + `.iseo-form-runtime/` | lead loss / PII; server validation + anti-spam authority — see Form Security Baseline |
+| Shared JS | `js/common.js` | forms + calculator + tariffs; includes `ISEO_FORM_SECURITY_V1` honeypot/token inject — reconcile with `production-source/js/common.js` |
 | Shared CSS | `css/main.css`, `css/media.css` | sitewide marketing look; **`css/main.css` operator manual glossary tuning plus glossary-scoped mobile overflow block; canonical SHA `4a1202b6…`; reconcile before automation overwrite** |
 | SEO calculator / tariffs | `/tariff-calc`, ACF calculator groups, `tarif-calc.php`, handlers | revenue tool |
 | Web-KP / offers | `/offers`, CPT `offer`, `single-offer.php`, ACF «Предложения» | private commercial proposals |
@@ -47,6 +47,14 @@ No secrets stored here.
 ---
 
 ## 3. Allow posture (historical completed charters only)
+
+Completed form harden charter (`ISEO-SU-SITE-OPS-FORMS-ANTISPAM-AND-VALIDATION-01`) mutated only named form/security/JS/mail-config surfaces. Further form/mail edits still require a **new** exact charter + scoped backups.
+
+## 3a. Form security note
+
+Do not disable server validation, honeypot, timing token, rate limit, or duplicate protection without charter. Do not enable `test_mode` in lasting production. CAPTCHA not part of baseline.
+
+
 
 Completed allowlists remain limited to prior WPilot install/activation/RC6/token phases.  
 **This architecture capture authorized documentation only — no production mutation.**
@@ -74,4 +82,4 @@ Even with WPilot active (RC6 safe defaults + local token):
 
 ---
 
-*Protected zones v1 · updated glossary post-launch closeout 2026-08-18.*
+*Protected zones v1 · updated form anti-spam 2026-08-20.*
