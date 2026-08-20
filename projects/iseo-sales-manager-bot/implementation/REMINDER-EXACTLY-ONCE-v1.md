@@ -1,3 +1,4 @@
+> **Phase 3H.10 (2026-08-20):** Delivery Wait/429 repair + actionable digest. Recipients from live ACCESS (**3**; MOD_A intentional). Natural acceptance **2026-08-21 10:00 Europe/Moscow**. Soak interrupted. AI OFF. Phase 3I.1 blocked.
 > **Phase 3H.8.2.2 (2026-08-14):** Reminder pending eligibility uses `iseo-reminder-current-state-selector-v1.0` — unique `lead_id` → authoritative current status → eligibility. First CLEAN pending row no longer wins. Production Reminder Build Claims adds no per-lead Sheets calls. Duplicate CLEAN row source forensic is deferred. Real 10:00 acceptance still pending.
 
 <!-- Phase 3H.8.2 addendum 2026-08-14 -->

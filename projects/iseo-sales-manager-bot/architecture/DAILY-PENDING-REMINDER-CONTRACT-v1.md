@@ -1,4 +1,6 @@
-> **Phase 3H.9.2 (2026-08-17):** ACCESS live drifted to 3 after an incomplete 2026-08-16 `/moderator_remove`/`/moderator_add` cycle left MOD_A revoked. Classified `UNAUTHORIZED_STATE_DRIFT`. Restored MOD_A via existing `/moderator_add` (same profile_no 3). Live ACCESS=4 · CONFIG=4 · Operational resolver=4 · reminder resolver=4. Next natural 10:00: **2026-08-18 Europe/Moscow**. Soak not restarted. Phase 3I.1 blocked. AI OFF. No four-recipient test sends.
+> **Phase 3H.10 (2026-08-20):** Reminder message = one actionable pending-queue digest (`iseo-pending-digest-renderer-v1.0`). Recipients from **live ACCESS** only. Current intended set: **3** (ADMIN_A, MOD_B, MOD_C); MOD_A intentionally revoked — do not restore. Wait 429 retry uses `specificTime`/`wait_until_iso`. Next natural acceptance: **2026-08-21 10:00 Europe/Moscow**.
+
+> **Phase 3H.9.2 (2026-08-17):** ACCESS live drifted to 3 after an incomplete 2026-08-16 `/moderator_remove`/`/moderator_add` cycle left MOD_A revoked. Classified `UNAUTHORIZED_STATE_DRIFT`. Restored MOD_A via existing `/moderator_add` (same profile_no 3). Live ACCESS=4 · CONFIG=4 · Operational resolver=4 · reminder resolver=4. Next natural 10:00: **2026-08-18 Europe/Moscow**. Soak not restarted. Phase 3I.1 blocked. AI OFF. No four-recipient test sends. **Superseded for current recipient baseline by Phase 3H.10 intentional MOD_A disable.**
 
 > **Phase 3H.9 (2026-08-17):** False «Недостаточно прав» on raw lead was ACCESS/CONFIG Google Sheets `invalid_grant` mislabeled as a permission deny. Reminder 10:00 windows 15–17 Aug failed at CONFIG read with the same credential error before evaluation; 429 retry path was not applicable. Admin deny text + Sheets error classifier patched. Live Sheets OAuth reconnect by operator is still required before ADMIN_A raw retest and the next natural 4-recipient 10:00. Soak not restarted. Phase 3I.1 blocked. AI OFF.
 
@@ -34,11 +36,12 @@
 - source: production **LEADS**
 - tests/archive excluded · active recipients only · once per business date
 - ledger: REMINDER_DELIVERIES
-- message: compact pending count + /pending_leads · no PII
+- message: **one actionable pending-queue digest** (Phase 3H.10) · grouped human categories · inline lead actions · no full cards · no PII
 - zero pending → zero sends
 - `/reminder_status` must return visible reply (Phase 3H.4 — Admin long-form SyntaxError repaired)
-- **Phase 3H.6:** recipient count must match live ACCESS active staff (four under current baseline); CONFIG `pending_reminder_active_recipients_count` is a cache only; `/reminder_status` prefers `$('Read ACCESS_CONTROL')`
-- **Phase 3H.9.2:** live ACCESS restored to four (MOD_A returned to active). Do not treat a CONFIG=4 / ACCESS=3 mismatch as a three-recipient baseline.
+- **Phase 3H.6 / 3H.10:** recipient count must match **live ACCESS** active reminder-eligible staff; CONFIG `pending_reminder_active_recipients_count` is a cache only
+- **Phase 3H.10 recipient baseline:** **3** active (ADMIN_A, MOD_B, MOD_C). MOD_A intentionally inactive — do not restore from cache drift
+- Sheets HTTP 429 retry Wait must use valid `specificTime` (`wait_until_iso`); broken Wait = delivery STOP
 - Allowed reminder window: 20 minutes from configured time (10:00 inclusive … 10:20 exclusive Europe/Moscow). Schedule interval 15 minutes → 10:00 and 10:15 may evaluate the same business date if `last_window` is unset.
 - Sheets HTTP 429 on ACCESS_CONTROL is retried per `iseo-sheets-429-retry-v1.0`; exhaustion fails closed (`ERROR_SHEETS_429_ACCESS`) and does **not** mark the day sent.
 
