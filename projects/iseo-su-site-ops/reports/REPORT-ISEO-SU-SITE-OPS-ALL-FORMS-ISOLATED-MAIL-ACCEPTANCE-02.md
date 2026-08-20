@@ -162,7 +162,11 @@ Bounded to `iseo-form-config.php` recipient correction + temporary `test_mode` t
 
 ## 22. Git Persistence
 
-Scoped commit on allowlisted i-seo paths only; foreign WIP excluded. Remote sync via clean worktree onto `origin/mars/canonical-post-recovery` (no force push). Tip recorded after push.
+| Local commit (dirty-main lineage) | `7a55c47c` |
+| Remote synced commit | `30764c6f` |
+| Method | clean worktree + cherry-pick onto origin tip `80e208df` (no force push) |
+| Remote | `origin/mars/canonical-post-recovery` |
+| Reachability | `git ls-remote` = `30764c6f` |
 
 ## 23. Open Blockers
 
@@ -207,5 +211,5 @@ PRODUCTION/SOURCE ALIGNED: YES
 ACCEPTANCE 01 RECIPIENT EVIDENCE: SUPERSEDED BY ACCEPTANCE 02
 SFTP/VPN INCIDENTS: 0 (final state)
 OPEN BLOCKERS: 0
-REMOTE SYNC: (filled after push)
+REMOTE SYNC: COMPLETE (30764c6f on origin/mars/canonical-post-recovery)
 ```
