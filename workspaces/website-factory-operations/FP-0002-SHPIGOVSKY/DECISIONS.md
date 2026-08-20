@@ -3,13 +3,45 @@
 **Factory Project:** FP-0002 — Shpigovsky.ru  
 **Format:** ADR (Architecture Decision Record)  
 **Created:** 2026-06-11  
-**Updated:** 2026-08-20 (native form anti-spam v1)
+**Updated:** 2026-08-20 (workspace stabilization closeout)
 
 ---
 
 ## Purpose
 
 Journal for **operator-declared** architectural and production decisions during the Factory track.
+
+---
+
+## Decisions (Maintenance Stabilization)
+
+### ADR-MAINT-001 — Production / maintenance is the active phase
+
+**Status:** Accepted
+
+**Decision:** FP-0002 is **PRODUCTION / MAINTENANCE — STABLE**. Launch waves are closed. Do not reopen launch automation that mutates production indexability, SMTP, or privacy defaults without a new bounded charter.
+
+**Evidence:** `REPORTS/REPORT-FP-0002-PROD-MAINT-WORKSPACE-STABILIZATION.md`
+
+---
+
+### ADR-MAINT-002 — Canonical remote is recovery authority
+
+**Status:** Accepted
+
+**Decision:** `origin/mars/canonical-post-recovery` is the source recovery authority. Dirty shared `X:\AI MARS` main with foreign WIP is **not** an FP-0002 Git tail and must not be cleaned/reset to “fix” project state.
+
+**Evidence:** `REPORTS/evidence/prod-maint-workspace-stabilization/`
+
+---
+
+### ADR-MAINT-003 — No external CAPTCHA by default
+
+**Status:** Accepted
+
+**Decision:** Keep native first-party layered anti-spam. Do **not** add Google reCAPTCHA or Yandex SmartCaptcha unless a future charter proves a project-specific need.
+
+**Evidence:** `REPORTS/REPORT-FP-0002-PROD-MAINT-NATIVE-ANTISPAM-V1.md` · ADR-AS-001
 
 ---
 
@@ -123,6 +155,11 @@ Journal for **operator-declared** architectural and production decisions during 
 
 | ADR | Title | Status |
 |-----|-------|--------|
+| MAINT-001 | Production / maintenance active phase | Accepted |
+| MAINT-002 | Canonical remote recovery authority | Accepted |
+| MAINT-003 | No external CAPTCHA by default | Accepted |
+| AS-001 | First-party layered anti-spam | Accepted |
+| P18I-A–C | Launch closeout / URL normalize / maintenance transition | Accepted |
 | P18H-A | Cookie Policy factual status | Accepted / legal pending |
 | P18H-B | Consent evidence browser-only | Accepted |
 | P18H-C | Consent lifetime 365d | Accepted |

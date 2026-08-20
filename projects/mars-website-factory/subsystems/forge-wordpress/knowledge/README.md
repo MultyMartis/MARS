@@ -72,4 +72,4 @@ FP-0002 evidence lives under `workspaces/website-factory-operations/FP-0002-SHPI
 
 CMS architecture templates live under [`templates/`](../templates/) (`CONTENT-ENTITY-MAP`, `FIELD-OWNERSHIP-MAP`, `PAGE-EDITABILITY-MAP`, `SITE-SETTINGS-MAP`, `RELATIONSHIP-MAP`, `COMPONENT-DATA-CONTRACT`, `ADMIN-INFORMATION-ARCHITECTURE`, `EDITOR-WORKFLOW-ACCEPTANCE-CHECKLIST`, `DESIGN-TO-CMS-MAPPING-WORKSHEET`, `CMS-MIGRATION-PLAN`).
 
-*WP Forge knowledge hub — 2026-08-19 (P18E privacy/cookie-controls standard added on top of the prior P18C/P18D production knowledge pack). One production case. Second-project validation still required where marked J.*
+*WP Forge knowledge hub — 2026-08-20 (FP-0002 maintenance closeout: native anti-spam + indexing human-ownership + clean-worktree Git discipline mapped in assimilation index; FORM-SPAM already in FORMS-AND-SMTP §15). One production case in PRODUCTION / MAINTENANCE. Second-project validation still required where marked J.*

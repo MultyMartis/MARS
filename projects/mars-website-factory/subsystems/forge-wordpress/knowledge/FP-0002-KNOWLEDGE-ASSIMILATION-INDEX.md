@@ -1,7 +1,7 @@
 # FP-0002 → WP Forge knowledge assimilation index
 
-**Date:** 2026-08-18  
-**Source case:** FP-0002 Shpigovsky production (P07–P17-FU02 plus earlier foundation where architecture changed)  
+**Date:** 2026-08-20  
+**Source case:** FP-0002 Shpigovsky production (P07–P18I + production-maintenance through native anti-spam v1 + workspace stabilization)  
 **Purpose:** Map each reusable lesson to a canonical WP Forge document. Agents should follow the **canonical** column, not the report archive.
 
 **Project reports remain evidence.** They are not the operating brain.
@@ -10,7 +10,7 @@
 
 ## How to use
 
-1. Identify the work type (new site / Admin / deploy / cutover / QA / security).
+1. Identify the work type (new site / Admin / deploy / cutover / QA / security / maintenance).
 2. Open the canonical document in the table.
 3. Open FP-0002 reports only when you need evidence, hashes, or a failure narrative.
 
@@ -20,6 +20,18 @@
 
 | FP-0002 lesson | Class | Canonical WP Forge document |
 |----------------|-------|-----------------------------|
+| Website Factory lifecycle ends in **PRODUCTION → MAINTENANCE** (stop launch mutation defaults) | C / D | [PRE-CUTOVER-AND-LAUNCH-SOP](../runbooks/FORGE-WORDPRESS-PRE-CUTOVER-AND-LAUNCH-SOP-v1.md) · project ADR-MAINT-001 |
+| Editorial production DB is legitimate current truth; intake before technical waves | C | [SOURCE-RUNTIME-AUTHORITY](../runbooks/FORGE-WORDPRESS-SOURCE-RUNTIME-AUTHORITY-STANDARD-v1.md) |
+| Human-owned indexability overrides old technical baselines / guards | D / E / G | [SEARCH-INDEXING-CONTROL](../standards/FORGE-WORDPRESS-SEARCH-INDEXING-CONTROL-STANDARD-v1.md) |
+| Client Admin widgets must be concise / role-appropriate | E / G | [ADMIN-UX-STANDARD](../standards/FORGE-WORDPRESS-ADMIN-UX-STANDARD-v1.md) §10.3 |
+| Form notification emails are product UI (Russian), not debug dumps | C / E | [FORMS-AND-SMTP-STANDARD](../standards/FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) §14 |
+| Machine form keys localized at presentation boundary | C / E | same §14 |
+| Persist accepted lead before mail attempt | A / C | same |
+| Spam filtering before lead persistence | A / C | same §15 FORM-SPAM |
+| First-party layered anti-spam (honeypot + signed timing + replay + rate + heuristics) | A / C | same §15 · FORM-SPAM-001–010 |
+| Do not add external CAPTCHA by default | G / C | same §15 |
+| Synthetic QA must not look like a production incident | G / E | [ACTIVITY-LOG-MODULE-SPEC](../standards/FORGE-WORDPRESS-ACTIVITY-LOG-MODULE-SPEC-v1.md) · SEARCH-INDEXING-CONTROL |
+| Dirty monorepo foreign WIP ≠ project Git tail; clean worktree + remote authority | C | [GIT-SOP](../runbooks/FORGE-WORDPRESS-GIT-SOP-v1.md) · GIT-WORKFLOW |
 | Child Pages used for staff-like entities; later CPT `specialist` | A / G | [CONTENT-MODEL-CPT-STANDARD](../standards/FORGE-WORDPRESS-CONTENT-MODEL-CPT-STANDARD-v1.md) · [CMS-ARCHITECTURE](../standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md) |
 | Preserve IDs/URLs when changing post type; hub page + CPT singles | A / D | same + [ENVIRONMENT-MIGRATION](../runbooks/FORGE-WORDPRESS-ENVIRONMENT-MIGRATION-STANDARD-v1.md) |
 | Duplicate custom permalink UI vs native WP slug row | G | [ANTI-PATTERN-REGISTRY](../standards/FORGE-WORDPRESS-ANTI-PATTERN-REGISTRY-v1.md) AP-002 · CPT standard |
@@ -28,7 +40,7 @@
 | SEO meta, verification, analytics, advanced code; sitemap ≠ indexing | A / C | [SEO-AND-SITEMAP-STANDARD](../standards/FORGE-WORDPRESS-SEO-AND-SITEMAP-STANDARD-v1.md) |
 | Extend native `wp-sitemap`; do not invent a Yandex page feed | A / G | same |
 | Smart Search: one REST, groups, desktop+mobile, AbortController | B / F | [SMART-SEARCH-MODULE-SPEC](../standards/FORGE-WORDPRESS-SMART-SEARCH-MODULE-SPEC-v1.md) |
-| Forms: nonce, anti-spam, AJAX, no `mail()`; persist lead before SMTP; Admin SMTP owner | A / C / D | [FORMS-AND-SMTP-STANDARD](../standards/FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) |
+| Forms: nonce, anti-spam, AJAX, no `mail()`; Admin SMTP owner | A / C / D | [FORMS-AND-SMTP-STANDARD](../standards/FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) |
 | DOCX → draft articles, images, no auto-publish | B | [DOCX-IMPORTER-MODULE-SPEC](../standards/FORGE-WORDPRESS-DOCX-IMPORTER-MODULE-SPEC-v1.md) |
 | Article TOC from H2 only; reading time | A / B / F | [ARTICLE-SYSTEM notes in BLUEPRINT](../standards/FORGE-WORDPRESS-PRODUCTION-WEBSITE-BLUEPRINT-v1.md) §P8 |
 | Broad DB typography rewrite vs render-time pipeline | G → A | [TYPOGRAPHY-PIPELINE-STANDARD](../standards/FORGE-WORDPRESS-TYPOGRAPHY-PIPELINE-STANDARD-v1.md) |
@@ -36,13 +48,8 @@
 | Sliders: mouse/touch/trackpad; Hero exceptions; forceToAxis | A / F / H | [SLIDER-CAROUSEL-STANDARD](../standards/FORGE-WORDPRESS-SLIDER-CAROUSEL-STANDARD-v1.md) |
 | iOS lifebuoy: emulation ≠ physical Safari; bounded fallback | G / H | [REAL-DEVICE-QA-STANDARD](../standards/FORGE-WORDPRESS-REAL-DEVICE-QA-STANDARD-v1.md) |
 | Activity log dedicated table; no full content / secrets | B / E | [ACTIVITY-LOG-MODULE-SPEC](../standards/FORGE-WORDPRESS-ACTIVITY-LOG-MODULE-SPEC-v1.md) |
-| Dashboard widget planned (no global notices) | A / E | [ADMIN-UX-STANDARD](../standards/FORGE-WORDPRESS-ADMIN-UX-STANDARD-v1.md) §10.3 · [DEFINITION-OF-DONE](../standards/FORGE-WORDPRESS-DEFINITION-OF-DONE-v1.md) |
-| Client-facing dashboard widget: role-appropriate summary; no internal telemetry dump | E / G | [ADMIN-UX-STANDARD](../standards/FORGE-WORDPRESS-ADMIN-UX-STANDARD-v1.md) §10.3 · FP-0002 P18J evidence |
-| Dashboard attribution: Overseo dev credit only; no MetaCODE support marketing in client footer | E / G | [ADMIN-UX-STANDARD](../standards/FORGE-WORDPRESS-ADMIN-UX-STANDARD-v1.md) §10.3 · FP-0002 P23 evidence |
-| Form notification mail: Russian labels, scoped HTML, machine keys internal | C / E | [FORMS-AND-SMTP-STANDARD](../standards/FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) §14 · MAIL-UX-001–005 |
-| Dashboard attribution: development credit only; no internal support/platform footer | E / G | [ADMIN-UX-STANDARD](../standards/FORGE-WORDPRESS-ADMIN-UX-STANDARD-v1.md) §10.3 · FP-0002 P23 evidence |
-| Form notification mail: localized Russian HTML + plain; machine keys internal | C / E | [FORMS-AND-SMTP-STANDARD](../standards/FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) §14 · MAIL-UX-001–005 |
-| Operator status UI must be updated in the same major production wave | C / E / G | same · AP-021 |
+| Dashboard attribution: Overseo development credit only | E / G | [ADMIN-UX-STANDARD](../standards/FORGE-WORDPRESS-ADMIN-UX-STANDARD-v1.md) §10.3 |
+| Operator status UI must be updated in the same major production wave | C / E / G | FORMS-AND-SMTP · AP-021 |
 | Admin feature not done until discoverable in normal left-menu IA | E / G | [ADMIN-UX-STANDARD](../standards/FORGE-WORDPRESS-ADMIN-UX-STANDARD-v1.md) §10.7 · [DoD](../standards/FORGE-WORDPRESS-DEFINITION-OF-DONE-v1.md) · AP-029 |
 | Search indexing is explicit human approval; one SET SITE INDEXABILITY owner | D / E / G | [SEARCH-INDEXING-CONTROL](../standards/FORGE-WORDPRESS-SEARCH-INDEXING-CONTROL-STANDARD-v1.md) |
 | Default technical SMTP sender `noreply@<domain>` | C | [FORMS-AND-SMTP-STANDARD](../standards/FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) §5 |
@@ -50,7 +57,6 @@
 | FS = runtime truth; DB = content truth; Git = code authority | C | [SOURCE-RUNTIME-AUTHORITY](../runbooks/FORGE-WORDPRESS-SOURCE-RUNTIME-AUTHORITY-STANDARD-v1.md) |
 | Exact-file deploy + hash parity; no directory mirror | C | [PRODUCTION-DEPLOYMENT-SOP](../runbooks/FORGE-WORDPRESS-PRODUCTION-DEPLOYMENT-SOP-v1.md) |
 | Exact-file rollback vs full files+DB backup gates | C | [BACKUP-ROLLBACK-STANDARD](../runbooks/FORGE-WORDPRESS-BACKUP-ROLLBACK-STANDARD-v1.md) |
-| Dirty MARS monorepo; clean worktree checkpoint | C | [GIT-SOP](../runbooks/FORGE-WORDPRESS-GIT-SOP-v1.md) |
 | `WP_ENVIRONMENT_TYPE=local`, `.test`, debug residue | D / G | [ENVIRONMENT-MIGRATION](../runbooks/FORGE-WORDPRESS-ENVIRONMENT-MIGRATION-STANDARD-v1.md) |
 | Public `mars-runtime/` mutating GET | G | [PUBLIC-WEBROOT-HYGIENE-GATE](../standards/FORGE-WORDPRESS-PUBLIC-WEBROOT-HYGIENE-GATE-v1.md) |
 | Legacy 301s: exact path, query preserve, no future-host hardcode pre-cutover | D | [REDIRECT-STANDARD](../runbooks/FORGE-WORDPRESS-REDIRECT-STANDARD-v1.md) |
@@ -58,8 +64,9 @@
 | Freeze → backup → NS → SSL → URLs → smoke → SMTP → indexing | D | [PRE-CUTOVER-AND-LAUNCH-SOP](../runbooks/FORGE-WORDPRESS-PRE-CUTOVER-AND-LAUNCH-SOP-v1.md) |
 | Operator already changed NS/`home`/`siteurl` — intake, do not revert | C / D | [SOURCE-RUNTIME-AUTHORITY](../runbooks/FORGE-WORDPRESS-SOURCE-RUNTIME-AUTHORITY-STANDARD-v1.md) · Launch SOP |
 | true_false false must not fall back to default; distinguish preview/autosave | A / G | [ACF-FIELD-MODELING](../standards/FORGE-WORDPRESS-ACF-FIELD-MODELING-STANDARD-v1.md) §6.1 · [EDITOR UX](../standards/FORGE-WORDPRESS-EDITOR-UX-STANDARD-v1.md) §5.1 · AP-020 / AP-CMS-016 |
-| Do not open indexing because the domain works | D / G | same § indexing gate |
+| Do not open indexing because the domain works | D / G | SEARCH-INDEXING-CONTROL |
 | WPilot READ; `write_enabled=false`; version ≠ option | C | [WPILOT-PRODUCTION-STANDARD](../runbooks/FORGE-WORDPRESS-WPILOT-PRODUCTION-STANDARD-v1.md) |
+| Cookie/privacy controls for small RU production site | A / C | [COOKIE-CONSENT-AND-PRIVACY-CONTROLS](../standards/FORGE-WORDPRESS-COOKIE-CONSENT-AND-PRIVACY-CONTROLS-STANDARD-v1.md) |
 | Clinical/brand/content/URLs of Shpigovsky | I | Do not copy — project LOC-ZONE only |
 | Reviews as ACF options repeater, not CPT | J / I | [CONTENT-MODEL-CPT](../standards/FORGE-WORDPRESS-CONTENT-MODEL-CPT-STANDARD-v1.md) § when not to CPT · [REPEATER-VS-ENTITY](../standards/FORGE-WORDPRESS-REPEATER-VS-ENTITY-DECISION-MATRIX-v1.md) |
 | Design/Admin fields modeled during implementation rather than as a CMS pack | G → A | [CMS-ARCHITECTURE](../standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md) P1b — do this **before** frontend WP coding |
@@ -90,7 +97,15 @@
 | P18B | Dashboard reality sync; safe Admin indexing control; indexing remains CLOSED | `REPORT-FP-0002-PROD-P18B-DASHBOARD-INDEXING.md` |
 | P18C | SMTP/forms Admin owner; lead persist-before-mail; Metrika goal after backend success; suppression remains ON | `REPORT-FP-0002-PROD-P18C-SMTP-FORMS-FOUNDATION.md` |
 | P18C-FU01 | Menu discoverability: Почта и формы visible under ACF Site Settings parent | `REPORT-FP-0002-PROD-P18C-FU01-ADMIN-MENU.md` |
-| P18J | Dashboard widget client UX rework — concise owner-facing summary; indexing safety preserved | `REPORT-FP-0002-PROD-P18J-DASHBOARD-WIDGET-UX.md` |
+| P18D / FU01 | SMTP verify/activate; suppression retired; editorial DB preserved | `REPORT-FP-0002-PROD-P18D*` |
+| P18E | Cookie consent + Metrika/form goal gating | `REPORT-FP-0002-PROD-P18E*` |
+| P18G | Indexing safety guard + admin alerts + watchdog | `REPORT-FP-0002-PROD-P18G-INDEXING-SAFETY.md` |
+| P18H | Privacy/retention decisions; Cookie Policy factual audit | `REPORT-FP-0002-PROD-P18H-PRIVACY-RETENTION-DECISIONS.md` |
+| P18I | Final launch crawl closeout → PRODUCTION / MAINTENANCE | `REPORT-FP-0002-PROD-P18I-FINAL-LAUNCH-CLOSEOUT.md` |
+| P18J | Synthetic indexing QA noise separated from real incidents | `REPORT-FP-0002-PROD-P18J-INDEXING-QA-NOISE-CLEANUP.md` |
+| P23 | Client dashboard attribution + Russian form mail UX | dashboard/mail polish on canonical |
+| Anti-spam v1 | Native layered form anti-spam; no external CAPTCHA | `REPORT-FP-0002-PROD-MAINT-NATIVE-ANTISPAM-V1.md` |
+| Maint stabilize | Workspace/Git/MARS closeout; zero FP-0002 Git tails | `REPORT-FP-0002-PROD-MAINT-WORKSPACE-STABILIZATION.md` |
 
 Earlier V9 Admin-parity / ACF SoT / operator-CSS canon work remains valid foundation (Experience Pack Phase 1–2). It is **historical**; production operations above supersede it for launch.
 
@@ -112,10 +127,10 @@ Earlier V9 Admin-parity / ACF SoT / operator-CSS canon work remains valid founda
 
 | Surface | Change |
 |---------|--------|
-| This hub | New |
-| Forge WordPress OPERATIONAL-INDEX | Production-knowledge routing |
-| Contracts/standards register | FW-S-09+ and runbooks |
+| This hub | Maintenance + anti-spam lessons mapped without duplication of FORM-SPAM / SEARCH standards |
+| Forge WordPress OPERATIONAL-INDEX | FP-0002 production-maintenance reference status |
+| Contracts/standards register | FORM-SPAM already in FORMS-AND-SMTP §15 |
 | Website Factory knowledge map | WP Forge production brain |
 | Experience Pack INDEX | Points here (brain upgrade done) |
 
-*Assimilation index v1 — 2026-08-18.*
+*Assimilation index — 2026-08-20 (maintenance closeout).*

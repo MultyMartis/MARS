@@ -79,14 +79,16 @@
 
 | Dimension | State |
 |-----------|-------|
-| Factory workspace | **Active** — `workspaces/fp-0002-shpigovsky-v6/` |
-| V6 desktop baseline | **FROZEN** — `FP-0002-V6-DESKTOP-STABLE-01` · tag `fp-0002-v6-desktop-stable-01` |
-| Factory manifest enrollment | **Not started** |
-| Factory registry enrollment | **Not started** |
-| RT-G04 substrate (POC-01…POC-10) | **Not started** |
-| Website Factory operational phase | **Pre-Onboarding** (V6 pilot execution active) |
-| Production lanes — Frontend | **In progress** — desktop shell frozen; mobile authorized not started |
-| Design intake | **Partial** — JPG mockup + operator-canonical V6 src |
+| Project phase | **PRODUCTION / MAINTENANCE — STABLE** (2026-08-20) |
+| Live domain | `https://shpigovsky.ru/` |
+| Core | `0.3.24-antispam` |
+| Indexing | **OPEN — HUMAN-APPROVED** |
+| Canonical source | `origin/mars/canonical-post-recovery` |
+| Operational locus | `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/` |
+| Status authority | [PROJECT-STATUS.md](PROJECT-STATUS.md) |
+| Open items | [REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md](REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md) |
+
+Historical frontend milestones (V6/V8/V9) remain in archives/tags; they are **not** the active delivery phase.
 
 ---
 

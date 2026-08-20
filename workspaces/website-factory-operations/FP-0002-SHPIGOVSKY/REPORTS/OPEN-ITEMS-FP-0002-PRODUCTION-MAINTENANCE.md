@@ -1,9 +1,9 @@
 # OPEN ITEMS — FP-0002 Production Maintenance
 
-**Phase:** PRODUCTION / MAINTENANCE (post native anti-spam v1)  
-**Updated:** 2026-08-20
+**Phase:** PRODUCTION / MAINTENANCE — STABLE  
+**Updated:** 2026-08-20 (workspace / Git / MARS closeout)
 
-Launch implementation tasks are **closed**. Only maintenance and operator follow-ups remain.
+Launch implementation tasks are **closed**. Git/worktree housekeeping for completed FP-0002 waves is **closed**. Only maintenance and operator follow-ups remain.
 
 ---
 
@@ -28,6 +28,8 @@ Launch implementation tasks are **closed**. Only maintenance and operator follow
 - Pre-cutover / cutover / launch crawl — **done** (P18I)
 - Sitemap technical validity — **done**
 - Native form anti-spam v1 — **done** (honeypot + signed timing + rate + replay + heuristics; no external CAPTCHA)
+- Dashboard / Russian mail UX polish — **done** (P23)
+- Workspace / Git / MARS stabilization closeout — **done** (this wave)
 
 ---
 
@@ -44,9 +46,11 @@ Launch implementation tasks are **closed**. Only maintenance and operator follow
 
 ## References
 
+- Workspace stabilization: `REPORTS/REPORT-FP-0002-PROD-MAINT-WORKSPACE-STABILIZATION.md`
 - Native anti-spam v1: `REPORTS/REPORT-FP-0002-PROD-MAINT-NATIVE-ANTISPAM-V1.md`
 - Forms anti-spam runbook: `DOCS/OPERATIONS-FORMS-ANTISPAM-v1.md`
 - P18J report: `REPORTS/REPORT-FP-0002-PROD-P18J-INDEXING-QA-NOISE-CLEANUP.md`
 - Final baseline: `REPORTS/BASELINE-FP-0002-PRODUCTION-FINAL.md`
+- Maintenance baseline addendum: `REPORTS/BASELINE-FP-0002-PRODUCTION-MAINTENANCE-STABLE.md`
 - Closeout report: `REPORTS/REPORT-FP-0002-PROD-P18I-FINAL-LAUNCH-CLOSEOUT.md`
 - Closeout charter summary: `REPORTS/FP-0002-FINAL-LAUNCH-CLOSEOUT-v1.md`

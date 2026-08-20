@@ -4,7 +4,7 @@
 **Parent:** [MARS Website Factory](../../OPERATIONAL-INDEX.md)  
 **Lane:** B — Website Factory architecture and documentation
 
-**Production knowledge brain (2026-08-18):** FP-0002 is a **production reference case**. How to build the next WordPress site: [knowledge/README.md](knowledge/README.md) · [BLUEPRINT](standards/FORGE-WORDPRESS-PRODUCTION-WEBSITE-BLUEPRINT-v1.md) · [CMS ARCHITECTURE](standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md) · [starter checklist](templates/FORGE-WORDPRESS-NEW-SITE-STARTER-CHECKLIST-v1.md). This does **not** claim AG-WP-001 is production-ready and does **not** mutate live FP-0002.
+**Production knowledge brain (2026-08-20):** FP-0002 / Шпиговский is a **PRODUCTION / MAINTENANCE — STABLE** reference case (`https://shpigovsky.ru/`, core `0.3.24-antispam`). How to build the next WordPress site: [knowledge/README.md](knowledge/README.md) · [assimilation index](knowledge/FP-0002-KNOWLEDGE-ASSIMILATION-INDEX.md) · [BLUEPRINT](standards/FORGE-WORDPRESS-PRODUCTION-WEBSITE-BLUEPRINT-v1.md) · [CMS ARCHITECTURE](standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md) · [starter checklist](templates/FORGE-WORDPRESS-NEW-SITE-STARTER-CHECKLIST-v1.md). This does **not** claim AG-WP-001 is production-ready and does **not** mutate live FP-0002.
 
 ---
 
