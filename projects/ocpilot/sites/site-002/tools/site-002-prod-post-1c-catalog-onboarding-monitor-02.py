@@ -25,8 +25,8 @@ OCPILOT_RUN = "4.213"
 SITE_ID = "SITE-002"
 ENVIRONMENT = "PRODUCTION"
 PRODUCTION_URL = "https://bzpm.ru/"
-BASELINE_BEFORE = "SITE-002-STABLE-PROD-POST-1C-IMPORT-20260728-MONITOR-BASELINE-1879-08"
-AUDIT_BASELINE_BEFORE = "SITE-002-MONITOR-BASELINE-REFRESH-08"
+BASELINE_BEFORE = "SITE-002-STABLE-PROD-POST-C2-PRETTY-URL-MONITOR-BASELINE-1887-09"
+AUDIT_BASELINE_BEFORE = "SITE-002-MONITOR-BASELINE-REFRESH-09"
 WRONG_BRAND = "БЗПМ"
 CORRECT_BRAND = "ЗПМ"
 UTF8_BOM = b"\xef\xbb\xbf"
@@ -111,7 +111,8 @@ ONBOARDED_CATEGORY_PATHS = {
 
 ROUTE_CHURN_FIXTURE_BASELINE = Path(
     r"X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\deployments"
-    r"\SITE-002-PROD-POST-1C-CATALOG-ONBOARDING-MONITOR-01\current\sitemap-current-urls.json"
+    r"\SITE-002-PROD-POST-1C-CATALOG-ONBOARDING-MONITOR-01\current"
+    r"\sitemap-current-urls-1879-pre-refresh-09.json"
 )
 
 TECHNICAL_QUERY_PATTERNS = (
@@ -926,14 +927,15 @@ def ensure_layout() -> None:
 def phase1_baseline() -> tuple[list[str], dict[str, Any]]:
     print("Phase 1: baseline selection...")
     source_op = (
-        "SITE-002-MONITOR-BASELINE-REFRESH-08 (Run 4.312) — refreshed from live sitemap "
-        "after 1C import 2026-07-28 (import mars-20260728-080001-24823ddf; charter commit b86950eb)"
+        "SITE-002-MONITOR-BASELINE-REFRESH-09 (Run 4.335) — refreshed from live pretty-URL sitemap "
+        "after post-C2 scheduled validation 2026-08-20_13-29-44 (commit 9865413c)"
     )
     verified_by = AUDIT_BASELINE_BEFORE
     limitation = (
         "Baseline URL set refreshed in MONITOR-01 current/sitemap-current-urls.json; "
-        "count 1879, SHA-256 of JSON artifact recorded in SITE-002-MONITOR-BASELINE-REFRESH-08 "
-        "baseline-update; prior 1836 snapshot retained under baseline-update pre-refresh backup."
+        "count 1887, SHA-256 of JSON artifact recorded in SITE-002-MONITOR-BASELINE-REFRESH-09 "
+        "baseline-refresh-apply; prior 1879 snapshot retained as "
+        "sitemap-current-urls-1879-pre-refresh-09.json (C2 fixture source)."
     )
     if not BASELINE_RUN_4212.exists():
         raise FileNotFoundError(f"Baseline artifact missing: {BASELINE_RUN_4212}")
@@ -946,8 +948,8 @@ def phase1_baseline() -> tuple[list[str], dict[str, Any]]:
         "audit_baseline_before": AUDIT_BASELINE_BEFORE,
         "artifact_path": str(BASELINE_RUN_4212),
         "url_count": len(urls),
-        "expected_count_run_4_312": 1879,
-        "match_expected": len(urls) == 1879,
+        "expected_count_run_4_335": 1887,
+        "match_expected": len(urls) == 1887,
         "reconstructed": False,
         "limitations": limitation,
         "captured_at": utc_now(),
@@ -965,7 +967,7 @@ def phase1_baseline() -> tuple[list[str], dict[str, Any]]:
             f"- Baseline checkpoint: `{BASELINE_BEFORE}`",
             f"- Artifact: `{BASELINE_RUN_4212}`",
             f"- URL count: **{len(urls)}**",
-            f"- Match Run 4.312 expected (1879): **{selection['match_expected']}**",
+            f"- Match Run 4.335 expected (1887): **{selection['match_expected']}**",
             f"- Reconstructed: **no**",
             "",
             "## Limitations",
@@ -1031,7 +1033,7 @@ def phase2_current() -> tuple[list[str], dict[str, Any], str, str]:
         "llms_bzpm_count": count_brand(llms_text, WRONG_BRAND),
         "llms_zpm_count": count_brand(llms_text, CORRECT_BRAND),
         "captured_at": utc_now(),
-        "baseline_expected_count": 1879,
+        "baseline_expected_count": 1887,
     }
     write_json(DEPLOYMENT_ROOT / "current" / "sitemap-current-summary.json", summary)
     write_json(DEPLOYMENT_ROOT / "current" / "sitemap-current-urls.json", urls)
@@ -1044,8 +1046,8 @@ def phase2_current() -> tuple[list[str], dict[str, Any], str, str]:
             f"- Sitemap HTTP: **{summary['sitemap_http_status']}**",
             f"- Valid XML: **{valid_xml}**",
             f"- URL count: **{len(urls)}**",
-            f"- Baseline (4.312): **1879**",
-            f"- Delta vs baseline: **{len(urls) - 1879:+d}**",
+            f"- Baseline (4.335): **1887**",
+            f"- Delta vs baseline: **{len(urls) - 1887:+d}**",
             f"- robots HTTP 200 + Sitemap: **{summary['robots_http_status'] == 200 and summary['robots_sitemap_directive']}**",
             f"- llms UTF-8 BOM: **{summary['llms_utf8_bom']}**",
             f"- llms ЗПМ / no БЗПМ: **{summary['llms_zpm_count'] > 0} / {summary['llms_bzpm_count'] == 0}**",
