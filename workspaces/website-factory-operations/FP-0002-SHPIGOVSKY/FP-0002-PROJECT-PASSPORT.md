@@ -83,7 +83,7 @@
 | Live domain | `https://shpigovsky.ru/` |
 | Core | `0.3.24-antispam` |
 | Indexing | **OPEN — HUMAN-APPROVED** |
-| Canonical source | `origin/mars/canonical-post-recovery` |
+| Canonical source | `origin/mars/canonical-post-recovery` @ `0fbd25bdbd8ba3f77d6c0ab1e4881c9d159a35c3` |
 | Operational locus | `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/` |
 | Status authority | [PROJECT-STATUS.md](PROJECT-STATUS.md) |
 | Open items | [REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md](REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md) |

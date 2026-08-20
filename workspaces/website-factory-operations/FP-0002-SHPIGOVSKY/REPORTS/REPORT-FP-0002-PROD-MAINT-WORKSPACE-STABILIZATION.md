@@ -162,15 +162,34 @@ Anti-spam standard already in Forge FORM-SMTP §15 — not duplicated.
 
 ## 13. Git Recovery Point
 
-Canonical remote after this wave: recorded in evidence `05-git-after.json` and PROJECT-STATUS.
+| Item | Value |
+|------|-------|
+| Branch | `origin/mars/canonical-post-recovery` |
+| SHA | `0fbd25bdbd8ba3f77d6c0ab1e4881c9d159a35c3` |
+| Subject | `FP-0002: stabilize production maintenance workspace` |
 
 **Required:** FP-0002 HAS A VERIFIED REMOTE CANONICAL RECOVERY POINT — **PASS**
 
 ---
 
-## 14–16. Stabilization Commit / Push / Final Audit
+## 14. Stabilization Commit
 
-Filled after commit+push in evidence and closeout sections below.
+- `0fbd25bdbd8ba3f77d6c0ab1e4881c9d159a35c3` — FP-0002: stabilize production maintenance workspace
+- Follow-up SHA record commit (if any) listed in `05-git-after.json`
+
+## 15. Push
+
+Pushed to `origin/mars/canonical-post-recovery` (`3f1f6595..0fbd25bd`).
+
+**Required:** FP-0002 CANONICAL REMOTE FULLY UPDATED — **PASS**
+
+## 16. Final Git Audit
+
+- No FP-0002 commits ahead of remote after push
+- Completed FP-0002 worktrees retired (see census)
+- Shared main remains dirty with **foreign** WIP — not an FP-0002 Git tail
+
+**Required:** ZERO OPEN FP-0002 GIT TAILS — **PASS**
 
 ---
 

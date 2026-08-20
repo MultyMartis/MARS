@@ -66,6 +66,7 @@
 | Authority | `origin/mars/canonical-post-recovery` |
 | Pre-stabilization remote tip | `e0d297e6f95dfaca42c2b9ba6dde800178d4ca6b` |
 | Anti-spam checkpoint (ancestor) | `0875b9d5c81f77b5a5f63ada7e6799eaf88c5cd2` |
+| Stabilization recovery point | `0fbd25bdbd8ba3f77d6c0ab1e4881c9d159a35c3` |
 | Stabilization commit | see `REPORT-FP-0002-PROD-MAINT-WORKSPACE-STABILIZATION.md` |
 
 ---
