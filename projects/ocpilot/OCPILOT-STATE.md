@@ -1,5 +1,6 @@
 
 
+**SITE-002 Run 4.337 (2026-08-20):** Monitor baseline metadata fix 01 **COMPLETE** — MONITOR-01 `sitemap-current-summary.json` stale **1377→1887** (metadata only); urls.json unchanged at **1887**; production/runtime/monitor-logic/baseline-refresh **0**. Report: [SITE-002-MONITOR-BASELINE-METADATA-FIX-01.md](sites/site-002/reports/SITE-002-MONITOR-BASELINE-METADATA-FIX-01.md).
 **SITE-002 Run 4.336 (2026-08-20):** Post-baseline workspace closeout **COMPLETE** — authority docs-03 clean/synced; git tails closed; dirty main foreign WIP recorded untouched; runtime checkout known (`df240710` + preserved D6G1A dirty surface); docs-01/docs-02 cleanup candidates inventoried (no delete); open items registered; no production/runtime/baseline mutation. Report: [SITE-002-POST-BASELINE-WORKSPACE-CLOSEOUT-01.md](sites/site-002/reports/SITE-002-POST-BASELINE-WORKSPACE-CLOSEOUT-01.md).
 **SITE-002 Run 4.335 (2026-08-20):** Monitor baseline refresh 09 **COMPLETE** — pretty-URL sitemap **1887** accepted after scheduled validation `2026-08-20_13-29-44`; old baseline **1879** frozen; post-refresh check **NO_ACTION_REQUIRED** 1887→1887 exact/semantic 0/0; route churn blocker resolved; `upakovochnoe` still separate; observe next 1C import for `95`/`364`. Report: [SITE-002-MONITOR-BASELINE-REFRESH-09.md](sites/site-002/reports/SITE-002-MONITOR-BASELINE-REFRESH-09.md).
 **SITE-002 Run 4.334 (2026-08-20):** Post-runtime-sync scheduled monitor validation **COMPLETE** — first full scheduled run `2026-08-20_13-29-44` exit 0 from C2 runtime `df240710`; artifact agreement + semantic diff confirmed; classification `ONBOARDING_REQUIRED`; baseline ready for explicit REFRESH-09 approval (not refreshed); mapping persistence `95`/`364` still pending next natural 1C import. Report: [SITE-002-POST-RUNTIME-SYNC-SCHEDULED-MONITOR-VALIDATION-01.md](sites/site-002/reports/SITE-002-POST-RUNTIME-SYNC-SCHEDULED-MONITOR-VALIDATION-01.md).
@@ -22,7 +23,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-08-20
-**Evidence cutoff:** 2026-08-20 (SITE-002 Run **4.336** / `SITE-002-POST-BASELINE-WORKSPACE-CLOSEOUT-01` — workspace closeout after baseline **1887**; open items registered; observe next 1C import for `95`/`364`)
+**Evidence cutoff:** 2026-08-20 (SITE-002 Run **4.337** / `SITE-002-MONITOR-BASELINE-METADATA-FIX-01` — stale MONITOR-01 summary **1377→1887**; active baseline **1887** unchanged; observe next 1C import for `95`/`364`)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -36,7 +37,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Post-baseline workspace closeout COMPLETE (Run 4.336)** — monitor baseline **1887** accepted; git/docs tails closed; open items: observe next 1C import `95`/`364`; `upakovochnoe` separate; D6G1A UX separate; docs-01/02 cleanup candidates (no delete) · [closeout 4.336](sites/site-002/reports/SITE-002-POST-BASELINE-WORKSPACE-CLOSEOUT-01.md) · [refresh 4.335](sites/site-002/reports/SITE-002-MONITOR-BASELINE-REFRESH-09.md) · [validation 4.334](sites/site-002/reports/SITE-002-POST-RUNTIME-SYNC-SCHEDULED-MONITOR-VALIDATION-01.md) · [sync 4.333](sites/site-002/reports/SITE-002-MONITOR-RUNTIME-CHECKOUT-SYNC-01.md) |
+| Current SITE-002 focus | **Monitor baseline metadata fix COMPLETE (Run 4.337)** — active baseline **1887**; MONITOR-01 summary aligned **1377→1887**; remaining open items: observe next 1C import `95`/`364`; `upakovochnoe` separate; D6G1A UX separate; docs-01/02 cleanup candidates (no delete) · [metadata fix 4.337](sites/site-002/reports/SITE-002-MONITOR-BASELINE-METADATA-FIX-01.md) · [closeout 4.336](sites/site-002/reports/SITE-002-POST-BASELINE-WORKSPACE-CLOSEOUT-01.md) · [refresh 4.335](sites/site-002/reports/SITE-002-MONITOR-BASELINE-REFRESH-09.md) · [validation 4.334](sites/site-002/reports/SITE-002-POST-RUNTIME-SYNC-SCHEDULED-MONITOR-VALIDATION-01.md) |
 
 ### Git authority note (SITE-002 Wave E — 2026-07-10)
 
