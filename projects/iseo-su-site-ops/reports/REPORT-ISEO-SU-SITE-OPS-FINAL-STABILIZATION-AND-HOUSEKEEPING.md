@@ -119,9 +119,10 @@ Local→remote hash map: `004ab1ce` → `67288e0a`.
 
 | Check | Result |
 |-------|--------|
-| Remote tip after push | `67288e0a` |
+| Remote tip after push | `798310fe` |
 | Prior closeout `b4e1be0d` reachable | yes (ancestor) |
 | Stabilization commit reachable | yes (`67288e0a`) |
+| REPORT commit reachable | yes (`798310fe`) |
 | Key brain files on origin | Current State / Stabilization Closeout / baseline / final launch closeout present |
 | Unrelated dirty-main commits pushed | **no** |
 | Secrets/raw backups in commit | **no** |
@@ -164,7 +165,7 @@ Stop after scratch cleanup, documentation/brain update, scoped Git persistence, 
 
 | Field | Value |
 |-------|-------|
-| PROJECT-OWNED UNCOMMITTED CHANGES | **0** (after REPORT persist wave if any — see closeout) |
+| PROJECT-OWNED UNCOMMITTED CHANGES | **0** |
 | PROJECT-OWNED UNTRACKED SCRATCH | **0** |
 | PROJECT-OWNED STAGED TAIL | **0** |
 | FOREIGN WIP PRESERVED | **YES** |
@@ -172,7 +173,7 @@ Stop after scratch cleanup, documentation/brain update, scoped Git persistence, 
 | OPEN REQUIRED TASKS | **0** |
 | DEFERRED OPTIONAL | listed above |
 | SAFE UNKNOWN | non-blocking register only |
-| LOCAL ACCEPTED COMMIT | `004ab1ce` (+ REPORT follow-up if needed) |
-| REMOTE CANONICAL TIP | `67288e0a` (pre-REPORT); tip advances with REPORT sync |
+| LOCAL ACCEPTED COMMIT | `004ab1ce` (housekeeping), `b7eb169d` (REPORT) |
+| REMOTE CANONICAL TIP | `798310fe` |
 | REMOTE SYNC | **COMPLETE** |
 | PRODUCTION MUTATIONS | **0** |

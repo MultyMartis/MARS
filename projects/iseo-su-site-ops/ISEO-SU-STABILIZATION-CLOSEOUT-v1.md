@@ -95,7 +95,7 @@ Scoped housekeeping commit on dirty main (iseo paths only). Foreign WIP remains 
 
 ## 12. Git Remote State
 
-Accepted closeout already on `origin/mars/canonical-post-recovery` via prior equivalents (`94ca9e5a`…`b4e1be0d`). Stabilization commit synced via clean worktree (see REPORT). Tip verified after push.
+Accepted closeout already on `origin/mars/canonical-post-recovery` via prior equivalents (`94ca9e5a`…`b4e1be0d`). Stabilization synced via clean worktree: local `004ab1ce` → remote `67288e0a`; REPORT local `b7eb169d` → remote `798310fe`. Observed tip after sync: `798310fe`.
 
 ## 13. Worktree Cleanup
 
