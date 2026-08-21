@@ -139,6 +139,12 @@ N/A for mutations. Local verify backups available under Git-ignored `_form-recip
 
 Scoped commit via clean worktree from `origin/mars/canonical-post-recovery` (dirty main unsafe). Foreign WIP preserved. No force push. Exact i-seo paths only.
 
+| Field | Value |
+|-------|-------|
+| Commit | `2400a4c1` — `docs(iseo-su): verify original form recipients retained` |
+| Remote | `origin/mars/canonical-post-recovery` @ `2400a4c1` |
+| Sync | **COMPLETE** (no force) |
+
 ## 18. Open Blockers
 
 **0**
