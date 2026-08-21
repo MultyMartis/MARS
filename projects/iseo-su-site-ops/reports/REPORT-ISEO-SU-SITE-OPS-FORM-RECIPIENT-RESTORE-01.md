@@ -142,8 +142,8 @@ Scoped commit via clean worktree from `origin/mars/canonical-post-recovery` (dir
 | Field | Value |
 |-------|-------|
 | Content commit | `2400a4c1` — `docs(iseo-su): verify original form recipients retained` |
-| Tip-record commit | `8b7ca983` — `docs(iseo-su): record form recipient restore remote tip` |
-| Remote | `origin/mars/canonical-post-recovery` @ `8b7ca983` |
+| Tip-record / align commits | `8b7ca983`, `34feaf31` |
+| Remote tip | `origin/mars/canonical-post-recovery` @ `34feaf31` |
 | Sync | **COMPLETE** (no force) |
 
 ## 18. Open Blockers
