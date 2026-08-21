@@ -31,6 +31,7 @@ Do **not** reopen the full Shpigovsky chronology unless evidence is required.
 | Is the site actually done? | [DEFINITION-OF-DONE](../standards/FORGE-WORDPRESS-DEFINITION-OF-DONE-v1.md) |
 | Is an Admin feature actually usable? | Same DoD discoverability sequence · [ADMIN-UX](../standards/FORGE-WORDPRESS-ADMIN-UX-STANDARD-v1.md) §10.7 · AP-029 |
 | How do we open/close search indexing? | [SEARCH-INDEXING-CONTROL](../standards/FORGE-WORDPRESS-SEARCH-INDEXING-CONTROL-STANDARD-v1.md) |
+| SEO robots vs OPEN/CLOSED ownership | [ROBOTS-OWNERSHIP-LESSONS](FORGE-WORDPRESS-ROBOTS-OWNERSHIP-LESSONS-v1.md) |
 | Which modules exist | [MODULE-CATALOG](../registries/FORGE-WORDPRESS-MODULE-CATALOG-v1.md) |
 
 ---

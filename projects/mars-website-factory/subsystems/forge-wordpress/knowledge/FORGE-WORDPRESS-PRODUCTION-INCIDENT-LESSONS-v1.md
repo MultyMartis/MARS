@@ -105,6 +105,16 @@
 | Fix | Access repair to real `public_html` |
 | Prevention | Access validation before any write |
 
+## INC-11 — SEO robots destroyed by indexability OPEN template
+
+| | |
+|--|--|
+| Detection | Live `/robots.txt` became short generic OPEN body after CLOSE→OPEN |
+| Impact | Editor SEO crawl policy lost while site remained “OPEN” |
+| Root cause | `IndexingControl::robots_body(true)` wrote a generic template after CLOSE overwrote the physical SEO file |
+| Fix | Canonical SEO policy asset; OPEN restores it; CLOSE backs up first |
+| Prevention | ROBOTS-001…003 (`FORGE-WORDPRESS-ROBOTS-OWNERSHIP-LESSONS-v1.md`) |
+
 ---
 
 *Incident lessons v1.*
