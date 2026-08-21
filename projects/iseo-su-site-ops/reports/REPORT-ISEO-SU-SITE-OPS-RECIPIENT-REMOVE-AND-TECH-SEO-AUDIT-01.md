@@ -118,7 +118,7 @@ Canonical strategy, title dedupe for blog archives, meta gaps, orphans, OG, alt-
 
 ## 19. Git Persistence
 
-Scoped commit + remote sync for allowlisted iseo-su-site-ops paths only (see closeout). No foreign WIP.
+Local commit f1e0ce31 on diverged dirty main; remote sync commit 3befa11c on origin/mars/canonical-post-recovery (cherry-pick FF). No force push. No foreign WIP staged.
 
 ## 20. Open Blockers
 
@@ -172,5 +172,5 @@ MOBILE TECH ISSUES: LIMITED
 SEO TEAM REPORT CREATED: YES
 AUDIT FIXES APPLIED: NO
 OPEN BLOCKERS: none for charter
-REMOTE SYNC: (filled after push)
+REMOTE SYNC: YES — origin tip 3befa11c via clean worktree cherry-pick (no force)
 ```
