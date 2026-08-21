@@ -2,7 +2,7 @@
 
 **Programme:** ISEO-SU-SITE-OPS  
 **Canonical locus:** `X:\AI MARS\projects\iseo-su-site-ops\`  
-**Updated:** 2026-08-21 (correct-operator isolated mail acceptance 02)  
+**Updated:** 2026-08-21 (form recipient restore verification 01)  
 **Authority rank:** primary project brain for ordinary next tasks
 
 ---
@@ -10,7 +10,8 @@
 ## 1. Project Status
 
 **COMPLETE — ISEO-SU FORMS HARDENED / EMPTY SUBMISSIONS BLOCKED / ANTISPAM ACTIVE / MAIL ROUTING RESTORED**  
-**All-forms isolated mail acceptance:** **COMPLETE** — correct operator mailbox `im.work@mail.ru` accepted; typo `im.work@nail.ru` removed; normal recipients restored. Acceptance 01 recipient evidence **SUPERSEDED BY ACCEPTANCE 02**.
+**All-forms isolated mail acceptance:** **COMPLETE** — correct operator mailbox `im.work@mail.ru` accepted; typo `im.work@nail.ru` removed. Acceptance 01 recipient evidence **SUPERSEDED BY ACCEPTANCE 02**.  
+**Form recipient restore verification:** **COMPLETE** — independent backup reconstruction + live SFTP verify confirms active original recipient retained + operator mailbox; see `ISEO-SU-FORM-RECIPIENT-RESTORATION-EVIDENCE-v1.md` (supersedes blind trust in prior restoration narrative).
 
 Glossary/site-ops stabilization remains accepted. Public form anti-spam/validation charter is **closed**. Ordinary future work starts from this file + Task Routing Guide + Protected Zones + Form Security Baseline.
 

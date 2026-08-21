@@ -4,6 +4,7 @@
 **Task:** ISEO-SU-SITE-OPS-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-02  
 **Date:** 2026-08-21  
 **Site:** https://i-seo.su/  
+**Recipient-restore cross-check:** `ISEO-SU-FORM-RECIPIENT-RESTORATION-EVIDENCE-v1.md` (2026-08-21) is current authority for original-recipient reconstruction; independently **confirms** active original retained + `im.work@mail.ru`.  
 **Rule:** No secrets; no full production recipient lists beyond the operator address; other recipients recorded as count + SHA-16 only.
 
 ## 1. Reason for Re-test

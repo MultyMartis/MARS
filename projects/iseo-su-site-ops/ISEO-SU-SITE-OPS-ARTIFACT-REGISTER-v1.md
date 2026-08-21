@@ -16,6 +16,13 @@ Status vocabulary: **CURRENT** · **CANONICAL** · **HISTORICAL** · **SUPERSEDE
 | Shared forms JS | `production-source/js/common.js` | CANONICAL |
 | Form anti-spam REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-FORM-ANTISPAM-AND-VALIDATION-01.md` | CURRENT |
 
+### Form recipient restore verification (2026-08-21) — CURRENT
+
+| Artifact | Path | Class |
+|----------|------|-------|
+| Form recipient restoration evidence | `ISEO-SU-FORM-RECIPIENT-RESTORATION-EVIDENCE-v1.md` | CURRENT / CANONICAL (recipient-restore authority) |
+| Form recipient restore REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-FORM-RECIPIENT-RESTORE-01.md` | CURRENT |
+
 ### All-forms isolated mail acceptance — correct operator (2026-08-21) — CURRENT
 
 | Artifact | Path | Class |

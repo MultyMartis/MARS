@@ -2,13 +2,14 @@
 
 **Programme:** ISEO-SU-SITE-OPS  
 **Task:** ISEO-SU-SITE-OPS-FORMS-ANTISPAM-AND-VALIDATION-01  
-**Updated:** 2026-08-21 (correct-operator mailbox acceptance 02)  
+**Updated:** 2026-08-21 (form recipient restore verification 01)  
 **Authority:** current form/security operating baseline for public leads on `https://i-seo.su/`
 
 ## 1. Status
 
 **COMPLETE — ISEO-SU FORMS HARDENED / EMPTY SUBMISSIONS BLOCKED / ANTISPAM ACTIVE / MAIL ROUTING RESTORED**  
-**All-forms isolated mail acceptance:** **COMPLETE** with correct operator mailbox — see `ISEO-SU-FORM-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-EVIDENCE-v2.md` (Acceptance 01 recipient evidence **SUPERSEDED** due to operator typo `im.work@nail.ru`).
+**All-forms isolated mail acceptance:** **COMPLETE** with correct operator mailbox — see `ISEO-SU-FORM-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-EVIDENCE-v2.md` (Acceptance 01 recipient evidence **SUPERSEDED** due to operator typo `im.work@nail.ru`).  
+**Recipient restore verification:** **COMPLETE** — see `ISEO-SU-FORM-RECIPIENT-RESTORATION-EVIDENCE-v1.md` (current authority for original-recipient reconstruction; confirms prior restore claim for the active set).
 
 Server-side validation and layered anti-spam are authoritative. Client `required` attributes are convenience only. Temporary mail test mode is **OFF**. Operator address `im.work@mail.ru` is permanently included in the production recipient set. Typo `im.work@nail.ru` is **absent**.
 
@@ -128,7 +129,8 @@ Do not commit active test mode as final production state.
 | test_mode | **false** |
 | im.work@mail.ru in production_recipients | **YES** |
 | im.work@nail.ru in production_recipients | **NO** (operator typo; removed) |
-| Prior legitimate recipients | **preserved** |
+| Prior legitimate recipients | **preserved** (active original = primary only; independently verified 2026-08-21) |
+| Recipient restore evidence | `ISEO-SU-FORM-RECIPIENT-RESTORATION-EVIDENCE-v1.md` |
 | CAPTCHA | **not installed** |
 
 ## 14. Security Boundaries
