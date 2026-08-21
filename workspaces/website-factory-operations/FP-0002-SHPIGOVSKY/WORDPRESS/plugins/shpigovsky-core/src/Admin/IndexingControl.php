@@ -19,6 +19,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /**
  * One semantic indexing operation for blog_public, robots.txt, and site-level meta robots.
+ *
+ * Ownership split (PROD-MAINT Olya robots):
+ * - Humans own global OPEN/CLOSED indexability.
+ * - Olya/SEO owns the OPEN-state robots crawl policy (canonical file in plugin assets).
+ * - CLOSED may write a temporary global Disallow; OPEN must restore the SEO policy intact.
  */
 final class IndexingControl implements ModuleInterface {
 
@@ -30,6 +35,8 @@ final class IndexingControl implements ModuleInterface {
 	const STATE_FIELD           = 'fp02_indexability';
 	const NOTICE_QUERY          = 'fp02_indexing';
 	const ROBOTS_RELATIVE       = 'robots.txt';
+	const SEO_POLICY_RELATIVE   = 'assets/robots-seo-policy.txt';
+	const SEO_BACKUP_RELATIVE   = 'robots.txt.fp02-seo-open.bak';
 	const TECHNICAL_CLOSE_CONST = 'FP02_INDEXING_TECHNICAL_CLOSE_AUTHORIZED';
 
 	/**
@@ -375,15 +382,64 @@ final class IndexingControl implements ModuleInterface {
 	/**
 	 * Canonical robots.txt body for the semantic state.
 	 *
+	 * OPEN → Olya/SEO policy (never a generic MARS open template).
+	 * CLOSED → temporary global crawl closure.
+	 *
 	 * @param bool $open Open indexing.
 	 * @return string
 	 */
 	public static function robots_body( $open ) {
 		$sitemap = home_url( '/wp-sitemap.xml' );
 		if ( $open ) {
-			return "User-agent: *\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\n\nSitemap: {$sitemap}\n";
+			return self::seo_policy_body( $sitemap );
 		}
 		return "User-agent: *\nDisallow: /\n\nSitemap: {$sitemap}\n";
+	}
+
+	/**
+	 * Absolute path to the canonical OPEN-state SEO robots policy (plugin-owned).
+	 *
+	 * @return string
+	 */
+	public static function seo_policy_path() {
+		return trailingslashit( SHPIGOVSKY_CORE_DIR ) . self::SEO_POLICY_RELATIVE;
+	}
+
+	/**
+	 * Absolute path for emergency SEO-policy backup beside docroot robots.txt.
+	 *
+	 * @return string
+	 */
+	public static function seo_backup_path() {
+		return trailingslashit( ABSPATH ) . self::SEO_BACKUP_RELATIVE;
+	}
+
+	/**
+	 * OPEN-state SEO robots policy body with current Sitemap host.
+	 *
+	 * @param string|null $sitemap Absolute sitemap URL.
+	 * @return string
+	 */
+	public static function seo_policy_body( $sitemap = null ) {
+		$sitemap = is_string( $sitemap ) && '' !== $sitemap ? $sitemap : home_url( '/wp-sitemap.xml' );
+		$path    = self::seo_policy_path();
+		$raw     = is_readable( $path ) ? file_get_contents( $path ) : false;
+
+		if ( ! is_string( $raw ) || '' === trim( $raw ) ) {
+			// Last-resort recoverable OPEN body — still not the historical generic MARS template.
+			$raw = "User-agent: *\nAllow: /\n\nSitemap: {$sitemap}\n";
+		}
+
+		$raw = str_replace( "\r\n", "\n", $raw );
+		$raw = preg_replace( "/^\xEF\xBB\xBF/", '', $raw );
+		if ( preg_match( '/^Sitemap:\s*\S+/mi', $raw ) ) {
+			$raw = preg_replace( '/^Sitemap:\s*\S+/mi', 'Sitemap: ' . $sitemap, $raw, 1 );
+		} else {
+			$raw = rtrim( $raw ) . "\n\nSitemap: {$sitemap}\n";
+		}
+		$raw = rtrim( $raw ) . "\n";
+
+		return $raw;
 	}
 
 	/**
@@ -396,31 +452,49 @@ final class IndexingControl implements ModuleInterface {
 	}
 
 	/**
-	 * Keep physical robots.txt aligned when it exists.
+	 * Whether robots body is the temporary global-close template.
+	 *
+	 * @param string $body Robots body.
+	 * @return bool
+	 */
+	public static function is_global_close_body( $body ) {
+		return (bool) preg_match( '/^\s*Disallow:\s*\/\s*$/mi', (string) $body );
+	}
+
+	/**
+	 * Keep physical robots.txt aligned with indexability state.
+	 *
+	 * Always writes a physical file so WordPress virtual robots cannot shadow SEO policy.
 	 *
 	 * @param bool $open Open indexing.
 	 * @return bool
 	 */
 	private static function sync_robots_file( $open ) {
 		$path = self::robots_path();
+		$bak  = self::seo_backup_path();
+
+		if ( ! $open && is_file( $path ) ) {
+			$current = file_get_contents( $path );
+			if ( is_string( $current ) && '' !== trim( $current ) && ! self::is_global_close_body( $current ) ) {
+				// Preserve live SEO policy before temporary close overwrite.
+				file_put_contents( $bak, str_replace( "\r\n", "\n", $current ) );
+			}
+		}
+
 		$body = self::robots_body( $open );
-
-		if ( ! is_file( $path ) ) {
-			return true;
-		}
-
-		$current = file_get_contents( $path );
-		if ( ! is_string( $current ) ) {
-			return false;
-		}
-
-		// Preserve complex host-managed robots when OPEN and no global Disallow:/ exists.
 		if ( $open ) {
-			$has_global_disallow = (bool) preg_match( '/^\s*Disallow:\s*\/\s*$/mi', $current );
-			$is_our_closed       = self::normalize_robots( $current ) === self::normalize_robots( self::robots_body( false ) );
-			$is_our_open         = self::normalize_robots( $current ) === self::normalize_robots( self::robots_body( true ) );
-			if ( ! $has_global_disallow && ! $is_our_closed && ! $is_our_open ) {
-				return true;
+			// Prefer canonical plugin SEO policy; backup is emergency only if canonical unreadable.
+			$canonical = self::seo_policy_body( home_url( '/wp-sitemap.xml' ) );
+			if ( is_readable( self::seo_policy_path() ) ) {
+				$body = $canonical;
+			} elseif ( is_file( $bak ) ) {
+				$backup = file_get_contents( $bak );
+				if ( is_string( $backup ) && '' !== trim( $backup ) && ! self::is_global_close_body( $backup ) ) {
+					$body = self::normalize_robots( $backup ) . "\n";
+					if ( ! preg_match( '/^Sitemap:\s*\S+/mi', $body ) ) {
+						$body = rtrim( $body ) . "\n\nSitemap: " . home_url( '/wp-sitemap.xml' ) . "\n";
+					}
+				}
 			}
 		}
 
@@ -564,11 +638,11 @@ final class IndexingControl implements ModuleInterface {
 		$inconsistent = ( IndexingState::STATE_INCONSISTENT === $effective );
 
 		if ( $inconsistent || ( ! $open && IndexingState::STATE_CLOSED !== $effective ) ) {
-			echo '<div class="fp02-indexing-banner" style="margin:0 0 14px;padding:12px 14px;border-left:4px solid #d63638;background:#fcf0f1;">';
-			echo '<p style="margin:0 0 6px;font-weight:700;color:#8a1f1f;">' . esc_html__( '⚠️ ВНИМАНИЕ: САЙТ ОГРАНИЧЕН ДЛЯ ИНДЕКСАЦИИ', 'shpigovsky-core' ) . '</p>';
-			echo '<p style="margin:0 0 8px;">' . esc_html__( 'Сигналы индексации расходятся. Проверьте blog_public, robots.txt и глобальные meta robots.', 'shpigovsky-core' ) . '</p>';
+			echo '<div class="fp02-indexing-banner is-inconsistent">';
+			echo '<p class="fp02-indexing-banner__title is-warning">' . esc_html__( '⚠️ Индексация сайта: требует проверки', 'shpigovsky-core' ) . '</p>';
+			echo '<p class="fp02-indexing-banner__meta">' . esc_html__( 'Сигналы индексации расходятся. Свяжитесь с техподдержкой MetaCODE.', 'shpigovsky-core' ) . '</p>';
 			if ( ! empty( $snap ) ) {
-				echo '<ul style="margin:0 0 8px 1.2em;font-size:12px;">';
+				echo '<ul class="fp02-indexing-banner__debug">';
 				printf( '<li>blog_public=%d</li>', (int) $snap['blog_public'] );
 				printf(
 					'<li>robots: %s (%s)</li>',
@@ -582,15 +656,15 @@ final class IndexingControl implements ModuleInterface {
 				echo '</ul>';
 			}
 		} elseif ( $open ) {
-			echo '<div class="fp02-indexing-banner" style="margin:0 0 14px;padding:12px 14px;border-left:4px solid #00a32a;background:#edfaef;">';
-			echo '<p style="margin:0 0 8px;font-weight:600;">' . esc_html__( 'Индексация сайта разрешена (OPEN).', 'shpigovsky-core' ) . '</p>';
+			echo '<div class="fp02-indexing-banner is-open">';
+			echo '<p class="fp02-indexing-banner__title">' . esc_html__( 'Индексация сайта: открыта', 'shpigovsky-core' ) . '</p>';
 			if ( ! empty( $snap['human_actor'] ) ) {
 				printf(
-					'<p class="description" style="margin:0 0 8px;">%s</p>',
+					'<p class="fp02-indexing-banner__meta">%s</p>',
 					esc_html(
 						sprintf(
 							/* translators: 1: actor, 2: datetime */
-							__( 'Последнее решение: OPEN · %1$s · %2$s', 'shpigovsky-core' ),
+							__( 'Последнее решение: %1$s · %2$s', 'shpigovsky-core' ),
 							(string) $snap['human_actor'],
 							(string) $snap['human_recorded_at']
 						)
@@ -598,9 +672,22 @@ final class IndexingControl implements ModuleInterface {
 				);
 			}
 		} else {
-			echo '<div class="fp02-indexing-banner" style="margin:0 0 14px;padding:12px 14px;border-left:4px solid #d63638;background:#fcf0f1;">';
-			echo '<p style="margin:0 0 6px;font-weight:700;">' . esc_html__( 'Сайт закрыт от индексации поисковыми системами (CLOSED).', 'shpigovsky-core' ) . '</p>';
-			echo '<p style="margin:0 0 8px;">' . esc_html__( 'Обход и добавление страниц в поиск намеренно запрещены.', 'shpigovsky-core' ) . '</p>';
+			echo '<div class="fp02-indexing-banner is-closed">';
+			echo '<p class="fp02-indexing-banner__title">' . esc_html__( 'Индексация сайта: закрыта', 'shpigovsky-core' ) . '</p>';
+			echo '<p class="fp02-indexing-banner__meta">' . esc_html__( 'Поисковые системы не должны обходить и индексировать сайт.', 'shpigovsky-core' ) . '</p>';
+			if ( ! empty( $snap['human_actor'] ) ) {
+				printf(
+					'<p class="fp02-indexing-banner__meta">%s</p>',
+					esc_html(
+						sprintf(
+							/* translators: 1: actor, 2: datetime */
+							__( 'Последнее решение: %1$s · %2$s', 'shpigovsky-core' ),
+							(string) $snap['human_actor'],
+							(string) $snap['human_recorded_at']
+						)
+					)
+				);
+			}
 		}
 
 		$action  = $open ? 'closed' : 'open';
@@ -621,9 +708,9 @@ final class IndexingControl implements ModuleInterface {
 		echo '<input type="hidden" name="' . esc_attr( self::CONFIRM_FIELD ) . '" value="1" />';
 
 		if ( $open ) {
-			echo '<div style="margin:0 0 10px;padding:10px;border:1px solid #dba617;background:#fff8e5;">';
-			echo '<p style="margin:0 0 6px;font-weight:600;">' . esc_html__( 'ВНИМАНИЕ', 'shpigovsky-core' ) . '</p>';
-			echo '<p style="margin:0 0 8px;">' . esc_html__( 'Закрытие индексации может привести к исключению страниц сайта из поисковой выдачи. Используйте это действие только осознанно.', 'shpigovsky-core' ) . '</p>';
+			echo '<div class="fp02-indexing-banner__warn">';
+			echo '<p class="fp02-indexing-banner__warn-title">' . esc_html__( 'Внимание', 'shpigovsky-core' ) . '</p>';
+			echo '<p>' . esc_html__( 'Закрытие индексации может привести к исключению страниц сайта из поисковой выдачи. Используйте это действие только осознанно.', 'shpigovsky-core' ) . '</p>';
 			echo '<label><input type="checkbox" name="' . esc_attr( self::CLOSE_ACK_FIELD ) . '" value="1" required /> ';
 			echo esc_html__( 'Я понимаю последствия и хочу закрыть индексацию', 'shpigovsky-core' ) . '</label>';
 			echo '</div>';

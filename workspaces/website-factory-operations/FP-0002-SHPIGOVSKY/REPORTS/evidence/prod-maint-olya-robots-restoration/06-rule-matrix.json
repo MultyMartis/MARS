@@ -1,0 +1,456 @@
+{
+  "pass": true,
+  "rows": [
+    {
+      "url": "/",
+      "label": "homepage",
+      "expected_default": true,
+      "Yandex": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Google": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Bing": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Generic": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Googlebot-Image": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      }
+    },
+    {
+      "url": "/?utm_source=test",
+      "label": "homepage_utm_generic_disallow_root_query",
+      "expected_default": false,
+      "Yandex": {
+        "allowed": false,
+        "expected": false,
+        "pass": true
+      },
+      "Google": {
+        "allowed": false,
+        "expected": false,
+        "pass": true
+      },
+      "Bing": {
+        "allowed": false,
+        "expected": false,
+        "pass": true
+      },
+      "Generic": {
+        "allowed": false,
+        "expected": false,
+        "pass": true
+      },
+      "Googlebot-Image": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      }
+    },
+    {
+      "url": "/wp-content/themes/shpigovsky/assets/css/v9-style.css",
+      "label": "theme_css",
+      "expected_default": true,
+      "Yandex": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Google": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Bing": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Generic": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Googlebot-Image": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      }
+    },
+    {
+      "url": "/wp-content/plugins/shpigovsky-core/assets/js/privacy-consent.js",
+      "label": "plugin_js",
+      "expected_default": true,
+      "Yandex": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Google": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Bing": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Generic": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Googlebot-Image": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      }
+    },
+    {
+      "url": "/wp-content/uploads/2026/07/shpigovsky-clinic-landscape.webp",
+      "label": "uploads_image",
+      "expected_default": true,
+      "Yandex": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Google": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Bing": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Generic": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Googlebot-Image": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      }
+    },
+    {
+      "url": "/wp-content/themes/shpigovsky/assets/img/decor/lifebuoy.webp",
+      "label": "theme_webp",
+      "expected_default": true,
+      "Yandex": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Google": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Bing": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Generic": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Googlebot-Image": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      }
+    },
+    {
+      "url": "/wp-content/themes/shpigovsky/assets/fonts/inter/inter-400.woff2",
+      "label": "theme_font_woff2",
+      "expected_default": true,
+      "Yandex": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Google": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Bing": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Generic": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Googlebot-Image": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      }
+    },
+    {
+      "url": "/wp-admin/admin-ajax.php",
+      "label": "admin_ajax",
+      "expected_default": true,
+      "Yandex": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Google": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Bing": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Generic": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Googlebot-Image": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      }
+    },
+    {
+      "url": "/wp-json/",
+      "label": "wp_json_blocked_by_wp_dash",
+      "expected_default": false,
+      "Yandex": {
+        "allowed": false,
+        "expected": false,
+        "pass": true
+      },
+      "Google": {
+        "allowed": false,
+        "expected": false,
+        "pass": true
+      },
+      "Bing": {
+        "allowed": false,
+        "expected": false,
+        "pass": true
+      },
+      "Generic": {
+        "allowed": false,
+        "expected": false,
+        "pass": true
+      },
+      "Googlebot-Image": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      }
+    },
+    {
+      "url": "/search/",
+      "label": "search",
+      "expected_default": false,
+      "Yandex": {
+        "allowed": false,
+        "expected": false,
+        "pass": true
+      },
+      "Google": {
+        "allowed": false,
+        "expected": false,
+        "pass": true
+      },
+      "Bing": {
+        "allowed": false,
+        "expected": false,
+        "pass": true
+      },
+      "Generic": {
+        "allowed": false,
+        "expected": false,
+        "pass": true
+      },
+      "Googlebot-Image": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      }
+    },
+    {
+      "url": "/author/admin/",
+      "label": "author",
+      "expected_default": false,
+      "Yandex": {
+        "allowed": false,
+        "expected": false,
+        "pass": true
+      },
+      "Google": {
+        "allowed": false,
+        "expected": false,
+        "pass": true
+      },
+      "Bing": {
+        "allowed": false,
+        "expected": false,
+        "pass": true
+      },
+      "Generic": {
+        "allowed": false,
+        "expected": false,
+        "pass": true
+      },
+      "Googlebot-Image": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      }
+    },
+    {
+      "url": "/feed/",
+      "label": "feed",
+      "expected_default": false,
+      "Yandex": {
+        "allowed": false,
+        "expected": false,
+        "pass": true
+      },
+      "Google": {
+        "allowed": false,
+        "expected": false,
+        "pass": true
+      },
+      "Bing": {
+        "allowed": false,
+        "expected": false,
+        "pass": true
+      },
+      "Generic": {
+        "allowed": false,
+        "expected": false,
+        "pass": true
+      },
+      "Googlebot-Image": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      }
+    },
+    {
+      "url": "/xmlrpc.php",
+      "label": "xmlrpc",
+      "expected_default": false,
+      "Yandex": {
+        "allowed": false,
+        "expected": false,
+        "pass": true
+      },
+      "Google": {
+        "allowed": false,
+        "expected": false,
+        "pass": true
+      },
+      "Bing": {
+        "allowed": false,
+        "expected": false,
+        "pass": true
+      },
+      "Generic": {
+        "allowed": false,
+        "expected": false,
+        "pass": true
+      },
+      "Googlebot-Image": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      }
+    },
+    {
+      "url": "/privacy-policy/",
+      "label": "legal_privacy",
+      "expected_default": false,
+      "Yandex": {
+        "allowed": false,
+        "expected": false,
+        "pass": true
+      },
+      "Google": {
+        "allowed": false,
+        "expected": false,
+        "pass": true
+      },
+      "Bing": {
+        "allowed": false,
+        "expected": false,
+        "pass": true
+      },
+      "Generic": {
+        "allowed": false,
+        "expected": false,
+        "pass": true
+      },
+      "Googlebot-Image": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      }
+    },
+    {
+      "url": "/uslugi/",
+      "label": "public_service_hub",
+      "expected_default": true,
+      "Yandex": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Google": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Bing": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Generic": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      },
+      "Googlebot-Image": {
+        "allowed": true,
+        "expected": true,
+        "pass": true
+      }
+    }
+  ],
+  "captured_at": "2026-08-21T07:39:54.059102+00:00"
+}

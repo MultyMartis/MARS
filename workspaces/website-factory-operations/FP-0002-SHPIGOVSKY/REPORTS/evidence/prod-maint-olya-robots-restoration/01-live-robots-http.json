@@ -1,0 +1,16 @@
+{
+  "captured_at": "2026-08-21T07:35:24.838144+00:00",
+  "status": 200,
+  "final_url": "https://shpigovsky.ru/robots.txt",
+  "content_type": "text/plain",
+  "headers": {
+    "Server": "nginx-reuseport/1.21.1",
+    "Content-Type": "text/plain",
+    "Last-Modified": "Wed, 19 Aug 2026 21:05:02 GMT",
+    "ETag": "W/\"6a861a7e-72\"",
+    "Cache-Control": "max-age=604800"
+  },
+  "sha256": "ec64f8b8a09afe446b910e0c8a3796e029169d29b79e477882315c7f9e04e0a8",
+  "bytes": 114,
+  "body_text": "User-agent: *\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\n\nSitemap: https://shpigovsky.ru/wp-sitemap.xml\n"
+}

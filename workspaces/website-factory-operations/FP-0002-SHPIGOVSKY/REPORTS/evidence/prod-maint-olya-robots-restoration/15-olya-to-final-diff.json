@@ -1,0 +1,48 @@
+{
+  "captured_at": "2026-08-21",
+  "supplied_source": "REPORTS/evidence/prod-p18g-indexing-safety/01-pre-intake.json → robots_physical.body (operator Olya physical robots at P18G intake)",
+  "supplied_sha256_utf8": "b484afdc1b196dc930dc3bbf70d5cbddd8a4b6b65df43ea9da04c6416a237616",
+  "final_sha256": "2594093919d01f067bcd3776d50d973cfa20a1faf4a6d63fc23f21367d08529e",
+  "deviations": [
+    {
+      "original": "UTF-8 BOM + CRLF newlines",
+      "final": "UTF-8 without BOM + LF newlines",
+      "reason": "Technical encoding/newline sanity; Google ignores BOM but LF is portable; no SEO rule change",
+      "evidence": "Google Search Central robots.txt file format (UTF-8; CR/LF/CRLF accepted)"
+    },
+    {
+      "original": "Yandex group: Disallow: *utm*= and Disallow: *openstat=",
+      "final": "Removed from Yandex group only",
+      "reason": "Official Yandex guidance: Clean-param preferred for tracking params; Disallow takes priority and defeats Clean-param consolidation",
+      "evidence": "https://yandex.com/support/webmaster/en/robot-workings/clean-param (retrieved 2026-08-21)"
+    },
+    {
+      "original": "Clean-param: utm",
+      "final": "Removed",
+      "reason": "Not an exact query parameter name used by the site; Yandex Clean-param requires exact parameter names; redundant with explicit utm_source&utm_medium&utm_campaign",
+      "evidence": "Yandex Clean-param syntax; site Metrika/UTM uses standard utm_* names (P18H privacy docs)"
+    },
+    {
+      "original": "No Allow for webp/woff/woff2/ttf under /wp-",
+      "final": "Added Allow: /*/*.webp, /*/*.woff, /*/*.woff2, /*/*.ttf in all crawl groups",
+      "reason": "Proven production rendering assets under /wp-content/themes/... are blocked by Disallow: /wp- without more-specific Allows (homepage lifebuoy.webp + Inter/Libertinus fonts in CSS)",
+      "evidence": "01-homepage-assets.json; _scan_css_assets.py"
+    },
+    {
+      "original": "(unchanged) Google/Bing/*/Image groups keep Disallow *utm*= / *openstat=",
+      "final": "Preserved",
+      "reason": "Clean-param is Yandex-only; Google/Bing ignore Clean-param — Disallow remains deliberate for those bots",
+      "evidence": "Google robots.txt supported fields (no Clean-param)"
+    }
+  ],
+  "preserved_without_change": [
+    "Separate User-agent groups for Yandex, GoogleBot, Bingbot, *, Googlebot-Image",
+    "Broad Disallow: /wp- and /wp/ with Allow for js/css/images/admin-ajax/uploads",
+    "Legal page Disallow paths",
+    "Search/author/users/feed/trackback/embed/xmlrpc restrictions",
+    "Disallow: /? (root querystrings)",
+    "Sitemap: https://shpigovsky.ru/wp-sitemap.xml",
+    "Clean-Param utm_source&utm_medium&utm_campaign; etext; pm_source; openstat",
+    "Googlebot-Image Allow: /"
+  ]
+}

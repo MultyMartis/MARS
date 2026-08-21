@@ -1,11 +1,12 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-08-20 (PROD-MAINT **Workspace Stabilization + WPilot probe/auth correction** — **PASS** → **PRODUCTION / MAINTENANCE — STABLE**)
+**Last updated:** 2026-08-21 (PROD-MAINT **Olya robots restoration + ownership separation + SEO safety audit** — **PASS** → **PRODUCTION / MAINTENANCE — STABLE**)
 
-**Current project state:** **PRODUCTION / MAINTENANCE — STABLE**. Domain `https://shpigovsky.ru/`. Core `0.3.24-antispam`. Indexing **OPEN — HUMAN-APPROVED** (`blog_public=1`). P18G guard **ACTIVE**; watchdog **ACTIVE**. Forms **ACTIVE**; SMTP **VERIFIED / ACTIVE**; native first-party anti-spam **ACTIVE** (no external CAPTCHA). Privacy **ACTIVE**; Metrika **CONSENT-GATED**; Russian form mail UX **ACTIVE**. WPilot probe contract: **`X-WPilot-Token`** (not Bearer). Failed Bearer/TLS probe classified **INVALID EVIDENCE** (not a production incident). No open technical launch tails. Canonical remote: `origin/mars/canonical-post-recovery` @ a515abf4a64bd93bf60a0578fc40ceae4818e8bb. Report: `REPORTS/REPORT-FP-0002-PROD-MAINT-WORKSPACE-STABILIZATION.md`. Evidence: `REPORTS/evidence/prod-maint-workspace-stabilization/`. Open items: `REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md`.
+**Current project state:** **PRODUCTION / MAINTENANCE — STABLE**. Domain `https://shpigovsky.ru/`. Core `0.3.25-olya-robots`. Indexing **OPEN — HUMAN-APPROVED** (`blog_public=1`). P18G guard **ACTIVE**; watchdog **ACTIVE**. Physical `/robots.txt` serves canonical Olya SEO policy (separate from global OPEN/CLOSED). Forms **ACTIVE**; SMTP **VERIFIED / ACTIVE**; native first-party anti-spam **ACTIVE**. Privacy **ACTIVE**; Metrika **CONSENT-GATED**. Report: `REPORTS/REPORT-FP-0002-PROD-MAINT-OLYA-ROBOTS-RESTORATION.md`. Evidence: `REPORTS/evidence/prod-maint-olya-robots-restoration/`. Runbook: `DOCS/OPERATIONS-INDEXING-ROBOTS-OWNERSHIP-v1.md`. Open items: `REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md`.
 
 **Prior WordPress phase:** `FP-0002 PROD-MAINT Workspace Stabilization + Git / MARS Closeout` — **PASS**. Git/worktree housekeeping; CURRENT docs aligned to maintenance; Forge knowledge assimilation.
+
 
 **Prior WordPress phase:** `FP-0002 PROD-MAINT NATIVE FORM ANTI-SPAM V1` — **PASS**. First-party layered anti-spam on all public lead forms (final + modal): honeypot, server-signed `fp02_fs` timing, idempotent `request_token`, bounded rate limits, conservative heuristics. Spam rejected before lead persist / mail / Metrika. No Google reCAPTCHA, no Yandex SmartCaptcha, no external CAPTCHA. Core `0.3.24-antispam`. Indexing remains **OPEN — HUMAN-APPROVED**; P18G guard **ACTIVE**; watchdog **ACTIVE**. SMTP / recipients / Russian mail UX unchanged. Report: `REPORTS/REPORT-FP-0002-PROD-MAINT-NATIVE-ANTISPAM-V1.md`. Evidence: `REPORTS/evidence/prod-maint-native-antispam-v1/`. Runbook: `DOCS/OPERATIONS-FORMS-ANTISPAM-v1.md`.
 

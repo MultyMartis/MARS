@@ -1,0 +1,21 @@
+{
+  "retrieved_at": "2026-08-21",
+  "authorities": [
+    {
+      "engine": "Yandex",
+      "url": "https://yandex.com/support/webmaster/en/robot-workings/clean-param",
+      "notes": "Clean-param consolidates tracking duplicates; Disallow takes priority over Clean-param; prefer Clean-param over Disallow for non-content-changing params"
+    },
+    {
+      "engine": "Yandex",
+      "url": "https://yandex.com/support/webmaster/en/indexing-options/get-parameters",
+      "notes": "GET parameter indexing can also be managed in Webmaster; conflicts prefer the rule that prevents indexing"
+    },
+    {
+      "engine": "Google",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/robots/robots_txt",
+      "notes": "Supports user-agent/allow/disallow/sitemap; longest match; least restrictive on conflict; ignores unsupported directives such as Clean-param; BOM ignored"
+    }
+  ],
+  "syntax_verdict": "OLYA ROBOTS SYNTAX AUDIT COMPLETE — valid User-agent groups; Allow/Disallow/Sitemap ok; Clean-param Yandex-only; wildcards used are Google/Yandex-compatible; minimal corrections only where proven"
+}

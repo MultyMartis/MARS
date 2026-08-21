@@ -3,7 +3,7 @@
 **Factory Project:** FP-0002 — Shpigovsky.ru  
 **Format:** ADR (Architecture Decision Record)  
 **Created:** 2026-06-11  
-**Updated:** 2026-08-20 (workspace stabilization closeout)
+**Updated:** 2026-08-21 (Olya robots ownership)
 
 ---
 
@@ -14,6 +14,16 @@ Journal for **operator-declared** architectural and production decisions during 
 ---
 
 ## Decisions (Maintenance Stabilization)
+
+### ADR-MAINT-004 — SEO robots policy ≠ global indexability
+
+**Status:** Accepted
+
+**Decision:** Olya/SEO owns the OPEN-state `robots.txt` crawl policy (canonical plugin asset). Humans own OPEN/CLOSED indexability via Dashboard/`IndexingControl`. OPEN must restore the SEO policy intact; CLOSED may apply temporary global disallow with backup. MARS must not replace OPEN SEO robots with a generic safety file.
+
+**Evidence:** `REPORTS/REPORT-FP-0002-PROD-MAINT-OLYA-ROBOTS-RESTORATION.md`, `DOCS/OPERATIONS-INDEXING-ROBOTS-OWNERSHIP-v1.md`
+
+---
 
 ### ADR-MAINT-001 — Production / maintenance is the active phase
 
