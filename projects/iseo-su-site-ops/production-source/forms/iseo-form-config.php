@@ -13,10 +13,9 @@ return array(
 
     "test_recipients" => array("im.work@mail.ru"),
 
-    // Normal production recipients (existing + operator).
+    // Normal production recipients (original active set only).
     "production_recipients" => array(
         "nikel007i33@yandex.ru",
-        "im.work@mail.ru",
     ),
 
     "from_email" => "noreply@i-seo.su",

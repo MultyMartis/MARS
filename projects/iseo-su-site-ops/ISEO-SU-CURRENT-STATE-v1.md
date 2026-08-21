@@ -2,16 +2,18 @@
 
 **Programme:** ISEO-SU-SITE-OPS  
 **Canonical locus:** `X:\AI MARS\projects\iseo-su-site-ops\`  
-**Updated:** 2026-08-21 (form recipient restore verification 01)  
+**Updated:** 2026-08-21 (operator recipient removal + tech/SEO audit 01)  
 **Authority rank:** primary project brain for ordinary next tasks
 
 ---
 
 ## 1. Project Status
 
-**COMPLETE — ISEO-SU FORMS HARDENED / EMPTY SUBMISSIONS BLOCKED / ANTISPAM ACTIVE / MAIL ROUTING RESTORED**  
-**All-forms isolated mail acceptance:** **COMPLETE** — correct operator mailbox `im.work@mail.ru` accepted; typo `im.work@nail.ru` removed. Acceptance 01 recipient evidence **SUPERSEDED BY ACCEPTANCE 02**.  
-**Form recipient restore verification:** **COMPLETE** — independent backup reconstruction + live SFTP verify confirms active original recipient retained + operator mailbox; see `ISEO-SU-FORM-RECIPIENT-RESTORATION-EVIDENCE-v1.md` (supersedes blind trust in prior restoration narrative).
+**COMPLETE — ISEO-SU FORMS HARDENED / ANTISPAM ACTIVE / OPERATOR RECIPIENT REMOVED / TECH-SEO AUDIT COMPLETE**  
+**All-forms isolated mail acceptance:** **COMPLETE** (historical) — Acceptance 02 proved correct operator mailbox delivery; typo `im.work@nail.ru` removed.  
+**Form recipient restore verification:** **COMPLETE** (historical) — see `ISEO-SU-FORM-RECIPIENT-RESTORATION-EVIDENCE-v1.md`.  
+**Operator recipient removal:** **COMPLETE** — `im.work@mail.ru` intentionally removed from production recipients; active set = `nikel007i33@yandex.ru` only; `test_mode` OFF; see `ISEO-SU-FORM-OPERATOR-RECIPIENT-REMOVAL-EVIDENCE-v1.md`.  
+**Tech/SEO audit (read-only):** **COMPLETE** — SEO visibility report + internal evidence; fixes deferred to separate Site Ops waves.
 
 Glossary/site-ops stabilization remains accepted. Public form anti-spam/validation charter is **closed**. Ordinary future work starts from this file + Task Routing Guide + Protected Zones + Form Security Baseline.
 

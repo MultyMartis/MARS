@@ -16,12 +16,24 @@ Status vocabulary: **CURRENT** · **CANONICAL** · **HISTORICAL** · **SUPERSEDE
 | Shared forms JS | `production-source/js/common.js` | CANONICAL |
 | Form anti-spam REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-FORM-ANTISPAM-AND-VALIDATION-01.md` | CURRENT |
 
-### Form recipient restore verification (2026-08-21) — CURRENT
+### Form recipient restore verification (2026-08-21) — HISTORICAL (restore wave)
 
 | Artifact | Path | Class |
 |----------|------|-------|
-| Form recipient restoration evidence | `ISEO-SU-FORM-RECIPIENT-RESTORATION-EVIDENCE-v1.md` | CURRENT / CANONICAL (recipient-restore authority) |
-| Form recipient restore REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-FORM-RECIPIENT-RESTORE-01.md` | CURRENT |
+| Form recipient restoration evidence | `ISEO-SU-FORM-RECIPIENT-RESTORATION-EVIDENCE-v1.md` | HISTORICAL (restore verification; pre-removal set) |
+| Form recipient restore REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-FORM-RECIPIENT-RESTORE-01.md` | HISTORICAL |
+
+### Operator recipient removal + tech/SEO audit (2026-08-21) — CURRENT
+
+| Artifact | Path | Class |
+|----------|------|-------|
+| Operator recipient removal evidence | `ISEO-SU-FORM-OPERATOR-RECIPIENT-REMOVAL-EVIDENCE-v1.md` | CURRENT / CANONICAL (production recipient authority) |
+| Tech SEO audit evidence | `ISEO-SU-TECH-SEO-AUDIT-EVIDENCE-v1.md` | CURRENT |
+| Tech SEO findings CSV | `audits/tech-seo/ISEO-SU-TECH-SEO-FINDINGS-v1.csv` | CURRENT |
+| Tech SEO URL inventory CSV | `audits/tech-seo/ISEO-SU-TECH-SEO-URL-INVENTORY-v1.csv` | CURRENT |
+| SEO-team audit report | `reports/ISEO-SU-TECH-SEO-AUDIT-FOR-SEO-TEAM-v1.md` | CURRENT |
+| Task REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-RECIPIENT-REMOVE-AND-TECH-SEO-AUDIT-01.md` | CURRENT |
+| Crawl raw (Storage) | `X:\AI MARS STORAGE\iseo-su-site-ops\tech-seo-audit-01\` | CURRENT (out of Git) |
 
 ### All-forms isolated mail acceptance — correct operator (2026-08-21) — CURRENT
 

@@ -2,7 +2,7 @@
 
 **Programme:** ISEO-SU-SITE-OPS  
 **Task:** ISEO-SU-SITE-OPS-FORMS-ANTISPAM-AND-VALIDATION-01  
-**Updated:** 2026-08-21 (form recipient restore verification 01)  
+**Updated:** 2026-08-21 (operator recipient removal + tech/SEO audit 01)  
 **Authority:** current form/security operating baseline for public leads on `https://i-seo.su/`
 
 ## 1. Status
@@ -11,7 +11,7 @@
 **All-forms isolated mail acceptance:** **COMPLETE** with correct operator mailbox — see `ISEO-SU-FORM-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-EVIDENCE-v2.md` (Acceptance 01 recipient evidence **SUPERSEDED** due to operator typo `im.work@nail.ru`).  
 **Recipient restore verification:** **COMPLETE** — see `ISEO-SU-FORM-RECIPIENT-RESTORATION-EVIDENCE-v1.md` (current authority for original-recipient reconstruction; confirms prior restore claim for the active set).
 
-Server-side validation and layered anti-spam are authoritative. Client `required` attributes are convenience only. Temporary mail test mode is **OFF**. Operator address `im.work@mail.ru` is permanently included in the production recipient set. Typo `im.work@nail.ru` is **absent**.
+Server-side validation and layered anti-spam are authoritative. Client `required` attributes are convenience only. Temporary mail test mode is **OFF**. Production recipient set is the original active mailbox only (`nikel007i33@yandex.ru`). Temporary/operator mailbox `im.work@mail.ru` was **intentionally removed** from production recipients after acceptance (2026-08-21). Typo `im.work@nail.ru` remains **absent**.
 
 ## 2. Form Inventory
 
@@ -109,8 +109,8 @@ After successful mail, same normalized payload fingerprint from same source supp
 
 Single config: `iseo-form-config.php`.
 
-- `production_recipients` — normal routing (includes prior primary + `im.work@mail.ru`)  
-- `test_recipients` — only used when `test_mode === true`  
+- `production_recipients` — normal routing (**original active recipient only**)  
+- `test_recipients` — only used when `test_mode === true` (may list operator mailbox for controlled tests)  
 - Do **not** hardcode recipients inside every handler.
 
 Do not print full recipient lists in public REPORT/docs beyond operator-supplied test address when needed.
@@ -127,10 +127,11 @@ Do not commit active test mode as final production state.
 | Field | Value |
 |-------|-------|
 | test_mode | **false** |
-| im.work@mail.ru in production_recipients | **YES** |
-| im.work@nail.ru in production_recipients | **NO** (operator typo; removed) |
-| Prior legitimate recipients | **preserved** (active original = primary only; independently verified 2026-08-21) |
-| Recipient restore evidence | `ISEO-SU-FORM-RECIPIENT-RESTORATION-EVIDENCE-v1.md` |
+| production recipient | `nikel007i33@yandex.ru` **only** |
+| im.work@mail.ru in production_recipients | **NO** (intentionally removed after acceptance) |
+| im.work@nail.ru in production_recipients | **NO** (operator typo; never restore) |
+| Operator removal evidence | `ISEO-SU-FORM-OPERATOR-RECIPIENT-REMOVAL-EVIDENCE-v1.md` |
+| Prior recipient-restore evidence (historical) | `ISEO-SU-FORM-RECIPIENT-RESTORATION-EVIDENCE-v1.md` |
 | CAPTCHA | **not installed** |
 
 ## 14. Security Boundaries
