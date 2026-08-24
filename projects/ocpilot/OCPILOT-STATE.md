@@ -1,5 +1,6 @@
 
 
+**SITE-002 Run 4.343 (2026-08-25):** Catalog normalization apply combined 01 **COMPLETE / PRODUCTION — TARGET ROOT MODEL APPLIED** — promote `364`/`375`/`373` to root; create `381` Upakovochnoe + 1C map; tmp+disable `362`/`93`/`171`/`205`/`206`; htaccess 301 redirects; `[96]` unchanged; product assignment for Upakovochnoe **pending next import**; sitemap live **1861** vs baseline **1887**; baseline refresh separate. Report: [SITE-002-CATALOG-NORMALIZATION-APPLY-COMBINED-01.md](sites/site-002/reports/SITE-002-CATALOG-NORMALIZATION-APPLY-COMBINED-01.md).
 **SITE-002 Run 4.342 (2026-08-24):** Catalog normalization decision freeze 01 **COMPLETE / DOCS-ONLY — READY FOR BOUNDED APPLY WAVES** — operator decisions frozen (8 public roots; Teplovoe/Hlebo stay root; promote Posuda/Elektro/Myaso; create Upakovochnoe; tmp+disable Tech/Inventar/Barnoe/Posudomoech/Vent; Zapchasti hold); Beget full backup signal recorded (operator-stated); production mutation **0**. Report: [SITE-002-CATALOG-NORMALIZATION-DECISION-FREEZE-01.md](sites/site-002/reports/SITE-002-CATALOG-NORMALIZATION-DECISION-FREEZE-01.md).
 **SITE-002 Run 4.341 (2026-08-24):** Catalog structure normalization plan 01 **COMPLETE / PLAN-ONLY — OPERATOR DECISIONS REQUIRED BEFORE APPLY** — Hybrid Option C recommended; decision matrix for roots/Posuda/Upakovochnoe/Teplovoe/Hlebo/empty suspects/Zapchasti; SEO/mapping/UI/apply phases documented; production mutation **0**. Report: [SITE-002-CATALOG-STRUCTURE-NORMALIZATION-PLAN-01.md](sites/site-002/reports/SITE-002-CATALOG-STRUCTURE-NORMALIZATION-PLAN-01.md).
 **SITE-002 Run 4.340 (2026-08-24):** Catalog tree ↔ 1C groups comparison audit 01 **COMPLETE / READ-ONLY — STRUCTURE ATTENTION REQUIRED** — live `import0_1.xml` roots **5** vs site roots **10**; shared Neutral/Holodilnoe/Tech; Posuda hierarchy mismatch (`364` nested); `upakovochnoe` 1C-only; demo/legacy root suspects `93/171/205/206/96`; production mutation **0**. Report: [SITE-002-CATALOG-TREE-1C-COMPARISON-AUDIT-01.md](sites/site-002/reports/SITE-002-CATALOG-TREE-1C-COMPARISON-AUDIT-01.md).
@@ -27,8 +28,8 @@
 # OCPilot — Program State
 
 **Status:** living state document — **not** automated router  
-**Last updated:** 2026-08-24
-**Evidence cutoff:** 2026-08-24 (SITE-002 Run **4.342** / `SITE-002-CATALOG-NORMALIZATION-DECISION-FREEZE-01` — decisions frozen; ready for bounded Apply 02+; mutation 0)
+**Last updated:** 2026-08-25
+**Evidence cutoff:** 2026-08-25 (SITE-002 Run **4.343** / `SITE-002-CATALOG-NORMALIZATION-APPLY-COMBINED-01` — 8-root model applied; baseline refresh pending)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -42,7 +43,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Catalog normalization decisions frozen (Run 4.342)** — 8 public roots approved; tmp+disable list approved; Zapchasti hold; Beget backup signal recorded; next = bounded Apply 02+ after explicit approval; baseline **1887** untouched; production mutation **0** · [decision freeze 4.342](sites/site-002/reports/SITE-002-CATALOG-NORMALIZATION-DECISION-FREEZE-01.md) · [normalization plan 4.341](sites/site-002/reports/SITE-002-CATALOG-STRUCTURE-NORMALIZATION-PLAN-01.md) · [comparison audit 4.340](sites/site-002/reports/SITE-002-CATALOG-TREE-1C-COMPARISON-AUDIT-01.md) |
+| Current SITE-002 focus | **Catalog normalization applied (Run 4.343)** — 8 public roots live; Upakovochnoe `381` created+mapped; product assignment pending next import; tmp+disable complete; Zapchasti hold unchanged; sitemap live **1861** vs baseline **1887**; next = baseline refresh (Apply 07) + post-import Upakovochnoe verify · [apply 4.343](sites/site-002/reports/SITE-002-CATALOG-NORMALIZATION-APPLY-COMBINED-01.md) · [decision freeze 4.342](sites/site-002/reports/SITE-002-CATALOG-NORMALIZATION-DECISION-FREEZE-01.md) |
 
 ### Git authority note (SITE-002 Wave E — 2026-07-10)
 
