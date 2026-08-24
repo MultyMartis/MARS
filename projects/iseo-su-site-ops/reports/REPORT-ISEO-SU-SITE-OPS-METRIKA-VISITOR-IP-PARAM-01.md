@@ -124,7 +124,10 @@ Soft: `"enabled" => false`. Hard: restore `js/common.js` backup + remove three a
 
 ## 20. Git Persistence
 
-Scoped commit on task files only; clean-worktree sync to `origin/mars/canonical-post-recovery` (see closeout). No foreign WIP.
+Scoped commit on task files only (local dirty-main commit `6a5056db`).  
+Remote histories had diverged; sync used clean worktree from `origin/mars/canonical-post-recovery` + cherry-pick of the task commit → remote tip **`0c6f80de`**.  
+No force push. No foreign WIP.  
+**REMOTE SYNC: COMPLETE** (`origin/mars/canonical-post-recovery` = `0c6f80de`).
 
 ## 21. Open Risks
 
@@ -172,5 +175,5 @@ FORM SYSTEM CHANGED: NO
 PUBLIC PAGE COVERAGE: PASS
 PRODUCTION/SOURCE ALIGNED: YES
 OPEN BLOCKERS: 0
-REMOTE SYNC: (completed in Git wave)
+REMOTE SYNC: COMPLETE
 ```
