@@ -25,12 +25,10 @@
 
 ## Current open work
 
-1. `SM-CHILD-404`: repair `/sitemap.xml` as a valid two-child index for `/sitemap-static.xml` and `/wp-sitemap.xml`; remove obsolete 404 children; then verify robots.
-2. Decide/implement `/sitemap-static.xml` maintenance: safe automation preferred, manual rebuild/procedure fallback.
-3. `IMG-BROKEN`: repair relative blog `img/...` paths (≈96 sampled broken URLs) and regression-crawl.
-4. Review/route the remaining 6 MEDIUM, 8 LOW, and 14 REVIEW audit signals using the findings CSV.
+1. ~~`SM-CHILD-404` / static sitemap / `IMG-BROKEN`~~ — **CLOSED** (HIGH FIX + completeness).
+2. ~~Tech cleanup wave 01~~ — **CLOSED** (`SM-MISSING-INDEXABLE` rechecked; `LINK-TO-REDIR` / `IMG-HUGE` closed).
+3. Review/route remaining **SEO_REVIEW** audit signals (canonical, titles/metas, orphans, alt, OG, SM-NONINDEX) using the backlog CSV — separate charter; no autofix.
 
-**Not implemented:** sitemap repair, static sitemap maintenance, blog image repair, and remaining audit fixes.
 **Deferred optional:** mobile glossary offcanvas, archive Yoast description, MERGED alias polish, unnecessary sitemap duplication, WPilot 6D.
 
 ---
@@ -54,7 +52,7 @@
 | Field | Value |
 |-------|-------|
 | **Lifecycle** | **COMPLETE — STATIC SITEMAP COMPLETENESS FIXED (127 URLS) / HIGH FIX WAVE 01 TECH HEALTH RETAINED** |
-| **Project status** | Glossary public: **184** published eligible; **57** non-eligible drafts; `/glossary/` **200**; archive/single services `page_scene` hero; desktop submenu **Глоссарий** after calculator; archive title **Глоссарий - INTLSEO Studio**; Yoast glossary sitemap **184**; root `/sitemap.xml` = `sitemap-static.xml` + `wp-sitemap.xml`; static sitemap **127** URLs (completeness reconciled); mobile overflow **fixed** (glossary-scoped CSS, SHA `4a1202b6…`); mobile offcanvas **intentionally unchanged**; WPilot bridge/writes/REST still gated; production form recipient = **original only** (`nikel007i33@yandex.ru`); active form HMAC secret = **production-local only** (`.iseo-form-runtime/iseo-form-secrets.local.php`), absent from current tracked source; tech/SEO audit HIGH findings CLOSED (WAVE 01); Metrika visitor IP param addon **ON** (`ipaddress` → counter **54287016**; kill switch in `metrika-visitor-ip-config.php`; analytics-only, no auto-ban) |
+| **Project status** | Glossary public: **184** published eligible; **57** non-eligible drafts; `/glossary/` **200**; archive/single services `page_scene` hero; desktop submenu **Глоссарий** after calculator; archive title **Глоссарий - INTLSEO Studio**; Yoast glossary sitemap **184**; root `/sitemap.xml` = `sitemap-static.xml` + `wp-sitemap.xml`; static sitemap **127** URLs (completeness reconciled); mobile overflow **fixed** (glossary-scoped CSS, SHA `4a1202b6…`); mobile offcanvas **intentionally unchanged**; WPilot bridge/writes/REST still gated; production form recipient = **original only** (`nikel007i33@yandex.ru`); active form HMAC secret = **production-local only** (`.iseo-form-runtime/iseo-form-secrets.local.php`), absent from current tracked source; tech/SEO audit HIGH findings CLOSED; TECH CLEANUP WAVE 01 CLOSED (`SM-MISSING-INDEXABLE` rechecked eligible 0; `LINK-TO-REDIR`/`IMG-HUGE` closed); Metrika visitor IP param addon **ON** (`ipaddress` → counter **54287016**; kill switch in `metrika-visitor-ip-config.php`; analytics-only, no auto-ban) |
 | **Architecture knowledge** | **COMPLETE** — knowledge base + route matrix + task routing guide |
 | **Glossary** | Foundation + Batches 01–04 content + **controlled public launch 2026-07-26** + final integration/post-launch closeout **2026-08-18** |
 | **Current phase (WPilot)** | **PHASE 6D — BLOCKED** (bridge/smoke awaiting exact approval + backup lines) — **not required** for ordinary site content/file tasks |
@@ -62,7 +60,7 @@
 | **Access files** | **LOCAL-ONLY FILLED / VALIDATED** (Git-ignored) |
 | **WPilot** | **ACTIVE** RC6; bridge **DISABLED**; writes **DISABLED**; token **LOCAL-ONLY**; REST **NOT RUN** |
 | **Open blockers / open required task groups** | **0 / 4** |
-| **Next operator action (site work)** | Optional: charter MEDIUM/LOW/REVIEW SEO backlog. Static sitemap: edit allowlist **and** `public-canonical-static-routes-v1.txt` → `generate-sitemap-static.py` → `validate-sitemap-static-completeness.py` → deploy. |
+| **Next operator action (site work)** | Optional: charter remaining **SEO_REVIEW** backlog (canonical/title/meta/orphan/alt/OG/SM-NONINDEX). Static sitemap regen: edit allowlist **and** `public-canonical-static-routes-v1.txt` → `generate-sitemap-static.py` → `validate-sitemap-static-completeness.py` → deploy. |
 | **Next operator action (WPilot 6D)** | Exact lines `APPROVE ISEO-SU WPILOT BRIDGE AND READ-ONLY SMOKE 6D` + `CONFIRM ISEO-SU FRESH BEGET BACKUP FOR WPILOT 6D` |
 
 Hosting: **Beget**. WordPress Admin: `https://i-seo.su/wp-admin/`. Staging: **absent**. Architecture: **hybrid** — see knowledge base.

@@ -3,14 +3,14 @@
 **Programme:** ISEO-SU-SITE-OPS  
 **Site:** `https://i-seo.su/`
 **Canonical locus:** `X:\AI MARS\projects\iseo-su-site-ops\`  
-**Updated:** 2026-08-24 (STATIC SITEMAP COMPLETENESS FIX 01)  
+**Updated:** 2026-08-24 (TECH CLEANUP WAVE 01)  
 **Authority:** first current-state document for ordinary work
 
 Historical REPORT files record earlier states and do not override this document or fresher accepted evidence.
 
 ## 1. Overall Status
 
-The production site is operating; glossary publication, form hardening, form HMAC secret rotation to a production-local authority, technical/SEO audit, and the Metrika visitor-IP addon are complete milestones. HIGH FIX WAVE 01 is **CLOSED** (technical): root `/sitemap.xml` repaired, initial static allowlist generator deployed (historical coverage was incomplete), theme relative `img/` paths normalized to `/img/`. **Static sitemap completeness fix 01 is CLOSED**: SEO-supplied 54 missing public URLs validated and added; +2 legal pages from broader reconciliation; static sitemap **71 → 127**; completeness gate `PUBLIC_CANONICAL_STATIC_ROUTES - SITEMAP_STATIC_URLS = 0` required on regenerate. Remaining open work is the MEDIUM/LOW/REVIEW audit backlog only (separate charter).
+The production site is operating; glossary publication, form hardening, form HMAC secret rotation to a production-local authority, technical/SEO audit, and the Metrika visitor-IP addon are complete milestones. HIGH FIX WAVE 01 is **CLOSED** (technical): root `/sitemap.xml` repaired, initial static allowlist generator deployed (historical coverage was incomplete), theme relative `img/` paths normalized to `/img/`. **Static sitemap completeness fix 01 is CLOSED**: SEO-supplied 54 missing public URLs validated and added; +2 legal pages from broader reconciliation; static sitemap **71 → 127**; completeness gate `PUBLIC_CANONICAL_STATIC_ROUTES - SITEMAP_STATIC_URLS = 0` required on regenerate. **TECH CLEANUP WAVE 01 is CLOSED**: `SM-MISSING-INDEXABLE` rechecked (eligible gap **0**), `LINK-TO-REDIR` residual **0**, `IMG-HUGE` residual **0**. Remaining open work is SEO-review audit findings only (separate charter).
 
 ## 2. Production Status
 
@@ -78,32 +78,36 @@ Archive has H1/intro/title `Глоссарий - INTLSEO Studio`; archive and si
 - Canonical root `/sitemap.xml` is a valid **sitemapindex** with exactly two children: `/sitemap-static.xml` and `/wp-sitemap.xml` (HIGH FIX WAVE 01).
 - Obsolete Yoast-style children (`post|page|category-sitemap.xml`) are no longer advertised.
 - `robots.txt` references `https://i-seo.su/sitemap.xml` only.
-- Static inventory: **71** URLs via allowlist generator `tools/generate-sitemap-static.py` (`data/sitemaps/sitemap-static-urls-v1.txt` → `production-source/sitemaps/sitemap-static.xml`).
+- Static inventory: **127** URLs via allowlist generator `tools/generate-sitemap-static.py` (`data/sitemaps/sitemap-static-urls-v1.txt` → `production-source/sitemaps/sitemap-static.xml`) with completeness validator.
 - MARS SoT: `production-source/sitemaps/`.
 
 See [Sitemap Architecture](ISEO-SU-SITEMAP-ARCHITECTURE-AND-CURRENT-STATE-v1.md) and [HIGH FIX WAVE 01 Evidence](ISEO-SU-HIGH-FIX-WAVE-01-EVIDENCE-v1.md).
 
 ## 10. Latest Tech/SEO Audit
 
-Read-only audit: **1033 crawled**, **643 indexable**, 0 critical, 2 high, 6 medium, 8 low, 14 review; page 4xx/5xx 0; broken internal links 0.
+Read-only audit (historical 2026-08-21): **1033 crawled**, **643 indexable**, 0 critical, 2 high, 6 medium, 8 low, 14 review; page 4xx/5xx 0; broken internal links 0.
 
 | ID | Severity | Current status | Owner |
 |---|---|---|---|
 | `SM-CHILD-404` | HIGH | `CLOSED` (HIGH FIX WAVE 01) | MARS / SITE OPS |
 | `IMG-BROKEN` | HIGH | `CLOSED` (HIGH FIX WAVE 01) | MARS / SITE OPS |
+| `SM-MISSING-INDEXABLE` | MEDIUM | `CLOSED / RECHECKED` (TECH CLEANUP WAVE 01; eligible gap 0) | MARS / SITE OPS |
+| `LINK-TO-REDIR` | LOW | `CLOSED` (TECH CLEANUP WAVE 01) | MARS / SITE OPS |
+| `IMG-HUGE` | LOW | `CLOSED` (TECH CLEANUP WAVE 01) | MARS / SITE OPS |
 | Remaining IDs in findings CSV | MEDIUM/LOW/REVIEW | `SEO_REVIEW` | CSV owner per finding |
 | `SM-DUAL-ARCH` | INFO | `EXPECTED` (root repaired; ownership split remains) | SEO REVIEW |
 
-Authority: [Audit Evidence](ISEO-SU-TECH-SEO-AUDIT-EVIDENCE-v1.md) and `audits/tech-seo/ISEO-SU-TECH-SEO-FINDINGS-v1.csv`.
+Authority: [Audit Evidence](ISEO-SU-TECH-SEO-AUDIT-EVIDENCE-v1.md), backlog CSV, [TECH CLEANUP WAVE 01 Evidence](ISEO-SU-TECH-CLEANUP-WAVE-01-EVIDENCE-v1.md).
 
 ## 11. Open Technical Tasks
 
 1. ~~Root sitemap repair~~ — **CLOSED** (HIGH FIX WAVE 01).
-2. ~~Static sitemap maintenance~~ — **CLOSED** (allowlist generator + documented regen).
+2. ~~Static sitemap maintenance~~ — **CLOSED** (allowlist generator + documented regen + completeness fix).
 3. ~~Blog image paths~~ — **CLOSED** (theme `/img/` normalization + targeted recrawl PASS).
-4. **Audit backlog:** review and route remaining MEDIUM / LOW / REVIEW signals using the findings CSV; technical implementation remains Site Ops, semantic decisions remain SEO review. **Not started** in WAVE 01.
+4. ~~Tech cleanup wave 01~~ — **CLOSED** (sitemap-gap recheck, redirect-link cleanup, two heavy images).
+5. **SEO-review backlog:** remaining CANON/TITLE/META/ORPHAN/ALT/OG/SM-NONINDEX signals — charter separately; no autofix.
 
-HIGH open after WAVE 01 (these two findings): **0**.
+HIGH open: **0**. OPEN_TECH from wave 01: **0**.
 
 ## 12. Deferred Optional Work
 
