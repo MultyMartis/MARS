@@ -169,8 +169,9 @@ Allowlisted paths:
 ## 17. Remote Sync
 
 Target: `origin/mars/canonical-post-recovery`  
-Method: push sync branch then fast-forward merge/push to canonical (no force).  
-Status: in progress at REPORT draft time; finalized after push.
+Method: clean worktree FF push (`d4ecf1a0..06a290ad`), no force.  
+Result: **COMPLETE** — tip `06a290ad` (`docs(iseo-su): prepare seo review decision pack`).  
+Previously reported WAVE 01 tip `9c669a70` remains historical; remote had advanced to `d4ecf1a0` before this pack.
 
 ## 18. Final Decision
 

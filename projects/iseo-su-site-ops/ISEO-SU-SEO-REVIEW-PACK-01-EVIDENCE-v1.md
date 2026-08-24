@@ -25,7 +25,7 @@ Prepare Russian SEO-facing decision materials so specialists can independently r
 | `reports/ISEO-SU-TECH-CLEANUP-WAVE-01-RU.md` | Accepted tech cleanup summary |
 | `ISEO-SU-TECH-CLEANUP-WAVE-01-EVIDENCE-v1.md` | WAVE 01 closure evidence |
 | `ISEO-SU-CURRENT-STATE-v1.md` | Current accepted project state |
-| Remote tip reference | `origin/mars/canonical-post-recovery` @ `9c669a70` (verify at sync) |
+| Remote tip reference | Task charter cited `9c669a70`; at sync time `origin/mars/canonical-post-recovery` was `d4ecf1a0`; pack persisted as `06a290ad` |
 
 No live production recrawl was performed in this task. Counts for open SEO items are **original audit counts** unless a later accepted wave materially superseded them.
 
