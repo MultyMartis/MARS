@@ -27,15 +27,9 @@ $support_heading = shpigovsky_get_rehab_requirements_scalar( 'rehab_requirements
 $support_items  = shpigovsky_get_rehab_requirements_support_items();
 $photo          = shpigovsky_get_rehab_requirements_photo();
 
-// Callers that already provide a layout container (e.g. Specialists Hub) may omit the inner wrapper.
-$args                 = ( isset( $args ) && is_array( $args ) ) ? $args : array();
-$omit_inner_container = ! empty( $args['omit_inner_container'] );
-
 ?>
 <section data-reveal class="home-rehabilitation-requirements" aria-labelledby="home-rehabilitation-requirements-heading">
-  <?php if ( ! $omit_inner_container ) : ?>
   <div class="container">
-  <?php endif; ?>
     <h2 class="home-rehabilitation-requirements__heading" id="home-rehabilitation-requirements-heading"><?php echo wp_kses_post( $heading ); ?></h2>
     <p class="block-whith-red-line"><?php echo wp_kses_post( $intro ); ?></p>
 
@@ -98,7 +92,5 @@ $omit_inner_container = ! empty( $args['omit_inner_container'] );
         decoding="async"
       >
     </div>
-  <?php if ( ! $omit_inner_container ) : ?>
   </div>
-  <?php endif; ?>
 </section>

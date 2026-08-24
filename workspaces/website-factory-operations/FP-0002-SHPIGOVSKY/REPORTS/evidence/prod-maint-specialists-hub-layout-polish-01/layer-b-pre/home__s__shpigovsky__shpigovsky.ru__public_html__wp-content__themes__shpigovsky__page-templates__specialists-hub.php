@@ -17,8 +17,7 @@ get_header();
 ?>
 <main class="page-plain-content__main site-main site-main--specialists-hub" id="main-content">
 	<?php
-	// Specialists Hub: breadcrumbs without `.internal-page-nav` shell (page-local only).
-	shpigovsky_render_breadcrumbs( array( 'wrap' => 'none' ) );
+	shpigovsky_render_breadcrumbs();
 	while ( have_posts() ) :
 		the_post();
 		get_template_part( 'template-parts/specialist/hub-content' );

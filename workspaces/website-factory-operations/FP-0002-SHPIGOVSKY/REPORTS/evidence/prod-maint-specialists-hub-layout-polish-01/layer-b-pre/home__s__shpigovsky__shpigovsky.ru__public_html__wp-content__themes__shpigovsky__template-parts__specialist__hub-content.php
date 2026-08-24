@@ -57,14 +57,7 @@ if ( function_exists( 'get_field' ) ) {
 			<?php
 			foreach ( $selected as $block_key ) {
 				if ( 'rehab_requirements' === $block_key ) {
-					// Hub already owns `.container plain-page-content__container` — omit nested inner container.
-					get_template_part(
-						'template-parts/home/rehabilitation-requirements',
-						null,
-						array(
-							'omit_inner_container' => true,
-						)
-					);
+					get_template_part( 'template-parts/home/rehabilitation-requirements' );
 				} elseif ( 'about_home' === $block_key ) {
 					get_template_part(
 						'template-parts/home/comfort',
