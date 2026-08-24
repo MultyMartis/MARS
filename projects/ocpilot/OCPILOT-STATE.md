@@ -1,5 +1,6 @@
 
 
+**SITE-002 Run 4.338 (2026-08-24):** Post-import and monitor healthcheck 01 **COMPLETE / GREEN** — scheduled monitor `2026-08-24_12-30-03` `NO_ACTION_REQUIRED` 1887→1887; Telegram OK correlated; latest natural 1C import `2026-08-24` SUCCESS with offers; mapping `95`/`364` persistence **CONFIRMED**; sitemap **1887**; `upakovochnoe` still separate 404; production mutation **0**. Report: [SITE-002-POST-IMPORT-AND-MONITOR-HEALTHCHECK-01.md](sites/site-002/reports/SITE-002-POST-IMPORT-AND-MONITOR-HEALTHCHECK-01.md).
 **SITE-002 Run 4.337 (2026-08-20):** Monitor baseline metadata fix 01 **COMPLETE** — MONITOR-01 `sitemap-current-summary.json` stale **1377→1887** (metadata only); urls.json unchanged at **1887**; production/runtime/monitor-logic/baseline-refresh **0**. Report: [SITE-002-MONITOR-BASELINE-METADATA-FIX-01.md](sites/site-002/reports/SITE-002-MONITOR-BASELINE-METADATA-FIX-01.md).
 **SITE-002 Run 4.336 (2026-08-20):** Post-baseline workspace closeout **COMPLETE** — authority docs-03 clean/synced; git tails closed; dirty main foreign WIP recorded untouched; runtime checkout known (`df240710` + preserved D6G1A dirty surface); docs-01/docs-02 cleanup candidates inventoried (no delete); open items registered; no production/runtime/baseline mutation. Report: [SITE-002-POST-BASELINE-WORKSPACE-CLOSEOUT-01.md](sites/site-002/reports/SITE-002-POST-BASELINE-WORKSPACE-CLOSEOUT-01.md).
 **SITE-002 Run 4.335 (2026-08-20):** Monitor baseline refresh 09 **COMPLETE** — pretty-URL sitemap **1887** accepted after scheduled validation `2026-08-20_13-29-44`; old baseline **1879** frozen; post-refresh check **NO_ACTION_REQUIRED** 1887→1887 exact/semantic 0/0; route churn blocker resolved; `upakovochnoe` still separate; observe next 1C import for `95`/`364`. Report: [SITE-002-MONITOR-BASELINE-REFRESH-09.md](sites/site-002/reports/SITE-002-MONITOR-BASELINE-REFRESH-09.md).
@@ -23,7 +24,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-08-20
-**Evidence cutoff:** 2026-08-20 (SITE-002 Run **4.337** / `SITE-002-MONITOR-BASELINE-METADATA-FIX-01` — stale MONITOR-01 summary **1377→1887**; active baseline **1887** unchanged; observe next 1C import for `95`/`364`)
+**Evidence cutoff:** 2026-08-24 (SITE-002 Run **4.338** / `SITE-002-POST-IMPORT-AND-MONITOR-HEALTHCHECK-01` — monitor OK 1887; mapping `95`/`364` persistence confirmed; `upakovochnoe` remains separate)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -37,7 +38,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Monitor baseline metadata fix COMPLETE (Run 4.337)** — active baseline **1887**; MONITOR-01 summary aligned **1377→1887**; remaining open items: observe next 1C import `95`/`364`; `upakovochnoe` separate; D6G1A UX separate; docs-01/02 cleanup candidates (no delete) · [metadata fix 4.337](sites/site-002/reports/SITE-002-MONITOR-BASELINE-METADATA-FIX-01.md) · [closeout 4.336](sites/site-002/reports/SITE-002-POST-BASELINE-WORKSPACE-CLOSEOUT-01.md) · [refresh 4.335](sites/site-002/reports/SITE-002-MONITOR-BASELINE-REFRESH-09.md) · [validation 4.334](sites/site-002/reports/SITE-002-POST-RUNTIME-SYNC-SCHEDULED-MONITOR-VALIDATION-01.md) |
+| Current SITE-002 focus | **Post-import monitor healthcheck GREEN (Run 4.338)** — baseline **1887**; monitor `NO_ACTION_REQUIRED`; mapping `95`/`364` persistence **CONFIRMED**; remaining open: `upakovochnoe` separate; `hlebopekarnoe`/`barnoe` separate; D6G1A UX separate; docs-01/02 cleanup candidates (no delete) · [healthcheck 4.338](sites/site-002/reports/SITE-002-POST-IMPORT-AND-MONITOR-HEALTHCHECK-01.md) · [metadata fix 4.337](sites/site-002/reports/SITE-002-MONITOR-BASELINE-METADATA-FIX-01.md) · [closeout 4.336](sites/site-002/reports/SITE-002-POST-BASELINE-WORKSPACE-CLOSEOUT-01.md) · [refresh 4.335](sites/site-002/reports/SITE-002-MONITOR-BASELINE-REFRESH-09.md) |
 
 ### Git authority note (SITE-002 Wave E — 2026-07-10)
 
