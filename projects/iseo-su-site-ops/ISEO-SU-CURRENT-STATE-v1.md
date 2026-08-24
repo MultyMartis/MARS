@@ -3,7 +3,7 @@
 **Programme:** ISEO-SU-SITE-OPS  
 **Site:** `https://i-seo.su/`
 **Canonical locus:** `X:\AI MARS\projects\iseo-su-site-ops\`  
-**Updated:** 2026-08-24 (TECH CLEANUP WAVE 01)  
+**Updated:** 2026-08-24 (SEO REVIEW PACK 01 — decision materials only)  
 **Authority:** first current-state document for ordinary work
 
 Historical REPORT files record earlier states and do not override this document or fresher accepted evidence.
@@ -105,7 +105,7 @@ Authority: [Audit Evidence](ISEO-SU-TECH-SEO-AUDIT-EVIDENCE-v1.md), backlog CSV,
 2. ~~Static sitemap maintenance~~ — **CLOSED** (allowlist generator + documented regen + completeness fix).
 3. ~~Blog image paths~~ — **CLOSED** (theme `/img/` normalization + targeted recrawl PASS).
 4. ~~Tech cleanup wave 01~~ — **CLOSED** (sitemap-gap recheck, redirect-link cleanup, two heavy images).
-5. **SEO-review backlog:** remaining CANON/TITLE/META/ORPHAN/ALT/OG/SM-NONINDEX signals — charter separately; no autofix.
+5. **SEO-review backlog:** remaining CANON/TITLE/META/ORPHAN/ALT/OG/SM-NONINDEX signals — **decision pack prepared** (`reports/ISEO-SU-SEO-REVIEW-PACK-01-RU.md`); awaiting SEO answers; no autofix; finding semantic statuses unchanged until SEO decides.
 
 HIGH open: **0**. OPEN_TECH from wave 01: **0**.
 

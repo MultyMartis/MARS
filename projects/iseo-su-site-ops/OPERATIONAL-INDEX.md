@@ -27,7 +27,7 @@
 
 1. ~~`SM-CHILD-404` / static sitemap / `IMG-BROKEN`~~ — **CLOSED** (HIGH FIX + completeness).
 2. ~~Tech cleanup wave 01~~ — **CLOSED** (`SM-MISSING-INDEXABLE` rechecked; `LINK-TO-REDIR` / `IMG-HUGE` closed).
-3. Review/route remaining **SEO_REVIEW** audit signals (canonical, titles/metas, orphans, alt, OG, SM-NONINDEX) using the backlog CSV — separate charter; no autofix.
+3. **SEO review pack 01 prepared** — awaiting SEO answers: [SEO report RU](reports/ISEO-SU-SEO-REVIEW-PACK-01-RU.md) · [decision checklist](reports/ISEO-SU-SEO-DECISION-CHECKLIST-01-RU.md) · [evidence](ISEO-SU-SEO-REVIEW-PACK-01-EVIDENCE-v1.md). Remaining **SEO_REVIEW** signals still open pending decisions; **no autofix**.
 
 **Deferred optional:** mobile glossary offcanvas, archive Yoast description, MERGED alias polish, unnecessary sitemap duplication, WPilot 6D.
 
@@ -60,7 +60,7 @@
 | **Access files** | **LOCAL-ONLY FILLED / VALIDATED** (Git-ignored) |
 | **WPilot** | **ACTIVE** RC6; bridge **DISABLED**; writes **DISABLED**; token **LOCAL-ONLY**; REST **NOT RUN** |
 | **Open blockers / open required task groups** | **0 / 4** |
-| **Next operator action (site work)** | Optional: charter remaining **SEO_REVIEW** backlog (canonical/title/meta/orphan/alt/OG/SM-NONINDEX). Static sitemap regen: edit allowlist **and** `public-canonical-static-routes-v1.txt` → `generate-sitemap-static.py` → `validate-sitemap-static-completeness.py` → deploy. |
+| **Next operator action (site work)** | Collect SEO answers from review pack 01 / checklist; then charter scoped implementation only for approved items. Static sitemap regen (if ever needed): edit allowlist **and** `public-canonical-static-routes-v1.txt` → `generate-sitemap-static.py` → `validate-sitemap-static-completeness.py` → deploy. |
 | **Next operator action (WPilot 6D)** | Exact lines `APPROVE ISEO-SU WPILOT BRIDGE AND READ-ONLY SMOKE 6D` + `CONFIRM ISEO-SU FRESH BEGET BACKUP FOR WPILOT 6D` |
 
 Hosting: **Beget**. WordPress Admin: `https://i-seo.su/wp-admin/`. Staging: **absent**. Architecture: **hybrid** — see knowledge base.
