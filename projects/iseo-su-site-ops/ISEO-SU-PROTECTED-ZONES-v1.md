@@ -1,7 +1,7 @@
 # ISEO-SU PROTECTED ZONES v1
 
 **Programme:** ISEO-SU-SITE-OPS  
-**Updated:** 2026-08-20 form anti-spam baseline  
+**Updated:** 2026-08-24 Metrika visitor IP param addon  
 **Policy:** Default **protect-all** until an exact task charter names paths/surfaces.
 
 No secrets stored here.
@@ -27,7 +27,8 @@ No secrets stored here.
 | Routing | `.htaccess` | HTTPS, www, HTML-as-PHP, WP rewrite |
 | Database | Beget MySQL | content/leads integrity |
 | Forms / mail | all `*__FORM.php` + service copies + `iseo-form-*.php` + `.iseo-form-runtime/` | lead loss / PII; server validation + anti-spam authority — see Form Security Baseline |
-| Shared JS | `js/common.js` | forms + calculator + tariffs; includes `ISEO_FORM_SECURITY_V1` honeypot/token inject — reconcile with `production-source/js/common.js` |
+| Shared JS | `js/common.js` | forms + calculator + tariffs; includes `ISEO_FORM_SECURITY_V1` honeypot/token inject + Metrika visitor IP loader hook — reconcile with `production-source/js/common.js` |
+| Metrika visitor IP addon | `metrika-visitor-ip-config.php`, `metrika-visitor-ip.php`, `js/metrika-visitor-ip.js` | analytics-only kill-switchable IP→Metrika param; do not turn into auto-ban; mirror `production-source/metrika-ip/` |
 | Shared CSS | `css/main.css`, `css/media.css` | sitewide marketing look; **`css/main.css` operator manual glossary tuning plus glossary-scoped mobile overflow block; canonical SHA `4a1202b6…`; reconcile before automation overwrite** |
 | SEO calculator / tariffs | `/tariff-calc`, ACF calculator groups, `tarif-calc.php`, handlers | revenue tool |
 | Web-KP / offers | `/offers`, CPT `offer`, `single-offer.php`, ACF «Предложения» | private commercial proposals |

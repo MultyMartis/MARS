@@ -2871,3 +2871,16 @@ $(document).ready(function () {
   });
 })(jQuery);
 
+/* ISEO-SU Metrika visitor IP param loader — fail-open; kill switch is server config */
+(function () {
+  try {
+    if (window.__ISEO_METRIKA_VISITOR_IP_LOADER) return;
+    window.__ISEO_METRIKA_VISITOR_IP_LOADER = true;
+    var s = document.createElement("script");
+    s.src = "/js/metrika-visitor-ip.js";
+    s.async = true;
+    (document.head || document.documentElement).appendChild(s);
+  } catch (_e) {}
+})();
+
+

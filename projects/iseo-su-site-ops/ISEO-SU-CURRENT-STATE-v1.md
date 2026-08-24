@@ -2,18 +2,19 @@
 
 **Programme:** ISEO-SU-SITE-OPS  
 **Canonical locus:** `X:\AI MARS\projects\iseo-su-site-ops\`  
-**Updated:** 2026-08-21 (operator recipient removal + tech/SEO audit 01)  
+**Updated:** 2026-08-24 (Metrika visitor IP param addon)  
 **Authority rank:** primary project brain for ordinary next tasks
 
 ---
 
 ## 1. Project Status
 
-**COMPLETE — ISEO-SU FORMS HARDENED / ANTISPAM ACTIVE / OPERATOR RECIPIENT REMOVED / TECH-SEO AUDIT COMPLETE**  
+**COMPLETE — ISEO-SU FORMS HARDENED / ANTISPAM ACTIVE / OPERATOR RECIPIENT REMOVED / TECH-SEO AUDIT COMPLETE / METRIKA VISITOR IP PARAM ADDON ACTIVE**  
 **All-forms isolated mail acceptance:** **COMPLETE** (historical) — Acceptance 02 proved correct operator mailbox delivery; typo `im.work@nail.ru` removed.  
 **Form recipient restore verification:** **COMPLETE** (historical) — see `ISEO-SU-FORM-RECIPIENT-RESTORATION-EVIDENCE-v1.md`.  
 **Operator recipient removal:** **COMPLETE** — `im.work@mail.ru` intentionally removed from production recipients; active set = `nikel007i33@yandex.ru` only; `test_mode` OFF; see `ISEO-SU-FORM-OPERATOR-RECIPIENT-REMOVAL-EVIDENCE-v1.md`.  
-**Tech/SEO audit (read-only):** **COMPLETE** — SEO visibility report + internal evidence; fixes deferred to separate Site Ops waves.
+**Tech/SEO audit (read-only):** **COMPLETE** — SEO visibility report + internal evidence; fixes deferred to separate Site Ops waves.  
+**Metrika visitor IP param addon:** **ACTIVE / ENABLED** — analytics-only; parameter `ipaddress` → counter **54287016**; kill switch `production-source/metrika-ip/metrika-visitor-ip-config.php` (`"enabled"`); IP blocking remains **manual / out of scope**. See `ISEO-SU-METRIKA-VISITOR-IP-PARAM-BASELINE-v1.md`.
 
 Glossary/site-ops stabilization remains accepted. Public form anti-spam/validation charter is **closed**. Ordinary future work starts from this file + Task Routing Guide + Protected Zones + Form Security Baseline.
 
@@ -82,6 +83,8 @@ Do **not** publish non-eligible without a new charter.
 | Artifact | Path |
 |----------|------|
 | Shared CSS SoT in MARS | `production-source/css/main.css` |
+| Shared forms JS SoT | `production-source/js/common.js` (includes Metrika IP loader hook) |
+| Metrika visitor IP addon | `production-source/metrika-ip/` |
 | Theme glossary package | `wordpress/iseoblog-glossary/` |
 | Content corpus | `content/glossary/batch-0{1..4}/` + editorial CSV under `data/glossary-editorial/` |
 | Immutable source workbook | `materials/glossary/ISEO-SU-GLOSSARY-SOURCE-NIKITA-v1.xlsx` |

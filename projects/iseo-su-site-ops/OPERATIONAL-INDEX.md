@@ -25,8 +25,8 @@
 
 | Field | Value |
 |-------|-------|
-| **Lifecycle** | **COMPLETE — FORMS HARDENED / OPERATOR RECIPIENT REMOVED / TECH-SEO AUDIT COMPLETE (fixes deferred)** |
-| **Project status** | Glossary public: **184** published eligible; **57** non-eligible drafts; `/glossary/` **200**; archive/single services `page_scene` hero; desktop submenu **Глоссарий** after calculator; archive title **Глоссарий - INTLSEO Studio**; Yoast glossary sitemap **184**; custom `sitemap.xml` unchanged; mobile overflow **fixed** (glossary-scoped CSS, SHA `4a1202b6…`); mobile offcanvas **intentionally unchanged**; WPilot bridge/writes/REST still gated; production form recipient = **original only** (`nikel007i33@yandex.ru`); tech/SEO audit HIGH: broken Yoast child sitemaps + blog relative image 404s |
+| **Lifecycle** | **COMPLETE — FORMS HARDENED / OPERATOR RECIPIENT REMOVED / TECH-SEO AUDIT COMPLETE / METRIKA IP PARAM ADDON ON** |
+| **Project status** | Glossary public: **184** published eligible; **57** non-eligible drafts; `/glossary/` **200**; archive/single services `page_scene` hero; desktop submenu **Глоссарий** after calculator; archive title **Глоссарий - INTLSEO Studio**; Yoast glossary sitemap **184**; custom `sitemap.xml` unchanged; mobile overflow **fixed** (glossary-scoped CSS, SHA `4a1202b6…`); mobile offcanvas **intentionally unchanged**; WPilot bridge/writes/REST still gated; production form recipient = **original only** (`nikel007i33@yandex.ru`); tech/SEO audit HIGH: broken Yoast child sitemaps + blog relative image 404s; Metrika visitor IP param addon **ON** (`ipaddress` → counter **54287016**; kill switch in `metrika-visitor-ip-config.php`; analytics-only, no auto-ban) |
 | **Architecture knowledge** | **COMPLETE** — knowledge base + route matrix + task routing guide |
 | **Glossary** | Foundation + Batches 01–04 content + **controlled public launch 2026-07-26** + final integration/post-launch closeout **2026-08-18** |
 | **Current phase (WPilot)** | **PHASE 6D — BLOCKED** (bridge/smoke awaiting exact approval + backup lines) — **not required** for ordinary site content/file tasks |
@@ -34,7 +34,7 @@
 | **Access files** | **LOCAL-ONLY FILLED / VALIDATED** (Git-ignored) |
 | **WPilot** | **ACTIVE** RC6; bridge **DISABLED**; writes **DISABLED**; token **LOCAL-ONLY**; REST **NOT RUN** |
 | **Open blockers / open required** | **0 / 0** |
-| **Next operator action (site work)** | Review SEO audit report; charter Site Ops fix wave for sitemap children 404 + blog image relative paths. Forms: operator mailbox removed from production recipients (`ISEO-SU-FORM-OPERATOR-RECIPIENT-REMOVAL-EVIDENCE-v1.md`) |
+| **Next operator action (site work)** | Review SEO audit report; charter Site Ops fix wave for sitemap children 404 + blog image relative paths. Forms: operator mailbox removed from production recipients (`ISEO-SU-FORM-OPERATOR-RECIPIENT-REMOVAL-EVIDENCE-v1.md`). Metrika IP addon: disable via one config flag if needed (`ISEO-SU-METRIKA-VISITOR-IP-PARAM-BASELINE-v1.md`) |
 | **Next operator action (WPilot 6D)** | Exact lines `APPROVE ISEO-SU WPILOT BRIDGE AND READ-ONLY SMOKE 6D` + `CONFIRM ISEO-SU FRESH BEGET BACKUP FOR WPILOT 6D` |
 
 Hosting: **Beget**. WordPress Admin: `https://i-seo.su/wp-admin/`. Staging: **absent**. Architecture: **hybrid** — see knowledge base.

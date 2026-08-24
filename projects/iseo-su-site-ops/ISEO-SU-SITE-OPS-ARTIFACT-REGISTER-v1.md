@@ -6,6 +6,16 @@
 Status vocabulary: **CURRENT** · **CANONICAL** · **HISTORICAL** · **SUPERSEDED** · **SCRATCH_REMOVED** · **COMPLETE** · **CREATED** · **PLANNED** · **CONDITIONAL** · **DEFERRED** · **NOT AUTHORIZED** · **OPEN** · **BLOCKED**
 
 
+### Metrika visitor IP param addon (2026-08-24) — CURRENT / CANONICAL
+
+| Artifact | Path | Class |
+|----------|------|-------|
+| Metrika visitor IP baseline | `ISEO-SU-METRIKA-VISITOR-IP-PARAM-BASELINE-v1.md` | CURRENT / CANONICAL |
+| Metrika visitor IP evidence | `ISEO-SU-METRIKA-VISITOR-IP-PARAM-EVIDENCE-v1.md` | CURRENT |
+| Addon production source | `production-source/metrika-ip/` | CANONICAL |
+| Shared JS (loader hook) | `production-source/js/common.js` | CANONICAL |
+| Task REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-METRIKA-VISITOR-IP-PARAM-01.md` | CURRENT |
+
 ### Form anti-spam and validation (2026-08-20) — CURRENT / CANONICAL
 
 | Artifact | Path | Class |
