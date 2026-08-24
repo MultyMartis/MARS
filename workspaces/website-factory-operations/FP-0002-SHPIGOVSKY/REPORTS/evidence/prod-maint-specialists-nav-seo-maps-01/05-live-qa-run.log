@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "X:\AI MARS\worktrees\fp0002-specialists-nav-seo-maps-01\workspaces\website-factory-operations\FP-0002-SHPIGOVSKY\REPORTS\evidence\prod-maint-specialists-nav-seo-maps-01\_03_live_qa.py", line 206, in <module>
+    main()
+    ~~~~^^
+  File "X:\AI MARS\worktrees\fp0002-specialists-nav-seo-maps-01\workspaces\website-factory-operations\FP-0002-SHPIGOVSKY\REPORTS\evidence\prod-maint-specialists-nav-seo-maps-01\_03_live_qa.py", line 201, in main
+    print(json.dumps(report, ensure_ascii=False, indent=2)[:16000])
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MetaCODE ONE\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1251.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 666-667: character maps to <undefined>

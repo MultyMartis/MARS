@@ -42,6 +42,7 @@ final class TypographyFilters implements ModuleInterface {
 		'redirect',
 		'map_url',
 		'map_embed',
+		'map_embed_code',
 		'yandex_map',
 		'video_url',
 		'video_file',

@@ -2990,6 +2990,17 @@ final class FieldGroups implements ModuleInterface {
 								'instructions' => 'Вставьте полный код конструктора Яндекс.Карт: <script ...></script>.',
 							)
 						),
+						self::field(
+							'field_fp02_contacts_location_map_scroll',
+							'Прокрутка карты',
+							'map_scroll',
+							'true_false',
+							array(
+								'default_value' => 0,
+								'ui'            => 1,
+								'instructions'  => 'Вкл — колёсико мыши управляет масштабом карты. По умолчанию выкл.',
+							)
+						),
 						self::field( 'field_fp02_contacts_location_map_alt', 'Alt карты', 'map_alt', 'text' ),
 						self::field( 'field_fp02_contacts_location_simplified', 'Упрощённая карточка', 'simplified', 'true_false' ),
 					),

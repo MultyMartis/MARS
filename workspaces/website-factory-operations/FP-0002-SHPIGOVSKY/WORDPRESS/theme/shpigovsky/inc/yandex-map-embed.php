@@ -10,6 +10,65 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
+ * Force the scroll query parameter on a Yandex Constructor script URL.
+ *
+ * @param string $src           Constructor script URL.
+ * @param string $scroll_value  "true" or "false".
+ * @return string
+ */
+function shpigovsky_set_yandex_constructor_scroll_param( $src, $scroll_value ) {
+	$src          = trim( (string) $src );
+	$scroll_value = ( 'true' === strtolower( (string) $scroll_value ) ) ? 'true' : 'false';
+
+	if ( '' === $src ) {
+		return '';
+	}
+
+	if ( preg_match( '/([?&])scroll=(true|false)/i', $src ) ) {
+		return (string) preg_replace( '/([?&])scroll=(true|false)/i', '${1}scroll=' . $scroll_value, $src, 1 );
+	}
+
+	$separator = ( false === strpos( $src, '?' ) ) ? '?' : '&';
+
+	return $src . $separator . 'scroll=' . $scroll_value;
+}
+
+/**
+ * Normalize scroll behavior then sanitize a trusted Yandex Constructor embed snippet.
+ *
+ * @param string $raw_code       Raw embed code from admin.
+ * @param bool   $scroll_enabled Whether wheel scroll should control map zoom.
+ * @return string Safe script HTML or empty string when invalid.
+ */
+function shpigovsky_normalize_yandex_constructor_embed( $raw_code, $scroll_enabled = false ) {
+	$raw_code = trim( html_entity_decode( (string) $raw_code, ENT_QUOTES | ENT_HTML5, 'UTF-8' ) );
+
+	if ( '' === $raw_code ) {
+		return '';
+	}
+
+	$scroll_value = $scroll_enabled ? 'true' : 'false';
+
+	$normalized = preg_replace_callback(
+		'#(<script\b[^>]*\ssrc=(["\']))([^"\']+)\2#i',
+		static function ( $matches ) use ( $scroll_value ) {
+			$src     = html_entity_decode( (string) $matches[3], ENT_QUOTES | ENT_HTML5, 'UTF-8' );
+			$updated = shpigovsky_set_yandex_constructor_scroll_param( $src, $scroll_value );
+
+			return $matches[1] . $updated . $matches[2];
+		},
+		$raw_code,
+		1
+	);
+
+	if ( ! is_string( $normalized ) || '' === $normalized ) {
+		$normalized = $raw_code;
+	}
+
+	return shpigovsky_sanitize_yandex_constructor_embed( $normalized );
+}
+
+/**
  * Sanitize a Yandex Constructor embed snippet to a single safe script tag.
  *
  * @param string $raw_code Raw embed code from admin.
@@ -56,12 +115,12 @@ function shpigovsky_sanitize_yandex_constructor_embed( $raw_code ) {
 		return '';
 	}
 
-	$src     = html_entity_decode( (string) $attrs['src'], ENT_QUOTES | ENT_HTML5, 'UTF-8' );
-	$parsed  = wp_parse_url( $src );
-	$scheme  = is_array( $parsed ) ? strtolower( (string) ( $parsed['scheme'] ?? '' ) ) : '';
-	$host    = is_array( $parsed ) ? strtolower( (string) ( $parsed['host'] ?? '' ) ) : '';
-	$path    = is_array( $parsed ) ? (string) ( $parsed['path'] ?? '' ) : '';
-	$query   = is_array( $parsed ) ? (string) ( $parsed['query'] ?? '' ) : '';
+	$src    = html_entity_decode( (string) $attrs['src'], ENT_QUOTES | ENT_HTML5, 'UTF-8' );
+	$parsed = wp_parse_url( $src );
+	$scheme = is_array( $parsed ) ? strtolower( (string) ( $parsed['scheme'] ?? '' ) ) : '';
+	$host   = is_array( $parsed ) ? strtolower( (string) ( $parsed['host'] ?? '' ) ) : '';
+	$path   = is_array( $parsed ) ? (string) ( $parsed['path'] ?? '' ) : '';
+	$query  = is_array( $parsed ) ? (string) ( $parsed['query'] ?? '' ) : '';
 
 	if ( 'https' !== $scheme || 'api-maps.yandex.ru' !== $host ) {
 		return '';

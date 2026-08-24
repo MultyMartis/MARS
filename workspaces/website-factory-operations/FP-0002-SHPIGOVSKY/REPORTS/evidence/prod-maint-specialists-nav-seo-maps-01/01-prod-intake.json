@@ -1,0 +1,133 @@
+{
+    "blog_public": 1,
+    "core_version": "0.3.28-specialists-canonical-url",
+    "theme_version": "0.3.0-d7a-shell",
+    "page_on_front": 4,
+    "page_for_posts": 19,
+    "seo": {
+        "front_page": {
+            "ID": 4,
+            "fp02_seo_title": "Центр профилактики и лечения зависимости в Москве- Шпиговский Дом",
+            "fp02_seo_description": "Центр лечения зависимостей Шпиговский Дом — место, где восстановление и реабилитация проходят без потери связи с жизнью. Запись на сайте и по телефону ☎️ +7 (925) 183-64-64",
+            "post_title": "Главная",
+            "post_type": "page",
+            "permalink": "https:\/\/shpigovsky.ru\/",
+            "template": ""
+        },
+        "posts_page": {
+            "ID": 19,
+            "fp02_seo_title": "",
+            "fp02_seo_description": "",
+            "post_title": "Статьи",
+            "post_type": "page",
+            "permalink": "https:\/\/shpigovsky.ru\/blog\/",
+            "template": ""
+        },
+        "specialists_hub_1030": {
+            "ID": 1030,
+            "fp02_seo_title": "",
+            "fp02_seo_description": "",
+            "post_title": "Специалисты",
+            "post_type": "page",
+            "permalink": "https:\/\/shpigovsky.ru\/specialisty\/",
+            "template": "page-templates\/specialists-hub.php"
+        },
+        "contacts": {
+            "ID": 20,
+            "fp02_seo_title": "Контакты центра лечения и профилактики зависимостей — Шпиговский Дом",
+            "fp02_seo_description": "Лечение зависимости в Москве и Московской области. Запись на сайте и по телефону ☎️: 8 (925) 183-64-64",
+            "post_title": "Контакты",
+            "post_type": "page",
+            "permalink": "https:\/\/shpigovsky.ru\/kontakty\/",
+            "template": "page-templates\/contacts.php"
+        },
+        "services_hub": {
+            "ID": 5,
+            "fp02_seo_title": "",
+            "fp02_seo_description": "",
+            "post_title": "Услуги",
+            "post_type": "page",
+            "permalink": "https:\/\/shpigovsky.ru\/uslugi\/",
+            "template": "page-templates\/services-hub.php"
+        },
+        "o_centre": {
+            "ID": 11,
+            "fp02_seo_title": "",
+            "fp02_seo_description": "",
+            "post_title": "О центре",
+            "post_type": "page",
+            "permalink": "https:\/\/shpigovsky.ru\/o-centre\/",
+            "template": "page-templates\/institutional.php"
+        },
+        "reviews": {
+            "ID": 18,
+            "fp02_seo_title": "",
+            "fp02_seo_description": "",
+            "post_title": "Отзывы",
+            "post_type": "page",
+            "permalink": "https:\/\/shpigovsky.ru\/otzyvy\/",
+            "template": "page-templates\/reviews.php"
+        },
+        "privacy": null,
+        "service_sample": {
+            "ID": 1011,
+            "fp02_seo_title": "",
+            "fp02_seo_description": "",
+            "post_title": "Лечение солевой зависимости",
+            "post_type": "service",
+            "permalink": "https:\/\/shpigovsky.ru\/uslugi\/zavisimosti\/lechenie-narkoticheskoy-zavisimosti\/soli\/",
+            "template": ""
+        },
+        "specialist_sample": {
+            "ID": 1031,
+            "fp02_seo_title": "",
+            "fp02_seo_description": "",
+            "post_title": "Сергей Юрьевич Шпиговский",
+            "post_type": "specialist",
+            "permalink": "https:\/\/shpigovsky.ru\/specialisty\/shpigovsky\/",
+            "template": ""
+        },
+        "article_sample": {
+            "ID": 750,
+            "fp02_seo_title": "",
+            "fp02_seo_description": "",
+            "post_title": "Лечение алкогольной зависимости: почему сила воли здесь ни при чём",
+            "post_type": "post",
+            "permalink": "https:\/\/shpigovsky.ru\/blog\/nazvanie-stati\/",
+            "template": ""
+        },
+        "generic_content_sample": null
+    },
+    "page_1030": {
+        "ID": 1030,
+        "post_name": "specialisty",
+        "template": "page-templates\/specialists-hub.php",
+        "permalink": "https:\/\/shpigovsky.ru\/specialisty\/"
+    },
+    "contacts_page": {
+        "ID": 20,
+        "permalink": "https:\/\/shpigovsky.ru\/kontakty\/",
+        "template": "page-templates\/contacts.php",
+        "locations": [
+            {
+                "index": 0,
+                "title": "Центр профилактики и лечения зависимости ",
+                "has_map_embed_code": true,
+                "map_embed_code_len": 270,
+                "map_embed_code_sha256": "eacbdbf533dcc812493f273a928adb674b7be32014ebae5a3ba0e632e684585c",
+                "map_scroll": false,
+                "simplified": false
+            },
+            {
+                "index": 1,
+                "title": "Лечение зависимостей Москва",
+                "has_map_embed_code": true,
+                "map_embed_code_len": 270,
+                "map_embed_code_sha256": "6a45ecbe21494daba98ac3991a3ec073c3b399cd6a3987bbae1693ebeaba0074",
+                "map_scroll": false,
+                "simplified": false
+            }
+        ]
+    },
+    "activity_log_recent": []
+}

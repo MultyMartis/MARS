@@ -328,6 +328,7 @@ function shpigovsky_normalize_contacts_location_rows( array $rows ) {
 		$email_label   = isset( $row['email_label'] ) ? trim( (string) $row['email_label'] ) : '';
 		$map_embed_code = isset( $row['map_embed_code'] ) ? (string) $row['map_embed_code'] : '';
 		$map_alt       = isset( $row['map_alt'] ) ? trim( (string) $row['map_alt'] ) : '';
+		$map_scroll    = ! empty( $row['map_scroll'] );
 		$simplified    = ! empty( $row['simplified'] );
 
 		if ( '' === $title && '' === $address ) {
@@ -370,6 +371,7 @@ function shpigovsky_normalize_contacts_location_rows( array $rows ) {
 			'map_embed'      => '',
 			'map_embed_code' => $map_embed_code,
 			'map_alt'        => $map_alt,
+			'map_scroll'     => $map_scroll,
 			'simplified'     => $simplified,
 		);
 	}

@@ -311,6 +311,26 @@
                     "rows": 4
                 },
                 {
+                    "key": "field_fp02_contacts_location_map_scroll",
+                    "label": "Прокрутка карты",
+                    "name": "map_scroll",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "Вкл — колёсико мыши управляет масштабом карты. По умолчанию выкл.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "Вкл",
+                    "ui_off_text": "Выкл"
+                },
+                {
                     "key": "field_fp02_contacts_location_map_alt",
                     "label": "Alt карты",
                     "name": "map_alt",
@@ -366,5 +386,5 @@
     "active": true,
     "description": "FP-0002 V9-06C canonical source field group. Runtime registration occurs only after delivery authorization.",
     "show_in_rest": 0,
-    "modified": 1784452800
+    "modified": 1756051200
 }
