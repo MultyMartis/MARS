@@ -125,3 +125,5 @@ Affected family (from audit): `varvara-new.php` + report-hub `client-report` que
 | SEO-FACING REPORT CREATED | YES |
 | SEO DECISION CHECKLIST CREATED | YES |
 | INTERNAL EVIDENCE CREATED | YES |
+| PROJECT ARTIFACTS PERSISTED | YES (`06a290ad`) |
+| REMOTE SYNC | COMPLETE (`origin/mars/canonical-post-recovery` @ `06a290ad`) |
