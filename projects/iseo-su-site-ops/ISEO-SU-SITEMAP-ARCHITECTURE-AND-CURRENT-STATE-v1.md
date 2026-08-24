@@ -1,8 +1,8 @@
 # ISEO-SU SITEMAP ARCHITECTURE AND CURRENT STATE v1
 
 **Programme:** ISEO-SU-SITE-OPS  
-**Updated:** 2026-08-24 (HIGH FIX WAVE 01)  
-**Companion evidence:** `ISEO-SU-HIGH-FIX-WAVE-01-EVIDENCE-v1.md`
+**Updated:** 2026-08-24 (STATIC SITEMAP COMPLETENESS FIX 01)  
+**Companion evidence:** `ISEO-SU-STATIC-SITEMAP-COMPLETENESS-FIX-EVIDENCE-v1.md` · historical `ISEO-SU-HIGH-FIX-WAVE-01-EVIDENCE-v1.md`
 
 ## Canonical entry
 
@@ -24,14 +24,27 @@ Obsolete Yoast-style children (`post|page|category-sitemap.xml`) are **not** adv
 
 | Item | Path / command |
 |------|----------------|
-| Allowlist | `data/sitemaps/sitemap-static-urls-v1.txt` |
+| Allowlist (source) | `data/sitemaps/sitemap-static-urls-v1.txt` |
+| Completeness inventory | `data/sitemaps/public-canonical-static-routes-v1.txt` |
 | Generator | `python projects/iseo-su-site-ops/tools/generate-sitemap-static.py` |
+| Completeness validator | `python projects/iseo-su-site-ops/tools/validate-sitemap-static-completeness.py` |
 | Output SoT | `production-source/sitemaps/sitemap-static.xml` |
-| Current URL count | **71** |
+| Current URL count | **127** |
 
-When adding/removing a public static marketing page: update allowlist → regenerate → deploy `sitemap-static.xml`.
+### Mandatory regeneration rule
+
+1. XML / HTTPS / uniqueness / HTTP health of listed URLs  
+2. Completeness:
+
+`PUBLIC_CANONICAL_STATIC_ROUTES - SITEMAP_STATIC_URLS = 0`
+
+(after approved exclusions: blog/WP, `home.html`, `report-hub/**`, handlers/admin/tests/backups)
+
+When adding/removing a public static marketing page: update **both** allowlist and inventory → regenerate → validate completeness → deploy `sitemap-static.xml`.
 
 Do **not** auto-dump every HTML file from disk (legacy twins / verification / handlers).
+
+**Historical note:** HIGH FIX WAVE 01 shipped a valid 71-URL static sitemap whose allowlist was later shown incomplete by SEO review; completeness fix 01 expanded coverage to 127 without abandoning deny-safe allowlist discipline.
 
 ## Ownership split
 

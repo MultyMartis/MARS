@@ -1,51 +1,22 @@
 # ISEO-SU-SITE-OPS Artifact Register v1
 
-**Status:** CURRENT / reconciled documentation consolidation 2026-08-24
+**Status:** ACCEPTED (Phase 1.5); **updated architecture knowledge capture** 2026-07-24; **stabilization** 2026-08-20  
 **Canonical locus:** `X:\AI MARS\projects\iseo-su-site-ops\`
 
-Primary vocabulary: **CURRENT** · **CANONICAL** · **SPECIALIZED** · **HISTORICAL** · **SUPERSEDED**. Supporting legacy labels below describe lifecycle but do not override these classes.
-
-## Current authority set
-
-| Artifact | Path | Classification |
-|---|---|---|
-| Current State | `ISEO-SU-CURRENT-STATE-v1.md` | CURRENT / CANONICAL |
-| Production Architecture Knowledge Base | `ISEO-SU-PRODUCTION-ARCHITECTURE-KNOWLEDGE-BASE-v1.md` | CURRENT / CANONICAL |
-| Task Routing Guide | `ISEO-SU-TASK-ROUTING-GUIDE-v1.md` | CURRENT / CANONICAL / OPERATIONAL MAP |
-| Route Ownership Matrix | `ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md` | CURRENT / CANONICAL / OPERATIONAL MAP |
-| Protected Zones | `ISEO-SU-PROTECTED-ZONES-v1.md` | CURRENT / CANONICAL |
-| SAFE UNKNOWN Register | `ISEO-SU-SITE-OPS-SAFE-UNKNOWN-REGISTER-v1.md` | CURRENT / CANONICAL |
-| Artifact Register | `ISEO-SU-SITE-OPS-ARTIFACT-REGISTER-v1.md` | CURRENT / CANONICAL |
-| Operational Index | `OPERATIONAL-INDEX.md` | CURRENT / CANONICAL ENTRY |
-
-## Specialized current authorities
-
-| Feature | Authority/evidence | Classification |
-|---|---|---|
-| Forms/security/recipient | `ISEO-SU-FORM-SECURITY-AND-ANTISPAM-BASELINE-v1.md`; `ISEO-SU-FORM-OPERATOR-RECIPIENT-REMOVAL-EVIDENCE-v1.md` | CURRENT / SPECIALIZED / CANONICAL |
-| Form acceptance | `ISEO-SU-FORM-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-EVIDENCE-v2.md` | SPECIALIZED / HISTORICAL ACCEPTANCE EVIDENCE |
-| Metrika visitor IP | `ISEO-SU-METRIKA-VISITOR-IP-PARAM-BASELINE-v1.md`; `ISEO-SU-METRIKA-VISITOR-IP-PARAM-EVIDENCE-v1.md` | CURRENT / SPECIALIZED |
-| Glossary final production | `ISEO-SU-GLOSSARY-FINAL-PRODUCTION-BASELINE-v1.md` | CURRENT / SPECIALIZED / CANONICAL |
-| Sitemap architecture | `ISEO-SU-SITEMAP-ARCHITECTURE-AND-CURRENT-STATE-v1.md` | CURRENT / SPECIALIZED / OPEN IMPLEMENTATION |
-| Tech SEO audit | `ISEO-SU-TECH-SEO-AUDIT-EVIDENCE-v1.md`; findings/inventory CSV; SEO-team report | CURRENT / SPECIALIZED EVIDENCE |
-| Stabilization | `ISEO-SU-STABILIZATION-CLOSEOUT-v1.md` | CANONICAL CLOSEOUT |
-| Documentation consolidation | `reports/REPORT-ISEO-SU-SITE-OPS-PROJECT-DOCUMENTATION-AND-KNOWLEDGE-CONSOLIDATION-01.md` | CURRENT TASK REPORT / GIT PERSISTENCE PENDING |
-
-## Historical and superseded policy
-
-- `reports/REPORT-*.md` from completed implementation/audit phases are **HISTORICAL EVIDENCE** even when they were “current” at creation. Their content remains unchanged.
-- Feature evidence may remain specialized proof; current operating values come from Current State and the relevant current baseline.
-- Acceptance v1 using typo `im.work@nail.ru` is **SUPERSEDED** for recipient evidence; v2 proves acceptance, while later removal evidence owns current routing.
-- Old draft-only/404 glossary instructions, old forms-without-validation statements, healthy-Yoast-root-sitemap claims, and WPilot-onboarding requirements are **SUPERSEDED** current guidance.
-- Raw/derived CSV/XLSX/source assets remain registered by family; this task did not edit them.
-
-## Inventory scope
-
-The recursive project inventory at task start contained **357 files**; **306 Markdown matches** include current authorities, feature evidence, historical REPORTs, content docs, and READMEs. Classification is by artifact family to avoid a 357-row duplicate catalog.
-
----
+Status vocabulary: **CURRENT** · **CANONICAL** · **HISTORICAL** · **SUPERSEDED** · **SCRATCH_REMOVED** · **COMPLETE** · **CREATED** · **PLANNED** · **CONDITIONAL** · **DEFERRED** · **NOT AUTHORIZED** · **OPEN** · **BLOCKED**
 
 
+### STATIC SITEMAP COMPLETENESS FIX 01 (2026-08-24) — CURRENT / CANONICAL
+
+| Artifact | Path | Status |
+|----------|------|--------|
+| Completeness fix evidence | `ISEO-SU-STATIC-SITEMAP-COMPLETENESS-FIX-EVIDENCE-v1.md` | CURRENT |
+| SEO-team completeness note | `reports/ISEO-SU-STATIC-SITEMAP-COMPLETENESS-FIX-FOR-SEO-TEAM.md` | CURRENT |
+| Task REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-STATIC-SITEMAP-COMPLETENESS-FIX-01.md` | CURRENT |
+| Public canonical static inventory | `data/sitemaps/public-canonical-static-routes-v1.txt` | CANONICAL |
+| SEO missing-54 acceptance list | `data/sitemaps/seo-missing-54-urls-v1.txt` | EVIDENCE |
+| Completeness validator | `tools/validate-sitemap-static-completeness.py` | CANONICAL |
+| Static sitemap SoT (127 URLs) | `production-source/sitemaps/sitemap-static.xml` | CANONICAL / deployed |
 ### HIGH FIX WAVE 01 — sitemap + blog images (2026-08-24) — CURRENT / CANONICAL
 
 | Artifact | Path | Class |
@@ -80,17 +51,17 @@ The recursive project inventory at task start contained **357 files**; **306 Mar
 | Metrika visitor IP evidence | `ISEO-SU-METRIKA-VISITOR-IP-PARAM-EVIDENCE-v1.md` | CURRENT |
 | Addon production source | `production-source/metrika-ip/` | CANONICAL |
 | Shared JS (loader hook) | `production-source/js/common.js` | CANONICAL |
-| Task REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-METRIKA-VISITOR-IP-PARAM-01.md` | HISTORICAL / COMPLETE |
+| Task REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-METRIKA-VISITOR-IP-PARAM-01.md` | CURRENT |
 
 ### Form anti-spam and validation (2026-08-20) — CURRENT / CANONICAL
 
 | Artifact | Path | Class |
 |----------|------|-------|
 | Form security baseline | `ISEO-SU-FORM-SECURITY-AND-ANTISPAM-BASELINE-v1.md` | CURRENT / CANONICAL |
-| Form anti-spam evidence | `ISEO-SU-FORM-ANTISPAM-VALIDATION-EVIDENCE-v1.md` | HISTORICAL / SPECIALIZED EVIDENCE (recipient narrative superseded; security results retained) |
+| Form anti-spam evidence | `ISEO-SU-FORM-ANTISPAM-VALIDATION-EVIDENCE-v1.md` | CURRENT |
 | Form handlers + security libs | `production-source/forms/` | CANONICAL |
 | Shared forms JS | `production-source/js/common.js` | CANONICAL |
-| Form anti-spam REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-FORM-ANTISPAM-AND-VALIDATION-01.md` | HISTORICAL / COMPLETE |
+| Form anti-spam REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-FORM-ANTISPAM-AND-VALIDATION-01.md` | CURRENT |
 
 ### Form recipient restore verification (2026-08-21) — HISTORICAL (restore wave)
 
@@ -108,15 +79,15 @@ The recursive project inventory at task start contained **357 files**; **306 Mar
 | Tech SEO findings CSV | `audits/tech-seo/ISEO-SU-TECH-SEO-FINDINGS-v1.csv` | CURRENT |
 | Tech SEO URL inventory CSV | `audits/tech-seo/ISEO-SU-TECH-SEO-URL-INVENTORY-v1.csv` | CURRENT |
 | SEO-team audit report | `reports/ISEO-SU-TECH-SEO-AUDIT-FOR-SEO-TEAM-v1.md` | CURRENT |
-| Task REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-RECIPIENT-REMOVE-AND-TECH-SEO-AUDIT-01.md` | HISTORICAL / COMPLETE |
+| Task REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-RECIPIENT-REMOVE-AND-TECH-SEO-AUDIT-01.md` | CURRENT |
 | Crawl raw (Storage) | `X:\AI MARS STORAGE\iseo-su-site-ops\tech-seo-audit-01\` | CURRENT (out of Git) |
 
-### All-forms isolated mail acceptance — correct operator (2026-08-21) — HISTORICAL ACCEPTANCE
+### All-forms isolated mail acceptance — correct operator (2026-08-21) — CURRENT
 
 | Artifact | Path | Class |
 |----------|------|-------|
-| All-forms isolated mail acceptance evidence v2 | `ISEO-SU-FORM-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-EVIDENCE-v2.md` | HISTORICAL / SPECIALIZED ACCEPTANCE EVIDENCE |
-| All-forms isolated mail acceptance REPORT 02 | `reports/REPORT-ISEO-SU-SITE-OPS-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-02.md` | HISTORICAL / COMPLETE |
+| All-forms isolated mail acceptance evidence v2 | `ISEO-SU-FORM-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-EVIDENCE-v2.md` | CURRENT |
+| All-forms isolated mail acceptance REPORT 02 | `reports/REPORT-ISEO-SU-SITE-OPS-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-02.md` | CURRENT |
 | Acceptance evidence v1 (typo address) | `ISEO-SU-FORM-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-EVIDENCE-v1.md` | HISTORICAL / SUPERSEDED (recipient evidence) |
 | Acceptance REPORT 01 (typo address) | `reports/REPORT-ISEO-SU-SITE-OPS-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-01.md` | HISTORICAL / SUPERSEDED (recipient evidence) |
 
@@ -126,7 +97,7 @@ The recursive project inventory at task start contained **357 files**; **306 Mar
 |----------|------|-------|
 | Current state | `ISEO-SU-CURRENT-STATE-v1.md` | CURRENT / CANONICAL |
 | Stabilization closeout | `ISEO-SU-STABILIZATION-CLOSEOUT-v1.md` | CURRENT / CANONICAL |
-| Stabilization REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-FINAL-STABILIZATION-AND-HOUSEKEEPING.md` | HISTORICAL / COMPLETE |
+| Stabilization REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-FINAL-STABILIZATION-AND-HOUSEKEEPING.md` | CURRENT |
 | Locus scratch gitignore | `.gitignore` (`_*-scratch/`) | CURRENT |
 | Scratch archive (out of Git) | `X:\AI MARS STORAGE\archives\iseo-su-site-ops-scratch-stabilization-2026-08-20\` | SCRATCH_REMOVED (retained in Storage) |
 
@@ -235,12 +206,10 @@ Phase status: **PHASE 6D — BLOCKED / PRODUCTION UNCHANGED**; accepted baseline
 
 ---
 
-## Explicit non-artifacts and security signal
+## Explicit non-artifacts
 
-This documentation wave introduced no token, password, cookie, session value, DB dump, Localhost mirror, unredacted production dump, or active `_*-scratch/` tree.
-
-**SECURITY RISK (pre-existing, not modified):** tracked `production-source/forms/iseo-form-config.php` contains HMAC secret material used by the accepted form-security implementation. Its value must never be copied into documentation, chat, REPORTs, or diffs outside an explicitly authorized secret-remediation task.
+Unchanged: no tokens/credentials in Git locus; no DB dumps; no Localhost mirror; no unredacted production dumps; no active `_*-scratch/` trees in the programme locus.
 
 ---
 
-*Artifact Register v1 · documentation consolidation 2026-08-24.*
+*Artifact Register v1 · updated 2026-08-20 form anti-spam harden.*

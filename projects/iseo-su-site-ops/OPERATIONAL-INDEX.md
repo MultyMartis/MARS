@@ -7,34 +7,6 @@
 
 ---
 
-## Start here — current authority order
-
-1. [Current State](ISEO-SU-CURRENT-STATE-v1.md)
-2. [Production Architecture Knowledge Base](ISEO-SU-PRODUCTION-ARCHITECTURE-KNOWLEDGE-BASE-v1.md)
-3. [Task Routing Guide](ISEO-SU-TASK-ROUTING-GUIDE-v1.md)
-4. [Route Ownership Matrix](ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md)
-5. [Protected Zones](ISEO-SU-PROTECTED-ZONES-v1.md)
-6. Feature baselines:
-   - [Forms / anti-spam / recipient](ISEO-SU-FORM-SECURITY-AND-ANTISPAM-BASELINE-v1.md)
-   - [Metrika visitor IP](ISEO-SU-METRIKA-VISITOR-IP-PARAM-BASELINE-v1.md)
-   - [Glossary final production](ISEO-SU-GLOSSARY-FINAL-PRODUCTION-BASELINE-v1.md)
-   - [Sitemap architecture/current state](ISEO-SU-SITEMAP-ARCHITECTURE-AND-CURRENT-STATE-v1.md)
-   - [Latest technical/SEO audit](ISEO-SU-TECH-SEO-AUDIT-EVIDENCE-v1.md)
-7. [Artifact Register](ISEO-SU-SITE-OPS-ARTIFACT-REGISTER-v1.md)
-8. Historical evidence/REPORTs only after current authorities.
-
-## Current open work
-
-1. `SM-CHILD-404`: repair `/sitemap.xml` as a valid two-child index for `/sitemap-static.xml` and `/wp-sitemap.xml`; remove obsolete 404 children; then verify robots.
-2. Decide/implement `/sitemap-static.xml` maintenance: safe automation preferred, manual rebuild/procedure fallback.
-3. `IMG-BROKEN`: repair relative blog `img/...` paths (≈96 sampled broken URLs) and regression-crawl.
-4. Review/route the remaining 6 MEDIUM, 8 LOW, and 14 REVIEW audit signals using the findings CSV.
-
-**Not implemented:** sitemap repair, static sitemap maintenance, blog image repair, and remaining audit fixes.
-**Deferred optional:** mobile glossary offcanvas, archive Yoast description, MERGED alias polish, unnecessary sitemap duplication, WPilot 6D.
-
----
-
 ## Programme identity
 
 | Field | Value |
@@ -53,16 +25,16 @@
 
 | Field | Value |
 |-------|-------|
-| **Lifecycle** | **COMPLETE — HIGH FIX WAVE 01 CLOSED / SITEMAP HEALTHY / BLOG IMAGES REPAIRED** |
-| **Project status** | Glossary public: **184** published eligible; **57** non-eligible drafts; `/glossary/` **200**; archive/single services `page_scene` hero; desktop submenu **Глоссарий** after calculator; archive title **Глоссарий - INTLSEO Studio**; Yoast glossary sitemap **184**; custom `sitemap.xml` unchanged; mobile overflow **fixed** (glossary-scoped CSS, SHA `4a1202b6…`); mobile offcanvas **intentionally unchanged**; WPilot bridge/writes/REST still gated; production form recipient = **original only** (`nikel007i33@yandex.ru`); active form HMAC secret = **production-local only** (`.iseo-form-runtime/iseo-form-secrets.local.php`), absent from current tracked source; tech/SEO audit HIGH: HIGH findings CLOSED (WAVE 01); Metrika visitor IP param addon **ON** (`ipaddress` → counter **54287016**; kill switch in `metrika-visitor-ip-config.php`; analytics-only, no auto-ban) |
+| **Lifecycle** | **COMPLETE — STATIC SITEMAP COMPLETENESS FIXED (127 URLS) / HIGH FIX WAVE 01 TECH HEALTH RETAINED / FORMS HARDENED / HMAC ROTATED / METRIKA IP PARAM ON** |
+| **Project status** | Glossary public: **184** published eligible; **57** non-eligible drafts; `/glossary/` **200**; archive/single services `page_scene` hero; desktop submenu **Глоссарий** after calculator; archive title **Глоссарий - INTLSEO Studio**; Yoast glossary sitemap **184**; root `/sitemap.xml` = index of `sitemap-static.xml` + `wp-sitemap.xml`; static sitemap **127** URLs (completeness reconciled 2026-08-24; prior allowlist incompleteness retained as historical fact); theme relative blog/home image paths repaired to `/img/`; mobile overflow **fixed** (glossary-scoped CSS, SHA `4a1202b6…`); mobile offcanvas **intentionally unchanged**; WPilot bridge/writes/REST still gated; production form recipient = **original only** (`nikel007i33@yandex.ru`); active form HMAC secret = **production-local only** (`.iseo-form-runtime/iseo-form-secrets.local.php`), absent from current tracked source; tech/SEO audit HIGH findings **CLOSED**; Metrika visitor IP param addon **ON** (`ipaddress` → counter **54287016**; kill switch in `metrika-visitor-ip-config.php`; analytics-only, no auto-ban) |
 | **Architecture knowledge** | **COMPLETE** — knowledge base + route matrix + task routing guide |
 | **Glossary** | Foundation + Batches 01–04 content + **controlled public launch 2026-07-26** + final integration/post-launch closeout **2026-08-18** |
 | **Current phase (WPilot)** | **PHASE 6D — BLOCKED** (bridge/smoke awaiting exact approval + backup lines) — **not required** for ordinary site content/file tasks |
 | **Accepted WPilot baseline** | **PHASE 6C — TOKEN CREATED / RC6 SAFE DEFAULTS** |
 | **Access files** | **LOCAL-ONLY FILLED / VALIDATED** (Git-ignored) |
 | **WPilot** | **ACTIVE** RC6; bridge **DISABLED**; writes **DISABLED**; token **LOCAL-ONLY**; REST **NOT RUN** |
-| **Open blockers / open required task groups** | **0 / 4** |
-| **Next operator action (site work)** | Optional: charter MEDIUM/LOW/REVIEW SEO backlog. Static sitemap regen: `python projects/iseo-su-site-ops/tools/generate-sitemap-static.py`. |
+| **Open blockers / open required** | **0 / 0** |
+| **Next operator action (site work)** | Optional: prioritize MEDIUM/LOW/REVIEW SEO backlog under a new charter. Forms: operator mailbox removed from production recipients. Metrika IP addon: disable via one config flag if needed (`ISEO-SU-METRIKA-VISITOR-IP-PARAM-BASELINE-v1.md`). Static sitemap: edit allowlist **and** `public-canonical-static-routes-v1.txt` → `generate-sitemap-static.py` → `validate-sitemap-static-completeness.py` → deploy. |
 | **Next operator action (WPilot 6D)** | Exact lines `APPROVE ISEO-SU WPILOT BRIDGE AND READ-ONLY SMOKE 6D` + `CONFIRM ISEO-SU FRESH BEGET BACKUP FOR WPILOT 6D` |
 
 Hosting: **Beget**. WordPress Admin: `https://i-seo.su/wp-admin/`. Staging: **absent**. Architecture: **hybrid** — see knowledge base.
@@ -82,7 +54,7 @@ Hosting: **Beget**. WordPress Admin: `https://i-seo.su/wp-admin/`. Staging: **ab
 
 Stabilization closeout: [ISEO-SU-STABILIZATION-CLOSEOUT-v1.md](ISEO-SU-STABILIZATION-CLOSEOUT-v1.md)
 
-Form security: [ISEO-SU-FORM-SECURITY-AND-ANTISPAM-BASELINE-v1.md](ISEO-SU-FORM-SECURITY-AND-ANTISPAM-BASELINE-v1.md) · evidence [ISEO-SU-FORM-ANTISPAM-VALIDATION-EVIDENCE-v1.md](ISEO-SU-FORM-ANTISPAM-VALIDATION-EVIDENCE-v1.md) · HMAC rotation [ISEO-SU-FORM-HMAC-SECRET-ROTATION-EVIDENCE-v1.md](ISEO-SU-FORM-HMAC-SECRET-ROTATION-EVIDENCE-v1.md) · operator recipient removal [ISEO-SU-FORM-OPERATOR-RECIPIENT-REMOVAL-EVIDENCE-v1.md](ISEO-SU-FORM-OPERATOR-RECIPIENT-REMOVAL-EVIDENCE-v1.md) · tech/SEO audit evidence [ISEO-SU-TECH-SEO-AUDIT-EVIDENCE-v1.md](ISEO-SU-TECH-SEO-AUDIT-EVIDENCE-v1.md) · SEO-team report [reports/ISEO-SU-TECH-SEO-AUDIT-FOR-SEO-TEAM-v1.md](reports/ISEO-SU-TECH-SEO-AUDIT-FOR-SEO-TEAM-v1.md) · task REPORT [reports/REPORT-ISEO-SU-SITE-OPS-RECIPIENT-REMOVE-AND-TECH-SEO-AUDIT-01.md](reports/REPORT-ISEO-SU-SITE-OPS-RECIPIENT-REMOVE-AND-TECH-SEO-AUDIT-01.md) · recipient restore verification (historical) [ISEO-SU-FORM-RECIPIENT-RESTORATION-EVIDENCE-v1.md](ISEO-SU-FORM-RECIPIENT-RESTORATION-EVIDENCE-v1.md) · all-forms isolated mail acceptance (historical current for acceptance) [ISEO-SU-FORM-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-EVIDENCE-v2.md](ISEO-SU-FORM-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-EVIDENCE-v2.md) · REPORT [reports/REPORT-ISEO-SU-SITE-OPS-FORM-ANTISPAM-AND-VALIDATION-01.md](reports/REPORT-ISEO-SU-SITE-OPS-FORM-ANTISPAM-AND-VALIDATION-01.md) · acceptance REPORT [reports/REPORT-ISEO-SU-SITE-OPS-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-02.md](reports/REPORT-ISEO-SU-SITE-OPS-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-02.md) · Acceptance 01 recipient evidence [SUPERSEDED](reports/REPORT-ISEO-SU-SITE-OPS-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-01.md)
+Form security: [ISEO-SU-FORM-SECURITY-AND-ANTISPAM-BASELINE-v1.md](ISEO-SU-FORM-SECURITY-AND-ANTISPAM-BASELINE-v1.md) · evidence [ISEO-SU-FORM-ANTISPAM-VALIDATION-EVIDENCE-v1.md](ISEO-SU-FORM-ANTISPAM-VALIDATION-EVIDENCE-v1.md) · HMAC rotation [ISEO-SU-FORM-HMAC-SECRET-ROTATION-EVIDENCE-v1.md](ISEO-SU-FORM-HMAC-SECRET-ROTATION-EVIDENCE-v1.md) · operator recipient removal [ISEO-SU-FORM-OPERATOR-RECIPIENT-REMOVAL-EVIDENCE-v1.md](ISEO-SU-FORM-OPERATOR-RECIPIENT-REMOVAL-EVIDENCE-v1.md) · static sitemap completeness [ISEO-SU-STATIC-SITEMAP-COMPLETENESS-FIX-EVIDENCE-v1.md](ISEO-SU-STATIC-SITEMAP-COMPLETENESS-FIX-EVIDENCE-v1.md) · SEO-team completeness note [reports/ISEO-SU-STATIC-SITEMAP-COMPLETENESS-FIX-FOR-SEO-TEAM.md](reports/ISEO-SU-STATIC-SITEMAP-COMPLETENESS-FIX-FOR-SEO-TEAM.md) · HIGH FIX WAVE 01 [ISEO-SU-HIGH-FIX-WAVE-01-EVIDENCE-v1.md](ISEO-SU-HIGH-FIX-WAVE-01-EVIDENCE-v1.md) · sitemap architecture [ISEO-SU-SITEMAP-ARCHITECTURE-AND-CURRENT-STATE-v1.md](ISEO-SU-SITEMAP-ARCHITECTURE-AND-CURRENT-STATE-v1.md) · SEO-team HIGH closeout [reports/ISEO-SU-HIGH-FIX-WAVE-01-FOR-SEO-TEAM.md](reports/ISEO-SU-HIGH-FIX-WAVE-01-FOR-SEO-TEAM.md) · tech/SEO audit evidence [ISEO-SU-TECH-SEO-AUDIT-EVIDENCE-v1.md](ISEO-SU-TECH-SEO-AUDIT-EVIDENCE-v1.md) · SEO-team report [reports/ISEO-SU-TECH-SEO-AUDIT-FOR-SEO-TEAM-v1.md](reports/ISEO-SU-TECH-SEO-AUDIT-FOR-SEO-TEAM-v1.md) · task REPORT [reports/REPORT-ISEO-SU-SITE-OPS-RECIPIENT-REMOVE-AND-TECH-SEO-AUDIT-01.md](reports/REPORT-ISEO-SU-SITE-OPS-RECIPIENT-REMOVE-AND-TECH-SEO-AUDIT-01.md) · recipient restore verification (historical) [ISEO-SU-FORM-RECIPIENT-RESTORATION-EVIDENCE-v1.md](ISEO-SU-FORM-RECIPIENT-RESTORATION-EVIDENCE-v1.md) · all-forms isolated mail acceptance (historical current for acceptance) [ISEO-SU-FORM-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-EVIDENCE-v2.md](ISEO-SU-FORM-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-EVIDENCE-v2.md) · REPORT [reports/REPORT-ISEO-SU-SITE-OPS-FORM-ANTISPAM-AND-VALIDATION-01.md](reports/REPORT-ISEO-SU-SITE-OPS-FORM-ANTISPAM-AND-VALIDATION-01.md) · acceptance REPORT [reports/REPORT-ISEO-SU-SITE-OPS-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-02.md](reports/REPORT-ISEO-SU-SITE-OPS-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-02.md) · Acceptance 01 recipient evidence [SUPERSEDED](reports/REPORT-ISEO-SU-SITE-OPS-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-01.md)
 
 ---
 
@@ -156,18 +128,15 @@ Form security: [ISEO-SU-FORM-SECURITY-AND-ANTISPAM-BASELINE-v1.md](ISEO-SU-FORM-
 
 ## Next authorized task
 
-**Glossary programme:** **closed and stabilized**. No open glossary launch work. Do not publish non-eligible without a new charter.
+**Glossary / site-ops programme:** **closed and stabilized** (2026-08-20). No open required glossary launch work. Do not publish non-eligible without a new charter. Do not restart glossary development without a new charter.
 
-**Ordinary site work:** select one of the four current open task groups or another exact operator-chartered task after fresh Beget backup; start from Current State + Knowledge Base + Task Routing Guide.
+**Ordinary site work:** additional concrete tasks after fresh Beget backup; start from Current State + Task Routing Guide.
 
 **Optional parallel gate:** Phase 6D WPilot bridge + read-only smoke — only after both exact approval lines (does not block site-content tasks).
 
 ---
 
 ## Artifact navigation (current first)
-
-<details>
-<summary>Expanded artifact navigation (historical and specialized)</summary>
 
 | Artifact | Path |
 |----------|------|
@@ -213,12 +182,9 @@ Form security: [ISEO-SU-FORM-SECURITY-AND-ANTISPAM-BASELINE-v1.md](ISEO-SU-FORM-
 
 Additional historical artifacts remain listed in the Artifact Register.
 
-</details>
+---
 
 ## REPORT navigation (latest)
-
-<details>
-<summary>Historical REPORT navigation</summary>
 
 | Report | Status |
 |--------|--------|
@@ -239,8 +205,6 @@ Additional historical artifacts remain listed in the Artifact Register.
 | Phase 6D WPilot bridge smoke | BLOCKED / PRODUCTION UNCHANGED |
 | Phase 6C-P onboarding evidence persistence | COMPLETE |
 
-</details>
-
 ---
 
-*ISEO-SU-SITE-OPS Operational Index · current-state reconciliation 2026-08-24 · four open technical task groups · glossary complete · WPilot 6D optional.*
+*ISEO-SU-SITE-OPS Operational Index · Stabilization 2026-08-20 · glossary production frozen · WPilot RC6 safe defaults · token local-only · bridge/writes disabled.*

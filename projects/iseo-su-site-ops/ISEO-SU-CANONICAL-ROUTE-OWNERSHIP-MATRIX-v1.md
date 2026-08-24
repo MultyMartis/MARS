@@ -3,7 +3,7 @@
 **Programme:** ISEO-SU-SITE-OPS  
 **Authority rank:** #3 (after task evidence + task routing guide)  
 **Companion:** [ISEO-SU-PRODUCTION-ARCHITECTURE-KNOWLEDGE-BASE-v1.md](ISEO-SU-PRODUCTION-ARCHITECTURE-KNOWLEDGE-BASE-v1.md)  
-**Evidence:** 2026-07-24 discovery, reconciled with accepted form/glossary/audit/Metrika state through 2026-08-24
+**Evidence:** 2026-07-24 read-only discovery  
 
 ## Classification vocabulary (exact one primary)
 
@@ -35,8 +35,8 @@ Confidence: **HIGH** / **MEDIUM** / **LOW**
 | `/tariff-calc` | `…/tariff-calc` | 200 | HYBRID_COMPOSITE | HIGH | Tariff calculator | ACF + `tarif-calc.php` + common.js + handlers | page 1734 | tariff-calc | page-tariffcalc.php | theme `page-tariffcalc.php` + `template-parts/tarif-calc.php` | theme+css | common.js | calc/tariff FORM.php | Настройки калькулятора (+ channels group) | — | **yes** | no | slash→no slash | theme tarifs parts on other pages | ACF fields and/or theme part — not editor HTML | ACF+theme+handlers scope | restore each layer | `/tariff-calc` | ACF, js, FORM.php | options vs page field location nuance |
 | `/offers` | `…/offers` | 200 | WORDPRESS_CONTENT | HIGH | Offers listing / KP entry | WP page + CPT ecosystem | page 1377 | offers | default | theme `page.php` / content-page | theme | theme | — | — | offer list related | no | **candidate** | slash alias | — | WP page + CPT posts | DB | restore | `/offers` | private offers | empty editor — listing UX detail |
 | `/offer/*` | private singles | — | WORDPRESS_CONTENT | MEDIUM | Single commercial proposal | CPT `offer` + `single-offer.php` + ACF «Предложения» | offer CPT | slug | single-offer.php | theme `single-offer.php` | theme | theme | — | Предложения | **offer** | no | **yes** | robots disallow | — | WP Admin offer + ACF; no public scrape | DB | restore | structural only | **PII/commercial** | public URL pattern variants |
-| `/glossary/` | `…/glossary/` | 200 anon | WORDPRESS_CONTENT | HIGH | Glossary archive (public) | CPT `glossary` + `archive-glossary.php` | glossary CPT | — | archive-glossary.php | theme `archive-glossary.php` | theme+css | theme | search GET only | glossary ACF | **glossary** | `/wp-sitemap.xml` family | no header | slash alias | — | final baseline only | theme+DB+package | scoped restore | public hub/H1/intro/CTA | 184 public; non-eligible stay draft | mobile offcanvas deferred; overflow fixed |
-| `/glossary/{slug}/` | same | 200 published | WORDPRESS_CONTENT | HIGH | Glossary term | CPT `glossary` + `single-glossary.php` | glossary | slug | single-glossary.php | theme `single-glossary.php` | theme+css | theme | — | synonyms/related | **glossary** | `/wp-sitemap.xml` family (184) | — | — | — | publish eligible only | DB+package | draft/scoped restore | public single/related links | 30 MERGED + 14 DEFERRED + 13 EXCLUDED non-public | single hero has no description |
+| `/glossary/` | `…/glossary/` | 200 anon | WORDPRESS_CONTENT | HIGH | Glossary archive (public) | CPT `glossary` + `archive-glossary.php` | glossary CPT | — | archive-glossary.php | theme `archive-glossary.php` | theme+css | theme | search GET only | glossary ACF | **glossary** | yoast/wp sitemap | no header | slash alias | — | published only; exposure true | theme+DB | publish→draft + exposure false | public hub | non-eligible stay draft | menu deferred |
+| `/glossary/{slug}/` | same | 200 published | WORDPRESS_CONTENT | HIGH | Glossary term | CPT `glossary` + `single-glossary.php` | glossary | slug | single-glossary.php | theme `single-glossary.php` | theme+css | theme | — | synonyms/related | **glossary** | yoast/wp | — | — | — | publish eligible only | DB | draft rollback | public singles | no non-eligible publish | related links gated |
 | `/web-kp/` `/kp/` | 404 | 404 | SAFE_UNKNOWN | HIGH | no public app at these paths | — | — | — | — | — | — | — | — | — | — | — | naming only | — | use `/offers`+CPT | — | — | — | — | — | operator nickname mapping |
 | `/services.html` | `…/services.html` | 200* | STATIC_HARDCODED | HIGH | Services hub | file | — | — | — | `services.html` | css | common.js | forms | — | — | possible | no | — | — | SFTP file | file | restore | URL+title | intermittent 500 once | root cause of intermittent 500 |
 | `/services/**/*.html` | same | 200 | STATIC_HARDCODED | HIGH | Service leaves | files under `services/` | — | — | — | matching path | css | common.js | often local FORM copies | — | — | often | no | — | — | SFTP exact file | file(+handler if touched) | restore | URL | handler copies drift | — |
@@ -51,10 +51,9 @@ Confidence: **HIGH** / **MEDIUM** / **LOW**
 | legal `*-policy.html` / `user-agreement.html` | same | 200 | STATIC_HARDCODED | HIGH | Legal | files | — | — | — | matching | css | — | — | — | — | no | no | — | — | SFTP | file | restore | URL | compliance | — |
 | `/report-hub/` | same | 200 | EXTERNAL_SIBLING | HIGH | Report Hub app | `report-hub/*` | — | — | — | report-hub HTML | local | local | — | — | — | no | no | — | `projects/iseo-report-hub` | separate programme | — | — | URL | do not treat as marketing | — |
 | `/varvara-new.php` | same | 200 | STATIC_HARDCODED | MEDIUM | VVR-Searcher tool | PHP file | — | — | — | `varvara-new.php` | — | — | — | — | — | no | no | — | — | SFTP chartered only | file | restore | title VVR-Searcher | unknown business use | deeper purpose |
-| `/sitemap.xml` | same | 200 | STATIC_HARDCODED | HIGH | Canonical sitemap index | physical file → static + wp-sitemap | — | — | — | `sitemap.xml` | — | — | — | — | — | no | no | — | — | SFTP file | file | restore | XML/index + 2 children | SEO | **CLOSED HIGH FIX WAVE 01** |
-| `/sitemap-static.xml` | same | 200 | STATIC_HARDCODED | HIGH | Static URL inventory | allowlist + generator (71 URLs) | — | — | — | `sitemap-static.xml` | — | — | — | — | — | no | no | — | — | SFTP + regen | file+procedure | restore | XML/count/URLs | SEO | regen via `tools/generate-sitemap-static.py` |
-| `/wp-sitemap.xml` | same | 200 | WORDPRESS_CONTENT | HIGH | Working WordPress sitemap index | WordPress core sitemap provider | WP objects | — | WP sitemap | WordPress runtime | — | — | — | — | posts/pages/CPT/taxonomy | no | offers/glossary included per rules | — | — | WP hooks/settings only under charter | DB/theme/plugin scope | restore | index and representative children | SEO | child of canonical root `/sitemap.xml` |
-| `/robots.txt` | same | 200 | STATIC_HARDCODED | HIGH | Robots policy | file/current runtime | — | — | — | `robots.txt` | — | — | — | — | — | no | no | disallow offer/* | — | SFTP careful | file | restore | directives | SEO | Sitemap directive already `https://i-seo.su/sitemap.xml` (NO CHANGE in WAVE 01) |
+| `/sitemap.xml` | same | 200 | STATIC_HARDCODED | HIGH | Canonical sitemap index | physical file → static + wp-sitemap | — | — | — | `sitemap.xml` | — | — | — | — | — | no | no | — | — | SFTP file | file | restore | index lists static+WP only | SEO | HIGH FIX WAVE 01 |
+| `/sitemap-static.xml` | same | 200 | STATIC_HARDCODED | HIGH | Static URL inventory | allowlist + completeness inventory + generator (**127** URLs) | — | — | — | `sitemap-static.xml` | — | — | — | — | — | no | no | — | — | SFTP + regen | file | restore | count/URLs + completeness=0 | SEO | keep allowlist≡inventory |
+| `/robots.txt` | same | 200 | STATIC_HARDCODED | HIGH | Robots | file | — | — | — | `robots.txt` | — | — | — | — | — | no | no | disallow offer/* | — | SFTP careful | file | restore | directives | SEO | — |
 | `/wp-admin/` | admin | 200 | WORDPRESS_CONTENT | HIGH | Admin | WP core | — | — | — | wp-admin | — | — | — | — | — | no | no | JS cookie gate | — | Admin HITL / Playwright under charter | — | — | — | credentials local-only | — |
 | `www.i-seo.su/*` | apex https | 301 | REDIRECT_OR_ALIAS | HIGH | Host alias | `.htaccess` | — | — | — | `.htaccess` | — | — | — | — | — | — | — | to `https://i-seo.su` | — | **do not edit** casually | htaccess | restore | redirect chain | routing | — |
 
@@ -62,28 +61,9 @@ Confidence: **HIGH** / **MEDIUM** / **LOW**
 
 ---
 
-## Shared security, analytics, and source ownership
-
-| Surface/path | Class | Runtime owner | Canonical MARS mirror | Safe edit route | Protected invariants | Current state |
-|---|---|---|---|---|---|---|
-| Root `*__FORM.php` (12) | HYBRID_COMPOSITE | thin root wrappers + shared send | `production-source/forms/` | exact form charter; keep delegates thin | server validation, honeypot, HMAC, limits, duplicate protection | hardened |
-| `services/**/*__FORM.php` | HYBRID_COMPOSITE | thin delegates to root | `production-source/forms/` where mirrored | modify shared root/config unless delegate bug proven | no divergent recipients/security | delegates |
-| `/iseo-form-config.php` | HYBRID_COMPOSITE | shared recipient/threshold/test config | `production-source/forms/iseo-form-config.php` | source/runtime bounded diff | recipient `nikel007i33@yandex.ru` only; `test_mode=false` | current |
-| `/iseo-form-security.php` + token/runtime | HYBRID_COMPOSITE | shared validation/anti-spam | `production-source/forms/` | exact security charter | `contact_company_url`; ≈3s HMAC; ≈3/5m/form/IP; ≈10/h/IP; ≈10m duplicate | active |
-| `/metrika-visitor-ip-config.php` | HYBRID_COMPOSITE | addon feature config | `production-source/metrika-ip/metrika-visitor-ip-config.php` | one-flag kill switch + source promotion | counter 54287016 unchanged; true→false disables only addon | ON |
-| `/metrika-visitor-ip.php` | HYBRID_COMPOSITE | same-origin read-only endpoint | `production-source/metrika-ip/` | exact addon charter | validated IPv4/IPv6 `REMOTE_ADDR`; no forwarded headers | active |
-| `/js/metrika-visitor-ip.js` | HYBRID_COMPOSITE | Metrika `ipaddress` params call | `production-source/metrika-ip/` | exact addon charter | no re-init, no auto-blocking, fail-open | active |
-| `/js/common.js` | HYBRID_COMPOSITE | shared forms/calc/addon loader | `production-source/js/common.js` | minimal diff + broad route smoke | revenue/analytics shared dependency | active |
-| `/css/main.css` | HYBRID_COMPOSITE | shared runtime CSS | `production-source/css/main.css` | runtime→diff→source promotion | preserve operator glossary/overflow hunks | aligned accepted baseline |
-| Glossary theme files | WORDPRESS_CONTENT | active `iseoblog` theme | `wordpress/iseoblog-glossary/` | bounded theme/content charter | 184 public; hero/CTA/menu/title/related baseline | complete |
-
-Any accepted operator runtime edit takes priority over an older mirror until it is reconciled by runtime → diff → canonical source promotion.
-
----
-
 ## Bulk marketing inventory
 
-All `sitemap-static.xml` URLs (71) are **STATIC_HARDCODED** unless a physical file is missing (then WP may catch). Enumerate leaves under `services/` and `cases/` from that sitemap before mass edits.
+All `sitemap-static.xml` URLs (**127**) are **STATIC_HARDCODED** unless a physical file is missing (then WP may catch). Enumerate leaves under `services/` and `cases/` from that sitemap before mass edits. Completeness authority: `data/sitemaps/public-canonical-static-routes-v1.txt`.
 
 ---
 
@@ -98,4 +78,4 @@ All `sitemap-static.xml` URLs (71) are **STATIC_HARDCODED** unless a physical fi
 
 ---
 
-*Canonical route ownership matrix v1 · current-state reconciliation 2026-08-24.*
+*Canonical route ownership matrix v1 · 2026-07-24.*
