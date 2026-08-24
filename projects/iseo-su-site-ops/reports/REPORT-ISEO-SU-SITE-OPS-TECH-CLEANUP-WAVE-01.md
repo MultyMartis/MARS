@@ -150,6 +150,10 @@ Scoped commits on clean worktree replay (main dirty/divergent). Exact path stagi
 
 Fetch + clean worktree replay onto `origin/mars/canonical-post-recovery`; no force push.
 
+- Worktree: `X:\AI MARS STORAGE\git-sync-iseo-su-tech-cleanup-wave-01\repo`
+- Commit: `0e9b1efa` — `fix(iseo-su): close technical cleanup backlog wave 01`
+- Remote tip after push: `0e9b1efa`
+
 ## 22. Final Decision
 
 **COMPLETE — ISEO-SU TECH CLEANUP WAVE 01 CLOSED / SITEMAP GAPS RECHECKED / REDIRECT LINKS CLEAN / HEAVY IMAGES OPTIMIZED**
@@ -191,9 +195,9 @@ SEO SEMANTIC METADATA CHANGED: NO
 SITEMAP ARCHITECTURE CHANGED: NO
 
 BACKLOG EXTRACTION ARTIFACTS PERSISTED: YES
-PROJECT-OWNED UNCOMMITTED: (see post-git status)
+PROJECT-OWNED UNCOMMITTED: 0 (accepted wave paths on origin `0e9b1efa`; local main remains divergent with foreign WIP)
 FOREIGN WIP PRESERVED: YES
 PRODUCTION/SOURCE ALIGNED: YES
 OPEN BLOCKERS: 0
-REMOTE SYNC: (see post-sync)
+REMOTE SYNC: COMPLETE
 ```
