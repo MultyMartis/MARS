@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "canonical_sha256": "2594093919d01f067bcd3776d50d973cfa20a1faf4a6d63fc23f21367d08529e",
+  "old_production_sha256": "49e52465c97f697290c7d13ab62b1b5fa74a9a5343e5464af8fb11f50f4dfad7",
+  "live_sha256": "2594093919d01f067bcd3776d50d973cfa20a1faf4a6d63fc23f21367d08529e",
+  "physical_sha256": "2594093919d01f067bcd3776d50d973cfa20a1faf4a6d63fc23f21367d08529e",
+  "backup": {
+    "captured_at": "2026-08-24T07:15:39.584096+00:00",
+    "remote_path": "/home/s/shpigovsky/shpigovsky.ru/public_html/robots.txt.fp0002-pre-restore-20260824T071539Z.bak",
+    "evidence_copy": "03-rollback-robots-20260824T071539Z.txt",
+    "sha256": "49e52465c97f697290c7d13ab62b1b5fa74a9a5343e5464af8fb11f50f4dfad7",
+    "bytes": 2901,
+    "matches_pre_restore_physical": true
+  },
+  "robots_pass": true,
+  "indexing_pass": true,
+  "sitemap_pass": true,
+  "public_pass": true,
+  "open_state_owner_preserves_olya": true,
+  "olya_policy_intact": true,
+  "indexing_open_human_approved": true,
+  "production_mutations": [
+    "/home/s/shpigovsky/shpigovsky.ru/public_html/robots.txt.fp0002-pre-restore-20260824T071539Z.bak",
+    "/home/s/shpigovsky/shpigovsky.ru/public_html/robots.txt"
+  ],
+  "synthetic_close_performed": false,
+  "form_or_smtp_test_performed": false,
+  "editorial_db_touched": false
+}

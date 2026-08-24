@@ -1,7 +1,7 @@
 # Operations — Indexing vs SEO robots ownership (FP-0002)
 
 **Status:** Active  
-**Updated:** 2026-08-21
+**Updated:** 2026-08-24
 
 ## Two separate concerns
 
@@ -31,9 +31,12 @@ When a human explicitly closes indexing:
 ## Do not
 
 - Replace OPEN-state SEO robots with a short generic “safe” file.
+- Optimize, normalize, simplify, or otherwise change the current Olya-approved policy without a new explicit Olya/operator SEO decision.
 - Treat Olya `Disallow: /wp-` / legal / UTM rules as “indexing closed”.
 - Let read-only probes, WPilot, or watchdog rewrite `robots.txt`.
 - Maintain a second editable robots truth outside the canonical policy file.
+
+The current canonical Olya policy is the human-approved SEO robots truth. P18G owns temporary global OPEN/CLOSED safety only; it does not own SEO-policy redesign.
 
 ## Canonical recovery
 

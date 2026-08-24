@@ -1,0 +1,62 @@
+{
+  "captured_at": "2026-08-24T07:15:39.025665+00:00",
+  "mode": "PRE_MUTATION",
+  "blog_public": 1,
+  "effective": "OPEN",
+  "human_decision": "OPEN",
+  "human_recorded_at": "2026-08-20 00:05:02",
+  "human_source": "admin_ui",
+  "guard_active": true,
+  "watchdog_active": true,
+  "watchdog_next_utc": "2026-08-24T07:28:06+00:00",
+  "watchdog_last": {
+    "checked_at": "2026-08-24 09:28:11",
+    "effective": "OPEN",
+    "fingerprint": "e305cb991e8eeadd264eb2ca7258aa5362c10d504fa7e31277dd879034db54ba",
+    "blog_public": 1
+  },
+  "watchdog_baseline": {
+    "effective": "OPEN",
+    "fingerprint": "e305cb991e8eeadd264eb2ca7258aa5362c10d504fa7e31277dd879034db54ba",
+    "set_at": "2026-08-24 09:28:11"
+  },
+  "open_body_sha256": "2594093919d01f067bcd3776d50d973cfa20a1faf4a6d63fc23f21367d08529e",
+  "open_body_has_global_disallow": false,
+  "physical": {
+    "path": "/home/s/shpigovsky/shpigovsky.ru/public_html/robots.txt",
+    "sha256": "49e52465c97f697290c7d13ab62b1b5fa74a9a5343e5464af8fb11f50f4dfad7",
+    "bytes": 2901,
+    "mtime_utc": "2026-08-21T13:45:09+00:00"
+  },
+  "live": {
+    "status": 200,
+    "final_url": "https://shpigovsky.ru/robots.txt",
+    "content_type": "text/plain",
+    "sha256": "49e52465c97f697290c7d13ab62b1b5fa74a9a5343e5464af8fb11f50f4dfad7",
+    "equals_physical": true
+  },
+  "canonical": {
+    "captured_at": "2026-08-24T07:15:35.179560+00:00",
+    "source": "HEAD:workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/plugins/shpigovsky-core/assets/robots-seo-policy.txt",
+    "review_source": "HEAD:workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/seo/OLYA-ROBOTS-REVIEWED-CANDIDATE.txt",
+    "canonical_sha256": "2594093919d01f067bcd3776d50d973cfa20a1faf4a6d63fc23f21367d08529e",
+    "review_sha256": "2594093919d01f067bcd3776d50d973cfa20a1faf4a6d63fc23f21367d08529e",
+    "sources_equal": true,
+    "bytes": 2826,
+    "line_endings": "LF",
+    "utf8_bom": false
+  },
+  "production_owner": {
+    "policy_asset_sha256": "2594093919d01f067bcd3776d50d973cfa20a1faf4a6d63fc23f21367d08529e",
+    "policy_asset_equals_canonical": true,
+    "indexing_control_sha256": "280e565035bb7f562e0a5ce6c6d8edcbc3692f686b5d8fe8d426bf1da32bacf7",
+    "watchdog_sha256": "cd519bc807833e1a8f71ff5ddea064e90aa9765519d85075b5ff8e5e87e6fdd2"
+  },
+  "sitemap": {
+    "status": 200,
+    "final_url": "https://shpigovsky.ru/wp-sitemap.xml",
+    "content_type": "application/xml; charset=UTF-8",
+    "production_host_present": true,
+    "staging_host_present": false
+  }
+}

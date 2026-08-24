@@ -1,0 +1,81 @@
+{
+  "captured_at": "2026-08-24T07:15:43.753093+00:00",
+  "robots": {
+    "http_status": 200,
+    "content_type": "text/plain",
+    "live_sha256": "2594093919d01f067bcd3776d50d973cfa20a1faf4a6d63fc23f21367d08529e",
+    "physical_sha256": "2594093919d01f067bcd3776d50d973cfa20a1faf4a6d63fc23f21367d08529e",
+    "canonical_sha256": "2594093919d01f067bcd3776d50d973cfa20a1faf4a6d63fc23f21367d08529e",
+    "live_equals_physical": true,
+    "physical_equals_canonical": true,
+    "live_equals_canonical": true,
+    "global_disallow_root": false,
+    "production_sitemap": true,
+    "staging_host_present": false,
+    "expected_agents": {
+      "User-agent: Yandex": true,
+      "User-agent: GoogleBot": true,
+      "User-agent: Bingbot": true,
+      "User-agent: *": true,
+      "User-Agent: Googlebot-Image": true
+    },
+    "bytes": 2826,
+    "line_count": 151
+  },
+  "robots_final_url": "https://shpigovsky.ru/robots.txt",
+  "indexing": {
+    "blog_public": 1,
+    "effective": "OPEN",
+    "human_decision": "OPEN",
+    "guard_active": true,
+    "watchdog_active": true,
+    "watchdog_next_utc": "2026-08-24T07:28:06+00:00",
+    "watchdog_last": {
+      "checked_at": "2026-08-24 09:28:11",
+      "effective": "OPEN",
+      "fingerprint": "e305cb991e8eeadd264eb2ca7258aa5362c10d504fa7e31277dd879034db54ba",
+      "blog_public": 1
+    },
+    "watchdog_baseline": {
+      "effective": "OPEN",
+      "fingerprint": "e305cb991e8eeadd264eb2ca7258aa5362c10d504fa7e31277dd879034db54ba",
+      "set_at": "2026-08-24 09:28:11"
+    },
+    "open_body_sha256": "2594093919d01f067bcd3776d50d973cfa20a1faf4a6d63fc23f21367d08529e"
+  },
+  "sitemap": {
+    "status": 200,
+    "final_url": "https://shpigovsky.ru/wp-sitemap.xml",
+    "content_type": "application/xml; charset=UTF-8",
+    "xml_sitemap": true,
+    "production_host_present": true,
+    "staging_host_present": false,
+    "referenced_by_robots": true
+  },
+  "public_regression": {
+    "homepage": {
+      "url": "https://shpigovsky.ru/",
+      "status": 200,
+      "final_url": "https://shpigovsky.ru/",
+      "x_robots_tag": null,
+      "meta_robots": "max-image-preview:large",
+      "bytes": 211867
+    },
+    "service": {
+      "url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "status": 200,
+      "final_url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "x_robots_tag": null,
+      "meta_robots": "max-image-preview:large",
+      "bytes": 159685
+    },
+    "contacts": {
+      "url": "https://shpigovsky.ru/kontakty/",
+      "status": 200,
+      "final_url": "https://shpigovsky.ru/kontakty/",
+      "x_robots_tag": null,
+      "meta_robots": "max-image-preview:large",
+      "bytes": 78250
+    }
+  }
+}

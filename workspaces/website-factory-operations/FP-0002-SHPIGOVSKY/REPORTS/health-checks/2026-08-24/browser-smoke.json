@@ -1,0 +1,131 @@
+{
+  "captured": true,
+  "viewports": [
+    {
+      "viewport": "desktop",
+      "pages": [
+        {
+          "key": "home",
+          "url": "https://shpigovsky.ru/",
+          "status": 200,
+          "final_url": "https://shpigovsky.ru/",
+          "consent_candidates": 29,
+          "metrika_in_dom_scripts": false,
+          "honeypot": false,
+          "fp02_fs": true,
+          "modal_click_attempted": true,
+          "overflow": {
+            "scrollWidth": 1425,
+            "clientWidth": 1440,
+            "overflow": false
+          },
+          "beget_tech": false,
+          "craftum": false,
+          "screenshot": "desktop-home.png"
+        },
+        {
+          "key": "service",
+          "url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+          "status": 200,
+          "final_url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+          "consent_candidates": 29,
+          "metrika_in_dom_scripts": false,
+          "honeypot": false,
+          "fp02_fs": true,
+          "overflow": {
+            "scrollWidth": 1425,
+            "clientWidth": 1440,
+            "overflow": false
+          },
+          "beget_tech": false,
+          "craftum": false,
+          "screenshot": "desktop-service.png"
+        },
+        {
+          "key": "contacts",
+          "url": "https://shpigovsky.ru/kontakty/",
+          "status": 200,
+          "final_url": "https://shpigovsky.ru/kontakty/",
+          "consent_candidates": 29,
+          "metrika_in_dom_scripts": false,
+          "honeypot": false,
+          "fp02_fs": true,
+          "modal_click_attempted": true,
+          "overflow": {
+            "scrollWidth": 1425,
+            "clientWidth": 1440,
+            "overflow": false
+          },
+          "beget_tech": false,
+          "craftum": false
+        }
+      ],
+      "js_errors": [],
+      "console_errors": [],
+      "failed_assets": []
+    },
+    {
+      "viewport": "mobile",
+      "pages": [
+        {
+          "key": "home",
+          "url": "https://shpigovsky.ru/",
+          "status": 200,
+          "final_url": "https://shpigovsky.ru/",
+          "consent_candidates": 29,
+          "metrika_in_dom_scripts": false,
+          "honeypot": false,
+          "fp02_fs": true,
+          "modal_click_attempted": false,
+          "overflow": {
+            "scrollWidth": 375,
+            "clientWidth": 390,
+            "overflow": false
+          },
+          "beget_tech": false,
+          "craftum": false,
+          "screenshot": "mobile-home.png"
+        },
+        {
+          "key": "service",
+          "url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+          "status": 200,
+          "final_url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+          "consent_candidates": 29,
+          "metrika_in_dom_scripts": false,
+          "honeypot": false,
+          "fp02_fs": true,
+          "overflow": {
+            "scrollWidth": 375,
+            "clientWidth": 390,
+            "overflow": false
+          },
+          "beget_tech": false,
+          "craftum": false,
+          "screenshot": "mobile-service.png"
+        },
+        {
+          "key": "contacts",
+          "url": "https://shpigovsky.ru/kontakty/",
+          "status": 200,
+          "final_url": "https://shpigovsky.ru/kontakty/",
+          "consent_candidates": 29,
+          "metrika_in_dom_scripts": false,
+          "honeypot": false,
+          "fp02_fs": true,
+          "modal_click_attempted": false,
+          "overflow": {
+            "scrollWidth": 375,
+            "clientWidth": 390,
+            "overflow": false
+          },
+          "beget_tech": false,
+          "craftum": false
+        }
+      ],
+      "js_errors": [],
+      "console_errors": [],
+      "failed_assets": []
+    }
+  ]
+}

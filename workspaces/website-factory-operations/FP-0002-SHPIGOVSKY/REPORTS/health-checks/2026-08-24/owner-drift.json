@@ -1,0 +1,32 @@
+{
+  "plugin_bootstrap": {
+    "match": true,
+    "local": "4f9e99d0f08840487ea5a37cee3e21be7579682a2fdf13e6629330c3669f300f",
+    "prod": "4f9e99d0f08840487ea5a37cee3e21be7579682a2fdf13e6629330c3669f300f"
+  },
+  "robots_policy_asset": {
+    "match": true,
+    "local": "2594093919d01f067bcd3776d50d973cfa20a1faf4a6d63fc23f21367d08529e",
+    "prod": "2594093919d01f067bcd3776d50d973cfa20a1faf4a6d63fc23f21367d08529e"
+  },
+  "indexing_control": {
+    "match": true,
+    "local": "280e565035bb7f562e0a5ce6c6d8edcbc3692f686b5d8fe8d426bf1da32bacf7",
+    "prod": "280e565035bb7f562e0a5ce6c6d8edcbc3692f686b5d8fe8d426bf1da32bacf7"
+  },
+  "indexing_watchdog": {
+    "match": true,
+    "local": "cd519bc807833e1a8f71ff5ddea064e90aa9765519d85075b5ff8e5e87e6fdd2",
+    "prod": "cd519bc807833e1a8f71ff5ddea064e90aa9765519d85075b5ff8e5e87e6fdd2"
+  },
+  "consultation_handler": {
+    "match": true,
+    "local": "faca4f03cbd8af72ec29d077271d5b5f963ccff70dbc90cd8b29db9d16768e98",
+    "prod": "faca4f03cbd8af72ec29d077271d5b5f963ccff70dbc90cd8b29db9d16768e98"
+  },
+  "anti_spam": {
+    "match": true,
+    "local": "f711f3817d4ace9558fd9240deccf70b56a18a61f37a753765dd94aa2033f28b",
+    "prod": "f711f3817d4ace9558fd9240deccf70b56a18a61f37a753765dd94aa2033f28b"
+  }
+}

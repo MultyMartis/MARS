@@ -1,0 +1,104 @@
+{
+  "check_id": "FP-0002-post-weekend-health-check",
+  "date": "2026-08-24",
+  "mode": "READ_ONLY_HEALTH_CHECK_WITH_BOUNDED_MAINTENANCE_CLOSEOUT",
+  "verdict": "PASS",
+  "verdict_history": [
+    {
+      "status": "ATTENTION",
+      "reason": "Physical /robots.txt drift vs canonical Olya policy",
+      "detected_at": "2026-08-24T05:52:04.643853+00:00"
+    },
+    {
+      "status": "PASS",
+      "reason": "ATTENTION RESOLVED — PHYSICAL ROBOTS RESTORED TO OLYA-APPROVED POLICY",
+      "verified_at": "2026-08-24T07:15:43.753093+00:00"
+    }
+  ],
+  "classification_notes": [
+    "Production publicly healthy; indexing OPEN; SMTP/forms operational.",
+    "Detected physical /robots.txt drift vs canonical Olya asset was corrected by exact canonical-byte restore.",
+    "Live HTTP, physical robots and canonical Olya source now share SHA-256 2594093919d01f067bcd3776d50d973cfa20a1faf4a6d63fc23f21367d08529e.",
+    "PHP/server error logs unavailable via SSH — SAFE UNKNOWN for log subcheck."
+  ],
+  "public": {
+    "canonical_host": "https://shpigovsky.ru/",
+    "redirects_ok": true,
+    "tls_valid": true,
+    "representative_routes_http_200": true,
+    "staging_leaks": false
+  },
+  "indexing": {
+    "blog_public": 1,
+    "effective": "OPEN",
+    "human_decision": "OPEN",
+    "human_recorded_at": "2026-08-20 00:05:02",
+    "p18g_guard_active": true,
+    "watchdog_hook": "fp02_indexing_watchdog_check",
+    "watchdog_schedule": "hourly",
+    "indexing_events_since_2026-08-21": 0,
+    "homepage_meta_robots": "max-image-preview:large",
+    "x_robots_tag_home": null
+  },
+  "robots": {
+    "detected_live_http_sha256": "49e52465c97f697290c7d13ab62b1b5fa74a9a5343e5464af8fb11f50f4dfad7",
+    "live_http_sha256": "2594093919d01f067bcd3776d50d973cfa20a1faf4a6d63fc23f21367d08529e",
+    "physical_sha256": "2594093919d01f067bcd3776d50d973cfa20a1faf4a6d63fc23f21367d08529e",
+    "canonical_asset_sha256": "2594093919d01f067bcd3776d50d973cfa20a1faf4a6d63fc23f21367d08529e",
+    "indexing_control_open_body_sha256": "2594093919d01f067bcd3776d50d973cfa20a1faf4a6d63fc23f21367d08529e",
+    "match_canonical_asset": true,
+    "global_disallow_root": false,
+    "sitemap_directive_ok": true,
+    "physical_mtime_utc": "2026-08-21T13:45:09+00:00",
+    "drift_detail": "Detected live/physical added Disallow: /wp-json/ in four crawler groups and reduced blank separators; canonical asset won by explicit operator decision.",
+    "restore_backup": "/home/s/shpigovsky/shpigovsky.ru/public_html/robots.txt.fp0002-pre-restore-20260824T071539Z.bak",
+    "restore_verified": true,
+    "ownership_verified": "OPEN-STATE ROBOTS OWNER PRESERVES OLYA POLICY"
+  },
+  "wordpress": {
+    "wp_version": "7.1",
+    "php_version": "8.3.20",
+    "theme": "Shpigovsky 0.3.0-d7a-shell",
+    "core_version": "0.3.25-olya-robots",
+    "wpilot": "0.3.2 write_enabled=false",
+    "maintenance_mode": false
+  },
+  "forms_smtp": {
+    "consultation_handler_loaded": true,
+    "anti_spam_loaded": true,
+    "ajax_action": "fp02_lead_submit",
+    "smtp_verified": 1,
+    "delivery_active": 1,
+    "recipient_count": 3,
+    "sender_domain": "shpigovsky.ru",
+    "lead_table": "fp02_form_leads",
+    "lead_total": 4,
+    "lead_recent_7d": 4,
+    "lead_errorish": 0,
+    "real_submission_performed": false
+  },
+  "privacy": {
+    "consent_ui_present_browser": true,
+    "metrika_before_consent": false,
+    "consent_gating_healthy": true
+  },
+  "frontend": {
+    "desktop_js_errors": 0,
+    "mobile_js_errors": 0,
+    "failed_critical_assets": 0,
+    "mobile_horizontal_overflow": false
+  },
+  "dashboard": {
+    "indexing_open_label": true,
+    "has_overseo": true,
+    "stale_launch_warnings": false
+  },
+  "drift": {
+    "critical_owner_files": "MATCH (6/6)",
+    "physical_robots_txt": "DETECTED_THEN_CORRECTED_AND_VERIFIED"
+  },
+  "logs": {
+    "status": "SAFE_UNKNOWN",
+    "critical_count": null
+  }
+}

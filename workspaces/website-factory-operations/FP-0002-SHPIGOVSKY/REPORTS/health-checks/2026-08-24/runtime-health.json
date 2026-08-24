@@ -1,0 +1,203 @@
+{
+  "captured_at": "2026-08-24T05:52:04.643853+00:00",
+  "mode": "READ_ONLY",
+  "checks": {
+    "robots": {
+      "http_status": 200,
+      "final_url": "https://shpigovsky.ru/robots.txt",
+      "live_sha256": "49e52465c97f697290c7d13ab62b1b5fa74a9a5343e5464af8fb11f50f4dfad7",
+      "canonical_source_sha256": "2594093919d01f067bcd3776d50d973cfa20a1faf4a6d63fc23f21367d08529e",
+      "expected_reviewed_sha256": "2594093919d01f067bcd3776d50d973cfa20a1faf4a6d63fc23f21367d08529e",
+      "match_canonical_source": false,
+      "match_expected_reviewed": false,
+      "has_global_disallow_root": false,
+      "has_sitemap_directive": true,
+      "has_staging_host": false,
+      "extra_vs_source": [
+        "/wp-json/"
+      ],
+      "bytes": 2901,
+      "content_type": "text/plain"
+    },
+    "wpilot": {
+      "site-info": {
+        "status": 200,
+        "data": {
+          "ok": true,
+          "data": {
+            "site_url": "https://shpigovsky.ru",
+            "home_url": "https://shpigovsky.ru",
+            "wp_version": "7.1",
+            "php_version": "8.3.20",
+            "active_theme": "Shpigovsky",
+            "is_multisite": false,
+            "bridge_enabled": true,
+            "write_enabled": false
+          },
+          "meta": {
+            "request_id": "wpilot-6e0e76b6-8091-4f17-9727-33319cd57f1d",
+            "timestamp_utc": "2026-08-24 05:52:04",
+            "endpoint": "site-info",
+            "auth_state": "authorized",
+            "bridge_state_snapshot": {
+              "state": "token-generated",
+              "bridge_enabled": true,
+              "dev_confirmed": true,
+              "emergency_disabled": false,
+              "write_enabled": false
+            }
+          }
+        }
+      },
+      "themes": {
+        "status": 200,
+        "data": {
+          "ok": true,
+          "data": {
+            "active_theme": {
+              "name": "Shpigovsky",
+              "version": "0.3.0-d7a-shell",
+              "template": "shpigovsky",
+              "stylesheet": "shpigovsky"
+            }
+          },
+          "meta": {
+            "request_id": "wpilot-9fba1c71-b13f-40d9-b922-da4f4698c287",
+            "timestamp_utc": "2026-08-24 05:52:05",
+            "endpoint": "themes",
+            "auth_state": "authorized",
+            "bridge_state_snapshot": {
+              "state": "token-generated",
+              "bridge_enabled": true,
+              "dev_confirmed": true,
+              "emergency_disabled": false,
+              "write_enabled": false
+            }
+          }
+        }
+      },
+      "plugins": {
+        "status": 200,
+        "data": {
+          "ok": true,
+          "data": {
+            "plugins": [
+              {
+                "name": "Advanced Custom Fields: Extended PRO",
+                "version": "0.9.2.3",
+                "plugin_file": "acf-extended-pro/acf-extended.php"
+              },
+              {
+                "name": "Advanced Custom Fields PRO",
+                "version": "6.8.5",
+                "plugin_file": "advanced-custom-fields-pro/acf.php"
+              },
+              {
+                "name": "Classic Editor",
+                "version": "1.7.0",
+                "plugin_file": "classic-editor/classic-editor.php"
+              },
+              {
+                "name": "MetaCODE WPilot",
+                "version": "0.3.2",
+                "plugin_file": "metacode-wpilot/metacode-wpilot.php"
+              },
+              {
+                "name": "Shpigovsky Core",
+                "version": "0.3.25-olya-robots",
+                "plugin_file": "shpigovsky-core/shpigovsky-core.php"
+              }
+            ]
+          },
+          "meta": {
+            "request_id": "wpilot-c385ac6f-c76c-478f-a96e-3369e4f620c5",
+            "timestamp_utc": "2026-08-24 05:52:06",
+            "endpoint": "plugins",
+            "auth_state": "authorized",
+            "bridge_state_snapshot": {
+              "state": "token-generated",
+              "bridge_enabled": true,
+              "dev_confirmed": true,
+              "emergency_disabled": false,
+              "write_enabled": false
+            }
+          }
+        }
+      }
+    },
+    "robots_physical": {
+      "path": "/home/s/shpigovsky/shpigovsky.ru/public_html/robots.txt",
+      "exists": true,
+      "size": 2901,
+      "mtime": 1787319909,
+      "mtime_iso": "2026-08-21T13:45:09+00:00",
+      "sha256": "49e52465c97f697290c7d13ab62b1b5fa74a9a5343e5464af8fb11f50f4dfad7",
+      "match_live_http": true,
+      "match_canonical_source": false
+    },
+    "critical_owner_files": {
+      "plugin_bootstrap": {
+        "exists": true,
+        "sha256": "4f9e99d0f08840487ea5a37cee3e21be7579682a2fdf13e6629330c3669f300f",
+        "bytes": 1778,
+        "path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/shpigovsky-core.php"
+      },
+      "robots_policy_asset": {
+        "exists": true,
+        "sha256": "2594093919d01f067bcd3776d50d973cfa20a1faf4a6d63fc23f21367d08529e",
+        "bytes": 2826,
+        "path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/assets/robots-seo-policy.txt"
+      },
+      "indexing_control": {
+        "exists": true,
+        "sha256": "280e565035bb7f562e0a5ce6c6d8edcbc3692f686b5d8fe8d426bf1da32bacf7",
+        "bytes": 26256,
+        "path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Admin/IndexingControl.php"
+      },
+      "indexing_watchdog": {
+        "exists": true,
+        "sha256": "cd519bc807833e1a8f71ff5ddea064e90aa9765519d85075b5ff8e5e87e6fdd2",
+        "bytes": 5624,
+        "path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Admin/IndexingWatchdog.php"
+      },
+      "privacy_consent": {
+        "exists": false,
+        "error": "[Errno 2] No such file",
+        "path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Frontend/PrivacyConsent.php"
+      },
+      "consultation_handler": {
+        "exists": true,
+        "sha256": "faca4f03cbd8af72ec29d077271d5b5f963ccff70dbc90cd8b29db9d16768e98",
+        "bytes": 18244,
+        "path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Forms/ConsultationHandler.php"
+      },
+      "anti_spam": {
+        "exists": true,
+        "sha256": "f711f3817d4ace9558fd9240deccf70b56a18a61f37a753765dd94aa2033f28b",
+        "bytes": 13844,
+        "path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Forms/AntiSpam.php"
+      }
+    },
+    "robots_asset_drift": {
+      "prod_asset_sha": "2594093919d01f067bcd3776d50d973cfa20a1faf4a6d63fc23f21367d08529e",
+      "local_canonical_sha": "2594093919d01f067bcd3776d50d973cfa20a1faf4a6d63fc23f21367d08529e",
+      "match": true
+    },
+    "wp_runtime": {
+      "raw": "",
+      "err": "",
+      "code": 0
+    },
+    "logs": {
+      "candidates": [],
+      "critical": [],
+      "warning": [],
+      "noise": [],
+      "unavailable": true,
+      "note": "No accessible error logs found in common paths",
+      "noise_count": 0,
+      "find_raw_head": "",
+      "ls_raw_head": ""
+    }
+  }
+}

@@ -1,0 +1,68 @@
+--- CURRENT-PHYSICAL-ROBOTS
++++ CURRENT-OLYA-CANONICAL-ROBOTS
+@@ -15,7 +15,6 @@
+ Disallow: /?
+ Disallow: /wp-
+ Disallow: /wp/
+-Disallow: /wp-json/
+ Disallow: *?s=
+ Disallow: *&s=
+ Disallow: /search/
+@@ -36,6 +35,7 @@
+ Clean-param: pm_source
+ Clean-Param: openstat
+ 
++
+ User-agent: GoogleBot
+ Allow: /*/*.js
+ Allow: /*/*.css
+@@ -52,7 +52,6 @@
+ Disallow: /?
+ Disallow: /wp-
+ Disallow: /wp/
+-Disallow: /wp-json/
+ Disallow: *?s=
+ Disallow: *&s=
+ Disallow: /search/
+@@ -72,6 +71,7 @@
+ Disallow: *openstat=
+ Allow: */uploads
+ 
++
+ User-agent: Bingbot
+ Allow: */uploads
+ Allow: /*/*.js
+@@ -89,7 +89,6 @@
+ Disallow: /?
+ Disallow: /wp-
+ Disallow: /wp/
+-Disallow: /wp-json/
+ Disallow: *?s=
+ Disallow: *&s=
+ Disallow: /search/
+@@ -108,6 +107,7 @@
+ Disallow: *utm*=
+ Disallow: *openstat=
+ 
++
+ User-agent: *
+ Allow: */uploads
+ Allow: /*/*.js
+@@ -125,7 +125,6 @@
+ Disallow: /?
+ Disallow: /wp-
+ Disallow: /wp/
+-Disallow: /wp-json/
+ Disallow: *?s=
+ Disallow: *&s=
+ Disallow: /search/
+@@ -144,7 +143,9 @@
+ Disallow: *utm*=
+ Disallow: *openstat=
+ 
++
+ User-Agent: Googlebot-Image
+ Allow: /
+ 
++
+ Sitemap: https://shpigovsky.ru/wp-sitemap.xml

@@ -1,0 +1,71 @@
+{
+  "ok": true,
+  "blog_public": 1,
+  "indexing_snapshot": {
+    "effective": "OPEN",
+    "blog_public": 1,
+    "blog_open": true,
+    "robots": {
+      "file_exists": true,
+      "owner": "physical_file",
+      "global_disallow": false,
+      "body_head": "User-agent: Yandex\nAllow: */uploads\nAllow: /*/*.js\nAllow: /*/*.css\nAllow: /*/*.webp\nAllow: /*/*.woff\nAllow: /*/*.woff2\nAllow: /*/*.ttf\nAllow: /wp-*.png\nAllow: /"
+    },
+    "meta": {
+      "global_noindex": false,
+      "source": "blog_public_core_robots"
+    },
+    "signals_open": true,
+    "signals_closed": false,
+    "human_decision": "OPEN",
+    "human_actor": "MetaCODE (metacode)",
+    "human_recorded_at": "2026-08-20 00:05:02",
+    "human_source": "admin_ui",
+    "fingerprint": "e305cb991e8eeadd264eb2ca7258aa5362c10d504fa7e31277dd879034db54ba"
+  },
+  "open_body_sha": "2594093919d01f067bcd3776d50d973cfa20a1faf4a6d63fc23f21367d08529e",
+  "open_body_has_wp_json": false,
+  "mail_ops": {
+    "smtp_enabled": 1,
+    "smtp_host": "smtp.beget.com",
+    "smtp_port": 465,
+    "smtp_encryption": "ssl",
+    "smtp_auth": 1,
+    "smtp_username": "REDACTED_EMAIL",
+    "smtp_from_email": "REDACTED_EMAIL",
+    "smtp_from_name": "Шпиговский дом",
+    "recipients": [
+      {
+        "has_email": true,
+        "has_label": true
+      },
+      {
+        "has_email": true,
+        "has_label": true
+      },
+      {
+        "has_email": true,
+        "has_label": true
+      }
+    ],
+    "reply_to_mode": "visitor_if_valid",
+    "form_metrika_goal": "",
+    "lead_logging": 1,
+    "lead_retention_days": 0,
+    "verified": 1,
+    "verified_at": "2026-08-19 10:13:19 UTC",
+    "last_test_status": "ok",
+    "last_test_error_category": "",
+    "delivery_active": 1
+  },
+  "recipient_count": 3,
+  "mailbox_auth_present": true,
+  "leads": {
+    "table": "fp02_form_leads",
+    "total": 4,
+    "recent_7d": 4,
+    "status_col": null,
+    "by_status": [],
+    "errorish": 0
+  }
+}
