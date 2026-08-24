@@ -1,7 +1,7 @@
 # REPORT — FP-0002 Final Local MARS Closeout
 
 ## 1. Verdict
-**PASS** pending this closeout commit/push wave. Production was not mutated. The wave was limited to local Git/worktree cleanup, bounded documentation reconciliation, and next-chat handoff creation.
+**PASS**. Production was not mutated. The wave was limited to local Git/worktree cleanup, bounded documentation reconciliation, and next-chat handoff creation.
 
 ## 2. Canonical State
 - remote HEAD at intake: `b3f5359ec7da460a16f803272493e49b46b96e7f`
@@ -114,10 +114,12 @@ Required: **NO DUPLICATE KNOWLEDGE SPRAWL**
 Required: **NEXT WEB-GPT CHAT CAN RESUME FP-0002 WITHOUT RECONSTRUCTING PROJECT HISTORY**
 
 ## 14. Commit / Push
-- closeout work is prepared in clean worktree:
+- closeout work was committed/pushed from clean worktree:
   - `X:\AI MARS\worktrees\mars-final-fp-0002-closeout-20260824`
-- final commit SHA: **to be updated after push**
-- final remote SHA: **to be updated after push**
+- final commit SHA:
+  - `422f56e446bf9d080d3ab35dd2dabb242fc78ed9`
+- final remote SHA:
+  - `422f56e446bf9d080d3ab35dd2dabb242fc78ed9`
 
 ## 15. Git Recovery
 - recovery authority remains `origin/mars/canonical-post-recovery`

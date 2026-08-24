@@ -37,8 +37,10 @@
   - `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/SOURCE-AUTHORITY.md`
 
 ## Current Git Recovery Point
-This handoff is finalized together with the local closeout wave. Read the matching closeout report for the exact final remote SHA:
-- `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-FINAL-LOCAL-MARS-CLOSEOUT.md`
+- canonical branch: `origin/mars/canonical-post-recovery`
+- exact remote SHA: `422f56e446bf9d080d3ab35dd2dabb242fc78ed9`
+- matching closeout report:
+  - `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-FINAL-LOCAL-MARS-CLOSEOUT.md`
 
 ## Mandatory Maintenance Workflow
 fresh intake

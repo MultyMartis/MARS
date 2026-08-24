@@ -48,6 +48,8 @@
   - `X:\AI MARS\local\tokens\`
 
 ## Post-cleanup FP-0002 state
+- final canonical remote SHA:
+  - `422f56e446bf9d080d3ab35dd2dabb242fc78ed9`
 - no active temporary FP-0002 development worktree remains
 - no local `fp-0002*` branch remains
 - no remote `fp-0002*` / `safety/fp-0002*` branch tail remains
