@@ -271,9 +271,11 @@ Layer B rollback: `X:\AI MARS STORAGE\deployment-packs\fp-0002\prod-open-graph-0
 
 ## 21. Git
 
-- Branch: `mars/canonical-post-recovery`
-- Commit: *(recorded at push — see closeout)*
-- Remote tip after push: *(recorded at push)*
+- Branch pushed: `origin/mars/canonical-post-recovery`
+- Base SHA: `d60e50725a76e45d07ff7d6959fc06501387dd8b`
+- Commit: `9fe3790aceba040d8e0c0d307a65bd5980d87f01`
+- Remote tip after push: `9fe3790aceba040d8e0c0d307a65bd5980d87f01`
+- Worktree: `X:\AI MARS\worktrees\fp0002-open-graph-01` (wave branch `wave/fp0002-open-graph-01`; canonical checked out in main repo)
 
 ---
 

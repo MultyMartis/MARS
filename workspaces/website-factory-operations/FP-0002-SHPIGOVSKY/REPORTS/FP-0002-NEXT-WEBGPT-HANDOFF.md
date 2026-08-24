@@ -46,11 +46,13 @@
 
 ## Current Git Recovery Point
 - canonical branch: `origin/mars/canonical-post-recovery`
-- latest schema wave commits:
+- latest open graph wave commit:
+  - `9fe3790aceba040d8e0c0d307a65bd5980d87f01` — Open Graph module + production evidence + report
+- matching closeout report:
+  - `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-GLOBAL-OPEN-GRAPH-META-01.md`
+- prior schema wave commits:
   - `fc39a5a922c398824306574b701ac7bf9860a698` — structured-data implementation + evidence
   - `bdf295a8` — report git SHA closeout (tip at push time)
-- matching closeout report:
-  - `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-PROD-YANDEX-SCHEMA-ORG-01.md`
 
 ## Mandatory Maintenance Workflow
 fresh intake
