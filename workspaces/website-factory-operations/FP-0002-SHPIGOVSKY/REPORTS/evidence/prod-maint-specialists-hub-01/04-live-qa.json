@@ -1,0 +1,208 @@
+{
+  "checks": [
+    {
+      "name": "hub_http_200",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "no_placeholder",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "has_h1",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "has_breadcrumbs",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "has_hub_list",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "uses_feature_grid",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "uses_specialist_card",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "uses_card_link",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "no_swiper_on_hub",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "card_count_9",
+      "ok": true,
+      "detail": {
+        "names": [
+          "Сергей Юрьевич Шпиговский",
+          "Максим Михайлович Казаков",
+          "Дарья Владимировна Костюк",
+          "Ханикова Светлана Николаевна",
+          "Шапигузова Татьяна Андреевна",
+          "Литвинов Кирилл Алексеевич",
+          "Поверинов Александр Константинович",
+          "Филиппов Илья Владимирович",
+          "Филиппова Мария Михайловна"
+        ],
+        "n": 9,
+        "links_n": 9
+      }
+    },
+    {
+      "name": "no_duplicate_names",
+      "ok": true,
+      "detail": [
+        "Сергей Юрьевич Шпиговский",
+        "Максим Михайлович Казаков",
+        "Дарья Владимировна Костюк",
+        "Ханикова Светлана Николаевна",
+        "Шапигузова Татьяна Андреевна",
+        "Литвинов Кирилл Алексеевич",
+        "Поверинов Александр Константинович",
+        "Филиппов Илья Владимирович",
+        "Филиппова Мария Михайловна"
+      ]
+    },
+    {
+      "name": "order_matches_menu_order",
+      "ok": true,
+      "detail": {
+        "got": [
+          "Сергей Юрьевич Шпиговский",
+          "Максим Михайлович Казаков",
+          "Дарья Владимировна Костюк",
+          "Ханикова Светлана Николаевна",
+          "Шапигузова Татьяна Андреевна",
+          "Литвинов Кирилл Алексеевич",
+          "Поверинов Александр Константинович",
+          "Филиппов Илья Владимирович",
+          "Филиппова Мария Михайловна"
+        ],
+        "expected": [
+          "Сергей Юрьевич Шпиговский",
+          "Максим Михайлович Казаков",
+          "Дарья Владимировна Костюк",
+          "Ханикова Светлана Николаевна",
+          "Шапигузова Татьяна Андреевна",
+          "Литвинов Кирилл Алексеевич",
+          "Поверинов Александр Константинович",
+          "Филиппов Илья Владимирович",
+          "Филиппова Мария Михайловна"
+        ]
+      }
+    },
+    {
+      "name": "all_links_under_specyalisty",
+      "ok": true,
+      "detail": [
+        "https://shpigovsky.ru/specyalisty/shpigovsky/",
+        "https://shpigovsky.ru/specyalisty/kazakov/",
+        "https://shpigovsky.ru/specyalisty/kostyuk/",
+        "https://shpigovsky.ru/specyalisty/hanikova/",
+        "https://shpigovsky.ru/specyalisty/shapiguzova/",
+        "https://shpigovsky.ru/specyalisty/litvinov/",
+        "https://shpigovsky.ru/specyalisty/poverinov/",
+        "https://shpigovsky.ru/specyalisty/filippov/",
+        "https://shpigovsky.ru/specyalisty/filippova/"
+      ]
+    },
+    {
+      "name": "no_php_warning",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "canonical_hint",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "specialisty_still_404",
+      "ok": true,
+      "detail": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "single_shpigovsky_200",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "single_shpigovsky_no_fatal",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "single_kostyuk_200",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "single_kostyuk_no_fatal",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "single_filippova_200",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "single_filippova_no_fatal",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "home_200",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "home_specialists_slider",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "home_specialists_count_ge_1",
+      "ok": true,
+      "detail": 9
+    },
+    {
+      "name": "uslugi_200",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "robots_200",
+      "ok": true,
+      "detail": 200
+    },
+    {
+      "name": "robots_sha_unchanged",
+      "ok": true,
+      "detail": "2594093919d01f067bcd3776d50d973cfa20a1faf4a6d63fc23f21367d08529e"
+    },
+    {
+      "name": "sitemap_200",
+      "ok": true,
+      "detail": 200
+    }
+  ],
+  "verdict": "PASS",
+  "failed": []
+}

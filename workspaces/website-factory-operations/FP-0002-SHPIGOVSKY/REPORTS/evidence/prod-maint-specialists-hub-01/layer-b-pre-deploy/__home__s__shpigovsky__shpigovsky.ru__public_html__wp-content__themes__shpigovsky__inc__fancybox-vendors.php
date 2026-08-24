@@ -76,10 +76,7 @@ function shpigovsky_enqueue_fancybox_vendor( $require_swiper_css_dep = false ) {
  * @return void
  */
 function shpigovsky_enqueue_generic_reusable_vendors() {
-	if (
-		! is_page_template( 'page-templates/generic.php' )
-		&& ! is_page_template( 'page-templates/specialists-hub.php' )
-	) {
+	if ( ! is_page_template( 'page-templates/generic.php' ) ) {
 		return;
 	}
 

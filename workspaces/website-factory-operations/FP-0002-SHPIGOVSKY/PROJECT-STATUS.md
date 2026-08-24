@@ -1,11 +1,13 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-08-24 (post-weekend health-check robots drift closeout — **PASS** → **PRODUCTION / MAINTENANCE — STABLE**)
+**Last updated:** 2026-08-24 (Specialists Hub implementation 01 — **PASS** → **PRODUCTION / MAINTENANCE — STABLE**)
 
-**Current project state:** **PRODUCTION / MAINTENANCE — STABLE**. Domain `https://shpigovsky.ru/`. Core `0.3.25-olya-robots`. Indexing **OPEN — HUMAN-APPROVED** (`blog_public=1`). P18G guard **ACTIVE**; watchdog **ACTIVE**. The 2026-08-24 health check detected physical `/robots.txt` drift (SHA `49e52465…`); bounded follow-up restored exact current Olya canonical policy (live = physical = canonical SHA `2594093919…`) and closed ATTENTION as PASS. Physical `/robots.txt` serves canonical Olya SEO policy, separate from global OPEN/CLOSED. Forms **ACTIVE**; SMTP **VERIFIED / ACTIVE**; native first-party anti-spam **ACTIVE**. Privacy **ACTIVE**; Metrika **CONSENT-GATED**. Health check: `REPORTS/health-checks/2026-08-24/REPORT-FP-0002-POST-WEEKEND-HEALTH-CHECK-2026-08-24.md`. Olya restoration authority report: `REPORTS/REPORT-FP-0002-PROD-MAINT-OLYA-ROBOTS-RESTORATION.md`. Runbook: `DOCS/OPERATIONS-INDEXING-ROBOTS-OWNERSHIP-v1.md`. Open items: `REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md`.
+**Current project state:** **PRODUCTION / MAINTENANCE — STABLE**. Domain `https://shpigovsky.ru/`. Core `0.3.26-specialists-hub`. Indexing **OPEN — HUMAN-APPROVED** (`blog_public=1`). P18G guard **ACTIVE**; watchdog **ACTIVE**. Physical `/robots.txt` remains Olya-approved SEO policy (SHA `2594093919…`), separate from global OPEN/CLOSED. Forms **ACTIVE**; SMTP **VERIFIED / ACTIVE**; native first-party anti-spam **ACTIVE**. Privacy **ACTIVE**; Metrika **CONSENT-GATED**. Open items: `REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md`.
 
-**Current maintenance phase:** `FP-0002 Olya Robots Restore + Health Check Closeout` — **PASS**. **ATTENTION RESOLVED — PHYSICAL ROBOTS RESTORED TO OLYA-APPROVED POLICY**. No indexing close, form/SMTP submission, or editorial DB mutation was performed.
+**Current maintenance phase:** `FP-0002 PROD-MAINT SPECIALISTS HUB 01` — **PASS**. Root cause confirmed: hub listing was never implemented. Page `#1030` `/specyalisty/` now uses `page-templates/specialists-hub.php`; published CPT specialists render via `shpigovsky_get_specialists_cards()` in existing card + `home-feature-grid__card-grid` styles (**zero new visual CSS**); Generic Content reusable-block field/location reused. Historical preparation placeholder cleared. `/specialisty/` untouched (deferred). Report: `REPORTS/REPORT-FP-0002-PROD-MAINT-SPECIALISTS-HUB-01.md`. Evidence: `REPORTS/evidence/prod-maint-specialists-hub-01/`.
+
+**Prior maintenance phase:** `FP-0002 Olya Robots Restore + Health Check Closeout` — **PASS**. **ATTENTION RESOLVED — PHYSICAL ROBOTS RESTORED TO OLYA-APPROVED POLICY**. No indexing close, form/SMTP submission, or editorial DB mutation was performed.
 
 **Prior WordPress phase:** `FP-0002 PROD-MAINT Workspace Stabilization + Git / MARS Closeout` — **PASS**. Git/worktree housekeeping; CURRENT docs aligned to maintenance; Forge knowledge assimilation.
 

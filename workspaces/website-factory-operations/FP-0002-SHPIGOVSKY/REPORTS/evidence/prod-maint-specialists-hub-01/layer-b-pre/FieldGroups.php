@@ -2693,10 +2693,7 @@ final class FieldGroups implements ModuleInterface {
 					'save_custom'   => 0,
 				),
 			),
-			array(
-				self::location( 'page_template', '==', 'page-templates/generic.php' ),
-				self::location( 'page_template', '==', 'page-templates/specialists-hub.php' ),
-			)
+			self::location( 'page_template', '==', 'page-templates/generic.php' )
 		);
 
 		$group['menu_order']     = 1;
@@ -2712,7 +2709,7 @@ final class FieldGroups implements ModuleInterface {
 			'tags',
 			'send-trackbacks',
 		);
-		$group['description']    = 'V9-06E52 generic page ACF content source of truth (Generic Content + Specialists Hub). PROD-P07: reusable shared blocks selector.';
+		$group['description']    = 'V9-06E52 generic page ACF content source of truth (Generic Content template). PROD-P07: reusable shared blocks selector.';
 
 		return $group;
 	}

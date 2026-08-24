@@ -1,0 +1,69 @@
+{
+  "files": [
+    {
+      "local": "X:\\AI MARS\\worktrees\\fp0002-specialists-hub-01\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\page-templates\\specialists-hub.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/page-templates/specialists-hub.php",
+      "semantic_match": true,
+      "src_sha256": "dc99fc01fb3d6f1c3321d13c45407cd7db1b02d8dfe57f853730bf19953ec397",
+      "prod_sha256": "dc99fc01fb3d6f1c3321d13c45407cd7db1b02d8dfe57f853730bf19953ec397",
+      "raw_equal": true
+    },
+    {
+      "local": "X:\\AI MARS\\worktrees\\fp0002-specialists-hub-01\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\specialist\\hub-content.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/specialist/hub-content.php",
+      "semantic_match": true,
+      "src_sha256": "dfa3336f602ec85b0453d985f8a178e1ae98c1b92d2ca382f965ceec2b3064ef",
+      "prod_sha256": "dfa3336f602ec85b0453d985f8a178e1ae98c1b92d2ca382f965ceec2b3064ef",
+      "raw_equal": true
+    },
+    {
+      "local": "X:\\AI MARS\\worktrees\\fp0002-specialists-hub-01\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\specialist\\hub-list.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/specialist/hub-list.php",
+      "semantic_match": true,
+      "src_sha256": "556bd655130bf83dba2e2fb7f35b5bb99f9d51b48f0b94875602a32654e00524",
+      "prod_sha256": "556bd655130bf83dba2e2fb7f35b5bb99f9d51b48f0b94875602a32654e00524",
+      "raw_equal": true
+    },
+    {
+      "local": "X:\\AI MARS\\worktrees\\fp0002-specialists-hub-01\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\inc\\fancybox-vendors.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/fancybox-vendors.php",
+      "semantic_match": true,
+      "src_sha256": "1c2db395520bb8021a5fd2d4943f893196a32cdaf921c6b2b114da039ff292c5",
+      "prod_sha256": "1c2db395520bb8021a5fd2d4943f893196a32cdaf921c6b2b114da039ff292c5",
+      "raw_equal": true
+    },
+    {
+      "local": "X:\\AI MARS\\worktrees\\fp0002-specialists-hub-01\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\plugins\\shpigovsky-core\\src\\Fields\\FieldGroups.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Fields/FieldGroups.php",
+      "semantic_match": true,
+      "src_sha256": "9a9eae430fc8cab5a581207c8c87a5abcd6cfcdeccc3c87534e324dd7faa42ed",
+      "prod_sha256": "9a9eae430fc8cab5a581207c8c87a5abcd6cfcdeccc3c87534e324dd7faa42ed",
+      "raw_equal": true
+    },
+    {
+      "local": "X:\\AI MARS\\worktrees\\fp0002-specialists-hub-01\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\plugins\\shpigovsky-core\\shpigovsky-core.php",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/shpigovsky-core.php",
+      "semantic_match": true,
+      "src_sha256": "c378fa79e2ae17d2b509ca3ae483f678303007ec0546489a0d52c94bd2d64ff4",
+      "prod_sha256": "c378fa79e2ae17d2b509ca3ae483f678303007ec0546489a0d52c94bd2d64ff4",
+      "raw_equal": true
+    },
+    {
+      "local": "X:\\AI MARS\\worktrees\\fp0002-specialists-hub-01\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\acf-json\\group_fp02_page_generic_content.json",
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/acf-json/group_fp02_page_generic_content.json",
+      "semantic_match": true,
+      "src_sha256": "79914f93deb2f8698235965309fa71408115b54bbd235bf4bf36439ff85399be",
+      "prod_sha256": "79914f93deb2f8698235965309fa71408115b54bbd235bf4bf36439ff85399be",
+      "raw_equal": true
+    }
+  ],
+  "semantic_parity": "PASS",
+  "page_config": {
+    "template": "page-templates/specialists-hub.php",
+    "blog_public": 1,
+    "body": "",
+    "post_content": "",
+    "core": "0.3.26-specialists-hub"
+  },
+  "match_count": "7/7"
+}

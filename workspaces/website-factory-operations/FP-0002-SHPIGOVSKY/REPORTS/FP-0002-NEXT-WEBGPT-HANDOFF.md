@@ -6,7 +6,8 @@
 - phase: **PRODUCTION / MAINTENANCE — STABLE**
 
 ## Current Production State
-- runtime/core: WordPress; current production status tracks core `0.3.25-olya-robots`
+- runtime/core: WordPress; current production status tracks core `0.3.26-specialists-hub`
+- specialists hub: Page `#1030` `/specyalisty/` uses `Specialists Hub` template (CPT cards via existing helper; reusable blocks supported)
 - indexing: **OPEN — human-approved**; P18G guard active; watchdog active
 - robots: **Olya-approved robots policy active**; physical `/robots.txt` is editorial/SEO-owned and must stay separate from global indexing state
 - forms: active
@@ -15,6 +16,7 @@
 - privacy: privacy/cookie consent active
 - analytics: Yandex Metrika consent-gated; form goals consent-gated
 - Dashboard: compact/current client-facing Dashboard UX active
+- note: `/specialisty/` alias/redirect remains intentionally deferred
 
 ## Authority Rules
 - canonical Git truth: `origin/mars/canonical-post-recovery`
@@ -38,9 +40,9 @@
 
 ## Current Git Recovery Point
 - canonical branch: `origin/mars/canonical-post-recovery`
-- exact remote SHA: `422f56e446bf9d080d3ab35dd2dabb242fc78ed9`
+- exact remote SHA: `70e54fa9cd66457717bce999b38e2364cf5159ce`
 - matching closeout report:
-  - `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-FINAL-LOCAL-MARS-CLOSEOUT.md`
+  - `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-PROD-MAINT-SPECIALISTS-HUB-01.md`
 
 ## Mandatory Maintenance Workflow
 fresh intake

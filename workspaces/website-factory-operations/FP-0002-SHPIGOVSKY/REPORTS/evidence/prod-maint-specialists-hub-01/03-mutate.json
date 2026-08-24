@@ -1,0 +1,37 @@
+{
+  "ok": true,
+  "actions": [
+    "template_set_specialists_hub",
+    "cleared_generic_page_body_placeholder",
+    "cleared_post_content_placeholder"
+  ],
+  "before": {
+    "template": "page-templates/generic.php",
+    "post_content": "<!-- wp:paragraph --><p>Раздел находится в подготовке. Здесь будет опубликована информация по теме страницы.</p><!-- /wp:paragraph -->",
+    "generic_page_body": "<!-- wp:paragraph --><p>Раздел находится в подготовке. Здесь будет опубликована информация по теме страницы.</p><!-- /wp:paragraph -->",
+    "generic_page_lead": "",
+    "generic_page_reusable_blocks": "",
+    "page_layout_mode": "full",
+    "seo_title": "",
+    "seo_description": "",
+    "post_title": "Специалисты",
+    "post_name": "specyalisty",
+    "post_status": "publish"
+  },
+  "after": {
+    "template": "page-templates/specialists-hub.php",
+    "post_content": "",
+    "generic_page_body": "",
+    "generic_page_lead": "",
+    "generic_page_reusable_blocks": "",
+    "page_layout_mode": "full",
+    "seo_title": "",
+    "seo_description": "",
+    "post_title": "Специалисты",
+    "post_name": "specyalisty",
+    "post_status": "publish",
+    "permalink": "https://shpigovsky.ru/specyalisty/",
+    "blog_public": 1,
+    "core_version": "0.3.26-specialists-hub"
+  }
+}

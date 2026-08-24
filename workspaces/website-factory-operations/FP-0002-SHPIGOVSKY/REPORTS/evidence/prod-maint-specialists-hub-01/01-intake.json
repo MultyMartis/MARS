@@ -1,0 +1,254 @@
+{
+  "ts_utc": "2026-08-24T11:02:58+00:00",
+  "blog_public": 1,
+  "siteurl": "https://shpigovsky.ru",
+  "home": "https://shpigovsky.ru",
+  "stylesheet": "shpigovsky",
+  "template": "shpigovsky",
+  "theme": {
+    "name": "Shpigovsky",
+    "version": "0.3.0-d7a-shell",
+    "stylesheet": "shpigovsky"
+  },
+  "core_plugin": {
+    "Name": "Shpigovsky Core",
+    "Version": "0.3.25-olya-robots",
+    "active": true
+  },
+  "wpilot": {
+    "Version": "0.3.2",
+    "active": true
+  },
+  "wpilot_write_probe": {
+    "option_write_enabled": null
+  },
+  "page_1030": {
+    "ID": 1030,
+    "post_title": "Специалисты",
+    "post_name": "specyalisty",
+    "post_status": "publish",
+    "post_type": "page",
+    "guid": "http://shpigovsky.test/specyalisty/",
+    "permalink": "https://shpigovsky.ru/specyalisty/",
+    "template": "page-templates/generic.php",
+    "post_content": "<!-- wp:paragraph --><p>Раздел находится в подготовке. Здесь будет опубликована информация по теме страницы.</p><!-- /wp:paragraph -->",
+    "post_content_sha256": "8c5f89d013533fe5211abba6977fde313f67ada09275e35b999e0571a62de2bc",
+    "post_excerpt": "",
+    "menu_order": 0,
+    "post_modified_gmt": "2026-08-24 09:55:46",
+    "acf": {
+      "generic_page_lead": "",
+      "generic_page_body": "<!-- wp:paragraph --><p>Раздел находится в подготовке. Здесь будет опубликована информация по теме страницы.</p><!-- /wp:paragraph -->",
+      "generic_page_reusable_blocks": "",
+      "page_layout_mode": "full",
+      "seo_title": "",
+      "seo_description": ""
+    },
+    "seo_title": "",
+    "seo_metadesc_yoast": "",
+    "rank_title": "",
+    "rank_desc": "",
+    "fp02_seo_title": "",
+    "fp02_seo_description": "",
+    "all_meta_keys": [
+      "_wp_page_template",
+      "page_layout_mode",
+      "_page_layout_mode",
+      "generic_page_body",
+      "_generic_page_body",
+      "_edit_lock",
+      "_edit_last",
+      "fp02_seo_title",
+      "_fp02_seo_title",
+      "fp02_seo_description",
+      "_fp02_seo_description",
+      "generic_page_lead",
+      "_generic_page_lead"
+    ]
+  },
+  "specialists_published": [
+    {
+      "ID": 1031,
+      "title": "Сергей Юрьевич Шпиговский",
+      "slug": "shpigovsky",
+      "status": "publish",
+      "menu_order": 10,
+      "permalink": "https://shpigovsky.ru/specyalisty/shpigovsky/",
+      "modified_gmt": "2026-08-22 07:45:01"
+    },
+    {
+      "ID": 1032,
+      "title": "Максим Михайлович Казаков",
+      "slug": "kazakov",
+      "status": "publish",
+      "menu_order": 20,
+      "permalink": "https://shpigovsky.ru/specyalisty/kazakov/",
+      "modified_gmt": "2026-08-16 14:19:06"
+    },
+    {
+      "ID": 1033,
+      "title": "Дарья Владимировна Костюк",
+      "slug": "kostyuk",
+      "status": "publish",
+      "menu_order": 30,
+      "permalink": "https://shpigovsky.ru/specyalisty/kostyuk/",
+      "modified_gmt": "2026-07-23 17:08:51"
+    },
+    {
+      "ID": 1967,
+      "title": "Ханикова Светлана Николаевна",
+      "slug": "hanikova",
+      "status": "publish",
+      "menu_order": 35,
+      "permalink": "https://shpigovsky.ru/specyalisty/hanikova/",
+      "modified_gmt": "2026-08-16 16:49:46"
+    },
+    {
+      "ID": 1097,
+      "title": "Шапигузова Татьяна Андреевна",
+      "slug": "shapiguzova",
+      "status": "publish",
+      "menu_order": 40,
+      "permalink": "https://shpigovsky.ru/specyalisty/shapiguzova/",
+      "modified_gmt": "2026-08-16 13:40:54"
+    },
+    {
+      "ID": 1949,
+      "title": "Литвинов Кирилл Алексеевич",
+      "slug": "litvinov",
+      "status": "publish",
+      "menu_order": 50,
+      "permalink": "https://shpigovsky.ru/specyalisty/litvinov/",
+      "modified_gmt": "2026-08-16 16:50:47"
+    },
+    {
+      "ID": 1957,
+      "title": "Поверинов Александр Константинович",
+      "slug": "poverinov",
+      "status": "publish",
+      "menu_order": 60,
+      "permalink": "https://shpigovsky.ru/specyalisty/poverinov/",
+      "modified_gmt": "2026-08-16 16:50:32"
+    },
+    {
+      "ID": 1963,
+      "title": "Филиппов Илья Владимирович",
+      "slug": "filippov",
+      "status": "publish",
+      "menu_order": 70,
+      "permalink": "https://shpigovsky.ru/specyalisty/filippov/",
+      "modified_gmt": "2026-08-16 16:50:02"
+    },
+    {
+      "ID": 1988,
+      "title": "Филиппова Мария Михайловна",
+      "slug": "filippova",
+      "status": "publish",
+      "menu_order": 80,
+      "permalink": "https://shpigovsky.ru/specyalisty/filippova/",
+      "modified_gmt": "2026-08-16 16:49:30"
+    }
+  ],
+  "specialists_count": 9,
+  "cards_helper": {
+    "skipped": "acf_cli_init_issue"
+  },
+  "specialists_roles_meta": [
+    {
+      "ID": 1031,
+      "role_meta": "Аддиктолог, интервенционист"
+    },
+    {
+      "ID": 1032,
+      "role_meta": "Психолог, преподаватель психологии, гештальт-терапевт"
+    },
+    {
+      "ID": 1033,
+      "role_meta": "Психолог, EMDR терапевт, телесно-ориентированный терапевт"
+    },
+    {
+      "ID": 1967,
+      "role_meta": "Клинический психолог"
+    },
+    {
+      "ID": 1097,
+      "role_meta": "Сертифицированный гонг-мастер, звукотерапевт и преподаватель Кундалини йоги."
+    },
+    {
+      "ID": 1949,
+      "role_meta": "Консультант по химической зависимости"
+    },
+    {
+      "ID": 1957,
+      "role_meta": "Психолог- консультант"
+    },
+    {
+      "ID": 1963,
+      "role_meta": "Психолог, гештальт-терапевт"
+    },
+    {
+      "ID": 1988,
+      "role_meta": "Психолог, клинический психолог"
+    }
+  ],
+  "activity_log_recent": [],
+  "prod_files": {
+    "theme/page-templates/generic.php": {
+      "path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/page-templates/generic.php",
+      "bytes": 1458,
+      "sha256": "1e818d10dd11facadeb026ff972865413e26ac67ae100c0545f12db039ceeb77",
+      "mtime": "2026-08-14T07:58:53+00:00",
+      "exists_specialists_hub": false
+    },
+    "theme/page-templates/services-hub.php": {
+      "path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/page-templates/services-hub.php",
+      "bytes": 3091,
+      "sha256": "5cd3286f748a21513aa9171f3a446956f70fdfae083049518d33fe6b22179d9f",
+      "mtime": "2026-08-16T11:49:27+00:00",
+      "exists_specialists_hub": false
+    },
+    "theme/inc/reusable-blocks-helpers.php": {
+      "path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/reusable-blocks-helpers.php",
+      "bytes": 36447,
+      "sha256": "183a6660041e2d0f79278c4c15650b07af247cd72b39a44935a804e8ec74ad7b",
+      "mtime": "2026-08-19T18:45:42+00:00",
+      "exists_specialists_hub": false
+    },
+    "theme/template-parts/home/specialists.php": {
+      "path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/home/specialists.php",
+      "bytes": 2780,
+      "sha256": "eda5af53ed84038101aa7f822f1faba0ca26a79181abb8b38b91a424b146ec48",
+      "mtime": "2026-08-14T15:07:48+00:00",
+      "exists_specialists_hub": false
+    },
+    "theme/template-parts/generic/content-page.php": {
+      "path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/generic/content-page.php",
+      "bytes": 4837,
+      "sha256": "37aaac70af8113e182b159fb98704240a4ec35241cc93ecceda3f9bcfee6d108",
+      "mtime": "2026-08-14T15:07:52+00:00",
+      "exists_specialists_hub": false
+    },
+    "plugin/FieldGroups.php": {
+      "path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Fields/FieldGroups.php",
+      "bytes": 160443,
+      "sha256": "c6cfc56f0a997000e13eb03178d4b20aeb0fb3951011a584b38fa32fcd528e5a",
+      "mtime": "2026-08-18T14:50:17+00:00",
+      "exists_specialists_hub": false
+    },
+    "plugin/shpigovsky-core.php": {
+      "path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/shpigovsky-core.php",
+      "bytes": 1778,
+      "sha256": "4f9e99d0f08840487ea5a37cee3e21be7579682a2fdf13e6629330c3669f300f",
+      "mtime": "2026-08-21T07:39:47+00:00",
+      "exists_specialists_hub": false
+    },
+    "robots.txt": {
+      "path": "/home/s/shpigovsky/shpigovsky.ru/public_html/robots.txt",
+      "bytes": 2826,
+      "sha256": "2594093919d01f067bcd3776d50d973cfa20a1faf4a6d63fc23f21367d08529e",
+      "mtime": "2026-08-24T07:15:38+00:00",
+      "exists_specialists_hub": false
+    }
+  },
+  "specialists_hub_template_exists": false
+}
