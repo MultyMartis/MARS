@@ -359,7 +359,15 @@ Rollback: restore 9 exact plugin files from Layer B + prior `shpigovsky-core.php
 
 ## 29. Git
 
-Commit and push authorized — see post-commit SHA in operator git log. Origin tip expected to advance from `1c9e92ed90a495000e2be4a022dcb40dda9abfbc`.
+| Item | Value |
+|------|-------|
+| Commit | `fc39a5a922c398824306574b701ac7bf9860a698` |
+| Message | `FP-0002: add Yandex-aligned Schema.org JSON-LD graph in shpigovsky-core.` |
+| Branch | `origin/mars/canonical-post-recovery` |
+| Prior origin tip | `1c9e92ed90a495000e2be4a022dcb40dda9abfbc` |
+| Final origin tip | `fc39a5a922c398824306574b701ac7bf9860a698` |
+| Files in commit | 32 (plugin module + report + evidence + status/handoff) |
+| Staging | Selective allowlist only — no `git add .` |
 
 ---
 
