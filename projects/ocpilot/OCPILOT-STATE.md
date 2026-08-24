@@ -1,5 +1,6 @@
 
 
+**SITE-002 Run 4.341 (2026-08-24):** Catalog structure normalization plan 01 **COMPLETE / PLAN-ONLY — OPERATOR DECISIONS REQUIRED BEFORE APPLY** — Hybrid Option C recommended; decision matrix for roots/Posuda/Upakovochnoe/Teplovoe/Hlebo/empty suspects/Zapchasti; SEO/mapping/UI/apply phases documented; production mutation **0**. Report: [SITE-002-CATALOG-STRUCTURE-NORMALIZATION-PLAN-01.md](sites/site-002/reports/SITE-002-CATALOG-STRUCTURE-NORMALIZATION-PLAN-01.md).
 **SITE-002 Run 4.340 (2026-08-24):** Catalog tree ↔ 1C groups comparison audit 01 **COMPLETE / READ-ONLY — STRUCTURE ATTENTION REQUIRED** — live `import0_1.xml` roots **5** vs site roots **10**; shared Neutral/Holodilnoe/Tech; Posuda hierarchy mismatch (`364` nested); `upakovochnoe` 1C-only; demo/legacy root suspects `93/171/205/206/96`; production mutation **0**. Report: [SITE-002-CATALOG-TREE-1C-COMPARISON-AUDIT-01.md](sites/site-002/reports/SITE-002-CATALOG-TREE-1C-COMPARISON-AUDIT-01.md).
 **SITE-002 Run 4.339 (2026-08-24):** Current catalog tree export 01 **COMPLETE / READ-ONLY** — DB tree **226** categories (**225 active / 1 inactive**), **10** roots, max depth **3**; all 225 active categories matched sitemap; sitemap **1887→1887**, URL delta **0/0**; **NO_NEW_PUBLIC_SECTIONS_DETECTED**; `upakovochnoe` absent DB+sitemap/404; 75-URL HTTP smoke 73×200/2×404; production mutation **0**. Report/tree/flat export: [SITE-002-CATALOG-TREE-CURRENT-EXPORT-01.md](sites/site-002/reports/SITE-002-CATALOG-TREE-CURRENT-EXPORT-01.md).
 **SITE-002 Run 4.338 (2026-08-24):** Post-import and monitor healthcheck 01 **COMPLETE / GREEN** — scheduled monitor `2026-08-24_12-30-03` `NO_ACTION_REQUIRED` 1887→1887; Telegram OK correlated; latest natural 1C import `2026-08-24` SUCCESS with offers; mapping `95`/`364` persistence **CONFIRMED**; sitemap **1887**; `upakovochnoe` still separate 404; production mutation **0**. Report: [SITE-002-POST-IMPORT-AND-MONITOR-HEALTHCHECK-01.md](sites/site-002/reports/SITE-002-POST-IMPORT-AND-MONITOR-HEALTHCHECK-01.md).
@@ -25,8 +26,8 @@
 # OCPilot — Program State
 
 **Status:** living state document — **not** automated router  
-**Last updated:** 2026-08-20
-**Evidence cutoff:** 2026-08-24 (SITE-002 Run **4.340** / `SITE-002-CATALOG-TREE-1C-COMPARISON-AUDIT-01` — site 10 roots vs 1C 5 roots; structure attention before apply; mutation 0)
+**Last updated:** 2026-08-24
+**Evidence cutoff:** 2026-08-24 (SITE-002 Run **4.341** / `SITE-002-CATALOG-STRUCTURE-NORMALIZATION-PLAN-01` — Hybrid C recommended; operator decisions required before apply; mutation 0)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -40,7 +41,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Catalog vs 1C tree comparison ready for HITL (Run 4.340)** — site roots **10** vs 1C roots **5**; shared Neutral/Holodilnoe/Tech; Posuda nested vs 1C root; `upakovochnoe` 1C-only; demo/legacy suspects among empty site-only roots; baseline **1887** untouched; no apply · [comparison audit 4.340](sites/site-002/reports/SITE-002-CATALOG-TREE-1C-COMPARISON-AUDIT-01.md) · [tree export 4.339](sites/site-002/reports/SITE-002-CATALOG-TREE-CURRENT-EXPORT-01.md) · [healthcheck 4.338](sites/site-002/reports/SITE-002-POST-IMPORT-AND-MONITOR-HEALTHCHECK-01.md) |
+| Current SITE-002 focus | **Catalog structure normalization plan ready for HITL (Run 4.341)** — Hybrid Option C recommended; decisions needed for Posuda/Upakovochnoe/Teplovoe/Hlebo/empty roots/Zapchasti; baseline **1887** untouched; no apply · [normalization plan 4.341](sites/site-002/reports/SITE-002-CATALOG-STRUCTURE-NORMALIZATION-PLAN-01.md) · [comparison audit 4.340](sites/site-002/reports/SITE-002-CATALOG-TREE-1C-COMPARISON-AUDIT-01.md) · [tree export 4.339](sites/site-002/reports/SITE-002-CATALOG-TREE-CURRENT-EXPORT-01.md) |
 
 ### Git authority note (SITE-002 Wave E — 2026-07-10)
 
