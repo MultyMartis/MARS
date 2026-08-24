@@ -1,0 +1,231 @@
+[
+  {
+    "label": "homepage",
+    "url": "https://shpigovsky.ru/",
+    "status": 200,
+    "final_url": "https://shpigovsky.ru/",
+    "jsonld_count": 1,
+    "og_count": 0,
+    "specyalisty_in_jsonld": false,
+    "parse_ok": true,
+    "types": [
+      "MedicalClinic",
+      "WebPage",
+      "WebSite"
+    ],
+    "webpage_type": "WebPage",
+    "breadcrumb": false,
+    "graph_size": 5
+  },
+  {
+    "label": "contacts",
+    "url": "https://shpigovsky.ru/kontakty/",
+    "status": 200,
+    "final_url": "https://shpigovsky.ru/kontakty/",
+    "jsonld_count": 1,
+    "og_count": 0,
+    "specyalisty_in_jsonld": false,
+    "parse_ok": true,
+    "types": [
+      "ContactPage",
+      "MedicalClinic",
+      "WebSite"
+    ],
+    "webpage_type": "ContactPage",
+    "breadcrumb": false,
+    "graph_size": 5
+  },
+  {
+    "label": "services_hub",
+    "url": "https://shpigovsky.ru/uslugi/",
+    "status": 200,
+    "final_url": "https://shpigovsky.ru/uslugi/",
+    "jsonld_count": 1,
+    "og_count": 0,
+    "specyalisty_in_jsonld": false,
+    "parse_ok": true,
+    "types": [
+      "BreadcrumbList",
+      "CollectionPage",
+      "ItemList",
+      "MedicalClinic",
+      "WebSite"
+    ],
+    "webpage_type": "CollectionPage",
+    "breadcrumb": true,
+    "graph_size": 7
+  },
+  {
+    "label": "service_single",
+    "url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+    "status": 200,
+    "final_url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+    "jsonld_count": 1,
+    "og_count": 0,
+    "specyalisty_in_jsonld": false,
+    "parse_ok": true,
+    "types": [
+      "BreadcrumbList",
+      "MedicalClinic",
+      "Service",
+      "WebPage",
+      "WebSite"
+    ],
+    "webpage_type": "WebPage",
+    "breadcrumb": true,
+    "graph_size": 7
+  },
+  {
+    "label": "specialists_hub",
+    "url": "https://shpigovsky.ru/specialisty/",
+    "status": 200,
+    "final_url": "https://shpigovsky.ru/specialisty/",
+    "jsonld_count": 1,
+    "og_count": 0,
+    "specyalisty_in_jsonld": false,
+    "parse_ok": true,
+    "types": [
+      "CollectionPage",
+      "ItemList",
+      "MedicalClinic",
+      "WebSite"
+    ],
+    "webpage_type": "CollectionPage",
+    "breadcrumb": false,
+    "graph_size": 6
+  },
+  {
+    "label": "specialist_single",
+    "url": "https://shpigovsky.ru/specialisty/shpigovsky/",
+    "status": 200,
+    "final_url": "https://shpigovsky.ru/specialisty/shpigovsky/",
+    "jsonld_count": 1,
+    "og_count": 0,
+    "specyalisty_in_jsonld": false,
+    "parse_ok": true,
+    "types": [
+      "BreadcrumbList",
+      "MedicalClinic",
+      "Person",
+      "WebPage",
+      "WebSite"
+    ],
+    "webpage_type": "WebPage",
+    "breadcrumb": true,
+    "graph_size": 7
+  },
+  {
+    "label": "article",
+    "url": "https://shpigovsky.ru/blog/nazvanie-stati/",
+    "status": 200,
+    "final_url": "https://shpigovsky.ru/blog/nazvanie-stati/",
+    "jsonld_count": 1,
+    "og_count": 0,
+    "specyalisty_in_jsonld": false,
+    "parse_ok": true,
+    "types": [
+      "Article",
+      "BreadcrumbList",
+      "MedicalClinic",
+      "WebPage",
+      "WebSite"
+    ],
+    "webpage_type": "WebPage",
+    "breadcrumb": true,
+    "graph_size": 7
+  },
+  {
+    "label": "about",
+    "url": "https://shpigovsky.ru/o-centre/o-nas/",
+    "status": 200,
+    "final_url": "https://shpigovsky.ru/o-centre/o-nas/",
+    "jsonld_count": 1,
+    "og_count": 0,
+    "specyalisty_in_jsonld": false,
+    "parse_ok": true,
+    "types": [
+      "BreadcrumbList",
+      "MedicalClinic",
+      "WebPage",
+      "WebSite"
+    ],
+    "webpage_type": "WebPage",
+    "breadcrumb": true,
+    "graph_size": 6
+  },
+  {
+    "label": "reviews",
+    "url": "https://shpigovsky.ru/otzyvy/",
+    "status": 200,
+    "final_url": "https://shpigovsky.ru/otzyvy/",
+    "jsonld_count": 1,
+    "og_count": 0,
+    "specyalisty_in_jsonld": false,
+    "parse_ok": true,
+    "types": [
+      "CollectionPage",
+      "MedicalClinic",
+      "WebSite"
+    ],
+    "webpage_type": "CollectionPage",
+    "breadcrumb": false,
+    "graph_size": 5
+  },
+  {
+    "label": "legal",
+    "url": "https://shpigovsky.ru/privacy-policy/",
+    "status": 200,
+    "final_url": "https://shpigovsky.ru/privacy-policy/",
+    "jsonld_count": 1,
+    "og_count": 0,
+    "specyalisty_in_jsonld": false,
+    "parse_ok": true,
+    "types": [
+      "BreadcrumbList",
+      "MedicalClinic",
+      "WebPage",
+      "WebSite"
+    ],
+    "webpage_type": "WebPage",
+    "breadcrumb": true,
+    "graph_size": 6
+  },
+  {
+    "label": "generic_institutional",
+    "url": "https://shpigovsky.ru/o-centre/programma-lecheniya/",
+    "status": 200,
+    "final_url": "https://shpigovsky.ru/o-centre/programma-lecheniya/",
+    "jsonld_count": 1,
+    "og_count": 0,
+    "specyalisty_in_jsonld": false,
+    "parse_ok": true,
+    "types": [
+      "BreadcrumbList",
+      "MedicalClinic",
+      "WebPage",
+      "WebSite"
+    ],
+    "webpage_type": "WebPage",
+    "breadcrumb": true,
+    "graph_size": 6
+  },
+  {
+    "label": "deprecated_redirect",
+    "url": "https://shpigovsky.ru/specyalisty/",
+    "status": 200,
+    "final_url": "https://shpigovsky.ru/specialisty/",
+    "jsonld_count": 1,
+    "og_count": 0,
+    "specyalisty_in_jsonld": false,
+    "parse_ok": true,
+    "types": [
+      "CollectionPage",
+      "ItemList",
+      "MedicalClinic",
+      "WebSite"
+    ],
+    "webpage_type": "CollectionPage",
+    "breadcrumb": false,
+    "graph_size": 6
+  }
+]

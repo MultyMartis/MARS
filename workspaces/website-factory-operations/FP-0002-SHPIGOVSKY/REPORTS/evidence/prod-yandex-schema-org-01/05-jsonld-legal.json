@@ -1,0 +1,153 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalClinic",
+      "@id": "https://shpigovsky.ru/#organization",
+      "name": "Шпиговский дом",
+      "url": "https://shpigovsky.ru",
+      "telephone": "8 (925) 183-64-64",
+      "email": "dom@shpigovsky.ru",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Москва,\r\nМосковская область",
+        "addressCountry": "RU",
+        "addressLocality": "Москва"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "19:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "09:00",
+          "closes": "20:00"
+        }
+      ],
+      "subOrganization": [
+        {
+          "@id": "https://shpigovsky.ru/#location-%d1%86%d0%b5%d0%bd%d1%82%d1%80-%d0%bf%d1%80%d0%be%d1%84%d0%b8%d0%bb%d0%b0%d0%ba%d1%82%d0%b8%d0%ba%d0%b8-%d0%b8-%d0%bb%d0%b5%d1%87%d0%b5%d0%bd%d0%b8%d1%8f-%d0%b7%d0%b0%d0%b2%d0%b8%d1%81%d0%b8"
+        },
+        {
+          "@id": "https://shpigovsky.ru/#location-%d0%bb%d0%b5%d1%87%d0%b5%d0%bd%d0%b8%d0%b5-%d0%b7%d0%b0%d0%b2%d0%b8%d1%81%d0%b8%d0%bc%d0%be%d1%81%d1%82%d0%b5%d0%b9-%d0%bc%d0%be%d1%81%d0%ba%d0%b2%d0%b0"
+        }
+      ]
+    },
+    {
+      "@type": "MedicalClinic",
+      "@id": "https://shpigovsky.ru/#location-%d1%86%d0%b5%d0%bd%d1%82%d1%80-%d0%bf%d1%80%d0%be%d1%84%d0%b8%d0%bb%d0%b0%d0%ba%d1%82%d0%b8%d0%ba%d0%b8-%d0%b8-%d0%bb%d0%b5%d1%87%d0%b5%d0%bd%d0%b8%d1%8f-%d0%b7%d0%b0%d0%b2%d0%b8%d1%81%d0%b8",
+      "name": "Центр профилактики и лечения зависимости",
+      "url": "https://shpigovsky.ru/kontakty/",
+      "parentOrganization": {
+        "@id": "https://shpigovsky.ru/#organization"
+      },
+      "telephone": "8 (925) 183-64-64",
+      "email": "Info@shpigovsky.ru",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Московская область, район ж.д. станции Катуар, д. Сухарево",
+        "addressCountry": "RU",
+        "addressRegion": "Московская область"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "19:00"
+        }
+      ]
+    },
+    {
+      "@type": "MedicalClinic",
+      "@id": "https://shpigovsky.ru/#location-%d0%bb%d0%b5%d1%87%d0%b5%d0%bd%d0%b8%d0%b5-%d0%b7%d0%b0%d0%b2%d0%b8%d1%81%d0%b8%d0%bc%d0%be%d1%81%d1%82%d0%b5%d0%b9-%d0%bc%d0%be%d1%81%d0%ba%d0%b2%d0%b0",
+      "name": "Лечение зависимостей Москва",
+      "url": "https://shpigovsky.ru/kontakty/",
+      "parentOrganization": {
+        "@id": "https://shpigovsky.ru/#organization"
+      },
+      "telephone": "8 (925) 183-64-64",
+      "email": "Info@shpigovsky.ru",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Москва, ул. Ленина, 3",
+        "addressCountry": "RU",
+        "addressLocality": "Москва"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "19:00"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://shpigovsky.ru/privacy-policy#webpage-breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://shpigovsky.ru"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Политика конфиденциальности",
+          "item": "https://shpigovsky.ru/privacy-policy"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://shpigovsky.ru/#website",
+      "url": "https://shpigovsky.ru",
+      "name": "Шпиговский дом",
+      "publisher": {
+        "@id": "https://shpigovsky.ru/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://shpigovsky.ru/privacy-policy#webpage",
+      "url": "https://shpigovsky.ru/privacy-policy",
+      "name": "Политика конфиденциальности",
+      "isPartOf": {
+        "@id": "https://shpigovsky.ru/#website"
+      },
+      "inLanguage": "ru-RU",
+      "description": "Настоящая Политика конфиденциальности (далее — Политика) разработана в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных» и определяет порядок обработки персональных данных и меры по их защите на сайте shpigovsky.ru, принадлежащем Шпиговскому Сергею Юрьевичу (далее — О…",
+      "breadcrumb": {
+        "@id": "https://shpigovsky.ru/privacy-policy#webpage-breadcrumb"
+      }
+    }
+  ]
+}

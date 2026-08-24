@@ -1,0 +1,11 @@
+{
+  "status": "YANDEX VALIDATOR = ACCESS BLOCKED",
+  "reason": "Authenticated Yandex Webmaster structured-data validator UI requires operator login; not available in agent session.",
+  "official_validator_docs": "https://yandex.ru/support/webmaster/en/yandex-indexing/validator.html",
+  "fallback_validation": {
+    "raw_html_jsonld_parse": "PASS — 12/12 representative URLs",
+    "json_structure": "@context + @graph with stable @id references",
+    "deprecated_url_in_jsonld": false,
+    "note": "Secondary public Schema.org / JSON-LD lint not run as separate tool; production HTML source QA used as primary post-deploy evidence."
+  }
+}

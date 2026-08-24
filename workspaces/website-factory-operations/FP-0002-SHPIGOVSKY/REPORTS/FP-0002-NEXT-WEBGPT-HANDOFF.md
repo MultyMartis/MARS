@@ -6,8 +6,9 @@
 - phase: **PRODUCTION / MAINTENANCE — STABLE**
 
 ## Current Production State
-- runtime/core: WordPress; current production status tracks core `0.3.26-specialists-hub`
-- specialists hub: Page `#1030` `/specyalisty/` uses `Specialists Hub` template (CPT cards via existing helper; reusable blocks supported)
+- runtime/core: WordPress; current production status tracks core **`0.3.30-yandex-schema-org-01`**
+- structured data: **JSON-LD LIVE** — `shpigovsky-core` module `structured-data.schema-org` (single head script, `@graph`, stable `@id`)
+- specialists hub: Page `#1030` `/specialisty/` uses `Specialists Hub` template (CPT cards via existing helper)
 - indexing: **OPEN — human-approved**; P18G guard active; watchdog active
 - robots: **Olya-approved robots policy active**; physical `/robots.txt` is editorial/SEO-owned and must stay separate from global indexing state
 - forms: active
@@ -15,8 +16,9 @@
 - anti-spam: native first-party anti-spam active; **no external CAPTCHA**
 - privacy: privacy/cookie consent active
 - analytics: Yandex Metrika consent-gated; form goals consent-gated
+- open graph: **not currently emitted** on sampled public pages (pre-existing; separate from Schema.org)
 - Dashboard: compact/current client-facing Dashboard UX active
-- note: `/specialisty/` alias/redirect remains intentionally deferred
+- deprecated path: `/specyalisty/` → 301 to `/specialisty/` (JSON-LD uses canonical `/specialisty/` only)
 
 ## Authority Rules
 - canonical Git truth: `origin/mars/canonical-post-recovery`
@@ -35,14 +37,16 @@
   - `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/BASELINE-FP-0002-PRODUCTION-MAINTENANCE-STABLE.md`
 - robots ownership/runbook:
   - `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/DOCS/OPERATIONS-INDEXING-ROBOTS-OWNERSHIP-v1.md`
+- structured data report:
+  - `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-PROD-YANDEX-SCHEMA-ORG-01.md`
 - source/runtime authority:
   - `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/SOURCE-AUTHORITY.md`
 
 ## Current Git Recovery Point
 - canonical branch: `origin/mars/canonical-post-recovery`
-- exact remote SHA: `70e54fa9cd66457717bce999b38e2364cf5159ce`
+- see latest commit on remote after schema wave push (report §29)
 - matching closeout report:
-  - `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-PROD-MAINT-SPECIALISTS-HUB-01.md`
+  - `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-PROD-YANDEX-SCHEMA-ORG-01.md`
 
 ## Mandatory Maintenance Workflow
 fresh intake
@@ -59,10 +63,13 @@ fresh intake
 - no broad dirty-main git operations
 - no external CAPTCHA currently
 - spam filtering before lead persistence
+- structured data must derive from Admin-owned fields — no manual JSON-LD editing UI
 
 ## Known Non-Blocking Items
 - Google Search Console sitemap submission
 - Yandex Webmaster sitemap submission
+- optional authenticated Yandex structured-data validator pass on live URLs
+- optional Open Graph implementation (separate from Schema.org)
 - optional legal sign-off on Cookie Policy
 - optional `lead_retention_days=730` policy alignment
 - optional anti-spam tuning only from real spam evidence
@@ -70,12 +77,10 @@ fresh intake
 
 ## Where To Read First
 1. `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/PROJECT-STATUS.md`
-2. `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md`
-3. `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/BASELINE-FP-0002-PRODUCTION-MAINTENANCE-STABLE.md`
-4. `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-PROD-MAINT-OLYA-ROBOTS-RESTORATION.md`
-5. `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-FINAL-LOCAL-MARS-CLOSEOUT.md`
+2. `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-PROD-YANDEX-SCHEMA-ORG-01.md`
+3. `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md`
+4. `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/BASELINE-FP-0002-PRODUCTION-MAINTENANCE-STABLE.md`
 
 ## Historical Evidence
 Deep historical P07–P18 reports remain preserved in `REPORTS/` and `REPORTS/evidence/`.
 Do not replay the full history for normal maintenance. Only drill into old reports when the current baseline/open-items/handoff files are insufficient for the specific task.
-

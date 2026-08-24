@@ -37,6 +37,7 @@ use Shpigovsky\Core\Permalinks\SpecialistLegacyRedirect;
 use Shpigovsky\Core\Privacy\LeadPersonalData;
 use Shpigovsky\Core\Privacy\PrivacyConsent;
 use Shpigovsky\Core\Settings\SiteSettings;
+use Shpigovsky\Core\StructuredData\StructuredData;
 use Shpigovsky\Core\Typography\TypographyFilters;
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -236,6 +237,12 @@ final class ModuleRegistry {
 		'typography.russian'        => array(
 			'module'            => 'Typography',
 			'class'             => TypographyFilters::class,
+			'status'            => self::ENABLED_IN_CONTENT_MODEL,
+			'runtime_delivered' => true,
+		),
+		'structured-data.schema-org' => array(
+			'module'            => 'StructuredData',
+			'class'             => StructuredData::class,
 			'status'            => self::ENABLED_IN_CONTENT_MODEL,
 			'runtime_delivered' => true,
 		),

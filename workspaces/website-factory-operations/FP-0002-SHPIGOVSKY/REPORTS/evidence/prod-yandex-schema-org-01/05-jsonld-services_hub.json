@@ -1,0 +1,347 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalClinic",
+      "@id": "https://shpigovsky.ru/#organization",
+      "name": "Шпиговский дом",
+      "url": "https://shpigovsky.ru",
+      "telephone": "8 (925) 183-64-64",
+      "email": "dom@shpigovsky.ru",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Москва,\r\nМосковская область",
+        "addressCountry": "RU",
+        "addressLocality": "Москва"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "19:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "09:00",
+          "closes": "20:00"
+        }
+      ],
+      "subOrganization": [
+        {
+          "@id": "https://shpigovsky.ru/#location-%d1%86%d0%b5%d0%bd%d1%82%d1%80-%d0%bf%d1%80%d0%be%d1%84%d0%b8%d0%bb%d0%b0%d0%ba%d1%82%d0%b8%d0%ba%d0%b8-%d0%b8-%d0%bb%d0%b5%d1%87%d0%b5%d0%bd%d0%b8%d1%8f-%d0%b7%d0%b0%d0%b2%d0%b8%d1%81%d0%b8"
+        },
+        {
+          "@id": "https://shpigovsky.ru/#location-%d0%bb%d0%b5%d1%87%d0%b5%d0%bd%d0%b8%d0%b5-%d0%b7%d0%b0%d0%b2%d0%b8%d1%81%d0%b8%d0%bc%d0%be%d1%81%d1%82%d0%b5%d0%b9-%d0%bc%d0%be%d1%81%d0%ba%d0%b2%d0%b0"
+        }
+      ]
+    },
+    {
+      "@type": "MedicalClinic",
+      "@id": "https://shpigovsky.ru/#location-%d1%86%d0%b5%d0%bd%d1%82%d1%80-%d0%bf%d1%80%d0%be%d1%84%d0%b8%d0%bb%d0%b0%d0%ba%d1%82%d0%b8%d0%ba%d0%b8-%d0%b8-%d0%bb%d0%b5%d1%87%d0%b5%d0%bd%d0%b8%d1%8f-%d0%b7%d0%b0%d0%b2%d0%b8%d1%81%d0%b8",
+      "name": "Центр профилактики и лечения зависимости",
+      "url": "https://shpigovsky.ru/kontakty/",
+      "parentOrganization": {
+        "@id": "https://shpigovsky.ru/#organization"
+      },
+      "telephone": "8 (925) 183-64-64",
+      "email": "Info@shpigovsky.ru",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Московская область, район ж.д. станции Катуар, д. Сухарево",
+        "addressCountry": "RU",
+        "addressRegion": "Московская область"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "19:00"
+        }
+      ]
+    },
+    {
+      "@type": "MedicalClinic",
+      "@id": "https://shpigovsky.ru/#location-%d0%bb%d0%b5%d1%87%d0%b5%d0%bd%d0%b8%d0%b5-%d0%b7%d0%b0%d0%b2%d0%b8%d1%81%d0%b8%d0%bc%d0%be%d1%81%d1%82%d0%b5%d0%b9-%d0%bc%d0%be%d1%81%d0%ba%d0%b2%d0%b0",
+      "name": "Лечение зависимостей Москва",
+      "url": "https://shpigovsky.ru/kontakty/",
+      "parentOrganization": {
+        "@id": "https://shpigovsky.ru/#organization"
+      },
+      "telephone": "8 (925) 183-64-64",
+      "email": "Info@shpigovsky.ru",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Москва, ул. Ленина, 3",
+        "addressCountry": "RU",
+        "addressLocality": "Москва"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "19:00"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://shpigovsky.ru/uslugi#webpage-breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://shpigovsky.ru"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Услуги лечения и профилактики",
+          "item": "https://shpigovsky.ru/uslugi"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://shpigovsky.ru/#website",
+      "url": "https://shpigovsky.ru",
+      "name": "Шпиговский дом",
+      "publisher": {
+        "@id": "https://shpigovsky.ru/#organization"
+      }
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://shpigovsky.ru/uslugi#webpage",
+      "url": "https://shpigovsky.ru/uslugi",
+      "name": "Услуги",
+      "isPartOf": {
+        "@id": "https://shpigovsky.ru/#website"
+      },
+      "inLanguage": "ru-RU",
+      "breadcrumb": {
+        "@id": "https://shpigovsky.ru/uslugi#webpage-breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://shpigovsky.ru/uslugi#webpage-services-list"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://shpigovsky.ru/uslugi#webpage-services-list",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/shopogolizm",
+          "name": "Зависимость от постоянных покупок"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/sozavisimost",
+          "name": "Лечение созависимости"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/internet-zavisimost",
+          "name": "Интернет-зависимость"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/ludomaniya",
+          "name": "Лечение игровой зависимости"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/geroin",
+          "name": "Лечение героиновой зависимости"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/matadon",
+          "name": "Лечение метадоновой зависимости"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/soli",
+          "name": "Лечение солевой зависимости"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "url": "https://shpigovsky.ru/uslugi/zavisimosti",
+          "name": "Зависимости"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti",
+          "name": "Лечение алкогольной зависимости"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti",
+          "name": "Лечение наркотической зависимости"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti",
+          "name": "Поведенческие зависимости"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "url": "https://shpigovsky.ru/uslugi/psihicheskoe-zdorovie",
+          "name": "Психическое здоровье"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/lekarstva",
+          "name": "Лечение лекарственной зависимости"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "url": "https://shpigovsky.ru/uslugi/rasstroystva-pischevogo-povedeniya",
+          "name": "Расстройства пищевого поведения"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "url": "https://shpigovsky.ru/uslugi/genotipirovenie",
+          "name": "Генотипирование"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "url": "https://shpigovsky.ru/uslugi/genotipirovenie/analiz-dya-specialistov",
+          "name": "Генотипирование для специалистов"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "url": "https://shpigovsky.ru/uslugi/genotipirovenie/profilakticheskiy-analiz",
+          "name": "Профилактический анализ"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "url": "https://shpigovsky.ru/uslugi/psihicheskoe-zdorovie/depressiya",
+          "name": "Депрессия"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/kompyuternaya-zavisimost",
+          "name": "Компьютерная зависимость"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/lechenie-opiumnoy-zavisimosti",
+          "name": "Лечение опиумной зависимости"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "url": "https://shpigovsky.ru/uslugi/psihicheskoe-zdorovie/ptsr",
+          "name": "ПТСР"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "url": "https://shpigovsky.ru/uslugi/psihicheskoe-zdorovie/emotsionalnoe-vygoranie",
+          "name": "Эмоциональное выгорание"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "url": "https://shpigovsky.ru/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva",
+          "name": "Тревожные расстройства"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "url": "https://shpigovsky.ru/uslugi/psihicheskoe-zdorovie/rasstroystva-sna",
+          "name": "Расстройства сна"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "url": "https://shpigovsky.ru/uslugi/psihicheskoe-zdorovie/travma",
+          "name": "Травма"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "url": "https://shpigovsky.ru/uslugi/psihicheskoe-zdorovie/hronicheskaya-ustalost",
+          "name": "Хроническая усталость"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "url": "https://shpigovsky.ru/uslugi/psihicheskoe-zdorovie/stress",
+          "name": "Стресс"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "url": "https://shpigovsky.ru/uslugi/psihicheskoe-zdorovie/nartsissizm",
+          "name": "Нарциссизм"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "url": "https://shpigovsky.ru/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya",
+          "name": "Анорексия"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "url": "https://shpigovsky.ru/uslugi/rasstroystva-pischevogo-povedeniya/buliniya",
+          "name": "Булимия"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "url": "https://shpigovsky.ru/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie",
+          "name": "Компульсивное переедание"
+        }
+      ]
+    }
+  ]
+}
