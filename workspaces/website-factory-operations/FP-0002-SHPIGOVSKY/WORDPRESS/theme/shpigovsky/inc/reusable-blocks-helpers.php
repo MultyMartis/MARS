@@ -214,7 +214,7 @@ function shpigovsky_get_specialists_all_link_label( $static_fallback = 'все �
 /**
  * Resolve specialists all-link URL.
  *
- * V9-06E34: default points to `/specyalisty/` parent page.
+ * Default points to `/specialisty/` hub page (#1030).
  *
  * @param string $static_fallback Static fallback URL.
  * @return string
@@ -228,14 +228,14 @@ function shpigovsky_get_specialists_all_link_url( $static_fallback = '' ) {
 
 	if ( '' === $static_fallback ) {
 		$parent_id = shpigovsky_get_specialists_parent_page_id();
-		$static_fallback = $parent_id > 0 ? get_permalink( $parent_id ) : home_url( '/specyalisty/' );
+		$static_fallback = $parent_id > 0 ? get_permalink( $parent_id ) : home_url( '/specialisty/' );
 	}
 
 	return shpigovsky_normalize_public_url( $static_fallback );
 }
 
 /**
- * Resolve Specialists parent page ID (`/specyalisty/`).
+ * Resolve Specialists hub page ID (`/specialisty/`, Page #1030).
  *
  * @return int
  */
@@ -246,7 +246,14 @@ function shpigovsky_get_specialists_parent_page_id() {
 		return $cached;
 	}
 
-	$page = get_page_by_path( 'specyalisty' );
+	// Stable object ID across slug migrations.
+	$by_id = get_post( 1030 );
+	if ( $by_id instanceof WP_Post && 'page' === $by_id->post_type ) {
+		$cached = 1030;
+		return $cached;
+	}
+
+	$page = get_page_by_path( 'specialisty' );
 	$cached = ( $page instanceof WP_Post ) ? (int) $page->ID : 0;
 
 	return $cached;
@@ -353,7 +360,7 @@ function shpigovsky_normalize_specialist_page_card( $page ) {
  * Resolve specialists cards for all reusable specialists renderers.
  *
  * PROD-P11: published Specialist CPT objects ordered by menu_order.
- * Hub page /specyalisty/ remains a separate Page (not an archive).
+ * Hub page /specialisty/ remains a separate Page (not an archive).
  *
  * @return array<int, array{image:string,width:int,height:int,name:string,role:string,link:string}>
  */

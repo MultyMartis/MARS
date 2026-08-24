@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Specialists Hub
- * Route family: /specyalisty/
+ * Route family: /specialisty/
  *
  * Page #1030 owns URL / H1 / SEO / optional intro / reusable-block selection.
  * Specialist cards come from shpigovsky_get_specialists_cards() (CPT, menu_order).

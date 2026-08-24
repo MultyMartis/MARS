@@ -1,0 +1,168 @@
+{
+    "blog_public": 1,
+    "home": "https:\/\/shpigovsky.ru",
+    "siteurl": "https:\/\/shpigovsky.ru",
+    "core_version": "0.3.27-specialists-hub-admin-ux",
+    "page_1030": {
+        "ID": 1030,
+        "post_name": "specyalisty",
+        "post_title": "Специалисты",
+        "post_status": "publish",
+        "post_parent": 0,
+        "permalink": "https:\/\/shpigovsky.ru\/specyalisty\/",
+        "template": "page-templates\/specialists-hub.php",
+        "reusable_enabled": "1",
+        "reusable": [
+            "rehab_requirements",
+            "about_home"
+        ]
+    },
+    "specialists": [
+        {
+            "ID": 1031,
+            "post_name": "shpigovsky",
+            "title": "Сергей Юрьевич Шпиговский",
+            "menu_order": 10,
+            "permalink": "https:\/\/shpigovsky.ru\/specyalisty\/shpigovsky\/"
+        },
+        {
+            "ID": 1032,
+            "post_name": "kazakov",
+            "title": "Максим Михайлович Казаков",
+            "menu_order": 20,
+            "permalink": "https:\/\/shpigovsky.ru\/specyalisty\/kazakov\/"
+        },
+        {
+            "ID": 1033,
+            "post_name": "kostyuk",
+            "title": "Дарья Владимировна Костюк",
+            "menu_order": 30,
+            "permalink": "https:\/\/shpigovsky.ru\/specyalisty\/kostyuk\/"
+        },
+        {
+            "ID": 1967,
+            "post_name": "hanikova",
+            "title": "Ханикова Светлана Николаевна",
+            "menu_order": 35,
+            "permalink": "https:\/\/shpigovsky.ru\/specyalisty\/hanikova\/"
+        },
+        {
+            "ID": 1097,
+            "post_name": "shapiguzova",
+            "title": "Шапигузова Татьяна Андреевна",
+            "menu_order": 40,
+            "permalink": "https:\/\/shpigovsky.ru\/specyalisty\/shapiguzova\/"
+        },
+        {
+            "ID": 1949,
+            "post_name": "litvinov",
+            "title": "Литвинов Кирилл Алексеевич",
+            "menu_order": 50,
+            "permalink": "https:\/\/shpigovsky.ru\/specyalisty\/litvinov\/"
+        },
+        {
+            "ID": 1957,
+            "post_name": "poverinov",
+            "title": "Поверинов Александр Константинович",
+            "menu_order": 60,
+            "permalink": "https:\/\/shpigovsky.ru\/specyalisty\/poverinov\/"
+        },
+        {
+            "ID": 1963,
+            "post_name": "filippov",
+            "title": "Филиппов Илья Владимирович",
+            "menu_order": 70,
+            "permalink": "https:\/\/shpigovsky.ru\/specyalisty\/filippov\/"
+        },
+        {
+            "ID": 1988,
+            "post_name": "filippova",
+            "title": "Филиппова Мария Михайловна",
+            "menu_order": 80,
+            "permalink": "https:\/\/shpigovsky.ru\/specyalisty\/filippova\/"
+        }
+    ],
+    "menu_hits": [
+        {
+            "menu": "Primary",
+            "item_id": 1995,
+            "title": "Специалисты",
+            "url": "https:\/\/shpigovsky.ru\/specyalisty\/",
+            "type": "post_type",
+            "object": "page",
+            "object_id": "1030"
+        }
+    ],
+    "specialists_all_link_url": null,
+    "rewrite_spec_rules_count": 17,
+    "rewrite_spec_rules_sample": {
+        "specyalisty\/[^\/]+\/attachment\/([^\/]+)\/?$": "index.php?attachment=$matches[1]",
+        "specyalisty\/[^\/]+\/attachment\/([^\/]+)\/trackback\/?$": "index.php?attachment=$matches[1]&tb=1",
+        "specyalisty\/[^\/]+\/attachment\/([^\/]+)\/feed\/(feed|rdf|rss|rss2|atom)\/?$": "index.php?attachment=$matches[1]&feed=$matches[2]",
+        "specyalisty\/[^\/]+\/attachment\/([^\/]+)\/(feed|rdf|rss|rss2|atom)\/?$": "index.php?attachment=$matches[1]&feed=$matches[2]",
+        "specyalisty\/[^\/]+\/attachment\/([^\/]+)\/comment-page-([0-9]{1,})\/?$": "index.php?attachment=$matches[1]&cpage=$matches[2]",
+        "specyalisty\/[^\/]+\/attachment\/([^\/]+)\/embed\/?$": "index.php?attachment=$matches[1]&embed=true",
+        "specyalisty\/([^\/]+)\/embed\/?$": "index.php?specialist=$matches[1]&embed=true",
+        "specyalisty\/([^\/]+)\/trackback\/?$": "index.php?specialist=$matches[1]&tb=1",
+        "specyalisty\/([^\/]+)\/page\/?([0-9]{1,})\/?$": "index.php?specialist=$matches[1]&paged=$matches[2]",
+        "specyalisty\/([^\/]+)\/comment-page-([0-9]{1,})\/?$": "index.php?specialist=$matches[1]&cpage=$matches[2]",
+        "specyalisty\/([^\/]+)(?:\/([0-9]+))?\/?$": "index.php?specialist=$matches[1]&page=$matches[2]",
+        "specyalisty\/[^\/]+\/([^\/]+)\/?$": "index.php?attachment=$matches[1]",
+        "specyalisty\/[^\/]+\/([^\/]+)\/trackback\/?$": "index.php?attachment=$matches[1]&tb=1",
+        "specyalisty\/[^\/]+\/([^\/]+)\/feed\/(feed|rdf|rss|rss2|atom)\/?$": "index.php?attachment=$matches[1]&feed=$matches[2]",
+        "specyalisty\/[^\/]+\/([^\/]+)\/(feed|rdf|rss|rss2|atom)\/?$": "index.php?attachment=$matches[1]&feed=$matches[2]",
+        "specyalisty\/[^\/]+\/([^\/]+)\/comment-page-([0-9]{1,})\/?$": "index.php?attachment=$matches[1]&cpage=$matches[2]",
+        "specyalisty\/[^\/]+\/([^\/]+)\/embed\/?$": "index.php?attachment=$matches[1]&embed=true"
+    },
+    "db_specyalisty": {
+        "posts_content": 4,
+        "postmeta": 0,
+        "options": 2
+    },
+    "db_option_names": [
+        {
+            "option_name": "rewrite_rules"
+        },
+        {
+            "option_name": "fp02-block-specialists_specialists_all_link_url"
+        }
+    ],
+    "db_meta_keys": [],
+    "db_posts_with_old_url": [
+        {
+            "ID": "1137",
+            "post_type": "acf-field",
+            "post_name": "field_fp02_home_specialists_source_notice",
+            "post_status": "publish"
+        },
+        {
+            "ID": "1229",
+            "post_type": "acf-field",
+            "post_name": "field_fp02_home_specialists_source_notice",
+            "post_status": "publish"
+        },
+        {
+            "ID": "1320",
+            "post_type": "acf-field",
+            "post_name": "field_fp02_home_specialists_source_notice",
+            "post_status": "publish"
+        },
+        {
+            "ID": "1540",
+            "post_type": "acf-field",
+            "post_name": "field_fp02_home_specialists_source_notice",
+            "post_status": "publish"
+        }
+    ],
+    "cpt_obj": {
+        "name": "specialist",
+        "has_archive": false,
+        "rewrite": {
+            "slug": "specyalisty",
+            "with_front": false,
+            "pages": true,
+            "feeds": false,
+            "ep_mask": 1
+        }
+    }
+}

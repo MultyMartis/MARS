@@ -119,7 +119,10 @@ function shpigovsky_sitemap_specialist_page_ids() {
 	}
 
 	// Legacy / rollback: child pages of hub.
-	$hub = get_page_by_path( 'specyalisty' );
+	$hub = get_page_by_path( 'specialisty' );
+	if ( ! ( $hub instanceof WP_Post ) ) {
+		$hub = get_post( 1030 );
+	}
 
 	if ( ! $hub instanceof WP_Post ) {
 		return array();

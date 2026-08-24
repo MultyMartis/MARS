@@ -17,8 +17,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Specialist custom post type boundary.
  *
- * Public URLs remain under /specyalisty/{slug}/.
- * Hub page /specyalisty/ stays a native Page (has_archive = false).
+ * Public URLs remain under /specialisty/{slug}/.
+ * Hub page /specialisty/ stays a native Page (has_archive = false).
+ * Deprecated /specyalisty/ paths redirect via SpecialistLegacyRedirect + .htaccess.
  */
 final class Specialist implements ModuleInterface {
 
@@ -28,9 +29,14 @@ final class Specialist implements ModuleInterface {
 	public const POST_TYPE = 'specialist';
 
 	/**
-	 * Public rewrite base (matches existing hub page slug).
+	 * Public rewrite base (matches hub page slug).
 	 */
-	public const REWRITE_SLUG = 'specyalisty';
+	public const REWRITE_SLUG = 'specialisty';
+
+	/**
+	 * Deprecated rewrite base retained only for migration redirects / docs.
+	 */
+	public const LEGACY_REWRITE_SLUG = 'specyalisty';
 
 	/**
 	 * {@inheritdoc}
@@ -65,7 +71,7 @@ final class Specialist implements ModuleInterface {
 			self::POST_TYPE,
 			array(
 				'labels'              => self::get_labels(),
-				'description'         => __( 'Специалисты FP-0002. Хаб /specyalisty/ остаётся отдельной страницей.', 'shpigovsky-core' ),
+				'description'         => __( 'Специалисты FP-0002. Хаб /specialisty/ остаётся отдельной страницей.', 'shpigovsky-core' ),
 				'public'              => true,
 				'hierarchical'        => false,
 				'exclude_from_search' => false,
@@ -92,11 +98,11 @@ final class Specialist implements ModuleInterface {
 	}
 
 	/**
-	 * One-time rewrite flush after CPT registration (PROD-P11).
+	 * One-time rewrite flush after CPT rewrite base change to specialisty.
 	 * Does not flush on every request.
 	 */
 	public static function maybe_flush_rewrites_once() {
-		$flag = 'fp02_specialist_cpt_rewrite_flushed_p11';
+		$flag = 'fp02_specialist_cpt_rewrite_flushed_specialisty_v1';
 		if ( get_option( $flag ) ) {
 			return;
 		}

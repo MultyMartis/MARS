@@ -133,7 +133,10 @@ function shpigovsky_search_result_type_label( $post_id ) {
 
 	if ( 'page' === $type ) {
 		$ancestors = get_post_ancestors( $post_id );
-		$hub       = get_page_by_path( 'specyalisty' );
+		$hub       = get_page_by_path( 'specialisty' );
+		if ( ! ( $hub instanceof WP_Post ) ) {
+			$hub = get_post( 1030 );
+		}
 
 		if ( $hub instanceof WP_Post ) {
 			$hub_id = (int) $hub->ID;
@@ -497,7 +500,10 @@ function shpigovsky_smart_search_group_key( $post_id ) {
 		return '';
 	}
 
-	$hub = get_page_by_path( 'specyalisty' );
+	$hub = get_page_by_path( 'specialisty' );
+	if ( ! ( $hub instanceof WP_Post ) ) {
+		$hub = get_post( 1030 );
+	}
 
 	if ( $hub instanceof WP_Post ) {
 		$hub_id = (int) $hub->ID;

@@ -13,7 +13,7 @@
 | Full production `.htaccess` | **RUNTIME / PRODUCTION-OWNED** — Beget `public_html/.htaccess` |
 | WordPress markers `# BEGIN WordPress` … `# END WordPress` | **WordPress-managed** — do not put custom rules inside |
 
-The full file is **not** stored under `WORDPRESS/` (WordPress regenerates its section). Ambiguous production-only redirects are forbidden: the seven rules live in the fragment **and** in production, byte-identical as a block.
+The full file is **not** stored under `WORDPRESS/` (WordPress regenerates its section). Ambiguous production-only redirects are forbidden: the custom rules live in the fragment **and** in production, byte-identical as a block (currently: 7 historical legacy paths + specialists `/specyalisty/` → `/specialisty/` migration pair).
 
 Token: `LEGACY REDIRECT CONFIG HAS A CANONICAL OWNER`
 
@@ -25,7 +25,14 @@ Token: `LEGACY REDIRECT CONFIG HAS A CANONICAL OWNER`
 - Snapshot: `X:\AI MARS STORAGE\deployment-packs\fp-0002\prod-p17-cont1-layer-b-pre\htaccess.production.before`
 - Post-change SHA-256: `ec8f06028d3ecde7442701ed09fce3aa107fc74a41434647e413f4a0088d9f38`
 - WordPress section preserved byte-for-byte after the custom block
-- Targets are **path-relative** (current host `shpigovsky.beget.tech`; future host inherits the same paths)
+- Targets are **path-relative** for the original seven rules (current host inherits the same paths)
+
+## Specialists canonical URL migration (2026-08-24)
+
+- Added path-preserving 301s: `/specyalisty/` → `/specialisty/` and `/specyalisty/{slug}/` → `/specialisty/{slug}/`
+- Specialists rules use `https://%{HTTP_HOST}/…` to avoid an HTTP→HTTPS Location chain behind Beget SSL termination
+- Companion WP owner: `Shpigovsky\Core\Permalinks\SpecialistLegacyRedirect` (same targets; fires only if request reaches WordPress)
+- Fragment remains the canonical source for the production custom block
 
 ---
 

@@ -33,6 +33,7 @@ use Shpigovsky\Core\Mail\MailOps;
 use Shpigovsky\Core\Mail\SmtpTransport;
 use Shpigovsky\Core\Migrations\MigrationRunner;
 use Shpigovsky\Core\Permalinks\ServicePermalinks;
+use Shpigovsky\Core\Permalinks\SpecialistLegacyRedirect;
 use Shpigovsky\Core\Privacy\LeadPersonalData;
 use Shpigovsky\Core\Privacy\PrivacyConsent;
 use Shpigovsky\Core\Settings\SiteSettings;
@@ -75,6 +76,12 @@ final class ModuleRegistry {
 			'class'             => ServicePermalinks::class,
 			'status'            => self::ENABLED_IN_CONTENT_MODEL,
 			'runtime_delivered' => false,
+		),
+		'permalinks.specialist-legacy-redirect' => array(
+			'module'            => 'Permalinks',
+			'class'             => SpecialistLegacyRedirect::class,
+			'status'            => self::ENABLED_IN_CONTENT_MODEL,
+			'runtime_delivered' => true,
 		),
 		'fields.acf'                => array(
 			'module'            => 'Fields',

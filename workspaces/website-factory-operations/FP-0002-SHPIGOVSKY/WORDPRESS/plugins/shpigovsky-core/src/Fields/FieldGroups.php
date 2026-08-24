@@ -3416,7 +3416,7 @@ final class FieldGroups implements ModuleInterface {
 	/**
 	 * Reusable block — specialists group (V9-06E18 Batch 1).
 	 *
-	 * V9-06E34: slider cards come from published child pages of `/specyalisty/`.
+	 * V9-06E34: slider cards come from published Specialist CPT (/specialisty/).
 	 * Manual specialists_items repeater retired from admin render path.
 	 *
 	 * @return array<string, mixed>
@@ -3443,7 +3443,7 @@ final class FieldGroups implements ModuleInterface {
 					'specialists_all_link_url',
 					'url',
 					array(
-						'instructions' => 'Пусто — /specyalisty/.',
+						'instructions' => 'Пусто — /specialisty/.',
 					)
 				),
 			),

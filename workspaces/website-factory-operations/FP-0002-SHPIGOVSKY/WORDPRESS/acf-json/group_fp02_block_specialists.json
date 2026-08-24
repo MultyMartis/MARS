@@ -7,7 +7,7 @@
             "label": "Источник слайдера",
             "name": "specialists_source_notice",
             "type": "message",
-            "message": "V9-06E34: карточки слайдера автоматически берутся из дочерних страниц «Специалисты» (/specyalisty/). Добавляйте/переупорядочивайте специалистов через страницы (menu_order). Ручной repeater specialists_items больше не используется в рендере."
+            "message": "V9-06E34: карточки слайдера автоматически берутся из CPT «Специалисты» (/specialisty/{slug}/). Добавляйте/переупорядочивайте специалистов через CPT (menu_order). Ручной repeater specialists_items больше не используется в рендере."
         },
         {
             "key": "field_fp02_specialists_section_heading",
@@ -26,7 +26,7 @@
             "label": "URL ссылки «все специалисты»",
             "name": "specialists_all_link_url",
             "type": "url",
-            "instructions": "Пусто — /specyalisty/."
+            "instructions": "Пусто — /specialisty/."
         }
     ],
     "location": [
@@ -44,7 +44,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "active": true,
-    "description": "FP-0002 V9-06E34 — specialists section chrome; cards from /specyalisty/ child pages.",
+    "description": "FP-0002 V9-06E34 — specialists section chrome; cards from /specialisty/ CPT.",
     "show_in_rest": 0,
     "modified": 1784304000
 }

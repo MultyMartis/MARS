@@ -8,5 +8,8 @@ RewriteRule ^home/?$ /o-centre/programma-lecheniya/ [R=301,L]
 RewriteRule ^policy/?$ /privacy-policy/ [R=301,L]
 RewriteRule ^neuro/?$ /o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/ [R=301,L]
 RewriteRule ^reviews/?$ /otzyvy/ [R=301,L]
+# Specialists URL migration: force https host to avoid HTTP→HTTPS chain behind SSL proxy.
+RewriteRule ^specyalisty/?$ https://%{HTTP_HOST}/specialisty/ [R=301,L]
+RewriteRule ^specyalisty/(.+?)/?$ https://%{HTTP_HOST}/specialisty/$1/ [R=301,L]
 </IfModule>
 

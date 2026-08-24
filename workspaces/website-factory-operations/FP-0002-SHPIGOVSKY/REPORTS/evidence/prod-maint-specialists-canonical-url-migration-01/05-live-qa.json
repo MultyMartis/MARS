@@ -1,0 +1,176 @@
+{
+  "new_hub": {
+    "status": 200,
+    "canonical": "https://shpigovsky.ru/specialisty/",
+    "h1": "Специалисты",
+    "has_internal_page_nav": false,
+    "has_old_path_links": false,
+    "has_specialist_cards": true,
+    "len": 77410
+  },
+  "new_singles": [
+    {
+      "slug": "shpigovsky",
+      "status": 200,
+      "canonical": "https://shpigovsky.ru/specialisty/shpigovsky/",
+      "has_old_path": false,
+      "is_redirect": false
+    },
+    {
+      "slug": "kazakov",
+      "status": 200,
+      "canonical": "https://shpigovsky.ru/specialisty/kazakov/",
+      "has_old_path": false,
+      "is_redirect": false
+    },
+    {
+      "slug": "kostyuk",
+      "status": 200,
+      "canonical": "https://shpigovsky.ru/specialisty/kostyuk/",
+      "has_old_path": false,
+      "is_redirect": false
+    },
+    {
+      "slug": "hanikova",
+      "status": 200,
+      "canonical": "https://shpigovsky.ru/specialisty/hanikova/",
+      "has_old_path": false,
+      "is_redirect": false
+    },
+    {
+      "slug": "shapiguzova",
+      "status": 200,
+      "canonical": "https://shpigovsky.ru/specialisty/shapiguzova/",
+      "has_old_path": false,
+      "is_redirect": false
+    },
+    {
+      "slug": "litvinov",
+      "status": 200,
+      "canonical": "https://shpigovsky.ru/specialisty/litvinov/",
+      "has_old_path": false,
+      "is_redirect": false
+    },
+    {
+      "slug": "poverinov",
+      "status": 200,
+      "canonical": "https://shpigovsky.ru/specialisty/poverinov/",
+      "has_old_path": false,
+      "is_redirect": false
+    },
+    {
+      "slug": "filippov",
+      "status": 200,
+      "canonical": "https://shpigovsky.ru/specialisty/filippov/",
+      "has_old_path": false,
+      "is_redirect": false
+    },
+    {
+      "slug": "filippova",
+      "status": 200,
+      "canonical": "https://shpigovsky.ru/specialisty/filippova/",
+      "has_old_path": false,
+      "is_redirect": false
+    }
+  ],
+  "old_hub": {
+    "first_status": 301,
+    "location": "https://shpigovsky.ru/specialisty/",
+    "second_status": 200,
+    "second_url": "https://shpigovsky.ru/specialisty/",
+    "second_canonical": "https://shpigovsky.ru/specialisty/",
+    "chain_ok": true
+  },
+  "old_singles": [
+    {
+      "slug": "shpigovsky",
+      "first_status": 301,
+      "location": "https://shpigovsky.ru/specialisty/shpigovsky/",
+      "second_status": 200,
+      "chain_ok": true
+    },
+    {
+      "slug": "kazakov",
+      "first_status": 301,
+      "location": "https://shpigovsky.ru/specialisty/kazakov/",
+      "second_status": 200,
+      "chain_ok": true
+    },
+    {
+      "slug": "kostyuk",
+      "first_status": 301,
+      "location": "https://shpigovsky.ru/specialisty/kostyuk/",
+      "second_status": 200,
+      "chain_ok": true
+    },
+    {
+      "slug": "hanikova",
+      "first_status": 301,
+      "location": "https://shpigovsky.ru/specialisty/hanikova/",
+      "second_status": 200,
+      "chain_ok": true
+    },
+    {
+      "slug": "shapiguzova",
+      "first_status": 301,
+      "location": "https://shpigovsky.ru/specialisty/shapiguzova/",
+      "second_status": 200,
+      "chain_ok": true
+    },
+    {
+      "slug": "litvinov",
+      "first_status": 301,
+      "location": "https://shpigovsky.ru/specialisty/litvinov/",
+      "second_status": 200,
+      "chain_ok": true
+    },
+    {
+      "slug": "poverinov",
+      "first_status": 301,
+      "location": "https://shpigovsky.ru/specialisty/poverinov/",
+      "second_status": 200,
+      "chain_ok": true
+    },
+    {
+      "slug": "filippov",
+      "first_status": 301,
+      "location": "https://shpigovsky.ru/specialisty/filippov/",
+      "second_status": 200,
+      "chain_ok": true
+    },
+    {
+      "slug": "filippova",
+      "first_status": 301,
+      "location": "https://shpigovsky.ru/specialisty/filippova/",
+      "second_status": 200,
+      "chain_ok": true
+    }
+  ],
+  "seo": {
+    "pages_sitemap_has_new": true,
+    "pages_sitemap_has_old": false,
+    "specialists_sitemap_new_count": 9,
+    "specialists_sitemap_old_count": 0,
+    "blog_public_open_probe": true,
+    "robots_unchanged_markers": true,
+    "hub_canonical_expected": true
+  },
+  "internal": {
+    "old_hrefs_by_page": {
+      "home": [],
+      "hub": [],
+      "uslugi": [],
+      "single_kostyuk": []
+    },
+    "LIVE_INTERNAL_LINKS_TO_specyalisty": 0,
+    "home_has_specialisty": true
+  },
+  "verdict": {
+    "new_hub_200": true,
+    "singles_ok": true,
+    "old_redirects_ok": true,
+    "seo_ok": true,
+    "internal_old_zero": true,
+    "PASS": true
+  }
+}

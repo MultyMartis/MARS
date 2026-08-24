@@ -3,7 +3,7 @@
  * Direct V9 port: specialists section (usluga-konechnaya-v1.html).
  *
  * V9-06E18: shared specialists block data source with home/subdivision renderers.
- * V9-06E34: cards from `/specyalisty/` child pages; card links to specialist pages.
+ * V9-06E34: cards from `/specialisty/` specialist CPT; card links to specialist pages.
  *
  * @package Shpigovsky
  */

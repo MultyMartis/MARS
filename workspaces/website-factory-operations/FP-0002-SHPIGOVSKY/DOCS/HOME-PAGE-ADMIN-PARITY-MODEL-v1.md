@@ -126,7 +126,7 @@ Full CSV: `REPORTS/evidence/v9-06e42-home-block-model.csv` and freeze backup `in
 | 14 | `genotyping.php` | Генотипирование | Home ACF | yes | body/items enabled |
 | 15 | `comfort.php` | Комфорт | Reusable/options | partial | `home_comfort_visible` |
 | 16 | `videos.php` | Видео | Home ACF + Media Library | yes | items enabled |
-| 17 | `specialists.php` / `.specialists` | Специалисты | `/specyalisty/` children | partial | `home_specialists_visible` |
+| 17 | `specialists.php` / `.specialists` | Специалисты | `/specialisty/` CPT | partial | `home_specialists_visible` |
 | 18 | `articles-teaser.php` | Статьи | Blog posts | partial | `home_articles_visible` |
 | 19 | `faq.php` | FAQ | Home ACF | yes | — |
 | 20 | `final-form.php` | CTA / форма | Home CTA + site form | partial | — |

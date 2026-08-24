@@ -1,0 +1,99 @@
+{
+    "before": {
+        "page_1030": {
+            "post_name": "specyalisty",
+            "permalink": "https:\/\/shpigovsky.ru\/specyalisty\/",
+            "template": "page-templates\/specialists-hub.php",
+            "reusable_enabled": "1",
+            "reusable": [
+                "rehab_requirements",
+                "about_home"
+            ]
+        },
+        "all_link": "http:\/\/shpigovsky.beget.tech\/specyalisty\/",
+        "cpt_rewrite": {
+            "slug": "specialisty",
+            "with_front": false,
+            "pages": true,
+            "feeds": false,
+            "ep_mask": 1
+        },
+        "blog_public": 1,
+        "core_version": "0.3.28-specialists-canonical-url"
+    },
+    "slug_result": "updated",
+    "opt_action": "cleared_empty",
+    "opt_before": "http:\/\/shpigovsky.beget.tech\/specyalisty\/",
+    "after": {
+        "page_1030": {
+            "post_name": "specialisty",
+            "permalink": "https:\/\/shpigovsky.ru\/specialisty\/",
+            "template": "page-templates\/specialists-hub.php",
+            "reusable_enabled": "1",
+            "reusable": [
+                "rehab_requirements",
+                "about_home"
+            ],
+            "title": "Специалисты"
+        },
+        "all_link": null,
+        "cpt_rewrite": {
+            "slug": "specialisty",
+            "with_front": false,
+            "pages": true,
+            "feeds": false,
+            "ep_mask": 1
+        },
+        "blog_public": 1,
+        "core_version": "0.3.28-specialists-canonical-url",
+        "rewrite_has_specialisty": true,
+        "rewrite_has_specyalisty": false,
+        "specialists": [
+            {
+                "ID": 1031,
+                "post_name": "shpigovsky",
+                "permalink": "https:\/\/shpigovsky.ru\/specialisty\/shpigovsky\/"
+            },
+            {
+                "ID": 1032,
+                "post_name": "kazakov",
+                "permalink": "https:\/\/shpigovsky.ru\/specialisty\/kazakov\/"
+            },
+            {
+                "ID": 1033,
+                "post_name": "kostyuk",
+                "permalink": "https:\/\/shpigovsky.ru\/specialisty\/kostyuk\/"
+            },
+            {
+                "ID": 1967,
+                "post_name": "hanikova",
+                "permalink": "https:\/\/shpigovsky.ru\/specialisty\/hanikova\/"
+            },
+            {
+                "ID": 1097,
+                "post_name": "shapiguzova",
+                "permalink": "https:\/\/shpigovsky.ru\/specialisty\/shapiguzova\/"
+            },
+            {
+                "ID": 1949,
+                "post_name": "litvinov",
+                "permalink": "https:\/\/shpigovsky.ru\/specialisty\/litvinov\/"
+            },
+            {
+                "ID": 1957,
+                "post_name": "poverinov",
+                "permalink": "https:\/\/shpigovsky.ru\/specialisty\/poverinov\/"
+            },
+            {
+                "ID": 1963,
+                "post_name": "filippov",
+                "permalink": "https:\/\/shpigovsky.ru\/specialisty\/filippov\/"
+            },
+            {
+                "ID": 1988,
+                "post_name": "filippova",
+                "permalink": "https:\/\/shpigovsky.ru\/specialisty\/filippova\/"
+            }
+        ]
+    }
+}

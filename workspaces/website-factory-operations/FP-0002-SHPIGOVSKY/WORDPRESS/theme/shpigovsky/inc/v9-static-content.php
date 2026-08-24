@@ -357,7 +357,7 @@ function shpigovsky_get_v9_alcohol_leaf_faq_items() {
  * Specialists cards — legacy V9 static fixture (partials/sections/specialists.html).
  *
  * V9-06E34: no longer the active slider source. Kept for migration/seed reference only.
- * Live slider uses published child pages of `/specyalisty/` via shpigovsky_get_specialists_cards().
+ * Live slider uses published specialist CPT via shpigovsky_get_specialists_cards().
  *
  * @return array<int, array{image:string,width:int,height:int,name:string,role:string}>
  */

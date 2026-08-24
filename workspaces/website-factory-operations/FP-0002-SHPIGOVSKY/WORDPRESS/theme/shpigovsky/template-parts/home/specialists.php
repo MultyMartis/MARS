@@ -3,7 +3,7 @@
  * Template part: home/specialists.php
  *
  * V9-06E18: reusable block options with V9 static fallback.
- * V9-06E34: cards from `/specyalisty/` child pages; card links to specialist pages.
+ * V9-06E34: cards from `/specialisty/` specialist CPT; card links to specialist pages.
  *
  * @package Shpigovsky
  */

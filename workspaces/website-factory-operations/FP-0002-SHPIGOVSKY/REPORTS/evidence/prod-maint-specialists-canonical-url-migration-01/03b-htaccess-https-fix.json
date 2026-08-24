@@ -1,0 +1,8 @@
+{
+  "before_sha256": "5df0ed52e1b53996d0c45b2157b6472ec6eb8a3cc695d4f6cb8a6f343f5b55a8",
+  "after_sha256": "214b282a44fcbd39e806babe045ddf292c22053c8357b4369d8062dd04c676f3",
+  "parity_ok": true,
+  "https_host_rule": true,
+  "snippet": "# FP-0002 legacy redirects\r\n<IfModule mod_rewrite.c>\r\nRewriteEngine On\r\nRewriteRule ^yoga/?$ /o-centre/programma-lecheniya/kinezioterapiya/ [R=301,L]\r\nRewriteRule ^about/?$ /o-centre/ [R=301,L]\r\nRewriteRule ^psy/?$ /o-centre/programma-lecheniya/psihokorrektsiya/ [R=301,L]\r\nRewriteRule ^home/?$ /o-centre/programma-lecheniya/ [R=301,L]\r\nRewriteRule ^policy/?$ /privacy-policy/ [R=301,L]\r\nRewriteRule ^neuro/?$ /o-centre/programma-lecheniya/prostranstvo-vosstanovleniya/ [R=301,L]\r\nRewriteRule ^reviews/?$ /otzyvy/ [R=301,L]\r\n# Specialists URL migration: force https host to avoid HTTP→HTTPS chain behind SSL proxy.\r\nRewriteRule ^specyalisty/?$ https://%{HTTP_HOST}/specialisty/ [R=301,L]\r\nRewriteRule ^specyalisty/(.+?)/?$ https://%{HTTP_HOST}/specialisty/$1/ [R=301,L]\r\n</IfModule>\r\n\r\n",
+  "has_https_rule": true
+}
