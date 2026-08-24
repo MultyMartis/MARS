@@ -124,10 +124,10 @@ Soft: `"enabled" => false`. Hard: restore `js/common.js` backup + remove three a
 
 ## 20. Git Persistence
 
-Scoped commit on task files only (local dirty-main commit `6a5056db`).  
-Remote histories had diverged; sync used clean worktree from `origin/mars/canonical-post-recovery` + cherry-pick of the task commit → remote tip **`0c6f80de`**.  
+Scoped commit on task files only (local dirty-main feature commit `6a5056db`; follow-up docs note `4a710d7c`).  
+Remote histories had diverged; sync used clean worktree from `origin/mars/canonical-post-recovery` + cherry-pick → remote feature tip **`0c6f80de`**, then docs note tip **`2da4d9b9`**.  
 No force push. No foreign WIP.  
-**REMOTE SYNC: COMPLETE** (`origin/mars/canonical-post-recovery` = `0c6f80de`).
+**REMOTE SYNC: COMPLETE** (`origin/mars/canonical-post-recovery` = `2da4d9b9`).
 
 ## 21. Open Risks
 
