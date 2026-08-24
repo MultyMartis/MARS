@@ -27,7 +27,7 @@ final class FieldGroups implements ModuleInterface {
 	/**
 	 * Deterministic modified timestamp for canonical JSON source.
 	 */
-	public const MODIFIED = 1784452800;
+	public const MODIFIED = 1787000000;
 
 	/**
 	 * {@inheritdoc}
@@ -2672,25 +2672,47 @@ final class FieldGroups implements ModuleInterface {
 					'label'         => __( 'Повторно используемые блоки', 'shpigovsky-core' ),
 					'name'          => 'generic_page_reusable_notice',
 					'type'          => 'message',
-					'message'       => __( 'Включает уже существующие общие блоки сайта. Контент блоков не копируется на страницу — редактируется в их канонических настройках (Комфорт / требования; галерея «О доме»).', 'shpigovsky-core' ),
+					'message'       => __( 'Общие блоки сайта (не копируются на страницу). Контент блоков редактируется в их канонических настройках.', 'shpigovsky-core' ),
 					'new_lines'     => 'wpautop',
 					'esc_html'      => 0,
 				),
+				self::field(
+					'field_fp02_generic_page_reusable_blocks_enabled',
+					__( 'Показывать повторно используемые блоки', 'shpigovsky-core' ),
+					'generic_page_reusable_blocks_enabled',
+					'true_false',
+					array(
+						'instructions'  => __( 'Вкл — выбрать блоки ниже. Выкл — блоки на сайте не показываются.', 'shpigovsky-core' ),
+						'default_value' => 0,
+						'ui'            => 1,
+						'ui_on_text'    => __( 'Вкл', 'shpigovsky-core' ),
+						'ui_off_text'   => __( 'Выкл', 'shpigovsky-core' ),
+					)
+				),
 				array(
-					'key'           => 'field_fp02_generic_page_reusable_blocks',
-					'label'         => __( 'Показать блоки на странице', 'shpigovsky-core' ),
-					'name'          => 'generic_page_reusable_blocks',
-					'type'          => 'checkbox',
-					'instructions'  => __( 'Отметьте блоки, которые нужно показать под основным текстом. Порядок на странице фиксированный: сначала требования к реабилитации, затем «О доме».', 'shpigovsky-core' ),
-					'choices'       => array(
+					'key'               => 'field_fp02_generic_page_reusable_blocks',
+					'label'             => __( 'Какие блоки показать', 'shpigovsky-core' ),
+					'name'              => 'generic_page_reusable_blocks',
+					'type'              => 'checkbox',
+					'instructions'      => __( 'Порядок на сайте фиксированный: сначала требования к реабилитации, затем «О доме».', 'shpigovsky-core' ),
+					'choices'           => array(
 						'rehab_requirements' => __( 'Что нужно для прохождения реабилитации и лечения', 'shpigovsky-core' ),
 						'about_home'         => __( 'О доме / комфорт и территория', 'shpigovsky-core' ),
 					),
-					'default_value' => array(),
-					'layout'        => 'vertical',
-					'return_format' => 'value',
-					'allow_custom'  => 0,
-					'save_custom'   => 0,
+					'default_value'     => array(),
+					'layout'            => 'vertical',
+					'return_format'     => 'value',
+					'allow_custom'      => 0,
+					'save_custom'       => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field'    => 'field_fp02_generic_page_reusable_blocks_enabled',
+								'operator' => '==',
+								'value'    => '1',
+							),
+						),
+					),
 				),
 			),
 			array(
@@ -2712,7 +2734,7 @@ final class FieldGroups implements ModuleInterface {
 			'tags',
 			'send-trackbacks',
 		);
-		$group['description']    = 'V9-06E52 generic page ACF content source of truth (Generic Content + Specialists Hub). PROD-P07: reusable shared blocks selector.';
+		$group['description']    = 'V9-06E52 generic page ACF content source of truth (Generic Content + Specialists Hub). PROD-P07 + Admin UX: reusable shared blocks enable/selector.';
 
 		return $group;
 	}

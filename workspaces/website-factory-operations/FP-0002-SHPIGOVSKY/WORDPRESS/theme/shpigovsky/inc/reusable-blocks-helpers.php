@@ -12,6 +12,56 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
+ * Whether page-owned reusable blocks should render on the frontend.
+ *
+ * Explicit enable meta wins. Legacy pages without the enable field still render
+ * when a selection is stored (pre-enable Admin UX).
+ *
+ * @param int $page_id Page ID.
+ * @return bool
+ */
+function shpigovsky_page_reusable_blocks_enabled( $page_id ) {
+	$page_id = (int) $page_id;
+	if ( $page_id <= 0 || ! function_exists( 'get_field' ) ) {
+		return false;
+	}
+
+	if ( metadata_exists( 'post', $page_id, 'generic_page_reusable_blocks_enabled' ) ) {
+		return (bool) get_field( 'generic_page_reusable_blocks_enabled', $page_id );
+	}
+
+	$raw = get_field( 'generic_page_reusable_blocks', $page_id );
+	return is_array( $raw ) && ! empty( $raw );
+}
+
+/**
+ * Selected reusable block keys for a page (ordered), or empty when disabled.
+ *
+ * @param int $page_id Page ID.
+ * @return string[]
+ */
+function shpigovsky_get_page_reusable_block_keys( $page_id ) {
+	$page_id = (int) $page_id;
+	if ( $page_id <= 0 || ! shpigovsky_page_reusable_blocks_enabled( $page_id ) ) {
+		return array();
+	}
+
+	$reusable = array();
+	$raw      = get_field( 'generic_page_reusable_blocks', $page_id );
+	if ( is_array( $raw ) ) {
+		foreach ( $raw as $item ) {
+			$key = is_string( $item ) ? trim( $item ) : '';
+			if ( '' !== $key ) {
+				$reusable[] = $key;
+			}
+		}
+	}
+
+	$order = array( 'rehab_requirements', 'about_home' );
+	return array_values( array_intersect( $order, $reusable ) );
+}
+
+/**
  * ACF options context for final form block admin.
  */
 function shpigovsky_get_final_form_block_context() {

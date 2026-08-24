@@ -88,6 +88,10 @@ function shpigovsky_enqueue_generic_reusable_vendors() {
 		return;
 	}
 
+	if ( function_exists( 'shpigovsky_page_reusable_blocks_enabled' ) && ! shpigovsky_page_reusable_blocks_enabled( $page_id ) ) {
+		return;
+	}
+
 	$blocks = get_field( 'generic_page_reusable_blocks', $page_id );
 	if ( ! is_array( $blocks ) || ! in_array( 'about_home', $blocks, true ) ) {
 		return;

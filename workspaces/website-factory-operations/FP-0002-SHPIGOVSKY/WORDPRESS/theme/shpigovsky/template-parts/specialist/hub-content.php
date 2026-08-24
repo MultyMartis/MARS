@@ -48,22 +48,9 @@ if ( function_exists( 'get_field' ) ) {
 		<?php get_template_part( 'template-parts/specialist/hub-list' ); ?>
 
 		<?php
-		$reusable = array();
-		if ( function_exists( 'get_field' ) ) {
-			$raw_reusable = get_field( 'generic_page_reusable_blocks', $page_id );
-			if ( is_array( $raw_reusable ) ) {
-				foreach ( $raw_reusable as $item ) {
-					$key = is_string( $item ) ? trim( $item ) : '';
-					if ( '' !== $key ) {
-						$reusable[] = $key;
-					}
-				}
-			}
-		}
-
-		// Fixed render order — same owner/storage as Generic Content (PROD-P07).
-		$order    = array( 'rehab_requirements', 'about_home' );
-		$selected = array_values( array_intersect( $order, $reusable ) );
+		$selected = function_exists( 'shpigovsky_get_page_reusable_block_keys' )
+			? shpigovsky_get_page_reusable_block_keys( $page_id )
+			: array();
 		if ( ! empty( $selected ) ) :
 			?>
 		<div class="generic-content-page__reusable">

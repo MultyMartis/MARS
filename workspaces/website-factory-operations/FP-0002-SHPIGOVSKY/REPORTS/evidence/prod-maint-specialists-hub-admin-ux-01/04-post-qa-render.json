@@ -1,0 +1,86 @@
+{
+  "core_version": "0.3.27-specialists-hub-admin-ux",
+  "compat_loaded": true,
+  "blog_public": 1,
+  "group_fields": [
+    {
+      "key": "field_fp02_generic_page_lead",
+      "name": "generic_page_lead",
+      "type": "textarea",
+      "label": "Лид / вступление",
+      "has_conditional": false
+    },
+    {
+      "key": "field_fp02_generic_page_body",
+      "name": "generic_page_body",
+      "type": "wysiwyg",
+      "label": "Основной текст",
+      "has_conditional": false
+    },
+    {
+      "key": "field_fp02_generic_page_reusable_notice",
+      "name": "",
+      "type": "message",
+      "label": "Повторно используемые блоки",
+      "has_conditional": false
+    },
+    {
+      "key": "field_fp02_generic_page_reusable_blocks_enabled",
+      "name": "generic_page_reusable_blocks_enabled",
+      "type": "true_false",
+      "label": "Показывать повторно используемые блоки",
+      "has_conditional": false
+    },
+    {
+      "key": "field_fp02_generic_page_reusable_blocks",
+      "name": "generic_page_reusable_blocks",
+      "type": "checkbox",
+      "label": "Какие блоки показать",
+      "has_conditional": true
+    }
+  ],
+  "renders": [
+    {
+      "key": "field_fp02_generic_page_reusable_blocks_enabled",
+      "exists": true,
+      "exception": null,
+      "html_has_critical": false,
+      "html_bytes": 1172,
+      "html_preview": " Показывать повторно используемые блоки? ВклВыкл "
+    },
+    {
+      "key": "field_fp02_generic_page_reusable_blocks",
+      "exists": true,
+      "exception": null,
+      "html_has_critical": false,
+      "html_bytes": 1524,
+      "html_preview": " Какие блоки показать? Что нужно для прохождения реабилитации и лечения О доме / комфорт и территория "
+    },
+    {
+      "key": "field_fp02_generic_page_reusable_notice",
+      "exists": true,
+      "exception": null,
+      "html_has_critical": false,
+      "html_bytes": 585,
+      "html_preview": " Повторно используемые блоки Общие блоки сайта (не копируются на страницу). Контент блоков редактируется в их канонических настройках. "
+    }
+  ],
+  "enable_helpers": {
+    "fn_exists": true,
+    "keys_fn": true,
+    "page1030_enabled": false,
+    "page1030_keys": []
+  },
+  "url_audit": {
+    "post_content": 0,
+    "postmeta": 0,
+    "options": 0,
+    "post_content_samples": [],
+    "postmeta_samples": [],
+    "options_samples": [],
+    "menu_hits": []
+  },
+  "robots_exists": true,
+  "robots_sha256": "2594093919d01f067bcd3776d50d973cfa20a1faf4a6d63fc23f21367d08529e",
+  "robots_bytes": 2826
+}

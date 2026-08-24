@@ -1,0 +1,178 @@
+{
+  "ts": "2026-08-24T11:33:53+00:00",
+  "acf_global_before": {
+    "isset": true,
+    "type": "object",
+    "is_object": true,
+    "is_array": false,
+    "class": "ACF"
+  },
+  "acf_instance": {
+    "type": "object",
+    "class": "ACF"
+  },
+  "current_user": {
+    "ID": 2,
+    "login": "admin"
+  },
+  "post_template": "page-templates/specialists-hub.php",
+  "matching_groups": [
+    {
+      "key": "group_fp02_page_generic_content",
+      "title": "Содержимое страницы",
+      "local": "json"
+    },
+    {
+      "key": "group_fp02_seo_entity_meta",
+      "title": "SEO",
+      "local": "php"
+    }
+  ],
+  "group": {
+    "key": "group_fp02_page_generic_content",
+    "title": "Содержимое страницы",
+    "local": "json",
+    "modified": 1786700000,
+    "location": [
+      [
+        {
+          "param": "page_template",
+          "operator": "==",
+          "value": "page-templates/generic.php"
+        }
+      ],
+      [
+        {
+          "param": "page_template",
+          "operator": "==",
+          "value": "page-templates/specialists-hub.php"
+        }
+      ]
+    ],
+    "fields": [
+      {
+        "key": "field_fp02_generic_page_lead",
+        "name": "generic_page_lead",
+        "type": "textarea",
+        "label": "Лид / вступление",
+        "conditional_logic": 0,
+        "choices": null
+      },
+      {
+        "key": "field_fp02_generic_page_body",
+        "name": "generic_page_body",
+        "type": "wysiwyg",
+        "label": "Основной текст",
+        "conditional_logic": 0,
+        "choices": null
+      },
+      {
+        "key": "field_fp02_generic_page_reusable_notice",
+        "name": "",
+        "type": "message",
+        "label": "Повторно используемые блоки",
+        "conditional_logic": 0,
+        "choices": null
+      },
+      {
+        "key": "field_fp02_generic_page_reusable_blocks",
+        "name": "generic_page_reusable_blocks",
+        "type": "checkbox",
+        "label": "Показать блоки на странице",
+        "conditional_logic": 0,
+        "choices": {
+          "rehab_requirements": "Что нужно для прохождения реабилитации и лечения",
+          "about_home": "О доме / комфорт и территория"
+        }
+      }
+    ]
+  },
+  "renders": [
+    {
+      "key": "field_fp02_generic_page_lead",
+      "exists": true,
+      "type": "textarea",
+      "name": "generic_page_lead",
+      "html_bytes": 597,
+      "html_has_critical": false,
+      "html_preview": "Лид / вступлениеНеобязательно. Если поле пустое — блок на фронте скрывается (без демо-текста).",
+      "acf_global_after": "object"
+    },
+    {
+      "key": "field_fp02_generic_page_body",
+      "exists": true,
+      "type": "wysiwyg",
+      "name": "generic_page_body",
+      "html_bytes": 1514,
+      "html_has_critical": false,
+      "html_preview": "Основной текстИсточник содержимого обычной страницы. Если пусто — текст на фронте не подставляется из шаблона. Аварийный запас: post_content только если ACF пуст.\n\n\t\t\n\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t Добавить медиафайл",
+      "acf_global_after": "object"
+    },
+    {
+      "key": "field_fp02_generic_page_reusable_notice",
+      "exists": true,
+      "type": "message",
+      "name": "",
+      "html_bytes": 708,
+      "html_has_critical": false,
+      "html_preview": "Повторно используемые блоки\n\nВключает уже существующие общие блоки сайта. Контент блоков не копируется на страницу — редактируется в их канонических настройках (Комфорт / требования; галерея «О доме»).",
+      "acf_global_after": "object"
+    },
+    {
+      "key": "field_fp02_generic_page_reusable_blocks",
+      "exists": true,
+      "type": "checkbox",
+      "name": "generic_page_reusable_blocks",
+      "exception": {
+        "class": "Error",
+        "message": "Cannot access private property acf_field_checkbox::$_values",
+        "file": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/acf-extended-pro/pro/includes/fields/field-checkbox.php",
+        "line": 35,
+        "trace": [
+          ": render_field",
+          "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-includes/class-wp-hook.php:353 call_user_func_array",
+          "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-includes/class-wp-hook.php:377 apply_filters",
+          "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-includes/plugin.php:571 do_action",
+          "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/advanced-custom-fields-pro/includes/acf-hook-functions.php:122 do_action_ref_array",
+          ": _acf_apply_hook_variations",
+          "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-includes/class-wp-hook.php:353 call_user_func_array",
+          "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-includes/class-wp-hook.php:377 apply_filters",
+          "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-includes/plugin.php:523 do_action",
+          "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/advanced-custom-fields-pro/includes/acf-field-functions.php:819 do_action",
+          "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/advanced-custom-fields-pro/includes/acf-field-functions.php:775 acf_render_field",
+          "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/uploads/.fp02-admin-render-20260824113352.php:140 acf_render_field_wrap"
+        ]
+      },
+      "html_bytes": 670,
+      "html_has_critical": false,
+      "html_preview": "Показать блоки на страницеОтметьте блоки, которые нужно показать под основным текстом. Порядок на странице фиксированный: сначала требования к реабилитации, затем «О доме».",
+      "acf_global_after": "object"
+    }
+  ],
+  "metabox_render": {
+    "exception": {
+      "class": "Error",
+      "message": "Cannot access private property acf_field_checkbox::$_values",
+      "file": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/acf-extended-pro/pro/includes/fields/field-checkbox.php",
+      "line": 35,
+      "trace": [
+        ": render_field",
+        "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-includes/class-wp-hook.php:353 call_user_func_array",
+        "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-includes/class-wp-hook.php:377 apply_filters",
+        "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-includes/plugin.php:571 do_action",
+        "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/advanced-custom-fields-pro/includes/acf-hook-functions.php:122 do_action_ref_array",
+        ": _acf_apply_hook_variations",
+        "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-includes/class-wp-hook.php:353 call_user_func_array",
+        "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-includes/class-wp-hook.php:377 apply_filters",
+        "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-includes/plugin.php:523 do_action",
+        "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/advanced-custom-fields-pro/includes/acf-field-functions.php:819 do_action",
+        "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/advanced-custom-fields-pro/includes/acf-field-functions.php:775 acf_render_field",
+        "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/advanced-custom-fields-pro/includes/acf-field-functions.php:626 acf_render_field_wrap",
+        "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/uploads/.fp02-admin-render-20260824113352.php:179 acf_render_fields"
+      ]
+    },
+    "html_bytes": 3464,
+    "has_critical": false,
+    "preview": "Лид / вступлениеНеобязательно. Если поле пустое — блок на фронте скрывается (без демо-текста).\n\n\n\n\n\nОсновной текстИсточник содержимого обычной страницы. Если пусто — текст на фронте не подставляется из шаблона. Аварийный запас: post_content только если ACF пуст.\n\n\t\t\n\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t Добавить медиафайл\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\n\t\t\t\n\n\n\nПовторно используемые блоки\n\nВключает уже существующие общие блоки сайта. Контент блоков не копируется на страницу — редактируется в их канонических настройках (Комфорт / требования; галерея «О доме»).\n\n\n\n\nПоказать блоки на страницеОтметьте блоки, ко"
+  }
+}

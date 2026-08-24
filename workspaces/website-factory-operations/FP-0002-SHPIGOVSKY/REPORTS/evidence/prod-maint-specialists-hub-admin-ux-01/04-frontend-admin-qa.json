@@ -1,0 +1,39 @@
+{
+  "front": {
+    "hub": {
+      "path": "/specyalisty/",
+      "status": 200,
+      "location": null,
+      "has_critical": false,
+      "has_specialists_grid": true,
+      "bytes": 67980
+    },
+    "typo": {
+      "path": "/specialisty/",
+      "status": 404,
+      "location": null,
+      "has_critical": false,
+      "has_specialists_grid": true,
+      "bytes": 62882
+    },
+    "home": {
+      "path": "/",
+      "status": 200,
+      "location": null,
+      "has_critical": false,
+      "has_specialists_grid": true,
+      "bytes": 188264
+    }
+  },
+  "admin": {
+    "login_ok": true,
+    "user": "mars",
+    "status": 200,
+    "has_critical": false,
+    "has_enable": true,
+    "has_selector": true,
+    "has_checkbox_list": true,
+    "reusable_section_has_critical": false
+  },
+  "ts": "2026-08-24T11:42:14.807519+00:00"
+}

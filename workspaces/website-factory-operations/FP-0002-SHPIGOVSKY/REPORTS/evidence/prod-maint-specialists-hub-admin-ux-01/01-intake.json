@@ -1,0 +1,202 @@
+{
+  "ts_utc": "2026-08-24T11:31:28+00:00",
+  "blog_public": 1,
+  "siteurl": "https://shpigovsky.ru",
+  "home": "https://shpigovsky.ru",
+  "theme": {
+    "name": "Shpigovsky",
+    "version": "0.3.0-d7a-shell"
+  },
+  "core_plugin": {
+    "Name": "Shpigovsky Core",
+    "Version": "0.3.26-specialists-hub",
+    "active": true
+  },
+  "acf": {
+    "key": "advanced-custom-fields-pro/acf.php",
+    "Version": "6.8.5",
+    "active": true
+  },
+  "acfe": {
+    "key": "acf-extended-pro/acf-extended.php",
+    "Version": "0.9.2.3",
+    "active": true
+  },
+  "page_1030": {
+    "ID": 1030,
+    "post_title": "Специалисты",
+    "post_name": "specyalisty",
+    "post_status": "publish",
+    "permalink": "https://shpigovsky.ru/specyalisty/",
+    "template": "page-templates/specialists-hub.php",
+    "post_content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "post_content_preview": "",
+    "post_modified_gmt": "2026-08-24 11:15:17",
+    "acf": {
+      "generic_page_lead": "",
+      "_generic_page_lead": "field_fp02_generic_page_lead",
+      "generic_page_body": "",
+      "_generic_page_body": "field_fp02_generic_page_body",
+      "generic_page_reusable_blocks": "",
+      "_generic_page_reusable_blocks": "",
+      "generic_page_reusable_blocks_enabled": "",
+      "_generic_page_reusable_blocks_enabled": "",
+      "page_layout_mode": "full",
+      "_page_layout_mode": "field_fp02_page_layout_mode",
+      "seo_title": "",
+      "_seo_title": "",
+      "seo_description": "",
+      "_seo_description": "",
+      "_wp_page_template": "page-templates/specialists-hub.php",
+      "__wp_page_template": ""
+    }
+  },
+  "prod_files": {
+    "FieldGroups.php": {
+      "path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/src/Fields/FieldGroups.php",
+      "bytes": 160555,
+      "sha256": "14ecec5d16abcc0a9af58d29c5fb5e0a350b649dbbf5a71221570b0be62f1a9d",
+      "mtime": "2026-08-24T11:06:46+00:00",
+      "has_specialists_hub_location": true,
+      "has_reusable_enabled": false,
+      "snippet_reusable": "page_generic_content(),\r\n\t\t\tself::page_treatment_program_child(),\r\n\t\t\tself::page_specialist_profile(),\r\n\t\t\tself::page_institutional_child(),\r\n\t\t\tself::page_contacts(),\r\n\t\t\tself::page_reviews(),\r\n\t\t\tself::page_legal(),\r\n\t\t\tself::blog_post_article_meta(),\r\n\t\t\tself::blog_archive_settings(),\r\n\t\t\tself::site_options_contacts(),\r\n\t\t\tself::site_options_modal_cta(),\r\n\t\t\tself::site_options_reviews(),\r\n\t\t\tSeoIntegrationsOptions::group(),\r\n\t\t\tSocialPlatformsOptions::group(),\r\n\t\t\tSeoEntityMeta::group(),\r\n\t\t\tself::block_final_form(),\r\n\t\t\tself::block_specialists(),\r\n\t\t\tself::block_cta_bands(),\r\n\t\t\tself::block_founder_quote(),\r\n\t\t\tself::block_header(),\r\n\t\t\tself::block_footer(),\r\n\t\t\tself::block_comfort_intro(),\r\n\t\t\tself::block_comfort_gallery(),\r\n\t\t\tself::block_comfort_requirements(),\r\n\t\t);\r\n\t}\r\n\r\n\t/**\r\n\t * Service layout group (layout selector + hub/catalog flags). Hero fields live in service_hero().\r\n\t *\r\n\t * @return array<string, mixed>\r\n\t */\r\n\tprivate static function service_layout() {\r\n\t\t$group = self::group(\r\n\t\t\t'group_fp02_service_layout_hero',\r\n\t\t\t__( 'Макет страницы услуги', 'shpigovsky-core' ),\r\n\t\t\tarray(\r\n\t\t\t\tself::field(\r\n\t\t\t\t\t'field_fp02_service_editor_role',\r\n\t\t\t\t\t__( 'Макет страницы услуги', 'shpigovsky-core' ),\r\n\t\t\t\t\t'service_editor_role',\r\n\t\t\t\t\t'button_group',\r\n\t\t\t\t\tarray(\r\n\t\t\t\t\t\t'instructions'  => __( 'Временный режим «Заглушка»: на фронте выводятся только шапка, навигация, H1 и подвал. Контент в полях не удаляется и может быть включён обратно сменой макета.', 'shpigovsky-core' ),\r\n\t\t\t\t\t\t'required'      => 0,\r\n\t\t\t\t\t\t'choices'       => array(\r\n\t\t\t\t\t\t\t'section'     => __( 'Раздел', 'shpigovsky-core' ),\r\n\t\t\t\t\t\t\t'service'     => __( 'Услуга', 'shpigovsky-core' ),\r\n\t\t\t\t\t\t\t'placeholder' => __( 'Заглушка', 'shpigovsky-core' ),\r\n\t\t\t\t\t\t),\r\n\t\t\t\t\t\t'default_value' => '',\r\n\t\t\t\t\t\t'return_format' => 'value',\r\n\t\t\t\t\t\t'allow_null'    => 1,\r\n\t\t\t\t\t\t'layout'        => 'horizontal',\r\n\t\t\t\t\t\t'wrapper'       => array(\r\n\t\t\t\t\t\t\t'width' => '',\r\n\t\t\t\t\t\t\t'class' => 'fp02-acf-section-title fp02-service-layout-selector',\r\n\t\t\t\t\t\t\t'id'    => '',\r\n\t\t\t\t\t\t),\r\n\t\t\t\t\t)\r\n\t\t\t\t),\r\n\t\t\t\t// Technical fields kept in meta for resolver/sync; hidden from normal admin UI (FIX03 prepare_field).\r\n\t\t\t\tself::field(\r\n\t\t\t\t\t'field_fp02_service_layout_advanced_heading',\r\n\t\t\t\t\t__( 'Расширенные настройки шаблона', 'shpigovsky-core' ),\r\n\t\t\t\t\t'service_layout_advanced_heading',\r\n\t\t\t\t\t'message',\r\n\t\t\t\t\tarray(\r\n\t\t\t\t\t\t'message' => __( 'Служебные параметры (скрыты в обычном UI). subdivision = Раздел; service_general = Услуг"
+    },
+    "shpigovsky-core.php": {
+      "path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/plugins/shpigovsky-core/shpigovsky-core.php",
+      "bytes": 1786,
+      "sha256": "227fa9231686ac671a92e69f9895db46ab1f682515b6626db91ac7006f2146b8",
+      "mtime": "2026-08-24T11:06:49+00:00",
+      "has_specialists_hub_location": false,
+      "has_reusable_enabled": false,
+      "snippet_reusable": null
+    },
+    "specialists-hub.php": {
+      "path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/page-templates/specialists-hub.php",
+      "bytes": 642,
+      "sha256": "b7dd99b41847b0da527208218d34aa1cfd07b20d31ca69732d15eef6a8959c82",
+      "mtime": "2026-08-24T11:06:41+00:00",
+      "has_specialists_hub_location": false,
+      "has_reusable_enabled": false,
+      "snippet_reusable": null
+    },
+    "hub-content.php": {
+      "path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/specialist/hub-content.php",
+      "bytes": 2765,
+      "sha256": "59e1c307af3123b3c28286ba7f4114039072e092ea701ee6ef1cdef1fa59178b",
+      "mtime": "2026-08-24T11:06:42+00:00",
+      "has_specialists_hub_location": false,
+      "has_reusable_enabled": false,
+      "snippet_reusable": null
+    },
+    "hub-list.php": {
+      "path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/specialist/hub-list.php",
+      "bytes": 1407,
+      "sha256": "5cf2c8b6ac8acafbca382ce7b215be03de913a64925a07d7c1f27b67ec29a313",
+      "mtime": "2026-08-24T11:06:43+00:00",
+      "has_specialists_hub_location": false,
+      "has_reusable_enabled": false,
+      "snippet_reusable": null
+    },
+    "content-page.php": {
+      "path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/template-parts/generic/content-page.php",
+      "bytes": 4837,
+      "sha256": "37aaac70af8113e182b159fb98704240a4ec35241cc93ecceda3f9bcfee6d108",
+      "mtime": "2026-08-14T15:07:52+00:00",
+      "has_specialists_hub_location": false,
+      "has_reusable_enabled": false,
+      "snippet_reusable": null
+    },
+    "fancybox-vendors.php": {
+      "path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/fancybox-vendors.php",
+      "bytes": 3589,
+      "sha256": "7aa8661308e1d02cc9b86ee717b79e5cac8edc516ea9c7e4b3959523167cf470",
+      "mtime": "2026-08-24T11:06:44+00:00",
+      "has_specialists_hub_location": true,
+      "has_reusable_enabled": false,
+      "snippet_reusable": null
+    },
+    "robots.txt": {
+      "path": "/home/s/shpigovsky/shpigovsky.ru/public_html/robots.txt",
+      "bytes": 2826,
+      "sha256": "2594093919d01f067bcd3776d50d973cfa20a1faf4a6d63fc23f21367d08529e",
+      "mtime": "2026-08-24T07:15:38+00:00",
+      "has_specialists_hub_location": false,
+      "has_reusable_enabled": false,
+      "snippet_reusable": null
+    }
+  },
+  "acf_json_paths": [
+    {
+      "path": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/acf-json/group_fp02_page_generic_content.json",
+      "sha256": "95ab59aff935f7429a00d55f09c0ce390813da8d978013b8ff29d0849bb6c705",
+      "bytes": 4985,
+      "location": [
+        [
+          {
+            "param": "page_template",
+            "operator": "==",
+            "value": "page-templates/generic.php"
+          }
+        ],
+        [
+          {
+            "param": "page_template",
+            "operator": "==",
+            "value": "page-templates/specialists-hub.php"
+          }
+        ]
+      ],
+      "fields": [
+        {
+          "key": "field_fp02_generic_page_lead",
+          "name": "generic_page_lead",
+          "type": "textarea"
+        },
+        {
+          "key": "field_fp02_generic_page_body",
+          "name": "generic_page_body",
+          "type": "wysiwyg"
+        },
+        {
+          "key": "field_fp02_generic_page_reusable_notice",
+          "name": "generic_page_reusable_notice",
+          "type": "message"
+        },
+        {
+          "key": "field_fp02_generic_page_reusable_blocks",
+          "name": "generic_page_reusable_blocks",
+          "type": "checkbox"
+        }
+      ],
+      "has_specialists_hub": true,
+      "has_reusable_enabled": false
+    }
+  ],
+  "error_logs": {
+    "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/debug.log": {
+      "missing": true
+    },
+    "/home/s/shpigovsky/shpigovsky.ru/public_html/error_log": {
+      "missing": true
+    },
+    "/home/s/shpigovsky/logs/shpigovsky.ru.error.log": {
+      "missing": true
+    },
+    "/home/s/shpigovsky/shpigovsky.ru/logs/error.log": {
+      "missing": true
+    },
+    "/home/s/shpigovsky/data/logs/shpigovsky.ru.error.log": {
+      "missing": true
+    }
+  },
+  "activity_log_recent": [],
+  "url_audit": {
+    "post_content": [],
+    "postmeta": [],
+    "options": []
+  },
+  "url_audit_loose_theme": [],
+  "url_audit_theme_files": [],
+  "url_audit_plugin_files": [],
+  "wpilot_write": null
+}

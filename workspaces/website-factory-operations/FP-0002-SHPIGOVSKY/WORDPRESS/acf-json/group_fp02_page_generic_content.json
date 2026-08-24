@@ -56,19 +56,47 @@
                 "class": "",
                 "id": ""
             },
-            "message": "Включает уже существующие общие блоки сайта. Контент блоков не копируется на страницу — редактируется в их канонических настройках (Комфорт / требования; галерея «О доме»).",
+            "message": "Общие блоки сайта (не копируются на страницу). Контент блоков редактируется в их канонических настройках.",
             "new_lines": "wpautop",
             "esc_html": 0
         },
         {
+            "key": "field_fp02_generic_page_reusable_blocks_enabled",
+            "label": "Показывать повторно используемые блоки",
+            "name": "generic_page_reusable_blocks_enabled",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Вкл — выбрать блоки ниже. Выкл — блоки на сайте не показываются.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Вкл",
+            "ui_off_text": "Выкл"
+        },
+        {
             "key": "field_fp02_generic_page_reusable_blocks",
-            "label": "Показать блоки на странице",
+            "label": "Какие блоки показать",
             "name": "generic_page_reusable_blocks",
             "aria-label": "",
             "type": "checkbox",
-            "instructions": "Отметьте блоки, которые нужно показать под основным текстом. Порядок на странице фиксированный: сначала требования к реабилитации, затем «О доме».",
+            "instructions": "Порядок на сайте фиксированный: сначала требования к реабилитации, затем «О доме».",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_generic_page_reusable_blocks_enabled",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -121,7 +149,7 @@
         "send-trackbacks"
     ],
     "active": true,
-    "description": "V9-06E52 generic page ACF content source of truth (Generic Content + Specialists Hub). PROD-P07: reusable shared blocks selector.",
+    "description": "V9-06E52 generic page ACF content source of truth (Generic Content + Specialists Hub). PROD-P07 + Admin UX: reusable shared blocks enable\/selector.",
     "show_in_rest": 0,
-    "modified": 1786700000
+    "modified": 1787000000
 }

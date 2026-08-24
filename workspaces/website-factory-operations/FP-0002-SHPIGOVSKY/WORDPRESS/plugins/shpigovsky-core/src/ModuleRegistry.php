@@ -7,6 +7,7 @@
 
 namespace Shpigovsky\Core;
 
+use Shpigovsky\Core\Admin\AcfeCheckboxCompat;
 use Shpigovsky\Core\Admin\EditorRestrictions;
 use Shpigovsky\Core\Admin\OptionsPage;
 use Shpigovsky\Core\Admin\ServiceDuplicate;
@@ -110,6 +111,12 @@ final class ModuleRegistry {
 			'class'             => EditorRestrictions::class,
 			'status'            => self::ENABLED_IN_CONTENT_MODEL,
 			'runtime_delivered' => false,
+		),
+		'admin.acfe-checkbox-compat' => array(
+			'module'            => 'Admin',
+			'class'             => AcfeCheckboxCompat::class,
+			'status'            => self::ENABLED_IN_CONTENT_MODEL,
+			'runtime_delivered' => true,
 		),
 		'admin.service-layout-governance' => array(
 			'module'            => 'Admin',

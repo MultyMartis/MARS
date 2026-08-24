@@ -1,0 +1,88 @@
+{
+  "ts": "2026-08-24T11:43:07.088500+00:00",
+  "snapshot": {
+    "phase": "snapshot",
+    "page_id": 1030,
+    "meta": {
+      "generic_page_reusable_blocks_enabled": "",
+      "generic_page_reusable_blocks": "",
+      "_generic_page_reusable_blocks_enabled": "",
+      "_generic_page_reusable_blocks": ""
+    },
+    "enabled_helper": false,
+    "keys_helper": []
+  },
+  "set_off": {
+    "phase": "set_off",
+    "page_id": 1030,
+    "enabled_helper": false,
+    "keys_helper": [],
+    "meta_enabled": "0",
+    "meta_blocks": [
+      "rehab_requirements",
+      "about_home"
+    ]
+  },
+  "front_off": {
+    "status": 200,
+    "has_rehab": false,
+    "has_about_home": false,
+    "bytes": 67980
+  },
+  "set_on": {
+    "phase": "set_on",
+    "page_id": 1030,
+    "enabled_helper": true,
+    "keys_helper": [
+      "rehab_requirements"
+    ],
+    "meta_enabled": "1",
+    "meta_blocks": [
+      "rehab_requirements"
+    ]
+  },
+  "front_on": {
+    "status": 200,
+    "has_rehab": true,
+    "has_about_home": false,
+    "bytes": 73192
+  },
+  "restore": {
+    "phase": "restore",
+    "page_id": 1030,
+    "meta": {
+      "generic_page_reusable_blocks_enabled": "",
+      "generic_page_reusable_blocks": "",
+      "_generic_page_reusable_blocks_enabled": "",
+      "_generic_page_reusable_blocks": ""
+    },
+    "enabled_helper": false,
+    "keys_helper": []
+  },
+  "front_restored": {
+    "status": 200,
+    "has_rehab": false,
+    "has_about_home": false,
+    "bytes": 67980
+  },
+  "restore_check": {
+    "phase": "restore_check",
+    "page_id": 1030,
+    "meta": {
+      "generic_page_reusable_blocks_enabled": "",
+      "generic_page_reusable_blocks": "",
+      "_generic_page_reusable_blocks_enabled": "",
+      "_generic_page_reusable_blocks": ""
+    },
+    "enabled_helper": false,
+    "keys_helper": []
+  },
+  "pass": {
+    "off_helper_false": true,
+    "off_front_no_rehab": true,
+    "on_helper_true": true,
+    "on_front_has_rehab": true,
+    "restored_empty": true
+  },
+  "all_pass": true
+}
