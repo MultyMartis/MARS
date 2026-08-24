@@ -11,7 +11,7 @@
 **All-forms isolated mail acceptance:** **COMPLETE** with correct operator mailbox — see `ISEO-SU-FORM-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-EVIDENCE-v2.md` (Acceptance 01 recipient evidence **SUPERSEDED** due to operator typo `im.work@nail.ru`).  
 **Recipient restore verification:** **COMPLETE** — see `ISEO-SU-FORM-RECIPIENT-RESTORATION-EVIDENCE-v1.md` (current authority for original-recipient reconstruction; confirms prior restore claim for the active set).
 
-Server-side validation and layered anti-spam are authoritative. Client `required` attributes are convenience only. Temporary mail test mode is **OFF**. Production recipient set is the original active mailbox only (`nikel007i33@yandex.ru`). Temporary/operator mailbox `im.work@mail.ru` was **intentionally removed** from production recipients after acceptance (2026-08-21). Typo `im.work@nail.ru` remains **absent**.
+Server-side validation and layered anti-spam are authoritative. Client `required` attributes are convenience only. Temporary mail test mode is **OFF**. Production recipient set is the original active mailbox only (`nikel007i33@yandex.ru`). Temporary/operator mailbox `im.work@mail.ru` was **intentionally removed** from production recipients after acceptance (2026-08-21). Typo `im.work@nail.ru` remains **absent and invalid**. `chrra@yandex.ru` is an **inactive historical commented alternate**, not a current or test recipient.
 
 ## 2. Form Inventory
 
@@ -130,6 +130,7 @@ Do not commit active test mode as final production state.
 | production recipient | `nikel007i33@yandex.ru` **only** |
 | im.work@mail.ru in production_recipients | **NO** (intentionally removed after acceptance) |
 | im.work@nail.ru in production_recipients | **NO** (operator typo; never restore) |
+| chrra@yandex.ru | **INACTIVE HISTORICAL COMMENT ONLY** (not a recipient) |
 | Operator removal evidence | `ISEO-SU-FORM-OPERATOR-RECIPIENT-REMOVAL-EVIDENCE-v1.md` |
 | Prior recipient-restore evidence (historical) | `ISEO-SU-FORM-RECIPIENT-RESTORATION-EVIDENCE-v1.md` |
 | CAPTCHA | **not installed** |

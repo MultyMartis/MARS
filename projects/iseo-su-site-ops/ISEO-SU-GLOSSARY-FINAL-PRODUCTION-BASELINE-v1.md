@@ -120,7 +120,9 @@ Live on singles via `iseo_glossary_get_related_public_links()` — links only to
 | Source | Count | Notes |
 |--------|------:|-------|
 | `wp-sitemap-posts-glossary-1.xml` | **184** | authoritative Yoast/WP sitemap child |
-| Custom `sitemap.xml` (robots primary index) | unchanged | no glossary URLs by design at launch |
+| Root `sitemap.xml` | unchanged by the glossary launch | later audit confirmed obsolete 404 child references; repair remains OPEN_TECH |
+
+The glossary remains correctly owned by `/wp-sitemap.xml`; it must not be duplicated into `sitemap-static.xml`. Current root-sitemap truth and the planned unified index are defined in `ISEO-SU-SITEMAP-ARCHITECTURE-AND-CURRENT-STATE-v1.md`.
 
 ## 14. Navigation
 
@@ -145,7 +147,7 @@ See `ISEO-SU-PROTECTED-ZONES-v1.md`.
 2. Glossary visual tweaks prefer bounded edits to `production-source/css/main.css` with forensic diff evidence — not full-file replace from old snapshots.
 3. Menu changes require `content-topbar.php` (global chrome); remember static HTML includes the same part.
 4. Archive title prefix removal is implemented in `glossary-cpt.php` — do not global-strip `Архив` for other post types.
-5. Next optional work (out of scope for this baseline): custom `sitemap.xml` glossary discovery, mobile offcanvas parity, MERGED alias polish, archive Yoast meta description (on-page archive description already present).
+5. Next optional glossary work: mobile offcanvas parity, MERGED alias polish, archive Yoast meta description (on-page archive description already present). Root sitemap repair is a separate required technical task, not optional glossary work.
 6. Mobile horizontal overflow on glossary WP pages was verified live 2026-08-18 and fixed with a glossary-scoped CSS block. Do not reintroduce global `overflow-x: hidden` on `html`/`body`.
 
 ---

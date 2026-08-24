@@ -1,156 +1,136 @@
 # ISEO-SU CURRENT STATE v1
 
 **Programme:** ISEO-SU-SITE-OPS  
+**Site:** `https://i-seo.su/`
 **Canonical locus:** `X:\AI MARS\projects\iseo-su-site-ops\`  
-**Updated:** 2026-08-24 (Metrika visitor IP param addon)  
-**Authority rank:** primary project brain for ordinary next tasks
+**Updated:** 2026-08-24
+**Authority:** first current-state document for ordinary work
 
----
+Historical REPORT files record earlier states and do not override this document or fresher accepted evidence.
 
-## 1. Project Status
+## 1. Overall Status
 
-**COMPLETE — ISEO-SU FORMS HARDENED / ANTISPAM ACTIVE / OPERATOR RECIPIENT REMOVED / TECH-SEO AUDIT COMPLETE / METRIKA VISITOR IP PARAM ADDON ACTIVE**  
-**All-forms isolated mail acceptance:** **COMPLETE** (historical) — Acceptance 02 proved correct operator mailbox delivery; typo `im.work@nail.ru` removed.  
-**Form recipient restore verification:** **COMPLETE** (historical) — see `ISEO-SU-FORM-RECIPIENT-RESTORATION-EVIDENCE-v1.md`.  
-**Operator recipient removal:** **COMPLETE** — `im.work@mail.ru` intentionally removed from production recipients; active set = `nikel007i33@yandex.ru` only; `test_mode` OFF; see `ISEO-SU-FORM-OPERATOR-RECIPIENT-REMOVAL-EVIDENCE-v1.md`.  
-**Tech/SEO audit (read-only):** **COMPLETE** — SEO visibility report + internal evidence; fixes deferred to separate Site Ops waves.  
-**Metrika visitor IP param addon:** **ACTIVE / ENABLED** — analytics-only; parameter `ipaddress` → counter **54287016**; kill switch `production-source/metrika-ip/metrika-visitor-ip-config.php` (`"enabled"`); IP blocking remains **manual / out of scope**. See `ISEO-SU-METRIKA-VISITOR-IP-PARAM-BASELINE-v1.md`.
-
-Glossary/site-ops stabilization remains accepted. Public form anti-spam/validation charter is **closed**. Ordinary future work starts from this file + Task Routing Guide + Protected Zones + Form Security Baseline.
+The production site is operating; glossary publication, form hardening, technical/SEO audit, and the Metrika visitor-IP addon are complete milestones. There are **four open technical tasks**, including two confirmed HIGH defects. No production change was made during this documentation consolidation.
 
 ## 2. Production Status
 
-| Field | Value |
-|-------|-------|
-| Site | `https://i-seo.su/` |
-| Glossary public | **healthy / accepted** |
-| `/glossary/` | HTTP **200** |
-| Active site blocker | **none** |
-| Production mutations in form anti-spam task | **YES** (bounded form/security/JS only) |
+- Production: `https://i-seo.su/`; hosting: Beget; staging is absent.
+- Main public page crawl was healthy: 0 page 4xx, 0 page 5xx, 0 broken internal links in the latest crawl graph.
+- Production mutations require an exact charter, fresh backup, bounded validation, and rollback evidence.
+- Do not perform generic onboarding or production rediscovery when current authorities already classify the target.
 
-## 3. Architecture Authority
+## 3. Architecture
 
-1. This file (`ISEO-SU-CURRENT-STATE-v1.md`)
-2. `ISEO-SU-FINAL-LAUNCH-CLOSEOUT-v1.md`
-3. `ISEO-SU-GLOSSARY-FINAL-PRODUCTION-BASELINE-v1.md`
-4. `ISEO-SU-TASK-ROUTING-GUIDE-v1.md`
-5. `ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md`
-6. `ISEO-SU-PRODUCTION-ARCHITECTURE-KNOWLEDGE-BASE-v1.md`
-7. `ISEO-SU-PROTECTED-ZONES-v1.md`
-8. `ISEO-SU-SITE-OPS-ARTIFACT-REGISTER-v1.md`
+i-seo.su is hybrid: physical PHP-capable HTML/static marketing files coexist with a WordPress root install and shared assets.
 
-Historical phase REPORTs are evidence, not current operating truth.
+- `/` → WordPress `page-home.php`; `home.html` is a parallel legacy file.
+- `/blog` → `page-blog.php`; posts use `/blog/%postname%.html`.
+- `/tariff-calc` → hybrid WordPress/ACF/theme/JS/form-handler surface.
+- `/offers` and `offer` CPT → offers/Web-KP surface.
+- `/glossary/` and `/glossary/{slug}/` → public glossary archive and singles.
+- Static marketing: root `*.html`, `/services/**`, `/cases/**`; shared `css/`, `js/`, `libs/`, `img/`.
 
-## 4. Glossary Final State
+See [Knowledge Base](ISEO-SU-PRODUCTION-ARCHITECTURE-KNOWLEDGE-BASE-v1.md) and [Route Matrix](ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md).
 
-- Public archive + singles live.
-- Hero: services-style `page_scene`; **no** `.page_scene__rates`.
-- CTA **Подробнее** → `#SecondScreen`.
-- Related-term block live (public eligible targets only).
-- Archive title: **`Глоссарий - INTLSEO Studio`**.
-- Operator manual CSS + glossary-scoped mobile overflow fix in production/`production-source/css/main.css` (SHA-256 `4a1202b6…`).
-- Theme package mirror: `wordpress/iseoblog-glossary/`.
+## 4. Current Form Security
 
-## 5. Published / Non-Public Corpus
+Current baseline: **12 root handlers** plus thin service-tree delegates; shared `iseo-form-security.php`, `iseo-form-config.php`, token endpoint, and `js/common.js`.
 
-| Bucket | Count | Public |
-|--------|------:|--------|
-| Published eligible canonical | **184** | yes |
-| MERGED | 30 | no |
-| DEFERRED | 14 | no |
-| EXCLUDED | 13 | no |
-| Non-eligible total | **57** | no |
+- server-side required-field/scalar/size/contact validation;
+- honeypot `contact_company_url`;
+- HMAC token and minimum fill time ≈3 seconds;
+- limits ≈3 submissions/5 minutes/form/IP and ≈10/hour/IP;
+- duplicate suppression ≈10 minutes;
+- header/HTML injection protections;
+- CAPTCHA absent by accepted design.
 
-Do **not** publish non-eligible without a new charter.
+Authority: [Form Security Baseline](ISEO-SU-FORM-SECURITY-AND-ANTISPAM-BASELINE-v1.md).
 
-## 6. Navigation
+## 5. Current Form Recipient
 
-| Surface | State |
-|---------|-------|
-| Desktop submenu | **Глоссарий** immediately after `Калькулятор SEO (free)` |
-| Mobile offcanvas | **intentionally unchanged** / deferred optional |
+| Field | Current state |
+|---|---|
+| Production recipient | **`nikel007i33@yandex.ru` only** |
+| `test_mode` | **OFF / false** |
+| `im.work@mail.ru` | historical acceptance-only test address; removed from production |
+| `im.work@nail.ru` | invalid historical typo; must remain absent |
+| `chrra@yandex.ru` | inactive historical commented alternate; not a recipient |
 
-## 7. SEO / Sitemap
+## 6. Current Metrika State
 
-| Source | State |
-|--------|-------|
-| Yoast/wp-sitemap glossary | **184** URLs |
-| Custom `sitemap.xml` | **unchanged** (0 glossary URLs — intentional) |
-| Archive Yoast meta description | **absent** — optional polish only |
+Existing Yandex Metrika counter: **54287016**. Normal counter initialization, goals, clickmap, and Webvisor are independent of the visitor-IP addon. Example counter `39163020` is not production.
 
-## 8. Production Source Authority
+## 7. Visitor IP Addon
 
-| Artifact | Path |
-|----------|------|
-| Shared CSS SoT in MARS | `production-source/css/main.css` |
-| Shared forms JS SoT | `production-source/js/common.js` (includes Metrika IP loader hook) |
-| Metrika visitor IP addon | `production-source/metrika-ip/` |
-| Theme glossary package | `wordpress/iseoblog-glossary/` |
-| Content corpus | `content/glossary/batch-0{1..4}/` + editorial CSV under `data/glossary-editorial/` |
-| Immutable source workbook | `materials/glossary/ISEO-SU-GLOSSARY-SOURCE-NIKITA-v1.xlsx` |
+State: **ON**. Production paths: `/metrika-visitor-ip-config.php`, `/metrika-visitor-ip.php`, `/js/metrika-visitor-ip.js`; loader: `/js/common.js`; MARS source: `production-source/metrika-ip/`.
 
-## 9. Manual Runtime Edit Rule
+The endpoint uses validated IPv4/IPv6 `REMOTE_ADDR`, ignores forwarded headers, and sends parameter `ipaddress` to counter 54287016. It does not auto-block. Kill switch: set `"enabled" => false`; normal Metrika/Webvisor remain active. See [Metrika Baseline](ISEO-SU-METRIKA-VISITOR-IP-PARAM-BASELINE-v1.md).
 
-Operator may edit production CSS/templates under a charter. Before any automated overwrite of `css/main.css`, reconcile against `production-source/css/main.css` and Protected Zones. Prefer promote-to-MARS over silent production-only drift.
+## 8. Glossary
 
-## 10. WPilot State
+Production work is complete: source 241; public canonical 184; MERGED 30, DEFERRED 14, EXCLUDED 13; archive and eligible singles return HTTP 200; sitemap glossary URLs 184.
 
-| Field | Value |
-|-------|-------|
-| Accepted baseline | **PHASE 6C — TOKEN CREATED / RC6 SAFE DEFAULTS** |
-| Bridge / writes / REST smoke | **DISABLED / NOT RUN** |
-| Phase 6D | **BLOCKED** until exact approval + fresh backup lines |
-| Blocks ordinary site work? | **No** |
+Archive has H1/intro/title `Глоссарий - INTLSEO Studio`; archive and singles use services-derived `page_scene` without rates; CTA `Подробнее` → `#SecondScreen`; singles have no hero description; related terms link only to eligible public terms. Desktop menu is live; mobile offcanvas is deferred; mobile overflow is fixed. Authority: [Glossary Final Baseline](ISEO-SU-GLOSSARY-FINAL-PRODUCTION-BASELINE-v1.md).
 
-Token remains **local-only** (Git-ignored).
+## 9. Sitemap
 
-## 11. Backup / Rollback Posture
+- Working: `/sitemap-static.xml` and `/wp-sitemap.xml`.
+- Broken current root: `/sitemap.xml` advertises `post-sitemap.xml`, `page-sitemap.xml`, and `category-sitemap.xml`, all observed 404.
+- Target, **not implemented**: valid root sitemap index whose two child `<loc>` entries are `/sitemap-static.xml` and `/wp-sitemap.xml`; after implementation, robots should reference only root `/sitemap.xml`.
+- Static sitemap maintenance strategy remains undecided.
 
-- Beget full backup required before any production mutation.
-- Glossary publication / batch rollback docs remain in-repo (canonical).
-- Production CSS overflow backup stamp: `css/main.css.bak-glossary-overflow-20260818T101846Z` (remote).
-- Scratch helpers relocated to Storage archive (not Git):  
-  `X:\AI MARS STORAGE\archives\iseo-su-site-ops-scratch-stabilization-2026-08-20\`
+See [Sitemap Architecture](ISEO-SU-SITEMAP-ARCHITECTURE-AND-CURRENT-STATE-v1.md).
 
-## 12. Git / Remote State
+## 10. Latest Tech/SEO Audit
 
-| Field | Value |
-|-------|-------|
-| Canonical branch | `mars/canonical-post-recovery` |
-| Accepted programme on remote | **yes** (closeout equivalents reachable; tip advances with other programmes) |
-| Dirty main | may hold **foreign WIP** — never stage it for iseo tasks |
-| Push method | clean `git-sync-*` worktree only |
+Read-only audit: **1033 crawled**, **643 indexable**, 0 critical, 2 high, 6 medium, 8 low, 14 review; page 4xx/5xx 0; broken internal links 0.
 
-## 13. Protected Zones
+| ID | Severity | Current status | Owner |
+|---|---|---|---|
+| `SM-CHILD-404` | HIGH | `OPEN_TECH` | MARS / SITE OPS |
+| `IMG-BROKEN` | HIGH | `OPEN_TECH` | MARS / SITE OPS |
+| Remaining IDs in findings CSV | MEDIUM/LOW/REVIEW | `SEO_REVIEW` | CSV owner per finding |
+| `SM-DUAL-ARCH` | INFO | `EXPECTED` | SEO REVIEW |
 
-See `ISEO-SU-PROTECTED-ZONES-v1.md`. Default protect-all. Glossary CPT, menu topbar, shared CSS, forms, calculator, offers/web-KP, secrets remain protected.
+Authority: [Audit Evidence](ISEO-SU-TECH-SEO-AUDIT-EVIDENCE-v1.md) and `audits/tech-seo/ISEO-SU-TECH-SEO-FINDINGS-v1.csv`.
 
-## 14. Deferred Optional Work
+## 11. Open Technical Tasks
 
-Separate charters only — **not** launch blockers:
+1. **Root sitemap repair:** replace obsolete 404 child references; make `/sitemap.xml` a valid index for `/sitemap-static.xml` and `/wp-sitemap.xml`; then verify robots references only root.
+2. **Static sitemap maintenance:** choose and implement safe automatic regeneration if practical; fallback is bounded rebuild plus documented regeneration procedure.
+3. **Blog image paths:** investigate and repair relative `img/...` references (≈96 sampled broken URLs), then run a targeted regression crawl.
+4. **Audit backlog:** review and route all 6 MEDIUM, 8 LOW, and 14 REVIEW signals using the findings CSV; technical implementation remains Site Ops, semantic decisions remain SEO review.
 
-1. Mobile offcanvas glossary parity  
-2. Archive Yoast meta description  
-3. MERGED alias search polish  
-4. Custom `sitemap.xml` glossary duplication — **NOT RECOMMENDED** unless a future requirement appears  
-5. WPilot Phase 6D bridge + read-only smoke (exact approval lines required)
+None is complete in this document.
 
-## 15. No-Longer-Required Work
+## 12. Deferred Optional Work
 
-- Glossary draft-only / 404 / publication-not-started programmes  
-- Generic onboarding / architecture rediscovery as a default gate  
-- Republishing the 184 eligible set  
-- Ritual full production re-audit without a contradiction  
-- Scratch-driven one-off import/update scripts for completed waves  
+Exactly five non-blocking items:
 
-## 16. Entry Point for Next Task
+1. Mobile glossary offcanvas parity.
+2. Glossary archive Yoast meta description.
+3. MERGED alias/search polish.
+4. Sitemap duplication beyond the target two-surface index, if ever justified.
+5. WPilot Phase 6D bridge/read-only smoke.
 
-1. Read this Current State.  
-2. Open `OPERATIONAL-INDEX.md` → Task Routing Guide → Route Ownership Matrix.  
-3. Confirm fresh Beget backup if mutating production.  
-4. Execute only the chartered surface.  
-5. Do not treat deferred optional items as open blockers.
+## 13. Protected Areas
 
----
+Protected means inspect, diff, back up, change intentionally, validate, and preserve rollback—not “never touch.” Forms/recipient config, shared CSS/JS, Metrika counter/addon switch, glossary baseline, sitemaps/robots, routing, offers, calculator, WordPress config/core, and local secrets require exact scope. See [Protected Zones](ISEO-SU-PROTECTED-ZONES-v1.md).
 
-*ISEO-SU CURRENT STATE v1 · stabilization 2026-08-20.*
+## 14. Git / Source Authority
+
+- Runtime truth is live production; canonical editable mirrors include `production-source/forms/`, `production-source/js/common.js`, `production-source/metrika-ip/`, `production-source/css/main.css`, and `wordpress/iseoblog-glossary/`.
+- After an accepted manual runtime edit: bounded **runtime → diff → canonical source promotion** before any automation overwrite.
+- Canonical branch: `mars/canonical-post-recovery`.
+- Main may contain foreign WIP. Never broad-stage, clean, reset, stash, or restore it.
+- Use scoped exact paths and a clean `X:\AI MARS STORAGE\git-sync-*` worktree for safe synchronization.
+
+## 15. Next Task Entry Point
+
+1. Read this file, then [Knowledge Base](ISEO-SU-PRODUCTION-ARCHITECTURE-KNOWLEDGE-BASE-v1.md).
+2. Use [Task Routing](ISEO-SU-TASK-ROUTING-GUIDE-v1.md) and [Route Matrix](ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md).
+3. Read [Protected Zones](ISEO-SU-PROTECTED-ZONES-v1.md) and the relevant specialized baseline.
+4. Select one open task and name exact runtime/source paths.
+5. For production mutation, require fresh backup, bounded deployment, validation, rollback, and source promotion.
+
+WPilot 6D is not required for ordinary site operations.

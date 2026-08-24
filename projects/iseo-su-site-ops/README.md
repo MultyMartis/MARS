@@ -2,7 +2,7 @@
 
 **Programme:** ISEO-SU-SITE-OPS  
 **Canonical locus:** `X:\AI MARS\projects\iseo-su-site-ops\`  
-**Fast entry:** [OPERATIONAL-INDEX.md](OPERATIONAL-INDEX.md)
+**Fast entry:** [ISEO-SU-CURRENT-STATE-v1.md](ISEO-SU-CURRENT-STATE-v1.md) → [OPERATIONAL-INDEX.md](OPERATIONAL-INDEX.md)
 
 ---
 
@@ -12,8 +12,9 @@ Human-supervised MARS programme for **existing production site operations** of *
 
 It is the **main source of truth** for hybrid site operations documentation: charter, phase reports, site passport (planned), access model, static/WordPress boundary, source-of-truth matrix, FTP/static planning, custom tools mapping, backup/rollback model, smoke plans, and operational runbook.
 
-**Current lifecycle:** DOCUMENTARY INTAKE / PRE-CONNECTION.  
-**Production connection:** NOT AUTHORIZED.
+**Current lifecycle:** OPERATIONS / DOCUMENTATION-STABILIZED.
+
+Production is live and has been operated through separately chartered, human-supervised tasks. This document does **not** itself authorize production access or mutation.
 
 ---
 
@@ -21,8 +22,8 @@ It is the **main source of truth** for hybrid site operations documentation: cha
 
 - Project charter and phase model
 - OPERATIONAL-INDEX and decision / SAFE UNKNOWN registers
-- Site passport and hybrid ownership documentation (when created)
-- Access model and connection plans (FTP/static; WPilot plugin plan — planning only until authorized)
+- Current State, production architecture knowledge base, route ownership, task routing and feature baselines
+- Local-only access model and SFTP/WordPress operational boundaries
 - Backup/rollback and protected-zone documentation for this site
 - Smoke plans and operational runbook (when authorized to draft)
 - Programme reports under `reports/`
@@ -40,21 +41,21 @@ It is the **main source of truth** for hybrid site operations documentation: cha
 | ATLAS identity mint | `projects/atlas/` — mint **DEFERRED** |
 | Localhost runtime root | `X:\MARS-Localhost` via MLI — **no mirror now** |
 | Remote connector / credential vault | ROL is methodology only |
-| Live production systems | External; access **NOT AUTHORIZED** |
+| Live production systems | External runtime authority; access only under an exact task charter |
 
 ---
 
 ## Hybrid site context
 
-Operator context (**OPERATOR-CONTEXT**, not verified technical evidence): the site is a **hybrid** of static HTML/files and WordPress.
+Accepted production evidence confirms that the site is a **hybrid** of static/PHP-capable HTML files and WordPress.
 
 Implications:
 
-- WPilot covers **WordPress-only** operational surfaces when later authorized.
-- Static HTML / file surfaces need a separate ownership and connection model (FTP/static planning — Phase 4A).
+- WPilot RC6 is active with bridge/writes disabled and does not gate ordinary operations.
+- Static HTML/file surfaces and theme files are operated through scoped SFTP tasks.
 - Report Hub may later live on or near i-seo.su WordPress, but remains a **sibling product**, not the site-ops SoT.
 
-Do **not** claim verified architecture until Phase 2+ evidence is accepted.
+Use the current Knowledge Base and Route Ownership Matrix; historical intake assumptions are not current authority.
 
 ---
 
@@ -68,11 +69,11 @@ Do **not** claim verified architecture until Phase 2+ evidence is accepted.
 
 ## How to navigate
 
-1. Start at [OPERATIONAL-INDEX.md](OPERATIONAL-INDEX.md).
-2. Read [ISEO-SU-SITE-OPS-CHARTER-v1.md](ISEO-SU-SITE-OPS-CHARTER-v1.md) and [ISEO-SU-SITE-OPS-SYSTEM-BOUNDARIES-v1.md](ISEO-SU-SITE-OPS-SYSTEM-BOUNDARIES-v1.md).
-3. Use [ISEO-SU-SITE-OPS-PHASE-MODEL-v1.md](ISEO-SU-SITE-OPS-PHASE-MODEL-v1.md) for phase gates.
-4. Track decisions and unknowns in the Decision and SAFE UNKNOWN registers.
-5. Close work with REPORT files under `reports/`.
+1. Read [ISEO-SU-CURRENT-STATE-v1.md](ISEO-SU-CURRENT-STATE-v1.md).
+2. Use [OPERATIONAL-INDEX.md](OPERATIONAL-INDEX.md) for the current authority order.
+3. Classify the task through the Task Routing Guide, Route Ownership Matrix and Protected Zones.
+4. Open only the relevant specialized baseline (forms, Metrika IP, glossary, sitemap or tech/SEO audit).
+5. Treat chronological REPORT files as historical evidence, not as the first entry point.
 
 ---
 
@@ -80,11 +81,11 @@ Do **not** claim verified architecture until Phase 2+ evidence is accepted.
 
 | Control | State |
 |---------|-------|
-| Production / external access | **NOT AUTHORIZED** |
+| Production / external access | Exact charter + operator approval + scoped backup required |
 | Secrets in repo docs | **FORBIDDEN** |
-| WPilot on production | **HOLD** (documentary / RC5 DEV reference only) |
-| FTP | **NOT CONFIGURED** |
-| Local mirror | **NOT DECIDED** |
+| WPilot on production | RC6 active; token local-only; bridge/writes/DEV confirmation off; 6D deferred |
+| SFTP / WordPress access | Local-only profile authority; never copy secrets into tracked docs |
+| Local mirror | No canonical full-site mirror claimed; scoped `production-source/` mirrors exist |
 | ATLAS mint | **DEFERRED** |
 | Firefox Browser Workstation | Direction approved; **implementation DEFERRED** |
 | Git | No stage/commit/push unless separately chartered |
@@ -100,7 +101,6 @@ Do **not** claim verified architecture until Phase 2+ evidence is accepted.
 
 ---
 
-## No production access yet
+## Current operational rule
 
-Phase 1.5 creates documentary locus only.  
-Next recommended phase after operator acceptance: **PHASE 2 — NON-SECRET SITE EVIDENCE INTAKE**.
+Historical Phase 1.5/2 intake documents remain evidence. For current work, start from Current State. Before replacing any production/runtime file from MARS, first reconcile bounded runtime changes into the matching canonical `production-source/` or theme package. Production mutation is never implied by reading this README.

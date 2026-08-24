@@ -1,8 +1,9 @@
 # ISEO-SU WORDPRESS OBJECT AND TEMPLATE MAP v1
 
 **Programme:** ISEO-SU-SITE-OPS  
-**Date:** 2026-07-24  
-**Methods:** public REST + Playwright Admin read-only + SFTP theme read  
+**Evidence basis:** 2026-07-24 read-only capture; glossary state reconciled 2026-08-24 from accepted launch/final baselines
+
+**Methods:** public REST + Playwright Admin read-only + SFTP theme read; no new production probe for reconciliation
 
 ## Reading / homepage settings
 
@@ -38,7 +39,7 @@
 | CPT | Labels | public | has_archive | REST public | Template | Notes |
 |-----|--------|--------|-------------|-------------|----------|-------|
 | `offer` | Предложения | true | true | no (401 on type) | `single-offer.php` | Admin list ~20 rows; robots disallow `/offer/*` |
-| `glossary` | Глоссарий / Термины | true (gated) | `/glossary/` | publish list empty `[]` | `archive-glossary.php`, `single-glossary.php` | **241 drafts**; anonymous front **404** until `ISEO_GLOSSARY_PUBLIC_EXPOSURE`; Yoast sitemap excluded pre-launch |
+| `glossary` | Глоссарий / Термины | true | `/glossary/` | 184 published canonical terms | `archive-glossary.php`, `single-glossary.php` | Public archive/singles **200**; 57 MERGED/DEFERRED/EXCLUDED records remain non-public; WP sitemap contains 184 |
 
 ## Taxonomies (route-relevant)
 
@@ -85,23 +86,26 @@ No `acf-json` directory found on disk. Glossary fields registered in theme PHP (
 | Location | `menu-1` → Primary |
 | Menu name | Меню 1 |
 | Theme topbar | Also hardcodes many service URLs |
-| Glossary | **not** added to menus (pre-launch HOLD) |
+| Glossary | Desktop services submenu includes **Глоссарий** immediately after `Калькулятор SEO (free)`; mobile offcanvas parity deferred |
 
 ## Homepage / blog settings summary
 
 Homepage is a **template-static-like WP page**. Blog hub is a **custom page template**, not the native posts page setting.
 
-## Glossary (2026-07-24)
+## Glossary (current accepted baseline)
 
 | Item | Detail |
 |------|--------|
 | CPT | `glossary` |
-| Drafts imported | 241 |
-| Published | 0 |
-| Public exposure constant | `ISEO_GLOSSARY_PUBLIC_EXPOSURE = false` |
+| Source terms | 241 |
+| Published canonical | 184 |
+| Non-public | MERGED 30 / DEFERRED 14 / EXCLUDED 13 |
+| Public routes | `/glossary/` and eligible singles return 200 |
+| WP sitemap | 184 glossary URLs |
 | Import tool | disabled after intake (`ISEO_GLOSSARY_IMPORT_ENABLED = false`) |
 | Source package | `projects/iseo-su-site-ops/wordpress/iseoblog-glossary/` |
+| Final authority | `ISEO-SU-GLOSSARY-FINAL-PRODUCTION-BASELINE-v1.md` |
 
 ---
 
-*WordPress object and template map v1 · updated glossary 2026-07-24.*
+*WordPress object and template map v1 · glossary state reconciled 2026-08-24.*

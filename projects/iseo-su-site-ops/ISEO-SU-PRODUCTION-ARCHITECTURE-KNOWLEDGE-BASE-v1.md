@@ -4,359 +4,538 @@
 **Task:** ISEO-SU-SITE-OPS-COMPLETE-PRODUCTION-ARCHITECTURE-ROUTE-KNOWLEDGE-CAPTURE  
 **Site:** https://i-seo.su/  
 **Canonical locus:** `X:\AI MARS\projects\iseo-su-site-ops\`  
-**Status:** COMPLETE / ARCHITECTURE KNOWLEDGE READY FOR SITE WORK  
-**Evidence date:** 2026-07-24  
-**Mode:** read-only production discovery (SFTP + public HTTP/REST + Playwright WP Admin; no saves)
+**Status:** CURRENT / CANONICAL / ARCHITECTURE KNOWLEDGE READY FOR SITE WORK
+**Current-state reconciliation:** 2026-08-24
+**Evidence basis:** accepted repository evidence through 2026-08-24; no production probe in this consolidation
 
-No secrets, credentials, customer proposal bodies, or mail recipients are stored here.
-
----
-
-## 1. Knowledge Status
-
-| Field | Value |
-|-------|-------|
-| Knowledge package | **READY** for ordinary site work |
-| Generic onboarding | **NOT REQUIRED** after this package |
-| Production mutated in this task | **No** |
-| WPilot bridge / writes / REST | **Disabled / not invoked** |
-| Remaining SAFE UNKNOWN | Named; **do not block** ordinary work |
-| Authority for future tasks | See §24 and [ISEO-SU-TASK-ROUTING-GUIDE-v1.md](ISEO-SU-TASK-ROUTING-GUIDE-v1.md) |
-
-**Primary companions:**
-
-1. [ISEO-SU-TASK-ROUTING-GUIDE-v1.md](ISEO-SU-TASK-ROUTING-GUIDE-v1.md)
-2. [ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md](ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md)
-3. This knowledge base
-4. Component maps (page/source, WP objects, static PHP, forms/web-KP, global components)
-5. Historical Phase 0–6C-P reports (immutable evidence)
+No credentials, tokens, customer proposal bodies, cookies, or passwords are stored here. The sole current production form recipient is recorded because it is an operator-approved routing authority, not a secret.
 
 ---
 
-## 2. Executive Architecture Summary
+## 1. Project Identity
 
-i-seo.su is a **hybrid production site** on Beget:
-
-1. **WordPress root install** in the same docroot as marketing files (`public_html`).
-2. **Physical `.html` marketing trees** (`*.html`, `services/`, `cases/`) coexist and win when the file exists (Apache `!-f` / `!-d` before WP rewrite).
-3. **`.html` is PHP-capable** via `.htaccess` `AddType application/x-httpd-php .html .htm`.
-4. **Homepage `/`** is a WordPress page (`glavnaya`, id 1732) rendered by theme template `page-home.php` that embeds a full static-like document and shared `/css` `/js` — **not** classic WP chrome / `the_content`.
-5. **Parallel file** `home.html` is publicly reachable and is a **legacy/parallel** drift twin of the live homepage template.
-6. **Blog** is WordPress-owned (`/blog`, template `page-blog.php`, singles under permalink `/blog/%postname%.html`).
-7. **Calculator / tariffs** are **hybrid**: WP page `/tariff-calc` + ACF field groups + theme `tarif-calc.php` + shared `js/common.js` + root `*__FORM.php` mail handlers (also copied under `services/**`).
-8. **Commercial proposals (“web-KP” candidate)** = CPT `offer` + page `/offers` + template `single-offer.php` + ACF group «Предложения». Exact operator nickname “web-KP” remains a naming SAFE UNKNOWN; the technical surface is mapped.
-9. **Report Hub** at `/report-hub/` is a **sibling product surface**, not core marketing Site Ops by default.
-10. **Active theme:** `iseoblog` only. **ACF PRO** active. **Yoast**, **Jetpack**, **WPilot RC6** active. **WP-Optimize** and **Akismet** inactive on disk/Admin.
-
----
-
-## 3. Production Runtime Layout
-
-| Role | Location |
-|------|----------|
+| Field | Current authority |
+|---|---|
+| Programme | `ISEO-SU-SITE-OPS` |
+| Site | `https://i-seo.su/` |
+| Organization | i-SEO |
+| Operator | Андрей |
+| MARS locus | `X:\AI MARS\projects\iseo-su-site-ops\` |
 | Hosting | Beget |
-| Docroot / WP root | `…/i-seo.su/public_html` (account redacted) |
-| Staging | **Absent** |
-| WordPress | 7.0.2 (generator + `version.php`) |
-| PHP runtime | **SAFE UNKNOWN** (Site Health parse inconclusive; core requires ≥ 7.4) |
-| Theme | `wp-content/themes/iseoblog` |
-| Shared assets | `css/`, `js/`, `libs/`, `img/`, `fonts/`, `favicon/`, `video/` |
-| Custom apps | `report-hub/`, `reports/` |
-| Form handlers | docroot `*__FORM.php` + copies under `services/**` |
-| WPilot | `wp-content/plugins/metacode-wpilot/` (active RC6) |
-| RC5 rollback sibling | `wp-content/plugins/.mars-rollback-metacode-wpilot-rc5-phase6c-r/` |
-
-No on-server Node/Gulp source tree (`package.json` / `gulpfile` / `src` / `scss` absent).
+| Architecture | Hybrid physical PHP-capable HTML/static + WordPress |
+| Current-state entry | [ISEO-SU-CURRENT-STATE-v1.md](ISEO-SU-CURRENT-STATE-v1.md) |
 
----
+This file is the broad current production-architecture authority. Specialized baselines remain authoritative for forms, Metrika visitor IP, glossary, sitemap, and the latest technical/SEO audit.
 
-## 4. Request Routing Model
+## 2. Purpose and Ownership
 
-```
-Request URL
-  → HTTPS / www→apex redirects (.htaccess)
-  → If physical file or directory exists → serve it
-       (HTML may execute as PHP)
-  → Else → WordPress front controller index.php
-       → page / post / CPT / taxonomy templates
-```
+The knowledge base lets a future operator classify a request, find the correct owner/source, protect shared dependencies, and start a bounded task without replaying chronological history. MARS/Site Ops owns technical changes; SEO/product owners decide semantic priorities where the audit marks `SEO_REVIEW`. Historical REPORT files are immutable evidence, not operating instructions.
 
-**Implications:**
+## 3. Production Domain
 
-- Editing a WordPress page does **not** change a same-path `.html` file if the file exists.
-- Deleting or renaming a physical file can suddenly expose a WP route (or 404).
-- `home.html` and `blog.html` do **not** own `/` and `/blog`.
+Production is `https://i-seo.su/`. The WordPress install and direct marketing files share the same document root. Physical files/directories win before WordPress rewrite; `.html`/`.htm` are PHP-capable. Staging is absent. Production probing was not performed for this documentation task.
 
----
+## 4. MARS Project Locus
 
-## 5. WordPress Architecture
+- Canonical project documentation/source locus: `X:\AI MARS\projects\iseo-su-site-ops\`.
+- Bulk evidence/scratch storage: `X:\AI MARS STORAGE\`.
+- Canonical local runtime root: `X:\MARS-Localhost\`; no i-seo local mirror is claimed here.
+- Local credentials/profiles and WPilot token remain local-only and Git-ignored.
 
-| Setting | Value |
-|---------|-------|
-| `show_on_front` | `page` |
-| Front page | id **1732**, slug `glavnaya`, template **`page-home.php`** |
-| Posts page | **not set** (`— Выбрать —`) |
-| Blog UI page | id **1730**, slug `blog`, template **`page-blog.php`**, URL `/blog` |
-| Tariff page | id **1734**, slug `tariff-calc`, template **`page-tariffcalc.php`** |
-| Offers page | id **1377**, slug `offers`, template **default**, URL `/offers` |
-| Permalink | custom **`/blog/%postname%.html`** |
-| Public pages via REST | exactly these 4 published pages |
-| CPT | `offer` (public, has_archive, UI visible; REST type not public — 401) |
-| Nav location | `menu-1` / Primary; WP menu name «Меню 1» |
-| ACF groups | «Записи», «Настройки калькулятора», «Настройки каналов и тарифов», «Предложения» |
+## 5. Source / Runtime / Production Authorities
 
-Active plugins (Admin, 2026-07-24): ACF PRO, Auto Version, Cyr-To-Lat, Disable Gutenberg, Duplicate Page, FeedbackWP/Rate My Post, Jetpack, MetaCODE WPilot, Post View Count, Simple User Avatar, Yoast SEO.
+| Layer | Authority rule |
+|---|---|
+| Live behavior | Production runtime is evidence of what currently executes |
+| Forms | `production-source/forms/` and `production-source/js/common.js` mirror accepted deployable source |
+| Metrika IP addon | `production-source/metrika-ip/` plus loader in `production-source/js/common.js` |
+| Shared CSS | `production-source/css/main.css`, including accepted operator manual hunks |
+| Glossary theme | `wordpress/iseoblog-glossary/` |
+| Glossary corpus | `content/glossary/`, `data/glossary-editorial/`, and immutable workbook under `materials/glossary/` |
+| WordPress content/ACF | Production database, edited only through chartered WP workflows |
 
-Inactive: Akismet, Hello Dolly, No Category Base (WPML), WP-Optimize.
+An accepted manual runtime edit must be reconciled by **runtime → bounded diff → canonical source promotion** before later automation overwrites the same surface.
 
----
+## 6. Repository and Git Model
 
-## 6. Static and PHP Marketing Architecture
+MARS is a monorepo; main may contain foreign WIP. Canonical branch is `mars/canonical-post-recovery`. Never use `git add .`, `git add -A`, broad restore/stash/clean/reset, or force push to isolate i-seo work. Stage exact project paths only. When main is dirty or histories differ, use a clean `X:\AI MARS STORAGE\git-sync-*` worktree based on `origin/mars/canonical-post-recovery`, replay only accepted scoped changes, and keep commit and push as separately authorized waves.
 
-Root marketing HTML (non-exhaustive): `about.html`, `services.html`, `contacts.html`, `cases.html`, `reviews.html`, `partners.html`, `bonuses.html`, `career.html`, `guarantees.html`, `privacy-policy.html`, `user-agreement.html`, `cookie-files-policy.html`, plus verification files and `readme.html`.
+## 7. High-Level Site Architecture
 
-Trees: `services/**` (seo, adv, audit, development, serm, ai-optimization), `cases/**`, `docs/`, `video/`.
+### 7.1 Hybrid Static + WordPress Model
 
-`sitemap-static.xml` lists **71** marketing URLs. Yoast `sitemap.xml` is a sitemap **index** that includes `sitemap-static.xml` plus WP sitemaps.
+Request order is redirects/routing → existing physical file or directory → WordPress front controller. A WordPress edit cannot change a same-path physical file; removing a physical file may expose a WordPress route.
 
-Marketing pages embed header/footer markup and load shared `css/main.css`, `css/media.css`, `js/common.js`, `libs/*`. They are **not** driven by WP menus for chrome (theme topbar is a separate WP chrome).
+### 7.2 Static Marketing Contour
 
----
+Root `*.html`, `/services/**`, `/cases/**`, legal pages, verification files, direct handlers, and shared assets are physical docroot surfaces. Marketing chrome is largely copied/hardcoded or PHP-included, not centrally controlled by the WordPress menu.
 
-## 7. Hybrid and Composite Surfaces
+### 7.3 WordPress Contour
 
-| Surface | Why hybrid |
-|---------|------------|
-| `/` homepage | WP routing + hardcoded template + shared static assets + calculator/tariff/forms markup |
-| `/tariff-calc` | WP page + ACF calculator settings + theme part + shared JS + mail handlers |
-| Blog chrome | WP templates + shared `/css` `/js` + Rate My Post + common.js forms |
-| Tariff cards on marketing HTML | Static markup + `js/common.js` + `tariff_*__FORM.php` |
-| Offers / proposals | WP CPT + ACF + `single-offer.php`; listing page `/offers` |
+WordPress owns `/`, `/blog`, blog posts/categories, `/tariff-calc`, `/offers`/`offer`, `/glossary/`/`glossary`, theme templates, ACF-backed content, and WP sitemap surfaces.
 
----
+### 7.4 Shared Assets
 
-## 8. Homepage
+`css/main.css`, `css/media.css`, `js/common.js`, `libs/*`, root `img/`, theme assets, and uploads have broad blast radius. `js/common.js` participates in forms, calculator/tariffs, and Metrika visitor-IP loading.
 
-| Question | Answer |
-|----------|--------|
-| Front-page setting | Page `glavnaya` (1732) |
-| Template | `page-home.php` («Home») |
-| Editor content used? | **No** (content length 0 on edit screen) |
-| ACF on home edit? | UI present; **0** fields attached to this page |
-| Rendering | Full HTML document hardcoded in template; assets from docroot `css/`, `js/`, `libs/` |
-| `get_header` / `get_footer` | **Not used** |
-| `home.html` | Public **200**; parallel/legacy; **same title**; different byte size (~59KB vs ~64KB template) |
-| Safe edit | Prefer **theme `page-home.php`** for live `/`; treat `home.html` as drift twin — sync or leave untouched deliberately |
-| Backup | Theme file + optional `home.html` if also published/linked |
+### 7.5 Form Handler Contour
 
----
+Twelve root `*__FORM.php` handlers call shared security/config code. Copies under `services/**` are thin delegates and must not develop independent validation/recipient logic.
 
-## 9. Blog
+## 8. Route Ownership
 
-| Item | Detail |
-|------|--------|
-| Hub URL | `/blog` (trailing slash normalizes) |
-| Owner | WP page 1730 + `page-blog.php` + post loop |
-| Singles | `single.php` + ACF group «Записи»; URL `/blog/{slug}.html` |
-| Categories | `/blog/category/{slug}` (news, seo, context, development, geo) |
-| Tags | Disallowed in `robots.txt` (`/tag/`) |
-| Parallel file | `blog.html` — **LEGACY_OR_PARALLEL**, not live `/blog` |
-| Chrome | Theme `header.php` / `footer.php` + `content-topbar.php` / `content-footer.php` / `content-mobilemenu.php` |
-| Shared JS | Theme enqueues docroot `js/common.js` among others |
+### 8.1 Homepage
 
----
+`/` is WordPress page 1732 rendered by `wp-content/themes/iseoblog/page-home.php`; editor content is not the live owner. `/home.html` is a parallel legacy twin and must not be edited as a substitute.
 
-## 10. Marketing Pages
+### 8.2 Services
 
-Class: **STATIC_HARDCODED** (PHP-capable HTML).  
-Edit via SFTP to the physical file. Shared chrome is **copied markup**, not WP menus. Forms post via `js/common.js` to root handlers (or relative copies under `services/`).
+`/services.html` and `/services/**/*.html` are physical PHP-capable HTML. Exact file ownership plus shared CSS/JS and form delegates must be considered.
 
-Note: `/services.html` returned **500** once during discovery and **200** on retry — treat as intermittent risk; validate after edits.
+### 8.3 Cases
 
----
+`/cases.html` and `/cases/**` are physical marketing files. Similar theme parts do not automatically own these public files.
 
-## 11. Calculator and Tariffs
+### 8.4 Blog
 
-| Layer | Owner |
-|-------|-------|
-| Public WP UI | `/tariff-calc` → `page-tariffcalc.php` → `template-parts/tarif-calc.php` |
-| ACF data | Group «Настройки калькулятора» (keys include `seo_rate`, `dev_rate`, `text_rate`, `tariffs`, `k_*`, …); group «Настройки каналов и тарифов» for channel/tariff content |
-| Front-end logic | `js/common.js` |
-| Mail handlers | `calc__FORM.php`, `tariff_1__FORM.php`…`tariff_4__FORM.php` (+ service-tree copies) |
-| Theme mirrors | `content-tarifs-*.php`, `content-calc-*.php`, popups |
-| Marketing pages | Calculator/tariff markup embedded in homepage template and many HTML pages |
+`/blog` is page 1730 via `page-blog.php`; posts are WordPress content via `single.php` and ACF, with permalinks `/blog/%postname%.html`. `/blog.html` is parallel/legacy.
 
-**Do not** submit live calculator/mail requests in audits. Structural only.
+### 8.5 Offers
 
----
+`/offers` is the WordPress offers entry; CPT `offer`, ACF «Предложения», and `single-offer.php` own commercial proposals. `/web-kp/` and `/kp/` are not public product routes. Offer content is commercially sensitive and must not be dumped into Git.
 
-## 12. Forms and Handlers
+### 8.6 Tariff Calculator
 
-Shared client: `js/common.js` posts to endpoints such as:
+`/tariff-calc` combines page/template PHP, ACF calculator/channel settings, `template-parts/tarif-calc.php`, `js/common.js`, and calculator/tariff handlers.
 
-`callback__FORM.php`, `page__FORM.php`, `audit__FORM.php`, `calc__FORM.php`, `tariff_1..4__FORM.php`, `bonus__FORM.php`, `career__FORM.php`, `partners__FORM.php`, `review__FORM.php`
+### 8.7 Glossary
 
-Server: PHP `mail()`-style handlers; recipient emails **not recorded**. SMTP path **SAFE UNKNOWN**. Spam protection: Akismet **inactive**; no dedicated CAPTCHA plugin identified.
+`/glossary/` and eligible `/glossary/{slug}/` singles are public WordPress CPT routes. Final state is complete; 184 eligible terms are public, while MERGED/DEFERRED/EXCLUDED remain non-public.
 
-See [ISEO-SU-FORMS-CALCULATORS-AND-WEB-KP-MAP-v1.md](ISEO-SU-FORMS-CALCULATORS-AND-WEB-KP-MAP-v1.md).
+### 8.8 Legal / Other
 
----
+Legal pages are physical `*-policy.html`/`user-agreement.html`. `/report-hub/` is a sibling product surface. Unknown tools such as `varvara-new.php` require separate owner confirmation before change.
 
-## 13. Web-KP and Offers
+Use [ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md](ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md) for the operational map.
 
-| Evidence | Finding |
-|----------|---------|
-| `/web-kp/`, `/kp/`, `/offers.html` | **404** |
-| `/offers` | WP page 1377, title «Предложения», generator WordPress |
-| CPT `offer` | Registered public + archive; Admin list reachable (~20 rows observed; titles **not** harvested) |
-| Single template | `single-offer.php` + ACF keys `site`, `region`, `tariff(s)`, `discount`, `deadline`, `stages`, `ways`, `growth`, `audit_file` |
-| Robots | `Disallow: /offer/*` and `/blog/offer/*` |
-| REST type | Not publicly readable (401) |
-| Operator label “web-KP” | **SAFE UNKNOWN** naming; **technical ownership mapped** as offers/CPT/ACF |
+## 9. WordPress
 
-Treat proposal content as **protected / private**. Do not dump customer KP bodies into Git.
+### 9.1 Theme
 
----
+Active custom theme: `iseoblog`. It owns custom page/archive/single templates and shared theme chrome.
 
-## 14. Header, Footer, and Shared Components
+### 9.2 Plugins / Dependencies
 
-| Surface | Chrome owner |
-|---------|--------------|
-| Marketing HTML / `page-home.php` | Hardcoded markup + shared CSS/JS |
-| WP blog / tariff / offer templates | `header.php` + `content-topbar.php` + `footer.php` + `content-footer.php` + mobile menu |
-| WP Primary menu | Exists («Меню 1») but theme topbar also contains **hardcoded** service links |
+Architecture evidence records ACF PRO, Yoast, Jetpack, and WPilot RC6 as active. Exact version claims are historical unless refreshed by accepted evidence. WP-Optimize and Akismet were inactive in the accepted capture.
 
-**Task impact:** a “header change” may require **both** static HTML files **and** theme template-parts — never assume one channel updates all.
+### 9.3 Custom Templates
 
----
+Key templates: `page-home.php`, `page-blog.php`, `page-tariffcalc.php`, `single.php`, `single-offer.php`, `archive-glossary.php`, and `single-glossary.php`.
 
-## 15. Theme and Plugin Dependencies
+### 9.4 ACF
 
-Architecture-relevant only:
+Known groups: «Записи», «Настройки калькулятора», «Настройки каналов и тарифов», and «Предложения»; glossary metadata has its own accepted model. Schema changes are higher risk than scoped value edits.
 
-| Component | Role |
-|-----------|------|
-| `iseoblog` | All WP templates / CPT registration / enqueues |
-| ACF PRO | Blog fields, calculator settings, channel/tariffs, offers |
-| Yoast SEO | Sitemap index + SEO metaboxes |
-| Jetpack | Present/active; WAF dir on disk |
-| WPilot RC6 | Active; bridge/writes off; token local-only; REST not for Site Ops content yet |
-| Disable Gutenberg | Classic editor posture |
-| Rate My Post / Post View Count | Blog engagement |
-| WP-Optimize | **Inactive** — do not assume cache purge behavior |
-| Cyr-To-Lat | Slug transliteration |
+### 9.5 Yoast
 
----
+Yoast/meta integration supplies SEO fields and glossary title filters, but the current root `/sitemap.xml` must not be described as healthy Yoast output. Working WordPress sitemap authority is `/wp-sitemap.xml`.
 
-## 16. ACF and CPT Structures
+### 9.6 Protected WordPress Boundaries
 
-| Group ID | Title | Primary use |
-|----------|-------|-------------|
-| 19 | Записи | Blog post structured fields |
-| 1761 | Настройки калькулятора | Calculator constants/rates/tariffs on `/tariff-calc` |
-| 1742 | Настройки каналов и тарифов | Channel stages/tariff packages |
-| 1382 | Предложения | CPT `offer` commercial proposals |
+`wp-config.php`, `.htaccess`, core, plugin activation/settings, theme PHP, ACF schema/data, CPT offers, glossary exposure, and sitemap/robots behavior require exact charters and rollback.
 
-CPT `offer` supports title/editor/thumbnail; rewrite `with_front => false`.
+## 10. Static Frontend
 
----
+### 10.1 HTML/PHP Structure
 
-## 17. Shared Assets
+Physical `.html` files may execute PHP. Shared header/footer can be copied markup or PHP includes; verify the exact file before change.
 
-| Path | Role | Blast radius |
-|------|------|--------------|
-| `css/main.css`, `css/media.css` | Global marketing + home template | **Sitewide** |
-| `js/common.js` | Forms, calculator, tariffs | **Sitewide leads/revenue** |
-| `libs/*` | jQuery, Owl, Fancybox, etc. | Sitewide |
-| Theme `js/script.js` | Blog/theme behaviors | WP surfaces |
-| `wp-content/uploads/` | Media | Content |
+### 10.2 CSS
 
----
+Root CSS affects multiple static and WordPress-like templates. `production-source/css/main.css` contains accepted operator glossary/mobile overflow work; never overwrite it from an older snapshot.
 
-## 18. Ownership and Historical Context
+### 10.3 JS
 
-| Surface | Business owner | Technical history | Runtime SoT |
-|---------|----------------|-------------------|-------------|
-| Programme / ops | Андрей (operator) | MARS Site Ops | this locus |
-| Marketing HTML | i-SEO | **SAFE UNKNOWN** (Андрей / Антон / shared) | production files |
-| Homepage live `/` | i-SEO | evolved hybrid | `page-home.php` |
-| Blog posts | i-SEO editorial | WordPress | WP DB + ACF «Записи» |
-| Calculator settings | i-SEO | ACF + theme | ACF on tariff page + `tarif-calc.php` |
-| Offers / KP | i-SEO commercial | CPT + ACF | `offer` + `single-offer.php` |
-| Report Hub | sibling programme | separate | `report-hub/` |
+`js/common.js` is revenue- and analytics-adjacent. It drives forms/calculator/tariffs and loads the Metrika addon. Make minimal diffs and test representative route classes.
 
-Do not invent freelancer attribution beyond operator-known facts.
+### 10.4 Shared Components
 
----
+Global header/footer changes may require both static/PHP include surfaces and WordPress theme parts. Updating only a WP menu is not sufficient for all pages.
 
-## 19. Safe Editing Rules
+### 10.5 Manual Operator Edit Rule
 
-1. Classify the route via the ownership matrix **before** editing.
-2. Prefer the **runtime source of truth**, not the parallel twin.
-3. Never edit `.htaccess`, `wp-config.php`, core, or form handlers without an exact charter.
-4. Shared `css/` / `js/common.js` require HITL + broad regression.
-5. Do not use WPilot for static HTML, theme PHP, ACF options, offers, or forms until separately chartered.
-6. Fresh **Beget full backup** before first production mutation wave.
-7. Validate public URL + status + title/marker + no fatal after change.
+Before automation touches an operator-edited runtime file: fetch the exact current runtime artifact, diff it against canonical source, preserve accepted manual hunks, promote the result into MARS, and only then deploy further changes.
 
----
+## 11. Public Forms
 
-## 20. Backup and Rollback Model
+### 11.1 Form Inventory
 
-| Layer | Method |
-|-------|--------|
-| Default pre-change | Full Beget hosting backup (operator) |
-| File edits | Keep pre-change copy of exact files; SFTP restore |
-| WP content | Native revisions / re-edit; optional WPilot backup only when write path authorized |
-| Theme | Restore exact template files from backup |
-| WPilot plugin | RC5 rollback sibling retained (cleanup pending); or restore from Beget |
-| Database | Beget restore only under DB charter — **not** routine Site Ops |
+Twelve root handlers cover callback, page, audit, calculator, four tariff forms, bonus, career, partners, and review; service-tree paths delegate to roots.
 
----
+### 11.2 Handler Architecture
 
-## 21. Validation Model
+Browser → `js/common.js` → thin `*__FORM.php` → `iseo-form-security.php` → `iseo-form-config.php` → PHP mail path. `.iseo-form-runtime/` stores bounded rate/duplicate markers, not full lead bodies.
 
-Minimum after any production change:
+### 11.3 Recipient Authority
 
-1. Target URL status 200 (or expected redirect)
-2. Final canonical URL correct
-3. Title / H1 / safe marker matches intent
-4. No maintenance mode / fatal
-5. If shared asset: spot-check `/`, `/blog`, one marketing HTML, `/tariff-calc`
-6. If form/calc adjacent: **do not** send real leads; structural smoke only if chartered
+Recipients belong only in shared `iseo-form-config.php`; handlers must not hardcode alternate To/CC/BCC addresses.
 
----
+### 11.4 Server Validation
 
-## 22. Protected Zones
+POST-only, required-field/contact plausibility, scalar enforcement, whitespace/punctuation rejection, size caps, normalization, escaping, and mail/header injection controls are server authoritative.
 
-See [ISEO-SU-PROTECTED-ZONES-v1.md](ISEO-SU-PROTECTED-ZONES-v1.md). Default = protect-all until charter names paths.
+### 11.5 Honeypot
 
----
+`contact_company_url` must exist and remain empty; missing or populated is rejected.
 
-## 23. SAFE UNKNOWN
+### 11.6 HMAC / Fill-Time
 
-See [ISEO-SU-SITE-OPS-SAFE-UNKNOWN-REGISTER-v1.md](ISEO-SU-SITE-OPS-SAFE-UNKNOWN-REGISTER-v1.md). Highlights after this capture:
+Signed `{t,s,id}` token and approximately 3-second minimum fill time reject direct/too-fast submissions.
 
-- Exact PHP runtime version
-- Operator confirmation that “web-KP” ≡ offers/CPT (technical map ready)
-- Mail SMTP vs `mail()` delivery path details
-- Canonical offline Git/build source (U-022)
-- Exact ACF location-rule dump (groups identified; UI location panels incompletely scraped)
-- Why `/services.html` intermittently 500
-- Full WP menu item URL list (menu exists; item harvest incomplete)
+### 11.7 Rate Limiting
 
-None of the above blocks ordinary classified site work if the route matrix is followed.
+Approximately 3 submissions per 5 minutes per form/IP and 10 per hour per IP; no permanent automatic blacklist.
 
----
+### 11.8 Duplicate Protection
 
-## 24. Knowledge Maintenance Rules
+Same normalized payload/source fingerprint is suppressed for approximately 10 minutes after a successful send.
 
-1. After material production discovery, update the route matrix + this KB summary; do **not** rewrite historical REPORT files.
-2. Task-specific accepted evidence outranks this KB when fresher.
-3. Scratch JSON under `_arch-knowledge-scratch/` is **not** authority (gitignored).
-4. Never commit secrets, tokens, customer KP content, or handler recipient emails.
-5. When architecture drifts, add a dated note and bump affected maps — keep classification vocabulary stable.
+### 11.9 Test Mode
 
----
+`test_mode` is **false/OFF**. `im.work@mail.ru` is historical acceptance-only and may exist only as an inactive test recipient. `im.work@nail.ru` is an invalid historical typo. `chrra@yandex.ru` is an inactive historical commented alternate.
 
-*ISEO-SU Production Architecture Knowledge Base v1 · 2026-07-24 · read-only capture.*
+### 11.10 Current Production Recipient
+
+**`nikel007i33@yandex.ru` only.**
+
+### 11.11 Rules for Future Form Changes
+
+Keep shared validation/config centralized; retain delegates; never leave test mode on; avoid real lead submissions without operator HITL; back up every touched runtime file; promote lasting runtime state to `production-source/forms/` and `production-source/js/common.js`.
+
+Specialized authority: [ISEO-SU-FORM-SECURITY-AND-ANTISPAM-BASELINE-v1.md](ISEO-SU-FORM-SECURITY-AND-ANTISPAM-BASELINE-v1.md).
+
+## 12. Yandex Metrika
+
+### 12.1 Counter
+
+Current production counter is **54287016**. Counter `39163020` is an unused historical example.
+
+### 12.2 Existing Initialization
+
+The existing page initialization and Yandex loader remain the normal analytics owner; the addon does not reinitialize the counter.
+
+### 12.3 Webvisor / Existing Features
+
+Clickmap, track links, bounce tracking, Webvisor, and normal goals remain independent and must continue working when the addon is disabled.
+
+### 12.4 Visitor IP Addon
+
+Production files: `/metrika-visitor-ip-config.php`, `/metrika-visitor-ip.php`, `/js/metrika-visitor-ip.js`; loader: `/js/common.js`; source: `production-source/metrika-ip/`.
+
+### 12.5 Parameter `ipaddress`
+
+One page-load call sends the validated server-observed address as `ym(54287016, 'params', {ipaddress: ...})`.
+
+### 12.6 Server IP Authority
+
+Authority is PHP `REMOTE_ADDR`, validated as IPv4/IPv6. `X-Forwarded-For`, `X-Real-IP`, `CF-Connecting-IP`, and `Forwarded` are not trusted.
+
+### 12.7 Kill Switch
+
+Current state is **ON**: `"enabled" => true` in `/metrika-visitor-ip-config.php` and canonical source.
+
+### 12.8 Disable Procedure
+
+Set `"enabled" => false` in production config, verify endpoint returns 204/no IP and no `ipaddress` call, then promote the same lasting state to `production-source/metrika-ip/metrika-visitor-ip-config.php`.
+
+### 12.9 Failure Behavior
+
+Fail-open for site rendering: endpoint/network/`ym` failures stop silently. Disabled state affects only custom IP parameter collection; normal Metrika/Webvisor stay operational.
+
+### 12.10 Manual IP Investigation Purpose
+
+The addon supports later manual traffic/spam analysis. It does not persist IP history in Git, modify forms, or automatically block visitors.
+
+Specialized authority: [ISEO-SU-METRIKA-VISITOR-IP-PARAM-BASELINE-v1.md](ISEO-SU-METRIKA-VISITOR-IP-PARAM-BASELINE-v1.md).
+
+## 13. Glossary
+
+### 13.1 Source Corpus
+
+Immutable source corpus contains **241** terms.
+
+### 13.2 Editorial Disposition
+
+Final disposition: 184 eligible canonical; MERGED 30; DEFERRED 14; EXCLUDED 13.
+
+### 13.3 Public Corpus
+
+**184** canonical articles are public; archive and eligible singles return HTTP 200; glossary sitemap child contains 184 term URLs.
+
+### 13.4 Non-Public Corpus
+
+57 non-eligible records remain non-public. A new charter/editorial decision is required before reconsideration.
+
+### 13.5 Routes
+
+Archive `/glossary/`; singles `/glossary/{slug}/`.
+
+### 13.6 Templates
+
+`archive-glossary.php`, `single-glossary.php`, glossary helpers under `inc/`, and mirrored package `wordpress/iseoblog-glossary/`.
+
+### 13.7 Hero
+
+Services-derived `page_scene`; no `.page_scene__rates`. Archive has H1 and intro; singles have H1 but no hero description.
+
+### 13.8 CTA
+
+`Подробнее` scrolls to `#SecondScreen`.
+
+### 13.9 Related Terms
+
+Singles link only to published eligible targets.
+
+### 13.10 Sitemap
+
+Working WordPress glossary sitemap contains 184 URLs. Glossary URLs do not need duplication in the static sitemap.
+
+### 13.11 Navigation
+
+Desktop submenu includes «Глоссарий» immediately after «Калькулятор SEO (free)». Mobile offcanvas parity is deferred optional. Mobile overflow is fixed.
+
+### 13.12 Final Production Baseline
+
+Archive title: `Глоссарий - INTLSEO Studio`. Production work is complete/frozen; see [ISEO-SU-GLOSSARY-FINAL-PRODUCTION-BASELINE-v1.md](ISEO-SU-GLOSSARY-FINAL-PRODUCTION-BASELINE-v1.md).
+
+## 14. Sitemap Architecture
+
+### 14.1 Current Working Sitemaps
+
+`/sitemap-static.xml` and `/wp-sitemap.xml` return working sitemap surfaces.
+
+### 14.2 Current Broken Root Sitemap State
+
+`/sitemap.xml` advertises `post-sitemap.xml`, `page-sitemap.xml`, and `category-sitemap.xml`; the three children were observed 404. Finding `SM-CHILD-404` is HIGH/`OPEN_TECH`.
+
+### 14.3 Target Root Sitemap Architecture
+
+**Not implemented:** `/sitemap.xml` should be a valid `<sitemapindex>` containing two `<sitemap><loc>` child entries: absolute URLs for `/sitemap-static.xml` and `/wp-sitemap.xml`. It must not inline URL sets or imply an invalid redirect chain.
+
+### 14.4 `sitemap-static.xml`
+
+Physical static inventory is working. Maintenance decision is open: prefer safe automatic regeneration; fallback to bounded rebuild plus documented procedure.
+
+### 14.5 WordPress Sitemap
+
+`/wp-sitemap.xml` is the working WordPress index for posts/pages/CPT/taxonomy surfaces.
+
+### 14.6 robots.txt
+
+Current robots behavior is protected. Target after root repair: reference only `https://i-seo.su/sitemap.xml`; this is planned, not implemented.
+
+### 14.7 Open Sitemap Task
+
+Repair root index, remove obsolete children, validate both child indexes and representative URLs, update/verify robots, and choose static maintenance. See [ISEO-SU-SITEMAP-ARCHITECTURE-AND-CURRENT-STATE-v1.md](ISEO-SU-SITEMAP-ARCHITECTURE-AND-CURRENT-STATE-v1.md).
+
+## 15. Technical SEO
+
+### 15.1 Latest Audit
+
+Read-only audit dated 2026-08-21; no audit remediation was applied.
+
+### 15.2 Crawl Size
+
+1033 crawled; 643 indexable; 0 critical; 2 high; 6 medium; 8 low; 14 review; page 4xx/5xx 0; broken internal links 0.
+
+### 15.3 Confirmed HIGH Findings
+
+| ID | Issue | Status | Owner |
+|---|---|---|---|
+| `SM-CHILD-404` | Root sitemap advertises three 404 children | `OPEN_TECH` | MARS / SITE OPS |
+| `IMG-BROKEN` | ≈96 sampled relative blog image URLs resolve to 404 | `OPEN_TECH` | MARS / SITE OPS |
+
+### 15.4 Medium / Low Findings
+
+| ID | Severity | Short issue | Status | Owner |
+|---|---|---|---|---|
+| `CANON-MISSING` | MEDIUM | Missing canonical on content-like pages | `SEO_REVIEW` | MARS / SITE OPS |
+| `CANON-MISMATCH` | MEDIUM | Canonical/self mismatch | `SEO_REVIEW` | MARS / SITE OPS |
+| `SM-MISSING-INDEXABLE` | MEDIUM | Indexable URLs absent from sitemap union | `SEO_REVIEW` | SEO REVIEW |
+| `SM-NONINDEX` | MEDIUM | Non-indexable URLs listed in sitemap | `SEO_REVIEW` | MARS / SITE OPS |
+| `TITLE-DUP` | MEDIUM | Duplicate titles | `SEO_REVIEW` | SEO REVIEW |
+| `ORPHAN-CRAWLER` | MEDIUM | Crawler-level orphan candidates | `SEO_REVIEW` | SEO REVIEW |
+| `LINK-TO-REDIR`, `TITLE-LONG`, `META-MISSING`, `META-DUP` | LOW | Redirect/title/meta cleanup | `SEO_REVIEW` | CSV owner |
+| `H1-MISSING`, `IMG-HUGE`, `IMG-ALT`, `OG-MISSING` | LOW | H1/image/social-meta review | `SEO_REVIEW` | CSV owner |
+
+### 15.5 SEO Review Findings
+
+Use the CSV owner/status per ID. `SM-DUAL-ARCH` is INFO/`EXPECTED`, not a defect by itself. Semantic choices for canonicals, titles/meta, orphan priority, alt text, and OG require SEO/product review before broad implementation.
+
+### 15.6 Audit Artifact Locations
+
+- `ISEO-SU-TECH-SEO-AUDIT-EVIDENCE-v1.md`
+- `audits/tech-seo/ISEO-SU-TECH-SEO-FINDINGS-v1.csv`
+- `audits/tech-seo/ISEO-SU-TECH-SEO-URL-INVENTORY-v1.csv`
+- `reports/ISEO-SU-TECH-SEO-AUDIT-FOR-SEO-TEAM-v1.md`
+- raw evidence: `X:\AI MARS STORAGE\iseo-su-site-ops\tech-seo-audit-01\`
+
+### 15.7 Fix Policy
+
+One scoped technical wave at a time; use actual finding IDs, preserve expected dual architecture, obtain SEO decisions where required, and run targeted regression rather than a speculative mass rewrite.
+
+## 16. Blog Image Architecture
+
+### 16.1 Current Relative-Path Defect
+
+Finding `IMG-BROKEN` remains open. Relative `img/...` references on nested blog URLs resolve below the current blog path instead of root `/img/`.
+
+### 16.2 Affected Pattern
+
+Audit sampled ≈96 broken URLs, especially `/blog/20YY/.../img/...` and `/blog/author/.../img/...`.
+
+### 16.3 Open Fix Task
+
+Trace whether each reference is post content, ACF, or template output; convert only confirmed site-root assets to `/img/...`; preserve upload URLs; validate representative year/author/post pages; run targeted image crawl.
+
+## 17. WPilot
+
+### 17.1 Current State
+
+WPilot RC6 is active with safe defaults; `dev_confirmed=false`.
+
+### 17.2 Token
+
+Token exists local-only and must never enter Git/docs.
+
+### 17.3 Bridge
+
+`bridge=false`.
+
+### 17.4 Write Mode
+
+`write=false`; WPilot is not authorized for static files, theme PHP, forms, ACF, offers, glossary publication, Metrika, or sitemap work.
+
+### 17.5 Deferred 6D
+
+Phase 6D bridge/read-only smoke is deferred optional and requires a separate exact approval and fresh backup.
+
+### 17.6 When WPilot Is / Is Not Required
+
+It is not required for ordinary SFTP/WP Admin Site Ops. Do not reopen onboarding unless a task explicitly needs WPilot capability.
+
+## 18. Production Operations
+
+### 18.1 Access Model
+
+Use existing local-only i-seo credential/profile authorities. Never copy credentials, tokens, cookies, or session values into project files.
+
+### 18.2 Scoped Backups
+
+Before mutation: fresh operator full backup plus exact pre-change copies/attestations for every touched file/object.
+
+### 18.3 SFTP
+
+Use bounded reads/writes to named paths. No broad mirror/purge. Preserve modes and verify hashes where practical.
+
+### 18.4 VPN Instability / Resume Rule
+
+If VPN/network/SFTP is unstable, stop repeated mutation attempts. Re-establish identity, fetch current runtime again, verify whether the prior upload completed, and resume from evidence—not assumption.
+
+### 18.5 Deployment Validation
+
+Validate status/final URL/title/H1/marker/no fatal, plus route-class regressions for shared assets. Do not submit production forms without explicit operator HITL.
+
+### 18.6 Runtime→Source Promotion
+
+For lasting runtime changes, reconcile and promote exact final bytes into the canonical source mirror before declaring source alignment.
+
+## 19. Backup / Rollback
+
+### 19.1 Operator Full Backups
+
+Fresh Beget backup is required before each production mutation wave.
+
+### 19.2 Scoped Production File Backups
+
+Keep exact pre-change copies and hashes/stamps for named runtime files; WP content uses revisions/DB backup as appropriate.
+
+### 19.3 Storage
+
+Large raw evidence/backups belong under approved `X:\AI MARS STORAGE\` task paths, not Git.
+
+### 19.4 Rollback Expectations
+
+Define rollback before deploy, restore only scoped artifacts, validate critical routes after rollback, and promote lasting rolled-back state to source.
+
+## 20. Protected Zones
+
+Protected means **inspect and change intentionally**, not “never touch.” Exact charter, backup, diff, validation, rollback, and source promotion apply to forms/recipient security, shared CSS/JS, Metrika counter/addon switch, glossary baseline, root/static/WP sitemaps and robots, `.htaccess`, `wp-config.php`, WP core/plugins/theme, ACF, offers, calculator, uploads, local secrets, and sibling Report Hub. See [ISEO-SU-PROTECTED-ZONES-v1.md](ISEO-SU-PROTECTED-ZONES-v1.md).
+
+## 21. Known Manual Operator Decisions
+
+- Production form recipient is `nikel007i33@yandex.ru` only; `test_mode` OFF.
+- `im.work@mail.ru` was acceptance-only and removed; typo `im.work@nail.ru` remains invalid; `chrra@yandex.ru` is inactive historical comment only.
+- CAPTCHA was not added; layered server protections are the accepted baseline.
+- Visitor-IP addon is ON, analytics-only, manually investigated, and kill-switchable without disabling normal Metrika.
+- Glossary public set is 184; non-eligible sets remain non-public; desktop link is live; mobile offcanvas remains deferred.
+- Root sitemap target is the two-child index; static maintenance strategy remains open.
+
+## 22. Current Open Technical Work
+
+1. `SM-CHILD-404`: repair `/sitemap.xml`, remove three obsolete 404 children, point to working `/sitemap-static.xml` and `/wp-sitemap.xml`, then verify robots.
+2. Decide/implement `/sitemap-static.xml` maintenance: safe automation preferred; manual rebuild/procedure fallback.
+3. `IMG-BROKEN`: repair confirmed relative blog image path patterns and regression-crawl.
+4. Review/route the remaining 6 MEDIUM, 8 LOW, and 14 REVIEW audit signals from the CSV.
+
+## 23. Deferred Optional Work
+
+1. Mobile glossary offcanvas parity.
+2. Glossary archive Yoast meta description.
+3. MERGED alias/search polish.
+4. Sitemap duplication beyond the target two-surface index if ever justified.
+5. WPilot Phase 6D bridge/read-only smoke.
+
+These are non-blocking and must not be confused with `OPEN_TECH`.
+
+## 24. Completed Major Work
+
+- Production architecture intake and route ownership capture.
+- WPilot RC6 install/activation and local-only token safety baseline.
+- Glossary source canonicalization, editorial model, four content batches, and final corpus.
+- Controlled publication of 184 glossary terms; hero/CTA/related terms/menu/title integration.
+- Glossary mobile overflow correction and operator CSS promotion.
+- Site Ops stabilization and scratch relocation.
+- Form server validation/anti-spam hardening and 12/12 isolated acceptance.
+- Recipient restoration/correction history followed by intentional operator-test-address removal; current single recipient confirmed.
+- Read-only 1033-URL technical/SEO audit and findings artifacts.
+- Metrika visitor-IP parameter addon with tested true→false→true kill switch.
+
+## 25. SAFE UNKNOWN
+
+Genuinely unresolved, non-blocking facts remain in [ISEO-SU-SITE-OPS-SAFE-UNKNOWN-REGISTER-v1.md](ISEO-SU-SITE-OPS-SAFE-UNKNOWN-REGISTER-v1.md): exact PHP runtime version, full ACF location-rule export, complete drift inventory, `/services.html` intermittent-500 cause, `/offers` listing composition detail, `varvara-new.php` ownership, Beget restore click-path details, mail transport/relay specifics, and selected WPilot internals. Unknowns are not open defects unless evidence creates a task.
+
+## 26. Entry Procedure for the Next Task
+
+1. Read [Current State](ISEO-SU-CURRENT-STATE-v1.md), then this KB.
+2. Select one concrete task/finding ID.
+3. Route via [Task Routing Guide](ISEO-SU-TASK-ROUTING-GUIDE-v1.md) and [Route Matrix](ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md).
+4. Read [Protected Zones](ISEO-SU-PROTECTED-ZONES-v1.md) and the relevant specialized baseline.
+5. Name exact runtime/source paths, backup, validation, rollback, and source-promotion plan.
+6. Keep secrets local-only and foreign Git WIP untouched.
+7. Persist only scoped accepted documentation/source evidence when explicitly authorized.
+
+## 27. Canonical Supporting Documents
+
+1. [ISEO-SU-CURRENT-STATE-v1.md](ISEO-SU-CURRENT-STATE-v1.md)
+2. [ISEO-SU-TASK-ROUTING-GUIDE-v1.md](ISEO-SU-TASK-ROUTING-GUIDE-v1.md)
+3. [ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md](ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md)
+4. [ISEO-SU-PROTECTED-ZONES-v1.md](ISEO-SU-PROTECTED-ZONES-v1.md)
+5. [ISEO-SU-FORM-SECURITY-AND-ANTISPAM-BASELINE-v1.md](ISEO-SU-FORM-SECURITY-AND-ANTISPAM-BASELINE-v1.md)
+6. [ISEO-SU-METRIKA-VISITOR-IP-PARAM-BASELINE-v1.md](ISEO-SU-METRIKA-VISITOR-IP-PARAM-BASELINE-v1.md)
+7. [ISEO-SU-GLOSSARY-FINAL-PRODUCTION-BASELINE-v1.md](ISEO-SU-GLOSSARY-FINAL-PRODUCTION-BASELINE-v1.md)
+8. [ISEO-SU-SITEMAP-ARCHITECTURE-AND-CURRENT-STATE-v1.md](ISEO-SU-SITEMAP-ARCHITECTURE-AND-CURRENT-STATE-v1.md)
+9. [ISEO-SU-TECH-SEO-AUDIT-EVIDENCE-v1.md](ISEO-SU-TECH-SEO-AUDIT-EVIDENCE-v1.md)
+10. [ISEO-SU-SITE-OPS-SAFE-UNKNOWN-REGISTER-v1.md](ISEO-SU-SITE-OPS-SAFE-UNKNOWN-REGISTER-v1.md)
+11. [ISEO-SU-SITE-OPS-ARTIFACT-REGISTER-v1.md](ISEO-SU-SITE-OPS-ARTIFACT-REGISTER-v1.md)
+12. [OPERATIONAL-INDEX.md](OPERATIONAL-INDEX.md)

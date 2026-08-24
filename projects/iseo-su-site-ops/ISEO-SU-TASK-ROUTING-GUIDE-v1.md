@@ -1,7 +1,7 @@
 # ISEO-SU TASK ROUTING GUIDE v1
 
 **Programme:** ISEO-SU-SITE-OPS  
-**Purpose:** Practical first stop for ordinary production site tasks after architecture knowledge capture.  
+**Purpose:** Compact operational map from task type to runtime/source owner, protected dependencies, validation, and rollback.
 **Authority rank:** #2 (after task-specific accepted production evidence)  
 **Companions:** [ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md](ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md), [ISEO-SU-PRODUCTION-ARCHITECTURE-KNOWLEDGE-BASE-v1.md](ISEO-SU-PRODUCTION-ARCHITECTURE-KNOWLEDGE-BASE-v1.md)
 
@@ -124,14 +124,14 @@
 
 | Step | Action |
 |------|--------|
-| Inspect first | Page markup + `js/common.js` endpoint + matching `*__FORM.php` |
-| SoT | Handler PHP + JS + page markup |
+| Inspect first | Page markup + `js/common.js` + matching root `*__FORM.php` + delegate + shared `iseo-form-security.php` / `iseo-form-config.php` |
+| SoT | Shared config/security and root handlers; MARS mirrors `production-source/forms/` + `production-source/js/common.js` |
 | Access | SFTP; **no form submit** in audits |
-| Backup | Handler + JS + page |
-| Modify | Extremely careful; charter required |
-| Validate | Structural only unless operator HITL send |
+| Backup | Every named handler/helper/config/JS/page file |
+| Modify | Prefer shared config/security; keep 12 root handlers and service delegates centralized |
+| Validate | Structural/negative tests; real mail only with explicit operator HITL |
 | Rollback | Restore handlers/JS |
-| Traps | Service-tree handler copies can diverge from root |
+| Traps | Current recipient is `nikel007i33@yandex.ru` only; `test_mode=false`; never restore acceptance-only `im.work@mail.ru`, typo `im.work@nail.ru`, or inactive historical `chrra@yandex.ru` |
 
 ---
 
@@ -185,13 +185,13 @@
 | Step | Action |
 |------|--------|
 | Inspect first | CPT `glossary` + `/glossary/` + `archive-glossary.php` / `single-glossary.php` + ACF group «Глоссарий — метаданные термина» |
-| SoT | Theme includes under `iseoblog/inc/glossary-*.php` + CPT posts |
-| Access | WP Admin for drafts/definitions; SFTP for templates |
+| SoT | Public CPT posts + theme package `wordpress/iseoblog-glossary/` + accepted shared CSS source |
+| Access | WP Admin for content; SFTP only for exact theme/runtime paths |
 | Backup | Beget + theme bak copies |
-| Modify | Draft definitions/excerpts; **do not** open `ISEO_GLOSSARY_PUBLIC_EXPOSURE` without charter |
-| Validate | Editor preview archive/single; anonymous must stay 404 until gate |
-| Rollback | Restore theme glossary files; delete only glossary drafts |
-| Traps | Workbook has no definitions — never invent; do not add menu/sitemap early; do not edit privacy-policy as “style twin” |
+| Modify | Final public baseline is frozen: 184 eligible public; do not publish 30 MERGED / 14 DEFERRED / 13 EXCLUDED |
+| Validate | `/glossary/` and representative singles must be 200; archive/single hero, CTA, related terms, desktop menu, sitemap count |
+| Rollback | Restore scoped theme/content/CSS state using accepted glossary rollback evidence |
+| Traps | Glossary is no longer draft-only or anonymous-404; desktop link and overflow fix are complete; mobile offcanvas remains deferred |
 
 ---
 
@@ -214,13 +214,13 @@
 
 | Step | Action |
 |------|--------|
-| Inspect first | Docroot `img/` vs `wp-content/uploads/` |
-| SoT | Matching tree |
+| Inspect first | For blog, identify whether `img/...` came from post content, ACF, or template; distinguish docroot `/img/` from uploads |
+| SoT | Matching content/template plus the actual asset tree |
 | Access | SFTP / Media library |
 | Backup | Replace with rename-keep-old when possible |
-| Validate | Hotlink URLs |
+| Validate | Representative post/year/author routes + targeted broken-image crawl |
 | Rollback | Restore old file name |
-| Traps | Homepage template uses relative `img/` / `../img/` paths |
+| Traps | `IMG-BROKEN` is OPEN: ≈96 sampled nested blog URLs resolve relative `img/...` below `/blog/...`; convert only confirmed root assets to `/img/...` |
 
 ---
 
@@ -258,13 +258,40 @@
 
 | Step | Action |
 |------|--------|
-| Inspect first | Hardcoded in HTML/theme heads; Jetpack may inject |
-| SoT | Template/HTML and/or plugin |
+| Inspect first | Existing counter init + `/metrika-visitor-ip-config.php`, endpoint, addon JS, and `/js/common.js` loader |
+| SoT | Counter **54287016** stays existing owner; addon source `production-source/metrika-ip/`; loader mirror `production-source/js/common.js` |
 | Access | SFTP / plugin settings |
-| Backup | Files |
-| Validate | View-source |
+| Backup | Exact config/endpoint/addon/loader files |
+| Validate | Endpoint + one `ipaddress` params call when ON; no call/204 when OFF; normal Metrika/Webvisor unaffected |
 | Rollback | Restore |
-| Traps | Dual chrome means dual insertion points |
+| Traps | IP authority is validated `REMOTE_ADDR`; no forwarded-header trust; no auto-blocking; soft kill is `"enabled" => false` |
+
+---
+
+## sitemap / robots
+
+| Step | Action |
+|------|--------|
+| Inspect first | `/sitemap.xml`, working `/sitemap-static.xml`, working `/wp-sitemap.xml`, current `robots.txt`, and actual runtime owner/generator |
+| SoT | Root index owner + physical static sitemap + WordPress core sitemap |
+| Backup | Root/static XML and robots before mutation |
+| Modify | OPEN target: valid root sitemap index with absolute child `<loc>` for `/sitemap-static.xml` and `/wp-sitemap.xml`; remove obsolete 404 children |
+| Validate | XML/index semantics, both child 200, representative URLs, robots references only root after deployment |
+| Rollback | Restore exact XML/robots files/settings |
+| Traps | Target is **not implemented**; do not inline URL records in `<sitemapindex>` or blindly duplicate glossary/WP URLs into static sitemap |
+
+---
+
+## production-source promotion
+
+| Step | Action |
+|------|--------|
+| Inspect first | Fetch current runtime and compare with the relevant MARS mirror before any overwrite |
+| SoT | Runtime proves execution; accepted final bytes/procedure must be promoted into `production-source/` or the specialized package |
+| Modify | Bounded runtime → diff → preserve accepted operator hunks → canonical source promotion → next automation |
+| Validate | Runtime/source hash or reviewed diff alignment |
+| Rollback | Restore scoped runtime backup and promote lasting rollback state |
+| Traps | Never overwrite operator manual production edits from an older source snapshot |
 
 ---
 
@@ -290,10 +317,10 @@
 - one marketing HTML (`/contacts.html` or `/about.html`)
 - `/tariff-calc`
 - `/offers` (if offers/KP adjacent)
-- `/glossary/` (expect **404** for anonymous until publication gate)
-- `/sitemap.xml` (if SEO/URL adjacent)
+- `/glossary/` (expect **200**; check a representative public single)
+- `/sitemap.xml`, `/sitemap-static.xml`, `/wp-sitemap.xml` (if SEO/URL adjacent; current root defect remains open)
 - `/privacy-policy.html` (if legal/reference adjacent)
 
 ---
 
-*Task routing guide v1 · updated glossary 2026-07-24.*
+*Task routing guide v1 · current-state reconciliation 2026-08-24.*

@@ -27,7 +27,7 @@ Final operational disposition assigned for **all 241** source terms.
 **Publication pool (APPROVED + APPROVED_RENAME):** 184  
 **Populated production-quality drafts:** 184 (Batches 01–04)  
 **Publication-eligible:** 184 — see `ISEO-SU-GLOSSARY-PUBLICATION-ELIGIBILITY-v1.md`  
-**Published:** 0  
+**Published:** 184 (publication completed 2026-07-26; current production authority is `ISEO-SU-GLOSSARY-FINAL-PRODUCTION-BASELINE-v1.md`)
 
 Historical note: initial final-corpus cut was APPROVED 146 / APPROVED_RENAME 48 / MERGED 26 / DEFERRED 8 / EXCLUDED 13 (publication pool 194). Batch 04 moved 4→MERGED and 6→DEFERRED rather than padding weak articles.
 
@@ -382,15 +382,13 @@ Deferred from REVIEW queue: Контент, Скрипт, Ссылка, Human-Fi
 
 ## 12. Publication Pool
 
-194 concepts are eligible for future publication batches (still drafts until a publication gate).
-
-Batch 01 marks 30 high-priority foundational terms for first content load.
+The final eligible pool is **184** concepts, all now published as canonical glossary articles. Batch descriptions below remain historical wave context.
 
 ---
 
 ## 13. Deferred Pool
 
-8 terms remain out of the publication corpus pending clearer definitions, audience fit, or myth-risk framing.
+**14** terms remain DEFERRED and non-public pending clearer definitions, audience fit, or myth-risk framing.
 
 ---
 

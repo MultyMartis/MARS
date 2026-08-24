@@ -1,80 +1,84 @@
 # ISEO-SU-SITE-OPS SAFE UNKNOWN Register v1
 
-**Status:** ACCEPTED; **updated architecture knowledge capture** 2026-07-24; **reconciled post-launch / stabilization** 2026-08-20  
+**Status:** CURRENT
+**Updated:** 2026-08-24
 **Canonical locus:** `X:\AI MARS\projects\iseo-su-site-ops\`
 
-Rule: do **not** invent values. Resolve only with evidence.
+Rule: do not invent values. `SAFE_UNKNOWN`, `OPEN_TECH`, and `DEFERRED_OPTIONAL` are different classes:
 
-## Phase / capture links
+- `SAFE_UNKNOWN` — fact is not proven; non-blocking unless a task touches it.
+- `OPEN_TECH` — proven defect/required implementation.
+- `DEFERRED_OPTIONAL` — understood choice intentionally postponed; not a blocker.
 
-| Artifact | Path |
-|----------|------|
-| Current state (brain) | [ISEO-SU-CURRENT-STATE-v1.md](ISEO-SU-CURRENT-STATE-v1.md) |
-| Architecture knowledge base | [ISEO-SU-PRODUCTION-ARCHITECTURE-KNOWLEDGE-BASE-v1.md](ISEO-SU-PRODUCTION-ARCHITECTURE-KNOWLEDGE-BASE-v1.md) |
-| Route matrix | [ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md](ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md) |
-| Historical 2B audit | [ISEO-SU-READ-ONLY-PRODUCTION-AUDIT-v1.md](ISEO-SU-READ-ONLY-PRODUCTION-AUDIT-v1.md) |
+## Current authority links
 
----
+- [Current State](ISEO-SU-CURRENT-STATE-v1.md)
+- [Knowledge Base](ISEO-SU-PRODUCTION-ARCHITECTURE-KNOWLEDGE-BASE-v1.md)
+- [Route Matrix](ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md)
+- [Sitemap State](ISEO-SU-SITEMAP-ARCHITECTURE-AND-CURRENT-STATE-v1.md)
+- [Tech SEO Evidence](ISEO-SU-TECH-SEO-AUDIT-EVIDENCE-v1.md)
 
-## Resolved or narrowed in architecture capture (2026-07-24)
+## SAFE_UNKNOWN
 
-| ID | Item | Outcome |
-|----|------|---------|
-| U-009b | Plugin active matrix | **RESOLVED** via Admin: 11 active / 4 inactive listed in WP inventory |
-| U-010 | ACF field groups | **RESOLVED at group level** — 4 groups titled; location-rule deep dump still partial |
-| U-012 | Header/footer | **CONFIRMED dual-channel** with theme topbar hardcoding |
-| U-015 | Web-KP technical surface | **NARROWED** — `/offers` + CPT `offer` + ACF «Предложения» + `single-offer.php`; public `/web-kp` 404; operator nickname confirmation still open |
-| U-033 | Menus | **PARTIAL → NARROWED** — Primary / «Меню 1» confirmed; desktop services submenu now includes **Глоссарий** after calculator (accepted 2026-08-18); full item URL harvest still incomplete |
-| U-034 | HTML PHP includes | **NARROWED** — sampled marketing HTML has no PHP includes; chrome duplicated |
-| — | Permalink structure | **RESOLVED** — `/blog/%postname%.html` |
-| — | Homepage editor/ACF use | **RESOLVED** — unused editor; 0 ACF fields on home |
+| ID | Proven current fact | Unknown | Operational rule / evidence needed |
+|---|---|---|---|
+| `U-007` | Site serves accepted WordPress baseline | Exact current PHP runtime version | Confirm in hosting panel/Site Health only when compatibility task needs it |
+| `U-015b` | `/offers` + CPT `offer` + ACF + `single-offer.php` are technically mapped | Exact staff scope of nickname “web-KP” | Route by technical owner; one-line operator confirmation for naming |
+| `U-017` | Shared helper invokes PHP mail path | Exact SMTP/relay transport behind hosting | Do not change delivery assumptions; chartered mail review |
+| `U-020` | Beget backups are required/used | Exact current restore click-path/object IDs | Operator restore notes or bounded restore drill |
+| `U-023` | Known parallel/drift surfaces include home/blog and service delegates | Complete runtime twin/drift inventory | Fetch/diff only chartered paths; maintain drift evidence |
+| `U-036` | WPilot RC6 active; bridge/write/dev flags false | Auth-header behavior through deferred bridge | Resolve only in Phase 6D charter |
+| `U-041` | WPilot schema was historically reported | Physical current DB table state | DB charter only; not needed for ordinary work |
+| `U-047` | `/services.html` once returned 500 and later 200 | Cause of transient failure | Revalidate after services edit; logs/HITL if repeated |
+| `U-048` | Main ACF groups and consuming templates are known | Full exact location-rule export | Export/inspect before schema/location change |
+| `U-049` | `/offers` page and offer CPT exist | Exact current offers listing composition detail | Bounded template trace before listing UX edit |
+| `U-050` | `varvara-new.php` existed as VVR-Searcher surface | Current business owner/use | Do not edit without operator attribution |
+| `G-U-004` | Glossary server inventory JSON historically existed; import UI disabled | Retention/removal preference | No cleanup without explicit operator decision |
+| `G-U-006` | Published expert terms carry accepted content | Current official status wording for legacy algorithms | Primary-source expert verification before content polish |
+| `G-U-007` | GEO terms are in accepted public corpus | Long-term vocabulary stability | Optional future expert review |
 
----
+`U-022` (whether canonical offline source exists) is **closed**: canonical mirrors are established under `production-source/` and `wordpress/iseoblog-glossary/`. This does not imply every production file has a full source mirror.
 
-## Resolved by accepted glossary launch / final baseline (2026-07-26 … 2026-08-18)
+## OPEN_TECH
 
-| ID | Item | Outcome |
-|----|------|---------|
-| G-U-002 | Glossary single `.html` URLs | **RESOLVED** — production uses slash CPT URLs; accepted baseline does not require blog-style `.html` |
-| G-U-003 | Related glossary terms | **RESOLVED** — related-term block live; public eligible targets only |
-| — | Glossary public exposure | **RESOLVED** — 184 published; 57 non-eligible non-public |
-| — | `/glossary/` availability | **RESOLVED** — HTTP 200 archive |
-| — | Desktop menu glossary link | **RESOLVED** — live after calculator |
-| — | Mobile overflow on glossary | **RESOLVED** — fixed; SHA `4a1202b6…` |
+| ID | Required work | Severity/status | Owner |
+|---|---|---|---|
+| `SM-CHILD-404` | Repair root `/sitemap.xml` to reference working `/sitemap-static.xml` and `/wp-sitemap.xml`; remove obsolete 404 children; then verify robots | HIGH / `OPEN_TECH` | MARS / SITE OPS |
+| `STATIC-SITEMAP-MAINT` | Decide/implement safe automatic static sitemap maintenance; fallback bounded rebuild + documented procedure | REQUIRED / `OPEN_TECH` | MARS / SITE OPS |
+| `IMG-BROKEN` | Repair relative blog `img/...` path pattern (≈96 sampled broken URLs) and regression-crawl | HIGH / `OPEN_TECH` | MARS / SITE OPS |
+| `TECH-SEO-BACKLOG` | Review/route 6 MEDIUM, 8 LOW, 14 REVIEW audit signals using actual CSV IDs/owners | REQUIRED / `OPEN_TECH` + `SEO_REVIEW` | MARS / SITE OPS and SEO REVIEW per CSV |
 
----
+These four tasks replace the stale statement `OPEN_REQUIRED = 0`.
 
-## Still open (non-blocking for ordinary classified work)
+## DEFERRED_OPTIONAL
 
-| ID | Subject | Known | Unknown | Why unresolved | Operational impact | Blocks ordinary work? | Future evidence |
-|----|---------|-------|---------|----------------|--------------------|-----------------------|-----------------|
-| U-007 | PHP runtime version | Core requires ≥7.4; host serves WP 7.0.2 | Exact PHP version string | Site Health debug scrape inconclusive | Compatibility planning only | **No** | Browser Site Health HITL or hosting panel |
-| U-015b | Operator “web-KP” nickname | Technical offers/CPT map ready | Whether staff call only this system “web-KP” | Naming confirmation needs operator | Communication clarity | **No** for edits if route known | One-line operator confirm |
-| U-017 | Mail delivery path | Handlers use `mail()` | SMTP plugin/relay details | No mail plugin clearly owning delivery | Silent lead failure risk on handler edits | **No** if handlers untouched | Chartered handler/mail review |
-| U-020 | Restore drill details | Beget backups used historically | Exact restore click-path/object IDs | Panel not opened by agent | Emergency speed | **No** for routine | Operator restore notes |
-| U-022 | Offline canonical source | Not on production | Local Git/build existence | No server evidence | Sync fantasies | **No** if editing production SoT | Operator attestation |
-| U-023 | Full drift inventory | Known twins home/blog; form copies | Complete twin list | Bounded discovery | Overwrite risk | **No** if matrix followed | Ongoing drift log |
-| U-036 | WPilot header forwarding | Namespace registered | Auth header behavior | REST not authorized | 6D smoke only | **No** for site content work | GATE 6D |
-| U-041 | WPilot DB tables physical | Admin schema said yes historically | Table existence without DB | No DB login | WPilot internals | **No** | DB charter |
-| U-045/46 | 6D backup/drift | 6D blocked | Fresh backup line + live drift at 6D | Approvals absent | Bridge gate only | **No** for site content | Exact 6D lines |
-| U-047 | `/services.html` intermittent 500 | File exists; later 200 | Root cause of one 500 | Transient server/upstream | Validate after services hub edits | **No** | Repeat probe + error log HITL |
-| U-048 | Exact ACF location rules | Groups + consuming templates known | Full location UI export | Admin location panel scrape noisy | Wrong object edits | **No** if editing known objects | Export field groups |
-| U-049 | `/offers` listing UX | Page exists; editor empty; CPT exists | How listing markup is composed | Not fully traced beyond default page template | Offers hub text edits | **No** if editing CPT/singles | Bounded template trace |
-| U-050 | `varvara-new.php` business role | Title VVR-Searcher; 200 | Product ownership/use | Out of marketing IA | Avoid casual edit | **No** | Operator note |
-| G-U-001 | Glossary Yoast focus workflow | Batch SEO titles/metadesc applied via Admin Yoast fields | Long-term preferred REST/meta automation pattern | Preference only | Content waves | **No** | Optional tooling polish |
-| G-U-004 | Server inventory JSON retention | File on theme `inc/data/`; import UI disabled | Keep vs remove from production | Ops hygiene | Low | **No** | Operator cleanup preference |
-| G-U-005 | Audit REVIEW queue (8 terms) | Independently **DEFERRED** in final corpus | Future reconsideration criteria only | Deferred pool | Blocks only those terms | **No** | Reopen via reconsideration rules |
-| G-U-006 | Algorithm status currency | Expert terms may be APPROVED with caution notes | Current official status of АГС/Минусинск/etc. at publish polish | Needs expert docs check | Expert batch only | **No** | Primary-source verification before polish |
-| G-U-007 | GEO vocabulary stability | GEO terms published as accepted corpus | Settled industry/official naming forever | Emerging topic | AI/GEO terms only | **No** | Optional expert revisit |
+Exactly five non-blocking items:
 
----
+1. Mobile glossary offcanvas parity.
+2. Glossary archive Yoast meta description.
+3. MERGED alias/search polish.
+4. Sitemap duplication beyond the target two-surface root index, if ever justified.
+5. WPilot Phase 6D bridge/read-only smoke.
+
+## Proven / closed facts
+
+| Prior uncertainty or stale claim | Current accepted outcome |
+|---|---|
+| Glossary draft-only / archive 404 | Closed: archive and 184 eligible singles are public |
+| Glossary related terms/menu/overflow | Closed: related terms and desktop menu live; overflow fixed |
+| Glossary URL form | Closed: slash CPT URLs, not blog-style `.html` |
+| Form validation/anti-spam absent | Closed: shared server validation and layered controls active |
+| Production recipient unknown | Closed: `nikel007i33@yandex.ru` only; `test_mode=false` |
+| Metrika production counter unknown/example | Closed: counter 54287016; example 39163020 is not production |
+| Visitor-IP addon absent/unknown | Closed: addon ON, `ipaddress`, validated `REMOTE_ADDR`, kill-switchable |
+| Healthy Yoast-style root sitemap | Closed as false: current root advertises three 404 children |
+| WPilot onboarding required | Closed as false for ordinary Site Ops; Phase 6D remains optional |
 
 ## Summary
 
-**OPEN_BLOCKER = 0 · OPEN_REQUIRED = 0** for glossary/site-ops. Remaining SAFE UNKNOWN items are **named** and **non-blocking** for ordinary work that follows Current State, Task Routing Guide, and Route Ownership Matrix.
+- `OPEN_BLOCKER`: 0 site-outage blockers.
+- `OPEN_TECH`: 4 required task groups, including 2 confirmed HIGH findings.
+- `DEFERRED_OPTIONAL`: 5.
+- `SAFE_UNKNOWN`: 14 named non-blocking items.
 
-WPilot bridge/REST remains a separate optional gate (6D), not required for ordinary site content/file tasks.
-
----
-
-*SAFE UNKNOWN Register v1 · updated stabilization 2026-08-20.*
+Follow Current State, Task Routing, Route Matrix, and specialized baselines; unknowns do not authorize broad rediscovery.

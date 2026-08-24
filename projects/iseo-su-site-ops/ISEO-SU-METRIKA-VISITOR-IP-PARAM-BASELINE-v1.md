@@ -10,7 +10,7 @@
 
 ## 1. Status
 
-**ACTIVE / ENABLED** — toggleable Metrika visitor IP parameter addon deployed on production.  
+**ACTIVE / ENABLED / CURRENT SWITCH ON** — toggleable Metrika visitor IP parameter addon deployed on production. Accepted validation exercised **true → false → true**; final state is `"enabled" => true`.
 Analytics-only. **Not** an automatic blocking / blacklist / CAPTCHA system.
 
 ## 2. Purpose
@@ -96,7 +96,8 @@ Semantic alias: **METRIKA_VISITOR_IP_ENABLED**.
 **One config change:**
 
 1. Set `"enabled" => false` in `/metrika-visitor-ip-config.php`.  
-2. Done.
+2. Verify the endpoint returns 204/no IP and no `ipaddress` params call is emitted.
+3. If disabled state is intended to persist, promote the same value to `production-source/metrika-ip/metrika-visitor-ip-config.php`.
 
 Expected: endpoint **204** / no IP; no `ipaddress` params call; **normal Metrika stays ON** (init / clickmap / Webvisor / goals unchanged).
 

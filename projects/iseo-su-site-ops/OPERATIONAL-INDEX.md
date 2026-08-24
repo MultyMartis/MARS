@@ -7,6 +7,34 @@
 
 ---
 
+## Start here — current authority order
+
+1. [Current State](ISEO-SU-CURRENT-STATE-v1.md)
+2. [Production Architecture Knowledge Base](ISEO-SU-PRODUCTION-ARCHITECTURE-KNOWLEDGE-BASE-v1.md)
+3. [Task Routing Guide](ISEO-SU-TASK-ROUTING-GUIDE-v1.md)
+4. [Route Ownership Matrix](ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md)
+5. [Protected Zones](ISEO-SU-PROTECTED-ZONES-v1.md)
+6. Feature baselines:
+   - [Forms / anti-spam / recipient](ISEO-SU-FORM-SECURITY-AND-ANTISPAM-BASELINE-v1.md)
+   - [Metrika visitor IP](ISEO-SU-METRIKA-VISITOR-IP-PARAM-BASELINE-v1.md)
+   - [Glossary final production](ISEO-SU-GLOSSARY-FINAL-PRODUCTION-BASELINE-v1.md)
+   - [Sitemap architecture/current state](ISEO-SU-SITEMAP-ARCHITECTURE-AND-CURRENT-STATE-v1.md)
+   - [Latest technical/SEO audit](ISEO-SU-TECH-SEO-AUDIT-EVIDENCE-v1.md)
+7. [Artifact Register](ISEO-SU-SITE-OPS-ARTIFACT-REGISTER-v1.md)
+8. Historical evidence/REPORTs only after current authorities.
+
+## Current open work
+
+1. `SM-CHILD-404`: repair `/sitemap.xml` as a valid two-child index for `/sitemap-static.xml` and `/wp-sitemap.xml`; remove obsolete 404 children; then verify robots.
+2. Decide/implement `/sitemap-static.xml` maintenance: safe automation preferred, manual rebuild/procedure fallback.
+3. `IMG-BROKEN`: repair relative blog `img/...` paths (≈96 sampled broken URLs) and regression-crawl.
+4. Review/route the remaining 6 MEDIUM, 8 LOW, and 14 REVIEW audit signals using the findings CSV.
+
+**Not implemented:** sitemap repair, static sitemap maintenance, blog image repair, and remaining audit fixes.
+**Deferred optional:** mobile glossary offcanvas, archive Yoast description, MERGED alias polish, unnecessary sitemap duplication, WPilot 6D.
+
+---
+
 ## Programme identity
 
 | Field | Value |
@@ -26,14 +54,14 @@
 | Field | Value |
 |-------|-------|
 | **Lifecycle** | **COMPLETE — FORMS HARDENED / OPERATOR RECIPIENT REMOVED / TECH-SEO AUDIT COMPLETE / METRIKA IP PARAM ADDON ON** |
-| **Project status** | Glossary public: **184** published eligible; **57** non-eligible drafts; `/glossary/` **200**; archive/single services `page_scene` hero; desktop submenu **Глоссарий** after calculator; archive title **Глоссарий - INTLSEO Studio**; Yoast glossary sitemap **184**; custom `sitemap.xml` unchanged; mobile overflow **fixed** (glossary-scoped CSS, SHA `4a1202b6…`); mobile offcanvas **intentionally unchanged**; WPilot bridge/writes/REST still gated; production form recipient = **original only** (`nikel007i33@yandex.ru`); tech/SEO audit HIGH: broken Yoast child sitemaps + blog relative image 404s; Metrika visitor IP param addon **ON** (`ipaddress` → counter **54287016**; kill switch in `metrika-visitor-ip-config.php`; analytics-only, no auto-ban) |
+| **Project status** | Glossary public: **184** published eligible; **57** non-eligible; `/glossary/` **200**; final hero/menu/title/overflow baseline complete; mobile offcanvas deferred. Forms hardened; production recipient `nikel007i33@yandex.ru` only. Metrika visitor-IP addon **ON** (`ipaddress`, counter **54287016**, no auto-ban). Tech/SEO audit has two HIGH open defects: root `/sitemap.xml` advertises three 404 children and ≈96 sampled relative blog image URLs are broken. |
 | **Architecture knowledge** | **COMPLETE** — knowledge base + route matrix + task routing guide |
 | **Glossary** | Foundation + Batches 01–04 content + **controlled public launch 2026-07-26** + final integration/post-launch closeout **2026-08-18** |
 | **Current phase (WPilot)** | **PHASE 6D — BLOCKED** (bridge/smoke awaiting exact approval + backup lines) — **not required** for ordinary site content/file tasks |
 | **Accepted WPilot baseline** | **PHASE 6C — TOKEN CREATED / RC6 SAFE DEFAULTS** |
 | **Access files** | **LOCAL-ONLY FILLED / VALIDATED** (Git-ignored) |
 | **WPilot** | **ACTIVE** RC6; bridge **DISABLED**; writes **DISABLED**; token **LOCAL-ONLY**; REST **NOT RUN** |
-| **Open blockers / open required** | **0 / 0** |
+| **Open blockers / open required task groups** | **0 / 4** |
 | **Next operator action (site work)** | Review SEO audit report; charter Site Ops fix wave for sitemap children 404 + blog image relative paths. Forms: operator mailbox removed from production recipients (`ISEO-SU-FORM-OPERATOR-RECIPIENT-REMOVAL-EVIDENCE-v1.md`). Metrika IP addon: disable via one config flag if needed (`ISEO-SU-METRIKA-VISITOR-IP-PARAM-BASELINE-v1.md`) |
 | **Next operator action (WPilot 6D)** | Exact lines `APPROVE ISEO-SU WPILOT BRIDGE AND READ-ONLY SMOKE 6D` + `CONFIRM ISEO-SU FRESH BEGET BACKUP FOR WPILOT 6D` |
 
@@ -128,15 +156,18 @@ Form security: [ISEO-SU-FORM-SECURITY-AND-ANTISPAM-BASELINE-v1.md](ISEO-SU-FORM-
 
 ## Next authorized task
 
-**Glossary / site-ops programme:** **closed and stabilized** (2026-08-20). No open required glossary launch work. Do not publish non-eligible without a new charter. Do not restart glossary development without a new charter.
+**Glossary programme:** **closed and stabilized**. No open glossary launch work. Do not publish non-eligible without a new charter.
 
-**Ordinary site work:** additional concrete tasks after fresh Beget backup; start from Current State + Task Routing Guide.
+**Ordinary site work:** select one of the four current open task groups or another exact operator-chartered task after fresh Beget backup; start from Current State + Knowledge Base + Task Routing Guide.
 
 **Optional parallel gate:** Phase 6D WPilot bridge + read-only smoke — only after both exact approval lines (does not block site-content tasks).
 
 ---
 
 ## Artifact navigation (current first)
+
+<details>
+<summary>Expanded artifact navigation (historical and specialized)</summary>
 
 | Artifact | Path |
 |----------|------|
@@ -182,9 +213,12 @@ Form security: [ISEO-SU-FORM-SECURITY-AND-ANTISPAM-BASELINE-v1.md](ISEO-SU-FORM-
 
 Additional historical artifacts remain listed in the Artifact Register.
 
----
+</details>
 
 ## REPORT navigation (latest)
+
+<details>
+<summary>Historical REPORT navigation</summary>
 
 | Report | Status |
 |--------|--------|
@@ -205,6 +239,8 @@ Additional historical artifacts remain listed in the Artifact Register.
 | Phase 6D WPilot bridge smoke | BLOCKED / PRODUCTION UNCHANGED |
 | Phase 6C-P onboarding evidence persistence | COMPLETE |
 
+</details>
+
 ---
 
-*ISEO-SU-SITE-OPS Operational Index · Stabilization 2026-08-20 · glossary production frozen · WPilot RC6 safe defaults · token local-only · bridge/writes disabled.*
+*ISEO-SU-SITE-OPS Operational Index · current-state reconciliation 2026-08-24 · four open technical task groups · glossary complete · WPilot 6D optional.*
