@@ -146,7 +146,7 @@ Template, reusable selection/enable, specialist IDs/slugs/`menu_order`/content p
 
 ## 20. Git
 
-Commit: `00ce9196e1157cbb0930cd2332f9b771ea7c91e3`.
+Commit: `8931523d66576ea8fc94539dd8680da880eec6ab`.
 Push to `origin/mars/canonical-post-recovery` (this wave).
 
 ## 21. Current canonical URL truth
