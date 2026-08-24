@@ -3,14 +3,14 @@
 **Programme:** ISEO-SU-SITE-OPS  
 **Site:** `https://i-seo.su/`
 **Canonical locus:** `X:\AI MARS\projects\iseo-su-site-ops\`  
-**Updated:** 2026-08-24 (form HMAC secret rotation)  
+**Updated:** 2026-08-24 (HIGH FIX WAVE 01 — sitemap + blog image paths)  
 **Authority:** first current-state document for ordinary work
 
 Historical REPORT files record earlier states and do not override this document or fresher accepted evidence.
 
 ## 1. Overall Status
 
-The production site is operating; glossary publication, form hardening, form HMAC secret rotation to a production-local authority, technical/SEO audit, and the Metrika visitor-IP addon are complete milestones. There are **four open technical tasks**, including two confirmed HIGH defects. The current security wave made bounded production changes only to the shared form security surfaces.
+The production site is operating; glossary publication, form hardening, form HMAC secret rotation to a production-local authority, technical/SEO audit, and the Metrika visitor-IP addon are complete milestones. HIGH FIX WAVE 01 is **CLOSED**: root `/sitemap.xml` repaired, static sitemap allowlist generator deployed, theme relative `img/` paths normalized to `/img/`, targeted re-crawl PASS. Remaining open work is the MEDIUM/LOW/REVIEW audit backlog only (separate charter). Prior security wave made bounded production changes only to shared form surfaces.
 
 ## 2. Production Status
 
@@ -75,12 +75,13 @@ Archive has H1/intro/title `Глоссарий - INTLSEO Studio`; archive and si
 
 ## 9. Sitemap
 
-- Working: `/sitemap-static.xml` and `/wp-sitemap.xml`.
-- Broken current root: `/sitemap.xml` advertises `post-sitemap.xml`, `page-sitemap.xml`, and `category-sitemap.xml`, all observed 404.
-- Target, **not implemented**: valid root sitemap index whose two child `<loc>` entries are `/sitemap-static.xml` and `/wp-sitemap.xml`; after implementation, robots should reference only root `/sitemap.xml`.
-- Static sitemap maintenance strategy remains undecided.
+- Canonical root `/sitemap.xml` is a valid **sitemapindex** with exactly two children: `/sitemap-static.xml` and `/wp-sitemap.xml` (HIGH FIX WAVE 01).
+- Obsolete Yoast-style children (`post|page|category-sitemap.xml`) are no longer advertised.
+- `robots.txt` references `https://i-seo.su/sitemap.xml` only.
+- Static inventory: **71** URLs via allowlist generator `tools/generate-sitemap-static.py` (`data/sitemaps/sitemap-static-urls-v1.txt` → `production-source/sitemaps/sitemap-static.xml`).
+- MARS SoT: `production-source/sitemaps/`.
 
-See [Sitemap Architecture](ISEO-SU-SITEMAP-ARCHITECTURE-AND-CURRENT-STATE-v1.md).
+See [Sitemap Architecture](ISEO-SU-SITEMAP-ARCHITECTURE-AND-CURRENT-STATE-v1.md) and [HIGH FIX WAVE 01 Evidence](ISEO-SU-HIGH-FIX-WAVE-01-EVIDENCE-v1.md).
 
 ## 10. Latest Tech/SEO Audit
 
@@ -88,21 +89,21 @@ Read-only audit: **1033 crawled**, **643 indexable**, 0 critical, 2 high, 6 medi
 
 | ID | Severity | Current status | Owner |
 |---|---|---|---|
-| `SM-CHILD-404` | HIGH | `OPEN_TECH` | MARS / SITE OPS |
-| `IMG-BROKEN` | HIGH | `OPEN_TECH` | MARS / SITE OPS |
+| `SM-CHILD-404` | HIGH | `CLOSED` (HIGH FIX WAVE 01) | MARS / SITE OPS |
+| `IMG-BROKEN` | HIGH | `CLOSED` (HIGH FIX WAVE 01) | MARS / SITE OPS |
 | Remaining IDs in findings CSV | MEDIUM/LOW/REVIEW | `SEO_REVIEW` | CSV owner per finding |
-| `SM-DUAL-ARCH` | INFO | `EXPECTED` | SEO REVIEW |
+| `SM-DUAL-ARCH` | INFO | `EXPECTED` (root repaired; ownership split remains) | SEO REVIEW |
 
 Authority: [Audit Evidence](ISEO-SU-TECH-SEO-AUDIT-EVIDENCE-v1.md) and `audits/tech-seo/ISEO-SU-TECH-SEO-FINDINGS-v1.csv`.
 
 ## 11. Open Technical Tasks
 
-1. **Root sitemap repair:** replace obsolete 404 child references; make `/sitemap.xml` a valid index for `/sitemap-static.xml` and `/wp-sitemap.xml`; then verify robots references only root.
-2. **Static sitemap maintenance:** choose and implement safe automatic regeneration if practical; fallback is bounded rebuild plus documented regeneration procedure.
-3. **Blog image paths:** investigate and repair relative `img/...` references (≈96 sampled broken URLs), then run a targeted regression crawl.
-4. **Audit backlog:** review and route all 6 MEDIUM, 8 LOW, and 14 REVIEW signals using the findings CSV; technical implementation remains Site Ops, semantic decisions remain SEO review.
+1. ~~Root sitemap repair~~ — **CLOSED** (HIGH FIX WAVE 01).
+2. ~~Static sitemap maintenance~~ — **CLOSED** (allowlist generator + documented regen).
+3. ~~Blog image paths~~ — **CLOSED** (theme `/img/` normalization + targeted recrawl PASS).
+4. **Audit backlog:** review and route remaining MEDIUM / LOW / REVIEW signals using the findings CSV; technical implementation remains Site Ops, semantic decisions remain SEO review. **Not started** in WAVE 01.
 
-None is complete in this document.
+HIGH open after WAVE 01 (these two findings): **0**.
 
 ## 12. Deferred Optional Work
 
@@ -120,7 +121,7 @@ Protected means inspect, diff, back up, change intentionally, validate, and pres
 
 ## 14. Git / Source Authority
 
-- Runtime truth is live production; canonical editable mirrors include `production-source/forms/`, `production-source/js/common.js`, `production-source/metrika-ip/`, `production-source/css/main.css`, and `wordpress/iseoblog-glossary/`.
+- Runtime truth is live production; canonical editable mirrors include `production-source/forms/`, `production-source/js/common.js`, `production-source/metrika-ip/`, `production-source/css/main.css`, `production-source/sitemaps/`, `production-source/theme/iseoblog/` (homepage/cases/recommendations img paths), and `wordpress/iseoblog-glossary/`.
 - After an accepted manual runtime edit: bounded **runtime → diff → canonical source promotion** before any automation overwrite.
 - Canonical branch: `mars/canonical-post-recovery`.
 - Main may contain foreign WIP. Never broad-stage, clean, reset, stash, or restore it.

@@ -5,7 +5,7 @@
 **Site:** https://i-seo.su/  
 **Canonical locus:** `X:\AI MARS\projects\iseo-su-site-ops\`  
 **Status:** CURRENT / CANONICAL / ARCHITECTURE KNOWLEDGE READY FOR SITE WORK
-**Current-state reconciliation:** 2026-08-24
+**Current-state reconciliation:** 2026-08-24 (HIGH FIX WAVE 01 closed)
 **Evidence basis:** accepted repository evidence through 2026-08-24; no production probe in this consolidation
 
 No credentials, tokens, customer proposal bodies, cookies, or passwords are stored here. The sole current production form recipient is recorded because it is an operator-approved routing authority, not a secret.
@@ -324,7 +324,7 @@ Archive title: `Глоссарий - INTLSEO Studio`. Production work is complet
 
 **Not implemented:** `/sitemap.xml` should be a valid `<sitemapindex>` containing two `<sitemap><loc>` child entries: absolute URLs for `/sitemap-static.xml` and `/wp-sitemap.xml`. It must not inline URL sets or imply an invalid redirect chain.
 
-### 14.4 `sitemap-static.xml`
+### 14.4 `sitemap-static.xml` (root `/sitemap.xml` indexes it with `/wp-sitemap.xml` after HIGH FIX WAVE 01)
 
 Physical static inventory is working. Maintenance decision is open: prefer safe automatic regeneration; fallback to bounded rebuild plus documented procedure.
 

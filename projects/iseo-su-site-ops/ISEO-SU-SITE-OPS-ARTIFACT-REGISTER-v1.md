@@ -45,6 +45,22 @@ The recursive project inventory at task start contained **357 files**; **306 Mar
 
 ---
 
+
+### HIGH FIX WAVE 01 — sitemap + blog images (2026-08-24) — CURRENT / CANONICAL
+
+| Artifact | Path | Class |
+|----------|------|-------|
+| HIGH FIX WAVE 01 evidence | `ISEO-SU-HIGH-FIX-WAVE-01-EVIDENCE-v1.md` | CURRENT |
+| Sitemap architecture / current state | `ISEO-SU-SITEMAP-ARCHITECTURE-AND-CURRENT-STATE-v1.md` | CURRENT / CANONICAL |
+| HIGH fix status register | `audits/tech-seo/ISEO-SU-TECH-SEO-HIGH-FIX-STATUS-v1.md` | CURRENT |
+| SEO-team mini closeout | `reports/ISEO-SU-HIGH-FIX-WAVE-01-FOR-SEO-TEAM.md` | CURRENT |
+| Task REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-HIGH-FIX-WAVE-01.md` | CURRENT |
+| Root + static sitemap SoT | `production-source/sitemaps/` | CANONICAL |
+| Static URL allowlist | `data/sitemaps/sitemap-static-urls-v1.txt` | CANONICAL |
+| Static sitemap generator | `tools/generate-sitemap-static.py` | CANONICAL |
+| Theme img-path SoT | `production-source/theme/iseoblog/` | CANONICAL |
+| Deploy/rollback receipts (out of Git) | `X:\AI MARS\local\sites\iseo-su-production\_high-fix-wave-01\` | CURRENT_ROLLBACK |
+
 ### HMAC secret rotation + final cleanup (2026-08-24) — CURRENT / CANONICAL
 
 | Artifact | Path | Class |
