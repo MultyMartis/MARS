@@ -37,6 +37,7 @@ use Shpigovsky\Core\Permalinks\SpecialistLegacyRedirect;
 use Shpigovsky\Core\Privacy\LeadPersonalData;
 use Shpigovsky\Core\Privacy\PrivacyConsent;
 use Shpigovsky\Core\Settings\SiteSettings;
+use Shpigovsky\Core\OpenGraph\OpenGraph;
 use Shpigovsky\Core\StructuredData\StructuredData;
 use Shpigovsky\Core\Typography\TypographyFilters;
 
@@ -243,6 +244,12 @@ final class ModuleRegistry {
 		'structured-data.schema-org' => array(
 			'module'            => 'StructuredData',
 			'class'             => StructuredData::class,
+			'status'            => self::ENABLED_IN_CONTENT_MODEL,
+			'runtime_delivered' => true,
+		),
+		'open-graph.meta'            => array(
+			'module'            => 'OpenGraph',
+			'class'             => OpenGraph::class,
 			'status'            => self::ENABLED_IN_CONTENT_MODEL,
 			'runtime_delivered' => true,
 		),
