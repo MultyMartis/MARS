@@ -1,7 +1,7 @@
 # ISEO-SU PROTECTED ZONES v1
 
 **Programme:** ISEO-SU-SITE-OPS  
-**Updated:** 2026-08-24 Metrika visitor IP param addon  
+**Updated:** 2026-08-24 Metrika visitor IP param addon + local-only HMAC secret authority  
 **Policy:** Default **protect-all** until an exact task charter names paths/surfaces. **Protected means inspect, diff, back up, change intentionally, validate, and preserve rollback; it does not mean “never touch.”**
 
 No secrets stored here.
@@ -27,7 +27,7 @@ No secrets stored here.
 | Config secrets | `wp-config.php` | DB credentials, salts |
 | Routing | `.htaccess` | HTTPS, www, HTML-as-PHP, WP rewrite |
 | Database | Beget MySQL | content/leads integrity |
-| Forms / mail | all 12 root `*__FORM.php`, service delegates, `iseo-form-security.php`, `iseo-form-config.php`, `iseo-form-token.php`, `.iseo-form-runtime/` | lead loss / PII; shared server validation + anti-spam + recipient authority; canonical mirror `production-source/forms/` |
+| Forms / mail | all 12 root `*__FORM.php`, service delegates, `iseo-form-security.php`, `iseo-form-config.php`, `iseo-form-token.php`, `.iseo-form-runtime/`, and production-local `iseo-form-secrets.local.php` | lead loss / PII; shared server validation + anti-spam + recipient authority; canonical mirror `production-source/forms/` |
 | Form recipient routing | `iseo-form-config.php` | production recipient must remain `nikel007i33@yandex.ru` only; `test_mode=false`; acceptance-only `im.work@mail.ru`, typo `im.work@nail.ru`, inactive comment `chrra@yandex.ru` are not active recipients |
 | Shared JS | `js/common.js` | forms + calculator + tariffs; includes honeypot/token inject + Metrika visitor IP loader hook — reconcile with `production-source/js/common.js` |
 | Existing Metrika | counter initialization/options for **54287016** | normal Metrika/Webvisor/goals must not be changed by addon work |
@@ -57,7 +57,7 @@ Completed form harden charter (`ISEO-SU-SITE-OPS-FORMS-ANTISPAM-AND-VALIDATION-0
 
 ## 3a. Form security note
 
-Do not disable server validation, `contact_company_url` honeypot, ≈3s HMAC timing token, ≈3/5m/form/IP and ≈10/h/IP limits, or ≈10m duplicate protection without charter. Do not enable `test_mode` in lasting production. CAPTCHA is not part of the accepted baseline.
+Do not disable server validation, `contact_company_url` honeypot, ≈3s HMAC timing token, ≈3/5m/form/IP and ≈10/h/IP limits, or ≈10m duplicate protection without charter. Do not enable `test_mode` in lasting production. CAPTCHA is not part of the accepted baseline. Active HMAC secret material must remain local-only and out of tracked source.
 
 ## 3b. Runtime/source promotion note
 

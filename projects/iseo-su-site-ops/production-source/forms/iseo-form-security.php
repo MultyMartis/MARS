@@ -9,8 +9,30 @@ if (!function_exists("iseo_form_cfg")) {
         static $cfg = null;
         if ($cfg === null) {
             $cfg = require __DIR__ . "/iseo-form-config.php";
+            $secret_path = isset($cfg["local_secret_path"]) ? (string)$cfg["local_secret_path"] : "";
+            if ($secret_path !== "" && is_file($secret_path)) {
+                $local_cfg = require $secret_path;
+                if (is_array($local_cfg)) {
+                    $cfg = array_merge($cfg, $local_cfg);
+                }
+            }
         }
         return $cfg;
+    }
+}
+
+if (!function_exists("iseo_form_hmac_secret")) {
+    function iseo_form_hmac_secret() {
+        $cfg = iseo_form_cfg();
+        $secret = isset($cfg["hmac_secret"]) ? $cfg["hmac_secret"] : null;
+        if (!is_string($secret)) {
+            return null;
+        }
+        $secret = trim($secret);
+        if ($secret === "") {
+            return null;
+        }
+        return $secret;
     }
 }
 
@@ -37,8 +59,11 @@ if (!function_exists("iseo_form_client_ip")) {
 
 if (!function_exists("iseo_form_ip_hash")) {
     function iseo_form_ip_hash() {
-        $cfg = iseo_form_cfg();
-        return hash_hmac("sha256", iseo_form_client_ip(), $cfg["hmac_secret"]);
+        $secret = iseo_form_hmac_secret();
+        if ($secret === null) {
+            return hash("sha256", iseo_form_client_ip());
+        }
+        return hash_hmac("sha256", iseo_form_client_ip(), $secret);
     }
 }
 
@@ -210,6 +235,10 @@ if (!function_exists("iseo_form_recipients")) {
 
 if (!function_exists("iseo_form_verify_timing")) {
     function iseo_form_verify_timing() {
+        $secret = iseo_form_hmac_secret();
+        if ($secret === null) {
+            return "reject";
+        }
         $cfg = iseo_form_cfg();
         $ts = iseo_form_post_scalar("iseo_ft", 32);
         $sig = iseo_form_post_scalar("iseo_fs", 128);
@@ -221,7 +250,7 @@ if (!function_exists("iseo_form_verify_timing")) {
             return "reject";
         }
         $payload = $tid . "|" . $ts;
-        $expect = hash_hmac("sha256", $payload, $cfg["hmac_secret"]);
+        $expect = hash_hmac("sha256", $payload, $secret);
         if (!hash_equals($expect, $sig)) {
             return "reject";
         }
@@ -238,10 +267,13 @@ if (!function_exists("iseo_form_verify_timing")) {
 
 if (!function_exists("iseo_form_issue_token")) {
     function iseo_form_issue_token() {
-        $cfg = iseo_form_cfg();
+        $secret = iseo_form_hmac_secret();
+        if ($secret === null) {
+            return null;
+        }
         $ts = (string)time();
         $tid = bin2hex(random_bytes(8));
-        $sig = hash_hmac("sha256", $tid . "|" . $ts, $cfg["hmac_secret"]);
+        $sig = hash_hmac("sha256", $tid . "|" . $ts, $secret);
         return array("t" => $ts, "s" => $sig, "id" => $tid);
     }
 }
@@ -296,10 +328,14 @@ if (!function_exists("iseo_form_rate_check")) {
 
 if (!function_exists("iseo_form_duplicate_paths")) {
     function iseo_form_duplicate_paths($form_id, $normalized) {
-        $cfg = iseo_form_cfg();
         $dir = iseo_form_runtime_dir();
         $ip_h = iseo_form_ip_hash();
-        $digest = hash_hmac("sha256", $form_id . "|" . $normalized, $cfg["hmac_secret"]);
+        $secret = iseo_form_hmac_secret();
+        if ($secret === null) {
+            $digest = hash("sha256", $form_id . "|" . $normalized);
+        } else {
+            $digest = hash_hmac("sha256", $form_id . "|" . $normalized, $secret);
+        }
         return $dir . "/dup_" . hash("sha256", $ip_h . "|" . $digest) . ".json";
     }
 }
@@ -342,6 +378,9 @@ if (!function_exists("iseo_form_log")) {
 
 if (!function_exists("iseo_form_send_mail")) {
     function iseo_form_send_mail($subject, $html_body) {
+        if (iseo_form_hmac_secret() === null) {
+            return false;
+        }
         $cfg = iseo_form_cfg();
         $recipients = iseo_form_recipients();
         if (!$recipients) {

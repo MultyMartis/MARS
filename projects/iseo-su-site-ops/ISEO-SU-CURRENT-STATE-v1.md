@@ -3,19 +3,20 @@
 **Programme:** ISEO-SU-SITE-OPS  
 **Site:** `https://i-seo.su/`
 **Canonical locus:** `X:\AI MARS\projects\iseo-su-site-ops\`  
-**Updated:** 2026-08-24
+**Updated:** 2026-08-24 (form HMAC secret rotation)  
 **Authority:** first current-state document for ordinary work
 
 Historical REPORT files record earlier states and do not override this document or fresher accepted evidence.
 
 ## 1. Overall Status
 
-The production site is operating; glossary publication, form hardening, technical/SEO audit, and the Metrika visitor-IP addon are complete milestones. There are **four open technical tasks**, including two confirmed HIGH defects. No production change was made during this documentation consolidation.
+The production site is operating; glossary publication, form hardening, form HMAC secret rotation to a production-local authority, technical/SEO audit, and the Metrika visitor-IP addon are complete milestones. There are **four open technical tasks**, including two confirmed HIGH defects. The current security wave made bounded production changes only to the shared form security surfaces.
 
 ## 2. Production Status
 
 - Production: `https://i-seo.su/`; hosting: Beget; staging is absent.
 - Main public page crawl was healthy: 0 page 4xx, 0 page 5xx, 0 broken internal links in the latest crawl graph.
+- Current form HMAC authority is production-local at `.iseo-form-runtime/iseo-form-secrets.local.php`; active secret is absent from current tracked source.
 - Production mutations require an exact charter, fresh backup, bounded validation, and rollback evidence.
 - Do not perform generic onboarding or production rediscovery when current authorities already classify the target.
 

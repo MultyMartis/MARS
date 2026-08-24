@@ -1,7 +1,7 @@
 # ISEO-SU-SITE-OPS SAFE UNKNOWN Register v1
 
 **Status:** CURRENT
-**Updated:** 2026-08-24
+**Updated:** 2026-08-24 (reviewed after HMAC rotation)
 **Canonical locus:** `X:\AI MARS\projects\iseo-su-site-ops\`
 
 Rule: do not invent values. `SAFE_UNKNOWN`, `OPEN_TECH`, and `DEFERRED_OPTIONAL` are different classes:
@@ -82,3 +82,7 @@ Exactly five non-blocking items:
 - `SAFE_UNKNOWN`: 14 named non-blocking items.
 
 Follow Current State, Task Routing, Route Matrix, and specialized baselines; unknowns do not authorize broad rediscovery.
+
+WPilot bridge/REST remains a separate optional gate (6D), not required for ordinary site content/file tasks.
+
+Historical revoked HMAC secret residue in Git history is **not SAFE UNKNOWN**. It is a known, non-active risk handled by rotation and current-tree cleanup; see `ISEO-SU-FORM-HMAC-SECRET-ROTATION-EVIDENCE-v1.md`.

@@ -114,6 +114,8 @@ Twelve root `*__FORM.php` handlers call shared security/config code. Copies unde
 
 ### 8.8 Legal / Other
 
+Server-side form security continues to use PHP `mail()`-style handlers; recipient emails are documented only in the specialized form baseline. SMTP path remains **SAFE UNKNOWN**. Current HMAC secret authority is **production-local** under `.iseo-form-runtime/iseo-form-secrets.local.php`; tracked config carries only the loader path and null placeholder.
+
 Legal pages are physical `*-policy.html`/`user-agreement.html`. `/report-hub/` is a sibling product surface. Unknown tools such as `varvara-new.php` require separate owner confirmation before change.
 
 Use [ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md](ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md) for the operational map.
@@ -202,7 +204,7 @@ Same normalized payload/source fingerprint is suppressed for approximately 10 mi
 
 ### 11.9 Test Mode
 
-`test_mode` is **false/OFF**. `im.work@mail.ru` is historical acceptance-only and may exist only as an inactive test recipient. `im.work@nail.ru` is an invalid historical typo. `chrra@yandex.ru` is an inactive historical commented alternate.
+`test_mode` is **false/OFF**. `im.work@mail.ru` is historical acceptance-only and may exist only as an inactive test recipient. `im.work@nail.ru` is an invalid historical typo. `chrra@yandex.ru` is an inactive historical commented alternate. The active HMAC secret is production-local only and must never be committed to tracked source or docs.
 
 ### 11.10 Current Production Recipient
 

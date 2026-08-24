@@ -45,6 +45,17 @@ The recursive project inventory at task start contained **357 files**; **306 Mar
 
 ---
 
+### HMAC secret rotation + final cleanup (2026-08-24) — CURRENT / CANONICAL
+
+| Artifact | Path | Class |
+|----------|------|-------|
+| HMAC rotation evidence | `ISEO-SU-FORM-HMAC-SECRET-ROTATION-EVIDENCE-v1.md` | CURRENT |
+| Security + housekeeping closeout | `ISEO-SU-SECURITY-AND-HOUSEKEEPING-CLOSEOUT-v1.md` | CURRENT / CANONICAL |
+| Task REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-SECURITY-SECRET-ROTATION-AND-FINAL-MARS-CLEANUP-01.md` | CURRENT |
+| Tracked config / loader remediation | `production-source/forms/iseo-form-config.php`, `production-source/forms/iseo-form-security.php`, `production-source/forms/iseo-form-token.php` | CANONICAL |
+| Example local secret template | `production-source/forms/iseo-form-secrets.example.php` | CANONICAL |
+| Current scoped rollback / validation receipts | `X:\AI MARS\local\sites\iseo-su-production\_hmac-rotation-01\` | CURRENT_ROLLBACK (out of Git) |
+
 ### Metrika visitor IP param addon (2026-08-24) — CURRENT / CANONICAL
 
 | Artifact | Path | Class |

@@ -19,7 +19,9 @@ return array(
     ),
 
     "from_email" => "noreply@i-seo.su",
-    "hmac_secret" => "656ef419b38ea7223fb82707b39b7b1309809fa546c480c7",
+    // Production secret must come from a local-only PHP file.
+    "hmac_secret" => null,
+    "local_secret_path" => __DIR__ . "/.iseo-form-runtime/iseo-form-secrets.local.php",
 
     "honeypot_field" => "contact_company_url",
 

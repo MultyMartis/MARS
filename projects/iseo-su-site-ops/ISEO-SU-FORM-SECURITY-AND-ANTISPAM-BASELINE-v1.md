@@ -2,12 +2,12 @@
 
 **Programme:** ISEO-SU-SITE-OPS  
 **Task:** ISEO-SU-SITE-OPS-FORMS-ANTISPAM-AND-VALIDATION-01  
-**Updated:** 2026-08-21 (operator recipient removal + tech/SEO audit 01)  
+**Updated:** 2026-08-24 (HMAC secret rotation to local-only authority)  
 **Authority:** current form/security operating baseline for public leads on `https://i-seo.su/`
 
 ## 1. Status
 
-**COMPLETE — ISEO-SU FORMS HARDENED / EMPTY SUBMISSIONS BLOCKED / ANTISPAM ACTIVE / MAIL ROUTING RESTORED**  
+**COMPLETE — ISEO-SU FORMS HARDENED / EMPTY SUBMISSIONS BLOCKED / ANTISPAM ACTIVE / HMAC SECRET ROTATED / MAIL ROUTING RESTORED**  
 **All-forms isolated mail acceptance:** **COMPLETE** with correct operator mailbox — see `ISEO-SU-FORM-ALL-FORMS-ISOLATED-MAIL-ACCEPTANCE-EVIDENCE-v2.md` (Acceptance 01 recipient evidence **SUPERSEDED** due to operator typo `im.work@nail.ru`).  
 **Recipient restore verification:** **COMPLETE** — see `ISEO-SU-FORM-RECIPIENT-RESTORATION-EVIDENCE-v1.md` (current authority for original-recipient reconstruction; confirms prior restore claim for the active set).
 
@@ -39,7 +39,8 @@ Browser form
   -> js/common.js (AJAX POST + honeypot/token inject)
   -> *__FORM.php (thin wrapper)
   -> iseo-form-security.php (validate + anti-spam + mail)
-  -> iseo-form-config.php (recipients / thresholds / test_mode)
+  -> iseo-form-config.php (recipients / thresholds / test_mode / local secret path)
+  -> .iseo-form-runtime/iseo-form-secrets.local.php (production-local HMAC authority)
   -> PHP mail()
 ```
 
@@ -89,7 +90,7 @@ Server rejects when **missing** (direct bot POST) **or** **populated**.
 
 ## 8. Minimum Fill Time
 
-Signed token (`t` timestamp + `s` HMAC + form `id`) issued by `iseo-form-token.php`.  
+Signed token (`t` timestamp + `s` HMAC + form `id`) issued by `iseo-form-token.php`. HMAC secret is **server-only** and loaded from a production-local PHP file under the protected runtime directory.  
 Threshold ≈ **3 seconds**. Too-fast submissions rejected. Plain client timestamps alone are not trusted.
 
 ## 9. Rate Limiting
@@ -111,7 +112,10 @@ Single config: `iseo-form-config.php`.
 
 - `production_recipients` — normal routing (**original active recipient only**)  
 - `test_recipients` — only used when `test_mode === true` (may list operator mailbox for controlled tests)  
+- `local_secret_path` — tracked pointer to the production-local HMAC authority file  
 - Do **not** hardcode recipients inside every handler.
+
+Active HMAC secret material must **not** remain in tracked source. The tracked config may contain only a null placeholder and local-only loader path.
 
 Do not print full recipient lists in public REPORT/docs beyond operator-supplied test address when needed.
 
@@ -131,6 +135,8 @@ Do not commit active test mode as final production state.
 | im.work@mail.ru in production_recipients | **NO** (intentionally removed after acceptance) |
 | im.work@nail.ru in production_recipients | **NO** (operator typo; never restore) |
 | chrra@yandex.ru | **INACTIVE HISTORICAL COMMENT ONLY** (not a recipient) |
+| active HMAC secret in tracked source | **NO** |
+| HMAC authority location | `.iseo-form-runtime/iseo-form-secrets.local.php` (production-local) |
 | Operator removal evidence | `ISEO-SU-FORM-OPERATOR-RECIPIENT-REMOVAL-EVIDENCE-v1.md` |
 | Prior recipient-restore evidence (historical) | `ISEO-SU-FORM-RECIPIENT-RESTORATION-EVIDENCE-v1.md` |
 | CAPTCHA | **not installed** |
@@ -138,6 +144,7 @@ Do not commit active test mode as final production state.
 ## 14. Security Boundaries
 
 Handlers must continue to block: CRLF/header injection, arbitrary recipient injection, uncontrolled From, HTML injection into mail, GET submissions, direct POSTs without token/honeypot semantics.  
+If the local secret file is missing or unreadable, HMAC-protected submission behavior must **fail closed**. No hardcoded default secret is allowed.  
 Do not expand into full pentest under ordinary edits.
 
 ## 15. Future Editing Rules
@@ -148,6 +155,7 @@ Do not expand into full pentest under ordinary edits.
 4. Reconcile Protected Zones + this baseline before automation overwrite.  
 5. No CAPTCHA / no broad IP hard-block as primary fix without charter.  
 6. Never leave `test_mode` on.
+7. Never place the active HMAC secret in Git, tracked docs, reports, or example config files.
 
 ## 16. Rollback
 
