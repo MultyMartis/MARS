@@ -1,10 +1,10 @@
 # BASELINE — FP-0002 Production Maintenance Stable
 
-**Baseline ID:** `FP-0002-PRODUCTION-MAINTENANCE-STABLE-2026-08-20`  
-**Established:** 2026-08-20  
+**Baseline ID:** `FP-0002-PRODUCTION-MAINTENANCE-STABLE-2026-08-24`  
+**Established:** 2026-08-24  
 **Supersedes for “current ops truth”:** post-anti-spam maintenance closeout (does **not** rewrite historical P18I baseline text)  
 **Domain:** https://shpigovsky.ru/  
-**Core version:** `0.3.24-antispam`
+**Core version:** `0.3.25-olya-robots`
 
 ---
 
@@ -18,14 +18,14 @@
 
 ---
 
-## Runtime (read-only verified 2026-08-20)
+## Runtime (read-only verified 2026-08-24)
 
 | Item | Value |
 |------|--------|
 | Public HTTP | **200** |
 | `home` / `siteurl` | `https://shpigovsky.ru` |
 | Theme | Shpigovsky |
-| Core plugin | `0.3.24-antispam` (WPilot plugins listing) |
+| Core plugin | `0.3.25-olya-robots` (current production status) |
 | WPilot | installed; `write_enabled=false` |
 
 ---
@@ -39,7 +39,7 @@
 | Discourage search engines | `false` |
 | P18G guard | **ACTIVE** (deployed; not mutated this wave) |
 | Watchdog | **ACTIVE** (deployed; not mutated this wave) |
-| robots.txt | Permissive admin disallow + Sitemap |
+| robots.txt | Olya-approved permissive policy + Sitemap |
 | Sitemap | `https://shpigovsky.ru/wp-sitemap.xml` (HTTP 200) |
 
 ---
@@ -68,12 +68,13 @@
 | Anti-spam checkpoint (ancestor) | `0875b9d5c81f77b5a5f63ada7e6799eaf88c5cd2` |
 | Stabilization recovery point | `0fbd25bdbd8ba3f77d6c0ab1e4881c9d159a35c3` |
 | Stabilization commit | see `REPORT-FP-0002-PROD-MAINT-WORKSPACE-STABILIZATION.md` |
+| Olya robots closeout commit (ancestor) | `76a23e3ae9976cb590e4493f6f25308cd981b101` |
 
 ---
 
 ## Non-blocking remaining
 
-Operator GSC / Yandex sitemap submission; optional Cookie Policy legal sign-off; optional `lead_retention_days=730`; normal SEO/content/feature maintenance.
+Operator GSC / Yandex sitemap submission; optional Cookie Policy legal sign-off; optional `lead_retention_days=730`; optional anti-spam tuning from real spam evidence; normal SEO/content/feature maintenance.
 
 ---
 

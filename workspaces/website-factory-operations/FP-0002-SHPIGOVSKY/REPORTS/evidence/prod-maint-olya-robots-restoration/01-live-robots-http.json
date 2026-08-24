@@ -1,16 +1,16 @@
 {
-  "captured_at": "2026-08-21T07:35:24.838144+00:00",
+  "captured_at": "2026-08-24T06:01:07.381800+00:00",
   "status": 200,
   "final_url": "https://shpigovsky.ru/robots.txt",
   "content_type": "text/plain",
   "headers": {
     "Server": "nginx-reuseport/1.21.1",
     "Content-Type": "text/plain",
-    "Last-Modified": "Wed, 19 Aug 2026 21:05:02 GMT",
-    "ETag": "W/\"6a861a7e-72\"",
+    "Last-Modified": "Fri, 21 Aug 2026 13:45:09 GMT",
+    "ETag": "W/\"6a885665-b55\"",
     "Cache-Control": "max-age=604800"
   },
-  "sha256": "ec64f8b8a09afe446b910e0c8a3796e029169d29b79e477882315c7f9e04e0a8",
-  "bytes": 114,
-  "body_text": "User-agent: *\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\n\nSitemap: https://shpigovsky.ru/wp-sitemap.xml\n"
+  "sha256": "49e52465c97f697290c7d13ab62b1b5fa74a9a5343e5464af8fb11f50f4dfad7",
+  "bytes": 2901,
+  "body_text": "User-agent: Yandex\nAllow: */uploads\nAllow: /*/*.js\nAllow: /*/*.css\nAllow: /*/*.webp\nAllow: /*/*.woff\nAllow: /*/*.woff2\nAllow: /*/*.ttf\nAllow: /wp-*.png\nAllow: /wp-*.jpg\nAllow: /wp-*.jpeg\nAllow: /wp-*.gif\nAllow: /wp-admin/admin-ajax.php\nDisallow: /cgi-bin\nDisallow: /?\nDisallow: /wp-\nDisallow: /wp/\nDisallow: /wp-json/\nDisallow: *?s=\nDisallow: *&s=\nDisallow: /search/\nDisallow: /author/\nDisallow: /users/\nDisallow: /privacy-policy/\nDisallow: /user-agreement/\nDisallow: /consent-personal-data/\nDisallow: /cookie-files-policy/\nDisallow: */trackback\nDisallow: */feed\nDisallow: */rss\nDisallow: */embed\nDisallow: */wlwmanifest.xml\nDisallow: /xmlrpc.php\nClean-Param: utm_source&utm_medium&utm_campaign\nClean-param: etext\nClean-param: pm_source\nClean-Param: openstat\n\nUser-agent: GoogleBot\nAllow: /*/*.js\nAllow: /*/*.css\nAllow: /*/*.webp\nAllow: /*/*.woff\nAllow: /*/*.woff2\nAllow: /*/*.ttf\nAllow: /wp-*.png\nAllow: /wp-*.jpg\nAllow: /wp-*.jpeg\nAllow: /wp-*.gif\nAllow: /wp-admin/admin-ajax.php\nDisallow: /cgi-bin\nDisallow: /?\nDisallow: /wp-\nDisallow: /wp/\nDisallow: /wp-json/\nDisallow: *?s=\nDisallow: *&s=\nDisallow: /search/\nDisallow: /author/\nDisallow: /users/\nDisallow: /privacy-policy/\nDisallow: /user-agreement/\nDisallow: /consent-personal-data/\nDisallow: /cookie-files-policy/\nDisallow: */trackback\nDisallow: */feed\nDisallow: */rss\nDisallow: */embed\nDisallow: */wlwmanifest.xml\nDisallow: /xmlrpc.php\nDisallow: *utm*=\nDisallow: *openstat=\nAllow: */uploads\n\nUser-agent: Bingbot\nAllow: */uploads\nAllow: /*/*.js\nAllow: /*/*.css\nAllow: /*/*.webp\nAllow: /*/*.woff\nAllow: /*/*.woff2\nAllow: /*/*.ttf\nAllow: /wp-*.png\nAllow: /wp-*.jpg\nAllow: /wp-*.jpeg\nAllow: /wp-*.gif\nAllow: /wp-admin/admin-ajax.php\nDisallow: /cgi-bin\nDisallow: /?\nDisallow: /wp-\nDisallow: /wp/\nDisallow: /wp-json/\nDisallow: *?s=\nDisallow: *&s=\nDisallow: /search/\nDisallow: /author/\nDisallow: /users/\nDisallow: /privacy-policy/\nDisallow: /user-agreement/\nDisallow: /consent-personal-data/\nDisallow: /cookie-files-policy/\nDisallow: */trackback\nDisallow: */feed\nDisallow: */rss\nDisallow: */embed\nDisallow: */wlwmanifest.xml\nDisallow: /xmlrpc.php\nDisallow: *utm*=\nDisallow: *openstat=\n\nUser-agent: *\nAllow: */uploads\nAllow: /*/*.js\nAllow: /*/*.css\nAllow: /*/*.webp\nAllow: /*/*.woff\nAllow: /*/*.woff2\nAllow: /*/*.ttf\nAllow: /wp-*.png\nAllow: /wp-*.jpg\nAllow: /wp-*.jpeg\nAllow: /wp-*.gif\nAllow: /wp-admin/admin-ajax.php\nDisallow: /cgi-bin\nDisallow: /?\nDisallow: /wp-\nDisallow: /wp/\nDisallow: /wp-json/\nDisallow: *?s=\nDisallow: *&s=\nDisallow: /search/\nDisallow: /author/\nDisallow: /users/\nDisallow: /privacy-policy/\nDisallow: /user-agreement/\nDisallow: /consent-personal-data/\nDisallow: /cookie-files-policy/\nDisallow: */trackback\nDisallow: */feed\nDisallow: */rss\nDisallow: */embed\nDisallow: */wlwmanifest.xml\nDisallow: /xmlrpc.php\nDisallow: *utm*=\nDisallow: *openstat=\n\nUser-Agent: Googlebot-Image\nAllow: /\n\nSitemap: https://shpigovsky.ru/wp-sitemap.xml\n"
 }
