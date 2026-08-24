@@ -1,6 +1,6 @@
 # SITE-002 — Site Passport
 
-**Status:** **SITE-002 CATALOG NORMALIZATION APPLIED** (Run 4.343; 8 public roots live; sitemap live **1861** vs baseline **1887**; baseline refresh pending)
+**Status:** **SITE-002 CATALOG NORMALIZATION UI REPAIRED** (Run 4.344; public catalog tiles show 8 roots; sitemap live **1861** vs baseline **1887**; baseline refresh pending)
 **Run:** 4.336 — SITE-002 Post Baseline Workspace Closeout 01 (2026-08-20)
 
 ---
@@ -33,6 +33,7 @@
 | **Deep PLP meta edge fix** | **COMPLETE — DEEP PLP META VERIFIED** (Run 4.207) — [report](reports/SITE-002-PROD-SEO-META-EDGE-FIX-01.md) |
 | **New catalog branch onboarding** | **COMPLETE** (Run 4.210 + 4.211 + **4.260** + **4.268** + **4.274** + **4.281**) — konditerskiy-inventar/formy-konditerskie (360/361); lari (88/141/140); **364**–**367** stellazhi/posuda; **368/373/369/371/372/370** tehnologicheskoe (hlebopekarnoe/myaso/teplovoe + nested) meta+allowlist · [Run 4.281](reports/SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-05.md) · [Run 4.274](reports/SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-04.md) · [Run 4.268](reports/SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-03.md) · [Run 4.260](reports/SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-02.md) |
 | **Accepted UX tasks (intake)** | (1) new section tiles — **DONE** Run 4.220 · [entrypoints 02 report](reports/SITE-002-PROD-NEW-SECTIONS-ENTRYPOINTS-02.md) · (2) PDP «Дополнительные сведения» — **DONE** Run 4.218 · [layout report](reports/SITE-002-PROD-PDP-EXTRA-INFO-ATTRIBUTE-LAYOUT-01.md) · [intake report](reports/SITE-002-PROD-UX-TASK-INTAKE-01.md) |
+| **Catalog normalization UI repair** | **COMPLETE (Run 4.344)** — public catalog tiles show 8 roots; `category_visibility.php` · [repair 4.344](reports/SITE-002-CATALOG-NORMALIZATION-UI-REPAIR-01.md) |
 | **Catalog normalization apply** | **COMPLETE (Run 4.343)** — 8 public roots; `381` Upakovochnoe; tmp+disable legacy; `[96]` hold · [apply 4.343](reports/SITE-002-CATALOG-NORMALIZATION-APPLY-COMBINED-01.md) |
 | **Post-1C catalog monitor** | **BASELINE 1887 ACTIVE — LIVE 1861 POST-NORMALIZATION** — refresh pending · [apply 4.343](reports/SITE-002-CATALOG-NORMALIZATION-APPLY-COMBINED-01.md) · checkpoint [1887-09](baselines/SITE-002-STABLE-PROD-POST-C2-PRETTY-URL-MONITOR-BASELINE-1887-09.md) |
 | **Current catalog tree export** | **COMPLETE / READ-ONLY (Run 4.339)** — DB `parent_id` hierarchy exported: **226** categories, **225 active**, 10 roots, depth 3; all active categories in sitemap; 1887 baseline/live delta 0/0; no new public sections; `upakovochnoe` absent/404 · [report](reports/SITE-002-CATALOG-TREE-CURRENT-EXPORT-01.md) · [tree](reports/SITE-002-CATALOG-TREE-CURRENT-EXPORT-01-TREE.md) · [flat CSV](reports/SITE-002-CATALOG-TREE-CURRENT-EXPORT-01-FLAT.csv) |

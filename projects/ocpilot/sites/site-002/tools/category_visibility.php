@@ -15,13 +15,16 @@
  *   mega/buildHubChildCards product gate unchanged; Tech 362 unchanged.
  * SITE-002-PROD-EMPTY-CATEGORY-COPY-RELOCATE-AND-NEW-FIRSTLEVEL-IMAGES-01 — empty copy moved to category PLP only;
  *   first-level tiles keep ALL-15 without card empty-copy; images for empty 82/83/85/87/89.
+ * SITE-002-CATALOG-NORMALIZATION-UI-REPAIR-01 — post-normalization public catalog UI:
+ *   8 approved public roots on home + /katalog/; Neutral children no longer replace root catalog block;
+ *   tmp/disabled roots hidden; mega menu roots aligned to approved model.
  *
  * Single source of truth for Launch Mode navigation and /katalog presentation.
  * Controllers must use this class; do not hardcode visibility rules in Twig.
  */
 class CategoryVisibility {
 	const LAUNCH_MODE = true;
-	const CATALOG_PRIMARY_ENTRY = '/katalog/nejtralnoe-oborudovanie';
+	const CATALOG_PRIMARY_ENTRY = '/katalog/';
 	const ACTIVE_LAUNCH_ROOT = 'nejtralnoe-oborudovanie';
 	/** @deprecated use getVisibleRootCategoryIds(); kept for older call sites */
 	const VISIBLE_ROOT_CATEGORY_ID = 79;
@@ -31,22 +34,33 @@ class CategoryVisibility {
 	/** Empty category PLP caption when the opened category has zero products. */
 	const EMPTY_FIRST_LEVEL_COPY = 'Ожидайте, товары скоро поступят.';
 
-	private static $visible_root_category_ids = array(79, 362);
+	/** Approved public root categories after SITE-002 catalog normalization. */
+	private static $visible_root_category_ids = array(79, 95, 90, 186, 375, 373, 364, 381);
 
 	private static $visible_root_slugs = array(
 		'nejtralnoe-oborudovanie',
-		'tehnologicheskoe-oborudovanie',
+		'holodilnoe-oborudovanie',
+		'teplovoe-oborudovanie',
+		'hlebopekarnoe-oborudovanie',
+		'elektromehanicheskoe',
+		'myasopererabatyvayuschee',
+		'posuda-i-inventar',
+		'upakovochnoe-oborudovanie',
 	);
 
 	private static $hidden_root_slugs = array(
-		'teplovoe-oborudovanie',
-		'holodilnoe-oborudovanie',
+		'tmp-tehnologicheskoe-oborudovanie',
+		'tmp-inventar',
+		'tmp-barnoe-oborudovanie',
+		'tmp-posudomoechnye-mashiny',
+		'tmp-ventilyacionnoe-oborudovanie',
+		'tehnologicheskoe-oborudovanie',
 		'inventar',
-		'elektromehanicheskoe-oborudovanie',
 		'barnoe-oborudovanie',
-		'hlebopekarnoe-oborudovanie',
 		'posudomoechnye-mashiny',
 		'ventilyacionnoe-oborudovanie',
+		'elektromehanicheskoe-oborudovanie',
+		'zapchasti',
 	);
 
 	/** ALL-15 Neutral first-level Catalog Section Tiles (home + /katalog/) — direct children of 79. */
@@ -157,6 +171,10 @@ class CategoryVisibility {
 			$slug = $category['keyword'];
 		} elseif (!empty($category['href'])) {
 			$slug = $this->extractRootSlugFromHref($category['href']);
+		}
+
+		if ($slug !== '' && in_array($slug, self::$hidden_root_slugs, true)) {
+			return false;
 		}
 
 		return in_array($slug, self::$visible_root_slugs, true);
@@ -353,9 +371,6 @@ class CategoryVisibility {
 	}
 
 	/**
-	 * Catalog Section Tiles — one block per visible Launch Mode root.
-	 */
-	/**
 	 * ALL-15 Neutral first-level cards for Catalog Section Tiles only (home + /katalog/).
 	 * Show all 15 direct children of 79, including zero-product cards.
 	 * Empty-state copy is NOT attached to tiles — it belongs on the category PLP only
@@ -388,6 +403,10 @@ class CategoryVisibility {
 		return $this->sortCategoriesByRussianName($cards);
 	}
 
+	/**
+	 * Catalog Section Tiles — single block with approved public root categories (home + /katalog/).
+	 * Neutral first-level children are shown on the Neutral hub page / mega menu only.
+	 */
 	public function buildCatalogSectionTileBlocks($controller) {
 		if (!$this->isLaunchMode()) {
 			return array();
@@ -397,35 +416,37 @@ class CategoryVisibility {
 		$controller->load->model('catalog/product');
 		$controller->load->model('tool/image');
 
-		$sections = array();
+		$cards = array();
 
 		foreach ($this->getVisibleRootCategoryIds() as $root_id) {
 			$root = $controller->model_catalog_category->getCategory((int)$root_id);
 
-			if (!$root) {
+			if (!$root || !isset($root['status']) || (int)$root['status'] !== 1) {
 				continue;
 			}
 
-			if ((int)$root_id === self::NEUTRAL_HUB_CATEGORY_ID) {
-				$cards = $this->buildNeutralFirstLevelBlockCards($controller);
-			} else {
-				$cards = $this->buildHubChildCards($controller, $root_id);
-			}
+			$card = $this->buildCardFromCategory($controller, (int)$root_id, $root, false);
 
-			if (empty($cards)) {
-				continue;
+			if ($card) {
+				$cards[] = $card;
 			}
-
-			$sections[] = array(
-				'category_id' => (int)$root_id,
-				'name'        => $root['name'],
-				'href'        => $controller->url->link('product/katalog', 'path=' . $this->buildCategoryPathParam($controller, (int)$root_id)),
-				'img'         => $this->resizeCategoryImage($controller, isset($root['image']) ? $root['image'] : ''),
-				'cards'       => $this->markFirstActive($cards),
-			);
 		}
 
-		return $sections;
+		$cards = $this->sortCategoriesByRussianName($cards);
+
+		if (empty($cards)) {
+			return array();
+		}
+
+		return array(
+			array(
+				'category_id' => 0,
+				'name'        => 'Каталог оборудования',
+				'href'        => $controller->url->link('product/katalog'),
+				'img'         => '',
+				'cards'       => $this->markFirstActive($cards),
+			),
+		);
 	}
 
 	/**
