@@ -131,7 +131,11 @@ SHA-256: `384d45512c43a9d083b3ba9f645c05670b108ee0663bb9b659ee4f3f5c9306d0`
 
 ## 20. Git Persistence
 
-Scoped commit `fix(iseo-su): complete static sitemap coverage` on `mars/canonical-post-recovery`; remote sync to `origin/mars/canonical-post-recovery` (no force).
+Scoped commit on clean worktree sync branch pushed to `origin/mars/canonical-post-recovery` (no force).
+
+- Local divergent commit (main dirty workspace): `166f09b5`
+- Remote-synced commit: `857f9296` (+ follow-up doc integrity patch if present)
+- Remote tip after sync: `origin/mars/canonical-post-recovery`
 
 ## 21. Open Blockers
 
