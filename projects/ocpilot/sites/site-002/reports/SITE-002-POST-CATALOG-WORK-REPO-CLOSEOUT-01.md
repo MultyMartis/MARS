@@ -116,13 +116,17 @@ Notable skips:
 
 ## 12. Push result
 
-Fast-forward only:
+Fast-forward only after rebase onto concurrent origin tip (`aa6a6834` ISEO bot commits):
 
 ```text
+git rebase origin/mars/canonical-post-recovery
 git push origin HEAD:mars/canonical-post-recovery
 ```
 
-(Result recorded in Storage `push/push-result.txt` after execution.)
+- Pre-rebase closeout commit: `1d09b3c0`
+- Pushed closeout commit: `e4c8cad8`
+- Origin after push: `e4c8cad8` (`mars/canonical-post-recovery`)
+- Result: success (recorded in Storage `push/push-result.txt`)
 
 ## 13. Remaining open items
 
