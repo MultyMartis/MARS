@@ -18,6 +18,12 @@
  * SITE-002-CATALOG-NORMALIZATION-UI-REPAIR-01 — post-normalization public catalog UI:
  *   8 approved public roots on home + /katalog/; Neutral children no longer replace root catalog block;
  *   tmp/disabled roots hidden; mega menu roots aligned to approved model.
+ * SITE-002-PROD-MEGAMENU-AND-POSUDA-PLP-REPAIR-01 — mega menu hides status=0 roots (381 while disabled);
+ *   section-hub leaf fallback renders direct products when no visible child categories (364 Posuda).
+ * SITE-002-PROD-MEGAMENU-LEAF-ROOT-INFO-PANEL-01 — mega menu right pane info fallback for leaf roots
+ *   with no visible children but direct/subtree products (e.g. 364 Posuda).
+ * SITE-002-PROD-MEGAMENU-LEAF-INFO-MINIDESCRIPTION-01 — prefer oc_category_description.menu_description
+ *   for leaf info panel text (admin field «Мини-описание для меню»).
  *
  * Single source of truth for Launch Mode navigation and /katalog presentation.
  * Controllers must use this class; do not hardcode visibility rules in Twig.
@@ -152,12 +158,23 @@ class CategoryVisibility {
 		return '';
 	}
 
+	public function isRootCategoryEnabled($controller, $category_id) {
+		$controller->load->model('catalog/category');
+		$info = $controller->model_catalog_category->getCategory((int)$category_id);
+
+		return $info && isset($info['status']) && (int)$info['status'] === 1;
+	}
+
 	public function isVisibleRootCategory($category) {
 		if (!$this->isLaunchMode()) {
 			return true;
 		}
 
 		if (!is_array($category)) {
+			return false;
+		}
+
+		if (isset($category['status']) && (int)$category['status'] !== 1) {
 			return false;
 		}
 
@@ -180,7 +197,7 @@ class CategoryVisibility {
 		return in_array($slug, self::$visible_root_slugs, true);
 	}
 
-	public function filterRootCategories(array $categories) {
+	public function filterRootCategories(array $categories, $controller = null) {
 		if (!$this->isLaunchMode()) {
 			return $categories;
 		}
@@ -188,12 +205,43 @@ class CategoryVisibility {
 		$filtered = array();
 
 		foreach ($categories as $category) {
+			if ($controller && !empty($category['category_id']) && !$this->isRootCategoryEnabled($controller, (int)$category['category_id'])) {
+				continue;
+			}
+
 			if ($this->isVisibleRootCategory($category)) {
 				$filtered[] = $category;
 			}
 		}
 
 		return $this->markFirstActive($filtered);
+	}
+
+	/**
+	 * Section hub PLP gate with leaf fallback: hub tiles only when visible child categories exist;
+	 * otherwise fall back to product PLP when direct enabled products exist.
+	 */
+	public function shouldRenderAsSectionHub($controller, $category_id) {
+		if (!$this->isSectionHubCategory($category_id)) {
+			return false;
+		}
+
+		$hub_cards = $this->buildHubChildCards($controller, (int)$category_id);
+
+		if (!empty($hub_cards)) {
+			return true;
+		}
+
+		$controller->load->model('catalog/product');
+
+		$filter_data = array(
+			'filter_category_id'  => (int)$category_id,
+			'filter_sub_category' => false,
+		);
+
+		$direct_count = (int)$controller->model_catalog_product->getTotalProducts($filter_data);
+
+		return $direct_count <= 0;
 	}
 
 	private function markFirstActive(array $categories) {
@@ -291,6 +339,115 @@ class CategoryVisibility {
 		}
 
 		return $controller->model_tool_image->resize(self::PLACEHOLDER_IMAGE, $width, $height);
+	}
+
+	/**
+	 * Clean category description for mega-menu leaf info panel (plain text excerpt).
+	 */
+	private function cleanCategoryDescriptionExcerpt($raw, $max_len = 220) {
+		$text = html_entity_decode((string)$raw, ENT_QUOTES, 'UTF-8');
+		$text = strip_tags($text);
+		$text = preg_replace('/\s+/u', ' ', $text);
+		$text = trim((string)$text);
+
+		if ($text === '') {
+			return '';
+		}
+
+		if (function_exists('mb_strlen') && function_exists('mb_substr')) {
+			if (mb_strlen($text, 'UTF-8') > $max_len) {
+				$cut = mb_substr($text, 0, $max_len, 'UTF-8');
+				$space = mb_strrpos($cut, ' ', 0, 'UTF-8');
+
+				if ($space !== false && $space > (int)($max_len * 0.6)) {
+					$cut = mb_substr($cut, 0, $space, 'UTF-8');
+				}
+
+				$text = rtrim($cut, " \t.,;:—-") . '…';
+			}
+		} elseif (strlen($text) > $max_len) {
+			$cut = substr($text, 0, $max_len);
+			$space = strrpos($cut, ' ');
+
+			if ($space !== false && $space > (int)($max_len * 0.6)) {
+				$cut = substr($cut, 0, $space);
+			}
+
+			$text = rtrim($cut, " \t.,;:—-") . '...';
+		}
+
+		return $text;
+	}
+
+	/**
+	 * Mega-menu right-pane fallback for visible leaf roots without child tiles.
+	 */
+	private function buildMegamenuLeafInfoPanel($controller, $root_id, array $category) {
+		$root_id = (int)$root_id;
+		$controller->load->model('catalog/category');
+		$controller->load->model('catalog/product');
+		$controller->load->model('tool/image');
+
+		$direct_count = (int)$controller->model_catalog_product->getTotalProducts(array(
+			'filter_category_id'  => $root_id,
+			'filter_sub_category' => false,
+		));
+
+		$subtree_count = (int)$controller->model_catalog_product->getTotalProducts(array(
+			'filter_category_id'  => $root_id,
+			'filter_sub_category' => true,
+		));
+
+		if ($direct_count <= 0 && $subtree_count <= 0) {
+			return null;
+		}
+
+		$info = $controller->model_catalog_category->getCategory($root_id);
+
+		if (!$info || (isset($info['status']) && (int)$info['status'] !== 1)) {
+			return null;
+		}
+
+		$name = !empty($category['name']) ? $category['name'] : (!empty($info['name']) ? $info['name'] : '');
+		$href = !empty($category['href']) ? $category['href'] : $controller->url->link(
+			'product/katalog',
+			'path=' . $this->buildCategoryPathParam($controller, $root_id)
+		);
+
+		$image = !empty($info['image']) ? $info['image'] : '';
+		$thumb = '';
+
+		if ($image !== '') {
+			$thumb = $this->resizeCategoryImage($controller, $image, 300, 300);
+		}
+
+		// Priority: admin menu_description → cleaned description excerpt → generic fallback.
+		$menu_raw = isset($info['menu_description']) ? $info['menu_description'] : '';
+		$menu_text = $this->cleanCategoryDescriptionExcerpt($menu_raw, 512);
+		$excerpt = '';
+
+		if ($menu_text !== '') {
+			$excerpt = $menu_text;
+		} else {
+			$excerpt = $this->cleanCategoryDescriptionExcerpt(
+				isset($info['description']) ? $info['description'] : ''
+			);
+
+			if ($excerpt === '') {
+				$excerpt = 'В данном разделе представлены товары категории. Перейдите в каталог, чтобы посмотреть ассортимент.';
+			}
+		}
+
+		return array(
+			'category_id' => $root_id,
+			'name'        => $name,
+			'href'        => $href,
+			'image'       => $thumb,
+			'has_image'   => ($thumb !== ''),
+			'text'        => $excerpt,
+			'cta_text'    => 'Перейти в раздел',
+			'count'       => $direct_count > 0 ? $direct_count : $subtree_count,
+		);
 	}
 
 	private function buildCardFromCategory($controller, $branch_id, $branch, $require_products, $attach_empty_copy = false) {
@@ -519,6 +676,12 @@ class CategoryVisibility {
 			}
 
 			$root_id = (int)$category['category_id'];
+
+			if (!$this->isRootCategoryEnabled($controller, $root_id)) {
+				unset($categories[$key]);
+				continue;
+			}
+
 			$children = array();
 
 			if ($this->isSectionHubCategory($root_id)) {
@@ -579,9 +742,22 @@ class CategoryVisibility {
 
 			$categories[$key]['children'] = $children;
 			$categories[$key]['has_children'] = !empty($children);
+			$categories[$key]['leaf_info'] = null;
+			$categories[$key]['has_leaf_info'] = false;
+
+			// SITE-002-PROD-MEGAMENU-LEAF-ROOT-INFO-PANEL-01:
+			// visible root with no child tiles but products → info panel instead of empty pane.
+			if (empty($children)) {
+				$leaf_info = $this->buildMegamenuLeafInfoPanel($controller, $root_id, $categories[$key]);
+
+				if ($leaf_info) {
+					$categories[$key]['leaf_info'] = $leaf_info;
+					$categories[$key]['has_leaf_info'] = true;
+				}
+			}
 		}
 
-		return $categories;
+		return array_values($categories);
 	}
 
 	public function applyCatalogNavData(array &$data) {

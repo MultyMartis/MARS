@@ -609,6 +609,7 @@ def phase_regression() -> None:
 
 def evaluate_after(rows: list[dict[str, Any]]) -> tuple[bool, list[str]]:
     issues: list[str] = []
+    approved_names = {name for _id, name, _kw in APPROVED_ROOTS}
     for path in ("/", "/katalog/"):
         r = next((x for x in rows if x["path"] == path), None)
         if not r or r.get("status") != "200":
@@ -616,11 +617,15 @@ def evaluate_after(rows: list[dict[str, Any]]) -> tuple[bool, list[str]]:
             continue
         if r.get("has_php_fatal"):
             issues.append(f"{path} PHP fatal")
-        if r.get("has_neutral_child_marker"):
+        tile_names = [t.strip() for t in (r.get("tile_names") or "").split(" | ") if t.strip()]
+        approved_in_tiles = sum(1 for name in tile_names if name in approved_names)
+        neutral_children_in_tiles = sum(1 for name in tile_names if name in NEUTRAL_CHILD_MARKERS)
+        if approved_in_tiles < 7:
+            issues.append(
+                f"{path} catalog tiles show {approved_in_tiles}/8 approved roots (tiles: {r.get('tile_names', '')[:120]})"
+            )
+        if neutral_children_in_tiles >= 3:
             issues.append(f"{path} still shows Neutral child tiles as main catalog block")
-        hits = int(r.get("approved_root_hits_in_html") or 0)
-        if hits < 6:
-            issues.append(f"{path} only {hits}/8 approved root names in HTML")
     for path in ("/tehnologicheskoe-oborudovanie", "/inventar", "/zapchasti"):
         r = next((x for x in rows if x["path"] == path), None)
         if r and r.get("status") == "200":

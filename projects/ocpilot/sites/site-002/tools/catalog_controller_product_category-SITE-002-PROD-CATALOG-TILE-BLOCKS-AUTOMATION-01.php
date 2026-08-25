@@ -119,8 +119,8 @@ class ControllerProductCategory extends Controller {
 		$category_info = $this->model_catalog_category->getCategory($category_id);
 
 		if ($category_info) {
-			// SITE-002-PROD-CATALOG-TILE-BLOCKS-AUTOMATION-01 — section hubs include technological root 362
-			$is_hub = $visibility->isSectionHubCategory($category_id);
+			// SITE-002-PROD-MEGAMENU-AND-POSUDA-PLP-REPAIR-01 — hub vs product PLP with leaf fallback
+			$is_hub = $visibility->shouldRenderAsSectionHub($this, $category_id);
 			$data['category_display_mode'] = $is_hub ? 'hub' : 'branch';
 			$data['hub_categories'] = array();
 
