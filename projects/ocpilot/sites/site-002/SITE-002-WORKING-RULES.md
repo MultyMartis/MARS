@@ -6,6 +6,20 @@
 
 ---
 
+## Client Ops / 1C production (2026-08-25) — READ FIRST for import reporting
+
+For **production** https://bzpm.ru/ **1C import + Client Ops Telegram**:
+
+- **Start:** [client-ops/FINAL-HANDOFF.md](client-ops/FINAL-HANDOFF.md)
+- **Agent brain:** [client-ops/AGENT-BRAIN.md](client-ops/AGENT-BRAIN.md)
+- **Authority:** server-side (Beget cron → wrapper → terminal → completion dispatch → n8n → Data Table → Telegram)
+- **Not** Google Sheets; **not** Windows completion poller / old producer (retired)
+- Post_1C monitor = **optional hygiene only**
+
+Sections below remain TEST UX / catalog working rules and may be **partially stale** relative to Client Ops. Prefer `client-ops/` when conflicted on import/reporting.
+
+---
+
 ## DO
 
 - **Capture live first** — если оператор правил на FTP, сделать FTP read + SHA256 до любых правок агента.

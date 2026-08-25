@@ -2,9 +2,25 @@
 
 **Site ID:** SITE-002  
 **Slug:** site-002  
+**Production URL:** https://bzpm.ru/  
+**Platform:** OpenCart / ocStore 3.0.3.9  
 **Status:** **STABLE LIVE CHECKPOINT — HOME COMMERCIAL TRUST 01**  
 **Run:** Home CTA `zpm-commercial-trust` replacement (2026-06-29)  
 **Active stage:** **PRODUCTION PREPARATION** — BZPM UX Redesign recovery **CLOSED** (2026-06-28) · **Corporate Pages Program** implementation phase **COMPLETE on TEST** — M9.14–M9.18 **IMPLEMENTED** · **M9.13 About RE-ACTIVATED on TEST** (2026-06-29) · **Home Commercial Trust 01 ACTIVE** (2026-06-29) · Local Fonts 01 **retained** · Operator Manual Polish 01 visual baseline **preserved**
+
+### 1C Import + Client Ops (production contour — 2026-08-25)
+
+| Field | Value |
+|-------|--------|
+| **Runtime authority** | **Server-side** (workstation not required for normal reporting) |
+| **Start-here** | [client-ops/FINAL-HANDOFF.md](client-ops/FINAL-HANDOFF.md) |
+| **Master overview** | [client-ops/MASTER-OVERVIEW.md](client-ops/MASTER-OVERVIEW.md) |
+| **Agent brain** | [client-ops/AGENT-BRAIN.md](client-ops/AGENT-BRAIN.md) |
+| **Cleanup manifest** | [client-ops/workstation-cleanup/WORKSTATION-CLEANUP-MANIFEST.md](client-ops/workstation-cleanup/WORKSTATION-CLEANUP-MANIFEST.md) |
+| **Dedupe backend** | n8n Data Table (not Google Sheets) |
+| **Offers input forensic** | OPEN — see [client-ops/OFFERS-INPUT-CURRENT-STATE.md](client-ops/OFFERS-INPUT-CURRENT-STATE.md) |
+
+Evidence generation: `projects/client-ops-reporting-bridge/` PHASE-1B-D6G / D6G1 / D6G1A / D6G1B.
 
 ### BZPM UX REDESIGN — project banner
 
@@ -43,6 +59,7 @@ Second registered OCPilot project site workspace. **TEST** площадка дл
 
 | Subfolder | Use |
 |-----------|-----|
+| `client-ops/` | **Canonical** 1C import + Client Ops production knowledge pack (server-side generation) |
 | `baselines/` | Stable checkpoint definitions (metadata; may not include site files) |
 | `knowledge/` | Persistent technical knowledge map and architecture reference |
 | `materials/` | Source materials from operator (sanitized briefs, path lists, screenshots without secrets) |

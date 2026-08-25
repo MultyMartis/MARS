@@ -26,6 +26,19 @@ Do not treat C:\ paths in this document as current write targets.
 
 ---
 
+## SITE-002 / bzpm.ru — 1C Client Ops (2026-08-25)
+
+| Field | Value |
+|-------|--------|
+| Production | https://bzpm.ru/ · SITE-002 · ocStore 3.0.3.9 |
+| Runtime authority | **Server-side** Client Ops (Beget cron → wrapper → terminal → dispatch → n8n → Data Table → Telegram) |
+| Start-here | [sites/site-002/client-ops/FINAL-HANDOFF.md](sites/site-002/client-ops/FINAL-HANDOFF.md) |
+| Agent brain | [sites/site-002/client-ops/AGENT-BRAIN.md](sites/site-002/client-ops/AGENT-BRAIN.md) |
+| Workstation cleanup (later) | [sites/site-002/client-ops/workstation-cleanup/WORKSTATION-CLEANUP-MANIFEST.md](sites/site-002/client-ops/workstation-cleanup/WORKSTATION-CLEANUP-MANIFEST.md) |
+| Evidence programme | [../client-ops-reporting-bridge/](../client-ops-reporting-bridge/) D6G / D6G1 / D6G1A / D6G1B |
+
+---
+
 
 
 ## Core Run

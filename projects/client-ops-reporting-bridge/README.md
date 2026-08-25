@@ -1,13 +1,30 @@
 # MARS Client Ops Reporting Bridge
 
 **Subsystem name:** MARS Client Ops Reporting Bridge
-**Status:** PHASE 0A/0B COMPLETE + PHASE 1A OFFLINE EXPORTER CORE COMPLETE + PROGRAMMER EXTENSION COMPLETE + PHASE 1B-B…C1 COMPLETE + PHASE 1B-D0 CHARTER COMPLETE + PHASE 1B-D1 DURABLE DEDUPE COMPLETE + PHASE 1B-D2 OFFLINE PRODUCER COMPLETE + PHASE 1B-D3 CONTROLLED PRODUCER LIVE CONNECTION PROVEN (D3B baseline commit)
-**Implementation status:** Phase 1A offline exporter core + fixtures + tests **COMPLETE**; MetaBOT programmer Client Ops extension **COMPLETE**; Phase 1B-B…C1 Telegram sandbox integration **APPLIED**; Phase 1B-D0 runtime-connection charter **COMPLETE**; Phase 1B-D1 durable sequential dedupe **PROVEN**; Phase 1B-D2 sequential runtime producer **PROVEN_OFFLINE**; Phase 1B-D3 controlled synthetic producer HTTPS **PROVEN_LIVE** (generic live mode remains BLOCKED; D3 charter CONSUMED); Phase 1B-D4 SITE-002 real-source adapter **PROVEN_OFFLINE** + Phase 1B-D4B offline evidence baseline **COMMITTED** (`READY_FOR_FIRST_MANUAL_REAL_SOURCE_CONNECTION_CHARTER`; real-source live POST blocked); production activation **NOT STARTED**
-**Production state:** UNCHANGED
+
+### CURRENT PRODUCTION (SITE-002 / bzpm.ru) — 2026-08-25
+
+The accepted **live** SITE-002 Client Ops contour is **server-side** (D6G / D6G1 / D6G1A / D6G1B).  
+**Canonical operator/Agent pack:** [`../ocpilot/sites/site-002/client-ops/FINAL-HANDOFF.md`](../ocpilot/sites/site-002/client-ops/FINAL-HANDOFF.md)
+
+| Item | Current accepted |
+|------|------------------|
+| n8n workflow | `MARS Client Ops Bridge — bzpm.ru` · `tkM4H0G0gM3q9Foi` · ~20 nodes · **active** |
+| Dedupe | n8n Data Table `H6VYhwz7RXZCBMmu` (**not** Google Sheets) |
+| Dispatch | Server `mars_1c_completion_dispatch.php` |
+| Windows poller / old producer | **RETIRED** |
+| Workstation required for reporting | **NO** |
+
+Historical Phase 0–D6F narrative below remains **programme/evidence history** and may describe earlier inactive/sandbox states. Prefer `sites/site-002/client-ops/` for current production truth.
+
+---
+
+**Status:** PHASE 0A/0B COMPLETE + PHASE 1A OFFLINE EXPORTER CORE COMPLETE + PROGRAMMER EXTENSION COMPLETE + PHASE 1B-B…C1 COMPLETE + PHASE 1B-D0 CHARTER COMPLETE + PHASE 1B-D1 DURABLE DEDUPE COMPLETE + PHASE 1B-D2 OFFLINE PRODUCER COMPLETE + PHASE 1B-D3 CONTROLLED PRODUCER LIVE CONNECTION PROVEN (D3B baseline commit) + **SITE-002 D6G server-side production accepted** (see client-ops pack)
+**Implementation status:** See historical rows below; **current SITE-002 production** documented under `projects/ocpilot/sites/site-002/client-ops/`.
 **Transport decision:** **PROFILE_B_REQUIRED**
-**Live n8n workflow name:** `MARS Client Ops Bridge — bzpm.ru` (inactive; nodes=17; executions=31; Data Table rows=2; durable dedupe + Pattern B Telegram; versionId `3d2fd6fc-…`)
-**Canonical locus:** `projects/client-ops-reporting-bridge/`
-**Registry:** `project_id` **not registered** — programme locus only (registry mutation not authorized)
+**Live n8n workflow name (historical sandbox line may be stale):** prefer current table above
+**Canonical locus:** `projects/client-ops-reporting-bridge/` (evidence) + `projects/ocpilot/sites/site-002/client-ops/` (current production knowledge)
+**Registry:** programme locus under OCPilot / SITE-002 (see `registry/project-registry.md` OCPilot note)
 
 ---
 
