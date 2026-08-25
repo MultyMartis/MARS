@@ -1,5 +1,9 @@
 # LEAD LIFECYCLE v1
 
+> **Production supersession (2026-08-17):** Current lifecycle and Telegram action semantics are documented in [LEAD-LIFECYCLE-CURRENT.md](LEAD-LIFECYCLE-CURRENT.md).
+> Canonical stable truth: [PRODUCTION-STABLE-BASELINE-2026-08-17.md](../baselines/PRODUCTION-STABLE-BASELINE-2026-08-17.md).
+> This Phase 2 file remains historical design context where it conflicts with production baseline.
+
 **Product:** i-SEO Sales Manager Bot  
 **Status:** documented — simple manager lifecycle (**not** a CRM)
 

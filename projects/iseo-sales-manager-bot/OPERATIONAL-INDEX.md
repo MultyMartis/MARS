@@ -1,15 +1,9 @@
-> **Phase 3H.10 (2026-08-20):** Wait/429 reminder delivery repair + actionable digest UX. Active recipients **3** (MOD_A intentionally revoked). Natural acceptance **2026-08-21 10:00 Europe/Moscow**. Soak interrupted until natural PASS. Phase 3I.1 blocked. AI OFF. See [evidence/phase3h10/](evidence/phase3h10/) and phase 3H.10 report.
-
-> **Phase 3H.9.2 (2026-08-17):** ACCESS live drifted to 3 after an incomplete 2026-08-16 `/moderator_remove`/`/moderator_add` cycle left MOD_A revoked. Classified `UNAUTHORIZED_STATE_DRIFT`. Restored MOD_A via existing `/moderator_add` (same profile_no 3). Live ACCESS=4 · CONFIG=4 · Operational resolver=4 · reminder resolver=4. Next natural 10:00: **2026-08-18 Europe/Moscow**. Soak not restarted. Phase 3I.1 blocked. AI OFF. No four-recipient test sends.
-
-> **Phase 3H.9 (2026-08-17):** False «Недостаточно прав» on raw lead was ACCESS/CONFIG Google Sheets `invalid_grant` mislabeled as a permission deny. Reminder 10:00 windows 15–17 Aug failed at CONFIG read with the same credential error before evaluation; 429 retry path was not applicable. Admin deny text + Sheets error classifier patched. Live Sheets OAuth reconnect by operator is still required before ADMIN_A raw retest and the next natural 4-recipient 10:00. Soak not restarted. Phase 3I.1 blocked. AI OFF.
-
 # i-SEO Sales Manager Bot — Operational Index
 
 **project_id:** `iseo-sales-manager-bot`  
 **Process line:** ISEO-SALES-MANAGER-BOT  
 **Primary logical owner:** OPS  
-**Domain root:** [README.md](README.md)
+**Domain root:** [README.md](README.md) · **Handoff:** [FINAL-HANDOFF.md](FINAL-HANDOFF.md) · **Agent brain:** [AGENTS.md](AGENTS.md)
 
 ---
 
@@ -19,13 +13,16 @@
 |-------|-------|
 | **Status** | **PRODUCTION STABLE** |
 | **Stable designation** | [Sales Manager v2 — Production Stable Baseline 2026-08-17](baselines/PRODUCTION-STABLE-BASELINE-2026-08-17.md) |
+| **Freeze commit** | `35819a63bed132f2ccdb9e2d468e3ec3de9d23fe` |
 | **Active production** | Operational.dev **active** · Admin.dev **active** · Sales-Manager-v2 **inactive** reference |
 | **AI** | **OFF** |
-| **Reminders** | enabled · Mon–Fri · 10:00 Europe/Moscow · weekday gate on |
+| **Persistence (current)** | Google Sheets (operational SoR today) |
+| **Persistence (successor)** | PostgreSQL preferred — roadmap only |
+| **Reminders** | enabled · Mon–Fri · 10:00 Europe/Moscow · weekday gate on · natural Monday acceptance **PENDING OBSERVATION** |
 | **Raw source** | Literal Gmail/intake body via `📄 Исходная заявка` · filtered RAW lookup · legacy READ-only Gmail fallback |
 | **Runtime** | External n8n (`n8n.ai-metacode.com`) — **not** executed from MARS |
-| **Registry** | `project_id` **iseo-sales-manager-bot** (documentation registration; live product is external) |
-| **Next** | Observe natural **2026-08-21 10:00 Europe/Moscow** three-recipient actionable digest (pending≥1; MOD_A intentionally inactive). Soak not restarted until natural PASS. Phase 3I.1 blocked. Any behavior change = **new explicit phase** |
+| **Registry** | `project_id` **iseo-sales-manager-bot** in `registry/project-registry.md` |
+| **Next** | Maintain stable contour; DB-first / deferred features require **new explicit phase** |
 
 **Supersession:** Older “planned / Phase 3A / Phase 3B NEXT / live parity SAFE UNKNOWN” index rows are historical relative to the 2026-08-17 stable freeze. Do not treat them as current production truth.
 
@@ -35,11 +32,27 @@
 
 | # | Document | Role |
 |---|----------|------|
+| S0 | [FINAL-HANDOFF.md](FINAL-HANDOFF.md) | Post-chat operator/Agent start |
 | S1 | [baselines/PRODUCTION-STABLE-BASELINE-2026-08-17.md](baselines/PRODUCTION-STABLE-BASELINE-2026-08-17.md) | Canonical production baseline |
-| S2 | [baselines/PRODUCTION-STABLE-ACCEPTANCE-MATRIX-2026-08-17.md](baselines/PRODUCTION-STABLE-ACCEPTANCE-MATRIX-2026-08-17.md) | Acceptance matrix |
-| S3 | [baselines/PRODUCTION-STABLE-KNOWN-STATE-2026-08-17.md](baselines/PRODUCTION-STABLE-KNOWN-STATE-2026-08-17.md) | Known non-blockers |
-| S4 | [evidence/stable-baseline-20260817/](evidence/stable-baseline-20260817/) | Sanitized freeze evidence |
-| S5 | [reports/REPORT-iseo-sales-manager-bot-production-stable-baseline-freeze-2026-08-17.md](reports/REPORT-iseo-sales-manager-bot-production-stable-baseline-freeze-2026-08-17.md) | Freeze report |
+| S2 | [architecture/CURRENT-PRODUCTION-ARCHITECTURE.md](architecture/CURRENT-PRODUCTION-ARCHITECTURE.md) | Live architecture |
+| S3 | [baselines/PRODUCTION-STABLE-ACCEPTANCE-MATRIX-2026-08-17.md](baselines/PRODUCTION-STABLE-ACCEPTANCE-MATRIX-2026-08-17.md) | Acceptance matrix |
+| S4 | [baselines/PRODUCTION-STABLE-KNOWN-STATE-2026-08-17.md](baselines/PRODUCTION-STABLE-KNOWN-STATE-2026-08-17.md) | Known non-blockers |
+| S5 | [evidence/stable-baseline-20260817/](evidence/stable-baseline-20260817/) | Sanitized freeze evidence |
+| S6 | [reports/REPORT-iseo-sales-manager-bot-production-stable-baseline-freeze-2026-08-17.md](reports/REPORT-iseo-sales-manager-bot-production-stable-baseline-freeze-2026-08-17.md) | Freeze report |
+| S7 | [architecture/SHEETS-DEPENDENCY-MAP.md](architecture/SHEETS-DEPENDENCY-MAP.md) | Current Sheets reality |
+| S8 | [roadmap/DB-FIRST-SUCCESSOR-BLUEPRINT.md](roadmap/DB-FIRST-SUCCESSOR-BLUEPRINT.md) | Successor direction |
+
+---
+
+## Knowledge pack (2026-08-25 consolidation)
+
+| Area | Path |
+|------|------|
+| Inventory / lessons / anti-patterns / hierarchy | [knowledge/](knowledge/) |
+| Contracts (data, lifecycle, Gmail, Telegram, reminder, admin) | [architecture/](architecture/) `*-CURRENT*` / `*-CONTRACT*` / `DATA-STATE-MODEL` |
+| Runbooks / recovery | [runbooks/OPERATIONAL-RUNBOOKS.md](runbooks/OPERATIONAL-RUNBOOKS.md) · [recovery/RECOVERY-GUIDE.md](recovery/RECOVERY-GUIDE.md) |
+| Reproduce + checklists | [playbooks/](playbooks/) · [checklists/](checklists/) |
+| Roadmap (DB, deferred, research, template) | [roadmap/](roadmap/) |
 
 ---
 
@@ -61,14 +74,7 @@
 
 | # | Document | Status |
 |---|----------|--------|
-| 1 | [architecture/TWO-WORKFLOW-ARCHITECTURE-v1.md](architecture/TWO-WORKFLOW-ARCHITECTURE-v1.md) | Phase 2 — superseded where conflicting with stable baseline |
-| 2 | [architecture/LEAD-DATA-MODEL-v1.md](architecture/LEAD-DATA-MODEL-v1.md) | Phase 2 — see stable RAW/CLEAN contract |
-| 3 | [architecture/LEAD-LIFECYCLE-v1.md](architecture/LEAD-LIFECYCLE-v1.md) | Phase 2 |
-| 4 | [architecture/CONFIGURATION-MODEL-v1.md](architecture/CONFIGURATION-MODEL-v1.md) | Phase 2 — reminder keys live in production CONFIG |
-| 5 | [architecture/TELEGRAM-UX-CONTRACT-v1.md](architecture/TELEGRAM-UX-CONTRACT-v1.md) | Phase 2 — see stable card actions + raw button |
-| 6 | [architecture/ADMIN-COMMAND-CONTRACT-v1.md](architecture/ADMIN-COMMAND-CONTRACT-v1.md) | Phase 2 |
-| 7 | [architecture/HEALTHCHECK-CONTRACT-v1.md](architecture/HEALTHCHECK-CONTRACT-v1.md) | Phase 2 |
-| 8 | [architecture/AI-OFF-ON-CONTRACT-v1.md](architecture/AI-OFF-ON-CONTRACT-v1.md) | Phase 2 — current AI OFF matches contract default |
+| 1–8 | [architecture/](architecture/) `*-v1.md` | Phase 2 — superseded where conflicting with stable baseline / CURRENT-* docs |
 
 ## Core Run — plans / ATLAS / Phase 3A (historical)
 
@@ -76,32 +82,34 @@
 |---|----------|--------|
 | 9–11 | [plans/](plans/) | Phase 2 historical |
 | 12 | [atlas/ATLAS-REGISTRATION-RECOMMENDATION-v1.md](atlas/ATLAS-REGISTRATION-RECOMMENDATION-v1.md) | Recommendation only |
-| 13–15 | [baselines/SOURCE-*.md](baselines/) · comparison | Phase 3A historical source-gap |
-| 16–24 | [implementation/](implementation/) | Phase 3A implementation package historical |
+| 13–24 | [baselines/SOURCE-*.md](baselines/) · [implementation/](implementation/) | Phase 3A historical |
 
 ## Reports
 
-Recent production reports live under [reports/](reports/). Historical reports are **not** rewritten. Freeze report: [REPORT-iseo-sales-manager-bot-production-stable-baseline-freeze-2026-08-17.md](reports/REPORT-iseo-sales-manager-bot-production-stable-baseline-freeze-2026-08-17.md).
+Recent production reports live under [reports/](reports/). Historical reports are **not** rewritten.
 
 ---
 
-## Phase gates (historical → freeze)
+## Phase gates
 
 | Phase | Scope | Status |
 |-------|-------|--------|
 | Phase 1–3A | Discovery → architecture → implementation package | Historical DONE |
 | Live build / raw UX / reminders | Operator-chartered production phases | DONE (see evidence/) |
 | **Stable freeze 2026-08-17** | Canonicalize accepted production contour | **DONE — PRODUCTION STABLE** |
+| **Knowledge consolidation 2026-08-25** | Handoff + reproduction + DB-first roadmap | **DONE (docs)** |
+| DB-first migration / deferred product | Separate charters | **NOT STARTED** |
 
 ---
 
 ## Forbidden without a new explicit phase
 
-- Behavior changes to Gmail full-source, literal raw UX, lifecycle, dedupe, or reminder weekday policy
-- Workflow copies / reactivation of Sales-Manager-v2 as production
-- Enabling AI without charter
-- Broad git staging / clean / restore on dirty main worktree
-- Manual reminder trigger solely to “close” the pending natural observation
+- Behavior changes to Gmail full-source, literal raw UX, lifecycle, dedupe, or reminder weekday policy  
+- Workflow copies / reactivation of Sales-Manager-v2 as production  
+- Enabling AI without charter  
+- Sheets → PostgreSQL cutover without migration charter  
+- Broad git staging / clean / restore on dirty main worktree  
+- Manual reminder trigger solely to “close” the pending natural observation  
 
 ---
 
@@ -117,4 +125,4 @@ Recent production reports live under [reports/](reports/). Historical reports ar
 
 ---
 
-*Last updated: 2026-08-17 — Production Stable Baseline freeze.*
+*Last updated: 2026-08-25 — Final knowledge consolidation (stable contour unchanged).*
