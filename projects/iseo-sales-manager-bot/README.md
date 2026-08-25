@@ -1,3 +1,9 @@
+> **Phase 3H.10 (2026-08-20):** Reminder non-delivery root cause proven: ACCESS 429 → broken Wait (`dateTime` invalid) → Telegram path never reached. Wait repaired (`specificTime` + `wait_until_iso`). Actionable pending-queue digest deployed. **MOD_A intentionally disabled** (operator) — active reminder recipients **3** (ADMIN_A, MOD_B, MOD_C). CONFIG cache reconciled to 3. ADMIN_A-only digest UX test PASS. Next natural 10:00: **2026-08-21 Europe/Moscow**. Soak not restarted. Phase 3I.1 blocked. AI OFF. Evidence: [evidence/phase3h10/](evidence/phase3h10/) · Report: [reports/REPORT-iseo-sales-manager-bot-phase3h10-reminder-delivery-actionable-digest-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3h10-reminder-delivery-actionable-digest-v1.md).
+
+> **Phase 3H.9.2 (2026-08-17):** ACCESS live drifted to 3 after an incomplete 2026-08-16 `/moderator_remove`/`/moderator_add` cycle left MOD_A revoked. Classified `UNAUTHORIZED_STATE_DRIFT`. Restored MOD_A via existing `/moderator_add` (same profile_no 3). Live ACCESS=4 · CONFIG=4 · Operational resolver=4 · reminder resolver=4. Next natural 10:00: **2026-08-18 Europe/Moscow**. Soak not restarted. Phase 3I.1 blocked. AI OFF. No four-recipient test sends.
+
+> **Phase 3H.9 (2026-08-17):** False «Недостаточно прав» on raw lead was ACCESS/CONFIG Google Sheets `invalid_grant` mislabeled as a permission deny. Reminder 10:00 windows 15–17 Aug failed at CONFIG read with the same credential error before evaluation; 429 retry path was not applicable. Admin deny text + Sheets error classifier patched. Live Sheets OAuth reconnect by operator is still required before ADMIN_A raw retest and the next natural 4-recipient 10:00. Soak not restarted. Phase 3I.1 blocked. AI OFF.
+
 # i-SEO Sales Manager Bot
 
 **project_id:** `iseo-sales-manager-bot`  
@@ -6,11 +12,9 @@
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
 
 **STATUS:** PRODUCTION STABLE  
-**Stable designation:** [Sales Manager v2 — Production Stable Baseline 2026-08-17](baselines/PRODUCTION-STABLE-BASELINE-2026-08-17.md)  
-**Freeze commit:** `35819a63bed132f2ccdb9e2d468e3ec3de9d23fe`  
-**Start here after chat loss:** [FINAL-HANDOFF.md](FINAL-HANDOFF.md) · Agent brain: [AGENTS.md](AGENTS.md)
+**Stable designation:** [Sales Manager v2 — Production Stable Baseline 2026-08-17](baselines/PRODUCTION-STABLE-BASELINE-2026-08-17.md)
 
-Older “Phase 3A / planned / runtime not started” statements in historical packs are **superseded** for production status. Phase 2/3A packs remain architecture history.
+Older “Phase 3A / planned / runtime not started” statements below the historical document map are **superseded** for production status. Phase 2/3A packs remain architecture history.
 
 ---
 
@@ -28,14 +32,13 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 
 ## Production workflows (stable)
 
-| Workflow | ID | Role | State |
-|----------|----|------|-------|
-| **i-SEO Sales Manager - Operational.dev** | `xSnXPy8cEHoZw6xG` | Scheduled Gmail intake → parse → RAW → CLEAN → Telegram manager card → Gmail labels | **active** |
-| **i-SEO Sales Manager - Admin.dev** | `wLrLp4WQHm1VJmxz` | Telegram admin + callbacks (processed / spam / raw source) + reminders | **active** |
-| **Sales-Manager-v2** | `h8I2Tl2yl4uzhUnB` | Inactive reference | **inactive** |
-| **Sales-Manager-v1** | `cJGoQUqIIHull4p7` | Legacy inactive | **inactive** |
+| Workflow | Role | State |
+|----------|------|-------|
+| **i-SEO Sales Manager - Operational.dev** | Scheduled Gmail intake → parse → RAW → process → CLEAN → Telegram manager card → Gmail labels | **active** |
+| **i-SEO Sales Manager - Admin.dev** | Telegram admin + callbacks (processed / spam / raw source) + reminders | **active** |
+| **Sales-Manager-v2** | Inactive reference | **inactive** |
 
-Host: `n8n.ai-metacode.com` · **No workflow copies.** · AI: **OFF** · Reminders: **Mon–Fri 10:00 Europe/Moscow**.
+**No workflow copies.** AI default/current: **OFF**. Reminders: **Mon–Fri 10:00 Europe/Moscow**.
 
 Production model: `Gmail → durable RAW/full source → CLEAN → Telegram manager card`.
 
@@ -46,80 +49,56 @@ Production model: `Gmail → durable RAW/full source → CLEAN → Telegram mana
 | Layer | Role |
 |-------|------|
 | **n8n** | Execution truth (external) |
-| **Google Sheets** | **Current** durable RAW / CLEAN / CONFIG / diagnostics (operational persistence today) |
-| **PostgreSQL** | **Preferred successor** system of record — roadmap only; not live |
+| **Google Sheets** | Durable RAW / CLEAN / CONFIG / diagnostics |
 | **Telegram** | Manager cards + admin commands |
 | **MARS (`projects/iseo-sales-manager-bot/`)** | Architecture, contracts, baselines, evidence — **does not execute** the bot |
 
-Sheets are honest current reality. They are **not** the preferred long-term architecture. See [SHEETS-DEPENDENCY-MAP.md](architecture/SHEETS-DEPENDENCY-MAP.md) and [DB-FIRST-SUCCESSOR-BLUEPRINT.md](roadmap/DB-FIRST-SUCCESSOR-BLUEPRINT.md).
-
 ---
 
-## Document map (canonical)
+## Document map
 
 | Area | Path |
 |------|------|
-| **Final handoff** | [FINAL-HANDOFF.md](FINAL-HANDOFF.md) |
-| **Agent brain** | [AGENTS.md](AGENTS.md) |
-| **Doc authority hierarchy** | [knowledge/DOC-AUTHORITY-HIERARCHY.md](knowledge/DOC-AUTHORITY-HIERARCHY.md) |
-| **Current architecture** | [architecture/CURRENT-PRODUCTION-ARCHITECTURE.md](architecture/CURRENT-PRODUCTION-ARCHITECTURE.md) |
-| **Stable baseline** | [baselines/PRODUCTION-STABLE-BASELINE-2026-08-17.md](baselines/PRODUCTION-STABLE-BASELINE-2026-08-17.md) |
-| Acceptance / known state | [baselines/PRODUCTION-STABLE-ACCEPTANCE-MATRIX-2026-08-17.md](baselines/PRODUCTION-STABLE-ACCEPTANCE-MATRIX-2026-08-17.md) · [baselines/PRODUCTION-STABLE-KNOWN-STATE-2026-08-17.md](baselines/PRODUCTION-STABLE-KNOWN-STATE-2026-08-17.md) |
-| Data / lifecycle / Gmail / Telegram / reminder / admin | [architecture/DATA-STATE-MODEL.md](architecture/DATA-STATE-MODEL.md) · [LEAD-LIFECYCLE-CURRENT.md](architecture/LEAD-LIFECYCLE-CURRENT.md) · [GMAIL-INTAKE-CONTRACT.md](architecture/GMAIL-INTAKE-CONTRACT.md) · [TELEGRAM-PRODUCT-CONTRACT.md](architecture/TELEGRAM-PRODUCT-CONTRACT.md) · [REMINDER-CONTRACT.md](architecture/REMINDER-CONTRACT.md) · [ADMIN-OPERATOR-CONTRACT.md](architecture/ADMIN-OPERATOR-CONTRACT.md) |
-| Sheets map | [architecture/SHEETS-DEPENDENCY-MAP.md](architecture/SHEETS-DEPENDENCY-MAP.md) |
-| Lessons / anti-patterns | [knowledge/LESSONS-LEARNED.md](knowledge/LESSONS-LEARNED.md) · [knowledge/ANTI-PATTERNS.md](knowledge/ANTI-PATTERNS.md) |
-| Runbooks / recovery | [runbooks/OPERATIONAL-RUNBOOKS.md](runbooks/OPERATIONAL-RUNBOOKS.md) · [recovery/RECOVERY-GUIDE.md](recovery/RECOVERY-GUIDE.md) |
-| Reproduce for new client | [playbooks/REPRODUCE-SALES-MANAGER-FOR-NEW-PROJECT.md](playbooks/REPRODUCE-SALES-MANAGER-FOR-NEW-PROJECT.md) |
-| Checklists | [checklists/](checklists/) |
-| DB-first roadmap | [roadmap/DB-FIRST-SUCCESSOR-BLUEPRINT.md](roadmap/DB-FIRST-SUCCESSOR-BLUEPRINT.md) · [roadmap/DB-FIRST-MIGRATION-ROADMAP.md](roadmap/DB-FIRST-MIGRATION-ROADMAP.md) |
-| Deferred product / research | [roadmap/DEFERRED-PRODUCT-ROADMAP.md](roadmap/DEFERRED-PRODUCT-ROADMAP.md) · [roadmap/DEEP-RESEARCH-BACKLOG.md](roadmap/DEEP-RESEARCH-BACKLOG.md) |
-| Project-neutral template | [roadmap/PROJECT-NEUTRAL-TEMPLATE.md](roadmap/PROJECT-NEUTRAL-TEMPLATE.md) |
-| Evidence / reports (historical) | [evidence/](evidence/) · [reports/](reports/) |
-| Phase 2 architecture (historical) | [architecture/](architecture/) `*-v1.md` |
+| **Canonical stable baseline** | [baselines/PRODUCTION-STABLE-BASELINE-2026-08-17.md](baselines/PRODUCTION-STABLE-BASELINE-2026-08-17.md) |
+| Acceptance matrix | [baselines/PRODUCTION-STABLE-ACCEPTANCE-MATRIX-2026-08-17.md](baselines/PRODUCTION-STABLE-ACCEPTANCE-MATRIX-2026-08-17.md) |
+| Known non-blockers | [baselines/PRODUCTION-STABLE-KNOWN-STATE-2026-08-17.md](baselines/PRODUCTION-STABLE-KNOWN-STATE-2026-08-17.md) |
+| Freeze evidence | [evidence/stable-baseline-20260817/](evidence/stable-baseline-20260817/) |
+| Operational index | [OPERATIONAL-INDEX.md](OPERATIONAL-INDEX.md) |
+| Architecture (historical Phase 2) | [architecture/](architecture/) |
+| Plans | [plans/](plans/) |
+| Implementation package (Phase 3A) | [implementation/](implementation/) |
+| Reports | [reports/](reports/) |
 
 ---
 
 ## Hard constraints (operator-attested / freeze)
 
-1. Exactly **two** active production workflows (Operational.dev + Admin.dev); v2 remains inactive reference.  
-2. AI processing is **optional**; current stable state **AI OFF**.  
-3. AI OFF: no OpenRouter call; zero AI tokens; fully operational.  
-4. First replies are for **manual manager copy only**.  
-5. **Never** send replies automatically to real clients.  
-6. `📄 Исходная заявка` shows literal source (not field reconstruction, not CLEAN substitute).  
-7. Do not discuss or embed OpenRouter / Gmail / Telegram credentials in docs or exports.  
-8. Preserve foreign WIP; selective staging only when explicitly chartered.  
-9. Any post-freeze behavior change = **new explicit phase**.  
-10. Do not treat Sheets as the preferred target architecture for successors.
-
----
-
-## Secrets and evidence
-
-| Kind | Where |
-|------|-------|
-| Secrets / credentials | n8n credential store + CONFIG **references** (never values in Git) |
-| Stable evidence | `evidence/stable-baseline-20260817/` |
-| TMP acceptance tooling | May live under `X:\AI MARS STORAGE\incoming\…` — **not** production runtime |
+1. Exactly **two** active production workflows (Operational.dev + Admin.dev); v2 remains inactive reference.
+2. AI processing is **optional**; current stable state **AI OFF**.
+3. AI OFF: no OpenRouter call; zero AI tokens; fully operational.
+4. First replies are for **manual manager copy only**.
+5. **Never** send replies automatically to real clients.
+6. `📄 Исходная заявка` shows literal source (not field reconstruction, not CLEAN substitute).
+7. Do not discuss or embed OpenRouter / Gmail / Telegram credentials in docs or exports.
+8. Preserve foreign WIP; selective staging only when explicitly chartered.
+9. Any post-freeze behavior change = **new explicit phase**.
 
 ---
 
 ## Not claimed
 
-- Implemented multi-agent runtime inside MARS.  
-- Full CRM / OPS-as-CRM.  
-- Auto-reply to clients.  
-- Natural Monday reminder live acceptance **PASS** (still **PENDING OBSERVATION** unless later evidence supersedes).  
-- Live PostgreSQL migration completed.
+- Implemented multi-agent runtime inside MARS.
+- Full CRM / OPS-as-CRM.
+- Auto-reply to clients.
+- Natural Monday reminder live acceptance **before** its first natural window (pending observation at freeze if not yet occurred).
 
 ---
 
 ## Next
 
-Treat [FINAL-HANDOFF.md](FINAL-HANDOFF.md) and the 2026-08-17 baseline as canonical. Observe the first natural Monday 10:00 MSK reminder if not yet accepted. Use a separate deep-research phase before implementing DB-first next generation. Do not begin another Sales Manager behavior phase automatically.
+Treat [PRODUCTION-STABLE-BASELINE-2026-08-17.md](baselines/PRODUCTION-STABLE-BASELINE-2026-08-17.md) as stable. Observe the first natural Monday 10:00 MSK reminder if not yet accepted. Do not begin another Sales Manager behavior phase automatically.
 
 ---
 
-*Knowledge consolidation: 2026-08-25.*  
 *Stable freeze: 2026-08-17.*  
 *Historical: Phase 2 / 2R / 3A documentation packs (2026-07-30).*

@@ -1,9 +1,5 @@
 # ADMIN COMMAND CONTRACT v1
 
-> **Production supersession (2026-08-17):** Current Admin.dev responsibilities and operator boundaries are documented in [ADMIN-OPERATOR-CONTRACT.md](ADMIN-OPERATOR-CONTRACT.md).
-> Canonical stable truth: [PRODUCTION-STABLE-BASELINE-2026-08-17.md](../baselines/PRODUCTION-STABLE-BASELINE-2026-08-17.md).
-> This Phase 2 file remains historical design context where it conflicts with production baseline.
-
 **Product:** i-SEO Sales Manager Bot  
 **Workflow:** Admin.dev  
 **Status:** documented command surface

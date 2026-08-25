@@ -1,9 +1,5 @@
 # TWO-WORKFLOW ARCHITECTURE v1
 
-> **Production supersession (2026-08-17):** Current live workflow IDs and runtime authority are documented in [CURRENT-PRODUCTION-ARCHITECTURE.md](CURRENT-PRODUCTION-ARCHITECTURE.md).
-> Canonical stable truth: [PRODUCTION-STABLE-BASELINE-2026-08-17.md](../baselines/PRODUCTION-STABLE-BASELINE-2026-08-17.md).
-> This Phase 2 file remains historical design context where it conflicts with production baseline.
-
 **Product:** i-SEO Sales Manager Bot  
 **Status:** documented architecture — **not** live n8n proof  
 **Authority:** Phase 2 operator decisions (exactly two workflows)
