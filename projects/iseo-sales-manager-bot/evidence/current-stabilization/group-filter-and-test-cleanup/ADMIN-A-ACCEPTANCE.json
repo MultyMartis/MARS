@@ -1,0 +1,85 @@
+{
+  "stamp": "2026-08-26T10-00-11-713Z",
+  "patch_live": {
+    "authoritative_group_pending": true,
+    "digest_group_preserve": true,
+    "readonly_ambiguous": true
+  },
+  "acceptance": {
+    "ok": true,
+    "phases": [
+      {
+        "phase": null,
+        "ok": true,
+        "has_kb": false,
+        "text_is_gruppa": false
+      },
+      {
+        "phase": null,
+        "ok": true,
+        "has_kb": false,
+        "text_is_gruppa": false
+      },
+      {
+        "phase": null,
+        "ok": true,
+        "has_kb": false,
+        "text_is_gruppa": false
+      },
+      {
+        "phase": null,
+        "ok": true,
+        "has_kb": false,
+        "text_is_gruppa": false
+      },
+      {
+        "phase": null,
+        "ok": true,
+        "has_kb": false,
+        "text_is_gruppa": false
+      }
+    ],
+    "counts": {
+      "All": 22,
+      "Audit": 14,
+      "SEO": 1,
+      "Other": 7,
+      "older24": 19
+    },
+    "set_sizes": {
+      "All": 22,
+      "Audit": 14,
+      "SEO": 1,
+      "Other": 7,
+      "older24": 19
+    },
+    "set_prefixes": {
+      "SEO": [
+        "lead_19fb7df740e51e2"
+      ],
+      "Audit": [
+        "lead_1a039e70825b7e0",
+        "lead_1a03cc65a71d3ba",
+        "lead_1a033e7204c0ea5",
+        "lead_1a037e407b93736",
+        "lead_1a02efaa527a975"
+      ],
+      "Other": [
+        "lead_1a0301f89e5ad6a",
+        "lead_1a02d1b19ffa58a",
+        "lead_1a02508beb2707a",
+        "lead_1a01f0739b05d3e",
+        "lead_1a01d4f5439d808"
+      ]
+    },
+    "proven_pending_rows": 0,
+    "pick_category": "SEO",
+    "generic_gruppa_replies": 0,
+    "moderator_messages": 0,
+    "customer_messages": 0,
+    "ai_calls": 0,
+    "claims_touched": false,
+    "last_window_touched": false
+  },
+  "ok": true
+}
