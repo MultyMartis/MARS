@@ -69,15 +69,13 @@
 
 ## Commits and push
 
-*(filled after commit/push wave)*
-
 | Wave | SHA | Message |
 |---|---|---|
-| implementation | TBD | `fix(iseo-sales-manager-bot): unify canonical lead cards across entry points` |
-| evidence/docs | TBD | `docs(iseo-sales-manager-bot): record canonical card production reconcile` |
+| implementation | `dc2509d45864a9317d976a886a94eaa388efc373` | `fix(iseo-sales-manager-bot): unify canonical lead cards across entry points` |
+| evidence/docs | `4b9c144a4cabcb1fcd32ad6b2cc35f24ea5e4465` | `docs(iseo-sales-manager-bot): record canonical card production reconcile` |
 
-**Final canonical SHA after push:** TBD  
-**Push target:** `origin/mars/canonical-post-recovery` (no force)
+**Final canonical SHA after push:** `4b9c144a4cabcb1fcd32ad6b2cc35f24ea5e4465`  
+**Push target:** `origin/mars/canonical-post-recovery` (no force) — **SUCCESS** `4daeb3b2..4b9c144a`
 
 ---
 
