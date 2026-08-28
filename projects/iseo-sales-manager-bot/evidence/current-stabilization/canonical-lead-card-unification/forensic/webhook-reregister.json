@@ -1,0 +1,22 @@
+{
+  "captured_at": "2026-08-28T11:06:15.799Z",
+  "admin_active": true,
+  "ops_active": true,
+  "webhook_id_before": "f23213f9-664d-4e57-8f7c-adcfe672c964",
+  "webhook_id_after": "f23213f9-664d-4e57-8f7c-adcfe672c964",
+  "webhook_probe": {
+    "ok": false,
+    "results": [
+      {
+        "url": "https://n8n.ai-metacode.com/webhook/<WH>",
+        "status": 404,
+        "body": "{\"code\":404,\"message\":\"The requested webhook \\\"POST f23213f9-664d-4e57-8f7c-adcfe672c964\\\" is not registered.\",\"hint\":\"T"
+      },
+      {
+        "url": "https://n8n.ai-metacode.com/webhook/<WH>/webhook",
+        "status": 403,
+        "body": "{\"message\":\"Provided secret is not valid\"}"
+      }
+    ]
+  }
+}

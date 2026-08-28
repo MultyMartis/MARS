@@ -1,0 +1,50 @@
+{
+  "captured_at": "2026-08-28T11:38:55.999Z",
+  "mode": "restore",
+  "command": "/moderator_add",
+  "webhook_post_cmd_ok": false,
+  "webhook_post_list_ok": false,
+  "command_exec_id": "42793",
+  "list_exec_id": "42794",
+  "mod_b_status_after": "active",
+  "profiles": [
+    {
+      "alias": "ADMIN_A",
+      "role": "admin",
+      "status": "active",
+      "user_hash12": "3FBE21323E22"
+    },
+    {
+      "alias": "MOD_B",
+      "role": "moderator",
+      "status": "active",
+      "user_hash12": "E67145502141"
+    },
+    {
+      "alias": "MOD_A",
+      "role": "moderator",
+      "status": "revoked",
+      "user_hash12": "518CC34C4C0F"
+    },
+    {
+      "alias": "MOD_C",
+      "role": "moderator",
+      "status": "revoked",
+      "user_hash12": "26B9B999DE8A"
+    },
+    {
+      "alias": null,
+      "role": "public",
+      "status": "pending",
+      "user_hash12": "D94B50C8820C"
+    }
+  ],
+  "pass": true,
+  "graph_restored": true,
+  "temp_webhook_left": false,
+  "admin_active": true,
+  "pre_node_count": 130,
+  "post_node_count": 130,
+  "pre_conn_hash": "5E5E73B42E4E47C5",
+  "post_conn_hash": "5E5E73B42E4E47C5"
+}

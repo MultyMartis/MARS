@@ -1,0 +1,46 @@
+{
+  "captured_at": "2026-08-28T11:07:19.046Z",
+  "mode": "revoke",
+  "command": "/moderator_remove",
+  "webhook_post_cmd_ok": false,
+  "webhook_post_list_ok": false,
+  "command_exec_id": "42720",
+  "list_exec_id": "42721",
+  "mod_b_status_after": "revoked",
+  "profiles": [
+    {
+      "alias": "ADMIN_A",
+      "role": "admin",
+      "status": "active",
+      "user_hash12": "3FBE21323E22"
+    },
+    {
+      "alias": "MOD_B",
+      "role": "moderator",
+      "status": "revoked",
+      "user_hash12": "E67145502141"
+    },
+    {
+      "alias": "MOD_A",
+      "role": "moderator",
+      "status": "revoked",
+      "user_hash12": "518CC34C4C0F"
+    },
+    {
+      "alias": "MOD_C",
+      "role": "moderator",
+      "status": "revoked",
+      "user_hash12": "26B9B999DE8A"
+    },
+    {
+      "alias": null,
+      "role": "public",
+      "status": "pending",
+      "user_hash12": "D94B50C8820C"
+    }
+  ],
+  "pass": true,
+  "graph_restored": false,
+  "temp_webhook_left": false,
+  "admin_active": true
+}

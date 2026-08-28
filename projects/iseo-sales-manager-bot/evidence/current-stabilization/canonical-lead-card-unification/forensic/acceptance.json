@@ -1,0 +1,134 @@
+{
+  "captured_at": "2026-08-28T12:04:51.658Z",
+  "phase": "canonical-card-unification",
+  "sections": {
+    "leads": {
+      "pass": true,
+      "card_count": 3,
+      "pending_count": 3,
+      "terminal_count": 0,
+      "pending_token_hash12": "77f8e0aba09f",
+      "first_pending_preview": "📋 Лид 1 из 3\n🕓 Ожидает обработки\n\nПоступил: 28.08.2026 15:00 МСК\n\nКлиент\nCCU Synth Fixture\n\nТелефон\n<code>+7***</code>\n\nИнтерес\nAudit\n\nЗапрос\nЗаявка на бесплатный аудит. CCU_CANONICAL_CARD synthetic — archive before close.\n\nИсточник\nsynthetic\n\n✉️ Ответ клиенту — нажмите на блок, чтобы скопировать\n<pre>Здравствуйте, CCU Synth Fixture!\n\nСпасибо за заявку на аудит.\n\nПришлите, пожалуйста, адрес сайта и кратко напишите, что именно требуется проверить или улучшить.\n\nС уважением,\nкоманда i-SEO</pre>\n\nРабочая карточка. Используйте кнопки ниже для обработки.",
+      "incorrectly_archival": 0
+    },
+    "queue_open": {
+      "pass": true,
+      "answer_text": "Карточка",
+      "has_actions": true,
+      "edit_keyboard_mode": "pending_actions",
+      "outcome": "queue_opened",
+      "preview": "🟢 Новый лид\n🕓 Ожидает обработки\n\nКлиент\n<code>CCU Synth Fixture</code>\nТелефон\n<code>+7***</code>\nEmail\n<code>[email]</code>\nИнтерес: Audit\n\nКомментарий клиента\nЗаявка на бесплатный аудит. CCU_CANONICAL_CARD synthetic — archive before close.\nКачество: Нужны уточнения\n\nНе хватает\nсайт\n\nСледующий шаг\nУточнить: сайт; использовать вопросы ниже.\n\n✉️ Готовый первый ответ — нажмите, чтобы скопировать\n<pre>Здравствуйте, CCU Synth Fixture!\n\nСпасибо за заявку на аудит.\n\nПришлите, пожалуйста, адрес сайта и кратко напишите, что именно требуется проверить или улучшить.\n\nС уважением,\nкоманда i-SEO</pre>\nО",
+      "exec_found": true,
+      "token_hash12": "77f8e0aba09f",
+      "route": "sm:q: from /leads pending"
+    },
+    "status_callbacks": {
+      "processed": {
+        "pass": false,
+        "error": "synth webhook HTTP 500 for mtcwmjpl-p ({\"message\":\"Error in workflow\"})"
+      },
+      "spam": {
+        "pass": false,
+        "error": "synth webhook HTTP 500 for mtcwmjpl-p ({\"message\":\"Error in workflow\"})"
+      }
+    },
+    "reminder_group": {
+      "pass": false,
+      "digest_counts": {
+        "All": 0,
+        "Audit": 0,
+        "SEO": 0,
+        "Other": 0,
+        "older24": 0
+      },
+      "selector_audit": {
+        "selector_callbacks": [
+          "sm:g:all"
+        ],
+        "vse_count": 1,
+        "pass_vse_once": true
+      },
+      "group_tests": {
+        "sm:g:all": {
+          "callback": "sm:g:all",
+          "current_count": 19,
+          "outcome": "group_opened",
+          "button_count": 0,
+          "gruppa_buttons": 0,
+          "vse_buttons": 0,
+          "sm_q_buttons": 0
+        },
+        "sm:g:c:aa2771a403": {
+          "callback": "sm:g:c:aa2771a403",
+          "current_count": 13,
+          "outcome": "group_opened",
+          "button_count": 0,
+          "gruppa_buttons": 0,
+          "vse_buttons": 0,
+          "sm_q_buttons": 0
+        },
+        "sm:g:c:ade3cbdc59": {
+          "callback": "sm:g:c:ade3cbdc59",
+          "current_count": 1,
+          "outcome": "group_opened",
+          "button_count": 0,
+          "gruppa_buttons": 0,
+          "vse_buttons": 0,
+          "sm_q_buttons": 0
+        },
+        "sm:g:c:e130bfb8c3": {
+          "callback": "sm:g:c:e130bfb8c3",
+          "current_count": 5,
+          "outcome": "group_opened",
+          "button_count": 0,
+          "gruppa_buttons": 0,
+          "vse_buttons": 0,
+          "sm_q_buttons": 0
+        },
+        "sm:g:o24": {
+          "callback": "sm:g:o24",
+          "current_count": 17,
+          "outcome": "group_opened",
+          "button_count": 0,
+          "gruppa_buttons": 0,
+          "vse_buttons": 0,
+          "sm_q_buttons": 0
+        }
+      },
+      "group_mismatch": 5,
+      "preview": ""
+    },
+    "terminal": {
+      "pass": true,
+      "skipped": "no_terminal_in_leads_3"
+    },
+    "clean_dedup": {
+      "pass": true,
+      "ops_node_count_before": 45,
+      "ops_node_count_after": 45,
+      "conn_hash_match": true
+    }
+  },
+  "mod_b_revoked_at_start": true,
+  "counters": {
+    "mod_b_test_messages": 0,
+    "other_moderator_test_messages": 0,
+    "customer_test_messages": 0,
+    "operational_dev_modifications": 0,
+    "ai_calls": 0,
+    "pending_reminder_leads_opened": 1,
+    "pending_reminder_leads_with_actions": 1,
+    "pending_leads_opened": 3,
+    "pending_leads_incorrectly_archival": 0,
+    "standalone_lid_after_fix": 0,
+    "empty_callbacks": 0,
+    "wrong_lead_resolutions": 0,
+    "stale_card_mutations": 0,
+    "duplicate_status_events": 0,
+    "group_set_mismatches": 5,
+    "duplicate_vse": 0,
+    "generic_gruppa": 0
+  },
+  "mod_b_isolation_cycle_complete": true,
+  "all_pass": false
+}

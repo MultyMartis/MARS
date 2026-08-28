@@ -1,0 +1,32 @@
+{
+  "id": "42919",
+  "status": "success",
+  "nc_command": "/reminder_digest_test",
+  "nc_text": "/reminder_digest_test",
+  "auth_role": "admin",
+  "pvh_keys": [
+    "text",
+    "deny_reason",
+    "deny_reply",
+    "answer_text",
+    "reply_text",
+    "notify_text",
+    "reminder_digest_test"
+  ],
+  "pvh_reply": "🔔 Необработанные лиды — 19\n\nНа тест (ADMIN_A only)\nСамый старый: 25 дней\n\n🔍 Аудит — 13\n• A1 · Анна · 🔴 25 дней\n• A2 · Владимир втг · 🔴 25 дней\n• A3 · test.ru · 🔴 24 дня\n• A4 · Чех Попутал · 🔴 23 дня\n• A5 · Михаил Русецкий · 🔴 23 дня\n• A6 · Никнейм · 🔴 23 дня\n• A7 · Александр · 🔴 16 дней\n• A11 · Ярослава · ⚠️ 4 дня\n• A13 · Никита · ⚠️ 4 дня\n• A14 · Владимир · ⚠️ 3 дня\n• A15 · алексей · ⚠️ ",
+  "nodes": [
+    "CCU Dig Probe",
+    "Normalize Command",
+    "Read Authorization Config",
+    "Collapse Authorization Context",
+    "Read ACCESS_CONTROL",
+    "Check User Authorization",
+    "IF Authorized",
+    "Route Command",
+    "Read CLEAN for Pending",
+    "Pending View Handler",
+    "Capture Admin Reply",
+    "IF Telegram Has Buttons",
+    "Switch Reply Keyboard Band"
+  ]
+}

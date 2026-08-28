@@ -1,0 +1,35 @@
+{
+  "captured_at": "2026-08-28T11:42:48.429Z",
+  "admin_active": true,
+  "nodes": {
+    "Handle Callback Action": {
+      "present": true,
+      "code_hash16": "509559A2821A2D13",
+      "code_len": 49417,
+      "has_queue_open_compact": false,
+      "has_archive_marker": false
+    },
+    "Recent Leads": {
+      "present": true,
+      "code_hash16": "4B432EE2655ABD44",
+      "code_len": 10061,
+      "has_queue_open_compact": false,
+      "has_archive_marker": true
+    },
+    "Edit Lead Card Message Pending": {
+      "present": true,
+      "code_hash16": null,
+      "code_len": 0,
+      "has_queue_open_compact": false,
+      "has_archive_marker": false
+    },
+    "Build Pending Actions Keyboard": {
+      "present": false,
+      "code_hash16": null,
+      "code_len": 0,
+      "has_queue_open_compact": false,
+      "has_archive_marker": false
+    }
+  },
+  "access": null
+}

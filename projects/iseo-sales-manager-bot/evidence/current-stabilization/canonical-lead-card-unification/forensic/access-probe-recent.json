@@ -1,0 +1,59 @@
+{
+  "captured_at": "2026-08-28T11:00:46.171Z",
+  "access": {
+    "exec_id": "42688",
+    "startedAt": "2026-08-28T10:14:25.014Z",
+    "node": "Read ACCESS_CONTROL",
+    "profiles": [
+      {
+        "alias": "ADMIN_A",
+        "profile_no": "1",
+        "role": "admin",
+        "status": "active",
+        "has_telegram": true,
+        "user_hash12": "3FBE21323E22"
+      },
+      {
+        "alias": "MOD_B",
+        "profile_no": "",
+        "role": "moderator",
+        "status": "active",
+        "has_telegram": true,
+        "user_hash12": "E67145502141"
+      },
+      {
+        "alias": "MOD_A",
+        "profile_no": "",
+        "role": "moderator",
+        "status": "revoked",
+        "has_telegram": true,
+        "user_hash12": "518CC34C4C0F"
+      },
+      {
+        "alias": "MOD_C",
+        "profile_no": "",
+        "role": "moderator",
+        "status": "revoked",
+        "has_telegram": true,
+        "user_hash12": "26B9B999DE8A"
+      },
+      {
+        "alias": null,
+        "profile_no": "",
+        "role": "public",
+        "status": "pending",
+        "has_telegram": true,
+        "user_hash12": "D94B50C8820C"
+      }
+    ]
+  },
+  "tried_count": 1,
+  "recent_tried": [
+    {
+      "exec_id": "42688",
+      "startedAt": "2026-08-28T10:14:25.014Z",
+      "node": "Read ACCESS_CONTROL",
+      "rows": 5
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "captured_at": "2026-08-28T10:57:54.821Z",
+  "access": {
+    "exec_id": "33554",
+    "startedAt": "2026-08-17T12:49:49.262Z",
+    "node": "Read ACCESS_CONTROL",
+    "profiles": [
+      {
+        "alias": "ADMIN_A",
+        "profile_no": "1",
+        "role": "admin",
+        "status": "active",
+        "has_telegram": true,
+        "user_hash12": "3FBE21323E22"
+      },
+      {
+        "alias": "MOD_B",
+        "profile_no": "",
+        "role": "moderator",
+        "status": "active",
+        "has_telegram": true,
+        "user_hash12": "E67145502141"
+      },
+      {
+        "alias": "MOD_A",
+        "profile_no": "",
+        "role": "moderator",
+        "status": "revoked",
+        "has_telegram": true,
+        "user_hash12": "518CC34C4C0F"
+      },
+      {
+        "alias": "MOD_C",
+        "profile_no": "",
+        "role": "moderator",
+        "status": "active",
+        "has_telegram": true,
+        "user_hash12": "26B9B999DE8A"
+      }
+    ]
+  }
+}

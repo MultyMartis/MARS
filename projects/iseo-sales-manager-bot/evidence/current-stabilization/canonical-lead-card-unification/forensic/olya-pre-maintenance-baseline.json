@@ -1,0 +1,102 @@
+{
+  "captured_at": "2026-08-28T11:40:02.073Z",
+  "baseline_scope": "MOD_B actor events from recent Admin.dev Handle Callback executions",
+  "mod_b_access": {
+    "status": "active",
+    "role": "moderator",
+    "user_hash12": "E67145502141"
+  },
+  "actor_prefix": "u:48…",
+  "lead_count": 14,
+  "status_counts": {
+    "pending": 1,
+    "spam": 13
+  },
+  "leads": [
+    {
+      "lead_hash12": "bd9c7ee3f398",
+      "authoritative_status": "pending",
+      "latest_action": "queue_opened",
+      "event_ts": "2026-08-28T06:02:24.584Z"
+    },
+    {
+      "lead_hash12": "41a8f2a23eaf",
+      "authoritative_status": "spam",
+      "latest_action": "applied",
+      "event_ts": "2026-08-28T05:58:52.723Z"
+    },
+    {
+      "lead_hash12": "ca1ac8b0f87c",
+      "authoritative_status": "spam",
+      "latest_action": "applied",
+      "event_ts": "2026-08-28T05:57:52.570Z"
+    },
+    {
+      "lead_hash12": "f2594e79f78e",
+      "authoritative_status": "spam",
+      "latest_action": "applied",
+      "event_ts": "2026-08-27T07:45:22.865Z"
+    },
+    {
+      "lead_hash12": "c0fe096e5df8",
+      "authoritative_status": "spam",
+      "latest_action": "applied",
+      "event_ts": "2026-08-27T07:23:03.709Z"
+    },
+    {
+      "lead_hash12": "e621eae00107",
+      "authoritative_status": "spam",
+      "latest_action": "idempotent",
+      "event_ts": "2026-08-27T07:22:51.164Z"
+    },
+    {
+      "lead_hash12": "08c4cf248f93",
+      "authoritative_status": "spam",
+      "latest_action": "idempotent",
+      "event_ts": "2026-08-27T07:22:50.050Z"
+    },
+    {
+      "lead_hash12": "c8d974b3429f",
+      "authoritative_status": "spam",
+      "latest_action": "idempotent",
+      "event_ts": "2026-08-27T07:21:16.859Z"
+    },
+    {
+      "lead_hash12": "f9361746e171",
+      "authoritative_status": "spam",
+      "latest_action": "idempotent",
+      "event_ts": "2026-08-27T07:21:15.499Z"
+    },
+    {
+      "lead_hash12": "783f242bc20f",
+      "authoritative_status": "spam",
+      "latest_action": "applied",
+      "event_ts": "2026-08-27T07:19:17.076Z"
+    },
+    {
+      "lead_hash12": "e66ce74ff116",
+      "authoritative_status": "spam",
+      "latest_action": "applied",
+      "event_ts": "2026-08-27T07:19:00.153Z"
+    },
+    {
+      "lead_hash12": "ddc15973acbd",
+      "authoritative_status": "spam",
+      "latest_action": "applied",
+      "event_ts": "2026-08-27T07:18:57.878Z"
+    },
+    {
+      "lead_hash12": "216f2c6873db",
+      "authoritative_status": "spam",
+      "latest_action": "applied",
+      "event_ts": "2026-08-27T07:18:43.443Z"
+    },
+    {
+      "lead_hash12": "aa62261847ec",
+      "authoritative_status": "spam",
+      "latest_action": "idempotent",
+      "event_ts": "2026-08-27T07:18:34.604Z"
+    }
+  ],
+  "executions_scanned": 200
+}
