@@ -200,8 +200,8 @@ Core card UX fixes are **live and proven** on Admin.dev for `/leads` and queue_o
 
 - Worktree: `git-sync-iseo-sm-canonical-card-git-reconcile-20260828-201448`
 - Base: `origin/mars/canonical-post-recovery` @ `4daeb3b2`
-- Commits: `dc2509d4` (patches), `4b9c144a` (evidence/report)
-- Final canonical SHA: `4b9c144a4cabcb1fcd32ad6b2cc35f24ea5e4465`
+- Commits: `dc2509d4` (patches), `4b9c144a` (evidence/report), `74274845` (SHA closeout)
+- Final canonical SHA: `74274845ae9c78a202c5fb94fabf3a144b7d1657`
 - **No force push**; foreign WIP on dirty main not staged
 
 ### Zero-traffic / access
