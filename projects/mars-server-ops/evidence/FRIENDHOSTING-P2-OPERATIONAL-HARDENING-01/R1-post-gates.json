@@ -1,0 +1,23 @@
+{
+  "ssh_3333": "PASS",
+  "nginx_443": "PASS",
+  "xray_8443": "PASS",
+  "public_20901": "NOT EXPOSED",
+  "vpn_egress": "92.42.99.126",
+  "tls_443": {
+    "ok": true,
+    "notAfter": "Nov 27 16:46:34 2026 GMT"
+  },
+  "tls_8443": {
+    "ok": true,
+    "notAfter": "Nov 27 16:46:34 2026 GMT"
+  },
+  "http_2096": {
+    "reachable": true,
+    "status": "HTTP/1.1 404 Not Found"
+  },
+  "tcp_2096_workstation": true,
+  "key_operator": "PASS",
+  "key_root": "PASS",
+  "vpn_https": "PASS"
+}

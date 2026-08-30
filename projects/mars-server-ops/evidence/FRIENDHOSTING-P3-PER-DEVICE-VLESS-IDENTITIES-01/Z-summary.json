@@ -1,0 +1,21 @@
+{
+  "ts": "20260830T110451Z",
+  "gates": {
+    "ssh_tcp": true,
+    "nginx_tcp": true,
+    "xray_tcp": true,
+    "tls_8443": true,
+    "legacy_present": true,
+    "uuid_unique": true,
+    "all_new_present": true,
+    "profiles_pass": true
+  },
+  "new_identities": 6,
+  "total_clients_server": 7,
+  "workstation_display": "WSP-ONE-FRIENDHOSTING-DE-RAW-8443",
+  "workstation_json": "X:\\AI MARS\\local\\infrastructure\\FRIENDHOSTING-GERMANY\\clients\\WSP-ONE\\friendhosting-de-raw-8443.json",
+  "workstation_vless": "X:\\AI MARS\\local\\infrastructure\\FRIENDHOSTING-GERMANY\\clients\\WSP-ONE\\friendhosting-de-raw-8443.vless.txt",
+  "operator_smoke": "PENDING",
+  "backup_local": "X:\\AI MARS\\local\\infrastructure\\FRIENDHOSTING-GERMANY\\backups\\friendhosting-p3-pre-device-identities-20260830T105341Z.tgz",
+  "backup_remote": "/root/mars-backups/friendhosting-p3-pre-device-identities-20260830T105341Z.tgz"
+}

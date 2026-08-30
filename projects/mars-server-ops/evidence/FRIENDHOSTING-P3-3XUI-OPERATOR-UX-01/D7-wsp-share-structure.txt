@@ -1,0 +1,14 @@
+WSP_IN_CLIENTS 1
+SHARE_HOST metacode-cloud.com
+QUERY_KEYS ['alpn', 'encryption', 'headerType', 'security', 'sni', 'type']
+SNI metacode-cloud.com
+ALPN http/1.1
+FP <empty>
+TYPE tcp
+SECURITY tls
+FLOW ''
+HEADER none
+CLIENTS_N 7
+XRAY_CHECK
+XRAY_N 7
+

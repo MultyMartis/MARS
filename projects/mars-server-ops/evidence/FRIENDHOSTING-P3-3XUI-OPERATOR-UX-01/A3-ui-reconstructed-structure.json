@@ -1,0 +1,32 @@
+{
+  "scheme": "vless",
+  "host": "metacode-cloud.com",
+  "port": 8443,
+  "has_uuid": true,
+  "uuid_len": 36,
+  "query_keys": [
+    "alpn",
+    "encryption",
+    "headerType",
+    "security",
+    "sni",
+    "type"
+  ],
+  "encryption": "none",
+  "security": "tls",
+  "sni": "metacode-cloud.com",
+  "alpn": "http/1.1",
+  "fp": "",
+  "type": "tcp",
+  "headerType": "none",
+  "flow": "",
+  "host_param": "",
+  "path": "",
+  "pbk": false,
+  "sid": false,
+  "spx": false,
+  "mode": "",
+  "serviceName": "",
+  "fragment_label": "WSP-ONE-FRIENDHOSTING-DE-RAW-8443",
+  "allowInsecure": ""
+}

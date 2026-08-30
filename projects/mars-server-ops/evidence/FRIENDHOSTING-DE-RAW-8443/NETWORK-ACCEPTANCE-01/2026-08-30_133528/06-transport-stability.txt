@@ -1,0 +1,41 @@
+=== TRANSPORT SUITE START 2026-08-30T13:39:21.5150147+07:00 ===
+HEAD_google wall_ms=25 curl: try 'curl --help' for more information
+GET_cloudflare_cdnjs_small wall_ms=21 curl: try 'curl --help' for more information
+GET_example_com wall_ms=22 curl: try 'curl --help' for more information
+GET_httpbin_1MB wall_ms=20 curl: try 'curl --help' for more information
+GET_cf_10MB wall_ms=28 curl: try 'curl --help' for more information
+GET_cf_25MB wall_ms=20 curl: try 'curl --help' for more information
+=== STABILITY 12x HEAD google (2s delay) ===
+sample_1 http=200 time=0.588403
+sample_2 http=200 time=0.527150
+sample_3 http=200 time=0.480943
+sample_4 http=200 time=0.484245
+sample_5 http=200 time=0.508114
+sample_6 http=200 time=0.491478
+sample_7 http=200 time=0.499787
+sample_8 http=200 time=0.508493
+sample_9 http=200 time=0.490523
+sample_10 http=200 time=0.487809
+sample_11 http=200 time=0.501223
+sample_12 http=200 time=0.552387
+STABILITY_SUMMARY pass=12 fail=0 total=12
+=== MEDIUM BODY 5x 1MB ===
+mb_1 http=200 time=1.061766 size=1000000 speed=941827
+mb_2 http=200 time=1.084053 size=1000000 speed=922464
+mb_3 http=200 time=1.089934 size=1000000 speed=917486
+mb_4 http=200 time=1.038996 size=1000000 speed=962467
+mb_5 http=200 time=1.063356 size=1000000 speed=940418
+MEDIUM_SUMMARY pass=5 fail=0 total=5
+=== TRANSPORT SUITE END 2026-08-30T13:40:03.1504639+07:00 ===
+=== EXTRA STABILITY 10x TLS sessions ===
+x1 http=200 t=0.525174 tls=0.437663
+x2 http=200 t=0.469394 tls=0.378159
+x3 http=200 t=0.470751 tls=0.383659
+x4 http=200 t=0.453794 tls=0.367615
+x5 http=200 t=0.466566 tls=0.377476
+x6 http=200 t=0.469771 tls=0.378295
+x7 http=200 t=0.532312 tls=0.443415
+x8 http=200 t=0.483022 tls=0.394409
+x9 http=200 t=0.461700 tls=0.375062
+x10 http=200 t=0.491475 tls=0.401621
+EXTRA_SUMMARY pass=10 fail=0

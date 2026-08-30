@@ -1,0 +1,69 @@
+{
+  "ts_utc": "20260830T075804Z",
+  "cpu_ram_verdict": "PASS",
+  "cpu_increased": true,
+  "ram_increased": true,
+  "hardware": {
+    "hostname": "imart216311",
+    "boot_time_raw": "system boot  2026-08-30 07:55\n2026-08-30 07:54:59\n 07:58:05 up 3 min,  1 user,  load average: 0.14, 0.16, 0.07",
+    "uptime_s": "2026-08-30 07:54:59",
+    "boot_changed": true,
+    "nproc": 2,
+    "cpu_sys": "cpu0\ncpu1",
+    "mem_free_h_total": "1.9Gi",
+    "mem_total_kb": 2014852,
+    "mem_mib_approx": 1968,
+    "swap": "Filename\t\t\t\tType\t\tSize\t\tUsed\t\tPriority",
+    "disk_sda_bytes": 10737418240,
+    "disk_sda_gib": 10.0,
+    "ipv4_ok": true,
+    "egress": "92.42.99.126",
+    "mtu": "2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000\n    link/ether bc:24:11:45:ff:a6 brd ff:ff:ff:ff:ff:ff\n    altname enp0s18"
+  },
+  "services": {
+    "ssh_3333": "PASS",
+    "nginx_443": "PASS",
+    "xray_8443": "PASS",
+    "xui_20901": "PASS",
+    "auto_recovery_no_manual_start": "PASS",
+    "ufw": "PASS",
+    "residual_2096": "PRESENT",
+    "tls_verify_0": true,
+    "versions": "nginx version: nginx/1.24.0 (Ubuntu)\nThe OS release is: ubuntu\n┌────────────────────────────────────────────────────────────────┐\n│  \u001b[0;34mx-ui control menu usages (subcommands):\u001b[0m                       │\n│                                                                │\n│  \u001b[0;34mx-ui\u001b[0m                       - Admin Management Script          │\n│  \u001b[0;34mx-ui start\u001b[0m                 - Star",
+    "failed_units": "active\nactive\nactive\n---\ndisabled\nenabled\nenabled\n---\n  UNIT LOAD ACTIVE SUB DESCRIPTION\n\n0 loaded units listed."
+  },
+  "disk_status": "PENDING PROVIDER-SIDE WORK",
+  "headroom": "GOOD",
+  "ws": {
+    "dns_ok": true,
+    "tls_pass": true,
+    "vpn_egress": "92.42.99.126",
+    "vpn_smoke": "PASS",
+    "vpn_details": {
+      "ipify": {
+        "status": 200,
+        "body": "92.42.99.126",
+        "len": 12,
+        "err": ""
+      },
+      "ifconfig": {
+        "status": 200,
+        "body": "92.42.99.126",
+        "len": 12,
+        "err": ""
+      },
+      "generate_204": {
+        "status": 204,
+        "body": "",
+        "len": 0,
+        "err": ""
+      },
+      "ovh_1mib": {
+        "status": 200,
+        "len": 1048576,
+        "err": ""
+      }
+    }
+  },
+  "cursor_smoke": "PASS"
+}

@@ -1,0 +1,107 @@
+{
+  "ok": true,
+  "remote_sha256": "b15631b7d1519fbd8364b73541fbf6e240f5e1032b0b44ef49fc34725bc80cec",
+  "local_sha256": "b15631b7d1519fbd8364b73541fbf6e240f5e1032b0b44ef49fc34725bc80cec",
+  "sha_match": true,
+  "remote_size": 81065422,
+  "local_size": 81065422,
+  "size_match": true,
+  "bytes": 81065422,
+  "mib": 77.310011,
+  "gib": 0.075498,
+  "member_count": 333,
+  "required_sections": {
+    "etc-ssh": true,
+    "etc-ufw": true,
+    "etc-fail2ban": true,
+    "usr-local-x-ui": true,
+    "x-ui-db": true,
+    "root-cert": true,
+    "fstab": true,
+    "journald.conf": true,
+    "clients-safe.json": true,
+    "sudoers": true,
+    "iptables-save.txt": true
+  },
+  "archive_readable": true,
+  "inbounds": [
+    {
+      "id": 1,
+      "remark": "MCA-Gate-TLS",
+      "port": 8443,
+      "protocol": "vless",
+      "client_count": 8,
+      "clients": [
+        {
+          "email": "WSP-ONE",
+          "enable": false,
+          "has_id": true,
+          "has_subId": true
+        },
+        {
+          "email": "Unit-01",
+          "enable": true,
+          "has_id": true,
+          "has_subId": true
+        },
+        {
+          "email": "Unit-MartisPhone",
+          "enable": true,
+          "has_id": true,
+          "has_subId": true
+        },
+        {
+          "email": "Unit-02",
+          "enable": false,
+          "has_id": true,
+          "has_subId": true
+        },
+        {
+          "email": "Unit-Metallka",
+          "enable": true,
+          "has_id": true,
+          "has_subId": true
+        },
+        {
+          "email": "Unit-MichaelPhone",
+          "enable": true,
+          "has_id": true,
+          "has_subId": true
+        },
+        {
+          "email": "Unit-MichaelWS",
+          "enable": true,
+          "has_id": true,
+          "has_subId": true
+        },
+        {
+          "email": "MCA-ONE",
+          "enable": true,
+          "has_id": true,
+          "has_subId": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "remark": "MCA-Gate-Reality",
+      "port": 46489,
+      "protocol": "vless",
+      "client_count": 1,
+      "clients": [
+        {
+          "email": "Main",
+          "enable": true,
+          "has_id": true,
+          "has_subId": true
+        }
+      ]
+    }
+  ],
+  "clients_8443": 8,
+  "clients_46489": 1,
+  "has_nginx": false,
+  "has_docker": true,
+  "remote_path": "/root/mars-backups/veesp-final-operational-20260830T184024Z.tgz",
+  "local_path": "X:\\AI MARS\\local\\infrastructure\\MCA-VPN-001\\backups\\veesp-final-operational-20260830T184024Z.tgz"
+}

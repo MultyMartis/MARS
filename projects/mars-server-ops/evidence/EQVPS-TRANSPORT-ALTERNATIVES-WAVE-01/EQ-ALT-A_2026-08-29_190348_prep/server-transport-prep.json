@@ -1,0 +1,8 @@
+{
+  "test_id": "EQ-ALT-A-REALITY-VISION",
+  "server_loopback": {"ok": true, "egress": "95.216.126.173"},
+  "server_hairpin": {"ok": true, "egress": "95.216.126.173"},
+  "workstation_from_goodline": {"ok": false, "note": "connection timeout via isolated local Xray — path may still differ under v2rayN TUN; operator acceptance required"},
+  "port_8443_regression": {"ok": true, "subject": "CN=metacode-cloud.com"},
+  "listeners": [443, 8443, 9443]
+}

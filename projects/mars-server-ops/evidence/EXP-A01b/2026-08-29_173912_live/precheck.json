@@ -1,0 +1,118 @@
+{
+    "harness_version":  "EXP-A01b-1.0.0",
+    "captured_utc":  "2026-08-29T10:39:13.7202238Z",
+    "captured_local":  "2026-08-29T17:39:13.7222178+07:00",
+    "windows_caption":  "Майкрософт Windows 10 Pro",
+    "windows_version":  "10.0.19045",
+    "windows_build":  "19045",
+    "powershell_version":  "5.1.19041.6456",
+    "is_admin":  true,
+    "interfaces_mtu":  [
+                           {
+                               "InterfaceAlias":  "Сетевое подключение Bluetooth",
+                               "ifIndex":  7,
+                               "NlMtu":  1500,
+                               "ConnectionState":  0,
+                               "Dhcp":  1
+                           },
+                           {
+                               "InterfaceAlias":  "Ethernet",
+                               "ifIndex":  6,
+                               "NlMtu":  1500,
+                               "ConnectionState":  1,
+                               "Dhcp":  1
+                           },
+                           {
+                               "InterfaceAlias":  "xray_tun",
+                               "ifIndex":  10,
+                               "NlMtu":  1500,
+                               "ConnectionState":  1,
+                               "Dhcp":  0
+                           },
+                           {
+                               "InterfaceAlias":  "Loopback Pseudo-Interface 1",
+                               "ifIndex":  1,
+                               "NlMtu":  4294967295,
+                               "ConnectionState":  1,
+                               "Dhcp":  0
+                           }
+                       ],
+    "default_routes":  [
+                           {
+                               "InterfaceAlias":  "xray_tun",
+                               "NextHop":  "0.0.0.0",
+                               "RouteMetric":  0,
+                               "ifIndex":  10
+                           },
+                           {
+                               "InterfaceAlias":  "Ethernet",
+                               "NextHop":  "192.168.0.1",
+                               "RouteMetric":  0,
+                               "ifIndex":  6
+                           }
+                       ],
+    "dns_servers":  [
+                        {
+                            "InterfaceAlias":  "Ethernet",
+                            "Servers":  [
+                                            "192.168.0.1"
+                                        ]
+                        }
+                    ],
+    "processes":  [
+                      {
+                          "Name":  "v2rayN",
+                          "Id":  11884,
+                          "StartTime":  "2026-08-29T10:14:44.0254376+07:00",
+                          "Path":  "C:\\Program Files\\v2rayN\\v2rayN.exe"
+                      },
+                      {
+                          "Name":  "v2rayN",
+                          "Id":  11884,
+                          "StartTime":  "2026-08-29T10:14:44.0254376+07:00",
+                          "Path":  "C:\\Program Files\\v2rayN\\v2rayN.exe"
+                      },
+                      {
+                          "Name":  "xray",
+                          "Id":  18744,
+                          "StartTime":  "2026-08-29T14:39:34.4166649+07:00",
+                          "Path":  "C:\\Program Files\\v2rayN\\bin\\xray\\xray.exe"
+                      },
+                      {
+                          "Name":  "xray",
+                          "Id":  18744,
+                          "StartTime":  "2026-08-29T14:39:34.4166649+07:00",
+                          "Path":  "C:\\Program Files\\v2rayN\\bin\\xray\\xray.exe"
+                      }
+                  ],
+    "listeners":  [
+                      {
+                          "Port":  10808,
+                          "Listening":  true,
+                          "Owners":  [
+                                         {
+                                             "LocalAddress":  "127.0.0.1",
+                                             "OwningPid":  18744,
+                                             "ProcessName":  "xray"
+                                         }
+                                     ],
+                          "Note":  ""
+                      },
+                      {
+                          "Port":  18088,
+                          "Listening":  false,
+                          "Owners":  [
+
+                                     ],
+                          "Note":  "expected_inactive_unless_isolated_probe"
+                      }
+                  ],
+    "mixed_proxy_10808":  {
+                              "expected_url":  "http://127.0.0.1:10808",
+                              "listening":  true,
+                              "owned_by_xray_or_v2ray":  true,
+                              "note":  "127.0.0.1:10808 appears to be live mixed proxy path"
+                          },
+    "port_18088_note":  "Do not assume active; inactive is expected outside isolated probe",
+    "dry_validate":  false
+}

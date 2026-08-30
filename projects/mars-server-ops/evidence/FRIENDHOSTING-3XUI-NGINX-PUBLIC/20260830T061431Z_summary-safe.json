@@ -1,0 +1,53 @@
+{
+  "ts": "20260830T061431Z",
+  "host": "92.42.99.126",
+  "domain": "metacode-cloud.com",
+  "checkpoint": {
+    "remote": "/root/mars-backups/friendhosting-nginx-3xui-20260830T061431Z",
+    "local_tgz": "X:\\AI MARS\\local\\infrastructure\\FRIENDHOSTING-GERMANY\\nginx-public-access-20260830T061431Z\\remote-checkpoint.tgz",
+    "sha256": "c0bf2c5b1a7a82e44047b59f56e081047b10b6afea9fa465c1455ac5457824d9",
+    "classification": "BACKUP + RESTORE STRATEGY CONFIRMED"
+  },
+  "validation": {
+    "nginx_t": true,
+    "nginx_active": true,
+    "root_http_code": "404",
+    "secret_http_code": "200",
+    "panel_localhost_only": true,
+    "vpn_8443_ok": true,
+    "ssh_3333_ok": true,
+    "body_hits": "len 2247\nhits ['login', 'sign']\nhas_title True"
+  },
+  "external": {
+    "tcp_443": "OPEN",
+    "tls_subject": "((('commonName', 'metacode-cloud.com'),),)",
+    "tls_san": "(('DNS', 'metacode-cloud.com'),)",
+    "tls_ok": true,
+    "root_code": "404",
+    "secret_code": "200",
+    "ext_20901": "NOT_PUBLICLY_EXPOSED_APP_LAYER",
+    "ext_20901_clarification": "TCP SYN may complete on path (blackhole); no HTTP bytes; localhost bind + UFW deny => NOT publicly exposed"
+  },
+  "nginx_install": {
+    "installed_this_wave": true,
+    "nginx_version": "nginx version: nginx/1.24.0 (Ubuntu)"
+  },
+  "tls_config": {
+    "listen": "443 ssl",
+    "server_name": "metacode-cloud.com",
+    "cert": "/etc/letsencrypt/live/metacode-cloud.com/fullchain.pem",
+    "key_path_only": "/etc/letsencrypt/live/metacode-cloud.com/privkey.pem",
+    "proxy_to": "http://127.0.0.1:20901",
+    "root_behavior": "404",
+    "secret_route": "[SECRET PANEL PATH — LOCAL ONLY]"
+  },
+  "precheck_summary": {
+    "nginx_present": false,
+    "port_443_free_or_nginx": true,
+    "panel_localhost": true,
+    "panel_proto": "http",
+    "cert_verify": "/etc/letsencrypt/live/metacode-cloud.com/fullchain.pem: OK",
+    "ufw": true,
+    "secret_path_sha256_16": "a065fd3481c653b1"
+  }
+}

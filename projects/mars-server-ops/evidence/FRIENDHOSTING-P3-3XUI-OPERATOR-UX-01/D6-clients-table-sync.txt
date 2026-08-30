@@ -1,0 +1,52 @@
+EMBEDDED_N 7
+CLIENTS_TABLE_BEFORE ['MCA-ONE-FRIENDHOSTING-DE-RAW-8443']
+CREATED ['WSP-ONE', 'MCA-PHONE', 'Unit-01', 'Unit-02', 'Unit-03', 'Unit-MichaelPhone']
+UPDATED ['MCA-ONE-FRIENDHOSTING-DE-RAW-8443']
+LINKED ['WSP-ONE', 'MCA-PHONE', 'Unit-01', 'Unit-02', 'Unit-03', 'Unit-MichaelPhone']
+N_CLIENTS 7
+N_LINKS 7
+N_TRAFFIC 7
+CLIENT 1 MCA-ONE-FRIENDHOSTING-DE-RAW-8443 enable=1 comment=LEGACY FALLBACK — DO NOT DELETE YET
+CLIENT 2 WSP-ONE enable=1 comment=Workstation NEW identity (P3)
+CLIENT 3 MCA-PHONE enable=1 comment=DEVICE_TEST_PENDING
+CLIENT 4 Unit-01 enable=1 comment=DEVICE_TEST_PENDING
+CLIENT 5 Unit-02 enable=1 comment=DEVICE_TEST_PENDING
+CLIENT 6 Unit-03 enable=1 comment=DEVICE_TEST_PENDING
+CLIENT 7 Unit-MichaelPhone enable=1 comment=DEVICE_TEST_PENDING
+LINK 1 -> 1
+LINK 2 -> 1
+LINK 3 -> 1
+LINK 4 -> 1
+LINK 5 -> 1
+LINK 6 -> 1
+LINK 7 -> 1
+XUI active
+XRAY_CLIENTS 7
+XRAY MCA-ONE-FRIENDHOSTING-DE-RAW-8443 flow=''
+XRAY WSP-ONE flow=''
+XRAY MCA-PHONE flow=''
+XRAY Unit-01 flow=''
+XRAY Unit-02 flow=''
+XRAY Unit-03 flow=''
+XRAY Unit-MichaelPhone flow=''
+XRAY_NET tcp SEC tls
+XRAY_SNI metacode-cloud.com ALPN ['http/1.1'] FP None
+SHARE_ADDR_STRATEGY ('node', None)
+HOSTS_COLS ['id', 'group_id', 'inbound_id', 'sort_order', 'remark', 'server_description', 'is_disabled', 'is_hidden', 'tags', 'address', 'port', 'security', 'sni', 'host_header', 'path', 'alpn', 'fingerprint', 'override_sni_from_address', 'keep_sni_blank', 'pinned_peer_cert_sha256', 'verify_peer_cert_by_name', 'allow_insecure', 'ech_config_list', 'mux_params', 'sockopt_params', 'final_mask', 'vless_route', 'exclude_from_sub_types', 'mihomo_ip_version', 'mihomo_x25519', 'shuffle_host', 'node_guids', 'created_at', 'updated_at']
+LISTEN 0      4096         0.0.0.0:3333       0.0.0.0:*    users:(("sshd",pid=816,fd=3),("systemd",pid=1,fd=167))                           
+LISTEN 0      511          0.0.0.0:443        0.0.0.0:*    users:(("nginx",pid=9453,fd=5),("nginx",pid=9452,fd=5),("nginx",pid=765,fd=5))   
+LISTEN 0      4096       127.0.0.1:20901      0.0.0.0:*    users:(("x-ui",pid=11069,fd=10))                                                 
+LISTEN 0      4096               *:2096             *:*    users:(("x-ui",pid=11069,fd=20))                                                 
+LISTEN 0      4096               *:8443             *:*    users:(("xray-linux-amd6",pid=11077,fd=6))                                       
+LISTEN 0      4096            [::]:3333          [::]:*    users:(("sshd",pid=816,fd=4),("systemd",pid=1,fd=168))                           
+LISTEN 0      511             [::]:443           [::]:*    users:(("nginx",pid=9453,fd=6),("nginx",pid=9452,fd=6),("nginx",pid=765,fd=6))   
+Status: active
+2096/tcp                   DENY        Anywhere                   # MARS-P2 block x-ui sub public
+20901/tcp                  DENY        Anywhere                   # MARS-P2 block panel direct
+2096/tcp (v6)              DENY        Anywhere (v6)              # MARS-P2 block x-ui sub public
+20901/tcp (v6)             DENY        Anywhere (v6)              # MARS-P2 block panel direct
+TLS_EXT 443 OK
+TLS_EXT 8443 OK
+PUBLIC 2096 OPEN
+PUBLIC 20901 BLOCKED_OR_REFUSED ConnectionRefusedError
+

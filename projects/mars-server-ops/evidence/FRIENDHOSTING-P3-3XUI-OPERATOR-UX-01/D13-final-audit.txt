@@ -1,0 +1,57 @@
+XUI active
+CLIENTS_N 7
+CI_N 7
+CLIENT_EMAILS MCA-ONE-FRIENDHOSTING-DE-RAW-8443|WSP-ONE|MCA-PHONE|Unit-01|Unit-02|Unit-03|Unit-MichaelPhone
+COMMENT MCA-ONE-FRIENDHOSTING-DE-RAW-8443 :: LEGACY FALLBACK — DO NOT DELETE YET
+COMMENT WSP-ONE :: Workstation NEW identity (P3)
+COMMENT MCA-PHONE :: DEVICE_TEST_PENDING
+COMMENT Unit-01 :: DEVICE_TEST_PENDING
+COMMENT Unit-02 :: DEVICE_TEST_PENDING
+COMMENT Unit-03 :: DEVICE_TEST_PENDING
+COMMENT Unit-MichaelPhone :: DEVICE_TEST_PENDING
+INBOUND_SETTINGS_N 7
+UUID_UNIQUE True
+ENABLED_JSON {"MCA-ONE-FRIENDHOSTING-DE-RAW-8443": true, "WSP-ONE": true, "MCA-PHONE": true, "Unit-01": true, "Unit-02": true, "Unit-03": true, "Unit-MichaelPhone": true}
+HOST_JSON {"address": "metacode-cloud.com", "port": 8443, "security": "tls", "sni": "metacode-cloud.com", "alpn": "[\"http/1.1\"]", "fingerprint": "chrome"}
+WSP_URI_WRITTEN 1
+XRAY_N 7
+XRAY_EMAILS MCA-ONE-FRIENDHOSTING-DE-RAW-8443|WSP-ONE|MCA-PHONE|Unit-01|Unit-02|Unit-03|Unit-MichaelPhone
+STREAM_NETWORK tcp
+STREAM_SECURITY tls
+STREAM_SNI metacode-cloud.com
+STREAM_ALPN ["http/1.1"]
+STREAM_FP 
+State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                                                                           
+LISTEN 0      4096       127.0.0.1:11111      0.0.0.0:*    users:(("xray-linux-amd6",pid=11458,fd=8))                                       
+LISTEN 0      511          0.0.0.0:80         0.0.0.0:*    users:(("nginx",pid=9453,fd=13),("nginx",pid=9452,fd=13),("nginx",pid=765,fd=13))
+LISTEN 0      4096   127.0.0.53%lo:53         0.0.0.0:*    users:(("systemd-resolve",pid=556,fd=15))                                        
+LISTEN 0      4096         0.0.0.0:3333       0.0.0.0:*    users:(("sshd",pid=816,fd=3),("systemd",pid=1,fd=167))                           
+LISTEN 0      4096      127.0.0.54:53         0.0.0.0:*    users:(("systemd-resolve",pid=556,fd=17))                                        
+LISTEN 0      511          0.0.0.0:443        0.0.0.0:*    users:(("nginx",pid=9453,fd=5),("nginx",pid=9452,fd=5),("nginx",pid=765,fd=5))   
+LISTEN 0      4096       127.0.0.1:62789      0.0.0.0:*    users:(("xray-linux-amd6",pid=11458,fd=3))                                       
+LISTEN 0      4096       127.0.0.1:20901      0.0.0.0:*    users:(("x-ui",pid=11450,fd=10))                                                 
+LISTEN 0      511             [::]:80            [::]:*    users:(("nginx",pid=9453,fd=14),("nginx",pid=9452,fd=14),("nginx",pid=765,fd=14))
+LISTEN 0      4096               *:2096             *:*    users:(("x-ui",pid=11450,fd=11))                                                 
+LISTEN 0      4096               *:8443             *:*    users:(("xray-linux-amd6",pid=11458,fd=6))                                       
+LISTEN 0      4096            [::]:3333          [::]:*    users:(("sshd",pid=816,fd=4),("systemd",pid=1,fd=168))                           
+LISTEN 0      511             [::]:443           [::]:*    users:(("nginx",pid=9453,fd=6),("nginx",pid=9452,fd=6),("nginx",pid=765,fd=6))   
+
+---UFW---
+Status: active
+
+To                         Action      From
+--                         ------      ----
+3333/tcp                   ALLOW       Anywhere                   # MARS SSH
+8443/tcp                   ALLOW       Anywhere                   # MARS Xray VLESS
+443/tcp                    ALLOW       Anywhere                   # MARS nginx TLS
+2096/tcp                   DENY        Anywhere                   # MARS-P2 block x-ui sub public
+20901/tcp                  DENY        Anywhere                   # MARS-P2 block panel direct
+80/tcp                     ALLOW       Anywhere                   # MARS ACME HTTP-01
+3333/tcp (v6)              ALLOW       Anywhere (v6)              # MARS SSH
+8443/tcp (v6)              ALLOW       Anywhere (v6)              # MARS Xray VLESS
+443/tcp (v6)               ALLOW       Anywhere (v6)              # MARS nginx TLS
+2096/tcp (v6)              DENY        Anywhere (v6)              # MARS-P2 block x-ui sub public
+20901/tcp (v6)             DENY        Anywhere (v6)              # MARS-P2 block panel direct
+80/tcp (v6)                ALLOW       Anywhere (v6)              # MARS ACME HTTP-01
+
+

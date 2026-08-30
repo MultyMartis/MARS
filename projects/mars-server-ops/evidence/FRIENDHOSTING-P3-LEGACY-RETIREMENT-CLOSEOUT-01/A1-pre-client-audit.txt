@@ -1,0 +1,27 @@
+INBOUND_COUNT 1
+INBOUND_ID 1
+REMARK FRIENDHOSTING-DE-RAW-8443
+PORT 8443
+PROTOCOL vless
+ENABLE 1
+NETWORK tcp
+SECURITY tls
+SNI metacode-cloud.com
+SNIFF False
+CLIENT_N 7
+EMAILS_JSON ["MCA-ONE-FRIENDHOSTING-DE-RAW-8443", "WSP-ONE", "MCA-PHONE", "Unit-01", "Unit-02", "Unit-03", "Unit-MichaelPhone"]
+UUID_UNIQUE True
+ENABLE_FLAGS [true, true, true, true, true, true, true]
+CLIENTS_TABLE_N 7
+CLIENTS_TABLE_EMAILS ["MCA-ONE-FRIENDHOSTING-DE-RAW-8443", "MCA-PHONE", "Unit-01", "Unit-02", "Unit-03", "Unit-MichaelPhone", "WSP-ONE"]
+CLIENTS_TABLE_ENABLE [1, 1, 1, 1, 1, 1, 1]
+CLIENT_INBOUNDS_N 7
+LEGACY_IN_SETTINGS 1
+LEGACY_IN_CLIENTS_TABLE 1
+HAS_HOSTS True
+HOSTS_COLS ['id', 'group_id', 'inbound_id', 'sort_order', 'remark', 'server_description', 'is_disabled', 'is_hidden', 'tags', 'address', 'port', 'security', 'sni', 'host_header', 'path', 'alpn', 'fingerprint', 'override_sni_from_address', 'keep_sni_blank', 'pinned_peer_cert_sha256', 'verify_peer_cert_by_name', 'allow_insecure', 'ech_config_list', 'mux_params', 'sockopt_params', 'final_mask', 'vless_route', 'exclude_from_sub_types', 'mihomo_ip_version', 'mihomo_x25519', 'shuffle_host', 'node_guids', 'created_at', 'updated_at']
+HOSTS_N 1
+TRAFFIC_LEGACY 1
+XRAY_LIVE_N 7
+XRAY_LIVE_EMAILS ["MCA-ONE-FRIENDHOSTING-DE-RAW-8443", "WSP-ONE", "MCA-PHONE", "Unit-01", "Unit-02", "Unit-03", "Unit-MichaelPhone"]
+

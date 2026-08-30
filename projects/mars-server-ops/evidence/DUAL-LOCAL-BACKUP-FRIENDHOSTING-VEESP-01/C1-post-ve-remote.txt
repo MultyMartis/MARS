@@ -1,0 +1,85 @@
+exit=0
+HOSTNAME=wsp-cloud
+OS=Ubuntu 22.04.5 LTS
+KERNEL=5.15.0-187-generic
+UPTIME=up 1 week, 6 days, 7 hours, 14 minutes
+===VERSIONS===
+Invalid subcommands
+
+
+bash: line 10: nginx: command not found
+nginx_absent
+0.11.2
+===SERVICES===
+active
+active
+active
+active
+enabled
+enabled
+enabled
+enabled
+===LISTEN===
+LISTEN 0      128          0.0.0.0:22         0.0.0.0:*    users:(("sshd",pid=1062,fd=3))           
+LISTEN 0      4096               *:5928             *:*    users:(("x-ui",pid=791,fd=9))            
+LISTEN 0      4096               *:2096             *:*    users:(("x-ui",pid=791,fd=13))           
+LISTEN 0      128             [::]:22            [::]:*    users:(("sshd",pid=1062,fd=4))           
+LISTEN 0      4096               *:8443             *:*    users:(("xray-linux-amd6",pid=878,fd=7)) 
+===FIREWALL===
+Status: inactive
+-P INPUT ACCEPT
+-P FORWARD DROP
+-P OUTPUT ACCEPT
+-N DOCKER
+-N DOCKER-BRIDGE
+-N DOCKER-CT
+-N DOCKER-FORWARD
+-N DOCKER-INTERNAL
+-N DOCKER-USER
+-N f2b-sshd
+-A INPUT -p tcp -m multiport --dports 22 -j f2b-sshd
+-A FORWARD -j DOCKER-USER
+-A FORWARD -j DOCKER-FORWARD
+-A DOCKER -d 172.17.0.2/32 ! -i docker0 -o docker0 -p tcp -m tcp --dport 443 -j ACCEPT
+-A DOCKER ! -i docker0 -o docker0 -j DROP
+-A DOCKER-BRIDGE -o docker0 -j DOCKER
+-A DOCKER-CT -o docker0 -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+-A DOCKER-FORWARD -j DOCKER-CT
+-A DOCKER-FORWARD -j DOCKER-INTERNAL
+-A DOCKER-FORWARD -j DOCKER-BRIDGE
+-A DOCKER-FORWARD -i docker0 -j ACCEPT
+-A f2b-sshd -s 92.118.39.14/32 -j REJECT --reject-with icmp-port-unreachable
+-A f2b-sshd -j RETURN
+===PATHS===
+total 1508
+drwxr-xr-x   2 root root    4096 Aug 30 13:23 .
+drwxr-xr-x 102 root root    4096 Aug 28 06:34 ..
+-rw-r--r--   1 root root 1301208 Aug 30 13:23 system_metrics.gob
+-rw-r--r--   1 root root  229376 Aug 30 12:30 x-ui.db
+total 86632
+drwxr-xr-x  3 root root     4096 Jun 25 22:57 .
+drwxr-xr-x 11 root root     4096 Jun 27 15:44 ..
+drwxr-xr-x  2 root root     4096 Aug 17 06:09 bin
+-rwxr-xr-x  1 root root 88551984 Jun 25 22:57 x-ui
+-rw-r--r--  1 root root      346 Jun 25 22:57 x-ui.service.arch
+-rw-r--r--  1 root root      347 Jun 25 22:57 x-ui.service.debian
+-rw-r--r--  1 root root      349 Jun 25 22:57 x-ui.service.rhel
+-rwxr-xr-x  1 root root   125765 Jun 25 22:57 x-ui.sh
+total 12
+drwxr-xr-x  3 root root 4096 Feb 14  2026 .
+drwx------ 10 root root 4096 Aug 30 13:23 ..
+drwxr-xr-x  2 root root 4096 Feb 14  2026 wsp-cloud.com
+letsencrypt_absent
+nginx_etc_absent
+===CERT===
+/root/cert/wsp-cloud.com/fullchain.pem
+/root/cert/wsp-cloud.com/privkey.pem
+===INBOUND===
+INBOUND_COUNT 2
+INBOUND port=8443 protocol=vless remark=MCA-Gate-TLS clients=8
+INBOUND port=46489 protocol=vless remark=MCA-Gate-Reality clients=1
+CLIENTS_8443 8
+XUI_LOCAL=000
+XUI_LOCAL=UNREACHABLE
+GATE_REMOTE_OK
+

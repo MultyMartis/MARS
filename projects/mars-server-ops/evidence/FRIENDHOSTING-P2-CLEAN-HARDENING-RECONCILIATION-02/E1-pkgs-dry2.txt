@@ -1,0 +1,22 @@
+===PKGS===
+1
+Listing...
+REBOOT_REQUIRED=no
+===TIMER===
+active
+enabled
+===DRY2===
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Processing /etc/letsencrypt/renewal/metacode-cloud.com.conf
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Simulating renewal of an existing certificate for metacode-cloud.com
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Congratulations, all simulated renewals succeeded: 
+  /etc/letsencrypt/live/metacode-cloud.com/fullchain.pem (success)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+DRY2_EXIT:0
+
+ERR:
+Saving debug log to /var/log/letsencrypt/letsencrypt.log

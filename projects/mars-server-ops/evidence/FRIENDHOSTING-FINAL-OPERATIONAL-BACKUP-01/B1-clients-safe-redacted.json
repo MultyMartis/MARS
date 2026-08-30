@@ -1,0 +1,49 @@
+{
+  "wave": "FRIENDHOSTING-FINAL-OPERATIONAL-BACKUP-01",
+  "created_utc": "20260830T125003Z",
+  "inbound": {
+    "id": 1,
+    "remark": "FRIENDHOSTING-DE-RAW-8443",
+    "port": 8443,
+    "protocol": "vless"
+  },
+  "client_count": 6,
+  "clients": [
+    {
+      "email": "WSP-ONE",
+      "enable": true,
+      "flow": "",
+      "has_id": true
+    },
+    {
+      "email": "MCA-PHONE",
+      "enable": true,
+      "flow": "",
+      "has_id": true
+    },
+    {
+      "email": "Unit-01",
+      "enable": true,
+      "flow": "",
+      "has_id": true
+    },
+    {
+      "email": "Unit-02",
+      "enable": true,
+      "flow": "",
+      "has_id": true
+    },
+    {
+      "email": "Unit-03",
+      "enable": true,
+      "flow": "",
+      "has_id": true
+    },
+    {
+      "email": "Unit-MichaelPhone",
+      "enable": true,
+      "flow": "",
+      "has_id": true
+    }
+  ]
+}

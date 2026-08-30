@@ -1,0 +1,30 @@
+=== EXISTING ===
+Status
+|- Number of jail:	2
+`- Jail list:	3x-ipl, sshd
+2026-08-30 09:38:04,933 fail2ban                [7810]: ERROR   NOK: ('Invalid command (no get action or not yet implemented)',)
+Invalid command (no get action or not yet implemented)
+5
+total 16
+drwxr-xr-x 2 root root 4096 Aug 29 17:44 .
+drwxr-xr-x 6 root root 4096 Aug 29 17:44 ..
+-rw-r--r-- 1 root root  130 Aug 29 17:44 3x-ipl.conf
+-rw-r--r-- 1 root root  117 Jun 10  2024 defaults-debian.conf
+/etc/fail2ban/jail.d/3x-ipl.conf:2:enabled=true
+/etc/fail2ban/jail.d/defaults-debian.conf:3:banaction_allports = nftables[type=allports]
+/etc/fail2ban/jail.d/defaults-debian.conf:6:[sshd]
+/etc/fail2ban/jail.d/defaults-debian.conf:7:enabled = true
+OK: configuration test is successful
+active
+Status for the jail: sshd
+|- Filter
+|  |- Currently failed:	0
+|  |- Total failed:	0
+|  `- Journal matches:	_SYSTEMD_UNIT=sshd.service + _COMM=sshd
+`- Actions
+   |- Currently banned:	0
+   |- Total banned:	0
+   `- Banned IP list:	
+2026-08-30 09:38:06,688 fail2ban                [7824]: ERROR   NOK: ('Invalid command (no get action or not yet implemented)',)
+Invalid command (no get action or not yet implemented)
+

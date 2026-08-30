@@ -1,0 +1,153 @@
+{
+  "node_id": "MCA-VPN-001",
+  "inventory_ref": "MCA-VPN-001",
+  "label": "VEESP / MCA-VPN-001",
+  "checked_utc": "2026-08-30T19:00:01.860195+00:00",
+  "soak_checkpoint": "T0",
+  "network": {
+    "dns_a": [
+      "178.173.250.69"
+    ],
+    "dns_ok": true,
+    "ssh_tcp": {
+      "port": 22,
+      "open": true
+    },
+    "vpn_tcp": {
+      "port": 8443,
+      "open": true
+    },
+    "tls_8443": {
+      "ok": true,
+      "subject_cn": "wsp-cloud.com",
+      "not_after": "Nov 11 08:03:40 2026 GMT",
+      "version": "TLSv1.3",
+      "expires_utc": "2026-11-11T08:03:40+00:00",
+      "days_remaining": 72.54
+    },
+    "tls_class": "PASS",
+    "ssh_key_present": true
+  },
+  "server": {
+    "hostname": "wsp-cloud",
+    "uptime_sec": 1169423,
+    "load": "0.04 0.11 0.09",
+    "mem_total": 1105010688,
+    "mem_used": 313122816,
+    "mem_avail": 622157824,
+    "swap_total": 1073737728,
+    "swap_used": 35680256,
+    "root_usepct": 45.0,
+    "inode_usepct": 10.0,
+    "ufw_status": "Status: active",
+    "listen_sample": [
+      "127.0.0.1:11111",
+      "127.0.0.1:62789",
+      "127.0.0.1:46539",
+      "127.0.0.53%lo:53",
+      "0.0.0.0:22",
+      "0.0.0.0:8445",
+      "*:5928",
+      "*:46489",
+      "*:2096",
+      "[::]:22",
+      "*:8443",
+      "[::]:8445"
+    ],
+    "mem_avail_pct": 56.3,
+    "swap_used_pct": 3.32,
+    "remote_backups_sample": [
+      "veesp-pre-system-hardening-20260830T162532Z.tgz.sha256",
+      "veesp-xui-postupgrade-20260830T155842Z.tgz",
+      "veesp-xui-precred-20260830T141517Z.tgz",
+      "veesp-xui-preupgrade-20260830T154548Z",
+      "veesp-xui-preupgrade-20260830T154548Z.tgz"
+    ]
+  },
+  "services": {
+    "ssh_active": true,
+    "x_ui_active": true,
+    "x_ui_enabled": true,
+    "xray_process": true,
+    "fail2ban_active": true,
+    "ufw_active": true,
+    "nginx_active": false,
+    "certbot": [
+      "CERTBOT=absent"
+    ],
+    "xui_settings_sanitized": [
+      "\u2502  \u001b[0;34mx-ui legacy\u001b[0m                - Legacy version                   \u2502"
+    ],
+    "remote_exit": 0
+  },
+  "ports": {
+    "22": {
+      "expected": "public",
+      "open": true,
+      "method": "local_tcp"
+    },
+    "8443": {
+      "expected": "public",
+      "open": true,
+      "method": "local_tcp"
+    },
+    "5928": {
+      "expected": "known_residual_public",
+      "open": true,
+      "method": "local_tcp"
+    },
+    "2096": {
+      "expected": "known_residual_public",
+      "open": true,
+      "method": "local_tcp"
+    },
+    "46489": {
+      "expected": "public",
+      "open": true,
+      "method": "local_tcp"
+    },
+    "8445": {
+      "expected": "public",
+      "open": true,
+      "method": "local_tcp"
+    }
+  },
+  "backup": {
+    "dir_exists": true,
+    "preferred_stamp": "20260830T184024Z",
+    "selected": "veesp-final-operational-20260830T184024Z.tgz",
+    "age_days": 0.01,
+    "freshness": "FRESH",
+    "size_bytes": 81065422,
+    "sha_sidecar_present": true,
+    "backup_timestamp_utc": "2026-08-30T18:40:24+00:00"
+  },
+  "residuals": [
+    {
+      "port": 5928,
+      "class": "KNOWN_RESIDUAL_PUBLIC",
+      "open": true,
+      "note": "Documented residual \u2014 does not auto-fail"
+    },
+    {
+      "port": 2096,
+      "class": "KNOWN_RESIDUAL_PUBLIC",
+      "open": true,
+      "note": "Documented residual \u2014 does not auto-fail"
+    }
+  ],
+  "issues": [],
+  "warnings": [],
+  "verdict": "PASS_WITH_RESIDUALS",
+  "real_workload_documented": {
+    "ChatGPT": "PASS",
+    "YouTube": "PASS",
+    "Cursor": "PASS"
+  },
+  "mutations": {
+    "server": 0,
+    "vpn": 0,
+    "client": 0,
+    "reboot": 0
+  }
+}

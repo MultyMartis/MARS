@@ -1,0 +1,26 @@
+3.7.0
+active
+active
+LISTEN 0      4096         0.0.0.0:3333       0.0.0.0:*    users:(("sshd",pid=816,fd=3),("systemd",pid=1,fd=167))                           
+LISTEN 0      511          0.0.0.0:443        0.0.0.0:*    users:(("nginx",pid=9453,fd=5),("nginx",pid=9452,fd=5),("nginx",pid=765,fd=5))   
+LISTEN 0      4096       127.0.0.1:20901      0.0.0.0:*    users:(("x-ui",pid=10372,fd=10))                                                 
+LISTEN 0      4096               *:2096             *:*    users:(("x-ui",pid=10372,fd=11))                                                 
+LISTEN 0      4096               *:8443             *:*    users:(("xray-linux-amd6",pid=10382,fd=3))                                       
+LISTEN 0      4096            [::]:3333          [::]:*    users:(("sshd",pid=816,fd=4),("systemd",pid=1,fd=168))                           
+LISTEN 0      511             [::]:443           [::]:*    users:(("nginx",pid=9453,fd=6),("nginx",pid=9452,fd=6),("nginx",pid=765,fd=6))   
+Status: active
+Default: deny (incoming), allow (outgoing), disabled (routed)
+3333/tcp                   ALLOW IN    Anywhere                   # MARS SSH
+8443/tcp                   ALLOW IN    Anywhere                   # MARS Xray VLESS
+443/tcp                    ALLOW IN    Anywhere                   # MARS nginx TLS
+2096/tcp                   DENY IN     Anywhere                   # MARS-P2 block x-ui sub public
+20901/tcp                  DENY IN     Anywhere                   # MARS-P2 block panel direct
+3333/tcp (v6)              ALLOW IN    Anywhere (v6)              # MARS SSH
+8443/tcp (v6)              ALLOW IN    Anywhere (v6)              # MARS Xray VLESS
+443/tcp (v6)               ALLOW IN    Anywhere (v6)              # MARS nginx TLS
+2096/tcp (v6)              DENY IN     Anywhere (v6)              # MARS-P2 block x-ui sub public
+20901/tcp (v6)             DENY IN     Anywhere (v6)              # MARS-P2 block panel direct
+TABLES ['users', 'sqlite_sequence', 'inbounds', 'outbound_traffics', 'settings', 'inbound_client_ips', 'client_traffics', 'history_of_seeders', 'nodes', 'api_tokens', 'clients', 'client_inbounds', 'client_hwids', 'client_external_links', 'client_groups', 'inbound_fallbacks', 'hosts', 'node_client_traffics', 'node_client_ips', 'client_global_traffics', 'outbound_subscriptions', 'sub_balancers']
+N_SETTINGS 5
+webListen = 127.0.0.1
+

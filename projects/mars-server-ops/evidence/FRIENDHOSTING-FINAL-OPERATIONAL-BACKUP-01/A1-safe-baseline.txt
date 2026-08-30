@@ -1,0 +1,132 @@
+exit=0
+===UTC===
+Sun Aug 30 12:50:06 UTC 2026
+===HOSTNAME===
+imart216311
+===OS===
+Ubuntu 24.04.4 LTS
+===KERNEL===
+6.8.0-138-generic
+===UPTIME===
+ 12:50:06 up  4:30,  1 user,  load average: 0.02, 0.01, 0.00
+===CPU===
+2
+CPU(s):                                  2
+On-line CPU(s) list:                     0,1
+Model name:                              Common KVM processor
+BIOS Model name:                         pc-i440fx-11.0  CPU @ 2.0GHz
+Thread(s) per core:                      1
+Core(s) per socket:                      2
+NUMA node0 CPU(s):                       0,1
+===MEM===
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       447Mi       116Mi       1.0Mi       1.5Gi       1.5Gi
+Swap:          2.0Gi       524Ki       2.0Gi
+===SWAP===
+NAME      TYPE SIZE USED PRIO
+/swapfile file   2G 524K   -2
+Swap:          2.0Gi       524Ki       2.0Gi
+===BLOCK===
+NAME     SIZE TYPE FSTYPE MOUNTPOINT
+sda       20G disk        
+├─sda1    19G part ext4   /
+├─sda14    4M part        
+├─sda15  106M part vfat   /boot/efi
+└─sda16  913M part ext4   /boot
+sr0     1024M rom         
+===FS===
+Filesystem     Type   Size  Used Avail Use% Mounted on
+tmpfs          tmpfs  197M  980K  196M   1% /run
+/dev/sda1      ext4    19G  6.6G   12G  36% /
+tmpfs          tmpfs  984M     0  984M   0% /dev/shm
+tmpfs          tmpfs  5.0M     0  5.0M   0% /run/lock
+/dev/sda16     ext4   881M  117M  703M  15% /boot
+/dev/sda15     vfat   105M  6.2M   99M   6% /boot/efi
+tmpfs          tmpfs  197M  8.0K  197M   1% /run/user/0
+===IP===
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    altname enp0s18
+    inet 92.42.99.126/24 brd 92.42.99.255 scope global eth0
+       valid_lft forever preferred_lft forever
+default via 92.42.99.1 dev eth0 proto static 
+92.42.99.0/24 dev eth0 proto kernel scope link src 92.42.99.126 
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
+    link/ether bc:24:11:45:ff:a6 brd ff:ff:ff:ff:ff:ff
+    altname enp0s18
+===LISTEN===
+State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                                                                           
+LISTEN 0      4096       127.0.0.1:11111      0.0.0.0:*    users:(("xray-linux-amd6",pid=12090,fd=7))                                       
+LISTEN 0      511          0.0.0.0:80         0.0.0.0:*    users:(("nginx",pid=9453,fd=13),("nginx",pid=9452,fd=13),("nginx",pid=765,fd=13))
+LISTEN 0      4096   127.0.0.53%lo:53         0.0.0.0:*    users:(("systemd-resolve",pid=556,fd=15))                                        
+LISTEN 0      4096         0.0.0.0:3333       0.0.0.0:*    users:(("sshd",pid=816,fd=3),("systemd",pid=1,fd=167))                           
+LISTEN 0      4096      127.0.0.54:53         0.0.0.0:*    users:(("systemd-resolve",pid=556,fd=17))                                        
+LISTEN 0      511          0.0.0.0:443        0.0.0.0:*    users:(("nginx",pid=9453,fd=5),("nginx",pid=9452,fd=5),("nginx",pid=765,fd=5))   
+LISTEN 0      4096       127.0.0.1:62789      0.0.0.0:*    users:(("xray-linux-amd6",pid=12090,fd=3))                                       
+LISTEN 0      4096       127.0.0.1:20901      0.0.0.0:*    users:(("x-ui",pid=12081,fd=10))                                                 
+LISTEN 0      511             [::]:80            [::]:*    users:(("nginx",pid=9453,fd=14),("nginx",pid=9452,fd=14),("nginx",pid=765,fd=14))
+LISTEN 0      4096               *:2096             *:*    users:(("x-ui",pid=12081,fd=17))                                                 
+LISTEN 0      4096               *:8443             *:*    users:(("xray-linux-amd6",pid=12090,fd=6))                                       
+LISTEN 0      4096            [::]:3333          [::]:*    users:(("sshd",pid=816,fd=4),("systemd",pid=1,fd=168))                           
+LISTEN 0      511             [::]:443           [::]:*    users:(("nginx",pid=9453,fd=6),("nginx",pid=9452,fd=6),("nginx",pid=765,fd=6))   
+===VERS===
+Invalid subcommands
+
+
+nginx version: nginx/1.24.0 (Ubuntu)
+OpenSSH_9.6p1 Ubuntu-3ubuntu13.18, OpenSSL 3.0.13 30 Jan 2024
+1.0.2
+certbot 2.9.0
+===ENABLED===
+enabled
+enabled
+enabled
+enabled
+enabled
+===UFW===
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+3333/tcp                   ALLOW IN    Anywhere                   # MARS SSH
+8443/tcp                   ALLOW IN    Anywhere                   # MARS Xray VLESS
+443/tcp                    ALLOW IN    Anywhere                   # MARS nginx TLS
+2096/tcp                   DENY IN     Anywhere                   # MARS-P2 block x-ui sub public
+20901/tcp                  DENY IN     Anywhere                   # MARS-P2 block panel direct
+80/tcp                     ALLOW IN    Anywhere                   # MARS ACME HTTP-01
+3333/tcp (v6)              ALLOW IN    Anywhere (v6)              # MARS SSH
+8443/tcp (v6)              ALLOW IN    Anywhere (v6)              # MARS Xray VLESS
+443/tcp (v6)               ALLOW IN    Anywhere (v6)              # MARS nginx TLS
+2096/tcp (v6)              DENY IN     Anywhere (v6)              # MARS-P2 block x-ui sub public
+20901/tcp (v6)             DENY IN     Anywhere (v6)              # MARS-P2 block panel direct
+80/tcp (v6)                ALLOW IN    Anywhere (v6)              # MARS ACME HTTP-01
+
+===F2B===
+Status
+|- Number of jail:	2
+`- Jail list:	3x-ipl, sshd
+===CERT===
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Found the following certs:
+  Certificate Name: metacode-cloud.com
+    Serial Number: 6b5535c454a3831753a8995d6a71dc49c0a
+    Key Type: ECDSA
+    Domains: metacode-cloud.com
+    Expiry Date: 2026-11-27 16:46:34+00:00 (VALID: 89 days)
+    Certificate Path: /etc/letsencrypt/live/metacode-cloud.com/fullchain.pem
+    Private Key Path: /etc/letsencrypt/live/metacode-cloud.com/privkey.pem
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+===RENEW===
+webroot_path = /var/www/letsencrypt
+authenticator = webroot
+BASELINE_OK
+

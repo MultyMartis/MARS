@@ -1,0 +1,13 @@
+exit=0
+PRESENT:/etc/x-ui
+PRESENT:/usr/local/x-ui
+ABSENT:/etc/xray
+PRESENT:/root/cert
+ABSENT:/etc/letsencrypt
+ABSENT:/etc/nginx
+PRESENT:/etc/ssh
+PRESENT:/etc/ufw
+PRESENT:/etc/fail2ban
+PRESENT:/etc/fstab
+PRESENT:/etc/docker
+PRESENT:/swapfile

@@ -1,0 +1,276 @@
+{
+  "wave": "VEESP-FINAL-FULL-OPERATIONAL-BACKUP-01",
+  "ts": "20260830T184024Z",
+  "pre": {
+    "ssh_root_key": true,
+    "xui": true,
+    "fail2ban": true,
+    "ufw_active": true,
+    "xray_8443_listen": true,
+    "tls_8443": true,
+    "panel_5928_tcp": true,
+    "panel_5928_tls": true,
+    "panel_5928_http": true,
+    "sub_2096_tcp": true,
+    "sub_2096_http": true,
+    "dns": true,
+    "vless_8443_inbound": true,
+    "clients_8443": 8,
+    "clients_46489": 1,
+    "swap_active": true,
+    "journald_cap": true,
+    "passwordauthentication_no": true,
+    "xui_version_3_7_0": true,
+    "xray_version_26_7_28": true,
+    "reboot_required": true,
+    "panel_5928_code": "404",
+    "sub_2096_code": "404",
+    "tls_8443_notAfter": "Nov 11 08:03:40 2026 GMT",
+    "hostname": "wsp-cloud",
+    "os": "Ubuntu 22.04.5 LTS",
+    "PASS": true,
+    "marsops_key_login": true,
+    "marsops_sudo": true
+  },
+  "backup": {
+    "ok": true,
+    "remote_sha256": "b15631b7d1519fbd8364b73541fbf6e240f5e1032b0b44ef49fc34725bc80cec",
+    "local_sha256": "b15631b7d1519fbd8364b73541fbf6e240f5e1032b0b44ef49fc34725bc80cec",
+    "sha_match": true,
+    "remote_size": 81065422,
+    "local_size": 81065422,
+    "size_match": true,
+    "bytes": 81065422,
+    "mib": 77.310011,
+    "gib": 0.075498,
+    "member_count": 333,
+    "required_sections": {
+      "etc-ssh": true,
+      "etc-ufw": true,
+      "etc-fail2ban": true,
+      "usr-local-x-ui": true,
+      "x-ui-db": true,
+      "root-cert": true,
+      "fstab": true,
+      "journald.conf": true,
+      "clients-safe.json": true,
+      "sudoers": true,
+      "iptables-save.txt": true
+    },
+    "archive_readable": true,
+    "inbounds": [
+      {
+        "id": 1,
+        "remark": "MCA-Gate-TLS",
+        "port": 8443,
+        "protocol": "vless",
+        "client_count": 8,
+        "clients": [
+          {
+            "email": "WSP-ONE",
+            "enable": false,
+            "has_id": true,
+            "has_subId": true
+          },
+          {
+            "email": "Unit-01",
+            "enable": true,
+            "has_id": true,
+            "has_subId": true
+          },
+          {
+            "email": "Unit-MartisPhone",
+            "enable": true,
+            "has_id": true,
+            "has_subId": true
+          },
+          {
+            "email": "Unit-02",
+            "enable": false,
+            "has_id": true,
+            "has_subId": true
+          },
+          {
+            "email": "Unit-Metallka",
+            "enable": true,
+            "has_id": true,
+            "has_subId": true
+          },
+          {
+            "email": "Unit-MichaelPhone",
+            "enable": true,
+            "has_id": true,
+            "has_subId": true
+          },
+          {
+            "email": "Unit-MichaelWS",
+            "enable": true,
+            "has_id": true,
+            "has_subId": true
+          },
+          {
+            "email": "MCA-ONE",
+            "enable": true,
+            "has_id": true,
+            "has_subId": true
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "remark": "MCA-Gate-Reality",
+        "port": 46489,
+        "protocol": "vless",
+        "client_count": 1,
+        "clients": [
+          {
+            "email": "Main",
+            "enable": true,
+            "has_id": true,
+            "has_subId": true
+          }
+        ]
+      }
+    ],
+    "clients_8443": 8,
+    "clients_46489": 1,
+    "has_nginx": false,
+    "has_docker": true,
+    "remote_path": "/root/mars-backups/veesp-final-operational-20260830T184024Z.tgz",
+    "local_path": "X:\\AI MARS\\local\\infrastructure\\MCA-VPN-001\\backups\\veesp-final-operational-20260830T184024Z.tgz"
+  },
+  "post": {
+    "ssh_root_key": true,
+    "xui": true,
+    "fail2ban": true,
+    "ufw_active": true,
+    "xray_8443_listen": true,
+    "tls_8443": true,
+    "panel_5928_tcp": true,
+    "panel_5928_tls": true,
+    "panel_5928_http": true,
+    "sub_2096_tcp": true,
+    "sub_2096_http": true,
+    "dns": true,
+    "vless_8443_inbound": true,
+    "clients_8443": 8,
+    "clients_46489": 1,
+    "swap_active": true,
+    "journald_cap": true,
+    "passwordauthentication_no": true,
+    "xui_version_3_7_0": true,
+    "xray_version_26_7_28": true,
+    "reboot_required": true,
+    "panel_5928_code": "404",
+    "sub_2096_code": "404",
+    "tls_8443_notAfter": "Nov 11 08:03:40 2026 GMT",
+    "hostname": "wsp-cloud",
+    "os": "Ubuntu 22.04.5 LTS",
+    "PASS": true,
+    "marsops_key_login": true,
+    "clients_unchanged": true
+  },
+  "directory_totals": {
+    "path": "X:\\AI MARS\\local\\infrastructure\\MCA-VPN-001\\backups",
+    "archive_count": 7,
+    "total_bytes": 492305582,
+    "total_mib": 469.499189,
+    "total_gib": 0.458495,
+    "archives": [
+      {
+        "name": "veesp-final-operational-20260830T184024Z.tgz",
+        "bytes": 81065422
+      },
+      {
+        "name": "veesp-operational-20260830T132309Z.tgz",
+        "bytes": 83967532
+      },
+      {
+        "name": "veesp-post-system-hardening-20260830T163612Z.tgz",
+        "bytes": 81048677
+      },
+      {
+        "name": "veesp-pre-system-hardening-20260830T162532Z.tgz",
+        "bytes": 81015066
+      },
+      {
+        "name": "veesp-xui-postupgrade-20260830T155842Z.tgz",
+        "bytes": 80876064
+      },
+      {
+        "name": "veesp-xui-precred-20260830T141517Z.tgz",
+        "bytes": 516851
+      },
+      {
+        "name": "veesp-xui-preupgrade-20260830T154548Z.tgz",
+        "bytes": 83815970
+      }
+    ]
+  },
+  "friendhosting_dir_optional": {
+    "path": "X:\\AI MARS\\local\\infrastructure\\FRIENDHOSTING-GERMANY\\backups",
+    "archive_count": 10,
+    "total_bytes": 498452697,
+    "total_mib": 475.361535,
+    "total_gib": 0.46422,
+    "archives": [
+      {
+        "name": "friendhosting-final-operational-20260830T125003Z.tgz",
+        "bytes": 80746687
+      },
+      {
+        "name": "friendhosting-operational-20260830T132309Z.tgz",
+        "bytes": 80743234
+      },
+      {
+        "name": "friendhosting-p2-clean-hardened-state-20260830T102110Z.tgz",
+        "bytes": 80721584
+      },
+      {
+        "name": "friendhosting-p3-pre-device-identities-20260830T105341Z.tgz",
+        "bytes": 80676164
+      },
+      {
+        "name": "friendhosting-p3-pre-legacy-retirement-20260830T120733Z.tgz",
+        "bytes": 13631488
+      },
+      {
+        "name": "friendhosting-p3-pre-legacy-retirement-ESSENTIAL-20260830T122055Z.tgz",
+        "bytes": 296373
+      },
+      {
+        "name": "friendhosting-p3-pre-legacy-retirement-ESSENTIAL-20260830T122418Z.tgz",
+        "bytes": 297287
+      },
+      {
+        "name": "friendhosting-plus-p2-pre-hardening-20260830T085016Z.tgz",
+        "bytes": 80689274
+      },
+      {
+        "name": "friendhosting-plus-pre-panel-reboot-20260830T073335Z.tgz",
+        "bytes": 80613337
+      },
+      {
+        "name": "friendhosting-prebuild-20260829T174340Z.tgz",
+        "bytes": 37269
+      }
+    ]
+  },
+  "verdict": "PASS",
+  "mutations": {
+    "friendhosting": 0,
+    "veesp_config": 0,
+    "veesp_client": 0,
+    "veesp_reboot": 0,
+    "secret_disclosure": 0,
+    "foreign_wip": 0,
+    "commit_push": 0
+  },
+  "marsops": {
+    "key_login": true,
+    "sudo": true,
+    "id_present": true
+  },
+  "restore_procedure": "CONFIRMED",
+  "bare_metal_restore": "NOT YET EXERCISED"
+}

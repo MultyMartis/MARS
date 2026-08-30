@@ -1,0 +1,363 @@
+===HOST===
+imart216311
+PRETTY_NAME="Ubuntu 24.04.4 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.4 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+Linux imart216311 6.8.0-138-generic #138-Ubuntu SMP PREEMPT_DYNAMIC Fri Jul 31 22:41:49 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+ 10:14:31 up  1:55,  2 users,  load average: 0.00, 0.00, 0.00
+2
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       410Mi       692Mi       1.1Mi       1.0Gi       1.5Gi
+Swap:          2.0Gi          0B       2.0Gi
+NAME      TYPE SIZE USED PRIO
+/swapfile file   2G   0B   -2
+Filesystem     Type  Size  Used Avail Use% Mounted on
+/dev/sda1      ext4   19G  5.3G   14G  29% /
+===NET===
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    altname enp0s18
+    inet 92.42.99.126/24 brd 92.42.99.255 scope global eth0
+       valid_lft forever preferred_lft forever
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 state UNKNOWN qlen 1000
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 state UP qlen 1000
+    inet6 2a06:fcc0:a::15b/48 scope global 
+       valid_lft forever preferred_lft forever
+    inet6 fe80::be24:11ff:fe45:ffa6/64 scope link 
+       valid_lft forever preferred_lft forever
+default via 92.42.99.1 dev eth0 proto static 
+92.42.99.0/24 dev eth0 proto kernel scope link src 92.42.99.126 
+2a06:fcc0:a::/48 dev eth0 proto kernel metric 256 pref medium
+fe80::/64 dev eth0 proto kernel metric 256 pref medium
+default via 2a06:fcc0:a::1 dev eth0 proto static metric 1024 pref medium
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
+===LISTEN===
+Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                                                                      
+udp   UNCONN 0      0         127.0.0.54:53         0.0.0.0:*    users:(("systemd-resolve",pid=556,fd=16))                                   
+udp   UNCONN 0      0      127.0.0.53%lo:53         0.0.0.0:*    users:(("systemd-resolve",pid=556,fd=14))                                   
+tcp   LISTEN 0      4096       127.0.0.1:11111      0.0.0.0:*    users:(("xray-linux-amd6",pid=6957,fd=7))                                   
+tcp   LISTEN 0      4096   127.0.0.53%lo:53         0.0.0.0:*    users:(("systemd-resolve",pid=556,fd=15))                                   
+tcp   LISTEN 0      4096         0.0.0.0:3333       0.0.0.0:*    users:(("sshd",pid=816,fd=3),("systemd",pid=1,fd=167))                      
+tcp   LISTEN 0      4096      127.0.0.54:53         0.0.0.0:*    users:(("systemd-resolve",pid=556,fd=17))                                   
+tcp   LISTEN 0      511          0.0.0.0:443        0.0.0.0:*    users:(("nginx",pid=767,fd=5),("nginx",pid=766,fd=5),("nginx",pid=765,fd=5))
+tcp   LISTEN 0      4096       127.0.0.1:62789      0.0.0.0:*    users:(("xray-linux-amd6",pid=6957,fd=6))                                   
+tcp   LISTEN 0      4096       127.0.0.1:20901      0.0.0.0:*    users:(("x-ui",pid=6947,fd=10))                                             
+tcp   LISTEN 0      4096               *:2096             *:*    users:(("x-ui",pid=6947,fd=18))                                             
+tcp   LISTEN 0      4096               *:8443             *:*    users:(("xray-linux-amd6",pid=6957,fd=3))                                   
+tcp   LISTEN 0      4096            [::]:3333          [::]:*    users:(("sshd",pid=816,fd=4),("systemd",pid=1,fd=168))                      
+tcp   LISTEN 0      511             [::]:443           [::]:*    users:(("nginx",pid=767,fd=6),("nginx",pid=766,fd=6),("nginx",pid=765,fd=6))
+===SVCS===
+ssh active=active
+ssh enabled=enabled
+nginx active=active
+nginx enabled=enabled
+x-ui active=active
+x-ui enabled=enabled
+fail2ban active=active
+fail2ban enabled=enabled
+active
+enabled
+NEXT                           LEFT LAST                        PASSED UNIT          ACTIVATES
+Sun 2026-08-30 12:18:42 UTC 2h 4min Sun 2026-08-30 05:39:09 UTC      - certbot.timer certbot.service
+
+1 timers listed.
+===UFW===
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+3333/tcp                   ALLOW IN    Anywhere                   # MARS SSH
+8443/tcp                   ALLOW IN    Anywhere                   # MARS Xray VLESS
+443/tcp                    ALLOW IN    Anywhere                   # MARS nginx TLS
+2096/tcp                   DENY IN     Anywhere                   # MARS-P2 block x-ui sub public
+20901/tcp                  DENY IN     Anywhere                   # MARS-P2 block panel direct
+3333/tcp (v6)              ALLOW IN    Anywhere (v6)              # MARS SSH
+8443/tcp (v6)              ALLOW IN    Anywhere (v6)              # MARS Xray VLESS
+443/tcp (v6)               ALLOW IN    Anywhere (v6)              # MARS nginx TLS
+2096/tcp (v6)              DENY IN     Anywhere (v6)              # MARS-P2 block x-ui sub public
+20901/tcp (v6)             DENY IN     Anywhere (v6)              # MARS-P2 block panel direct
+
+===UFW6===
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+3333/tcp                   ALLOW IN    Anywhere                   # MARS SSH
+8443/tcp                   ALLOW IN    Anywhere                   # MARS Xray VLESS
+443/tcp                    ALLOW IN    Anywhere                   # MARS nginx TLS
+2096/tcp                   DENY IN     Anywhere                   # MARS-P2 block x-ui sub public
+20901/tcp                  DENY IN     Anywhere                   # MARS-P2 block panel direct
+3333/tcp (v6)              ALLOW IN    Anywhere (v6)              # MARS SSH
+8443/tcp (v6)              ALLOW IN    Anywhere (v6)              # MARS Xray VLESS
+443/tcp (v6)               ALLOW IN    Anywhere (v6)              # MARS nginx TLS
+2096/tcp (v6)              DENY IN     Anywhere (v6)              # MARS-P2 block x-ui sub public
+20901/tcp (v6)             DENY IN     Anywhere (v6)              # MARS-P2 block panel direct
+
+-P INPUT DROP
+-A INPUT -j ufw-before-logging-input
+-A INPUT -j ufw-before-input
+-A INPUT -j ufw-after-input
+-A INPUT -j ufw-after-logging-input
+-A INPUT -j ufw-reject-input
+-A INPUT -j ufw-track-input
+-P INPUT DROP
+-A INPUT -j ufw6-before-logging-input
+-A INPUT -j ufw6-before-input
+-A INPUT -j ufw6-after-input
+-A INPUT -j ufw6-after-logging-input
+-A INPUT -j ufw6-reject-input
+-A INPUT -j ufw6-track-input
+===SSH===
+port 3333
+port 3333
+permitrootlogin without-password
+pubkeyauthentication yes
+passwordauthentication no
+kbdinteractiveauthentication no
+authorizedkeysfile .ssh/authorized_keys .ssh/authorized_keys2
+total 12
+drwxr-xr-x 2 root root 4096 Aug 30 09:21 .
+drwxr-xr-x 4 root root 4096 Aug 29 14:07 ..
+-rw-r--r-- 1 root root  245 Aug 30 09:31 00-mars-server-ops-hardening.conf
+/etc/ssh/sshd_config.d/00-mars-server-ops-hardening.conf:3:Port 3333
+/etc/ssh/sshd_config.d/00-mars-server-ops-hardening.conf:4:PermitRootLogin prohibit-password
+/etc/ssh/sshd_config.d/00-mars-server-ops-hardening.conf:5:PasswordAuthentication no
+/etc/ssh/sshd_config.d/00-mars-server-ops-hardening.conf:6:KbdInteractiveAuthentication no
+/etc/ssh/sshd_config.d/00-mars-server-ops-hardening.conf:7:PubkeyAuthentication yes
+/etc/ssh/sshd_config.d/00-mars-server-ops-hardening.conf:8:MaxAuthTries 4
+root:x:0:0:root:/root:/bin/bash
+marsops:x:1000:1000:MARS Server Ops,,,:/home/marsops:/bin/bash
+marsops : marsops sudo users
+/home/marsops/.ssh:
+total 12
+drwx------ 2 marsops marsops 4096 Aug 30 09:14 .
+drwxr-x--- 4 marsops marsops 4096 Aug 30 09:21 ..
+-rw------- 1 marsops marsops  228 Aug 30 09:31 authorized_keys
+
+/root/.ssh:
+total 12
+drwx------ 2 root root 4096 Aug 29 13:54 .
+drwx------ 5 root root 4096 Aug 29 17:43 ..
+-rw------- 1 root root  228 Aug 30 09:31 authorized_keys
+===FAIL2BAN===
+Status
+|- Number of jail:	2
+`- Jail list:	3x-ipl, sshd
+Status for the jail: sshd
+|- Filter
+|  |- Currently failed:	0
+|  |- Total failed:	0
+|  `- Journal matches:	_SYSTEMD_UNIT=sshd.service + _COMM=sshd
+`- Actions
+   |- Currently banned:	0
+   |- Total banned:	0
+   `- Banned IP list:	
+total 20
+drwxr-xr-x 2 root root 4096 Aug 30 09:38 .
+drwxr-xr-x 6 root root 4096 Aug 29 17:44 ..
+-rw-r--r-- 1 root root  107 Aug 30 09:38 00-mars-server-ops-ssh.conf
+-rw-r--r-- 1 root root  130 Aug 29 17:44 3x-ipl.conf
+-rw-r--r-- 1 root root  117 Jun 10  2024 defaults-debian.conf
+[sshd]
+enabled = true
+port = 3333
+filter = sshd
+backend = systemd
+maxretry = 5
+findtime = 10m
+bantime = 1h
+[3x-ipl]
+enabled=true
+backend=auto
+filter=3x-ipl
+action=3x-ipl
+logpath=/var/log/x-ui/3xipl.log
+maxretry=1
+findtime=32
+bantime=30m
+[DEFAULT]
+banaction = nftables
+banaction_allports = nftables[type=allports]
+backend = systemd
+
+[sshd]
+enabled = true
+===SWAP===
+-rw------- 1 root root 2147483648 Aug 30 09:38 /swapfile
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       403Mi       699Mi       1.1Mi       1.0Gi       1.5Gi
+Swap:          2.0Gi          0B       2.0Gi
+NAME      TYPE SIZE USED PRIO
+/swapfile file   2G   0B   -2
+4:/swapfile none swap sw 0 0
+===TLS===
+certbot 2.9.0
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Found the following certs:
+  Certificate Name: metacode-cloud.com
+    Serial Number: 6b5535c454a3831753a8995d6a71dc49c0a
+    Key Type: ECDSA
+    Domains: metacode-cloud.com
+    Expiry Date: 2026-11-27 16:46:34+00:00 (VALID: 89 days)
+    Certificate Path: /etc/letsencrypt/live/metacode-cloud.com/fullchain.pem
+    Private Key Path: /etc/letsencrypt/live/metacode-cloud.com/privkey.pem
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+total 12
+drwxr-xr-x 2 root root 4096 Aug 29 17:45 .
+drwxr-xr-x 7 root root 4096 Aug 30 10:14 ..
+-rw-r--r-- 1 root root  573 Aug 29 17:45 metacode-cloud.com.conf
+---/etc/letsencrypt/renewal/metacode-cloud.com.conf---
+# renew_before_expiry = 30 days
+version = 2.9.0
+archive_dir = /etc/letsencrypt/archive/metacode-cloud.com
+cert = /etc/letsencrypt/live/metacode-cloud.com/cert.pem
+privkey = /etc/letsencrypt/live/metacode-cloud.com/privkey.pem
+chain = /etc/letsencrypt/live/metacode-cloud.com/chain.pem
+fullchain = /etc/letsencrypt/live/metacode-cloud.com/fullchain.pem
+
+# Options used in the renewal process
+[renewalparams]
+account = 41b9c0196b8d959fc44b88c87382a69c
+pref_challs = http-01,
+authenticator = standalone
+server = https://acme-v02.api.letsencrypt.org/directory
+key_type = ecdsa
+notBefore=Aug 29 16:46:35 2026 GMT
+notAfter=Nov 27 16:46:34 2026 GMT
+subject=CN = metacode-cloud.com
+issuer=C = US, O = Let's Encrypt, CN = YE1
+total 12
+drwxr-xr-x 2 root root 4096 Aug 29 17:45 .
+drwx------ 3 root root 4096 Aug 29 17:45 ..
+-rw-r--r-- 1 root root  692 Aug 29 17:45 README
+lrwxrwxrwx 1 root root   42 Aug 29 17:45 cert.pem -> ../../archive/metacode-cloud.com/cert1.pem
+lrwxrwxrwx 1 root root   43 Aug 29 17:45 chain.pem -> ../../archive/metacode-cloud.com/chain1.pem
+lrwxrwxrwx 1 root root   47 Aug 29 17:45 fullchain.pem -> ../../archive/metacode-cloud.com/fullchain1.pem
+lrwxrwxrwx 1 root root   45 Aug 29 17:45 privkey.pem -> ../../archive/metacode-cloud.com/privkey1.pem
+===NGINX===
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+/etc/nginx/conf.d/:
+total 12
+drwxr-xr-x 2 root root 4096 Aug 30 06:14 .
+drwxr-xr-x 8 root root 4096 Aug 30 06:14 ..
+-rw-r--r-- 1 root root   82 Aug 30 06:14 mars-websocket-upgrade.conf
+
+/etc/nginx/sites-enabled/:
+total 8
+drwxr-xr-x 2 root root 4096 Aug 30 06:14 .
+drwxr-xr-x 8 root root 4096 Aug 30 06:14 ..
+lrwxrwxrwx 1 root root   46 Aug 30 06:14 metacode-cloud-3xui -> /etc/nginx/sites-available/metacode-cloud-3xui
+====/etc/nginx/sites-enabled/metacode-cloud-3xui====
+# MARS FriendHosting — 3X-UI TLS reverse proxy
+# Generated 20260830T061431Z
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    server_name metacode-cloud.com;
+
+    ssl_certificate     /etc/letsencrypt/live/metacode-cloud.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/metacode-cloud.com/privkey.pem;
+    ssl_protocols       TLSv1.2 TLSv1.3;
+    ssl_session_timeout 1d;
+    ssl_session_cache   shared:SSL:10m;
+
+    location / {
+        return 404;
+    }
+
+    location /[REDACTED_PANEL_PATH]/ {
+        proxy_pass http://127.0.0.1:20901;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection $connection_upgrade;
+        proxy_read_timeout 3600s;
+        proxy_send_timeout 3600s;
+        proxy_connect_timeout 60s;
+        proxy_buffering off;
+        proxy_redirect off;
+    }
+}
+====/etc/nginx/conf.d/mars-websocket-upgrade.conf====
+map $http_upgrade $connection_upgrade {
+    default upgrade;
+    ''      close;
+}
+===XUI/XRAY CERT PATHS (sanitized)===
+xui_files ['/usr/local/x-ui/bin/config.json']
+db /etc/x-ui/x-ui.db True
+SET webPort = 20901
+SET webBasePath = /[REDACTED_PANEL_PATH]/
+SET webListen = 127.0.0.1
+INBOUND 1 8443 vless FRIENDHOSTING-DE-RAW-8443 1  {"network":"tcp","security":"tls","externalProxy":[],"tlsSettings":{"serverName":"metacode-cloud.com","minVersion":"1.2","maxVersion":"1.3","cipherSuites":"","rejectUnknownSni":false,"disableSystemRoot":false,"enableSessionResumption":false,"certificates":[{"certificateFile":"/etc/letsencrypt/live/metacode-cloud.com/fullchain.pem","keyFile":"/etc/letsencrypt/live/metacode-cloud.com/privkey.pem","oneTimeLoading":false,"usage":"encipherment","buildChain":false}],"alpn":["http/1.1"],"settings":{"al
+===JOURNALD===
+/etc/systemd/journald.conf:#SystemMaxUse=
+/etc/systemd/journald.conf.d/00-mars-size.conf:SystemMaxUse=200M
+Archived and active journals take up 38.8M in the file system.
+===LOGROTATE===
+alternatives
+apport
+apt
+bootlog
+btmp
+certbot
+cloud-init
+dpkg
+fail2ban
+mars-x-ui
+nginx
+rsyslog
+ubuntu-pro-client
+ufw
+wtmp
+/var/log/nginx/*.log {
+	daily
+	missingok
+	rotate 14
+	compress
+	delaycompress
+	notifempty
+	create 0640 www-data adm
+	sharedscripts
+	prerotate
+		if [ -d /etc/logrotate.d/httpd-prerotate ]; then \
+			run-parts /etc/logrotate.d/httpd-prerotate; \
+		fi \
+	endscript
+	postrotate
+		invoke-rc.d nginx rotate >/dev/null 2>&1
+	endscript
+}
+===PKGS===
+Listing...
+REBOOT_REQUIRED=no
+===PANEL LOCAL===
+panel_https:000
+panel_http:404
+sub_https:000
+sub_http:404
+===EGRESS SERVER===
+92.42.99.126
+===DONE===
+
+ERR:

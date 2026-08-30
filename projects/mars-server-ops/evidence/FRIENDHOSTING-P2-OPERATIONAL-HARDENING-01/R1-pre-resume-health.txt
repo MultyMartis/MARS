@@ -1,0 +1,24 @@
+{
+  "tcp_3333": true,
+  "tcp_443": true,
+  "tcp_8443": true,
+  "tls_443": {
+    "ok": true,
+    "notAfter": "Nov 27 16:46:34 2026 GMT"
+  },
+  "tls_8443": {
+    "ok": true,
+    "notAfter": "Nov 27 16:46:34 2026 GMT"
+  },
+  "panel_local_bind": true,
+  "egress": "92.42.99.126",
+  "services": "===PANEL===\nLISTEN 0      4096       127.0.0.1:20901      0.0.0.0:*    users:((\"x-ui\",pid=6947,fd=10))                                             \n===EGRESS===\n92.42.99.126\n===SVCS===\nactive\nactive\nactive\n"
+}
+===PANEL===
+LISTEN 0      4096       127.0.0.1:20901      0.0.0.0:*    users:(("x-ui",pid=6947,fd=10))                                             
+===EGRESS===
+92.42.99.126
+===SVCS===
+active
+active
+active

@@ -1,0 +1,49 @@
+{
+  "settings_emails": [
+    "MCA-ONE-FRIENDHOSTING-DE-RAW-8443",
+    "WSP-ONE",
+    "MCA-PHONE",
+    "Unit-01",
+    "Unit-02",
+    "Unit-03",
+    "Unit-MichaelPhone"
+  ],
+  "clients_table_emails": [
+    "MCA-ONE-FRIENDHOSTING-DE-RAW-8443",
+    "MCA-PHONE",
+    "Unit-01",
+    "Unit-02",
+    "Unit-03",
+    "Unit-MichaelPhone",
+    "WSP-ONE"
+  ],
+  "client_n": 7,
+  "uuid_unique": true,
+  "legacy_in_settings": 1,
+  "legacy_in_clients_table": 1,
+  "settings_sorted": [
+    "MCA-ONE-FRIENDHOSTING-DE-RAW-8443",
+    "MCA-PHONE",
+    "Unit-01",
+    "Unit-02",
+    "Unit-03",
+    "Unit-MichaelPhone",
+    "WSP-ONE"
+  ],
+  "expected_pre": [
+    "MCA-ONE-FRIENDHOSTING-DE-RAW-8443",
+    "MCA-PHONE",
+    "Unit-01",
+    "Unit-02",
+    "Unit-03",
+    "Unit-MichaelPhone",
+    "WSP-ONE"
+  ],
+  "settings_match_expected": true,
+  "table_match_expected": true,
+  "architecture": {
+    "network": "tcp",
+    "security": "tls",
+    "sni": "metacode-cloud.com"
+  }
+}

@@ -1,0 +1,45 @@
+REMOVED_SERVER_FP chrome
+DB_CLIENTS_BEFORE_WRITE 7
+XUI active
+XRAY_CLIENTS 1
+XRAY MCA-ONE-FRIENDHOSTING-DE-RAW-8443
+XRAY_NET tcp SEC tls
+XRAY_SNI metacode-cloud.com ALPN ['http/1.1'] FP None
+FINAL_XRAY_N 1
+LISTEN 0      4096         0.0.0.0:3333       0.0.0.0:*    users:(("sshd",pid=816,fd=3),("systemd",pid=1,fd=167))                           
+LISTEN 0      511          0.0.0.0:443        0.0.0.0:*    users:(("nginx",pid=9453,fd=5),("nginx",pid=9452,fd=5),("nginx",pid=765,fd=5))   
+LISTEN 0      4096       127.0.0.1:20901      0.0.0.0:*    users:(("x-ui",pid=10731,fd=10))                                                 
+LISTEN 0      4096               *:8443             *:*    users:(("xray-linux-amd6",pid=10739,fd=3))                                       
+LISTEN 0      4096            [::]:3333          [::]:*    users:(("sshd",pid=816,fd=4),("systemd",pid=1,fd=168))                           
+LISTEN 0      511             [::]:443           [::]:*    users:(("nginx",pid=9453,fd=6),("nginx",pid=9452,fd=6),("nginx",pid=765,fd=6))   
+Aug 30 11:04:54 imart216311 /usr/local/x-ui/x-ui[10372]: INFO - XRAY: infra/conf/serial: Reading config: &{Name:bin/config.json Format:json}
+Aug 30 11:04:54 imart216311 /usr/local/x-ui/x-ui[10372]: WARNING - XRAY: core: Xray 26.7.28 started
+Aug 30 11:05:04 imart216311 /usr/local/x-ui/x-ui[10372]: INFO - xray core supports the online-stats API; using connection-based onlines and access-log-free IP limit
+Aug 30 11:31:50 imart216311 systemd[1]: Stopping x-ui.service - x-ui Service...
+Aug 30 11:31:50 imart216311 x-ui[10372]: 2026/08/30 11:31:50 Shutting down servers.
+Aug 30 11:31:50 imart216311 systemd[1]: x-ui.service: Deactivated successfully.
+Aug 30 11:31:50 imart216311 systemd[1]: Stopped x-ui.service - x-ui Service.
+Aug 30 11:31:50 imart216311 systemd[1]: x-ui.service: Consumed 8.052s CPU time.
+Aug 30 11:31:50 imart216311 systemd[1]: Started x-ui.service - x-ui Service.
+Aug 30 11:31:50 imart216311 x-ui[10596]: 2026/08/30 11:31:50 Starting x-ui 3.7.0
+Aug 30 11:31:50 imart216311 /usr/local/x-ui/x-ui[10596]: INFO - GC percent set to 75
+Aug 30 11:31:50 imart216311 /usr/local/x-ui/x-ui[10596]: INFO - Go memory soft limit not enforced: no explicit budget; soft limit left at Go default
+Aug 30 11:31:50 imart216311 /usr/local/x-ui/x-ui[10596]: INFO - Web server running HTTP on 127.0.0.1:20901
+Aug 30 11:31:50 imart216311 /usr/local/x-ui/x-ui[10596]: INFO - XRAY: infra/conf/serial: Reading config: &{Name:bin/config.json Format:json}
+Aug 30 11:31:50 imart216311 /usr/local/x-ui/x-ui[10596]: INFO - Sub server running HTTP on [::]:2096
+Aug 30 11:31:51 imart216311 /usr/local/x-ui/x-ui[10596]: WARNING - XRAY: core: Xray 26.7.28 started
+Aug 30 11:32:00 imart216311 /usr/local/x-ui/x-ui[10596]: INFO - xray core supports the online-stats API; using connection-based onlines and access-log-free IP limit
+Aug 30 11:33:19 imart216311 systemd[1]: Stopping x-ui.service - x-ui Service...
+Aug 30 11:33:19 imart216311 x-ui[10596]: 2026/08/30 11:33:19 Shutting down servers.
+Aug 30 11:33:19 imart216311 /usr/local/x-ui/x-ui[10596]: INFO - WebSocket hub stopped
+Aug 30 11:33:19 imart216311 systemd[1]: x-ui.service: Deactivated successfully.
+Aug 30 11:33:19 imart216311 systemd[1]: Stopped x-ui.service - x-ui Service.
+Aug 30 11:33:19 imart216311 systemd[1]: Started x-ui.service - x-ui Service.
+Aug 30 11:33:19 imart216311 x-ui[10731]: 2026/08/30 11:33:19 Starting x-ui 3.7.0
+Aug 30 11:33:19 imart216311 /usr/local/x-ui/x-ui[10731]: INFO - GC percent set to 75
+Aug 30 11:33:19 imart216311 /usr/local/x-ui/x-ui[10731]: INFO - Go memory soft limit not enforced: no explicit budget; soft limit left at Go default
+Aug 30 11:33:20 imart216311 /usr/local/x-ui/x-ui[10731]: INFO - Web server running HTTP on 127.0.0.1:20901
+Aug 30 11:33:20 imart216311 /usr/local/x-ui/x-ui[10731]: INFO - Sub server running HTTP on [::]:2096
+Aug 30 11:33:20 imart216311 /usr/local/x-ui/x-ui[10731]: INFO - XRAY: infra/conf/serial: Reading config: &{Name:bin/config.json Format:json}
+Aug 30 11:33:20 imart216311 /usr/local/x-ui/x-ui[10731]: WARNING - XRAY: core: Xray 26.7.28 started
+

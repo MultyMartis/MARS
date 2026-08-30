@@ -1,0 +1,29 @@
+exit=0
+active
+● x-ui.service - x-ui Service
+     Loaded: loaded (/etc/systemd/system/x-ui.service; enabled; preset: enabled)
+     Active: active (running) since Sun 2026-08-30 09:31:00 UTC; 10s ago
+   Main PID: 6411 (x-ui)
+      Tasks: 17 (limit: 2315)
+     Memory: 45.4M (peak: 45.8M)
+        CPU: 569ms
+     CGroup: /system.slice/x-ui.service
+             ├─6411 /usr/local/x-ui/x-ui
+             └─6420 bin/xray-linux-amd64 -c bin/config.json
+
+Aug 30 09:31:00 imart216311 systemd[1]: Started x-ui.service - x-ui Service.
+Aug 30 09:31:00 imart216311 x-ui[6411]: 2026/08/30 09:31:00 Starting x-ui 3.7.0
+Aug 30 09:31:00 imart216311 /usr/local/x-ui/x-ui[6411]: INFO - GC percent set to 75
+Aug 30 09:31:00 imart216311 /usr/local/x-ui/x-ui[6411]: INFO - Go memory soft limit not enforced: no explicit budget; soft limit left at Go default
+Aug 30 09:31:00 imart216311 /usr/local/x-ui/x-ui[6411]: INFO - Web server running HTTP on 127.0.0.1:20901
+Aug 30 09:31:00 imart216311 /usr/local/x-ui/x-ui[6411]: INFO - XRAY: infra/conf/serial: Reading config: &{Name:bin/config.json Format:json}
+Aug 30 09:31:00 imart216311 /usr/local/x-ui/x-ui[6411]: INFO - Sub server running HTTP on [::]:2096
+Aug 30 09:31:00 imart216311 /usr/local/x-ui/x-ui[6411]: WARNING - XRAY: core: Xray 26.7.28 started
+Aug 30 09:31:10 imart216311 /usr/local/x-ui/x-ui[6411]: INFO - xray core supports the online-stats API; using connection-based onlines and access-log-free IP limit
+---
+current panel settings as follows:
+Warning: Panel is not secure with SSL
+hasDefaultCredential: false
+port: 20901
+webBasePath=[REDACTED]
+

@@ -1,0 +1,23 @@
+exit=0
+# renew_before_expiry = 30 days
+version = 2.9.0
+archive_dir = /etc/letsencrypt/archive/metacode-cloud.com
+cert = /etc/letsencrypt/live/metacode-cloud.com/cert.pem
+privkey = /etc/letsencrypt/live/metacode-cloud.com/privkey.pem
+chain = /etc/letsencrypt/live/metacode-cloud.com/chain.pem
+fullchain = /etc/letsencrypt/live/metacode-cloud.com/fullchain.pem
+
+# Options used in the renewal process
+[renewalparams]
+webroot_path = /var/www/letsencrypt
+account = 41b9c0196b8d959fc44b88c87382a69c
+pref_challs = http-01,
+authenticator = webroot
+server = https://acme-v02.api.letsencrypt.org/directory
+key_type = ecdsa
+
+[[webroot_map]]
+metacode-cloud.com = /var/www/letsencrypt
+
+RENEWAL_CONF_OK
+

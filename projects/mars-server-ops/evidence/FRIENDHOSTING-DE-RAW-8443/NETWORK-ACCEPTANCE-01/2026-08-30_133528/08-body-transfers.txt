@@ -1,0 +1,17 @@
+=== BODY TRANSFERS 2026-08-30T13:43:29.8969964+07:00 ===
+HEAD_google wall_ms=572 http=200 time_total=0.540487 time_connect=0.013672 time_appconnect=0.436186 size=0
+GET_example wall_ms=521 http=200 time_total=0.493324 time_connect=0.000995 time_appconnect=0.404716 size=559
+GET_jquery_small wall_ms=684 http=200 time_total=0.661065 time_connect=0.001020 time_appconnect=0.390222 size=87533 speed=132412
+GET_1MB wall_ms=1062 http=200 time_total=1.037091 time_connect=0.001109 time_appconnect=0.385256 size=1000000 speed=964235
+GET_10MB wall_ms=1952 http=200 time_total=1.923968 time_connect=0.001204 time_appconnect=0.384345 size=10000000 speed=5197591
+GET_25MB wall_ms=4087 http=200 time_total=4.062299 time_connect=0.011367 time_appconnect=0.399411 size=25000000 speed=6154150
+=== KEEP-ALIVE 8x example.com ===
+ka_1 http=200 time=0.522902
+ka_2 http=200 time=0.515443
+ka_3 http=200 time=0.468507
+ka_4 http=200 time=0.496242
+ka_5 http=200 time=0.466450
+ka_6 http=200 time=0.482504
+ka_7 http=200 time=0.739535
+ka_8 http=200 time=0.501880
+KA_SUMMARY pass=8 fail=0

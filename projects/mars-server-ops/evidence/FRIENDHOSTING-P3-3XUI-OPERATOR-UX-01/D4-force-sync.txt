@@ -1,0 +1,30 @@
+TABLES ['users', 'sqlite_sequence', 'inbounds', 'outbound_traffics', 'settings', 'inbound_client_ips', 'client_traffics', 'history_of_seeders', 'nodes', 'api_tokens', 'clients', 'client_inbounds', 'client_hwids', 'client_external_links', 'client_groups', 'inbound_fallbacks', 'hosts', 'node_client_traffics', 'node_client_ips', 'client_global_traffics', 'outbound_subscriptions', 'sub_balancers']
+TRAFFICS_N 1
+TRAFFIC MCA-ONE-FRIENDHOSTING-DE-RAW-8443 inbound 1 enable 1
+INBOUND_ID 1 ENABLE 1 TAG inbound-8443
+DB_CLIENTS 7
+TRAFFIC_EXISTING ['MCA-ONE-FRIENDHOSTING-DE-RAW-8443']
+TRAFFIC_ADDED ['WSP-ONE', 'MCA-PHONE', 'Unit-01', 'Unit-02', 'Unit-03', 'Unit-MichaelPhone']
+AFTER_RESTART_XRAY_N 1 ['MCA-ONE-FRIENDHOSTING-DE-RAW-8443']
+MANUAL_PATCH
+AFTER_PATCH_XRAY_N 1
+XRAY MCA-ONE-FRIENDHOSTING-DE-RAW-8443
+TRAFFIC_FINAL_N 7
+TRAFFIC MCA-ONE-FRIENDHOSTING-DE-RAW-8443 enable 1
+TRAFFIC MCA-PHONE enable 1
+TRAFFIC Unit-01 enable 1
+TRAFFIC Unit-02 enable 1
+TRAFFIC Unit-03 enable 1
+TRAFFIC Unit-MichaelPhone enable 1
+TRAFFIC WSP-ONE enable 1
+XUI active
+NGINX active
+LISTEN 0      4096         0.0.0.0:3333       0.0.0.0:*    users:(("sshd",pid=816,fd=3),("systemd",pid=1,fd=167))                           
+LISTEN 0      511          0.0.0.0:443        0.0.0.0:*    users:(("nginx",pid=9453,fd=5),("nginx",pid=9452,fd=5),("nginx",pid=765,fd=5))   
+LISTEN 0      4096       127.0.0.1:20901      0.0.0.0:*    users:(("x-ui",pid=10868,fd=10))                                                 
+LISTEN 0      4096               *:8443             *:*    users:(("xray-linux-amd6",pid=10876,fd=6))                                       
+LISTEN 0      4096            [::]:3333          [::]:*    users:(("sshd",pid=816,fd=4),("systemd",pid=1,fd=168))                           
+LISTEN 0      511             [::]:443           [::]:*    users:(("nginx",pid=9453,fd=6),("nginx",pid=9452,fd=6),("nginx",pid=765,fd=6))   
+TLS_LOCAL 443 OK TLSv1.3
+TLS_LOCAL 8443 OK TLSv1.3
+

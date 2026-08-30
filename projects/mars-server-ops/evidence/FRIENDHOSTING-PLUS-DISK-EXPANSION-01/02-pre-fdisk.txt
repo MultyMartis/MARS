@@ -1,0 +1,15 @@
+Disk /dev/sda: 20 GiB, 21474836480 bytes, 41943040 sectors
+Disk model: QEMU HARDDISK   
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: 82232295-9D2E-4B89-A3C0-7122BF17CC87
+
+Device       Start      End  Sectors  Size Type
+/dev/sda1  2099200 41940991 39841792   19G Linux filesystem
+/dev/sda14    2048    10239     8192    4M BIOS boot
+/dev/sda15   10240   227327   217088  106M EFI System
+/dev/sda16  227328  2097152  1869825  913M Linux extended boot
+
+Partition table entries are not in disk order.

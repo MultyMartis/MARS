@@ -1,0 +1,10 @@
+exit=0
+disabled
+enabled
+enabled
+enabled
+Restart=on-failure
+RestartUSec=5s
+FragmentPath=/etc/systemd/system/x-ui.service
+Restart=no
+

@@ -1,0 +1,112 @@
+{
+  "ts": "20260830T083148Z",
+  "host": "92.42.99.126",
+  "backup_local": {
+    "path": "X:\\AI MARS\\local\\infrastructure\\FRIENDHOSTING-GERMANY\\backups\\friendhosting-plus-pre-panel-reboot-20260830T073335Z.tgz",
+    "size": 80613337,
+    "sha256": "04344ea5fb7d90086360753060197a2e2371f063f0efbef60bd713efe96ff002",
+    "expected": "04344ea5fb7d90086360753060197a2e2371f063f0efbef60bd713efe96ff002",
+    "hash_match": true,
+    "readable": true,
+    "sample_members": [
+      "friendhosting-plus-pre-panel-reboot-20260830T073335Z",
+      "friendhosting-plus-pre-panel-reboot-20260830T073335Z/usr-local",
+      "friendhosting-plus-pre-panel-reboot-20260830T073335Z/usr-local/x-ui",
+      "friendhosting-plus-pre-panel-reboot-20260830T073335Z/usr-local/x-ui/x-ui.sh",
+      "friendhosting-plus-pre-panel-reboot-20260830T073335Z/usr-local/x-ui/x-ui.service.arch"
+    ]
+  },
+  "backup_remote": {
+    "path": "/root/mars-backups/friendhosting-plus-pre-panel-reboot-20260830T073335Z.tgz",
+    "exit": 0,
+    "sha256": "04344ea5fb7d90086360753060197a2e2371f063f0efbef60bd713efe96ff002",
+    "hash_match": true,
+    "readable_list": true
+  },
+  "pre": {
+    "sda_bytes": 21474836480,
+    "sda1_bytes": 20398997504,
+    "fs_bytes": 20398997504,
+    "block_size": 4096,
+    "block_count": 4980224,
+    "case": "A",
+    "lsblk_h": "NAME     SIZE TYPE FSTYPE MOUNTPOINTS UUID\nsda       20G disk                    \n├─sda1    19G part ext4   /           b6730d0f-2634-4914-bca0-f58bb6add294\n├─sda14    4M part                    \n├─sda15  106M part vfat   /boot/efi   D82E-1002\n└─sda16  913M part ext4   /boot       cd7ae2aa-2de3-4e45-b08f-b0ef1722a18c\nsr0     1024M rom                     \n",
+    "df": "Filesystem     Type  Size  Used Avail Use% Mounted on\n/dev/sda1      ext4   19G  3.0G   16G  16% /\n/dev/sda1      ext4   19G  3.0G   16G  16% /\n---\nFilesystem     1T-blocks  Used Available Use% Mounted on\n/dev/sda1             1T    1T        1T  16% /\n",
+    "cpu": "2\nCPU(s):                                  2\nOn-line CPU(s) list:                     0,1\nModel name:                              Common KVM processor\nBIOS Model name:                         pc-i440fx-11.0  CPU @ 2.0GHz\nThread(s) per core:                      1\nCore(s) per socket:                      2\nNUMA node0 CPU(s):                       0,1\n",
+    "mem": "               total        used        free      shared  buff/cache   available\nMem:           1.9Gi       356Mi       1.4Gi       1.0Mi       326Mi       1.6Gi\nSwap:             0B          0B          0B\n---\nMemTotal:        2014844 kB\nSwapTotal:             0 kB\n",
+    "growpart": "/usr/bin/growpart\nii  cloud-guest-utils 0.33-1       all          cloud guest utilities\n"
+  },
+  "post": {
+    "sda_bytes": 21474836480,
+    "sda1_bytes": 20398997504,
+    "fs_bytes": 20398997504,
+    "free_bytes_approx": 16566775808,
+    "df": "Filesystem     Type  Size  Used Avail Use% Mounted on\n/dev/sda1      ext4   19G  3.0G   16G  16% /\n---\nFilesystem     1T-blocks  Used Available Use% Mounted on\n/dev/sda1             1T    1T        1T  16% /\n",
+    "findmnt": "/dev/sda1 ext4   18.3G 15.4G  2.9G  16% /\n",
+    "lsblk_h": "NAME     SIZE TYPE FSTYPE MOUNTPOINTS UUID\nsda       20G disk                    \n├─sda1    19G part ext4   /           b6730d0f-2634-4914-bca0-f58bb6add294\n├─sda14    4M part                    \n├─sda15  106M part vfat   /boot/efi   D82E-1002\n└─sda16  913M part ext4   /boot       cd7ae2aa-2de3-4e45-b08f-b0ef1722a18c\nsr0     1024M rom                     \n",
+    "cpu": "2\nCPU(s):                                  2\nOn-line CPU(s) list:                     0,1\nModel name:                              Common KVM processor\nBIOS Model name:                         pc-i440fx-11.0  CPU @ 2.0GHz\nNUMA node0 CPU(s):                       0,1\n",
+    "mem": "               total        used        free      shared  buff/cache   available\nMem:           1.9Gi       362Mi       1.4Gi       1.0Mi       328Mi       1.6Gi\nSwap:             0B          0B          0B\n---\nMemTotal:        2014844 kB\nSwapTotal:             0 kB\n"
+  },
+  "case_final": "A",
+  "case": "A",
+  "storage_case": "A",
+  "mutation": {
+    "partition": "NOT REQUIRED",
+    "filesystem": "NOT REQUIRED",
+    "stopped": false,
+    "stop_reason": null,
+    "commands": []
+  },
+  "services_raw": "LISTEN 0      4096         0.0.0.0:3333       0.0.0.0:*    users:((\"sshd\",pid=816,fd=3),(\"systemd\",pid=1,fd=85))                       \nLISTEN 0      511          0.0.0.0:443        0.0.0.0:*    users:((\"nginx\",pid=767,fd=5),(\"nginx\",pid=766,fd=5),(\"nginx\",pid=765,fd=5))\nLISTEN 0      4096       127.0.0.1:20901      0.0.0.0:*    users:((\"x-ui\",pid=669,fd=10))                                              \nLISTEN 0      4096               *:2096             *:*    users:((\"x-ui\",pid=669,fd=15))                                              \nLISTEN 0      4096               *:8443             *:*    users:((\"xray-linux-amd6\",pid=726,fd=6))                                    \nLISTEN 0      4096            [::]:3333          [::]:*    users:((\"sshd\",pid=816,fd=4),(\"systemd\",pid=1,fd=86))                       \nLISTEN 0      511             [::]:443           [::]:*    users:((\"nginx\",pid=767,fd=6),(\"nginx\",pid=766,fd=6),(\"nginx\",pid=765,fd=6))\n---\nactive\nactive\nactive\n---\n404\nStatus: active\nLogging: on (low)\nDefault: deny (incoming), allow (outgoing), disabled (routed)\nNew profiles: skip\n\nTo                         Action      From\n--                         ------      ----\n3333/tcp                   ALLOW IN    Anywhere                   # MARS SSH\n8443/tcp                   ALLOW IN    Anywhere                   # MARS XRAY VLESS TLS RAW\n443/tcp                    ALLOW IN    Anywhere                   # MARS 3X-UI nginx TLS\n3333/tcp (v6)              ALLOW IN    Anywhere (v6)              # MARS SSH\n8443/tcp (v6)              ALLOW IN    Anywhere (v6)              # MARS XRAY VLESS TLS RAW\n443/tcp (v6)               ALLOW IN    Anywhere (v6)              # MARS 3X-UI nginx TLS\n\n---\n-P INPUT DROP\n-P FORWARD DROP\n-P OUTPUT ACCEPT\n-N ufw-after-forward\n-N ufw-after-input\n-N ufw-after-logging-forward\n-N ufw-after-logging-input\n-N ufw-after-logging-output\n-N ufw-after-output\n-N ufw-before-forward\n-N ufw-before-input\n-N ufw-before-logging-forward\n-N ufw-before-logging-input\n-N ufw-before-logging-output\n-N ufw-before-output\n-N ufw-logging-allow\n-N ufw-logging-deny\n-N ufw-not-local\n-N ufw-reject-forward\n-N ufw-reject-input\n-N ufw-reject-output\n-N ufw-skip-to-policy-forward\n-N ufw-skip-to-policy-input\n-N ufw-skip-to-policy-output\n-N ufw-track-forward\n-N ufw-track-input\n-N ufw-track-output\n-N ufw-user-forward\n-N ufw-user-input\n-N ufw-user-limit\n",
+  "tls_host": "subject=CN = metacode-cloud.com\nnotBefore=Aug 29 16:46:35 2026 GMT\nnotAfter=Nov 27 16:46:34 2026 GMT\nVERIFY443=Verify return code: 0 (ok)\nVERIFY8443=Verify return code: 0 (ok)\n",
+  "dns": "92.42.99.126",
+  "tls443": {
+    "ok": true,
+    "verify": 0,
+    "subject": "((('commonName', 'metacode-cloud.com'),),)",
+    "version": "TLSv1.3"
+  },
+  "tls8443": {
+    "ok": true,
+    "verify": 0,
+    "subject": "((('commonName', 'metacode-cloud.com'),),)",
+    "version": "TLSv1.3"
+  },
+  "residual_2096": {
+    "present": true,
+    "status": 404,
+    "snippet": "404 page not found"
+  },
+  "vpn": {
+    "ipify": {
+      "status": 200,
+      "body": "92.42.99.126"
+    },
+    "ifconfig": {
+      "status": 200,
+      "body": "92.42.99.126"
+    },
+    "example": {
+      "status": 200,
+      "body_len": 256,
+      "ok": true
+    }
+  },
+  "compute": {
+    "nproc": "2",
+    "mem_kib": 2014844
+  },
+  "gates": {
+    "ssh_3333": "PASS",
+    "nginx_443": "PASS",
+    "xui_20901": "PASS",
+    "xray_8443": "PASS",
+    "vpn_smoke": "PASS",
+    "dns": "PASS",
+    "backup": "PASS",
+    "compute_plus": "PASS"
+  },
+  "cursor_smoke": "PASS",
+  "rescan_done": false,
+  "verdict": "PASS"
+}

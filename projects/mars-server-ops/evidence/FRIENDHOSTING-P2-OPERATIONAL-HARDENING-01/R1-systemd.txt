@@ -1,0 +1,17 @@
+Synchronizing state of ssh.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable ssh
+Created symlink /etc/systemd/system/sshd.service → /usr/lib/systemd/system/ssh.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/ssh.service → /usr/lib/systemd/system/ssh.service.
+== ssh ==
+enabled
+active
+== nginx ==
+enabled
+active
+== x-ui ==
+enabled
+active
+== fail2ban ==
+enabled
+active
+

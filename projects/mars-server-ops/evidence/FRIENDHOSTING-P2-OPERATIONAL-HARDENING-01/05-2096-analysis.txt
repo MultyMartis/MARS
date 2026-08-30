@@ -1,0 +1,60 @@
+=== LISTENERS ===
+LISTEN 0      4096               *:2096             *:*    users:(("x-ui",pid=6411,fd=14))                                             
+=== X-UI SETTINGS ===
+current panel settings as follows:
+Warning: Panel is not secure with SSL
+hasDefaultCredential: false
+port: 20901
+webBasePath=[REDACTED]
+=== HELP SUB ===
+Usage of setting:
+  -enabletgbot
+    	Enable notifications via Telegram bot
+  -getApiToken
+    	Display current API token
+  -getCert
+    	Display current certificate settings
+  -getListen
+    	Display current panel listenIP IP
+  -listenIP string
+    	set panel listenIP IP
+  -password string
+    	Set login password
+  -port int
+    	Set panel port number
+  -reset
+    	Reset all settings
+  -resetTwoFactor
+    	Reset two-factor authentication settings
+  -show
+    	Display current settings
+  -tgbotRuntime string
+    	Set cron time for Telegram bot notifications
+  -tgbotchatid string
+    	Set chat ID for Telegram bot notifications
+  -tgbottoken string
+    	Set token for Telegram bot
+  -username string
+    	Set login username
+  -webBasePath string
+    	Set base path for Panel
+  -webCert string
+    	Set path to public key file for panel
+  -webCertKey string
+    	Set path to private key file for panel
+=== PROCESS ===
+root        6411       1  1 09:30 ?        00:00:00 /usr/local/x-ui/x-ui
+root        6892    6845  0 09:31 ?        00:00:00 bash -c  set +e echo '=== LISTENERS ===' ss -lntp | egrep ':2096\b' || true echo '=== X-UI SETTINGS ===' /usr/local/x-ui/x-ui setting -show 2>&1 | head -100 echo '=== HELP SUB ===' /usr/local/x-ui/x-ui setting -h 2>&1 | head -80 echo '=== PROCESS ===' ps -ef | egrep '[x]-ui' || true echo '=== CURL LOCAL ===' curl -sI --max-time 5 http://127.0.0.1:2096/ | head -15 echo '=== CURL PUBLIC SELF ===' curl -sI --max-time 5 http://92.42.99.126:2096/ | head -15 
+=== CURL LOCAL ===
+HTTP/1.1 404 Not Found
+Content-Type: text/plain
+Date: Sun, 30 Aug 2026 09:31:25 GMT
+Content-Length: 18
+
+=== CURL PUBLIC SELF ===
+HTTP/1.1 404 Not Found
+Content-Type: text/plain
+Date: Sun, 30 Aug 2026 09:31:25 GMT
+Content-Length: 18
+
+

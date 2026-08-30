@@ -1,0 +1,29 @@
+=== route to 92.42.99.126 ===
+
+IPAddress      : 172.18.0.1
+InterfaceAlias : xray_tun
+NextHop        : 
+RouteMetric    : 
+
+IPAddress      : 
+InterfaceAlias : xray_tun
+NextHop        : 0.0.0.0
+RouteMetric    : 0
+
+
+=== Get-NetRoute matching ===
+
+DestinationPrefix NextHop     InterfaceAlias RouteMetric
+----------------- -------     -------------- -----------
+0.0.0.0/0         0.0.0.0     xray_tun                 0
+0.0.0.0/0         192.168.0.1 Ethernet                 0
+
+
+=== tracert -d -h 15 -w 1000 92.42.99.126 ===
+
+Трассировка маршрута к 92.42.99.126 с максимальным числом прыжков 15
+
+  1    <1 мс    <1 мс    <1 мс  92.42.99.126 
+
+Трассировка завершена.
+

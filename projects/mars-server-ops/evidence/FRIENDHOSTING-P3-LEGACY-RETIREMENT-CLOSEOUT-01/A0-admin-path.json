@@ -1,0 +1,9 @@
+{
+  "preferred_control": "VEESP",
+  "workstation_egress": "92.42.99.126",
+  "friendhosting_ipv4": "92.42.99.126",
+  "on_friendhosting_vpn_path": true,
+  "independent_admin_path": false,
+  "v2rayN_auto_switch": false,
+  "note": "Workstation egress equals FriendHosting public IPv4 \u2014 not on preferred VEESP independent control path. Documented per charter; no auto-switch."
+}

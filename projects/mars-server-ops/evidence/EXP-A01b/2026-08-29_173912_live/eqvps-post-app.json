@@ -1,0 +1,91 @@
+{
+    "label":  "EQVPS_TRANSPORT_POST_APP",
+    "started_utc":  "2026-08-29T10:47:01.4168249Z",
+    "started_local":  "2026-08-29T17:47:01.4168249+07:00",
+    "tests":  {
+                  "egress":  {
+                                 "url":  "https://api.ipify.org",
+                                 "method":  "GET",
+                                 "use_proxy":  true,
+                                 "proxy":  "http://127.0.0.1:10808",
+                                 "timeout_sec":  25,
+                                 "started_local":  "2026-08-29T17:47:01.4188573+07:00",
+                                 "started_utc":  "2026-08-29T10:47:01.4188573Z",
+                                 "exit_code":  0,
+                                 "http_code":  "200",
+                                 "size_download":  "14",
+                                 "time_total":  "0.560402",
+                                 "errormsg":  null,
+                                 "body_sample":  "95.216.126.173",
+                                 "ok":  true,
+                                 "ended_local":  "2026-08-29T17:47:02.0571175+07:00",
+                                 "duration_ms":  643
+                             },
+                  "https":  {
+                                "url":  "https://www.cloudflare.com/cdn-cgi/trace",
+                                "method":  "GET",
+                                "use_proxy":  true,
+                                "proxy":  "http://127.0.0.1:10808",
+                                "timeout_sec":  25,
+                                "started_local":  "2026-08-29T17:47:02.0624593+07:00",
+                                "started_utc":  "2026-08-29T10:47:02.0624593Z",
+                                "exit_code":  0,
+                                "http_code":  "200",
+                                "size_download":  "211",
+                                "time_total":  "0.365004",
+                                "errormsg":  null,
+                                "body_sample":  "fl=1166f19\nh=www.cloudflare.com\nip=95.216.126.173\nts=1788000422.000\nvisit_scheme=https\nuag=curl/8.13.0\ncolo=HEL\nsliver=n",
+                                "ok":  true,
+                                "ended_local":  "2026-08-29T17:47:02.4912516+07:00",
+                                "duration_ms":  430
+                            },
+                  "https_one_repeat":  {
+                                           "url":  "https://www.cloudflare.com/cdn-cgi/trace",
+                                           "method":  "GET",
+                                           "use_proxy":  true,
+                                           "proxy":  "http://127.0.0.1:10808",
+                                           "timeout_sec":  25,
+                                           "started_local":  "2026-08-29T17:47:02.4932124+07:00",
+                                           "started_utc":  "2026-08-29T10:47:02.4932124Z",
+                                           "exit_code":  0,
+                                           "http_code":  "200",
+                                           "size_download":  "212",
+                                           "time_total":  "0.385616",
+                                           "errormsg":  null,
+                                           "body_sample":  "fl=1166f120\nh=www.cloudflare.com\nip=95.216.126.173\nts=1788000422.000\nvisit_scheme=https\nuag=curl/8.13.0\ncolo=HEL\nsliver=",
+                                           "ok":  true,
+                                           "ended_local":  "2026-08-29T17:47:02.9398447+07:00",
+                                           "duration_ms":  447
+                                       },
+                  "body_10mb":  {
+                                    "expected_bytes":  10000000,
+                                    "actual_bytes":  10000000,
+                                    "curl":  {
+                                                 "url":  "https://speed.cloudflare.com/__down?bytes=10000000",
+                                                 "method":  "GET",
+                                                 "use_proxy":  true,
+                                                 "proxy":  "http://127.0.0.1:10808",
+                                                 "timeout_sec":  120,
+                                                 "started_local":  "2026-08-29T17:47:02.9408431+07:00",
+                                                 "started_utc":  "2026-08-29T10:47:02.9408431Z",
+                                                 "exit_code":  0,
+                                                 "http_code":  "200",
+                                                 "size_download":  "10000000",
+                                                 "time_total":  "2.008701",
+                                                 "errormsg":  null,
+                                                 "body_sample":  null,
+                                                 "ok":  true,
+                                                 "ended_local":  "2026-08-29T17:47:05.0038632+07:00",
+                                                 "duration_ms":  2063
+                                             },
+                                    "ok":  true
+                                }
+              },
+    "summary":  {
+                    "egress_ok":  true,
+                    "https_ok":  true,
+                    "repeat_ok":  true,
+                    "body_10mb_ok":  true
+                },
+    "ended_utc":  "2026-08-29T10:47:05.0088505Z"
+}

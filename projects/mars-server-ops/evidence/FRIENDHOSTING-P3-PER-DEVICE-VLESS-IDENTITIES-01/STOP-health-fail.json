@@ -1,0 +1,25 @@
+{
+  "ssh_tcp": true,
+  "nginx_tcp": true,
+  "xray_tcp": true,
+  "tls_443": {
+    "ok": true,
+    "notAfter": "Nov 27 16:46:34 2026 GMT",
+    "subject": "((('commonName', 'metacode-cloud.com'),),)"
+  },
+  "tls_8443": {
+    "ok": true,
+    "notAfter": "Nov 27 16:46:34 2026 GMT",
+    "subject": "((('commonName', 'metacode-cloud.com'),),)"
+  },
+  "http_20901_public": {
+    "reachable": false,
+    "status": null,
+    "error": "RemoteDisconnected"
+  },
+  "local_xui": false,
+  "xui_active": true,
+  "legacy_present": true,
+  "client_count_before": 1,
+  "critical_pass": false
+}

@@ -1,0 +1,164 @@
+===== CMD: hostname RC=0 =====
+imart216311
+
+===== CMD: uname -a RC=0 =====
+Linux imart216311 6.8.0-138-generic #138-Ubuntu SMP PREEMPT_DYNAMIC Fri Jul 31 22:41:49 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+
+===== CMD: ip -4 addr show RC=0 =====
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    altname enp0s18
+    inet 92.42.99.126/24 brd 92.42.99.255 scope global eth0
+       valid_lft forever preferred_lft forever
+
+===== CMD: ip -6 addr show RC=0 =====
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 state UNKNOWN qlen 1000
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 state UP qlen 1000
+    inet6 2a06:fcc0:a::15b/48 scope global 
+       valid_lft forever preferred_lft forever
+    inet6 fe80::be24:11ff:fe45:ffa6/64 scope link 
+       valid_lft forever preferred_lft forever
+
+===== CMD: ip -4 route RC=0 =====
+default via 92.42.99.1 dev eth0 proto static 
+92.42.99.0/24 dev eth0 proto kernel scope link src 92.42.99.126 
+
+===== CMD: ip -6 route RC=0 =====
+2a06:fcc0:a::/48 dev eth0 proto kernel metric 256 pref medium
+fe80::/64 dev eth0 proto kernel metric 256 pref medium
+default via 2a06:fcc0:a::1 dev eth0 proto static metric 1024 pref medium
+
+===== CMD: ip link show RC=0 =====
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
+    link/ether bc:24:11:45:ff:a6 brd ff:ff:ff:ff:ff:ff
+    altname enp0s18
+
+===== CMD: cat /etc/resolv.conf RC=0 =====
+# This is /run/systemd/resolve/stub-resolv.conf managed by man:systemd-resolved(8).
+# Do not edit.
+#
+# This file might be symlinked as /etc/resolv.conf. If you're looking at
+# /etc/resolv.conf and seeing this text, you have followed the symlink.
+#
+# This is a dynamic resolv.conf file for connecting local clients to the
+# internal DNS stub resolver of systemd-resolved. This file lists all
+# configured search domains.
+#
+# Run "resolvectl status" to see details about the uplink DNS servers
+# currently in use.
+#
+# Third party programs should typically not access this file directly, but only
+# through the symlink at /etc/resolv.conf. To manage man:resolv.conf(5) in a
+# different way, replace this symlink by a static file or a different symlink.
+#
+# See man:systemd-resolved.service(8) for details about the supported modes of
+# operation for /etc/resolv.conf.
+
+nameserver 127.0.0.53
+options edns0 trust-ad
+search friendhosting.net
+
+===== CMD: ss -lntup RC=0 =====
+Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                                                 
+udp   UNCONN 0      0         127.0.0.54:53         0.0.0.0:*    users:(("systemd-resolve",pid=484,fd=16))              
+udp   UNCONN 0      0      127.0.0.53%lo:53         0.0.0.0:*    users:(("systemd-resolve",pid=484,fd=14))              
+tcp   LISTEN 0      4096       127.0.0.1:62789      0.0.0.0:*    users:(("xray-linux-amd6",pid=5501,fd=3))              
+tcp   LISTEN 0      4096         0.0.0.0:3333       0.0.0.0:*    users:(("sshd",pid=726,fd=3),("systemd",pid=1,fd=155)) 
+tcp   LISTEN 0      4096       127.0.0.1:11111      0.0.0.0:*    users:(("xray-linux-amd6",pid=5501,fd=7))              
+tcp   LISTEN 0      4096   127.0.0.53%lo:53         0.0.0.0:*    users:(("systemd-resolve",pid=484,fd=15))              
+tcp   LISTEN 0      511          0.0.0.0:443        0.0.0.0:*    users:(("nginx",pid=7921,fd=5),("nginx",pid=7920,fd=5))
+tcp   LISTEN 0      4096       127.0.0.1:20901      0.0.0.0:*    users:(("x-ui",pid=5493,fd=10))                        
+tcp   LISTEN 0      4096      127.0.0.54:53         0.0.0.0:*    users:(("systemd-resolve",pid=484,fd=17))              
+tcp   LISTEN 0      4096            [::]:3333          [::]:*    users:(("sshd",pid=726,fd=4),("systemd",pid=1,fd=156)) 
+tcp   LISTEN 0      511             [::]:443           [::]:*    users:(("nginx",pid=7921,fd=6),("nginx",pid=7920,fd=6))
+tcp   LISTEN 0      4096               *:2096             *:*    users:(("x-ui",pid=5493,fd=18))                        
+tcp   LISTEN 0      4096               *:8443             *:*    users:(("xray-linux-amd6",pid=5501,fd=6))              
+
+===== CMD: sysctl net.ipv4.tcp_congestion_control net.core.default_qdisc net.ipv4.tcp_timestamps net.ipv4.tcp_window_scaling net.ipv4.tcp_ecn net.ipv6.conf.all.disable_ipv6 RC=0 =====
+net.ipv4.tcp_congestion_control = cubic
+net.core.default_qdisc = fq_codel
+net.ipv4.tcp_timestamps = 1
+net.ipv4.tcp_window_scaling = 1
+net.ipv4.tcp_ecn = 2
+net.ipv6.conf.all.disable_ipv6 = 0
+
+===== CMD: tc qdisc show RC=0 =====
+qdisc noqueue 0: dev lo root refcnt 2 
+qdisc fq_codel 0: dev eth0 root refcnt 2 limit 10240p flows 1024 quantum 1514 target 5ms interval 100ms memory_limit 32Mb ecn drop_batch 64 
+
+===== CMD: ethtool -k eth0 2>/dev/null | head -40 || true RC=0 =====
+Features for eth0:
+rx-checksumming: on [fixed]
+tx-checksumming: on
+	tx-checksum-ipv4: off [fixed]
+	tx-checksum-ip-generic: on
+	tx-checksum-ipv6: off [fixed]
+	tx-checksum-fcoe-crc: off [fixed]
+	tx-checksum-sctp: off [fixed]
+scatter-gather: on
+	tx-scatter-gather: on
+	tx-scatter-gather-fraglist: off [fixed]
+tcp-segmentation-offload: on
+	tx-tcp-segmentation: on
+	tx-tcp-ecn-segmentation: on
+	tx-tcp-mangleid-segmentation: off
+	tx-tcp6-segmentation: on
+generic-segmentation-offload: on
+generic-receive-offload: on
+large-receive-offload: off [fixed]
+rx-vlan-offload: off [fixed]
+tx-vlan-offload: off [fixed]
+ntuple-filters: off [fixed]
+receive-hashing: off [fixed]
+highdma: on [fixed]
+rx-vlan-filter: on [fixed]
+vlan-challenged: off [fixed]
+tx-lockless: off [fixed]
+netns-local: off [fixed]
+tx-gso-robust: on [fixed]
+tx-fcoe-segmentation: off [fixed]
+tx-gre-segmentation: off [fixed]
+tx-gre-csum-segmentation: off [fixed]
+tx-ipxip4-segmentation: off [fixed]
+tx-ipxip6-segmentation: off [fixed]
+tx-udp_tnl-segmentation: off [fixed]
+tx-udp_tnl-csum-segmentation: off [fixed]
+tx-gso-partial: off [fixed]
+tx-tunnel-remcsum-segmentation: off [fixed]
+tx-sctp-segmentation: off [fixed]
+tx-esp-segmentation: off [fixed]
+
+===== CMD: (/usr/local/x-ui/bin/xray-linux-amd64 version || xray version || true) 2>&1 | head -20 RC=0 =====
+Xray 26.7.28 (Xray, Penetrates Everything.) 5ca6f4b (go1.26.5 linux/amd64)
+A unified platform for anti-censorship.
+
+===== CMD: ps aux | egrep '[x]ray|[x]-ui|[n]ginx|[s]shd' | head -40 RC=0 =====
+root         726  0.0  0.8  12020  8220 ?        Ss   Aug29   0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root        5493  0.3 10.1 1399204 100036 ?      Ssl  Aug29   2:43 /usr/local/x-ui/x-ui
+root        5501  0.0  4.7 1364052 46992 ?       Sl   Aug29   0:45 bin/xray-linux-amd64 -c bin/config.json
+root        7920  0.0  0.2  21664  2136 ?        Ss   06:14   0:00 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
+www-data    7921  0.0  0.9  23712  8904 ?        S    06:14   0:00 nginx: worker process
+root        8216  1.1  1.0  14932 10692 ?        Ss   06:39   0:00 sshd: root@notty
+
+===== CMD: ss -lntp | egrep ':8443|:443|:3333|:20901' || true RC=0 =====
+LISTEN 0      4096         0.0.0.0:3333       0.0.0.0:*    users:(("sshd",pid=726,fd=3),("systemd",pid=1,fd=155)) 
+LISTEN 0      511          0.0.0.0:443        0.0.0.0:*    users:(("nginx",pid=7921,fd=5),("nginx",pid=7920,fd=5))
+LISTEN 0      4096       127.0.0.1:20901      0.0.0.0:*    users:(("x-ui",pid=5493,fd=10))                        
+LISTEN 0      4096            [::]:3333          [::]:*    users:(("sshd",pid=726,fd=4),("systemd",pid=1,fd=156)) 
+LISTEN 0      511             [::]:443           [::]:*    users:(("nginx",pid=7921,fd=6),("nginx",pid=7920,fd=6))
+LISTEN 0      4096               *:8443             *:*    users:(("xray-linux-amd6",pid=5501,fd=6))              
+
+===== CMD: curl -fsS --max-time 10 https://api.ipify.org; echo RC=0 =====
+92.42.99.126
+
+===== CMD: curl -fsS --max-time 10 -6 https://api64.ipify.org 2>/dev/null || echo IPV6_EGRESS_FAIL_OR_UNAVAILABLE RC=0 =====
+2a06:fcc0:a::15b
+===== CMD: cat /sys/class/net/eth0/mtu 2>/dev/null; cat /sys/class/net/eth0/speed 2>/dev/null || true RC=0 =====
+1500
+-1

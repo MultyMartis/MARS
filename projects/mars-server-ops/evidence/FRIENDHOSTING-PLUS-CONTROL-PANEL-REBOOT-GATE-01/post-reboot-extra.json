@@ -1,0 +1,72 @@
+{
+  "lscpu_short": {
+    "code": 0,
+    "out": "CPU(s):                                  2\nOn-line CPU(s) list:                     0,1\nVendor ID:                               GenuineIntel\nBIOS Vendor ID:                          QEMU\nModel name:                              Common KVM processor\nBIOS Model name:                         pc-i440fx-11.0  CPU @ 2.0GHz\nThread(s) per core:                      1\nCore(s) per socket:                      2\nSocket(s):                               1\nHypervisor vendor:                       KVM\nNUMA node0 CPU(s):                       0,1",
+    "err": ""
+  },
+  "enabled": {
+    "code": 0,
+    "out": "disabled\nenabled\nenabled\nenabled\n---\nactive\nactive\nactive\nactive",
+    "err": ""
+  },
+  "xray_ver": {
+    "code": 0,
+    "out": "Xray 26.7.28 (Xray, Penetrates Everything.) 5ca6f4b (go1.26.5 linux/amd64)\nA unified platform for anti-censorship.",
+    "err": ""
+  },
+  "tls": {
+    "code": 0,
+    "out": "subject=CN = metacode-cloud.com\nissuer=C = US, O = Let's Encrypt, CN = YE1\nnotBefore=Aug 29 16:46:35 2026 GMT\nnotAfter=Nov 27 16:46:34 2026 GMT\nX509v3 Subject Alternative Name: \n    DNS:metacode-cloud.com",
+    "err": ""
+  },
+  "verify": {
+    "code": 0,
+    "out": "/etc/letsencrypt/live/metacode-cloud.com/fullchain.pem: OK\nEXIT:0",
+    "err": ""
+  },
+  "df": {
+    "code": 0,
+    "out": "Filesystem     Type   Size  Used Avail Use% Mounted on\ntmpfs          tmpfs  197M  968K  196M   1% /run\n/dev/sda1      ext4   8.7G  3.0G  5.8G  34% /\ntmpfs          tmpfs  984M     0  984M   0% /dev/shm\ntmpfs          tmpfs  5.0M     0  5.0M   0% /run/lock\n/dev/sda16     ext4   881M  117M  703M  15% /boot\n/dev/sda15     vfat   105M  6.2M   99M   6% /boot/efi\ntmpfs          tmpfs  197M  8.0K  197M   1% /run/user/0\n---\nFilesystem      1B-blocks       Used  Available Use% Mounted on\n/dev/sda1      9283444736 3114749952 6151917568  34% /",
+    "err": ""
+  },
+  "parted": {
+    "code": 0,
+    "out": "Model: QEMU QEMU HARDDISK (scsi)\nDisk /dev/sda: 10737418240B\nSector size (logical/physical): 512B/512B\nPartition Table: gpt\nDisk Flags: \n\nNumber  Start        End           Size         File system  Name  Flags\n14      1048576B     5242879B      4194304B                        bios_grub\n15      5242880B     116391935B    111149056B   fat32              boot, esp\n16      116391936B   1073742335B   957350400B   ext4               bls_boot\n 1      1074790400B  10737401343B  9662610944B  ext4",
+    "err": ""
+  },
+  "routes": {
+    "code": 0,
+    "out": "default via 92.42.99.1 dev eth0 proto static \n92.42.99.0/24 dev eth0 proto kernel scope link src 92.42.99.126 \n---\n2a06:fcc0:a::/48 dev eth0 proto kernel metric 256 pref medium\nfe80::/64 dev eth0 proto kernel metric 256 pref medium\ndefault via 2a06:fcc0:a::1 dev eth0 proto static metric 1024 pref medium",
+    "err": ""
+  },
+  "ip4": {
+    "code": 0,
+    "out": "1: lo    inet 127.0.0.1/8 scope host lo\\       valid_lft forever preferred_lft forever\n2: eth0    inet 92.42.99.126/24 brd 92.42.99.255 scope global eth0\\       valid_lft forever preferred_lft forever",
+    "err": ""
+  },
+  "journal": {
+    "code": 0,
+    "out": "IDX BOOT ID                          FIRST ENTRY                 LAST ENTRY\n -3 b2160816068843a58290b2f08ade9f5a Sat 2026-08-29 13:54:26 UTC Sat 2026-08-29 14:00:34 UTC\n -2 d40d0d6aefe54c3cb4a63ff130f91abd Sat 2026-08-29 14:04:55 UTC Sat 2026-08-29 14:07:10 UTC\n -1 2afae64970964aa1a5d7844b2455c640 Sat 2026-08-29 14:07:23 UTC Sun 2026-08-30 07:54:46 UTC\n  0 6aec78f297cb447ea8a47e832a23ad18 Sun 2026-08-30 07:55:03 UTC Sun 2026-08-30 07:59:40 UTC",
+    "err": ""
+  },
+  "ufw": {
+    "code": 0,
+    "out": "Status: active\nLogging: on (low)\nDefault: deny (incoming), allow (outgoing), disabled (routed)\nNew profiles: skip\n\nTo                         Action      From\n--                         ------      ----\n3333/tcp                   ALLOW IN    Anywhere                   # MARS SSH\n8443/tcp                   ALLOW IN    Anywhere                   # MARS XRAY VLESS TLS RAW\n443/tcp                    ALLOW IN    Anywhere                   # MARS 3X-UI nginx TLS\n3333/tcp (v6)              ALLOW IN    Anywhere (v6)              # MARS SSH\n8443/tcp (v6)              ALLOW IN    Anywhere (v6)              # MARS XRAY VLESS TLS RAW\n443/tcp (v6)               ALLOW IN    Anywhere (v6)              # MARS 3X-UI nginx TLS",
+    "err": ""
+  },
+  "swap": {
+    "code": 0,
+    "out": "Filename\t\t\t\tType\t\tSize\t\tUsed\t\tPriority\nSwapTotal:             0 kB",
+    "err": ""
+  },
+  "failed": {
+    "code": 0,
+    "out": "NONE_IF_EMPTY",
+    "err": ""
+  },
+  "findmnt": {
+    "code": 1,
+    "out": "",
+    "err": ""
+  }
+}

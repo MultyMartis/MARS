@@ -1,0 +1,83 @@
+==== ss -lntp | egrep ':(80|443|3333|8443|2096|20901)\b' || true
+LISTEN 0      4096         0.0.0.0:3333       0.0.0.0:*    users:(("sshd",pid=816,fd=3),("systemd",pid=1,fd=167))                      
+LISTEN 0      511          0.0.0.0:443        0.0.0.0:*    users:(("nginx",pid=767,fd=5),("nginx",pid=766,fd=5),("nginx",pid=765,fd=5))
+LISTEN 0      4096       127.0.0.1:20901      0.0.0.0:*    users:(("x-ui",pid=6947,fd=10))                                             
+LISTEN 0      4096               *:2096             *:*    users:(("x-ui",pid=6947,fd=18))                                             
+LISTEN 0      4096               *:8443             *:*    users:(("xray-linux-amd6",pid=6957,fd=3))                                   
+LISTEN 0      4096            [::]:3333          [::]:*    users:(("sshd",pid=816,fd=4),("systemd",pid=1,fd=168))                      
+LISTEN 0      511             [::]:443           [::]:*    users:(("nginx",pid=767,fd=6),("nginx",pid=766,fd=6),("nginx",pid=765,fd=6))
+
+==== free -h; swapon --show; grep -n swap /etc/fstab || true
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       410Mi       696Mi       1.0Mi       1.0Gi       1.5Gi
+Swap:          2.0Gi          0B       2.0Gi
+NAME      TYPE SIZE USED PRIO
+/swapfile file   2G   0B   -2
+4:/swapfile none swap sw 0 0
+
+==== sshd -T 2>/dev/null | egrep 'passwordauthentication|permitrootlogin|pubkeyauthentication|^port '
+port 3333
+port 3333
+permitrootlogin without-password
+pubkeyauthentication yes
+passwordauthentication no
+
+==== ufw status verbose
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+3333/tcp                   ALLOW IN    Anywhere                   # MARS SSH
+8443/tcp                   ALLOW IN    Anywhere                   # MARS Xray VLESS
+443/tcp                    ALLOW IN    Anywhere                   # MARS nginx TLS
+2096/tcp                   DENY IN     Anywhere                   # MARS-P2 block x-ui sub public
+20901/tcp                  DENY IN     Anywhere                   # MARS-P2 block panel direct
+3333/tcp (v6)              ALLOW IN    Anywhere (v6)              # MARS SSH
+8443/tcp (v6)              ALLOW IN    Anywhere (v6)              # MARS Xray VLESS
+443/tcp (v6)               ALLOW IN    Anywhere (v6)              # MARS nginx TLS
+2096/tcp (v6)              DENY IN     Anywhere (v6)              # MARS-P2 block x-ui sub public
+20901/tcp (v6)             DENY IN     Anywhere (v6)              # MARS-P2 block panel direct
+
+
+==== systemctl is-enabled --quiet certbot.timer && echo certbot.timer=enabled; systemctl is-active certbot.timer
+certbot.timer=enabled
+active
+
+==== openssl x509 -in /etc/letsencrypt/live/metacode-cloud.com/fullchain.pem -noout -dates -subject 2>/dev/null
+notBefore=Aug 29 16:46:35 2026 GMT
+notAfter=Nov 27 16:46:34 2026 GMT
+subject=CN = metacode-cloud.com
+
+==== id marsops; getent passwd marsops; groups marsops
+uid=1000(marsops) gid=1000(marsops) groups=1000(marsops),27(sudo),100(users)
+marsops:x:1000:1000:MARS Server Ops,,,:/home/marsops:/bin/bash
+marsops : marsops sudo users
+
+==== test -f /etc/ssh/sshd_config.d/00-mars-server-ops-hardening.conf && echo HARDENING_DROPIN=yes; grep -v '^#' /etc/ssh/sshd_config.d/00-mars-server-ops-hardening.conf | sed '/^$/d'
+HARDENING_DROPIN=yes
+Port 3333
+PermitRootLogin prohibit-password
+PasswordAuthentication no
+KbdInteractiveAuthentication no
+PubkeyAuthentication yes
+MaxAuthTries 4
+
+==== fail2ban-client status sshd 2>/dev/null | head -20
+Status for the jail: sshd
+|- Filter
+|  |- Currently failed:	0
+|  |- Total failed:	0
+|  `- Journal matches:	_SYSTEMD_UNIT=sshd.service + _COMM=sshd
+`- Actions
+   |- Currently banned:	0
+   |- Total banned:	0
+   `- Banned IP list:	
+
+==== ls -la /var/log/journal 2>/dev/null | head -3; grep SystemMaxUse /etc/systemd/journald.conf.d/* 2>/dev/null || grep SystemMaxUse /etc/systemd/journald.conf || true
+total 12
+drwxr-sr-x+  3 root systemd-journal 4096 Aug 29 13:54 .
+drwxrwxr-x  11 root syslog          4096 Aug 30 08:19 ..
+SystemMaxUse=200M

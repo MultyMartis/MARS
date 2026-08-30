@@ -1,0 +1,109 @@
+{
+  "wave": "FRIENDHOSTING-P2-CLEAN-HARDENING-RECONCILIATION-02",
+  "ts": "20260830T102110Z",
+  "admin_path": "VEESP",
+  "gates": {
+    "health": "PASS",
+    "backup": "PASS",
+    "restore_strategy": "CONFIRMED",
+    "certbot_dry_run": "PASS",
+    "ssh_keys": "PASS",
+    "password_auth": "DISABLED",
+    "marsops_sudo": "PASS",
+    "tls_live": "PASS",
+    "port_2096": "UFW-DENIED ACCEPTED BOUNDARY",
+    "panel_proxy": "PASS",
+    "panel_localhost": "PASS"
+  },
+  "mutations": [
+    "nginx :80 ACME webroot + HTTPS redirect",
+    "ufw allow 80/tcp",
+    "deploy hook reload nginx + restart x-ui",
+    "certbot renewal: standalone \u2192 webroot"
+  ],
+  "notes": [],
+  "workstation_egress": "178.173.250.69",
+  "backup": {
+    "ok": true,
+    "remote": "/root/mars-backups/friendhosting-p2-clean-hardened-state-20260830T102110Z.tgz",
+    "local": "X:\\AI MARS\\local\\infrastructure\\FRIENDHOSTING-GERMANY\\backups\\friendhosting-p2-clean-hardened-state-20260830T102110Z.tgz",
+    "remote_sha256": "bb9a07045cc610c52275895cf4679881699906df24284e147f059486098d243c",
+    "local_sha256": "bb9a07045cc610c52275895cf4679881699906df24284e147f059486098d243c",
+    "sha_match": true,
+    "size": 80721584,
+    "members_ok": {
+      "etc-ssh": true,
+      "etc-nginx": true,
+      "etc-letsencrypt": true,
+      "etc-ufw": true,
+      "usr-local-x-ui": true,
+      "x-ui-db": true,
+      "fail2ban": true,
+      "fstab": true
+    }
+  },
+  "acme": {
+    "ok": true,
+    "dry_run_exit_ok": true,
+    "mutations": [
+      "nginx :80 ACME webroot + HTTPS redirect",
+      "ufw allow 80/tcp",
+      "deploy hook reload nginx + restart x-ui",
+      "certbot renewal: standalone \u2192 webroot"
+    ],
+    "authenticator": "webroot",
+    "webroot": "/var/www/letsencrypt",
+    "deploy_hook": "/etc/letsencrypt/renewal-hooks/deploy/mars-reload-tls-consumers.sh",
+    "external_probe": {
+      "reachable": true,
+      "status": "HTTP/1.1 200 OK"
+    }
+  },
+  "acme_dry_run_tail": "\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\nProcessing /etc/letsencrypt/renewal/metacode-cloud.com.conf\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\nSimulating renewal of an existing certificate for metacode-cloud.com\n\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\nCongratulations, all simulated renewals succeeded: \n  /etc/letsencrypt/live/metacode-cloud.com/fullchain.pem (success)\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\nDRY_EXIT:0\n",
+  "regression": {
+    "gates": {
+      "ssh_tcp": true,
+      "nginx_tcp": true,
+      "xray_tcp": true,
+      "http80_tcp": true,
+      "tls_443": {
+        "ok": true,
+        "notAfter": "Nov 27 16:46:34 2026 GMT"
+      },
+      "tls_8443": {
+        "ok": true,
+        "notAfter": "Nov 27 16:46:34 2026 GMT"
+      },
+      "http_2096": {
+        "reachable": false,
+        "error": "TimeoutError"
+      },
+      "http_20901": {
+        "reachable": false,
+        "error": "TimeoutError"
+      },
+      "http80_root": {
+        "reachable": true,
+        "status": "HTTP/1.1 301 Moved Permanently"
+      },
+      "http80_acme_missing": {
+        "reachable": true,
+        "status": "HTTP/1.1 404 Not Found"
+      },
+      "key_root": true,
+      "key_marsops": true,
+      "password_auth": "DISABLED",
+      "marsops_sudo": "PASS"
+    },
+    "port_2096": "UFW-DENIED ACCEPTED BOUNDARY",
+    "ssh_snippet": [
+      "port 3333",
+      "port 3333",
+      "permitrootlogin without-password",
+      "passwordauthentication no"
+    ],
+    "panel_localhost": "PASS",
+    "panel_proxy": "PASS"
+  },
+  "verdict": "PASS"
+}

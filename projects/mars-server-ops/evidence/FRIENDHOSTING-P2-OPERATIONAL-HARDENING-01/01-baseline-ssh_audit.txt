@@ -1,0 +1,36 @@
+exit=0
+port 3333
+port 3333
+maxauthtries 4
+permitrootlogin without-password
+pubkeyauthentication yes
+passwordauthentication no
+kbdinteractiveauthentication no
+gatewayports no
+authenticationmethods any
+---
+total 12
+drwxr-xr-x 2 root root 4096 Aug 30 09:21 .
+drwxr-xr-x 4 root root 4096 Aug 29 14:07 ..
+-rw-r--r-- 1 root root  245 Aug 30 09:30 00-mars-server-ops-hardening.conf
+---
+/etc/ssh/sshd_config:12:Include /etc/ssh/sshd_config.d/*.conf
+/etc/ssh/sshd_config:23:Port 3333
+/etc/ssh/sshd_config:42:PermitRootLogin yes
+/etc/ssh/sshd_config:90:PermitRootLogin yes
+/etc/ssh/sshd_config.d/00-mars-server-ops-hardening.conf:3:Port 3333
+/etc/ssh/sshd_config.d/00-mars-server-ops-hardening.conf:4:PermitRootLogin prohibit-password
+/etc/ssh/sshd_config.d/00-mars-server-ops-hardening.conf:5:PasswordAuthentication no
+/etc/ssh/sshd_config.d/00-mars-server-ops-hardening.conf:7:PubkeyAuthentication yes
+---
+root:x:0:0:root:/root:/bin/bash
+sync:x:4:65534:sync:/bin:/bin/sync
+marsops:x:1000:1000:MARS Server Ops,,,:/home/marsops:/bin/bash
+---
+total 12
+drwx------ 2 root root 4096 Aug 29 13:54 .
+drwx------ 5 root root 4096 Aug 29 17:43 ..
+-rw------- 1 root root  228 Aug 30 09:30 authorized_keys
+---
+2 /root/.ssh/authorized_keys
+

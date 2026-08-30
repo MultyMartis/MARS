@@ -1,0 +1,46 @@
+{
+    "experiment":  "EXP-A01b",
+    "harness_version":  "EXP-A01b-1.0.0",
+    "dry_validate":  true,
+    "status":  "DRYVALIDATE_PASS",
+    "evidence_dir":  "X:\\AI MARS\\projects\\mars-server-ops\\evidence\\EXP-A01b\\2026-08-29_160612_dryvalidate",
+    "phases":  {
+                   "phase0_precheck":  {
+                                           "mixed_proxy_10808_listening":  true,
+                                           "mixed_proxy_owned_ok":  true,
+                                           "port_18088_listening":  [
+                                                                        false
+                                                                    ],
+                                           "is_admin":  false,
+                                           "log_capture":  {
+                                                               "v2rayn":  "PARTIAL",
+                                                               "xray":  "NOT_AVAILABLE",
+                                                               "notes":  [
+
+                                                                         ]
+                                                           }
+                                       },
+                   "dryvalidate":  {
+                                       "dry_validate":  true,
+                                       "powershell_syntax_ok":  true,
+                                       "evidence_dir_created":  true,
+                                       "transport_helper_ran":  true,
+                                       "csv_json_written":  true,
+                                       "admin_required":  false,
+                                       "admin_used":  false,
+                                       "v2rayn_config_mutation":  0,
+                                       "server_mutation":  0,
+                                       "eqvps_switch_simulated":  false,
+                                       "app_acceptance_triggered":  false,
+                                       "result":  "PASS",
+                                       "evidence_dir":  "X:\\AI MARS\\projects\\mars-server-ops\\evidence\\EXP-A01b\\2026-08-29_160612_dryvalidate",
+                                       "completed_utc":  "2026-08-29T09:06:22.7402813Z"
+                                   }
+               },
+    "admin_required":  false,
+    "admin_used":  false,
+    "vpn_auto_switch":  false,
+    "v2rayn_config_writes":  0,
+    "server_mutations":  0,
+    "secret_disclosure":  0
+}

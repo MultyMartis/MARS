@@ -1,0 +1,45 @@
+{
+  "gates": {
+    "ssh_tcp": true,
+    "nginx_tcp": true,
+    "xray_tcp": true,
+    "http80_tcp": true,
+    "tls_443": {
+      "ok": true,
+      "notAfter": "Nov 27 16:46:34 2026 GMT"
+    },
+    "tls_8443": {
+      "ok": true,
+      "notAfter": "Nov 27 16:46:34 2026 GMT"
+    },
+    "http_2096": {
+      "reachable": false,
+      "error": "TimeoutError"
+    },
+    "http_20901": {
+      "reachable": false,
+      "error": "TimeoutError"
+    },
+    "http80_root": {
+      "reachable": true,
+      "status": "HTTP/1.1 301 Moved Permanently"
+    },
+    "http80_acme_missing": {
+      "reachable": true,
+      "status": "HTTP/1.1 404 Not Found"
+    },
+    "key_root": true,
+    "key_marsops": true,
+    "password_auth": "DISABLED",
+    "marsops_sudo": "PASS"
+  },
+  "port_2096": "UFW-DENIED ACCEPTED BOUNDARY",
+  "ssh_snippet": [
+    "port 3333",
+    "port 3333",
+    "permitrootlogin without-password",
+    "passwordauthentication no"
+  ],
+  "panel_localhost": "PASS",
+  "panel_proxy": "PASS"
+}

@@ -1,0 +1,7 @@
+exit=0
+ok-acme-probe
+ok-acme-probe
+LISTEN 0      511          0.0.0.0:80         0.0.0.0:*    users:(("nginx",pid=9453,fd=13),("nginx",pid=9452,fd=13),("nginx",pid=765,fd=13))
+LISTEN 0      511             [::]:80            [::]:*    users:(("nginx",pid=9453,fd=14),("nginx",pid=9452,fd=14),("nginx",pid=765,fd=14))
+PROBE_LOCAL_OK
+

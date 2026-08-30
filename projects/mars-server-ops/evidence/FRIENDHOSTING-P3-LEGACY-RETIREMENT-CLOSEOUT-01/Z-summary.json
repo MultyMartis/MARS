@@ -1,0 +1,98 @@
+{
+  "wave": "FRIENDHOSTING-P3-LEGACY-RETIREMENT-CLOSEOUT-01",
+  "ts": "20260830T122707Z",
+  "legacy_removed": true,
+  "deletion_method": "canonical sqlite (inbounds.settings + clients + client_inbounds + traffics) + x-ui restart",
+  "backup": {
+    "remote_full": "/root/mars-backups/friendhosting-p3-pre-legacy-retirement-20260830T120733Z.tgz",
+    "sha256_full_remote": "4952b6368ad884be1a6737506f7f81c8464aaa28cb2e44807c038049918abac8",
+    "remote_essential": "/root/mars-backups/friendhosting-p3-pre-legacy-retirement-ESSENTIAL-20260830T122055Z.tgz",
+    "local_essential": "X:\\AI MARS\\local\\infrastructure\\FRIENDHOSTING-GERMANY\\backups\\friendhosting-p3-pre-legacy-retirement-ESSENTIAL-20260830T122055Z.tgz",
+    "sha256_essential_remote": "647ca4da349e26ce4617ecc9a1cf2cfc1aaf7a5c89a8fd31d9f4d1ad30ff9ddc",
+    "sha256_essential_local": "647ca4da349e26ce4617ecc9a1cf2cfc1aaf7a5c89a8fd31d9f4d1ad30ff9ddc",
+    "sha_match_essential": true,
+    "size_essential": 296373,
+    "essential_pre_delete_clients": 7,
+    "essential_has_legacy": true,
+    "restore_strategy": "CONFIRMED",
+    "primary_local_twin": "X:\\AI MARS\\local\\infrastructure\\FRIENDHOSTING-GERMANY\\backups\\friendhosting-p3-pre-legacy-retirement-ESSENTIAL-20260830T122055Z.tgz"
+  },
+  "post": {
+    "settings_n": 6,
+    "settings_emails": [
+      "MCA-PHONE",
+      "Unit-01",
+      "Unit-02",
+      "Unit-03",
+      "Unit-MichaelPhone",
+      "WSP-ONE"
+    ],
+    "table_emails": [
+      "MCA-PHONE",
+      "Unit-01",
+      "Unit-02",
+      "Unit-03",
+      "Unit-MichaelPhone",
+      "WSP-ONE"
+    ],
+    "xray_emails": [
+      "MCA-PHONE",
+      "Unit-01",
+      "Unit-02",
+      "Unit-03",
+      "Unit-MichaelPhone",
+      "WSP-ONE"
+    ],
+    "legacy_absent": true,
+    "uuid_unique": true,
+    "all_enabled": true,
+    "wsp": true,
+    "phone": true,
+    "orphan_ci": 0,
+    "architecture": {
+      "network": "tcp",
+      "security": "tls",
+      "sni": "metacode-cloud.com",
+      "remark": "FRIENDHOSTING-DE-RAW-8443"
+    },
+    "delete_snaps": [
+      "/root/mars-backups/x-ui.db.p31-pre-delete-20260830T122423Z"
+    ]
+  },
+  "regression": {
+    "ssh_3333": true,
+    "nginx_443": true,
+    "xray_8443": true,
+    "xui_active": true,
+    "nginx_active": true,
+    "local": {
+      "tcp_3333": true,
+      "tcp_443": true,
+      "tcp_8443": true,
+      "tls_443": {
+        "ok": true,
+        "notAfter": "Nov 27 16:46:34 2026 GMT"
+      },
+      "tls_8443": {
+        "ok": true,
+        "notAfter": "Nov 27 16:46:34 2026 GMT"
+      }
+    },
+    "ufw_excerpt_in_D1": true,
+    "pass": true
+  },
+  "egress": "92.42.99.126",
+  "mutations": {
+    "veesp": 0,
+    "eqvps": 0,
+    "legacy_deletion": 1,
+    "remaining_client_mutation": 0,
+    "architecture": 0,
+    "firewall": 0,
+    "ssh": 0,
+    "reboot": 0,
+    "secret_disclosure": 0,
+    "foreign_wip": 0,
+    "commit_push": 0
+  }
+}

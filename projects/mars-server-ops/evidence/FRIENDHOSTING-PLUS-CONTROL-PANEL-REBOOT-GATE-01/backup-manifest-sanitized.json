@@ -1,0 +1,23 @@
+{
+  "wave": "FRIENDHOSTING-PLUS-CONTROL-PANEL-REBOOT-GATE-01",
+  "ts_utc": "20260830T073335Z",
+  "remote_tgz": "/root/mars-backups/friendhosting-plus-pre-panel-reboot-20260830T073335Z.tgz",
+  "local_tgz": "X:\\AI MARS\\local\\infrastructure\\FRIENDHOSTING-GERMANY\\backups\\friendhosting-plus-pre-panel-reboot-20260830T073335Z.tgz",
+  "remote_size": 80613337,
+  "local_size": 80613337,
+  "sha256_match": true,
+  "remote_sha256": "04344ea5fb7d90086360753060197a2e2371f063f0efbef60bd713efe96ff002",
+  "local_sha256": "04344ea5fb7d90086360753060197a2e2371f063f0efbef60bd713efe96ff002",
+  "readability": "PASS",
+  "components": {
+    "x-ui": true,
+    "x-ui.db": true,
+    "nginx": true,
+    "letsencrypt": true,
+    "ssh": true,
+    "ufw": true,
+    "baseline": true,
+    "systemd": true
+  },
+  "status": "BACKUP + RESTORE STRATEGY CONFIRMED"
+}

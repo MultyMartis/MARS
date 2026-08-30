@@ -1,0 +1,124 @@
+{
+  "wave": "FRIENDHOSTING-FINAL-OPERATIONAL-BACKUP-01",
+  "ts": "20260830T125003Z",
+  "host": "92.42.99.126",
+  "domain": "metacode-cloud.com",
+  "gates": {
+    "pre": {
+      "ssh_3333": true,
+      "nginx_443": true,
+      "xui_20901_localhost": true,
+      "xray_8443": true,
+      "tls_443": true,
+      "tls_8443": true,
+      "dns": true,
+      "ufw": true,
+      "fail2ban": true,
+      "swap_2g": true,
+      "certbot_timer": true,
+      "acme_webroot_signal": true,
+      "client_count_6": true,
+      "client_count": 6,
+      "client_labels": [
+        "MCA-PHONE",
+        "Unit-01",
+        "Unit-02",
+        "Unit-03",
+        "Unit-MichaelPhone",
+        "WSP-ONE"
+      ],
+      "has_legacy": false,
+      "remote_ok": true,
+      "services_is_active": "active\nactive\nactive\nactive\nactive",
+      "swap_kb": 2097148,
+      "dns_a": [
+        "92.42.99.126"
+      ],
+      "nginx_http_code_signal": true,
+      "xui_http_code_signal": true,
+      "PASS": true
+    }
+  },
+  "backup": {
+    "ok": true,
+    "remote_path": "/root/mars-backups/friendhosting-final-operational-20260830T125003Z.tgz",
+    "local_path": "X:\\AI MARS\\local\\infrastructure\\FRIENDHOSTING-GERMANY\\backups\\friendhosting-final-operational-20260830T125003Z.tgz",
+    "remote_sha256": "1012e3157db97ea3ba2a1c4d0b8d02328223e6656adf12ade22fa1adbb3a0ea2",
+    "local_sha256": "1012e3157db97ea3ba2a1c4d0b8d02328223e6656adf12ade22fa1adbb3a0ea2",
+    "sha_match": true,
+    "remote_size": 80746687,
+    "local_size": 80746687,
+    "size_match": true,
+    "required_sections": {
+      "etc-ssh": true,
+      "etc-nginx": true,
+      "etc-letsencrypt": true,
+      "etc-ufw": true,
+      "etc-fail2ban": true,
+      "usr-local-x-ui": true,
+      "x-ui-db": true,
+      "fstab": true,
+      "clients-safe.json": true,
+      "journald": true,
+      "sudoers": true
+    },
+    "archive_readable": true,
+    "client_count": 6,
+    "client_labels": [
+      "WSP-ONE",
+      "MCA-PHONE",
+      "Unit-01",
+      "Unit-02",
+      "Unit-03",
+      "Unit-MichaelPhone"
+    ],
+    "member_count": 342
+  },
+  "post": {
+    "ssh_3333": true,
+    "nginx_443": true,
+    "xui_20901_localhost": true,
+    "xray_8443": true,
+    "tls_443": true,
+    "tls_8443": true,
+    "dns": true,
+    "ufw": true,
+    "fail2ban": true,
+    "swap_2g": true,
+    "certbot_timer": true,
+    "acme_webroot_signal": true,
+    "client_count_6": true,
+    "client_count": 6,
+    "client_labels": [
+      "MCA-PHONE",
+      "Unit-01",
+      "Unit-02",
+      "Unit-03",
+      "Unit-MichaelPhone",
+      "WSP-ONE"
+    ],
+    "has_legacy": false,
+    "remote_ok": true,
+    "services_is_active": "active\nactive\nactive\nactive\nactive",
+    "swap_kb": 2097148,
+    "dns_a": [
+      "92.42.99.126"
+    ],
+    "nginx_http_code_signal": true,
+    "xui_http_code_signal": true,
+    "PASS": true
+  },
+  "verdict": "PASS",
+  "mutations": {
+    "veesp": 0,
+    "eqvps": 0,
+    "friendhosting_config": 0,
+    "friendhosting_clients": 0,
+    "friendhosting_firewall": 0,
+    "friendhosting_ssh": 0,
+    "friendhosting_reboot": 0,
+    "secret_disclosure": 0,
+    "foreign_wip": 0,
+    "commit_push": 0
+  }
+}

@@ -1,0 +1,14 @@
+﻿=== TRANSPORT SUITE: DRY_TRANSPORT ===
+UTC: 2026-08-29T18:02:21.4632028Z
+Proxy: http://127.0.0.1:10808
+
+EGRESS ok=True http=200 time=0.633836 sample=178.173.250.69 err=
+HTTPS ok=True http=200 time=0.500126 err=
+REPEAT[1] ok=True http=200 time=0.549030
+REPEAT[2] ok=True http=200 time=0.556246
+REPEAT[3] ok=True http=200 time=0.527627
+REPEAT[4] ok=True http=200 time=0.515432
+REPEAT[5] ok=True http=200 time=0.552040
+BODY10MB ok=True http=200 bytes=10000000 time=4.071738 err=
+
+SUMMARY egress=True https=True repeat=True body10mb=True

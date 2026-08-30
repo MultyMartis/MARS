@@ -1,0 +1,89 @@
+{
+  "hostname": {
+    "code": 0,
+    "out": "imart216311",
+    "err": ""
+  },
+  "os": {
+    "code": 0,
+    "out": "Ubuntu 24.04.4 LTS",
+    "err": ""
+  },
+  "nginx_present": {
+    "code": 0,
+    "out": "NGINX_ABSENT",
+    "err": ""
+  },
+  "nginx_service": {
+    "code": 0,
+    "out": "inactive\ninactive",
+    "err": ""
+  },
+  "listeners": {
+    "code": 0,
+    "out": "Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                                                \nudp   UNCONN 0      0         127.0.0.54:53         0.0.0.0:*    users:((\"systemd-resolve\",pid=484,fd=16))             \nudp   UNCONN 0      0      127.0.0.53%lo:53         0.0.0.0:*    users:((\"systemd-resolve\",pid=484,fd=14))             \ntcp   LISTEN 0      4096       127.0.0.1:62789      0.0.0.0:*    users:((\"xray-linux-amd6\",pid=5501,fd=3))             \ntcp   LISTEN 0      4096         0.0.0.0:3333       0.0.0.0:*    users:((\"sshd\",pid=726,fd=3),(\"systemd\",pid=1,fd=167))\ntcp   LISTEN 0      4096       127.0.0.1:11111      0.0.0.0:*    users:((\"xray-linux-amd6\",pid=5501,fd=7))             \ntcp   LISTEN 0      4096   127.0.0.53%lo:53         0.0.0.0:*    users:((\"systemd-resolve\",pid=484,fd=15))             \ntcp   LISTEN 0      4096       127.0.0.1:20901      0.0.0.0:*    users:((\"x-ui\",pid=5493,fd=10))                       \ntcp   LISTEN 0      4096      127.0.0.54:53         0.0.0.0:*    users:((\"systemd-resolve\",pid=484,fd=17))             \ntcp   LISTEN 0      4096            [::]:3333          [::]:*    users:((\"sshd\",pid=726,fd=4),(\"systemd\",pid=1,fd=168))\ntcp   LISTEN 0      4096               *:2096             *:*    users:((\"x-ui\",pid=5493,fd=18))                       \ntcp   LISTEN 0      4096               *:8443             *:*    users:((\"xray-linux-amd6\",pid=5501,fd=6))",
+    "err": ""
+  },
+  "port_443": {
+    "code": 0,
+    "out": "PORT_443_FREE",
+    "err": ""
+  },
+  "port_20901": {
+    "code": 0,
+    "out": "tcp   LISTEN 0      4096       127.0.0.1:20901      0.0.0.0:*    users:((\"x-ui\",pid=5493,fd=10))",
+    "err": ""
+  },
+  "port_8443": {
+    "code": 0,
+    "out": "tcp   LISTEN 0      4096               *:8443             *:*    users:((\"xray-linux-amd6\",pid=5501,fd=6))",
+    "err": ""
+  },
+  "port_3333": {
+    "code": 0,
+    "out": "tcp   LISTEN 0      4096         0.0.0.0:3333       0.0.0.0:*    users:((\"sshd\",pid=726,fd=3),(\"systemd\",pid=1,fd=167))\ntcp   LISTEN 0      4096            [::]:3333          [::]:*    users:((\"sshd\",pid=726,fd=4),(\"systemd\",pid=1,fd=168))",
+    "err": ""
+  },
+  "cert_ls": {
+    "code": 0,
+    "out": "total 12\ndrwxr-xr-x 2 root root 4096 Aug 29 17:45 .\ndrwx------ 3 root root 4096 Aug 29 17:45 ..\n-rw-r--r-- 1 root root  692 Aug 29 17:45 README\nlrwxrwxrwx 1 root root   42 Aug 29 17:45 cert.pem -> ../../archive/metacode-cloud.com/cert1.pem\nlrwxrwxrwx 1 root root   43 Aug 29 17:45 chain.pem -> ../../archive/metacode-cloud.com/chain1.pem\nlrwxrwxrwx 1 root root   47 Aug 29 17:45 fullchain.pem -> ../../archive/metacode-cloud.com/fullchain1.pem\nlrwxrwxrwx 1 root root   45 Aug 29 17:45 privkey.pem [PRESENT]",
+    "err": ""
+  },
+  "cert_dates": {
+    "code": 0,
+    "out": "subject=CN = metacode-cloud.com\nissuer=C = US, O = Let's Encrypt, CN = YE1\nnotBefore=Aug 29 16:46:35 2026 GMT\nnotAfter=Nov 27 16:46:34 2026 GMT\nX509v3 Subject Alternative Name: \n    DNS:metacode-cloud.com",
+    "err": ""
+  },
+  "cert_verify": {
+    "code": 0,
+    "out": "/etc/letsencrypt/live/metacode-cloud.com/fullchain.pem: OK",
+    "err": ""
+  },
+  "ufw_status": {
+    "code": 0,
+    "out": "Status: active\nLogging: on (low)\nDefault: deny (incoming), allow (outgoing), disabled (routed)\nNew profiles: skip\n\nTo                         Action      From\n--                         ------      ----\n3333/tcp                   ALLOW IN    Anywhere                   # MARS SSH\n8443/tcp                   ALLOW IN    Anywhere                   # MARS XRAY VLESS TLS RAW\n3333/tcp (v6)              ALLOW IN    Anywhere (v6)              # MARS SSH\n8443/tcp (v6)              ALLOW IN    Anywhere (v6)              # MARS XRAY VLESS TLS RAW",
+    "err": ""
+  },
+  "xui_status": {
+    "code": 0,
+    "out": "active",
+    "err": ""
+  },
+  "panel_http_probe": {
+    "code": 0,
+    "out": "404",
+    "err": ""
+  },
+  "panel_https_probe": {
+    "code": 0,
+    "out": "curl: (35) OpenSSL/3.0.13: error:0A00010B:SSL routines::wrong version number\n000HTTPS_FAIL",
+    "err": ""
+  },
+  "dpkg_nginx": {
+    "code": 0,
+    "out": "",
+    "err": ""
+  },
+  "panel_proto_decision": "http",
+  "secret_path_sha256_16": "a065fd3481c653b1"
+}

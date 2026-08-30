@@ -1,0 +1,15 @@
+{
+  "verdict": "V2RAYN_IMPORT_FIELD_MISMAP_PUBLICKEY",
+  "uri_pbk_sha12": "e83743293573",
+  "uri_pbk_decoded_len": 32,
+  "uri_valid": true,
+  "v2rayn_active_profile_present": false,
+  "freelist_publickey_equals_sid": true,
+  "freelist_publickey_value_kind": "shortId_hex16",
+  "expected_pbk_in_db": false,
+  "xray_schema_json_field": "publicKey",
+  "xray_error_internal_name": "password",
+  "direct_xray_test": "PASS",
+  "direct_xray_transport": "TIMEOUT",
+  "v2rayn_russian_msg_is_wrapper_of_xray_invalid_password": true
+}

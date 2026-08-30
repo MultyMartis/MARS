@@ -1,0 +1,52 @@
+=== openssl s_client metacode-cloud.com:8443 ===
+depth=3 C=US, O=Internet Security Research Group, CN=ISRG Root X2
+verify return:1
+depth=2 C=US, O=ISRG, CN=Root YE
+verify return:1
+depth=1 C=US, O=Let's Encrypt, CN=YE1
+verify return:1
+depth=0 CN=metacode-cloud.com
+verify return:1
+CONNECTED(00000004)
+subject=CN=metacode-cloud.com
+issuer=C=US, O=Let's Encrypt, CN=YE1
+New, TLSv1.3, Cipher is TLS_AES_128_GCM_SHA256
+Protocol: TLSv1.3
+ALPN protocol: http/1.1
+Verify return code: 0 (ok)
+=== curl -v google via proxy (TLS lines) ===
+* CONNECT tunnel: HTTP/1.1 negotiated
+> CONNECT www.google.com:443 HTTP/1.1
+< HTTP/1.1 200 Connection established
+* ALPN: curl offers http/1.1
+* ALPN: server accepted http/1.1
+* Connected to 127.0.0.1 (127.0.0.1) port 10808
+* using HTTP/1.x
+> GET / HTTP/1.1
+< HTTP/1.1 200 OK
+< Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+=== curl --http2 google ===
+curl: option --http2: the installed libcurl version does not support this
+curl: try 'curl --help' for more information
+=== curl --http1.1 google ===
+http=200 version=1.1
+=== curl http3 probe (may fail) ===
+curl: option --http3: the installed libcurl version does not support this
+curl: try 'curl --help' for more information
+=== cloudflare /cdn-cgi/trace via proxy ===
+fl=696f64
+h=www.cloudflare.com
+ip=92.42.99.126
+ts=1788072225.000
+visit_scheme=https
+uag=curl/8.13.0
+colo=FRA
+sliver=none
+http=http/1.1
+loc=DE
+tls=TLSv1.2
+sni=plaintext
+warp=off
+gateway=off
+rbi=off
+kex=X25519

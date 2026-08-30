@@ -1,0 +1,24 @@
+exit=0
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Found the following certs:
+  Certificate Name: metacode-cloud.com
+    Serial Number: 6b5535c454a3831753a8995d6a71dc49c0a
+    Key Type: ECDSA
+    Domains: metacode-cloud.com
+    Expiry Date: 2026-11-27 16:46:34+00:00 (VALID: 89 days)
+    Certificate Path: /etc/letsencrypt/live/metacode-cloud.com/fullchain.pem
+    Private Key Path: /etc/letsencrypt/live/metacode-cloud.com/privkey.pem
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+total 16
+drwx------ 3 root root 4096 Aug 29 17:45 .
+drwxr-xr-x 7 root root 4096 Aug 30 09:31 ..
+-rw-r--r-- 1 root root  740 Aug 29 17:45 README
+drwxr-xr-x 2 root root 4096 Aug 29 17:45 metacode-cloud.com
+NEXT                            LEFT LAST                        PASSED UNIT          ACTIVATES
+Sun 2026-08-30 13:27:50 UTC 3h 56min Sun 2026-08-30 05:39:09 UTC      - certbot.timer certbot.service
+
+1 timers listed.
+/etc/cron.d/certbot
+

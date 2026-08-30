@@ -1,0 +1,21 @@
+Rule added
+Rule added (v6)
+Rule added
+Rule added (v6)
+Status: active
+
+     To                         Action      From
+     --                         ------      ----
+[ 1] 3333/tcp                   ALLOW IN    Anywhere                   # MARS SSH
+[ 2] 8443/tcp                   ALLOW IN    Anywhere                   # MARS XRAY VLESS TLS RAW
+[ 3] 443/tcp                    ALLOW IN    Anywhere                   # MARS 3X-UI nginx TLS
+[ 4] 2096/tcp                   DENY IN     Anywhere                   # MARS-P2 block x-ui sub public
+[ 5] 20901/tcp                  DENY IN     Anywhere                   # MARS-P2 block panel direct
+[ 6] 3333/tcp (v6)              ALLOW IN    Anywhere (v6)              # MARS SSH
+[ 7] 8443/tcp (v6)              ALLOW IN    Anywhere (v6)              # MARS XRAY VLESS TLS RAW
+[ 8] 443/tcp (v6)               ALLOW IN    Anywhere (v6)              # MARS 3X-UI nginx TLS
+[ 9] 2096/tcp (v6)              DENY IN     Anywhere (v6)              # MARS-P2 block x-ui sub public
+[10] 20901/tcp (v6)             DENY IN     Anywhere (v6)              # MARS-P2 block panel direct
+
+LISTEN 0      4096               *:2096             *:*    users:(("x-ui",pid=6947,fd=18))                                             
+

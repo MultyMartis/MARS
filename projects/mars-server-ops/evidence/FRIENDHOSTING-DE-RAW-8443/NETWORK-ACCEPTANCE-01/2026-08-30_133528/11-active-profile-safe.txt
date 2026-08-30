@@ -1,0 +1,32 @@
+TABLES=SubItem,ProfileItem,ServerStatItem,RoutingItem,ProfileExItem,DNSItem,FullConfigTemplateItem,ProfileGroupItem
+TABLE SubItem COLS=['Id', 'Remarks', 'Url', 'MoreUrl', 'Enabled', 'UserAgent', 'Sort', 'Filter', 'AutoUpdateInterval', 'UpdateTime', 'ConvertTarget', 'PrevProfile', 'NextProfile', 'PreSocksPort', 'Memo']
+SubItem: Id=5176823982427706481 | Remarks=import_sub
+TABLE ProfileItem COLS=['IndexId', 'ConfigType', 'ConfigVersion', 'Address', 'Port', 'Ports', 'Id', 'AlterId', 'Security', 'Network', 'Remarks', 'HeaderType', 'RequestHost', 'Path', 'StreamSecurity', 'AllowInsecure', 'Subid', 'IsSub', 'Flow', 'Sni', 'Alpn', 'CoreType', 'PreSocksPort', 'Fingerprint', 'DisplayLog', 'PublicKey', 'ShortId', 'SpiderX', 'Mldsa65Verify', 'Extra', 'MuxEnabled', 'Cert', 'CertSha', 'EchConfigList', 'EchForceQuery', 'Password', 'Username', 'Finalmask', 'ProtoExtra', 'TransportExtra']
+ProfileItem: IndexId=4850651204958926275 | ConfigType=5 | Address=wsp-cloud.com | Port=8443 | Id=None | Security=None | Network=raw | Remarks=MCA-Gate-TLS-MCA-ONE | StreamSecurity=tls | Subid=None | Flow=None | Sni=wsp-cloud.com | Alpn=http/1.1 | CoreType=None
+ProfileItem: IndexId=5720078675591532017 | ConfigType=5 | Address=metacode-cloud.com | Port=8443 | Id=None | Security=None | Network=raw | Remarks=MCA-ONE-FRIENDHOSTING-DE-RAW-8443 | StreamSecurity=tls | Subid=None | Flow=None | Sni=metacode-cloud.com | Alpn=http/1.1 | CoreType=None
+TABLE ServerStatItem COLS=['IndexId', 'TotalUp', 'TotalDown', 'TodayUp', 'TodayDown', 'DateNow']
+ServerStatItem: IndexId=4738029423398426811
+ServerStatItem: IndexId=4850651204958926275
+ServerStatItem: IndexId=4988202411561677124
+ServerStatItem: IndexId=5361692255576528264
+ServerStatItem: IndexId=5720078675591532017
+TABLE RoutingItem COLS=['Id', 'Remarks', 'Url', 'RuleSet', 'RuleNum', 'Enabled', 'Locked', 'CustomIcon', 'CustomRulesetPath4Singbox', 'DomainStrategy', 'DomainStrategy4Singbox', 'Sort', 'IsActive']
+RoutingItem: Id=5459568161998612481 | Remarks=V4-绕过大陆(Whitelist) | IsActive=0
+RoutingItem: Id=4897368326813044420 | Remarks=V4-黑名单(Blacklist) | IsActive=0
+RoutingItem: Id=4656807768534389565 | Remarks=V4-全局(Global) | IsActive=1
+TABLE ProfileExItem COLS=['IndexId', 'Delay', 'Speed', 'Sort', 'Message', 'IpInfo']
+ProfileExItem: IndexId=4850651204958926275
+TABLE DNSItem COLS=['Id', 'Remarks', 'Enabled', 'CoreType', 'UseSystemHosts', 'NormalDNS', 'TunDNS', 'DomainStrategy4Freedom', 'DomainDNSAddress']
+DNSItem: Id=5192948728093814185 | Remarks=V2ray | CoreType=2
+DNSItem: Id=5204814650572992130 | Remarks=sing-box | CoreType=24
+TABLE FullConfigTemplateItem COLS=['Id', 'Remarks', 'Enabled', 'CoreType', 'Config', 'TunConfig', 'AddProxyOnly', 'ProxyDetour']
+FullConfigTemplateItem: Id=5639491325572122596 | Remarks=V2ray | CoreType=2
+FullConfigTemplateItem: Id=5120748652371870547 | Remarks=sing-box | CoreType=24
+TABLE ProfileGroupItem COLS=['IndexId', 'ChildItems', 'SubChildItems', 'Filter', 'MultipleLoad']
+SETTINGS ServerStatItem: IndexId=4850651204958926275
+SETTINGS ServerStatItem: IndexId=4738029423398426811
+SETTINGS ServerStatItem: IndexId=5361692255576528264
+SETTINGS ServerStatItem: IndexId=4988202411561677124
+SETTINGS ServerStatItem: IndexId=5720078675591532017
+SETTINGS FullConfigTemplateItem: Id=5639491325572122596 | Remarks=V2ray | CoreType=2
+SETTINGS FullConfigTemplateItem: Id=5120748652371870547 | Remarks=sing-box | CoreType=24

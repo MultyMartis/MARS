@@ -1,0 +1,8 @@
+port 3333
+port 3333
+maxauthtries 4
+permitrootlogin without-password
+pubkeyauthentication yes
+passwordauthentication no
+gatewayports no
+

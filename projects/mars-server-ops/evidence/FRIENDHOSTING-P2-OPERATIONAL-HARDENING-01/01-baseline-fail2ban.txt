@@ -1,0 +1,7 @@
+exit=0
+ii  fail2ban       1.0.2-3ubuntu0.1 all          ban hosts that cause multiple authentication errors
+active
+Status
+|- Number of jail:	2
+`- Jail list:	3x-ipl, sshd
+

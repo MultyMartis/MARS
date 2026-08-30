@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "remote": "/root/mars-backups/friendhosting-p3-pre-device-identities-20260830T105341Z.tgz",
+  "local": "X:\\AI MARS\\local\\infrastructure\\FRIENDHOSTING-GERMANY\\backups\\friendhosting-p3-pre-device-identities-20260830T105341Z.tgz",
+  "remote_sha256": "dbdc2da01a33e1a109b3cedd8e19a3a4323a4cabf1c2d59244139096ef44eaa2",
+  "local_sha256": "dbdc2da01a33e1a109b3cedd8e19a3a4323a4cabf1c2d59244139096ef44eaa2",
+  "sha_match": true,
+  "size": 80676164,
+  "members_ok": {
+    "etc-x-ui": true,
+    "x-ui-db": true,
+    "usr-local-x-ui": true,
+    "xray-config": true,
+    "clients-safe": true
+  }
+}

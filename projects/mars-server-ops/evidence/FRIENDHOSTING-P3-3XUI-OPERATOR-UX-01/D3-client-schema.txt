@@ -1,0 +1,7 @@
+SETTINGS_TOP ['clients', 'decryption', 'fallbacks']
+CLIENTS_N 7
+LEGACY_CLIENT {"id": "<UUID>", "flow": "", "email": "MCA-ONE-FRIENDHOSTING-DE-RAW-8443", "limitIp": 0, "totalGB": 0, "expiryTime": 0, "enable": true, "tgId": "", "subId": "fhde8443mcaone01", "comment": "", "reset": 0}
+WSP_CLIENT {"id": "<UUID>", "flow": "", "email": "WSP-ONE", "limitIp": 0, "totalGB": 0, "expiryTime": 0, "enable": true, "tgId": "", "subId": "fhdewsponefriendhostingderaw", "comment": "P3 per-device; LEGACY MCA-ONE preserved", "reset": 0}
+XRAY_SETTINGS_TOP ['clients', 'decryption', 'fallbacks']
+XRAY_N 1
+

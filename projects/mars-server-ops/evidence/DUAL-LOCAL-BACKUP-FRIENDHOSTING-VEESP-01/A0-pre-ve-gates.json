@@ -1,0 +1,20 @@
+{
+  "ssh_22": true,
+  "xui": true,
+  "xray_8443_listen": true,
+  "tls_8443": true,
+  "dns": true,
+  "vless_8443_inbound": true,
+  "clients_8443": 8,
+  "fail2ban_active": true,
+  "nginx_present": false,
+  "letsencrypt_present": false,
+  "cert_root_present": true,
+  "remote_ok": true,
+  "hostname": "wsp-cloud",
+  "os": "Ubuntu 22.04.5 LTS",
+  "kernel": "5.15.0-187-generic",
+  "services_is_active": "active\nactive\nactive",
+  "tls_notAfter": "Nov 11 08:03:40 2026 GMT",
+  "PASS": true
+}

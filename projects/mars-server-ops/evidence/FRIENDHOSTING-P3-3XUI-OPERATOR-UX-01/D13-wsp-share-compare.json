@@ -1,0 +1,21 @@
+{
+  "struct_keys_compared": [
+    "scheme",
+    "host",
+    "port",
+    "encryption",
+    "security",
+    "sni",
+    "alpn",
+    "fp",
+    "type",
+    "headerType",
+    "flow"
+  ],
+  "diffs": {},
+  "struct_match_core": true,
+  "uuid_equal": true,
+  "mars_fragment": "WSP-ONE",
+  "ui_fragment": "WSP-ONE",
+  "fragment_note": "display name may differ; not material for transport"
+}

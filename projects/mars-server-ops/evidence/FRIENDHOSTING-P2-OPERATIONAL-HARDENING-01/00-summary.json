@@ -1,0 +1,124 @@
+{
+  "wave": "FRIENDHOSTING-P2-OPERATIONAL-HARDENING-01-RECOVERY",
+  "ts": "20260830T093757Z",
+  "host": "92.42.99.126",
+  "gates": {
+    "backup": "PASS",
+    "restore_strategy": "CONFIRMED",
+    "key_based_operator_ssh": "PASS",
+    "ssh_auth_hardening": "PASS",
+    "pre_resume_health": "PASS",
+    "port_2096": "HARDENED",
+    "ufw": "PASS",
+    "fail2ban": "PASS",
+    "swap": "PASS",
+    "tls_renewal": "FAIL",
+    "logging": "PASS",
+    "boot_recovery": "PASS"
+  },
+  "mutations": {
+    "2096": "ufw deny 2096/tcp + ufw deny 20901/tcp; no x-ui listen change; no x-ui restart",
+    "firewall": "ensure allow 3333,443,8443; deny 20901,2096; default deny",
+    "fail2ban": "ensure jail.d/00-mars-server-ops-ssh.conf port=3333; reload",
+    "swap": "created /swapfile 2048M + fstab",
+    "logging": "journald SystemMaxUse=200M; optional x-ui logrotate",
+    "systemd": "systemctl enable ssh (was disabled); verify nginx/x-ui/fail2ban enabled+active"
+  },
+  "notes": [
+    "TLS renew dry-run FAIL under current UFW \u2014 P2 FINAL PARTIAL",
+    "Interrupted-run recovery RECOVERED"
+  ],
+  "interrupted_recovery": {
+    "cursor_interruption": "RECOVERED",
+    "completed_before": [
+      "pre-hardening baseline",
+      "fresh post-Plus backup",
+      "backup/hash validation",
+      "restore strategy",
+      "SSH audit",
+      "key-based operator SSH",
+      "SSH auth hardening"
+    ],
+    "partial_before": [
+      ":2096 analysis COMPLETED; :2096 hardening INCOMPLETE (SSH died after x-ui restart before UFW deny)"
+    ],
+    "resumed": [
+      ":2096 hardening via UFW deny (no x-ui restart)",
+      "firewall reconciliation",
+      "fail2ban validate/port 3333",
+      "swap create 2GiB",
+      "TLS renewal dry-run",
+      "journald size cap + logrotate check",
+      "systemd enable/boot readiness",
+      "post-hardening regression"
+    ],
+    "not_repeated": [
+      "SSH operator creation",
+      "SSH auth drop-in rewrite (already PASS)",
+      "backup recreation"
+    ]
+  },
+  "backup": {
+    "remote": "/root/mars-backups/friendhosting-plus-p2-pre-hardening-20260830T085016Z.tgz",
+    "local": "X:\\AI MARS\\local\\infrastructure\\FRIENDHOSTING-GERMANY\\backups\\friendhosting-plus-p2-pre-hardening-20260830T085016Z.tgz",
+    "sha256": "596469e821d4c4cf2dae8156032c7dc1a79b8702cde4495cd9643cebc125b9da",
+    "sha_match": true,
+    "size": 80689274
+  },
+  "port_2096": {
+    "http_before": {
+      "reachable": true,
+      "status": "HTTP/1.1 404 Not Found"
+    },
+    "http_after": {
+      "reachable": true,
+      "status": "HTTP/1.1 404 Not Found"
+    },
+    "ufw_deny_2096": true,
+    "listen_still_star": true,
+    "case": "A_not_required",
+    "method": "UFW deny without x-ui restart",
+    "xui_restart": false,
+    "sub_used_by_local_profile": false,
+    "status": "HARDENED"
+  },
+  "firewall_snippet": "Skipping adding existing rule\nSkipping adding existing rule (v6)\nRule updated\nRule updated (v6)\nRule updated\nRule updated (v6)\nSkipping adding existing rule\nSkipping adding existing rule (v6)\nSkipping adding existing rule\nSkipping adding existing rule (v6)\nStatus: active\nLogging: on (low)\nDefault: deny (incoming), allow (outgoing), disabled (routed)\nNew profiles: skip\n\nTo                         Action      From\n--                         ------      ----\n3333/tcp                   ALLOW IN    Anywhere                   # MARS SSH\n8443/tcp                   ALLOW IN    Anywhere                   # MARS Xray VLESS\n443/tcp                    ALLOW IN    Anywhere                   # MARS nginx TLS\n2096/tcp                   DENY IN     Anywhere                   # MARS-P2 block x-ui sub public\n20901/tcp                  DENY IN     Anywhere                   # MARS-P2 block panel direct\n3333/tcp (v6)              ALLOW IN    Anywhere (v6)              # MARS SSH\n8443/tcp (v6)              ALLOW IN    Anywhere (v6)              # MARS Xray VLESS\n443/tcp (v6)               ALLOW IN    Anywhere (v6)              # MARS nginx TLS\n2096/tcp (v6)              DENY IN     Anywhere (v6)              # MARS-P2 block x-ui sub public\n20901/tcp (v6)             DENY IN     Anywhere (v6)              # MARS-P2 block panel direct\n\n",
+  "swap": {
+    "created": true,
+    "path": "/swapfile",
+    "size_mib": 2048
+  },
+  "tls": {
+    "dry_run_ok": false,
+    "class": "FAIL",
+    "authenticator": "standalone",
+    "reason": "HTTP-01 requires :80; UFW denies :80; certbot.timer enabled; live certs OK until 2026-11-27"
+  },
+  "packages": {
+    "reboot_required": true
+  },
+  "post_gates": {
+    "ssh_3333": "PASS",
+    "nginx_443": "PASS",
+    "xray_8443": "PASS",
+    "public_20901": "NOT EXPOSED",
+    "vpn_egress": "92.42.99.126",
+    "tls_443": {
+      "ok": true,
+      "notAfter": "Nov 27 16:46:34 2026 GMT"
+    },
+    "tls_8443": {
+      "ok": true,
+      "notAfter": "Nov 27 16:46:34 2026 GMT"
+    },
+    "http_2096": {
+      "reachable": true,
+      "status": "HTTP/1.1 404 Not Found"
+    },
+    "tcp_2096_workstation": true,
+    "key_operator": "PASS",
+    "key_root": "PASS",
+    "vpn_https": "PASS"
+  },
+  "verdict": "PARTIAL"
+}

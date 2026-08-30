@@ -1,0 +1,13 @@
+enabled
+active
+NEXT                            LEFT LAST                        PASSED UNIT          ACTIVATES
+Sun 2026-08-30 12:18:42 UTC 2h 33min Sun 2026-08-30 05:39:09 UTC      - certbot.timer certbot.service
+
+1 timers listed.
+Pass --all to see loaded but inactive timers, too.
+total 12
+drwxr-xr-x 2 root root 4096 Aug 29 17:45 .
+drwxr-xr-x 7 root root 4096 Aug 30 09:38 ..
+-rw-r--r-- 1 root root  573 Aug 29 17:45 metacode-cloud.com.conf
+pref_challs = http-01,
+authenticator = standalone

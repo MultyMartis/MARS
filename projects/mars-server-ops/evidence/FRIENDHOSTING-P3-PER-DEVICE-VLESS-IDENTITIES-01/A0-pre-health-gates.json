@@ -1,0 +1,21 @@
+{
+  "ssh_tcp": true,
+  "nginx_tcp": true,
+  "xray_tcp": true,
+  "tls_443": {
+    "ok": true,
+    "notAfter": "Nov 27 16:46:34 2026 GMT"
+  },
+  "tls_8443": {
+    "ok": true,
+    "notAfter": "Nov 27 16:46:34 2026 GMT"
+  },
+  "http_20901_public": {
+    "ok": null,
+    "notAfter": null
+  },
+  "local_xui": true,
+  "xui_active": true,
+  "legacy_present": true,
+  "client_count_before": 7
+}

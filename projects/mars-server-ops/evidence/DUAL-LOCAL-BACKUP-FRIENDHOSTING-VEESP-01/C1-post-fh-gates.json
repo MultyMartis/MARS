@@ -1,0 +1,27 @@
+{
+  "ssh_3333": true,
+  "nginx_443": true,
+  "xui": true,
+  "xray_8443": true,
+  "tls_443": true,
+  "tls_8443": true,
+  "dns": true,
+  "ufw": true,
+  "fail2ban": true,
+  "swap_2g": true,
+  "certbot_timer": true,
+  "client_count_6": true,
+  "client_count": 6,
+  "client_labels": [
+    "MCA-PHONE",
+    "Unit-01",
+    "Unit-02",
+    "Unit-03",
+    "Unit-MichaelPhone",
+    "WSP-ONE"
+  ],
+  "has_legacy": false,
+  "remote_ok": true,
+  "services_is_active": "active\nactive\nactive\nactive\nactive",
+  "PASS": true
+}

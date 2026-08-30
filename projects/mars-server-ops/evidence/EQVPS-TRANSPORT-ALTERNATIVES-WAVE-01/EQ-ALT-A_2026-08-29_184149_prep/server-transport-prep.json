@@ -1,0 +1,33 @@
+{
+  "test_id": "EQ-ALT-A-REALITY-VISION",
+  "port": 9443,
+  "dest": "www.microsoft.com:443",
+  "profile_display_name": "MCA-ONE-EQ-ALT-A-REALITY-VISION",
+  "transport_probe": {
+    "probe_port": 18094,
+    "tests": [
+      {
+        "name": "egress",
+        "ok": false,
+        "error": "<urlopen error _ssl.c:1064: The handshake operation timed out>"
+      },
+      {
+        "name": "https_trace",
+        "ok": false,
+        "error": "<urlopen error _ssl.c:1064: The handshake operation timed out>"
+      },
+      {
+        "name": "https_repeat_5",
+        "ok": false,
+        "ok_count": 0
+      },
+      {
+        "name": "body_1MB",
+        "ok": false,
+        "error": "<urlopen error _ssl.c:1064: The handshake operation timed out>"
+      }
+    ]
+  },
+  "all_ok": false,
+  "flow_residual": "3X-UI may omit flow in config.json; client uses xtls-rprx-vision"
+}

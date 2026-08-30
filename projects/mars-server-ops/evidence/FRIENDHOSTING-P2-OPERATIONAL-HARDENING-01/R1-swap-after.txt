@@ -1,0 +1,10 @@
+exit=0
+Setting up swapspace version 1, size = 2 GiB (2147479552 bytes)
+no label, UUID=0c3adac8-9d8b-4052-ac8d-cbc1420c1323
+NAME      TYPE SIZE USED PRIO
+/swapfile file   2G   0B   -2
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       390Mi       718Mi       1.1Mi       1.0Gi       1.5Gi
+Swap:          2.0Gi          0B       2.0Gi
+-rw------- 1 root root 2147483648 Aug 30 09:38 /swapfile
+

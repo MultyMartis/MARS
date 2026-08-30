@@ -1,0 +1,24 @@
+exit=0
+Rule added
+Rule added (v6)
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+3333/tcp                   ALLOW IN    Anywhere                   # MARS SSH
+8443/tcp                   ALLOW IN    Anywhere                   # MARS Xray VLESS
+443/tcp                    ALLOW IN    Anywhere                   # MARS nginx TLS
+2096/tcp                   DENY IN     Anywhere                   # MARS-P2 block x-ui sub public
+20901/tcp                  DENY IN     Anywhere                   # MARS-P2 block panel direct
+80/tcp                     ALLOW IN    Anywhere                   # MARS ACME HTTP-01
+3333/tcp (v6)              ALLOW IN    Anywhere (v6)              # MARS SSH
+8443/tcp (v6)              ALLOW IN    Anywhere (v6)              # MARS Xray VLESS
+443/tcp (v6)               ALLOW IN    Anywhere (v6)              # MARS nginx TLS
+2096/tcp (v6)              DENY IN     Anywhere (v6)              # MARS-P2 block x-ui sub public
+20901/tcp (v6)             DENY IN     Anywhere (v6)              # MARS-P2 block panel direct
+80/tcp (v6)                ALLOW IN    Anywhere (v6)              # MARS ACME HTTP-01
+
+

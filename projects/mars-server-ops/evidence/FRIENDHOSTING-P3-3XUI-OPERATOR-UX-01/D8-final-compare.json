@@ -1,0 +1,40 @@
+{
+  "struct_match_ignoring_optional_fp": true,
+  "struct_match_full": false,
+  "diffs": [
+    {
+      "field": "fp",
+      "ui": "",
+      "mars": "chrome"
+    }
+  ],
+  "uuid_equal": true,
+  "ui": {
+    "host": "metacode-cloud.com",
+    "port": 8443,
+    "encryption": "none",
+    "security": "tls",
+    "sni": "metacode-cloud.com",
+    "alpn": "http/1.1",
+    "fp": "",
+    "type": "tcp",
+    "headerType": "none",
+    "flow": "",
+    "fragment": "WSP-ONE",
+    "uuid_ok": true
+  },
+  "mars": {
+    "host": "metacode-cloud.com",
+    "port": 8443,
+    "encryption": "none",
+    "security": "tls",
+    "sni": "metacode-cloud.com",
+    "alpn": "http/1.1",
+    "fp": "chrome",
+    "type": "tcp",
+    "headerType": "none",
+    "flow": "",
+    "uuid_ok": true,
+    "fragment": "WSP-ONE-FRIENDHOSTING-DE-RAW-8443"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "root": {
+    "ok": true,
+    "out": "root\nuid=0(root) gid=0(root) groups=0(root)\nKEY_OK"
+  },
+  "marsops": {
+    "ok": true,
+    "out": "marsops\nuid=1000(marsops) gid=1000(marsops) groups=1000(marsops),27(sudo),100(users)\nKEY_OK",
+    "sudo_n": "sudo: a password is required\nSUDO_EXIT:1|"
+  }
+}

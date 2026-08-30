@@ -1,0 +1,65 @@
+=== TIMESTAMP LOCAL ===
+2026-08-30T13:35:28.8482610+07:00
+=== PROCESSES v2rayN / xray ===
+
+ProcessName : v2rayN
+Id          : 11536
+Path        : 
+StartTime   : 30.08.2026 11:35:02
+
+ProcessName : xray
+Id          : 11672
+Path        : 
+StartTime   : 30.08.2026 13:26:48
+
+
+=== LISTENING 10808 / 10809 ===
+
+LocalAddress LocalPort OwningProcess  State
+------------ --------- -------------  -----
+127.0.0.1        10808         11672 Listen
+
+
+=== ADAPTERS (TUN / Wintun / xray) ===
+
+Name                 : xray_tun
+Status               : Up
+MacAddress           : 
+LinkSpeed            : 100 Gbps
+InterfaceDescription : Wintun Tunnel
+
+
+=== IP CONFIG TUN-LIKE ===
+
+InterfaceAlias AddressFamily NlMtu ConnectionState     Dhcp
+-------------- ------------- ----- ---------------     ----
+xray_tun                IPv6  1500       Connected Disabled
+xray_tun                IPv4  1500       Connected Disabled
+
+
+=== ROUTES via xray_tun (top) ===
+
+DestinationPrefix NextHop InterfaceAlias RouteMetric InterfaceMetric
+----------------- ------- -------------- ----------- ---------------
+0.0.0.0/0         0.0.0.0 xray_tun                 0 
+::/0              ::      xray_tun                 0 
+172.18.0.3/32     0.0.0.0 xray_tun               256 
+172.18.0.1/32     0.0.0.0 xray_tun               256 
+172.18.0.0/30     0.0.0.0 xray_tun               256 
+
+
+=== SYSTEM PROXY (WinINET) ===
+ProxyEnable=0
+ProxyServer=127.0.0.1:10808
+ProxyOverride=<local>;localhost;127.*;10.*;172.16.*;172.17.*;172.18.*;172.19.*;172.20.*;172.21.*;172.22.*;172.23.*;172.24.*;172.25.*;172.26.*;172.27.*;172.28.*;172.29.*;172.30.*;172.31.*;192.168.*
+=== DNS CLIENT SERVERS ===
+
+InterfaceAlias                AddressFamily Servers
+--------------                ------------- -------
+xray_tun                                 23 fec0:0:0:ffff::1,fec0:0:0:ffff::2,fec0:0:0:ffff::3
+Ethernet                                  2 192.168.0.1
+Ethernet                                 23 fe80::f68c:ebff:fe40:8d27
+Сетевое подключение Bluetooth            23 fec0:0:0:ffff::1,fec0:0:0:ffff::2,fec0:0:0:ffff::3
+Loopback Pseudo-Interface 1              23 fec0:0:0:ffff::1,fec0:0:0:ffff::2,fec0:0:0:ffff::3
+
+

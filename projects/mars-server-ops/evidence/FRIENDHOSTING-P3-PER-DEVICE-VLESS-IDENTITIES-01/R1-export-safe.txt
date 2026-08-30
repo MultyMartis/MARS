@@ -1,0 +1,15 @@
+CLIENTS_N 7
+NETWORK tcp
+SECURITY tls
+SNI metacode-cloud.com
+SNIFF False
+CLIENT MCA-ONE-FRIENDHOSTING-DE-RAW-8443 enable=True flow='' has_id=True
+CLIENT WSP-ONE-FRIENDHOSTING-DE-RAW-8443 enable=True flow='' has_id=True
+CLIENT MCA-PHONE-FRIENDHOSTING-DE-RAW-8443 enable=True flow='' has_id=True
+CLIENT Unit-01-FRIENDHOSTING-DE-RAW-8443 enable=True flow='' has_id=True
+CLIENT Unit-02-FRIENDHOSTING-DE-RAW-8443 enable=True flow='' has_id=True
+CLIENT Unit-03-FRIENDHOSTING-DE-RAW-8443 enable=True flow='' has_id=True
+CLIENT Unit-MichaelPhone-FRIENDHOSTING-DE-RAW-8443 enable=True flow='' has_id=True
+UUID_UNIQUE True
+XRAY_EMAIL MCA-ONE-FRIENDHOSTING-DE-RAW-8443
+

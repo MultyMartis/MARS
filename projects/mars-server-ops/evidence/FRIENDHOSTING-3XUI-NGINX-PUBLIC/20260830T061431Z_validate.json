@@ -1,0 +1,67 @@
+{
+  "nginx_t": {
+    "code": 0,
+    "out": "nginx: the configuration file /etc/nginx/nginx.conf syntax is ok\nnginx: configuration file /etc/nginx/nginx.conf test is successful",
+    "err": ""
+  },
+  "nginx_active": {
+    "code": 0,
+    "out": "active",
+    "err": ""
+  },
+  "listeners": {
+    "code": 0,
+    "out": "tcp   LISTEN 0      4096         0.0.0.0:3333       0.0.0.0:*    users:((\"sshd\",pid=726,fd=3),(\"systemd\",pid=1,fd=155)) \ntcp   LISTEN 0      511          0.0.0.0:443        0.0.0.0:*    users:((\"nginx\",pid=7921,fd=5),(\"nginx\",pid=7920,fd=5))\ntcp   LISTEN 0      4096       127.0.0.1:20901      0.0.0.0:*    users:((\"x-ui\",pid=5493,fd=10))                        \ntcp   LISTEN 0      4096            [::]:3333          [::]:*    users:((\"sshd\",pid=726,fd=4),(\"systemd\",pid=1,fd=156)) \ntcp   LISTEN 0      511             [::]:443           [::]:*    users:((\"nginx\",pid=7921,fd=6),(\"nginx\",pid=7920,fd=6))\ntcp   LISTEN 0      4096               *:8443             *:*    users:((\"xray-linux-amd6\",pid=5501,fd=6))",
+    "err": ""
+  },
+  "panel_bind": {
+    "code": 0,
+    "out": "tcp   LISTEN 0      4096       127.0.0.1:20901      0.0.0.0:*    users:((\"x-ui\",pid=5493,fd=10))",
+    "err": ""
+  },
+  "ext_20901": {
+    "code": 0,
+    "out": "EXT_20901_NOT_BOUND",
+    "err": ""
+  },
+  "curl_root": {
+    "code": 0,
+    "out": "404",
+    "err": ""
+  },
+  "curl_secret": {
+    "code": 0,
+    "out": "200",
+    "err": ""
+  },
+  "body_snip": {
+    "code": 0,
+    "out": "len 2247\nhits ['login', 'sign']\nhas_title True",
+    "err": ""
+  },
+  "cert_sni": {
+    "code": 0,
+    "out": "subject=CN = metacode-cloud.com\nX509v3 Subject Alternative Name: \n    DNS:metacode-cloud.com",
+    "err": ""
+  },
+  "vpn_8443": {
+    "code": 0,
+    "out": "tcp   LISTEN 0      4096               *:8443             *:*    users:((\"xray-linux-amd6\",pid=5501,fd=6))",
+    "err": ""
+  },
+  "ssh_3333": {
+    "code": 0,
+    "out": "tcp   LISTEN 0      4096         0.0.0.0:3333       0.0.0.0:*    users:((\"sshd\",pid=726,fd=3),(\"systemd\",pid=1,fd=155)) \ntcp   LISTEN 0      4096            [::]:3333          [::]:*    users:((\"sshd\",pid=726,fd=4),(\"systemd\",pid=1,fd=156))",
+    "err": ""
+  },
+  "ufw": {
+    "code": 0,
+    "out": "Status: active\nLogging: on (low)\nDefault: deny (incoming), allow (outgoing), disabled (routed)\nNew profiles: skip\n\nTo                         Action      From\n--                         ------      ----\n3333/tcp                   ALLOW IN    Anywhere                   # MARS SSH\n8443/tcp                   ALLOW IN    Anywhere                   # MARS XRAY VLESS TLS RAW\n443/tcp                    ALLOW IN    Anywhere                   # MARS 3X-UI nginx TLS\n3333/tcp (v6)              ALLOW IN    Anywhere (v6)              # MARS SSH\n8443/tcp (v6)              ALLOW IN    Anywhere (v6)              # MARS XRAY VLESS TLS RAW\n443/tcp (v6)               ALLOW IN    Anywhere (v6)              # MARS 3X-UI nginx TLS",
+    "err": ""
+  },
+  "rm_body": {
+    "code": 0,
+    "out": "",
+    "err": ""
+  }
+}

@@ -1,0 +1,18 @@
+# Environment — never commit real secrets
+.env
+.env.local
+.env.*
+!.env.example
+
+# Storage runtime artefacts (keep .keep files)
+storage/logs/*
+!storage/logs/.keep
+storage/uploads/*
+!storage/uploads/.keep
+storage/cache/*
+!storage/cache/.keep
+
+# Optional local tooling noise
+.DS_Store
+Thumbs.db
+*.log

@@ -1,0 +1,12 @@
+Model: QEMU QEMU HARDDISK (scsi)
+Disk /dev/sda: 21474836480B
+Sector size (logical/physical): 512B/512B
+Partition Table: gpt
+Disk Flags: 
+
+Number  Start        End           Size          File system  Name  Flags
+14      1048576B     5242879B      4194304B                         bios_grub
+15      5242880B     116391935B    111149056B    fat32              boot, esp
+16      116391936B   1073742335B   957350400B    ext4               bls_boot
+ 1      1074790400B  21473787903B  20398997504B  ext4
+

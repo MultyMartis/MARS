@@ -1,0 +1,22 @@
+COLS ['id', 'group_id', 'inbound_id', 'sort_order', 'remark', 'server_description', 'is_disabled', 'is_hidden', 'tags', 'address', 'port', 'security', 'sni', 'host_header', 'path', 'alpn', 'fingerprint', 'override_sni_from_address', 'keep_sni_blank', 'pinned_peer_cert_sha256', 'verify_peer_cert_by_name', 'allow_insecure', 'ech_config_list', 'mux_params', 'sockopt_params', 'final_mask', 'vless_route', 'exclude_from_sub_types', 'mihomo_ip_version', 'mihomo_x25519', 'shuffle_host', 'node_guids', 'created_at', 'updated_at']
+BEFORE {'id': 1, 'group_id': None, 'inbound_id': 1, 'sort_order': 1, 'remark': 'FRIENDHOSTING-DE-RAW-8443', 'server_description': '', 'is_disabled': 0, 'is_hidden': 0, 'tags': '', 'address': 'metacode-cloud.com', 'port': 8443, 'security': 'tls', 'sni': 'metacode-cloud.com', 'host_header': '', 'path': '', 'alpn': 'http/1.1', 'fingerprint': 'chrome', 'override_sni_from_address': 0, 'keep_sni_blank': 0, 'pinned_peer_cert_sha256': '', 'verify_peer_cert_by_name': '1', 'allow_insecure': 0, 'ech_config_list': '', 'mux_params': '', 'sockopt_params': '', 'final_mask': '', 'vless_route': '', 'exclude_from_sub_types': '', 'mihomo_ip_version': '', 'mihomo_x25519': 0, 'shuffle_host': 0, 'node_guids': '', 'created_at': 1788089835129, 'updated_at': 1788089835129}
+FIXED_ALPN ["http/1.1"]
+AFTER {'id': 1, 'address': 'metacode-cloud.com', 'port': 8443, 'security': 'tls', 'sni': 'metacode-cloud.com', 'alpn': '["http/1.1"]', 'fingerprint': 'chrome', 'mux_params': '', 'sockopt_params': '', 'tags': ''}
+XUI active code 0
+LISTEN 0      4096         0.0.0.0:3333       0.0.0.0:*    users:(("sshd",pid=816,fd=3),("systemd",pid=1,fd=167))                           
+LISTEN 0      511          0.0.0.0:443        0.0.0.0:*    users:(("nginx",pid=9453,fd=5),("nginx",pid=9452,fd=5),("nginx",pid=765,fd=5))   
+LISTEN 0      4096       127.0.0.1:20901      0.0.0.0:*    users:(("x-ui",pid=11450,fd=10))                                                 
+LISTEN 0      4096               *:2096             *:*    users:(("x-ui",pid=11450,fd=11))                                                 
+LISTEN 0      4096               *:8443             *:*    users:(("xray-linux-amd6",pid=11458,fd=6))                                       
+LISTEN 0      4096            [::]:3333          [::]:*    users:(("sshd",pid=816,fd=4),("systemd",pid=1,fd=168))                           
+LISTEN 0      511             [::]:443           [::]:*    users:(("nginx",pid=9453,fd=6),("nginx",pid=9452,fd=6),("nginx",pid=765,fd=6))   
+
+XRAY_N 7
+XRAY MCA-ONE-FRIENDHOSTING-DE-RAW-8443
+XRAY WSP-ONE
+XRAY MCA-PHONE
+XRAY Unit-01
+XRAY Unit-02
+XRAY Unit-03
+XRAY Unit-MichaelPhone
+

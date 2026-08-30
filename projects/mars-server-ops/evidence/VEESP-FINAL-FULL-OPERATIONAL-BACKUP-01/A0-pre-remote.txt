@@ -1,0 +1,70 @@
+exit=0
+HOSTNAME=wsp-cloud
+OS=Ubuntu 22.04.5 LTS
+KERNEL=5.15.0-187-generic
+DATE_UTC=2026-08-30T18:40:26Z
+===SERVICES===
+active
+active
+active
+===UFW===
+Status: active
+
+To                         Action      From
+--                         ------      ----
+22/tcp                     ALLOW       Anywhere                   # OpenSSH
+8443/tcp                   ALLOW       Anywhere                   # VLESS TLS RAW
+46489/tcp                  ALLOW       Anywhere                   # VLESS Reality
+5928/tcp                   ALLOW       Anywhere                   # 3X-UI panel TEMPORARY
+2096/tcp                   ALLOW       Anywhere                   # x-ui sub residual TEMPORARY
+8445/tcp                   ALLOW       Anywhere                   # MTProto docker-proxy
+22/tcp (v6)                ALLOW       Anywhere (v6)              # OpenSSH
+8443/tcp (v6)              ALLOW       Anywhere (v6)              # VLESS TLS RAW
+46489/tcp (v6)             ALLOW       Anywhere (v6)              # VLESS Reality
+5928/tcp (v6)              ALLOW       Anywhere (v6)              # 3X-UI panel TEMPORARY
+2096/tcp (v6)              ALLOW       Anywhere (v6)              # x-ui sub residual TEMPORARY
+8445/tcp (v6)              ALLOW       Anywhere (v6)              # MTProto docker-proxy
+
+===SWAP===
+NAME      TYPE  SIZE USED PRIO
+/swapfile file 1024M 9.5M   -2
+               total        used        free      shared  buff/cache   available
+Mem:           1.0Gi       326Mi       103Mi       2.0Mi       623Mi       565Mi
+Swap:          1.0Gi       9.0Mi       1.0Gi
+===JOURNALD===
+/etc/systemd/journald.conf.d/00-mars-server-ops-size.conf:SystemMaxUse=300M
+/etc/systemd/journald.conf.d/00-mars-server-ops-size.conf:RuntimeMaxUse=100M
+===LISTEN===
+LISTEN 0      128          0.0.0.0:22         0.0.0.0:*    users:(("sshd",pid=1062,fd=3))             
+LISTEN 0      4096         0.0.0.0:8445       0.0.0.0:*    users:(("docker-proxy",pid=1368,fd=7))     
+LISTEN 0      4096               *:5928             *:*    users:(("x-ui",pid=130292,fd=11))          
+LISTEN 0      4096               *:46489            *:*    users:(("xray-linux-amd6",pid=130363,fd=8))
+LISTEN 0      4096               *:2096             *:*    users:(("x-ui",pid=130292,fd=15))          
+LISTEN 0      128             [::]:22            [::]:*    users:(("sshd",pid=1062,fd=4))             
+LISTEN 0      4096               *:8443             *:*    users:(("xray-linux-amd6",pid=130363,fd=7))
+LISTEN 0      4096            [::]:8445          [::]:*    users:(("docker-proxy",pid=1373,fd=7))     
+===SSHD===
+port 22
+permitrootlogin without-password
+pubkeyauthentication yes
+passwordauthentication no
+===VERSIONS===
+Aug 30 15:57:23 wsp-cloud x-ui[130292]: 2026/08/30 15:57:23 Starting x-ui 3.7.0
+Xray 26.7.28 (Xray, Penetrates Everything.) 5ca6f4b (go1.26.5 linux/amd64)
+A unified platform for anti-censorship.
+XUI_BIN_MTIME=2026-08-24 13:10:19.000000000 +0000
+===REBOOT===
+REBOOT_REQUIRED=YES
+linux-image-5.15.0-190-generic
+linux-base
+===PANEL_LOCAL===
+PANEL_5928=404
+SUB_2096=404
+===INBOUND===
+INBOUND_COUNT 2
+INBOUND port=8443 protocol=vless remark=MCA-Gate-TLS clients=8
+INBOUND port=46489 protocol=vless remark=MCA-Gate-Reality clients=1
+CLIENTS_8443 8
+CLIENTS_46489 1
+GATE_REMOTE_OK
+

@@ -1,0 +1,167 @@
+{
+  "wave": "FRIENDHOSTING-P3-3XUI-OPERATOR-UX-01",
+  "ts": "20260830T113146Z",
+  "gates": {
+    "pre_tcp": {
+      "ssh_3333": true,
+      "nginx_443": true,
+      "xray_8443": true,
+      "tls_443": true,
+      "tls_8443": true,
+      "public_2096": true,
+      "public_20901": true
+    },
+    "live_audit": {
+      "client_count": 7,
+      "uuid_unique": true,
+      "network": "tcp",
+      "security": "tls",
+      "sni": "metacode-cloud.com",
+      "alpn": "http/1.1",
+      "fp_tlsSettings": "",
+      "externalTraffic": {}
+    },
+    "wsp_export_compare": {
+      "struct_match": false,
+      "diffs": [
+        {
+          "field": "fp",
+          "ui": "",
+          "mars": "chrome"
+        }
+      ],
+      "uuid_equal_wsp": true,
+      "mars_query_keys": [
+        "alpn",
+        "encryption",
+        "fp",
+        "headerType",
+        "security",
+        "sni",
+        "type"
+      ],
+      "ui_query_keys": [
+        "alpn",
+        "encryption",
+        "headerType",
+        "security",
+        "sni",
+        "type"
+      ],
+      "mars_fp": "chrome",
+      "ui_fp": "",
+      "mars_alpn": "http/1.1",
+      "ui_alpn": "http/1.1",
+      "inbound_fp": "",
+      "inbound_alpn": "http/1.1",
+      "externalTraffic": {}
+    },
+    "wsp_export_post": {
+      "struct_match": true,
+      "diffs": [],
+      "uuid_equal_wsp": true,
+      "ui_structure": {
+        "scheme": "vless",
+        "host": "metacode-cloud.com",
+        "port": 8443,
+        "has_uuid": true,
+        "uuid_len": 36,
+        "query_keys": [
+          "alpn",
+          "encryption",
+          "fp",
+          "headerType",
+          "security",
+          "sni",
+          "type"
+        ],
+        "encryption": "none",
+        "security": "tls",
+        "sni": "metacode-cloud.com",
+        "alpn": "http/1.1",
+        "fp": "chrome",
+        "type": "tcp",
+        "headerType": "none",
+        "flow": "",
+        "host_param": "",
+        "path": "",
+        "pbk": false,
+        "sid": false,
+        "spx": false,
+        "mode": "",
+        "serviceName": "",
+        "fragment_label": "WSP-ONE",
+        "allowInsecure": ""
+      }
+    },
+    "regression": {
+      "ssh_3333": true,
+      "nginx_443": true,
+      "tls_443": true,
+      "xray_8443": true,
+      "tls_8443": true,
+      "public_2096_open": true,
+      "public_20901_open": true,
+      "xui_active_line": true
+    },
+    "visible_clients": [
+      "MCA-ONE-FRIENDHOSTING-DE-RAW-8443",
+      "WSP-ONE",
+      "MCA-PHONE",
+      "Unit-01",
+      "Unit-02",
+      "Unit-03",
+      "Unit-MichaelPhone"
+    ],
+    "client_count_post": 7,
+    "legacy_present": true,
+    "uuid_unique_post": true,
+    "native_export_ux": {
+      "panel": "3X-UI 3.7.0",
+      "path": "Inbounds \u2192 FRIENDHOSTING-DE-RAW-8443 (:8443) \u2192 client row \u2192 QR / info / copy link",
+      "supports_per_client_qr": true,
+      "supports_per_client_uri": true,
+      "public_subscription_required": false,
+      "2096_ufw": "DENIED externally (accepted)"
+    }
+  },
+  "mutations": [
+    {
+      "backup": "/root/mars-backups/friendhosting-p3-3xui-ux-pre-20260830T113146Z.tgz"
+    },
+    {
+      "rename": [
+        [
+          "WSP-ONE-FRIENDHOSTING-DE-RAW-8443",
+          "WSP-ONE"
+        ],
+        [
+          "MCA-PHONE-FRIENDHOSTING-DE-RAW-8443",
+          "MCA-PHONE"
+        ],
+        [
+          "Unit-01-FRIENDHOSTING-DE-RAW-8443",
+          "Unit-01"
+        ],
+        [
+          "Unit-02-FRIENDHOSTING-DE-RAW-8443",
+          "Unit-02"
+        ],
+        [
+          "Unit-03-FRIENDHOSTING-DE-RAW-8443",
+          "Unit-03"
+        ],
+        [
+          "Unit-MichaelPhone-FRIENDHOSTING-DE-RAW-8443",
+          "Unit-MichaelPhone"
+        ]
+      ],
+      "tls_export_align": {
+        "fp": true,
+        "alpn": false
+      },
+      "xui_restart": true
+    }
+  ],
+  "notes": []
+}

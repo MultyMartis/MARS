@@ -1,0 +1,89 @@
+{
+  "ok": true,
+  "remote_sha256": "d10b67cb1b8a9e0beb4a131a583eee1af56cb153e4513d1e599f6e8bba9112c8",
+  "local_sha256": "d10b67cb1b8a9e0beb4a131a583eee1af56cb153e4513d1e599f6e8bba9112c8",
+  "sha_match": true,
+  "remote_size": 83967532,
+  "local_size": 83967532,
+  "size_match": true,
+  "required_sections": {
+    "etc-ssh": true,
+    "usr-local-x-ui": true,
+    "x-ui-db": true,
+    "fstab": true,
+    "clients-safe.json": true
+  },
+  "archive_readable": true,
+  "member_count": 289,
+  "tls_material_present": true,
+  "xui_present": true,
+  "db_present": true,
+  "inbounds": [
+    {
+      "id": 1,
+      "remark": "MCA-Gate-TLS",
+      "port": 8443,
+      "protocol": "vless",
+      "client_count": 8,
+      "clients": [
+        {
+          "email": "WSP-ONE",
+          "enable": false,
+          "has_id": true
+        },
+        {
+          "email": "Unit-01",
+          "enable": true,
+          "has_id": true
+        },
+        {
+          "email": "Unit-MartisPhone",
+          "enable": true,
+          "has_id": true
+        },
+        {
+          "email": "Unit-02",
+          "enable": false,
+          "has_id": true
+        },
+        {
+          "email": "Unit-Metallka",
+          "enable": true,
+          "has_id": true
+        },
+        {
+          "email": "Unit-MichaelPhone",
+          "enable": true,
+          "has_id": true
+        },
+        {
+          "email": "Unit-MichaelWS",
+          "enable": true,
+          "has_id": true
+        },
+        {
+          "email": "MCA-ONE",
+          "enable": true,
+          "has_id": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "remark": "MCA-Gate-Reality",
+      "port": 46489,
+      "protocol": "vless",
+      "client_count": 1,
+      "clients": [
+        {
+          "email": "Main",
+          "enable": true,
+          "has_id": true
+        }
+      ]
+    }
+  ],
+  "clients_8443": 8,
+  "remote_path": "/root/mars-backups/veesp-operational-20260830T132309Z.tgz",
+  "local_path": "X:\\AI MARS\\local\\infrastructure\\MCA-VPN-001\\backups\\veesp-operational-20260830T132309Z.tgz"
+}

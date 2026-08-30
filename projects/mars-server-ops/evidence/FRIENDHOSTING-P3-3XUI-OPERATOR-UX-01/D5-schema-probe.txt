@@ -1,0 +1,104 @@
+TABLE clients
+  COL id INTEGER notnull 0 pk 1 default None
+  COL email TEXT notnull 1 pk 0 default None
+  COL sub_id TEXT notnull 0 pk 0 default None
+  COL uuid TEXT notnull 0 pk 0 default None
+  COL password TEXT notnull 0 pk 0 default None
+  COL auth TEXT notnull 0 pk 0 default None
+  COL flow TEXT notnull 0 pk 0 default None
+  COL security TEXT notnull 0 pk 0 default None
+  COL reverse TEXT notnull 0 pk 0 default None
+  COL wg_private_key TEXT notnull 0 pk 0 default None
+  COL wg_public_key TEXT notnull 0 pk 0 default None
+  COL wg_allowed_ips TEXT notnull 0 pk 0 default None
+  COL wg_pre_shared_key TEXT notnull 0 pk 0 default None
+  COL wg_keep_alive INTEGER notnull 0 pk 0 default 0
+  COL wg_forwarded_ports TEXT notnull 0 pk 0 default None
+  COL secret TEXT notnull 0 pk 0 default None
+  COL ad_tag TEXT notnull 0 pk 0 default ""
+  COL limit_ip INTEGER notnull 0 pk 0 default None
+  COL limit_hwid INTEGER notnull 0 pk 0 default 0
+  COL total_gb INTEGER notnull 0 pk 0 default None
+  COL expiry_time INTEGER notnull 0 pk 0 default None
+  COL enable numeric notnull 0 pk 0 default true
+  COL tg_id INTEGER notnull 0 pk 0 default None
+  COL group_name TEXT notnull 0 pk 0 default ""
+  COL comment TEXT notnull 0 pk 0 default None
+  COL reset INTEGER notnull 0 pk 0 default 0
+  COL reset_day INTEGER notnull 0 pk 0 default 0
+  COL reset_max INTEGER notnull 0 pk 0 default 0
+  COL traffic_reset TEXT notnull 0 pk 0 default "never"
+  COL traffic_reset_day INTEGER notnull 0 pk 0 default 1
+  COL created_at INTEGER notnull 0 pk 0 default None
+  COL updated_at INTEGER notnull 0 pk 0 default None
+  COL sync_orphaned_at INTEGER notnull 0 pk 0 default 0
+  COUNT 1
+TABLE client_inbounds
+  COL client_id INTEGER notnull 0 pk 1 default None
+  COL inbound_id INTEGER notnull 0 pk 2 default None
+  COL flow_override TEXT notnull 0 pk 0 default None
+  COL created_at INTEGER notnull 0 pk 0 default None
+  COUNT 1
+TABLE client_traffics
+  COL id INTEGER notnull 0 pk 1 default None
+  COL inbound_id INTEGER notnull 0 pk 0 default None
+  COL enable numeric notnull 0 pk 0 default None
+  COL email TEXT notnull 0 pk 0 default None
+  COL up INTEGER notnull 0 pk 0 default None
+  COL down INTEGER notnull 0 pk 0 default None
+  COL expiry_time INTEGER notnull 0 pk 0 default None
+  COL total INTEGER notnull 0 pk 0 default None
+  COL reset INTEGER notnull 0 pk 0 default 0
+  COL reset_day INTEGER notnull 0 pk 0 default 0
+  COL reset_max INTEGER notnull 0 pk 0 default 0
+  COL reset_count INTEGER notnull 0 pk 0 default 0
+  COL last_online INTEGER notnull 0 pk 0 default 0
+  COL last_sub_fetch INTEGER notnull 0 pk 0 default 0
+  COUNT 7
+TABLE inbounds
+  COL id INTEGER notnull 0 pk 1 default None
+  COL user_id INTEGER notnull 0 pk 0 default None
+  COL up INTEGER notnull 0 pk 0 default None
+  COL down INTEGER notnull 0 pk 0 default None
+  COL total INTEGER notnull 0 pk 0 default None
+  COL remark TEXT notnull 0 pk 0 default None
+  COL sub_sort_index INTEGER notnull 0 pk 0 default 1
+  COL enable numeric notnull 0 pk 0 default None
+  COL expiry_time INTEGER notnull 0 pk 0 default None
+  COL traffic_reset TEXT notnull 0 pk 0 default "never"
+  COL traffic_reset_day INTEGER notnull 0 pk 0 default 1
+  COL last_traffic_reset_time INTEGER notnull 0 pk 0 default 0
+  COL listen TEXT notnull 0 pk 0 default None
+  COL port INTEGER notnull 0 pk 0 default None
+  COL protocol TEXT notnull 0 pk 0 default None
+  COL settings TEXT notnull 0 pk 0 default None
+  COL stream_settings TEXT notnull 0 pk 0 default None
+  COL tag TEXT notnull 0 pk 0 default None
+  COL sniffing TEXT notnull 0 pk 0 default None
+  COL node_id INTEGER notnull 0 pk 0 default None
+  COL share_addr_strategy TEXT notnull 0 pk 0 default "node"
+  COL share_addr TEXT notnull 0 pk 0 default None
+  COL disable_flow numeric notnull 0 pk 0 default false
+  COL origin_node_guid TEXT notnull 0 pk 0 default None
+  COUNT 1
+TABLE client_external_links
+  COL id INTEGER notnull 0 pk 1 default None
+  COL client_id INTEGER notnull 0 pk 0 default None
+  COL kind TEXT notnull 0 pk 0 default None
+  COL value TEXT notnull 0 pk 0 default None
+  COL remark TEXT notnull 0 pk 0 default None
+  COL enable numeric notnull 0 pk 0 default true
+  COL expiry_time INTEGER notnull 0 pk 0 default 0
+  COL name_prefix TEXT notnull 0 pk 0 default None
+  COL last_fetch_at INTEGER notnull 0 pk 0 default 0
+  COL last_fetch_error TEXT notnull 0 pk 0 default None
+  COL sort_index INTEGER notnull 0 pk 0 default None
+  COL created_at INTEGER notnull 0 pk 0 default None
+  COUNT 0
+---CLIENTS_ROWS---
+COLS ['id', 'email', 'sub_id', 'uuid', 'password', 'auth', 'flow', 'security', 'reverse', 'wg_private_key', 'wg_public_key', 'wg_allowed_ips', 'wg_pre_shared_key', 'wg_keep_alive', 'wg_forwarded_ports', 'secret', 'ad_tag', 'limit_ip', 'limit_hwid', 'total_gb', 'expiry_time', 'enable', 'tg_id', 'group_name', 'comment', 'reset', 'reset_day', 'reset_max', 'traffic_reset', 'traffic_reset_day', 'created_at', 'updated_at', 'sync_orphaned_at']
+ROW {'id': 1, 'email': 'MCA-ONE-FRIENDHOSTING-DE-RAW-8443', 'sub_id': 'fhde8443mcaone01', 'uuid': '<SECRET>', 'password': '', 'auth': '', 'flow': '', 'security': '', 'reverse': '0', 'wg_private_key': None, 'wg_public_key': None, 'wg_allowed_ips': None, 'wg_pre_shared_key': None, 'wg_keep_alive': 0, 'wg_forwarded_ports': None, 'secret': '', 'ad_tag': '', 'limit_ip': 0, 'limit_hwid': 0, 'total_gb': 0, 'expiry_time': 0, 'enable': 1, 'tg_id': 0, 'group_name': '', 'comment': '', 'reset': 0, 'reset_day': 1, 'reset_max': 0, 'traffic_reset': 'never', 'traffic_reset_day': 1, 'created_at': 1788025696, 'updated_at': 1788025696, 'sync_orphaned_at': 0}
+---CLIENT_INBOUNDS---
+COLS ['client_id', 'inbound_id', 'flow_override', 'created_at']
+ROW {'client_id': 1, 'inbound_id': 1, 'flow_override': '', 'created_at': 1788025696}
+

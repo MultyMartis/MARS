@@ -1,0 +1,15 @@
+*
+!.gitignore
+!README.md
+!logs/
+!uploads/
+!cache/
+!logs/.keep
+!uploads/.keep
+!cache/.keep
+logs/*
+!logs/.keep
+uploads/*
+!uploads/.keep
+cache/*
+!cache/.keep

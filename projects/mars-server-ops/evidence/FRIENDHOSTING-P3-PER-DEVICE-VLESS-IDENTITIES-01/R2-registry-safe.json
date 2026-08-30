@@ -1,0 +1,70 @@
+{
+  "wave": "P3",
+  "ts": "20260830T110451Z",
+  "inbound": {
+    "remark": "FRIENDHOSTING-DE-RAW-8443",
+    "port": 8443,
+    "protocol": "vless",
+    "enable": 1,
+    "network": "tcp",
+    "security": "tls",
+    "sni": "metacode-cloud.com",
+    "sniff_enabled": false
+  },
+  "legacy_fallback": {
+    "email": "MCA-ONE-FRIENDHOSTING-DE-RAW-8443",
+    "status": "LEGACY-FALLBACK / MIGRATION SAFETY NET",
+    "path": "X:\\AI MARS\\local\\infrastructure\\FRIENDHOSTING-GERMANY\\clients\\MCA-ONE",
+    "delete_in_p3": false
+  },
+  "devices": [
+    {
+      "device": "WSP-ONE",
+      "display_name": "WSP-ONE-FRIENDHOSTING-DE-RAW-8443",
+      "eqvps_map": "MCA-ONE",
+      "is_current_workstation": true,
+      "status": "PROFILE_READY / SERVER_CLIENT_CREATED / CURRENT_WORKSTATION_SMOKE_PENDING",
+      "dir": "X:\\AI MARS\\local\\infrastructure\\FRIENDHOSTING-GERMANY\\clients\\WSP-ONE"
+    },
+    {
+      "device": "MCA-PHONE",
+      "display_name": "MCA-PHONE-FRIENDHOSTING-DE-RAW-8443",
+      "eqvps_map": "MCA-PHONE",
+      "is_current_workstation": false,
+      "status": "PROFILE_READY / SERVER_CLIENT_CREATED / DEVICE_TEST_PENDING",
+      "dir": "X:\\AI MARS\\local\\infrastructure\\FRIENDHOSTING-GERMANY\\clients\\MCA-PHONE"
+    },
+    {
+      "device": "Unit-01",
+      "display_name": "Unit-01-FRIENDHOSTING-DE-RAW-8443",
+      "eqvps_map": "Unit-01",
+      "is_current_workstation": false,
+      "status": "PROFILE_READY / SERVER_CLIENT_CREATED / DEVICE_TEST_PENDING",
+      "dir": "X:\\AI MARS\\local\\infrastructure\\FRIENDHOSTING-GERMANY\\clients\\Unit-01"
+    },
+    {
+      "device": "Unit-02",
+      "display_name": "Unit-02-FRIENDHOSTING-DE-RAW-8443",
+      "eqvps_map": "Unit-02",
+      "is_current_workstation": false,
+      "status": "PROFILE_READY / SERVER_CLIENT_CREATED / DEVICE_TEST_PENDING",
+      "dir": "X:\\AI MARS\\local\\infrastructure\\FRIENDHOSTING-GERMANY\\clients\\Unit-02"
+    },
+    {
+      "device": "Unit-03",
+      "display_name": "Unit-03-FRIENDHOSTING-DE-RAW-8443",
+      "eqvps_map": "Unit-03",
+      "is_current_workstation": false,
+      "status": "PROFILE_READY / SERVER_CLIENT_CREATED / DEVICE_TEST_PENDING",
+      "dir": "X:\\AI MARS\\local\\infrastructure\\FRIENDHOSTING-GERMANY\\clients\\Unit-03"
+    },
+    {
+      "device": "Unit-MichaelPhone",
+      "display_name": "Unit-MichaelPhone-FRIENDHOSTING-DE-RAW-8443",
+      "eqvps_map": "Unit-MichaelPhone",
+      "is_current_workstation": false,
+      "status": "PROFILE_READY / SERVER_CLIENT_CREATED / DEVICE_TEST_PENDING",
+      "dir": "X:\\AI MARS\\local\\infrastructure\\FRIENDHOSTING-GERMANY\\clients\\Unit-MichaelPhone"
+    }
+  ]
+}

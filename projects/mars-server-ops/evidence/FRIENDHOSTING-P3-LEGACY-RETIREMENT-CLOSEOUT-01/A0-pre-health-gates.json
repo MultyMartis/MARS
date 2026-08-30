@@ -1,0 +1,29 @@
+{
+  "ssh_3333": true,
+  "nginx_443": true,
+  "xray_8443": true,
+  "xui_active": true,
+  "ufw_present": true,
+  "deny_2096_signal": true,
+  "block_20901_signal": true,
+  "remote_code": 0,
+  "local": {
+    "tcp_80": true,
+    "tcp_3333": true,
+    "tcp_443": true,
+    "tcp_8443": true,
+    "tls_443": {
+      "ok": true,
+      "notAfter": "Nov 27 16:46:34 2026 GMT"
+    },
+    "tls_8443": {
+      "ok": true,
+      "notAfter": "Nov 27 16:46:34 2026 GMT"
+    },
+    "tcp_2096_probe": true,
+    "tcp_20901_probe": true
+  },
+  "xui_is_active": true,
+  "nginx_is_active": true,
+  "critical_pass": true
+}

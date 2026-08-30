@@ -1,0 +1,34 @@
+{
+  "ssh_3333": true,
+  "nginx_443": true,
+  "xui_20901_localhost": true,
+  "xray_8443": true,
+  "tls_443": true,
+  "tls_8443": true,
+  "dns": true,
+  "ufw": true,
+  "fail2ban": true,
+  "swap_2g": true,
+  "certbot_timer": true,
+  "acme_webroot_signal": true,
+  "client_count_6": true,
+  "client_count": 6,
+  "client_labels": [
+    "MCA-PHONE",
+    "Unit-01",
+    "Unit-02",
+    "Unit-03",
+    "Unit-MichaelPhone",
+    "WSP-ONE"
+  ],
+  "has_legacy": false,
+  "remote_ok": true,
+  "services_is_active": "active\nactive\nactive\nactive\nactive",
+  "swap_kb": 2097148,
+  "dns_a": [
+    "92.42.99.126"
+  ],
+  "nginx_http_code_signal": true,
+  "xui_http_code_signal": true,
+  "PASS": true
+}

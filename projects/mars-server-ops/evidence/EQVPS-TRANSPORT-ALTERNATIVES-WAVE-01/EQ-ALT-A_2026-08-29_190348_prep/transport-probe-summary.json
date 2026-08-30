@@ -1,0 +1,21 @@
+{
+  "server_loopback": {
+    "ok": true,
+    "egress_host_match": true
+  },
+  "server_hairpin": {
+    "ok": true,
+    "egress_host_match": true
+  },
+  "workstation": {
+    "ok": false,
+    "egress": "FAIL:curl: (28) Connection timed out after 25000 milliseconds\n",
+    "https_ok": false,
+    "repeat_ok": false,
+    "body1mb_ok": false,
+    "body1mb_len": 0,
+    "pub_sha12": "e83743293573",
+    "sni": "www.cloudflare.com"
+  },
+  "note": "Workstation path may FAIL even when server Reality stack PASS (Goodline path)."
+}

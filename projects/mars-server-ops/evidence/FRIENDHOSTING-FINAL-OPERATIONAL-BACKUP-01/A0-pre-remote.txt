@@ -1,0 +1,108 @@
+exit=0
+HOSTNAME=imart216311
+UNAME=Linux imart216311 6.8.0-138-generic #138-Ubuntu SMP PREEMPT_DYNAMIC Fri Jul 31 22:41:49 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+UPTIME=up 4 hours, 30 minutes
+NPROC=2
+MEM_KB=2014844
+SWAP_KB=2097148
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       434Mi       130Mi       1.0Mi       1.5Gi       1.5Gi
+Swap:          2.0Gi       524Ki       2.0Gi
+NAME      TYPE SIZE USED PRIO
+/swapfile file   2G 524K   -2
+Filesystem     Type  Size  Used Avail Use% Mounted on
+/dev/sda1      ext4   19G  6.6G   12G  36% /
+NAME     SIZE TYPE FSTYPE MOUNTPOINT
+sda       20G disk        
+├─sda1    19G part ext4   /
+├─sda14    4M part        
+├─sda15  106M part vfat   /boot/efi
+└─sda16  913M part ext4   /boot
+sr0     1024M rom         
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    altname enp0s18
+    inet 92.42.99.126/24 brd 92.42.99.255 scope global eth0
+       valid_lft forever preferred_lft forever
+default via 92.42.99.1 dev eth0 proto static 
+92.42.99.0/24 dev eth0 proto kernel scope link src 92.42.99.126 
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
+    link/ether bc:24:11:45:ff:a6 brd ff:ff:ff:ff:ff:ff
+    altname enp0s18
+LISTEN 0      511          0.0.0.0:80         0.0.0.0:*    users:(("nginx",pid=9453,fd=13),("nginx",pid=9452,fd=13),("nginx",pid=765,fd=13))
+LISTEN 0      4096         0.0.0.0:3333       0.0.0.0:*    users:(("sshd",pid=816,fd=3),("systemd",pid=1,fd=167))                           
+LISTEN 0      511          0.0.0.0:443        0.0.0.0:*    users:(("nginx",pid=9453,fd=5),("nginx",pid=9452,fd=5),("nginx",pid=765,fd=5))   
+LISTEN 0      4096       127.0.0.1:20901      0.0.0.0:*    users:(("x-ui",pid=12081,fd=10))                                                 
+LISTEN 0      511             [::]:80            [::]:*    users:(("nginx",pid=9453,fd=14),("nginx",pid=9452,fd=14),("nginx",pid=765,fd=14))
+LISTEN 0      4096               *:2096             *:*    users:(("x-ui",pid=12081,fd=17))                                                 
+LISTEN 0      4096               *:8443             *:*    users:(("xray-linux-amd6",pid=12090,fd=6))                                       
+LISTEN 0      4096            [::]:3333          [::]:*    users:(("sshd",pid=816,fd=4),("systemd",pid=1,fd=168))                           
+LISTEN 0      511             [::]:443           [::]:*    users:(("nginx",pid=9453,fd=6),("nginx",pid=9452,fd=6),("nginx",pid=765,fd=6))   
+active
+active
+active
+active
+active
+enabled
+enabled
+enabled
+enabled
+enabled
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+3333/tcp                   ALLOW IN    Anywhere                   # MARS SSH
+8443/tcp                   ALLOW IN    Anywhere                   # MARS Xray VLESS
+443/tcp                    ALLOW IN    Anywhere                   # MARS nginx TLS
+2096/tcp                   DENY IN     Anywhere                   # MARS-P2 block x-ui sub public
+20901/tcp                  DENY IN     Anywhere                   # MARS-P2 block panel direct
+80/tcp                     ALLOW IN    Anywhere                   # MARS ACME HTTP-01
+3333/tcp (v6)              ALLOW IN    Anywhere (v6)              # MARS SSH
+8443/tcp (v6)              ALLOW IN    Anywhere (v6)              # MARS Xray VLESS
+443/tcp (v6)               ALLOW IN    Anywhere (v6)              # MARS nginx TLS
+2096/tcp (v6)              DENY IN     Anywhere (v6)              # MARS-P2 block x-ui sub public
+20901/tcp (v6)             DENY IN     Anywhere (v6)              # MARS-P2 block panel direct
+80/tcp (v6)                ALLOW IN    Anywhere (v6)              # MARS ACME HTTP-01
+
+Status
+|- Number of jail:	2
+`- Jail list:	3x-ipl, sshd
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Found the following certs:
+  Certificate Name: metacode-cloud.com
+    Serial Number: 6b5535c454a3831753a8995d6a71dc49c0a
+    Key Type: ECDSA
+    Domains: metacode-cloud.com
+    Expiry Date: 2026-11-27 16:46:34+00:00 (VALID: 89 days)
+    Certificate Path: /etc/letsencrypt/live/metacode-cloud.com/fullchain.pem
+    Private Key Path: /etc/letsencrypt/live/metacode-cloud.com/privkey.pem
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+active
+total 16
+drwxr-xr-x 2 root root 4096 Aug 30 10:21 .
+drwxr-xr-x 7 root root 4096 Aug 30 12:50 ..
+-rw-r--r-- 1 root root  665 Aug 30 10:21 metacode-cloud.com.conf
+-rw-r--r-- 1 root root  573 Aug 29 17:45 metacode-cloud.com.conf.bak-p2-clean-02
+# renew_before_expiry = 30 days
+# Options used in the renewal process
+[renewalparams]
+webroot_path = /var/www/letsencrypt
+authenticator = webroot
+[[webroot_map]]
+CLIENT_COUNT 6
+CLIENT_LABELS MCA-PHONE,Unit-01,Unit-02,Unit-03,Unit-MichaelPhone,WSP-ONE
+HAS_LEGACY False
+INBOUND_PROTOCOL vless
+INBOUND_REMARK FRIENDHOSTING-DE-RAW-8443
+NGINX443=404
+XUI20901=404
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+GATE_REMOTE_OK
+

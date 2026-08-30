@@ -1,0 +1,16 @@
+{
+  "tcp_80": true,
+  "tcp_3333": true,
+  "tcp_443": true,
+  "tcp_8443": true,
+  "tls_443": {
+    "ok": true,
+    "notAfter": "Nov 27 16:46:34 2026 GMT"
+  },
+  "tls_8443": {
+    "ok": true,
+    "notAfter": "Nov 27 16:46:34 2026 GMT"
+  },
+  "tcp_2096_probe": true,
+  "tcp_20901_probe": true
+}

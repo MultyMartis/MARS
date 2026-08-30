@@ -1,0 +1,38 @@
+{
+  "struct_match": true,
+  "diffs": [],
+  "uuid_equal_wsp": true,
+  "ui_structure": {
+    "scheme": "vless",
+    "host": "metacode-cloud.com",
+    "port": 8443,
+    "has_uuid": true,
+    "uuid_len": 36,
+    "query_keys": [
+      "alpn",
+      "encryption",
+      "fp",
+      "headerType",
+      "security",
+      "sni",
+      "type"
+    ],
+    "encryption": "none",
+    "security": "tls",
+    "sni": "metacode-cloud.com",
+    "alpn": "http/1.1",
+    "fp": "chrome",
+    "type": "tcp",
+    "headerType": "none",
+    "flow": "",
+    "host_param": "",
+    "path": "",
+    "pbk": false,
+    "sid": false,
+    "spx": false,
+    "mode": "",
+    "serviceName": "",
+    "fragment_label": "WSP-ONE",
+    "allowInsecure": ""
+  }
+}

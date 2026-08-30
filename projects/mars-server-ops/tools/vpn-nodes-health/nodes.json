@@ -1,0 +1,65 @@
+{
+  "schema": "mars-server-ops-vpn-nodes-health-v1",
+  "notes": "No secrets. Key paths point to local-only contours under X:\\AI MARS\\local\\infrastructure\\.",
+  "thresholds": {
+    "disk_warn_pct": 80,
+    "disk_fail_pct": 90,
+    "ram_available_warn_pct": 10,
+    "swap_used_warn_pct": 75,
+    "tls_warn_days": 21,
+    "tls_fail_days": 7,
+    "backup_fresh_days": 7,
+    "backup_aging_days": 30
+  },
+  "soak_checkpoints": ["T0", "T+24h", "T+72h", "T+7d"],
+  "nodes": [
+    {
+      "id": "FRIENDHOSTING-DE",
+      "inventory_ref": "FRIENDHOSTING-DE",
+      "label": "FriendHosting DE",
+      "ipv4": "92.42.99.126",
+      "domain": "metacode-cloud.com",
+      "ssh_port": 3333,
+      "ssh_user": "root",
+      "ssh_key_local": "X:\\AI MARS\\local\\infrastructure\\FRIENDHOSTING-GERMANY\\ssh\\marsops_ed25519",
+      "vpn_port": 8443,
+      "tls_sni": "metacode-cloud.com",
+      "expected_public_tcp": [80, 3333, 443, 8443],
+      "expected_not_public_tcp": [20901, 2096],
+      "known_residual_public_tcp": [],
+      "local_backup_dir": "X:\\AI MARS\\local\\infrastructure\\FRIENDHOSTING-GERMANY\\backups",
+      "preferred_backup_glob": "friendhosting-operational-*.tgz",
+      "preferred_backup_stamp": "20260830T132309Z",
+      "checks_extra": ["nginx", "certbot"],
+      "real_workload_documented": {
+        "ChatGPT": "PASS",
+        "YouTube": "PASS",
+        "Cursor": "PASS"
+      }
+    },
+    {
+      "id": "MCA-VPN-001",
+      "inventory_ref": "MCA-VPN-001",
+      "label": "VEESP / MCA-VPN-001",
+      "ipv4": "178.173.250.69",
+      "domain": "wsp-cloud.com",
+      "ssh_port": 22,
+      "ssh_user": "root",
+      "ssh_key_local": "X:\\AI MARS\\local\\infrastructure\\MCA-VPN-001\\ssh\\root_recovery_ed25519",
+      "vpn_port": 8443,
+      "tls_sni": "wsp-cloud.com",
+      "expected_public_tcp": [22, 8443, 5928, 2096, 46489, 8445],
+      "expected_not_public_tcp": [],
+      "known_residual_public_tcp": [5928, 2096],
+      "local_backup_dir": "X:\\AI MARS\\local\\infrastructure\\MCA-VPN-001\\backups",
+      "preferred_backup_glob": "veesp-final-operational-*.tgz",
+      "preferred_backup_stamp": "20260830T184024Z",
+      "checks_extra": [],
+      "real_workload_documented": {
+        "ChatGPT": "PASS",
+        "YouTube": "PASS",
+        "Cursor": "PASS"
+      }
+    }
+  ]
+}

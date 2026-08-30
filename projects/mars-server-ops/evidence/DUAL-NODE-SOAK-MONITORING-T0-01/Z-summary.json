@@ -1,0 +1,69 @@
+{
+  "wave": "VPN-NODES-LIGHTWEIGHT-HEALTH",
+  "checkpoint": "T0",
+  "checked_utc": "2026-08-30T18:59:59.749111+00:00",
+  "nodes": [
+    {
+      "id": "FRIENDHOSTING-DE",
+      "verdict": "PASS_WITH_RESIDUALS",
+      "uptime_sec": 38441,
+      "disk_usepct": 40.0,
+      "mem_avail_pct": 78.98,
+      "swap_used_pct": 0.02,
+      "tls_days": 88.91,
+      "tls_not_after": "Nov 27 16:46:34 2026 GMT",
+      "backup_freshness": "FRESH",
+      "backup_selected": "friendhosting-operational-20260830T132309Z.tgz",
+      "residuals": [
+        {
+          "port": 20901,
+          "class": "LOCAL_TCP_OPEN_WHILE_FIREWALLED_OR_LOCALHOST",
+          "note": "Operator-local TCP open may be VPN hairpin; remote UFW/listen says not public"
+        },
+        {
+          "port": 2096,
+          "class": "LOCAL_TCP_OPEN_WHILE_FIREWALLED_OR_LOCALHOST",
+          "note": "Operator-local TCP open may be VPN hairpin; remote UFW/listen says not public"
+        }
+      ],
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "MCA-VPN-001",
+      "verdict": "PASS_WITH_RESIDUALS",
+      "uptime_sec": 1169423,
+      "disk_usepct": 45.0,
+      "mem_avail_pct": 56.3,
+      "swap_used_pct": 3.32,
+      "tls_days": 72.54,
+      "tls_not_after": "Nov 11 08:03:40 2026 GMT",
+      "backup_freshness": "FRESH",
+      "backup_selected": "veesp-final-operational-20260830T184024Z.tgz",
+      "residuals": [
+        {
+          "port": 5928,
+          "class": "KNOWN_RESIDUAL_PUBLIC",
+          "open": true,
+          "note": "Documented residual \u2014 does not auto-fail"
+        },
+        {
+          "port": 2096,
+          "class": "KNOWN_RESIDUAL_PUBLIC",
+          "open": true,
+          "note": "Documented residual \u2014 does not auto-fail"
+        }
+      ],
+      "issues": [],
+      "warnings": []
+    }
+  ],
+  "combined_verdict": "PASS_WITH_RESIDUALS",
+  "soak_long_term": "NOT_YET_PROVEN",
+  "acceptance_tokens": {
+    "SOAK_T0_PASS": true,
+    "SOAK_24H_PASS": false,
+    "SOAK_72H_PASS": false,
+    "SOAK_7D_PASS": false
+  }
+}

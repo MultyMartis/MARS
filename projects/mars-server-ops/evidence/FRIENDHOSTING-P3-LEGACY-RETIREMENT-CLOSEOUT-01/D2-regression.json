@@ -1,0 +1,22 @@
+{
+  "ssh_3333": true,
+  "nginx_443": true,
+  "xray_8443": true,
+  "xui_active": true,
+  "nginx_active": true,
+  "local": {
+    "tcp_3333": true,
+    "tcp_443": true,
+    "tcp_8443": true,
+    "tls_443": {
+      "ok": true,
+      "notAfter": "Nov 27 16:46:34 2026 GMT"
+    },
+    "tls_8443": {
+      "ok": true,
+      "notAfter": "Nov 27 16:46:34 2026 GMT"
+    }
+  },
+  "ufw_excerpt_in_D1": true,
+  "pass": true
+}

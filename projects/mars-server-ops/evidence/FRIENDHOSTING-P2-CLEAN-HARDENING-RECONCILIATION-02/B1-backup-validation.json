@@ -1,0 +1,19 @@
+{
+  "ok": true,
+  "remote": "/root/mars-backups/friendhosting-p2-clean-hardened-state-20260830T102110Z.tgz",
+  "local": "X:\\AI MARS\\local\\infrastructure\\FRIENDHOSTING-GERMANY\\backups\\friendhosting-p2-clean-hardened-state-20260830T102110Z.tgz",
+  "remote_sha256": "bb9a07045cc610c52275895cf4679881699906df24284e147f059486098d243c",
+  "local_sha256": "bb9a07045cc610c52275895cf4679881699906df24284e147f059486098d243c",
+  "sha_match": true,
+  "size": 80721584,
+  "members_ok": {
+    "etc-ssh": true,
+    "etc-nginx": true,
+    "etc-letsencrypt": true,
+    "etc-ufw": true,
+    "usr-local-x-ui": true,
+    "x-ui-db": true,
+    "fail2ban": true,
+    "fstab": true
+  }
+}

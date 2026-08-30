@@ -1,0 +1,55 @@
+{
+  "ts": "20260830T101402Z",
+  "out": "X:\\AI MARS\\local\\infrastructure\\FRIENDHOSTING-GERMANY\\p2-clean-recon-02-20260830T101402Z",
+  "ev": "X:\\AI MARS\\projects\\mars-server-ops\\evidence\\FRIENDHOSTING-P2-CLEAN-HARDENING-RECONCILIATION-02",
+  "egress": "178.173.250.69",
+  "key_proof": {
+    "root": {
+      "ok": true,
+      "out": "root\nuid=0(root) gid=0(root) groups=0(root)\nKEY_OK"
+    },
+    "marsops": {
+      "ok": true,
+      "out": "marsops\nuid=1000(marsops) gid=1000(marsops) groups=1000(marsops),27(sudo),100(users)\nKEY_OK",
+      "sudo_n": "sudo: a password is required\nSUDO_EXIT:1|"
+    }
+  },
+  "probes": {
+    "workstation_egress": "178.173.250.69",
+    "dns_A": "metacode-cloud.com",
+    "tcp": {
+      "22": true,
+      "80": true,
+      "443": true,
+      "3333": true,
+      "8443": true,
+      "2096": true,
+      "20901": true
+    },
+    "tls_443": {
+      "ok": true,
+      "notAfter": "Nov 27 16:46:34 2026 GMT"
+    },
+    "tls_8443": {
+      "ok": true,
+      "notAfter": "Nov 27 16:46:34 2026 GMT"
+    },
+    "http_80": {
+      "reachable": false,
+      "error": "TimeoutError"
+    },
+    "http_443": {
+      "reachable": true,
+      "status": "HTTP/1.1 400 Bad Request",
+      "body_snip": "HTTP/1.1 400 Bad Request\r\nServer: nginx/1.24.0 (Ubuntu)\r\nDate: Sun, 30 Aug 2026 10:14:10 GMT\r\nContent-Type: text/html\r\nContent-Length: 264\r\nConnection: close\r\n\r\n<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<"
+    },
+    "http_2096": {
+      "reachable": false,
+      "error": "TimeoutError"
+    },
+    "http_20901": {
+      "reachable": false,
+      "error": "TimeoutError"
+    }
+  }
+}

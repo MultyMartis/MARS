@@ -1,0 +1,17 @@
+{
+  "ssh_22": true,
+  "tcp_8443": true,
+  "tcp_5928": true,
+  "tcp_2096": true,
+  "tls_8443": {
+    "ok": true,
+    "notAfter": "Nov 11 08:03:40 2026 GMT"
+  },
+  "tls_5928": {
+    "ok": true,
+    "notAfter": "Nov 11 08:03:40 2026 GMT"
+  },
+  "dns_a": [
+    "178.173.250.69"
+  ]
+}

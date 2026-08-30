@@ -1,0 +1,20 @@
+DB_CLIENTS 7
+DB MCA-ONE-FRIENDHOSTING-DE-RAW-8443 keys= ['comment', 'email', 'enable', 'expiryTime', 'flow', 'id', 'limitIp', 'reset', 'subId', 'tgId', 'totalGB'] enable= True flow= ''
+DB WSP-ONE keys= ['comment', 'email', 'enable', 'expiryTime', 'flow', 'id', 'limitIp', 'reset', 'subId', 'tgId', 'totalGB'] enable= True flow= ''
+DB MCA-PHONE keys= ['comment', 'email', 'enable', 'expiryTime', 'flow', 'id', 'limitIp', 'reset', 'subId', 'tgId', 'totalGB'] enable= True flow= ''
+DB Unit-01 keys= ['comment', 'email', 'enable', 'expiryTime', 'flow', 'id', 'limitIp', 'reset', 'subId', 'tgId', 'totalGB'] enable= True flow= ''
+DB Unit-02 keys= ['comment', 'email', 'enable', 'expiryTime', 'flow', 'id', 'limitIp', 'reset', 'subId', 'tgId', 'totalGB'] enable= True flow= ''
+DB Unit-03 keys= ['comment', 'email', 'enable', 'expiryTime', 'flow', 'id', 'limitIp', 'reset', 'subId', 'tgId', 'totalGB'] enable= True flow= ''
+DB Unit-MichaelPhone keys= ['comment', 'email', 'enable', 'expiryTime', 'flow', 'id', 'limitIp', 'reset', 'subId', 'tgId', 'totalGB'] enable= True flow= ''
+STREAM_KEYS ['externalProxy', 'network', 'security', 'tcpSettings', 'tlsSettings']
+TLS_KEYS ['alpn', 'certificates', 'cipherSuites', 'disableSystemRoot', 'enableSessionResumption', 'fingerprint', 'maxVersion', 'minVersion', 'rejectUnknownSni', 'serverName', 'settings']
+TLS_FP chrome
+TLS_ALPN ['http/1.1']
+TLS_SNI metacode-cloud.com
+XRAY_IB_N 1
+XRAY_CLIENTS 1
+XRAY MCA-ONE-FRIENDHOSTING-DE-RAW-8443
+XRAY_NET tcp SEC tls
+XRAY_TLS_KEYS ['alpn', 'certificates', 'cipherSuites', 'disableSystemRoot', 'enableSessionResumption', 'fingerprint', 'maxVersion', 'minVersion', 'rejectUnknownSni', 'serverName']
+XRAY_FP chrome
+

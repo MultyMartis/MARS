@@ -1,0 +1,28 @@
+{
+  "wave": "FRIENDHOSTING-PLUS-CONTROL-PANEL-REBOOT-GATE-01",
+  "ts_utc": "20260830T073335Z",
+  "pre_hardware": {
+    "nproc": "1",
+    "mem_free_h_total": "961Mi",
+    "disk_sda_bytes": 10737418240,
+    "disk_sda_gib_approx": 10.0,
+    "boot_time_raw": "system boot  2026-08-29 14:07\n2026-08-29 14:07:19\n 07:33:36 up 17:26,  1 user,  load average: 0.00, 0.00, 0.00",
+    "hostname": "imart216311",
+    "egress": "92.42.99.126"
+  },
+  "pre_service_gate": {
+    "ssh_3333": "PASS",
+    "nginx_443": "PASS",
+    "xray_8443": "PASS",
+    "xui_20901": "PASS",
+    "ipv4_ok": true,
+    "residual_2096": "PRESENT"
+  },
+  "backup_status": "BACKUP + RESTORE STRATEGY CONFIRMED",
+  "sha256_match": true,
+  "restore_strategy": "CONFIRMED",
+  "remote_tgz": "/root/mars-backups/friendhosting-plus-pre-panel-reboot-20260830T073335Z.tgz",
+  "local_tgz": "X:\\AI MARS\\local\\infrastructure\\FRIENDHOSTING-GERMANY\\backups\\friendhosting-plus-pre-panel-reboot-20260830T073335Z.tgz",
+  "local_sha256": "04344ea5fb7d90086360753060197a2e2371f063f0efbef60bd713efe96ff002",
+  "STOP": "OPERATOR_PANEL_REBOOT_REQUIRED"
+}

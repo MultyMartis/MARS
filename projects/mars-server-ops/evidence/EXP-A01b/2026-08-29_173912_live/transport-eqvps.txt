@@ -1,0 +1,14 @@
+﻿=== TRANSPORT SUITE: EQVPS ===
+UTC: 2026-08-29T10:41:51.0225828Z
+Proxy: http://127.0.0.1:10808
+
+EGRESS ok=True http=200 time=0.581757 sample=95.216.126.173 err=
+HTTPS ok=True http=200 time=0.387123 err=
+REPEAT[1] ok=True http=200 time=0.412284
+REPEAT[2] ok=True http=200 time=0.411029
+REPEAT[3] ok=True http=200 time=0.379876
+REPEAT[4] ok=True http=200 time=0.367921
+REPEAT[5] ok=True http=200 time=0.376606
+BODY10MB ok=True http=200 bytes=10000000 time=1.601493 err=
+
+SUMMARY egress=True https=True repeat=True body10mb=True

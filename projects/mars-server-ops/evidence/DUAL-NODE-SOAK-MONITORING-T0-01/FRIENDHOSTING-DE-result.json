@@ -1,0 +1,169 @@
+{
+  "node_id": "FRIENDHOSTING-DE",
+  "inventory_ref": "FRIENDHOSTING-DE",
+  "label": "FriendHosting DE",
+  "checked_utc": "2026-08-30T18:59:59.749155+00:00",
+  "soak_checkpoint": "T0",
+  "network": {
+    "dns_a": [
+      "92.42.99.126"
+    ],
+    "dns_ok": true,
+    "ssh_tcp": {
+      "port": 3333,
+      "open": true
+    },
+    "vpn_tcp": {
+      "port": 8443,
+      "open": true
+    },
+    "tls_8443": {
+      "ok": true,
+      "subject_cn": "metacode-cloud.com",
+      "not_after": "Nov 27 16:46:34 2026 GMT",
+      "version": "TLSv1.3",
+      "expires_utc": "2026-11-27T16:46:34+00:00",
+      "days_remaining": 88.91
+    },
+    "tls_class": "PASS",
+    "ssh_key_present": true
+  },
+  "server": {
+    "hostname": "imart216311",
+    "uptime_sec": 38441,
+    "load": "0.11 0.07 0.02",
+    "mem_total": 2063200256,
+    "mem_used": 433737728,
+    "mem_avail": 1629462528,
+    "swap_total": 2147479552,
+    "swap_used": 536576,
+    "root_usepct": 40.0,
+    "inode_usepct": 6.0,
+    "ufw_status": "Status: active",
+    "listen_sample": [
+      "127.0.0.1:11111",
+      "0.0.0.0:80",
+      "127.0.0.53%lo:53",
+      "0.0.0.0:3333",
+      "127.0.0.54:53",
+      "0.0.0.0:443",
+      "127.0.0.1:62789",
+      "127.0.0.1:20901",
+      "[::]:80",
+      "*:2096",
+      "*:8443",
+      "[::]:3333",
+      "[::]:443"
+    ],
+    "mem_avail_pct": 78.98,
+    "swap_used_pct": 0.02,
+    "remote_backups_sample": [
+      "x-ui.db.p3ux-forcesync-20260830T113414Z",
+      "x-ui.db.p3ux-hosts-20260830T113715Z",
+      "x-ui.db.p3ux-hosts-fix-20260830T113840Z",
+      "x-ui.db.p3ux-resync-20260830T113319Z",
+      "xray-config.p3ux-forcesync-20260830T113414Z.json"
+    ]
+  },
+  "services": {
+    "ssh_active": true,
+    "x_ui_active": true,
+    "x_ui_enabled": true,
+    "xray_process": true,
+    "fail2ban_active": true,
+    "ufw_active": true,
+    "nginx_active": true,
+    "certbot": [
+      "CERTBOT=present",
+      "CERTBOT_TIMER=Mon 2026-08-31 05:43:14 UTC      10h Sun 2026-08-30 12:18:47 UTC      6h ago certbot.timer                  certbot.service",
+      "CERTBOT_RENEWAL=metacode-cloud.com.conf",
+      "CERTBOT_RENEWAL=metacode-cloud.com.conf.bak-p2-clean-02"
+    ],
+    "xui_settings_sanitized": [
+      "\u2502  \u001b[0;34mx-ui legacy\u001b[0m                - Legacy version                   \u2502"
+    ],
+    "remote_exit": 0
+  },
+  "ports": {
+    "80": {
+      "expected": "public",
+      "open": true,
+      "method": "local_tcp"
+    },
+    "3333": {
+      "expected": "public",
+      "open": true,
+      "method": "local_tcp"
+    },
+    "443": {
+      "expected": "public",
+      "open": true,
+      "method": "local_tcp"
+    },
+    "8443": {
+      "expected": "public",
+      "open": true,
+      "method": "local_tcp"
+    },
+    "20901": {
+      "expected": "not_public",
+      "publicly_exposed": false,
+      "method": "remote_listen_ufw_plus_local_tcp_hint",
+      "reason": "localhost_bind_only_or_absent",
+      "binds": [
+        "127.0.0.1:20901"
+      ],
+      "ufw_deny": true,
+      "local_tcp_open": true,
+      "local_tcp_note": "ignored_for_not_public_when_localhost_only"
+    },
+    "2096": {
+      "expected": "not_public",
+      "publicly_exposed": false,
+      "method": "remote_listen_ufw_plus_local_tcp_hint",
+      "reason": "ufw_deny",
+      "binds": [
+        "*:2096"
+      ],
+      "ufw_deny": true,
+      "local_tcp_open": true,
+      "local_tcp_note": "local_open_may_be_vpn_hairpin_artifact"
+    }
+  },
+  "backup": {
+    "dir_exists": true,
+    "preferred_stamp": "20260830T132309Z",
+    "selected": "friendhosting-operational-20260830T132309Z.tgz",
+    "age_days": 0.23,
+    "freshness": "FRESH",
+    "size_bytes": 80743234,
+    "sha_sidecar_present": true,
+    "backup_timestamp_utc": "2026-08-30T13:23:09+00:00"
+  },
+  "residuals": [
+    {
+      "port": 20901,
+      "class": "LOCAL_TCP_OPEN_WHILE_FIREWALLED_OR_LOCALHOST",
+      "note": "Operator-local TCP open may be VPN hairpin; remote UFW/listen says not public"
+    },
+    {
+      "port": 2096,
+      "class": "LOCAL_TCP_OPEN_WHILE_FIREWALLED_OR_LOCALHOST",
+      "note": "Operator-local TCP open may be VPN hairpin; remote UFW/listen says not public"
+    }
+  ],
+  "issues": [],
+  "warnings": [],
+  "verdict": "PASS_WITH_RESIDUALS",
+  "real_workload_documented": {
+    "ChatGPT": "PASS",
+    "YouTube": "PASS",
+    "Cursor": "PASS"
+  },
+  "mutations": {
+    "server": 0,
+    "vpn": 0,
+    "client": 0,
+    "reboot": 0
+  }
+}

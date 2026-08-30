@@ -1,0 +1,19 @@
+{
+  "tcp_3333": true,
+  "tcp_443": true,
+  "tcp_8443": true,
+  "tcp_20901": true,
+  "tcp_2096": true,
+  "tls_443": {
+    "ok": true,
+    "notAfter": "Nov 27 16:46:34 2026 GMT"
+  },
+  "tls_8443": {
+    "ok": true,
+    "notAfter": "Nov 27 16:46:34 2026 GMT"
+  },
+  "http_2096": {
+    "reachable": true,
+    "status": "HTTP/1.1 404 Not Found"
+  }
+}

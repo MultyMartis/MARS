@@ -1,0 +1,36 @@
+{
+  "ok": true,
+  "remote_sha256": "a434c1fdd178c3df133b74b503e8298b150a6640727c15d89aee341b9bf6e617",
+  "local_sha256": "a434c1fdd178c3df133b74b503e8298b150a6640727c15d89aee341b9bf6e617",
+  "sha_match": true,
+  "remote_size": 80743234,
+  "local_size": 80743234,
+  "size_match": true,
+  "required_sections": {
+    "etc-ssh": true,
+    "etc-nginx": true,
+    "etc-letsencrypt": true,
+    "etc-ufw": true,
+    "etc-fail2ban": true,
+    "usr-local-x-ui": true,
+    "x-ui-db": true,
+    "fstab": true,
+    "clients-safe.json": true,
+    "journald": true,
+    "sudoers": true
+  },
+  "archive_readable": true,
+  "member_count": 340,
+  "client_count_ok": true,
+  "client_count": 6,
+  "client_labels": [
+    "WSP-ONE",
+    "MCA-PHONE",
+    "Unit-01",
+    "Unit-02",
+    "Unit-03",
+    "Unit-MichaelPhone"
+  ],
+  "remote_path": "/root/mars-backups/friendhosting-operational-20260830T132309Z.tgz",
+  "local_path": "X:\\AI MARS\\local\\infrastructure\\FRIENDHOSTING-GERMANY\\backups\\friendhosting-operational-20260830T132309Z.tgz"
+}

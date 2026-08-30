@@ -1,0 +1,68 @@
+{
+  "wave": "FRIENDHOSTING-CONTROL-NODE-BUILD-01",
+  "ts_utc": "20260829T174340Z",
+  "host": "92.42.99.126",
+  "baseline": {
+    "hostname": "imart216311",
+    "port_443_free": true,
+    "port_8443_free": true,
+    "ssh_3333": true
+  },
+  "backup": {
+    "remote_tgz": "/root/mars-backups/friendhosting-prebuild-20260829T174340Z.tgz",
+    "remote_sha256": "UNKNOWN",
+    "local_tgz": "X:\\AI MARS\\local\\infrastructure\\FRIENDHOSTING-GERMANY\\backups\\friendhosting-prebuild-20260829T174340Z.tgz",
+    "local_sha256": "24fbcf543d7c7deeb7d91d53435ed247ad7ddef7542624718d0e1191ef288368",
+    "status": "BACKUP + RESTORE STRATEGY CONFIRMED"
+  },
+  "packages": {
+    "status": "OK",
+    "log": "X:\\AI MARS\\local\\infrastructure\\FRIENDHOSTING-GERMANY\\build-01-control-node\\packages-20260829T174340Z.log"
+  },
+  "xui": {
+    "version_target": "3.7.0",
+    "xray_version_observed": "26.7.28",
+    "panel_port": 20901,
+    "listen": "127.0.0.1"
+  },
+  "tls": {
+    "domain": "metacode-cloud.com",
+    "method": "certbot --standalone HTTP-01",
+    "paths": "/etc/letsencrypt/live/metacode-cloud.com/fullchain.pem + privkey.pem",
+    "status": "ISSUED",
+    "ufw_80_temp": "deleted_after_issue"
+  },
+  "inbound": {
+    "remark": "FRIENDHOSTING-DE-RAW-8443",
+    "port": 8443,
+    "protocol": "vless",
+    "security": "tls",
+    "network": "tcp",
+    "alpn": "http/1.1",
+    "fingerprint": "chrome",
+    "flow": "empty",
+    "sniffing": "disabled",
+    "sni": "metacode-cloud.com"
+  },
+  "server_validate": {
+    "xui_active": true,
+    "listening_8443": true,
+    "tls_verify_0": true,
+    "alpn_http11_seen": true,
+    "code": 0
+  },
+  "client_profile": {
+    "display_name": "MCA-ONE-FRIENDHOSTING-DE-RAW-8443",
+    "path_vless": "X:\\AI MARS\\local\\infrastructure\\FRIENDHOSTING-GERMANY\\clients\\MCA-ONE\\friendhosting-de-raw-8443.vless.txt",
+    "path_json": "X:\\AI MARS\\local\\infrastructure\\FRIENDHOSTING-GERMANY\\clients\\MCA-ONE\\friendhosting-de-raw-8443.json",
+    "secret": "[LOCAL SECRET EXISTS \u2014 VALUE NOT EXPOSED]"
+  },
+  "isolated": {
+    "status": "FAIL",
+    "egress_ip": null,
+    "egress_ok": null,
+    "https_ok": null,
+    "body_10mb_ok": null
+  },
+  "verdict": "PREP_PARTIAL_ISOLATED_FAIL"
+}

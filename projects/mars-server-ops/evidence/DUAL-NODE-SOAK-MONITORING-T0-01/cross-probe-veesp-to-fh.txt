@@ -1,0 +1,15 @@
+LOCAL probes FH:
+  80 (True, 3.4, 'ok')
+  3333 (True, 0.9, 'ok')
+  443 (True, 0.5, 'ok')
+  8443 (True, 2.5, 'ok')
+  20901 (True, 0.8, 'ok')
+  2096 (True, 0.4, 'ok')
+FROM VEESP -> FH:
+80 (True, 10.8, 'ok')
+3333 (True, 6.3, 'ok')
+443 (True, 6.6, 'ok')
+8443 (True, 6.3, 'ok')
+20901 (False, 5004.8, 'TimeoutError')
+2096 (False, 5003.8, 'TimeoutError')
+

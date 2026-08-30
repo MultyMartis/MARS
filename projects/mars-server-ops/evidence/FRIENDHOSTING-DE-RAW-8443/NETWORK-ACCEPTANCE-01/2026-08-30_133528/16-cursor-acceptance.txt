@@ -1,0 +1,21 @@
+CURSOR REAL-APP ACCEPTANCE EVIDENCE (this Agent session)
+Date local: 2026-08-30
+Active egress throughout: 92.42.99.126 (FriendHosting)
+
+Meaningful operation/tool cycles observed without reconnect/endless thinking/tool-stream failure:
+1. Read OPERATIONAL-INDEX + prior FriendHosting/EQVPS reports
+2. Preflight git/volume/branch checks
+3. Client/TUN/proxy state capture via Shell
+4. Multi-endpoint egress validation via curl+proxy
+5. SSH read-only server inventory via Python/paramiko
+6. Transport body transfers 1MB/10MB/25MB
+7. DNS/IPv6/Facebook light checks
+8. TLS/ALPN/openssl characterization
+9. ASN/RDAP web research (bgp.he.net, RIPE RDAP)
+10. Route/tracert/MTU DF probes
+11. Extra stability TLS sessions + latency samples
+12. Evidence file writes under NETWORK-ACCEPTANCE-01
+13. Final report authoring
+
+Failures observed in Cursor UI/transport during this wave: NONE observed by agent
+Classification: CURSOR PASS

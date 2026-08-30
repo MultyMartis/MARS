@@ -1,0 +1,36 @@
+﻿# FRIENDHOSTING-DE-RAW-8443 session evidence
+
+Harness: FRIENDHOSTING-DE-RAW-8443-1.0.0
+Session directory: X:\AI MARS\projects\mars-server-ops\evidence\FRIENDHOSTING-DE-RAW-8443\2026-08-30_010218_dryvalidate
+DryValidate: True
+
+## Purpose
+Operator-guided offline acceptance capture:
+VEESP baseline → FRIENDHOSTING switch → transport + real apps → VEESP restore → recovery.
+
+## Important
+If the harness aborts (Ctrl+C / exception) after FRIENDHOSTING phase started:
+
+**Manually restore VEESP RAW :8443 in v2rayN.**
+
+Do not change TUN / System Proxy / routing / DNS / MTU / other settings.
+This harness never switches VPN automatically and never edits v2rayN config.
+
+## Secrets policy
+Evidence must not contain VLESS UUIDs, URIs, passwords, panel paths, tokens, or subscription links.
+Log extracts are redacted best-effort.
+
+## Files
+- session-summary.json
+- session-events.csv
+- baseline-veesp.json / transport-veesp.txt
+- friendhosting.json / transport-friendhosting.txt
+- friendhosting-post-app.json / transport-friendhosting-post-app.txt (if reached)
+- recovery-veesp.json / transport-recovery.txt
+- manual-acceptance.csv
+- process-snapshot.txt
+- v2rayn-log-extract.txt
+- xray-client-log-extract.txt
+- COMPLETED.marker (only on full completion)
+
+After completion with VEESP restored, return to Cursor and provide this directory path.

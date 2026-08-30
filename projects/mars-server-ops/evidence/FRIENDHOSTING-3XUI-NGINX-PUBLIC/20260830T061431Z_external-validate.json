@@ -1,0 +1,9 @@
+{
+  "tcp_443": "OPEN",
+  "tls_subject": "((('commonName', 'metacode-cloud.com'),),)",
+  "tls_san": "(('DNS', 'metacode-cloud.com'),)",
+  "tls_ok": true,
+  "root_code": "404",
+  "secret_code": "200",
+  "ext_20901": "UNEXPECTEDLY_OPEN"
+}

@@ -1,0 +1,14 @@
+HOSTS_BEFORE 0
+HOST_INSERTED 1
+HOST {'id': 1, 'inbound_id': 1, 'address': 'metacode-cloud.com', 'port': 8443, 'security': 'tls', 'sni': 'metacode-cloud.com', 'alpn': 'http/1.1', 'fingerprint': 'chrome', 'is_disabled': 0}
+SHARE_KEYS ['alpn', 'encryption', 'fp', 'headerType', 'security', 'sni', 'type']
+SHARE_FP chrome
+
+Traceback (most recent call last):
+  File "<stdin>", line 68, in <module>
+  File "/usr/lib/python3.12/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['systemctl', 'is-active', 'x-ui']' returned non-zero exit status 3.

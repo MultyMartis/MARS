@@ -1,0 +1,88 @@
+=== HOST ===
+imart216311
+ 09:35:25 up  1:16,  3 users,  load average: 0.00, 0.04, 0.01
+=== LISTENERS ===
+LISTEN 0      4096         0.0.0.0:3333       0.0.0.0:*    users:(("sshd",pid=816,fd=3),("systemd",pid=1,fd=85))                       
+LISTEN 0      511          0.0.0.0:443        0.0.0.0:*    users:(("nginx",pid=767,fd=5),("nginx",pid=766,fd=5),("nginx",pid=765,fd=5))
+LISTEN 0      4096       127.0.0.1:20901      0.0.0.0:*    users:(("x-ui",pid=6947,fd=10))                                             
+LISTEN 0      4096               *:2096             *:*    users:(("x-ui",pid=6947,fd=18))                                             
+LISTEN 0      4096               *:8443             *:*    users:(("xray-linux-amd6",pid=6957,fd=3))                                   
+LISTEN 0      4096            [::]:3333          [::]:*    users:(("sshd",pid=816,fd=4),("systemd",pid=1,fd=86))                       
+LISTEN 0      511             [::]:443           [::]:*    users:(("nginx",pid=767,fd=6),("nginx",pid=766,fd=6),("nginx",pid=765,fd=6))
+=== SERVICES ===
+ssh: active
+disabled
+nginx: active
+enabled
+x-ui: active
+enabled
+fail2ban: active
+enabled
+=== SSHD EFFECTIVE ===
+port 3333
+port 3333
+maxauthtries 4
+permitrootlogin without-password
+pubkeyauthentication yes
+passwordauthentication no
+=== SSH DROPINS ===
+total 12
+drwxr-xr-x 2 root root 4096 Aug 30 09:21 .
+drwxr-xr-x 4 root root 4096 Aug 29 14:07 ..
+-rw-r--r-- 1 root root  245 Aug 30 09:31 00-mars-server-ops-hardening.conf
+=== AUTHKEYS ===
+  2 /root/.ssh/authorized_keys
+  2 /home/marsops/.ssh/authorized_keys
+  4 total
+uid=1000(marsops) gid=1000(marsops) groups=1000(marsops),27(sudo),100(users)
+=== UFW ===
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+3333/tcp                   ALLOW IN    Anywhere                   # MARS SSH
+8443/tcp                   ALLOW IN    Anywhere                   # MARS XRAY VLESS TLS RAW
+443/tcp                    ALLOW IN    Anywhere                   # MARS 3X-UI nginx TLS
+3333/tcp (v6)              ALLOW IN    Anywhere (v6)              # MARS SSH
+8443/tcp (v6)              ALLOW IN    Anywhere (v6)              # MARS XRAY VLESS TLS RAW
+443/tcp (v6)               ALLOW IN    Anywhere (v6)              # MARS 3X-UI nginx TLS
+
+=== FAIL2BAN ===
+ii  fail2ban       1.0.2-3ubuntu0.1 all          ban hosts that cause multiple authentication errors
+Status
+|- Number of jail:	2
+`- Jail list:	3x-ipl, sshd
+Status for the jail: sshd
+|- Filter
+|  |- Currently failed:	0
+|  |- Total failed:	0
+|  `- Journal matches:	_SYSTEMD_UNIT=sshd.service + _COMM=sshd
+`- Actions
+   |- Currently banned:	0
+   |- Total banned:	0
+   `- Banned IP list:	
+=== SWAP ===
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       416Mi       695Mi       1.1Mi       1.0Gi       1.5Gi
+Swap:             0B          0B          0B
+NO_SWAP_FSTAB
+ls: cannot access '/swapfile': No such file or directory
+=== TLS ===
+NEXT                            LEFT LAST                        PASSED UNIT          ACTIVATES
+Sun 2026-08-30 13:27:50 UTC 3h 52min Sun 2026-08-30 05:39:09 UTC      - certbot.timer certbot.service
+
+1 timers listed.
+/etc/cron.d/certbot
+=== JOURNALD ===
+Archived and active journals take up 38.8M in the file system.
+=== EGRESS ===
+92.42.99.126
+=== BACKUP REMOTE ===
+-rw-r--r-- 1 root root 80689274 Aug 30 08:50 /root/mars-backups/friendhosting-plus-p2-pre-hardening-20260830T085016Z.tgz
+596469e821d4c4cf2dae8156032c7dc1a79b8702cde4495cd9643cebc125b9da  /root/mars-backups/friendhosting-plus-p2-pre-hardening-20260830T085016Z.tgz
+=== XUI PANEL LISTEN ===
+LISTEN 0      4096       127.0.0.1:20901      0.0.0.0:*    users:(("x-ui",pid=6947,fd=10))                                             
+

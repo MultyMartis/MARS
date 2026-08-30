@@ -1,0 +1,35 @@
+{
+  "struct_match": false,
+  "diffs": [
+    {
+      "field": "fp",
+      "ui": "",
+      "mars": "chrome"
+    }
+  ],
+  "uuid_equal_wsp": true,
+  "mars_query_keys": [
+    "alpn",
+    "encryption",
+    "fp",
+    "headerType",
+    "security",
+    "sni",
+    "type"
+  ],
+  "ui_query_keys": [
+    "alpn",
+    "encryption",
+    "headerType",
+    "security",
+    "sni",
+    "type"
+  ],
+  "mars_fp": "chrome",
+  "ui_fp": "",
+  "mars_alpn": "http/1.1",
+  "ui_alpn": "http/1.1",
+  "inbound_fp": "",
+  "inbound_alpn": "http/1.1",
+  "externalTraffic": {}
+}

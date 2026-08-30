@@ -1,0 +1,172 @@
+{
+  "inbound": {
+    "id": 1,
+    "remark": "FRIENDHOSTING-DE-RAW-8443",
+    "port": 8443,
+    "protocol": "vless",
+    "enable": 1,
+    "listen": "",
+    "network": "tcp",
+    "security": "tls",
+    "sni": "metacode-cloud.com",
+    "alpn": "http/1.1",
+    "fp_tlsSettings": "",
+    "headerType": "none",
+    "sniff_enabled": false,
+    "client_count": 7
+  },
+  "externalTraffic": {},
+  "safe_settings": {
+    "webBasePath": "/8wGLp6QCoZP87RvsJE/",
+    "webPort": "20901",
+    "webListen": "127.0.0.1"
+  },
+  "fp_like_settings": {},
+  "setting_keys": [
+    "panelGuid",
+    "secret",
+    "webBasePath",
+    "webListen",
+    "webPort"
+  ],
+  "clients": [
+    {
+      "email": "MCA-ONE-FRIENDHOSTING-DE-RAW-8443",
+      "enable": true,
+      "flow": "",
+      "has_id": true,
+      "limitIp": 0,
+      "totalGB": 0,
+      "expiryTime": 0,
+      "share_query": {
+        "encryption": "none",
+        "security": "tls",
+        "type": "tcp",
+        "sni": "metacode-cloud.com",
+        "alpn": "http/1.1",
+        "headerType": "none"
+      },
+      "share_host": "metacode-cloud.com",
+      "share_port": 8443
+    },
+    {
+      "email": "WSP-ONE-FRIENDHOSTING-DE-RAW-8443",
+      "enable": true,
+      "flow": "",
+      "has_id": true,
+      "limitIp": 0,
+      "totalGB": 0,
+      "expiryTime": 0,
+      "share_query": {
+        "encryption": "none",
+        "security": "tls",
+        "type": "tcp",
+        "sni": "metacode-cloud.com",
+        "alpn": "http/1.1",
+        "headerType": "none"
+      },
+      "share_host": "metacode-cloud.com",
+      "share_port": 8443
+    },
+    {
+      "email": "MCA-PHONE-FRIENDHOSTING-DE-RAW-8443",
+      "enable": true,
+      "flow": "",
+      "has_id": true,
+      "limitIp": 0,
+      "totalGB": 0,
+      "expiryTime": 0,
+      "share_query": {
+        "encryption": "none",
+        "security": "tls",
+        "type": "tcp",
+        "sni": "metacode-cloud.com",
+        "alpn": "http/1.1",
+        "headerType": "none"
+      },
+      "share_host": "metacode-cloud.com",
+      "share_port": 8443
+    },
+    {
+      "email": "Unit-01-FRIENDHOSTING-DE-RAW-8443",
+      "enable": true,
+      "flow": "",
+      "has_id": true,
+      "limitIp": 0,
+      "totalGB": 0,
+      "expiryTime": 0,
+      "share_query": {
+        "encryption": "none",
+        "security": "tls",
+        "type": "tcp",
+        "sni": "metacode-cloud.com",
+        "alpn": "http/1.1",
+        "headerType": "none"
+      },
+      "share_host": "metacode-cloud.com",
+      "share_port": 8443
+    },
+    {
+      "email": "Unit-02-FRIENDHOSTING-DE-RAW-8443",
+      "enable": true,
+      "flow": "",
+      "has_id": true,
+      "limitIp": 0,
+      "totalGB": 0,
+      "expiryTime": 0,
+      "share_query": {
+        "encryption": "none",
+        "security": "tls",
+        "type": "tcp",
+        "sni": "metacode-cloud.com",
+        "alpn": "http/1.1",
+        "headerType": "none"
+      },
+      "share_host": "metacode-cloud.com",
+      "share_port": 8443
+    },
+    {
+      "email": "Unit-03-FRIENDHOSTING-DE-RAW-8443",
+      "enable": true,
+      "flow": "",
+      "has_id": true,
+      "limitIp": 0,
+      "totalGB": 0,
+      "expiryTime": 0,
+      "share_query": {
+        "encryption": "none",
+        "security": "tls",
+        "type": "tcp",
+        "sni": "metacode-cloud.com",
+        "alpn": "http/1.1",
+        "headerType": "none"
+      },
+      "share_host": "metacode-cloud.com",
+      "share_port": 8443
+    },
+    {
+      "email": "Unit-MichaelPhone-FRIENDHOSTING-DE-RAW-8443",
+      "enable": true,
+      "flow": "",
+      "has_id": true,
+      "limitIp": 0,
+      "totalGB": 0,
+      "expiryTime": 0,
+      "share_query": {
+        "encryption": "none",
+        "security": "tls",
+        "type": "tcp",
+        "sni": "metacode-cloud.com",
+        "alpn": "http/1.1",
+        "headerType": "none"
+      },
+      "share_host": "metacode-cloud.com",
+      "share_port": 8443
+    }
+  ],
+  "uuid_unique": true,
+  "xray_emails": [
+    "MCA-ONE-FRIENDHOSTING-DE-RAW-8443"
+  ],
+  "strings_hint_len": 4000
+}

@@ -1,0 +1,21 @@
+{
+  "ok": true,
+  "remote": "/root/mars-backups/friendhosting-plus-p2-pre-hardening-20260830T085016Z.tgz",
+  "local": "X:\\AI MARS\\local\\infrastructure\\FRIENDHOSTING-GERMANY\\backups\\friendhosting-plus-p2-pre-hardening-20260830T085016Z.tgz",
+  "size": 80689274,
+  "remote_sha256": "596469e821d4c4cf2dae8156032c7dc1a79b8702cde4495cd9643cebc125b9da",
+  "local_sha256": "596469e821d4c4cf2dae8156032c7dc1a79b8702cde4495cd9643cebc125b9da",
+  "sha_match": true,
+  "expected_contents": {
+    "etc-ssh": true,
+    "etc-nginx": true,
+    "etc-letsencrypt": true,
+    "etc-ufw": true,
+    "usr-local-x-ui": true,
+    "ss-lntp": true,
+    "x-ui-db": true,
+    "systemd": true
+  },
+  "resumed": true,
+  "note": "validated full member scan 2026-08-30; adopted for P2 resume"
+}

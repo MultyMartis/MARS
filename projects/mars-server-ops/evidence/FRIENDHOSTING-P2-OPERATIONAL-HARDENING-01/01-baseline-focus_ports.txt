@@ -1,0 +1,9 @@
+exit=0
+LISTEN 0      4096         0.0.0.0:3333       0.0.0.0:*    users:(("sshd",pid=816,fd=3),("systemd",pid=1,fd=85))                       
+LISTEN 0      511          0.0.0.0:443        0.0.0.0:*    users:(("nginx",pid=767,fd=5),("nginx",pid=766,fd=5),("nginx",pid=765,fd=5))
+LISTEN 0      4096       127.0.0.1:20901      0.0.0.0:*    users:(("x-ui",pid=6411,fd=10))                                             
+LISTEN 0      4096               *:2096             *:*    users:(("x-ui",pid=6411,fd=14))                                             
+LISTEN 0      4096               *:8443             *:*    users:(("xray-linux-amd6",pid=6420,fd=3))                                   
+LISTEN 0      4096            [::]:3333          [::]:*    users:(("sshd",pid=816,fd=4),("systemd",pid=1,fd=86))                       
+LISTEN 0      511             [::]:443           [::]:*    users:(("nginx",pid=767,fd=6),("nginx",pid=766,fd=6),("nginx",pid=765,fd=6))
+

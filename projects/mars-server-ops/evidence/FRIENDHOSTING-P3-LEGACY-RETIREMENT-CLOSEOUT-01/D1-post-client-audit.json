@@ -1,0 +1,42 @@
+{
+  "settings_n": 6,
+  "settings_emails": [
+    "MCA-PHONE",
+    "Unit-01",
+    "Unit-02",
+    "Unit-03",
+    "Unit-MichaelPhone",
+    "WSP-ONE"
+  ],
+  "table_emails": [
+    "MCA-PHONE",
+    "Unit-01",
+    "Unit-02",
+    "Unit-03",
+    "Unit-MichaelPhone",
+    "WSP-ONE"
+  ],
+  "xray_emails": [
+    "MCA-PHONE",
+    "Unit-01",
+    "Unit-02",
+    "Unit-03",
+    "Unit-MichaelPhone",
+    "WSP-ONE"
+  ],
+  "legacy_absent": true,
+  "uuid_unique": true,
+  "all_enabled": true,
+  "wsp": true,
+  "phone": true,
+  "orphan_ci": 0,
+  "architecture": {
+    "network": "tcp",
+    "security": "tls",
+    "sni": "metacode-cloud.com",
+    "remark": "FRIENDHOSTING-DE-RAW-8443"
+  },
+  "delete_snaps": [
+    "/root/mars-backups/x-ui.db.p31-pre-delete-20260830T122423Z"
+  ]
+}

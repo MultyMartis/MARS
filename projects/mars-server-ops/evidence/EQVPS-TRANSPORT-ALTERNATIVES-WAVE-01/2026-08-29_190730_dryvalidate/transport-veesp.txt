@@ -1,0 +1,14 @@
+﻿=== TRANSPORT SUITE: DRY_TRANSPORT ===
+UTC: 2026-08-29T12:07:32.4785976Z
+Proxy: http://127.0.0.1:10808
+
+EGRESS ok=False http=000 time=2.033450 sample= err=curl: (7) Failed to connect to 127.0.0.1 port 10808 after 2033 ms: Could not connect to server
+HTTPS ok=False http=000 time=2.023080 err=curl: (7) Failed to connect to 127.0.0.1 port 10808 after 2023 ms: Could not connect to server
+REPEAT[1] ok=False http=000 time=2.042777
+REPEAT[2] ok=False http=000 time=2.037769
+REPEAT[3] ok=False http=000 time=2.045455
+REPEAT[4] ok=False http=000 time=2.044300
+REPEAT[5] ok=False http=000 time=2.054763
+BODY10MB ok=False http=000 bytes= time=2.039365 err=curl: (7) Failed to connect to 127.0.0.1 port 10808 after 2039 ms: Could not connect to server
+
+SUMMARY egress=False https=False repeat=False body10mb=False

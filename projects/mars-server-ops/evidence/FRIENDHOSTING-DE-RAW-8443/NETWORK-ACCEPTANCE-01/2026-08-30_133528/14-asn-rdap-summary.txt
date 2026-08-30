@@ -1,0 +1,20 @@
+FACT sources:
+- https://bgp.he.net/net/92.42.99.0/24
+- https://rdap.db.ripe.net/ip/92.42.99.126
+- https://bgp.he.net/AS47447
+
+Prefix: 92.42.99.0/24
+Origin ASN: AS47447 (23M GmbH)
+Prefix registrant (HE / RIPE route): Friendhosting LTD
+RIPE inetnum name: BG-FRIENDHOSTING10-20240112
+RIPE country field: DE
+Org: Friendhosting LTD (ORG-FL341-RIPE), Burgas, Bulgaria (corporate)
+RIPE registry allocation CC on HE matching delegations: BG
+mnt-by: FRIENDHOSTING-MNT
+PTR observed: imart216311.vds
+Server IPv6: 2a06:fcc0:a::15b/48 (server-side)
+Cloudflare colo via VPN egress: FRA (Frankfurt) from /cdn-cgi/trace
+Geolocation DB claims (INFERENCE/UNPROVEN as fact): Frankfurt am Main / Germany common in third-party DBs
+
+23M GmbH upstreams (from AS47447 RIPE remarks via HE, FACT as published):
+AS174, AS1299, AS3320, AS3356 (and peering via AS6777)

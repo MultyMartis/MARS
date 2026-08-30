@@ -1,0 +1,15 @@
+{
+  "backup_name": "eqvps-pre-alt-a-reality-vision-20260829T113219Z",
+  "remote_tgz": "/root/mars-backups/eqvps-pre-alt-a-reality-vision-20260829T113219Z.tgz",
+  "local_tgz": "X:\\AI MARS\\local\\infrastructure\\EQVPS-MICRO-IP\\eqvps-alt-a-reality-vision-2026-08-29\\backups\\eqvps-pre-alt-a-reality-vision-20260829T113219Z.tgz",
+  "sha256_remote": "021ce536bc814519280b046d794fe14fee84c3b0a85e0c5d17acb07372246b7a",
+  "sha256_local": "021ce536bc814519280b046d794fe14fee84c3b0a85e0c5d17acb07372246b7a",
+  "match": true,
+  "classification": "BACKUP + RESTORE STRATEGY CONFIRMED",
+  "rollback_summary": [
+    "1. Disable/remove inbound EQVPS-ALT-A-REALITY-VISION (port 9443) and client MCA-ONE-EQ-ALT-A-REALITY-VISION only.",
+    "2. Remove UFW allow 9443/tcp comment 'EQ-ALT-A REALITY VISION'.",
+    "3. If DB drift: stop x-ui; restore /etc/x-ui from backup etc-x-ui; restore config.json; start x-ui.",
+    "4. Verify listeners 22/443/8443/20901/2096; confirm 9443 absent; confirm :8443 RAW/TLS unchanged."
+  ]
+}

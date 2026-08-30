@@ -1,0 +1,92 @@
+STATE_BEFORE
+activating
+active
+● x-ui.service - x-ui Service
+     Loaded: loaded (/etc/systemd/system/x-ui.service; enabled; preset: enabled)
+     Active: activating (auto-restart) (Result: exit-code) since Sun 2026-08-30 11:37:46 UTC; 815ms ago
+    Process: 11256 ExecStart=/usr/local/x-ui/x-ui (code=exited, status=1/FAILURE)
+   Main PID: 11256 (code=exited, status=1/FAILURE)
+        CPU: 72ms
+Aug 30 11:37:15 imart216311 systemd[1]: x-ui.service: Main process exited, code=exited, status=1/FAILURE
+Aug 30 11:37:15 imart216311 systemd[1]: x-ui.service: Failed with result 'exit-code'.
+Aug 30 11:37:20 imart216311 systemd[1]: x-ui.service: Scheduled restart job, restart counter is at 1.
+Aug 30 11:37:20 imart216311 systemd[1]: Started x-ui.service - x-ui Service.
+Aug 30 11:37:20 imart216311 x-ui[11206]: 2026/08/30 11:37:20 Starting x-ui 3.7.0
+Aug 30 11:37:20 imart216311 /usr/local/x-ui/x-ui[11206]: INFO - GC percent set to 75
+Aug 30 11:37:20 imart216311 /usr/local/x-ui/x-ui[11206]: INFO - Go memory soft limit not enforced: no explicit budget; soft limit left at Go default
+Aug 30 11:37:20 imart216311 x-ui[11206]: 2026/08/30 11:37:20 Error initializing database: invalid character 'h' looking for beginning of value
+Aug 30 11:37:20 imart216311 systemd[1]: x-ui.service: Main process exited, code=exited, status=1/FAILURE
+Aug 30 11:37:20 imart216311 systemd[1]: x-ui.service: Failed with result 'exit-code'.
+Aug 30 11:37:25 imart216311 systemd[1]: x-ui.service: Scheduled restart job, restart counter is at 2.
+Aug 30 11:37:25 imart216311 systemd[1]: Started x-ui.service - x-ui Service.
+Aug 30 11:37:25 imart216311 x-ui[11217]: 2026/08/30 11:37:25 Starting x-ui 3.7.0
+Aug 30 11:37:25 imart216311 /usr/local/x-ui/x-ui[11217]: INFO - GC percent set to 75
+Aug 30 11:37:25 imart216311 /usr/local/x-ui/x-ui[11217]: INFO - Go memory soft limit not enforced: no explicit budget; soft limit left at Go default
+Aug 30 11:37:25 imart216311 x-ui[11217]: 2026/08/30 11:37:25 Error initializing database: invalid character 'h' looking for beginning of value
+Aug 30 11:37:25 imart216311 systemd[1]: x-ui.service: Main process exited, code=exited, status=1/FAILURE
+Aug 30 11:37:25 imart216311 systemd[1]: x-ui.service: Failed with result 'exit-code'.
+Aug 30 11:37:30 imart216311 systemd[1]: x-ui.service: Scheduled restart job, restart counter is at 3.
+Aug 30 11:37:30 imart216311 systemd[1]: Started x-ui.service - x-ui Service.
+Aug 30 11:37:30 imart216311 x-ui[11224]: 2026/08/30 11:37:30 Starting x-ui 3.7.0
+Aug 30 11:37:30 imart216311 /usr/local/x-ui/x-ui[11224]: INFO - GC percent set to 75
+Aug 30 11:37:30 imart216311 /usr/local/x-ui/x-ui[11224]: INFO - Go memory soft limit not enforced: no explicit budget; soft limit left at Go default
+Aug 30 11:37:30 imart216311 x-ui[11224]: 2026/08/30 11:37:30 Error initializing database: invalid character 'h' looking for beginning of value
+Aug 30 11:37:30 imart216311 systemd[1]: x-ui.service: Main process exited, code=exited, status=1/FAILURE
+Aug 30 11:37:30 imart216311 systemd[1]: x-ui.service: Failed with result 'exit-code'.
+Aug 30 11:37:36 imart216311 systemd[1]: x-ui.service: Scheduled restart job, restart counter is at 4.
+Aug 30 11:37:36 imart216311 systemd[1]: Started x-ui.service - x-ui Service.
+Aug 30 11:37:36 imart216311 x-ui[11240]: 2026/08/30 11:37:36 Starting x-ui 3.7.0
+Aug 30 11:37:36 imart216311 /usr/local/x-ui/x-ui[11240]: INFO - GC percent set to 75
+Aug 30 11:37:36 imart216311 /usr/local/x-ui/x-ui[11240]: INFO - Go memory soft limit not enforced: no explicit budget; soft limit left at Go default
+Aug 30 11:37:36 imart216311 x-ui[11240]: 2026/08/30 11:37:36 Error initializing database: invalid character 'h' looking for beginning of value
+Aug 30 11:37:36 imart216311 systemd[1]: x-ui.service: Main process exited, code=exited, status=1/FAILURE
+Aug 30 11:37:36 imart216311 systemd[1]: x-ui.service: Failed with result 'exit-code'.
+Aug 30 11:37:41 imart216311 systemd[1]: x-ui.service: Scheduled restart job, restart counter is at 5.
+Aug 30 11:37:41 imart216311 systemd[1]: Started x-ui.service - x-ui Service.
+Aug 30 11:37:41 imart216311 x-ui[11249]: 2026/08/30 11:37:41 Starting x-ui 3.7.0
+Aug 30 11:37:41 imart216311 /usr/local/x-ui/x-ui[11249]: INFO - GC percent set to 75
+Aug 30 11:37:41 imart216311 /usr/local/x-ui/x-ui[11249]: INFO - Go memory soft limit not enforced: no explicit budget; soft limit left at Go default
+Aug 30 11:37:41 imart216311 x-ui[11249]: 2026/08/30 11:37:41 Error initializing database: invalid character 'h' looking for beginning of value
+Aug 30 11:37:41 imart216311 systemd[1]: x-ui.service: Main process exited, code=exited, status=1/FAILURE
+Aug 30 11:37:41 imart216311 systemd[1]: x-ui.service: Failed with result 'exit-code'.
+Aug 30 11:37:46 imart216311 systemd[1]: x-ui.service: Scheduled restart job, restart counter is at 6.
+Aug 30 11:37:46 imart216311 systemd[1]: Started x-ui.service - x-ui Service.
+Aug 30 11:37:46 imart216311 x-ui[11256]: 2026/08/30 11:37:46 Starting x-ui 3.7.0
+Aug 30 11:37:46 imart216311 /usr/local/x-ui/x-ui[11256]: INFO - GC percent set to 75
+Aug 30 11:37:46 imart216311 /usr/local/x-ui/x-ui[11256]: INFO - Go memory soft limit not enforced: no explicit budget; soft limit left at Go default
+Aug 30 11:37:46 imart216311 x-ui[11256]: 2026/08/30 11:37:46 Error initializing database: invalid character 'h' looking for beginning of value
+Aug 30 11:37:46 imart216311 systemd[1]: x-ui.service: Main process exited, code=exited, status=1/FAILURE
+Aug 30 11:37:46 imart216311 systemd[1]: x-ui.service: Failed with result 'exit-code'.
+RESTART
+activating
+active
+LISTEN 0      4096         0.0.0.0:3333      0.0.0.0:*    users:(("sshd",pid=816,fd=3),("systemd",pid=1,fd=167))                           
+LISTEN 0      511          0.0.0.0:443       0.0.0.0:*    users:(("nginx",pid=9453,fd=5),("nginx",pid=9452,fd=5),("nginx",pid=765,fd=5))   
+LISTEN 0      4096            [::]:3333         [::]:*    users:(("sshd",pid=816,fd=4),("systemd",pid=1,fd=168))                           
+LISTEN 0      511             [::]:443          [::]:*    users:(("nginx",pid=9453,fd=6),("nginx",pid=9452,fd=6),("nginx",pid=765,fd=6))   
+CLIENTS 7
+LINKS 7
+HOSTS 1
+EMAIL MCA-ONE-FRIENDHOSTING-DE-RAW-8443
+EMAIL WSP-ONE
+EMAIL MCA-PHONE
+EMAIL Unit-01
+EMAIL Unit-02
+EMAIL Unit-03
+EMAIL Unit-MichaelPhone
+XRAY_N 7
+XRAY MCA-ONE-FRIENDHOSTING-DE-RAW-8443
+XRAY WSP-ONE
+XRAY MCA-PHONE
+XRAY Unit-01
+XRAY Unit-02
+XRAY Unit-03
+XRAY Unit-MichaelPhone
+NET tcp SEC tls
+SNI metacode-cloud.com
+Status: active
+2096/tcp                   DENY        Anywhere                   # MARS-P2 block x-ui sub public
+20901/tcp                  DENY        Anywhere                   # MARS-P2 block panel direct
+2096/tcp (v6)              DENY        Anywhere (v6)              # MARS-P2 block x-ui sub public
+20901/tcp (v6)             DENY        Anywhere (v6)              # MARS-P2 block panel direct
+
