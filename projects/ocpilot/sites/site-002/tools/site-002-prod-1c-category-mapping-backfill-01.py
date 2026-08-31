@@ -26,6 +26,15 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from site002_harness_authority import (
+    CANONICAL_MONOREPO,
+    DEFAULT_MONITOR_CHECKOUT,
+    guard_historical_harness,
+    resolve_repo_root_for_read,
+    site002_reports_dir,
+    site002_tools_dir,
+)
+
 OPERATION_ID = "SITE-002-PROD-1C-CATEGORY-MAPPING-BACKFILL-01"
 OCPILOT_RUN = "4.296"
 SITE_ID = "SITE-002"
@@ -37,19 +46,13 @@ STORAGE = Path(
     r"X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\deployments"
     rf"\{OPERATION_ID}"
 )
-HARNESS_TOOL = Path(
-    r"X:\AI MARS STORAGE\git-sync-e01\repo\projects\ocpilot\sites\site-002\tools"
-    r"\site-002-1c-category-identity-harness.py"
-)
+HARNESS_TOOL = site002_tools_dir() / "site-002-1c-category-identity-harness.py"
 PRIOR_XML = Path(
     r"X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\deployments"
     r"\SITE-002-PROD-1C-CATEGORY-IDENTITY-HARNESS-01\xml-input\import0_1.xml"
 )
 REMOTE_IMPORT_XML = "public_html/1c_incoming/webdata/import0_1.xml"
-REPO_ARTIFACTS = Path(
-    r"X:\AI MARS STORAGE\git-sync-e01\repo\projects\ocpilot\sites\site-002\reports"
-    rf"\artifacts\{OPERATION_ID}"
-)
+REPO_ARTIFACTS = site002_reports_dir() / "artifacts" / OPERATION_ID
 
 # Confirmed canonical mappings after Run 4.295 leaf apply
 TARGET_MAPPINGS: list[dict[str, Any]] = [
@@ -1519,6 +1522,8 @@ def phase_capture_apply_artifacts(expected_rows: int) -> dict[str, Any]:
 
 
 def main() -> int:
+    guard_historical_harness('OPERATION_ID')
+
     parser = argparse.ArgumentParser()
     parser.add_argument("--apply", action="store_true", help="Apply after gates")
     parser.add_argument("--dry-run-only", action="store_true")

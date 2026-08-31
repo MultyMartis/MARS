@@ -20,6 +20,15 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from site002_harness_authority import (
+    CANONICAL_MONOREPO,
+    DEFAULT_MONITOR_CHECKOUT,
+    guard_historical_harness,
+    resolve_repo_root_for_read,
+    site002_reports_dir,
+    site002_tools_dir,
+)
+
 OPERATION_ID = "SITE-002-PROD-POSUDA-UPAKOVOCHNOE-EMPTY-CATEGORY-CHECK-01"
 PRODUCTION_URL = "https://bzpm.ru/"
 PREFIX = "oc_"
@@ -28,7 +37,7 @@ LANGUAGE_ID = 1
 STORE_ID = 0
 TARGET_IDS = (364, 381)
 SECRETS_PATH = Path(r"X:\AI MARS STORAGE\ocpilot\project-sites\site-002\secrets\secrets.md")
-AUTHORITY_REPO = Path(r"X:\AI MARS STORAGE\git-sync-site002-offers-recovery-docs-03\repo")
+AUTHORITY_REPO = CANONICAL_MONOREPO  # resolved in main()
 STORAGE = Path(
     r"X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\deployments"
     rf"\{OPERATION_ID}"
@@ -516,8 +525,11 @@ def clear_cache() -> str:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
+    parser.add_argument("--repo-root", default=None, help="Git authority root (default: X:\\AI MARS)")
     parser.add_argument("--apply-hide", action="store_true")
     args = parser.parse_args()
+    global AUTHORITY_REPO
+    AUTHORITY_REPO = resolve_repo_root_for_read(args.repo_root)
 
     ensure_storage()
     git = git_preflight()

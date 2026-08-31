@@ -2,6 +2,14 @@
 """SITE-002 D6G1 deploy: server-side completion dispatch + watchdog + admin UI."""
 from __future__ import annotations
 
+from site002_harness_authority import (
+    CANONICAL_MONOREPO,
+    DEFAULT_MONITOR_CHECKOUT,
+    guard_historical_harness,
+    resolve_repo_root_for_read,
+    site002_reports_dir,
+    site002_tools_dir,
+)
 import hashlib
 import io
 import json
@@ -12,13 +20,13 @@ from pathlib import Path
 
 OPERATION = "SITE-002-PROD-D6G1-SERVER-SIDE-COMPLETION-DISPATCH-01"
 SECRETS = Path(r"X:\AI MARS STORAGE\ocpilot\project-sites\site-002\secrets\secrets.md")
-REPO = Path(r"X:\AI MARS STORAGE\git-sync-d6g1-20260807\repo")
-TOOLS = REPO / "projects/ocpilot/sites/site-002/tools"
+REPO = CANONICAL_MONOREPO
+TOOLS = site002_tools_dir()
 ADMIN = REPO / "projects/ocpilot/sites/site-002/opencart-admin/mars_1c_exchange"
 EVIDENCE = Path(
     r"X:\AI MARS STORAGE\runtime-state\client-ops-site-002-producer\tmp\d6g1-deploy"
 )
-MAIN = Path(r"X:\AI MARS")
+MAIN = CANONICAL_MONOREPO
 WEBHOOK_SECRETS = MAIN / "local/client-ops-reporting-bridge/bzpm.ru/secrets.local.env"
 N8N_ENV = MAIN / "local/tokens/n8n-api.env"
 
@@ -263,6 +271,8 @@ def local_bytes(rel: str) -> bytes:
 
 
 def main() -> int:
+    guard_historical_harness('OPERATION')
+
     EVIDENCE.mkdir(parents=True, exist_ok=True)
     secrets = load_env(WEBHOOK_SECRETS)
     n8n = load_env(N8N_ENV)

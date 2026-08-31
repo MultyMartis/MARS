@@ -16,6 +16,15 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from site002_harness_authority import (
+    CANONICAL_MONOREPO,
+    DEFAULT_MONITOR_CHECKOUT,
+    guard_historical_harness,
+    resolve_repo_root_for_read,
+    site002_reports_dir,
+    site002_tools_dir,
+)
+
 OPERATION_ID = "SITE-002-PROD-BLOG-LITERAL-NEWLINE-CLEANUP-01"
 OCPILOT_RUN = "4.277"
 SITE_ID = "SITE-002"
@@ -28,8 +37,8 @@ STORAGE_ROOT = Path(
     r"X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\deployments"
     rf"\{OPERATION_ID}"
 )
-AUTH_REPO = Path(r"X:\AI MARS STORAGE\git-sync-e01\repo")
-DIRTY_MAIN = Path(r"X:\AI MARS")
+AUTH_REPO = CANONICAL_MONOREPO
+DIRTY_MAIN = CANONICAL_MONOREPO
 PREFIX = "oc_"
 USER_AGENT = f"MARS-OCPilot/{OPERATION_ID}"
 
@@ -624,6 +633,8 @@ def run_verification_summary(before_conf: dict[str, Any], after_conf: dict[str, 
 
 
 def main() -> int:
+    guard_historical_harness('OPERATION_ID')
+
     phase = sys.argv[1] if len(sys.argv) > 1 else "all"
     init_storage()
 

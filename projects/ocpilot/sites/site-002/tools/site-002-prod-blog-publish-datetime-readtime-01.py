@@ -18,6 +18,15 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from site002_harness_authority import (
+    CANONICAL_MONOREPO,
+    DEFAULT_MONITOR_CHECKOUT,
+    guard_historical_harness,
+    resolve_repo_root_for_read,
+    site002_reports_dir,
+    site002_tools_dir,
+)
+
 OPERATION_ID = "SITE-002-PROD-BLOG-PUBLISH-DATETIME-READTIME-01"
 OCPILOT_RUN = "4.272"
 SITE_ID = "SITE-002"
@@ -27,9 +36,7 @@ STORAGE_ROOT = Path(
     r"X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\deployments"
     rf"\{OPERATION_ID}"
 )
-REPO_TOOLS = Path(
-    r"X:\AI MARS STORAGE\git-sync-e01\repo\projects\ocpilot\sites\site-002\tools"
-)
+REPO_TOOLS = site002_tools_dir()
 PREFIX = "oc_"
 USER_AGENT = f"MARS-OCPilot/{OPERATION_ID}"
 TARGET_POST_ID = 13
@@ -1372,6 +1379,8 @@ def copy_mirrors_to_repo_tools() -> list[str]:
 
 
 def main() -> int:
+    guard_historical_harness('OPERATION_ID')
+
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "phase",

@@ -25,6 +25,15 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from site002_harness_authority import (
+    CANONICAL_MONOREPO,
+    DEFAULT_MONITOR_CHECKOUT,
+    guard_historical_harness,
+    resolve_repo_root_for_read,
+    site002_reports_dir,
+    site002_tools_dir,
+)
+
 OPERATION_ID = "SITE-002-CATALOG-NORMALIZATION-UI-REPAIR-01"
 PREVIOUS_APPLY_COMMIT = "b0447bc8"
 SITE_ID = "SITE-002"
@@ -32,8 +41,8 @@ PRODUCTION_URL = "https://bzpm.ru/"
 PREFIX = "oc_"
 LANGUAGE_ID = 1
 SECRETS_PATH = Path(r"X:\AI MARS STORAGE\ocpilot\project-sites\site-002\secrets\secrets.md")
-AUTHORITY_REPO = Path(r"X:\AI MARS STORAGE\git-sync-site002-offers-recovery-docs-03\repo")
-TOOLS = AUTHORITY_REPO / "projects" / "ocpilot" / "sites" / "site-002" / "tools"
+AUTHORITY_REPO = CANONICAL_MONOREPO
+TOOLS = site002_tools_dir()
 MIRROR_CV = TOOLS / "category_visibility.php"
 REMOTE_CV = "/public_html/system/library/zpm/category_visibility.php"
 CACHE_DIR = "/home/a/assum/bzpm.ru/storage/cache"
@@ -634,6 +643,8 @@ def evaluate_after(rows: list[dict[str, Any]]) -> tuple[bool, list[str]]:
 
 
 def main() -> int:
+    guard_historical_harness('OPERATION_ID')
+
     parser = argparse.ArgumentParser()
     parser.add_argument("--apply", action="store_true", help="Deploy to production")
     args = parser.parse_args()

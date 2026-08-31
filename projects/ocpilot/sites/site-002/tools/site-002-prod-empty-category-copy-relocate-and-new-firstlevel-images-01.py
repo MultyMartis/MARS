@@ -17,6 +17,15 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from site002_harness_authority import (
+    CANONICAL_MONOREPO,
+    DEFAULT_MONITOR_CHECKOUT,
+    guard_historical_harness,
+    resolve_repo_root_for_read,
+    site002_reports_dir,
+    site002_tools_dir,
+)
+
 OPERATION_ID = "SITE-002-PROD-EMPTY-CATEGORY-COPY-RELOCATE-AND-NEW-FIRSTLEVEL-IMAGES-01"
 OCPILOT_RUN = "4.317"
 SITE_ID = "SITE-002"
@@ -45,8 +54,8 @@ DEPLOYMENT_ROOT = Path(
     r"X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\deployments"
     rf"\{OPERATION_ID}"
 )
-AUTHORITY_REPO = Path(r"X:\AI MARS STORAGE\git-sync-e01\repo")
-TOOLS = AUTHORITY_REPO / "projects" / "ocpilot" / "sites" / "site-002" / "tools"
+AUTHORITY_REPO = CANONICAL_MONOREPO
+TOOLS = site002_tools_dir()
 CACHE_DIR = "/home/a/assum/bzpm.ru/storage/cache"
 
 REMOTE_CV = "/public_html/system/library/zpm/category_visibility.php"
@@ -580,7 +589,7 @@ def phase_report(state: dict[str, Any], deploy: dict[str, Any]) -> None:
 | Check | Result |
 |-------|--------|
 | Volume `AI WS` (X:) | PASS |
-| Authority worktree | `X:\\AI MARS STORAGE\\git-sync-e01\\repo` |
+| Authority (canonical) | `X:\\AI MARS` (clean worktree via --repo-root for git mutation) |
 | Dirty main | read-only; foreign WIP untouched |
 | Prior accepted | Run **4.316** ALL-15 + baseline **1879** |
 
@@ -652,7 +661,7 @@ Placeholder remaining on empty cards: **{len(state['placeholder_on_empty_cards']
 
 ## 7. Git / Storage
 
-- Authority allowlist commit/push from `X:\\AI MARS STORAGE\\git-sync-e01\\repo` only
+- Authority allowlist commit/push from clean worktree only (never hardcode git-sync-*)
 - Storage pack: `X:\\AI MARS STORAGE\\ocpilot\\project-sites\\site-002\\production\\deployments\\{OPERATION_ID}\\`
 - Repo report: `projects/ocpilot/sites/site-002/reports/{OPERATION_ID}.md`
 
@@ -684,6 +693,8 @@ Placeholder remaining on empty cards: **{len(state['placeholder_on_empty_cards']
 
 
 def main() -> int:
+    guard_historical_harness('OPERATION_ID')
+
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--phase",

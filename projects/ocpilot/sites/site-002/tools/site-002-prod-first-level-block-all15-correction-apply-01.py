@@ -27,6 +27,15 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
+from site002_harness_authority import (
+    CANONICAL_MONOREPO,
+    DEFAULT_MONITOR_CHECKOUT,
+    guard_historical_harness,
+    resolve_repo_root_for_read,
+    site002_reports_dir,
+    site002_tools_dir,
+)
+
 OPERATION_ID = "SITE-002-PROD-FIRST-LEVEL-BLOCK-ALL15-CORRECTION-APPLY-01"
 OCPILOT_RUN = "4.316"
 SITE_ID = "SITE-002"
@@ -61,10 +70,10 @@ DEPLOYMENT_ROOT = Path(
     r"X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\deployments"
     rf"\{OPERATION_ID}"
 )
-AUTHORITY_REPO = Path(r"X:\AI MARS STORAGE\git-sync-e01\repo")
-TOOLS = AUTHORITY_REPO / "projects" / "ocpilot" / "sites" / "site-002" / "tools"
+AUTHORITY_REPO = CANONICAL_MONOREPO
+TOOLS = site002_tools_dir()
 MIRROR_CV = TOOLS / "category_visibility.php"
-MONITOR_REPO = Path(r"X:\AI MARS STORAGE\runtime-checkouts\site-002-monitor\repo")
+MONITOR_REPO = DEFAULT_MONITOR_CHECKOUT
 CACHE_DIR = "/home/a/assum/bzpm.ru/storage/cache"
 
 REMOTE_CV = "/public_html/system/library/zpm/category_visibility.php"
@@ -1596,6 +1605,8 @@ def phase_closeout(state: dict[str, Any]) -> None:
 
 
 def main() -> int:
+    guard_historical_harness('OPERATION_ID')
+
     parser = argparse.ArgumentParser()
     parser.add_argument("--phase", default="all", choices=["all", "prep-only", "deploy"])
     args = parser.parse_args()

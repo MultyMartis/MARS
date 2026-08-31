@@ -15,6 +15,15 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from site002_harness_authority import (
+    CANONICAL_MONOREPO,
+    DEFAULT_MONITOR_CHECKOUT,
+    guard_historical_harness,
+    resolve_repo_root_for_read,
+    site002_reports_dir,
+    site002_tools_dir,
+)
+
 OPERATION_ID = "SITE-002-PROD-BRAND-CAPS-AND-BLOG-SLIDER-ORDER-01"
 OCPILOT_RUN = "4.276"
 SITE_ID = "SITE-002"
@@ -24,9 +33,7 @@ STORAGE_ROOT = Path(
     r"X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\deployments"
     rf"\{OPERATION_ID}"
 )
-REPO_TOOLS = Path(
-    r"X:\AI MARS STORAGE\git-sync-e01\repo\projects\ocpilot\sites\site-002\tools"
-)
+REPO_TOOLS = site002_tools_dir()
 PREFIX = "oc_"
 USER_AGENT = f"MARS-OCPilot/{OPERATION_ID}"
 TARGET_POST_ID = 13
@@ -469,6 +476,8 @@ def extract_slider_meta(html: str) -> list[dict[str, str]]:
 
 
 def main() -> int:
+    guard_historical_harness('OPERATION_ID')
+
     phase = sys.argv[1] if len(sys.argv) > 1 else "all"
     init_storage()
 
@@ -476,8 +485,8 @@ def main() -> int:
         print("=== PHASE 1: PREFLIGHT ===")
         import subprocess
 
-        auth_repo = Path(r"X:\AI MARS STORAGE\git-sync-e01\repo")
-        dirty_main = Path(r"X:\AI MARS")
+        auth_repo = CANONICAL_MONOREPO
+        dirty_main = CANONICAL_MONOREPO
         auth_out = subprocess.run(
             ["git", "status", "--short", "&&", "git", "branch", "--show-current", "&&", "git", "rev-parse", "HEAD"],
             cwd=auth_repo,

@@ -29,6 +29,15 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from site002_harness_authority import (
+    CANONICAL_MONOREPO,
+    DEFAULT_MONITOR_CHECKOUT,
+    guard_historical_harness,
+    resolve_repo_root_for_read,
+    site002_reports_dir,
+    site002_tools_dir,
+)
+
 OPERATION_ID = "SITE-002-CATALOG-NORMALIZATION-APPLY-COMBINED-01"
 DECISION_FREEZE_COMMIT = "d4ecf1a0"
 SITE_ID = "SITE-002"
@@ -38,7 +47,7 @@ MAP_TABLE = f"{PREFIX}mars_1c_category_map"
 LANGUAGE_ID = 1
 STORE_ID = 0
 SECRETS_PATH = Path(r"X:\AI MARS STORAGE\ocpilot\project-sites\site-002\secrets\secrets.md")
-AUTHORITY_REPO = Path(r"X:\AI MARS STORAGE\git-sync-site002-offers-recovery-docs-03\repo")
+AUTHORITY_REPO = CANONICAL_MONOREPO
 STORAGE = Path(
     r"X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\deployments"
     rf"\{OPERATION_ID}"
@@ -768,6 +777,8 @@ def run_smoke(cats: dict[int, dict[str, Any]]) -> None:
 
 
 def main() -> int:
+    guard_historical_harness('OPERATION_ID')
+
     parser = argparse.ArgumentParser()
     parser.add_argument("--apply", action="store_true", help="Execute production mutations")
     args = parser.parse_args()

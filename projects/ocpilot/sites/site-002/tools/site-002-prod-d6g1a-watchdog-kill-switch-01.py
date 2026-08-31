@@ -2,6 +2,14 @@
 """SITE-002 D6G1A: Beget watchdog cron + kill-switch config + deploy + acceptance."""
 from __future__ import annotations
 
+from site002_harness_authority import (
+    CANONICAL_MONOREPO,
+    DEFAULT_MONITOR_CHECKOUT,
+    guard_historical_harness,
+    resolve_repo_root_for_read,
+    site002_reports_dir,
+    site002_tools_dir,
+)
 import hashlib
 import io
 import json
@@ -14,8 +22,8 @@ from pathlib import Path
 
 OPERATION = "SITE-002-PROD-D6G1A-WATCHDOG-KILL-SWITCH-01"
 SECRETS = Path(r"X:\AI MARS STORAGE\ocpilot\project-sites\site-002\secrets\secrets.md")
-REPO = Path(r"X:\AI MARS STORAGE\git-sync-d6g1a-20260807T162210\repo")
-TOOLS = REPO / "projects/ocpilot/sites/site-002/tools"
+REPO = CANONICAL_MONOREPO
+TOOLS = site002_tools_dir()
 ADMIN = REPO / "projects/ocpilot/sites/site-002/opencart-admin/mars_1c_exchange"
 EVIDENCE_RUNTIME = Path(
     r"X:\AI MARS STORAGE\runtime-state\client-ops-site-002-producer\tmp\d6g1a-ops"
@@ -720,6 +728,8 @@ def mode_ssh_php_checks() -> int:
 
 
 def main() -> int:
+    guard_historical_harness('OPERATION')
+
     if len(sys.argv) < 2:
         print("usage: prestate|install_watchdog_cron|deploy|watchdog_live|ssh_php_checks")
         return 2

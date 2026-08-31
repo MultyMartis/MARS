@@ -22,6 +22,15 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from site002_harness_authority import (
+    CANONICAL_MONOREPO,
+    DEFAULT_MONITOR_CHECKOUT,
+    guard_historical_harness,
+    resolve_repo_root_for_read,
+    site002_reports_dir,
+    site002_tools_dir,
+)
+
 OPERATION_ID = "SITE-002-PROD-MEGAMENU-AND-POSUDA-PLP-REPAIR-01"
 PRODUCTION_URL = "https://bzpm.ru/"
 PREFIX = "oc_"
@@ -29,14 +38,14 @@ LANGUAGE_ID = 1
 STORE_ID = 0
 TARGET_IDS = (364, 381, 96)
 SECRETS_PATH = Path(r"X:\AI MARS STORAGE\ocpilot\project-sites\site-002\secrets\secrets.md")
-AUTHORITY_REPO = Path(r"X:\AI MARS STORAGE\git-sync-site002-offers-recovery-docs-03\repo")
-TOOLS = AUTHORITY_REPO / "projects" / "ocpilot" / "sites" / "site-002" / "tools"
+AUTHORITY_REPO = CANONICAL_MONOREPO
+TOOLS = site002_tools_dir()
 MIRROR_CV = TOOLS / "category_visibility.php"
 MIRROR_CATEGORY = TOOLS / "catalog_controller_product_category-SITE-002-PROD-CATALOG-TILE-BLOCKS-AUTOMATION-01.php"
 REMOTE_CV = "/public_html/system/library/zpm/category_visibility.php"
 REMOTE_CATEGORY = "/public_html/catalog/controller/product/category.php"
 CACHE_DIR = "/home/a/assum/bzpm.ru/storage/cache"
-REPORT_PATH = AUTHORITY_REPO / "projects/ocpilot/sites/site-002/reports/SITE-002-PROD-MEGAMENU-AND-POSUDA-PLP-REPAIR-01.md"
+REPORT_PATH = site002_reports_dir() / "SITE-002-PROD-MEGAMENU-AND-POSUDA-PLP-REPAIR-01.md"
 
 STORAGE = Path(
     r"X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\deployments"
@@ -549,6 +558,8 @@ def build_report(
 
 
 def main() -> int:
+    guard_historical_harness('OPERATION_ID')
+
     parser = argparse.ArgumentParser()
     parser.add_argument("--apply", action="store_true", help="Deploy to production")
     args = parser.parse_args()

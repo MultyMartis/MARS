@@ -2,6 +2,14 @@
 """SITE-002 D6G deploy: wrapper+contract+admin module+menu snippet via FTP."""
 from __future__ import annotations
 
+from site002_harness_authority import (
+    CANONICAL_MONOREPO,
+    DEFAULT_MONITOR_CHECKOUT,
+    guard_historical_harness,
+    resolve_repo_root_for_read,
+    site002_reports_dir,
+    site002_tools_dir,
+)
 import argparse
 import ftplib
 import hashlib
@@ -17,11 +25,8 @@ SECRETS = Path(r"X:\AI MARS STORAGE\ocpilot\project-sites\site-002\secrets\secre
 DEPLOY_ROOT = Path(
     r"X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\deployments\SITE-002-PROD-D6G-EVENT-DRIVEN-1C-IMPORT-01"
 )
-# Prefer worktree if present
-WT = Path(r"X:\AI MARS STORAGE\git-sync-d6g-event-driven\repo")
-MAIN = Path(r"X:\AI MARS")
-REPO = WT if (WT / "projects/ocpilot/sites/site-002/tools/mars_1c_import_wrapper.php").is_file() else MAIN
-TOOLS = REPO / "projects/ocpilot/sites/site-002/tools"
+REPO = CANONICAL_MONOREPO
+TOOLS = site002_tools_dir()
 ADMIN = REPO / "projects/ocpilot/sites/site-002/opencart-admin/mars_1c_exchange"
 
 
@@ -277,6 +282,8 @@ def cmd_deploy(_: argparse.Namespace) -> int:
 
 
 def main() -> int:
+    guard_historical_harness('OPERATION')
+
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
     p = sub.add_parser("deploy")
