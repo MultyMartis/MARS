@@ -5,7 +5,8 @@
 **Primary commit:** `f81f6e04d5dad2ab0325813dbec16be389307c9f`  
 **Hash-record commit:** `2c9bed89c3cde35cd4bb85c3f0686c2de5a2f24e`  
 **Tip HEAD before audit:** `13b3830541f421a452b21bf08eea2e5963b1b23c`  
-**Tip HEAD after hash-record:** `2c9bed89c3cde35cd4bb85c3f0686c2de5a2f24e`  
+**Tip HEAD after hash-record:** `2c9bed89c3cde35cd4bb85c3f0686c2de5a2f24e`
+**Tip HEAD after tip-lock:** `5fed521747a2b5d6bd9c136e96a9d95b30671735`  
 **Push:** no
 
 ---
@@ -193,7 +194,7 @@ Do **not** restore deleted `git-sync-iseo-report-hub-*` contours for project con
 
 - primary: `f81f6e04d5dad2ab0325813dbec16be389307c9f`
 - hash-record: `2c9bed89c3cde35cd4bb85c3f0686c2de5a2f24e`
-- tip HEAD: `2c9bed89c3cde35cd4bb85c3f0686c2de5a2f24e` (before tip-lock self-ref if any)
+- tip HEAD: `5fed521747a2b5d6bd9c136e96a9d95b30671735`
 - push: no
 
 ---
