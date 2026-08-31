@@ -39,6 +39,13 @@
 - `CLIENT_OPS_DISPATCH_ENABLED` in non-Git local config
 - Blocks outbound only; terminal still records
 
+## Git / MARS authority
+
+- Canonical Git repo: `X:\AI MARS` on branch `mars/canonical-post-recovery`.
+- Client Ops knowledge authority: `client-ops/` in that repo (not deleted STORAGE `git-sync-*` / `git-reconcile-*` contours).
+- Historical STORAGE git-sync worktrees were **disposable promotion aids**; post–2026-08 hygiene they are gone. Use main repo or a **new** clean worktree under `X:\AI MARS STORAGE\git-sync-<task>\repo` — never assume an old git-sync path still exists.
+- Closeout: `client-ops/storage-hygiene/POST-STORAGE-HYGIENE-LOSS-AUDIT-2026-08-31.md`
+
 ## Boundaries
 
 - Do not mutate live importer/reporting without charter

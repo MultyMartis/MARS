@@ -29,3 +29,8 @@
 
 - `X:\AI MARS\registry\project-registry.md`
 - OCPilot operational indexes under `projects/ocpilot/`
+
+## Storage hygiene (2026-08-31)
+
+- Post-hygiene loss audit closeout: `client-ops/storage-hygiene/POST-STORAGE-HYGIENE-LOSS-AUDIT-2026-08-31.md`
+- Deleted `X:\AI MARS STORAGE\git-sync-*` / `git-reconcile-*` contours: **not** current Git authority (disposable / promoted)
