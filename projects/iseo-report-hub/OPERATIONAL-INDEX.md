@@ -27,7 +27,7 @@
 |-------|-------|
 | **Status** | planned / product architecture + Phase 0 scaffold + Model A `app-source/` + Phase 1A/1B + local DB + **auth persistence implemented** + **DB-03 migration applied** + **local fixture apply complete** + **Reporting Period CRUD Implementation 01 complete** + **Weekly Checkpoints DB-04 Charter 01 complete** + **DB-04 migration apply complete** + **Weekly Checkpoints CRUD Charter 01 complete** + **Weekly Checkpoints CRUD Implementation 01 complete** + **Monthly Report Content DB-05 Charter 01 complete** + **DB-05 migration apply complete** + **Monthly Report Content CRUD Charter 01 complete** + **Monthly Report Content CRUD Implementation 01 complete** + **Report Blocks DB-06 Charter 01 complete** + **DB-06 migration apply complete** + **Report Blocks CRUD Charter 01 complete** + **Report Blocks CRUD Implementation 01 complete** + **Report Preview / Render Charter 01 complete** + **Report Preview / Render Implementation 01 complete** + **Report Finalization Charter 01 complete** + **Report Finalization Implementation 01 complete** + **Report Snapshot Charter 01 complete** + **Report Snapshot DB-07 Migration Apply 01 complete** + **Report Snapshot Implementation 01 complete** + **Report Export / PDF Charter 01 complete** + **Report Export DB-08 Migration Apply 01 complete** |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | **Local Specialist MVP Acceptance Closeout 01 complete** — status `LOCAL SPECIALIST MVP ACCEPTED_BY_MARS_REVIEW / OPERATOR_MANUAL_WALKTHROUGH_PENDING`; Web-GPT visual accepted; operator manual walkthrough + SEO draft instruction v0.1 ready; evidence/attachments PRD v0.1 recorded; next = operator manual walkthrough → SEO-team feedback → Report Evidence Links charter |
+| **Active stage** | **Project-Centric Dashboard and IA Charter 01 complete** — operator rejected demo home (`Рабочий контур` / `Быстрые действия` / `Статус локальной системы`); project-centric IA charter + implementation plan recorded; next impl = **Project Dashboard Implementation 01**; parallel = operator manual walkthrough still pending (`LOCAL SPECIALIST MVP ACCEPTED_BY_MARS_REVIEW / OPERATOR_MANUAL_WALKTHROUGH_PENDING`); host track paused |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -2084,6 +2084,22 @@
 
 ---
 
+## Project-Centric Dashboard and IA Charter 01 (2026-08-31)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Complete** — docs/charter only |
+| **Charter** | [I-SEO-REPORT-HUB-PROJECT-CENTRIC-DASHBOARD-IA-CHARTER-v0.1.md](product/I-SEO-REPORT-HUB-PROJECT-CENTRIC-DASHBOARD-IA-CHARTER-v0.1.md) |
+| **Implementation plan** | [I-SEO-REPORT-HUB-PROJECT-CENTRIC-DASHBOARD-IMPLEMENTATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-PROJECT-CENTRIC-DASHBOARD-IMPLEMENTATION-PLAN-v0.1.md) |
+| **Closeout** | [REPORT-iseo-report-hub-project-centric-dashboard-ia-charter-01.md](reports/REPORT-iseo-report-hub-project-centric-dashboard-ia-charter-01.md) |
+| **Operator decision** | Current `/` demo blocks (`Рабочий контур`, `Быстрые действия`, `Статус локальной системы`) **rejected**; future home = **project dashboard** |
+| **IA direction** | `Projects → Project Detail → Project Reports → Work Entries / Texts / Preview / Future Evidence` |
+| **Approved sequence** | Dashboard Impl 01 → Project Detail Impl 01 → Project Creation Draft → Curator Notes/Alerts Charter → Evidence Links |
+| **Not done in this wave** | No app-source / runtime / DB / host / PDF / export / share / evidence implementation |
+| **Next recommended stage** | **Project Dashboard Implementation 01** |
+
+---
+
 ## Current approved decisions (summary)
 
 1. Report Hub — **операционная система отчётности**, не PDF-only tool.
@@ -2639,9 +2655,11 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 - **Specialist Content Workflow Review Pass 01 is complete (PASS)** — specialist screenshot/QA pack; CTA + six cards + hint fill + preview marker + July lock + raw 403; no P1; light P2 scroll; no code/DB content mutation beyond audit_log; Web-GPT visual decision: SPECIALIST CONTENT WORKFLOW VISUAL ACCEPTED
 - **Local Specialist MVP Acceptance Closeout 01 is complete** — milestone status `LOCAL SPECIALIST MVP ACCEPTED_BY_MARS_REVIEW / OPERATOR_MANUAL_WALKTHROUGH_PENDING`; closeout + operator walkthrough v0.1 + SEO specialist draft instruction v0.1 + Report Evidence/Attachments/Links requirement v0.1; operator manual walkthrough **not yet done**; no code/runtime/host/DB
 - **Storage Hygiene Loss Audit 01 is complete (SAFE)** — deleted temporary STORAGE git contours did not remove authoritative i-SEO Report Hub data; restore not needed; normal work may continue; see [REPORT-iseo-report-hub-storage-hygiene-loss-audit-01.md](reports/REPORT-iseo-report-hub-storage-hygiene-loss-audit-01.md)
-- **Next (operator)** = **Manual walkthrough** — [I-SEO-REPORT-HUB-OPERATOR-MANUAL-WALKTHROUGH-v0.1.md](operator-guides/I-SEO-REPORT-HUB-OPERATOR-MANUAL-WALKTHROUGH-v0.1.md)
-- **Next (product UX)** = collect SEO-team feedback on draft instruction; Specialist Content Workflow UX Polish 02 optional / not urgent
-- **Next (product layer)** = **Report Evidence Links Charter 01** — [I-SEO-REPORT-HUB-REPORT-EVIDENCE-ATTACHMENTS-LINKS-REQUIREMENT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EVIDENCE-ATTACHMENTS-LINKS-REQUIREMENT-v0.1.md)
+- **Project-Centric Dashboard and IA Charter 01 is complete** — operator rejected demo home blocks; charter + implementation plan recorded; see [I-SEO-REPORT-HUB-PROJECT-CENTRIC-DASHBOARD-IA-CHARTER-v0.1.md](product/I-SEO-REPORT-HUB-PROJECT-CENTRIC-DASHBOARD-IA-CHARTER-v0.1.md)
+- **Next (product UX / local)** = **Project Dashboard Implementation 01** — replace `/` with project list dashboard
+- **Next (operator)** = **Manual walkthrough** — [I-SEO-REPORT-HUB-OPERATOR-MANUAL-WALKTHROUGH-v0.1.md](operator-guides/I-SEO-REPORT-HUB-OPERATOR-MANUAL-WALKTHROUGH-v0.1.md) (parallel; still pending)
+- **Next (product UX)** = collect SEO-team feedback on draft instruction after walkthrough; Specialist Content Workflow UX Polish 02 optional / not urgent
+- **Next (after dashboard + detail)** = Project Creation Draft → Curator Notes/Alerts Charter → **Report Evidence Links** — [I-SEO-REPORT-HUB-REPORT-EVIDENCE-ATTACHMENTS-LINKS-REQUIREMENT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EVIDENCE-ATTACHMENTS-LINKS-REQUIREMENT-v0.1.md)
 - **Next (baseline / hosting track, paused)** = **Production Config Normalization 01**
 - **Next (template/export track, parked)** = Export Share PDF Readiness Charter / Client Report Export HTML Alignment (only after operator confirm)
 - **Next (hosting ops)** = host smoke checklist + optional deploy package builder; do not broad-sync `tools/` or local `.env.local`
