@@ -2,8 +2,8 @@
 
 **Date:** 2026-08-31  
 **Verdict:** PROJECT-CENTRIC DASHBOARD IA CHARTER COMPLETE  
-**Primary commit:** *(fill after commit)*  
-**Hash-record commit:** *(fill after hash-record if needed)*  
+**Primary commit:** `4e7f82c89621674e6c08915bb8e24e487ce5d96e`  
+**Hash-record commit:** *(this tip after hash-fill)*  
 **Tip HEAD before:** `4ad1cf7a0ae79dac84642c869baa39b005bc0d6d`  
 **Push:** no
 
@@ -158,9 +158,9 @@ Optional (not committed):
 
 ## 18. Commit
 
-- Primary: *(fill)* — `docs(iseo-report-hub): add project-centric dashboard ia charter`
-- Hash-record: *(fill if needed)*
-- Tip HEAD: *(fill)*
+- Primary: `4e7f82c89621674e6c08915bb8e24e487ce5d96e` — `docs(iseo-report-hub): add project-centric dashboard ia charter`
+- Hash-record: *(fill after hash-record commit)*
+- Tip HEAD: *(fill after hash-record)*
 - Push: **no**
 
 ---
