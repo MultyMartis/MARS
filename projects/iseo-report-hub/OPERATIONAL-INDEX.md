@@ -2070,6 +2070,20 @@
 
 ---
 
+## Storage Hygiene Loss Audit 01 (2026-08-31)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Complete** — verdict `SAFE` |
+| **Closeout** | [REPORT-iseo-report-hub-storage-hygiene-loss-audit-01.md](reports/REPORT-iseo-report-hub-storage-hygiene-loss-audit-01.md) |
+| **Scope** | Read-only forensic triage after broad deletion of temporary STORAGE `git-sync-*` / `git-reconcile-*` contours |
+| **Result** | No confirmed loss of unpromoted i-SEO commits, docs, app-source, or listed `incoming\` evidence; canonical `projects/iseo-report-hub/` tree identical to `recovery/pre-reanchor-20260831-01` tip |
+| **Restore** | **not needed** |
+| **Normal work** | **may continue** — next product prompt when operator authorizes |
+| **Mutations** | docs-only audit report + this index; no app-source / runtime / DB / host / cleanup / restore |
+
+---
+
 ## Current approved decisions (summary)
 
 1. Report Hub — **операционная система отчётности**, не PDF-only tool.
@@ -2624,6 +2638,7 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 - **Specialist Report Content Workflow Implementation 01 is complete** — Option D Hybrid MVP; route `/monthly-reports/{id}/content-workflow`; specialist save to `report_blocks.body` + flat mirror; August validation write done; no host
 - **Specialist Content Workflow Review Pass 01 is complete (PASS)** — specialist screenshot/QA pack; CTA + six cards + hint fill + preview marker + July lock + raw 403; no P1; light P2 scroll; no code/DB content mutation beyond audit_log; Web-GPT visual decision: SPECIALIST CONTENT WORKFLOW VISUAL ACCEPTED
 - **Local Specialist MVP Acceptance Closeout 01 is complete** — milestone status `LOCAL SPECIALIST MVP ACCEPTED_BY_MARS_REVIEW / OPERATOR_MANUAL_WALKTHROUGH_PENDING`; closeout + operator walkthrough v0.1 + SEO specialist draft instruction v0.1 + Report Evidence/Attachments/Links requirement v0.1; operator manual walkthrough **not yet done**; no code/runtime/host/DB
+- **Storage Hygiene Loss Audit 01 is complete (SAFE)** — deleted temporary STORAGE git contours did not remove authoritative i-SEO Report Hub data; restore not needed; normal work may continue; see [REPORT-iseo-report-hub-storage-hygiene-loss-audit-01.md](reports/REPORT-iseo-report-hub-storage-hygiene-loss-audit-01.md)
 - **Next (operator)** = **Manual walkthrough** — [I-SEO-REPORT-HUB-OPERATOR-MANUAL-WALKTHROUGH-v0.1.md](operator-guides/I-SEO-REPORT-HUB-OPERATOR-MANUAL-WALKTHROUGH-v0.1.md)
 - **Next (product UX)** = collect SEO-team feedback on draft instruction; Specialist Content Workflow UX Polish 02 optional / not urgent
 - **Next (product layer)** = **Report Evidence Links Charter 01** — [I-SEO-REPORT-HUB-REPORT-EVIDENCE-ATTACHMENTS-LINKS-REQUIREMENT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EVIDENCE-ATTACHMENTS-LINKS-REQUIREMENT-v0.1.md)
