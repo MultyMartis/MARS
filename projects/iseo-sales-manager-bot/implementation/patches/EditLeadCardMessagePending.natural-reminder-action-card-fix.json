@@ -1,0 +1,39 @@
+{
+  "node": "Edit Lead Card Message Pending",
+  "contract": "iseo-natural-reminder-action-card-fix-v1.0",
+  "change": "Replace whole-object inlineKeyboard expression with static fixedCollection + field expressions (n8n silently drops reply_markup on whole-object IIFE).",
+  "inlineKeyboard": {
+    "rows": [
+      {
+        "row": {
+          "buttons": [
+            {
+              "text": "✅ Обработано",
+              "additionalFields": {
+                "callback_data": "={{$json.telegram_callback_processed}}"
+              }
+            },
+            {
+              "text": "🚫 Спам",
+              "additionalFields": {
+                "callback_data": "={{$json.telegram_callback_spam}}"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "row": {
+          "buttons": [
+            {
+              "text": "📄 Исходная заявка",
+              "additionalFields": {
+                "callback_data": "={{$json.telegram_callback_raw_source}}"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
