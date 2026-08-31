@@ -2,8 +2,8 @@
 
 **Date:** 2026-08-31  
 **Verdict:** `SAFE`  
-**Primary commit:** *(filled after docs commit)*  
-**Hash-record commit:** *(if needed)*  
+**Primary commit:** `f81f6e04d5dad2ab0325813dbec16be389307c9f`  
+**Hash-record commit:** *(this commit)*  
 **Tip HEAD before audit:** `13b3830541f421a452b21bf08eea2e5963b1b23c`  
 **Push:** no
 
@@ -190,9 +190,9 @@ Do **not** restore deleted `git-sync-iseo-report-hub-*` contours for project con
 
 ## 12. Commit
 
-- primary: *(filled after commit)*
-- hash-record: *(if used)*
-- tip HEAD: *(after commits)*
+- primary: `f81f6e04d5dad2ab0325813dbec16be389307c9f`
+- hash-record: *(filled in this hash-record commit)*
+- tip HEAD: *(after hash-record)*
 - push: no
 
 ---
