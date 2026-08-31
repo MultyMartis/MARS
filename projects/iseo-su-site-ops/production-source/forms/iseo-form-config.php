@@ -2,6 +2,10 @@
 /**
  * ISEO form mail / security configuration.
  * TEST_MODE must be false in normal production.
+ *
+ * Public query parameters (for example ?iseo_hmac_rotation_test=1) do NOT enable
+ * test_mode, do NOT change recipients, and do NOT expose a hidden validation route.
+ * test_mode is config-file only during operator-controlled maintenance.
  */
 if (!defined("ISEO_FORM_CONFIG_LOADED")) {
     define("ISEO_FORM_CONFIG_LOADED", true);
@@ -11,6 +15,7 @@ return array(
     // TEMPORARY: true during controlled mail tests only.
     "test_mode" => false,
 
+    // Isolated acceptance mailbox; active ONLY while test_mode is true (operator-controlled).
     "test_recipients" => array("im.work@mail.ru"),
 
     // Normal production recipients (original active set only).

@@ -225,6 +225,7 @@ if (!function_exists("iseo_form_h")) {
 
 if (!function_exists("iseo_form_recipients")) {
     function iseo_form_recipients() {
+        // Recipient routing is config-only; public GET/POST query flags do not switch test_mode.
         $cfg = iseo_form_cfg();
         if (!empty($cfg["test_mode"])) {
             return $cfg["test_recipients"];

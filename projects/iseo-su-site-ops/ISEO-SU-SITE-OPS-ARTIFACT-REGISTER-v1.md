@@ -103,6 +103,14 @@ The recursive project inventory at task start contained **357 files**; **306 Mar
 | Form recipient restoration evidence | `ISEO-SU-FORM-RECIPIENT-RESTORATION-EVIDENCE-v1.md` | HISTORICAL (restore verification; pre-removal set) |
 | Form recipient restore REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-FORM-RECIPIENT-RESTORE-01.md` | HISTORICAL |
 
+### HMAC rotation test route cleanup (2026-08-31) — CURRENT
+
+| Artifact | Path | Class |
+|----------|------|-------|
+| HMAC rotation test route cleanup evidence | `ISEO-SU-HMAC-ROTATION-TEST-ROUTE-CLEANUP-EVIDENCE-v1.md` | CURRENT / CANONICAL (recipient + test-route authority) |
+| Task REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-HMAC-ROTATION-TEST-ROUTE-CLEANUP-01.md` | CURRENT |
+| Remote verification (local) | `X:\AI MARS\local\sites\iseo-su-production\_hmac-test-route-cleanup-01\remote-verify.json` | CURRENT (out of Git) |
+
 ### Operator recipient removal + tech/SEO audit (2026-08-21) — CURRENT
 
 | Artifact | Path | Class |

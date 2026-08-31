@@ -2,7 +2,7 @@
 
 **Programme:** ISEO-SU-SITE-OPS  
 **Task:** ISEO-SU-SITE-OPS-FORMS-ANTISPAM-AND-VALIDATION-01  
-**Updated:** 2026-08-24 (HMAC secret rotation to local-only authority)  
+**Updated:** 2026-08-31 (HMAC rotation test route cleanup — query param does not enable test_mode)  
 **Authority:** current form/security operating baseline for public leads on `https://i-seo.su/`
 
 ## 1. Status
@@ -126,18 +126,21 @@ While ON: mail **only** to `im.work@mail.ru` (no CC/BCC to production recipients
 Must be reverted to `false` before declaring COMPLETE.  
 Do not commit active test mode as final production state.
 
+Public query parameters (for example `?iseo_hmac_rotation_test=1`) do **not** enable `test_mode`, do **not** change recipients, and do **not** expose a hidden validation route. Such URLs may appear only as client-supplied POST metadata (`pf_page_title` / `pf_page_link`) in mail bodies.
+
 ## 13. Production Mail State
 
 | Field | Value |
 |-------|-------|
 | test_mode | **false** |
 | production recipient | `nikel007i33@yandex.ru` **only** |
-| im.work@mail.ru in production_recipients | **NO** (intentionally removed after acceptance) |
+| im.work@mail.ru in production_recipients | **NO** (isolated `test_recipients` only while `test_mode` ON) |
 | im.work@nail.ru in production_recipients | **NO** (operator typo; never restore) |
 | chrra@yandex.ru | **INACTIVE HISTORICAL COMMENT ONLY** (not a recipient) |
 | active HMAC secret in tracked source | **NO** |
 | HMAC authority location | `.iseo-form-runtime/iseo-form-secrets.local.php` (production-local) |
 | Operator removal evidence | `ISEO-SU-FORM-OPERATOR-RECIPIENT-REMOVAL-EVIDENCE-v1.md` |
+| HMAC rotation test route cleanup (2026-08-31) | `ISEO-SU-HMAC-ROTATION-TEST-ROUTE-CLEANUP-EVIDENCE-v1.md` |
 | Prior recipient-restore evidence (historical) | `ISEO-SU-FORM-RECIPIENT-RESTORATION-EVIDENCE-v1.md` |
 | CAPTCHA | **not installed** |
 

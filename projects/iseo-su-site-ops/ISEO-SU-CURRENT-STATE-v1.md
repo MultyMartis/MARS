@@ -3,14 +3,14 @@
 **Programme:** ISEO-SU-SITE-OPS  
 **Site:** `https://i-seo.su/`
 **Canonical locus:** `X:\AI MARS\projects\iseo-su-site-ops\`  
-**Updated:** 2026-08-24 (SEO REVIEW PACK 01 — decision materials only)  
+**Updated:** 2026-08-31 (HMAC rotation test route cleanup 01)  
 **Authority:** first current-state document for ordinary work
 
 Historical REPORT files record earlier states and do not override this document or fresher accepted evidence.
 
 ## 1. Overall Status
 
-The production site is operating; glossary publication, form hardening, form HMAC secret rotation to a production-local authority, technical/SEO audit, and the Metrika visitor-IP addon are complete milestones. HIGH FIX WAVE 01 is **CLOSED** (technical): root `/sitemap.xml` repaired, initial static allowlist generator deployed (historical coverage was incomplete), theme relative `img/` paths normalized to `/img/`. **Static sitemap completeness fix 01 is CLOSED**: SEO-supplied 54 missing public URLs validated and added; +2 legal pages from broader reconciliation; static sitemap **71 → 127**; completeness gate `PUBLIC_CANONICAL_STATIC_ROUTES - SITEMAP_STATIC_URLS = 0` required on regenerate. **TECH CLEANUP WAVE 01 is CLOSED**: `SM-MISSING-INDEXABLE` rechecked (eligible gap **0**), `LINK-TO-REDIR` residual **0**, `IMG-HUGE` residual **0**. Remaining open work is SEO-review audit findings only (separate charter).
+The production site is operating; glossary publication, form hardening, form HMAC secret rotation to a production-local authority, technical/SEO audit, and the Metrika visitor-IP addon are complete milestones. HIGH FIX WAVE 01 is **CLOSED** (technical): root `/sitemap.xml` repaired, initial static allowlist generator deployed (historical coverage was incomplete), theme relative `img/` paths normalized to `/img/`. **Static sitemap completeness fix 01 is CLOSED**: SEO-supplied 54 missing public URLs validated and added; +2 legal pages from broader reconciliation; static sitemap **71 → 127**; completeness gate `PUBLIC_CANONICAL_STATIC_ROUTES - SITEMAP_STATIC_URLS = 0` required on regenerate. **TECH CLEANUP WAVE 01 is CLOSED**: `SM-MISSING-INDEXABLE` rechecked (eligible gap **0**), `LINK-TO-REDIR` residual **0**, `IMG-HUGE` residual **0**. **HMAC rotation test route cleanup 01 is CLOSED** (2026-08-31): no public server route for `?iseo_hmac_rotation_test=1`; incident mail matched isolated HMAC rotation validation POST with `test_mode` ON (restored OFF 2026-08-24); production recipient remains `nikel007i33@yandex.ru` only; see `ISEO-SU-HMAC-ROTATION-TEST-ROUTE-CLEANUP-EVIDENCE-v1.md`. Remaining open work is SEO-review audit findings only (separate charter).
 
 ## 2. Production Status
 
