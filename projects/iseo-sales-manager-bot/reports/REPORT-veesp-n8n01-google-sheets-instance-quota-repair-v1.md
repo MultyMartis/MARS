@@ -283,8 +283,9 @@ Rationale: after removing CONFIG/DEDUP waste, **legitimate stuck-lead recovery**
 | Base (pre-repair) | `4a304a29facd500892f32f5203b00ec9831de973` (= `origin/mars/canonical-post-recovery` at task start) |
 | Charter anchor cited | `ef662992ab3146abfcdb0c10e3a025720a597bbb` — **superseded** by later canonical |
 | Live production | **Ahead of** prior partial git state; Wave 5 live **2026-09-01T08:31:58Z** |
-| Commit | See git commit SHA after selective stage in repair worktree |
-| Push | Per charter: `origin/mars/canonical-post-recovery` non-force — **pending operator merge** from repair branch |
+| Repair worktree commit | `395ff51271be47e2f9c6b0527a07ea318984dc91` (`iseo-sm-gs429-repair-20260901`) |
+| Canonical commit (main repo) | `2359b4ea9087e2d29d68afc6341aa35a4c04fc6c` — selective stage of 28 allowlisted paths |
+| Push | **STOP — REMOTE/HEAD MISMATCH** — `git push origin mars/canonical-post-recovery` rejected (non-fast-forward); remote @ `4a304a29`; local ahead with repair commit + prior unpushed foreign commits. Operator pull/rebase/merge required before push. |
 
 **Allowlisted artifacts:** instance report, iSEO 429 repair report, evidence folders `google-sheets-429-repair` + `google-sheets-instance-quota-repair`, patches `*.google-sheets-429-repair.js`.
 
