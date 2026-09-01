@@ -1,0 +1,32 @@
+{
+  "stamp": "2026-09-01T07-02-37-356Z",
+  "contract": "iseo-google-sheets-429-repair-hotfix-v1",
+  "ops_id": "xSnXPy8cEHoZw6xG",
+  "ops_active": true,
+  "admin_active": true,
+  "admin_unchanged": true,
+  "v2_active": false,
+  "removed_nodes": [
+    "CONFIG Cache Gate"
+  ],
+  "added_nodes": [
+    "CONFIG Route Prep",
+    "CONFIG Cache IF"
+  ],
+  "modified_connections": [
+    "Parse Lead",
+    "CONFIG Route Prep",
+    "CONFIG Cache IF",
+    "Read CONFIG"
+  ],
+  "hashes": {
+    "config_route_prep": "4BB62A8CF58D481D",
+    "normalize_config": "87BBB072526E09C7"
+  },
+  "routing": {
+    "cache_fresh_true": "Normalize CONFIG (skip Read CONFIG)",
+    "cache_fresh_false": "Read CONFIG → Normalize CONFIG"
+  },
+  "backup_pre": "X:\\AI MARS STORAGE\\incoming\\iseo-sales-manager-bot\\google-sheets-429-repair-20260901-134643-local\\backups\\Operational.dev.PRE-hotfix-2026-09-01T07-02-37-356Z.json",
+  "backup_post": "X:\\AI MARS STORAGE\\incoming\\iseo-sales-manager-bot\\google-sheets-429-repair-20260901-134643-local\\backups\\Operational.dev.POST-hotfix-2026-09-01T07-02-37-356Z.json"
+}

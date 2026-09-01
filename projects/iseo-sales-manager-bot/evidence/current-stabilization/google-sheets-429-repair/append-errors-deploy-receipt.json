@@ -1,0 +1,20 @@
+{
+  "stamp": "2026-09-01T07-21-38-890Z",
+  "contract": "iseo-google-sheets-429-repair-append-errors-onerror-v1",
+  "ops_id": "xSnXPy8cEHoZw6xG",
+  "ops_active": true,
+  "admin_active": true,
+  "admin_unchanged": true,
+  "v2_active": false,
+  "modified_nodes": [
+    {
+      "name": "Append ERRORS",
+      "id": "aa321e17-3ff9-45d7-8eb2-373df5068386",
+      "onError": "continueRegularOutput",
+      "operation": "append"
+    }
+  ],
+  "rationale": "Allow Add Gmail ERROR to run when ERRORS sheet append hits quota; stops Gmail re-intake on error-path completions.",
+  "backup_pre": "X:\\AI MARS STORAGE\\incoming\\iseo-sales-manager-bot\\google-sheets-429-repair-20260901-134643-local\\backups\\Operational.dev.PRE-append-errors-2026-09-01T07-21-38-890Z.json",
+  "backup_post": "X:\\AI MARS STORAGE\\incoming\\iseo-sales-manager-bot\\google-sheets-429-repair-20260901-134643-local\\backups\\Operational.dev.POST-append-errors-2026-09-01T07-21-38-890Z.json"
+}

@@ -1,0 +1,137 @@
+{
+  "hotfix_since": "2026-09-01T07:21:38Z",
+  "observe_ms": 180000,
+  "started_at": "2026-09-01T07:22:21.446Z",
+  "ended_at": "2026-09-01T07:25:27.342Z",
+  "executions_observed": 6,
+  "post_fix_429_count": 6,
+  "success_executions": 0,
+  "read_config_skipped": 6,
+  "read_config_hit": 0,
+  "config_route_prep": 6,
+  "add_gmail_error_ok": 3,
+  "add_gmail_processed_ok": 0,
+  "remove_gmail_incoming_ok": 0,
+  "successful_sheets_ops": 24,
+  "retry_events": 0,
+  "node429_totals": {
+    "Lookup DEDUP_INDEX": 3,
+    "Apply Runtime State CONFIG": 3
+  },
+  "samples": [
+    {
+      "id": "54259",
+      "status": "error",
+      "startedAt": "2026-09-01T07:22:00.051Z",
+      "stoppedAt": "2026-09-01T07:22:01.488Z",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "addGmailError": false,
+      "addGmailProcessed": false,
+      "removeGmailIncoming": false,
+      "retries": 0,
+      "successOps": 0,
+      "node429": {
+        "Lookup DEDUP_INDEX": 1
+      },
+      "last": "Lookup DEDUP_INDEX"
+    },
+    {
+      "id": "54260",
+      "status": "error",
+      "startedAt": "2026-09-01T07:22:30.036Z",
+      "stoppedAt": "2026-09-01T07:22:52.731Z",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "addGmailError": true,
+      "addGmailProcessed": false,
+      "removeGmailIncoming": false,
+      "retries": 0,
+      "successOps": 8,
+      "node429": {
+        "Apply Runtime State CONFIG": 1
+      },
+      "last": "Apply Runtime State CONFIG"
+    },
+    {
+      "id": "54261",
+      "status": "error",
+      "startedAt": "2026-09-01T07:23:00.033Z",
+      "stoppedAt": "2026-09-01T07:23:01.422Z",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "addGmailError": false,
+      "addGmailProcessed": false,
+      "removeGmailIncoming": false,
+      "retries": 0,
+      "successOps": 0,
+      "node429": {
+        "Lookup DEDUP_INDEX": 1
+      },
+      "last": "Lookup DEDUP_INDEX"
+    },
+    {
+      "id": "54262",
+      "status": "error",
+      "startedAt": "2026-09-01T07:23:30.059Z",
+      "stoppedAt": "2026-09-01T07:23:50.241Z",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "addGmailError": true,
+      "addGmailProcessed": false,
+      "removeGmailIncoming": false,
+      "retries": 0,
+      "successOps": 8,
+      "node429": {
+        "Apply Runtime State CONFIG": 1
+      },
+      "last": "Apply Runtime State CONFIG"
+    },
+    {
+      "id": "54263",
+      "status": "error",
+      "startedAt": "2026-09-01T07:24:00.034Z",
+      "stoppedAt": "2026-09-01T07:24:01.535Z",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "addGmailError": false,
+      "addGmailProcessed": false,
+      "removeGmailIncoming": false,
+      "retries": 0,
+      "successOps": 0,
+      "node429": {
+        "Lookup DEDUP_INDEX": 1
+      },
+      "last": "Lookup DEDUP_INDEX"
+    },
+    {
+      "id": "54264",
+      "status": "error",
+      "startedAt": "2026-09-01T07:24:30.053Z",
+      "stoppedAt": "2026-09-01T07:24:50.398Z",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "addGmailError": true,
+      "addGmailProcessed": false,
+      "removeGmailIncoming": false,
+      "retries": 0,
+      "successOps": 8,
+      "node429": {
+        "Apply Runtime State CONFIG": 1
+      },
+      "last": "Apply Runtime State CONFIG"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "stamp": "2026-09-01T06-58-17-504Z",
+  "resumeDeploy": true,
+  "contract": "iseo-google-sheets-429-repair-v1",
+  "ops_id": "xSnXPy8cEHoZw6xG",
+  "ops_active": true,
+  "admin_active": true,
+  "admin_unchanged": true,
+  "v2_active": false,
+  "modified_nodes": [
+    "CONFIG Cache Gate (added)",
+    "Parse Lead (connections)",
+    "Read CONFIG (onError=continueRegularOutput)",
+    "Normalize CONFIG (cache persist/stale fallback)",
+    "Update Last Success / Runtime State (empty-poll runtime CONFIG throttle)"
+  ],
+  "hashes": {
+    "config_cache_gate": "BBFA01BD98EC5A05",
+    "normalize_config": "87BBB072526E09C7",
+    "update_last_success": "9D018C11781768A3"
+  },
+  "read_config_onError": "continueRegularOutput",
+  "backup_pre": "X:\\AI MARS STORAGE\\incoming\\iseo-sales-manager-bot\\google-sheets-429-repair-20260901-134643-local\\backups\\Operational.dev.PRE-2026-09-01T06-58-17-504Z.json",
+  "backup_post": "X:\\AI MARS STORAGE\\incoming\\iseo-sales-manager-bot\\google-sheets-429-repair-20260901-134643-local\\backups\\Operational.dev.POST-2026-09-01T06-58-17-504Z.json"
+}

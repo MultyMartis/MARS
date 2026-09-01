@@ -1,0 +1,648 @@
+{
+  "reIntake": {
+    "windowMinutes": 60,
+    "sinceIso": "2026-09-01T07:26:01.028Z",
+    "operationalExecutions": 100,
+    "uniqueGmailMessages": 2,
+    "repeatedMessageCount": 2,
+    "repeatedMessages": [
+      {
+        "gmailMessageIdHash": "2291E5B5C55C6F78",
+        "executionCount": 69,
+        "executionIds": [
+          "54393",
+          "54391",
+          "54390",
+          "54389",
+          "54388",
+          "54387",
+          "54386",
+          "54385",
+          "54384",
+          "54383"
+        ]
+      },
+      {
+        "gmailMessageIdHash": "A8139E6C77BD1C52",
+        "executionCount": 31,
+        "executionIds": [
+          "54319",
+          "54318",
+          "54317",
+          "54316",
+          "54315",
+          "54314",
+          "54313",
+          "54312",
+          "54311",
+          "54310"
+        ]
+      }
+    ],
+    "classification": "RE-INTAKE LOOP CONFIRMED",
+    "amplificationPerMinute": 1.6666666666666667,
+    "sampleRows": [
+      {
+        "id": "54393",
+        "startedAt": "2026-09-01T08:26:00.036Z",
+        "status": "error",
+        "gmailMessageIdHash": "2291E5B5C55C6F78",
+        "parseLead": true,
+        "addGmailProcessed": false,
+        "addGmailError": false,
+        "removeGmailIncoming": false,
+        "lookupDedup429": true,
+        "readConfigSkipped": true,
+        "first429Node": "Lookup DEDUP_INDEX",
+        "sheetsNodeCount": 1
+      },
+      {
+        "id": "54391",
+        "startedAt": "2026-09-01T08:25:00.046Z",
+        "status": "error",
+        "gmailMessageIdHash": "2291E5B5C55C6F78",
+        "parseLead": true,
+        "addGmailProcessed": false,
+        "addGmailError": false,
+        "removeGmailIncoming": false,
+        "lookupDedup429": true,
+        "readConfigSkipped": true,
+        "first429Node": "Lookup DEDUP_INDEX",
+        "sheetsNodeCount": 1
+      },
+      {
+        "id": "54390",
+        "startedAt": "2026-09-01T08:24:30.039Z",
+        "status": "error",
+        "gmailMessageIdHash": "2291E5B5C55C6F78",
+        "parseLead": true,
+        "addGmailProcessed": false,
+        "addGmailError": true,
+        "removeGmailIncoming": false,
+        "lookupDedup429": false,
+        "appendRaw429": true,
+        "readConfigSkipped": true,
+        "first429Node": "Append RAW v2",
+        "sheetsNodeCount": 10
+      },
+      {
+        "id": "54389",
+        "startedAt": "2026-09-01T08:24:00.074Z",
+        "status": "error",
+        "gmailMessageIdHash": "2291E5B5C55C6F78",
+        "parseLead": true,
+        "addGmailProcessed": false,
+        "addGmailError": false,
+        "removeGmailIncoming": false,
+        "lookupDedup429": true,
+        "readConfigSkipped": true,
+        "first429Node": "Lookup DEDUP_INDEX",
+        "sheetsNodeCount": 1
+      },
+      {
+        "id": "54388",
+        "startedAt": "2026-09-01T08:23:30.064Z",
+        "status": "success",
+        "gmailMessageIdHash": "2291E5B5C55C6F78",
+        "parseLead": true,
+        "addGmailProcessed": false,
+        "addGmailError": true,
+        "removeGmailIncoming": false,
+        "lookupDedup429": false,
+        "appendRaw429": false,
+        "readConfigSkipped": true,
+        "first429Node": null,
+        "sheetsNodeCount": 10
+      },
+      {
+        "id": "54387",
+        "startedAt": "2026-09-01T08:23:00.049Z",
+        "status": "error",
+        "gmailMessageIdHash": "2291E5B5C55C6F78",
+        "parseLead": true,
+        "addGmailProcessed": false,
+        "addGmailError": false,
+        "removeGmailIncoming": false,
+        "lookupDedup429": true,
+        "readConfigSkipped": true,
+        "first429Node": "Lookup DEDUP_INDEX",
+        "sheetsNodeCount": 1
+      },
+      {
+        "id": "54386",
+        "startedAt": "2026-09-01T08:22:30.028Z",
+        "status": "error",
+        "gmailMessageIdHash": "2291E5B5C55C6F78",
+        "parseLead": true,
+        "addGmailProcessed": false,
+        "addGmailError": true,
+        "removeGmailIncoming": false,
+        "lookupDedup429": false,
+        "appendRaw429": true,
+        "readConfigSkipped": true,
+        "first429Node": "Append RAW v2",
+        "sheetsNodeCount": 10
+      },
+      {
+        "id": "54385",
+        "startedAt": "2026-09-01T08:22:00.034Z",
+        "status": "error",
+        "gmailMessageIdHash": "2291E5B5C55C6F78",
+        "parseLead": true,
+        "addGmailProcessed": false,
+        "addGmailError": false,
+        "removeGmailIncoming": false,
+        "lookupDedup429": true,
+        "readConfigSkipped": true,
+        "first429Node": "Lookup DEDUP_INDEX",
+        "sheetsNodeCount": 1
+      },
+      {
+        "id": "54384",
+        "startedAt": "2026-09-01T08:21:30.039Z",
+        "status": "error",
+        "gmailMessageIdHash": "2291E5B5C55C6F78",
+        "parseLead": true,
+        "addGmailProcessed": false,
+        "addGmailError": true,
+        "removeGmailIncoming": false,
+        "lookupDedup429": false,
+        "appendRaw429": true,
+        "readConfigSkipped": true,
+        "first429Node": "Append RAW v2",
+        "sheetsNodeCount": 10
+      },
+      {
+        "id": "54383",
+        "startedAt": "2026-09-01T08:21:00.053Z",
+        "status": "error",
+        "gmailMessageIdHash": "2291E5B5C55C6F78",
+        "parseLead": true,
+        "addGmailProcessed": false,
+        "addGmailError": true,
+        "removeGmailIncoming": false,
+        "lookupDedup429": false,
+        "appendRaw429": true,
+        "readConfigSkipped": true,
+        "first429Node": "Append RAW v2",
+        "sheetsNodeCount": 10
+      },
+      {
+        "id": "54382",
+        "startedAt": "2026-09-01T08:20:30.076Z",
+        "status": "error",
+        "gmailMessageIdHash": "2291E5B5C55C6F78",
+        "parseLead": true,
+        "addGmailProcessed": false,
+        "addGmailError": false,
+        "removeGmailIncoming": false,
+        "lookupDedup429": true,
+        "readConfigSkipped": true,
+        "first429Node": "Lookup DEDUP_INDEX",
+        "sheetsNodeCount": 1
+      },
+      {
+        "id": "54381",
+        "startedAt": "2026-09-01T08:20:00.049Z",
+        "status": "error",
+        "gmailMessageIdHash": "2291E5B5C55C6F78",
+        "parseLead": true,
+        "addGmailProcessed": false,
+        "addGmailError": true,
+        "removeGmailIncoming": false,
+        "lookupDedup429": false,
+        "appendRaw429": true,
+        "readConfigSkipped": true,
+        "first429Node": "Append RAW v2",
+        "sheetsNodeCount": 10
+      },
+      {
+        "id": "54380",
+        "startedAt": "2026-09-01T08:19:30.042Z",
+        "status": "error",
+        "gmailMessageIdHash": "2291E5B5C55C6F78",
+        "parseLead": true,
+        "addGmailProcessed": false,
+        "addGmailError": false,
+        "removeGmailIncoming": false,
+        "lookupDedup429": true,
+        "readConfigSkipped": true,
+        "first429Node": "Lookup DEDUP_INDEX",
+        "sheetsNodeCount": 1
+      },
+      {
+        "id": "54379",
+        "startedAt": "2026-09-01T08:19:00.038Z",
+        "status": "error",
+        "gmailMessageIdHash": "2291E5B5C55C6F78",
+        "parseLead": true,
+        "addGmailProcessed": false,
+        "addGmailError": true,
+        "removeGmailIncoming": false,
+        "lookupDedup429": false,
+        "appendRaw429": true,
+        "readConfigSkipped": true,
+        "first429Node": "Append RAW v2",
+        "sheetsNodeCount": 10
+      },
+      {
+        "id": "54378",
+        "startedAt": "2026-09-01T08:18:30.065Z",
+        "status": "error",
+        "gmailMessageIdHash": "2291E5B5C55C6F78",
+        "parseLead": true,
+        "addGmailProcessed": false,
+        "addGmailError": false,
+        "removeGmailIncoming": false,
+        "lookupDedup429": true,
+        "readConfigSkipped": true,
+        "first429Node": "Lookup DEDUP_INDEX",
+        "sheetsNodeCount": 1
+      },
+      {
+        "id": "54377",
+        "startedAt": "2026-09-01T08:18:00.036Z",
+        "status": "error",
+        "gmailMessageIdHash": "2291E5B5C55C6F78",
+        "parseLead": true,
+        "addGmailProcessed": false,
+        "addGmailError": true,
+        "removeGmailIncoming": false,
+        "lookupDedup429": false,
+        "appendRaw429": true,
+        "readConfigSkipped": true,
+        "first429Node": "Append RAW v2",
+        "sheetsNodeCount": 10
+      },
+      {
+        "id": "54376",
+        "startedAt": "2026-09-01T08:17:30.039Z",
+        "status": "error",
+        "gmailMessageIdHash": "2291E5B5C55C6F78",
+        "parseLead": true,
+        "addGmailProcessed": false,
+        "addGmailError": false,
+        "removeGmailIncoming": false,
+        "lookupDedup429": true,
+        "readConfigSkipped": true,
+        "first429Node": "Lookup DEDUP_INDEX",
+        "sheetsNodeCount": 1
+      },
+      {
+        "id": "54375",
+        "startedAt": "2026-09-01T08:17:00.040Z",
+        "status": "error",
+        "gmailMessageIdHash": "2291E5B5C55C6F78",
+        "parseLead": true,
+        "addGmailProcessed": false,
+        "addGmailError": true,
+        "removeGmailIncoming": false,
+        "lookupDedup429": false,
+        "appendRaw429": true,
+        "readConfigSkipped": true,
+        "first429Node": "Append RAW v2",
+        "sheetsNodeCount": 10
+      },
+      {
+        "id": "54374",
+        "startedAt": "2026-09-01T08:16:30.045Z",
+        "status": "error",
+        "gmailMessageIdHash": "2291E5B5C55C6F78",
+        "parseLead": true,
+        "addGmailProcessed": false,
+        "addGmailError": false,
+        "removeGmailIncoming": false,
+        "lookupDedup429": false,
+        "readConfigSkipped": true,
+        "first429Node": "Append or Update CLEAN v2",
+        "sheetsNodeCount": 2
+      },
+      {
+        "id": "54373",
+        "startedAt": "2026-09-01T08:16:00.035Z",
+        "status": "error",
+        "gmailMessageIdHash": "2291E5B5C55C6F78",
+        "parseLead": true,
+        "addGmailProcessed": false,
+        "addGmailError": true,
+        "removeGmailIncoming": false,
+        "lookupDedup429": false,
+        "appendRaw429": true,
+        "readConfigSkipped": true,
+        "first429Node": "Append RAW v2",
+        "sheetsNodeCount": 10
+      },
+      {
+        "id": "54371",
+        "startedAt": "2026-09-01T08:15:30.043Z",
+        "status": "error",
+        "gmailMessageIdHash": "2291E5B5C55C6F78",
+        "parseLead": true,
+        "addGmailProcessed": false,
+        "addGmailError": false,
+        "removeGmailIncoming": false,
+        "lookupDedup429": true,
+        "readConfigSkipped": true,
+        "first429Node": "Lookup DEDUP_INDEX",
+        "sheetsNodeCount": 1
+      },
+      {
+        "id": "54370",
+        "startedAt": "2026-09-01T08:15:00.027Z",
+        "status": "error",
+        "gmailMessageIdHash": "2291E5B5C55C6F78",
+        "parseLead": true,
+        "addGmailProcessed": false,
+        "addGmailError": true,
+        "removeGmailIncoming": false,
+        "lookupDedup429": false,
+        "appendRaw429": true,
+        "readConfigSkipped": true,
+        "first429Node": "Append RAW v2",
+        "sheetsNodeCount": 10
+      },
+      {
+        "id": "54369",
+        "startedAt": "2026-09-01T08:14:30.033Z",
+        "status": "error",
+        "gmailMessageIdHash": "2291E5B5C55C6F78",
+        "parseLead": true,
+        "addGmailProcessed": false,
+        "addGmailError": false,
+        "removeGmailIncoming": false,
+        "lookupDedup429": true,
+        "readConfigSkipped": true,
+        "first429Node": "Lookup DEDUP_INDEX",
+        "sheetsNodeCount": 1
+      },
+      {
+        "id": "54368",
+        "startedAt": "2026-09-01T08:14:00.042Z",
+        "status": "error",
+        "gmailMessageIdHash": "2291E5B5C55C6F78",
+        "parseLead": true,
+        "addGmailProcessed": false,
+        "addGmailError": true,
+        "removeGmailIncoming": false,
+        "lookupDedup429": false,
+        "appendRaw429": true,
+        "readConfigSkipped": true,
+        "first429Node": "Append RAW v2",
+        "sheetsNodeCount": 10
+      },
+      {
+        "id": "54367",
+        "startedAt": "2026-09-01T08:13:30.056Z",
+        "status": "error",
+        "gmailMessageIdHash": "2291E5B5C55C6F78",
+        "parseLead": true,
+        "addGmailProcessed": false,
+        "addGmailError": false,
+        "removeGmailIncoming": false,
+        "lookupDedup429": true,
+        "readConfigSkipped": true,
+        "first429Node": "Lookup DEDUP_INDEX",
+        "sheetsNodeCount": 1
+      },
+      {
+        "id": "54366",
+        "startedAt": "2026-09-01T08:13:00.036Z",
+        "status": "error",
+        "gmailMessageIdHash": "2291E5B5C55C6F78",
+        "parseLead": true,
+        "addGmailProcessed": false,
+        "addGmailError": true,
+        "removeGmailIncoming": false,
+        "lookupDedup429": false,
+        "appendRaw429": true,
+        "readConfigSkipped": true,
+        "first429Node": "Append RAW v2",
+        "sheetsNodeCount": 10
+      },
+      {
+        "id": "54365",
+        "startedAt": "2026-09-01T08:12:30.043Z",
+        "status": "error",
+        "gmailMessageIdHash": "2291E5B5C55C6F78",
+        "parseLead": true,
+        "addGmailProcessed": false,
+        "addGmailError": false,
+        "removeGmailIncoming": false,
+        "lookupDedup429": true,
+        "readConfigSkipped": true,
+        "first429Node": "Lookup DEDUP_INDEX",
+        "sheetsNodeCount": 1
+      },
+      {
+        "id": "54364",
+        "startedAt": "2026-09-01T08:12:00.084Z",
+        "status": "error",
+        "gmailMessageIdHash": "2291E5B5C55C6F78",
+        "parseLead": true,
+        "addGmailProcessed": false,
+        "addGmailError": true,
+        "removeGmailIncoming": false,
+        "lookupDedup429": false,
+        "appendRaw429": true,
+        "readConfigSkipped": true,
+        "first429Node": "Append RAW v2",
+        "sheetsNodeCount": 10
+      },
+      {
+        "id": "54363",
+        "startedAt": "2026-09-01T08:11:30.048Z",
+        "status": "error",
+        "gmailMessageIdHash": "2291E5B5C55C6F78",
+        "parseLead": true,
+        "addGmailProcessed": false,
+        "addGmailError": false,
+        "removeGmailIncoming": false,
+        "lookupDedup429": true,
+        "readConfigSkipped": true,
+        "first429Node": "Lookup DEDUP_INDEX",
+        "sheetsNodeCount": 1
+      },
+      {
+        "id": "54362",
+        "startedAt": "2026-09-01T08:11:00.045Z",
+        "status": "error",
+        "gmailMessageIdHash": "2291E5B5C55C6F78",
+        "parseLead": true,
+        "addGmailProcessed": false,
+        "addGmailError": true,
+        "removeGmailIncoming": false,
+        "lookupDedup429": false,
+        "appendRaw429": true,
+        "readConfigSkipped": true,
+        "first429Node": "Append RAW v2",
+        "sheetsNodeCount": 10
+      }
+    ]
+  },
+  "adminReminder": {
+    "windowMinutes": 60,
+    "executionsAnalyzed": 4,
+    "executionsWith429": 0,
+    "reminderFailureLikely429": false,
+    "samples": [
+      {
+        "id": "54372",
+        "startedAt": "2026-09-01T08:15:47.075Z",
+        "status": "success",
+        "errors": [],
+        "sheetsRuns": [
+          {
+            "node": "Read Reminder CONFIG",
+            "op": "read",
+            "status": "success",
+            "is429": false
+          },
+          {
+            "node": "Append ERRORS Reminder 429",
+            "op": "append",
+            "status": "success",
+            "is429": false
+          },
+          {
+            "node": "Apply Reminder Window CONFIG Write",
+            "op": "appendOrUpdate",
+            "status": "success",
+            "is429": false
+          }
+        ],
+        "callbackHints": [],
+        "has429": false,
+        "reminderFailurePattern": false
+      },
+      {
+        "id": "54341",
+        "startedAt": "2026-09-01T08:00:47.065Z",
+        "status": "success",
+        "errors": [],
+        "sheetsRuns": [
+          {
+            "node": "Read Reminder CONFIG",
+            "op": "read",
+            "status": "success",
+            "is429": false
+          },
+          {
+            "node": "Append ERRORS Reminder 429",
+            "op": "append",
+            "status": "success",
+            "is429": false
+          },
+          {
+            "node": "Apply Reminder Window CONFIG Write",
+            "op": "appendOrUpdate",
+            "status": "success",
+            "is429": false
+          }
+        ],
+        "callbackHints": [],
+        "has429": false,
+        "reminderFailurePattern": false
+      },
+      {
+        "id": "54308",
+        "startedAt": "2026-09-01T07:45:47.071Z",
+        "status": "success",
+        "errors": [],
+        "sheetsRuns": [
+          {
+            "node": "Read Reminder CONFIG",
+            "op": "read",
+            "status": "success",
+            "is429": false
+          },
+          {
+            "node": "Apply Reminder Window CONFIG Write",
+            "op": "appendOrUpdate",
+            "status": "success",
+            "is429": false
+          }
+        ],
+        "callbackHints": [],
+        "has429": false,
+        "reminderFailurePattern": false
+      },
+      {
+        "id": "54277",
+        "startedAt": "2026-09-01T07:30:47.062Z",
+        "status": "success",
+        "errors": [],
+        "sheetsRuns": [
+          {
+            "node": "Read Reminder CONFIG",
+            "op": "read",
+            "status": "success",
+            "is429": false
+          },
+          {
+            "node": "Apply Reminder Window CONFIG Write",
+            "op": "appendOrUpdate",
+            "status": "success",
+            "is429": false
+          }
+        ],
+        "callbackHints": [],
+        "has429": false,
+        "reminderFailurePattern": false
+      }
+    ],
+    "sameSheets429AsOperational": false
+  },
+  "seoHealth": {
+    "workflowId": "AR6QxGt8ZKH0xG2T",
+    "workflowName": "SEO Content Agent Beta.v14 - Admin",
+    "sameCredential": true,
+    "credentialIdHash": "714B72146501A2F8",
+    "sheetsNodes": [
+      {
+        "name": "Lookup Active Locks",
+        "op": "read"
+      },
+      {
+        "name": "Cancel Active Locks",
+        "op": "update"
+      },
+      {
+        "name": "Lookup Locks",
+        "op": "read"
+      },
+      {
+        "name": "Health Check Active Jobs",
+        "op": "read"
+      },
+      {
+        "name": "Health Check Memory",
+        "op": "read"
+      }
+    ],
+    "executionsAnalyzed": 1,
+    "healthExecutions": [
+      {
+        "id": "54322",
+        "startedAt": "2026-09-01T07:51:53.867Z",
+        "status": "success",
+        "sheetsRuns": [
+          {
+            "node": "Health Check Active Jobs",
+            "op": "read",
+            "status": "success",
+            "is429": false
+          },
+          {
+            "node": "Health Check Memory",
+            "op": "read",
+            "status": "success",
+            "is429": false
+          }
+        ],
+        "errors": []
+      }
+    ],
+    "readsPerHealthEstimate": 4
+  },
+  "generatedAt": "2026-09-01T08:26:58.616Z"
+}

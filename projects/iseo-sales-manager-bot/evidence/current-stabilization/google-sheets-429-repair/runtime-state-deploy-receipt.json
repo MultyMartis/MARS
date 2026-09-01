@@ -1,0 +1,20 @@
+{
+  "stamp": "2026-09-01T07-26-44-614Z",
+  "contract": "iseo-google-sheets-429-repair-runtime-state-onerror-v1",
+  "ops_id": "xSnXPy8cEHoZw6xG",
+  "ops_active": true,
+  "admin_active": true,
+  "admin_unchanged": true,
+  "v2_active": false,
+  "modified_nodes": [
+    {
+      "name": "Apply Runtime State CONFIG",
+      "id": "2dd36645-a2ef-4c0c-9497-356838b8ad2d",
+      "onError": "continueRegularOutput",
+      "operation": "appendOrUpdate"
+    }
+  ],
+  "rationale": "Runtime CONFIG appendOrUpdate is telemetry; Gmail labels already applied. Quota 429 here must not mark execution failed or block completion.",
+  "backup_pre": "X:\\AI MARS STORAGE\\incoming\\iseo-sales-manager-bot\\google-sheets-429-repair-20260901-134643-local\\backups\\Operational.dev.PRE-runtime-state-2026-09-01T07-26-44-614Z.json",
+  "backup_post": "X:\\AI MARS STORAGE\\incoming\\iseo-sales-manager-bot\\google-sheets-429-repair-20260901-134643-local\\backups\\Operational.dev.POST-runtime-state-2026-09-01T07-26-44-614Z.json"
+}

@@ -1,0 +1,423 @@
+{
+  "hotfix_since": "2026-09-01T07:02:37Z",
+  "ended_at": "2026-09-01T07:17:52.977Z",
+  "executions_observed": 29,
+  "post_fix_429_count": 29,
+  "success_executions": 0,
+  "read_config_skipped": 28,
+  "read_config_hit": 1,
+  "config_route_prep": 29,
+  "successful_sheets_ops": 85,
+  "node429_totals": {
+    "Lookup DEDUP_INDEX": 15,
+    "Append ERRORS": 14
+  },
+  "samples": [
+    {
+      "id": "54249",
+      "startedAt": "2026-09-01T07:17:00.032Z",
+      "status": "error",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "successOps": 0,
+      "node429": {
+        "Lookup DEDUP_INDEX": 1
+      },
+      "last": "Lookup DEDUP_INDEX"
+    },
+    {
+      "id": "54248",
+      "startedAt": "2026-09-01T07:16:30.033Z",
+      "status": "error",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "successOps": 6,
+      "node429": {
+        "Append ERRORS": 1
+      },
+      "last": "Append ERRORS"
+    },
+    {
+      "id": "54247",
+      "startedAt": "2026-09-01T07:16:00.069Z",
+      "status": "error",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "successOps": 0,
+      "node429": {
+        "Lookup DEDUP_INDEX": 1
+      },
+      "last": "Lookup DEDUP_INDEX"
+    },
+    {
+      "id": "54245",
+      "startedAt": "2026-09-01T07:15:30.055Z",
+      "status": "error",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "successOps": 6,
+      "node429": {
+        "Append ERRORS": 1
+      },
+      "last": "Append ERRORS"
+    },
+    {
+      "id": "54244",
+      "startedAt": "2026-09-01T07:15:00.045Z",
+      "status": "error",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "successOps": 0,
+      "node429": {
+        "Lookup DEDUP_INDEX": 1
+      },
+      "last": "Lookup DEDUP_INDEX"
+    },
+    {
+      "id": "54243",
+      "startedAt": "2026-09-01T07:14:30.066Z",
+      "status": "error",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "successOps": 6,
+      "node429": {
+        "Append ERRORS": 1
+      },
+      "last": "Append ERRORS"
+    },
+    {
+      "id": "54242",
+      "startedAt": "2026-09-01T07:14:00.029Z",
+      "status": "error",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "successOps": 0,
+      "node429": {
+        "Lookup DEDUP_INDEX": 1
+      },
+      "last": "Lookup DEDUP_INDEX"
+    },
+    {
+      "id": "54241",
+      "startedAt": "2026-09-01T07:13:30.035Z",
+      "status": "error",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "successOps": 6,
+      "node429": {
+        "Append ERRORS": 1
+      },
+      "last": "Append ERRORS"
+    },
+    {
+      "id": "54240",
+      "startedAt": "2026-09-01T07:13:00.059Z",
+      "status": "error",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "successOps": 0,
+      "node429": {
+        "Lookup DEDUP_INDEX": 1
+      },
+      "last": "Lookup DEDUP_INDEX"
+    },
+    {
+      "id": "54239",
+      "startedAt": "2026-09-01T07:12:30.038Z",
+      "status": "error",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "successOps": 6,
+      "node429": {
+        "Append ERRORS": 1
+      },
+      "last": "Append ERRORS"
+    },
+    {
+      "id": "54238",
+      "startedAt": "2026-09-01T07:12:00.048Z",
+      "status": "error",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "successOps": 0,
+      "node429": {
+        "Lookup DEDUP_INDEX": 1
+      },
+      "last": "Lookup DEDUP_INDEX"
+    },
+    {
+      "id": "54237",
+      "startedAt": "2026-09-01T07:11:30.040Z",
+      "status": "error",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "successOps": 6,
+      "node429": {
+        "Append ERRORS": 1
+      },
+      "last": "Append ERRORS"
+    },
+    {
+      "id": "54236",
+      "startedAt": "2026-09-01T07:11:00.031Z",
+      "status": "error",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "successOps": 0,
+      "node429": {
+        "Lookup DEDUP_INDEX": 1
+      },
+      "last": "Lookup DEDUP_INDEX"
+    },
+    {
+      "id": "54235",
+      "startedAt": "2026-09-01T07:10:30.039Z",
+      "status": "error",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "successOps": 6,
+      "node429": {
+        "Append ERRORS": 1
+      },
+      "last": "Append ERRORS"
+    },
+    {
+      "id": "54234",
+      "startedAt": "2026-09-01T07:10:00.049Z",
+      "status": "error",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "successOps": 0,
+      "node429": {
+        "Lookup DEDUP_INDEX": 1
+      },
+      "last": "Lookup DEDUP_INDEX"
+    },
+    {
+      "id": "54233",
+      "startedAt": "2026-09-01T07:09:30.047Z",
+      "status": "error",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "successOps": 6,
+      "node429": {
+        "Append ERRORS": 1
+      },
+      "last": "Append ERRORS"
+    },
+    {
+      "id": "54232",
+      "startedAt": "2026-09-01T07:09:00.038Z",
+      "status": "error",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "successOps": 0,
+      "node429": {
+        "Lookup DEDUP_INDEX": 1
+      },
+      "last": "Lookup DEDUP_INDEX"
+    },
+    {
+      "id": "54231",
+      "startedAt": "2026-09-01T07:08:30.043Z",
+      "status": "error",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "successOps": 6,
+      "node429": {
+        "Append ERRORS": 1
+      },
+      "last": "Append ERRORS"
+    },
+    {
+      "id": "54230",
+      "startedAt": "2026-09-01T07:08:00.043Z",
+      "status": "error",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "successOps": 0,
+      "node429": {
+        "Lookup DEDUP_INDEX": 1
+      },
+      "last": "Lookup DEDUP_INDEX"
+    },
+    {
+      "id": "54229",
+      "startedAt": "2026-09-01T07:07:30.089Z",
+      "status": "error",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "successOps": 6,
+      "node429": {
+        "Append ERRORS": 1
+      },
+      "last": "Append ERRORS"
+    },
+    {
+      "id": "54228",
+      "startedAt": "2026-09-01T07:07:00.035Z",
+      "status": "error",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "successOps": 0,
+      "node429": {
+        "Lookup DEDUP_INDEX": 1
+      },
+      "last": "Lookup DEDUP_INDEX"
+    },
+    {
+      "id": "54227",
+      "startedAt": "2026-09-01T07:06:30.055Z",
+      "status": "error",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "successOps": 6,
+      "node429": {
+        "Append ERRORS": 1
+      },
+      "last": "Append ERRORS"
+    },
+    {
+      "id": "54226",
+      "startedAt": "2026-09-01T07:06:00.063Z",
+      "status": "error",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "successOps": 0,
+      "node429": {
+        "Lookup DEDUP_INDEX": 1
+      },
+      "last": "Lookup DEDUP_INDEX"
+    },
+    {
+      "id": "54225",
+      "startedAt": "2026-09-01T07:05:30.101Z",
+      "status": "error",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "successOps": 6,
+      "node429": {
+        "Append ERRORS": 1
+      },
+      "last": "Append ERRORS"
+    },
+    {
+      "id": "54224",
+      "startedAt": "2026-09-01T07:05:00.041Z",
+      "status": "error",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "successOps": 0,
+      "node429": {
+        "Lookup DEDUP_INDEX": 1
+      },
+      "last": "Lookup DEDUP_INDEX"
+    },
+    {
+      "id": "54223",
+      "startedAt": "2026-09-01T07:04:30.038Z",
+      "status": "error",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "successOps": 6,
+      "node429": {
+        "Append ERRORS": 1
+      },
+      "last": "Append ERRORS"
+    },
+    {
+      "id": "54220",
+      "startedAt": "2026-09-01T07:04:00.051Z",
+      "status": "error",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "successOps": 0,
+      "node429": {
+        "Lookup DEDUP_INDEX": 1
+      },
+      "last": "Lookup DEDUP_INDEX"
+    },
+    {
+      "id": "54219",
+      "startedAt": "2026-09-01T07:03:30.088Z",
+      "status": "error",
+      "has429": true,
+      "readConfigHit": false,
+      "readConfigSkipped": true,
+      "cacheRoutePrep": true,
+      "successOps": 0,
+      "node429": {
+        "Lookup DEDUP_INDEX": 1
+      },
+      "last": "Lookup DEDUP_INDEX"
+    },
+    {
+      "id": "54218",
+      "startedAt": "2026-09-01T07:03:00.042Z",
+      "status": "error",
+      "has429": true,
+      "readConfigHit": true,
+      "readConfigSkipped": false,
+      "cacheRoutePrep": true,
+      "successOps": 7,
+      "node429": {
+        "Append ERRORS": 1
+      },
+      "last": "Append ERRORS"
+    }
+  ]
+}

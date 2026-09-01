@@ -1,0 +1,36 @@
+{
+  "stamp": "2026-09-01T08-31-58-079Z",
+  "contract": "iseo-google-sheets-instance-quota-wave5-v1",
+  "ops_id": "xSnXPy8cEHoZw6xG",
+  "ops_active": true,
+  "admin_active": true,
+  "admin_unchanged": true,
+  "dedup": {
+    "retryOnFail": true,
+    "maxTries": 4,
+    "onError": "continueErrorOutput"
+  },
+  "raw": {
+    "retryOnFail": true,
+    "maxTries": 4,
+    "onError": null
+  },
+  "added_nodes": [
+    "Sheets Quota Defer Gate",
+    "IF Sheets Quota Deferred",
+    "Sheets Quota Defer Skip",
+    "Sheets Quota Error Bridge"
+  ],
+  "modified_nodes": [
+    "Error Handler",
+    "Lookup DEDUP_INDEX",
+    "Append RAW v2"
+  ],
+  "hashes": {
+    "defer_gate": "99CC78890094F70F",
+    "error_bridge": "91FD9DD020CB0DB7",
+    "error_handler": "6EAF1F95C872D25B"
+  },
+  "backup_pre": "X:\\AI MARS STORAGE\\incoming\\iseo-sales-manager-bot\\google-sheets-429-repair-20260901-134643-local\\backups\\Operational.dev.PRE-wave5-2026-09-01T08-31-58-079Z.json",
+  "backup_post": "X:\\AI MARS STORAGE\\incoming\\iseo-sales-manager-bot\\google-sheets-429-repair-20260901-134643-local\\backups\\Operational.dev.POST-wave5-2026-09-01T08-31-58-079Z.json"
+}

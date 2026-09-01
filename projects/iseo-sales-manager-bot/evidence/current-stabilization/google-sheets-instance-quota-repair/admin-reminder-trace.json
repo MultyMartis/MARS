@@ -1,0 +1,1467 @@
+{
+  "generatedAt": "2026-09-01T08:32:21.531Z",
+  "adminId": "wLrLp4WQHm1VJmxz",
+  "credentialFilter": "nRfNJVn6SEziII8k",
+  "windowMinutes": 180,
+  "since": "2026-09-01T05:32:09.798Z",
+  "executionCount": 19,
+  "sheets429Count": 12,
+  "reminderFailureCount": 3,
+  "sameSheets429AsOperational": true,
+  "reminderFailureLikely429": true,
+  "executions": [
+    {
+      "id": "54403",
+      "status": "success",
+      "startedAt": "2026-09-01T08:30:47.076Z",
+      "stoppedAt": "2026-09-01T08:31:03.655Z",
+      "mode": "trigger",
+      "nodeCount": 9,
+      "sheets429": [
+        {
+          "node": "Read Reminder CONFIG",
+          "message": "429"
+        },
+        {
+          "node": "Reminder Classify Sheets Error",
+          "message": "429"
+        },
+        {
+          "node": "IF Reminder Sheets Retry",
+          "message": "429"
+        },
+        {
+          "node": "Reminder Stamp Sheets Error",
+          "message": "429"
+        },
+        {
+          "node": "Append ERRORS Reminder 429",
+          "message": "429"
+        },
+        {
+          "node": "Reminder Mark Window Complete",
+          "message": "429"
+        },
+        {
+          "node": "Apply Reminder Window CONFIG Write",
+          "message": "429"
+        }
+      ],
+      "callbackHints": [],
+      "replyHints": [],
+      "reminderFailurePattern": false
+    },
+    {
+      "id": "54372",
+      "status": "success",
+      "startedAt": "2026-09-01T08:15:47.075Z",
+      "stoppedAt": "2026-09-01T08:16:04.123Z",
+      "mode": "trigger",
+      "nodeCount": 9,
+      "sheets429": [
+        {
+          "node": "Read Reminder CONFIG",
+          "message": "429"
+        },
+        {
+          "node": "Reminder Classify Sheets Error",
+          "message": "429"
+        },
+        {
+          "node": "IF Reminder Sheets Retry",
+          "message": "429"
+        },
+        {
+          "node": "Reminder Stamp Sheets Error",
+          "message": "429"
+        },
+        {
+          "node": "Append ERRORS Reminder 429",
+          "message": "429"
+        },
+        {
+          "node": "Reminder Mark Window Complete",
+          "message": "429"
+        }
+      ],
+      "callbackHints": [],
+      "replyHints": [],
+      "reminderFailurePattern": false
+    },
+    {
+      "id": "54341",
+      "status": "success",
+      "startedAt": "2026-09-01T08:00:47.065Z",
+      "stoppedAt": "2026-09-01T08:01:05.050Z",
+      "mode": "trigger",
+      "nodeCount": 9,
+      "sheets429": [
+        {
+          "node": "Read Reminder CONFIG",
+          "message": "429"
+        },
+        {
+          "node": "Reminder Classify Sheets Error",
+          "message": "429"
+        },
+        {
+          "node": "IF Reminder Sheets Retry",
+          "message": "429"
+        },
+        {
+          "node": "Reminder Stamp Sheets Error",
+          "message": "429"
+        },
+        {
+          "node": "Append ERRORS Reminder 429",
+          "message": "429"
+        },
+        {
+          "node": "Reminder Mark Window Complete",
+          "message": "429"
+        },
+        {
+          "node": "Apply Reminder Window CONFIG Write",
+          "message": "429"
+        }
+      ],
+      "callbackHints": [],
+      "replyHints": [],
+      "reminderFailurePattern": false
+    },
+    {
+      "id": "54308",
+      "status": "success",
+      "startedAt": "2026-09-01T07:45:47.071Z",
+      "stoppedAt": "2026-09-01T07:45:48.839Z",
+      "mode": "trigger",
+      "nodeCount": 7,
+      "sheets429": [],
+      "callbackHints": [],
+      "replyHints": [],
+      "reminderFailurePattern": false
+    },
+    {
+      "id": "54277",
+      "status": "success",
+      "startedAt": "2026-09-01T07:30:47.062Z",
+      "stoppedAt": "2026-09-01T07:30:48.734Z",
+      "mode": "trigger",
+      "nodeCount": 7,
+      "sheets429": [],
+      "callbackHints": [],
+      "replyHints": [],
+      "reminderFailurePattern": false
+    },
+    {
+      "id": "54246",
+      "status": "success",
+      "startedAt": "2026-09-01T07:15:47.087Z",
+      "stoppedAt": "2026-09-01T07:15:48.650Z",
+      "mode": "trigger",
+      "nodeCount": 7,
+      "sheets429": [],
+      "callbackHints": [],
+      "replyHints": [],
+      "reminderFailurePattern": false
+    },
+    {
+      "id": "54222",
+      "status": "success",
+      "startedAt": "2026-09-01T07:04:04.232Z",
+      "stoppedAt": "2026-09-01T07:04:04.943Z",
+      "mode": "webhook",
+      "nodeCount": 9,
+      "sheets429": [
+        {
+          "node": "Read Authorization Config",
+          "message": "429"
+        },
+        {
+          "node": "Read ACCESS_CONTROL",
+          "message": "429"
+        }
+      ],
+      "callbackHints": [
+        {
+          "node": "Telegram Trigger",
+          "keys": [
+            "update_id",
+            "callback_query"
+          ]
+        },
+        {
+          "node": "Normalize Command",
+          "keys": [
+            "command",
+            "command_raw",
+            "args",
+            "text",
+            "callback_data",
+            "callback_query_id",
+            "callback_message_id",
+            "callback_chat_id",
+            "user_id",
+            "chat_id",
+            "username",
+            "first_name",
+            "last_name",
+            "display_name",
+            "action",
+            "action_token",
+            "raw_ok"
+          ]
+        },
+        {
+          "node": "Collapse Authorization Context",
+          "keys": [
+            "command",
+            "command_raw",
+            "args",
+            "text",
+            "callback_data",
+            "callback_query_id",
+            "callback_message_id",
+            "callback_chat_id",
+            "user_id",
+            "chat_id",
+            "username",
+            "first_name",
+            "last_name",
+            "display_name",
+            "action",
+            "action_token",
+            "raw_ok",
+            "config_map",
+            "config_read_ok"
+          ]
+        },
+        {
+          "node": "Check User Authorization",
+          "keys": [
+            "command",
+            "command_raw",
+            "args",
+            "text",
+            "callback_data",
+            "callback_query_id",
+            "callback_message_id",
+            "callback_chat_id",
+            "user_id",
+            "chat_id",
+            "username",
+            "first_name",
+            "last_name",
+            "display_name",
+            "action",
+            "action_token",
+            "raw_ok",
+            "config_map",
+            "authorized",
+            "auth_role"
+          ]
+        },
+        {
+          "node": "IF Deny Is Callback",
+          "keys": [
+            "command",
+            "command_raw",
+            "args",
+            "text",
+            "callback_data",
+            "callback_query_id",
+            "callback_message_id",
+            "callback_chat_id",
+            "user_id",
+            "chat_id",
+            "username",
+            "first_name",
+            "last_name",
+            "display_name",
+            "action",
+            "action_token",
+            "raw_ok",
+            "config_map",
+            "authorized",
+            "auth_role"
+          ]
+        }
+      ],
+      "replyHints": [
+        {
+          "node": "Check User Authorization",
+          "reply_text": "Сервис временно недоступен. Попробуйте позже."
+        },
+        {
+          "node": "IF Deny Is Callback",
+          "reply_text": "Сервис временно недоступен. Попробуйте позже."
+        }
+      ],
+      "reminderFailurePattern": true
+    },
+    {
+      "id": "54221",
+      "status": "success",
+      "startedAt": "2026-09-01T07:04:00.565Z",
+      "stoppedAt": "2026-09-01T07:04:01.906Z",
+      "mode": "webhook",
+      "nodeCount": 9,
+      "sheets429": [
+        {
+          "node": "Read Authorization Config",
+          "message": "429"
+        },
+        {
+          "node": "Read ACCESS_CONTROL",
+          "message": "429"
+        }
+      ],
+      "callbackHints": [
+        {
+          "node": "Telegram Trigger",
+          "keys": [
+            "update_id",
+            "callback_query"
+          ]
+        },
+        {
+          "node": "Normalize Command",
+          "keys": [
+            "command",
+            "command_raw",
+            "args",
+            "text",
+            "callback_data",
+            "callback_query_id",
+            "callback_message_id",
+            "callback_chat_id",
+            "user_id",
+            "chat_id",
+            "username",
+            "first_name",
+            "last_name",
+            "display_name",
+            "action",
+            "action_token",
+            "raw_ok"
+          ]
+        },
+        {
+          "node": "Collapse Authorization Context",
+          "keys": [
+            "command",
+            "command_raw",
+            "args",
+            "text",
+            "callback_data",
+            "callback_query_id",
+            "callback_message_id",
+            "callback_chat_id",
+            "user_id",
+            "chat_id",
+            "username",
+            "first_name",
+            "last_name",
+            "display_name",
+            "action",
+            "action_token",
+            "raw_ok",
+            "config_map",
+            "config_read_ok"
+          ]
+        },
+        {
+          "node": "Check User Authorization",
+          "keys": [
+            "command",
+            "command_raw",
+            "args",
+            "text",
+            "callback_data",
+            "callback_query_id",
+            "callback_message_id",
+            "callback_chat_id",
+            "user_id",
+            "chat_id",
+            "username",
+            "first_name",
+            "last_name",
+            "display_name",
+            "action",
+            "action_token",
+            "raw_ok",
+            "config_map",
+            "authorized",
+            "auth_role"
+          ]
+        },
+        {
+          "node": "IF Deny Is Callback",
+          "keys": [
+            "command",
+            "command_raw",
+            "args",
+            "text",
+            "callback_data",
+            "callback_query_id",
+            "callback_message_id",
+            "callback_chat_id",
+            "user_id",
+            "chat_id",
+            "username",
+            "first_name",
+            "last_name",
+            "display_name",
+            "action",
+            "action_token",
+            "raw_ok",
+            "config_map",
+            "authorized",
+            "auth_role"
+          ]
+        }
+      ],
+      "replyHints": [
+        {
+          "node": "Check User Authorization",
+          "reply_text": "Сервис временно недоступен. Попробуйте позже."
+        },
+        {
+          "node": "IF Deny Is Callback",
+          "reply_text": "Сервис временно недоступен. Попробуйте позже."
+        }
+      ],
+      "reminderFailurePattern": true
+    },
+    {
+      "id": "54217",
+      "status": "error",
+      "startedAt": "2026-09-01T07:02:52.742Z",
+      "stoppedAt": "2026-09-01T07:02:59.611Z",
+      "mode": "webhook",
+      "nodeCount": 23,
+      "sheets429": [
+        {
+          "node": "Read CLEAN for Callback",
+          "message": "429"
+        },
+        {
+          "node": "Read LEAD_DELIVERIES for Sync",
+          "message": "429"
+        }
+      ],
+      "callbackHints": [
+        {
+          "node": "Telegram Trigger",
+          "keys": [
+            "update_id",
+            "callback_query"
+          ]
+        },
+        {
+          "node": "Normalize Command",
+          "keys": [
+            "command",
+            "command_raw",
+            "args",
+            "text",
+            "callback_data",
+            "callback_query_id",
+            "callback_message_id",
+            "callback_chat_id",
+            "user_id",
+            "chat_id",
+            "username",
+            "first_name",
+            "last_name",
+            "display_name",
+            "action",
+            "action_token",
+            "raw_ok"
+          ]
+        },
+        {
+          "node": "Collapse Authorization Context",
+          "keys": [
+            "command",
+            "command_raw",
+            "args",
+            "text",
+            "callback_data",
+            "callback_query_id",
+            "callback_message_id",
+            "callback_chat_id",
+            "user_id",
+            "chat_id",
+            "username",
+            "first_name",
+            "last_name",
+            "display_name",
+            "action",
+            "action_token",
+            "raw_ok",
+            "config_map",
+            "config_read_ok"
+          ]
+        },
+        {
+          "node": "Check User Authorization",
+          "keys": [
+            "command",
+            "command_raw",
+            "args",
+            "text",
+            "callback_data",
+            "callback_query_id",
+            "callback_message_id",
+            "callback_chat_id",
+            "user_id",
+            "chat_id",
+            "username",
+            "first_name",
+            "last_name",
+            "display_name",
+            "action",
+            "action_token",
+            "raw_ok",
+            "config_map",
+            "authorized",
+            "auth_role"
+          ]
+        },
+        {
+          "node": "IF Authorized",
+          "keys": [
+            "command",
+            "command_raw",
+            "args",
+            "text",
+            "callback_data",
+            "callback_query_id",
+            "callback_message_id",
+            "callback_chat_id",
+            "user_id",
+            "chat_id",
+            "username",
+            "first_name",
+            "last_name",
+            "display_name",
+            "action",
+            "action_token",
+            "raw_ok",
+            "config_map",
+            "authorized",
+            "auth_role"
+          ]
+        },
+        {
+          "node": "Prepare Early Callback Ack",
+          "keys": [
+            "command",
+            "command_raw",
+            "args",
+            "text",
+            "callback_data",
+            "callback_query_id",
+            "callback_message_id",
+            "callback_chat_id",
+            "user_id",
+            "chat_id",
+            "username",
+            "first_name",
+            "last_name",
+            "display_name",
+            "action",
+            "action_token",
+            "raw_ok",
+            "config_map",
+            "authorized",
+            "auth_role"
+          ]
+        },
+        {
+          "node": "Read CLEAN for Callback",
+          "keys": [
+            "row_number",
+            "lead_id",
+            "source_message_id",
+            "created_at",
+            "processed_at",
+            "updated_at",
+            "client_name",
+            "primary_contact",
+            "contact_type",
+            "phone",
+            "email",
+            "messenger",
+            "site",
+            "service",
+            "summary",
+            "source",
+            "request_page",
+            "utm_source",
+            "utm_medium",
+            "utm_campaign"
+          ]
+        },
+        {
+          "node": "Handle Callback Action",
+          "keys": [
+            "command",
+            "command_raw",
+            "args",
+            "text",
+            "callback_data",
+            "callback_query_id",
+            "callback_message_id",
+            "callback_chat_id",
+            "user_id",
+            "chat_id",
+            "username",
+            "first_name",
+            "last_name",
+            "display_name",
+            "action",
+            "action_token",
+            "raw_ok",
+            "config_map",
+            "authorized",
+            "auth_role"
+          ]
+        },
+        {
+          "node": "Expand Card Sync Copies",
+          "keys": [
+            "command",
+            "command_raw",
+            "args",
+            "text",
+            "callback_data",
+            "callback_query_id",
+            "callback_message_id",
+            "callback_chat_id",
+            "user_id",
+            "chat_id",
+            "username",
+            "first_name",
+            "last_name",
+            "display_name",
+            "action",
+            "action_token",
+            "raw_ok",
+            "config_map",
+            "authorized",
+            "auth_role"
+          ]
+        },
+        {
+          "node": "Aggregate Card Sync Result",
+          "keys": [
+            "command",
+            "command_raw",
+            "args",
+            "text",
+            "callback_data",
+            "callback_query_id",
+            "callback_message_id",
+            "callback_chat_id",
+            "user_id",
+            "chat_id",
+            "username",
+            "first_name",
+            "last_name",
+            "display_name",
+            "action",
+            "action_token",
+            "raw_ok",
+            "config_map",
+            "authorized",
+            "auth_role"
+          ]
+        },
+        {
+          "node": "Prepare Callback Answer",
+          "keys": [
+            "command",
+            "command_raw",
+            "args",
+            "text",
+            "callback_data",
+            "callback_query_id",
+            "callback_message_id",
+            "callback_chat_id",
+            "user_id",
+            "chat_id",
+            "username",
+            "first_name",
+            "last_name",
+            "display_name",
+            "action",
+            "action_token",
+            "raw_ok",
+            "config_map",
+            "authorized",
+            "auth_role"
+          ]
+        }
+      ],
+      "replyHints": [
+        {
+          "node": "Prepare Early Callback Ack",
+          "reply_text": ""
+        }
+      ],
+      "reminderFailurePattern": false
+    },
+    {
+      "id": "54216",
+      "status": "error",
+      "startedAt": "2026-09-01T07:02:36.523Z",
+      "stoppedAt": "2026-09-01T07:02:44.879Z",
+      "mode": "webhook",
+      "nodeCount": 23,
+      "sheets429": [
+        {
+          "node": "Read CLEAN for Callback",
+          "message": "429"
+        },
+        {
+          "node": "Read LEAD_DELIVERIES for Sync",
+          "message": "429"
+        }
+      ],
+      "callbackHints": [
+        {
+          "node": "Telegram Trigger",
+          "keys": [
+            "update_id",
+            "callback_query"
+          ]
+        },
+        {
+          "node": "Normalize Command",
+          "keys": [
+            "command",
+            "command_raw",
+            "args",
+            "text",
+            "callback_data",
+            "callback_query_id",
+            "callback_message_id",
+            "callback_chat_id",
+            "user_id",
+            "chat_id",
+            "username",
+            "first_name",
+            "last_name",
+            "display_name",
+            "action",
+            "action_token",
+            "raw_ok"
+          ]
+        },
+        {
+          "node": "Collapse Authorization Context",
+          "keys": [
+            "command",
+            "command_raw",
+            "args",
+            "text",
+            "callback_data",
+            "callback_query_id",
+            "callback_message_id",
+            "callback_chat_id",
+            "user_id",
+            "chat_id",
+            "username",
+            "first_name",
+            "last_name",
+            "display_name",
+            "action",
+            "action_token",
+            "raw_ok",
+            "config_map",
+            "config_read_ok"
+          ]
+        },
+        {
+          "node": "Check User Authorization",
+          "keys": [
+            "command",
+            "command_raw",
+            "args",
+            "text",
+            "callback_data",
+            "callback_query_id",
+            "callback_message_id",
+            "callback_chat_id",
+            "user_id",
+            "chat_id",
+            "username",
+            "first_name",
+            "last_name",
+            "display_name",
+            "action",
+            "action_token",
+            "raw_ok",
+            "config_map",
+            "authorized",
+            "auth_role"
+          ]
+        },
+        {
+          "node": "IF Authorized",
+          "keys": [
+            "command",
+            "command_raw",
+            "args",
+            "text",
+            "callback_data",
+            "callback_query_id",
+            "callback_message_id",
+            "callback_chat_id",
+            "user_id",
+            "chat_id",
+            "username",
+            "first_name",
+            "last_name",
+            "display_name",
+            "action",
+            "action_token",
+            "raw_ok",
+            "config_map",
+            "authorized",
+            "auth_role"
+          ]
+        },
+        {
+          "node": "Prepare Early Callback Ack",
+          "keys": [
+            "command",
+            "command_raw",
+            "args",
+            "text",
+            "callback_data",
+            "callback_query_id",
+            "callback_message_id",
+            "callback_chat_id",
+            "user_id",
+            "chat_id",
+            "username",
+            "first_name",
+            "last_name",
+            "display_name",
+            "action",
+            "action_token",
+            "raw_ok",
+            "config_map",
+            "authorized",
+            "auth_role"
+          ]
+        },
+        {
+          "node": "Read CLEAN for Callback",
+          "keys": [
+            "row_number",
+            "lead_id",
+            "source_message_id",
+            "created_at",
+            "processed_at",
+            "updated_at",
+            "client_name",
+            "primary_contact",
+            "contact_type",
+            "phone",
+            "email",
+            "messenger",
+            "site",
+            "service",
+            "summary",
+            "source",
+            "request_page",
+            "utm_source",
+            "utm_medium",
+            "utm_campaign"
+          ]
+        },
+        {
+          "node": "Handle Callback Action",
+          "keys": [
+            "command",
+            "command_raw",
+            "args",
+            "text",
+            "callback_data",
+            "callback_query_id",
+            "callback_message_id",
+            "callback_chat_id",
+            "user_id",
+            "chat_id",
+            "username",
+            "first_name",
+            "last_name",
+            "display_name",
+            "action",
+            "action_token",
+            "raw_ok",
+            "config_map",
+            "authorized",
+            "auth_role"
+          ]
+        },
+        {
+          "node": "Expand Card Sync Copies",
+          "keys": [
+            "command",
+            "command_raw",
+            "args",
+            "text",
+            "callback_data",
+            "callback_query_id",
+            "callback_message_id",
+            "callback_chat_id",
+            "user_id",
+            "chat_id",
+            "username",
+            "first_name",
+            "last_name",
+            "display_name",
+            "action",
+            "action_token",
+            "raw_ok",
+            "config_map",
+            "authorized",
+            "auth_role"
+          ]
+        },
+        {
+          "node": "Aggregate Card Sync Result",
+          "keys": [
+            "command",
+            "command_raw",
+            "args",
+            "text",
+            "callback_data",
+            "callback_query_id",
+            "callback_message_id",
+            "callback_chat_id",
+            "user_id",
+            "chat_id",
+            "username",
+            "first_name",
+            "last_name",
+            "display_name",
+            "action",
+            "action_token",
+            "raw_ok",
+            "config_map",
+            "authorized",
+            "auth_role"
+          ]
+        },
+        {
+          "node": "Prepare Callback Answer",
+          "keys": [
+            "command",
+            "command_raw",
+            "args",
+            "text",
+            "callback_data",
+            "callback_query_id",
+            "callback_message_id",
+            "callback_chat_id",
+            "user_id",
+            "chat_id",
+            "username",
+            "first_name",
+            "last_name",
+            "display_name",
+            "action",
+            "action_token",
+            "raw_ok",
+            "config_map",
+            "authorized",
+            "auth_role"
+          ]
+        }
+      ],
+      "replyHints": [
+        {
+          "node": "Prepare Early Callback Ack",
+          "reply_text": ""
+        }
+      ],
+      "reminderFailurePattern": false
+    },
+    {
+      "id": "54211",
+      "status": "success",
+      "startedAt": "2026-09-01T07:00:47.065Z",
+      "stoppedAt": "2026-09-01T07:02:14.398Z",
+      "mode": "trigger",
+      "nodeCount": 24,
+      "sheets429": [
+        {
+          "node": "Read CLEAN for Reminder",
+          "message": "429"
+        },
+        {
+          "node": "Read ACCESS_CONTROL for Reminder",
+          "message": "429"
+        },
+        {
+          "node": "Read ACCESS_CONTROL for Reminder",
+          "message": "429"
+        },
+        {
+          "node": "Read ACCESS_CONTROL for Reminder",
+          "message": "429"
+        },
+        {
+          "node": "Reminder Classify Sheets Error",
+          "message": "429"
+        },
+        {
+          "node": "Reminder Classify Sheets Error",
+          "message": "429"
+        },
+        {
+          "node": "Reminder Classify Sheets Error",
+          "message": "429"
+        },
+        {
+          "node": "IF Reminder Sheets Retry",
+          "message": "429"
+        },
+        {
+          "node": "IF Reminder Sheets Retry",
+          "message": "429"
+        },
+        {
+          "node": "IF Reminder Sheets Retry",
+          "message": "429"
+        },
+        {
+          "node": "Prepare Reminder Sheets Wait",
+          "message": "429"
+        },
+        {
+          "node": "Prepare Reminder Sheets Wait",
+          "message": "429"
+        },
+        {
+          "node": "Prepare Reminder Sheets Wait",
+          "message": "429"
+        },
+        {
+          "node": "Wait Reminder Sheets Retry",
+          "message": "429"
+        },
+        {
+          "node": "Wait Reminder Sheets Retry",
+          "message": "429"
+        },
+        {
+          "node": "Wait Reminder Sheets Retry",
+          "message": "429"
+        }
+      ],
+      "callbackHints": [
+        {
+          "node": "Read CLEAN for Reminder",
+          "keys": [
+            "row_number",
+            "lead_id",
+            "source_message_id",
+            "created_at",
+            "processed_at",
+            "updated_at",
+            "client_name",
+            "primary_contact",
+            "contact_type",
+            "phone",
+            "email",
+            "messenger",
+            "site",
+            "service",
+            "summary",
+            "source",
+            "request_page",
+            "utm_source",
+            "utm_medium",
+            "utm_campaign"
+          ]
+        },
+        {
+          "node": "Reminder Build Claims",
+          "keys": [
+            "reminder_send",
+            "reminder_window",
+            "reminder_key",
+            "recipient_ref",
+            "role_snapshot",
+            "chat_id",
+            "reply_text",
+            "parse_mode",
+            "pending_count_snapshot",
+            "raw_candidate_rows",
+            "unique_candidate_leads",
+            "authoritative_pending_count",
+            "safe_unknown_count",
+            "reminder_selector_contract",
+            "oldest_age_minutes_snapshot",
+            "claimed_at",
+            "status",
+            "reminder_version",
+            "digest_renderer_contract",
+            "telegram_has_buttons"
+          ]
+        },
+        {
+          "node": "IF Reminder Send",
+          "keys": [
+            "reminder_send",
+            "reminder_window",
+            "reminder_key",
+            "recipient_ref",
+            "role_snapshot",
+            "chat_id",
+            "reply_text",
+            "parse_mode",
+            "pending_count_snapshot",
+            "raw_candidate_rows",
+            "unique_candidate_leads",
+            "authoritative_pending_count",
+            "safe_unknown_count",
+            "reminder_selector_contract",
+            "oldest_age_minutes_snapshot",
+            "claimed_at",
+            "status",
+            "reminder_version",
+            "digest_renderer_contract",
+            "telegram_has_buttons"
+          ]
+        },
+        {
+          "node": "Merge Reminder Send Payload",
+          "keys": [
+            "reminder_key",
+            "reminder_window",
+            "recipient_ref",
+            "role_snapshot",
+            "pending_count_snapshot",
+            "oldest_age_minutes_snapshot",
+            "claimed_at",
+            "sent_at",
+            "status",
+            "telegram_message_ref_safe",
+            "error_code_safe",
+            "reminder_version",
+            "reconciled_at",
+            "reminder_send",
+            "chat_id",
+            "reply_text",
+            "parse_mode",
+            "raw_candidate_rows",
+            "unique_candidate_leads",
+            "authoritative_pending_count"
+          ]
+        },
+        {
+          "node": "Send Reminder Telegram KB5",
+          "keys": [
+            "ok",
+            "result"
+          ]
+        },
+        {
+          "node": "Reminder Stamp",
+          "keys": [
+            "reminder_key",
+            "reminder_window",
+            "recipient_ref",
+            "role_snapshot",
+            "pending_count_snapshot",
+            "oldest_age_minutes_snapshot",
+            "claimed_at",
+            "sent_at",
+            "status",
+            "telegram_message_ref_safe",
+            "error_code_safe",
+            "reminder_version",
+            "reconciled_at",
+            "reminder_send",
+            "chat_id",
+            "reply_text",
+            "parse_mode",
+            "raw_candidate_rows",
+            "unique_candidate_leads",
+            "authoritative_pending_count"
+          ]
+        },
+        {
+          "node": "Reminder Post Deliver Window",
+          "keys": [
+            "reminder_key",
+            "reminder_window",
+            "recipient_ref",
+            "role_snapshot",
+            "pending_count_snapshot",
+            "oldest_age_minutes_snapshot",
+            "claimed_at",
+            "sent_at",
+            "status",
+            "telegram_message_ref_safe",
+            "error_code_safe",
+            "reminder_version",
+            "reconciled_at",
+            "reminder_send",
+            "chat_id",
+            "reply_text",
+            "parse_mode",
+            "raw_candidate_rows",
+            "unique_candidate_leads",
+            "authoritative_pending_count"
+          ]
+        },
+        {
+          "node": "Reminder Mark Window Complete",
+          "keys": [
+            "reminder_key",
+            "reminder_window",
+            "recipient_ref",
+            "role_snapshot",
+            "pending_count_snapshot",
+            "oldest_age_minutes_snapshot",
+            "claimed_at",
+            "sent_at",
+            "status",
+            "telegram_message_ref_safe",
+            "error_code_safe",
+            "reminder_version",
+            "reconciled_at",
+            "reminder_send",
+            "chat_id",
+            "reply_text",
+            "parse_mode",
+            "raw_candidate_rows",
+            "unique_candidate_leads",
+            "authoritative_pending_count"
+          ]
+        },
+        {
+          "node": "Prepare Reminder Window Config Write",
+          "keys": [
+            "reminder_key",
+            "reminder_window",
+            "recipient_ref",
+            "role_snapshot",
+            "pending_count_snapshot",
+            "oldest_age_minutes_snapshot",
+            "claimed_at",
+            "sent_at",
+            "status",
+            "telegram_message_ref_safe",
+            "error_code_safe",
+            "reminder_version",
+            "reconciled_at",
+            "reminder_send",
+            "chat_id",
+            "reply_text",
+            "parse_mode",
+            "raw_candidate_rows",
+            "unique_candidate_leads",
+            "authoritative_pending_count"
+          ]
+        }
+      ],
+      "replyHints": [],
+      "reminderFailurePattern": false
+    },
+    {
+      "id": "54184",
+      "status": "success",
+      "startedAt": "2026-09-01T06:45:47.073Z",
+      "stoppedAt": "2026-09-01T06:45:48.662Z",
+      "mode": "trigger",
+      "nodeCount": 7,
+      "sheets429": [],
+      "callbackHints": [],
+      "replyHints": [],
+      "reminderFailurePattern": false
+    },
+    {
+      "id": "54153",
+      "status": "success",
+      "startedAt": "2026-09-01T06:30:47.126Z",
+      "stoppedAt": "2026-09-01T06:30:48.644Z",
+      "mode": "trigger",
+      "nodeCount": 7,
+      "sheets429": [],
+      "callbackHints": [],
+      "replyHints": [],
+      "reminderFailurePattern": false
+    },
+    {
+      "id": "54122",
+      "status": "error",
+      "startedAt": "2026-09-01T06:15:51.720Z",
+      "stoppedAt": "2026-09-01T06:15:52.967Z",
+      "mode": "webhook",
+      "nodeCount": 10,
+      "sheets429": [
+        {
+          "node": "Read Authorization Config",
+          "message": "429"
+        },
+        {
+          "node": "Read ACCESS_CONTROL",
+          "message": "429"
+        }
+      ],
+      "callbackHints": [],
+      "replyHints": [
+        {
+          "node": "Check User Authorization",
+          "reply_text": "Сервис временно недоступен. Попробуйте позже."
+        },
+        {
+          "node": "Deny Reply",
+          "reply_text": "Сервис временно недоступен. Попробуйте позже."
+        }
+      ],
+      "reminderFailurePattern": true
+    },
+    {
+      "id": "54121",
+      "status": "success",
+      "startedAt": "2026-09-01T06:15:47.087Z",
+      "stoppedAt": "2026-09-01T06:15:48.674Z",
+      "mode": "trigger",
+      "nodeCount": 7,
+      "sheets429": [],
+      "callbackHints": [],
+      "replyHints": [],
+      "reminderFailurePattern": false
+    },
+    {
+      "id": "54116",
+      "status": "error",
+      "startedAt": "2026-09-01T06:13:43.262Z",
+      "stoppedAt": "2026-09-01T06:13:45.843Z",
+      "mode": "webhook",
+      "nodeCount": 11,
+      "sheets429": [],
+      "callbackHints": [],
+      "replyHints": [],
+      "reminderFailurePattern": false
+    },
+    {
+      "id": "54090",
+      "status": "error",
+      "startedAt": "2026-09-01T06:08:19.937Z",
+      "stoppedAt": "2026-09-01T06:08:21.490Z",
+      "mode": "webhook",
+      "nodeCount": 10,
+      "sheets429": [
+        {
+          "node": "Read Authorization Config",
+          "message": "429"
+        },
+        {
+          "node": "Collapse Authorization Context",
+          "message": "429"
+        },
+        {
+          "node": "Read ACCESS_CONTROL",
+          "message": "429"
+        },
+        {
+          "node": "Check User Authorization",
+          "message": "429"
+        },
+        {
+          "node": "IF Authorized",
+          "message": "429"
+        },
+        {
+          "node": "Route Command",
+          "message": "429"
+        },
+        {
+          "node": "Help",
+          "message": "429"
+        }
+      ],
+      "callbackHints": [],
+      "replyHints": [],
+      "reminderFailurePattern": false
+    },
+    {
+      "id": "54075",
+      "status": "success",
+      "startedAt": "2026-09-01T06:00:01.062Z",
+      "stoppedAt": "2026-09-01T06:00:02.760Z",
+      "mode": "trigger",
+      "nodeCount": 9,
+      "sheets429": [
+        {
+          "node": "Read Reminder CONFIG",
+          "message": "429"
+        },
+        {
+          "node": "Reminder Classify Sheets Error",
+          "message": "429"
+        },
+        {
+          "node": "IF Reminder Sheets Retry",
+          "message": "429"
+        },
+        {
+          "node": "Reminder Stamp Sheets Error",
+          "message": "429"
+        },
+        {
+          "node": "Reminder Mark Window Complete",
+          "message": "429"
+        }
+      ],
+      "callbackHints": [],
+      "replyHints": [],
+      "reminderFailurePattern": false
+    },
+    {
+      "id": "54044",
+      "status": "success",
+      "startedAt": "2026-09-01T05:45:01.093Z",
+      "stoppedAt": "2026-09-01T05:45:03.315Z",
+      "mode": "trigger",
+      "nodeCount": 9,
+      "sheets429": [
+        {
+          "node": "Read Reminder CONFIG",
+          "message": "429"
+        },
+        {
+          "node": "Reminder Classify Sheets Error",
+          "message": "429"
+        },
+        {
+          "node": "IF Reminder Sheets Retry",
+          "message": "429"
+        },
+        {
+          "node": "Reminder Stamp Sheets Error",
+          "message": "429"
+        },
+        {
+          "node": "Reminder Mark Window Complete",
+          "message": "429"
+        }
+      ],
+      "callbackHints": [],
+      "replyHints": [],
+      "reminderFailurePattern": false
+    }
+  ]
+}

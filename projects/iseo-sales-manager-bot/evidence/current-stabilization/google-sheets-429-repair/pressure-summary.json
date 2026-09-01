@@ -1,0 +1,152 @@
+{
+  "windowMinutes": 45,
+  "sinceIso": "2026-09-01T06:04:26.505Z",
+  "activeWorkflowsSharingCredential": 5,
+  "totalExecutionsInWindow": 110,
+  "totalSheetsRunsSampled": 496,
+  "total429Sampled": 80,
+  "pressureTable": [
+    {
+      "workflow": "i-SEO Sales Manager - Operational.dev",
+      "id": "xSnXPy8cEHoZw6xG",
+      "active": true,
+      "executionsInWindow": 90,
+      "executionsPerMin": 2,
+      "sheetsNodes": 12,
+      "explicitReadNodes": 4,
+      "writeNodes": 8,
+      "sheetsRunsSampled": 472,
+      "readQuotaRunsSampled": 472,
+      "approxReadsPerMin": 10.49,
+      "err429Sampled": 80,
+      "topNodes": [
+        [
+          "Append RAW v2",
+          80
+        ],
+        [
+          "Read CONFIG",
+          80
+        ],
+        [
+          "Lookup DEDUP_INDEX",
+          39
+        ],
+        [
+          "Append or Update CLEAN v2",
+          39
+        ],
+        [
+          "Append DEDUP_INDEX",
+          39
+        ],
+        [
+          "Read LEAD_DELIVERIES",
+          39
+        ],
+        [
+          "Read ACCESS_CONTROL",
+          39
+        ],
+        [
+          "Upsert LEAD_DELIVERIES Claim",
+          39
+        ]
+      ],
+      "credential": "nRfNJVn6SEziII8k"
+    },
+    {
+      "workflow": "SEO Content Agent Beta.v14 - Admin",
+      "id": "AR6QxGt8ZKH0xG2T",
+      "active": true,
+      "executionsInWindow": 7,
+      "executionsPerMin": 0.16,
+      "sheetsNodes": 5,
+      "explicitReadNodes": 4,
+      "writeNodes": 1,
+      "sheetsRunsSampled": 12,
+      "readQuotaRunsSampled": 12,
+      "approxReadsPerMin": 0.27,
+      "err429Sampled": 0,
+      "topNodes": [
+        [
+          "Health Check Active Jobs",
+          6
+        ],
+        [
+          "Health Check Memory",
+          6
+        ]
+      ],
+      "credential": "nRfNJVn6SEziII8k"
+    },
+    {
+      "workflow": "i-SEO Sales Manager - Admin.dev",
+      "id": "wLrLp4WQHm1VJmxz",
+      "active": true,
+      "executionsInWindow": 6,
+      "executionsPerMin": 0.13,
+      "sheetsNodes": 27,
+      "explicitReadNodes": 16,
+      "writeNodes": 11,
+      "sheetsRunsSampled": 12,
+      "readQuotaRunsSampled": 12,
+      "approxReadsPerMin": 0.27,
+      "err429Sampled": 0,
+      "topNodes": [
+        [
+          "Read Reminder CONFIG",
+          3
+        ],
+        [
+          "Apply Reminder Window CONFIG Write",
+          3
+        ],
+        [
+          "Read Authorization Config",
+          3
+        ],
+        [
+          "Read ACCESS_CONTROL",
+          3
+        ]
+      ],
+      "credential": "nRfNJVn6SEziII8k"
+    },
+    {
+      "workflow": "SEO Content Agent Beta.v14 - Worker",
+      "id": "p4mqb4VuPcemIDlC",
+      "active": true,
+      "executionsInWindow": 0,
+      "executionsPerMin": 0,
+      "sheetsNodes": 9,
+      "explicitReadNodes": 2,
+      "writeNodes": 7,
+      "sheetsRunsSampled": 0,
+      "readQuotaRunsSampled": 0,
+      "approxReadsPerMin": 0,
+      "err429Sampled": 0,
+      "topNodes": [],
+      "credential": "nRfNJVn6SEziII8k"
+    },
+    {
+      "workflow": "SEO Content Agent Beta.v14 - Intake",
+      "id": "x8EbTGKNdlBprLvk",
+      "active": true,
+      "executionsInWindow": 7,
+      "executionsPerMin": 0.16,
+      "sheetsNodes": 3,
+      "explicitReadNodes": 2,
+      "writeNodes": 1,
+      "sheetsRunsSampled": 0,
+      "readQuotaRunsSampled": 0,
+      "approxReadsPerMin": 0,
+      "err429Sampled": 0,
+      "topNodes": [],
+      "credential": "nRfNJVn6SEziII8k"
+    }
+  ],
+  "operationalDevLiveHash": "74913474A92F3899",
+  "phase3d5BaselineHash": "6E4D17F4FABD3260",
+  "liveMatchesBaseline": false
+}
