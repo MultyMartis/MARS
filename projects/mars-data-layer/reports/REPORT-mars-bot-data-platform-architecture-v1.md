@@ -122,12 +122,14 @@ PostgreSQL **not** installed in this wave.
 
 | Item | Value |
 |------|-------|
-| Worktree base | `origin/mars/canonical-post-recovery` |
+| Worktree base | `origin/mars/canonical-post-recovery` @ `afa647de` |
 | Worktree path | `X:\AI MARS STORAGE\git-sync-mars-data-layer-architecture-v1-20260903-010429\repo` |
+| Wave branch | `wave/mars-data-layer-architecture-v1-20260903-010429` |
 | Allowlisted paths | `projects/mars-data-layer/**`, `registry/project-registry.md` |
 | Foreign WIP | Untouched in primary working tree |
-
-*(Commit hashes filled at closeout.)*
+| Commit 1 | `5c9cf370` — `docs(mars-data-layer): establish bot data platform architecture v1` |
+| Commit 2 | `187018cd` — `docs(mars): register MARS Bot Data Platform` |
+| Push target | `origin/mars/canonical-post-recovery` (non-force) |
 
 ---
 
