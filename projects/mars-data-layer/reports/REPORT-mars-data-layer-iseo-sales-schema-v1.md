@@ -212,8 +212,12 @@ No mandatory handoff rewrite. Business tables remain migration-owned. Foundation
 
 - Clean worktree from `origin/mars/canonical-post-recovery` @ `0482e9cd`
 - Selective paths: `projects/mars-data-layer/**` + `registry/project-registry.md`
-- Push target: `origin/mars/canonical-post-recovery` (non-force)
-- Commit SHAs: filled after commit/push in closeout
+- Push: non-force `HEAD:mars/canonical-post-recovery` (`0482e9cd..4d98d233`)
+- Commits:
+  - `69d010f9` — `feat(mars-data-layer): define iSEO sales relational model v1`
+  - `09c26c3c` — `feat(mars-data-layer): add initial PostgreSQL migrations and contracts`
+  - `4d98d233` — `test(mars-data-layer): add iSEO schema fixtures and validation`
+- Tip: `4d98d233` = `origin/mars/canonical-post-recovery`
 
 ---
 
