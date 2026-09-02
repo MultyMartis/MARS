@@ -1,7 +1,7 @@
 # MARS Bot Data Platform — Roadmap
 
 **project_id:** `mars-data-layer`  
-**Status:** Architecture V1 / Foundation  
+**Status:** LOCAL SCHEMA DESIGN  
 **Last updated:** 2026-09-03
 
 Phases are **sequential gates**. Later phases must not start without explicit human charter when they touch production.
@@ -39,10 +39,10 @@ Phases are **sequential gates**. Later phases must not start without explicit hu
 
 **Owner:** this project
 
-- `mars_core` (small)
-- Roles / grants specification
-- Migration toolchain + standards applied
-- MARS DB Toolkit **base** (narrow validated operations)
+- [x] `mars_core` local migrations (`schema_migrations`, `apps`, `data_contract_versions`, `workflow_releases`)
+- [x] Roles / grants specification + SQL stubs (`mars_migrator`, `iseo_*`; no passwords in Git)
+- [~] Migration toolchain + standards applied (SQL source in-tree; runner still human/`psql`)
+- [ ] MARS DB Toolkit **base** (narrow validated operations)
 
 **Exit:** Core schemas + Toolkit contract usable in local/dev; production apply only under migration standard.
 
@@ -50,9 +50,11 @@ Phases are **sequential gates**. Later phases must not start without explicit hu
 
 ## Phase 3 — i-SEO Sales Manager data model
 
-- Map Sheets concepts → relational model (`app_iseo_sales`)
-- Primitives: jobs, events, errors, idempotency, audit, outbox
-- No blind 1:1 Sheet→table copy
+- [x] Map Sheets concepts → relational model (`app_iseo_sales`) — local V1 migrations
+- [x] Primitives: jobs, events, errors, idempotency, audit, outbox + SECURITY DEFINER ops
+- [x] No blind 1:1 Sheet→table copy
+- [ ] Local PG apply + constraint/permission test green on disposable DB
+- [ ] Human approval of schema set before any shadow/cutover work
 
 **Exit:** Approved schema + migration set for Sales Manager (still Sheets-primary).
 
@@ -129,5 +131,6 @@ Triggers only (not premature):
 
 ## Current position
 
-**Completed this wave:** Architecture V1 + local development contract + registry registration (documentation).  
-**Next:** Local schema design (post–Architecture V1 gate).
+**Completed this wave:** Architecture V1 + **local schema design SQL** for `mars_core` / `app_iseo_sales` V1 (roles, migrations, fixtures, test scripts).  
+**In progress:** Local apply validation when disposable PostgreSQL is available.  
+**Next:** Green local tests → human schema approval → Phase 4 shadow design (still no VPS mutation from this pack alone).

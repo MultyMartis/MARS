@@ -2,7 +2,7 @@
 
 **project_id:** `mars-data-layer`  
 **Canonical name:** MARS Bot Data Platform  
-**Status:** `ARCHITECTURE / FOUNDATION`  
+**Status:** `LOCAL SCHEMA DESIGN`  
 **Authority model:** Hybrid **B + D-lite** (one PostgreSQL cluster/database `mars`, schema-per-app, least-privilege roles, MARS DB Toolkit as controlled contract layer)
 
 ---
@@ -47,7 +47,7 @@ MLI already uses `X:\MARS-Localhost\databases\` for dumps/baselines (MySQL/WordP
 
 ## Current stage
 
-**Architecture V1 established.** Next gate: local schema design + migration stubs for `mars_core` and first app mapping refinement — still **no** production server mutation from this pack.
+**LOCAL SCHEMA DESIGN** — `mars_core` + `app_iseo_sales` V1 migrations, roles, fixtures, and local apply/test scripts are in-tree. `app_seo_content` remains an empty placeholder schema. Still **no** production server mutation from this pack.
 
 Roadmap: [ROADMAP.md](ROADMAP.md)
 
@@ -78,9 +78,19 @@ Handoff: [runbooks/SERVER-OPS-POSTGRES-FOUNDATION-HANDOFF-v1.md](runbooks/SERVER
 | Security | [architecture/POSTGRES-SECURITY-STANDARD-v1.md](architecture/POSTGRES-SECURITY-STANDARD-v1.md) |
 | Backup/DR | [architecture/BACKUP-DR-STANDARD-v1.md](architecture/BACKUP-DR-STANDARD-v1.md) |
 | `mars_core` scope | [architecture/MARS-CORE-SCOPE-v1.md](architecture/MARS-CORE-SCOPE-v1.md) |
-| i-SEO mapping v0 | [architecture/ISEO-SALES-DATA-MAPPING-v0.md](architecture/ISEO-SALES-DATA-MAPPING-v0.md) |
+| i-SEO data model v1 | [architecture/ISEO-SALES-DATA-MODEL-v1.md](architecture/ISEO-SALES-DATA-MODEL-v1.md) |
+| i-SEO mapping v1 | [architecture/ISEO-SALES-DATA-MAPPING-v1.md](architecture/ISEO-SALES-DATA-MAPPING-v1.md) |
+| i-SEO mapping v0 (superseded) | [architecture/ISEO-SALES-DATA-MAPPING-v0.md](architecture/ISEO-SALES-DATA-MAPPING-v0.md) |
+| i-SEO migration validation | [architecture/ISEO-SALES-MIGRATION-VALIDATION-v1.md](architecture/ISEO-SALES-MIGRATION-VALIDATION-v1.md) |
+| i-SEO open questions | [architecture/ISEO-SALES-DATA-OPEN-QUESTIONS-v1.md](architecture/ISEO-SALES-DATA-OPEN-QUESTIONS-v1.md) |
 | SEO Content mapping v0 | [architecture/SEO-CONTENT-DATA-MAPPING-v0.md](architecture/SEO-CONTENT-DATA-MAPPING-v0.md) |
 | Architecture report | [reports/REPORT-mars-bot-data-platform-architecture-v1.md](reports/REPORT-mars-bot-data-platform-architecture-v1.md) |
+| Schema report | [reports/REPORT-mars-data-layer-iseo-sales-schema-v1.md](reports/REPORT-mars-data-layer-iseo-sales-schema-v1.md) |
+| Roles (no passwords) | [database/roles/README.md](database/roles/README.md) |
+| Core migrations | [database/core/migrations/](database/core/migrations/) |
+| iSEO Sales migrations | [database/app_iseo_sales/migrations/](database/app_iseo_sales/migrations/) |
+| Synthetic fixtures | [fixtures/iseo_sales/README.md](fixtures/iseo_sales/README.md) |
+| Local schema tests | [tests/iseo_sales/README.md](tests/iseo_sales/README.md) |
 
 ---
 
@@ -95,4 +105,4 @@ Handoff: [runbooks/SERVER-OPS-POSTGRES-FOUNDATION-HANDOFF-v1.md](runbooks/SERVER
 
 ## Next gate
 
-**READY FOR LOCAL SCHEMA DESIGN** — design `mars_core` + first `app_iseo_sales` relational model from mapping v0; still no VPS PostgreSQL install from this wave.
+**LOCAL SCHEMA DESIGN in progress / ready for local apply validation** — run `tests/iseo_sales/01_schema_apply.sh` against disposable local PG when available; still no VPS PostgreSQL install or production cutover from this wave.

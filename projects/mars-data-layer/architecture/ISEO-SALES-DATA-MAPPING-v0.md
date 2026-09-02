@@ -1,9 +1,11 @@
 # i-SEO Sales Manager — Data Mapping v0
 
 **Document:** `ISEO-SALES-DATA-MAPPING-v0`  
-**Status:** Placeholder inventory — **NOT** final schema  
+**Status:** Placeholder inventory — **SUPERSEDED** by `ISEO-SALES-DATA-MAPPING-v1.md`  
 **Date:** 2026-09-03  
 **Source packs:** `projects/iseo-sales-manager-bot/` (Sheets + n8n product)
+
+Kept for history. Use **v1** for cutover planning.
 
 Do **not** create one PostgreSQL table per Sheet.
 
