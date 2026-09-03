@@ -99,11 +99,17 @@ WAVE 1 → **COMPLETE**; WAVE 2 → **NEXT**; WAVE 3 remains **QUEUED / OPEN DEC
 
 ## 21. Git Persistence
 
-Scoped commit(s) from clean sync worktree only; allowlisted paths; no foreign WIP.
+Scoped commit from clean sync worktree `X:\AI MARS STORAGE\git-sync-iseo-su-form-consent-wave-01\repo` only; allowlisted paths; no foreign WIP.
+
+- Commit: `a69c46002f5b2baabac13715b5f357baa4cfcac7`
+- Subject: `fix(iseo-su): require personal data consent on contact forms`
+- Parent tip before push: `239bedc7`
 
 ## 22. Remote Sync
 
-Push to `origin/mars/canonical-post-recovery` (no force).
+Pushed to `origin/mars/canonical-post-recovery` (no force): `239bedc7..a69c4600`.
+
+Post-fetch: `HEAD` == `origin/mars/canonical-post-recovery` == `a69c4600`.
 
 ## 23. Remaining Risks
 
@@ -164,7 +170,7 @@ WAVE 1 STATUS: COMPLETE
 WAVE 2 STATUS: NEXT
 WAVE 3 STATUS: QUEUED / OPEN DECISIONS
 
-PROJECT-OWNED UNCOMMITTED: (see post-commit status)
+PROJECT-OWNED UNCOMMITTED: 0
 FOREIGN WIP PRESERVED: YES
-REMOTE SYNC: (see push result)
+REMOTE SYNC: COMPLETE
 ```
