@@ -1,0 +1,36 @@
+{
+  "snapshot_id": "20260903T091128Z",
+  "apply_runs": 2,
+  "second_run_rc": 0,
+  "post_reconcile_stable_counts": {
+    "inbound": 59,
+    "leads": 65,
+    "dedup": 129,
+    "events": 191,
+    "access": 5,
+    "deliveries": 264,
+    "config": 340,
+    "errors": 4,
+    "pending_deliveries": 0
+  },
+  "idempotency_mechanisms": {
+    "inbound_events": "ON CONFLICT (source_system, source_id)",
+    "leads": "ON CONFLICT (lead_id)",
+    "lead_events": "deterministic event_id + ON CONFLICT DO NOTHING (sheet + mig_*)",
+    "lead_dedup_keys": "ON CONFLICT (dedup_key)",
+    "access_rules": "ON CONFLICT (principal_key)",
+    "deliveries": "ON CONFLICT (delivery_id)",
+    "config": "ON CONFLICT (key)",
+    "errors": "DELETE WHERE app_component='shadow-import' then re-insert (no natural unique)"
+  },
+  "duplicates_created_on_second_run": {
+    "inbound": 0,
+    "leads": 0,
+    "events": 0,
+    "deliveries": 0,
+    "access": 0,
+    "dedup": 0,
+    "errors_shadow": 0
+  },
+  "verdict": "IDEMPOTENCY PASS"
+}

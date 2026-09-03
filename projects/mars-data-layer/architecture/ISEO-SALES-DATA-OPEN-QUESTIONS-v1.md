@@ -3,7 +3,8 @@
 **Document:** `ISEO-SALES-DATA-OPEN-QUESTIONS-v1`  
 **project_id:** `mars-data-layer`  
 **Date:** 2026-09-03  
-**Rule:** only genuine blockers/uncertainties — no invented business rules
+**Rule:** only genuine blockers/uncertainties — no invented business rules  
+**Update:** post shadow-migration forensic `20260903T091128Z`
 
 ---
 
@@ -12,10 +13,10 @@
 | Field | Content |
 |-------|---------|
 | **Question** | What exact algorithm mints production `lead_id` (`LEAD_<12 hex>` vs UUID/ULID vs `lead_<hex>`)? |
-| **Evidence** | Architecture says UUID/ULID at parse; live samples show multiple string shapes |
-| **Consequence** | PG stores opaque `text`; import safe. New minting must match product code |
+| **Evidence** | Live CLEAN collapse shows opaque text IDs; multiple historical shapes; import stores as `text` |
+| **Classification** | **NON-BLOCKING** for PG_SHADOW; **OPERATOR DECISION REQUIRED BEFORE CUTOVER** for Toolkit mint freeze |
+| **Consequence** | PG uniqueness on `lead_id` works; new minting must match product code |
 | **Recommended default** | Keep opaque text uniqueness; mint in workflow/parser as today until single generator is documented |
-| **Operator decision before migration?** | No for import; **Yes** before freezing Toolkit mint helper |
 
 ---
 
@@ -23,11 +24,11 @@
 
 | Field | Content |
 |-------|---------|
-| **Question** | Is current production CLEAN/DEDUP writer still `append` with empty `matchingColumns` (Sep 1 evidence) or restored to upsert? |
-| **Evidence** | Sep 1 node-run samples vs older soak docs claiming `appendOrUpdate` |
+| **Question** | Is current production CLEAN/DEDUP writer still `append` with empty `matchingColumns` or restored to upsert? |
+| **Evidence** | Forensic: RAW ~17.5k / CLEAN ~7.9k with few unique IDs → append-history confirmed in practice |
+| **Classification** | **RESOLVED** for migration strategy (collapse latest + PG UNIQUE). Sheets hygiene optional ops fix |
 | **Consequence** | Import must collapse duplicates; shadow dual-write must use PG upsert regardless |
 | **Recommended default** | Treat Sheets as dirty append-capable; PG enforces uniqueness |
-| **Operator decision before migration?** | No — validation spec already requires collapse. Optional ops fix for Sheets hygiene |
 
 ---
 
@@ -35,11 +36,11 @@
 
 | Field | Content |
 |-------|---------|
-| **Question** | Exact status enum and full column set for `LEAD_DELIVERIES` and `REMINDER_DELIVERIES`? |
-| **Evidence** | Partial fields proven (`lead_id`, telegram message/chat ids, action token, `reminder_key`); full enum SAFE UNKNOWN |
-| **Consequence** | `deliveries.status` uses platform outbox enum; import mapping may need a one-time adapter |
-| **Recommended default** | Map success→`sent`, failure→`dead`/`retry`, unknown→`sent` if message id present else `pending` |
-| **Operator decision before migration?** | Prefer sample export review; not a schema blocker |
+| **Question** | Exact status enum and full column set for deliveries? |
+| **Evidence** | Live columns include `delivery_key`, `stable_lead_ref`, `delivery_status`, `delivered_at`, telegram refs; adapter maps to outbox enum; historical pending forced non-pending |
+| **Classification** | **RESOLVED** enough for shadow; residual malformed/orphan rows documented |
+| **Consequence** | Candidate workers must not resume historical cancelled/sent as pending |
+| **Recommended default** | Keep adapter; treat unknown with message id as `sent` else `cancelled` for history |
 
 ---
 
@@ -47,11 +48,11 @@
 
 | Field | Content |
 |-------|---------|
-| **Question** | Should PG permanently support both CRM lifecycle (`reviewing`…) and Telegram ops (`processed`/`spam`/`pending`)? |
-| **Evidence** | LEAD-LIFECYCLE-v1 vs live Admin callback/reminder selectors |
-| **Consequence** | CHECK admits union; product UX must pick canonical labels |
+| **Question** | Should PG permanently support both CRM lifecycle and Telegram ops statuses? |
+| **Evidence** | Collapsed live statuses in shadow: `new/pending/processed/spam` only (exact Sheets match) |
+| **Classification** | **NON-BLOCKING**; soft product decision before Admin UX redesign |
+| **Consequence** | CHECK admits union; runtime writers currently use ops subset |
 | **Recommended default** | Keep union in V1 CHECK; document ops subset as runtime writers |
-| **Operator decision before migration?** | Soft — confirm before Admin UX redesign |
 
 ---
 
@@ -59,8 +60,19 @@
 
 | Field | Content |
 |-------|---------|
-| **Question** | When will disposable PG under `X:\MARS-Localhost\databases\mars-bot-data\` be installed for apply validation? |
-| **Evidence** | No `psql`/`docker` on this workstation at schema wave time; MLI MySQL contour exists |
-| **Consequence** | Migrations are source-complete but not execution-validated here |
-| **Recommended default** | Follow `LOCAL-DB-DEVELOPMENT-CONTRACT-v1`; install only under charter |
-| **Operator decision before migration?** | **Yes** before claiming “schema apply proven” |
+| **Question** | When will disposable local PG under `X:\MARS-Localhost\...` be installed? |
+| **Evidence** | Shadow apply validated on server `mars-postgres` (PG18) this wave |
+| **Classification** | **NON-BLOCKING** for shadow migration (server path proven) |
+| **Consequence** | Local disposable still useful for offline tooling |
+| **Recommended default** | Follow local DB contract; not required to claim shadow PASS |
+
+---
+
+## New residuals from shadow wave (not original Q1–Q4)
+
+| Item | Classification |
+|------|----------------|
+| 67 deliveries with null `lead_id` (orphan stable_lead_ref) | **NON-BLOCKING** for shadow; **OPERATOR DECISION** before cutover UX |
+| 1 malformed delivery row | **NON-BLOCKING** / UNKNOWN retained |
+| DEDUP sheet empty keys | **RESOLVED** via synth `lead_dedup_keys` + constraints |
+| ACCESS only 1 active admin at T0 | Fidelity PASS; re-check at cutover freeze |

@@ -1,0 +1,378 @@
+{
+  "spreadsheetId": "1aeIWHeaqHwgJSKLCFZP8M4qG5y9qmOcPt6rvSWsltRU",
+  "title": "MetaBOT -Leads_Manager.DB",
+  "tabs": {
+    "lead-base-processed": {
+      "headers": [
+        "lead_id",
+        "created_at",
+        "clean_name",
+        "primary_contact",
+        "phone",
+        "email",
+        "messenger",
+        "site",
+        "service",
+        "summary",
+        "quality_status",
+        "duplicate_status",
+        "manager_status",
+        "notes"
+      ],
+      "row_count_body": 20,
+      "nonempty_rows": 20
+    },
+    "lead_clean_v2": {
+      "headers": [
+        "lead_id",
+        "source_message_id",
+        "created_at",
+        "processed_at",
+        "updated_at",
+        "client_name",
+        "primary_contact",
+        "contact_type",
+        "phone",
+        "email",
+        "messenger",
+        "site",
+        "service",
+        "summary",
+        "source",
+        "request_page",
+        "utm_source",
+        "utm_medium",
+        "utm_campaign",
+        "processing_mode",
+        "ai_enabled",
+        "ai_status",
+        "ai_model",
+        "fallback_used",
+        "parser_version",
+        "message_format_version",
+        "reply_template_version",
+        "priority",
+        "quality_status",
+        "quality_comment",
+        "missing_fields",
+        "clarification_questions",
+        "manager_recommendation",
+        "first_reply_text",
+        "first_reply_source",
+        "reply_review_status",
+        "reply_sent_manually_at",
+        "duplicate_status",
+        "duplicate_match_type",
+        "duplicate_lead_id",
+        "previous_contact_at",
+        "previous_service",
+        "previous_summary",
+        "manager_status",
+        "assigned_to",
+        "first_contact_at",
+        "next_followup_at",
+        "closed_at",
+        "close_reason",
+        "manager_notes",
+        "processing_error",
+        "last_error_code",
+        "manager_status_updated_at",
+        "manager_status_updated_by",
+        "manager_status_source",
+        "telegram_chat_ref_hash",
+        "telegram_message_ref",
+        "telegram_action_token",
+        "last_manager_action",
+        "last_manager_action_at",
+        "spam_at",
+        "spam_by",
+        "spam_reason",
+        "manager_action_processed_at",
+        "manager_action_processed_by"
+      ],
+      "row_count_body": 7956,
+      "nonempty_rows": 7956
+    },
+    "CONFIG": {
+      "headers": [
+        "key",
+        "value",
+        "type",
+        "updated_at",
+        "updated_by",
+        "description"
+      ],
+      "row_count_body": 340,
+      "nonempty_rows": 340
+    },
+    "LEAD_EVENTS": {
+      "headers": [
+        "event_id",
+        "ts",
+        "lead_id",
+        "event_type",
+        "actor",
+        "detail"
+      ],
+      "row_count_body": 241,
+      "nonempty_rows": 241
+    },
+    "ERRORS": {
+      "headers": [
+        "ts",
+        "error_code",
+        "lead_id",
+        "stage",
+        "message",
+        "workflow",
+        "resolved"
+      ],
+      "row_count_body": 2952,
+      "nonempty_rows": 2952
+    },
+    "DEDUP_INDEX": {
+      "headers": [
+        "dedup_key",
+        "key_type",
+        "lead_id",
+        "gmail_message_id",
+        "normalized_value",
+        "created_at",
+        "last_seen_at",
+        "active"
+      ],
+      "row_count_body": 7927,
+      "nonempty_rows": 7927
+    },
+    "ACCESS_CONTROL": {
+      "headers": [
+        "telegram_user_id",
+        "telegram_user_hash",
+        "telegram_username",
+        "display_name",
+        "role",
+        "status",
+        "first_seen_at",
+        "last_seen_at",
+        "requested_at",
+        "approved_at",
+        "approved_by",
+        "revoked_at",
+        "revoked_by",
+        "source",
+        "notes",
+        "",
+        "reply_sender_name",
+        "reply_sender_enabled",
+        "reply_company_name",
+        "reply_profile_version",
+        "reply_profile_updated_at",
+        "reply_profile_updated_by",
+        "reply_profile_number"
+      ],
+      "row_count_body": 5,
+      "nonempty_rows": 5
+    },
+    "ACCESS_EVENTS": {
+      "headers": [
+        "ts",
+        "opaque_user_ref",
+        "event",
+        "prior_role",
+        "prior_status",
+        "new_role",
+        "new_status",
+        "actor_ref",
+        "source",
+        "outcome",
+        "detail"
+      ],
+      "row_count_body": 60,
+      "nonempty_rows": 60
+    },
+    "LEAD_DELIVERIES": {
+      "headers": [
+        "delivery_timestamp",
+        "stable_lead_ref",
+        "recipient_ref",
+        "recipient_role",
+        "delivery_channel",
+        "delivery_status",
+        "attempt_number",
+        "telegram_message_ref",
+        "telegram_chat_ref_hash",
+        "card_version",
+        "lifecycle_status_at_send",
+        "error_code",
+        "last_attempt_at",
+        "delivered_at",
+        "updated_at",
+        "delivery_key",
+        "telegram_delivery_chat_id"
+      ],
+      "row_count_body": 252,
+      "nonempty_rows": 252
+    },
+    "REMINDER_DELIVERIES": {
+      "headers": [
+        "reminder_key",
+        "reminder_window",
+        "recipient_ref",
+        "role_snapshot",
+        "pending_count_snapshot",
+        "oldest_age_minutes_snapshot",
+        "claimed_at",
+        "sent_at",
+        "status",
+        "telegram_message_ref_safe",
+        "error_code_safe",
+        "reminder_version",
+        "reconciled_at"
+      ],
+      "row_count_body": 13,
+      "nonempty_rows": 13
+    },
+    "ARCHIVE_CLEAN_PRE_2026-08-05": {
+      "headers": [
+        "error"
+      ],
+      "row_count_body": 1,
+      "nonempty_rows": 1
+    },
+    "ARCHIVE_LEAD_EVENTS_PRE_2026-08-05": {
+      "headers": [],
+      "row_count_body": 0,
+      "nonempty_rows": 0
+    },
+    "ARCHIVE_LEAD_DELIVERIES_PRE_2026-08-05": {
+      "headers": [],
+      "row_count_body": 0,
+      "nonempty_rows": 0
+    },
+    "ARCHIVE_REMINDER_DELIVERIES_PRE_2026-08-05": {
+      "headers": [],
+      "row_count_body": 0,
+      "nonempty_rows": 0
+    },
+    "ARCHIVE_DEDUP_PRE_2026-08-05": {
+      "headers": [],
+      "row_count_body": 0,
+      "nonempty_rows": 0
+    },
+    "LEADS": {
+      "headers": [
+        "lead_id",
+        "stable_lead_ref",
+        "callback_token",
+        "public_lead_id",
+        "received_at_utc",
+        "received_at_business",
+        "received_timezone",
+        "received_date",
+        "source_channel",
+        "client_name",
+        "phone",
+        "email",
+        "website",
+        "website_state",
+        "resolved_service_code",
+        "resolved_service_label",
+        "client_comment",
+        "request_summary",
+        "first_reply_version",
+        "first_reply_ready",
+        "first_reply_text",
+        "lifecycle_status",
+        "lifecycle_changed_at",
+        "lifecycle_changed_by",
+        "lifecycle_changed_by_role",
+        "is_real_lead",
+        "is_probable_test",
+        "production_generation",
+        "stats_included",
+        "archive_state",
+        "created_at",
+        "updated_at",
+        "last_event_at",
+        "",
+        "source_display"
+      ],
+      "row_count_body": 1,
+      "nonempty_rows": 1
+    },
+    "LEAD_EVENTS_V2": {
+      "headers": [],
+      "row_count_body": 0,
+      "nonempty_rows": 0
+    },
+    "TEST_LEADS": {
+      "headers": [
+        "fixture_id",
+        "template_id",
+        "phase_marker",
+        "probable_test",
+        "stats_included",
+        "exclude_from_prod_stats",
+        "site_sanitized",
+        "comment_sanitized",
+        "created_at",
+        "note"
+      ],
+      "row_count_body": 0,
+      "nonempty_rows": 0
+    },
+    "TEST_LEAD_EVENTS": {
+      "headers": [],
+      "row_count_body": 0,
+      "nonempty_rows": 0
+    },
+    "SYNC_STATE": {
+      "headers": [],
+      "row_count_body": 0,
+      "nonempty_rows": 0
+    },
+    "RAW_CURRENT": {
+      "headers": [],
+      "row_count_body": 0,
+      "nonempty_rows": 0
+    },
+    "CLEAN_CURRENT": {
+      "headers": [],
+      "row_count_body": 0,
+      "nonempty_rows": 0
+    },
+    "RECIPIENT_REPLIES": {
+      "headers": [
+        "stable_lead_ref",
+        "recipient_ref",
+        "reply_sender_name",
+        "reply_company_name",
+        "template_id",
+        "reply_text",
+        "created_at",
+        "phase_marker",
+        "is_test"
+      ],
+      "row_count_body": 0,
+      "nonempty_rows": 0
+    },
+    "PROFILE_EVENTS": {
+      "headers": [
+        "event_id",
+        "profile_number",
+        "event_at",
+        "action",
+        "previous_name",
+        "new_name",
+        "previous_enabled",
+        "new_enabled",
+        "actor_ref_safe",
+        "actor_display",
+        "reason_source",
+        "profile_version"
+      ],
+      "row_count_body": 7,
+      "nonempty_rows": 7
+    }
+  }
+}

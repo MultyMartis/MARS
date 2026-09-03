@@ -1,0 +1,12 @@
+{
+  "snapshot_id": "20260903T090906Z",
+  "postgres_credential_count": 0,
+  "postgres_node_binding_count": 0,
+  "iseo_active_present": true,
+  "active_iseo_workflows": [
+    "i-SEO Sales Manager - Operational.dev",
+    "i-SEO Sales Manager - Admin.dev"
+  ],
+  "shadow_write_path": "SSH + docker exec mars-postgres psql (migration credential contour only)",
+  "verdict": "PG_SHADOW DOES NOT AFFECT LIVE — PASS"
+}
