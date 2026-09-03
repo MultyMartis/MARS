@@ -270,7 +270,7 @@ Production mutations in this registration: **0** at registration time. **WAVE 1 
 | Task REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-FORM-CONSENT-WAVE-01.md` | CURRENT |
 | Russian closeout | `reports/ISEO-SU-FORM-CONSENT-WAVE-01-RU.md` | CURRENT |
 | Form security baseline (consent §) | `ISEO-SU-FORM-SECURITY-AND-ANTISPAM-BASELINE-v1.md` | CURRENT / CANONICAL |
-| Roadmap (WAVE 2 COMPLETE / WAVE 3 NEXT) | `ISEO-SU-IMPLEMENTATION-ROADMAP-2026-09-v1.md` | CURRENT / CANONICAL |
+| Roadmap (WAVE 3 COMPLETE) | `ISEO-SU-IMPLEMENTATION-ROADMAP-2026-09-v1.md` | CURRENT / CANONICAL |
 
 ---
 
@@ -299,6 +299,19 @@ Production mutations in this registration: **0** at registration time. **WAVE 1 
 | Static sitemap | `production-source/sitemaps/sitemap-static.xml` (132 URLs) | CURRENT |
 | Allowlist inventories | `data/sitemaps/sitemap-static-urls-v1.txt` · `data/sitemaps/public-canonical-static-routes-v1.txt` | CURRENT |
 | Sitemap architecture | `ISEO-SU-SITEMAP-ARCHITECTURE-AND-CURRENT-STATE-v1.md` | CURRENT / CANONICAL |
+
+---
+
+### USA/UAE Pages WAVE 03 (2026-09-03) — CURRENT / COMPLETE
+
+| Artifact | Path | Class |
+|----------|------|-------|
+| WAVE 03 evidence | `ISEO-SU-USA-UAE-PAGES-WAVE-03-EVIDENCE-v1.md` | CURRENT / CANONICAL |
+| Task REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-USA-UAE-PAGES-WAVE-03.md` | CURRENT |
+| Russian closeout | `reports/ISEO-SU-USA-UAE-PAGES-WAVE-03-RU.md` | CURRENT |
+| USA page (source) | `production-source/static-html/services/seo/prodvizhenie-v-ssha.html` | CURRENT |
+| UAE page (source) | `production-source/static-html/services/seo/prodvizhenie-v-oae.html` | CURRENT |
+| Static sitemap | **unchanged** 132 URLs — USA/UAE **not** listed | CURRENT |
 
 ---
 

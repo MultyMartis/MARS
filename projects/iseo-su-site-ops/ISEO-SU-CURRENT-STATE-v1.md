@@ -3,14 +3,14 @@
 **Programme:** ISEO-SU-SITE-OPS  
 **Site:** `https://i-seo.su/`
 **Canonical locus:** `X:\AI MARS\projects\iseo-su-site-ops\`  
-**Updated:** 2026-09-03 (City Pages WAVE 02 COMPLETE; Form Consent WAVE 01 COMPLETE / RECONCILED via WAVE 01A)  
+**Updated:** 2026-09-03 (USA/UAE WAVE 03 COMPLETE; City Pages WAVE 02 COMPLETE; Form Consent WAVE 01 COMPLETE / RECONCILED via WAVE 01A)  
 **Authority:** first current-state document for ordinary work
 
 Historical REPORT files record earlier states and do not override this document or fresher accepted evidence.
 
 ## 1. Overall Status
 
-The production site is operating; glossary publication, form hardening, form HMAC secret rotation to a production-local authority, technical/SEO audit, and the Metrika visitor-IP addon are complete milestones. HIGH FIX WAVE 01 is **CLOSED** (technical): root `/sitemap.xml` repaired, initial static allowlist generator deployed (historical coverage was incomplete), theme relative `img/` paths normalized to `/img/`. **Static sitemap completeness fix 01 is CLOSED**: SEO-supplied 54 missing public URLs validated and added; +2 legal pages from broader reconciliation; static sitemap **71 → 127**; completeness gate `PUBLIC_CANONICAL_STATIC_ROUTES - SITEMAP_STATIC_URLS = 0` required on regenerate. **TECH CLEANUP WAVE 01 is CLOSED**: `SM-MISSING-INDEXABLE` rechecked (eligible gap **0**), `LINK-TO-REDIR` residual **0**, `IMG-HUGE` residual **0**. **HMAC rotation test route cleanup 01 is CLOSED** (2026-08-31): no public server route for `?iseo_hmac_rotation_test=1`; incident mail matched isolated HMAC rotation validation POST with `test_mode` ON (restored OFF 2026-08-24); production recipient remains `nikel007i33@yandex.ru` only; see `ISEO-SU-HMAC-ROTATION-TEST-ROUTE-CLEANUP-EVIDENCE-v1.md`. Remaining open work is SEO-review audit findings only (separate charter).
+The production site is operating; glossary publication, form hardening, form HMAC secret rotation to a production-local authority, technical/SEO audit, and the Metrika visitor-IP addon are complete milestones. HIGH FIX WAVE 01 is **CLOSED** (technical): root `/sitemap.xml` repaired, initial static allowlist generator deployed (historical coverage was incomplete), theme relative `img/` paths normalized to `/img/`. **Static sitemap completeness fix 01 is CLOSED**: SEO-supplied 54 missing public URLs validated and added; +2 legal pages from broader reconciliation; static sitemap **71 → 127**; completeness gate `PUBLIC_CANONICAL_STATIC_ROUTES - SITEMAP_STATIC_URLS = 0` required on regenerate. **TECH CLEANUP WAVE 01 is CLOSED**: `SM-MISSING-INDEXABLE` rechecked (eligible gap **0**), `LINK-TO-REDIR` residual **0**, `IMG-HUGE` residual **0**. **HMAC rotation test route cleanup 01 is CLOSED** (2026-08-31): no public server route for `?iseo_hmac_rotation_test=1`; incident mail matched isolated HMAC rotation validation POST with `test_mode` ON (restored OFF 2026-08-24); production recipient remains `nikel007i33@yandex.ru` only; see `ISEO-SU-HMAC-ROTATION-TEST-ROUTE-CLEANUP-EVIDENCE-v1.md`. **USA/UAE WAVE 03 is CLOSED** (2026-09-03): Direct-ready `/services/seo/prodvizhenie-v-ssha.html` and `prodvizhenie-v-oae.html`; INTLSEO titles; not in menu; not in static sitemap. Remaining open work is SEO-review audit findings only (separate charter).
 
 ## 2. Production Status
 
@@ -149,6 +149,6 @@ SEO-team task pack registered 2026-09 (documentation/roadmap only; production mu
 
 - **WAVE 1 Form Consent** — **COMPLETE / RECONCILED** (2026-09-03): contact forms + calculator-result lead (`tarif-calc.php`) require consent; server enforcement via shared guard; recipient unchanged (`nikel007i33@yandex.ru`); privacy URL `https://i-seo.su/privacy-policy.html`. WAVE 01A patch evidence: [ISEO-SU-FORM-CONSENT-WAVE-01A-CALC-RESULT-PATCH-EVIDENCE-v1.md](ISEO-SU-FORM-CONSENT-WAVE-01A-CALC-RESULT-PATCH-EVIDENCE-v1.md)
 - **WAVE 2 City Pages ×5** — **COMPLETE** (2026-09-03): five regional SEO landings live; hub «Выберите ваш город»; self-canonical 5/5; static sitemap **132**; completeness PASS; consent baseline preserved. Evidence: [ISEO-SU-CITY-PAGES-WAVE-02-EVIDENCE-v1.md](ISEO-SU-CITY-PAGES-WAVE-02-EVIDENCE-v1.md)
-- **WAVE 3 USA/UAE ×2** — **NEXT / OPEN DECISIONS** (not started)
+- **WAVE 3 USA/UAE ×2** — **COMPLETE** (2026-09-03): Direct-ready landings live (`prodvizhenie-v-ssha.html`, `prodvizhenie-v-oae.html`); **INTLSEO** title suffix; not in menu; not in sitemap (132 unchanged); normal indexability; consent preserved. Evidence: [ISEO-SU-USA-UAE-PAGES-WAVE-03-EVIDENCE-v1.md](ISEO-SU-USA-UAE-PAGES-WAVE-03-EVIDENCE-v1.md)
 
 Does **not** close or modify the existing SEO-review backlog (CANON-*/TITLE-*/META-*/ORPHAN/ALT/OG/H1 review).

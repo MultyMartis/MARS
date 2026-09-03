@@ -175,14 +175,14 @@ MARS **не** меняет контент по этим сервисам без 
 - cases;
 - **remove** секцию «Выберите тематику» полностью.
 
-### Ограничения публикации
+### Ограничения публикации — **RESOLVED (WAVE 03)**
 
-Страницы пока **не**:
+Страницы **не**:
 
 - выводить в menu;
 - добавлять в sitemap.
 
-Purpose: создать для согласования SEO-командой.
+Purpose: Direct-ready / advertising first; normal indexability allowed. **WAVE 3 COMPLETE** 2026-09-03.
 
 ### Cases to verify (только в implementation wave)
 
@@ -191,7 +191,7 @@ Purpose: создать для согласования SEO-командой.
 | USA | `/cases/aaa-limo.html`, `/cases/drnicole.html` |
 | UAE | `/cases/iluve-me.html`, `/cases/youfleet.html` |
 
-Проверка существования/корректности — **не** сейчас.
+Проверка существования/корректности — **PASS 4/4** (WAVE 03 implementation).
 
 ---
 
@@ -201,7 +201,7 @@ Purpose: создать для согласования SEO-командой.
 
 1. **WAVE 1 — FORM CONSENT**
 2. **WAVE 2 — 5 CITY SEO PAGES**
-3. **WAVE 3 — USA / UAE DRAFT PAGES**
+3. **WAVE 3 — USA / UAE SEO PAGES** — **COMPLETE** (2026-09-03)
 
 Не менять порядок без operator decision.
 
@@ -211,32 +211,26 @@ Reason: FORM CONSENT first — чтобы все новые страницы н�
 
 ## 8. Open Decisions
 
-### 8.1 USA/UAE PRE-APPROVAL INDEXABILITY — **UNRESOLVED**
+### 8.1 USA/UAE PRE-APPROVAL INDEXABILITY — **RESOLVED — NORMAL INDEXABILITY ALLOWED / NO SITEMAP / NO MENU**
 
-В исходном SEO ТЗ:
+Operator WAVE 03:
 
 - menu = NO;
 - sitemap = NO;
-- отдельный `noindex` **не** указан.
+- `noindex` **не** ставить;
+- normal `index, follow` допустим;
+- Direct-ready без sitemap/menu promotion.
 
-MARS **не** придумывает `noindex` без решения.
+### 8.2 USA/UAE TITLE BRAND SUFFIX — **RESOLVED — INTLSEO**
 
-До production реализации требуется:
+Operator WAVE 03: суффикс title строго `| INTLSEO`.
 
-- explicit SEO/operator decision; **или**
-- deployment strategy, исключающая нежелательное обнаружение поисковиком.
+Не использовать в title этих страниц: `itlseo`, `itlseo.su`, `i-seo.su`.
 
-### 8.2 OPEN CONTENT CONFIRMATION — USA/UAE TITLE BRAND SUFFIX
+Exact titles:
 
-В SEO ТЗ:
-
-- USA: `Заказать SEO-продвижение сайта компании в США |itlseo`
-- UAE: `Заказать SEO-продвижение сайта компании в ОАЭ | itlseo.su`
-
-Возможная опечатка относительно бренда/domain `i-seo.su`.  
-**Не исправлять молча.**
-
-Перед implementation: подтвердить — оставлять текст SEO буквально **или** заменить на корректный `i-seo.su` branding.
+- `Заказать SEO-продвижение сайта компании в США | INTLSEO`
+- `Заказать SEO-продвижение сайта компании в ОАЭ | INTLSEO`
 
 ### 8.3 Exact privacy policy URL (перед WAVE 1)
 
@@ -288,7 +282,6 @@ Registration REPORT этой задачи **не** закрывает implementa
 
 ## 12. Current Decision
 
-**READY TO START WAVE 1**
+**WAVE 1 COMPLETE / RECONCILED · WAVE 2 COMPLETE · WAVE 3 COMPLETE**
 
-Следующий operator/charter шаг: отдельная implementation задача на Form Consent (после подтверждения privacy policy URL).  
-WAVE 2 / WAVE 3 остаются в очереди. WAVE 3 дополнительно ждёт open decisions.
+Open decisions **8.1** and **8.2** resolved in WAVE 03. Remaining SEO-review backlog (CANON/TITLE/META/…) is a **separate contour** — not started by this pack.

@@ -49,19 +49,19 @@
 
 ---
 
-### 3. USA/UAE DRAFT PAGES ×2
+### 3. USA/UAE SEO PAGES ×2
 
-**Status:** **NEXT / OPEN DECISIONS**
+**Status:** **COMPLETE** (2026-09-03) — evidence `ISEO-SU-USA-UAE-PAGES-WAVE-03-EVIDENCE-v1.md`
 
 | Field | Value |
 |-------|-------|
-| **Scope** | 2 draft static pages cloned from `zarubezhnye.html` for SEO approval; no menu; no sitemap; content per SEO package; remove «Выберите тематику» |
-| **Dependencies** | WAVE 1 preferred (form baseline); **OPEN:** pre-approval indexability; **OPEN:** title brand suffix (`itlseo` / `itlseo.su` vs `i-seo.su`); case URL existence check at implementation time |
-| **Production mutation type** | New static HTML only (after decisions). Explicitly **no** menu entry, **no** sitemap allowlist add in this wave |
-| **Validation requirements** | Pages exist for SEO review; layout/forms intact; menu/sitemap unchanged; indexability matches explicit decision; titles match confirmed brand policy; cases links verified |
-| **Rollback expectation** | Delete/unpublish 2 draft pages; no sitemap/menu rollback needed if never added |
-| **Documentation expected** | Wave REPORT recording decisions used + any residual SEO content anomalies |
-| **Stop condition** | Do **not** deploy until indexability + title brand decisions recorded; do not invent `noindex` |
+| **Scope** | 2 static SEO pages cloned from `zarubezhnye.html`; Direct-ready; no menu; no sitemap; approved content; remove «Выберите тематику» on new pages only |
+| **Decisions used** | **DIRECT-READY / NOT SITEMAP-PROMOTED**; normal indexability allowed (`index, follow`, no `noindex`); **INTLSEO** title suffix; cases verified 4/4 |
+| **Production mutation type** | New static HTML only. Explicitly **no** menu entry, **no** sitemap allowlist add, **no** sitemap regen |
+| **Validation requirements** | 2× HTTP 200; self-canonical; `index,follow`; not in menu; not in static sitemap (count **132**); INTLSEO titles; cases links verified; consent inherited |
+| **Rollback expectation** | Delete/unpublish 2 pages; no sitemap/menu rollback needed |
+| **Documentation expected** | Wave REPORT + evidence + RU closeout |
+| **Stop condition** | WAVE 3 closed; do not start unrelated SEO-review backlog |
 
 **Target URLs:**
 
