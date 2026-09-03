@@ -277,7 +277,15 @@ Host paths (contents not in Git):
 
 ## 29. Git
 
-Commit/push from clean worktree only; allowlisted tools/docs/evidence/report. No dumps, no credentials, no raw PII.
+| Item | Value |
+|---|---|
+| Worktree | `X:\AI MARS\worktrees\mars-data-layer-iseo-sales-sheets-to-pg-shadow-01` |
+| Branch | `wave/mars-data-layer-iseo-sales-sheets-to-pg-shadow-01` |
+| Feature commit | `97abea69` |
+| Tip after canonical merge | `976ba003` (merged `origin/mars/canonical-post-recovery` @ `239bedc7`) |
+| Push | non-force `origin/wave/mars-data-layer-iseo-sales-sheets-to-pg-shadow-01` |
+
+Allowlisted tools/docs/sanitized evidence/report only. Host-local inventories/`result.json` with residual display strings remain untracked. No dumps, no credentials, no raw PII in Git.
 
 ---
 
