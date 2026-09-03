@@ -3,7 +3,7 @@
 **Programme:** ISEO-SU-SITE-OPS  
 **Site:** `https://i-seo.su/`
 **Canonical locus:** `X:\AI MARS\projects\iseo-su-site-ops\`  
-**Updated:** 2026-08-31 (HMAC rotation test route cleanup 01)  
+**Updated:** 2026-09-03 (SEO team task pack registration / roadmap)  
 **Authority:** first current-state document for ordinary work
 
 Historical REPORT files record earlier states and do not override this document or fresher accepted evidence.
@@ -140,3 +140,13 @@ Protected means inspect, diff, back up, change intentionally, validate, and pres
 5. For production mutation, require fresh backup, bounded deployment, validation, rollback, and source promotion.
 
 WPilot 6D is not required for ordinary site operations.
+
+## Approved Upcoming Work
+
+SEO-team task pack registered 2026-09 (documentation/roadmap only; production mutations **0** until each wave is separately chartered). Authority: [ISEO-SU-SEO-TEAM-NEW-TASK-PACK-2026-09-v1.md](ISEO-SU-SEO-TEAM-NEW-TASK-PACK-2026-09-v1.md) · [ISEO-SU-IMPLEMENTATION-ROADMAP-2026-09-v1.md](ISEO-SU-IMPLEMENTATION-ROADMAP-2026-09-v1.md).
+
+- **WAVE 1 Form Consent** — **NEXT**
+- **WAVE 2 City Pages ×5** — **QUEUED**
+- **WAVE 3 USA/UAE ×2** — **QUEUED / requires indexability + title confirmation**
+
+Does **not** close or modify the existing SEO-review backlog (CANON-*/TITLE-*/META-*/ORPHAN/ALT/OG/H1 review).
