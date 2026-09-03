@@ -60,7 +60,7 @@
 | Field | Content |
 |-------|---------|
 | **Question** | When will disposable PG under `X:\MARS-Localhost\databases\mars-bot-data\` be installed for apply validation? |
-| **Evidence** | No `psql`/`docker` on this workstation at schema wave time; MLI MySQL contour exists |
-| **Consequence** | Migrations are source-complete but not execution-validated here |
-| **Recommended default** | Follow `LOCAL-DB-DEVELOPMENT-CONTRACT-v1`; install only under charter |
-| **Operator decision before migration?** | **Yes** before claiming “schema apply proven” |
+| **Evidence** | **RESOLVED_BY_SCHEMA_TEST (2026-09-03):** portable PostgreSQL 17.11 under MARS-Localhost; empty `mars` → migrations → fixtures → suites PASS (incl. repeatability). **Server (same day):** VEESP-N8N-01 PG **18.0** application schema apply + validation PASS — see `evidence/server-validation/iseo-sales-schema-v1/` and `REPORT-mars-data-layer-iseo-server-schema-apply-v1.md`. |
+| **Consequence** | Local + server schema apply are execution-validated. Business Q1–Q4 unchanged. Next gate is Sheets → Postgres **shadow** import (not cutover). |
+| **Recommended default** | Keep disposable runtime non-authoritative; reproduce from Git migrations only |
+| **Operator decision before migration?** | **No** for schema-apply proof (local + server done); **Yes** still before production workflow/Sheets cutover |

@@ -72,7 +72,21 @@ After foundation:
 
 ---
 
-## 6. References
+## 6. Local validation note (2026-09-03)
+
+Data-layer executed **local-only** disposable PostgreSQL validation:
+
+- Portable **PostgreSQL 17.11** under `X:\MARS-Localhost\` (not VEESP; not a Windows system service).
+- Empty database `mars` → Git migrations (`mars_core` + `app_iseo_sales`) → fixtures → constraint/permission/extended suites **PASS**, including migration repeatability after reset.
+- Evidence/report: `evidence/local-validation/iseo-sales-schema-v1/`, `reports/REPORT-mars-data-layer-iseo-local-postgres-validation-v1.md`.
+
+**Server requirement remains PostgreSQL 18** on VEESP-N8N-01. Local 17.11 proof does **not** change the production engine target and does **not** mean foundation work was executed on the server.
+
+No additional infra requirement beyond this handoff was discovered that blocks Server Ops (standard SQL migrations; roles/security/backup hooks unchanged).
+
+---
+
+## 7. References
 
 - [MARS-BOT-DATA-ARCHITECTURE-v1.md](../architecture/MARS-BOT-DATA-ARCHITECTURE-v1.md)
 - [BACKUP-DR-STANDARD-v1.md](../architecture/BACKUP-DR-STANDARD-v1.md)
