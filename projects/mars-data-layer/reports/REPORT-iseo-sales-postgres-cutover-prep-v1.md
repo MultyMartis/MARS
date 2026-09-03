@@ -228,8 +228,9 @@ Non-blockers for SoT timing: encryptionKey residual (separate remediation).
 
 Worktree: `X:\AI MARS\worktrees\mars-data-layer-iseo-sales-cutover-prep-01`  
 Branch: `wave/mars-data-layer-iseo-sales-cutover-prep-01`  
-Dirty main at `X:\AI MARS` **not** touched.  
-Commit + non-force push of allowlisted paths (this wave).
+Commit: `5816b1e451410baddeb9ad53d78ff22442bf6a45`  
+Remote: `origin/wave/mars-data-layer-iseo-sales-cutover-prep-01` (non-force push)  
+Dirty main at `X:\AI MARS` **not** touched.
 
 ---
 
