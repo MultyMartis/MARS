@@ -1,0 +1,34 @@
+{
+  "admin_dev": {
+    "id": "wLrLp4WQHm1VJmxz",
+    "name": "i-SEO Sales Manager - Admin.dev",
+    "active": true
+  },
+  "admin_v3_dev": {
+    "id": "Zk9b1BiXpYN9rMMo",
+    "name": "i-SEO Sales Manager - Admin.v3.dev",
+    "active": false,
+    "telegram_trigger_nodes": 0,
+    "google_sheets_nodes": 0
+  },
+  "operational_dev": {
+    "id": "xSnXPy8cEHoZw6xG",
+    "active": true
+  },
+  "operational_v3_dev": {
+    "id": "NH4uV145Amrgnmkm",
+    "active": false
+  },
+  "admin_v3_rollback": {
+    "id": "8uStgSN9brsxmz6g",
+    "name": "i-SEO Sales Manager - Admin.v3.rollback",
+    "active": false
+  },
+  "operational_v3_rollback": {
+    "id": "favawMOzVwtFMdyH",
+    "active": false
+  },
+  "telegram_intake": "Admin.dev only (candidate has no Telegram Trigger)",
+  "security_residual": "SECURITY RESIDUAL \u2014 MAY BE REMEDIATED AFTER CUTOVER",
+  "cutover_performed": false
+}

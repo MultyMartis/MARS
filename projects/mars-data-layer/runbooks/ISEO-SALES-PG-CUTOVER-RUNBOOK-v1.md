@@ -1,50 +1,50 @@
 # ISEO Sales — PostgreSQL Cutover Runbook v1
 
 **Document:** `ISEO-SALES-PG-CUTOVER-RUNBOOK-v1`  
-**Status:** DESIGN ONLY — **DO NOT EXECUTE** in the prep wave  
-**Date:** 2026-09-03  
+**Status:** DESIGN ONLY — **DO NOT EXECUTE** in candidate waves  
+**Updated:** 2026-09-03 (Admin.v3.dev candidate wave)  
 **App:** `app_iseo_sales`
 
 ---
 
 ## 0. Preconditions (all must PASS)
 
-1. Topology: **JOINT Operational + Admin PG cutover** approved (Admin.v3.dev ready or Admin Sheets writes fenced).
-2. DR: off-host logical backup **PASS** + restore proof **PASS**.
-3. Authority marker: `mars_core.apps.metadata.data_authority_state = PG_CANDIDATE_VALIDATED`, `sheets_sot=true`.
-4. Workflows:
-   - Operational.dev `xSnXPy8cEHoZw6xG` **active**
-   - Operational.v3.dev `NH4uV145Amrgnmkm` **inactive** but Gmail+Telegram **wired**
-   - Operational.v3.rollback `favawMOzVwtFMdyH` **inactive**
+1. Topology: **JOINT Operational + Admin PG cutover** (both v3 candidates ready).
+2. DR: off-host logical backup **PASS** + restore proof **PASS** (prep residual may still block GO).
+3. Authority marker: `mars_core.apps.metadata.data_authority_state = PG_CANDIDATE_VALIDATED`, `sheets_sot=true` until fence.
+4. Workflows (expected pre-cutover):
+
+| Workflow | ID | Status |
+|----------|----|--------|
+| Operational.dev | `xSnXPy8cEHoZw6xG` | **ACTIVE** |
+| Admin.dev | `wLrLp4WQHm1VJmxz` | **ACTIVE** |
+| Operational.v3.dev | `NH4uV145Amrgnmkm` | **INACTIVE** |
+| Admin.v3.dev | `Zk9b1BiXpYN9rMMo` | **INACTIVE** |
+| Operational.v3.rollback | `favawMOzVwtFMdyH` | **INACTIVE** |
+| Admin.v3.rollback | `8uStgSN9brsxmz6g` | **INACTIVE** |
+
 5. Final delta tool ready: `iseo_sales_sheets_to_pg_shadow.py`
 6. Human GO recorded.
 
 ---
 
-## 1. Cutover fence sequence (future)
+## 1. Joint cutover fence sequence (future — DO NOT RUN NOW)
 
-1. Announce / start cutover window.
-2. Verify Operational.dev is sole Gmail intake.
-3. Wait for / inspect in-flight Operational.dev executions (see `in_flight_execution_policy.json`).
-4. Fence / deactivate old Gmail intake (Operational.dev → inactive).
-5. Record exact cutoff timestamp (UTC).
-6. Set authority → `CUTOVER_IN_PROGRESS` in `mars_core.apps.metadata`.
-7. Run **FINAL CUTOVER DELTA** (not ordinary shadow refresh):
-
-```text
-python projects/mars-data-layer/tools/iseo_sales_sheets_to_pg_shadow.py dry-run
-python projects/mars-data-layer/tools/iseo_sales_sheets_to_pg_shadow.py apply
-python projects/mars-data-layer/tools/iseo_sales_sheets_to_pg_shadow.py reconcile
-```
-
-8. Reconcile: zero unexplained differences; malformed delivery still `LEGACY INVALID ROW`.
-9. Declare PostgreSQL authoritative: `data_authority_state=PG_PRIMARY`, `sheets_sot=false`.
-10. Activate Operational.v3.dev.
-11. Verify candidate active.
-12. Verify Operational.dev inactive.
-13. Verify exactly one Gmail poller.
-14. Natural production observation (no synthetic Telegram).
-15. Rollback via [ISEO-SALES-PG-ROLLBACK-RUNBOOK-v1.md](./ISEO-SALES-PG-ROLLBACK-RUNBOOK-v1.md) on hard failure.
+1. Old Operational.dev **active**; old Admin.dev **active**; both v3 candidates **inactive**.
+2. Preflight: DR, ACCESS shadow parity, current lead state, one Gmail intake, Admin Telegram webhook on Admin.dev only.
+3. Fence old **Operational** intake (stop Gmail poller / deactivate Operational.dev intake path).
+4. Fence old **Admin** mutation intake / Telegram handling (deactivate Admin.dev Telegram trigger path so webhook is free for Admin.v3).
+5. Wait / reconcile in-flight executions on both old workflows.
+6. Final Sheets→PG delta + reconcile (malformed delivery remains `LEGACY INVALID ROW`).
+7. Verify ACCESS + current lead state in PostgreSQL.
+8. Mark `data_authority_state=PG_PRIMARY`, `sheets_sot=false`.
+9. Activate **Operational.v3.dev**.
+10. Activate **Admin.v3.dev** (Telegram trigger wiring only at this step — never before).
+11. Verify old Operational.dev and Admin.dev **inactive**.
+12. Verify exactly **one** Gmail intake.
+13. Verify exactly **one** Telegram Admin intake (Admin.v3).
+14. Natural production acceptance (no synthetic Telegram to Olya/customers).
+15. On hard failure: joint PG rollback runbook — **never** auto-reactivate Sheets Admin.dev / Operational.dev as SoT after `PG_PRIMARY`.
 
 ---
 
@@ -53,7 +53,7 @@ python projects/mars-data-layer/tools/iseo_sales_sheets_to_pg_shadow.py reconcil
 | Class | When | Mutates PG | Authority |
 |-------|------|------------|-----------|
 | `SHADOW REFRESH` | Sheets still SoT | Optional apply if contract allows | Sheets |
-| `FINAL CUTOVER DELTA` | Inside fence after old intake stopped | Required apply + reconcile | Becomes PG |
+| `FINAL CUTOVER DELTA` | Inside fence after old intakes stopped | Required apply + reconcile | Becomes PG |
 
 Operator must not hand-edit SQL/rows.
 
@@ -61,17 +61,18 @@ Operator must not hand-edit SQL/rows.
 
 ## 3. Post-activate natural acceptance (first window)
 
-- Gmail intake functioning
+- Gmail intake functioning (Operational.v3)
+- Admin Telegram commands/callbacks on Admin.v3 only
 - First natural new lead persists to PG
 - No duplicate inbound
-- Lead state correct
+- Lead status actions via `change_lead_status` / Admin closed ops
+- Reminder digest/group navigation from PG (no Sheets 429)
 - Outbox/delivery correct
 - Gmail processed only after DB commit
-- No Sheets critical calls on Operational.v3
+- No Sheets critical calls on either v3 workflow
 - No re-intake storm
 - No PG errors
-- One active intake only
-- Admin path also PG-backed (joint cutover)
+- One Gmail + one Admin Telegram intake only
 
 ---
 
@@ -80,10 +81,12 @@ Operator must not hand-edit SQL/rows.
 - Sheets no longer authoritative
 - Old production inactive
 - No automatic Sheets → PG writeback
+- No Admin PG → Sheets sync in v1
 - Projection may remain **NOT IMPLEMENTED** (communicate explicitly)
 
 ---
 
-## 5. Explicit non-actions of prep wave
+## 5. Explicit non-actions of Admin.v3 candidate wave
 
-This document was created during prep. **No step in §1 was executed.**
+This document was updated during Admin.v3 candidate preparation. **No step in §1 was executed.**
+No Admin.v3 / Operational.v3 activation. No SoT switch. No live Telegram tests.

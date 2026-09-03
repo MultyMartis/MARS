@@ -1,0 +1,28 @@
+{
+  "pin_ts": "20260903T110201Z",
+  "rollback": {
+    "id": "8uStgSN9brsxmz6g",
+    "name": "i-SEO Sales Manager - Admin.v3.rollback",
+    "active": false,
+    "export_hash": "1e19672ac9a9ef79783a475e8950d33c007aba1237a58c0fd29434c6eb037f6a",
+    "pre_id_hash": "d6373171a1f71fc7eb8810310dcf28d4384e04975c20eb054cc01fd101ae3de7"
+  },
+  "candidate": {
+    "id": "Zk9b1BiXpYN9rMMo",
+    "name": "i-SEO Sales Manager - Admin.v3.dev",
+    "active": false
+  },
+  "production": {
+    "id": "wLrLp4WQHm1VJmxz",
+    "name": "i-SEO Sales Manager - Admin.dev",
+    "active": true
+  },
+  "registry_exit": 0,
+  "registry_ok": true,
+  "hard_stops": {
+    "activated_v3": false,
+    "deactivated_production": false,
+    "activated_rollback": false,
+    "sheets_admin_as_post_pg_rollback": false
+  }
+}

@@ -1,0 +1,16 @@
+DELETE 0
+ id |  status  | n8n_workflow_id  |  release_version  
+----+----------+------------------+-------------------
+  9 | rollback | 8uStgSN9brsxmz6g | Admin.v3.rollback
+(1 row)
+
+INSERT 0 1
+  release_version  |  status   | n8n_workflow_id  |    hash12    
+-------------------+-----------+------------------+--------------
+ Admin.dev         | active    | wLrLp4WQHm1VJmxz | 
+ Admin.v3.dev      | candidate | Zk9b1BiXpYN9rMMo | 6c8526b255d4
+ Admin.v3.rollback | rollback  | 8uStgSN9brsxmz6g | 1e19672ac9a9
+(3 rows)
+
+
+---STDERR---

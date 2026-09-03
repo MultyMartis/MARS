@@ -1,0 +1,93 @@
+{
+  "source_workflow": {
+    "id": "wLrLp4WQHm1VJmxz",
+    "name": "i-SEO Sales Manager - Admin.dev",
+    "sheets_write_count": 11
+  },
+  "target_workflow": {
+    "id": "Zk9b1BiXpYN9rMMo",
+    "name": "i-SEO Sales Manager - Admin.v3.dev",
+    "sheets_authoritative_writes": 0
+  },
+  "mapping": [
+    {
+      "write_node": "Apply CONFIG Write",
+      "sheet": "CONFIG",
+      "pg_contract": "app_iseo_sales.set_config_value / config_kv",
+      "authoritative_in_v3": "PG",
+      "accounted": true
+    },
+    {
+      "write_node": "Update CLEAN Lifecycle",
+      "sheet": "lead_clean_v2",
+      "pg_contract": "app_iseo_sales.change_lead_status via admin_callback_lead_action",
+      "authoritative_in_v3": "PG",
+      "accounted": true
+    },
+    {
+      "write_node": "Append LEAD_EVENTS Callback",
+      "sheet": "LEAD_EVENTS",
+      "pg_contract": "lead_events append inside change_lead_status / admin_callback_lead_action",
+      "authoritative_in_v3": "PG",
+      "accounted": true
+    },
+    {
+      "write_node": "Upsert ACCESS_CONTROL",
+      "sheet": "ACCESS_CONTROL",
+      "pg_contract": "access_rules (authority); check_access reads; no mutation in this wave",
+      "authoritative_in_v3": "PG",
+      "accounted": true
+    },
+    {
+      "write_node": "Append ACCESS_EVENTS",
+      "sheet": "ACCESS_EVENTS",
+      "pg_contract": "audit/domain events on access mutations (future admin ACCESS ops); wave = read-only parity",
+      "authoritative_in_v3": "PG",
+      "accounted": true
+    },
+    {
+      "write_node": "Append ACCESS_EVENTS Notify",
+      "sheet": "ACCESS_EVENTS",
+      "pg_contract": "same as ACCESS_EVENTS + delivery intent if notify required",
+      "authoritative_in_v3": "PG",
+      "accounted": true
+    },
+    {
+      "write_node": "Upsert REMINDER_DELIVERIES Claim",
+      "sheet": "REMINDER_DELIVERIES",
+      "pg_contract": "claim_reminder_window (jobs/idempotency)",
+      "authoritative_in_v3": "PG",
+      "accounted": true
+    },
+    {
+      "write_node": "Upsert REMINDER_DELIVERIES Delivered",
+      "sheet": "REMINDER_DELIVERIES",
+      "pg_contract": "record_reminder_delivery → deliveries",
+      "authoritative_in_v3": "PG",
+      "accounted": true
+    },
+    {
+      "write_node": "Apply Reminder Window CONFIG Write",
+      "sheet": "CONFIG",
+      "pg_contract": "set_config_value for reminder window keys",
+      "authoritative_in_v3": "PG",
+      "accounted": true
+    },
+    {
+      "write_node": "Append PROFILE_EVENTS",
+      "sheet": "PROFILE_EVENTS",
+      "pg_contract": "DEFERRED — not required for Admin.v3 critical runtime; profile not Sheets-authoritative after cutover",
+      "authoritative_in_v3": "DEFERRED",
+      "accounted": true
+    },
+    {
+      "write_node": "Append ERRORS Reminder 429",
+      "sheet": "ERRORS",
+      "pg_contract": "record_error / errors table; Sheets 429 path eliminated by PG reminder reads",
+      "authoritative_in_v3": "PG",
+      "accounted": true
+    }
+  ],
+  "all_11_accounted": true,
+  "critical_sheets_writes_remaining_in_admin_v3": 0
+}

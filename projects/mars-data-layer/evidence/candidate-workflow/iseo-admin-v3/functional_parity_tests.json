@@ -1,0 +1,50 @@
+{
+  "methodology": "offline synthetic SQL harness under namespace adminv3test_% + n8n Manual inject contract; zero live Telegram",
+  "olya_test_traffic": 0,
+  "customer_test_traffic": 0,
+  "live_callbacks": 0,
+  "tests": {
+    "access": {
+      "authorized_admin_synthetic": "PASS",
+      "authorized_olya_shadow_read": "PASS (read-only against shadow ACCESS; no revoke/restore)",
+      "revoked_moderator_synthetic": "PASS (denied action)",
+      "unknown_actor": "PASS (denied)"
+    },
+    "lead_actions": {
+      "pending_to_processed": "PASS",
+      "pending_to_spam": "PASS",
+      "repeated_callback_idempotent": "PASS",
+      "stale_callback_version": "COVERED by expected_version / change_lead_status contract"
+    },
+    "reminders": {
+      "digest_grouping": "PASS",
+      "group_navigation": "PASS",
+      "exact_lead_card": "PASS",
+      "terminal_lead": "PASS via get_lead_card_payload after status change"
+    },
+    "cards": {
+      "pending_actionable": "PASS",
+      "processed_terminal": "PASS",
+      "spam_terminal": "PASS",
+      "source_request_action": "PASS (payload action present; no live send)",
+      "no_stray_kartochka": "PASS (forbidden in card builder)"
+    },
+    "commands": {
+      "help": "PASS",
+      "status": "PASS",
+      "health": "PASS",
+      "stats": "PASS",
+      "last_error": "PASS",
+      "config": "PASS",
+      "ai_status": "PASS (read path; live AI not mutated)"
+    },
+    "config_mutation": {
+      "ai_on_off_contract": "PASS on namespaced key adminv3test.ai.enabled only",
+      "live_ai_state_changed": false
+    },
+    "legacy_invalid_row": {
+      "excluded_from_card_queries": "PASS",
+      "query_failure_from_legacy_row": false
+    }
+  }
+}

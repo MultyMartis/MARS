@@ -22,6 +22,22 @@ ALLOWED_OPS: tuple[str, ...] = (
     "claim_pending_deliveries",
     "mark_delivery_result",
     "process_gmail_inbound_commit",
+    # Admin.v3.dev closed catalog
+    "check_access",
+    "set_config_value",
+    "get_admin_health",
+    "get_admin_status_snapshot",
+    "get_admin_stats",
+    "get_last_error",
+    "list_leads_page",
+    "list_pending_lead_groups",
+    "get_pending_leads_in_group",
+    "get_lead_card_payload",
+    "admin_callback_lead_action",
+    "claim_reminder_window",
+    "record_reminder_delivery",
+    "update_delivery_message_binding",
+    "admin_runtime_call",
 )
 
 
@@ -229,4 +245,137 @@ class IseoSalesOps:
                 correlation_id,
                 lead_id,
             ),
+        )
+
+    def check_access(
+        self,
+        telegram_user_id: str | None = None,
+        principal_key: str | None = None,
+    ) -> dict:
+        return self._call(
+            "SELECT app_iseo_sales.check_access(%s, %s)",
+            (telegram_user_id, principal_key),
+        )
+
+    def set_config_value(
+        self,
+        key: str,
+        value: str,
+        updated_by: str = "admin",
+        value_type: str = "string",
+        description: str | None = None,
+    ) -> dict:
+        return self._call(
+            "SELECT app_iseo_sales.set_config_value(%s, %s, %s, %s, %s)",
+            (key, value, updated_by, value_type, description),
+        )
+
+    def get_admin_health(self) -> dict:
+        return self._call("SELECT app_iseo_sales.get_admin_health()")
+
+    def get_admin_status_snapshot(self) -> dict:
+        return self._call("SELECT app_iseo_sales.get_admin_status_snapshot()")
+
+    def get_admin_stats(self) -> dict:
+        return self._call("SELECT app_iseo_sales.get_admin_stats()")
+
+    def get_last_error(self, limit: int = 5) -> dict:
+        return self._call("SELECT app_iseo_sales.get_last_error(%s)", (limit,))
+
+    def list_leads_page(
+        self,
+        statuses: Sequence[str] | None = None,
+        limit: int = 20,
+        offset: int = 0,
+        site: str | None = None,
+    ) -> dict:
+        return self._call(
+            "SELECT app_iseo_sales.list_leads_page(%s::text[], %s, %s, %s)",
+            (list(statuses) if statuses else None, limit, offset, site),
+        )
+
+    def list_pending_lead_groups(self) -> dict:
+        return self._call("SELECT app_iseo_sales.list_pending_lead_groups()")
+
+    def get_pending_leads_in_group(self, group_key: str, limit: int = 50) -> dict:
+        return self._call(
+            "SELECT app_iseo_sales.get_pending_leads_in_group(%s, %s)",
+            (group_key, limit),
+        )
+
+    def get_lead_card_payload(self, lead_id: str) -> dict:
+        return self._call(
+            "SELECT app_iseo_sales.get_lead_card_payload(%s)", (lead_id,)
+        )
+
+    def admin_callback_lead_action(
+        self,
+        lead_id: str,
+        action: str,
+        telegram_user_id: str,
+        callback_id: str | None = None,
+        expected_version: int | None = None,
+        from_status: str | None = None,
+        correlation_id: str | None = None,
+    ) -> dict:
+        return self._call(
+            "SELECT app_iseo_sales.admin_callback_lead_action(%s,%s,%s,%s,%s,%s,%s)",
+            (
+                lead_id,
+                action,
+                telegram_user_id,
+                callback_id,
+                expected_version,
+                from_status,
+                correlation_id,
+            ),
+        )
+
+    def claim_reminder_window(
+        self,
+        window_key: str,
+        actor_id: str = "admin-v3",
+        ttl_seconds: int = 86400,
+    ) -> dict:
+        return self._call(
+            "SELECT app_iseo_sales.claim_reminder_window(%s, %s, %s)",
+            (window_key, actor_id, ttl_seconds),
+        )
+
+    def record_reminder_delivery(
+        self,
+        window_key: str,
+        recipient_principal_key: str,
+        external_message_id: str | None = None,
+        status: str = "sent",
+        correlation_id: str | None = None,
+    ) -> dict:
+        return self._call(
+            "SELECT app_iseo_sales.record_reminder_delivery(%s,%s,%s,%s,%s)",
+            (
+                window_key,
+                recipient_principal_key,
+                external_message_id,
+                status,
+                correlation_id,
+            ),
+        )
+
+    def update_delivery_message_binding(
+        self,
+        delivery_id: str,
+        external_message_id: str,
+        telegram_chat_id: str | None = None,
+        status: str = "sent",
+    ) -> dict:
+        return self._call(
+            "SELECT app_iseo_sales.update_delivery_message_binding(%s,%s,%s,%s)",
+            (delivery_id, external_message_id, telegram_chat_id, status),
+        )
+
+    def admin_runtime_call(self, op: str, payload: Mapping[str, Any] | None = None) -> dict:
+        pl = json.dumps(payload or {})
+        return self._call(
+            "SELECT app_iseo_sales.admin_runtime_call(%s, %s::jsonb)",
+            (op, pl),
         )

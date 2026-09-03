@@ -1,0 +1,20 @@
+{
+  "candidate_id": "Zk9b1BiXpYN9rMMo",
+  "candidate_name": "i-SEO Sales Manager - Admin.v3.dev",
+  "node_inventory": [
+    {"name": "Manual Inject (fixtures only)", "type": "n8n-nodes-base.manualTrigger", "class": "trigger"},
+    {"name": "Normalize Admin Fixture", "type": "n8n-nodes-base.code", "class": "logic"},
+    {"name": "PG Admin Runtime Call", "type": "n8n-nodes-base.postgres", "class": "runtime"},
+    {"name": "Telegram Dry-Run (NO SEND)", "type": "n8n-nodes-base.code", "class": "boundary"},
+    {"name": "CANDIDATE INACTIVE", "type": "n8n-nodes-base.stickyNote", "class": "doc"}
+  ],
+  "google_sheets_nodes": 0,
+  "telegram_trigger_nodes": 0,
+  "postgres_nodes": 1,
+  "critical_runtime_sheets_path": 0,
+  "notes": [
+    "No Telegram Trigger — production Admin.dev webhook unchanged while candidate inactive",
+    "Telegram sends are dry-run only in candidate wave",
+    "Closed ops dispatched via app_iseo_sales.admin_runtime_call allowlist"
+  ]
+}

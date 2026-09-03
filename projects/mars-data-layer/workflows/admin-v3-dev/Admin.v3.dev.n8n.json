@@ -1,0 +1,133 @@
+{
+  "id": "Zk9b1BiXpYN9rMMo",
+  "name": "i-SEO Sales Manager - Admin.v3.dev",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "manual-trigger",
+      "name": "Manual Inject (fixtures only)",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Admin.v3 fixture → closed op payload. No live Telegram.\nconst i = items[0].json;\nconst op = i.op || i.command || 'help';\nconst payload = i.payload || i;\nconst clean = Object.assign({}, payload);\ndelete clean.op; delete clean.command;\nreturn [{ json: {\n  op: String(op).replace(/^\\//,''),\n  payload: clean,\n  dry_run_telegram: true,\n  workflow_version: 'Admin.v3.dev',\n  sheets_writes: 0\n} }];\n"
+      },
+      "id": "normalize-fixture",
+      "name": "Normalize Admin Fixture",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        260,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT app_iseo_sales.admin_runtime_call(\n  $1::text, COALESCE($2::jsonb, '{}'::jsonb)\n) AS result;",
+        "options": {
+          "queryReplacement": "={{ [$json.op, JSON.stringify($json.payload || {})] }}"
+        }
+      },
+      "id": "pg-admin-dispatch",
+      "name": "PG Admin Runtime Call",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.5,
+      "position": [
+        540,
+        300
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "XCmmOgzZ1RWT4Fg3",
+          "name": "ISEO Runtime PG (v3)"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// HARD: zero Telegram API calls — dry-run response only\nconst r = items[0].json.result || items[0].json;\nreturn [{ json: {\n  result: r,\n  telegram_sent: false,\n  answer_callback_query: 'DEFERRED_BOUNDARY_OR_DRY_RUN',\n  note: 'Candidate inactive: no Telegram Trigger; no live sends'\n} }];\n"
+      },
+      "id": "telegram-dry-run",
+      "name": "Telegram Dry-Run (NO SEND)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        820,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Admin.v3.dev — INACTIVE CANDIDATE\n\n- Runtime: PostgreSQL `app_iseo_sales` via `iseo_runtime`\n- Google Sheets critical writes: **0**\n- NO Telegram Trigger (production Admin.dev webhook unchanged)\n- Telegram sends: dry-run only\n- Do NOT activate until joint PG cutover GO\n",
+        "height": 300,
+        "width": 440
+      },
+      "id": "sticky-note",
+      "name": "CANDIDATE INACTIVE",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -40,
+        40
+      ]
+    }
+  ],
+  "connections": {
+    "Manual Inject (fixtures only)": {
+      "main": [
+        [
+          {
+            "node": "Normalize Admin Fixture",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalize Admin Fixture": {
+      "main": [
+        [
+          {
+            "node": "PG Admin Runtime Call",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "PG Admin Runtime Call": {
+      "main": [
+        [
+          {
+            "node": "Telegram Dry-Run (NO SEND)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false
+  },
+  "meta": {
+    "export_ts": "20260903T110001Z",
+    "data_contract_version": "iseo-sales-v1",
+    "release_version": "Admin.v3.dev",
+    "status": "candidate",
+    "pg_credential_id": "XCmmOgzZ1RWT4Fg3",
+    "pg_credential_name": "ISEO Runtime PG (v3)",
+    "pg_role": "iseo_runtime",
+    "telegram_trigger": false,
+    "sheets_nodes": 0
+  }
+}

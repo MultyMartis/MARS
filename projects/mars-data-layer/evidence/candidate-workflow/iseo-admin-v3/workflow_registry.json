@@ -1,0 +1,34 @@
+{
+  "family": "admin_runtime",
+  "data_contract_version": "iseo-sales-v1",
+  "entries": [
+    {
+      "release_version": "Admin.dev",
+      "n8n_workflow_id": "wLrLp4WQHm1VJmxz",
+      "status": "active",
+      "authority": "Google Sheets (production)"
+    },
+    {
+      "release_version": "Admin.v3.dev",
+      "n8n_workflow_id": "Zk9b1BiXpYN9rMMo",
+      "status": "candidate",
+      "git_export_hash": "6c8526b255d41cd302d09dcc04450fa8cdf61047ea1898accbb565440cc5dfb1",
+      "authority": "PostgreSQL app_iseo_sales"
+    },
+    {
+      "release_version": "Admin.v3.rollback",
+      "n8n_workflow_id": "8uStgSN9brsxmz6g",
+      "status": "rollback",
+      "git_export_hash": "1e19672ac9a9ef79783a475e8950d33c007aba1237a58c0fd29434c6eb037f6a",
+      "authority": "PostgreSQL app_iseo_sales"
+    }
+  ],
+  "credential": {
+    "id": "XCmmOgzZ1RWT4Fg3",
+    "name": "ISEO Runtime PG (v3)",
+    "role": "iseo_runtime",
+    "admin_dedicated_credential": false,
+    "password_in_git": false
+  },
+  "security_residual": "encryptionKey issue remains SECURITY RESIDUAL — MAY BE REMEDIATED AFTER CUTOVER"
+}
