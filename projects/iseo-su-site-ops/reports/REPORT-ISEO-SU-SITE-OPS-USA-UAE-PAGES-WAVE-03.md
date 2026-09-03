@@ -124,11 +124,29 @@ WAVE 3 → **COMPLETE**. Open decisions 8.1 / 8.2 **RESOLVED** (normal indexabil
 
 ## 22. Git Persistence
 
-Scoped commits via `X:\AI MARS STORAGE\git-sync-iseo-su-usa-uae-wave-03\repo` onto origin tip `6603aa87`. Exact paths only. Foreign WIP not staged. See §23 after push.
+Main checkout remained dirty/divergent (`HEAD` ≠ origin). Isolated sync used worktree:
+
+`X:\AI MARS STORAGE\git-sync-iseo-su-usa-uae-wave-03-wt`
+
+branch `iseo-su-usa-uae-wave-03-sync` @ parent `6603aa87` (`docs(iseo-su): record city-pages wave-02 remote sync`).
+
+Feature commit (10 allowlisted paths only):
+
+- `24421ee0` — `feat(iseo-su): add usa and uae seo landing pages`
+
+Foreign WIP not staged. No `git add .` / `-A`. No force push.
 
 ## 23. Remote Sync
 
-Recorded after push (no force).
+FF push without force:
+
+`git push origin HEAD:mars/canonical-post-recovery`
+
+Result: `6603aa87..24421ee0` → `origin/mars/canonical-post-recovery`.
+
+Post-push tip: `24421ee0d2d23faff48684d3a000251c590c1b05`.
+
+Docs sync commit (this file + evidence SHA fill) follows on the same isolated worktree.
 
 ## 24. Final Decision
 
@@ -189,7 +207,8 @@ WAVE 3 STATUS: COMPLETE
 ROADMAP COMPLETE: YES
 OPEN DECISIONS REMAINING: 0 for this task pack
 
-PROJECT-OWNED UNCOMMITTED: (see post-sync)
+PROJECT-OWNED UNCOMMITTED: 0
 FOREIGN WIP PRESERVED: YES
-REMOTE SYNC: (see post-sync)
+REMOTE SYNC: COMPLETE
 ```
+

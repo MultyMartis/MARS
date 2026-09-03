@@ -222,8 +222,10 @@ Canonical MARS files:
 
 Delete the two remote HTML files; restore nothing else (menu/sitemap untouched). Local CREATE copies remain under `_usa-uae-pages-wave-03\`.
 
+Git rollback tip before WAVE 3: `6603aa87`. Feature commit: `24421ee0` (`feat(iseo-su): add usa and uae seo landing pages`). Isolated worktree: `X:\AI MARS STORAGE\git-sync-iseo-su-usa-uae-wave-03-wt`. Remote sync: FF to `origin/mars/canonical-post-recovery` without force.
+
 ---
 
 ## 20. Final Decision
 
-**COMPLETE** — WAVE 3 USA/UAE Direct-ready landings live; INTLSEO titles; no menu; no sitemap; consent preserved.
+**COMPLETE** — WAVE 3 USA/UAE Direct-ready landings live; INTLSEO titles; no menu; no sitemap; consent preserved; remote sync COMPLETE @ `24421ee0`.
