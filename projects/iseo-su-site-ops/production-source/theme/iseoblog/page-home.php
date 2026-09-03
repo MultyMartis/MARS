@@ -931,6 +931,13 @@ include_once $template_parts . "content-mobilemenu.php";
 
 							</div>
 
+							<div class="form_agree__wrap personal-data-consent-wrap">
+				<div class="checkbox-border">
+	              <input type="checkbox" class="required-checkbox personal-data-consent" id="personal_data_consent_calculator__FORM" name="personal_data_consent" value="1" required>
+				</div>
+              <label for="personal_data_consent_calculator__FORM">Я&nbsp;соглашаюсь с&nbsp;<a href="/privacy-policy.html" target="_blank">политикой конфиденциальности</a> и даю согласие на&nbsp;обработку персональных данных</label>
+            </div>
+
 							<div class="calculator_stage__btns">
 								<a href="javascript:void(0);" class="back" data-target='0' style="display:none;">Назад</a>
 								<div class="calculator_stage__errors"></div>
@@ -1105,7 +1112,12 @@ include_once $template_parts . "content-mobilemenu.php";
 									<textarea id="pf_comment" name="pf_comment" placeholder="Комментарий"></textarea>
 									<!-- <label for="comment">Комментарий</label> -->
 								</div>
-								<div class="form_agree__wrap">Я&nbsp;соглашаюсь с&nbsp;<a href="/privacy-policy.html" target="_blank">политикой конфиденциальности</a> и даю согласие на&nbsp;обработку персональных данных</div>
+								<div class="form_agree__wrap personal-data-consent-wrap">
+				<div class="checkbox-border">
+	              <input type="checkbox" class="required-checkbox personal-data-consent" id="personal_data_consent_page__FORM" name="personal_data_consent" value="1" required>
+				</div>
+              <label for="personal_data_consent_page__FORM">Я&nbsp;соглашаюсь с&nbsp;<a href="/privacy-policy.html" target="_blank">политикой конфиденциальности</a> и даю согласие на&nbsp;обработку персональных данных</label>
+            </div>
 								<button id="page__FORM_send" type="submit">Отправить</button>
 							</form>
 						</div>
@@ -1261,8 +1273,13 @@ include_once $template_parts . "content-mobilemenu.php";
 				<input type="text" id="cf_site" name="cf_site" placeholder="Адрес сайта">
 				<!-- <label for="site">Адрес сайта</label> -->
 			</div>
+			<div class="callback_form__agree personal-data-consent-wrap">
+				<div class="checkbox-border">
+	              <input type="checkbox" class="required-checkbox personal-data-consent" id="personal_data_consent_callback__FORM" name="personal_data_consent" value="1" required>
+				</div>
+              <label for="personal_data_consent_callback__FORM">Я&nbsp;соглашаюсь с&nbsp;<a href="/privacy-policy.html" target="_blank">политикой конфиденциальности</a> и даю согласие на&nbsp;обработку персональных данных</label>
+            </div>
 			<button id="callback__FORM_send" type="submit">Отправить</button>
-			<div class="callback_form__agree">Я&nbsp;соглашаюсь с&nbsp;<a href="/privacy-policy.html" target="_blank">политикой конфиденциальности</a> и даю согласие на&nbsp;обработку персональных данных</div>
 		</form>					
 	</div>
 
@@ -1294,8 +1311,13 @@ include_once $template_parts . "content-mobilemenu.php";
 				<textarea id="af_comment" name="af_comment" placeholder="Комментарий"></textarea>
 				<!-- <label for="comment">Комментарий</label> -->
 			</div>
+			<div class="callback_form__agree personal-data-consent-wrap">
+				<div class="checkbox-border">
+	              <input type="checkbox" class="required-checkbox personal-data-consent" id="personal_data_consent_audit__FORM" name="personal_data_consent" value="1" required>
+				</div>
+              <label for="personal_data_consent_audit__FORM">Я&nbsp;соглашаюсь с&nbsp;<a href="/privacy-policy.html" target="_blank">политикой конфиденциальности</a> и даю согласие на&nbsp;обработку персональных данных</label>
+            </div>
 			<button id="audit__FORM_send" type="submit">Отправить</button>
-			<div class="callback_form__agree">Я&nbsp;соглашаюсь с&nbsp;<a href="/privacy-policy.html" target="_blank">политикой конфиденциальности</a> и даю согласие на&nbsp;обработку персональных данных</div>
 		</form>					
 	</div>
 

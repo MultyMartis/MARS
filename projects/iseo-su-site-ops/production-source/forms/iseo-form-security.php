@@ -442,6 +442,12 @@ if (!function_exists("iseo_form_guard_request")) {
         if ($rl !== "ok") {
             iseo_form_reject($form_id, "rate");
         }
+        // Required explicit personal-data processing consent (WAVE 1).
+        // Accepted representation is exactly "1"; missing/0/false/random => reject.
+        $consent = iseo_form_post_scalar("personal_data_consent", 8);
+        if ($consent === null || $consent !== "1") {
+            iseo_form_reject($form_id, "consent");
+        }
     }
 }
 

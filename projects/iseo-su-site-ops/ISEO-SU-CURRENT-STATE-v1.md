@@ -3,7 +3,7 @@
 **Programme:** ISEO-SU-SITE-OPS  
 **Site:** `https://i-seo.su/`
 **Canonical locus:** `X:\AI MARS\projects\iseo-su-site-ops\`  
-**Updated:** 2026-09-03 (SEO team task pack registration / roadmap)  
+**Updated:** 2026-09-03 (Form Consent WAVE 01 COMPLETE)  
 **Authority:** first current-state document for ordinary work
 
 Historical REPORT files record earlier states and do not override this document or fresher accepted evidence.
@@ -43,9 +43,10 @@ Current baseline: **12 root handlers** plus thin service-tree delegates; shared 
 - limits ≈3 submissions/5 minutes/form/IP and ≈10/hour/IP;
 - duplicate suppression ≈10 minutes;
 - header/HTML injection protections;
-- CAPTCHA absent by accepted design.
+- CAPTCHA absent by accepted design;
+- **personal-data consent** field `personal_data_consent` exact value `"1"` required client-side and in shared server guard (WAVE 01 COMPLETE); privacy URL `https://i-seo.su/privacy-policy.html`.
 
-Authority: [Form Security Baseline](ISEO-SU-FORM-SECURITY-AND-ANTISPAM-BASELINE-v1.md).
+Authority: [Form Security Baseline](ISEO-SU-FORM-SECURITY-AND-ANTISPAM-BASELINE-v1.md) · [Consent WAVE 01 evidence](ISEO-SU-FORM-CONSENT-WAVE-01-EVIDENCE-v1.md).
 
 ## 5. Current Form Recipient
 
@@ -145,8 +146,8 @@ WPilot 6D is not required for ordinary site operations.
 
 SEO-team task pack registered 2026-09 (documentation/roadmap only; production mutations **0** until each wave is separately chartered). Authority: [ISEO-SU-SEO-TEAM-NEW-TASK-PACK-2026-09-v1.md](ISEO-SU-SEO-TEAM-NEW-TASK-PACK-2026-09-v1.md) · [ISEO-SU-IMPLEMENTATION-ROADMAP-2026-09-v1.md](ISEO-SU-IMPLEMENTATION-ROADMAP-2026-09-v1.md).
 
-- **WAVE 1 Form Consent** — **NEXT**
-- **WAVE 2 City Pages ×5** — **QUEUED**
-- **WAVE 3 USA/UAE ×2** — **QUEUED / requires indexability + title confirmation**
+- **WAVE 1 Form Consent** — **COMPLETE** (2026-09-03): all contact forms require consent; server enforcement active; recipient unchanged (`nikel007i33@yandex.ru`); privacy URL `https://i-seo.su/privacy-policy.html`
+- **WAVE 2 City Pages ×5** — **NEXT** (not started)
+- **WAVE 3 USA/UAE ×2** — **QUEUED / OPEN DECISIONS** (not started)
 
 Does **not** close or modify the existing SEO-review backlog (CANON-*/TITLE-*/META-*/ORPHAN/ALT/OG/H1 review).

@@ -8574,3 +8574,23 @@ footer {
         bottom: 10px;
     }
 }
+
+/* WAVE 1 — personal data consent checkbox layout */
+.form_agree__wrap.personal-data-consent-wrap,
+.callback_form__agree.personal-data-consent-wrap {
+	display: flex;
+	align-items: flex-start;
+	text-align: left;
+	gap: 0;
+}
+.form_agree__wrap.personal-data-consent-wrap label,
+.callback_form__agree.personal-data-consent-wrap label {
+	margin-bottom: 0 !important;
+	cursor: pointer;
+	font-size: 16px;
+	line-height: 28px;
+}
+.popup__FORM_wrap .callback_form__agree.personal-data-consent-wrap,
+.popup_big__FORM_wrap .callback_form__agree.personal-data-consent-wrap {
+	margin: 10px auto 0px;
+}

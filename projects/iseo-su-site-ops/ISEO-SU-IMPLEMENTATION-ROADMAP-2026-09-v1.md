@@ -11,7 +11,7 @@
 
 ### 1. FORM CONSENT
 
-**Status:** **NEXT**
+**Status:** **COMPLETE**
 
 | Field | Value |
 |-------|-------|
@@ -27,7 +27,7 @@
 
 ### 2. CITY PAGES ×5
 
-**Status:** **QUEUED**
+**Status:** **NEXT**
 
 | Field | Value |
 |-------|-------|

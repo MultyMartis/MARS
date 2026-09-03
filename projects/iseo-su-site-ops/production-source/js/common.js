@@ -2595,6 +2595,19 @@ function checkEmptyFields(form) {
 			$(this).closest('form').attr('data-errors','1');
 		}
 	});
+	// Explicit personal-data consent (WAVE 1): must be present, checked, value exactly "1".
+	var consentInputs = form.find('input[name="personal_data_consent"]');
+	if (consentInputs.length === 0) {
+		form.attr('data-errors','1');
+	} else {
+		consentInputs.each(function(){
+			$(this).parent().removeClass('error');
+			if (!$(this).prop('checked') || String($(this).val()) !== '1') {
+				$(this).parent().addClass('error');
+				form.attr('data-errors','1');
+			}
+		});
+	}
 //	console.log(form.attr('data-errors'));
 	return form.attr('data-errors');
 }

@@ -2,7 +2,7 @@
 
 **Programme:** ISEO-SU-SITE-OPS  
 **Task:** ISEO-SU-SITE-OPS-FORMS-ANTISPAM-AND-VALIDATION-01  
-**Updated:** 2026-08-31 (HMAC rotation test route cleanup — query param does not enable test_mode)  
+**Updated:** 2026-09-03 (Form Consent WAVE 01 — personal_data_consent required client + server)  
 **Authority:** current form/security operating baseline for public leads on `https://i-seo.su/`
 
 ## 1. Status
@@ -72,10 +72,24 @@ Shared helper: `iseo-form-security.php`.
 - scalar enforcement / length caps;
 - POST-only;
 - required field presence;
+- **personal-data consent** (see §5.1);
 - contact heuristics (phone / email / Telegram — not over-strict for intl);
 - HTML escape for mail body;
 - generic client error body `false` (AJAX contract) / neutral messaging via JS;
 - no internal PHP errors to client.
+
+### 5.1 Personal-data consent (WAVE 01)
+
+| Field | Value |
+|-------|-------|
+| Field name | `personal_data_consent` |
+| Accepted value | exact `"1"` only |
+| Missing / `"0"` / `"false"` / other | **reject** via `iseo_form_reject(..., "consent")`; **zero mail** |
+| Privacy policy URL | `https://i-seo.su/privacy-policy.html` |
+| Enforcement | Centralized in `iseo_form_guard_request()` (all 12 handlers) |
+| Client | Checkbox + `required` + `js/common.js` gate |
+| Mail notification | Consent text **not** required in mail body (validate-only) |
+| Evidence | `ISEO-SU-FORM-CONSENT-WAVE-01-EVIDENCE-v1.md` |
 
 ## 6. Anti-Spam Layers
 

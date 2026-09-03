@@ -258,7 +258,19 @@ Phase status: **PHASE 6D — BLOCKED / PRODUCTION UNCHANGED**; accepted baseline
 | Current State (Approved Upcoming Work) | `ISEO-SU-CURRENT-STATE-v1.md` | CURRENT / CANONICAL |
 | Operational Index links | `OPERATIONAL-INDEX.md` | CURRENT / CANONICAL ENTRY |
 
-Production mutations in this registration: **0**. Implementation waves not started.
+Production mutations in this registration: **0** at registration time. **WAVE 1 Form Consent** later **COMPLETE** (2026-09-03) — see section below.
+
+---
+
+### Form Consent WAVE 01 (2026-09-03) — CURRENT
+
+| Artifact | Path | Class |
+|----------|------|-------|
+| Consent evidence | `ISEO-SU-FORM-CONSENT-WAVE-01-EVIDENCE-v1.md` | CURRENT / CANONICAL |
+| Task REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-FORM-CONSENT-WAVE-01.md` | CURRENT |
+| Russian closeout | `reports/ISEO-SU-FORM-CONSENT-WAVE-01-RU.md` | CURRENT |
+| Form security baseline (consent §) | `ISEO-SU-FORM-SECURITY-AND-ANTISPAM-BASELINE-v1.md` | CURRENT / CANONICAL |
+| Roadmap (WAVE 1 COMPLETE / WAVE 2 NEXT) | `ISEO-SU-IMPLEMENTATION-ROADMAP-2026-09-v1.md` | CURRENT / CANONICAL |
 
 ---
 
