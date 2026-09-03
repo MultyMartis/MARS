@@ -3,7 +3,7 @@
 **Programme:** ISEO-SU-SITE-OPS  
 **Site:** `https://i-seo.su/`
 **Canonical locus:** `X:\AI MARS\projects\iseo-su-site-ops\`  
-**Updated:** 2026-09-03 (Form Consent WAVE 01 COMPLETE / RECONCILED via WAVE 01A)  
+**Updated:** 2026-09-03 (City Pages WAVE 02 COMPLETE; Form Consent WAVE 01 COMPLETE / RECONCILED via WAVE 01A)  
 **Authority:** first current-state document for ordinary work
 
 Historical REPORT files record earlier states and do not override this document or fresher accepted evidence.
@@ -80,7 +80,7 @@ Archive has H1/intro/title `Глоссарий - INTLSEO Studio`; archive and si
 - Canonical root `/sitemap.xml` is a valid **sitemapindex** with exactly two children: `/sitemap-static.xml` and `/wp-sitemap.xml` (HIGH FIX WAVE 01).
 - Obsolete Yoast-style children (`post|page|category-sitemap.xml`) are no longer advertised.
 - `robots.txt` references `https://i-seo.su/sitemap.xml` only.
-- Static inventory: **127** URLs via allowlist generator `tools/generate-sitemap-static.py` (`data/sitemaps/sitemap-static-urls-v1.txt` → `production-source/sitemaps/sitemap-static.xml`) with completeness validator.
+- Static inventory: **132** URLs via allowlist generator `tools/generate-sitemap-static.py` (`data/sitemaps/sitemap-static-urls-v1.txt` → `production-source/sitemaps/sitemap-static.xml`) with completeness validator (WAVE 02 city pages +5; previously 127 after completeness fix 01).
 - MARS SoT: `production-source/sitemaps/`.
 
 See [Sitemap Architecture](ISEO-SU-SITEMAP-ARCHITECTURE-AND-CURRENT-STATE-v1.md) and [HIGH FIX WAVE 01 Evidence](ISEO-SU-HIGH-FIX-WAVE-01-EVIDENCE-v1.md).
@@ -148,7 +148,7 @@ WPilot 6D is not required for ordinary site operations.
 SEO-team task pack registered 2026-09 (documentation/roadmap only; production mutations **0** until each wave is separately chartered). Authority: [ISEO-SU-SEO-TEAM-NEW-TASK-PACK-2026-09-v1.md](ISEO-SU-SEO-TEAM-NEW-TASK-PACK-2026-09-v1.md) · [ISEO-SU-IMPLEMENTATION-ROADMAP-2026-09-v1.md](ISEO-SU-IMPLEMENTATION-ROADMAP-2026-09-v1.md).
 
 - **WAVE 1 Form Consent** — **COMPLETE / RECONCILED** (2026-09-03): contact forms + calculator-result lead (`tarif-calc.php`) require consent; server enforcement via shared guard; recipient unchanged (`nikel007i33@yandex.ru`); privacy URL `https://i-seo.su/privacy-policy.html`. WAVE 01A patch evidence: [ISEO-SU-FORM-CONSENT-WAVE-01A-CALC-RESULT-PATCH-EVIDENCE-v1.md](ISEO-SU-FORM-CONSENT-WAVE-01A-CALC-RESULT-PATCH-EVIDENCE-v1.md)
-- **WAVE 2 City Pages ×5** — **NEXT** (not started)
-- **WAVE 3 USA/UAE ×2** — **QUEUED / OPEN DECISIONS** (not started)
+- **WAVE 2 City Pages ×5** — **COMPLETE** (2026-09-03): five regional SEO landings live; hub «Выберите ваш город»; self-canonical 5/5; static sitemap **132**; completeness PASS; consent baseline preserved. Evidence: [ISEO-SU-CITY-PAGES-WAVE-02-EVIDENCE-v1.md](ISEO-SU-CITY-PAGES-WAVE-02-EVIDENCE-v1.md)
+- **WAVE 3 USA/UAE ×2** — **NEXT / OPEN DECISIONS** (not started)
 
 Does **not** close or modify the existing SEO-review backlog (CANON-*/TITLE-*/META-*/ORPHAN/ALT/OG/H1 review).

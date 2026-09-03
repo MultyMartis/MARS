@@ -270,7 +270,7 @@ Production mutations in this registration: **0** at registration time. **WAVE 1 
 | Task REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-FORM-CONSENT-WAVE-01.md` | CURRENT |
 | Russian closeout | `reports/ISEO-SU-FORM-CONSENT-WAVE-01-RU.md` | CURRENT |
 | Form security baseline (consent §) | `ISEO-SU-FORM-SECURITY-AND-ANTISPAM-BASELINE-v1.md` | CURRENT / CANONICAL |
-| Roadmap (WAVE 1 COMPLETE / RECONCILED / WAVE 2 NEXT) | `ISEO-SU-IMPLEMENTATION-ROADMAP-2026-09-v1.md` | CURRENT / CANONICAL |
+| Roadmap (WAVE 2 COMPLETE / WAVE 3 NEXT) | `ISEO-SU-IMPLEMENTATION-ROADMAP-2026-09-v1.md` | CURRENT / CANONICAL |
 
 ---
 
@@ -284,6 +284,21 @@ Production mutations in this registration: **0** at registration time. **WAVE 1 
 | Source authority | `production-source/theme/iseoblog/template-parts/tarif-calc.php` | CURRENT |
 | Client binding | `production-source/js/common.js` | CURRENT |
 | Styles | `production-source/css/main.css`, `production-source/theme/iseoblog/style.css` | CURRENT |
+
+---
+
+### City Pages WAVE 02 (2026-09-03) — CURRENT / COMPLETE
+
+| Artifact | Path | Class |
+|----------|------|-------|
+| WAVE 02 evidence | `ISEO-SU-CITY-PAGES-WAVE-02-EVIDENCE-v1.md` | CURRENT / CANONICAL |
+| Task REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-CITY-PAGES-WAVE-02.md` | CURRENT |
+| Russian closeout | `reports/ISEO-SU-CITY-PAGES-WAVE-02-RU.md` | CURRENT |
+| City pages (source) | `production-source/static-html/services/seo/prodvizhenie-v-*.html` (×5) | CURRENT |
+| Hub linking | `production-source/static-html/services/seo/b-regionakh.html` | CURRENT |
+| Static sitemap | `production-source/sitemaps/sitemap-static.xml` (132 URLs) | CURRENT |
+| Allowlist inventories | `data/sitemaps/sitemap-static-urls-v1.txt` · `data/sitemaps/public-canonical-static-routes-v1.txt` | CURRENT |
+| Sitemap architecture | `ISEO-SU-SITEMAP-ARCHITECTURE-AND-CURRENT-STATE-v1.md` | CURRENT / CANONICAL |
 
 ---
 

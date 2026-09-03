@@ -1,8 +1,8 @@
 # ISEO-SU SITEMAP ARCHITECTURE AND CURRENT STATE v1
 
 **Programme:** ISEO-SU-SITE-OPS  
-**Updated:** 2026-08-24 (STATIC SITEMAP COMPLETENESS FIX 01)  
-**Companion evidence:** `ISEO-SU-STATIC-SITEMAP-COMPLETENESS-FIX-EVIDENCE-v1.md` · historical `ISEO-SU-HIGH-FIX-WAVE-01-EVIDENCE-v1.md`
+**Updated:** 2026-09-03 (CITY PAGES WAVE 02 — static inventory 127 → 132)  
+**Companion evidence:** `ISEO-SU-CITY-PAGES-WAVE-02-EVIDENCE-v1.md` · `ISEO-SU-STATIC-SITEMAP-COMPLETENESS-FIX-EVIDENCE-v1.md` · historical `ISEO-SU-HIGH-FIX-WAVE-01-EVIDENCE-v1.md`
 
 ## Canonical entry
 
@@ -29,7 +29,7 @@ Obsolete Yoast-style children (`post|page|category-sitemap.xml`) are **not** adv
 | Generator | `python projects/iseo-su-site-ops/tools/generate-sitemap-static.py` |
 | Completeness validator | `python projects/iseo-su-site-ops/tools/validate-sitemap-static-completeness.py` |
 | Output SoT | `production-source/sitemaps/sitemap-static.xml` |
-| Current URL count | **127** |
+| Current URL count | **132** |
 
 ### Mandatory regeneration rule
 
@@ -44,7 +44,7 @@ When adding/removing a public static marketing page: update **both** allowlist a
 
 Do **not** auto-dump every HTML file from disk (legacy twins / verification / handlers).
 
-**Historical note:** HIGH FIX WAVE 01 shipped a valid 71-URL static sitemap whose allowlist was later shown incomplete by SEO review; completeness fix 01 expanded coverage to 127 without abandoning deny-safe allowlist discipline.
+**Historical note:** HIGH FIX WAVE 01 shipped a valid 71-URL static sitemap whose allowlist was later shown incomplete by SEO review; completeness fix 01 expanded coverage to 127 without abandoning deny-safe allowlist discipline. **CITY PAGES WAVE 02** (2026-09-03) added five regional SEO landings under `/services/seo/prodvizhenie-v-*.html` → static inventory **127 → 132**; completeness gate still PASS.
 
 ## Ownership split
 

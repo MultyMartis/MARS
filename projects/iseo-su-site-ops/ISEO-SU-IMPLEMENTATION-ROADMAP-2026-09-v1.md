@@ -27,7 +27,7 @@
 
 ### 2. CITY PAGES ×5
 
-**Status:** **NEXT**
+**Status:** **COMPLETE** (2026-09-03) — evidence `ISEO-SU-CITY-PAGES-WAVE-02-EVIDENCE-v1.md`
 
 | Field | Value |
 |-------|-------|
@@ -51,7 +51,7 @@
 
 ### 3. USA/UAE DRAFT PAGES ×2
 
-**Status:** **QUEUED / OPEN DECISIONS**
+**Status:** **NEXT / OPEN DECISIONS**
 
 | Field | Value |
 |-------|-------|
