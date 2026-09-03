@@ -121,7 +121,7 @@ Commit message:
 `docs(iseo-su): register seo team implementation roadmap`
 
 **Commit SHA:** `f4c8a2bb6e82525554490f72df202882c0f4b251`  
-Follow-up tip SHA (this REPORT git section): recorded after remote sync below.
+Follow-up tip SHA (this REPORT git section): `b1deea14f2ff8a6d5c399210d939f68131aed987`.
 
 ---
 
@@ -131,7 +131,7 @@ Target: `origin/mars/canonical-post-recovery`
 Force push: **NO**  
 Method: clean Storage worktree `X:\AI MARS STORAGE\git-sync-iseo-su-seo-task-pack-registration-01\repo` (detached from origin tip, then push HEAD → branch).
 
-**REMOTE SYNC:** COMPLETE (pending push confirmation in same wave)
+**REMOTE SYNC:** COMPLETE
 
 ---
 
