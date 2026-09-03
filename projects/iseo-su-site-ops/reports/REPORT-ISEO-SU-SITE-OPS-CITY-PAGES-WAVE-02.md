@@ -128,11 +128,15 @@ WAVE 3 → **NEXT / OPEN DECISIONS** (not started)
 
 ## 25. Git Persistence
 
-Scoped commit(s) via clean STORAGE sync path onto `origin/mars/canonical-post-recovery` (main tree dirty/divergent; foreign WIP preserved). Subject: `feat(iseo-su): add five regional seo landing pages`.
+Scoped commit via clean STORAGE worktree `X:\AI MARS STORAGE\git-sync-iseo-su-city-pages-wave-02\repo` onto `origin/mars/canonical-post-recovery` @ `219a74e8`.
+
+**Commit:** `a81777b7` — `feat(iseo-su): add five regional seo landing pages`  
+21 paths (city pages ×5, hub, sitemap inventories + XML, evidence/REPORT/RU, roadmap/state/index/register/sitemap-arch, wave02 helpers). Foreign WIP not staged.
 
 ## 26. Remote Sync
 
-Push accepted commit(s) to `origin/mars/canonical-post-recovery` without force push. Details filled after sync wave.
+Pushed without force: `219a74e8..a81777b7` → `origin/mars/canonical-post-recovery`.  
+**REMOTE SYNC: COMPLETE**
 
 ## 27. Final Decision
 
@@ -186,7 +190,7 @@ PRODUCTION/SOURCE ALIGNED: YES
 WAVE 2 STATUS: COMPLETE
 WAVE 3 STATUS: NEXT / OPEN DECISIONS
 
-PROJECT-OWNED UNCOMMITTED: (pending git sync)
+PROJECT-OWNED UNCOMMITTED: 0
 FOREIGN WIP PRESERVED: YES
-REMOTE SYNC: (pending git sync)
+REMOTE SYNC: COMPLETE
 ```
