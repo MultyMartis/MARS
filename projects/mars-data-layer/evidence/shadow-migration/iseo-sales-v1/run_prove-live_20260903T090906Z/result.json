@@ -1,0 +1,44 @@
+{
+  "mode": "prove-live",
+  "snapshot_id": "20260903T090906Z",
+  "work": "/tmp/mars-iseo-shadow-20260903T090906Z",
+  "prove_live": {
+    "postgres_type_credentials": [],
+    "workflows_with_postgres_nodes": [],
+    "postgres_credential_count": 0,
+    "postgres_node_binding_count": 0,
+    "workflow_count": 36,
+    "active_workflows_sample": [
+      {
+        "id": "AR6QxGt8ZKH0xG2T",
+        "name": "SEO Content Agent Beta.v14 - Admin"
+      },
+      {
+        "id": "x8EbTGKNdlBprLvk",
+        "name": "SEO Content Agent Beta.v14 - Intake"
+      },
+      {
+        "id": "a4wvy1jBh3S5WcZU",
+        "name": "MARS SEO Content Agent Bridge"
+      },
+      {
+        "id": "p4mqb4VuPcemIDlC",
+        "name": "SEO Content Agent Beta.v14 - Worker"
+      },
+      {
+        "id": "tkM4H0G0gM3q9Foi",
+        "name": "MARS Client Ops Bridge — bzpm.ru"
+      },
+      {
+        "id": "xSnXPy8cEHoZw6xG",
+        "name": "i-SEO Sales Manager - Operational.dev"
+      },
+      {
+        "id": "wLrLp4WQHm1VJmxz",
+        "name": "i-SEO Sales Manager - Admin.dev"
+      }
+    ],
+    "iseo_active_present": true,
+    "note": "Shadow import uses docker exec only; Sheets remains authority; no n8n PG cutover"
+  }
+}
