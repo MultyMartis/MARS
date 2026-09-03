@@ -1,0 +1,220 @@
+{
+  "id": "NH4uV145Amrgnmkm",
+  "name": "i-SEO Sales Manager - Operational.v3.dev",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "manual-trigger",
+      "name": "Manual Inject (fixtures only)",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Sanitize fixture \u2192 commit payload. No live Gmail.\nconst i = items[0].json;\nconst sourceId = i.source_id || i.id || ('fixture-' + Date.now());\nconst leadId = i.lead_id || ('lead-' + sourceId);\nreturn [{\n  json: {\n    source_id: sourceId,\n    lead_id: leadId,\n    subject: i.subject || '',\n    from_email: i.from_email || '',\n    raw_text: i.raw_text || i.snippet || '',\n    client_name: i.client_name || null,\n    phone: i.phone || null,\n    email: i.email || null,\n    site: i.site || null,\n    service: i.service || null,\n    summary: i.summary || null,\n    manager_status: i.manager_status || 'new',\n    correlation_id: i.correlation_id || ('corr-' + sourceId),\n    workflow_version: 'Operational.v3.dev',\n    dry_run_telegram: true,\n    gmail_finalize_simulated: false\n  }\n}];\n"
+      },
+      "id": "normalize-fixture",
+      "name": "Normalize Fixture",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        260,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT app_iseo_sales.process_gmail_inbound_commit(\n  $1::text, $2::text, '{}'::jsonb, $3::text, $4::text,\n  NULL, NULL, $5::text, $6::text, NULL, 'v3-pg',\n  'Operational.v3.dev', $7::text, NULL, NULL, $8::text, $9::text,\n  NULL, $10::text, $11::text, $12::text, 'gmail', $13::text,\n  '{}'::jsonb, 'iseo-sales-v1', true,\n  jsonb_build_object('dry_run', true, 'text', coalesce($12::text,'')),\n  NULL\n) AS commit_result;",
+        "options": {
+          "queryReplacement": "={{ [$json.source_id, $json.lead_id, $json.raw_text, $json.correlation_id, $json.subject, $json.from_email, $json.client_name, $json.phone, $json.email, $json.site, $json.service, $json.summary, $json.manager_status] }}"
+        }
+      },
+      "id": "pg-commit",
+      "name": "PG Commit (process_gmail_inbound_commit)",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.5,
+      "position": [
+        540,
+        300
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "XCmmOgzZ1RWT4Fg3",
+          "name": "ISEO Runtime PG (v3)"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const r = items[0].json.commit_result || items[0].json;\nconst allow = !!(r.gmail_finalize_allowed);\nreturn [{ json: {\n  commit: r,\n  gmail_finalize_allowed: allow,\n  gmail_finalize_status: allow ? 'SIMULATED_OK_INACTIVE' : 'BLOCKED',\n  note: 'Candidate inactive: Gmail labels not applied to production mailbox'\n} }];\n"
+      },
+      "id": "gmail-finalize-gate",
+      "name": "Gmail Finalize Gate (after PG)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        820,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT app_iseo_sales.claim_pending_deliveries(\n  'operational-v3-dryrun', 20, 60\n) AS claimed;"
+      },
+      "id": "claim-outbox",
+      "name": "Claim Delivery Outbox",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.5,
+      "position": [
+        1100,
+        300
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "XCmmOgzZ1RWT4Fg3",
+          "name": "ISEO Runtime PG (v3)"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// HARD: dry-run only \u2014 zero Telegram API calls\nconst claimed = items[0].json.claimed || items[0].json;\nconst rows = (claimed.claimed || []);\nconst out = [];\nfor (const d of rows) {\n  out.push({\n    json: {\n      delivery_id: d.delivery_id,\n      dry_run: true,\n      telegram_sent: false,\n      mark_status: 'sent',\n      external_message_id: 'dryrun-' + d.delivery_id\n    }\n  });\n}\nif (!out.length) return [{ json: { dry_run: true, claimed_count: 0 } }];\nreturn out;\n"
+      },
+      "id": "telegram-dry-run",
+      "name": "Telegram Dry-Run (NO SEND)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1380,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT app_iseo_sales.mark_delivery_result(\n  $1::text, $2::text, $3::text, NULL, NULL, NULL\n) AS result;",
+        "options": {
+          "queryReplacement": "={{ [$json.delivery_id, $json.mark_status || 'sent', $json.external_message_id] }}"
+        }
+      },
+      "id": "mark-delivery",
+      "name": "Mark Delivery Result",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.5,
+      "position": [
+        1660,
+        300
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "XCmmOgzZ1RWT4Fg3",
+          "name": "ISEO Runtime PG (v3)"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Operational.v3.dev \u2014 INACTIVE CANDIDATE\n\n- Runtime data: PostgreSQL `app_iseo_sales`\n- Production Gmail poller remains Operational.dev only\n- Telegram: dry-run path only (synthetic expected 0)\n- Do NOT activate until cutover prep gate\n",
+        "height": 280,
+        "width": 420
+      },
+      "id": "sticky-note",
+      "name": "CANDIDATE INACTIVE",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -40,
+        40
+      ]
+    }
+  ],
+  "connections": {
+    "Manual Inject (fixtures only)": {
+      "main": [
+        [
+          {
+            "node": "Normalize Fixture",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalize Fixture": {
+      "main": [
+        [
+          {
+            "node": "PG Commit (process_gmail_inbound_commit)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "PG Commit (process_gmail_inbound_commit)": {
+      "main": [
+        [
+          {
+            "node": "Gmail Finalize Gate (after PG)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail Finalize Gate (after PG)": {
+      "main": [
+        [
+          {
+            "node": "Claim Delivery Outbox",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Claim Delivery Outbox": {
+      "main": [
+        [
+          {
+            "node": "Telegram Dry-Run (NO SEND)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram Dry-Run (NO SEND)": {
+      "main": [
+        [
+          {
+            "node": "Mark Delivery Result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false
+  },
+  "meta": {
+    "export_ts": "20260903T093419Z",
+    "data_contract_version": "iseo-sales-v1",
+    "release_version": "Operational.v3.dev",
+    "status": "candidate",
+    "pg_credential_id": "XCmmOgzZ1RWT4Fg3",
+    "pg_credential_name": "ISEO Runtime PG (v3)",
+    "pg_role": "iseo_runtime"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "ts": "20260903T093419Z",
+  "namespace": "v3test_20260903T093419Z",
+  "gates": {
+    "runtime_secret_file": "X:\\AI MARS\\local\\infrastructure\\VEESP-N8N-01\\postgres\\iseo_runtime.env",
+    "runtime_secret_present": true,
+    "password_printed": false,
+    "migration_apply_exit": 0,
+    "migration_apply_ok": true,
+    "iseo_runtime_login": true,
+    "pg_tests_exit": 0,
+    "pg_tests_ok": true,
+    "idempotency_r2": true,
+    "status_lifecycle": true,
+    "n8n_pg_credential_id": "XCmmOgzZ1RWT4Fg3",
+    "n8n_pg_credential_name": "ISEO Runtime PG (v3)",
+    "n8n_pg_credential_role": "iseo_runtime",
+    "candidate_workflow_id": "NH4uV145Amrgnmkm",
+    "candidate_name": "i-SEO Sales Manager - Operational.v3.dev",
+    "candidate_active": false,
+    "production_workflow_id": "xSnXPy8cEHoZw6xG",
+    "production_active": true,
+    "production_name": "i-SEO Sales Manager - Operational.dev",
+    "git_export_hash": "dcd9ddd595102aa8ec1e804ef08ea6efc6ef7d1bf21d37626c0eb3b4ad9b0601",
+    "workflow_registry_ok": true,
+    "workflow_registry_exit": 0
+  },
+  "migration_sha256": "70cdef24a62ce7129afdc85209286db0ff3c1cfd4d5825b9338190dfe76deaa1",
+  "test_stdout_tail": "                                                                                                                                                                                                                                                                                                           claimed                                                                                                                                                                                                                                                                                                                 \n----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n {\"count\": 1, \"claimed\": [{\"id\": 1073, \"status\": \"processing\", \"channel\": \"telegram\", \"lead_id\": \"v3test_20260903T093419Z_lead_1\", \"payload\": {\"dry_run\": true, \"principal_key\": \"tg:REDACTED\", \"dry_run_default\": true}, \"attempts\": 1, \"delivery_id\": \"dlv-56f0ac42-e3c7-4dbd-98df-d932d4d18a52\", \"delivery_type\": \"lead_card\", \"correlation_id\": \"corr-v3test_20260903T093419Z_gmail_src_1\", \"idempotency_key\": \"lead_card:v3test_20260903T093419Z_lead_1:tg:REDACTED:v3test_20260903T093419Z_gmail_src_1\", \"recipient_principal_key\": \"tg:REDACTED\", \"recipient_telegram_user_id\": \"REDACTED\"}], \"worker_id\": \"v3-test-worker\"}\n(1 row)\n\nCLAIM_OK\n                                   mark_delivery_result                                    \n-------------------------------------------------------------------------------------------\n {\"id\": 1073, \"status\": \"sent\", \"delivery_id\": \"dlv-56f0ac42-e3c7-4dbd-98df-d932d4d18a52\"}\n(1 row)\n\nDELIVERY_DRYRUN_OK\nRESET\nDELETE 1\nDELETE 4\nDELETE 2\nDELETE 1\nDELETE 1\nDELETE 2\nUPDATE 2\nDELETE 2\nDELETE 2\nCLEANUP_OK\n shadow_leads \n--------------\n           65\n(1 row)\n\n shadow_inbound \n----------------\n             59\n(1 row)\n\n shadow_deliveries \n-------------------\n               264\n(1 row)\n\n access_active \n---------------\n             1\n(1 row)\n\n",
+  "verdict_hint": "PASS"
+}
