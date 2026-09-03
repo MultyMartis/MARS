@@ -1,0 +1,31 @@
+{
+  "premise": "Deactivating an n8n workflow does NOT kill already-running executions.",
+  "scope": "Operational.dev executions that started before fence/deactivate during future cutover window",
+  "rules": [
+    {
+      "case": "execution_started_before_deactivate",
+      "policy": "ALLOW_TO_COMPLETE",
+      "reconcile": "After fence, inventory running executions for Operational.dev; wait for completion or hard timeout; do not start new polls after deactivate"
+    },
+    {
+      "case": "gmail_message_read_not_fully_finalized",
+      "policy": "DETERMINISTIC_RECONCILE_AFTER_PG_PRIMARY",
+      "reconcile": "If Gmail message was read but Sheets/PG commit incomplete: treat as unfinished inbound. After PG_PRIMARY, reconcile by gmail_message_id stable key — do not rely on Sheets row numbers. Prefer PG commit then Gmail label; never label-before-commit on v3 path"
+    },
+    {
+      "case": "sheets_write_completed_gmail_label_not_completed",
+      "policy": "COMPLETE_LABEL_OR_MARK_FOR_MANUAL",
+      "reconcile": "Sheets write under old SoT is authoritative until CUTOVER_IN_PROGRESS final delta absorbs it. Ensure final delta includes that lead. Complete Gmail label under old workflow if still running; otherwise operator label after proving PG has the inbound"
+    },
+    {
+      "case": "telegram_delivery_in_progress",
+      "policy": "ALLOW_COMPLETE_THEN_RECONCILE_OUTBOX",
+      "reconcile": "Do not send duplicate Telegram. After PG_PRIMARY, delivery outbox claim must be idempotent on delivery identity; historical Sheets deliveries absorbed by final delta"
+    }
+  ],
+  "forbidden_assumptions": [
+    "deactivate_kills_running_executions",
+    "automatic_sheets_writeback_after_pg_primary",
+    "row_number_based_reconciliation"
+  ]
+}

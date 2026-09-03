@@ -1,0 +1,20 @@
+{
+  "hard_rollback_triggers": [
+    "Gmail intake stops after activate",
+    "duplicate logical leads created",
+    "DB commit failure causes source message loss / unsafe label-before-commit",
+    "Telegram delivery corruption / mass duplicate sends",
+    "ACCESS mismatch affects recipients",
+    "PostgreSQL unavailable and retry path unsafe",
+    "more than one production Gmail intake active",
+    "unexpected critical Sheets dependency discovered on Operational.v3 path",
+    "Admin.dev continues mutating Sheets lead/ACCESS state after PG_PRIMARY (split-brain)"
+  ],
+  "non_rollback_observations": [
+    "temporary Telegram API retry / 429 with durable outbox retry",
+    "noncritical projection delay (Sheets not updating after PG_PRIMARY expected if projection NOT IMPLEMENTED)",
+    "old Sheets idle after Operational.dev deactivated (expected)",
+    "known LEGACY INVALID ROW malformed delivery remains excluded"
+  ],
+  "rollback_model": "POST-CUTOVER = activate Operational.v3.rollback (PG-compatible); preserve PostgreSQL as authoritative; do NOT auto-switch SoT back to Sheets"
+}

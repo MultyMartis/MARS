@@ -1,0 +1,21 @@
+{
+  "question": "Does n8n encryptionKey residual BLOCK PostgreSQL data-authority cutover?",
+  "classification": "SECURITY RESIDUAL — MAY BE REMEDIATED AFTER CUTOVER",
+  "not": "BLOCKING BEFORE CUTOVER",
+  "evidence": {
+    "value_committed_to_git_in_audited_scope": false,
+    "value_like_assignment_in_sanitized_evidence": false,
+    "path_documented": "/opt/n8n/n8n_data/config",
+    "path_perms_observed": "0600 marsops:marsops",
+    "config_content_read_this_wave": false,
+    "rotation_performed_this_wave": false,
+    "prior_wave_note": "Candidate wave deferred encryptionKey remediation to separate Server Ops wave; no key value present in audited markdown/json"
+  },
+  "unauthorized_decryption_risk_from_repo_evidence": "NOT PROVEN — no key value found outside protected server file in audited repo text",
+  "SAFE_UNKNOWN": [
+    "Whether historical chat/operator clipboard ever contained the raw key outside this audit scope",
+    "Whether off-repo backups of n8n config exist with weaker ACLs"
+  ],
+  "operator_rule": "Do NOT rotate encryptionKey in the same wave as data-authority cutover",
+  "server_ops_handoff": "If historical exposure is later proven, schedule Pro: MARS Server Ops credential-rotation wave separate from PG SoT switch"
+}

@@ -1,0 +1,84 @@
+{
+  "captured_at": "20260903T100627Z",
+  "authority": "PG_CANDIDATE_VALIDATED (sheets_sot=true)",
+  "workflows": {
+    "production": {
+      "id": "xSnXPy8cEHoZw6xG",
+      "name": "i-SEO Sales Manager - Operational.dev",
+      "active": true,
+      "node_count": 51,
+      "sheets_write": 8,
+      "sheets_read": 4,
+      "sheets_unknown": 0,
+      "postgres_nodes": [],
+      "gmail_node_count": 4,
+      "telegram_node_count": 2,
+      "credential_types": {
+        "gmailOAuth2": 4,
+        "googleSheetsOAuth2Api": 12,
+        "telegramApi": 2
+      }
+    },
+    "candidate": {
+      "id": "NH4uV145Amrgnmkm",
+      "name": "i-SEO Sales Manager - Operational.v3.dev",
+      "active": false,
+      "node_count": 8,
+      "sheets_write": 0,
+      "sheets_read": 0,
+      "sheets_unknown": 0,
+      "postgres_nodes": [
+        "PG Commit (process_gmail_inbound_commit)",
+        "Claim Delivery Outbox",
+        "Mark Delivery Result"
+      ],
+      "gmail_node_count": 0,
+      "telegram_node_count": 0,
+      "credential_types": {
+        "postgres": 3
+      }
+    },
+    "rollback": {
+      "id": "favawMOzVwtFMdyH",
+      "name": "i-SEO Sales Manager - Operational.v3.rollback",
+      "active": false,
+      "node_count": 8,
+      "sheets_write": 0,
+      "sheets_read": 0,
+      "sheets_unknown": 0,
+      "postgres_nodes": [
+        "PG Commit (process_gmail_inbound_commit)",
+        "Claim Delivery Outbox",
+        "Mark Delivery Result"
+      ],
+      "gmail_node_count": 0,
+      "telegram_node_count": 0,
+      "credential_types": {
+        "postgres": 3
+      }
+    },
+    "admin": {
+      "id": "wLrLp4WQHm1VJmxz",
+      "name": "i-SEO Sales Manager - Admin.dev",
+      "active": true,
+      "node_count": 130,
+      "sheets_write": 11,
+      "sheets_read": 16,
+      "sheets_unknown": 0,
+      "postgres_nodes": [],
+      "gmail_node_count": 2,
+      "telegram_node_count": 33,
+      "credential_types": {
+        "telegramApi": 33,
+        "googleSheetsOAuth2Api": 27,
+        "gmailOAuth2": 2
+      }
+    }
+  },
+  "hard_stops_observed": {
+    "prod_active": true,
+    "candidate_inactive": true,
+    "rollback_inactive": true,
+    "admin_active": true
+  }
+}

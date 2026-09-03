@@ -1,0 +1,915 @@
+{
+  "counters": {
+    "raw_class_TEST/SYNTHETIC": 78,
+    "raw_class_ACTIVE BUSINESS DATA": 17507,
+    "inbound_unique": 59,
+    "raw_gmail_message_id_unique_all": 137,
+    "raw_gmail_message_id_dup_keys": 17,
+    "raw_rows_total": 17585,
+    "clean_class_TEST/SYNTHETIC": 93,
+    "clean_class_ACTIVE BUSINESS DATA": 7881,
+    "clean_class_TERMINAL/HISTORICAL BUSINESS DATA": 32,
+    "leads_unique": 65,
+    "clean_rows": 8006,
+    "dedup_test_excluded": 78,
+    "dedup_empty": 7899,
+    "dedup_from_lead_synth": 129,
+    "dedup_dup_key_skipped": 4,
+    "dedup_entries": 7977,
+    "dedup_keys_written": 129,
+    "events_test_excluded": 96,
+    "events_orphan": 19,
+    "events_migrated": 126,
+    "access_migrated": 5,
+    "access_status_active": 1,
+    "access_role_admin": 1,
+    "access_status_revoked": 3,
+    "access_role_moderator": 4,
+    "access_status_pending": 1,
+    "delivery_lead_card_malformed": 1,
+    "delivery_lead_card_orphan_lead": 67,
+    "delivery_lead_card": 251,
+    "delivery_reminder": 13,
+    "reminder_as_delivery": 13,
+    "config_migrated": 341,
+    "errors_test_excluded": 2951,
+    "errors_historical": 1
+  },
+  "excluded": [
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 2
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 3
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 4
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 5
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 6
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 7
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 60
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 61
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 62
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 63
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 64
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 65
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 66
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 67
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 68
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 69
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 70
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 71
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 72
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 73
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 74
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 75
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 76
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 77
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 78
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 79
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 80
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 81
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 82
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 83
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 84
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 85
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 86
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 87
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 88
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 89
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 90
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 91
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 92
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 93
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 94
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 95
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 96
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 97
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 98
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 99
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 100
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 101
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 102
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 103
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 104
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 105
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 106
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 107
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 108
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 109
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 111
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 112
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 113
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 114
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 116
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 117
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 118
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 119
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 120
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 121
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 122
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 178
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 179
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 180
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 181
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 182
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 183
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 184
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 185
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 186
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 187
+    },
+    {
+      "domain": "inbound",
+      "class": "TEST/SYNTHETIC",
+      "row": 188
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 2
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 3
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 4
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 5
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 6
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 7
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 8
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 9
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 10
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 11
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 12
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 13
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 14
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 15
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 16
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 17
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 18
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 19
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 20
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 21
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 22
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 23
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 24
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 25
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 26
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 27
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 28
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 38
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 41
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 42
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 63
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 64
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 65
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 66
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 67
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 68
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 69
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 70
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 71
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 72
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 73
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 74
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 75
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 76
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 77
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 78
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 79
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 80
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 81
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 82
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 83
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 84
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 85
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 86
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 87
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 88
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 89
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 90
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 91
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 92
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 93
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 94
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 95
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 96
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 97
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 98
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 99
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 100
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 101
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 103
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 104
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 105
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 106
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 108
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 109
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 110
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 111
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 112
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 113
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 114
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 157
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 158
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 164
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 165
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 166
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 167
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 168
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 169
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 170
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 171
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 172
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 173
+    },
+    {
+      "domain": "leads",
+      "class": "TEST/SYNTHETIC",
+      "row": 174
+    }
+  ],
+  "unknowns": [
+    {
+      "domain": "deliveries",
+      "reason": "malformed_row",
+      "type": "lead_card",
+      "row": 2
+    }
+  ],
+  "status_hist_src": {
+    "new": 4,
+    "pending": 29,
+    "processed": 3,
+    "spam": 29
+  },
+  "status_hist_pg": {
+    "new": 4,
+    "pending": 29,
+    "processed": 3,
+    "spam": 29
+  }
+}

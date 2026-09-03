@@ -1,0 +1,23 @@
+=== dumps ===
+total 208
+drwx------ 2 root root  4096 Sep  3 09:11 .
+drwxr-xr-x 6 root root  4096 Sep  3 07:19 ..
+-rw------- 1 root root   710 Sep  3 07:21 mars-foundation-20260903T072137Z.sql.gz
+-rw-r--r-- 1 root root 10387 Sep  3 07:41 mars-post-app-schema-20260903T074124Z.sql.gz
+-rw-r--r-- 1 root root 55404 Sep  3 09:07 mars-post-shadow-20260903T090738Z.sql.gz
+-rw-r--r-- 1 root root 55831 Sep  3 09:11 mars-post-shadow-20260903T091128Z.sql.gz
+-rw-r--r-- 1 root root   710 Sep  3 07:35 mars-pre-app-schema-20260903T073534Z.sql.gz
+-rw-r--r-- 1 root root 10388 Sep  3 09:07 mars-pre-shadow-20260903T090738Z.sql.gz
+-rw-r--r-- 1 root root 55410 Sep  3 09:11 mars-pre-shadow-20260903T091128Z.sql.gz
+=== backup script ===
+-rwx------ 1 root root 305 Sep  3 07:21 /opt/mars-postgres/backup-logical.sh
+=== cron ===
+=== beget/offhost markers ===
+NO_OFFHOST_DIR
+NO_BEGET_MNT
+=== restore drill markers ===
+NO_RESTORE_DRILL_ARTIFACT
+=== n8n config perms (no content) ===
+-rw------- 1 marsops marsops 56 Apr  4 13:23 /opt/n8n/n8n_data/config
+
+STDERR:

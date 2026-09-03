@@ -1,0 +1,67 @@
+{
+  "spreadsheetId": "1Ba1iveHphZqHSTjkHdih0Aqekk5gmonELEX5dKXZ2NU",
+  "title": "MetaBOT -Leads.DB",
+  "tabs": {
+    "lead-base": {
+      "headers": [
+        "lead_id",
+        "created_at",
+        "source",
+        "email_subject",
+        "client_name",
+        "contact_type",
+        "client_contact",
+        "client_phone",
+        "client_email",
+        "client_messenger",
+        "client_site",
+        "request_text",
+        "request_page",
+        "ip",
+        "ai_summary",
+        "ai_detected_service",
+        "ai_priority",
+        "ai_reply",
+        "manager_status",
+        "processing_status"
+      ],
+      "row_count_body": 20,
+      "nonempty_rows": 20
+    },
+    "lead_raw_v2": {
+      "headers": [
+        "lead_id",
+        "gmail_message_id",
+        "gmail_thread_id",
+        "received_at",
+        "source",
+        "email_subject",
+        "sender_email",
+        "request_page",
+        "form_name",
+        "utm_source",
+        "utm_medium",
+        "utm_campaign",
+        "utm_term",
+        "utm_content",
+        "parsed_name",
+        "parsed_phone",
+        "parsed_email",
+        "parsed_messenger",
+        "parsed_site",
+        "request_text",
+        "calc_detected",
+        "calc_data",
+        "ip",
+        "parser_version",
+        "parse_status",
+        "parse_warnings",
+        "workflow_version",
+        "raw_logged_at",
+        "raw_text"
+      ],
+      "row_count_body": 17585,
+      "nonempty_rows": 17585
+    }
+  }
+}

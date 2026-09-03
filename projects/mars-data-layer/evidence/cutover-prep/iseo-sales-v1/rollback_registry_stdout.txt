@@ -1,0 +1,12 @@
+DELETE 0
+ id |  status  | n8n_workflow_id  |     release_version     
+----+----------+------------------+-------------------------
+  5 | rollback | favawMOzVwtFMdyH | Operational.v3.rollback
+(1 row)
+
+INSERT 0 1
+
+---STDERR---
+ERROR:  column reference "status" is ambiguous
+LINE 1: SELECT release_version, status, n8n_workflow_id, left(git_ex...
+                                ^

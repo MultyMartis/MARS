@@ -1,0 +1,18 @@
+{
+  "canonical_store": "mars_core.apps.metadata.data_authority_state",
+  "progression": [
+    "SHEETS_PRIMARY",
+    "PG_SHADOW",
+    "PG_CANDIDATE_VALIDATED",
+    "CUTOVER_IN_PROGRESS",
+    "PG_PRIMARY"
+  ],
+  "architecture_alias": {
+    "CUTOVER": "CUTOVER_IN_PROGRESS",
+    "SHEETS_PROJECTION": "post_PG_PRIMARY_optional"
+  },
+  "current": "PG_CANDIDATE_VALIDATED",
+  "sheets_still_sot": true,
+  "companion_doc": "projects/mars-data-layer/evidence/cutover-prep/iseo-sales-v1/AUTHORITY-STATE-v1.md",
+  "note": "Do not invent a second competing state system; apps.metadata is the control marker"
+}

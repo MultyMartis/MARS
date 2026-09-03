@@ -1,0 +1,34 @@
+{
+  "topology_class": "B",
+  "verdict": "JOINT OPERATIONAL + ADMIN PG CUTOVER REQUIRED",
+  "not": [
+    "OPERATIONAL-ONLY CUTOVER SAFE",
+    "CUTOVER BLOCKED BY DATA/SECURITY/DR RESIDUAL alone"
+  ],
+  "rationale": "Admin.dev is ACTIVE with 11 Sheets WRITE paths mutating lead lifecycle, ACCESS, reminders, CONFIG, events. Operational-only PG_PRIMARY while Admin continues writing Sheets creates split-brain.",
+  "admin_workflow": {
+    "id": "wLrLp4WQHm1VJmxz",
+    "name": "i-SEO Sales Manager - Admin.dev",
+    "active": true,
+    "sheets_write": 11,
+    "sheets_read": 16,
+    "postgres_nodes": 0
+  },
+  "must_migrate_before_operational_cutover": [
+    "ACCESS_CONTROL",
+    "ACCESS_EVENTS",
+    "CONFIG",
+    "LEAD_EVENTS",
+    "REMINDER_DELIVERIES",
+    "lead_clean_v2",
+    "PROFILE_EVENTS",
+    "ERRORS"
+  ],
+  "preferred_next_candidate": "Admin.v3.dev (inactive, PostgreSQL-backed) — NOT built in this prep wave",
+  "additional_blockers_independent_of_topology": [
+    "OFF_HOST_BACKUP FAIL",
+    "RESTORE_PROOF FAIL",
+    "v3/rollback lack live Gmail+Telegram wiring until cutover wire plan"
+  ],
+  "prep_wave_overall": "PARTIAL — CUTOVER BLOCKERS REMAIN"
+}

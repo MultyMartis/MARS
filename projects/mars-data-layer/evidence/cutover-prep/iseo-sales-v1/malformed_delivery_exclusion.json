@@ -1,0 +1,10 @@
+{
+  "classification": "LEGACY INVALID ROW",
+  "counter_key": "delivery_lead_card_malformed",
+  "count_apply_20260903T091128Z": 1,
+  "count_dry_run_20260903T095930Z": 1,
+  "policy": "Excluded from authoritative migration / not repaired into valid delivery rows",
+  "reproducible": true,
+  "proof": "Same counter remains 1 across apply and subsequent dry-run; transform continues to classify rather than silently import as valid delivery",
+  "cutover_expectation": "Final delta must keep this exclusion; unexplained increase to malformed count is a stop condition"
+}

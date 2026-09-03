@@ -1,0 +1,35 @@
+{
+  "probed_at": "20260903T101500Z_approx",
+  "host": "VEESP-N8N-01",
+  "local_logical_dumps_exist": true,
+  "local_dump_dir": "/root/mars-backups/postgres/",
+  "local_dumps_observed": [
+    "mars-foundation-20260903T072137Z.sql.gz",
+    "mars-pre-app-schema-20260903T073534Z.sql.gz",
+    "mars-post-app-schema-20260903T074124Z.sql.gz",
+    "mars-pre-shadow-20260903T090738Z.sql.gz",
+    "mars-post-shadow-20260903T090738Z.sql.gz",
+    "mars-pre-shadow-20260903T091128Z.sql.gz",
+    "mars-post-shadow-20260903T091128Z.sql.gz"
+  ],
+  "backup_script_exists": true,
+  "backup_script_path": "/opt/mars-postgres/backup-logical.sh",
+  "nightly_backup_configured": false,
+  "nightly_cron_evidence": "no matching crontab / cron.d entries for backup-logical or mars-backups/postgres",
+  "off_host_copy_exists": false,
+  "off_host_markers": {
+    "/root/mars-backups/offhost": false,
+    "/mnt/beget": false
+  },
+  "preferred_future_off_host_target": "Beget (logical encrypted dump copy; not hot replication)",
+  "restore_tested": false,
+  "restore_drill_artifacts": false,
+  "gates": {
+    "POSTGRESQL_LOGICAL_BACKUP_ON_VPS": "PASS_PARTIAL — ad-hoc dumps exist; nightly not configured",
+    "POSTGRESQL_LOGICAL_BACKUP_OFF_VPS": "FAIL",
+    "RESTORE_PROOF": "FAIL"
+  },
+  "cutover_blocker_class": "BLOCKING UNTIL PASS",
+  "handoff": "projects/mars-data-layer/runbooks/SERVER-OPS-PG-DR-CUTOVER-GATE-HANDOFF-v1.md",
+  "audience": "Pro: MARS Server Ops pt.2"
+}

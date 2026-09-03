@@ -1,0 +1,36 @@
+{
+  "scope": "projects/mars-data-layer + projects/mars-server-ops under worktree",
+  "files_mentioning_encryptionKey_word": 4,
+  "any_value_like_assignment_in_repo_text": false,
+  "files": [
+    {
+      "path": "projects/mars-data-layer/reports/REPORT-iseo-operational-v3-postgres-candidate-v1.md",
+      "has_value_like_assignment": false,
+      "mentions": 2
+    },
+    {
+      "path": "projects/mars-data-layer/tools/iseo_sales_shadow_worker.py",
+      "has_value_like_assignment": false,
+      "mentions": 1
+    },
+    {
+      "path": "projects/mars-data-layer/evidence/candidate-workflow/iseo-operational-v3/acceptance_matrix.md",
+      "has_value_like_assignment": false,
+      "mentions": 1
+    },
+    {
+      "path": "projects/mars-data-layer/evidence/candidate-workflow/iseo-operational-v3/db_credential_role_proof.md",
+      "has_value_like_assignment": false,
+      "mentions": 1
+    }
+  ],
+  "server_config_path": "/opt/n8n/n8n_data/config",
+  "server_config_mode_observed": "0600 marsops:marsops size=56",
+  "content_read": false,
+  "classification_inputs": {
+    "committed_to_git_value": false,
+    "sanitized_evidence_contains_value": false,
+    "path_documented": true,
+    "rotation_performed": false
+  }
+}

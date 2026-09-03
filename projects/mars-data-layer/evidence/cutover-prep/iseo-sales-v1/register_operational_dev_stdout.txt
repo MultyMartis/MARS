@@ -1,0 +1,18 @@
+DELETE 0
+ id | status | n8n_workflow_id  | release_version 
+----+--------+------------------+-----------------
+  6 | active | xSnXPy8cEHoZw6xG | Operational.dev
+(1 row)
+
+INSERT 0 1
+     release_version     |  status   | n8n_workflow_id  |    hash12    
+-------------------------+-----------+------------------+--------------
+ Operational.v3.dev      | candidate | NH4uV145Amrgnmkm | 6a989d73bf5b
+ Operational.v3.dev      | candidate | NH4uV145Amrgnmkm | 57246a4f0566
+ Operational.v3.dev      | candidate | NH4uV145Amrgnmkm | c2b59d0767c7
+ Operational.v3.dev      | candidate | NH4uV145Amrgnmkm | dcd9ddd59510
+ Operational.v3.rollback | rollback  | favawMOzVwtFMdyH | ac28d8e5268a
+ Operational.dev         | active    | xSnXPy8cEHoZw6xG | e299a967dbff
+(6 rows)
+
+

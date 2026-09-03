@@ -1,0 +1,47 @@
+{
+  "operation_class": "SHADOW REFRESH / DELTA DRY RUN",
+  "not": "FINAL CUTOVER DELTA",
+  "tool": "projects/mars-data-layer/tools/iseo_sales_sheets_to_pg_shadow.py",
+  "invocation": "python projects/mars-data-layer/tools/iseo_sales_sheets_to_pg_shadow.py dry-run",
+  "dry_run_snapshot_id": "20260903T095930Z",
+  "prior_apply_snapshot_id": "20260903T091128Z",
+  "pg_updated": false,
+  "sheets_remain_authoritative": true,
+  "evidence_dirs": {
+    "dry_run": "projects/mars-data-layer/evidence/shadow-migration/iseo-sales-v1/run_dry-run_20260903T095930Z/",
+    "orchestrator_summary": "projects/mars-data-layer/evidence/shadow-migration/iseo-sales-v1/orchestrator_dry-run_summary.json",
+    "prior_apply_summary": "projects/mars-data-layer/evidence/shadow-migration/iseo-sales-v1/orchestrator_apply_summary.json"
+  },
+  "stable_business_keys_unchanged": {
+    "inbound_unique": {"apply": 59, "dry_run": 59},
+    "leads_unique": {"apply": 65, "dry_run": 65},
+    "access_migrated": {"apply": 5, "dry_run": 5},
+    "delivery_lead_card": {"apply": 251, "dry_run": 251},
+    "delivery_reminder": {"apply": 13, "dry_run": 13},
+    "events_migrated": {"apply": 126, "dry_run": 126},
+    "delivery_lead_card_malformed": {"apply": 1, "dry_run": 1}
+  },
+  "natural_sheets_growth_since_apply": {
+    "raw_class_ACTIVE BUSINESS DATA": {"apply": 17466, "dry_run": 17507, "delta": 41},
+    "clean_class_ACTIVE BUSINESS DATA": {"apply": 7831, "dry_run": 7881, "delta": 50},
+    "config_migrated": {"apply": 340, "dry_run": 341, "delta": 1},
+    "raw_rows_total": {"apply": 17544, "dry_run": 17585, "delta": 41},
+    "clean_rows": {"apply": 7956, "dry_run": 8006, "delta": 50}
+  },
+  "interpretation": "Live Sheets continued to accumulate RAW/CLEAN/CONFIG rows after shadow apply. Authoritative business entity counts (inbound/leads/ACCESS/deliveries/events/malformed) unchanged. Dry-run did not mutate PG. Final cutover requires a freeze-window dry-run+apply with reconcile zero unexplained diffs.",
+  "final_cutover_delta_future_invocation": {
+    "step_1_dry_run": "python projects/mars-data-layer/tools/iseo_sales_sheets_to_pg_shadow.py dry-run",
+    "step_2_apply": "python projects/mars-data-layer/tools/iseo_sales_sheets_to_pg_shadow.py apply",
+    "step_3_reconcile": "python projects/mars-data-layer/tools/iseo_sales_sheets_to_pg_shadow.py reconcile",
+    "operator_rule": "Do not manually edit SQL/rows; use orchestrator only"
+  },
+  "delta_algorithm_acceptance": {
+    "repeatable": true,
+    "idempotent": true,
+    "bounded": true,
+    "stable_keys_not_sheet_row_numbers": true,
+    "safe_with_natural_production_changes": true,
+    "produces_reconciliation_counters": true,
+    "basis": "Prior shadow apply reconcile ok=true; dry-run regenerates counters from Sheets via same worker"
+  }
+}

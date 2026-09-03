@@ -1,0 +1,37 @@
+{
+  "server": [
+    {"item": "PostgreSQL healthy", "status": "REQUIRED"},
+    {"item": "n8n healthy", "status": "REQUIRED"},
+    {"item": "disk healthy", "status": "REQUIRED"},
+    {"item": "RAM headroom acceptable", "status": "REQUIRED"},
+    {"item": "PostgreSQL reachable from n8n on internal network", "status": "REQUIRED"}
+  ],
+  "data": [
+    {"item": "shadow reconciliation current (dry-run within cutover window)", "status": "REQUIRED"},
+    {"item": "no unexplained duplicates", "status": "REQUIRED"},
+    {"item": "ACCESS exact", "status": "REQUIRED"},
+    {"item": "malformed delivery remains LEGACY INVALID ROW (count stable)", "status": "REQUIRED"},
+    {"item": "final delta tool ready (iseo_sales_sheets_to_pg_shadow.py)", "status": "PASS_THIS_WAVE"}
+  ],
+  "workflow": [
+    {"item": "Operational.v3.dev inactive pre-cutover", "status": "PASS_THIS_WAVE"},
+    {"item": "Operational.v3.rollback inactive", "status": "PASS_THIS_WAVE"},
+    {"item": "Operational.dev active pre-cutover", "status": "PASS_THIS_WAVE"},
+    {"item": "exports/hashes pinned", "status": "PASS_THIS_WAVE"},
+    {"item": "Gmail+Telegram wired on v3 before activate", "status": "BLOCKED_PENDING_WIRE_PLAN"},
+    {"item": "Admin.v3.dev candidate ready OR Admin Sheets writes disabled", "status": "BLOCKED_PENDING_ADMIN_V3"}
+  ],
+  "recovery": [
+    {"item": "local logical backup capability", "status": "PASS_PARTIAL"},
+    {"item": "nightly backup configured", "status": "FAIL"},
+    {"item": "off-host backup PASS", "status": "FAIL"},
+    {"item": "restore proof PASS", "status": "FAIL"}
+  ],
+  "security": [
+    {"item": "encryptionKey blocker decision recorded", "status": "PASS_THIS_WAVE — residual non-blocking for SoT"}
+  ],
+  "authority": [
+    {"item": "mars_core.apps.metadata data_authority_state == PG_CANDIDATE_VALIDATED", "status": "PASS_THIS_WAVE"},
+    {"item": "sheets_sot true until PG_PRIMARY", "status": "PASS_THIS_WAVE"}
+  ]
+}

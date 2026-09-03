@@ -1,0 +1,1223 @@
+{
+  "mode": "dry-run",
+  "snapshot_id": "20260903T095930Z",
+  "work": "/tmp/mars-iseo-shadow-20260903T095930Z",
+  "inventory": {
+    "snapshot_id": "20260903T095930Z",
+    "cutoff_utc": "2026-09-03T10:00:45.149526+00:00",
+    "spreadsheets": {
+      "RAW": {
+        "spreadsheetId": "1Ba1iveHphZqHSTjkHdih0Aqekk5gmonELEX5dKXZ2NU",
+        "title": "MetaBOT -Leads.DB",
+        "tabs": {
+          "lead-base": {
+            "headers": [
+              "lead_id",
+              "created_at",
+              "source",
+              "email_subject",
+              "client_name",
+              "contact_type",
+              "client_contact",
+              "client_phone",
+              "client_email",
+              "client_messenger",
+              "client_site",
+              "request_text",
+              "request_page",
+              "ip",
+              "ai_summary",
+              "ai_detected_service",
+              "ai_priority",
+              "ai_reply",
+              "manager_status",
+              "processing_status"
+            ],
+            "row_count_body": 20,
+            "nonempty_rows": 20,
+            "classification": {
+              "LEGACY/OBSOLETE": 20
+            },
+            "duplicate_candidate_keys": 5,
+            "key_field": "lead_id",
+            "sample_redacted": [
+              {
+                "_sheet_row": "2",
+                "lead_id": "19dcff4988710f1b",
+                "created_at": "2026-04-27T17:20:05.000Z",
+                "source": "gmail",
+                "email_subject": "UNKNOWN",
+                "client_name": "Тестовоимённый Телефон: phone_h:48ce12a9 Адрес сайта: i-seo.com 01: Москва 02: До 2000 запросов 03: До 8 страниц (20 тысяч символов) 04: Более 30 коммерческих ссылок и",
+                "contact_type": "phone",
+                "client_contact": "#ERROR! (Formula parse error.)",
+                "client_phone": "phone_h:48ce12a9 Адрес сайта: i-seo.com 01: Москва 02: До 2000 запросов 03: До 8 страниц (20 тысяч символов) 04: Более 30 коммерческих ссылок и",
+                "client_email": "",
+                "client_messenger": "",
+                "client_site": "i-seo.com 01: Москва 02: До 2000 запросов 03: До 8 страниц (20 тысяч символов) 04: Более 30 коммерческих ссылок и",
+                "request_text": "01: Москва 02: До 2000 запросов 03: До 8 страниц (20 тысяч символов) 04: Более 30 коммерческих ссылок и",
+                "request_page": ""
+              },
+              {
+                "_sheet_row": "3",
+                "lead_id": "19dcf3073804c941",
+                "created_at": "2026-04-27T13:45:50.000Z",
+                "source": "gmail",
+                "email_subject": "UNKNOWN",
+                "client_name": "Владимир Способ связи: Телефон Контакт: phone_h:688ef2d4 Адрес сайта: . Комментарий: Отправлено со страницы: Продвижение сайтов в ТОП под ключ в Москве | Агентство",
+                "contact_type": "phone",
+                "client_contact": "#ERROR! (Formula parse error.)",
+                "client_phone": "phone_h:688ef2d4 Адрес сайта: . Комментарий: Отправлено со страницы: Продвижение сайтов в ТОП под ключ в Москве | Агентство",
+                "client_email": "",
+                "client_messenger": "",
+                "client_site": ". Комментарий: Отправлено со страницы: Продвижение сайтов в ТОП под ключ в Москве | Агентство",
+                "request_text": "",
+                "request_page": "Продвижение сайтов в ТОП под ключ в Москве | Агентство"
+              },
+              {
+                "_sheet_row": "4",
+                "lead_id": "19dce6a868f45b97",
+                "created_at": "2026-04-27T10:09:39.000Z",
+                "source": "gmail",
+                "email_subject": "UNKNOWN",
+                "client_name": "Андрей Способ связи: Telegram Контакт: phone_h:197cb25c Адрес сайта: тест-бота Комментарий: Отправлено со страницы: Продвижение сайтов в ТОП под ключ в Москве |",
+                "contact_type": "phone",
+                "client_contact": "#ERROR! (Formula parse error.)",
+                "client_phone": "phone_h:197cb25c Адрес сайта: тест-бота Комментарий: Отправлено со страницы: Продвижение сайтов в ТОП под ключ в Москве |",
+                "client_email": "",
+                "client_messenger": "",
+                "client_site": "тест-бота Комментарий: Отправлено со страницы: Продвижение сайтов в ТОП под ключ в Москве |",
+                "request_text": "",
+                "request_page": "Продвижение сайтов в ТОП под ключ в Москве |"
+              }
+            ]
+          },
+          "lead_raw_v2": {
+            "headers": [
+              "lead_id",
+              "gmail_message_id",
+              "gmail_thread_id",
+              "received_at",
+              "source",
+              "email_subject",
+              "sender_email",
+              "request_page",
+              "form_name",
+              "utm_source",
+              "utm_medium",
+              "utm_campaign",
+              "utm_term",
+              "utm_content",
+              "parsed_name",
+              "parsed_phone",
+              "parsed_email",
+              "parsed_messenger",
+              "parsed_site",
+              "request_text",
+              "calc_detected",
+              "calc_data",
+              "ip",
+              "parser_version",
+              "parse_status",
+              "parse_warnings",
+              "workflow_version",
+              "raw_logged_at",
+              "raw_text"
+            ],
+            "row_count_body": 17585,
+            "nonempty_rows": 17585,
+            "classification": {
+              "TEST/SYNTHETIC": 78,
+              "ACTIVE BUSINESS DATA": 17507
+            },
+            "duplicate_candidate_keys": 17,
+            "key_field": "gmail_message_id",
+            "sample_redacted": [
+              {
+                "_sheet_row": "2",
+                "lead_id": "lead_synth_p3b1_c01",
+                "gmail_message_id": "msg_synth_C01_unnamed_audit",
+                "gmail_thread_id": "",
+                "received_at": "2026-07-30T08:51:14.929Z",
+                "source": "synthetic",
+                "email_subject": "SYNTHETIC_TEST C01",
+                "sender_email": "",
+                "request_page": "/audit",
+                "form_name": "",
+                "utm_source": "",
+                "utm_medium": "",
+                "utm_campaign": "",
+                "utm_term": ""
+              },
+              {
+                "_sheet_row": "3",
+                "lead_id": "lead_synth_p3b1_c02",
+                "gmail_message_id": "msg_synth_C02_named_seo",
+                "gmail_thread_id": "",
+                "received_at": "2026-07-30T08:51:14.929Z",
+                "source": "synthetic",
+                "email_subject": "SYNTHETIC_TEST C02",
+                "sender_email": "",
+                "request_page": "",
+                "form_name": "",
+                "utm_source": "",
+                "utm_medium": "",
+                "utm_campaign": "",
+                "utm_term": ""
+              },
+              {
+                "_sheet_row": "4",
+                "lead_id": "lead_synth_p3b2_TG1",
+                "gmail_message_id": "msg_synth_p3b2_TG1",
+                "gmail_thread_id": "",
+                "received_at": "2026-07-30T18:45:56.609Z",
+                "source": "synthetic",
+                "email_subject": "SYNTHETIC_TEST TG1",
+                "sender_email": "",
+                "request_page": "/audit",
+                "form_name": "",
+                "utm_source": "",
+                "utm_medium": "",
+                "utm_campaign": "",
+                "utm_term": ""
+              }
+            ]
+          }
+        }
+      },
+      "CLEAN": {
+        "spreadsheetId": "1aeIWHeaqHwgJSKLCFZP8M4qG5y9qmOcPt6rvSWsltRU",
+        "title": "MetaBOT -Leads_Manager.DB",
+        "tabs": {
+          "lead-base-processed": {
+            "headers": [
+              "lead_id",
+              "created_at",
+              "clean_name",
+              "primary_contact",
+              "phone",
+              "email",
+              "messenger",
+              "site",
+              "service",
+              "summary",
+              "quality_status",
+              "duplicate_status",
+              "manager_status",
+              "notes"
+            ],
+            "row_count_body": 20,
+            "nonempty_rows": 20,
+            "classification": {
+              "LEGACY/OBSOLETE": 20
+            },
+            "duplicate_candidate_keys": 5,
+            "key_field": "lead_id",
+            "sample_redacted": [
+              {
+                "_sheet_row": "2",
+                "lead_id": "19dcff4988710f1b",
+                "created_at": "2026-04-27T17:20:05.000Z",
+                "clean_name": "Тестовоимённый",
+                "primary_contact": "#ERROR! (Formula parse error.)",
+                "phone": "phone_h:48ce12a9",
+                "email": "",
+                "messenger": "",
+                "site": "i-seo.com",
+                "service": "SEO",
+                "summary": "Заявка на SEO-услуги для сайта i-seo.com. Клиент из Москвы, интересуется оптимизацией до 2000 запросов и 8 страниц.",
+                "quality_status": "ok",
+                "duplicate_status": "new",
+                "manager_status": "new"
+              },
+              {
+                "_sheet_row": "3",
+                "lead_id": "19dcf3073804c941",
+                "created_at": "2026-04-27T13:45:50.000Z",
+                "clean_name": "Владимир",
+                "primary_contact": "#ERROR! (Formula parse error.)",
+                "phone": "phone_h:688ef2d4",
+                "email": "",
+                "messenger": "",
+                "site": "",
+                "service": "Other",
+                "summary": "Заявка на бесплатный аудит от Владимира. Контактный телефон указан.",
+                "quality_status": "ok",
+                "duplicate_status": "new",
+                "manager_status": "new"
+              },
+              {
+                "_sheet_row": "4",
+                "lead_id": "19dce6a868f45b97",
+                "created_at": "2026-04-27T10:09:39.000Z",
+                "clean_name": "Андрей",
+                "primary_contact": "#ERROR! (Formula parse error.)",
+                "phone": "phone_h:197cb25c",
+                "email": "",
+                "messenger": "Telegram",
+                "site": "тест-бота",
+                "service": "Other",
+                "summary": "Заявка на бесплатный аудит сайта от клиента по имени Андрей. Связь через Telegram.",
+                "quality_status": "ok",
+                "duplicate_status": "new",
+                "manager_status": "new"
+              }
+            ]
+          },
+          "lead_clean_v2": {
+            "headers": [
+              "lead_id",
+              "source_message_id",
+              "created_at",
+              "processed_at",
+              "updated_at",
+              "client_name",
+              "primary_contact",
+              "contact_type",
+              "phone",
+              "email",
+              "messenger",
+              "site",
+              "service",
+              "summary",
+              "source",
+              "request_page",
+              "utm_source",
+              "utm_medium",
+              "utm_campaign",
+              "processing_mode",
+              "ai_enabled",
+              "ai_status",
+              "ai_model",
+              "fallback_used",
+              "parser_version",
+              "message_format_version",
+              "reply_template_version",
+              "priority",
+              "quality_status",
+              "quality_comment",
+              "missing_fields",
+              "clarification_questions",
+              "manager_recommendation",
+              "first_reply_text",
+              "first_reply_source",
+              "reply_review_status",
+              "reply_sent_manually_at",
+              "duplicate_status",
+              "duplicate_match_type",
+              "duplicate_lead_id",
+              "previous_contact_at",
+              "previous_service",
+              "previous_summary",
+              "manager_status",
+              "assigned_to",
+              "first_contact_at",
+              "next_followup_at",
+              "closed_at",
+              "close_reason",
+              "manager_notes",
+              "processing_error",
+              "last_error_code",
+              "manager_status_updated_at",
+              "manager_status_updated_by",
+              "manager_status_source",
+              "telegram_chat_ref_hash",
+              "telegram_message_ref",
+              "telegram_action_token",
+              "last_manager_action",
+              "last_manager_action_at",
+              "spam_at",
+              "spam_by",
+              "spam_reason",
+              "manager_action_processed_at",
+              "manager_action_processed_by"
+            ],
+            "row_count_body": 8006,
+            "nonempty_rows": 8006,
+            "classification": {
+              "TEST/SYNTHETIC": 93,
+              "ACTIVE BUSINESS DATA": 7881,
+              "TERMINAL/HISTORICAL BUSINESS DATA": 32
+            },
+            "duplicate_candidate_keys": 8,
+            "key_field": "lead_id",
+            "sample_redacted": [
+              {
+                "_sheet_row": "2",
+                "lead_id": "lead_synth_p3b1_c01",
+                "source_message_id": "msg_synth_C01_unnamed_audit",
+                "created_at": "2026-07-30T08:51:14.929Z",
+                "processed_at": "2026-07-30T08:51:14.929Z",
+                "updated_at": "2026-07-30T08:51:14.929Z",
+                "client_name": "",
+                "primary_contact": "phone_h:d334088b",
+                "contact_type": "phone",
+                "phone": "phone_h:d334088b",
+                "email": "",
+                "messenger": "",
+                "site": "",
+                "service": "Audit"
+              },
+              {
+                "_sheet_row": "3",
+                "lead_id": "lead_synth_p3b1_c02",
+                "source_message_id": "msg_synth_C02_named_seo",
+                "created_at": "2026-07-30T08:51:14.929Z",
+                "processed_at": "2026-07-30T08:51:14.929Z",
+                "updated_at": "2026-07-30T08:51:14.929Z",
+                "client_name": "Синтетик Тестов",
+                "primary_contact": "email_h:4349fc29",
+                "contact_type": "email",
+                "phone": "",
+                "email": "email_h:4349fc29",
+                "messenger": "",
+                "site": "synth-c02.example.test",
+                "service": "SEO"
+              },
+              {
+                "_sheet_row": "4",
+                "lead_id": "lead_synth_p3b1_c08",
+                "source_message_id": "msg_synth_C08_repeat_phone",
+                "created_at": "2026-07-30T08:51:14.929Z",
+                "processed_at": "2026-07-30T08:51:14.929Z",
+                "updated_at": "2026-07-30T08:51:14.929Z",
+                "client_name": "",
+                "primary_contact": "phone_h:d334088b",
+                "contact_type": "phone",
+                "phone": "phone_h:d334088b",
+                "email": "",
+                "messenger": "",
+                "site": "",
+                "service": "Other"
+              }
+            ]
+          },
+          "CONFIG": {
+            "headers": [
+              "key",
+              "value",
+              "type",
+              "updated_at",
+              "updated_by",
+              "description"
+            ],
+            "row_count_body": 341,
+            "nonempty_rows": 341,
+            "classification": {
+              "ACTIVE BUSINESS DATA": 341
+            },
+            "duplicate_candidate_keys": 0,
+            "key_field": "key",
+            "sample_redacted": [
+              {
+                "_sheet_row": "2",
+                "key": "ai_enabled",
+                "value": "false",
+                "type": "boolean",
+                "updated_at": "2026-07-30T21:56:24.657Z",
+                "updated_by": "phase3c-cutover",
+                "description": "AI OFF initial production"
+              },
+              {
+                "_sheet_row": "3",
+                "key": "ai_model",
+                "value": "",
+                "type": "string",
+                "updated_at": "2026-07-29T22:01:23.956Z",
+                "updated_by": "phase3b-system",
+                "description": "Used only when AI ON"
+              },
+              {
+                "_sheet_row": "4",
+                "key": "environment",
+                "value": "production",
+                "type": "string",
+                "updated_at": "2026-07-30T21:56:24.657Z",
+                "updated_by": "phase3c-cutover",
+                "description": "production contour"
+              }
+            ]
+          },
+          "LEAD_EVENTS": {
+            "headers": [
+              "event_id",
+              "ts",
+              "lead_id",
+              "event_type",
+              "actor",
+              "detail"
+            ],
+            "row_count_body": 241,
+            "nonempty_rows": 241,
+            "classification": {
+              "TEST/SYNTHETIC": 96,
+              "ACTIVE BUSINESS DATA": 145
+            },
+            "duplicate_candidate_keys": 73,
+            "key_field": "lead_id",
+            "sample_redacted": [
+              {
+                "_sheet_row": "2",
+                "event_id": "evt_synth_p3b1_1",
+                "ts": "2026-07-30T08:51:14.929Z",
+                "lead_id": "lead_synth_p3b1_c01",
+                "event_type": "synthetic_processed",
+                "actor": "phase3b1",
+                "detail": "SYNTHETIC_TEST AI OFF path"
+              },
+              {
+                "_sheet_row": "3",
+                "event_id": "evt_synth_p3b1_2",
+                "ts": "2026-07-30T08:51:14.929Z",
+                "lead_id": "lead_synth_p3b1_c02",
+                "event_type": "synthetic_processed",
+                "actor": "phase3b1",
+                "detail": "SYNTHETIC_TEST AI OFF path"
+              },
+              {
+                "_sheet_row": "4",
+                "event_id": "evt_synth_p3b1_3",
+                "ts": "2026-07-30T08:51:14.929Z",
+                "lead_id": "lead_synth_p3b1_c08",
+                "event_type": "synthetic_processed",
+                "actor": "phase3b1",
+                "detail": "SYNTHETIC_TEST repeat phone"
+              }
+            ]
+          },
+          "ERRORS": {
+            "headers": [
+              "ts",
+              "error_code",
+              "lead_id",
+              "stage",
+              "message",
+              "workflow",
+              "resolved"
+            ],
+            "row_count_body": 2952,
+            "nonempty_rows": 2952,
+            "classification": {
+              "TEST/SYNTHETIC": 2951,
+              "ACTIVE BUSINESS DATA": 1
+            },
+            "duplicate_candidate_keys": 1,
+            "key_field": "lead_id",
+            "sample_redacted": [
+              {
+                "_sheet_row": "2",
+                "ts": "2026-07-30T08:51:14.929Z",
+                "error_code": "telegram_delivery_failed",
+                "lead_id": "lead_synth_p3b1_tg_fail",
+                "stage": "telegram_send",
+                "message": "SYNTHETIC_TEST forced telegram failure path (mocked; no real send)",
+                "workflow": "Operational.dev",
+                "resolved": "False"
+              },
+              {
+                "_sheet_row": "3",
+                "ts": "2026-07-30T18:46:00.481Z",
+                "error_code": "processing_error",
+                "lead_id": "lead_synth_p3b2_tg_fail",
+                "stage": "unknown",
+                "message": "SYNTHETIC_TEST PHASE_3B2 controlled telegram failure",
+                "workflow": "Operational.dev",
+                "resolved": "False"
+              },
+              {
+                "_sheet_row": "4",
+                "ts": "2026-07-30T19:47:56.503Z",
+                "error_code": "telegram_delivery_failed",
+                "lead_id": "SYNTHETIC_TEST",
+                "stage": "telegram_send",
+                "message": "Не удалось доставить карточку в Telegram.",
+                "workflow": "Operational.dev",
+                "resolved": "False"
+              }
+            ]
+          },
+          "DEDUP_INDEX": {
+            "headers": [
+              "dedup_key",
+              "key_type",
+              "lead_id",
+              "gmail_message_id",
+              "normalized_value",
+              "created_at",
+              "last_seen_at",
+              "active"
+            ],
+            "row_count_body": 7977,
+            "nonempty_rows": 7977,
+            "classification": {
+              "TEST/SYNTHETIC": 78,
+              "ACTIVE BUSINESS DATA": 7899
+            },
+            "duplicate_candidate_keys": 3,
+            "key_field": "gmail_message_id",
+            "sample_redacted": [
+              {
+                "_sheet_row": "2",
+                "dedup_key": "gmail_message_id:msg_synth_C01_unnamed_audit",
+                "key_type": "gmail_message_id",
+                "lead_id": "lead_synth_p3b1_c01",
+                "gmail_message_id": "msg_synth_C01_unnamed_audit",
+                "normalized_value": "msg_synth_C01_unnamed_audit",
+                "created_at": "2026-07-30T08:51:14.929Z",
+                "last_seen_at": "2026-07-30T08:51:14.929Z",
+                "active": "True"
+              },
+              {
+                "_sheet_row": "3",
+                "dedup_key": "phone:phone_h:d334088b",
+                "key_type": "phone",
+                "lead_id": "lead_synth_p3b1_c01",
+                "gmail_message_id": "msg_synth_C01_unnamed_audit",
+                "normalized_value": "phone_h:d334088b",
+                "created_at": "2026-07-30T08:51:14.929Z",
+                "last_seen_at": "2026-07-30T08:51:14.929Z",
+                "active": "True"
+              },
+              {
+                "_sheet_row": "4",
+                "dedup_key": "gmail_message_id:msg_synth_C02_named_seo",
+                "key_type": "gmail_message_id",
+                "lead_id": "lead_synth_p3b1_c02",
+                "gmail_message_id": "msg_synth_C02_named_seo",
+                "normalized_value": "msg_synth_C02_named_seo",
+                "created_at": "2026-07-30T08:51:14.929Z",
+                "last_seen_at": "2026-07-30T08:51:14.929Z",
+                "active": "True"
+              }
+            ]
+          },
+          "ACCESS_CONTROL": {
+            "headers": [
+              "telegram_user_id",
+              "telegram_user_hash",
+              "telegram_username",
+              "display_name",
+              "role",
+              "status",
+              "first_seen_at",
+              "last_seen_at",
+              "requested_at",
+              "approved_at",
+              "approved_by",
+              "revoked_at",
+              "revoked_by",
+              "source",
+              "notes",
+              "",
+              "reply_sender_name",
+              "reply_sender_enabled",
+              "reply_company_name",
+              "reply_profile_version",
+              "reply_profile_updated_at",
+              "reply_profile_updated_by",
+              "reply_profile_number"
+            ],
+            "row_count_body": 5,
+            "nonempty_rows": 5,
+            "classification": {
+              "ACTIVE BUSINESS DATA": 5
+            },
+            "duplicate_candidate_keys": 0,
+            "key_field": "telegram_user_id",
+            "sample_redacted": [
+              {
+                "_sheet_row": "2",
+                "telegram_user_id": "phone_h:3fbe2132",
+                "telegram_user_hash": "3FBE21323E22BFC1",
+                "telegram_username": "@ignismartis",
+                "display_name": "Андрей Русецкий",
+                "role": "admin",
+                "status": "active",
+                "first_seen_at": "2026-08-03T17:04:20.588Z",
+                "last_seen_at": "2026-08-06T10:04:24.135Z",
+                "requested_at": "",
+                "approved_at": "2026-08-03T17:04:20.588Z",
+                "approved_by": "phase3d51_registry_repair",
+                "revoked_at": "",
+                "revoked_by": ""
+              },
+              {
+                "_sheet_row": "3",
+                "telegram_user_id": "phone_h:e6714550",
+                "telegram_user_hash": "E6714550214106BA",
+                "telegram_username": "@Ola4seo",
+                "display_name": "Ola4seo",
+                "role": "moderator",
+                "status": "revoked",
+                "first_seen_at": "2026-08-03T17:04:20.588Z",
+                "last_seen_at": "2026-08-31T07:07:53.971Z",
+                "requested_at": "2026-08-03T17:04:20.588Z",
+                "approved_at": "2026-08-31T06:11:42.914Z",
+                "approved_by": "u:3FBE21323E22",
+                "revoked_at": "2026-08-31T07:07:53.971Z",
+                "revoked_by": "u:3FBE21323E22"
+              },
+              {
+                "_sheet_row": "4",
+                "telegram_user_id": "phone_h:518cc34c",
+                "telegram_user_hash": "518CC34C4C0F2220",
+                "telegram_username": "@Obosfuud",
+                "display_name": "Мопс",
+                "role": "moderator",
+                "status": "revoked",
+                "first_seen_at": "2026-08-03T19:13:34.052Z",
+                "last_seen_at": "2026-08-17T13:24:58.979Z",
+                "requested_at": "2026-08-03T19:13:34.052Z",
+                "approved_at": "2026-08-17T13:17:12.012Z",
+                "approved_by": "u:3FBE21323E22",
+                "revoked_at": "2026-08-17T13:24:58.979Z",
+                "revoked_by": "u:3FBE21323E22"
+              }
+            ]
+          },
+          "ACCESS_EVENTS": {
+            "headers": [
+              "ts",
+              "opaque_user_ref",
+              "event",
+              "prior_role",
+              "prior_status",
+              "new_role",
+              "new_status",
+              "actor_ref",
+              "source",
+              "outcome",
+              "detail"
+            ],
+            "row_count_body": 60,
+            "nonempty_rows": 60,
+            "classification": {
+              "ACTIVE BUSINESS DATA": 60
+            },
+            "duplicate_candidate_keys": 0,
+            "key_field": null,
+            "sample_redacted": [
+              {
+                "_sheet_row": "2",
+                "ts": "2026-08-03T16:19:26.124Z",
+                "opaque_user_ref": "u:3FBE21323E22",
+                "event": "moderator_approved",
+                "prior_role": "",
+                "prior_status": "",
+                "new_role": "admin",
+                "new_status": "active",
+                "actor_ref": "phase3d5-migration",
+                "source": "migration",
+                "outcome": "ok",
+                "detail": "seed_admin"
+              },
+              {
+                "_sheet_row": "3",
+                "ts": "2026-08-03T16:19:26.124Z",
+                "opaque_user_ref": "u:Ephone_h:30dcf8e6",
+                "event": "moderator_approved",
+                "prior_role": "",
+                "prior_status": "",
+                "new_role": "moderator",
+                "new_status": "active",
+                "actor_ref": "phase3d5-migration",
+                "source": "migration",
+                "outcome": "ok",
+                "detail": "seed_moderator"
+              },
+              {
+                "_sheet_row": "4",
+                "ts": "2026-08-03T17:03:19.326Z",
+                "opaque_user_ref": "u:3FBE21323E22",
+                "event": "registry_identity_migrated",
+                "prior_role": "",
+                "prior_status": "",
+                "new_role": "admin",
+                "new_status": "active",
+                "actor_ref": "phase3d51_registry_repair",
+                "source": "phase3d51_registry_repair",
+                "outcome": "mapping_repaired",
+                "detail": "andrey_admin_upsert"
+              }
+            ]
+          },
+          "LEAD_DELIVERIES": {
+            "headers": [
+              "delivery_timestamp",
+              "stable_lead_ref",
+              "recipient_ref",
+              "recipient_role",
+              "delivery_channel",
+              "delivery_status",
+              "attempt_number",
+              "telegram_message_ref",
+              "telegram_chat_ref_hash",
+              "card_version",
+              "lifecycle_status_at_send",
+              "error_code",
+              "last_attempt_at",
+              "delivered_at",
+              "updated_at",
+              "delivery_key",
+              "telegram_delivery_chat_id"
+            ],
+            "row_count_body": 252,
+            "nonempty_rows": 252,
+            "classification": {
+              "ACTIVE BUSINESS DATA": 252
+            },
+            "duplicate_candidate_keys": 0,
+            "key_field": null,
+            "sample_redacted": [
+              {
+                "_sheet_row": "2",
+                "delivery_timestamp": "{\"host\":\"n8n.ai-metacode.com\",\"x-real-ip\":\"178.173.250.69\",\"x-forwarded-for\":\"178.173.250.69\",\"x-forwarded-proto\":\"https\",\"connection\":\"upgrade\",\"content-length\":\"2\",\"content-type\":\"application/json\",\"accept\":\"*/*\",\"accept-language\":\"*\",\"sec-fetch-mode\":\"cors\",\"user-agent\":\"node\",\"accept-encoding\":\"br, gzip, deflate\"}",
+                "stable_lead_ref": "{}",
+                "recipient_ref": "{}",
+                "recipient_role": "{}",
+                "delivery_channel": "https://n8n.ai-metacode.com/webhook/iseo-sm-p3d81-hdr2-msf5sqwf",
+                "delivery_status": "production",
+                "attempt_number": "",
+                "telegram_message_ref": "",
+                "telegram_chat_ref_hash": "",
+                "card_version": "",
+                "lifecycle_status_at_send": "",
+                "error_code": "",
+                "last_attempt_at": ""
+              },
+              {
+                "_sheet_row": "3",
+                "delivery_timestamp": "2026-08-04T21:20:29.472Z",
+                "stable_lead_ref": "lead_msg_synth_3d81_msf5wdveeer5",
+                "recipient_ref": "u:3FBE21323E22",
+                "recipient_role": "admin",
+                "delivery_channel": "telegram_private",
+                "delivery_status": "delivered",
+                "attempt_number": "1",
+                "telegram_message_ref": "512",
+                "telegram_chat_ref_hash": "48EC8D4DEF3C4F5D",
+                "card_version": "sm-msg-v2.1",
+                "lifecycle_status_at_send": "pending",
+                "error_code": "",
+                "last_attempt_at": "2026-08-04T21:20:30.763Z"
+              },
+              {
+                "_sheet_row": "4",
+                "delivery_timestamp": "2026-08-04T21:20:29.472Z",
+                "stable_lead_ref": "lead_msg_synth_3d81_msf5wdveeer5",
+                "recipient_ref": "u:518CC34C4C0F",
+                "recipient_role": "moderator",
+                "delivery_channel": "telegram_private",
+                "delivery_status": "delivered",
+                "attempt_number": "1",
+                "telegram_message_ref": "513",
+                "telegram_chat_ref_hash": "4CFA3197F16052DB",
+                "card_version": "sm-msg-v2.1",
+                "lifecycle_status_at_send": "pending",
+                "error_code": "",
+                "last_attempt_at": "2026-08-04T21:20:30.764Z"
+              }
+            ]
+          },
+          "REMINDER_DELIVERIES": {
+            "headers": [
+              "reminder_key",
+              "reminder_window",
+              "recipient_ref",
+              "role_snapshot",
+              "pending_count_snapshot",
+              "oldest_age_minutes_snapshot",
+              "claimed_at",
+              "sent_at",
+              "status",
+              "telegram_message_ref_safe",
+              "error_code_safe",
+              "reminder_version",
+              "reconciled_at"
+            ],
+            "row_count_body": 13,
+            "nonempty_rows": 13,
+            "classification": {
+              "ACTIVE BUSINESS DATA": 13
+            },
+            "duplicate_candidate_keys": 0,
+            "key_field": null,
+            "sample_redacted": [
+              {
+                "_sheet_row": "2",
+                "reminder_key": "pending-reminder:phone_h:b14d3324:10:00:Europe/Moscow|3FBE21323E22BFC1",
+                "reminder_window": "pending-reminder:phone_h:b14d3324:10:00:Europe/Moscow",
+                "recipient_ref": "3FBE21323E22BFC1",
+                "role_snapshot": "admin",
+                "pending_count_snapshot": "13",
+                "oldest_age_minutes_snapshot": "26136",
+                "claimed_at": "2026-08-21T07:01:21.328Z",
+                "sent_at": "2026-08-21T07:01:22.672Z",
+                "status": "delivered",
+                "telegram_message_ref_safe": "msg:1060",
+                "error_code_safe": "",
+                "reminder_version": "sm-pending-reminder-v1.0",
+                "reconciled_at": "2026-08-21T07:01:22.672Z"
+              },
+              {
+                "_sheet_row": "3",
+                "reminder_key": "pending-reminder:phone_h:eca80d2c:10:00:Europe/Moscow|3FBE21323E22BFC1",
+                "reminder_window": "pending-reminder:phone_h:eca80d2c:10:00:Europe/Moscow",
+                "recipient_ref": "3FBE21323E22BFC1",
+                "role_snapshot": "admin",
+                "pending_count_snapshot": "17",
+                "oldest_age_minutes_snapshot": "30456",
+                "claimed_at": "2026-08-24T07:02:05.090Z",
+                "sent_at": "2026-08-24T07:02:06.374Z",
+                "status": "delivered",
+                "telegram_message_ref_safe": "msg:1074",
+                "error_code_safe": "",
+                "reminder_version": "sm-pending-reminder-v1.0",
+                "reconciled_at": "2026-08-24T07:02:06.374Z"
+              },
+              {
+                "_sheet_row": "4",
+                "reminder_key": "pending-reminder:phone_h:fb58a6f5:10:00:Europe/Moscow|3FBE21323E22BFC1",
+                "reminder_window": "pending-reminder:phone_h:fb58a6f5:10:00:Europe/Moscow",
+                "recipient_ref": "3FBE21323E22BFC1",
+                "role_snapshot": "admin",
+                "pending_count_snapshot": "19",
+                "oldest_age_minutes_snapshot": "31896",
+                "claimed_at": "2026-08-25T07:01:55.872Z",
+                "sent_at": "2026-08-25T07:01:57.118Z",
+                "status": "delivered",
+                "telegram_message_ref_safe": "msg:1078",
+                "error_code_safe": "",
+                "reminder_version": "sm-pending-reminder-v1.0",
+                "reconciled_at": "2026-08-25T07:01:57.118Z"
+              }
+            ]
+          },
+          "ARCHIVE_CLEAN_PRE_2026-08-05": {
+            "headers": [
+              "error"
+            ],
+            "row_count_body": 1,
+            "nonempty_rows": 1,
+            "classification": {
+              "ARCHIVE": 1
+            },
+            "duplicate_candidate_keys": 0,
+            "key_field": null,
+            "sample_redacted": [
+              {
+                "_sheet_row": "2",
+                "error": "The service is receiving too many requests from you"
+              }
+            ]
+          },
+          "ARCHIVE_LEAD_EVENTS_PRE_2026-08-05": {
+            "headers": [],
+            "row_count_body": 0,
+            "nonempty_rows": 0,
+            "classification": {},
+            "duplicate_candidate_keys": 0,
+            "key_field": null,
+            "sample_redacted": []
+          },
+          "ARCHIVE_LEAD_DELIVERIES_PRE_2026-08-05": {
+            "headers": [],
+            "row_count_body": 0,
+            "nonempty_rows": 0,
+            "classification": {},
+            "duplicate_candidate_keys": 0,
+            "key_field": null,
+            "sample_redacted": []
+          },
+          "ARCHIVE_REMINDER_DELIVERIES_PRE_2026-08-05": {
+            "headers": [],
+            "row_count_body": 0,
+            "nonempty_rows": 0,
+            "classification": {},
+            "duplicate_candidate_keys": 0,
+            "key_field": null,
+            "sample_redacted": []
+          },
+          "ARCHIVE_DEDUP_PRE_2026-08-05": {
+            "headers": [],
+            "row_count_body": 0,
+            "nonempty_rows": 0,
+            "classification": {},
+            "duplicate_candidate_keys": 0,
+            "key_field": null,
+            "sample_redacted": []
+          },
+          "LEADS": {
+            "headers": [
+              "lead_id",
+              "stable_lead_ref",
+              "callback_token",
+              "public_lead_id",
+              "received_at_utc",
+              "received_at_business",
+              "received_timezone",
+              "received_date",
+              "source_channel",
+              "client_name",
+              "phone",
+              "email",
+              "website",
+              "website_state",
+              "resolved_service_code",
+              "resolved_service_label",
+              "client_comment",
+              "request_summary",
+              "first_reply_version",
+              "first_reply_ready",
+              "first_reply_text",
+              "lifecycle_status",
+              "lifecycle_changed_at",
+              "lifecycle_changed_by",
+              "lifecycle_changed_by_role",
+              "is_real_lead",
+              "is_probable_test",
+              "production_generation",
+              "stats_included",
+              "archive_state",
+              "created_at",
+              "updated_at",
+              "last_event_at",
+              "",
+              "source_display"
+            ],
+            "row_count_body": 1,
+            "nonempty_rows": 1,
+            "classification": {
+              "TERMINAL/HISTORICAL BUSINESS DATA": 1
+            },
+            "duplicate_candidate_keys": 0,
+            "key_field": "lead_id",
+            "sample_redacted": [
+              {
+                "_sheet_row": "2",
+                "lead_id": "lead_19fd2052066e18b7",
+                "stable_lead_ref": "lead_19fd2052066e18b7",
+                "callback_token": "5b774a847311",
+                "public_lead_id": "1",
+                "received_at_utc": "2026-08-05T13:02:57.000Z",
+                "received_at_business": "2026-08-05T16:02:57",
+                "received_timezone": "Europe/Moscow",
+                "received_date": "phone_h:a10d6c9d",
+                "source_channel": "gmail_form",
+                "client_name": "Евгений Егоров",
+                "phone": "phone_h:29f12fc3",
+                "email": "",
+                "website": ""
+              }
+            ]
+          },
+          "LEAD_EVENTS_V2": {
+            "headers": [],
+            "row_count_body": 0,
+            "nonempty_rows": 0,
+            "classification": {},
+            "duplicate_candidate_keys": 0,
+            "key_field": null,
+            "sample_redacted": []
+          },
+          "TEST_LEADS": {
+            "headers": [
+              "fixture_id",
+              "template_id",
+              "phase_marker",
+              "probable_test",
+              "stats_included",
+              "exclude_from_prod_stats",
+              "site_sanitized",
+              "comment_sanitized",
+              "created_at",
+              "note"
+            ],
+            "row_count_body": 0,
+            "nonempty_rows": 0,
+            "classification": {},
+            "duplicate_candidate_keys": 0,
+            "key_field": null,
+            "sample_redacted": []
+          },
+          "TEST_LEAD_EVENTS": {
+            "headers": [],
+            "row_count_body": 0,
+            "nonempty_rows": 0,
+            "classification": {},
+            "duplicate_candidate_keys": 0,
+            "key_field": null,
+            "sample_redacted": []
+          },
+          "SYNC_STATE": {
+            "headers": [],
+            "row_count_body": 0,
+            "nonempty_rows": 0,
+            "classification": {},
+            "duplicate_candidate_keys": 0,
+            "key_field": null,
+            "sample_redacted": []
+          },
+          "RAW_CURRENT": {
+            "headers": [],
+            "row_count_body": 0,
+            "nonempty_rows": 0,
+            "classification": {},
+            "duplicate_candidate_keys": 0,
+            "key_field": null,
+            "sample_redacted": []
+          },
+          "CLEAN_CURRENT": {
+            "headers": [],
+            "row_count_body": 0,
+            "nonempty_rows": 0,
+            "classification": {},
+            "duplicate_candidate_keys": 0,
+            "key_field": null,
+            "sample_redacted": []
+          },
+          "RECIPIENT_REPLIES": {
+            "headers": [
+              "stable_lead_ref",
+              "recipient_ref",
+              "reply_sender_name",
+              "reply_company_name",
+              "template_id",
+              "reply_text",
+              "created_at",
+              "phase_marker",
+              "is_test"
+            ],
+            "row_count_body": 0,
+            "nonempty_rows": 0,
+            "classification": {},
+            "duplicate_candidate_keys": 0,
+            "key_field": null,
+            "sample_redacted": []
+          },
+          "PROFILE_EVENTS": {
+            "headers": [
+              "event_id",
+              "profile_number",
+              "event_at",
+              "action",
+              "previous_name",
+              "new_name",
+              "previous_enabled",
+              "new_enabled",
+              "actor_ref_safe",
+              "actor_display",
+              "reason_source",
+              "profile_version"
+            ],
+            "row_count_body": 7,
+            "nonempty_rows": 7,
+            "classification": {
+              "ACTIVE BUSINESS DATA": 7
+            },
+            "duplicate_candidate_keys": 0,
+            "key_field": "event_id",
+            "sample_redacted": [
+              {
+                "_sheet_row": "2",
+                "event_id": "pev_seed_1_msgj5qju",
+                "profile_number": "1",
+                "event_at": "2026-08-05T20:19:14.730Z",
+                "action": "profile_number_assigned",
+                "previous_name": "Андрей",
+                "new_name": "Андрей",
+                "previous_enabled": "true",
+                "new_enabled": "true",
+                "actor_ref_safe": "SYSTEM",
+                "actor_display": "phase3g2_seed",
+                "reason_source": "phase3g2_number_seed",
+                "profile_version": "iseo-recipient-name-v1.1"
+              },
+              {
+                "_sheet_row": "3",
+                "event_id": "pev_seed_2_msgj5qjv",
+                "profile_number": "2",
+                "event_at": "2026-08-05T20:19:14.730Z",
+                "action": "profile_number_assigned",
+                "previous_name": "Оля",
+                "new_name": "Оля",
+                "previous_enabled": "false",
+                "new_enabled": "false",
+                "actor_ref_safe": "SYSTEM",
+                "actor_display": "phase3g2_seed",
+                "reason_source": "phase3g2_number_seed",
+                "profile_version": "iseo-recipient-name-v1.1"
+              },
+              {
+                "_sheet_row": "4",
+                "event_id": "pev_seed_3_msgj5qjv",
+                "profile_number": "3",
+                "event_at": "2026-08-05T20:19:14.730Z",
+                "action": "profile_number_assigned",
+                "previous_name": "Михаил",
+                "new_name": "Михаил",
+                "previous_enabled": "true",
+                "new_enabled": "true",
+                "actor_ref_safe": "SYSTEM",
+                "actor_display": "phase3g2_seed",
+                "reason_source": "phase3g2_number_seed",
+                "profile_version": "iseo-recipient-name-v1.1"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "counters": {
+    "raw_class_TEST/SYNTHETIC": 78,
+    "raw_class_ACTIVE BUSINESS DATA": 17507,
+    "inbound_unique": 59,
+    "raw_gmail_message_id_unique_all": 137,
+    "raw_gmail_message_id_dup_keys": 17,
+    "raw_rows_total": 17585,
+    "clean_class_TEST/SYNTHETIC": 93,
+    "clean_class_ACTIVE BUSINESS DATA": 7881,
+    "clean_class_TERMINAL/HISTORICAL BUSINESS DATA": 32,
+    "leads_unique": 65,
+    "clean_rows": 8006,
+    "dedup_test_excluded": 78,
+    "dedup_empty": 7899,
+    "dedup_from_lead_synth": 129,
+    "dedup_dup_key_skipped": 4,
+    "dedup_entries": 7977,
+    "dedup_keys_written": 129,
+    "events_test_excluded": 96,
+    "events_orphan": 19,
+    "events_migrated": 126,
+    "access_migrated": 5,
+    "access_status_active": 1,
+    "access_role_admin": 1,
+    "access_status_revoked": 3,
+    "access_role_moderator": 4,
+    "access_status_pending": 1,
+    "delivery_lead_card_malformed": 1,
+    "delivery_lead_card_orphan_lead": 67,
+    "delivery_lead_card": 251,
+    "delivery_reminder": 13,
+    "reminder_as_delivery": 13,
+    "config_migrated": 341,
+    "errors_test_excluded": 2951,
+    "errors_historical": 1
+  },
+  "status_hist_src": {
+    "new": 4,
+    "pending": 29,
+    "processed": 3,
+    "spam": 29
+  },
+  "status_hist_pg": {
+    "new": 4,
+    "pending": 29,
+    "processed": 3,
+    "spam": 29
+  },
+  "unknown_count": 1,
+  "excluded_count": 171,
+  "dry_run": true,
+  "sql_bytes": 750630
+}

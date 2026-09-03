@@ -1,0 +1,183 @@
+{
+  "workflow_id": "wLrLp4WQHm1VJmxz",
+  "name": "i-SEO Sales Manager - Admin.dev",
+  "active": true,
+  "sheets_write_count": 11,
+  "sheets_read_count": 16,
+  "sheets_unknown_count": 0,
+  "write_node_names": [
+    "Apply CONFIG Write",
+    "Update CLEAN Lifecycle",
+    "Append LEAD_EVENTS Callback",
+    "Upsert ACCESS_CONTROL",
+    "Append ACCESS_EVENTS",
+    "Append ACCESS_EVENTS Notify",
+    "Upsert REMINDER_DELIVERIES Claim",
+    "Upsert REMINDER_DELIVERIES Delivered",
+    "Apply Reminder Window CONFIG Write",
+    "Append PROFILE_EVENTS",
+    "Append ERRORS Reminder 429"
+  ],
+  "write_operations": [
+    {
+      "name": "Apply CONFIG Write",
+      "operation": "appendOrUpdate",
+      "sheet_hint": "CONFIG"
+    },
+    {
+      "name": "Update CLEAN Lifecycle",
+      "operation": "update",
+      "sheet_hint": "lead_clean_v2"
+    },
+    {
+      "name": "Append LEAD_EVENTS Callback",
+      "operation": "append",
+      "sheet_hint": "LEAD_EVENTS"
+    },
+    {
+      "name": "Upsert ACCESS_CONTROL",
+      "operation": "appendOrUpdate",
+      "sheet_hint": "ACCESS_CONTROL"
+    },
+    {
+      "name": "Append ACCESS_EVENTS",
+      "operation": "append",
+      "sheet_hint": "ACCESS_EVENTS"
+    },
+    {
+      "name": "Append ACCESS_EVENTS Notify",
+      "operation": "append",
+      "sheet_hint": "ACCESS_EVENTS"
+    },
+    {
+      "name": "Upsert REMINDER_DELIVERIES Claim",
+      "operation": "appendOrUpdate",
+      "sheet_hint": "REMINDER_DELIVERIES"
+    },
+    {
+      "name": "Upsert REMINDER_DELIVERIES Delivered",
+      "operation": "appendOrUpdate",
+      "sheet_hint": "REMINDER_DELIVERIES"
+    },
+    {
+      "name": "Apply Reminder Window CONFIG Write",
+      "operation": "appendOrUpdate",
+      "sheet_hint": "CONFIG"
+    },
+    {
+      "name": "Append PROFILE_EVENTS",
+      "operation": "append",
+      "sheet_hint": "PROFILE_EVENTS"
+    },
+    {
+      "name": "Append ERRORS Reminder 429",
+      "operation": "append",
+      "sheet_hint": "ERRORS"
+    }
+  ],
+  "read_sheet_hints_sample": [
+    "ACCESS_CONTROL",
+    "CONFIG",
+    "ERRORS",
+    "LEAD_DELIVERIES",
+    "LEAD_EVENTS",
+    "REMINDER_DELIVERIES",
+    "lead_clean_v2",
+    "lead_raw_v2"
+  ],
+  "write_sheet_hints": [
+    "ACCESS_CONTROL",
+    "ACCESS_EVENTS",
+    "CONFIG",
+    "ERRORS",
+    "LEAD_EVENTS",
+    "PROFILE_EVENTS",
+    "REMINDER_DELIVERIES",
+    "lead_clean_v2"
+  ],
+  "postgres_nodes": [],
+  "split_brain_risk": true,
+  "topology_implication": "JOINT OPERATIONAL + ADMIN PG CUTOVER REQUIRED",
+  "dependency_classes": [
+    {
+      "target": "ACCESS_CONTROL",
+      "class": "MUST MIGRATE BEFORE OPERATIONAL CUTOVER",
+      "reason": "ACCESS write path"
+    },
+    {
+      "target": "ACCESS_EVENTS",
+      "class": "MUST MIGRATE BEFORE OPERATIONAL CUTOVER",
+      "reason": "ACCESS write path"
+    },
+    {
+      "target": "CONFIG",
+      "class": "MUST MIGRATE BEFORE OPERATIONAL CUTOVER",
+      "reason": "CONFIG write"
+    },
+    {
+      "target": "ERRORS",
+      "class": "MUST MIGRATE BEFORE OPERATIONAL CUTOVER",
+      "reason": "Sheets write present"
+    },
+    {
+      "target": "LEAD_EVENTS",
+      "class": "MUST MIGRATE BEFORE OPERATIONAL CUTOVER",
+      "reason": "lead lifecycle/status write"
+    },
+    {
+      "target": "PROFILE_EVENTS",
+      "class": "MUST MIGRATE BEFORE OPERATIONAL CUTOVER",
+      "reason": "Sheets write present"
+    },
+    {
+      "target": "REMINDER_DELIVERIES",
+      "class": "MUST MIGRATE BEFORE OPERATIONAL CUTOVER",
+      "reason": "delivery/reminder write"
+    },
+    {
+      "target": "lead_clean_v2",
+      "class": "MUST MIGRATE BEFORE OPERATIONAL CUTOVER",
+      "reason": "lead lifecycle/status write"
+    },
+    {
+      "target": "ACCESS_CONTROL",
+      "class": "MUST MIGRATE BEFORE OPERATIONAL CUTOVER",
+      "reason": "Sheets read; unsafe alone if paired with Operational PG writes while Admin still writes Sheets"
+    },
+    {
+      "target": "CONFIG",
+      "class": "MUST MIGRATE BEFORE OPERATIONAL CUTOVER",
+      "reason": "Sheets read; unsafe alone if paired with Operational PG writes while Admin still writes Sheets"
+    },
+    {
+      "target": "ERRORS",
+      "class": "MUST MIGRATE BEFORE OPERATIONAL CUTOVER",
+      "reason": "Sheets read; unsafe alone if paired with Operational PG writes while Admin still writes Sheets"
+    },
+    {
+      "target": "LEAD_DELIVERIES",
+      "class": "MUST MIGRATE BEFORE OPERATIONAL CUTOVER",
+      "reason": "Sheets read; unsafe alone if paired with Operational PG writes while Admin still writes Sheets"
+    },
+    {
+      "target": "LEAD_EVENTS",
+      "class": "MUST MIGRATE BEFORE OPERATIONAL CUTOVER",
+      "reason": "Sheets read; unsafe alone if paired with Operational PG writes while Admin still writes Sheets"
+    },
+    {
+      "target": "REMINDER_DELIVERIES",
+      "class": "MUST MIGRATE BEFORE OPERATIONAL CUTOVER",
+      "reason": "Sheets read; unsafe alone if paired with Operational PG writes while Admin still writes Sheets"
+    },
+    {
+      "target": "lead_clean_v2",
+      "class": "MUST MIGRATE BEFORE OPERATIONAL CUTOVER",
+      "reason": "Sheets read; unsafe alone if paired with Operational PG writes while Admin still writes Sheets"
+    },
+    {
+      "target": "lead_raw_v2",
+      "class": "MUST MIGRATE BEFORE OPERATIONAL CUTOVER",
+      "reason": "Sheets read; unsafe alone if paired with Operational PG writes while Admin still writes Sheets"
+    }
+  ]
+}
