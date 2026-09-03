@@ -1130,6 +1130,39 @@ $("#callback__FORM_send_info").on("click", function(){
     }
 });
 
+// WAVE 01A — SEO/tariff calculator result lead form (after "Рассчитать")
+$(document).on("click", "#callback__FORM_tariff_calc_send", function(e){
+    e.preventDefault();
+    var $form = $("#callback__FORM_tariff_calc");
+    if (!$form.length) return;
+    if (checkEmptyFields($form) !== '0') return;
+    var $btn = $(this);
+    if ($btn.data("busy")) return;
+    $btn.data("busy", true);
+    var btnHtml = $btn.html();
+    $btn.prop("disabled", true).html("отправка...");
+    $.ajax({
+        type: 'POST',
+        url: '/callback__FORM.php',
+        data: $form.serialize() + getPageAttrs(),
+        success: function(data) {
+            if (data == "true") {
+                $form.fadeOut("fast", function(){
+                    $(this).before("<p class=\"tariff-calc-request__success\">Успешно! Сообщение отправлено</p>");
+                    if (typeof ym === "function") {
+                        ym(54287016, 'reachGoal', 'form_info');
+                    }
+                });
+            } else {
+                $btn.prop("disabled", false).html(btnHtml).data("busy", false);
+            }
+        },
+        error: function() {
+            $btn.prop("disabled", false).html(btnHtml).data("busy", false);
+        }
+    });
+});
+
 $("#audit__FORM_send_info").on("click", function(){
     if (checkEmptyFields($(this).closest('form')) === '0') {
         $("#audit__FORM_send_info").replaceWith("<em>отправка...</em>");

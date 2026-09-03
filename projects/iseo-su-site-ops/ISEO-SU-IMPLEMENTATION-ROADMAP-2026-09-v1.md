@@ -11,11 +11,11 @@
 
 ### 1. FORM CONSENT
 
-**Status:** **COMPLETE**
+**Status:** **COMPLETE / RECONCILED** (WAVE 01A calculator-result patch 2026-09-03)
 
 | Field | Value |
 |-------|-------|
-| **Scope** | Обязательный checkbox согласия на обработку ПДн на всех контактных формах с персональными данными; client + server validation; ссылка на действующую privacy page; централизация server check в shared helper при возможности |
+| **Scope** | Обязательный checkbox согласия на обработку ПДн на всех контактных формах с персональными данными; client + server validation; ссылка на действующую privacy page; централизация server check в shared helper при возможности. **Reconciled:** lead UI после «Рассчитать» в `tarif-calc.php` (form → `callback__FORM.php`) |
 | **Dependencies** | Подтверждённый exact privacy policy URL; текущий form security baseline; HMAC / antispam / recipient не менять по смыслу |
 | **Production mutation type** | Forms markup + `js/common.js` client rules + shared PHP validation (`iseo-form-security.php` / handlers as needed). No new handlers unless proven necessary |
 | **Validation requirements** | Checkbox required UI; POST without consent rejected; HMAC/honeypot/min-fill/rate/dup still pass; recipient = `nikel007i33@yandex.ru` only; `test_mode` OFF; privacy link resolves 200 to approved URL |

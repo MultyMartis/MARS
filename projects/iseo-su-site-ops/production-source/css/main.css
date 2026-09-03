@@ -8594,3 +8594,33 @@ footer {
 .popup_big__FORM_wrap .callback_form__agree.personal-data-consent-wrap {
 	margin: 10px auto 0px;
 }
+
+/* WAVE 01A — SEO/tariff calculator result lead form consent */
+.tariff-calc-request__agree.personal-data-consent-wrap {
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+	margin: 0 0 18px;
+	text-align: left;
+}
+.tariff-calc-request__agree.personal-data-consent-wrap label {
+	margin-bottom: 0 !important;
+	cursor: pointer;
+	font-size: 13px;
+	line-height: 18px;
+	color: #A1A1AA;
+}
+.tariff-calc-request__agree.personal-data-consent-wrap label a {
+	color: #FACC15;
+	text-decoration: underline;
+}
+.tariff-calc-request__btn {
+	cursor: pointer;
+	font-family: inherit;
+	appearance: none;
+	-webkit-appearance: none;
+}
+.tariff-calc-request__btn:disabled {
+	opacity: 0.7;
+	cursor: wait;
+}

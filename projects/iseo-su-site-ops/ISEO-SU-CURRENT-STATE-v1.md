@@ -3,7 +3,7 @@
 **Programme:** ISEO-SU-SITE-OPS  
 **Site:** `https://i-seo.su/`
 **Canonical locus:** `X:\AI MARS\projects\iseo-su-site-ops\`  
-**Updated:** 2026-09-03 (Form Consent WAVE 01 COMPLETE)  
+**Updated:** 2026-09-03 (Form Consent WAVE 01 COMPLETE / RECONCILED via WAVE 01A)  
 **Authority:** first current-state document for ordinary work
 
 Historical REPORT files record earlier states and do not override this document or fresher accepted evidence.
@@ -44,9 +44,10 @@ Current baseline: **12 root handlers** plus thin service-tree delegates; shared 
 - duplicate suppression ≈10 minutes;
 - header/HTML injection protections;
 - CAPTCHA absent by accepted design;
-- **personal-data consent** field `personal_data_consent` exact value `"1"` required client-side and in shared server guard (WAVE 01 COMPLETE); privacy URL `https://i-seo.su/privacy-policy.html`.
+- **personal-data consent** field `personal_data_consent` exact value `"1"` required client-side and in shared server guard (WAVE 01 COMPLETE / **RECONCILED** via WAVE 01A calculator-result patch); privacy URL `https://i-seo.su/privacy-policy.html`.
+- Calculator result lead after «Рассчитать» (`tarif-calc.php` → form `callback__FORM_tariff_calc`) posts to existing `callback__FORM.php` with the same consent contract.
 
-Authority: [Form Security Baseline](ISEO-SU-FORM-SECURITY-AND-ANTISPAM-BASELINE-v1.md) · [Consent WAVE 01 evidence](ISEO-SU-FORM-CONSENT-WAVE-01-EVIDENCE-v1.md).
+Authority: [Form Security Baseline](ISEO-SU-FORM-SECURITY-AND-ANTISPAM-BASELINE-v1.md) · [Consent WAVE 01 evidence](ISEO-SU-FORM-CONSENT-WAVE-01-EVIDENCE-v1.md) · [WAVE 01A evidence](ISEO-SU-FORM-CONSENT-WAVE-01A-CALC-RESULT-PATCH-EVIDENCE-v1.md).
 
 ## 5. Current Form Recipient
 
@@ -146,7 +147,7 @@ WPilot 6D is not required for ordinary site operations.
 
 SEO-team task pack registered 2026-09 (documentation/roadmap only; production mutations **0** until each wave is separately chartered). Authority: [ISEO-SU-SEO-TEAM-NEW-TASK-PACK-2026-09-v1.md](ISEO-SU-SEO-TEAM-NEW-TASK-PACK-2026-09-v1.md) · [ISEO-SU-IMPLEMENTATION-ROADMAP-2026-09-v1.md](ISEO-SU-IMPLEMENTATION-ROADMAP-2026-09-v1.md).
 
-- **WAVE 1 Form Consent** — **COMPLETE** (2026-09-03): all contact forms require consent; server enforcement active; recipient unchanged (`nikel007i33@yandex.ru`); privacy URL `https://i-seo.su/privacy-policy.html`
+- **WAVE 1 Form Consent** — **COMPLETE / RECONCILED** (2026-09-03): contact forms + calculator-result lead (`tarif-calc.php`) require consent; server enforcement via shared guard; recipient unchanged (`nikel007i33@yandex.ru`); privacy URL `https://i-seo.su/privacy-policy.html`. WAVE 01A patch evidence: [ISEO-SU-FORM-CONSENT-WAVE-01A-CALC-RESULT-PATCH-EVIDENCE-v1.md](ISEO-SU-FORM-CONSENT-WAVE-01A-CALC-RESULT-PATCH-EVIDENCE-v1.md)
 - **WAVE 2 City Pages ×5** — **NEXT** (not started)
 - **WAVE 3 USA/UAE ×2** — **QUEUED / OPEN DECISIONS** (not started)
 

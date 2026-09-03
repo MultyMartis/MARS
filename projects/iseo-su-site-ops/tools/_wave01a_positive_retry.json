@@ -1,0 +1,29 @@
+{
+  "stamp": "2026-09-03T11:40:12.845968+00:00",
+  "cooldown_s": 320,
+  "test_mode_on": "true",
+  "attempt": {
+    "kind": "telegram",
+    "status": 200,
+    "body": "true"
+  },
+  "pass": true,
+  "final_body": "true",
+  "recipient_expected": "im.work@mail.ru",
+  "test_mode_final": "false",
+  "routing": {
+    "production_recipients": [
+      "nikel007i33@yandex.ru"
+    ],
+    "test_recipients": [
+      "im.work@mail.ru"
+    ],
+    "prod_has_nikel": true,
+    "im_work_in_normal_routing": false,
+    "nail_typo": false,
+    "test_mode": "false"
+  },
+  "prod_has_nikel": true,
+  "nail_typo": false,
+  "im_work_in_normal_routing": false
+}

@@ -258,7 +258,7 @@ Phase status: **PHASE 6D — BLOCKED / PRODUCTION UNCHANGED**; accepted baseline
 | Current State (Approved Upcoming Work) | `ISEO-SU-CURRENT-STATE-v1.md` | CURRENT / CANONICAL |
 | Operational Index links | `OPERATIONAL-INDEX.md` | CURRENT / CANONICAL ENTRY |
 
-Production mutations in this registration: **0** at registration time. **WAVE 1 Form Consent** later **COMPLETE** (2026-09-03) — see section below.
+Production mutations in this registration: **0** at registration time. **WAVE 1 Form Consent** later **COMPLETE / RECONCILED** (2026-09-03, WAVE 01A) — see sections below.
 
 ---
 
@@ -270,7 +270,20 @@ Production mutations in this registration: **0** at registration time. **WAVE 1 
 | Task REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-FORM-CONSENT-WAVE-01.md` | CURRENT |
 | Russian closeout | `reports/ISEO-SU-FORM-CONSENT-WAVE-01-RU.md` | CURRENT |
 | Form security baseline (consent §) | `ISEO-SU-FORM-SECURITY-AND-ANTISPAM-BASELINE-v1.md` | CURRENT / CANONICAL |
-| Roadmap (WAVE 1 COMPLETE / WAVE 2 NEXT) | `ISEO-SU-IMPLEMENTATION-ROADMAP-2026-09-v1.md` | CURRENT / CANONICAL |
+| Roadmap (WAVE 1 COMPLETE / RECONCILED / WAVE 2 NEXT) | `ISEO-SU-IMPLEMENTATION-ROADMAP-2026-09-v1.md` | CURRENT / CANONICAL |
+
+---
+
+### Form Consent WAVE 01A — Calc Result Patch (2026-09-03) — CURRENT
+
+| Artifact | Path | Class |
+|----------|------|-------|
+| WAVE 01A evidence | `ISEO-SU-FORM-CONSENT-WAVE-01A-CALC-RESULT-PATCH-EVIDENCE-v1.md` | CURRENT / CANONICAL |
+| Task REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-FORM-CONSENT-WAVE-01A-CALC-RESULT-PATCH.md` | CURRENT |
+| Russian closeout | `reports/ISEO-SU-FORM-CONSENT-WAVE-01A-CALC-RESULT-PATCH-RU.md` | CURRENT |
+| Source authority | `production-source/theme/iseoblog/template-parts/tarif-calc.php` | CURRENT |
+| Client binding | `production-source/js/common.js` | CURRENT |
+| Styles | `production-source/css/main.css`, `production-source/theme/iseoblog/style.css` | CURRENT |
 
 ---
 

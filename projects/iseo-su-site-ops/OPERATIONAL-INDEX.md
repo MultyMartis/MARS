@@ -31,7 +31,7 @@
 1. ~~`SM-CHILD-404` / static sitemap / `IMG-BROKEN`~~ — **CLOSED** (HIGH FIX + completeness).
 2. ~~Tech cleanup wave 01~~ — **CLOSED** (`SM-MISSING-INDEXABLE` rechecked; `LINK-TO-REDIR` / `IMG-HUGE` closed).
 3. **SEO review pack 01 prepared** — awaiting SEO answers: [SEO report RU](reports/ISEO-SU-SEO-REVIEW-PACK-01-RU.md) · [decision checklist](reports/ISEO-SU-SEO-DECISION-CHECKLIST-01-RU.md) · [evidence](ISEO-SU-SEO-REVIEW-PACK-01-EVIDENCE-v1.md). Remaining **SEO_REVIEW** signals still open pending decisions; **no autofix**.
-4. **SEO team new task pack 2026-09** — [Task pack](ISEO-SU-SEO-TEAM-NEW-TASK-PACK-2026-09-v1.md) · [Implementation roadmap](ISEO-SU-IMPLEMENTATION-ROADMAP-2026-09-v1.md). Queue: WAVE 1 Form Consent **COMPLETE** → WAVE 2 City pages ×5 **NEXT** → WAVE 3 USA/UAE ×2 **QUEUED / OPEN DECISIONS**. Evidence: [Form Consent WAVE 01](ISEO-SU-FORM-CONSENT-WAVE-01-EVIDENCE-v1.md) · [REPORT](reports/REPORT-ISEO-SU-SITE-OPS-FORM-CONSENT-WAVE-01.md) · [RU](reports/ISEO-SU-FORM-CONSENT-WAVE-01-RU.md). Does **not** close SEO review backlog above.
+4. **SEO team new task pack 2026-09** — [Task pack](ISEO-SU-SEO-TEAM-NEW-TASK-PACK-2026-09-v1.md) · [Implementation roadmap](ISEO-SU-IMPLEMENTATION-ROADMAP-2026-09-v1.md). Queue: WAVE 1 Form Consent **COMPLETE / RECONCILED** (01A calc-result) → WAVE 2 City pages ×5 **NEXT** → WAVE 3 USA/UAE ×2 **QUEUED / OPEN DECISIONS**. Evidence: [WAVE 01](ISEO-SU-FORM-CONSENT-WAVE-01-EVIDENCE-v1.md) · [WAVE 01A](ISEO-SU-FORM-CONSENT-WAVE-01A-CALC-RESULT-PATCH-EVIDENCE-v1.md) · [REPORT 01A](reports/REPORT-ISEO-SU-SITE-OPS-FORM-CONSENT-WAVE-01A-CALC-RESULT-PATCH.md) · [RU 01A](reports/ISEO-SU-FORM-CONSENT-WAVE-01A-CALC-RESULT-PATCH-RU.md). Does **not** close SEO review backlog above.
 
 **Deferred optional:** mobile glossary offcanvas, archive Yoast description, MERGED alias polish, unnecessary sitemap duplication, WPilot 6D.
 
@@ -64,7 +64,7 @@
 | **Access files** | **LOCAL-ONLY FILLED / VALIDATED** (Git-ignored) |
 | **WPilot** | **ACTIVE** RC6; bridge **DISABLED**; writes **DISABLED**; token **LOCAL-ONLY**; REST **NOT RUN** |
 | **Open blockers / open required task groups** | **0 / 4** |
-| **Next operator action (site work)** | Chartered **WAVE 2 City Pages ×5** (after WAVE 1 Form Consent COMPLETE). Parallel: collect SEO answers from review pack 01 / checklist — separate contour. Static sitemap regen (if ever needed): edit allowlist **and** `public-canonical-static-routes-v1.txt` → `generate-sitemap-static.py` → `validate-sitemap-static-completeness.py` → deploy. |
+| **Next operator action (site work)** | Chartered **WAVE 2 City Pages ×5** (after WAVE 1 Form Consent COMPLETE / RECONCILED). Parallel: collect SEO answers from review pack 01 / checklist — separate contour. Static sitemap regen (if ever needed): edit allowlist **and** `public-canonical-static-routes-v1.txt` → `generate-sitemap-static.py` → `validate-sitemap-static-completeness.py` → deploy. |
 | **Next operator action (WPilot 6D)** | Exact lines `APPROVE ISEO-SU WPILOT BRIDGE AND READ-ONLY SMOKE 6D` + `CONFIRM ISEO-SU FRESH BEGET BACKUP FOR WPILOT 6D` |
 
 Hosting: **Beget**. WordPress Admin: `https://i-seo.su/wp-admin/`. Staging: **absent**. Architecture: **hybrid** — see knowledge base.

@@ -2,7 +2,7 @@
 
 **Programme:** ISEO-SU-SITE-OPS  
 **Task:** ISEO-SU-SITE-OPS-FORMS-ANTISPAM-AND-VALIDATION-01  
-**Updated:** 2026-09-03 (Form Consent WAVE 01 — personal_data_consent required client + server)  
+**Updated:** 2026-09-03 (Form Consent WAVE 01 COMPLETE / RECONCILED — WAVE 01A calculator-result patch)  
 **Authority:** current form/security operating baseline for public leads on `https://i-seo.su/`
 
 ## 1. Status
@@ -18,6 +18,7 @@ Server-side validation and layered anti-spam are authoritative. Client `required
 | FORM_ID | PUBLIC_ROUTE(S) | FORM_NAME | SOURCE_TEMPLATE | ACTION/HANDLER | METHOD | STATUS |
 |---------|-----------------|-----------|-----------------|----------------|--------|--------|
 | callback | `/`, `/contacts.html`, marketing chrome, many static pages | Заявка обратной связи | static HTML / theme chrome | `callback__FORM.php` (+ service-tree delegates) | POST AJAX | HARDENED |
+| callback (calc-result family) | `/tariff-calc`, `/services/seo.html` (+ pages including `tarif-calc.php`) | Lead after «Рассчитать» | `template-parts/tarif-calc.php` form `#callback__FORM_tariff_calc` | `callback__FORM.php` | POST AJAX | HARDENED (WAVE 01A) |
 | page | page-specific lead surfaces | Page lead | page HTML | `page__FORM.php` | POST AJAX | HARDENED |
 | audit | audit CTAs / services | Заявка на бесплатный аудит | page HTML | `audit__FORM.php` | POST AJAX | HARDENED |
 | calc | `/tariff-calc`, homepage calc | Calculator lead | calc UI | `calc__FORM.php` | POST AJAX | HARDENED |
@@ -90,6 +91,7 @@ Shared helper: `iseo-form-security.php`.
 | Client | Checkbox + `required` + `js/common.js` gate |
 | Mail notification | Consent text **not** required in mail body (validate-only) |
 | Evidence | `ISEO-SU-FORM-CONSENT-WAVE-01-EVIDENCE-v1.md` |
+| WAVE 01A (calc result) | Same field/value; UI in `tarif-calc.php`; AJAX via `#callback__FORM_tariff_calc_send` → `callback__FORM.php`; evidence `ISEO-SU-FORM-CONSENT-WAVE-01A-CALC-RESULT-PATCH-EVIDENCE-v1.md` |
 
 ## 6. Anti-Spam Layers
 

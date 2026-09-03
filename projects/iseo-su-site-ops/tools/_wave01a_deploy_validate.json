@@ -1,0 +1,196 @@
+{
+  "stamp": "20260903T112856Z",
+  "backup": [
+    {
+      "full_production_path": "/home/n/nikel0rv/i-seo.su/public_html/wp-content/themes/iseoblog/template-parts/tarif-calc.php",
+      "backup_path": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_form-consent-wave-01a-calc-result-patch\\backups\\20260903T112856Z\\20260903T112856Zhome__n__nikel0rv__i-seo.su__public_html__wp-content__themes__iseoblog__template-parts__tarif-calc.php",
+      "timestamp": "20260903T112856Z",
+      "sha256_before": "c237fa520e8332da943f1d92c165df724633744a8a5d30b1e43d949faa95f673",
+      "size": 22658
+    },
+    {
+      "full_production_path": "/home/n/nikel0rv/i-seo.su/public_html/js/common.js",
+      "backup_path": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_form-consent-wave-01a-calc-result-patch\\backups\\20260903T112856Z\\20260903T112856Zhome__n__nikel0rv__i-seo.su__public_html__js__common.js",
+      "timestamp": "20260903T112856Z",
+      "sha256_before": "f27626b2c0c21bd8876b0524788916e14eb994dc9113cb60372eea3eb0e964f2",
+      "size": 99434
+    },
+    {
+      "full_production_path": "/home/n/nikel0rv/i-seo.su/public_html/css/main.css",
+      "backup_path": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_form-consent-wave-01a-calc-result-patch\\backups\\20260903T112856Z\\20260903T112856Zhome__n__nikel0rv__i-seo.su__public_html__css__main.css",
+      "timestamp": "20260903T112856Z",
+      "sha256_before": "de2037b4195dec88c95bb94cfcdd6810884d48898c6e3fe0e851b38df6f03463",
+      "size": 154959
+    },
+    {
+      "full_production_path": "/home/n/nikel0rv/i-seo.su/public_html/wp-content/themes/iseoblog/style.css",
+      "backup_path": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_form-consent-wave-01a-calc-result-patch\\backups\\20260903T112856Z\\20260903T112856Zhome__n__nikel0rv__i-seo.su__public_html__wp-content__themes__iseoblog__style.css",
+      "timestamp": "20260903T112856Z",
+      "sha256_before": "d998ef3ae85d6d4509e8879da84cbc964182ca8c15d2345722a63d2f85718b4d",
+      "size": 36645
+    }
+  ],
+  "deploy": [
+    {
+      "local": "X:\\AI MARS\\projects\\iseo-su-site-ops\\production-source\\theme\\iseoblog\\template-parts\\tarif-calc.php",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/wp-content/themes/iseoblog/template-parts/tarif-calc.php",
+      "sha256_local": "74883ea093dc6011616f791706db82b1261d2f1dd7953e24327e25caf22b9736",
+      "sha256_remote_after": "74883ea093dc6011616f791706db82b1261d2f1dd7953e24327e25caf22b9736",
+      "aligned": true,
+      "size": 23478
+    },
+    {
+      "local": "X:\\AI MARS\\projects\\iseo-su-site-ops\\production-source\\js\\common.js",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/js/common.js",
+      "sha256_local": "5cce01e7b75bf7d06b8fce9842b694d865d22eb60d1bf41685ed5eb3ae3176c5",
+      "sha256_remote_after": "5cce01e7b75bf7d06b8fce9842b694d865d22eb60d1bf41685ed5eb3ae3176c5",
+      "aligned": true,
+      "size": 100751
+    },
+    {
+      "local": "X:\\AI MARS\\projects\\iseo-su-site-ops\\production-source\\css\\main.css",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/css/main.css",
+      "sha256_local": "86aa73a81dd6ff2b3027d4782df0b13206139092056297b5d26399308d0fa9a7",
+      "sha256_remote_after": "86aa73a81dd6ff2b3027d4782df0b13206139092056297b5d26399308d0fa9a7",
+      "aligned": true,
+      "size": 155674
+    },
+    {
+      "local": "X:\\AI MARS\\projects\\iseo-su-site-ops\\production-source\\theme\\iseoblog\\style.css",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/wp-content/themes/iseoblog/style.css",
+      "sha256_local": "56bd7ea4be71971e9651b079717d618053616cd92e12656a701fc5f836b096ac",
+      "sha256_remote_after": "56bd7ea4be71971e9651b079717d618053616cd92e12656a701fc5f836b096ac",
+      "aligned": true,
+      "size": 39377
+    }
+  ],
+  "align": [
+    {
+      "path": "/home/n/nikel0rv/i-seo.su/public_html/wp-content/themes/iseoblog/template-parts/tarif-calc.php",
+      "aligned": true
+    },
+    {
+      "path": "/home/n/nikel0rv/i-seo.su/public_html/js/common.js",
+      "aligned": true
+    },
+    {
+      "path": "/home/n/nikel0rv/i-seo.su/public_html/css/main.css",
+      "aligned": true
+    },
+    {
+      "path": "/home/n/nikel0rv/i-seo.su/public_html/wp-content/themes/iseoblog/style.css",
+      "aligned": true
+    }
+  ],
+  "http_ui": {
+    "https://i-seo.su/services/seo.html": {
+      "id=\"callback__FORM_tariff_calc\"": true,
+      "name=\"personal_data_consent\"": true,
+      "value=\"1\"": true,
+      "id=\"callback__FORM_tariff_calc_send\"": true,
+      "/privacy-policy.html": true,
+      "политикой конфиденциальности": true,
+      "has_old_soft_note": false,
+      "len": 100587
+    },
+    "https://i-seo.su/tariff-calc": {
+      "id=\"callback__FORM_tariff_calc\"": true,
+      "name=\"personal_data_consent\"": true,
+      "value=\"1\"": true,
+      "id=\"callback__FORM_tariff_calc_send\"": true,
+      "/privacy-policy.html": true,
+      "политикой конфиденциальности": true,
+      "has_old_soft_note": false,
+      "len": 79558
+    }
+  },
+  "smoke": {
+    "https://i-seo.su/services/seo.html": {
+      "status": "ok",
+      "len": 114754,
+      "has_calc_form": true,
+      "title_ok": true
+    },
+    "https://i-seo.su/tariff-calc": {
+      "status": "ok",
+      "len": 85442,
+      "has_calc_form": true,
+      "title_ok": true
+    },
+    "https://i-seo.su/": {
+      "status": "ok",
+      "len": 85277,
+      "has_calc_form": false,
+      "title_ok": true
+    },
+    "https://i-seo.su/glossary/": {
+      "status": "ok",
+      "len": 177922,
+      "has_calc_form": false,
+      "title_ok": true
+    },
+    "https://i-seo.su/blog/": {
+      "status": "ok",
+      "len": 385551,
+      "has_calc_form": false,
+      "title_ok": true
+    }
+  },
+  "server_tests": {
+    "negatives": {
+      "without_consent": {
+        "http": 200,
+        "body": "false",
+        "rejected": true
+      },
+      "consent_0": {
+        "http": 200,
+        "body": "false",
+        "rejected": true
+      },
+      "consent_false": {
+        "http": 200,
+        "body": "false",
+        "rejected": true
+      },
+      "consent_malformed": {
+        "http": 200,
+        "body": "false",
+        "rejected": true
+      }
+    },
+    "mail_sent_on_negative": 0,
+    "positive": {
+      "test_mode_on": "true",
+      "http": 200,
+      "body": "false",
+      "pass": false,
+      "recipient_expected": "im.work@mail.ru"
+    },
+    "test_mode_final": "false"
+  },
+  "cfg": {},
+  "cfg_before_tests": {
+    "test_mode": "false",
+    "production_recipients_raw": null,
+    "test_recipients_raw": null,
+    "prod_has_nikel": true,
+    "prod_has_im_work": false,
+    "nail_typo": false
+  },
+  "cfg_final": {
+    "test_mode": "false",
+    "production_recipients_raw": null,
+    "test_recipients_raw": null,
+    "prod_has_nikel": true,
+    "prod_has_im_work": false,
+    "nail_typo": false
+  },
+  "source_authority": {
+    "remote": "/home/n/nikel0rv/i-seo.su/public_html/wp-content/themes/iseoblog/template-parts/tarif-calc.php",
+    "has_consent_field": true,
+    "consent_count": 1,
+    "form_id": true,
+    "old_soft_note_present": false
+  }
+}
