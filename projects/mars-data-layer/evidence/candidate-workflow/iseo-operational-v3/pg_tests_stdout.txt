@@ -1,0 +1,105 @@
+BEGIN
+DELETE 1
+DELETE 4
+DELETE 2
+DELETE 1
+DELETE 1
+DELETE 2
+UPDATE 2
+DELETE 2
+DELETE 2
+COMMIT
+SET
+R1_OK
+R2_OK
+ inbound_c 
+-----------
+         1
+(1 row)
+
+ lead_c 
+--------
+      1
+(1 row)
+
+ del_c 
+-------
+     1
+(1 row)
+
+ evt_c 
+-------
+     1
+(1 row)
+
+                                             change_lead_status                                             
+------------------------------------------------------------------------------------------------------------
+ {"result": "success", "lead_id": "v3test_20260903T093419Z_lead_1", "version": 2, "manager_status": "spam"}
+(1 row)
+
+                                               change_lead_status                                                
+-----------------------------------------------------------------------------------------------------------------
+ {"result": "success", "lead_id": "v3test_20260903T093419Z_lead_1", "version": 3, "manager_status": "processed"}
+(1 row)
+
+STATUS_OK
+                                                                                                                                                                                                                                                                 process_gmail_inbound_commit                                                                                                                                                                                                                                                                 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ {"ok": true, "lead": {"id": 290, "lead_id": "v3test_20260903T093419Z_lead_2", "version": 1, "inserted": true}, "event": {"id": 786, "event_id": "evt-v3test_20260903T093419Z_gmail_src_2-lead_created", "idempotent_replay": false}, "inbound": {"id": 249, "lead_id": null, "source_id": "v3test_20260903T093419Z_gmail_src_2", "is_duplicate": false, "source_system": "gmail", "processing_status": "received"}, "deliveries": [], "commit_point": "inbound+lead+event+delivery_intents", "inbound_was_duplicate": false, "gmail_finalize_allowed": true}
+(1 row)
+
+R3_OK
+ record_error 
+--------------
+ {"id": 10}
+(1 row)
+
+              enqueue_job               
+----------------------------------------
+ {"id": 11, "idempotent_replay": false}
+(1 row)
+
+JOB_OK
+                                                                                                                                                                                                                                                                                                                claimed                                                                                                                                                                                                                                                                                                                 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ {"count": 1, "claimed": [{"id": 1073, "status": "processing", "channel": "telegram", "lead_id": "v3test_20260903T093419Z_lead_1", "payload": {"dry_run": true, "principal_key": "tg:REDACTED", "dry_run_default": true}, "attempts": 1, "delivery_id": "dlv-56f0ac42-e3c7-4dbd-98df-d932d4d18a52", "delivery_type": "lead_card", "correlation_id": "corr-v3test_20260903T093419Z_gmail_src_1", "idempotency_key": "lead_card:v3test_20260903T093419Z_lead_1:tg:REDACTED:v3test_20260903T093419Z_gmail_src_1", "recipient_principal_key": "tg:REDACTED", "recipient_telegram_user_id": "REDACTED"}], "worker_id": "v3-test-worker"}
+(1 row)
+
+CLAIM_OK
+                                   mark_delivery_result                                    
+-------------------------------------------------------------------------------------------
+ {"id": 1073, "status": "sent", "delivery_id": "dlv-56f0ac42-e3c7-4dbd-98df-d932d4d18a52"}
+(1 row)
+
+DELIVERY_DRYRUN_OK
+RESET
+DELETE 1
+DELETE 4
+DELETE 2
+DELETE 1
+DELETE 1
+DELETE 2
+UPDATE 2
+DELETE 2
+DELETE 2
+CLEANUP_OK
+ shadow_leads 
+--------------
+           65
+(1 row)
+
+ shadow_inbound 
+----------------
+             59
+(1 row)
+
+ shadow_deliveries 
+-------------------
+               264
+(1 row)
+
+ access_active 
+---------------
+             1
+(1 row)
+
