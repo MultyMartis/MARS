@@ -32,6 +32,7 @@ Primary vocabulary: **CURRENT** · **CANONICAL** · **SPECIALIZED** · **HISTORI
 | Tech SEO remaining backlog | `audits/tech-seo/ISEO-SU-TECH-SEO-REMAINING-BACKLOG-v1.csv`; RU `reports/ISEO-SU-TECH-SEO-REMAINING-BACKLOG-DETAILED-RU-v1.md`; extraction REPORT | CURRENT / SPECIALIZED |
 | Tech cleanup wave 01 | `ISEO-SU-TECH-CLEANUP-WAVE-01-EVIDENCE-v1.md`; RU `reports/ISEO-SU-TECH-CLEANUP-WAVE-01-RU.md`; REPORT `reports/REPORT-ISEO-SU-SITE-OPS-TECH-CLEANUP-WAVE-01.md` | CURRENT / SPECIALIZED / CLOSED |
 | SEO review pack 01 | Evidence `ISEO-SU-SEO-REVIEW-PACK-01-EVIDENCE-v1.md`; SEO report `reports/ISEO-SU-SEO-REVIEW-PACK-01-RU.md`; checklist `reports/ISEO-SU-SEO-DECISION-CHECKLIST-01-RU.md`; REPORT `reports/REPORT-ISEO-SU-SITE-OPS-SEO-REVIEW-PACK-01.md` | CURRENT / SPECIALIZED / AWAITING SEO DECISIONS |
+| SEO team new task pack 2026-09 | Task pack `ISEO-SU-SEO-TEAM-NEW-TASK-PACK-2026-09-v1.md`; roadmap `ISEO-SU-IMPLEMENTATION-ROADMAP-2026-09-v1.md`; REPORT `reports/REPORT-ISEO-SU-SITE-OPS-SEO-TEAM-TASK-PACK-REGISTRATION-01.md` | CURRENT / SPECIALIZED / APPROVED FOR IMPLEMENTATION PLANNING |
 | Stabilization | `ISEO-SU-STABILIZATION-CLOSEOUT-v1.md` | CANONICAL CLOSEOUT |
 | Documentation consolidation | `reports/REPORT-ISEO-SU-SITE-OPS-PROJECT-DOCUMENTATION-AND-KNOWLEDGE-CONSOLIDATION-01.md` | CURRENT TASK REPORT / GIT PERSISTENCE PENDING |
 
@@ -244,6 +245,20 @@ Local-only (Git-ignored): `X:\AI MARS\local\sites\iseo-su-production\` · `X:\AI
 Former locus scratch (`_glossary-scratch/`, `_phase*-scratch/`, `_arch-knowledge-scratch/`): **SCRATCH_REMOVED** from Git locus; archived under Storage path above. Historical REPORTs may still name those paths as past evidence locations.
 
 Phase status: **PHASE 6D — BLOCKED / PRODUCTION UNCHANGED**; accepted baseline remains **PHASE 6C — TOKEN CREATED / RC6 SAFE DEFAULTS**; bridge / writes / DEV / REST smoke **NOT RUN**.
+
+---
+
+### SEO team new task pack registration (2026-09-03) — CURRENT
+
+| Artifact | Path | Class |
+|----------|------|-------|
+| SEO team new task pack 2026-09 | `ISEO-SU-SEO-TEAM-NEW-TASK-PACK-2026-09-v1.md` | CURRENT / CANONICAL (planning) |
+| Implementation roadmap 2026-09 | `ISEO-SU-IMPLEMENTATION-ROADMAP-2026-09-v1.md` | CURRENT / CANONICAL (queue) |
+| Registration REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-SEO-TEAM-TASK-PACK-REGISTRATION-01.md` | CURRENT |
+| Current State (Approved Upcoming Work) | `ISEO-SU-CURRENT-STATE-v1.md` | CURRENT / CANONICAL |
+| Operational Index links | `OPERATIONAL-INDEX.md` | CURRENT / CANONICAL ENTRY |
+
+Production mutations in this registration: **0**. Implementation waves not started.
 
 ---
 
