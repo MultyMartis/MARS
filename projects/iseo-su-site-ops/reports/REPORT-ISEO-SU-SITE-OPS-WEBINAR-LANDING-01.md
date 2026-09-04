@@ -142,13 +142,19 @@ Main checkout remained dirty/divergent (`HEAD` ≠ origin). Isolated sync used w
 
 Allowlisted paths only. Foreign WIP not staged. No `git add .` / `-A`. No force push.
 
-Suggested commit message:
+Feature commit:
 
-`feat(iseo-su): add seo contractor webinar landing page`
+`8028ea5df3000686dc91629bf7b02d8c215efe6f` — `feat(iseo-su): add seo contractor webinar landing page`
 
 ## 13. Remote Sync
 
-FF push without force onto `origin/mars/canonical-post-recovery` from the isolated worktree (see evidence / post-push SHA after sync completes).
+FF push without force onto `origin/mars/canonical-post-recovery` from the isolated worktree:
+
+- Before: `1657c211ad445d11d97aff875e4f0ccdbda57d18`
+- Feature tip pushed: `8028ea5df3000686dc91629bf7b02d8c215efe6f`
+- `origin/mars/canonical-post-recovery` verified equal to that tip after `git fetch`
+
+REMOTE SYNC: **COMPLETE**
 
 ## 14. Stop Condition
 
@@ -207,7 +213,7 @@ JS ERRORS: 0
 PRODUCTION/SOURCE ALIGNED: YES
 PROJECT-OWNED UNCOMMITTED: 0 (after Storage sync)
 FOREIGN WIP PRESERVED: YES
-REMOTE SYNC: COMPLETE (after Storage FF push)
+REMOTE SYNC: COMPLETE (origin tip 8028ea5df3000686dc91629bf7b02d8c215efe6f)
 
 FINAL STATUS:
 COMPLETE — ISEO-SU WEBINAR LANDING LIVE / RSYA READY / INTLSEO / SECURE REGISTRATION FORM

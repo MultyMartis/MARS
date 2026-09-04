@@ -32,3 +32,9 @@
 
 - Evidence: `ISEO-SU-WEBINAR-LANDING-01-EVIDENCE-v1.md`
 - Task REPORT: `reports/REPORT-ISEO-SU-SITE-OPS-WEBINAR-LANDING-01.md`
+
+## Git
+
+- Commit: `8028ea5df3000686dc91629bf7b02d8c215efe6f`
+- Branch: `origin/mars/canonical-post-recovery` (FF push, без force)
+- REMOTE SYNC: COMPLETE

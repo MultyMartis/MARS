@@ -131,3 +131,14 @@ LAYOUT OVERLAP: **0** · JS ERRORS: **0** · BROKEN ASSETS signal: **0** · hori
 PRODUCTION/SOURCE ALIGNED: **YES**  
 PROJECT-OWNED UNCOMMITTED (after Storage sync): **0** for this allowlist  
 FOREIGN WIP PRESERVED: **YES**
+
+## 16. Remote sync
+
+| Item | Value |
+|------|--------|
+| Worktree | `X:\AI MARS STORAGE\git-sync-iseo-su-webinar-landing-01\repo` |
+| Feature commit | `8028ea5df3000686dc91629bf7b02d8c215efe6f` |
+| Message | `feat(iseo-su): add seo contractor webinar landing page` |
+| FF push | `1657c211` → `8028ea5d` on `origin/mars/canonical-post-recovery` |
+| Force push | **NO** |
+| REMOTE SYNC | **COMPLETE** |
