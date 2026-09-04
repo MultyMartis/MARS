@@ -138,7 +138,7 @@ PRODUCTION/SOURCE ALIGNED: YES
 VISUAL EVIDENCE:
 X:\AI MARS\projects\iseo-su-site-ops\evidence\city-small-height-overlap-pilot-01\screenshots\20260904T045143Z\
 
-REMOTE SYNC: (filled after git push)
+REMOTE SYNC: YES — `3d087501f7572d355bd7fdab38355c3f7dc7b4b5` on `origin/mars/canonical-post-recovery` (worktree `X:\AI MARS STORAGE\git-sync-iseo-su-city-height-overlap-pilot-01\repo`, branch `wave/iseo-su-city-height-overlap-pilot-01`; push ff-only `61ada673..3d087501`)
 
 ROLLOUT STATUS:
 WAITING FOR OPERATOR VISUAL APPROVAL

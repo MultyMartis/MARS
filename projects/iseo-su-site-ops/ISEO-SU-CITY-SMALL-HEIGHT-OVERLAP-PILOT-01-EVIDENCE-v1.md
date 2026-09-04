@@ -127,7 +127,18 @@ Boundary shots are scrolled so first-screen text ends, then SecondScreen begins,
 
 ---
 
-## 9. Rollout
+## 9. Git / remote sync
+
+| Field | Value |
+|-------|--------|
+| Worktree | `X:\AI MARS STORAGE\git-sync-iseo-su-city-height-overlap-pilot-01\repo` |
+| Commit | `3d087501f7572d355bd7fdab38355c3f7dc7b4b5` |
+| Subject | `fix(iseo-su): prevent low-height overlap on novosibirsk city page` |
+| Remote | `origin/mars/canonical-post-recovery` (`61ada673..3d087501`, no force) |
+
+---
+
+## 10. Rollout
 
 | Field | Value |
 |-------|--------|
@@ -138,7 +149,7 @@ Boundary shots are scrolled so first-screen text ends, then SecondScreen begins,
 
 ---
 
-## 10. Operator next step
+## 11. Operator next step
 
 Visually inspect:
 
