@@ -1,0 +1,332 @@
+{
+  "timestamp_utc": "20260904T014744Z",
+  "backup_dir": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_city-pages-wave-02a-cross-linking\\backup-20260904T014744Z",
+  "files": [
+    {
+      "role": "MODIFY",
+      "production": "/home/n/nikel0rv/i-seo.su/public_html/services/seo/prodvizhenie-v-sankt-peterburge.html",
+      "backup": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_city-pages-wave-02a-cross-linking\\backup-20260904T014744Z\\prodvizhenie-v-sankt-peterburge.html",
+      "sha256_before": "d023d3d79cf5e8c494fc2d9f1fb261d223fe2762a9b2001280c323bbbd08605f",
+      "bytes": 43901
+    },
+    {
+      "role": "MODIFY",
+      "production": "/home/n/nikel0rv/i-seo.su/public_html/services/seo/prodvizhenie-v-kazani.html",
+      "backup": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_city-pages-wave-02a-cross-linking\\backup-20260904T014744Z\\prodvizhenie-v-kazani.html",
+      "sha256_before": "318eb1950edaf6f5135be204513d3c4c96ab751fa3de54475cf161f9f194a756",
+      "bytes": 43679
+    },
+    {
+      "role": "MODIFY",
+      "production": "/home/n/nikel0rv/i-seo.su/public_html/services/seo/prodvizhenie-v-ekaterinburge.html",
+      "backup": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_city-pages-wave-02a-cross-linking\\backup-20260904T014744Z\\prodvizhenie-v-ekaterinburge.html",
+      "sha256_before": "4bba37ebbc8f668bdc1d31877940bf53110cf6358eeae38b3f5c9fc160c8f4fb",
+      "bytes": 43686
+    },
+    {
+      "role": "MODIFY",
+      "production": "/home/n/nikel0rv/i-seo.su/public_html/services/seo/prodvizhenie-v-novosibirske.html",
+      "backup": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_city-pages-wave-02a-cross-linking\\backup-20260904T014744Z\\prodvizhenie-v-novosibirske.html",
+      "sha256_before": "8c9e7ecc6a30570ca0d04f97f5cb3065221d22a0b9e661949bf1e3e404dd1ce1",
+      "bytes": 43656
+    },
+    {
+      "role": "MODIFY",
+      "production": "/home/n/nikel0rv/i-seo.su/public_html/services/seo/prodvizhenie-v-krasnoyarske.html",
+      "backup": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_city-pages-wave-02a-cross-linking\\backup-20260904T014744Z\\prodvizhenie-v-krasnoyarske.html",
+      "sha256_before": "8f180a319e358d9d89dec396ee79016abe0e4c3f9737ee350c9dd1dfef7799a2",
+      "bytes": 43644
+    }
+  ],
+  "deploy": [
+    {
+      "local": "X:\\AI MARS\\projects\\iseo-su-site-ops\\production-source\\static-html\\services\\seo\\prodvizhenie-v-sankt-peterburge.html",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/seo/prodvizhenie-v-sankt-peterburge.html",
+      "sha256": "eb0244287b752493222ee9e120fabb4d0667266a21616024c0d57ce9817c2398",
+      "bytes": 44910,
+      "verify_match": true
+    },
+    {
+      "local": "X:\\AI MARS\\projects\\iseo-su-site-ops\\production-source\\static-html\\services\\seo\\prodvizhenie-v-kazani.html",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/seo/prodvizhenie-v-kazani.html",
+      "sha256": "d0444217d6d16eaeb16891fe346c028c9e3504ffdc4f2bcc0d2d25353b74a09b",
+      "bytes": 44698,
+      "verify_match": true
+    },
+    {
+      "local": "X:\\AI MARS\\projects\\iseo-su-site-ops\\production-source\\static-html\\services\\seo\\prodvizhenie-v-ekaterinburge.html",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/seo/prodvizhenie-v-ekaterinburge.html",
+      "sha256": "f17027925c6b842cb0029449183166b6457f2a9fd3e5e8fb69a0924086939005",
+      "bytes": 44698,
+      "verify_match": true
+    },
+    {
+      "local": "X:\\AI MARS\\projects\\iseo-su-site-ops\\production-source\\static-html\\services\\seo\\prodvizhenie-v-novosibirske.html",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/seo/prodvizhenie-v-novosibirske.html",
+      "sha256": "de54cb53b728f26fa8d63e0d03868154347a1c8006d828ec042f0f55d61ebf8d",
+      "bytes": 44669,
+      "verify_match": true
+    },
+    {
+      "local": "X:\\AI MARS\\projects\\iseo-su-site-ops\\production-source\\static-html\\services\\seo\\prodvizhenie-v-krasnoyarske.html",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/seo/prodvizhenie-v-krasnoyarske.html",
+      "sha256": "c0bcc2f6ac7f00e17533454ce64d73adc6a058a937f8422eada7444f544dad5d",
+      "bytes": 44657,
+      "verify_match": true
+    }
+  ],
+  "pages": {
+    "prodvizhenie-v-sankt-peterburge.html": {
+      "url": "https://i-seo.su/services/seo/prodvizhenie-v-sankt-peterburge.html",
+      "http": 200,
+      "nav_present": true,
+      "nav_title_ok": true,
+      "outbound_links": [
+        "https://i-seo.su/services/seo/prodvizhenie-v-kazani.html",
+        "https://i-seo.su/services/seo/prodvizhenie-v-ekaterinburge.html",
+        "https://i-seo.su/services/seo/prodvizhenie-v-novosibirske.html",
+        "https://i-seo.su/services/seo/prodvizhenie-v-krasnoyarske.html"
+      ],
+      "outbound_count": 4,
+      "outbound_ok": true,
+      "current_labels": [
+        "Санкт-Петербург"
+      ],
+      "current_ok": true,
+      "nofollow": false,
+      "target_blank": false,
+      "target_http": {
+        "https://i-seo.su/services/seo/prodvizhenie-v-kazani.html": 200,
+        "https://i-seo.su/services/seo/prodvizhenie-v-ekaterinburge.html": 200,
+        "https://i-seo.su/services/seo/prodvizhenie-v-novosibirske.html": 200,
+        "https://i-seo.su/services/seo/prodvizhenie-v-krasnoyarske.html": 200
+      },
+      "targets_200": true,
+      "title_ok": true,
+      "title": "SEO-продвижение сайта компании в Санкт-Петербурге | i-seo.su",
+      "description_ok": true,
+      "h1_ok": true,
+      "h1": "SEO-продвижение сайта в Санкт-Петербурге",
+      "faq4_ok": true,
+      "canonical": "https://i-seo.su/services/seo/prodvizhenie-v-sankt-peterburge.html",
+      "canonical_ok": true,
+      "hub_backlink": true,
+      "consent_count": 10,
+      "privacy_count": 11,
+      "consent_ok": true,
+      "calc_present": true,
+      "calc_consent_ok": true,
+      "ok": true
+    },
+    "prodvizhenie-v-kazani.html": {
+      "url": "https://i-seo.su/services/seo/prodvizhenie-v-kazani.html",
+      "http": 200,
+      "nav_present": true,
+      "nav_title_ok": true,
+      "outbound_links": [
+        "https://i-seo.su/services/seo/prodvizhenie-v-sankt-peterburge.html",
+        "https://i-seo.su/services/seo/prodvizhenie-v-ekaterinburge.html",
+        "https://i-seo.su/services/seo/prodvizhenie-v-novosibirske.html",
+        "https://i-seo.su/services/seo/prodvizhenie-v-krasnoyarske.html"
+      ],
+      "outbound_count": 4,
+      "outbound_ok": true,
+      "current_labels": [
+        "Казань"
+      ],
+      "current_ok": true,
+      "nofollow": false,
+      "target_blank": false,
+      "target_http": {
+        "https://i-seo.su/services/seo/prodvizhenie-v-sankt-peterburge.html": 200,
+        "https://i-seo.su/services/seo/prodvizhenie-v-ekaterinburge.html": 200,
+        "https://i-seo.su/services/seo/prodvizhenie-v-novosibirske.html": 200,
+        "https://i-seo.su/services/seo/prodvizhenie-v-krasnoyarske.html": 200
+      },
+      "targets_200": true,
+      "title_ok": true,
+      "title": "SEO-продвижение сайта компании в Казани | i-seo.su",
+      "description_ok": true,
+      "h1_ok": true,
+      "h1": "SEO-продвижение сайта в Казани",
+      "faq4_ok": true,
+      "canonical": "https://i-seo.su/services/seo/prodvizhenie-v-kazani.html",
+      "canonical_ok": true,
+      "hub_backlink": true,
+      "consent_count": 10,
+      "privacy_count": 11,
+      "consent_ok": true,
+      "calc_present": true,
+      "calc_consent_ok": true,
+      "ok": true
+    },
+    "prodvizhenie-v-ekaterinburge.html": {
+      "url": "https://i-seo.su/services/seo/prodvizhenie-v-ekaterinburge.html",
+      "http": 200,
+      "nav_present": true,
+      "nav_title_ok": true,
+      "outbound_links": [
+        "https://i-seo.su/services/seo/prodvizhenie-v-sankt-peterburge.html",
+        "https://i-seo.su/services/seo/prodvizhenie-v-kazani.html",
+        "https://i-seo.su/services/seo/prodvizhenie-v-novosibirske.html",
+        "https://i-seo.su/services/seo/prodvizhenie-v-krasnoyarske.html"
+      ],
+      "outbound_count": 4,
+      "outbound_ok": true,
+      "current_labels": [
+        "Екатеринбург"
+      ],
+      "current_ok": true,
+      "nofollow": false,
+      "target_blank": false,
+      "target_http": {
+        "https://i-seo.su/services/seo/prodvizhenie-v-sankt-peterburge.html": 200,
+        "https://i-seo.su/services/seo/prodvizhenie-v-kazani.html": 200,
+        "https://i-seo.su/services/seo/prodvizhenie-v-novosibirske.html": 200,
+        "https://i-seo.su/services/seo/prodvizhenie-v-krasnoyarske.html": 200
+      },
+      "targets_200": true,
+      "title_ok": true,
+      "title": "SEO-продвижение сайта компании в Екатеринбурге | i-seo.su",
+      "description_ok": true,
+      "h1_ok": true,
+      "h1": "SEO-продвижение сайта в Екатеринбурге",
+      "faq4_ok": true,
+      "canonical": "https://i-seo.su/services/seo/prodvizhenie-v-ekaterinburge.html",
+      "canonical_ok": true,
+      "hub_backlink": true,
+      "consent_count": 10,
+      "privacy_count": 11,
+      "consent_ok": true,
+      "calc_present": true,
+      "calc_consent_ok": true,
+      "ok": true
+    },
+    "prodvizhenie-v-novosibirske.html": {
+      "url": "https://i-seo.su/services/seo/prodvizhenie-v-novosibirske.html",
+      "http": 200,
+      "nav_present": true,
+      "nav_title_ok": true,
+      "outbound_links": [
+        "https://i-seo.su/services/seo/prodvizhenie-v-sankt-peterburge.html",
+        "https://i-seo.su/services/seo/prodvizhenie-v-kazani.html",
+        "https://i-seo.su/services/seo/prodvizhenie-v-ekaterinburge.html",
+        "https://i-seo.su/services/seo/prodvizhenie-v-krasnoyarske.html"
+      ],
+      "outbound_count": 4,
+      "outbound_ok": true,
+      "current_labels": [
+        "Новосибирск"
+      ],
+      "current_ok": true,
+      "nofollow": false,
+      "target_blank": false,
+      "target_http": {
+        "https://i-seo.su/services/seo/prodvizhenie-v-sankt-peterburge.html": 200,
+        "https://i-seo.su/services/seo/prodvizhenie-v-kazani.html": 200,
+        "https://i-seo.su/services/seo/prodvizhenie-v-ekaterinburge.html": 200,
+        "https://i-seo.su/services/seo/prodvizhenie-v-krasnoyarske.html": 200
+      },
+      "targets_200": true,
+      "title_ok": true,
+      "title": "SEO-продвижение сайта компании в Новосибирске | i-seo.su",
+      "description_ok": true,
+      "h1_ok": true,
+      "h1": "SEO-продвижение сайта в Новосибирске",
+      "faq4_ok": true,
+      "canonical": "https://i-seo.su/services/seo/prodvizhenie-v-novosibirske.html",
+      "canonical_ok": true,
+      "hub_backlink": true,
+      "consent_count": 10,
+      "privacy_count": 11,
+      "consent_ok": true,
+      "calc_present": true,
+      "calc_consent_ok": true,
+      "ok": true
+    },
+    "prodvizhenie-v-krasnoyarske.html": {
+      "url": "https://i-seo.su/services/seo/prodvizhenie-v-krasnoyarske.html",
+      "http": 200,
+      "nav_present": true,
+      "nav_title_ok": true,
+      "outbound_links": [
+        "https://i-seo.su/services/seo/prodvizhenie-v-sankt-peterburge.html",
+        "https://i-seo.su/services/seo/prodvizhenie-v-kazani.html",
+        "https://i-seo.su/services/seo/prodvizhenie-v-ekaterinburge.html",
+        "https://i-seo.su/services/seo/prodvizhenie-v-novosibirske.html"
+      ],
+      "outbound_count": 4,
+      "outbound_ok": true,
+      "current_labels": [
+        "Красноярск"
+      ],
+      "current_ok": true,
+      "nofollow": false,
+      "target_blank": false,
+      "target_http": {
+        "https://i-seo.su/services/seo/prodvizhenie-v-sankt-peterburge.html": 200,
+        "https://i-seo.su/services/seo/prodvizhenie-v-kazani.html": 200,
+        "https://i-seo.su/services/seo/prodvizhenie-v-ekaterinburge.html": 200,
+        "https://i-seo.su/services/seo/prodvizhenie-v-novosibirske.html": 200
+      },
+      "targets_200": true,
+      "title_ok": true,
+      "title": "SEO-продвижение сайта компании в Красноярске | i-seo.su",
+      "description_ok": true,
+      "h1_ok": true,
+      "h1": "SEO-продвижение сайта в Красноярске",
+      "faq4_ok": true,
+      "canonical": "https://i-seo.su/services/seo/prodvizhenie-v-krasnoyarske.html",
+      "canonical_ok": true,
+      "hub_backlink": true,
+      "consent_count": 10,
+      "privacy_count": 11,
+      "consent_ok": true,
+      "calc_present": true,
+      "calc_consent_ok": true,
+      "ok": true
+    }
+  },
+  "hub": {
+    "url": "https://i-seo.su/services/seo/b-regionakh.html",
+    "http": 200,
+    "city_links": 5,
+    "city_links_ok": true,
+    "cross_nav_absent": true
+  },
+  "sitemap": {
+    "http": 200,
+    "url_count": 132,
+    "url_count_ok": true,
+    "city_urls_present": 5,
+    "changed": false
+  },
+  "smoke": {
+    "https://i-seo.su/services/seo/b-regionakh.html": 200,
+    "https://i-seo.su/services/seo/prodvizhenie-v-sankt-peterburge.html": 200,
+    "https://i-seo.su/services/seo/prodvizhenie-v-kazani.html": 200,
+    "https://i-seo.su/services/seo/prodvizhenie-v-ekaterinburge.html": 200,
+    "https://i-seo.su/services/seo/prodvizhenie-v-novosibirske.html": 200,
+    "https://i-seo.su/services/seo/prodvizhenie-v-krasnoyarske.html": 200,
+    "https://i-seo.su/sitemap-static.xml": 200
+  },
+  "final": {
+    "CITY_PAGES_CHECKED": 5,
+    "CITY_NAV_BLOCK_ADDED": true,
+    "CITY_NAV_BLOCK_PAGES": "5/5",
+    "CURRENT_CITY_STATE": "DISTINCT / NON-LINKED",
+    "CROSS_CITY_LINKS_PER_PAGE": 4,
+    "CROSS_CITY_TARGETS_VALID": "20/20",
+    "CITY_CITY_CONNECTIVITY": "PASS",
+    "CITY_HUB_BACKLINK": "5/5",
+    "HUB_CITY_LINKS": "5/5",
+    "TITLE_CHANGED": "NO",
+    "DESCRIPTION_CHANGED": "NO",
+    "H1_CHANGED": "NO",
+    "FAQ_CHANGED": "NO",
+    "CANONICAL_CHANGED": "NO",
+    "SITEMAP_CHANGED": "NO",
+    "STATIC_SITEMAP_URL_COUNT": 132,
+    "ok": true
+  }
+}

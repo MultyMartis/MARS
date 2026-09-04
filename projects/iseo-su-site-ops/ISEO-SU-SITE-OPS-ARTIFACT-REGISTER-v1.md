@@ -302,6 +302,21 @@ Production mutations in this registration: **0** at registration time. **WAVE 1 
 
 ---
 
+### City Pages WAVE 02A Cross-Linking (2026-09-04) — CURRENT / COMPLETE
+
+| Artifact | Path | Class |
+|----------|------|-------|
+| WAVE 02A evidence | `ISEO-SU-CITY-PAGES-WAVE-02A-CROSS-LINKING-EVIDENCE-v1.md` | CURRENT / CANONICAL |
+| Task REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-CITY-PAGES-WAVE-02A-CROSS-LINKING.md` | CURRENT |
+| Russian closeout | `reports/ISEO-SU-CITY-PAGES-WAVE-02A-CROSS-LINKING-RU.md` | CURRENT |
+| City pages (source, cross-nav) | `production-source/static-html/services/seo/prodvizhenie-v-*.html` (×5; `#city-seo-cross-nav`) | CURRENT |
+| Linking model | Hub ↔ City + City ↔ City | CURRENT |
+| Static sitemap | **unchanged** 132 URLs | CURRENT |
+| Deploy validate JSON | `tools/_wave02a_deploy_validate.json` | EVIDENCE |
+| Patch / deploy tools | `tools/_wave02a_patch_source.py` · `tools/_wave02a_backup_deploy_validate.py` | HELPER |
+
+---
+
 ### USA/UAE Pages WAVE 03 (2026-09-03) — CURRENT / COMPLETE
 
 | Artifact | Path | Class |

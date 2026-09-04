@@ -3,7 +3,7 @@
 **Programme:** ISEO-SU-SITE-OPS  
 **Site:** `https://i-seo.su/`
 **Canonical locus:** `X:\AI MARS\projects\iseo-su-site-ops\`  
-**Updated:** 2026-09-03 (USA/UAE WAVE 03 COMPLETE; City Pages WAVE 02 COMPLETE; Form Consent WAVE 01 COMPLETE / RECONCILED via WAVE 01A)  
+**Updated:** 2026-09-04 (City Pages WAVE 02A CROSS-LINKING COMPLETE; USA/UAE WAVE 03 COMPLETE; City Pages WAVE 02 COMPLETE; Form Consent WAVE 01 COMPLETE / RECONCILED via WAVE 01A)  
 **Authority:** first current-state document for ordinary work
 
 Historical REPORT files record earlier states and do not override this document or fresher accepted evidence.
@@ -149,6 +149,7 @@ SEO-team task pack registered 2026-09 (documentation/roadmap only; production mu
 
 - **WAVE 1 Form Consent** — **COMPLETE / RECONCILED** (2026-09-03): contact forms + calculator-result lead (`tarif-calc.php`) require consent; server enforcement via shared guard; recipient unchanged (`nikel007i33@yandex.ru`); privacy URL `https://i-seo.su/privacy-policy.html`. WAVE 01A patch evidence: [ISEO-SU-FORM-CONSENT-WAVE-01A-CALC-RESULT-PATCH-EVIDENCE-v1.md](ISEO-SU-FORM-CONSENT-WAVE-01A-CALC-RESULT-PATCH-EVIDENCE-v1.md)
 - **WAVE 2 City Pages ×5** — **COMPLETE** (2026-09-03): five regional SEO landings live; hub «Выберите ваш город»; self-canonical 5/5; static sitemap **132**; completeness PASS; consent baseline preserved. Evidence: [ISEO-SU-CITY-PAGES-WAVE-02-EVIDENCE-v1.md](ISEO-SU-CITY-PAGES-WAVE-02-EVIDENCE-v1.md)
+- **WAVE 02A City Cross-Linking** — **COMPLETE** (2026-09-04): City ↔ City nav on all 5 city pages (`#city-seo-cross-nav`); current city non-linked; Hub ↔ City retained; sitemap **132** unchanged. Evidence: [ISEO-SU-CITY-PAGES-WAVE-02A-CROSS-LINKING-EVIDENCE-v1.md](ISEO-SU-CITY-PAGES-WAVE-02A-CROSS-LINKING-EVIDENCE-v1.md)
 - **WAVE 3 USA/UAE ×2** — **COMPLETE** (2026-09-03): Direct-ready landings live (`prodvizhenie-v-ssha.html`, `prodvizhenie-v-oae.html`); **INTLSEO** title suffix; not in menu; not in sitemap (132 unchanged); normal indexability; consent preserved. Evidence: [ISEO-SU-USA-UAE-PAGES-WAVE-03-EVIDENCE-v1.md](ISEO-SU-USA-UAE-PAGES-WAVE-03-EVIDENCE-v1.md)
 
 Does **not** close or modify the existing SEO-review backlog (CANON-*/TITLE-*/META-*/ORPHAN/ALT/OG/H1 review).

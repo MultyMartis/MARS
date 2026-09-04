@@ -27,11 +27,14 @@
 
 ### 2. CITY PAGES ×5
 
-**Status:** **COMPLETE** (2026-09-03) — evidence `ISEO-SU-CITY-PAGES-WAVE-02-EVIDENCE-v1.md`
+**Status:** **COMPLETE** (2026-09-03) — evidence `ISEO-SU-CITY-PAGES-WAVE-02-EVIDENCE-v1.md`  
+**Follow-on WAVE 02A:** **COMPLETE** (2026-09-04) — City ↔ City cross-linking; evidence `ISEO-SU-CITY-PAGES-WAVE-02A-CROSS-LINKING-EVIDENCE-v1.md`  
+**City-page linking model:** Hub ↔ City + City ↔ City  
+**Future:** additional city/page pack (when chartered) must extend the same `#city-seo-cross-nav` pattern — no speculative URLs.
 
 | Field | Value |
 |-------|-------|
-| **Scope** | 5 static SEO city pages cloned from `b-regionakh.html`; SEO-approved content only; hub «Выберите ваш город»; self-canonical on new pages; allowlist + regenerate static sitemap; completeness gate |
+| **Scope** | 5 static SEO city pages cloned from `b-regionakh.html`; SEO-approved content only; hub «Выберите ваш город»; self-canonical on new pages; allowlist + regenerate static sitemap; completeness gate. **WAVE 02A:** compact City ↔ City nav on each city page (current city non-linked); hub unchanged functionally; sitemap unchanged |
 | **Dependencies** | WAVE 1 complete (forms inherit consent); SEO city content package; sitemap generator/allowlist model |
 | **Production mutation type** | New static HTML under `/services/seo/`; edit hub page linking; update allowlist inventories; regenerate `sitemap-static.xml`; deploy static + sitemap surfaces |
 | **Validation requirements** | 5× HTTP 200; self-canonical; `index,follow`; in static sitemap; hub links both ways; no new 4xx/5xx; completeness `PUBLIC_CANONICAL_STATIC_ROUTES - SITEMAP_STATIC_URLS = 0`; do **not** mass-fix old CANON-MISSING |
