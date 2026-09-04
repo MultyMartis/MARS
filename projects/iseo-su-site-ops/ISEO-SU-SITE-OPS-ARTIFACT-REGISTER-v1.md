@@ -344,6 +344,35 @@ Production mutations in this registration: **0** at registration time. **WAVE 1 
 
 ---
 
+### City small-height overlap PILOT 01 (2026-09-04) — SUPERSEDED
+
+| Artifact | Path | Class |
+|----------|------|-------|
+| PILOT 01 evidence | `ISEO-SU-CITY-SMALL-HEIGHT-OVERLAP-PILOT-01-EVIDENCE-v1.md` | **SUPERSEDED** (historical; do not erase) |
+| Task REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-CITY-SMALL-HEIGHT-OVERLAP-PILOT-01.md` | **SUPERSEDED** |
+| Pilot CSS (removed) | `production-source/css/city-seo-novosibirsk-height-pilot.css` | **REMOVED** — superseded by shared rollout CSS |
+| Superseded by | New SEO landings small-height ROLLOUT 01 | — |
+
+---
+
+### New SEO landings small-height overlap ROLLOUT 01 (2026-09-04) — CURRENT / COMPLETE
+
+| Artifact | Path | Class |
+|----------|------|-------|
+| ROLLOUT 01 evidence | `ISEO-SU-NEW-SEO-LANDINGS-SMALL-HEIGHT-ROLLOUT-01-EVIDENCE-v1.md` | CURRENT / CANONICAL |
+| Task REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-NEW-SEO-LANDINGS-SMALL-HEIGHT-ROLLOUT-01.md` | CURRENT |
+| Russian closeout | `reports/ISEO-SU-NEW-SEO-LANDINGS-SMALL-HEIGHT-ROLLOUT-01-RU.md` | CURRENT |
+| Shared CSS | `production-source/css/new-seo-landing-flex-first-screen.css` | CURRENT |
+| 14 landings (source) | `production-source/static-html/services/seo/prodvizhenie-*.html` (city×5 + niche×7 + ssha/oae) | CURRENT |
+| Body class | `new-seo-landing-flex-first-screen` | CURRENT |
+| Static sitemap | **unchanged** 139 URLs | CURRENT |
+| Screenshots | `evidence/new-seo-landings-small-height-rollout-01/screenshots/20260904T051415Z/` | EVIDENCE |
+| Deploy validate JSON | `tools/_new-seo-landings-small-height-rollout-01-validate.json` | EVIDENCE |
+| Deploy tool | `tools/_new-seo-landings-small-height-rollout-01-deploy-validate.py` | HELPER |
+| Production backup | `local/sites/iseo-su-production/_new-seo-landings-small-height-rollout-01/20260904T051415Z/` | BACKUP |
+
+---
+
 ## Explicit non-artifacts and security signal
 
 This documentation wave introduced no token, password, cookie, session value, DB dump, Localhost mirror, unredacted production dump, or active `_*-scratch/` tree.
