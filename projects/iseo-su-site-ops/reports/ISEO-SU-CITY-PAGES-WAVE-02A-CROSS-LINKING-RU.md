@@ -47,6 +47,12 @@ Title, description, H1, FAQ, canonical, robots, sitemap (132 URL), меню, ф�
 | Hub → City | 5/5 |
 | Sitemap | 132, без изменений |
 
+## Git / remote
+
+- Feature: `d2b162e1` — `feat(iseo-su): cross-link regional seo city pages`
+- FF push на `origin/mars/canonical-post-recovery` (без force)
+- Worktree: `X:\AI MARS STORAGE\git-sync-iseo-su-city-pages-wave-02a-cross-linking\repo`
+
 ## Дальше
 
 Ожидается отдельное ТЗ на дополнительные городские страницы. Расширять тот же паттерн `#city-seo-cross-nav`. Без нового чартера — **STOP**.

@@ -129,6 +129,21 @@ Hub smoke: HTTP 200; city links 5/5; cross-nav block **absent** on hub (expected
 
 ---
 
-## 9. Stop Condition
+## 9. Git / Remote Sync
+
+| Field | Value |
+|-------|--------|
+| Isolated worktree | `X:\AI MARS STORAGE\git-sync-iseo-su-city-pages-wave-02a-cross-linking\repo` |
+| Sync base | `origin/mars/canonical-post-recovery` @ `97b53b5f` (`docs(iseo-su): record usa-uae wave-03 remote sync`) |
+| Feature commit | `d2b162e1` — `feat(iseo-su): cross-link regional seo city pages` |
+| Remote sync | FF to `origin/mars/canonical-post-recovery` without force (`97b53b5f..d2b162e1`) |
+| PROJECT-OWNED UNCOMMITTED | 0 (after docs sync closeout) |
+| FOREIGN WIP | preserved on dirty main worktree |
+
+---
+
+## 10. Stop Condition
 
 WAVE 02A closed. Do **not** start additional city pages without a new operator charter.
+
+**COMPLETE** — 5 city SEO pages fully cross-linked; Hub + City navigation model active; remote sync COMPLETE @ `d2b162e1`.

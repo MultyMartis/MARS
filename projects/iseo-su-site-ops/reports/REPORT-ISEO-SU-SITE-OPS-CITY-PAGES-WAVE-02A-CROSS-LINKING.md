@@ -71,12 +71,22 @@ LAYOUT REGRESSION: NONE
 PRODUCTION MUTATIONS: 5 city HTML
 PRODUCTION/SOURCE ALIGNED: YES
 
-PROJECT-OWNED UNCOMMITTED: PENDING
+PROJECT-OWNED UNCOMMITTED: 0
 FOREIGN WIP PRESERVED: YES
-REMOTE SYNC: PENDING
+REMOTE SYNC: COMPLETE
 ```
 
-## 7. Stop Condition
+## 7. Git / Remote Sync
+
+| Field | Value |
+|-------|--------|
+| Sync worktree | `X:\AI MARS STORAGE\git-sync-iseo-su-city-pages-wave-02a-cross-linking\repo` |
+| Sync base | `origin/mars/canonical-post-recovery` @ `97b53b5f` |
+| Feature commit | `d2b162e1` — `feat(iseo-su): cross-link regional seo city pages` |
+| Push | FF `97b53b5f..d2b162e1` → `origin/mars/canonical-post-recovery` (no force) |
+| Docs sync commit | recorded in follow-up `docs(iseo-su): record city-pages wave-02a remote sync` |
+
+## 8. Stop Condition
 
 WAVE 02A closed. Do **not** start additional city pages without a new operator charter.
 
