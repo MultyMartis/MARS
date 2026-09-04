@@ -110,11 +110,20 @@ CURRENT-STATE, sitemap architecture, OPERATIONAL-INDEX, artifact register update
 
 ## 24. Git Persistence
 
-Scoped commit via STORAGE worktree (main dirty/foreign WIP preserved). Subject: `feat(iseo-su): add seven niche seo landing pages`
+Scoped commit via STORAGE worktree `X:\AI MARS STORAGE\git-sync-iseo-su-niche-pages-wave-04\repo` (main dirty/foreign WIP preserved).
+
+- Branch (worktree): `mars/iseo-su-niche-pages-wave-04`
+- Commit: `4e20c5bdecc16a6d14a400f00fa536df200ad138`
+- Subject: `feat(iseo-su): add seven niche seo landing pages`
+- Files: 27 allowlisted paths (7 niche HTML + hub + sitemap inventory/XML + evidence/reports/state + wave04 tools)
+- Parent: `99dd5f38870d444dbcf4b40c0ae4c0a06212497a`
 
 ## 25. Remote Sync
 
-Push to `origin/mars/canonical-post-recovery` (no force). Recorded below after sync.
+- Method: `git push origin HEAD:mars/canonical-post-recovery` (FF only, no force)
+- Before: `99dd5f38`
+- After: `4e20c5bd` = `origin/mars/canonical-post-recovery`
+- Status: **COMPLETE**
 
 ## 26. Final Decision
 
@@ -149,9 +158,9 @@ Push to `origin/mars/canonical-post-recovery` (no force). Recorded below after s
 | PRODUCTION/SOURCE ALIGNED | YES |
 | UNAPPROVED CONTENT CHANGES | 0 |
 | UNRELATED SEO CHANGES | 0 |
-| PROJECT-OWNED UNCOMMITTED | 0 (after sync) |
+| PROJECT-OWNED UNCOMMITTED | 0 |
 | FOREIGN WIP PRESERVED | YES |
-| REMOTE SYNC | COMPLETE (after push) |
+| REMOTE SYNC | COMPLETE (`4e20c5bd`) |
 
 **FINAL STATUS:** COMPLETE — ISEO-SU NICHE PAGES WAVE 04 / 7 NEW SEO LANDINGS LIVE / SERVICES SEO HUB UPDATED / SITEMAP UPDATED
 

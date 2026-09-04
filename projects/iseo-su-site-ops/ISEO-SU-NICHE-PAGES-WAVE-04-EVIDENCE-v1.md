@@ -254,6 +254,9 @@ Restore from `_niche-pages-wave-04/backup-20260904T042424Z/`: delete 7 CREATEs; 
 | PRODUCTION/SOURCE ALIGNED | YES |
 | UNAPPROVED CONTENT CHANGES | 0 |
 | UNRELATED SEO CHANGES | 0 |
+| PROJECT-OWNED UNCOMMITTED | 0 |
+| FOREIGN WIP PRESERVED | YES |
+| REMOTE SYNC | COMPLETE (`4e20c5bd` on `origin/mars/canonical-post-recovery`) |
 
 Source SHA256 (SoT):
 
