@@ -38,6 +38,7 @@
 8. **Webinar landing REBUILD 01** — **CURRENT / COMPLETE**: `https://i-seo.su/webinar-seo-podryadchik.html` rebuilt on existing i-seo design system (source: restaurant niche SEO page); custom landing CSS removed; RSYA Direct-ready; no menu/sitemap. Evidence: [REBUILD 01](ISEO-SU-WEBINAR-LANDING-REBUILD-01-EVIDENCE-v1.md) · [REPORT](reports/REPORT-ISEO-SU-SITE-OPS-WEBINAR-LANDING-REBUILD-01.md) · [RU](reports/ISEO-SU-WEBINAR-LANDING-REBUILD-01-RU.md).
 9. **TECH SEO RE-AUDIT 02** — **COMPLETE / READ-ONLY** (2026-09-04 contour `20260904-163451`): fresh full-site crawl; CRITICAL **0**; prior SM-CHILD-404 / LINK-TO-REDIR / static 139 completeness remain closed; new city/niche/USA/UAE/webinar healthy; menu placement deferred to Nikita. Evidence: [REAUDIT 02](ISEO-SU-TECH-SEO-REAUDIT-02-EVIDENCE-v1.md) · [REPORT](reports/REPORT-ISEO-SU-SITE-OPS-TECH-SEO-REAUDIT-02.md) · [SEO RU](reports/ISEO-SU-TECH-SEO-REAUDIT-02-FOR-SEO-TEAM-RU.md) · [FINDINGS CSV](audits/tech-seo/ISEO-SU-TECH-SEO-REAUDIT-02-FINDINGS.csv).
 10. **TECH REPAIR WAVE 01** — **COMPLETE** (2026-09-04): author CSS nested-path 6→0 (`page-home.php` root-relative CSS/libs); logo.svg 404 closed **MODEL A** (`blog.html` → `/img/logo-intl.svg`); SEO backlog untouched; menu deferred to Nikita. Evidence: [WAVE 01](ISEO-SU-TECH-REPAIR-WAVE-01-EVIDENCE-v1.md) · [REPORT](reports/REPORT-ISEO-SU-SITE-OPS-TECH-REPAIR-WAVE-01.md) · [RU](reports/ISEO-SU-TECH-REPAIR-WAVE-01-RU.md).
+11. **SAFE WORKSPACE CLEANUP 01** — **COMPLETE** (2026-09-04): project-scoped only; ~21.66 GB temp sync/empty residuals removed; form-consent dirty + tech-repair unknown retained; raw audit / rollback / archives preserved. Report: [REPORT](reports/REPORT-ISEO-SU-SITE-OPS-SAFE-WORKSPACE-CLEANUP-01.md).
 
 **Deferred optional:** mobile glossary offcanvas, archive Yoast description, MERGED alias polish, unnecessary sitemap duplication, WPilot 6D.
 
@@ -230,6 +231,7 @@ Additional historical artifacts remain listed in the Artifact Register.
 
 | Report | Status |
 |--------|--------|
+| [Safe workspace cleanup 01](reports/REPORT-ISEO-SU-SITE-OPS-SAFE-WORKSPACE-CLEANUP-01.md) | **COMPLETE — ISEO-SU PROJECT-SCOPED WORKSPACE CLEANUP / SAFE TEMP CONTOURS REMOVED / EVIDENCE + ROLLBACK PRESERVED** |
 | [Final stabilization and housekeeping](reports/REPORT-ISEO-SU-SITE-OPS-FINAL-STABILIZATION-AND-HOUSEKEEPING.md) | **COMPLETE — ISEO-SU SITE OPS STABILIZED / WORKSPACE CLEAN / MARS BRAIN CURRENT / GIT CLOSED** |
 | [Final post-launch and git sync closeout](reports/REPORT-ISEO-SU-SITE-OPS-FINAL-POST-LAUNCH-AND-GIT-SYNC-CLOSEOUT.md) | **COMPLETE — ISEO-SU POST-LAUNCH VERIFIED / CANONICAL REMOTE SYNCED / SITE OPS CLOSEOUT COMPLETE** |
 | [Glossary final integration and closeout](reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-FINAL-INTEGRATION-AND-CLOSEOUT.md) | **COMPLETE — GLOSSARY FINAL INTEGRATION COMPLETE / PRODUCTION BASELINE FROZEN** |

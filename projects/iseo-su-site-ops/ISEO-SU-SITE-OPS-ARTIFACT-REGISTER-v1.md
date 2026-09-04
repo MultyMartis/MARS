@@ -35,6 +35,7 @@ Primary vocabulary: **CURRENT** · **CANONICAL** · **SPECIALIZED** · **HISTORI
 | SEO team new task pack 2026-09 | Task pack `ISEO-SU-SEO-TEAM-NEW-TASK-PACK-2026-09-v1.md`; roadmap `ISEO-SU-IMPLEMENTATION-ROADMAP-2026-09-v1.md`; REPORT `reports/REPORT-ISEO-SU-SITE-OPS-SEO-TEAM-TASK-PACK-REGISTRATION-01.md` | CURRENT / SPECIALIZED / APPROVED FOR IMPLEMENTATION PLANNING |
 | Stabilization | `ISEO-SU-STABILIZATION-CLOSEOUT-v1.md` | CANONICAL CLOSEOUT |
 | Documentation consolidation | `reports/REPORT-ISEO-SU-SITE-OPS-PROJECT-DOCUMENTATION-AND-KNOWLEDGE-CONSOLIDATION-01.md` | CURRENT TASK REPORT / GIT PERSISTENCE PENDING |
+| Safe workspace cleanup 01 | `reports/REPORT-ISEO-SU-SITE-OPS-SAFE-WORKSPACE-CLEANUP-01.md` | CURRENT / SPECIALIZED / COMPLETE (project-scoped FS hygiene only) |
 
 ## Historical and superseded policy
 
@@ -440,6 +441,19 @@ Production mutations in this registration: **0** at registration time. **WAVE 1 
 | Production backup | `X:\AI MARS\local\sites\iseo-su-production\_tech-repair-wave-01\20260904T155608Z\` | BACKUP (out of git) |
 | Logo fix model | **A** (stale ref → `/img/logo-intl.svg`) | DECISION |
 | SEO backlog / menu | **UNCHANGED** / Nikita deferred | POLICY |
+
+---
+
+## SAFE WORKSPACE CLEANUP 01 (2026-09-04) — COMPLETE
+
+| Artifact | Path | Role |
+|----------|------|------|
+| Task REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-SAFE-WORKSPACE-CLEANUP-01.md` | REPORT |
+| Scope | Project-scoped only (`git-sync-iseo-su-*`, related worktrees; not general Storage Hygiene) | POLICY |
+| Retained temps | `X:\AI MARS STORAGE\git-sync-iseo-su-form-consent-wave-01`; `...\git-sync-iseo-su-tech-repair-wave-01` | RETAIN |
+| Protected evidence | `X:\AI MARS STORAGE\iseo-su-site-ops\` (incl. `tech-seo-reaudit-02\20260904-163451\`) | RETAIN |
+| Protected archive | `X:\AI MARS STORAGE\archives\iseo-su-site-ops-scratch-stabilization-2026-08-20\` | RETAIN |
+| Protected local rollback | `X:\AI MARS\local\sites\iseo-su-production\_*` | RETAIN |
 
 ---
 
