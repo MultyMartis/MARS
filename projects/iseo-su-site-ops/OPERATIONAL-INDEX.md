@@ -19,7 +19,7 @@
    - [Metrika visitor IP](ISEO-SU-METRIKA-VISITOR-IP-PARAM-BASELINE-v1.md)
    - [Glossary final production](ISEO-SU-GLOSSARY-FINAL-PRODUCTION-BASELINE-v1.md)
    - [Sitemap architecture/current state](ISEO-SU-SITEMAP-ARCHITECTURE-AND-CURRENT-STATE-v1.md)
-   - [Latest technical/SEO audit](ISEO-SU-TECH-SEO-AUDIT-EVIDENCE-v1.md)
+   - [Latest technical/SEO re-audit 02](ISEO-SU-TECH-SEO-REAUDIT-02-EVIDENCE-v1.md) (supersedes audit-01 as freshest crawl; audit-01 retained)
 7. Approved upcoming implementation map:
    - [SEO team new task pack 2026-09](ISEO-SU-SEO-TEAM-NEW-TASK-PACK-2026-09-v1.md)
    - [Implementation roadmap 2026-09](ISEO-SU-IMPLEMENTATION-ROADMAP-2026-09-v1.md)
@@ -36,6 +36,7 @@
 6. **New SEO landings small-height overlap ROLLOUT 01** — **COMPLETE**: 14 new landings safe at low desktop heights; shared `new-seo-landing-flex-first-screen`; pilot CSS/class removed. Evidence: [ROLLOUT 01](ISEO-SU-NEW-SEO-LANDINGS-SMALL-HEIGHT-ROLLOUT-01-EVIDENCE-v1.md) · [REPORT](reports/REPORT-ISEO-SU-SITE-OPS-NEW-SEO-LANDINGS-SMALL-HEIGHT-ROLLOUT-01.md) · [RU](reports/ISEO-SU-NEW-SEO-LANDINGS-SMALL-HEIGHT-ROLLOUT-01-RU.md).
 7. **Webinar landing WEBINAR-LANDING-01** — **SUPERSEDED BY REBUILD 01** (custom design rejected; historical evidence retained): [WEBINAR 01](ISEO-SU-WEBINAR-LANDING-01-EVIDENCE-v1.md) · [REPORT](reports/REPORT-ISEO-SU-SITE-OPS-WEBINAR-LANDING-01.md) · [RU](reports/ISEO-SU-WEBINAR-LANDING-01-RU.md).
 8. **Webinar landing REBUILD 01** — **CURRENT / COMPLETE**: `https://i-seo.su/webinar-seo-podryadchik.html` rebuilt on existing i-seo design system (source: restaurant niche SEO page); custom landing CSS removed; RSYA Direct-ready; no menu/sitemap. Evidence: [REBUILD 01](ISEO-SU-WEBINAR-LANDING-REBUILD-01-EVIDENCE-v1.md) · [REPORT](reports/REPORT-ISEO-SU-SITE-OPS-WEBINAR-LANDING-REBUILD-01.md) · [RU](reports/ISEO-SU-WEBINAR-LANDING-REBUILD-01-RU.md).
+9. **TECH SEO RE-AUDIT 02** — **COMPLETE / READ-ONLY** (2026-09-04 contour `20260904-163451`): fresh full-site crawl; CRITICAL **0**; prior SM-CHILD-404 / LINK-TO-REDIR / static 139 completeness remain closed; new city/niche/USA/UAE/webinar healthy; menu placement deferred to Nikita. Evidence: [REAUDIT 02](ISEO-SU-TECH-SEO-REAUDIT-02-EVIDENCE-v1.md) · [REPORT](reports/REPORT-ISEO-SU-SITE-OPS-TECH-SEO-REAUDIT-02.md) · [SEO RU](reports/ISEO-SU-TECH-SEO-REAUDIT-02-FOR-SEO-TEAM-RU.md) · [FINDINGS CSV](audits/tech-seo/ISEO-SU-TECH-SEO-REAUDIT-02-FINDINGS.csv).
 
 **Deferred optional:** mobile glossary offcanvas, archive Yoast description, MERGED alias polish, unnecessary sitemap duplication, WPilot 6D.
 
@@ -59,7 +60,7 @@
 
 | Field | Value |
 |-------|-------|
-| **Lifecycle** | **COMPLETE — WEBINAR LANDING REBUILD 01 ON SITE DESIGN / CUSTOM DESIGN REMOVED / RSYA READY / WEBINAR-LANDING-01 SUPERSEDED / NEW SEO LANDINGS SMALL-HEIGHT ROLLOUT 01 / 14 PAGES SAFE / NICHE WAVE 04 / HUB 38 / STATIC SITEMAP 139 / USA/UAE WAVE 03 / CITY WAVE 02+02A** |
+| **Lifecycle** | **COMPLETE — TECH SEO RE-AUDIT 02 / WEBINAR LANDING REBUILD 01 ON SITE DESIGN / CUSTOM DESIGN REMOVED / RSYA READY / WEBINAR-LANDING-01 SUPERSEDED / NEW SEO LANDINGS SMALL-HEIGHT ROLLOUT 01 / 14 PAGES SAFE / NICHE WAVE 04 / HUB 38 / STATIC SITEMAP 139 / USA/UAE WAVE 03 / CITY WAVE 02+02A** |
 | **Project status** | Glossary public: **184** published eligible; **57** non-eligible drafts; `/glossary/` **200**; archive/single services `page_scene` hero; desktop submenu **Глоссарий** after calculator; archive title **Глоссарий - INTLSEO Studio**; Yoast glossary sitemap **184**; root `/sitemap.xml` = `sitemap-static.xml` + `wp-sitemap.xml`; static sitemap **139** URLs (WAVE 04 niche +7; WAVE 02 city +5; completeness PASS); hub niche list **38**; mobile overflow **fixed** (glossary-scoped CSS, SHA `4a1202b6…`); mobile offcanvas **intentionally unchanged**; WPilot bridge/writes/REST still gated; production form recipient = **original only** (`nikel007i33@yandex.ru`); active form HMAC secret = **production-local only** (`.iseo-form-runtime/iseo-form-secrets.local.php`), absent from current tracked source; tech/SEO audit HIGH findings CLOSED; TECH CLEANUP WAVE 01 CLOSED (`SM-MISSING-INDEXABLE` rechecked eligible 0; `LINK-TO-REDIR`/`IMG-HUGE` closed); Metrika visitor IP param addon **ON** (`ipaddress` → counter **54287016**; kill switch in `metrika-visitor-ip-config.php`; analytics-only, no auto-ban) |
 | **Architecture knowledge** | **COMPLETE** — knowledge base + route matrix + task routing guide |
 | **Glossary** | Foundation + Batches 01–04 content + **controlled public launch 2026-07-26** + final integration/post-launch closeout **2026-08-18** |

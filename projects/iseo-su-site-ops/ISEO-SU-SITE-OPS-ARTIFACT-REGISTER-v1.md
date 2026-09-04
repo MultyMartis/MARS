@@ -408,6 +408,20 @@ Production mutations in this registration: **0** at registration time. **WAVE 1 
 | Screenshots tool | `tools/_webinar-landing-rebuild-01-screenshots.py` | HELPER |
 | Production backup | `local/sites/iseo-su-production/_webinar-landing-rebuild-01/` | BACKUP |
 
+### Tech SEO Re-Audit 02 (2026-09-04) — CURRENT / COMPLETE / READ-ONLY
+
+| Artifact | Path | Class |
+|----------|------|-------|
+| Evidence | `ISEO-SU-TECH-SEO-REAUDIT-02-EVIDENCE-v1.md` | CURRENT / CANONICAL (freshest crawl) |
+| Task REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-TECH-SEO-REAUDIT-02.md` | CURRENT |
+| SEO-facing RU report | `reports/ISEO-SU-TECH-SEO-REAUDIT-02-FOR-SEO-TEAM-RU.md` | CURRENT |
+| Findings CSV | `audits/tech-seo/ISEO-SU-TECH-SEO-REAUDIT-02-FINDINGS.csv` | CURRENT |
+| Raw Storage contour | `X:\AI MARS STORAGE\iseo-su-site-ops\tech-seo-reaudit-02\20260904-163451\` | EVIDENCE (out of git) |
+| Prior audit-01 evidence | `ISEO-SU-TECH-SEO-AUDIT-EVIDENCE-v1.md` | RETAINED / SUPERSEDED AS FRESHEST |
+| Prior SEO-team audit-01 | `reports/ISEO-SU-TECH-SEO-AUDIT-FOR-SEO-TEAM-v1.md` | RETAINED |
+| Menu / navigation | **NO CHANGE** (Nikita decision deferred) | POLICY |
+| Production / source mutations | **0** | READ-ONLY |
+
 ---
 
 ## Explicit non-artifacts and security signal
