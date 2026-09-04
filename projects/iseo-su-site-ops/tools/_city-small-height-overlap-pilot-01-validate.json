@@ -1,0 +1,330 @@
+{
+  "task": "ISEO-SU-SITE-OPS-CITY-SMALL-HEIGHT-OVERLAP-PILOT-01",
+  "timestamp_utc": "20260904T045143Z",
+  "pilot_url": "https://i-seo.su/services/seo/prodvizhenie-v-novosibirske.html",
+  "local_html": "X:\\AI MARS\\projects\\iseo-su-site-ops\\production-source\\static-html\\services\\seo\\prodvizhenie-v-novosibirske.html",
+  "local_css": "X:\\AI MARS\\projects\\iseo-su-site-ops\\production-source\\css\\city-seo-novosibirsk-height-pilot.css",
+  "backup_dir": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_city-small-height-overlap-pilot-01\\20260904T045143Z",
+  "baseline": {
+    "title": "SEO-продвижение сайта компании в Новосибирске | i-seo.su",
+    "h1": "SEO-продвижение сайта в Новосибирске",
+    "description": "Продвигаем сайты бизнеса в Новосибирске. Аудит, стратегия, рост позиций и трафика. Опыт в разных нишах, прозрачная отчетность на каждом этапе.",
+    "canonical": "https://i-seo.su/services/seo/prodvizhenie-v-novosibirske.html",
+    "html_sha256": "2ef7a39c6cd72c48adee44ac77b9b16cea9f43ebc82d07490d6941330e2e41e5",
+    "css_sha256": "a3e5323b6e13da985f96366363426c09ddb6d37e8f046c5604e768b8a68cc339"
+  },
+  "backup": {
+    "remote_html": "/home/n/nikel0rv/i-seo.su/public_html/services/seo/prodvizhenie-v-novosibirske.html",
+    "remote_css": "/home/n/nikel0rv/i-seo.su/public_html/css/city-seo-novosibirsk-height-pilot.css",
+    "html_sha256_before": "de54cb53b728f26fa8d63e0d03868154347a1c8006d828ec042f0f55d61ebf8d",
+    "css_sha256_before": null,
+    "backup_html": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_city-small-height-overlap-pilot-01\\20260904T045143Z\\prodvizhenie-v-novosibirske.html.before",
+    "backup_css": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_city-small-height-overlap-pilot-01\\20260904T045143Z\\city-seo-novosibirsk-height-pilot.css.before.MISSING"
+  },
+  "controls_before": {
+    "hub": {
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/seo/b-regionakh.html",
+      "sha256": "20374a198c7bbd72fb0028806d3b5aa21a02361b7cf3f1d857e55c527d29badd"
+    },
+    "spb": {
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/seo/prodvizhenie-v-sankt-peterburge.html",
+      "sha256": "eb0244287b752493222ee9e120fabb4d0667266a21616024c0d57ce9817c2398"
+    },
+    "kazan": {
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/seo/prodvizhenie-v-kazani.html",
+      "sha256": "d0444217d6d16eaeb16891fe346c028c9e3504ffdc4f2bcc0d2d25353b74a09b"
+    },
+    "ekb": {
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/seo/prodvizhenie-v-ekaterinburge.html",
+      "sha256": "f17027925c6b842cb0029449183166b6457f2a9fd3e5e8fb69a0924086939005"
+    },
+    "krsk": {
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/seo/prodvizhenie-v-krasnoyarske.html",
+      "sha256": "c0bcc2f6ac7f00e17533454ce64d73adc6a058a937f8422eada7444f544dad5d"
+    }
+  },
+  "deploy": {
+    "html_sha256_after": "2ef7a39c6cd72c48adee44ac77b9b16cea9f43ebc82d07490d6941330e2e41e5",
+    "css_sha256_after": "a3e5323b6e13da985f96366363426c09ddb6d37e8f046c5604e768b8a68cc339",
+    "html_matches_local": true,
+    "css_matches_local": true
+  },
+  "controls_after": {
+    "hub": {
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/seo/b-regionakh.html",
+      "sha256": "20374a198c7bbd72fb0028806d3b5aa21a02361b7cf3f1d857e55c527d29badd",
+      "unchanged": true
+    },
+    "spb": {
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/seo/prodvizhenie-v-sankt-peterburge.html",
+      "sha256": "eb0244287b752493222ee9e120fabb4d0667266a21616024c0d57ce9817c2398",
+      "unchanged": true
+    },
+    "kazan": {
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/seo/prodvizhenie-v-kazani.html",
+      "sha256": "d0444217d6d16eaeb16891fe346c028c9e3504ffdc4f2bcc0d2d25353b74a09b",
+      "unchanged": true
+    },
+    "ekb": {
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/seo/prodvizhenie-v-ekaterinburge.html",
+      "sha256": "f17027925c6b842cb0029449183166b6457f2a9fd3e5e8fb69a0924086939005",
+      "unchanged": true
+    },
+    "krsk": {
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/seo/prodvizhenie-v-krasnoyarske.html",
+      "sha256": "c0bcc2f6ac7f00e17533454ce64d73adc6a058a937f8422eada7444f544dad5d",
+      "unchanged": true
+    }
+  },
+  "live_http": {
+    "status": 200,
+    "title": "SEO-продвижение сайта компании в Новосибирске | i-seo.su",
+    "h1": "SEO-продвижение сайта в Новосибирске",
+    "description": "Продвигаем сайты бизнеса в Новосибирске. Аудит, стратегия, рост позиций и трафика. Опыт в разных нишах, прозрачная отчетность на каждом этапе.",
+    "canonical": "https://i-seo.su/services/seo/prodvizhenie-v-novosibirske.html",
+    "has_pilot_class": true,
+    "has_pilot_css_link": true,
+    "title_unchanged": true,
+    "h1_unchanged": true,
+    "desc_unchanged": true,
+    "canonical_unchanged": true,
+    "sha256": "a0b6d01693d132ed8f9ab5ee9b85f1f282b38ceef62e21de2d0ae11380121329"
+  },
+  "live_css": {
+    "status": 200,
+    "sha256": "a3e5323b6e13da985f96366363426c09ddb6d37e8f046c5604e768b8a68cc339",
+    "matches_local": true,
+    "contains_height_auto": true,
+    "contains_min_height": true
+  },
+  "sitemap": {
+    "status": 200,
+    "url_count": 139,
+    "expected": 139
+  },
+  "smoke": {
+    "home": {
+      "status": 200,
+      "has_consent_markers": true
+    },
+    "tariff_calc": {
+      "status": 200,
+      "has_consent_markers": true
+    },
+    "spb": {
+      "status": 200,
+      "has_consent_markers": true
+    },
+    "hub": {
+      "status": 200,
+      "has_consent_markers": true
+    }
+  },
+  "viewport_matrix": [
+    {
+      "ok": true,
+      "viewport": {
+        "w": 1920,
+        "h": 1080
+      },
+      "inner": {
+        "height_css": "1080px",
+        "minHeight_css": "1080px",
+        "height_px": 1080,
+        "bottom_doc": 1160
+      },
+      "content_bottom_doc": 1049,
+      "second_top_doc": 1160,
+      "gap_px": 111,
+      "overlap": false,
+      "clipped_by_inner_box": false,
+      "intro_visible": true,
+      "cta_visible": true,
+      "pilot_body": true,
+      "viewport_name": "1920x1080",
+      "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\city-small-height-overlap-pilot-01\\screenshots\\20260904T045143Z\\pilot-1920x1080.png",
+      "pass": true
+    },
+    {
+      "ok": true,
+      "viewport": {
+        "w": 1440,
+        "h": 900
+      },
+      "inner": {
+        "height_css": "1094px",
+        "minHeight_css": "900px",
+        "height_px": 1094,
+        "bottom_doc": 1174
+      },
+      "content_bottom_doc": 1104,
+      "second_top_doc": 1244,
+      "gap_px": 140,
+      "overlap": false,
+      "clipped_by_inner_box": false,
+      "intro_visible": true,
+      "cta_visible": true,
+      "pilot_body": true,
+      "viewport_name": "1440x900",
+      "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\city-small-height-overlap-pilot-01\\screenshots\\20260904T045143Z\\pilot-1440x900.png",
+      "pass": true
+    },
+    {
+      "ok": true,
+      "viewport": {
+        "w": 1366,
+        "h": 768
+      },
+      "inner": {
+        "height_css": "1094px",
+        "minHeight_css": "768px",
+        "height_px": 1094,
+        "bottom_doc": 1174
+      },
+      "content_bottom_doc": 1104,
+      "second_top_doc": 1244,
+      "gap_px": 140,
+      "overlap": false,
+      "clipped_by_inner_box": false,
+      "intro_visible": true,
+      "cta_visible": true,
+      "pilot_body": true,
+      "viewport_name": "1366x768",
+      "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\city-small-height-overlap-pilot-01\\screenshots\\20260904T045143Z\\pilot-1366x768.png",
+      "pass": true
+    },
+    {
+      "ok": true,
+      "viewport": {
+        "w": 1280,
+        "h": 720
+      },
+      "inner": {
+        "height_css": "1146px",
+        "minHeight_css": "720px",
+        "height_px": 1146,
+        "bottom_doc": 1226
+      },
+      "content_bottom_doc": 1156,
+      "second_top_doc": 1296,
+      "gap_px": 140,
+      "overlap": false,
+      "clipped_by_inner_box": false,
+      "intro_visible": true,
+      "cta_visible": true,
+      "pilot_body": true,
+      "boundary_shot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\city-small-height-overlap-pilot-01\\screenshots\\20260904T045143Z\\pilot-1280x720-boundary.png",
+      "viewport_name": "1280x720",
+      "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\city-small-height-overlap-pilot-01\\screenshots\\20260904T045143Z\\pilot-1280x720.png",
+      "pass": true
+    },
+    {
+      "ok": true,
+      "viewport": {
+        "w": 1366,
+        "h": 650
+      },
+      "inner": {
+        "height_css": "1094px",
+        "minHeight_css": "650px",
+        "height_px": 1094,
+        "bottom_doc": 1174
+      },
+      "content_bottom_doc": 1104,
+      "second_top_doc": 1244,
+      "gap_px": 140,
+      "overlap": false,
+      "clipped_by_inner_box": false,
+      "intro_visible": true,
+      "cta_visible": true,
+      "pilot_body": true,
+      "boundary_shot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\city-small-height-overlap-pilot-01\\screenshots\\20260904T045143Z\\pilot-1366x650-boundary.png",
+      "viewport_name": "1366x650",
+      "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\city-small-height-overlap-pilot-01\\screenshots\\20260904T045143Z\\pilot-1366x650.png",
+      "pass": true
+    },
+    {
+      "ok": true,
+      "viewport": {
+        "w": 1440,
+        "h": 600
+      },
+      "inner": {
+        "height_css": "1094px",
+        "minHeight_css": "600px",
+        "height_px": 1094,
+        "bottom_doc": 1174
+      },
+      "content_bottom_doc": 1104,
+      "second_top_doc": 1244,
+      "gap_px": 140,
+      "overlap": false,
+      "clipped_by_inner_box": false,
+      "intro_visible": true,
+      "cta_visible": true,
+      "pilot_body": true,
+      "boundary_shot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\city-small-height-overlap-pilot-01\\screenshots\\20260904T045143Z\\pilot-1440x600-boundary.png",
+      "viewport_name": "1440x600",
+      "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\city-small-height-overlap-pilot-01\\screenshots\\20260904T045143Z\\pilot-1440x600.png",
+      "pass": true
+    },
+    {
+      "ok": true,
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "inner": {
+        "height_css": "1338px",
+        "minHeight_css": "844px",
+        "height_px": 1338,
+        "bottom_doc": 1418
+      },
+      "content_bottom_doc": 1348,
+      "second_top_doc": 1488,
+      "gap_px": 140,
+      "overlap": false,
+      "clipped_by_inner_box": false,
+      "intro_visible": true,
+      "cta_visible": true,
+      "pilot_body": true,
+      "viewport_name": "390x844",
+      "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\city-small-height-overlap-pilot-01\\screenshots\\20260904T045143Z\\pilot-390x844.png",
+      "pass": true
+    },
+    {
+      "ok": true,
+      "viewport": {
+        "w": 360,
+        "h": 800
+      },
+      "inner": {
+        "height_css": "1394px",
+        "minHeight_css": "800px",
+        "height_px": 1394,
+        "bottom_doc": 1474
+      },
+      "content_bottom_doc": 1404,
+      "second_top_doc": 1544,
+      "gap_px": 140,
+      "overlap": false,
+      "clipped_by_inner_box": false,
+      "intro_visible": true,
+      "cta_visible": true,
+      "pilot_body": true,
+      "viewport_name": "360x800",
+      "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\city-small-height-overlap-pilot-01\\screenshots\\20260904T045143Z\\pilot-360x800.png",
+      "pass": true
+    }
+  ],
+  "screenshots_dir": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\city-small-height-overlap-pilot-01\\screenshots\\20260904T045143Z",
+  "summary": {
+    "all_viewports_pass": true,
+    "siblings_unchanged": true,
+    "sitemap_ok": true,
+    "content_guard_ok": true,
+    "deploy_aligned": true,
+    "rollout_status": "WAITING FOR OPERATOR VISUAL APPROVAL",
+    "final_status": "PILOT COMPLETE — NOVOSIBIRSK LOW-HEIGHT OVERLAP FIXED / WAITING FOR OPERATOR VISUAL APPROVAL"
+  }
+}

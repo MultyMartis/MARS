@@ -1,0 +1,18 @@
+/**
+ * ISEO-SU-CITY-SMALL-HEIGHT-OVERLAP-PILOT-01
+ * Novosibirsk-only first-screen height fix.
+ *
+ * Root cause: shared `.page_scene_inner { height: 100vh }` caps layout height
+ * while long city intro content overflows; `#SecondScreen` then starts in flow
+ * and visually overlaps the overflowing first-screen copy.
+ *
+ * Fix: allow the first screen to grow with content while keeping a full-viewport
+ * floor on tall screens. Scoped via body class + this file (loaded only from
+ * prodvizhenie-v-novosibirske.html) until operator visual approval / rollout.
+ */
+
+body.city-seo-novosibirsk-height-pilot .page_scene_inner {
+	height: auto;
+	min-height: 100vh;
+	position: relative;
+}
