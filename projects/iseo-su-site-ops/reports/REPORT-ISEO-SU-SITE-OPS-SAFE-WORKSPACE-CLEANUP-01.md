@@ -190,7 +190,7 @@ Retained temp after: form-consent (~3.06 GB) + tech-repair (~3.08 GB).
 |-------|--------|
 | Canonical project path intact | YES |
 | Remote tip before cleanup | `d2759f6aed738936d69db0a5f0637be16d817775` |
-| Remote tip after docs FF push | `682ae690ebdf1b7b9b6bfe160d5ef0efc97efe42` |
+| Remote tip after docs FF push | `9af17e9c0117d87c095e512f9b31589b4d0940f0` |
 | Form-consent still registered | YES |
 | Tech-repair still on disk | YES |
 | Evidence / archive / production rollback | YES |
@@ -226,7 +226,7 @@ COMPLETE — ISEO-SU PROJECT-SCOPED WORKSPACE CLEANUP / SAFE TEMP CONTOURS REMOV
 PROJECT: ISEO-SU-SITE-OPS
 CANONICAL PROJECT PATH: X:\AI MARS\projects\iseo-su-site-ops\
 CANONICAL REMOTE TIP BEFORE: d2759f6aed738936d69db0a5f0637be16d817775
-CANONICAL REMOTE TIP AFTER:  682ae690ebdf1b7b9b6bfe160d5ef0efc97efe42
+CANONICAL REMOTE TIP AFTER:  9af17e9c0117d87c095e512f9b31589b4d0940f0
 
 ISEO CLEANUP CANDIDATES FOUND: 15
 SAFE TEMP SYNC CLONES: 8
@@ -260,5 +260,5 @@ TEMP STORAGE SIZE BEFORE: 29845382270 (~27.80 GB)
 TEMP STORAGE SIZE AFTER:  6593064667 (~6.14 GB)
 SPACE RECLAIMED:          23252317603 (~21.66 GB)
 
-REMOTE SYNC: FF push OK — d2759f6a..682ae690 (docs(iseo-su): record safe workspace cleanup); cleanup sync worktree removed (no residual)
+REMOTE SYNC: FF push OK — d2759f6a..682ae690 (record cleanup); 682ae690..9af17e9c (finalize tips); cleanup sync worktrees 01/01b removed (no residual)
 ```
