@@ -373,24 +373,40 @@ Production mutations in this registration: **0** at registration time. **WAVE 1 
 
 ---
 
-### Webinar landing WEBINAR-LANDING-01 (2026-09-04) — CURRENT / COMPLETE
+### Webinar landing WEBINAR-LANDING-01 (2026-09-04) — SUPERSEDED BY REBUILD 01
 
 | Artifact | Path | Class |
 |----------|------|-------|
-| Evidence | `ISEO-SU-WEBINAR-LANDING-01-EVIDENCE-v1.md` | CURRENT / CANONICAL |
-| Task REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-WEBINAR-LANDING-01.md` | CURRENT |
-| Russian closeout | `reports/ISEO-SU-WEBINAR-LANDING-01-RU.md` | CURRENT |
+| Evidence | `ISEO-SU-WEBINAR-LANDING-01-EVIDENCE-v1.md` | SUPERSEDED (retained) |
+| Task REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-WEBINAR-LANDING-01.md` | SUPERSEDED (retained) |
+| Russian closeout | `reports/ISEO-SU-WEBINAR-LANDING-01-RU.md` | SUPERSEDED (retained) |
+| Screenshots | `evidence/webinar-landing-01/screenshots/20260904T064652Z/` | HISTORICAL EVIDENCE |
+| Viewport QA JSON | `evidence/webinar-landing-01/_viewport_qa_latest.json` | HISTORICAL EVIDENCE |
+| Deploy tool | `tools/_webinar-landing-01-backup-deploy-validate.py` | HISTORICAL HELPER |
+| Screenshots tool | `tools/_webinar-landing-01-screenshots.py` | HISTORICAL HELPER |
+| Production backup | `local/sites/iseo-su-production/_webinar-landing-01/` | BACKUP |
+| Superseded by | `ISEO-SU-SITE-OPS-WEBINAR-LANDING-REBUILD-01` | SUPERSESSION |
+
+### Webinar landing REBUILD 01 (2026-09-04) — CURRENT / COMPLETE
+
+| Artifact | Path | Class |
+|----------|------|-------|
+| Evidence | `ISEO-SU-WEBINAR-LANDING-REBUILD-01-EVIDENCE-v1.md` | CURRENT / CANONICAL |
+| Task REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-WEBINAR-LANDING-REBUILD-01.md` | CURRENT |
+| Russian closeout | `reports/ISEO-SU-WEBINAR-LANDING-REBUILD-01-RU.md` | CURRENT |
 | Page (source) | `production-source/static-html/webinar-seo-podryadchik.html` | CURRENT |
-| Scoped CSS | `production-source/css/webinar-seo-podryadchik.css` | CURRENT |
+| Scoped CSS | `production-source/css/webinar-seo-podryadchik.css` | CURRENT (tiny; ~73 lines) |
+| Structural source | `production-source/static-html/services/seo/prodvizhenie-sajta-restorana.html` | REFERENCE (not mutated) |
 | Live URL | `https://i-seo.su/webinar-seo-podryadchik.html` | CURRENT |
 | Nikita asset | `/img/iSEO_Boss.png` (existing; not generated) | CURRENT |
 | Form family | `page` → `/page__FORM.php` | CURRENT |
 | Menu / sitemap | **NO** / **NO** (static sitemap **139** unchanged) | CURRENT |
-| Screenshots | `evidence/webinar-landing-01/screenshots/20260904T064652Z/` | EVIDENCE |
-| Viewport QA JSON | `evidence/webinar-landing-01/_viewport_qa_latest.json` | EVIDENCE |
-| Deploy tool | `tools/_webinar-landing-01-backup-deploy-validate.py` | HELPER |
-| Screenshots tool | `tools/_webinar-landing-01-screenshots.py` | HELPER |
-| Production backup | `local/sites/iseo-su-production/_webinar-landing-01/` | BACKUP |
+| Screenshots | `evidence/webinar-landing-rebuild-01/screenshots/20260904T070951Z/` | EVIDENCE |
+| Viewport QA JSON | `evidence/webinar-landing-rebuild-01/viewport-qa.json` | EVIDENCE |
+| Deploy validate JSON | `evidence/webinar-landing-rebuild-01/deploy-validate.json` | EVIDENCE |
+| Deploy tool | `tools/_webinar-landing-rebuild-01-deploy-validate.py` | HELPER |
+| Screenshots tool | `tools/_webinar-landing-rebuild-01-screenshots.py` | HELPER |
+| Production backup | `local/sites/iseo-su-production/_webinar-landing-rebuild-01/` | BACKUP |
 
 ---
 

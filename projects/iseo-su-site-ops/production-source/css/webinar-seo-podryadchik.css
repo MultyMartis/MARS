@@ -1,498 +1,85 @@
-/**
- * ISEO-SU-SITE-OPS-WEBINAR-LANDING-01
- * Scoped styles for /webinar-seo-podryadchik.html
- * Body class: .webinar-seo-podryadchik
+/*
+ * ISEO-SU webinar landing — page-scoped CSS only.
+ * Rebuild 01: keep shared site design; tiny overrides for hero photo + yellow eyebrow.
+ * Line count target: minimal. Do not rebuild a custom landing design system here.
  */
 
-html:has(body.webinar-seo-podryadchik) {
-	overflow-x: hidden;
-	max-width: 100%;
-}
-
-body.webinar-seo-podryadchik {
-	overflow-x: hidden;
-	max-width: 100%;
-}
-
-body.webinar-seo-podryadchik #header_template,
-body.webinar-seo-podryadchik main,
-body.webinar-seo-podryadchik .container,
-body.webinar-seo-podryadchik .row {
-	max-width: 100%;
-}
-
-body.webinar-seo-podryadchik .page_scene {
-	position: relative;
-	isolation: isolate;
-	background-color: #050505;
-	background-image:
-		linear-gradient(135deg, rgba(250, 204, 21, 0.06) 0%, transparent 42%),
-		linear-gradient(225deg, rgba(255, 255, 255, 0.03) 0%, transparent 38%),
-		linear-gradient(160deg, #050505 0%, #0a0a0a 45%, #111111 100%);
-	overflow: hidden;
-}
-
-body.webinar-seo-podryadchik .page_scene::before,
-body.webinar-seo-podryadchik .page_scene::after {
-	content: "";
-	position: absolute;
-	pointer-events: none;
-	z-index: 0;
-}
-
-body.webinar-seo-podryadchik .page_scene::before {
-	top: -12%;
-	right: 0;
-	width: 46%;
-	height: 70%;
-	background: linear-gradient(145deg, rgba(250, 204, 21, 0.08), transparent 62%);
-	transform: skewX(-12deg);
-	opacity: 0.9;
-}
-
-body.webinar-seo-podryadchik .page_scene::after {
-	bottom: -10%;
-	left: 0;
-	width: 40%;
-	height: 52%;
-	background: linear-gradient(35deg, rgba(255, 255, 255, 0.04), transparent 70%);
-	transform: skewX(-14deg);
-}
-
-body.webinar-seo-podryadchik .page_scene > .container {
-	position: relative;
-	z-index: 1;
-}
-
-body.webinar-seo-podryadchik .page_scene_inner {
-	align-items: center;
-	padding-top: 40px;
-	padding-bottom: 48px;
-	gap: 24px;
-}
-
-body.webinar-seo-podryadchik .webinar-hero__eyebrow {
+/* Yellow webinar label inside existing hero typography */
+body.webinar-seo-podryadchik .webinar-eyebrow {
 	display: block;
-	margin: 0 0 12px;
-	font-size: clamp(42px, 6vw, 72px);
-	line-height: 1.05;
-	font-weight: 800;
+	margin: 0 0 16px;
 	color: rgb(250, 204, 21);
-	letter-spacing: -0.02em;
-}
-
-body.webinar-seo-podryadchik .page_scene__description > h1 {
-	margin: 0 0 22px;
-	font-size: clamp(28px, 3.4vw, 44px);
+	font-size: 22px;
+	font-weight: 700;
 	line-height: 1.2;
-	font-weight: 700;
-	color: #ffffff;
-	max-width: 18ch;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
 }
 
-body.webinar-seo-podryadchik .webinar-hero__points-label {
-	display: block;
-	margin: 0 0 10px;
-	font-size: 16px;
-	line-height: 1.4;
-	color: rgba(255, 255, 255, 0.82);
-}
-
-body.webinar-seo-podryadchik .webinar-hero__points {
-	margin: 0 0 28px;
-	padding: 0;
-	list-style: none;
-	max-width: 520px;
-}
-
-body.webinar-seo-podryadchik .webinar-hero__points > li {
-	position: relative;
-	padding-left: 18px;
-	margin: 0 0 8px;
-	font-size: 15px;
-	line-height: 1.45;
-	color: rgba(255, 255, 255, 0.88);
-}
-
-body.webinar-seo-podryadchik .webinar-hero__points > li::before {
-	content: "—";
-	position: absolute;
-	left: 0;
-	top: 0;
-	color: rgb(250, 204, 21);
-}
-
-body.webinar-seo-podryadchik .webinar-hero__person {
-	margin: 0 0 22px;
-}
-
-body.webinar-seo-podryadchik .webinar-hero__person-name {
-	display: block;
-	font-size: 18px;
-	font-weight: 700;
-	color: #ffffff;
-	line-height: 1.3;
-}
-
-body.webinar-seo-podryadchik .webinar-hero__person-role {
-	display: block;
-	margin-top: 4px;
-	font-size: 14px;
-	line-height: 1.4;
-	color: rgba(161, 161, 170, 1);
-}
-
-body.webinar-seo-podryadchik .webinar-hero__meta {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 10px 18px;
-	margin: 0 0 28px;
-}
-
-body.webinar-seo-podryadchik .webinar-hero__meta-item {
-	display: inline-flex;
-	align-items: center;
-	gap: 8px;
-	padding: 8px 14px;
-	border: 1px solid rgba(250, 204, 21, 0.35);
-	background: rgba(255, 255, 255, 0.03);
-	border-radius: 4px;
-	font-size: 14px;
-	line-height: 1.3;
-	color: #ffffff;
-}
-
-body.webinar-seo-podryadchik .webinar-hero__meta-item strong {
-	color: rgb(250, 204, 21);
-	font-weight: 700;
-}
-
-body.webinar-seo-podryadchik .page_scene__btns {
-	align-items: center;
-}
-
+/* Nikita photo: match site hero proportions (not tiny) */
 body.webinar-seo-podryadchik .page_scene__info_wrap {
-	display: flex;
-	justify-content: center;
-	align-items: flex-end;
+	width: 88%;
 }
 
 body.webinar-seo-podryadchik .page_scene__info_wrap > img {
 	display: block;
 	width: 100%;
-	max-width: 420px;
 	height: auto;
+	margin-top: 0;
 	object-fit: contain;
-	filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.45));
+	object-position: center bottom;
 }
 
-body.webinar-seo-podryadchik .webinar-section {
-	padding: 56px 0;
-}
-
-body.webinar-seo-podryadchik .webinar-section--alt {
-	background: rgba(255, 255, 255, 0.02);
-	border-top: 1px solid rgba(255, 255, 255, 0.06);
-	border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-body.webinar-seo-podryadchik .webinar-section__title {
-	margin: 0 0 28px;
-	font-size: clamp(26px, 3vw, 36px);
-	line-height: 1.2;
-	font-weight: 700;
-	color: #ffffff;
-}
-
-body.webinar-seo-podryadchik .webinar-about__text {
-	max-width: 760px;
-	font-size: 17px;
-	line-height: 1.65;
-	color: rgba(255, 255, 255, 0.88);
-}
-
-body.webinar-seo-podryadchik .webinar-about__text p {
-	margin: 0 0 16px;
-}
-
-body.webinar-seo-podryadchik .webinar-about__text p:last-child {
-	margin-bottom: 0;
-}
-
-body.webinar-seo-podryadchik .webinar-list {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	display: grid;
-	gap: 14px;
-}
-
-body.webinar-seo-podryadchik .webinar-list > li {
-	position: relative;
-	padding: 18px 20px 18px 54px;
-	background: rgba(255, 255, 255, 0.03);
-	border: 1px solid rgba(255, 255, 255, 0.08);
-	border-radius: 6px;
-	font-size: 16px;
-	line-height: 1.5;
-	color: rgba(255, 255, 255, 0.9);
-}
-
-body.webinar-seo-podryadchik .webinar-list > li::before {
-	content: "";
-	position: absolute;
-	left: 18px;
-	top: 22px;
-	width: 18px;
-	height: 18px;
-	border-radius: 50%;
-	background: rgb(250, 204, 21);
-	box-shadow: inset 0 0 0 4px #050505;
-}
-
-body.webinar-seo-podryadchik .webinar-facts {
-	display: grid;
-	grid-template-columns: repeat(4, minmax(0, 1fr));
-	gap: 14px;
-}
-
-body.webinar-seo-podryadchik .webinar-facts__item {
-	padding: 22px 18px;
-	background: rgba(255, 255, 255, 0.03);
-	border: 1px solid rgba(250, 204, 21, 0.28);
-	border-radius: 6px;
-}
-
-body.webinar-seo-podryadchik .webinar-facts__label {
-	display: block;
-	margin-bottom: 8px;
-	font-size: 13px;
-	line-height: 1.3;
-	letter-spacing: 0.04em;
-	text-transform: uppercase;
-	color: rgba(161, 161, 170, 1);
-}
-
-body.webinar-seo-podryadchik .webinar-facts__value {
-	display: block;
-	font-size: 18px;
-	line-height: 1.35;
-	font-weight: 700;
-	color: #ffffff;
-}
-
-body.webinar-seo-podryadchik .webinar-register {
-	scroll-margin-top: 90px;
-}
-
-body.webinar-seo-podryadchik .webinar-register__lead {
-	margin: 0 0 28px;
-	max-width: 640px;
-	font-size: 16px;
-	line-height: 1.55;
-	color: rgba(255, 255, 255, 0.82);
-}
-
-body.webinar-seo-podryadchik .webinar-register__grid {
-	display: grid;
-	grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-	gap: 28px;
-	align-items: start;
-}
-
-body.webinar-seo-podryadchik .webinar-register__form-wrap {
-	padding: 28px 24px;
-	background: rgba(255, 255, 255, 0.04);
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	border-radius: 8px;
-}
-
-body.webinar-seo-podryadchik .webinar-register__form-title {
-	margin: 0 0 18px;
-	font-size: 18px;
-	line-height: 1.35;
-	font-weight: 700;
-	color: #ffffff;
-}
-
-body.webinar-seo-podryadchik #page__FORM_seo > div {
-	margin-bottom: 14px;
-}
-
-body.webinar-seo-podryadchik #page__FORM_seo input[type="text"],
-body.webinar-seo-podryadchik #page__FORM_seo textarea {
-	display: block;
-	width: 100%;
-	box-sizing: border-box;
-	padding: 16px 18px;
-	border: 1px solid rgba(255, 255, 255, 0.14);
-	border-radius: 4px;
-	background: rgba(0, 0, 0, 0.35);
-	color: #ffffff;
-	font: inherit;
-	font-size: 15px;
-	line-height: 1.4;
-}
-
-body.webinar-seo-podryadchik #page__FORM_seo textarea {
-	min-height: 96px;
-	resize: vertical;
-}
-
-body.webinar-seo-podryadchik #page__FORM_seo input.error,
-body.webinar-seo-podryadchik #page__FORM_seo textarea.error {
-	border-color: #ef4444;
-}
-
-body.webinar-seo-podryadchik #page__FORM_seo .form_agree__wrap {
+/* Facts row: reuse .achievement_block without owl carousel */
+body.webinar-seo-podryadchik .webinar-facts-grid {
 	display: flex;
-	align-items: flex-start;
-	gap: 12px;
-	margin-top: 8px;
-	margin-bottom: 18px;
+	flex-wrap: wrap;
+	gap: 20px;
 }
 
-body.webinar-seo-podryadchik #page__FORM_seo .form_agree__wrap label {
-	font-size: 13px;
-	line-height: 1.45;
-	color: rgba(255, 255, 255, 0.78);
+body.webinar-seo-podryadchik .webinar-facts-grid .achievement_block {
+	flex: 1 1 200px;
+	max-width: 100%;
+	box-sizing: border-box;
 }
 
-body.webinar-seo-podryadchik #page__FORM_seo .form_agree__wrap a {
-	color: rgb(250, 204, 21);
-	text-decoration: underline;
+body.webinar-seo-podryadchik .webinar-facts-grid .achievement_block > div {
+	font-size: 22px;
+	line-height: 1.2;
 }
 
-body.webinar-seo-podryadchik #page__FORM_send_seo {
-	display: inline-block;
-	min-width: 220px;
-	height: 56px;
-	padding: 0 28px;
-	border: 0;
-	border-radius: 4px;
-	background: rgb(250, 204, 21);
-	color: #111111;
-	font: inherit;
-	font-size: 16px;
-	font-weight: 700;
-	line-height: 56px;
-	cursor: pointer;
-	transition: filter 0.2s ease, transform 0.2s ease;
-}
-
-body.webinar-seo-podryadchik #page__FORM_send_seo:hover,
-body.webinar-seo-podryadchik #page__FORM_send_seo:focus-visible {
-	filter: brightness(1.05);
-}
-
-body.webinar-seo-podryadchik .webinar-register__note {
-	margin: 0;
-	font-size: 15px;
-	line-height: 1.55;
-	color: rgba(255, 255, 255, 0.72);
-}
-
-body.webinar-seo-podryadchik .webinar-register__note strong {
-	color: rgb(250, 204, 21);
-}
-
-/* Override media.css `.page_scene__info { display: none }` (<=990px) for this campaign page. */
+/* Override media.css `.page_scene__info { display: none }` so Nikita stays visible on mobile */
 @media (max-width: 990px) {
 	body.webinar-seo-podryadchik .page_scene__info {
 		display: flex !important;
 		width: 100%;
-		flex-flow: column;
-		align-items: center;
-		order: -1;
-	}
-
-	body.webinar-seo-podryadchik .page_scene__info_wrap {
-		display: flex;
 		justify-content: center;
-		width: 100%;
-	}
-}
-
-@media (max-width: 1199px) {
-	body.webinar-seo-podryadchik .page_scene_inner {
-		flex-wrap: wrap;
+		order: 2;
+		margin-top: 24px;
 	}
 
 	body.webinar-seo-podryadchik .page_scene__description {
 		width: 100%;
-		max-width: 100%;
+		order: 1;
 	}
 
-	body.webinar-seo-podryadchik .page_scene__info {
-		width: 100%;
-		order: -1;
-	}
-
-	body.webinar-seo-podryadchik .page_scene__info_wrap > img {
-		max-width: 280px;
-	}
-
-	body.webinar-seo-podryadchik .page_scene__description > h1 {
-		max-width: none;
-	}
-
-	body.webinar-seo-podryadchik .webinar-register__grid {
-		grid-template-columns: 1fr;
-	}
-
-	body.webinar-seo-podryadchik .webinar-facts {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-	}
-}
-
-@media (max-width: 767px) {
-	body.webinar-seo-podryadchik .webinar-hero__eyebrow {
-		font-size: 40px;
-	}
-
-	body.webinar-seo-podryadchik .page_scene__info_wrap > img {
-		max-width: 220px;
-	}
-
-	body.webinar-seo-podryadchik .webinar-facts {
-		grid-template-columns: 1fr;
-	}
-
-	body.webinar-seo-podryadchik .webinar-section {
-		padding: 40px 0;
-	}
-
-	body.webinar-seo-podryadchik #page__FORM_send_seo {
-		width: 100%;
-		min-width: 0;
-		text-align: center;
-	}
-}
-
-@media (max-height: 700px) and (min-width: 1025px) {
 	body.webinar-seo-podryadchik .page_scene_inner {
-		padding-top: 24px;
-		padding-bottom: 28px;
+		flex-wrap: wrap;
 	}
 
-	body.webinar-seo-podryadchik .webinar-hero__eyebrow {
-		font-size: 48px;
+	body.webinar-seo-podryadchik .page_scene__info_wrap {
+		width: 70%;
+		max-width: 360px;
 	}
 
-	body.webinar-seo-podryadchik .page_scene__description > h1 {
-		font-size: 30px;
-		margin-bottom: 14px;
+	body.webinar-seo-podryadchik .webinar-eyebrow {
+		font-size: 18px;
 	}
+}
 
-	body.webinar-seo-podryadchik .webinar-hero__points {
-		margin-bottom: 16px;
-	}
-
-	body.webinar-seo-podryadchik .webinar-hero__meta {
-		margin-bottom: 18px;
-	}
-
-	body.webinar-seo-podryadchik .page_scene__info_wrap > img {
+@media (max-width: 580px) {
+	body.webinar-seo-podryadchik .page_scene__info_wrap {
+		width: 85%;
 		max-width: 320px;
 	}
 }
