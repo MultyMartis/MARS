@@ -73,9 +73,35 @@
 
 ---
 
+### 4. NICHE SEO PAGES ×7 + SERVICES SEO HUB + SITEMAP
+
+**Status:** **COMPLETE** (2026-09-04) — evidence `ISEO-SU-NICHE-PAGES-WAVE-04-EVIDENCE-v1.md`
+
+| Field | Value |
+|-------|-------|
+| **Scope** | 7 static niche SEO pages cloned from `prodvizhenie-avtomobilnogo-sajta.html`; hub `services/seo.html` +7 niche links; static sitemap **132 → 139**; Pitomnik case → Maltipoo Honey Club |
+| **Decisions used** | Approved content mapping only (title/description/H1/intro/breadcrumb); self-canonical; indexable; consent baseline preserved |
+| **Production mutation type** | 7 new HTML + hub update + regenerated `sitemap-static.xml` |
+| **Validation requirements** | 7× HTTP 200; content/breadcrumb exact; self-canonical 7/7; hub 31→38; sitemap completeness PASS; consent regression NONE |
+| **Rollback expectation** | Restore hub + sitemap from `_niche-pages-wave-04` backup; delete 7 new pages |
+| **Documentation expected** | Wave REPORT + evidence + RU closeout |
+| **Stop condition** | WAVE 4 closed; do not start unrelated SEO-review backlog |
+
+**Target URLs:**
+
+- `/services/seo/prodvizhenie-sajta-pitomnika.html`
+- `/services/seo/prodvizhenie-sajta-smi.html`
+- `/services/seo/prodvizhenie-sajta-restorana.html`
+- `/services/seo/prodvizhenie-internet-magazina-zapchastej.html`
+- `/services/seo/prodvizhenie-sajta-internet-provajdera.html`
+- `/services/seo/prodvizhenie-internet-magazina-kosmetiki.html`
+- `/services/seo/prodvizhenie-internet-magazina-czvetov.html`
+
+---
+
 ## Cross-cutting rules
 
-1. Order locked: **1 → 2 → 3** unless operator overrides.
+1. Order locked: **1 → 2 → 3 → 4** unless operator overrides.
 2. Each wave needs its own exact charter + backup + REPORT.
 3. SEO review backlog (CANON-*, TITLE-*, META-*, etc.) is **out of scope** for this roadmap.
 4. Registration of this roadmap does **not** authorize production mutations.

@@ -330,6 +330,20 @@ Production mutations in this registration: **0** at registration time. **WAVE 1 
 
 ---
 
+### Niche Pages WAVE 04 (2026-09-04) — CURRENT / COMPLETE
+
+| Artifact | Path | Class |
+|----------|------|-------|
+| WAVE 04 evidence | `ISEO-SU-NICHE-PAGES-WAVE-04-EVIDENCE-v1.md` | CURRENT / CANONICAL |
+| Task REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-NICHE-PAGES-WAVE-04.md` | CURRENT |
+| Russian closeout | `reports/ISEO-SU-NICHE-PAGES-WAVE-04-RU.md` | CURRENT |
+| 7 niche pages (source) | `production-source/static-html/services/seo/prodvizhenie-sajta-pitomnika.html` (+6 siblings) | CURRENT |
+| SEO hub | `production-source/static-html/services/seo.html` | CURRENT |
+| Static sitemap | **139** URLs (132 → 139) | CURRENT |
+| Deploy validate JSON | `tools/_wave04_deploy_validate.json` | EVIDENCE |
+
+---
+
 ## Explicit non-artifacts and security signal
 
 This documentation wave introduced no token, password, cookie, session value, DB dump, Localhost mirror, unredacted production dump, or active `_*-scratch/` tree.
