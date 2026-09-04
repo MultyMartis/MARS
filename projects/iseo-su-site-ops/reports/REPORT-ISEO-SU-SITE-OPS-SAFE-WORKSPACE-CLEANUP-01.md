@@ -142,7 +142,7 @@ Project hygiene: no disposable project file deletions this task (probe `_pilot01
 
 ## 8. Locked Residuals
 
-**None.** All intended removals completed without Windows lock escalation. Class `SAFE_RESIDUAL_LOCKED`: 0.
+During docs closeout, `git worktree remove --force` on `X:\AI MARS STORAGE\git-sync-iseo-su-workspace-cleanup-01\repo` briefly left an unregistered empty physical residual (`Permission denied`). Classified `SAFE_RESIDUAL_LOCKED`, then cleared on retry (`rmdir`); parent folder gone. **Final locked residuals: 0.**
 
 ---
 
@@ -189,7 +189,8 @@ Retained temp after: form-consent (~3.06 GB) + tech-repair (~3.08 GB).
 | Check | Result |
 |-------|--------|
 | Canonical project path intact | YES |
-| Remote tip unchanged | `d2759f6aed738936d69db0a5f0637be16d817775` |
+| Remote tip before cleanup | `d2759f6aed738936d69db0a5f0637be16d817775` |
+| Remote tip after docs FF push | `682ae690ebdf1b7b9b6bfe160d5ef0efc97efe42` |
 | Form-consent still registered | YES |
 | Tech-repair still on disk | YES |
 | Evidence / archive / production rollback | YES |
@@ -225,7 +226,7 @@ COMPLETE — ISEO-SU PROJECT-SCOPED WORKSPACE CLEANUP / SAFE TEMP CONTOURS REMOV
 PROJECT: ISEO-SU-SITE-OPS
 CANONICAL PROJECT PATH: X:\AI MARS\projects\iseo-su-site-ops\
 CANONICAL REMOTE TIP BEFORE: d2759f6aed738936d69db0a5f0637be16d817775
-CANONICAL REMOTE TIP AFTER:  d2759f6aed738936d69db0a5f0637be16d817775
+CANONICAL REMOTE TIP AFTER:  682ae690ebdf1b7b9b6bfe160d5ef0efc97efe42
 
 ISEO CLEANUP CANDIDATES FOUND: 15
 SAFE TEMP SYNC CLONES: 8
@@ -259,5 +260,5 @@ TEMP STORAGE SIZE BEFORE: 29845382270 (~27.80 GB)
 TEMP STORAGE SIZE AFTER:  6593064667 (~6.14 GB)
 SPACE RECLAIMED:          23252317603 (~21.66 GB)
 
-REMOTE SYNC: docs commit/push via git-sync-iseo-su-workspace-cleanup-01 (see closeout)
+REMOTE SYNC: FF push OK — d2759f6a..682ae690 (docs(iseo-su): record safe workspace cleanup); cleanup sync worktree removed (no residual)
 ```
