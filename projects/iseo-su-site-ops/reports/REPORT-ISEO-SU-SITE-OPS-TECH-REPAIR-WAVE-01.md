@@ -142,11 +142,10 @@ TITLE / DESCRIPTION / H1 / CANONICAL / ROBOTS / SITEMAP / MENU-NAVIGATION: **NO*
 
 ## 16. Git Persistence
 
-Scoped commit via Storage clone (`X:\AI MARS STORAGE\git-sync-iseo-su-tech-seo-reaudit-02\repo`) from `origin/mars/canonical-post-recovery` @ `5add8c2a`.
+Scoped commits via Storage clone (`X:\AI MARS STORAGE\git-sync-iseo-su-tech-seo-reaudit-02\repo`) from `origin/mars/canonical-post-recovery` @ `5add8c2a`.
 
-- Commit: `87204916d6c5c8deddfe149667f15a3254dd81f4`
-- Message: `fix(iseo-su): repair blog author css and stale logo asset reference`
-- Allowlist: 12 paths only
+1. `87204916` — `fix(iseo-su): repair blog author css and stale logo asset reference` (12 paths)
+2. `b98aced0` — `docs(iseo-su): stamp tech repair wave 01 remote tip` (2 paths)
 
 No `git add .` / `-A` / force push. Foreign WIP untouched on main workspace.
 
@@ -154,9 +153,9 @@ No `git add .` / `-A` / force push. Foreign WIP untouched on main workspace.
 
 ## 17. Remote Sync
 
-Fast-forward push (no force): `5add8c2a` → `87204916` on `origin/mars/canonical-post-recovery`.
+Fast-forward push (no force): `5add8c2a` → `87204916` → `b98aced0` on `origin/mars/canonical-post-recovery`.
 
-**Remote tip verified:** `87204916d6c5c8deddfe149667f15a3254dd81f4`
+**Remote tip verified:** `b98aced0985aa0eeb67b4c03762284fbc484096d`
 
 ---
 
