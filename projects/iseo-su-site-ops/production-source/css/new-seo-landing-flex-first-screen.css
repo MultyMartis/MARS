@@ -1,0 +1,22 @@
+/**
+ * ISEO-SU-NEW-SEO-LANDINGS-SMALL-HEIGHT-OVERLAP-ROLLOUT-01
+ *
+ * Shared first-screen height safety for the 14 new SEO landings
+ * (5 city + 7 niche + 2 USA/UAE).
+ *
+ * Root cause: shared `.page_scene_inner { height: 100vh }` caps layout
+ * height while longer approved intro copy overflows; `#SecondScreen`
+ * then starts in normal document flow and visually overlaps overflow.
+ *
+ * Fix: allow the first screen to grow with content while keeping a
+ * full-viewport floor on tall screens. Scoped via body class so legacy
+ * / control pages that still rely on fixed 100vh remain unchanged.
+ *
+ * Supersedes: city-seo-novosibirsk-height-pilot.css (pilot retired).
+ */
+
+body.new-seo-landing-flex-first-screen .page_scene_inner {
+	height: auto;
+	min-height: 100vh;
+	position: relative;
+}
