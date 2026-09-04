@@ -373,6 +373,27 @@ Production mutations in this registration: **0** at registration time. **WAVE 1 
 
 ---
 
+### Webinar landing WEBINAR-LANDING-01 (2026-09-04) — CURRENT / COMPLETE
+
+| Artifact | Path | Class |
+|----------|------|-------|
+| Evidence | `ISEO-SU-WEBINAR-LANDING-01-EVIDENCE-v1.md` | CURRENT / CANONICAL |
+| Task REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-WEBINAR-LANDING-01.md` | CURRENT |
+| Russian closeout | `reports/ISEO-SU-WEBINAR-LANDING-01-RU.md` | CURRENT |
+| Page (source) | `production-source/static-html/webinar-seo-podryadchik.html` | CURRENT |
+| Scoped CSS | `production-source/css/webinar-seo-podryadchik.css` | CURRENT |
+| Live URL | `https://i-seo.su/webinar-seo-podryadchik.html` | CURRENT |
+| Nikita asset | `/img/iSEO_Boss.png` (existing; not generated) | CURRENT |
+| Form family | `page` → `/page__FORM.php` | CURRENT |
+| Menu / sitemap | **NO** / **NO** (static sitemap **139** unchanged) | CURRENT |
+| Screenshots | `evidence/webinar-landing-01/screenshots/20260904T064652Z/` | EVIDENCE |
+| Viewport QA JSON | `evidence/webinar-landing-01/_viewport_qa_latest.json` | EVIDENCE |
+| Deploy tool | `tools/_webinar-landing-01-backup-deploy-validate.py` | HELPER |
+| Screenshots tool | `tools/_webinar-landing-01-screenshots.py` | HELPER |
+| Production backup | `local/sites/iseo-su-production/_webinar-landing-01/` | BACKUP |
+
+---
+
 ## Explicit non-artifacts and security signal
 
 This documentation wave introduced no token, password, cookie, session value, DB dump, Localhost mirror, unredacted production dump, or active `_*-scratch/` tree.
