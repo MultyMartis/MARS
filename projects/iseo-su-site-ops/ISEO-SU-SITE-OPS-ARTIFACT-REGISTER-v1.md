@@ -424,6 +424,25 @@ Production mutations in this registration: **0** at registration time. **WAVE 1 
 
 ---
 
+## TECH REPAIR WAVE 01 (2026-09-04) — COMPLETE
+
+| Artifact | Path | Role |
+|----------|------|------|
+| Evidence | `ISEO-SU-TECH-REPAIR-WAVE-01-EVIDENCE-v1.md` | EVIDENCE |
+| Main REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-TECH-REPAIR-WAVE-01.md` | REPORT |
+| RU closeout | `reports/ISEO-SU-TECH-REPAIR-WAVE-01-RU.md` | REPORT (RU) |
+| Source CSS fix | `production-source/theme/iseoblog/page-home.php` | SOURCE |
+| Source logo fix | `production-source/static-html/blog.html` | SOURCE |
+| Deploy/validate tool | `tools/_wave_tech_repair_01_backup_deploy_validate.py` | TOOL |
+| Deploy/validate JSON | `tools/_wave_tech_repair_01_deploy_validate.json` | EVIDENCE |
+| Recrawl tool | `tools/_wave_tech_repair_01_recrawl.py` | TOOL |
+| Recrawl JSON | `tools/_wave_tech_repair_01_recrawl.json` | EVIDENCE |
+| Production backup | `X:\AI MARS\local\sites\iseo-su-production\_tech-repair-wave-01\20260904T155608Z\` | BACKUP (out of git) |
+| Logo fix model | **A** (stale ref → `/img/logo-intl.svg`) | DECISION |
+| SEO backlog / menu | **UNCHANGED** / Nikita deferred | POLICY |
+
+---
+
 ## Explicit non-artifacts and security signal
 
 This documentation wave introduced no token, password, cookie, session value, DB dump, Localhost mirror, unredacted production dump, or active `_*-scratch/` tree.

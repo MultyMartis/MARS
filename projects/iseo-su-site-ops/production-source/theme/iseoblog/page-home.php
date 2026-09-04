@@ -42,19 +42,19 @@ Template Name: Home
 
 	<meta property="og:image" content="/img/site-image.png">
 
-	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="/css/normalize.css">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="libs/owl/owl.carousel.min.css">
-	<link rel="stylesheet" href="libs/owl/owl.theme.default.min.css">
+	<link rel="stylesheet" href="/libs/owl/owl.carousel.min.css">
+	<link rel="stylesheet" href="/libs/owl/owl.theme.default.min.css">
 
-	<link rel="stylesheet" href="libs/fancybox/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="/libs/fancybox/jquery.fancybox.min.css">
 
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/media.css">
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/media.css">
 
 	<!--  LPTracker code start -->
 	<script type="text/javascript">
