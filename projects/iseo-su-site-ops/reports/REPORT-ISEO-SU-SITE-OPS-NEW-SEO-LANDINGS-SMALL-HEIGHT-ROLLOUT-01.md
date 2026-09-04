@@ -136,13 +136,21 @@ PRODUCTION/SOURCE ALIGNED: **YES**
 
 ## 23. Git Persistence
 
-Scoped commits via STORAGE worktree (dirty main preserved). Subjects:
-- fix(iseo-su): prevent low-height overlap on new seo landings
-- docs(iseo-su): close seo landing height rollout
+Scoped commits via STORAGE worktree `X:\AI MARS STORAGE\git-sync-iseo-su-new-seo-height-rollout-01\repo` (dirty main / foreign WIP preserved).
+
+| Commit | Subject |
+|--------|---------|
+| `8cc261fd` | fix(iseo-su): prevent low-height overlap on new seo landings |
+| `e8d3c4b3` | docs(iseo-su): close seo landing height rollout |
 
 ## 24. Remote Sync
 
-Pending closeout wave — recorded after push.
+COMPLETE.
+
+- Pre-push origin tip: `3e9e065a`
+- FF push: `3e9e065a..e8d3c4b3` → `origin/mars/canonical-post-recovery`
+- Post-push origin tip: `e8d3c4b30e8e4d2eb3dad51121b65a76d382cddb`
+- Force push: NO
 
 ## 25. Final Decision
 
