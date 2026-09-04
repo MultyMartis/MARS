@@ -109,7 +109,7 @@ BROKEN ASSETS: 0
 JS ERRORS: 0
 
 PRODUCTION/SOURCE ALIGNED: YES
-REMOTE SYNC: COMPLETE (or see Storage sync closeout below)
+REMOTE SYNC: COMPLETE
 ```
 
 ## 7. Supersession
@@ -118,8 +118,13 @@ REMOTE SYNC: COMPLETE (or see Storage sync closeout below)
 
 ## 8. Git
 
-Scoped Storage sync only. Suggested message:
+| Item | Value |
+|------|--------|
+| Worktree | `X:\AI MARS STORAGE\git-sync-iseo-su-webinar-rebuild-01\repo` |
+| Message | `fix(iseo-su): rebuild webinar landing on existing site template` |
+| Feature commit | `6db015261bf5a4a6162f233e2ecdcd940693b0bb` |
+| FF push | `45fb8d68..6db01526` → `origin/mars/canonical-post-recovery` |
+| Force push | **NO** |
+| REMOTE SYNC | **COMPLETE** |
 
-`fix(iseo-su): rebuild webinar landing on existing site template`
-
-No force push. Foreign WIP preserved on main workspace.
+Foreign WIP preserved on main workspace.

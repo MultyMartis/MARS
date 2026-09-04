@@ -163,7 +163,9 @@ Screenshots produced:
 | Worktree | `X:\AI MARS STORAGE\git-sync-iseo-su-webinar-rebuild-01\repo` |
 | Message | `fix(iseo-su): rebuild webinar landing on existing site template` |
 | Force push | **NO** |
-| REMOTE SYNC | see REPORT closeout |
+| Feature commit | `6db015261bf5a4a6162f233e2ecdcd940693b0bb` |
+| Origin tip after FF push | `6db015261bf5a4a6162f233e2ecdcd940693b0bb` |
+| REMOTE SYNC | **COMPLETE** |
 
 ## 13. Historical supersession
 
