@@ -204,4 +204,6 @@ exact backup files for `page-home.php` and `blog.html` via scoped SFTP overwrite
 
 **COMPLETE — ISEO-SU TECH REPAIR WAVE 01 / BLOG AUTHOR CSS FIXED / LOGO 404 RESOLVED / SEO BACKLOG UNTOUCHED**
 
+Scoped Git: commit `87204916` on `origin/mars/canonical-post-recovery` (fast-forward from `5add8c2a`).
+
 STOP after docs + scoped Git sync. Do not start canonical/title/meta/alt/OG/menu work.

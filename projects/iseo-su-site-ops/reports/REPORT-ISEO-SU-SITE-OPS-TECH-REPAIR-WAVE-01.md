@@ -142,9 +142,11 @@ TITLE / DESCRIPTION / H1 / CANONICAL / ROBOTS / SITEMAP / MENU-NAVIGATION: **NO*
 
 ## 16. Git Persistence
 
-Scoped commit via Storage clone from `origin/mars/canonical-post-recovery` @ `5add8c2a`. Message:
+Scoped commit via Storage clone (`X:\AI MARS STORAGE\git-sync-iseo-su-tech-seo-reaudit-02\repo`) from `origin/mars/canonical-post-recovery` @ `5add8c2a`.
 
-`fix(iseo-su): repair blog author css and stale logo asset reference`
+- Commit: `87204916d6c5c8deddfe149667f15a3254dd81f4`
+- Message: `fix(iseo-su): repair blog author css and stale logo asset reference`
+- Allowlist: 12 paths only
 
 No `git add .` / `-A` / force push. Foreign WIP untouched on main workspace.
 
@@ -152,7 +154,9 @@ No `git add .` / `-A` / force push. Foreign WIP untouched on main workspace.
 
 ## 17. Remote Sync
 
-Push of Storage clone branch to `origin/mars/canonical-post-recovery` (fast-forward / no force). See closeout HARD CHECK for final tip.
+Fast-forward push (no force): `5add8c2a` → `87204916` on `origin/mars/canonical-post-recovery`.
+
+**Remote tip verified:** `87204916d6c5c8deddfe149667f15a3254dd81f4`
 
 ---
 
