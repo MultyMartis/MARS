@@ -1,9 +1,10 @@
 <?php
 /**
- * BZPM M9 Phase 1 — filter profile: Столы (category 301).
+ * BZPM M9 — filter profile: Столы (category 301).
+ * Refresh: SITE-002-PROD-M9-STOLY-PROFILE-301-REFRESH-01
+ * Delta: attr 33 (Тип опоры, single distinct value) moved PRIMARY → SECONDARY.
  *
  * Scope: branch root 301 and descendants only.
- * Future profiles (80, 322, 207) follow the same schema in sibling files.
  */
 return array(
 	'profile_id' => 301,
@@ -13,19 +14,18 @@ return array(
 	'primary_attribute_ids' => array(
 		22, // Материал столешницы
 		51, // Конструкция полки
-		33, // Тип опоры
 		20, // Макс. нагрузка (до, кг)
 		25, // Наличие борта
 	),
 	'primary_sort' => array(
 		22 => 10,
 		51 => 20,
-		33 => 30,
-		20 => 40,
-		25 => 50,
+		20 => 30,
+		25 => 40,
 	),
 	'secondary_attribute_ids' => array(
 		21,  // Конструкция
+		33,  // Тип опоры (single value — demoted from PRIMARY)
 		112, // Материал полки
 		26,  // Ножки
 		31,  // Регулируемость опоры по высоте (max мм)
@@ -35,6 +35,7 @@ return array(
 	),
 	'secondary_sort' => array(
 		21 => 10,
+		33 => 15,
 		112 => 20,
 		26 => 30,
 		31 => 40,

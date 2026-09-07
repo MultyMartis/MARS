@@ -2,7 +2,7 @@
 
 /**
 
- * BZPM M9 — category filter profile resolver (Phase 3: profiles 80, 207, 301, 322, 326).
+ * BZPM M9 — category filter profile resolver (Phase 3+: profiles 80, 86, 207, 301, 322, 326, 331, 186).
 
  *
 
@@ -18,25 +18,20 @@ class FilterProfileResolver {
 
 	const TIER_HIDDEN = 'HIDDEN';
 
-
-
 	/** @var object|null */
 
 	private $db;
 
-
-
 	/** @var int[] */
 
-	private $registered_branch_roots = array(80, 207, 301, 322, 326);
-
-
+	private $registered_branch_roots = array(80, 86, 207, 301, 322, 326, 331, 186);
 
 	/** @var array<int,string> */
 
 	private $profile_file_map = array(
 
 		80 => '80_moechnye_vanny.php',
+		86 => '86_stellazhi.php',
 
 		207 => '207_zonty.php',
 
@@ -46,23 +41,18 @@ class FilterProfileResolver {
 
 		326 => '326_telezhki.php',
 
-	);
-
-
+	331 => '331_polki.php',
+	186 => '186_hlebopekarnoe.php');
 
 	/** @var array|null */
 
 	private $global_hidden_ids;
-
-
 
 	public function __construct($db = null) {
 
 		$this->db = $db;
 
 	}
-
-
 
 	/**
 
@@ -78,13 +68,9 @@ class FilterProfileResolver {
 
 		}
 
-
-
 		return $this->global_hidden_ids;
 
 	}
-
-
 
 	/**
 
@@ -102,21 +88,15 @@ class FilterProfileResolver {
 
 		$profile_id = $this->findActiveProfileId((int)$category_id);
 
-
-
 		if (!$profile_id) {
 
 			return null;
 
 		}
 
-
-
 		return $this->loadProfile($profile_id);
 
 	}
-
-
 
 	/**
 
@@ -130,15 +110,11 @@ class FilterProfileResolver {
 
 		$category_id = (int)$category_id;
 
-
-
 		if ($category_id <= 0) {
 
 			return null;
 
 		}
-
-
 
 		foreach ($this->registered_branch_roots as $root_id) {
 
@@ -148,8 +124,6 @@ class FilterProfileResolver {
 
 			}
 
-
-
 			if ($this->db && $this->isUnderBranchRoot($category_id, (int)$root_id)) {
 
 				return (int)$root_id;
@@ -158,13 +132,9 @@ class FilterProfileResolver {
 
 		}
 
-
-
 		return null;
 
 	}
-
-
 
 	/**
 
@@ -186,13 +156,9 @@ class FilterProfileResolver {
 
 		);
 
-
-
 		return !empty($query->row['total']);
 
 	}
-
-
 
 	/**
 
@@ -206,19 +172,13 @@ class FilterProfileResolver {
 
 		$profile_id = (int)$profile_id;
 
-
-
 		if (!isset($this->profile_file_map[$profile_id])) {
 
 			return null;
 
 		}
 
-
-
 		$file = DIR_SYSTEM . 'library/zpm/filter_profiles/' . $this->profile_file_map[$profile_id];
-
-
 
 		if (!is_file($file)) {
 
@@ -226,19 +186,13 @@ class FilterProfileResolver {
 
 		}
 
-
-
 		$profile = require($file);
 
 		$profile['hidden_global_ids'] = $this->getGlobalHiddenIds();
 
-
-
 		return $profile;
 
 	}
-
-
 
 	/**
 
@@ -262,8 +216,6 @@ class FilterProfileResolver {
 
 		);
 
-
-
 		// Branch allowlist wins over global hidden (INH-04 — e.g. attr 34 on zonty).
 
 		if (in_array($attribute_id, $allowed, true)) {
@@ -271,8 +223,6 @@ class FilterProfileResolver {
 			return false;
 
 		}
-
-
 
 		$hidden = array_merge(
 
@@ -282,21 +232,15 @@ class FilterProfileResolver {
 
 		);
 
-
-
 		if (in_array($attribute_id, $hidden, true)) {
 
 			return true;
 
 		}
 
-
-
 		return true;
 
 	}
-
-
 
 	/**
 
@@ -312,15 +256,11 @@ class FilterProfileResolver {
 
 		$attribute_id = (int)$attribute_id;
 
-
-
 		if ($this->isHiddenAttribute($profile, $attribute_id)) {
 
 			return null;
 
 		}
-
-
 
 		if (in_array($attribute_id, (array)$profile['primary_attribute_ids'], true)) {
 
@@ -328,21 +268,15 @@ class FilterProfileResolver {
 
 		}
 
-
-
 		if (in_array($attribute_id, (array)$profile['secondary_attribute_ids'], true)) {
 
 			return self::TIER_SECONDARY;
 
 		}
 
-
-
 		return null;
 
 	}
-
-
 
 	/**
 
@@ -358,15 +292,11 @@ class FilterProfileResolver {
 
 		$attribute_id = (int)$attribute_id;
 
-
-
 		if ($tier === self::TIER_PRIMARY && !empty($profile['primary_sort'][$attribute_id])) {
 
 			return (int)$profile['primary_sort'][$attribute_id];
 
 		}
-
-
 
 		if ($tier === self::TIER_SECONDARY && !empty($profile['secondary_sort'][$attribute_id])) {
 
@@ -374,13 +304,9 @@ class FilterProfileResolver {
 
 		}
 
-
-
 		return 999;
 
 	}
-
-
 
 	/**
 
@@ -400,23 +326,17 @@ class FilterProfileResolver {
 
 		$filtered = array();
 
-
-
 		foreach ($attribute_data as $key => $attribute) {
 
 			$attribute_id = (int)$attribute['attribute_id'];
 
 			$tier = $this->getAttributeTier($profile, $attribute_id);
 
-
-
 			if ($tier === null) {
 
 				continue;
 
 			}
-
-
 
 			$attribute['tier'] = $tier;
 
@@ -425,8 +345,6 @@ class FilterProfileResolver {
 			$filtered[$key] = $attribute;
 
 		}
-
-
 
 		uasort($filtered, function ($a, $b) {
 
@@ -442,21 +360,15 @@ class FilterProfileResolver {
 
 			$b_tier = isset($tier_order[$b['tier']]) ? $tier_order[$b['tier']] : 9;
 
-
-
 			if ($a_tier !== $b_tier) {
 
 				return $a_tier - $b_tier;
 
 			}
 
-
-
 			$a_sort = isset($a['sort_order']) ? (int)$a['sort_order'] : 999;
 
 			$b_sort = isset($b['sort_order']) ? (int)$b['sort_order'] : 999;
-
-
 
 			if ($a_sort !== $b_sort) {
 
@@ -464,18 +376,13 @@ class FilterProfileResolver {
 
 			}
 
-
-
 			return strcmp((string)$a['name'], (string)$b['name']);
 
 		});
-
-
 
 		return $filtered;
 
 	}
 
 }
-
 
