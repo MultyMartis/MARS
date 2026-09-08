@@ -1,10 +1,10 @@
 <?php
 /**
  * SITE-002 — PDP hero specs family resolver
- * Operations: SITE-002-PROD-PDP-HERO-SPECS-STELLAZHI-86-01; SITE-002-PROD-PDP-HERO-SPECS-HLEBOPEKARNOE-186-01
+ * Operations: SITE-002-PROD-PDP-HERO-SPECS-STELLAZHI-86-01; SITE-002-PROD-PDP-HERO-SPECS-HLEBOPEKARNOE-186-01; SITE-002-POLKI-PDP-HERO-SPECS-GO1-BUILD-01
  *
  * Returns ordered attribute IDs for `.product-hero__specs` (after L/W/H/weight).
- * Family map for [86] Стеллажи and [186] Хлебопекарное; otherwise SUPER_ATTS fallback.
+ * Family map for [86] Стеллажи, [186] Хлебопекарное, and [331] Полки; otherwise SUPER_ATTS fallback.
  * Does not alter full characteristics table (attribute_groups).
  */
 class ProductHeroSpecsResolver
@@ -14,6 +14,9 @@ class ProductHeroSpecsResolver
 
 	/** Bakery equipment branch root category_id */
 	const FAMILY_ROOT_HLEBOPEKARNOE = 186;
+
+	/** Shelves branch root category_id */
+	const FAMILY_ROOT_POLKI = 331;
 
 	/**
 	 * Attribute IDs appended after product dimensions for [86] Стеллажи.
@@ -25,6 +28,8 @@ class ProductHeroSpecsResolver
 		86 => array(21, 114, 122, 26, 33),
 		// Объем, Мощность кВт, Напряжение, Кол-во скоростей, Загрузка сухого, Загрузка теста, об/мин, Реверс
 		186 => array(127, 135, 134, 130, 129, 128, 132, 137),
+		// [331] Полки: 51, 112, Конструкция, Макс. нагрузка на полку, Ножки, 123; omit 114. Optional 115 if filled.
+		331 => array(51, 112, 21, 122, 26, 123, 115),
 	);
 
 	/** @var object|null */
@@ -53,6 +58,10 @@ class ProductHeroSpecsResolver
 
 		if ($this->isBakeryProduct($product_id, $path_category_id)) {
 			return $this->family_attr_map[self::FAMILY_ROOT_HLEBOPEKARNOE];
+		}
+
+		if ($this->isPolkiProduct($product_id, $path_category_id)) {
+			return $this->family_attr_map[self::FAMILY_ROOT_POLKI];
 		}
 
 		if (defined('SUPER_ATTS') && is_array(SUPER_ATTS)) {
@@ -135,6 +144,36 @@ class ProductHeroSpecsResolver
 
 		return !empty($query->row['total']);
 	}
+
+	/**
+	 * @param int $product_id
+	 * @param int $path_category_id
+	 * @return bool
+	 */
+	private function isPolkiProduct($product_id, $path_category_id)
+	{
+		$root = self::FAMILY_ROOT_POLKI;
+
+		if ($path_category_id > 0 && $this->isUnderBranchRoot($path_category_id, $root)) {
+			return true;
+		}
+
+		if ($product_id <= 0 || !$this->db) {
+			return false;
+		}
+
+		$query = $this->db->query(
+			"SELECT COUNT(*) AS total"
+			. " FROM `" . DB_PREFIX . "product_to_category` pc"
+			. " INNER JOIN `" . DB_PREFIX . "category_path` cp"
+			. "   ON cp.category_id = pc.category_id"
+			. " WHERE pc.product_id = '" . (int)$product_id . "'"
+			. "   AND cp.path_id = '" . (int)$root . "'"
+		);
+
+		return !empty($query->row['total']);
+	}
+
 	private function isUnderBranchRoot($category_id, $root_id)
 	{
 		if (!$this->db || $category_id <= 0 || $root_id <= 0) {
