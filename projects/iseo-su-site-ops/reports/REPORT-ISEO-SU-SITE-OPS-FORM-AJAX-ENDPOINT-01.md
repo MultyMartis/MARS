@@ -90,7 +90,7 @@ CSS CHANGED: **NO**
 PRODUCTION/SOURCE ALIGNED: **YES** (live `common.js` SHA-256 `B6D1F7E9…` == working-tree canonical source)  
 UNRELATED JS REGRESSION: **NONE** (pre-existing console 409 noise unchanged)  
 FOREIGN WIP PRESERVED: **YES**  
-REMOTE SYNC: *(filled after push)*
+REMOTE SYNC: **COMPLETE** — no-force push onto `origin/mars/canonical-post-recovery`. Fix `1341440a`; docs SHA `2238cf5a`.
 
 ---
 
@@ -98,4 +98,6 @@ REMOTE SYNC: *(filled after push)*
 
 Worktree: `X:\AI MARS STORAGE\git-sync-iseo-su-form-ajax-endpoint-01\repo`  
 Base: `origin/mars/canonical-post-recovery` @ `af5ca48788dac2e4ef9ff96fb6a45197ae3f909d`  
+Fix: `1341440ac1e8381682273ff3392546b5afcd52ad` (`fix(iseo-su): use root-relative form endpoint`)  
+Docs: `2238cf5a538dec0882f7f2282b5ef730c05327f2` (`docs(iseo-su): audit form ajax endpoint resolution`)  
 Main workspace: dirty + 348 local-only commits; not used for this push.
