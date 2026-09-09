@@ -898,7 +898,7 @@ $(document).ready(function() {
 		$('.calculator_stage__errors').text('');
 	});
 	$('.calculator_stage__btns .submit').click(function(e){
-		e.preventDefault;		
+		e.preventDefault();
 		var isSelected = $('.calculator_stage:visible input[type="radio"]:checked').length;
 		var numSelect = $('.calculator_stage:visible input[type="radio"]').length;
 		if(!isSelected && numSelect) {
@@ -913,7 +913,7 @@ $(document).ready(function() {
             
             $.ajax({
                 type: 'POST',
-                url: 'calc__FORM.php',
+                url: '/calc__FORM.php',
                 data: $('[id^="calculator__FORM"]').serialize() + getPageAttrs(),
                 success: function(data) {
                     if(data == "true") {
@@ -1040,7 +1040,7 @@ $(".modalbox").fancybox();
                     
                     $.ajax({
                         type: 'POST',
-                        url: 'callback__FORM.php',
+                        url: '/callback__FORM.php',
                         data: $("#callback__FORM").serialize() + getPageAttrs(),
                         success: function(data) {
                             if(data == "true") {
@@ -1066,7 +1066,7 @@ $(".modalbox").fancybox();
                     
                     $.ajax({
                         type: 'POST',
-                        url: 'audit__FORM.php',
+                        url: '/audit__FORM.php',
                         data: $("#audit__FORM").serialize() + getPageAttrs(),
                         success: function(data) {
                             if(data == "true") {
@@ -1091,7 +1091,7 @@ $(".modalbox").fancybox();
                     
                     $.ajax({
                         type: 'POST',
-                        url: 'page__FORM.php',
+                        url: '/page__FORM.php',
                         data: $("#page__FORM").serialize() + getPageAttrs(),
                         success: function(data) {
                             if(data == "true") {
@@ -1121,7 +1121,7 @@ $("#callback__FORM_send_info").on("click", function(){
 		if($(this).attr('data-root')) root = true;
         $.ajax({
             type: 'POST',
-            url: root ? '/callback__FORM.php' : 'callback__FORM.php',
+            url: '/callback__FORM.php',
             data: $("#callback__FORM_info").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -1175,7 +1175,7 @@ $("#audit__FORM_send_info").on("click", function(){
             
         $.ajax({
             type: 'POST',
-            url: 'audit__FORM.php',
+            url: '/audit__FORM.php',
             data: $("#audit__FORM_info").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -1219,7 +1219,7 @@ $("#page__FORM_send_info").on("click", function(){
                     
                     $.ajax({
                         type: 'POST',
-                        url: 'bonus__FORM.php',
+                        url: '/bonus__FORM.php',
                         data: $("#bonus__FORM").serialize() + getPageAttrs(),
                         success: function(data) {
                             if(data == "true") {
@@ -1240,7 +1240,7 @@ $("#page__FORM_send_info").on("click", function(){
                     
                     $.ajax({
                         type: 'POST',
-                        url: 'bonus__FORM.php',
+                        url: '/bonus__FORM.php',
                         data: $("#bonus__FORM_seo").serialize() + getPageAttrs(),
                         success: function(data) {
                             if(data == "true") {
@@ -1264,7 +1264,7 @@ $("#page__FORM_send_info").on("click", function(){
                     
                     $.ajax({
                         type: 'POST',
-                        url: 'bonus__FORM.php',
+                        url: '/bonus__FORM.php',
                         data: $("#bonus__FORM_1").serialize() + getPageAttrs(),
                         success: function(data) {
                             if(data == "true") {
@@ -1288,7 +1288,7 @@ $("#page__FORM_send_info").on("click", function(){
                     
                     $.ajax({
                         type: 'POST',
-                        url: 'bonus__FORM.php',
+                        url: '/bonus__FORM.php',
                         data: $("#bonus__FORM_2").serialize() + getPageAttrs(),
                         success: function(data) {
                             if(data == "true") {
@@ -1312,7 +1312,7 @@ $("#page__FORM_send_info").on("click", function(){
                     
                     $.ajax({
                         type: 'POST',
-                        url: 'bonus__FORM.php',
+                        url: '/bonus__FORM.php',
                         data: $("#bonus__FORM_3").serialize() + getPageAttrs(),
                         success: function(data) {
                             if(data == "true") {
@@ -1336,7 +1336,7 @@ $("#page__FORM_send_info").on("click", function(){
                     
                     $.ajax({
                         type: 'POST',
-                        url: 'bonus__FORM.php',
+                        url: '/bonus__FORM.php',
                         data: $("#bonus__FORM_4").serialize() + getPageAttrs(),
                         success: function(data) {
                             if(data == "true") {
@@ -1360,7 +1360,7 @@ $("#page__FORM_send_info").on("click", function(){
                     
                     $.ajax({
                         type: 'POST',
-                        url: 'bonus__FORM.php',
+                        url: '/bonus__FORM.php',
                         data: $("#bonus__FORM_5").serialize() + getPageAttrs(),
                         success: function(data) {
                             if(data == "true") {
@@ -1384,7 +1384,7 @@ $("#page__FORM_send_info").on("click", function(){
                     
                     $.ajax({
                         type: 'POST',
-                        url: 'bonus__FORM.php',
+                        url: '/bonus__FORM.php',
                         data: $("#bonus__FORM_6").serialize() + getPageAttrs(),
                         success: function(data) {
                             if(data == "true") {
@@ -1407,11 +1407,32 @@ $("#page__FORM_send_info").on("click", function(){
                     
                     $.ajax({
                         type: 'POST',
-                        url: 'career__FORM.php',
+                        url: '/career__FORM.php',
                         data: $("#career__FORM").serialize() + getPageAttrs(),
                         success: function(data) {
                             if(data == "true") {
                                 $("#career__FORM").fadeOut("fast", function(){
+                                    $(this).before("<p>Успешно! Сообщение отправлено</p>");
+                                    ym(54287016, 'reachGoal', 'form_info');
+                                    setTimeout("$.fancybox.close()", 3000);
+                                });
+                            }
+                        }
+                    });
+				}
+            });
+
+            $("#career__FORM_send_info").on("click", function(){
+				if (checkEmptyFields($(this).closest('form')) === '0') {
+                    $("#career__FORM_send_info").replaceWith("<em>отправка...</em>");
+                    
+                    $.ajax({
+                        type: 'POST',
+                        url: '/career__FORM.php',
+                        data: $("#career__FORM_info").serialize() + getPageAttrs(),
+                        success: function(data) {
+                            if(data == "true") {
+                                $("#career__FORM_info").fadeOut("fast", function(){
                                     $(this).before("<p>Успешно! Сообщение отправлено</p>");
                                     ym(54287016, 'reachGoal', 'form_info');
                                     setTimeout("$.fancybox.close()", 3000);
@@ -1428,7 +1449,7 @@ $("#page__FORM_send_info").on("click", function(){
                     
                     $.ajax({
                         type: 'POST',
-                        url: 'review__FORM.php',
+                        url: '/review__FORM.php',
                         data: $("#review_page__FORM").serialize() + getPageAttrs(),
                         success: function(data) {
                             if(data == "true") {
@@ -1449,7 +1470,7 @@ $("#page__FORM_send_info").on("click", function(){
                     
                     $.ajax({
                         type: 'POST',
-                        url: 'review__FORM.php',
+                        url: '/review__FORM.php',
                         data: $("#review_page__FORM_info").serialize() + getPageAttrs(),
                         success: function(data) {
                             if(data == "true") {
@@ -1471,7 +1492,7 @@ $("#page__FORM_send_info").on("click", function(){
                     
                     $.ajax({
                         type: 'POST',
-                        url: 'review__FORM.php',
+                        url: '/review__FORM.php',
                         data: $("#review__FORM").serialize() + getPageAttrs(),
                         success: function(data) {
                             if(data == "true") {
@@ -1494,7 +1515,7 @@ $("#page__FORM_send_info").on("click", function(){
                     
                     $.ajax({
                         type: 'POST',
-                        url: 'partners__FORM.php',
+                        url: '/partners__FORM.php',
                         data: $("#partners_page__FORM").serialize() + getPageAttrs(),
                         success: function(data) {
                             if(data == "true") {
@@ -1516,7 +1537,7 @@ $("#page__FORM_send_info").on("click", function(){
                     
                     $.ajax({
                         type: 'POST',
-                        url: 'partners__FORM.php',
+                        url: '/partners__FORM.php',
                         data: $("#partners__FORM").serialize() + getPageAttrs(),
                         success: function(data) {
                             if(data == "true") {
@@ -1537,7 +1558,7 @@ $("#page__FORM_send_info").on("click", function(){
                     
                     $.ajax({
                         type: 'POST',
-                        url: 'partners__FORM.php',
+                        url: '/partners__FORM.php',
                         data: $("#partners__FORM_info").serialize() + getPageAttrs(),
                         success: function(data) {
                             if(data == "true") {
@@ -1559,7 +1580,7 @@ $("#page__FORM_send_info").on("click", function(){
                     
                     $.ajax({
                         type: 'POST',
-                        url: 'partners__FORM.php',
+                        url: '/partners__FORM.php',
                         data: $("#partners_page__FORM_info").serialize() + getPageAttrs(),
                         success: function(data) {
                             if(data == "true") {
@@ -1583,7 +1604,7 @@ $("#callback__FORM_send_cases").on("click", function(){
                 
         $.ajax({
             type: 'POST',
-            url: 'callback__FORM.php',
+            url: '/callback__FORM.php',
             data: $("#callback__FORM_cases").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -1604,7 +1625,7 @@ $("#audit__FORM_send_cases").on("click", function(){
             
         $.ajax({
             type: 'POST',
-            url: 'audit__FORM.php',
+            url: '/audit__FORM.php',
             data: $("#audit__FORM_cases").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -1625,7 +1646,7 @@ $("#page__FORM_send_cases").on("click", function(){
                     
         $.ajax({
             type: 'POST',
-            url: 'page__FORM.php',
+            url: '/page__FORM.php',
             data: $("#page__FORM_cases").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -1649,7 +1670,7 @@ $("#callback__FORM_send_services").on("click", function(){
                 
         $.ajax({
             type: 'POST',
-            url: 'callback__FORM.php',
+            url: '/callback__FORM.php',
             data: $("#callback__FORM_services").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -1670,7 +1691,7 @@ $("#audit__FORM_send_services").on("click", function(){
             
         $.ajax({
             type: 'POST',
-            url: 'audit__FORM.php',
+            url: '/audit__FORM.php',
             data: $("#audit__FORM_services").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -1691,7 +1712,7 @@ $("#page__FORM_send_services").on("click", function(){
                     
         $.ajax({
             type: 'POST',
-            url: 'page__FORM.php',
+            url: '/page__FORM.php',
             data: $("#page__FORM_services").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -1730,7 +1751,7 @@ $("#callback__FORM_send_seo").on("click", function(){
                 
         $.ajax({
             type: 'POST',
-            url: 'callback__FORM.php',
+            url: '/callback__FORM.php',
             data: $("#callback__FORM_seo").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -1755,7 +1776,7 @@ $("#audit__FORM_send_seo").on("click", function(){
 
         $.ajax({
             type: 'POST',
-            url: root ? '/audit__FORM.php' : 'audit__FORM.php',
+            url: '/audit__FORM.php',
             data: $("#audit__FORM_seo").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -1802,7 +1823,7 @@ $("#tariff_1__FORM_send_seo").on("click", function(){
 		if($(this).attr('data-root')) root = true;
         $.ajax({
             type: 'POST',
-            url: root ? '/tariff_1__FORM.php' : 'tariff_1__FORM.php',
+            url: '/tariff_1__FORM.php',
             data: $("#tariff_1__FORM_seo").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -1827,7 +1848,7 @@ $("#tariff_2__FORM_send_seo").on("click", function(){
 		if($(this).attr('data-root')) root = true;
         $.ajax({
             type: 'POST',
-            url: root ? '/tariff_2__FORM.php' : 'tariff_2__FORM.php',
+            url: '/tariff_2__FORM.php',
             data: $("#tariff_2__FORM_seo").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -1852,7 +1873,7 @@ $("#tariff_3__FORM_send_seo").on("click", function(){
 		if($(this).attr('data-root')) root = true;
         $.ajax({
             type: 'POST',
-            url: root ? '/tariff_3__FORM.php' : 'tariff_3__FORM.php',
+            url: '/tariff_3__FORM.php',
             data: $("#tariff_3__FORM_seo").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -1877,7 +1898,7 @@ $("#tariff_4__FORM_send_seo").on("click", function(){
 		if($(this).attr('data-root')) root = true;
         $.ajax({
             type: 'POST',
-            url: root ? '/tariff_4__FORM.php' : 'tariff_4__FORM.php',
+            url: '/tariff_4__FORM.php',
             data: $("#tariff_4__FORM_seo").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -1925,7 +1946,7 @@ $("#callback__FORM_send_adv").on("click", function(){
                 
         $.ajax({
             type: 'POST',
-            url: 'callback__FORM.php',
+            url: '/callback__FORM.php',
             data: $("#callback__FORM_adv").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -1946,7 +1967,7 @@ $("#audit__FORM_send_adv").on("click", function(){
             
         $.ajax({
             type: 'POST',
-            url: 'audit__FORM.php',
+            url: '/audit__FORM.php',
             data: $("#audit__FORM_adv").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -1967,7 +1988,7 @@ $("#page__FORM_send_adv").on("click", function(){
                     
         $.ajax({
             type: 'POST',
-            url: 'page__FORM.php',
+            url: '/page__FORM.php',
             data: $("#page__FORM_adv").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -1987,7 +2008,7 @@ $("#tariff_1__FORM_send_adv").on("click", function(){
                 
         $.ajax({
             type: 'POST',
-            url: 'tariff_1__FORM.php',
+            url: '/tariff_1__FORM.php',
             data: $("#tariff_1__FORM_adv").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -2008,7 +2029,7 @@ $("#tariff_2__FORM_send_adv").on("click", function(){
                     
         $.ajax({
             type: 'POST',
-            url: 'tariff_2__FORM.php',
+            url: '/tariff_2__FORM.php',
             data: $("#tariff_2__FORM_adv").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -2029,7 +2050,7 @@ $("#tariff_3__FORM_send_adv").on("click", function(){
             
         $.ajax({
             type: 'POST',
-            url: 'tariff_3__FORM.php',
+            url: '/tariff_3__FORM.php',
             data: $("#tariff_3__FORM_adv").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -2050,7 +2071,7 @@ $("#tariff_4__FORM_send_adv").on("click", function(){
                 
         $.ajax({
             type: 'POST',
-            url: 'tariff_4__FORM.php',
+            url: '/tariff_4__FORM.php',
             data: $("#tariff_4__FORM_adv").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -2089,7 +2110,7 @@ $("#callback__FORM_send_audit").on("click", function(){
                 
         $.ajax({
             type: 'POST',
-            url: 'callback__FORM.php',
+            url: '/callback__FORM.php',
             data: $("#callback__FORM_audit").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -2110,7 +2131,7 @@ $("#audit__FORM_send_audit").on("click", function(){
             
         $.ajax({
             type: 'POST',
-            url: 'audit__FORM.php',
+            url: '/audit__FORM.php',
             data: $("#audit__FORM_audit").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -2131,7 +2152,7 @@ $("#page__FORM_send_audit").on("click", function(){
                     
         $.ajax({
             type: 'POST',
-            url: 'page__FORM.php',
+            url: '/page__FORM.php',
             data: $("#page__FORM_audit").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -2151,7 +2172,7 @@ $("#tariff_1__FORM_send_audit").on("click", function(){
                 
         $.ajax({
             type: 'POST',
-            url: 'tariff_1__FORM.php',
+            url: '/tariff_1__FORM.php',
             data: $("#tariff_1__FORM_audit").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -2172,7 +2193,7 @@ $("#tariff_2__FORM_send_audit").on("click", function(){
                     
         $.ajax({
             type: 'POST',
-            url: 'tariff_2__FORM.php',
+            url: '/tariff_2__FORM.php',
             data: $("#tariff_2__FORM_audit").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -2193,7 +2214,7 @@ $("#tariff_3__FORM_send_audit").on("click", function(){
             
         $.ajax({
             type: 'POST',
-            url: 'tariff_3__FORM.php',
+            url: '/tariff_3__FORM.php',
             data: $("#tariff_3__FORM_audit").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -2214,7 +2235,7 @@ $("#tariff_4__FORM_send_audit").on("click", function(){
                 
         $.ajax({
             type: 'POST',
-            url: 'tariff_4__FORM.php',
+            url: '/tariff_4__FORM.php',
             data: $("#tariff_4__FORM_audit").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -2254,7 +2275,7 @@ $("#callback__FORM_send_develop").on("click", function(){
                 
         $.ajax({
             type: 'POST',
-            url: 'callback__FORM.php',
+            url: '/callback__FORM.php',
             data: $("#callback__FORM_develop").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -2275,7 +2296,7 @@ $("#audit__FORM_send_develop").on("click", function(){
             
         $.ajax({
             type: 'POST',
-            url: 'audit__FORM.php',
+            url: '/audit__FORM.php',
             data: $("#audit__FORM_develop").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -2296,7 +2317,7 @@ $("#page__FORM_send_develop").on("click", function(){
                     
         $.ajax({
             type: 'POST',
-            url: 'page__FORM.php',
+            url: '/page__FORM.php',
             data: $("#page__FORM_develop").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -2316,7 +2337,7 @@ $("#tariff_1__FORM_send_develop").on("click", function(){
                 
         $.ajax({
             type: 'POST',
-            url: 'tariff_1__FORM.php',
+            url: '/tariff_1__FORM.php',
             data: $("#tariff_1__FORM_develop").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -2337,7 +2358,7 @@ $("#tariff_2__FORM_send_develop").on("click", function(){
                     
         $.ajax({
             type: 'POST',
-            url: 'tariff_2__FORM.php',
+            url: '/tariff_2__FORM.php',
             data: $("#tariff_2__FORM_develop").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -2358,7 +2379,7 @@ $("#tariff_3__FORM_send_develop").on("click", function(){
             
         $.ajax({
             type: 'POST',
-            url: 'tariff_3__FORM.php',
+            url: '/tariff_3__FORM.php',
             data: $("#tariff_3__FORM_develop").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -2379,7 +2400,7 @@ $("#tariff_4__FORM_send_develop").on("click", function(){
                 
         $.ajax({
             type: 'POST',
-            url: 'tariff_4__FORM.php',
+            url: '/tariff_4__FORM.php',
             data: $("#tariff_4__FORM_develop").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -2408,7 +2429,7 @@ $("#callback__FORM_send_serm").on("click", function(){
                 
         $.ajax({
             type: 'POST',
-            url: 'callback__FORM.php',
+            url: '/callback__FORM.php',
             data: $("#callback__FORM_serm").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -2429,7 +2450,7 @@ $("#audit__FORM_send_serm").on("click", function(){
             
         $.ajax({
             type: 'POST',
-            url: 'audit__FORM.php',
+            url: '/audit__FORM.php',
             data: $("#audit__FORM_serm").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -2450,7 +2471,7 @@ $("#page__FORM_send_serm").on("click", function(){
                     
         $.ajax({
             type: 'POST',
-            url: 'page__FORM.php',
+            url: '/page__FORM.php',
             data: $("#page__FORM_serm").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -2470,7 +2491,7 @@ $("#tariff_1__FORM_send_serm").on("click", function(){
                 
         $.ajax({
             type: 'POST',
-            url: 'tariff_1__FORM.php',
+            url: '/tariff_1__FORM.php',
             data: $("#tariff_1__FORM_serm").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -2491,7 +2512,7 @@ $("#tariff_2__FORM_send_serm").on("click", function(){
                     
         $.ajax({
             type: 'POST',
-            url: 'tariff_2__FORM.php',
+            url: '/tariff_2__FORM.php',
             data: $("#tariff_2__FORM_serm").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -2512,7 +2533,7 @@ $("#tariff_3__FORM_send_serm").on("click", function(){
             
         $.ajax({
             type: 'POST',
-            url: 'tariff_3__FORM.php',
+            url: '/tariff_3__FORM.php',
             data: $("#tariff_3__FORM_serm").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -2533,7 +2554,7 @@ $("#tariff_4__FORM_send_serm").on("click", function(){
                 
         $.ajax({
             type: 'POST',
-            url: 'tariff_4__FORM.php',
+            url: '/tariff_4__FORM.php',
             data: $("#tariff_4__FORM_serm").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
@@ -2884,7 +2905,10 @@ $(document).ready(function () {
     $('form[id*="FORM"]').each(function () {
       ensureSecurityFields($(this));
     });
-    $(document).on("click", '[id*="FORM_send"], [id*="_send"]', function () {
+    $(document).on("click", '[id*="FORM_send"], [id*="_send"]', function (e) {
+      if (this.id && this.id.indexOf("FORM_send") !== -1) {
+        e.preventDefault();
+      }
       ensureSecurityFields($(this).closest("form"));
     });
   });

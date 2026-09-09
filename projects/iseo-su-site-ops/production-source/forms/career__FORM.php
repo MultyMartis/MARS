@@ -8,7 +8,10 @@ $username = iseo_form_first_scalar(array("cf_name"), 120);
 $method = iseo_form_first_scalar(array("cf_contact", "cf_ontact"), 80);
 $contact = iseo_form_first_scalar(array("cf_phone"), 120);
 $file = iseo_form_first_scalar(array("cf_file"), 300);
-if ($username === null || $method === null || $contact === null || $file === null) {
+if ($file === null || $file === "") {
+    $file = "не приложен";
+}
+if ($username === null || $method === null || $contact === null) {
     iseo_form_reject($form_id, "array");
 }
 $page = iseo_form_page_meta();

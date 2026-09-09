@@ -117,7 +117,7 @@
 				<!-- <label for="name">Ваше имя</label> -->
 			</div>
 			<div>									
-				<select id="сf_contact" class="contact_select" name="сf_contact" required>
+				<select id="cf_contact" class="contact_select" name="cf_contact" required>
 					<option selected disabled>Выберите способ связи:</option>
 					<option value="Телефон">Телефон</option>
 					<option value="Telegram">Telegram</option>
