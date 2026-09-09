@@ -1,0 +1,220 @@
+{
+  "task": "ISEO-SU-SITE-OPS-WEBINAR-FORM-FIX-01",
+  "started": "2026-09-09T09:47:46Z",
+  "backup": [
+    {
+      "absolute_path": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_webinar-form-fix-01\\webinar-seo-podryadchik.html.before.20260909T094748Z",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/webinar-seo-podryadchik.html",
+      "sha256_before": "2434e990b08b6765fd0e475d203671f34acf77222447d03c48a43b49758c4382",
+      "timestamp": "2026-09-09T09:47:48Z",
+      "bytes": 13711
+    },
+    {
+      "absolute_path": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_webinar-form-fix-01\\iseo-form-config.php.before.20260909T094748Z",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/iseo-form-config.php",
+      "sha256_before": "d4e394f3a8dd725f526e6c195d290b6cb2ad46a8f27e1b8021d5769567d5ecb7",
+      "timestamp": "2026-09-09T09:47:48Z"
+    }
+  ],
+  "live_before": {
+    "has_pf_phone": false,
+    "has_hidden_whatsapp": false,
+    "tel_still_named_contact": true,
+    "consent_1": true,
+    "pf_site": true,
+    "date_10": true,
+    "date_3": false,
+    "time_1900": true,
+    "h1": true
+  },
+  "cfg_before": {
+    "test_mode": "false",
+    "production_recipients_raw": "",
+    "test_recipients_raw": "",
+    "prod_has_nikel": false,
+    "prod_has_im_work": false,
+    "test_has_im_work": false,
+    "nail_typo": false,
+    "hmac_secret_null": true,
+    "honeypot_field": true,
+    "min_fill_seconds": true,
+    "rate_limit_burst_max": true,
+    "duplicate_window": true
+  },
+  "deploy": {
+    "mode": "patched",
+    "sha256_after": "f5e7d6029faeda9cabae7502a34ad716c6700f1eb309c188372205ab64b14331",
+    "bytes": 13776
+  },
+  "live_after_http": {
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "contract": {
+      "has_pf_phone": true,
+      "has_hidden_whatsapp": true,
+      "tel_still_named_contact": false,
+      "consent_1": true,
+      "pf_site": true,
+      "date_10": true,
+      "date_3": false,
+      "time_1900": true,
+      "h1": true
+    },
+    "keep_markers": {
+      "10 сентября 2026": true,
+      "19:00 МСК": true,
+      "Как выбрать подрядчика в SEO и не ошибиться?": true,
+      "WEBINAR SEO CONTRACTOR 2026-09": true,
+      "name=\"personal_data_consent\"": true,
+      "id=\"page__FORM_seo\"": true,
+      "id=\"page__FORM_send_seo\"": true,
+      "name=\"pf_phone\"": true,
+      "name=\"pf_contact\"": true
+    }
+  },
+  "rate_limit_pause_seconds": 310,
+  "neg_missing_consent": {
+    "http_status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "body": "false",
+    "posted_keys": [
+      "contact_company_url",
+      "iseo_fid",
+      "iseo_fs",
+      "iseo_ft",
+      "pf_comment",
+      "pf_contact",
+      "pf_name",
+      "pf_page_link",
+      "pf_page_title",
+      "pf_phone",
+      "pf_site"
+    ],
+    "event_class": "consent"
+  },
+  "neg_consent_0": {
+    "http_status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "body": "false",
+    "posted_keys": [
+      "contact_company_url",
+      "iseo_fid",
+      "iseo_fs",
+      "iseo_ft",
+      "personal_data_consent",
+      "pf_comment",
+      "pf_contact",
+      "pf_name",
+      "pf_page_link",
+      "pf_page_title",
+      "pf_phone",
+      "pf_site"
+    ],
+    "event_class": "consent"
+  },
+  "neg_malformed_consent": {
+    "http_status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "body": "false",
+    "posted_keys": [
+      "contact_company_url",
+      "iseo_fid",
+      "iseo_fs",
+      "iseo_ft",
+      "personal_data_consent",
+      "pf_comment",
+      "pf_contact",
+      "pf_name",
+      "pf_page_link",
+      "pf_page_title",
+      "pf_phone",
+      "pf_site"
+    ],
+    "event_class": "consent"
+  },
+  "pause_started": "2026-09-09T09:48:02Z",
+  "pause_ended": "2026-09-09T09:53:12Z",
+  "neg_honeypot": {
+    "http_status": 200,
+    "body": "false",
+    "event_class": "honeypot"
+  },
+  "test_mode_on": "true",
+  "pos_isolated_mail": {
+    "http_status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "body": "true",
+    "posted_keys": [
+      "contact_company_url",
+      "iseo_fid",
+      "iseo_fs",
+      "iseo_ft",
+      "personal_data_consent",
+      "pf_comment",
+      "pf_contact",
+      "pf_name",
+      "pf_page_link",
+      "pf_page_title",
+      "pf_phone",
+      "pf_site"
+    ],
+    "event_class": "accept"
+  },
+  "ui": {
+    "available": true,
+    "viewports": [],
+    "desktop": {
+      "success_ui": true,
+      "generic_fail_ui": false,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ],
+      "network": {
+        "url": "https://i-seo.su/page__FORM.php",
+        "method": "POST",
+        "status": 200,
+        "body": "true",
+        "has_pf_phone": true,
+        "consent_1": true,
+        "honeypot_empty": true
+      },
+      "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\webinar-form-fix-01\\screenshots\\desktop-1440x900-after-submit-202609090947496.png"
+    },
+    "mobile": {
+      "form_present": true,
+      "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\webinar-form-fix-01\\screenshots\\mobile-390x844-202609090947496.png",
+      "h1": "КАК ВЫБРАТЬ ПОДРЯДЧИКА В SEO И НЕ ОШИБИТЬСЯ?"
+    }
+  },
+  "test_mode_off": "false",
+  "cfg_final": {
+    "test_mode": "false",
+    "production_recipients_raw": "",
+    "test_recipients_raw": "",
+    "prod_has_nikel": false,
+    "prod_has_im_work": false,
+    "test_has_im_work": false,
+    "nail_typo": false,
+    "hmac_secret_null": true,
+    "honeypot_field": true,
+    "min_fill_seconds": true,
+    "rate_limit_burst_max": true,
+    "duplicate_window": true
+  },
+  "regression": {
+    "home_status": 200,
+    "home_has_pf_phone": true,
+    "home_has_pf_contact_select": true,
+    "restaurant_status": 200,
+    "restaurant_form_present": true
+  },
+  "source_sha256": "1aafe6845db10df206d9f7e64866c87c5ce0b17bc82c415a99391fd5045b9704",
+  "ended": "2026-09-09T09:53:40Z"
+}
