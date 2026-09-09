@@ -493,6 +493,22 @@ Production mutations in this registration: **0** at registration time. **WAVE 1 
 
 ---
 
+## HOMEPAGE FORM REGRESSION 01 (2026-09-09) — COMPLETE
+
+| Artifact | Path | Role |
+|----------|------|------|
+| Evidence | `ISEO-SU-HOMEPAGE-FORM-REGRESSION-01-EVIDENCE-v1.md` | EVIDENCE |
+| Main REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-HOMEPAGE-FORM-REGRESSION-01.md` | REPORT |
+| RU closeout | `reports/ISEO-SU-HOMEPAGE-FORM-REGRESSION-01-RU.md` | REPORT (RU) |
+| Shared JS source | `production-source/js/common.js` | SOURCE (homepage/modal handlers + site optional semantics) |
+| Machine evidence | `evidence/homepage-form-regression-01/` | EVIDENCE (local; may be out of git) |
+| Production backup | `X:\AI MARS\local\sites\iseo-su-production\_homepage-form-regression-01\` | BACKUP (out of git) |
+| Live defect | blank site → JS required + native reload → no AJAX/mail | METRIC |
+| Handler / field contract / security | **UNCHANGED** (site remains optional server-side) | POLICY |
+| SEO / menu / design | **UNCHANGED** | POLICY |
+
+---
+
 ## Explicit non-artifacts and security signal
 
 This documentation wave introduced no token, password, cookie, session value, DB dump, Localhost mirror, unredacted production dump, or active `_*-scratch/` tree.

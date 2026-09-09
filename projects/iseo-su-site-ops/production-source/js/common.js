@@ -1033,7 +1033,8 @@ $(".modalbox").fancybox();
 // Формы на ГЛАВНОЙ
 
             // $("#callback__FORM_popup").submit(function() { return false; });        
-            $("#callback__FORM_send").on("click", function(){
+            $("#callback__FORM_send").on("click", function(e){
+				e.preventDefault();
 				if (checkEmptyFields($(this).closest('form')) === '0') {
                     $("#callback__FORM_send").replaceWith("<em>отправка...</em>");
                     
@@ -1052,6 +1053,7 @@ $(".modalbox").fancybox();
                         }
                     });
 				}
+				return false;
             });
 
 
@@ -1080,7 +1082,8 @@ $(".modalbox").fancybox();
 
 
 
-            $("#page__FORM_send").on("click", function(){
+            $("#page__FORM_send").on("click", function(e){
+				e.preventDefault();
 				if (checkEmptyFields($(this).closest('form')) === '0') {
                     $("#page__FORM_send").replaceWith("<em>отправка...</em>");
                     
@@ -1098,6 +1101,7 @@ $(".modalbox").fancybox();
                         }
                     });
 				}
+				return false;
             });
 
 
@@ -2613,10 +2617,12 @@ function checkEmptyFields(form) {
 			$(this).closest('form').attr('data-errors','1');
 		}
 	});
+	// Site URL: enforce only when HTML required (or *_site_no escape path).
+	// Do NOT treat every name$="_site" as mandatory — homepage/modal leave it optional.
 	var noSite = form.find('input[name$="_site_no"]').is(':checked');
 	form.find('input[name$="_site"]').each(function(){
 		$(this).removeClass('error');
-		if($(this).val().length === 0 && !noSite){
+		if($(this).val().length === 0 && $(this).prop('required') && !noSite){
 			$(this).addClass('error');
 			$(this).closest('form').attr('data-errors','1');
 		}

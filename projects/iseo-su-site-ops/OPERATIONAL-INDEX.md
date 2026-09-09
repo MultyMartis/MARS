@@ -41,6 +41,7 @@
 11. **SAFE WORKSPACE CLEANUP 01** — **COMPLETE** (2026-09-04): project-scoped only; ~21.66 GB temp sync/empty residuals removed; form-consent dirty + tech-repair unknown retained; raw audit / rollback / archives preserved. Report: [REPORT](reports/REPORT-ISEO-SU-SITE-OPS-SAFE-WORKSPACE-CLEANUP-01.md).
 12. **FORM CONTRACT REGRESSION 01** — **COMPLETE** (2026-09-09): 90 live `/page__FORM.php` clones of the webinar `pf_contact`/`pf_phone` defect closed (18 remote authorities; shared `content-form-seo.php`); restaurant HEALTHY; GET after 0; HMAC/honeypot/min-fill/rate-limit/duplicate/consent ACTIVE; recipient `nikel007i33@yandex.ru`; `test_mode` OFF. Evidence: [REGRESSION 01](ISEO-SU-FORM-CONTRACT-REGRESSION-01-EVIDENCE-v1.md) · [REPORT](reports/REPORT-ISEO-SU-SITE-OPS-FORM-CONTRACT-REGRESSION-01.md) · [RU](reports/ISEO-SU-FORM-CONTRACT-REGRESSION-01-RU.md).
 13. **FORM AJAX ENDPOINT 01** — **COMPLETE** (2026-09-09): nested `/services/seo/` SEO forms posted to `/services/seo/page__FORM.php`; `#page__FORM_send_seo` now root-relative `/page__FORM.php`; post-deploy POSTs canonical; handler/HMAC/consent unchanged; `test_mode` OFF. Evidence: [ENDPOINT 01](ISEO-SU-FORM-AJAX-ENDPOINT-01-EVIDENCE-v1.md) · [REPORT](reports/REPORT-ISEO-SU-SITE-OPS-FORM-AJAX-ENDPOINT-01.md) · [RU](reports/ISEO-SU-FORM-AJAX-ENDPOINT-01-RU.md).
+14. **HOMEPAGE FORM REGRESSION 01** — **COMPLETE** (2026-09-09): main `#page__FORM` + modal `#callback__FORM` blank-site path reloaded without AJAX (JS forced site required + missing `preventDefault`); live lead intake restored; site URL optional; HMAC/consent unchanged; `test_mode` OFF. Evidence: [HOMEPAGE 01](ISEO-SU-HOMEPAGE-FORM-REGRESSION-01-EVIDENCE-v1.md) · [REPORT](reports/REPORT-ISEO-SU-SITE-OPS-HOMEPAGE-FORM-REGRESSION-01.md) · [RU](reports/ISEO-SU-HOMEPAGE-FORM-REGRESSION-01-RU.md).
 
 **Deferred optional:** mobile glossary offcanvas, archive Yoast description, MERGED alias polish, unnecessary sitemap duplication, WPilot 6D.
 
@@ -234,6 +235,7 @@ Additional historical artifacts remain listed in the Artifact Register.
 | Report | Status |
 |--------|--------|
 | [Form AJAX endpoint 01](reports/REPORT-ISEO-SU-SITE-OPS-FORM-AJAX-ENDPOINT-01.md) | **COMPLETE — FORM AJAX ENDPOINT DEFECT PROVEN + FIXED / ROOT-RELATIVE ENDPOINT / NO REGRESSION** |
+| [Homepage form regression 01](reports/REPORT-ISEO-SU-SITE-OPS-HOMEPAGE-FORM-REGRESSION-01.md) | **COMPLETE — HOMEPAGE + MODAL FORM REGRESSION ROOT CAUSE PROVEN / LIVE LEAD INTAKE RESTORED / SECURITY PRESERVED** |
 | [Form contract regression 01](reports/REPORT-ISEO-SU-SITE-OPS-FORM-CONTRACT-REGRESSION-01.md) | **COMPLETE — ISEO-SU FORM CONTRACT REGRESSION AUDIT + FIX / ALL PROVEN PF_CONTACT-PF_PHONE DEFECTS CLOSED** |
 | [Safe workspace cleanup 01](reports/REPORT-ISEO-SU-SITE-OPS-SAFE-WORKSPACE-CLEANUP-01.md) | **COMPLETE — ISEO-SU PROJECT-SCOPED WORKSPACE CLEANUP / SAFE TEMP CONTOURS REMOVED / EVIDENCE + ROLLBACK PRESERVED** |
 | [Final stabilization and housekeeping](reports/REPORT-ISEO-SU-SITE-OPS-FINAL-STABILIZATION-AND-HOUSEKEEPING.md) | **COMPLETE — ISEO-SU SITE OPS STABILIZED / WORKSPACE CLEAN / MARS BRAIN CURRENT / GIT CLOSED** |
