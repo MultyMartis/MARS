@@ -232,8 +232,8 @@ PHP lint OK. LF/CRLF not rewritten beyond the edited sources.
 
 - Branch pushed: `origin/mars/canonical-post-recovery`
 - Base SHA: `c7290512a8b02113e3716ee145caac6229887f68`
-- Commit: `COMMIT_PENDING`
-- Remote tip after push: `COMMIT_PENDING`
+- Wave commit: `074777b544e810d7ab9894987fd1983d1c6afab1`
+- Closeout commit: `CLOSEOUT_PENDING`
 - Worktree: `X:\AI MARS\worktrees\fp0002-blog-hub-announcement-01` (`wave/fp0002-blog-hub-announcement-01`)
 
 ---

@@ -50,7 +50,7 @@
 ## Current Git Recovery Point
 - canonical branch: `origin/mars/canonical-post-recovery`
 - latest blog hub announcement wave commit:
-  - `COMMIT_PENDING`
+  - `074777b544e810d7ab9894987fd1983d1c6afab1` — dedicated Blog Hub card announcement field + evidence
 - matching closeout report:
   - `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-BLOG-HUB-DEDICATED-ANNOUNCEMENT-FIELD-01.md`
 - prior open graph wave commit:
