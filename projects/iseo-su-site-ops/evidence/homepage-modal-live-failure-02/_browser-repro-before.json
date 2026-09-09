@@ -1,0 +1,330 @@
+{
+  "started": "2026-09-09T14:54:43Z",
+  "cases": [
+    {
+      "label": "blank_site_valid_phone",
+      "opened_href": "#audit__FORM_popup",
+      "inventory": {
+        "modal_title": "Получить бесплатный аудит вашего сайта",
+        "form_id": "audit__FORM",
+        "form_action": "",
+        "form_method": "post",
+        "submit_id": "audit__FORM_send",
+        "fields": [
+          {
+            "tag": "input",
+            "name": "af_name",
+            "id": "af_name",
+            "type": "text",
+            "required": true,
+            "placeholder": "Ваше имя"
+          },
+          {
+            "tag": "select",
+            "name": "af_contact",
+            "id": "af_contact",
+            "type": null,
+            "required": true,
+            "placeholder": null
+          },
+          {
+            "tag": "input",
+            "name": "af_phone",
+            "id": "af_phone",
+            "type": "tel",
+            "required": true,
+            "placeholder": "Телефон"
+          },
+          {
+            "tag": "input",
+            "name": "af_site",
+            "id": "af_site",
+            "type": "text",
+            "required": false,
+            "placeholder": "Адрес сайта"
+          },
+          {
+            "tag": "textarea",
+            "name": "af_comment",
+            "id": "af_comment",
+            "type": null,
+            "required": false,
+            "placeholder": "Комментарий"
+          },
+          {
+            "tag": "input",
+            "name": "personal_data_consent",
+            "id": "personal_data_consent_audit__FORM",
+            "type": "checkbox",
+            "required": true,
+            "placeholder": null
+          },
+          {
+            "tag": "button",
+            "name": null,
+            "id": "audit__FORM_send",
+            "type": "submit",
+            "required": false,
+            "placeholder": null
+          },
+          {
+            "tag": "input",
+            "name": "contact_company_url",
+            "id": null,
+            "type": "text",
+            "required": false,
+            "placeholder": null
+          },
+          {
+            "tag": "input",
+            "name": "iseo_ft",
+            "id": null,
+            "type": "hidden",
+            "required": false,
+            "placeholder": null
+          },
+          {
+            "tag": "input",
+            "name": "iseo_fs",
+            "id": null,
+            "type": "hidden",
+            "required": false,
+            "placeholder": null
+          },
+          {
+            "tag": "input",
+            "name": "iseo_fid",
+            "id": null,
+            "type": "hidden",
+            "required": false,
+            "placeholder": null
+          }
+        ],
+        "site_required_attr": false,
+        "site_required_prop": false,
+        "audit_handler": {
+          "click_count": 1,
+          "has_preventDefault": false,
+          "has_return_false": false,
+          "src_preview": [
+            "function(){\r\n\t\t\t\tif (checkEmptyFields($(this).closest('form')) === '0') {\r\n                    $(\"#audit__FORM_send\").replaceWith(\"<em>отправка...</em>\");\r\n                    \r\n                    $.ajax({\r\n                        type: 'POST',\r\n                        url: 'aud"
+          ]
+        },
+        "common_js_src": [
+          "https://i-seo.su/js/common.js"
+        ]
+      },
+      "js_probe": {
+        "checkEmptyFields": "0",
+        "site_error": false,
+        "site_required": false,
+        "data_errors": "0"
+      },
+      "phone": "+7 (999) 123-45-67",
+      "site_filled": false,
+      "request_sent": true,
+      "request_url": "https://i-seo.su/audit__FORM.php",
+      "method": "POST",
+      "post_payload": "af_name=TEST+MARS&af_contact=WhatsApp&af_phone=%2B7+(799)+912-34-5&af_site=&af_comment=TEST+HOMEPAGE+MODAL+%E2%80%94+DO+NOT+PROCESS&personal_data_consent=1&contact_company_url=&iseo_ft=1788965685&iseo_fs=e0aff6d3abda8f4a7b7307b2770d6d4ae91dc72ef5c9e9c6517f8b14733f2402&iseo_fid=9135154e9c03ce45&pf_page_title=Продвижение сайтов в ТОП под ключ в Москве | Агентство INTLSEO&pf_page_link=https://i-seo.su/",
+      "http_status": 200,
+      "response_body": "false",
+      "page_reload": false,
+      "nav_count": 0,
+      "url_before": "https://i-seo.su/",
+      "success_ui": {
+        "success": false,
+        "generic_error": true,
+        "busy_or_error_html": true,
+        "visible_snippet": "Получить бесплатный аудит вашего сайта\nЗаполните форму обратной связи и мы сделаем аудит вашего сайта бесплатно\nВыберите способ связи:\nТелефон\nTelegram\nWhatsApp\nЯ соглашаюсь с политикой конфиденциальности и даю согласие на обработку персональных данных\n\nНе удалось отправить заявку. Проверьте заполнение формы и попробуйте ещё раз.\n\nCompany URL"
+      },
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ],
+      "all_form_posts": [
+        {
+          "phase": "req",
+          "url": "https://i-seo.su/audit__FORM.php",
+          "method": "POST",
+          "post": "af_name=TEST+MARS&af_contact=WhatsApp&af_phone=%2B7+(799)+912-34-5&af_site=&af_comment=TEST+HOMEPAGE+MODAL+%E2%80%94+DO+NOT+PROCESS&personal_data_consent=1&contact_company_url=&iseo_ft=1788965685&iseo_fs=e0aff6d3abda8f4a7b7307b2770d6d4ae91dc72ef5c9e9c6517f8b14733f2402&iseo_fid=9135154e9c03ce45&pf_page_title=Продвижение сайтов в ТОП под ключ в Москве | Агентство INTLSEO&pf_page_link=https://i-seo.su/"
+        },
+        {
+          "phase": "resp",
+          "url": "https://i-seo.su/audit__FORM.php",
+          "status": 200,
+          "ct": "text/plain; charset=utf-8",
+          "body": "false"
+        }
+      ]
+    },
+    {
+      "label": "filled_site_operator_phone",
+      "opened_href": "#audit__FORM_popup",
+      "inventory": {
+        "modal_title": "Получить бесплатный аудит вашего сайта",
+        "form_id": "audit__FORM",
+        "form_action": "",
+        "form_method": "post",
+        "submit_id": "audit__FORM_send",
+        "fields": [
+          {
+            "tag": "input",
+            "name": "af_name",
+            "id": "af_name",
+            "type": "text",
+            "required": true,
+            "placeholder": "Ваше имя"
+          },
+          {
+            "tag": "select",
+            "name": "af_contact",
+            "id": "af_contact",
+            "type": null,
+            "required": true,
+            "placeholder": null
+          },
+          {
+            "tag": "input",
+            "name": "af_phone",
+            "id": "af_phone",
+            "type": "tel",
+            "required": true,
+            "placeholder": "Телефон"
+          },
+          {
+            "tag": "input",
+            "name": "af_site",
+            "id": "af_site",
+            "type": "text",
+            "required": false,
+            "placeholder": "Адрес сайта"
+          },
+          {
+            "tag": "textarea",
+            "name": "af_comment",
+            "id": "af_comment",
+            "type": null,
+            "required": false,
+            "placeholder": "Комментарий"
+          },
+          {
+            "tag": "input",
+            "name": "personal_data_consent",
+            "id": "personal_data_consent_audit__FORM",
+            "type": "checkbox",
+            "required": true,
+            "placeholder": null
+          },
+          {
+            "tag": "button",
+            "name": null,
+            "id": "audit__FORM_send",
+            "type": "submit",
+            "required": false,
+            "placeholder": null
+          },
+          {
+            "tag": "input",
+            "name": "contact_company_url",
+            "id": null,
+            "type": "text",
+            "required": false,
+            "placeholder": null
+          },
+          {
+            "tag": "input",
+            "name": "iseo_ft",
+            "id": null,
+            "type": "hidden",
+            "required": false,
+            "placeholder": null
+          },
+          {
+            "tag": "input",
+            "name": "iseo_fs",
+            "id": null,
+            "type": "hidden",
+            "required": false,
+            "placeholder": null
+          },
+          {
+            "tag": "input",
+            "name": "iseo_fid",
+            "id": null,
+            "type": "hidden",
+            "required": false,
+            "placeholder": null
+          }
+        ],
+        "site_required_attr": false,
+        "site_required_prop": false,
+        "audit_handler": {
+          "click_count": 1,
+          "has_preventDefault": false,
+          "has_return_false": false,
+          "src_preview": [
+            "function(){\r\n\t\t\t\tif (checkEmptyFields($(this).closest('form')) === '0') {\r\n                    $(\"#audit__FORM_send\").replaceWith(\"<em>отправка...</em>\");\r\n                    \r\n                    $.ajax({\r\n                        type: 'POST',\r\n                        url: 'aud"
+          ]
+        },
+        "common_js_src": [
+          "https://i-seo.su/js/common.js"
+        ]
+      },
+      "js_probe": {
+        "checkEmptyFields": "0",
+        "site_error": false,
+        "site_required": false,
+        "data_errors": "0"
+      },
+      "phone": "+7 (111) 111-11-11",
+      "site_filled": true,
+      "request_sent": true,
+      "request_url": "https://i-seo.su/audit__FORM.php",
+      "method": "POST",
+      "post_payload": "af_name=TEST+MARS&af_contact=WhatsApp&af_phone=%2B7+(711)+111-11-1&af_site=https%3A%2F%2Fexample-mars-modal-live-failure-02.test&af_comment=TEST+HOMEPAGE+MODAL+PHONE+B+%E2%80%94+DO+NOT+PROCESS&personal_data_consent=1&contact_company_url=&iseo_ft=1788965698&iseo_fs=509186b2642e9585ff84e302e74ec5478535710b44734d3b58a792fae08259b5&iseo_fid=f1c4ec72cb5dda08&pf_page_title=Продвижение сайтов в ТОП под ключ в Москве | Агентство INTLSEO&pf_page_link=https://i-seo.su/",
+      "http_status": 200,
+      "response_body": "true",
+      "page_reload": false,
+      "nav_count": 0,
+      "url_before": "https://i-seo.su/",
+      "success_ui": {
+        "success": true,
+        "generic_error": false,
+        "busy_or_error_html": true,
+        "visible_snippet": "\n\t\tПолучить бесплатный аудит вашего сайта\n\t\tЗаполните форму обратной связи и мы сделаем аудит вашего сайта бесплатно\n\t\tУспешно! Сообщение отправлено\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\tВыберите способ связи:\n\t\t\t\t\tТелефон\n\t\t\t\t\tTelegram\n\t\t\t\t\tWhatsApp\n\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\t\n\t              \n\t\t\t\t\n              Я соглашаюс"
+      },
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ],
+      "all_form_posts": [
+        {
+          "phase": "req",
+          "url": "https://i-seo.su/audit__FORM.php",
+          "method": "POST",
+          "post": "af_name=TEST+MARS&af_contact=WhatsApp&af_phone=%2B7+(711)+111-11-1&af_site=https%3A%2F%2Fexample-mars-modal-live-failure-02.test&af_comment=TEST+HOMEPAGE+MODAL+PHONE+B+%E2%80%94+DO+NOT+PROCESS&personal_data_consent=1&contact_company_url=&iseo_ft=1788965698&iseo_fs=509186b2642e9585ff84e302e74ec5478535710b44734d3b58a792fae08259b5&iseo_fid=f1c4ec72cb5dda08&pf_page_title=Продвижение сайтов в ТОП под ключ в Москве | Агентство INTLSEO&pf_page_link=https://i-seo.su/"
+        },
+        {
+          "phase": "resp",
+          "url": "https://i-seo.su/audit__FORM.php",
+          "status": 200,
+          "ct": "text/plain; charset=utf-8",
+          "body": "true"
+        }
+      ]
+    }
+  ],
+  "ended": "2026-09-09T14:55:09Z"
+}

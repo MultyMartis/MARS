@@ -1,0 +1,290 @@
+{
+  "started": "2026-09-09T15:06:21Z",
+  "suffix": "150621",
+  "cfg_before": {
+    "test_mode": "true",
+    "prod_has_nikel": true,
+    "prod_has_im_work": false,
+    "test_has_im_work": true,
+    "nail_typo": false,
+    "hmac_secret_null": true,
+    "honeypot_field": true,
+    "min_fill_seconds": true,
+    "rate_limit_burst_max": true,
+    "duplicate_window": true,
+    "consent_guard_hint": false
+  },
+  "test_mode_on": "true",
+  "rate_wait_sec": 310,
+  "cases": [
+    {
+      "case": "audit_modal",
+      "site_filled": false,
+      "phone": "+7901150621",
+      "request_url": "https://i-seo.su/audit__FORM.php",
+      "http": 200,
+      "body": "true",
+      "page_reload": false,
+      "nav_count": 1,
+      "success_ui": false,
+      "generic_error": false,
+      "preventDefault_audit": false,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ],
+      "posts": [
+        {
+          "phase": "req",
+          "url": "https://i-seo.su/audit__FORM.php",
+          "method": "POST",
+          "post": "af_name=TEST+MARS+blank+150621&af_contact=WhatsApp&af_phone=%2B7+(790)+115-06-21&af_site=&af_comment=TEST+HOMEPAGE+MODAL+BLANK+150621+%E2%80%94+DO+NOT+PROCESS&personal_data_consent=1&contact_company_url=&iseo_ft=1788966387&iseo_fs=12fa0112510898024dc90edcfb58c4520e11485a98bd366487a3f8f7e70a4544&iseo_fid=746772525e2a2e42&pf_page_title=Продвижение сайтов в ТОП под ключ в Москве | Агентство INTLSEO&pf_page_link=https://i-seo.su/"
+        },
+        {
+          "phase": "resp",
+          "url": "https://i-seo.su/audit__FORM.php",
+          "status": 200,
+          "ct": "text/plain; charset=utf-8",
+          "body": "true"
+        }
+      ],
+      "pass": false
+    },
+    {
+      "case": "audit_modal",
+      "site_filled": true,
+      "phone": "+7902150621",
+      "request_url": "https://i-seo.su/audit__FORM.php",
+      "http": 200,
+      "body": "true",
+      "page_reload": false,
+      "nav_count": 1,
+      "success_ui": false,
+      "generic_error": false,
+      "preventDefault_audit": false,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ],
+      "posts": [
+        {
+          "phase": "req",
+          "url": "https://i-seo.su/audit__FORM.php",
+          "method": "POST",
+          "post": "af_name=TEST+MARS+filled+150621&af_contact=WhatsApp&af_phone=%2B7+(790)+215-06-21&af_site=https%3A%2F%2Fexample-modal-150621.test&af_comment=TEST+HOMEPAGE+MODAL+FILLED+150621+%E2%80%94+DO+NOT+PROCESS&personal_data_consent=1&contact_company_url=&iseo_ft=1788966409&iseo_fs=f8d1bab776599de63a2a45bdf130fcb54ac4b586911b953830dec13818c296bb&iseo_fid=981a87a334b32188&pf_page_title=Продвижение сайтов в ТОП под ключ в Москве | Агентство INTLSEO&pf_page_link=https://i-seo.su/"
+        },
+        {
+          "phase": "resp",
+          "url": "https://i-seo.su/audit__FORM.php",
+          "status": 200,
+          "ct": "text/plain; charset=utf-8",
+          "body": "true"
+        }
+      ],
+      "pass": false
+    },
+    {
+      "case": "main_homepage",
+      "url": "https://i-seo.su/",
+      "request_url": "https://i-seo.su/page__FORM.php",
+      "http": 200,
+      "body": "true",
+      "page_reload": false,
+      "success_ui": true,
+      "generic_error": false,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ],
+      "posts": [
+        {
+          "phase": "req",
+          "url": "https://i-seo.su/page__FORM.php",
+          "method": "POST",
+          "post": "pf_name=MainHome+150621&pf_contact=Telegram&pf_phone=%2B7+(790)+315-06-21&pf_site=&pf_comment=SMOKE+main_homepage+150621+%E2%80%94+DO+NOT+PROCESS&personal_data_consent=1&contact_company_url=&iseo_ft=1788966433&iseo_fs=9f0ef4112b48cf5f8a6c756562f2658e1b95103606e8834ea530001b45804971&iseo_fid=cc35427b75b8c3d7&pf_page_title=Продвижение сайтов в ТОП под ключ в Москве | Агентство INTLSEO&pf_page_link=https://i-seo.su/"
+        },
+        {
+          "phase": "resp",
+          "url": "https://i-seo.su/page__FORM.php",
+          "status": 200,
+          "ct": "text/plain; charset=utf-8",
+          "body": "true"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "case": "webinar",
+      "url": "https://i-seo.su/webinar-seo-podryadchik.html",
+      "request_url": "https://i-seo.su/page__FORM.php",
+      "http": 200,
+      "body": "true",
+      "page_reload": false,
+      "success_ui": true,
+      "generic_error": false,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ],
+      "posts": [
+        {
+          "phase": "req",
+          "url": "https://i-seo.su/page__FORM.php",
+          "method": "POST",
+          "post": "pf_name=Webinar+150621&pf_contact=WhatsApp&pf_phone=%2B7+(790)+415-06-21&pf_site=WEBINAR+SEO+CONTRACTOR+2026-09&pf_comment=SMOKE+webinar+150621&personal_data_consent=1&contact_company_url=&iseo_ft=1788966455&iseo_fs=9ca130ca0ca1a82c13b18897372f7c3d3664cce7f0293518d944f5a1c559f88d&iseo_fid=12286c153f79983b&pf_page_title=Вебинар «Как выбрать подрядчика в SEO и не ошибиться?» | INTLSEO&pf_page_link=https://i-seo.su/webinar-seo-podryadchik.html"
+        },
+        {
+          "phase": "resp",
+          "url": "https://i-seo.su/page__FORM.php",
+          "status": 200,
+          "ct": "text/plain; charset=utf-8",
+          "body": "true"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "case": "restaurant",
+      "url": "https://i-seo.su/services/seo/prodvizhenie-sajta-restorana.html",
+      "request_url": null,
+      "http": null,
+      "body": null,
+      "page_reload": false,
+      "success_ui": false,
+      "generic_error": false,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ],
+      "posts": [],
+      "pass": false
+    },
+    {
+      "case": "city",
+      "url": "https://i-seo.su/services/seo/prodvizhenie-v-novosibirske.html",
+      "request_url": null,
+      "http": null,
+      "body": null,
+      "page_reload": false,
+      "success_ui": false,
+      "generic_error": false,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ],
+      "posts": [],
+      "pass": false
+    },
+    {
+      "case": "niche",
+      "url": "https://i-seo.su/services/seo/prodvizhenie-internet-magazina-kosmetiki.html",
+      "request_url": null,
+      "http": null,
+      "body": null,
+      "page_reload": false,
+      "success_ui": false,
+      "generic_error": false,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ],
+      "posts": [],
+      "pass": false
+    },
+    {
+      "case": "consent_negative",
+      "checkEmptyFields": "1",
+      "request_sent": false,
+      "pass": true,
+      "posts": []
+    }
+  ],
+  "events_tail": [
+    "{\"ts\":\"2026-09-09T13:19:57+00:00\",\"form\":\"page\",\"class\":\"rate\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T13:20:20+00:00\",\"form\":\"callback\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T13:39:18+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T13:39:41+00:00\",\"form\":\"callback\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T13:40:06+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T13:40:29+00:00\",\"form\":\"callback\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T13:56:49+00:00\",\"form\":\"audit\",\"class\":\"site\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T14:54:51+00:00\",\"form\":\"audit\",\"class\":\"site\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T14:55:04+00:00\",\"form\":\"audit\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T14:58:07+00:00\",\"form\":\"audit\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T14:58:30+00:00\",\"form\":\"audit\",\"class\":\"rate\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T14:58:52+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T15:00:32+00:00\",\"form\":\"audit\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T15:00:55+00:00\",\"form\":\"audit\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T15:01:16+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T15:01:37+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T15:06:35+00:00\",\"form\":\"audit\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T15:06:57+00:00\",\"form\":\"audit\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T15:07:19+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T15:07:41+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}"
+  ],
+  "test_mode_off": "false",
+  "cfg_final": {
+    "test_mode": "false",
+    "prod_has_nikel": true,
+    "prod_has_im_work": false,
+    "test_has_im_work": true,
+    "nail_typo": false,
+    "hmac_secret_null": true,
+    "honeypot_field": true,
+    "min_fill_seconds": true,
+    "rate_limit_burst_max": true,
+    "duplicate_window": true,
+    "consent_guard_hint": false
+  },
+  "ended": "2026-09-09T15:14:04Z",
+  "summary": {
+    "audit_modal": false,
+    "main_homepage": true,
+    "webinar": true,
+    "restaurant": false,
+    "city": false,
+    "niche": false,
+    "consent_negative": true
+  }
+}

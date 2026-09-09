@@ -1,0 +1,162 @@
+{
+  "started": "2026-09-09T15:16:16Z",
+  "suffix": "151616",
+  "cfg_before": {
+    "test_mode": "false",
+    "prod_has_nikel": true,
+    "prod_has_im_work": false,
+    "test_has_im_work": true,
+    "nail_typo": false,
+    "hmac_secret_null": true,
+    "honeypot_field": true,
+    "min_fill_seconds": true,
+    "rate_limit_burst_max": true,
+    "duplicate_window": true,
+    "consent_guard_hint": false
+  },
+  "test_mode_on": "true",
+  "cases": [
+    {
+      "case": "audit_blank",
+      "site_filled": false,
+      "request_url": "https://i-seo.su/audit__FORM.php",
+      "http": 200,
+      "body": "true",
+      "page_reload": false,
+      "success_ui_early": true,
+      "success_ui_late": true,
+      "form_hidden": true,
+      "generic_error": false,
+      "posts": [
+        {
+          "phase": "req",
+          "url": "https://i-seo.su/audit__FORM.php",
+          "method": "POST",
+          "post": "af_name=TEST+MARS+151616&af_contact=WhatsApp&af_phone=%2B7+(791)+150-11-1&af_site=&af_comment=FOCUSED+RETEST+site%3DN+151616+%E2%80%94+DO+NOT+PROCESS&personal_data_consent=1&contact_company_url=&iseo_ft=1788966981&iseo_fs=6d01a8f5906c44f6ae64c6e9f13bad7fbd15fd44b741a4c3d552ce63009719c2&iseo_fid=81cba6696fa72e2f&pf_page_title=Продвижение сайтов в ТОП под ключ в Москве | Агентство INTLSEO&pf_page_link=https://i-seo.su/"
+        },
+        {
+          "phase": "resp",
+          "url": "https://i-seo.su/audit__FORM.php",
+          "status": 200,
+          "body": "true"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "case": "audit_filled",
+      "site_filled": true,
+      "request_url": "https://i-seo.su/audit__FORM.php",
+      "http": 200,
+      "body": "true",
+      "page_reload": false,
+      "success_ui_early": true,
+      "success_ui_late": true,
+      "form_hidden": true,
+      "generic_error": false,
+      "posts": [
+        {
+          "phase": "req",
+          "url": "https://i-seo.su/audit__FORM.php",
+          "method": "POST",
+          "post": "af_name=TEST+MARS+151616&af_contact=WhatsApp&af_phone=%2B7+(791)+150-22-2&af_site=https%3A%2F%2Fexample-151616.test&af_comment=FOCUSED+RETEST+site%3DY+151616+%E2%80%94+DO+NOT+PROCESS&personal_data_consent=1&contact_company_url=&iseo_ft=1788967006&iseo_fs=e13f976dce5114b1e248646506f12afe5007d86e09fd9ed9deeefa786dbaf0e4&iseo_fid=a4c336b5e9c2fc87&pf_page_title=Продвижение сайтов в ТОП под ключ в Москве | Агентство INTLSEO&pf_page_link=https://i-seo.su/"
+        },
+        {
+          "phase": "resp",
+          "url": "https://i-seo.su/audit__FORM.php",
+          "status": 200,
+          "body": "true"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "case": "restaurant",
+      "url": "https://i-seo.su/services/seo/prodvizhenie-sajta-restorana.html",
+      "checkEmptyFields": "1",
+      "request_url": null,
+      "http": null,
+      "body": null,
+      "page_reload": false,
+      "success_ui": false,
+      "generic_error": false,
+      "posts": [],
+      "pass": false
+    },
+    {
+      "case": "city",
+      "url": "https://i-seo.su/services/seo/prodvizhenie-v-novosibirske.html",
+      "checkEmptyFields": "1",
+      "request_url": null,
+      "http": null,
+      "body": null,
+      "page_reload": false,
+      "success_ui": false,
+      "generic_error": false,
+      "posts": [],
+      "pass": false
+    },
+    {
+      "case": "niche",
+      "url": "https://i-seo.su/services/seo/prodvizhenie-internet-magazina-kosmetiki.html",
+      "checkEmptyFields": "1",
+      "request_url": null,
+      "http": null,
+      "body": null,
+      "page_reload": false,
+      "success_ui": false,
+      "generic_error": false,
+      "posts": [],
+      "pass": false
+    }
+  ],
+  "events_tail": [
+    "{\"ts\":\"2026-09-09T13:16:47+00:00\",\"form\":\"page\",\"class\":\"rate\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T13:19:09+00:00\",\"form\":\"page\",\"class\":\"rate\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T13:19:31+00:00\",\"form\":\"callback\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T13:19:57+00:00\",\"form\":\"page\",\"class\":\"rate\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T13:20:20+00:00\",\"form\":\"callback\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T13:39:18+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T13:39:41+00:00\",\"form\":\"callback\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T13:40:06+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T13:40:29+00:00\",\"form\":\"callback\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T13:56:49+00:00\",\"form\":\"audit\",\"class\":\"site\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T14:54:51+00:00\",\"form\":\"audit\",\"class\":\"site\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T14:55:04+00:00\",\"form\":\"audit\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T14:58:07+00:00\",\"form\":\"audit\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T14:58:30+00:00\",\"form\":\"audit\",\"class\":\"rate\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T14:58:52+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T15:00:32+00:00\",\"form\":\"audit\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T15:00:55+00:00\",\"form\":\"audit\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T15:01:16+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T15:01:37+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T15:06:35+00:00\",\"form\":\"audit\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T15:06:57+00:00\",\"form\":\"audit\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T15:07:19+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T15:07:41+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T15:16:29+00:00\",\"form\":\"audit\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T15:16:54+00:00\",\"form\":\"audit\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}"
+  ],
+  "test_mode_off": "false",
+  "cfg_final": {
+    "test_mode": "false",
+    "prod_has_nikel": true,
+    "prod_has_im_work": false,
+    "test_has_im_work": true,
+    "nail_typo": false,
+    "hmac_secret_null": true,
+    "honeypot_field": true,
+    "min_fill_seconds": true,
+    "rate_limit_burst_max": true,
+    "duplicate_window": true,
+    "consent_guard_hint": false
+  },
+  "ended": "2026-09-09T15:23:22Z",
+  "summary": {
+    "audit_blank": true,
+    "audit_filled": true,
+    "restaurant": false,
+    "city": false,
+    "niche": false
+  }
+}

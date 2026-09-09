@@ -1059,7 +1059,8 @@ $(".modalbox").fancybox();
 
 
             // $("#audit__FORM_popup").submit(function() { return false; });
-            $("#audit__FORM_send").on("click", function(){
+            $("#audit__FORM_send").on("click", function(e){
+				e.preventDefault();
 				if (checkEmptyFields($(this).closest('form')) === '0') {
                     $("#audit__FORM_send").replaceWith("<em>отправка...</em>");
                     
@@ -1078,6 +1079,7 @@ $(".modalbox").fancybox();
                         }
                     });
 				}
+				return false;
             });
 
 

@@ -35,7 +35,9 @@ if (!iseo_form_is_meaningful($method, 2)) {
 if (!iseo_form_contact_ok($method, $contact)) {
     iseo_form_reject($form_id, "contact");
 }
-if (!iseo_form_is_meaningful($site, 3)) {
+// Site URL is optional in homepage audit modal markup (no HTML required).
+// Reject only non-empty but non-meaningful values; blank site must be accepted.
+if ($site !== "" && !iseo_form_is_meaningful($site, 3)) {
     iseo_form_reject($form_id, "site");
 }
 if ($email !== "" && !iseo_form_looks_email($email)) {

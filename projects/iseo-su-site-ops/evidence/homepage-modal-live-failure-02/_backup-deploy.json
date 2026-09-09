@@ -1,0 +1,32 @@
+{
+  "started_utc": "2026-09-09T14:56:39Z",
+  "files": [
+    {
+      "name": "audit__FORM.php",
+      "local_path": "X:\\AI MARS\\projects\\iseo-su-site-ops\\production-source\\forms\\audit__FORM.php",
+      "remote_path": "/home/n/nikel0rv/i-seo.su/public_html/audit__FORM.php",
+      "backup_path": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_homepage-modal-live-failure-02\\audit__FORM.php.remote-before.2026-09-09T145639Z",
+      "local_sha256": "C6DDCE7E8DBC40150F93F9EDFFD1C86E44512A0B0AF1C09C10BA37BBD4464D86",
+      "remote_sha256_before": "3A8A965BA9A112437B3EEE7B10FCAC6912B3BD9A83D46836F9159D161084C58C",
+      "remote_sha256_after": "C6DDCE7E8DBC40150F93F9EDFFD1C86E44512A0B0AF1C09C10BA37BBD4464D86",
+      "remote_matches_local": true
+    },
+    {
+      "name": "common.js",
+      "local_path": "X:\\AI MARS\\projects\\iseo-su-site-ops\\production-source\\js\\common.js",
+      "remote_path": "/home/n/nikel0rv/i-seo.su/public_html/js/common.js",
+      "backup_path": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_homepage-modal-live-failure-02\\common.js.remote-before.2026-09-09T145639Z",
+      "local_sha256": "7681D979546F87E84929B13C23C9053B1DFDE5F293F6AE558533EC1CE5992012",
+      "remote_sha256_before": "5894E145C10FC7FDF66543FFE421ADA4255829109C68B1962927A66C37D3FD13",
+      "remote_sha256_after": "7681D979546F87E84929B13C23C9053B1DFDE5F293F6AE558533EC1CE5992012",
+      "remote_matches_local": true,
+      "live_http_sha256": "7681D979546F87E84929B13C23C9053B1DFDE5F293F6AE558533EC1CE5992012",
+      "live_matches_local": true
+    }
+  ],
+  "deployed_utc": "2026-09-09T14:56:44Z",
+  "markers": {
+    "audit_site_optional": true,
+    "audit_preventDefault": true
+  }
+}

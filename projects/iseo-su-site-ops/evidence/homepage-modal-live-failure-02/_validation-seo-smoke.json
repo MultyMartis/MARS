@@ -1,0 +1,68 @@
+{
+  "started": "2026-09-09T15:25:21.483724+00:00",
+  "suffix": "152521",
+  "cases": [
+    {
+      "case": "restaurant",
+      "checkEmptyFields": "0",
+      "request_url": "https://i-seo.su/page__FORM.php",
+      "http": 200,
+      "body": "true",
+      "success_ui": true,
+      "generic_error": false,
+      "page_reload": false,
+      "pass": true
+    },
+    {
+      "case": "city",
+      "checkEmptyFields": "0",
+      "request_url": "https://i-seo.su/page__FORM.php",
+      "http": 200,
+      "body": "true",
+      "success_ui": true,
+      "generic_error": false,
+      "page_reload": false,
+      "pass": true
+    },
+    {
+      "case": "niche",
+      "checkEmptyFields": "0",
+      "request_url": "https://i-seo.su/page__FORM.php",
+      "http": 200,
+      "body": "true",
+      "success_ui": true,
+      "generic_error": false,
+      "page_reload": false,
+      "pass": true
+    }
+  ],
+  "test_mode_on": "true",
+  "events": [
+    "{\"ts\":\"2026-09-09T15:00:55+00:00\",\"form\":\"audit\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T15:01:16+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T15:01:37+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T15:06:35+00:00\",\"form\":\"audit\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T15:06:57+00:00\",\"form\":\"audit\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T15:07:19+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T15:07:41+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T15:16:29+00:00\",\"form\":\"audit\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T15:16:54+00:00\",\"form\":\"audit\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T15:25:33+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T15:31:03+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T15:31:28+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}"
+  ],
+  "test_mode_off": "false",
+  "cfg_final": {
+    "test_mode": "false",
+    "prod_has_nikel": true,
+    "prod_has_im_work": false,
+    "test_has_im_work": true,
+    "nail_typo": false,
+    "hmac_secret_null": true,
+    "honeypot_field": true,
+    "min_fill_seconds": true,
+    "rate_limit_burst_max": true,
+    "duplicate_window": true,
+    "consent_guard_hint": false
+  }
+}
