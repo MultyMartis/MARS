@@ -1,0 +1,383 @@
+{
+  "task": "ISEO-SU-SITE-OPS-FORM-AJAX-ENDPOINT-01",
+  "started": "2026-09-09T12:27:15Z",
+  "stamp": "20260909122715",
+  "cfg_before": {
+    "test_mode": "false",
+    "prod_has_nikel": true,
+    "prod_has_im_work": false,
+    "test_has_im_work": true,
+    "nail_typo": false,
+    "hmac_secret_null": true,
+    "honeypot_field": true,
+    "min_fill_seconds": true,
+    "rate_limit_burst_max": true,
+    "duplicate_window": true,
+    "consent_guard_hint": false
+  },
+  "seo_gets": {
+    "home": {
+      "url": "https://i-seo.su/",
+      "http": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "Продвижение сайтов в ТОП под ключ в Москве | Агентство INTLSEO",
+      "h1": "Продвигаем бизнес в&nbsp;интернете, выводим сайты в&nbsp;ИИ выдачу",
+      "canonical": "",
+      "contract": {
+        "has_pf_phone": true,
+        "has_hidden_whatsapp": false,
+        "tel_still_named_contact": false,
+        "consent_checkbox": true,
+        "select_pf_contact": true
+      }
+    },
+    "webinar": {
+      "url": "https://i-seo.su/webinar-seo-podryadchik.html",
+      "http": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "Вебинар «Как выбрать подрядчика в SEO и не ошибиться?» | INTLSEO",
+      "h1": "Как выбрать подрядчика в SEO и не ошибиться?",
+      "canonical": "https://i-seo.su/webinar-seo-podryadchik.html",
+      "contract": {
+        "has_pf_phone": true,
+        "has_hidden_whatsapp": true,
+        "tel_still_named_contact": false,
+        "consent_checkbox": true,
+        "select_pf_contact": false
+      }
+    },
+    "restaurant": {
+      "url": "https://i-seo.su/services/seo/prodvizhenie-sajta-restorana.html",
+      "http": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "Заказать SEO продвижение сайта ресторана | i-seo.su",
+      "h1": "SEO продвижение сайта ресторана",
+      "canonical": "https://i-seo.su/services/seo/prodvizhenie-sajta-restorana.html",
+      "contract": {
+        "has_pf_phone": true,
+        "has_hidden_whatsapp": true,
+        "tel_still_named_contact": false,
+        "consent_checkbox": true,
+        "select_pf_contact": true
+      }
+    },
+    "city": {
+      "url": "https://i-seo.su/services/seo/prodvizhenie-v-novosibirske.html",
+      "http": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "SEO-продвижение сайта компании в Новосибирске | i-seo.su",
+      "h1": "SEO-продвижение сайта в Новосибирске",
+      "canonical": "https://i-seo.su/services/seo/prodvizhenie-v-novosibirske.html",
+      "contract": {
+        "has_pf_phone": true,
+        "has_hidden_whatsapp": true,
+        "tel_still_named_contact": false,
+        "consent_checkbox": true,
+        "select_pf_contact": true
+      }
+    },
+    "niche": {
+      "url": "https://i-seo.su/services/seo/prodvizhenie-internet-magazina-kosmetiki.html",
+      "http": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "SEO продвижение интернет-магазина косметики | i-seo.su",
+      "h1": "SEO продвижение интернет-магазина косметики",
+      "canonical": "https://i-seo.su/services/seo/prodvizhenie-internet-magazina-kosmetiki.html",
+      "contract": {
+        "has_pf_phone": true,
+        "has_hidden_whatsapp": true,
+        "tel_still_named_contact": false,
+        "consent_checkbox": true,
+        "select_pf_contact": true
+      }
+    },
+    "seo_hub": {
+      "url": "https://i-seo.su/services/seo.html",
+      "http": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "Заказать SEO продвижение сайтов в Москве — поисковая оптимизация | INTLSEO",
+      "h1": "SEO&nbsp;продвижение сайтов",
+      "canonical": "",
+      "contract": {
+        "has_pf_phone": true,
+        "has_hidden_whatsapp": true,
+        "tel_still_named_contact": false,
+        "consent_checkbox": true,
+        "select_pf_contact": true
+      }
+    }
+  },
+  "neg_honeypot": {
+    "case": "honeypot",
+    "page_url": "https://i-seo.su/services/seo/prodvizhenie-sajta-restorana.html",
+    "post_url": "https://i-seo.su/page__FORM.php",
+    "canonical_post": true,
+    "status": 200,
+    "body": "false",
+    "success_ui": false,
+    "fail_ui": true,
+    "wait_error": null,
+    "console_errors": [
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 409 ()"
+      },
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 409 ()"
+      }
+    ],
+    "consent_posted": true,
+    "honeypot_posted": true
+  },
+  "neg_consent": {
+    "case": "consent_missing",
+    "page_url": "https://i-seo.su/services/seo/prodvizhenie-sajta-restorana.html",
+    "post_url": null,
+    "canonical_post": false,
+    "status": null,
+    "body": null,
+    "success_ui": false,
+    "fail_ui": false,
+    "wait_error": "Timeout 20000ms exceeded while waiting for event \"response\"",
+    "console_errors": [
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 409 ()"
+      },
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 409 ()"
+      }
+    ],
+    "consent_posted": false,
+    "honeypot_posted": false
+  },
+  "events_after_negatives": [
+    "{\"ts\":\"2026-09-09T12:26:13+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:26:21+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:26:30+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:26:39+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:26:47+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:27:28+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}"
+  ],
+  "neg_consent_server": {
+    "http_status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "body": "false",
+    "posted_keys": [
+      "contact_company_url",
+      "iseo_fid",
+      "iseo_fs",
+      "iseo_ft",
+      "pf_comment",
+      "pf_contact",
+      "pf_name",
+      "pf_page_link",
+      "pf_page_title",
+      "pf_phone",
+      "pf_site"
+    ]
+  },
+  "test_mode_on": "true",
+  "rate_limit_pause_seconds": 310,
+  "pause_started": "2026-09-09T12:28:37Z",
+  "pause_ended": "2026-09-09T12:33:47Z",
+  "test_mode_off_on_error": "false",
+  "ended": "2026-09-09T12:34:53Z",
+  "resume_started": "2026-09-09T12:37:22Z",
+  "events_before_resume": [
+    "{\"ts\":\"2026-09-09T06:06:20+00:00\",\"form\":\"page\",\"class\":\"required\",\"result\":\"reject\",\"ip_h\":\"4d363bd226a2e37a\"}",
+    "{\"ts\":\"2026-09-09T09:17:52+00:00\",\"form\":\"page\",\"class\":\"required\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T09:34:44+00:00\",\"form\":\"audit\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"e1376958e2ea4e3b\"}",
+    "{\"ts\":\"2026-09-09T09:38:16+00:00\",\"form\":\"page\",\"class\":\"required\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T09:47:52+00:00\",\"form\":\"page\",\"class\":\"consent\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T09:47:57+00:00\",\"form\":\"page\",\"class\":\"consent\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T09:48:01+00:00\",\"form\":\"page\",\"class\":\"consent\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T09:53:15+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T09:53:20+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T09:53:30+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T10:24:26+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T11:16:29+00:00\",\"form\":\"page\",\"class\":\"consent\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T11:16:34+00:00\",\"form\":\"page\",\"class\":\"consent\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T11:16:38+00:00\",\"form\":\"page\",\"class\":\"consent\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T11:21:53+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T11:21:57+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T11:25:20+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T11:29:34+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:09:45+00:00\",\"form\":\"page\",\"class\":\"method\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:09:46+00:00\",\"form\":\"page\",\"class\":\"method\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:18:32+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:18:40+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:18:50+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:18:59+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:19:07+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:19:15+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:19:24+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:25:56+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:26:04+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:26:13+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:26:21+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:26:30+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:26:39+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:26:47+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:27:28+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:28:08+00:00\",\"form\":\"page\",\"class\":\"consent\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:28:18+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:28:32+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:33:56+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:34:11+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}"
+  ],
+  "cfg_before_resume": {
+    "test_mode": "false",
+    "prod_has_nikel": true,
+    "prod_has_im_work": false,
+    "test_has_im_work": true,
+    "nail_typo": false,
+    "hmac_secret_null": true,
+    "honeypot_field": true,
+    "min_fill_seconds": true,
+    "rate_limit_burst_max": true,
+    "duplicate_window": true,
+    "consent_guard_hint": false
+  },
+  "resume_test_mode_on": "true",
+  "valid_submits": [
+    {
+      "case": "valid_home",
+      "page_url": "https://i-seo.su/",
+      "post_url": "https://i-seo.su/page__FORM.php",
+      "canonical_post": true,
+      "status": 200,
+      "body": "true",
+      "success_ui": true,
+      "fail_ui": false,
+      "wait_error": null,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ],
+      "consent_posted": true,
+      "honeypot_posted": false
+    }
+  ],
+  "valid_home_resume": {
+    "case": "valid_home",
+    "page_url": "https://i-seo.su/",
+    "post_url": "https://i-seo.su/page__FORM.php",
+    "canonical_post": true,
+    "status": 200,
+    "body": "true",
+    "success_ui": true,
+    "fail_ui": false,
+    "wait_error": null,
+    "console_errors": [
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 409 ()"
+      },
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 409 ()"
+      }
+    ],
+    "consent_posted": true,
+    "honeypot_posted": false
+  },
+  "shared_js_console": [
+    {
+      "url": "https://i-seo.su/",
+      "form_present": true,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ]
+    },
+    {
+      "url": "https://i-seo.su/services/seo.html",
+      "form_present": true,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ]
+    },
+    {
+      "url": "https://i-seo.su/services/seo/prodvizhenie-sajta-restorana.html",
+      "form_present": true,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ]
+    },
+    {
+      "url": "https://i-seo.su/webinar-seo-podryadchik.html",
+      "form_present": true,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ]
+    }
+  ],
+  "events_after_resume": [
+    "{\"ts\":\"2026-09-09T12:19:24+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:25:56+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:26:04+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:26:13+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:26:21+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:26:30+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:26:39+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:26:47+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:27:28+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:28:08+00:00\",\"form\":\"page\",\"class\":\"consent\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:28:18+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:28:32+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:33:56+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:34:11+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T12:37:34+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}"
+  ],
+  "resume_test_mode_off": "false",
+  "cfg_final": {
+    "test_mode": "false",
+    "prod_has_nikel": true,
+    "prod_has_im_work": false,
+    "test_has_im_work": true,
+    "nail_typo": false,
+    "hmac_secret_null": true,
+    "honeypot_field": true,
+    "min_fill_seconds": true,
+    "rate_limit_burst_max": true,
+    "duplicate_window": true,
+    "consent_guard_hint": false
+  },
+  "resume_ended": "2026-09-09T12:37:53Z"
+}

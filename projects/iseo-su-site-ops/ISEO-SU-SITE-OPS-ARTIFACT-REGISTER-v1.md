@@ -476,6 +476,23 @@ Production mutations in this registration: **0** at registration time. **WAVE 1 
 
 ---
 
+## FORM AJAX ENDPOINT 01 (2026-09-09) — COMPLETE
+
+| Artifact | Path | Role |
+|----------|------|------|
+| Evidence | `ISEO-SU-FORM-AJAX-ENDPOINT-01-EVIDENCE-v1.md` | EVIDENCE |
+| Main REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-FORM-AJAX-ENDPOINT-01.md` | REPORT |
+| RU closeout | `reports/ISEO-SU-FORM-AJAX-ENDPOINT-01-RU.md` | REPORT (RU) |
+| Shared JS source | `production-source/js/common.js` | SOURCE (SEO handler URL only) |
+| Probe / deploy / regression tools | `tools/_form-ajax-endpoint-01-*.py` | TOOL |
+| Machine evidence | `evidence/form-ajax-endpoint-01/` | EVIDENCE |
+| Production backup | `X:\AI MARS\local\sites\iseo-su-production\_form-ajax-endpoint-01\` | BACKUP (out of git) |
+| Live defect | nested POST `/services/seo/page__FORM.php` → canonical `/page__FORM.php` | METRIC |
+| Handler / field contract | **UNCHANGED** | POLICY |
+| SEO / menu / design | **UNCHANGED** | POLICY |
+
+---
+
 ## Explicit non-artifacts and security signal
 
 This documentation wave introduced no token, password, cookie, session value, DB dump, Localhost mirror, unredacted production dump, or active `_*-scratch/` tree.
