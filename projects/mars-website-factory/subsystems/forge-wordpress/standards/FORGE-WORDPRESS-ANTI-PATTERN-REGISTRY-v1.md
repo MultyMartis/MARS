@@ -5,7 +5,7 @@
 **Date:** 2026-08-18  
 **Evidence:** FP-0002 production + V9 Admin waves
 
-Each ID is reusable. Client facts are generalized.
+Each **global** `AP-*` ID is unique in this registry. Do not reuse those numbers as document-local IDs. Local packs use an explicit prefix (`AP-CMS-*`, `AP-COOKIE-*`). Client facts are generalized.
 
 ---
 
@@ -562,4 +562,17 @@ Do **not** reuse AP-001–021 numbers. Full entries: [CMS-ANTI-PATTERNS](FORGE-W
 
 ---
 
-*FW-S-21 v1.7 — AP-030–034 (editorial-field ownership, SEO/OG/Schema owners, truthful Schema, trusted embeds, Admin compatibility shim). Add IDs; do not reuse numbers.*
+## Cookie/privacy local namespace (`AP-COOKIE-*`)
+
+Document-local anti-patterns in [COOKIE-CONSENT](FORGE-WORDPRESS-COOKIE-CONSENT-AND-PRIVACY-CONTROLS-STANDARD-v1.md). **Not** global `AP-031`–`AP-034`.
+
+| ID | Title | Former local ID |
+|----|-------|-----------------|
+| AP-COOKIE-031 | decorative cookie banner without gating | AP-031 (FW-S-33 local, pre-hygiene) |
+| AP-COOKIE-032 | analytics loads before consent state resolves | AP-032 (FW-S-33 local, pre-hygiene) |
+| AP-COOKIE-033 | cookie analytics consent merged with form personal-data consent | AP-033 (FW-S-33 local, pre-hygiene) |
+| AP-COOKIE-034 | privacy policy names generic/demo vendors instead of actual runtime | AP-034 (FW-S-33 local, pre-hygiene) |
+
+---
+
+*FW-S-21 v1.8 — AP-030–034 remain global (editorial-field ownership, SEO/OG/Schema owners, truthful Schema, trusted embeds, Admin compatibility shim). Cookie-local IDs moved to `AP-COOKIE-*`. Add IDs; do not reuse numbers.*

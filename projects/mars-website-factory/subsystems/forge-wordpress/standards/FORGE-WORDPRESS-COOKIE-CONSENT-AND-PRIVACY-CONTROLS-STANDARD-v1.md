@@ -3,8 +3,9 @@
 **ID:** FW-S-33  
 **Status:** ACTIVE — PRODUCTION-INFORMED / FOUNDATION IMPLEMENTED ONCE  
 **Date:** 2026-08-19  
+**Namespace:** `AP-COOKIE-*` (document-local; does not reuse global `AP-*` registry numbers)  
 **Evidence:** FP-0002 PROD-P18E design; FP-0002 live Metrika/forms/legal reality  
-**Companions:** [FORMS-AND-SMTP](FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) · [SITE-SETTINGS](FORGE-WORDPRESS-SITE-SETTINGS-STANDARD-v1.md) · [GLOBAL-SETTINGS-OWNERSHIP](FORGE-WORDPRESS-GLOBAL-SETTINGS-OWNERSHIP-STANDARD-v1.md) · [ADMIN-IA](FORGE-WORDPRESS-ADMIN-INFORMATION-ARCHITECTURE-STANDARD-v1.md)
+**Companions:** [FORMS-AND-SMTP](FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) · [SITE-SETTINGS](FORGE-WORDPRESS-SITE-SETTINGS-STANDARD-v1.md) · [GLOBAL-SETTINGS-OWNERSHIP](FORGE-WORDPRESS-GLOBAL-SETTINGS-OWNERSHIP-STANDARD-v1.md) · [ADMIN-IA](FORGE-WORDPRESS-ADMIN-INFORMATION-ARCHITECTURE-STANDARD-v1.md) · [ANTI-PATTERN-REGISTRY](FORGE-WORDPRESS-ANTI-PATTERN-REGISTRY-v1.md)
 
 ---
 
@@ -252,12 +253,14 @@ Project-specific concerns:
 
 ## 14. Anti-pattern linkage
 
-Related anti-patterns:
+Document-local anti-patterns (`AP-COOKIE-*`). These are **not** global registry IDs. Global `AP-031`–`AP-034` remain the FP-0002 SEO / embed / shim lessons in [ANTI-PATTERN-REGISTRY](FORGE-WORDPRESS-ANTI-PATTERN-REGISTRY-v1.md).
 
-- AP-031 — decorative cookie banner without gating
-- AP-032 — analytics loads before consent state resolves
-- AP-033 — cookie analytics consent merged with form personal-data consent
-- AP-034 — privacy policy names generic/demo vendors instead of actual runtime
+| Local ID | Meaning | Former local ID | Related rule |
+|----------|---------|-----------------|--------------|
+| AP-COOKIE-031 | decorative cookie banner without gating | AP-031 | PRIVACY-002 |
+| AP-COOKIE-032 | analytics loads before consent state resolves | AP-032 | PRIVACY-003 |
+| AP-COOKIE-033 | cookie analytics consent merged with form personal-data consent | AP-033 | PRIVACY-004 |
+| AP-COOKIE-034 | privacy policy names generic/demo vendors instead of actual runtime | AP-034 | PRIVACY-007 |
 
 ---
 
@@ -280,4 +283,4 @@ Related anti-patterns:
 
 ---
 
-*FW-S-33 v1 — first WP Forge privacy/cookie controls standard derived from FP-0002 P18E.*
+*FW-S-33 v1.1 — local cookie anti-pattern IDs namespaced as `AP-COOKIE-*` (former local AP-031–034). Derived from FP-0002 P18E.*
