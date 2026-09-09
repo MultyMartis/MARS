@@ -450,7 +450,7 @@ Production mutations in this registration: **0** at registration time. **WAVE 1 
 |----------|------|------|
 | Task REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-SAFE-WORKSPACE-CLEANUP-01.md` | REPORT |
 | Scope | Project-scoped only (`git-sync-iseo-su-*`, related worktrees; not general Storage Hygiene) | POLICY |
-| Retained temps | `X:\AI MARS STORAGE\git-sync-iseo-su-form-consent-wave-01`; `...\git-sync-iseo-su-tech-repair-wave-01` | RETAIN |
+| Retained temps (historical) | form-consent + tech-repair clones — **CLOSED** by FINAL HOUSEKEEPING / GIT CLOSURE 01 (2026-09-10) | SUPERSEDED |
 | Protected evidence | `X:\AI MARS STORAGE\iseo-su-site-ops\` (incl. `tech-seo-reaudit-02\20260904-163451\`) | RETAIN |
 | Protected archive | `X:\AI MARS STORAGE\archives\iseo-su-site-ops-scratch-stabilization-2026-08-20\` | RETAIN |
 | Protected local rollback | `X:\AI MARS\local\sites\iseo-su-production\_*` | RETAIN |
@@ -529,6 +529,20 @@ Production mutations in this registration: **0** at registration time. **WAVE 1 
 | Live surfaces / families / handlers | **3744** / **10** / **12** | METRIC |
 | Isolated mail recipient | `im.work@mail.ru` only; production test mails **0** | POLICY |
 | SEO / menu / design | **UNCHANGED** | POLICY |
+
+---
+
+## FINAL HOUSEKEEPING + GIT CLOSURE 01 (2026-09-10) — COMPLETE
+
+| Artifact | Path | Role |
+|----------|------|------|
+| Task REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-FINAL-HOUSEKEEPING-GIT-CLOSURE-01.md` | REPORT |
+| Scope | i-seo.su Git/temp contours only; no production site mutation; no foreign WIP | POLICY |
+| Closed temps | `X:\AI MARS STORAGE\git-sync-iseo-su-*` (worktrees + empty shells + tech-repair residual) | CLOSED |
+| Glossary residual | form-consent `archive-glossary.php` — same blob as origin `wordpress/iseoblog-glossary/` | DECISION |
+| Recovery note | `X:\AI MARS STORAGE\iseo-su-site-ops\recovery\final-housekeeping-git-closure-01\` | RETAIN |
+| Protected evidence | `X:\AI MARS STORAGE\iseo-su-site-ops\` (incl. `tech-seo-reaudit-02\`) | RETAIN |
+| Protected local rollback | `X:\AI MARS\local\sites\iseo-su-production\_*` | RETAIN |
 
 ---
 
