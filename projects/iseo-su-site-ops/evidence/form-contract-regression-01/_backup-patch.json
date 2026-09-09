@@ -1,0 +1,210 @@
+{
+  "task": "ISEO-SU-SITE-OPS-FORM-CONTRACT-REGRESSION-01",
+  "started": "2026-09-09T11:04:19Z",
+  "backup_root": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_form-contract-regression-01",
+  "files": [
+    {
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/blog-article.html",
+      "backup": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_form-contract-regression-01\\blog-article.html.before.20260909T110419Z",
+      "sha256_before": "7dc492b24097b121804deb9d3c9d785c01d95ca7bd60627a26c901b7a419a8f7",
+      "bytes_before": 27290,
+      "mode": "patched",
+      "replacements": 1,
+      "sha256_after": "12e49f122a388b2adfe1996046b0966f24b0eb53c5d3aa389698f68ac6f4bd25",
+      "bytes_after": 27355
+    },
+    {
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/blog.html",
+      "backup": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_form-contract-regression-01\\blog.html.before.20260909T110419Z",
+      "sha256_before": "4aad6518d7eeae6bb5a59776de457dac3cf3a6db68bc9db4f20bb4c0a6f98427",
+      "bytes_before": 57513,
+      "mode": "patched",
+      "replacements": 1,
+      "sha256_after": "7e3402c978d5f82086e06ed92150b1189e35cceb133be6d951c88943f9d1c984",
+      "bytes_after": 57578
+    },
+    {
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/adv/google-adwords.html",
+      "backup": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_form-contract-regression-01\\services__adv__google-adwords.html.before.20260909T110419Z",
+      "sha256_before": "9e316443378bbfcfb6ea461f1e249f897caf8282e28a8f73718f26ed83af3aa5",
+      "bytes_before": 66720,
+      "mode": "patched",
+      "replacements": 1,
+      "sha256_after": "899a2e23a78fb116d26419a76c4ac66bcc88deb6cb21b9e32f2b32d1c198de5d",
+      "bytes_after": 66785
+    },
+    {
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/adv/medijnaya-reklama.html",
+      "backup": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_form-contract-regression-01\\services__adv__medijnaya-reklama.html.before.20260909T110419Z",
+      "sha256_before": "e893e16cfb155e2029e888f9337a64e2a86f001c4b4a0dc73256f6c7a370f938",
+      "bytes_before": 66642,
+      "mode": "patched",
+      "replacements": 1,
+      "sha256_after": "5b0152701cae1b99d0fd764883ca04030c68c826c0c9636bd2878a36c50d8d06",
+      "bytes_after": 66707
+    },
+    {
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/adv/yandeks-direkt.html",
+      "backup": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_form-contract-regression-01\\services__adv__yandeks-direkt.html.before.20260909T110419Z",
+      "sha256_before": "5e62382ce583ee44567bcaf1977869b33d9880b2dca8062c8170cf715413db59",
+      "bytes_before": 66651,
+      "mode": "patched",
+      "replacements": 1,
+      "sha256_after": "a7198926508cca4798ad10321d0e066886d0a4ee4153d47db80b3c2a5efcff81",
+      "bytes_after": 66716
+    },
+    {
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/audit/analiz-konkurentov.html",
+      "backup": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_form-contract-regression-01\\services__audit__analiz-konkurentov.html.before.20260909T110419Z",
+      "sha256_before": "1d9c19c40699480b2068fbf517a8381846ddbd34b4da5e9c8a68dc6cd7c64bcc",
+      "bytes_before": 40862,
+      "mode": "patched",
+      "replacements": 1,
+      "sha256_after": "ecfe8279221e22d0c3ecb7b7332d3b6bfc8eab054ff1548902102e61661b2d2e",
+      "bytes_after": 40927
+    },
+    {
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/development/optimizaciya-pod-mobilnye-ustrojstva.html",
+      "backup": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_form-contract-regression-01\\services__development__optimizaciya-pod-mobilnye-ustrojstva.html.before.20260909T110419Z",
+      "sha256_before": "b736b5ecd1b32a5f8b25c1f5caa49a72a730033a4a31a1d423bd0ee1210b5dd7",
+      "bytes_before": 63493,
+      "mode": "patched",
+      "replacements": 1,
+      "sha256_after": "3465f65658ce01c6eac7c38150daeb276b5ee79683bfb35d9408924d080d8466",
+      "bytes_after": 63558
+    },
+    {
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/development/soprovozhdenie-sajta.html",
+      "backup": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_form-contract-regression-01\\services__development__soprovozhdenie-sajta.html.before.20260909T110419Z",
+      "sha256_before": "c954519564e36436461d8128f1e512f4182bd7770340088db870616d0c6ea6ab",
+      "bytes_before": 63319,
+      "mode": "patched",
+      "replacements": 1,
+      "sha256_after": "ef4086de32c621143b6a96a28a5bac188e2478c116bfceed14e519ac1a6c62d8",
+      "bytes_after": 63384
+    },
+    {
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/development/sozdanie-sajta.html",
+      "backup": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_form-contract-regression-01\\services__development__sozdanie-sajta.html.before.20260909T110419Z",
+      "sha256_before": "eec67c978ee2180e3ebd060d425f326879cff4344fe49ccf329a3be7d54c8224",
+      "bytes_before": 70722,
+      "mode": "patched",
+      "replacements": 1,
+      "sha256_after": "4e54c6623dc5b2f49f226d7178e3e516b0dcbf938b243632af5e9ccb63408584",
+      "bytes_after": 70787
+    },
+    {
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/development/tekhnicheskaya-optimizaciya.html",
+      "backup": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_form-contract-regression-01\\services__development__tekhnicheskaya-optimizaciya.html.before.20260909T110419Z",
+      "sha256_before": "eb314ac88bcbe4cb78b0f988af07ada644335da4b094115a601299855e5eff59",
+      "bytes_before": 63211,
+      "mode": "patched",
+      "replacements": 1,
+      "sha256_after": "3c2d10a1ddf33eb3f9e7f458ca7ca57cc789f43eafde4258792cde9ea1565ac7",
+      "bytes_after": 63276
+    },
+    {
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/development/tekhnicheskaya-podderzhka.html",
+      "backup": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_form-contract-regression-01\\services__development__tekhnicheskaya-podderzhka.html.before.20260909T110419Z",
+      "sha256_before": "a8ddd5a7539778ccf40b1ef559c0eb8dce95d3226da8a1276b9b2851012caeed",
+      "bytes_before": 63727,
+      "mode": "patched",
+      "replacements": 1,
+      "sha256_after": "83d1cbbc1fa7b9908cb4c91007228b34d2540fae306255286fbbad66f0a090ff",
+      "bytes_after": 63792
+    },
+    {
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/serm/email-marketing.html",
+      "backup": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_form-contract-regression-01\\services__serm__email-marketing.html.before.20260909T110419Z",
+      "sha256_before": "30f1cd80553c2721466ddeb70d3afbd35a18951869754058d4550b8085763bb3",
+      "bytes_before": 59573,
+      "mode": "patched",
+      "replacements": 1,
+      "sha256_after": "bcc6063413514d6a42cb9dacafbed7a1bd8ec596612e781c3d55a7f20f4cce70",
+      "bytes_after": 59638
+    },
+    {
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/serm/reklama-u-blogerov.html",
+      "backup": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_form-contract-regression-01\\services__serm__reklama-u-blogerov.html.before.20260909T110419Z",
+      "sha256_before": "d3a9c86cc42b0131dc15130fdff1160b6617bb1c10454c47c2b41bafab46713f",
+      "bytes_before": 63883,
+      "mode": "patched",
+      "replacements": 1,
+      "sha256_after": "ad40105661538be0d9fc2941b8a88e8e3f3b6ab501253ca04cd0684070290792",
+      "bytes_after": 63948
+    },
+    {
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/serm/reklama-v-telegram.html",
+      "backup": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_form-contract-regression-01\\services__serm__reklama-v-telegram.html.before.20260909T110419Z",
+      "sha256_before": "e875eb8de5dcf442a5fe6e9fee5eee48ee0a9c45f9e5726c7f7fbea68b925e93",
+      "bytes_before": 64235,
+      "mode": "patched",
+      "replacements": 1,
+      "sha256_after": "22ff0cda205da55e1436796faad75430c2476c1f34ecdfcea68c6beecf22808e",
+      "bytes_after": 64300
+    },
+    {
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/serm/smm.html",
+      "backup": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_form-contract-regression-01\\services__serm__smm.html.before.20260909T110419Z",
+      "sha256_before": "7ffa755fcd96cadbdc902217cf0c9ed3cb213d23cef107aa833c5c8af32c0a01",
+      "bytes_before": 64983,
+      "mode": "patched",
+      "replacements": 1,
+      "sha256_after": "216d93b8f0e8d1829eaaa2c495524aae3e1661b6fd09ed5855e2882b39901022",
+      "bytes_after": 65048
+    },
+    {
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/serm/targetirovannaya-reklama.html",
+      "backup": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_form-contract-regression-01\\services__serm__targetirovannaya-reklama.html.before.20260909T110419Z",
+      "sha256_before": "0d8b2d179f1b13649446eed6996d0ab48a6b6d8911be7c09f96be4fcc0d4aa0a",
+      "bytes_before": 65401,
+      "mode": "patched",
+      "replacements": 1,
+      "sha256_after": "23fa68e6b34e09612bea2135c1ddc7d546fa09bfcabc540dd0237bf066aec621",
+      "bytes_after": 65466
+    },
+    {
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/serm/upravlenie-reputaciej.html",
+      "backup": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_form-contract-regression-01\\services__serm__upravlenie-reputaciej.html.before.20260909T110419Z",
+      "sha256_before": "43b18810ca29e31209a765be295c641367e7cf9f8458772689ae00142a6ae761",
+      "bytes_before": 59880,
+      "mode": "patched",
+      "replacements": 1,
+      "sha256_after": "45bb460beaba94f417a6a0a0d40ba02d63f81950055ab8960f2af4f1615b1d65",
+      "bytes_after": 59945
+    },
+    {
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/wp-content/themes/iseoblog/template-parts/content-form-seo.php",
+      "backup": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_form-contract-regression-01\\wp-content__themes__iseoblog__template-parts__content-form-seo.php.before.20260909T110419Z",
+      "sha256_before": "1d49be880913cb31c60afc34af08cfd6e63997fc29f2ff14bf80267953967150",
+      "bytes_before": 2029,
+      "mode": "patched",
+      "replacements": 1,
+      "sha256_after": "b57a5690f13070e7754f22cbf3665b616f69b6e391dcc311d99266fa0de28a4e",
+      "bytes_after": 2093
+    }
+  ],
+  "local_source_patched": [
+    {
+      "path": "X:\\AI MARS\\projects\\iseo-su-site-ops\\production-source\\static-html\\blog-article.html",
+      "mode": "patched",
+      "replacements": 1,
+      "sha256_after": "95977b787880ca74111628307a3824016763511acab03648749503cda8f4b4a5"
+    },
+    {
+      "path": "X:\\AI MARS\\projects\\iseo-su-site-ops\\production-source\\static-html\\blog.html",
+      "mode": "patched",
+      "replacements": 1,
+      "sha256_after": "7e3402c978d5f82086e06ed92150b1189e35cceb133be6d951c88943f9d1c984"
+    },
+    {
+      "path": "X:\\AI MARS\\projects\\iseo-su-site-ops\\production-source\\theme\\iseoblog\\template-parts\\content-form-seo.php",
+      "mode": "patched",
+      "replacements": 1,
+      "sha256_after": "b57a5690f13070e7754f22cbf3665b616f69b6e391dcc311d99266fa0de28a4e"
+    }
+  ],
+  "ended": "2026-09-09T11:04:51Z",
+  "patched_count": 18,
+  "already_patched_count": 0
+}

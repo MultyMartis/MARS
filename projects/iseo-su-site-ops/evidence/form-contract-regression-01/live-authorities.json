@@ -1,0 +1,307 @@
+{
+  "task": "ISEO-SU-SITE-OPS-FORM-CONTRACT-REGRESSION-01",
+  "scanned_utc": "2026-09-09T10:49:29Z",
+  "formish_template_parts": [
+    "content-form-seo.php"
+  ],
+  "all_template_part_names": [
+    "cases-context.php",
+    "cases-develop.php",
+    "cases-geo.php",
+    "cases-seo.php",
+    "content-calc-audit.php",
+    "content-calc-seo.php",
+    "content-footer.php",
+    "content-form-seo.php",
+    "content-glossary-page-scene.php",
+    "content-mobilemenu.php",
+    "content-none.php",
+    "content-page.php",
+    "content-recomendations.php",
+    "content-reviews.php",
+    "content-search.php",
+    "content-seo-popups.php",
+    "content-stories-video.php",
+    "content-tarifs-main.php",
+    "content-tarifs-popups.php",
+    "content-tarifs-seo-test.php",
+    "content-tarifs-seo.php",
+    "content-tarifs-serm.php",
+    "content-topbar.php",
+    "content-topbar.php.bak-glossary-final-20260818T070304Z",
+    "content.php",
+    "tarif-calc.php"
+  ],
+  "findings": [
+    {
+      "kind": "theme-template-part",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/wp-content/themes/iseoblog/template-parts/content-form-seo.php",
+      "name": "content-form-seo.php",
+      "tel_named_pf_contact": true,
+      "pf_phone_present": false,
+      "hidden_pf_contact": false,
+      "select_pf_contact": false,
+      "consent_checkbox": true,
+      "old_core_exact": true,
+      "proven_defect": true
+    },
+    {
+      "kind": "file",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/blog.html",
+      "tel_named_pf_contact": true,
+      "pf_phone_present": false,
+      "hidden_pf_contact": false,
+      "select_pf_contact": false,
+      "consent_checkbox": false,
+      "old_core_exact": true,
+      "proven_defect": true
+    },
+    {
+      "kind": "file",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/blog-article.html",
+      "tel_named_pf_contact": true,
+      "pf_phone_present": false,
+      "hidden_pf_contact": false,
+      "select_pf_contact": false,
+      "consent_checkbox": true,
+      "old_core_exact": true,
+      "proven_defect": true
+    },
+    {
+      "kind": "file",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/audit.html",
+      "tel_named_pf_contact": false,
+      "pf_phone_present": false,
+      "hidden_pf_contact": false,
+      "select_pf_contact": false,
+      "consent_checkbox": false,
+      "old_core_exact": false,
+      "proven_defect": false
+    },
+    {
+      "kind": "file",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/adv.html",
+      "tel_named_pf_contact": false,
+      "pf_phone_present": true,
+      "hidden_pf_contact": false,
+      "select_pf_contact": true,
+      "consent_checkbox": true,
+      "old_core_exact": false,
+      "proven_defect": false
+    },
+    {
+      "kind": "file",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/development.html",
+      "tel_named_pf_contact": false,
+      "pf_phone_present": true,
+      "hidden_pf_contact": false,
+      "select_pf_contact": true,
+      "consent_checkbox": true,
+      "old_core_exact": false,
+      "proven_defect": false
+    },
+    {
+      "kind": "file",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/serm.html",
+      "tel_named_pf_contact": false,
+      "pf_phone_present": true,
+      "hidden_pf_contact": false,
+      "select_pf_contact": true,
+      "consent_checkbox": true,
+      "old_core_exact": false,
+      "proven_defect": false
+    },
+    {
+      "kind": "file",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/ai-optimization.html",
+      "tel_named_pf_contact": false,
+      "pf_phone_present": false,
+      "hidden_pf_contact": false,
+      "select_pf_contact": false,
+      "consent_checkbox": false,
+      "old_core_exact": false,
+      "proven_defect": false
+    },
+    {
+      "kind": "file",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/contacts.html",
+      "tel_named_pf_contact": false,
+      "pf_phone_present": true,
+      "hidden_pf_contact": false,
+      "select_pf_contact": true,
+      "consent_checkbox": true,
+      "old_core_exact": false,
+      "proven_defect": false
+    },
+    {
+      "kind": "file",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/reviews.html",
+      "tel_named_pf_contact": false,
+      "pf_phone_present": true,
+      "hidden_pf_contact": false,
+      "select_pf_contact": true,
+      "consent_checkbox": true,
+      "old_core_exact": false,
+      "proven_defect": false
+    },
+    {
+      "kind": "file",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/cases.html",
+      "tel_named_pf_contact": false,
+      "pf_phone_present": true,
+      "hidden_pf_contact": false,
+      "select_pf_contact": true,
+      "consent_checkbox": true,
+      "old_core_exact": false,
+      "proven_defect": false
+    },
+    {
+      "kind": "file",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services.html",
+      "tel_named_pf_contact": false,
+      "pf_phone_present": true,
+      "hidden_pf_contact": false,
+      "select_pf_contact": true,
+      "consent_checkbox": true,
+      "old_core_exact": false,
+      "proven_defect": false
+    },
+    {
+      "kind": "file",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/webinar-seo-podryadchik.html",
+      "tel_named_pf_contact": false,
+      "pf_phone_present": true,
+      "hidden_pf_contact": true,
+      "select_pf_contact": false,
+      "consent_checkbox": true,
+      "old_core_exact": false,
+      "proven_defect": false
+    },
+    {
+      "kind": "file",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/wp-content/themes/iseoblog/footer.php",
+      "tel_named_pf_contact": false,
+      "pf_phone_present": true,
+      "hidden_pf_contact": false,
+      "select_pf_contact": true,
+      "consent_checkbox": true,
+      "old_core_exact": false,
+      "proven_defect": false
+    },
+    {
+      "kind": "file",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/wp-content/themes/iseoblog/page-home.php",
+      "tel_named_pf_contact": false,
+      "pf_phone_present": true,
+      "hidden_pf_contact": false,
+      "select_pf_contact": true,
+      "consent_checkbox": true,
+      "old_core_exact": false,
+      "proven_defect": false
+    },
+    {
+      "kind": "file",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/wp-content/themes/iseoblog/page-blog.php",
+      "tel_named_pf_contact": false,
+      "pf_phone_present": false,
+      "hidden_pf_contact": false,
+      "select_pf_contact": false,
+      "consent_checkbox": false,
+      "old_core_exact": false,
+      "proven_defect": false
+    },
+    {
+      "kind": "page-sample",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/seo/prodvizhenie-sajta-restorana.html",
+      "includes": [
+        "content-form-seo.php"
+      ],
+      "inline_old_core": false,
+      "tel_named_pf_contact": false,
+      "pf_phone_present": false,
+      "hidden_pf_contact": false,
+      "select_pf_contact": false,
+      "consent_checkbox": false,
+      "old_core_exact": false,
+      "proven_defect": false
+    },
+    {
+      "kind": "missing-page",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/seo/prodvizhenie-sajta-otele.html"
+    },
+    {
+      "kind": "missing-page",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/audit/tehnicheskij-audit.html"
+    },
+    {
+      "kind": "missing-page",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/adv/kontekstnaya-reklama.html"
+    },
+    {
+      "kind": "missing-page",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/development/sozdanie-sajtov.html"
+    },
+    {
+      "kind": "page-sample",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/serm/smm.html",
+      "includes": [],
+      "inline_old_core": true,
+      "tel_named_pf_contact": true,
+      "pf_phone_present": false,
+      "hidden_pf_contact": false,
+      "select_pf_contact": false,
+      "consent_checkbox": true,
+      "old_core_exact": true,
+      "proven_defect": true
+    }
+  ],
+  "proven_authorities": [
+    {
+      "kind": "theme-template-part",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/wp-content/themes/iseoblog/template-parts/content-form-seo.php",
+      "name": "content-form-seo.php",
+      "tel_named_pf_contact": true,
+      "pf_phone_present": false,
+      "hidden_pf_contact": false,
+      "select_pf_contact": false,
+      "consent_checkbox": true,
+      "old_core_exact": true,
+      "proven_defect": true
+    },
+    {
+      "kind": "file",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/blog.html",
+      "tel_named_pf_contact": true,
+      "pf_phone_present": false,
+      "hidden_pf_contact": false,
+      "select_pf_contact": false,
+      "consent_checkbox": false,
+      "old_core_exact": true,
+      "proven_defect": true
+    },
+    {
+      "kind": "file",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/blog-article.html",
+      "tel_named_pf_contact": true,
+      "pf_phone_present": false,
+      "hidden_pf_contact": false,
+      "select_pf_contact": false,
+      "consent_checkbox": true,
+      "old_core_exact": true,
+      "proven_defect": true
+    },
+    {
+      "kind": "page-sample",
+      "remote": "/home/n/nikel0rv/i-seo.su/public_html/services/serm/smm.html",
+      "includes": [],
+      "inline_old_core": true,
+      "tel_named_pf_contact": true,
+      "pf_phone_present": false,
+      "hidden_pf_contact": false,
+      "select_pf_contact": false,
+      "consent_checkbox": true,
+      "old_core_exact": true,
+      "proven_defect": true
+    }
+  ]
+}

@@ -457,6 +457,25 @@ Production mutations in this registration: **0** at registration time. **WAVE 1 
 
 ---
 
+## FORM CONTRACT REGRESSION 01 (2026-09-09) — COMPLETE
+
+| Artifact | Path | Role |
+|----------|------|------|
+| Evidence | `ISEO-SU-FORM-CONTRACT-REGRESSION-01-EVIDENCE-v1.md` | EVIDENCE |
+| Main REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-FORM-CONTRACT-REGRESSION-01.md` | REPORT |
+| RU closeout | `reports/ISEO-SU-FORM-CONTRACT-REGRESSION-01-RU.md` | REPORT (RU) |
+| Shared source | `production-source/theme/iseoblog/template-parts/content-form-seo.php` | SOURCE |
+| Inline source | `production-source/static-html/blog.html` | SOURCE |
+| Inline source | `production-source/static-html/blog-article.html` | SOURCE |
+| Inventory / patch / UI tools | `tools/_form-contract-regression-01-*.py` | TOOL |
+| Machine evidence | `evidence/form-contract-regression-01/` | EVIDENCE |
+| Production backup | `X:\AI MARS\local\sites\iseo-su-production\_form-contract-regression-01\` | BACKUP (out of git) |
+| Live defects closed | **90** `/page__FORM.php` surfaces; **18** remote authorities | METRIC |
+| Handler / JS | **UNCHANGED** | POLICY |
+| SEO / menu / design | **UNCHANGED** | POLICY |
+
+---
+
 ## Explicit non-artifacts and security signal
 
 This documentation wave introduced no token, password, cookie, session value, DB dump, Localhost mirror, unredacted production dump, or active `_*-scratch/` tree.

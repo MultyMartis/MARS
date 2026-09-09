@@ -39,6 +39,7 @@
 9. **TECH SEO RE-AUDIT 02** — **COMPLETE / READ-ONLY** (2026-09-04 contour `20260904-163451`): fresh full-site crawl; CRITICAL **0**; prior SM-CHILD-404 / LINK-TO-REDIR / static 139 completeness remain closed; new city/niche/USA/UAE/webinar healthy; menu placement deferred to Nikita. Evidence: [REAUDIT 02](ISEO-SU-TECH-SEO-REAUDIT-02-EVIDENCE-v1.md) · [REPORT](reports/REPORT-ISEO-SU-SITE-OPS-TECH-SEO-REAUDIT-02.md) · [SEO RU](reports/ISEO-SU-TECH-SEO-REAUDIT-02-FOR-SEO-TEAM-RU.md) · [FINDINGS CSV](audits/tech-seo/ISEO-SU-TECH-SEO-REAUDIT-02-FINDINGS.csv).
 10. **TECH REPAIR WAVE 01** — **COMPLETE** (2026-09-04): author CSS nested-path 6→0 (`page-home.php` root-relative CSS/libs); logo.svg 404 closed **MODEL A** (`blog.html` → `/img/logo-intl.svg`); SEO backlog untouched; menu deferred to Nikita. Evidence: [WAVE 01](ISEO-SU-TECH-REPAIR-WAVE-01-EVIDENCE-v1.md) · [REPORT](reports/REPORT-ISEO-SU-SITE-OPS-TECH-REPAIR-WAVE-01.md) · [RU](reports/ISEO-SU-TECH-REPAIR-WAVE-01-RU.md).
 11. **SAFE WORKSPACE CLEANUP 01** — **COMPLETE** (2026-09-04): project-scoped only; ~21.66 GB temp sync/empty residuals removed; form-consent dirty + tech-repair unknown retained; raw audit / rollback / archives preserved. Report: [REPORT](reports/REPORT-ISEO-SU-SITE-OPS-SAFE-WORKSPACE-CLEANUP-01.md).
+12. **FORM CONTRACT REGRESSION 01** — **COMPLETE** (2026-09-09): 90 live `/page__FORM.php` clones of the webinar `pf_contact`/`pf_phone` defect closed (18 remote authorities; shared `content-form-seo.php`); restaurant HEALTHY; GET after 0; HMAC/honeypot/min-fill/rate-limit/duplicate/consent ACTIVE; recipient `nikel007i33@yandex.ru`; `test_mode` OFF. Evidence: [REGRESSION 01](ISEO-SU-FORM-CONTRACT-REGRESSION-01-EVIDENCE-v1.md) · [REPORT](reports/REPORT-ISEO-SU-SITE-OPS-FORM-CONTRACT-REGRESSION-01.md) · [RU](reports/ISEO-SU-FORM-CONTRACT-REGRESSION-01-RU.md).
 
 **Deferred optional:** mobile glossary offcanvas, archive Yoast description, MERGED alias polish, unnecessary sitemap duplication, WPilot 6D.
 
@@ -231,6 +232,7 @@ Additional historical artifacts remain listed in the Artifact Register.
 
 | Report | Status |
 |--------|--------|
+| [Form contract regression 01](reports/REPORT-ISEO-SU-SITE-OPS-FORM-CONTRACT-REGRESSION-01.md) | **COMPLETE — ISEO-SU FORM CONTRACT REGRESSION AUDIT + FIX / ALL PROVEN PF_CONTACT-PF_PHONE DEFECTS CLOSED** |
 | [Safe workspace cleanup 01](reports/REPORT-ISEO-SU-SITE-OPS-SAFE-WORKSPACE-CLEANUP-01.md) | **COMPLETE — ISEO-SU PROJECT-SCOPED WORKSPACE CLEANUP / SAFE TEMP CONTOURS REMOVED / EVIDENCE + ROLLBACK PRESERVED** |
 | [Final stabilization and housekeeping](reports/REPORT-ISEO-SU-SITE-OPS-FINAL-STABILIZATION-AND-HOUSEKEEPING.md) | **COMPLETE — ISEO-SU SITE OPS STABILIZED / WORKSPACE CLEAN / MARS BRAIN CURRENT / GIT CLOSED** |
 | [Final post-launch and git sync closeout](reports/REPORT-ISEO-SU-SITE-OPS-FINAL-POST-LAUNCH-AND-GIT-SYNC-CLOSEOUT.md) | **COMPLETE — ISEO-SU POST-LAUNCH VERIFIED / CANONICAL REMOTE SYNCED / SITE OPS CLOSEOUT COMPLETE** |

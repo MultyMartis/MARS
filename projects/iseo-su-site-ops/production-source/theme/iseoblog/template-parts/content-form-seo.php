@@ -4,7 +4,8 @@
 									<!-- <label for="name">Ваше имя</label> -->
 								</div>
 								<div>									
-									<input type="tel" id="pf_contact" name="pf_contact" placeholder="WhatsApp / Telegram" required>
+									<input type="hidden" name="pf_contact" value="WhatsApp">
+									<input type="tel" id="pf_contact" name="pf_phone" placeholder="WhatsApp / Telegram" required>
 									<!-- <label for="contact">WhatsApp / Telegram</label> -->
 								</div>
 								<div>									

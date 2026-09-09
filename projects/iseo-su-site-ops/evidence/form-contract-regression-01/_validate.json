@@ -1,0 +1,526 @@
+{
+  "task": "ISEO-SU-SITE-OPS-FORM-CONTRACT-REGRESSION-01",
+  "started": "2026-09-09T11:25:09Z",
+  "mode": "ui-only",
+  "cfg_before": {
+    "test_mode": "false",
+    "prod_has_nikel": true,
+    "prod_has_im_work": false,
+    "test_has_im_work": true,
+    "nail_typo": false,
+    "hmac_secret_null": true,
+    "honeypot_field": true,
+    "min_fill_seconds": true,
+    "rate_limit_burst_max": true,
+    "duplicate_window": true,
+    "consent_guard_hint": false
+  },
+  "gets": {
+    "restaurant": {
+      "url": "https://i-seo.su/services/seo/prodvizhenie-sajta-restorana.html",
+      "http": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "Заказать SEO продвижение сайта ресторана | i-seo.su",
+      "h1": "SEO продвижение сайта ресторана",
+      "canonical": "https://i-seo.su/services/seo/prodvizhenie-sajta-restorana.html",
+      "contract": {
+        "has_pf_phone": true,
+        "has_hidden_whatsapp": true,
+        "tel_still_named_contact": false,
+        "consent_checkbox": true,
+        "select_pf_contact": true
+      }
+    },
+    "blog": {
+      "url": "https://i-seo.su/blog.html",
+      "http": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "Блог | Агентство INTLSEO",
+      "h1": "Блог",
+      "canonical": "",
+      "contract": {
+        "has_pf_phone": true,
+        "has_hidden_whatsapp": true,
+        "tel_still_named_contact": false,
+        "consent_checkbox": false,
+        "select_pf_contact": false
+      }
+    },
+    "adv": {
+      "url": "https://i-seo.su/services/adv/google-adwords.html",
+      "http": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "Ведение и настройка Google Ads для вашего бизнеса | INTLSEO",
+      "h1": "Настройка и&nbsp;ведение Google adwords",
+      "canonical": "",
+      "contract": {
+        "has_pf_phone": true,
+        "has_hidden_whatsapp": true,
+        "tel_still_named_contact": false,
+        "consent_checkbox": true,
+        "select_pf_contact": false
+      }
+    },
+    "serm": {
+      "url": "https://i-seo.su/services/serm/smm.html",
+      "http": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "Профессиональное ведение социальных сетей | INTLSEO",
+      "h1": "SMM продвижение бренда",
+      "canonical": "",
+      "contract": {
+        "has_pf_phone": true,
+        "has_hidden_whatsapp": true,
+        "tel_still_named_contact": false,
+        "consent_checkbox": true,
+        "select_pf_contact": false
+      }
+    },
+    "develop": {
+      "url": "https://i-seo.su/services/development/sozdanie-sajta.html",
+      "http": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "Создание сайтов в Москве под ключ по выгодной цене | INTLSEO",
+      "h1": "Создание сайтов в Москве под ключ",
+      "canonical": "",
+      "contract": {
+        "has_pf_phone": true,
+        "has_hidden_whatsapp": true,
+        "tel_still_named_contact": false,
+        "consent_checkbox": true,
+        "select_pf_contact": false
+      }
+    },
+    "home": {
+      "url": "https://i-seo.su/",
+      "http": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "Продвижение сайтов в ТОП под ключ в Москве | Агентство INTLSEO",
+      "h1": "Продвигаем бизнес в&nbsp;интернете, выводим сайты в&nbsp;ИИ выдачу",
+      "canonical": "",
+      "contract": {
+        "has_pf_phone": true,
+        "has_hidden_whatsapp": false,
+        "tel_still_named_contact": false,
+        "consent_checkbox": true,
+        "select_pf_contact": true
+      }
+    },
+    "webinar": {
+      "url": "https://i-seo.su/webinar-seo-podryadchik.html",
+      "http": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "Вебинар «Как выбрать подрядчика в SEO и не ошибиться?» | INTLSEO",
+      "h1": "Как выбрать подрядчика в SEO и не ошибиться?",
+      "canonical": "https://i-seo.su/webinar-seo-podryadchik.html",
+      "contract": {
+        "has_pf_phone": true,
+        "has_hidden_whatsapp": true,
+        "tel_still_named_contact": false,
+        "consent_checkbox": true,
+        "select_pf_contact": false
+      }
+    }
+  },
+  "events_salvage": [
+    "{\"ts\":\"2026-09-07T10:32:46+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"78bfcf5d952609c9\"}",
+    "{\"ts\":\"2026-09-07T10:33:31+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"78bfcf5d952609c9\"}",
+    "{\"ts\":\"2026-09-07T10:34:18+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"78bfcf5d952609c9\"}",
+    "{\"ts\":\"2026-09-07T11:09:39+00:00\",\"form\":\"audit\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"cb922ee43a9559ef\"}",
+    "{\"ts\":\"2026-09-07T11:26:17+00:00\",\"form\":\"audit\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"a2c069ef5e909e69\"}",
+    "{\"ts\":\"2026-09-07T20:06:58+00:00\",\"form\":\"callback\",\"class\":\"honeypot_missing\",\"result\":\"reject\",\"ip_h\":\"f878b565b4436e5a\"}",
+    "{\"ts\":\"2026-09-07T20:06:58+00:00\",\"form\":\"calc\",\"class\":\"honeypot_missing\",\"result\":\"reject\",\"ip_h\":\"f878b565b4436e5a\"}",
+    "{\"ts\":\"2026-09-08T04:42:26+00:00\",\"form\":\"audit\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"b93a3d9988d53b2a\"}",
+    "{\"ts\":\"2026-09-08T09:58:07+00:00\",\"form\":\"audit\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"7f7a1afaee18c37f\"}",
+    "{\"ts\":\"2026-09-08T16:20:46+00:00\",\"form\":\"audit\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"7212cf471655012b\"}",
+    "{\"ts\":\"2026-09-08T17:29:44+00:00\",\"form\":\"audit\",\"class\":\"site\",\"result\":\"reject\",\"ip_h\":\"24bfbea40136b374\"}",
+    "{\"ts\":\"2026-09-08T19:02:00+00:00\",\"form\":\"page\",\"class\":\"required\",\"result\":\"reject\",\"ip_h\":\"4d363bd226a2e37a\"}",
+    "{\"ts\":\"2026-09-08T19:04:32+00:00\",\"form\":\"page\",\"class\":\"required\",\"result\":\"reject\",\"ip_h\":\"4d363bd226a2e37a\"}",
+    "{\"ts\":\"2026-09-08T22:12:44+00:00\",\"form\":\"audit\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"4a3c6069e871f7d0\"}",
+    "{\"ts\":\"2026-09-09T06:06:20+00:00\",\"form\":\"page\",\"class\":\"required\",\"result\":\"reject\",\"ip_h\":\"4d363bd226a2e37a\"}",
+    "{\"ts\":\"2026-09-09T09:17:52+00:00\",\"form\":\"page\",\"class\":\"required\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T09:34:44+00:00\",\"form\":\"audit\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"e1376958e2ea4e3b\"}",
+    "{\"ts\":\"2026-09-09T09:38:16+00:00\",\"form\":\"page\",\"class\":\"required\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T09:47:52+00:00\",\"form\":\"page\",\"class\":\"consent\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T09:47:57+00:00\",\"form\":\"page\",\"class\":\"consent\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T09:48:01+00:00\",\"form\":\"page\",\"class\":\"consent\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T09:53:15+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T09:53:20+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T09:53:30+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T10:24:26+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T11:16:29+00:00\",\"form\":\"page\",\"class\":\"consent\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T11:16:34+00:00\",\"form\":\"page\",\"class\":\"consent\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T11:16:38+00:00\",\"form\":\"page\",\"class\":\"consent\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T11:21:53+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T11:21:57+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}"
+  ],
+  "test_mode_on": "true",
+  "post_wave_note": "HTTP POST negatives + isolated accept already executed in the first full validate wave; this run is UI-only. events_salvage holds the log.",
+  "ui_restaurant": {
+    "available": false,
+    "error": "Page.screenshot: Protocol error (Page.captureScreenshot): Unable to capture screenshot\nCall log:\n  - taking page screenshot\n  - waiting for fonts to load...\n  - fonts loaded\n"
+  },
+  "ui_blog_fields_only": {
+    "available": true,
+    "url": "https://i-seo.su/blog.html",
+    "viewports": {
+      "desktop-1440x900": {
+        "form_present": true,
+        "pf_phone": true,
+        "hidden_pf_contact": true,
+        "select_pf_contact": false,
+        "tel_named_contact": false,
+        "console_errors": [
+          {
+            "type": "error",
+            "text": "Failed to load resource: the server responded with a status of 409 ()"
+          },
+          {
+            "type": "error",
+            "text": "Failed to load resource: the server responded with a status of 409 ()"
+          }
+        ],
+        "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-contract-regression-01\\screenshots\\blog-desktop-1440x900-20260909112513.png"
+      },
+      "mobile-390x844": {
+        "form_present": true,
+        "pf_phone": true,
+        "hidden_pf_contact": true,
+        "select_pf_contact": false,
+        "tel_named_contact": false,
+        "console_errors": [
+          {
+            "type": "error",
+            "text": "Failed to load resource: the server responded with a status of 409 ()"
+          },
+          {
+            "type": "error",
+            "text": "Failed to load resource: the server responded with a status of 409 ()"
+          }
+        ],
+        "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-contract-regression-01\\screenshots\\blog-mobile-390x844-20260909112513.png"
+      }
+    }
+  },
+  "ui_adv_fields_only": {
+    "available": false,
+    "error": "Page.screenshot: Protocol error (Page.captureScreenshot): Unable to capture screenshot\nCall log:\n  - taking page screenshot\n  - waiting for fonts to load...\n  - fonts loaded\n",
+    "url": "https://i-seo.su/services/adv/google-adwords.html"
+  },
+  "ui_serm_fields_only": {
+    "available": false,
+    "error": "Page.screenshot: Timeout 30000ms exceeded.\nCall log:\n  - taking page screenshot\n  - waiting for fonts to load...\n  - fonts loaded\n",
+    "url": "https://i-seo.su/services/serm/smm.html"
+  },
+  "ui_develop_fields_only": {
+    "available": false,
+    "error": "Page.screenshot: Protocol error (Page.captureScreenshot): Unable to capture screenshot\nCall log:\n  - taking page screenshot\n  - waiting for fonts to load...\n  - fonts loaded\n",
+    "url": "https://i-seo.su/services/development/sozdanie-sajta.html"
+  },
+  "ui_home_unaffected": {
+    "available": false,
+    "error": "Page.screenshot: Protocol error (Page.captureScreenshot): Unable to capture screenshot\nCall log:\n  - taking page screenshot\n  - waiting for fonts to load...\n  - fonts loaded\n",
+    "url": "https://i-seo.su/"
+  },
+  "ui_webinar_unaffected": {
+    "available": true,
+    "url": "https://i-seo.su/webinar-seo-podryadchik.html",
+    "viewports": {
+      "desktop-1440x900": {
+        "form_present": true,
+        "pf_phone": true,
+        "hidden_pf_contact": true,
+        "select_pf_contact": false,
+        "tel_named_contact": false,
+        "console_errors": [
+          {
+            "type": "error",
+            "text": "Failed to load resource: the server responded with a status of 409 ()"
+          },
+          {
+            "type": "error",
+            "text": "Failed to load resource: the server responded with a status of 409 ()"
+          }
+        ],
+        "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-contract-regression-01\\screenshots\\webinar-unaffected-desktop-1440x900-20260909112513.png"
+      },
+      "mobile-390x844": {
+        "form_present": true,
+        "pf_phone": true,
+        "hidden_pf_contact": true,
+        "select_pf_contact": false,
+        "tel_named_contact": false,
+        "console_errors": [
+          {
+            "type": "error",
+            "text": "Failed to load resource: the server responded with a status of 409 ()"
+          },
+          {
+            "type": "error",
+            "text": "Failed to load resource: the server responded with a status of 409 ()"
+          }
+        ],
+        "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-contract-regression-01\\screenshots\\webinar-unaffected-mobile-390x844-20260909112513.png"
+      }
+    }
+  },
+  "test_mode_off": "false",
+  "cfg_final": {
+    "test_mode": "false",
+    "prod_has_nikel": true,
+    "prod_has_im_work": false,
+    "test_has_im_work": true,
+    "nail_typo": false,
+    "hmac_secret_null": true,
+    "honeypot_field": true,
+    "min_fill_seconds": true,
+    "rate_limit_burst_max": true,
+    "duplicate_window": true,
+    "consent_guard_hint": false
+  },
+  "ended": "2026-09-09T11:27:04Z",
+  "ui_smoke_retry_started": "2026-09-09T11:29:27Z",
+  "cfg_before_ui_retry": {
+    "test_mode": "false",
+    "prod_has_nikel": true,
+    "prod_has_im_work": false,
+    "test_has_im_work": true,
+    "nail_typo": false,
+    "hmac_secret_null": true,
+    "honeypot_field": true,
+    "min_fill_seconds": true,
+    "rate_limit_burst_max": true,
+    "duplicate_window": true,
+    "consent_guard_hint": false
+  },
+  "test_mode_on_ui_retry": "true",
+  "ui_restaurant_retry": {
+    "available": true,
+    "desktop": {
+      "success_ui": true,
+      "generic_fail_ui": false,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ],
+      "screenshot_before": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-contract-regression-01\\screenshots\\restaurant-desktop-1440x900-before-submit-20260909112927.png",
+      "screenshot_after": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-contract-regression-01\\screenshots\\restaurant-desktop-1440x900-after-submit-20260909112927.png",
+      "network": {
+        "url": "https://i-seo.su/services/seo/page__FORM.php",
+        "method": "POST",
+        "status": 200,
+        "body": "true",
+        "has_pf_phone": true,
+        "consent_1": true,
+        "wait_error": null
+      }
+    },
+    "mobile": {
+      "form_present": true,
+      "pf_phone": true,
+      "hidden_pf_contact": true,
+      "select_pf_contact": false,
+      "tel_named_contact": false,
+      "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-contract-regression-01\\screenshots\\restaurant-mobile-390x844-20260909112927.png"
+    }
+  },
+  "events_after_ui_retry": [
+    "{\"ts\":\"2026-09-09T10:24:26+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T11:16:29+00:00\",\"form\":\"page\",\"class\":\"consent\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T11:16:34+00:00\",\"form\":\"page\",\"class\":\"consent\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T11:16:38+00:00\",\"form\":\"page\",\"class\":\"consent\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T11:21:53+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T11:21:57+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T11:25:20+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T11:29:34+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}"
+  ],
+  "test_mode_off_ui_retry": "false",
+  "ui_adv_retry": {
+    "available": true,
+    "url": "https://i-seo.su/services/adv/google-adwords.html",
+    "viewports": {
+      "desktop-1440x900": {
+        "form_present": true,
+        "pf_phone": true,
+        "hidden_pf_contact": true,
+        "select_pf_contact": false,
+        "tel_named_contact": false,
+        "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-contract-regression-01\\screenshots\\adv-adwords-desktop-1440x900-20260909112927.png",
+        "console_errors": [
+          {
+            "type": "error",
+            "text": "Failed to load resource: the server responded with a status of 409 ()"
+          },
+          {
+            "type": "error",
+            "text": "Failed to load resource: the server responded with a status of 409 ()"
+          }
+        ]
+      },
+      "mobile-390x844": {
+        "form_present": true,
+        "pf_phone": true,
+        "hidden_pf_contact": true,
+        "select_pf_contact": false,
+        "tel_named_contact": false,
+        "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-contract-regression-01\\screenshots\\adv-adwords-mobile-390x844-20260909112927.png",
+        "console_errors": [
+          {
+            "type": "error",
+            "text": "Failed to load resource: the server responded with a status of 409 ()"
+          },
+          {
+            "type": "error",
+            "text": "Failed to load resource: the server responded with a status of 409 ()"
+          }
+        ]
+      }
+    }
+  },
+  "ui_serm_retry": {
+    "available": true,
+    "url": "https://i-seo.su/services/serm/smm.html",
+    "viewports": {
+      "desktop-1440x900": {
+        "form_present": true,
+        "pf_phone": true,
+        "hidden_pf_contact": true,
+        "select_pf_contact": false,
+        "tel_named_contact": false,
+        "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-contract-regression-01\\screenshots\\serm-smm-desktop-1440x900-20260909112927.png",
+        "console_errors": [
+          {
+            "type": "error",
+            "text": "Failed to load resource: the server responded with a status of 409 ()"
+          },
+          {
+            "type": "error",
+            "text": "Failed to load resource: the server responded with a status of 409 ()"
+          }
+        ]
+      },
+      "mobile-390x844": {
+        "form_present": true,
+        "pf_phone": true,
+        "hidden_pf_contact": true,
+        "select_pf_contact": false,
+        "tel_named_contact": false,
+        "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-contract-regression-01\\screenshots\\serm-smm-mobile-390x844-20260909112927.png",
+        "console_errors": [
+          {
+            "type": "error",
+            "text": "Failed to load resource: the server responded with a status of 409 ()"
+          },
+          {
+            "type": "error",
+            "text": "Failed to load resource: the server responded with a status of 409 ()"
+          }
+        ]
+      }
+    }
+  },
+  "ui_develop_retry": {
+    "available": true,
+    "url": "https://i-seo.su/services/development/sozdanie-sajta.html",
+    "viewports": {
+      "desktop-1440x900": {
+        "form_present": true,
+        "pf_phone": true,
+        "hidden_pf_contact": true,
+        "select_pf_contact": false,
+        "tel_named_contact": false,
+        "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-contract-regression-01\\screenshots\\develop-sozdanie-desktop-1440x900-20260909112927.png",
+        "console_errors": [
+          {
+            "type": "error",
+            "text": "Failed to load resource: the server responded with a status of 409 ()"
+          },
+          {
+            "type": "error",
+            "text": "Failed to load resource: the server responded with a status of 409 ()"
+          }
+        ]
+      },
+      "mobile-390x844": {
+        "form_present": true,
+        "pf_phone": true,
+        "hidden_pf_contact": true,
+        "select_pf_contact": false,
+        "tel_named_contact": false,
+        "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-contract-regression-01\\screenshots\\develop-sozdanie-mobile-390x844-20260909112927.png",
+        "console_errors": [
+          {
+            "type": "error",
+            "text": "Failed to load resource: the server responded with a status of 409 ()"
+          },
+          {
+            "type": "error",
+            "text": "Failed to load resource: the server responded with a status of 409 ()"
+          }
+        ]
+      }
+    }
+  },
+  "ui_home_retry": {
+    "available": true,
+    "url": "https://i-seo.su/",
+    "viewports": {
+      "desktop-1440x900": {
+        "form_present": true,
+        "pf_phone": true,
+        "hidden_pf_contact": false,
+        "select_pf_contact": true,
+        "tel_named_contact": false,
+        "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-contract-regression-01\\screenshots\\home-unaffected-desktop-1440x900-20260909112927.png",
+        "console_errors": [
+          {
+            "type": "error",
+            "text": "Failed to load resource: the server responded with a status of 409 ()"
+          },
+          {
+            "type": "error",
+            "text": "Failed to load resource: the server responded with a status of 409 ()"
+          }
+        ]
+      },
+      "mobile-390x844": {
+        "form_present": true,
+        "pf_phone": true,
+        "hidden_pf_contact": false,
+        "select_pf_contact": true,
+        "tel_named_contact": false,
+        "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-contract-regression-01\\screenshots\\home-unaffected-mobile-390x844-20260909112927.png",
+        "console_errors": [
+          {
+            "type": "error",
+            "text": "Failed to load resource: the server responded with a status of 409 ()"
+          },
+          {
+            "type": "error",
+            "text": "Failed to load resource: the server responded with a status of 409 ()"
+          }
+        ]
+      }
+    }
+  },
+  "cfg_final_ui_retry": {
+    "test_mode": "false",
+    "prod_has_nikel": true,
+    "prod_has_im_work": false,
+    "test_has_im_work": true,
+    "nail_typo": false,
+    "hmac_secret_null": true,
+    "honeypot_field": true,
+    "min_fill_seconds": true,
+    "rate_limit_burst_max": true,
+    "duplicate_window": true,
+    "consent_guard_hint": false
+  },
+  "ui_smoke_retry_ended": "2026-09-09T11:30:23Z"
+}
