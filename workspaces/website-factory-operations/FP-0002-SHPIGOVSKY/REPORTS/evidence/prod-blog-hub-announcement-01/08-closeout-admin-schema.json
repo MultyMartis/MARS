@@ -1,0 +1,94 @@
+{
+  "ts_utc": "2026-09-09T10:32:09.544827+00:00",
+  "pages": {
+    "1745": {
+      "url": "https://shpigovsky.ru/blog/demo-pagination-article-01/",
+      "hero_excerpt_preview": "Зависимость всегда окружали мифы. Считалось, что решающую роль играла сила воли, а если человек срывается, значит недостаточно старался. Сегодня мы знаем, что в основе зависимого поведения лежат особенности работы мозга, которые можно увидеть с помощью лабораторного исследования генов. Генотипирование на старте программы помогает врачу подобрать действительно индивидуальный подход и избежать лишни",
+      "hero_has_lead": true,
+      "schema_descriptions": [
+        "Разберем анализ набора генетических маркеров, которые покажут, как мозг воспринимает удовольствие, как реагирует на стресс и как восстанавливается после нагрузок. Шпиговский Дом",
+        "Разберем анализ набора генетических маркеров, которые покажут, как мозг воспринимает удовольствие, как реагирует на стресс и как восстанавливается после нагрузок. Шпиговский Дом"
+      ],
+      "schema_uses_seo": true,
+      "html_has_hub_field_name": false,
+      "html_has_qa_marker": false
+    },
+    "750": {
+      "url": "https://shpigovsky.ru/blog/lechenie-alkogolnoy-zavisimosti-pochemu-sila-voli-ni-pri-chem/",
+      "hero_excerpt_preview": "Есть расхожее мнение, что алкоголизм — это история про слабохарактерных людей, которые просто не хотят взять себя в руки. Оно настолько въелось в культуру, что даже сами зависимые в него верят и это, пожалуй, один из самых разрушительных мифов, с которым приходится работать нашим специалистам по лечению зависимостей. Потому что пока человек убежден, что его проблема называется «слабая воля», он бу",
+      "hero_has_lead": true,
+      "schema_descriptions": [
+        "Почему при алкоголизме сила воли ни при чём, разберем в статье реабилитационного центра Шпиговский Дом. Расскажем кто больше подвержен зависимости, где и как проходить лечение.",
+        "Почему при алкоголизме сила воли ни при чём, разберем в статье реабилитационного центра Шпиговский Дом. Расскажем кто больше подвержен зависимости, где и как проходить лечение."
+      ],
+      "schema_uses_seo": true,
+      "html_has_hub_field_name": false,
+      "html_has_qa_marker": false
+    }
+  },
+  "admin": {
+    "blog_public": 1,
+    "core_version": "0.3.32-blog-hub-announcement-01",
+    "hub_field": {
+      "key": null,
+      "name": null,
+      "label": null,
+      "type": null,
+      "instructions": null,
+      "parent": null,
+      "value": null
+    },
+    "lead_field": {
+      "key": "field_fp02_article_lead",
+      "name": "article_lead",
+      "label": "Lead / announcement"
+    },
+    "group_title": "Blog Post — Article Meta",
+    "field_order_names": [
+      "article_eyebrow",
+      "article_lead",
+      "article_hub_announcement",
+      "article_source_label",
+      "article_reading_time",
+      "article_disclaimer",
+      "article_hide_author_public",
+      "article_author_label",
+      "article_show_date_public",
+      "article_show_toc",
+      "article_toc_title",
+      "article_conclusion_heading",
+      "article_conclusion_quote",
+      "article_source_items",
+      "article_faq_items",
+      "related_posts",
+      "article_final_cta_title",
+      "article_final_cta_text",
+      "article_final_cta_button_label",
+      "article_final_cta_button_url",
+      "article_source_file_name",
+      "article_source_import_date",
+      "article_editor_status",
+      "article_content_qa_status"
+    ],
+    "modified_1745": "2026-09-09 09:24:19",
+    "modified_750": "2026-09-09 07:13:06",
+    "excerpt_1745": "",
+    "excerpt_750": "В статье расскажем о подходах к лечению и профилактике зависимости",
+    "hub_meta_1745": "",
+    "hub_meta_750": ""
+  },
+  "checks": {
+    "blog_public_open": true,
+    "hub_field_present": true,
+    "hub_after_lead": true,
+    "hub_empty_1745": true,
+    "hub_empty_750": true,
+    "hero_1745_lead": true,
+    "hero_750_lead": true,
+    "schema_1745_seo": true,
+    "schema_750_seo": true,
+    "no_hub_leak_html": true,
+    "no_qa_residue": true
+  },
+  "stderr": ""
+}

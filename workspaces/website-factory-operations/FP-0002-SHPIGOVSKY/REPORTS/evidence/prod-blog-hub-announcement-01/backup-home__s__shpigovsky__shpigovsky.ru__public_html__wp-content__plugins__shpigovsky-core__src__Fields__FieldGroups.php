@@ -3123,16 +3123,6 @@ final class FieldGroups implements ModuleInterface {
 			array(
 				self::field( 'field_fp02_article_eyebrow', 'Eyebrow', 'article_eyebrow', 'text' ),
 				self::field( 'field_fp02_article_lead', 'Lead / announcement', 'article_lead', 'textarea', array( 'rows' => 4 ) ),
-				self::field(
-					'field_fp02_article_hub_announcement',
-					'Анонс статьи для хаба',
-					'article_hub_announcement',
-					'textarea',
-					array(
-						'rows'         => 4,
-						'instructions' => 'Текст, который показывается в карточке статьи на странице «Статьи».',
-					)
-				),
 				self::field( 'field_fp02_article_source_label', 'Source label', 'article_source_label', 'text' ),
 				self::field(
 					'field_fp02_article_reading_time',

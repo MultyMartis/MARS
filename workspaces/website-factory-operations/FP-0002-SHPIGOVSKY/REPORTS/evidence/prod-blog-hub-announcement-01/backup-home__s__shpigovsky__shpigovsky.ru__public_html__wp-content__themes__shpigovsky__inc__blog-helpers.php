@@ -378,7 +378,7 @@ function shpigovsky_build_blog_archive_card_args( $post_id ) {
 	return array(
 		'title'        => get_the_title( $post_id ),
 		'url'          => get_permalink( $post_id ),
-		'excerpt'      => shpigovsky_get_blog_hub_announcement( $post_id ),
+		'excerpt'      => get_the_excerpt( $post_id ),
 		'image_url'    => $image['url'],
 		'image_width'  => $image['width'],
 		'image_height' => $image['height'],
@@ -599,26 +599,6 @@ function shpigovsky_get_article_lead( $post_id ) {
 	$excerpt = get_post_field( 'post_excerpt', $post_id );
 
 	return is_string( $excerpt ) ? trim( $excerpt ) : '';
-}
-
-/**
- * Blog Hub card announcement with native excerpt fallback.
- *
- * Dedicated ACF field article_hub_announcement owns the /blog/ card preview.
- * Empty field keeps the historical get_the_excerpt() behaviour.
- *
- * @param int $post_id Post ID.
- * @return string
- */
-function shpigovsky_get_blog_hub_announcement( $post_id ) {
-	$post_id      = (int) $post_id;
-	$announcement = shpigovsky_get_article_field( 'article_hub_announcement', $post_id );
-
-	if ( '' !== $announcement ) {
-		return $announcement;
-	}
-
-	return get_the_excerpt( $post_id );
 }
 
 /**

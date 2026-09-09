@@ -6,7 +6,8 @@
 - phase: **PRODUCTION / MAINTENANCE — STABLE**
 
 ## Current Production State
-- runtime/core: WordPress; current production status tracks core **`0.3.31-open-graph-01`**
+- runtime/core: WordPress; current production status tracks core **`0.3.32-blog-hub-announcement-01`**
+- blog hub card preview: ACF **`article_hub_announcement`** (`Анонс статьи для хаба`) owns `/blog/` card text; empty → native `get_the_excerpt()` fallback. Article hero Lead remains **`article_lead`**. Do not copy Hub announcement into SEO/OG/Schema.
 - structured data: **JSON-LD LIVE** — `shpigovsky-core` module `structured-data.schema-org` (single head script, `@graph`, stable `@id`)
 - open graph: **LIVE** — `shpigovsky-core` module `open-graph.meta` (single `<meta property="og:*">` owner; SEO title/description reused; separate from JSON-LD)
 - specialists hub: Page `#1030` `/specialisty/` uses `Specialists Hub` template (CPT cards via existing helper)
@@ -41,15 +42,19 @@
   - `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-PROD-YANDEX-SCHEMA-ORG-01.md`
 - open graph report:
   - `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-GLOBAL-OPEN-GRAPH-META-01.md`
+- blog hub announcement field report:
+  - `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-BLOG-HUB-DEDICATED-ANNOUNCEMENT-FIELD-01.md`
 - source/runtime authority:
   - `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/SOURCE-AUTHORITY.md`
 
 ## Current Git Recovery Point
 - canonical branch: `origin/mars/canonical-post-recovery`
-- latest open graph wave commit:
-  - `9fe3790aceba040d8e0c0d307a65bd5980d87f01` — Open Graph module + production evidence + report
+- latest blog hub announcement wave commit:
+  - `COMMIT_PENDING`
 - matching closeout report:
-  - `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-GLOBAL-OPEN-GRAPH-META-01.md`
+  - `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-BLOG-HUB-DEDICATED-ANNOUNCEMENT-FIELD-01.md`
+- prior open graph wave commit:
+  - `9fe3790aceba040d8e0c0d307a65bd5980d87f01` — Open Graph module + production evidence + report
 - prior schema wave commits:
   - `fc39a5a922c398824306574b701ac7bf9860a698` — structured-data implementation + evidence
   - `bdf295a8` — report git SHA closeout (tip at push time)
@@ -83,10 +88,11 @@ fresh intake
 
 ## Where To Read First
 1. `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/PROJECT-STATUS.md`
-2. `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-GLOBAL-OPEN-GRAPH-META-01.md`
-3. `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-PROD-YANDEX-SCHEMA-ORG-01.md`
-4. `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md`
-5. `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/BASELINE-FP-0002-PRODUCTION-MAINTENANCE-STABLE.md`
+2. `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-BLOG-HUB-DEDICATED-ANNOUNCEMENT-FIELD-01.md`
+3. `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-GLOBAL-OPEN-GRAPH-META-01.md`
+4. `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-PROD-YANDEX-SCHEMA-ORG-01.md`
+5. `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md`
+6. `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/BASELINE-FP-0002-PRODUCTION-MAINTENANCE-STABLE.md`
 
 ## Historical Evidence
 Deep historical P07–P18 reports remain preserved in `REPORTS/` and `REPORTS/evidence/`.

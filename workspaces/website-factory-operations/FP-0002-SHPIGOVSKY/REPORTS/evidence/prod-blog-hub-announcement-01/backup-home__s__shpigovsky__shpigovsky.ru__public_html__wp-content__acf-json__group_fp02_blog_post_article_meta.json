@@ -38,24 +38,6 @@
             "rows": 4
         },
         {
-            "key": "field_fp02_article_hub_announcement",
-            "label": "Анонс статьи для хаба",
-            "name": "article_hub_announcement",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "Текст, который показывается в карточке статьи на странице «Статьи».",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "rows": 4
-        },
-        {
             "key": "field_fp02_article_source_label",
             "label": "Source label",
             "name": "article_source_label",
@@ -495,5 +477,5 @@
     "active": true,
     "description": "FP-0002 V9-06E26C blog single article meta field group.",
     "show_in_rest": 0,
-    "modified": 1787000001
+    "modified": 1783604469
 }
