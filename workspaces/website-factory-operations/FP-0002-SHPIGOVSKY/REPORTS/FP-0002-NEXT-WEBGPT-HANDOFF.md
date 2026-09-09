@@ -73,7 +73,7 @@ See `REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md`. Remaining items are 
 - branch: `origin/mars/canonical-post-recovery`
 - blog hub implementation: `074777b544e810d7ab9894987fd1983d1c6afab1`
 - blog hub SHA-recording follow-up (closes `CLOSEOUT_PENDING` in that report): `33d13bed6e4686809ac23ddd463ca4eae62f68df`
-- knowledge/workspace closeout: **this wave’s commit after push** — fetch origin for the tip
+- knowledge/workspace closeout: `55ee8ba8fc4bf6ca469f9f09038502af48839e3e` (SHA-recording follow-up is a later tip — fetch origin)
 
 ## Important safeguards
 

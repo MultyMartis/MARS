@@ -29,6 +29,16 @@ Cleanup of completed FP-0002 worktrees/branches is recorded after those operatio
 
 Do **not** treat these SHAs as permanent recovery authority.
 
+### 2.1 Follow-up — SHA recording (2026-09-09)
+
+A commit cannot contain its own SHA. The original `CLOSEOUT_PENDING` cells above are the **wave-time placeholder**, not unfinished work.
+
+SHA-recording follow-up (docs/knowledge commit already on canonical origin):
+
+- `55ee8ba8fc4bf6ca469f9f09038502af48839e3e` — `docs(fp0002): promote production-maintenance knowledge and closeout current ops.`
+
+Fetch `origin/mars/canonical-post-recovery` for the tip after this SHA-recording commit. Do not rewrite Git history to backfill the table.
+
 ---
 
 ## 3. Current FP-0002 production baseline (compact)
@@ -111,7 +121,7 @@ See git commit for exact paths. Intended set:
 - Current specialists URL `/specialisty/` in CURRENT ops docs
 - Knowledge hub `specyalisty` row: historical spelling, not current contract
 - Harvest map: current-URL note; historical rows not rewritten
-- This report’s own SHA: `CLOSEOUT_PENDING` until follow-up commit
+- This report’s own SHA: **kept as wave-time placeholder**; §2.1 records `55ee8ba8`
 
 Historical V9 / P-reports left as historical.
 
