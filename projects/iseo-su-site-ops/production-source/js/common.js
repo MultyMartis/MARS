@@ -1772,7 +1772,7 @@ $("#page__FORM_send_seo").on("click", function(){
                     
         $.ajax({
             type: 'POST',
-            url: 'page__FORM.php',
+            url: '/page__FORM.php',
             data: $("#page__FORM_seo").serialize() + getPageAttrs(),
             success: function(data) {
                 if(data == "true") {
