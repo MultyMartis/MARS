@@ -7,6 +7,16 @@
 
 **Note:** Local subsystem IDs only — **not** global MARS registry rows.
 
+## Identifier namespace (living docs)
+
+- **Global sequential IDs** (`FW-S-*`, `FW-C-*`, `FW-T-*`, `FW-RB-*`, `FW-R-*`, `AP-*`) must be unique within their family across current living Forge WordPress documentation.
+- Canonical owner of `FW-S-*` / `FW-C-*` / `FW-T-*` / `FW-RB-*` / `FW-R-*` allocation is **this register**. Allocate the next unused number after checking this table and living `**ID:**` headers. Do not reuse a number because a local document already used it informally.
+- **Global `AP-*`** are owned by [FORGE-WORDPRESS-ANTI-PATTERN-REGISTRY-v1.md](../standards/FORGE-WORDPRESS-ANTI-PATTERN-REGISTRY-v1.md). Add IDs; do not reuse numbers.
+- **Document-local IDs** that look like global IDs must use an explicit domain prefix (`AP-CMS-*`, `AP-COOKIE-*`, `PRIVACY-*`, `FORM-SPAM-*`, `INDEX-*`, `OBSERVABILITY-*`). Do not issue bare `AP-NNN` or `FW-S-NN` inside a document unless this register already assigned that number to that document.
+- Historical FP-0002 reports may retain former IDs. Living docs may note: historical report used former/local ID X; current canonical ID is Y.
+- Migration aliases are labeled former/historical and must not remain the active canonical identifier.
+- Indexes and this register must list canonical IDs only.
+
 ---
 
 ## Contracts
@@ -56,6 +66,22 @@
 | FW-S-31 | [FORGE-WORDPRESS-CMS-ANTI-PATTERNS-v1.md](../standards/FORGE-WORDPRESS-CMS-ANTI-PATTERNS-v1.md) | Registry | PRODUCTION KNOWLEDGE v1 | All | Forge Architect |
 | FW-S-32 | [FORGE-WORDPRESS-SEARCH-INDEXING-CONTROL-STANDARD-v1.md](../standards/FORGE-WORDPRESS-SEARCH-INDEXING-CONTROL-STANDARD-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | Launch/Admin | Operator |
 | FW-S-33 | [FORGE-WORDPRESS-COOKIE-CONSENT-AND-PRIVACY-CONTROLS-STANDARD-v1.md](../standards/FORGE-WORDPRESS-COOKIE-CONSENT-AND-PRIVACY-CONTROLS-STANDARD-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | Privacy/cookie controls | Forge Architect |
+| FW-S-34 | [FORGE-WORDPRESS-DESIGN-SYSTEM-FOUNDATION-v1.md](../standards/FORGE-WORDPRESS-DESIGN-SYSTEM-FOUNDATION-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | Design tokens / FE architecture | Theme Specialist |
+| FW-S-35 | [FORGE-WORDPRESS-CSS-COMPONENT-ARCHITECTURE-STANDARD-v1.md](../standards/FORGE-WORDPRESS-CSS-COMPONENT-ARCHITECTURE-STANDARD-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | CSS ownership | Theme Specialist |
+| FW-S-36 | [FORGE-WORDPRESS-FRONTEND-INTERACTION-OWNERSHIP-STANDARD-v1.md](../standards/FORGE-WORDPRESS-FRONTEND-INTERACTION-OWNERSHIP-STANDARD-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | JS/interaction ownership | Theme Specialist |
+| FW-S-37 | [FORGE-WORDPRESS-ACCESSIBILITY-BASELINE-v1.md](../standards/FORGE-WORDPRESS-ACCESSIBILITY-BASELINE-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | Minimum a11y acceptance | WordPress Validator |
+| FW-S-38 | [FORGE-WORDPRESS-MEDIA-ARCHITECTURE-STANDARD-v1.md](../standards/FORGE-WORDPRESS-MEDIA-ARCHITECTURE-STANDARD-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | Media / Library | Theme Specialist |
+| FW-S-39 | [FORGE-WORDPRESS-PERFORMANCE-BASELINE-v1.md](../standards/FORGE-WORDPRESS-PERFORMANCE-BASELINE-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | Performance baseline | Operator |
+| FW-S-40 | [FORGE-WORDPRESS-FORMS-UX-STANDARD-v1.md](../standards/FORGE-WORDPRESS-FORMS-UX-STANDARD-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | Form UX | Admin UX Specialist |
+| FW-S-41 | [FORGE-WORDPRESS-CHANGE-RELEASE-MANAGEMENT-STANDARD-v1.md](../standards/FORGE-WORDPRESS-CHANGE-RELEASE-MANAGEMENT-STANDARD-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | Change/release | Operator |
+| FW-S-42 | [FORGE-WORDPRESS-REGRESSION-PACK-v1.md](../standards/FORGE-WORDPRESS-REGRESSION-PACK-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | QA regression | WordPress Validator |
+| FW-S-43 | [FORGE-WORDPRESS-CONTENT-OPERATIONS-STANDARD-v1.md](../standards/FORGE-WORDPRESS-CONTENT-OPERATIONS-STANDARD-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | Editor safety | Admin UX Specialist |
+| FW-S-44 | [FORGE-WORDPRESS-SECURITY-OWNERSHIP-BASELINE-v1.md](../standards/FORGE-WORDPRESS-SECURITY-OWNERSHIP-BASELINE-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | Security ownership | Forge Architect |
+| FW-S-45 | [FORGE-WORDPRESS-EXTERNAL-INTEGRATION-OWNERSHIP-STANDARD-v1.md](../standards/FORGE-WORDPRESS-EXTERNAL-INTEGRATION-OWNERSHIP-STANDARD-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | Third-party integrations | Forge Architect |
+| FW-S-46 | [FORGE-WORDPRESS-FRONTEND-ACCEPTANCE-STANDARD-v1.md](../standards/FORGE-WORDPRESS-FRONTEND-ACCEPTANCE-STANDARD-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | Frontend acceptance | WordPress Validator |
+| FW-S-47 | [FORGE-WORDPRESS-SECOND-SITE-BOOTSTRAP-v1.md](../standards/FORGE-WORDPRESS-SECOND-SITE-BOOTSTRAP-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | Next-site bootstrap | Forge Architect |
+| FW-S-48 | [FORGE-WORDPRESS-CODE-OWNERSHIP-BOUNDARIES-STANDARD-v1.md](../standards/FORGE-WORDPRESS-CODE-OWNERSHIP-BOUNDARIES-STANDARD-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | Theme vs functionality plugin (former local ID FW-S-32) | Forge Architect |
+| FW-S-49 | [FORGE-WORDPRESS-MODULE-LIFECYCLE-STANDARD-v1.md](../standards/FORGE-WORDPRESS-MODULE-LIFECYCLE-STANDARD-v1.md) | Standard | PRODUCTION KNOWLEDGE v1 | Module identity/deps/uninstall (former local ID FW-S-33) | Forge Architect |
 
 ---
 
@@ -135,7 +161,7 @@
 | FW-RB-* | [runbooks/](../runbooks/) | SOP | ACTIVE |
 | FW-T-19 | [FORGE-WORDPRESS-NEW-SITE-STARTER-CHECKLIST-v1.md](../templates/FORGE-WORDPRESS-NEW-SITE-STARTER-CHECKLIST-v1.md) | Template | ACTIVE |
 | FW-K-03 | [knowledge/KNOWLEDGE-RETRIEVAL-VALIDATION.md](../knowledge/KNOWLEDGE-RETRIEVAL-VALIDATION.md) | Validation | ACTIVE (ops Q1–Q3 + CMS Q1–Q10) |
-| FW-S-22–33 | CMS / editable architecture pack + privacy/cookie controls | Standard | ACTIVE |
+| FW-S-22–49 | CMS / editable architecture pack + privacy/cookie + engineering/ops standards | Standard | ACTIVE |
 
 *FP-0002 lessons assimilated; CMS architecture pack 2026-08-18; AG-WP-001 remains NOT PRODUCTION READY.*
 
@@ -183,4 +209,4 @@
 
 ---
 
-*Register v1 — subsystem local; updated 2026-08-19 with FW-S-33 privacy/cookie controls standard on top of the 2026-08-18 production knowledge pack.*
+*Register v1 — subsystem local; updated 2026-09-09 with identifier namespace rules and FW-S-34–49 (including former local collisions FW-S-32→FW-S-48, FW-S-33→FW-S-49). Global FW-S-32 remains search indexing; global FW-S-33 remains cookie/privacy controls.*

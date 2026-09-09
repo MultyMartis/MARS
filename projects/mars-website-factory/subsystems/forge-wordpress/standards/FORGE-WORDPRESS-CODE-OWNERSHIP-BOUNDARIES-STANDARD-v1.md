@@ -1,6 +1,7 @@
 # Forge WordPress — Code ownership boundaries standard v1
 
-**ID:** FW-S-32  
+**ID:** FW-S-48  
+**Former ID:** FW-S-32 (historical/local collision — that global ID belongs to search indexing control)  
 **Status:** ACTIVE — CANONICAL DEFAULT  
 **Date:** 2026-08-18  
 **Extends:** [THEME-ARCHITECTURE](FORGE-WORDPRESS-THEME-ARCHITECTURE-STANDARD-v1.md) (FW-S-03) · [FUNCTIONALITY-PLUGIN](FORGE-WORDPRESS-FUNCTIONALITY-PLUGIN-STANDARD-v1.md) (FW-S-04)  
@@ -125,4 +126,4 @@ Governed by [PLUGIN-GOVERNANCE](FORGE-WORDPRESS-PLUGIN-GOVERNANCE-STANDARD-v1.md
 
 ---
 
-*FW-S-32 v1 — survival test first; FW-S-03/04 remain structural detail.*
+*FW-S-48 v1 — former ambiguous ID FW-S-32; survival test first; FW-S-03/04 remain structural detail.*

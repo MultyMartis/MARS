@@ -1,6 +1,7 @@
 # Forge WordPress — Module lifecycle standard v1
 
-**ID:** FW-S-33  
+**ID:** FW-S-49  
+**Former ID:** FW-S-33 (historical/local collision — that global ID belongs to cookie/privacy controls)  
 **Status:** ACTIVE — CANONICAL DEFAULT  
 **Date:** 2026-08-18  
 **Evidence:** FP-0002 `ModuleRegistry` + `ModuleInterface`; INC-04 `mars-runtime` mutating GET; leftover importers
@@ -122,4 +123,4 @@ Use [TEMPORARY-TOOL-REGISTER](../templates/FORGE-WORDPRESS-TEMPORARY-TOOL-REGIST
 
 ---
 
-*FW-S-33 v1.*
+*FW-S-49 v1 — former ambiguous ID FW-S-33.*

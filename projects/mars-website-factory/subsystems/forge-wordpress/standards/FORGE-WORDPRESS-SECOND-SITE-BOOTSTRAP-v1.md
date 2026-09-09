@@ -14,7 +14,7 @@
 |-------|--------|
 | Theme skeleton | FW-S-03 structure; enqueue; template-parts folders; tokens file |
 | Functionality plugin skeleton | bootstrap, autoload or includes, text domain |
-| Module registry | [FW-S-33](FORGE-WORDPRESS-MODULE-LIFECYCLE-STANDARD-v1.md) — even if a simple array |
+| Module registry | [FW-S-49](FORGE-WORDPRESS-MODULE-LIFECYCLE-STANDARD-v1.md) — even if a simple array |
 | i18n | [FW-S-18](FORGE-WORDPRESS-I18N-STANDARD-v1.md) from first string |
 | Settings foundation | options page stub + SoT helpers |
 | SEO foundation | one owner; empty-safe output |

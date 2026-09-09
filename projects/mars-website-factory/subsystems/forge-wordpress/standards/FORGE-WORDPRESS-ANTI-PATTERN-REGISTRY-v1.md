@@ -568,10 +568,10 @@ Document-local anti-patterns in [COOKIE-CONSENT](FORGE-WORDPRESS-COOKIE-CONSENT-
 
 | ID | Title | Former local ID |
 |----|-------|-----------------|
-| AP-COOKIE-031 | decorative cookie banner without gating | AP-031 (FW-S-33 local, pre-hygiene) |
-| AP-COOKIE-032 | analytics loads before consent state resolves | AP-032 (FW-S-33 local, pre-hygiene) |
-| AP-COOKIE-033 | cookie analytics consent merged with form personal-data consent | AP-033 (FW-S-33 local, pre-hygiene) |
-| AP-COOKIE-034 | privacy policy names generic/demo vendors instead of actual runtime | AP-034 (FW-S-33 local, pre-hygiene) |
+| AP-COOKIE-031 | decorative cookie banner without gating | AP-031 (document-local in FW-S-33 cookie standard, pre-hygiene) |
+| AP-COOKIE-032 | analytics loads before consent state resolves | AP-032 (document-local in FW-S-33 cookie standard, pre-hygiene) |
+| AP-COOKIE-033 | cookie analytics consent merged with form personal-data consent | AP-033 (document-local in FW-S-33 cookie standard, pre-hygiene) |
+| AP-COOKIE-034 | privacy policy names generic/demo vendors instead of actual runtime | AP-034 (document-local in FW-S-33 cookie standard, pre-hygiene) |
 
 ---
 

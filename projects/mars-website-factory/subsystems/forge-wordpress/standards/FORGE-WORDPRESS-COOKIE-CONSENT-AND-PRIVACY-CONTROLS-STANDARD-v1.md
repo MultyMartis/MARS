@@ -3,7 +3,7 @@
 **ID:** FW-S-33  
 **Status:** ACTIVE — PRODUCTION-INFORMED / FOUNDATION IMPLEMENTED ONCE  
 **Date:** 2026-08-19  
-**Namespace:** `AP-COOKIE-*` (document-local; does not reuse global `AP-*` registry numbers)  
+**Namespace:** Global sequential ID `FW-S-33` (this document). Local anti-patterns `AP-COOKIE-*`. Local rules `PRIVACY-*`. Does not reuse global `AP-*` numbers.  
 **Evidence:** FP-0002 PROD-P18E design; FP-0002 live Metrika/forms/legal reality  
 **Companions:** [FORMS-AND-SMTP](FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) · [SITE-SETTINGS](FORGE-WORDPRESS-SITE-SETTINGS-STANDARD-v1.md) · [GLOBAL-SETTINGS-OWNERSHIP](FORGE-WORDPRESS-GLOBAL-SETTINGS-OWNERSHIP-STANDARD-v1.md) · [ADMIN-IA](FORGE-WORDPRESS-ADMIN-INFORMATION-ARCHITECTURE-STANDARD-v1.md) · [ANTI-PATTERN-REGISTRY](FORGE-WORDPRESS-ANTI-PATTERN-REGISTRY-v1.md)
 

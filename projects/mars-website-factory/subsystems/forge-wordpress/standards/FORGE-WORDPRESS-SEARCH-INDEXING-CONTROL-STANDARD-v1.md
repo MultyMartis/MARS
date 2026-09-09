@@ -3,6 +3,7 @@
 **ID:** FW-S-32  
 **Status:** ACTIVE — PRODUCTION PROVEN (FP-0002 P18B)  
 **Date:** 2026-08-19  
+**Namespace:** Global sequential ID `FW-S-32` (this document). Local indexing anti-patterns live as `INDEX-*` in FW-S-21. Does not share this number with code-ownership (now FW-S-48).  
 **Class:** C / D / E / G  
 **Evidence:** FP-0002 MetaCODE Dashboard indexing control; `blog_public` + physical/`robots.txt` + core meta robots
 
