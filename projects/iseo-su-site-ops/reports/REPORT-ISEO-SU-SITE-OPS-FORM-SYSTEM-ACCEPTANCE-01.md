@@ -47,4 +47,8 @@ SEO calculator (`/services/seo.html`) and tariff calculator (`/tariff-calc`) sha
 
 ## Git
 
-Canonical sync via clean worktree from `origin/mars/canonical-post-recovery` (`1f090c0e`). Main workspace unpushed foreign WIP preserved (not staged).
+Worktree: `X:\AI MARS STORAGE\git-sync-iseo-su-form-system-acceptance-01\repo`  
+Base: `origin/mars/canonical-post-recovery` @ `1f090c0e`  
+Fix: `1f51a0247c8f588f0b4d83cc0934c280a0e978b7` (`fix(iseo-su): close live form acceptance defects`)  
+Docs: `181a5b86e5de553312edd54ca1e3e44cd9509036` (`docs(iseo-su): record complete form system acceptance`)  
+Main workspace: dirty + local-only foreign commits; not used for this push. Foreign WIP preserved.

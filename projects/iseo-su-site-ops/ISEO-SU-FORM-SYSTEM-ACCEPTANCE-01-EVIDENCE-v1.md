@@ -224,3 +224,5 @@ Canonical mirrors updated under `projects/iseo-su-site-ops/production-source/` f
 **COMPLETE** — all classified live surfaces structurally accounted; unique PHP handlers mail-tested in isolation; proven defects closed; SEO/tariff calculator submit+success+isolated mail PASS; homepage main + audit modal PASS; other modals (bonus, tariff 1–4) PASS; webinar/city/niche/USA-UAE share SEO form family with nested restaurant PASS; `test_mode` FINAL OFF; production test mails 0.
 
 Classifier **87** UA keys were not each given a separate POST (shared templates + per-`form_id` rate limit 3/5 min). That is the same clone-authority model as FORM CONTRACT REGRESSION 01, not an untested user form family.
+
+Remote sync: fix `1f51a024` + docs `181a5b86` on `origin/mars/canonical-post-recovery` (base `1f090c0e`).
