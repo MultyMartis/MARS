@@ -93,7 +93,7 @@ DESIGN CHANGED: **NO**
 PRODUCTION/SOURCE ALIGNED: **YES** for shared include + `blog.html`; `blog-article.html` contract-aligned not byte-identical; 15 inline HTML live-only  
 PROJECT-OWNED UNCOMMITTED: **NONE** (scoped worktree allowlist only)  
 FOREIGN WIP PRESERVED: **YES**  
-REMOTE SYNC: **this wave** (worktree `iseo-su-form-contract-regression-01` → `origin/mars/canonical-post-recovery`; SHA filled after commit)
+REMOTE SYNC: **this wave** `450b299807f4404580088a0eda6ce0b90991b0e4` (`iseo-su-form-contract-regression-01` → `origin/mars/canonical-post-recovery`)
 
 ---
 
@@ -101,5 +101,5 @@ REMOTE SYNC: **this wave** (worktree `iseo-su-form-contract-regression-01` → `
 
 Worktree: `X:\AI MARS STORAGE\git-sync-iseo-su-form-contract-regression-01\repo`  
 Branch: `iseo-su-form-contract-regression-01` from `origin/mars/canonical-post-recovery` @ `70c1a312`  
-Message: `fix(iseo-su): repair legacy page form contract`  
+Fix commit: `450b299807f4404580088a0eda6ce0b90991b0e4` — `fix(iseo-su): repair legacy page form contract`  
 Push: `git push origin HEAD:mars/canonical-post-recovery` (no force)
