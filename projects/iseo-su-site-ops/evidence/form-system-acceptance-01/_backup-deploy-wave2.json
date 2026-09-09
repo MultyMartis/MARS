@@ -1,0 +1,38 @@
+{
+  "started_utc": "2026-09-09T18:23:26Z",
+  "wave": 2,
+  "files": [
+    {
+      "name": "common.js",
+      "local_path": "X:\\AI MARS\\projects\\iseo-su-site-ops\\production-source\\js\\common.js",
+      "remote_path": "/home/n/nikel0rv/i-seo.su/public_html/js/common.js",
+      "backup_path": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_form-system-acceptance-01\\common.js.remote-before-wave2.2026-09-09T182326Z",
+      "timestamp": "2026-09-09T18:23:28Z",
+      "reason": "DEF-CAREER-INFO-HANDLER + optional cf_file (serialize cannot send type=file)",
+      "local_sha256": "A5D978BA6CBF6CF78B807A5BD3AAFEFB42712FCBE6DB991E742114CE5182E2CD",
+      "remote_sha256_before": "AD14FB257733BDD0B27E2B8D3CF14C3F5BDC7AF16CC468077F51595BB37E77A0",
+      "remote_sha256_after": "A5D978BA6CBF6CF78B807A5BD3AAFEFB42712FCBE6DB991E742114CE5182E2CD",
+      "remote_matches_local": true,
+      "live_http_sha256": "A5D978BA6CBF6CF78B807A5BD3AAFEFB42712FCBE6DB991E742114CE5182E2CD",
+      "live_matches_local": true
+    },
+    {
+      "name": "career__FORM.php",
+      "local_path": "X:\\AI MARS\\projects\\iseo-su-site-ops\\production-source\\forms\\career__FORM.php",
+      "remote_path": "/home/n/nikel0rv/i-seo.su/public_html/career__FORM.php",
+      "backup_path": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_form-system-acceptance-01\\career__FORM.php.remote-before-wave2.2026-09-09T182326Z",
+      "timestamp": "2026-09-09T18:23:30Z",
+      "reason": "DEF-CAREER-INFO-HANDLER + optional cf_file (serialize cannot send type=file)",
+      "local_sha256": "6CC56F8F9D364B60EB6FD8CC64E28496C6252E8983BE66FF39591E035B6FD36B",
+      "remote_sha256_before": "21C8F5BFA000FFD041C32A09417914C4A167847D116DCC9DC1084A6C855CE8D6",
+      "remote_sha256_after": "6CC56F8F9D364B60EB6FD8CC64E28496C6252E8983BE66FF39591E035B6FD36B",
+      "remote_matches_local": true
+    }
+  ],
+  "markers": {
+    "career_send_info_handler": true,
+    "cf_file_optional": true,
+    "root_career_url": true
+  },
+  "deployed_utc": "2026-09-09T18:23:31Z"
+}

@@ -1,0 +1,564 @@
+{
+  "started_utc": "2026-09-09T16:56:11Z",
+  "stamp": "165611",
+  "browser": [
+    {
+      "label": "homepage_main",
+      "url": "https://i-seo.su/",
+      "request_url": "https://i-seo.su/page__FORM.php",
+      "http": 200,
+      "body": "true",
+      "success_ui": true,
+      "page_reload": false,
+      "nav_count": 1,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ],
+      "wrong_endpoint": false,
+      "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-system-acceptance-01\\screenshots\\accept-homepage_main.png",
+      "pass": true
+    },
+    {
+      "label": "homepage_audit_modal",
+      "url": "https://i-seo.su/",
+      "request_url": "https://i-seo.su/audit__FORM.php",
+      "http": 200,
+      "body": "true",
+      "success_ui": false,
+      "page_reload": false,
+      "nav_count": 1,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ],
+      "wrong_endpoint": false,
+      "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-system-acceptance-01\\screenshots\\accept-homepage_audit_modal.png",
+      "pass": false
+    },
+    {
+      "label": "homepage_calc",
+      "request_url": "https://i-seo.su/calc__FORM.php",
+      "http": 200,
+      "body": "true",
+      "success_ui": true,
+      "page_reload": false,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "label": "seo_calculator",
+      "url": "https://i-seo.su/services/seo.html",
+      "calculation": {
+        "result_text": "РЕКОМЕНДУЕМЫЙ ТАРИФ\n\nСТАНДАРТ\n\n64 000 ₽/мес",
+        "result_display": "flex",
+        "form": true,
+        "consent": true,
+        "request_display": "block"
+      },
+      "request_url": "https://i-seo.su/callback__FORM.php",
+      "http": 200,
+      "body": "true",
+      "success_ui": true,
+      "page_reload": false,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ],
+      "dup_click_handlers_on_button": 0,
+      "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-system-acceptance-01\\screenshots\\accept-seo_calculator.png",
+      "pass": true
+    },
+    {
+      "label": "tariff_calculator",
+      "url": "https://i-seo.su/tariff-calc",
+      "calculation": {
+        "result_text": "РЕКОМЕНДУЕМЫЙ ТАРИФ\n\nСТАНДАРТ\n\n64 000 ₽/мес",
+        "result_display": "flex",
+        "form": true,
+        "consent": true,
+        "request_display": "block"
+      },
+      "request_url": "https://i-seo.su/callback__FORM.php",
+      "http": 200,
+      "body": "true",
+      "success_ui": true,
+      "page_reload": false,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ],
+      "dup_click_handlers_on_button": 0,
+      "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-system-acceptance-01\\screenshots\\accept-tariff_calculator.png",
+      "pass": true
+    },
+    {
+      "label": "nested_seo_page",
+      "url": "https://i-seo.su/services/seo/prodvizhenie-sajta-restorana.html",
+      "request_url": null,
+      "http": null,
+      "body": null,
+      "success_ui": false,
+      "page_reload": false,
+      "nav_count": 1,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ],
+      "wrong_endpoint": false,
+      "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-system-acceptance-01\\screenshots\\accept-nested_seo_page.png",
+      "pass": false
+    },
+    {
+      "label": "blog_html",
+      "url": "https://i-seo.su/blog.html",
+      "request_url": "https://i-seo.su/page__FORM.php",
+      "http": 200,
+      "body": "false",
+      "success_ui": false,
+      "page_reload": false,
+      "nav_count": 1,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ],
+      "wrong_endpoint": false,
+      "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-system-acceptance-01\\screenshots\\accept-blog_html.png",
+      "pass": false
+    },
+    {
+      "label": "blog_wp_footer_callback",
+      "url": "https://i-seo.su/blog/",
+      "request_url": "https://i-seo.su/callback__FORM.php",
+      "http": 200,
+      "body": "true",
+      "success_ui": false,
+      "page_reload": false,
+      "nav_count": 1,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ],
+      "wrong_endpoint": false,
+      "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-system-acceptance-01\\screenshots\\accept-blog_wp_footer_callback.png",
+      "pass": false
+    },
+    {
+      "label": "career",
+      "url": "https://i-seo.su/career.html",
+      "request_url": null,
+      "http": null,
+      "body": null,
+      "success_ui": false,
+      "page_reload": false,
+      "nav_count": 1,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ],
+      "wrong_endpoint": false,
+      "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-system-acceptance-01\\screenshots\\accept-career.png",
+      "pass": false
+    },
+    {
+      "label": "partners",
+      "url": "https://i-seo.su/partners.html",
+      "request_url": "https://i-seo.su/partners__FORM.php",
+      "http": 200,
+      "body": "true",
+      "success_ui": true,
+      "page_reload": false,
+      "nav_count": 1,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ],
+      "wrong_endpoint": false,
+      "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-system-acceptance-01\\screenshots\\accept-partners.png",
+      "pass": true
+    },
+    {
+      "label": "reviews",
+      "url": "https://i-seo.su/reviews.html",
+      "request_url": null,
+      "http": null,
+      "body": null,
+      "success_ui": false,
+      "page_reload": false,
+      "nav_count": 1,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: net::ERR_TIMED_OUT"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ],
+      "wrong_endpoint": false,
+      "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-system-acceptance-01\\screenshots\\accept-reviews.png",
+      "pass": false
+    },
+    {
+      "label": "bonuses",
+      "url": "https://i-seo.su/bonuses.html",
+      "request_url": "https://i-seo.su/bonus__FORM.php",
+      "http": 200,
+      "body": "true",
+      "success_ui": false,
+      "page_reload": false,
+      "nav_count": 1,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ],
+      "wrong_endpoint": false,
+      "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-system-acceptance-01\\screenshots\\accept-bonuses.png",
+      "pass": false
+    },
+    {
+      "label": "nested_tariff1_modal",
+      "url": "https://i-seo.su/services/seo.html",
+      "pass": false,
+      "error": "fill:Locator.check: Element is not visible\nCall log:\n  - waiting for locator(\"#tariff_1__FORM_seo\").first.locator(\"input[name='personal_data_consent']\").first\n    - locator resolved to <input value=\"1\" required=\"\" type=\"checkbox\" name=\"personal_data_consent\" id=\"personal_data_consent_tariff_1__FORM_seo\" class=\"required-checkbox personal-data-consent\"/>\n  - attempting click action\n    - scrolling into view if needed\n"
+    }
+  ],
+  "mail": [
+    {
+      "handler": "page",
+      "source": "browser",
+      "label": "homepage_main",
+      "http_status": 200,
+      "body": "true",
+      "recipient": "im.work@mail.ru"
+    },
+    {
+      "handler": "audit",
+      "source": "browser",
+      "label": "homepage_audit_modal",
+      "http_status": 200,
+      "body": "true",
+      "recipient": "im.work@mail.ru"
+    },
+    {
+      "handler": "calc",
+      "source": "browser",
+      "label": "homepage_calc",
+      "http_status": 200,
+      "body": "true",
+      "recipient": "im.work@mail.ru"
+    },
+    {
+      "handler": "callback",
+      "source": "browser",
+      "label": "seo_calculator",
+      "http_status": 200,
+      "body": "true",
+      "recipient": "im.work@mail.ru"
+    },
+    {
+      "handler": "callback",
+      "source": "browser",
+      "label": "tariff_calculator",
+      "http_status": 200,
+      "body": "true",
+      "recipient": "im.work@mail.ru"
+    },
+    {
+      "handler": "callback",
+      "source": "browser",
+      "label": "blog_wp_footer_callback",
+      "http_status": 200,
+      "body": "true",
+      "recipient": "im.work@mail.ru"
+    },
+    {
+      "handler": "partners",
+      "source": "browser",
+      "label": "partners",
+      "http_status": 200,
+      "body": "true",
+      "recipient": "im.work@mail.ru"
+    },
+    {
+      "handler": "bonus",
+      "source": "browser",
+      "label": "bonuses",
+      "http_status": 200,
+      "body": "true",
+      "recipient": "im.work@mail.ru"
+    },
+    {
+      "http_status": 200,
+      "body": "true",
+      "handler": "career",
+      "source": "synthetic_uncovered",
+      "recipient": "im.work@mail.ru"
+    },
+    {
+      "http_status": 200,
+      "body": "true",
+      "handler": "review",
+      "source": "synthetic_uncovered",
+      "recipient": "im.work@mail.ru"
+    },
+    {
+      "http_status": 200,
+      "body": "true",
+      "handler": "tariff_1",
+      "source": "synthetic_uncovered",
+      "recipient": "im.work@mail.ru"
+    },
+    {
+      "http_status": 200,
+      "body": "true",
+      "handler": "tariff_2",
+      "source": "synthetic_uncovered",
+      "recipient": "im.work@mail.ru"
+    },
+    {
+      "http_status": 200,
+      "body": "true",
+      "handler": "tariff_3",
+      "source": "synthetic_uncovered",
+      "recipient": "im.work@mail.ru"
+    },
+    {
+      "http_status": 200,
+      "body": "true",
+      "handler": "tariff_4",
+      "source": "synthetic_uncovered",
+      "recipient": "im.work@mail.ru"
+    }
+  ],
+  "negative": [
+    {
+      "case": "missing_consent",
+      "http": 200,
+      "body": "false"
+    },
+    {
+      "case": "consent_0",
+      "http": 200,
+      "body": "false"
+    },
+    {
+      "case": "consent_bad",
+      "http": 200,
+      "body": "false"
+    },
+    {
+      "case": "honeypot",
+      "http": 200,
+      "body": "false"
+    },
+    {
+      "case": "too_fast",
+      "http": 200,
+      "body": "false"
+    }
+  ],
+  "cfg_before": {
+    "test_mode": "false",
+    "prod_has_nikel": true,
+    "prod_has_im_work": false,
+    "test_has_im_work": true,
+    "nail_typo": false,
+    "hmac_secret_null": true,
+    "honeypot_field": true,
+    "min_fill_seconds": true,
+    "rate_limit_burst_max": true,
+    "duplicate_window": true,
+    "consent_guard_hint": false
+  },
+  "test_mode_on": "true",
+  "cfg_during": {
+    "test_mode": "true",
+    "prod_has_nikel": true,
+    "prod_has_im_work": false,
+    "test_has_im_work": true,
+    "nail_typo": false,
+    "hmac_secret_null": true,
+    "honeypot_field": true,
+    "min_fill_seconds": true,
+    "rate_limit_burst_max": true,
+    "duplicate_window": true,
+    "consent_guard_hint": false
+  },
+  "nested_callback_js_url": [
+    {
+      "has_prevent": false,
+      "url": "/callback__FORM.php"
+    }
+  ],
+  "family_inspect": [
+    {
+      "label": "city",
+      "url": "https://i-seo.su/services/seo/prodvizhenie-v-sankt-peterburge.html",
+      "has_page_form": true,
+      "consent": true,
+      "send_seo": true,
+      "cf_contact_latin": true
+    },
+    {
+      "label": "usa",
+      "url": "https://i-seo.su/services/seo/prodvizhenie-v-ssha.html",
+      "has_page_form": true,
+      "consent": true,
+      "send_seo": true,
+      "cf_contact_latin": true
+    },
+    {
+      "label": "webinar",
+      "url": "https://i-seo.su/webinar-seo-podryadchik.html",
+      "has_page_form": true,
+      "consent": true,
+      "send_seo": true,
+      "cf_contact_latin": true
+    },
+    {
+      "label": "cases",
+      "url": "https://i-seo.su/cases.html",
+      "has_page_form": true,
+      "consent": true,
+      "send_seo": true,
+      "cf_contact_latin": false
+    }
+  ],
+  "events_after_mail": [
+    "{\"ts\":\"2026-09-09T16:50:18+00:00\",\"form\":\"calc\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T16:50:33+00:00\",\"form\":\"callback\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T16:50:48+00:00\",\"form\":\"callback\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T16:51:35+00:00\",\"form\":\"page\",\"class\":\"honeypot_missing\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T16:51:50+00:00\",\"form\":\"callback\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T16:56:21+00:00\",\"form\":\"page\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T16:56:37+00:00\",\"form\":\"audit\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T16:56:52+00:00\",\"form\":\"calc\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T16:57:07+00:00\",\"form\":\"callback\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T16:57:22+00:00\",\"form\":\"callback\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T16:58:11+00:00\",\"form\":\"page\",\"class\":\"honeypot_missing\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T16:58:26+00:00\",\"form\":\"callback\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T16:58:55+00:00\",\"form\":\"partners\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T16:59:52+00:00\",\"form\":\"bonus\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T17:00:56+00:00\",\"form\":\"career\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T17:01:00+00:00\",\"form\":\"review\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T17:01:04+00:00\",\"form\":\"tariff_1\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T17:01:08+00:00\",\"form\":\"tariff_2\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T17:01:13+00:00\",\"form\":\"tariff_3\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T17:01:17+00:00\",\"form\":\"tariff_4\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}"
+  ],
+  "negative_wait_sec": 310,
+  "events_final_during": [
+    "{\"ts\":\"2026-09-09T16:59:52+00:00\",\"form\":\"bonus\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T17:00:56+00:00\",\"form\":\"career\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T17:01:00+00:00\",\"form\":\"review\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T17:01:04+00:00\",\"form\":\"tariff_1\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T17:01:08+00:00\",\"form\":\"tariff_2\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T17:01:13+00:00\",\"form\":\"tariff_3\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T17:01:17+00:00\",\"form\":\"tariff_4\",\"class\":\"accept\",\"result\":\"mail\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T17:06:32+00:00\",\"form\":\"page\",\"class\":\"consent\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T17:06:32+00:00\",\"form\":\"page\",\"class\":\"consent\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T17:06:33+00:00\",\"form\":\"page\",\"class\":\"consent\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T17:06:34+00:00\",\"form\":\"page\",\"class\":\"honeypot\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}",
+    "{\"ts\":\"2026-09-09T17:06:34+00:00\",\"form\":\"page\",\"class\":\"too_fast\",\"result\":\"reject\",\"ip_h\":\"c3df31c661591968\"}"
+  ],
+  "test_mode_off": "false",
+  "cfg_final": {
+    "test_mode": "false",
+    "prod_has_nikel": true,
+    "prod_has_im_work": false,
+    "test_has_im_work": true,
+    "nail_typo": false,
+    "hmac_secret_null": true,
+    "honeypot_field": true,
+    "min_fill_seconds": true,
+    "rate_limit_burst_max": true,
+    "duplicate_window": true,
+    "consent_guard_hint": false
+  },
+  "finished_utc": "2026-09-09T17:06:37Z",
+  "summary": {
+    "mail_true": 14,
+    "mail_total": 14,
+    "browser_pass": 5,
+    "browser_total": 13,
+    "test_mode_final": "false",
+    "prod_has_nikel": true,
+    "prod_has_im_work": false,
+    "crash": null
+  }
+}

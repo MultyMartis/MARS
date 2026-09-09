@@ -1,0 +1,67 @@
+{
+  "started_utc": "2026-09-09T16:46:35Z",
+  "files": [
+    {
+      "name": "common.js",
+      "local_path": "X:\\AI MARS\\projects\\iseo-su-site-ops\\production-source\\js\\common.js",
+      "remote_path": "/home/n/nikel0rv/i-seo.su/public_html/js/common.js",
+      "backup_path": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_form-system-acceptance-01\\common.js.remote-before.2026-09-09T164635Z",
+      "timestamp": "2026-09-09T16:46:38Z",
+      "reason": "form-system-acceptance-01 guarded repair",
+      "local_sha256": "AD14FB257733BDD0B27E2B8D3CF14C3F5BDC7AF16CC468077F51595BB37E77A0",
+      "remote_sha256_before": "7681D979546F87E84929B13C23C9053B1DFDE5F293F6AE558533EC1CE5992012",
+      "remote_sha256_after": "AD14FB257733BDD0B27E2B8D3CF14C3F5BDC7AF16CC468077F51595BB37E77A0",
+      "remote_matches_local": true,
+      "live_http_sha256": "AD14FB257733BDD0B27E2B8D3CF14C3F5BDC7AF16CC468077F51595BB37E77A0",
+      "live_matches_local": true
+    },
+    {
+      "name": "blog.html",
+      "local_path": "X:\\AI MARS\\projects\\iseo-su-site-ops\\production-source\\static-html\\blog.html",
+      "remote_path": "/home/n/nikel0rv/i-seo.su/public_html/blog.html",
+      "backup_path": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_form-system-acceptance-01\\blog.html.remote-before.2026-09-09T164635Z",
+      "timestamp": "2026-09-09T16:46:40Z",
+      "reason": "form-system-acceptance-01 guarded repair",
+      "local_sha256": "CE8C5B026736515C9D4FB2B53B331035D9489A00C40FEC92E2CE26DCB782F05B",
+      "remote_sha256_before": "7E3402C978D5F82086E06ED92150B1189E35CCEB133BE6D951C88943F9D1C984",
+      "remote_sha256_after": "CE8C5B026736515C9D4FB2B53B331035D9489A00C40FEC92E2CE26DCB782F05B",
+      "remote_matches_local": true,
+      "live_http_sha256": "CE8C5B026736515C9D4FB2B53B331035D9489A00C40FEC92E2CE26DCB782F05B",
+      "live_matches_local": true
+    },
+    {
+      "name": "blog-article.html",
+      "local_path": "X:\\AI MARS\\projects\\iseo-su-site-ops\\production-source\\static-html\\blog-article.html",
+      "remote_path": "/home/n/nikel0rv/i-seo.su/public_html/blog-article.html",
+      "backup_path": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_form-system-acceptance-01\\blog-article.html.remote-before.2026-09-09T164635Z",
+      "timestamp": "2026-09-09T16:46:42Z",
+      "reason": "form-system-acceptance-01 guarded repair",
+      "local_sha256": "B0FD8ABCA9AFA55DF73C2D69EF6EA42988E86CD00A98DDE673036A6AF9292ABD",
+      "remote_sha256_before": "12E49F122A388B2ADFE1996046B0966F24B0EB53C5D3AA389698F68AC6F4BD25",
+      "remote_sha256_after": "B0FD8ABCA9AFA55DF73C2D69EF6EA42988E86CD00A98DDE673036A6AF9292ABD",
+      "remote_matches_local": true
+    },
+    {
+      "name": "footer.php",
+      "local_path": "X:\\AI MARS\\projects\\iseo-su-site-ops\\production-source\\theme\\iseoblog\\footer.php",
+      "remote_path": "/home/n/nikel0rv/i-seo.su/public_html/wp-content/themes/iseoblog/footer.php",
+      "backup_path": "X:\\AI MARS\\local\\sites\\iseo-su-production\\_form-system-acceptance-01\\footer.php.remote-before.2026-09-09T164635Z",
+      "timestamp": "2026-09-09T16:46:43Z",
+      "reason": "form-system-acceptance-01 guarded repair",
+      "local_sha256": "CA5D6C75C1E6369107F518143F8DF8E7DE3066BF5327A761EEDC86FA86129853",
+      "remote_sha256_before": "4EADBC5488772FC23A4942B1DC645245D331863DFD14C0ECB5092AB8ACA537FB",
+      "remote_sha256_after": "CA5D6C75C1E6369107F518143F8DF8E7DE3066BF5327A761EEDC86FA86129853",
+      "remote_matches_local": true
+    }
+  ],
+  "markers": {
+    "calc_preventDefault_call": true,
+    "form_send_catch_all_preventDefault": true,
+    "root_calc_url": true,
+    "root_callback_url": true,
+    "unrooted_callback": false,
+    "footer_latin_cf_contact": true,
+    "blog_consent": true
+  },
+  "deployed_utc": "2026-09-09T16:46:44Z"
+}

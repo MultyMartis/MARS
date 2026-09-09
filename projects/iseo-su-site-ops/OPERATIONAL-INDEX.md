@@ -43,6 +43,8 @@
 13. **FORM AJAX ENDPOINT 01** — **COMPLETE** (2026-09-09): nested `/services/seo/` SEO forms posted to `/services/seo/page__FORM.php`; `#page__FORM_send_seo` now root-relative `/page__FORM.php`; post-deploy POSTs canonical; handler/HMAC/consent unchanged; `test_mode` OFF. Evidence: [ENDPOINT 01](ISEO-SU-FORM-AJAX-ENDPOINT-01-EVIDENCE-v1.md) · [REPORT](reports/REPORT-ISEO-SU-SITE-OPS-FORM-AJAX-ENDPOINT-01.md) · [RU](reports/ISEO-SU-FORM-AJAX-ENDPOINT-01-RU.md).
 14. **HOMEPAGE FORM REGRESSION 01** — **COMPLETE** (2026-09-09): main `#page__FORM` + modal `#callback__FORM` blank-site path reloaded without AJAX (JS forced site required + missing `preventDefault`); live lead intake restored; site URL optional; HMAC/consent unchanged; `test_mode` OFF. Evidence: [HOMEPAGE 01](ISEO-SU-HOMEPAGE-FORM-REGRESSION-01-EVIDENCE-v1.md) · [REPORT](reports/REPORT-ISEO-SU-SITE-OPS-HOMEPAGE-FORM-REGRESSION-01.md) · [RU](reports/ISEO-SU-HOMEPAGE-FORM-REGRESSION-01-RU.md).
 
+15. **FORM SYSTEM ACCEPTANCE 01** — **COMPLETE** (2026-09-09): full live form inventory **3744** / families **10** / PHP handlers **12**; unique handler UI browser-tested; all handlers isolated-mail to `im.work@mail.ru`; production mails **0**; `test_mode` OFF; recipient `nikel007i33@yandex.ru`; HMAC/honeypot/min-fill/rate/duplicate/consent ACTIVE. Evidence: [ACCEPTANCE 01](ISEO-SU-FORM-SYSTEM-ACCEPTANCE-01-EVIDENCE-v1.md) · [REPORT](reports/REPORT-ISEO-SU-SITE-OPS-FORM-SYSTEM-ACCEPTANCE-01.md) · [RU](reports/ISEO-SU-FORM-SYSTEM-ACCEPTANCE-01-RU.md).
+
 **Deferred optional:** mobile glossary offcanvas, archive Yoast description, MERGED alias polish, unnecessary sitemap duplication, WPilot 6D.
 
 ---
@@ -234,6 +236,7 @@ Additional historical artifacts remain listed in the Artifact Register.
 
 | Report | Status |
 |--------|--------|
+| [Form system acceptance 01](reports/REPORT-ISEO-SU-SITE-OPS-FORM-SYSTEM-ACCEPTANCE-01.md) | **COMPLETE — ISEO-SU COMPLETE LIVE FORM SYSTEM ACCEPTANCE / ALL USER-REACHABLE FORMS VERIFIED / ALL PROVEN DEFECTS CLOSED / ISOLATED MAIL ONLY / PRODUCTION TEST MAILS 0** |
 | [Form AJAX endpoint 01](reports/REPORT-ISEO-SU-SITE-OPS-FORM-AJAX-ENDPOINT-01.md) | **COMPLETE — FORM AJAX ENDPOINT DEFECT PROVEN + FIXED / ROOT-RELATIVE ENDPOINT / NO REGRESSION** |
 | [Homepage form regression 01](reports/REPORT-ISEO-SU-SITE-OPS-HOMEPAGE-FORM-REGRESSION-01.md) | **COMPLETE — HOMEPAGE + MODAL FORM REGRESSION ROOT CAUSE PROVEN / LIVE LEAD INTAKE RESTORED / SECURITY PRESERVED** |
 | [Form contract regression 01](reports/REPORT-ISEO-SU-SITE-OPS-FORM-CONTRACT-REGRESSION-01.md) | **COMPLETE — ISEO-SU FORM CONTRACT REGRESSION AUDIT + FIX / ALL PROVEN PF_CONTACT-PF_PHONE DEFECTS CLOSED** |

@@ -1,0 +1,53 @@
+{
+  "started_utc": "2026-09-09T18:27:47Z",
+  "cfg_before": {
+    "test_mode": "false",
+    "prod_has_nikel": true,
+    "prod_has_im_work": false,
+    "test_has_im_work": true,
+    "nail_typo": false,
+    "hmac_secret_null": true,
+    "honeypot_field": true,
+    "min_fill_seconds": true,
+    "rate_limit_burst_max": true,
+    "duplicate_window": true,
+    "consent_guard_hint": false
+  },
+  "browser": {
+    "label": "nested_tariff1_modal",
+    "url": "https://i-seo.su/services/seo/prodvizhenie-sajta-restorana.html",
+    "request_url": "https://i-seo.su/tariff_1__FORM.php",
+    "http": 200,
+    "body": "true",
+    "success_ui": true,
+    "page_reload": false,
+    "nav_count": 1,
+    "console_errors": [
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 409 ()"
+      },
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 409 ()"
+      }
+    ],
+    "wrong_endpoint": false,
+    "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-system-acceptance-01\\screenshots\\accept-nested_tariff1_modal.png",
+    "pass": true
+  },
+  "cfg_final": {
+    "test_mode": "false",
+    "prod_has_nikel": true,
+    "prod_has_im_work": false,
+    "test_has_im_work": true,
+    "nail_typo": false,
+    "hmac_secret_null": true,
+    "honeypot_field": true,
+    "min_fill_seconds": true,
+    "rate_limit_burst_max": true,
+    "duplicate_window": true,
+    "consent_guard_hint": false
+  },
+  "finished_utc": "2026-09-09T18:28:06Z"
+}

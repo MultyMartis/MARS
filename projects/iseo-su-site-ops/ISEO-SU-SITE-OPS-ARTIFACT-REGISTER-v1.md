@@ -509,6 +509,29 @@ Production mutations in this registration: **0** at registration time. **WAVE 1 
 
 ---
 
+## FORM SYSTEM ACCEPTANCE 01 (2026-09-09) — COMPLETE
+
+| Artifact | Path | Role |
+|----------|------|------|
+| Evidence | `ISEO-SU-FORM-SYSTEM-ACCEPTANCE-01-EVIDENCE-v1.md` | EVIDENCE |
+| Main REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-FORM-SYSTEM-ACCEPTANCE-01.md` | REPORT |
+| RU closeout | `reports/ISEO-SU-FORM-SYSTEM-ACCEPTANCE-01-RU.md` | REPORT (RU) |
+| Inventory | `evidence/form-system-acceptance-01/live-form-inventory.csv` | EVIDENCE |
+| Inventory JSON | `evidence/form-system-acceptance-01/live-form-inventory.json` | EVIDENCE |
+| Defects | `evidence/form-system-acceptance-01/defects.csv` | EVIDENCE |
+| Shared JS source | `production-source/js/common.js` | SOURCE (root-relative AJAX, preventDefault catch-all, career `_info`) |
+| Career handler | `production-source/forms/career__FORM.php` | SOURCE (optional `cf_file`) |
+| Blog HTML | `production-source/static-html/blog.html`, `blog-article.html` | SOURCE (consent) |
+| Theme footer | `production-source/theme/iseoblog/footer.php` | SOURCE (`cf_contact` name hygiene) |
+| Inventory / UI / deploy tools | `tools/_form-system-acceptance-01-*.py` | TOOL |
+| Machine evidence | `evidence/form-system-acceptance-01/` | EVIDENCE |
+| Production backup | `X:\AI MARS\local\sites\iseo-su-production\_form-system-acceptance-01\` | BACKUP (out of git) |
+| Live surfaces / families / handlers | **3744** / **10** / **12** | METRIC |
+| Isolated mail recipient | `im.work@mail.ru` only; production test mails **0** | POLICY |
+| SEO / menu / design | **UNCHANGED** | POLICY |
+
+---
+
 ## Explicit non-artifacts and security signal
 
 This documentation wave introduced no token, password, cookie, session value, DB dump, Localhost mirror, unredacted production dump, or active `_*-scratch/` tree.

@@ -1,0 +1,351 @@
+{
+  "started_utc": "2026-09-09T18:31:06Z",
+  "browser": [
+    {
+      "label": "nested_tariff2_modal",
+      "url": "https://i-seo.su/services/seo/prodvizhenie-sajta-restorana.html",
+      "request_url": "https://i-seo.su/tariff_2__FORM.php",
+      "http": 200,
+      "body": "true",
+      "success_ui": true,
+      "page_reload": false,
+      "nav_count": 1,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ],
+      "wrong_endpoint": false,
+      "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-system-acceptance-01\\screenshots\\accept-nested_tariff2_modal.png",
+      "pass": true
+    },
+    {
+      "label": "nested_tariff3_modal",
+      "url": "https://i-seo.su/services/seo/prodvizhenie-sajta-restorana.html",
+      "request_url": "https://i-seo.su/tariff_3__FORM.php",
+      "http": 200,
+      "body": "true",
+      "success_ui": true,
+      "page_reload": false,
+      "nav_count": 1,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ],
+      "wrong_endpoint": false,
+      "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-system-acceptance-01\\screenshots\\accept-nested_tariff3_modal.png",
+      "pass": true
+    },
+    {
+      "label": "nested_tariff4_modal",
+      "url": "https://i-seo.su/services/seo/prodvizhenie-sajta-restorana.html",
+      "request_url": "https://i-seo.su/tariff_4__FORM.php",
+      "http": 200,
+      "body": "true",
+      "success_ui": true,
+      "page_reload": false,
+      "nav_count": 1,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ],
+      "wrong_endpoint": false,
+      "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-system-acceptance-01\\screenshots\\accept-nested_tariff4_modal.png",
+      "pass": true
+    }
+  ],
+  "blog_consent_live": {
+    "url": "https://i-seo.su/blog.html",
+    "consent_checkbox": true,
+    "privacy_link": true,
+    "page_form": true
+  },
+  "cfg_before": {
+    "test_mode": "false",
+    "prod_has_nikel": true,
+    "prod_has_im_work": false,
+    "test_has_im_work": true,
+    "nail_typo": false,
+    "hmac_secret_null": true,
+    "honeypot_field": true,
+    "min_fill_seconds": true,
+    "rate_limit_burst_max": true,
+    "duplicate_window": true,
+    "consent_guard_hint": false
+  },
+  "seo_recalc": {
+    "label": "seo_calculator_recalc_resubmit",
+    "url": "https://i-seo.su/services/seo.html",
+    "first_result_cost": "64 000",
+    "second_result_cost": "64 000",
+    "result_changed": false,
+    "form_count_after_recalc": 1,
+    "first_body": "true",
+    "resp_bodies": [
+      "true"
+    ],
+    "second_body": "true",
+    "submit_count": 1,
+    "first_success_ui": true,
+    "final_success_ui": true,
+    "page_reload": false,
+    "dup_click_handlers_on_button": 0,
+    "console_errors": [
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 409 ()"
+      },
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 409 ()"
+      }
+    ],
+    "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-system-acceptance-01\\screenshots\\accept-seo_calculator_recalc.png",
+    "pass": false
+  },
+  "responsive": {
+    "rows": [
+      {
+        "viewport": "1440x900",
+        "label": "homepage",
+        "form": {
+          "w": 653,
+          "h": 607,
+          "t": 13078,
+          "vis": true
+        },
+        "consent": {
+          "w": 18,
+          "h": 18,
+          "t": 13545,
+          "vis": true
+        },
+        "button": {
+          "w": 199,
+          "h": 70,
+          "t": 13615,
+          "vis": true
+        },
+        "vw": 1440,
+        "vh": 900
+      },
+      {
+        "viewport": "1440x900",
+        "label": "homepage_modal_trigger",
+        "form": {
+          "w": 259,
+          "h": 70,
+          "t": 653,
+          "vis": true
+        },
+        "consent": null,
+        "button": {
+          "w": 480,
+          "h": 70,
+          "t": 815,
+          "vis": true
+        },
+        "vw": 1440,
+        "vh": 900
+      },
+      {
+        "viewport": "1440x900",
+        "label": "seo_calc",
+        "form": {
+          "w": 420,
+          "h": 558,
+          "t": 633,
+          "vis": true
+        },
+        "consent": {
+          "w": 18,
+          "h": 18,
+          "t": 1020,
+          "vis": true
+        },
+        "button": {
+          "w": 350,
+          "h": 70,
+          "t": 1086,
+          "vis": true
+        },
+        "vw": 1440,
+        "vh": 900
+      },
+      {
+        "viewport": "1440x900",
+        "label": "tariff_calc",
+        "form": {
+          "w": 420,
+          "h": 558,
+          "t": 633,
+          "vis": true
+        },
+        "consent": {
+          "w": 18,
+          "h": 18,
+          "t": 1020,
+          "vis": true
+        },
+        "button": {
+          "w": 350,
+          "h": 70,
+          "t": 1086,
+          "vis": true
+        },
+        "vw": 1440,
+        "vh": 900
+      },
+      {
+        "viewport": "1440x900",
+        "label": "webinar",
+        "form": null,
+        "consent": null,
+        "button": {
+          "w": 199,
+          "h": 70,
+          "t": 4928,
+          "vis": true
+        },
+        "vw": 1440,
+        "vh": 900
+      },
+      {
+        "viewport": "390x844",
+        "label": "homepage",
+        "form": {
+          "w": 345,
+          "h": 625,
+          "t": 13358,
+          "vis": true
+        },
+        "consent": {
+          "w": 18,
+          "h": 18,
+          "t": 13825,
+          "vis": true
+        },
+        "button": {
+          "w": 345,
+          "h": 60,
+          "t": 13923,
+          "vis": true
+        },
+        "vw": 390,
+        "vh": 844
+      },
+      {
+        "viewport": "390x844",
+        "label": "homepage_modal_trigger",
+        "form": {
+          "w": 345,
+          "h": 60,
+          "t": 596,
+          "vis": true
+        },
+        "consent": null,
+        "button": {
+          "w": 315,
+          "h": 60,
+          "t": 859,
+          "vis": true
+        },
+        "vw": 390,
+        "vh": 844
+      },
+      {
+        "viewport": "390x844",
+        "label": "seo_calc",
+        "form": {
+          "w": 299,
+          "h": 660,
+          "t": 1489,
+          "vis": true
+        },
+        "consent": {
+          "w": 18,
+          "h": 18,
+          "t": 1960,
+          "vis": true
+        },
+        "button": {
+          "w": 229,
+          "h": 70,
+          "t": 2044,
+          "vis": true
+        },
+        "vw": 390,
+        "vh": 844
+      },
+      {
+        "viewport": "390x844",
+        "label": "tariff_calc",
+        "form": {
+          "w": 299,
+          "h": 660,
+          "t": 1489,
+          "vis": true
+        },
+        "consent": {
+          "w": 18,
+          "h": 18,
+          "t": 1960,
+          "vis": true
+        },
+        "button": {
+          "w": 229,
+          "h": 70,
+          "t": 2044,
+          "vis": true
+        },
+        "vw": 390,
+        "vh": 844
+      },
+      {
+        "viewport": "390x844",
+        "label": "webinar",
+        "form": null,
+        "consent": null,
+        "button": {
+          "w": 365,
+          "h": 60,
+          "t": 6715,
+          "vis": true
+        },
+        "vw": 390,
+        "vh": 844
+      }
+    ]
+  },
+  "cfg_final": {
+    "test_mode": "false",
+    "prod_has_nikel": true,
+    "prod_has_im_work": false,
+    "test_has_im_work": true,
+    "nail_typo": false,
+    "hmac_secret_null": true,
+    "honeypot_field": true,
+    "min_fill_seconds": true,
+    "rate_limit_burst_max": true,
+    "duplicate_window": true,
+    "consent_guard_hint": false
+  },
+  "finished_utc": "2026-09-09T18:33:28Z"
+}

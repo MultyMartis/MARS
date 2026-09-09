@@ -1,0 +1,7000 @@
+{
+  "ts": "2026-09-09T16:38:38Z",
+  "pages": [
+    {
+      "href": "https://i-seo.su/",
+      "forms": [
+        {
+          "id": "calculator__FORM",
+          "action": "",
+          "method": "post",
+          "className": "",
+          "send_id": null,
+          "send_type": null,
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "radio_st_01",
+            "radio_st_01",
+            "radio_st_01",
+            "radio_st_01",
+            "radio_st_01",
+            "radio_st_02",
+            "radio_st_02",
+            "radio_st_02",
+            "radio_st_02",
+            "radio_st_02",
+            "radio_st_03",
+            "radio_st_03",
+            "radio_st_03",
+            "radio_st_03",
+            "radio_st_03",
+            "radio_st_04",
+            "radio_st_04",
+            "radio_st_04",
+            "radio_st_04",
+            "radio_st_05",
+            "radio_st_05",
+            "radio_st_05",
+            "radio_st_05",
+            "calc_name",
+            "calc_contact",
+            "calc_phone",
+            "calc_site",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "calc_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "calc_contact",
+              "id": "calc_contact",
+              "type": null,
+              "tag": "SELECT"
+            },
+            {
+              "name": "calc_phone",
+              "id": "calc_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "page__FORM",
+          "action": "",
+          "method": "post",
+          "className": "",
+          "send_id": "page__FORM_send",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "pf_name",
+            "pf_contact",
+            "pf_phone",
+            "pf_site",
+            "pf_comment",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "pf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "pf_contact",
+              "id": "pf_contact",
+              "type": null,
+              "tag": "SELECT"
+            },
+            {
+              "name": "pf_phone",
+              "id": "pf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "callback__FORM",
+          "action": "",
+          "method": "post",
+          "className": "",
+          "send_id": "callback__FORM_send",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_contact",
+            "cf_phone",
+            "cf_site",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": null,
+              "tag": "SELECT"
+            },
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "audit__FORM",
+          "action": "",
+          "method": "post",
+          "className": "",
+          "send_id": "audit__FORM_send",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "af_name",
+            "af_contact",
+            "af_phone",
+            "af_site",
+            "af_comment",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "af_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "af_contact",
+              "id": "af_contact",
+              "type": null,
+              "tag": "SELECT"
+            },
+            {
+              "name": "af_phone",
+              "id": "af_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        }
+      ],
+      "triggers": [
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        },
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        },
+        {
+          "href": "#audit__FORM_popup",
+          "text": "Оставить заявку"
+        },
+        {
+          "href": "#audit__FORM_popup",
+          "text": "Заказать аудит"
+        },
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Хочу также"
+        },
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Увеличить продажи"
+        }
+      ],
+      "calc": {
+        "tariff_wrap": false,
+        "tariff_submit": false,
+        "tariff_request": false,
+        "stage": true
+      },
+      "handlers": [
+        {
+          "id": "page__FORM_send",
+          "click_count": 1,
+          "preventDefault_call": true,
+          "return_false": true,
+          "urls": [
+            "page__FORM.php"
+          ]
+        },
+        {
+          "id": "callback__FORM_send",
+          "click_count": 1,
+          "preventDefault_call": true,
+          "return_false": true,
+          "urls": [
+            "callback__FORM.php"
+          ]
+        },
+        {
+          "id": "audit__FORM_send",
+          "click_count": 1,
+          "preventDefault_call": true,
+          "return_false": true,
+          "urls": [
+            "audit__FORM.php"
+          ]
+        }
+      ],
+      "common_js": [
+        "https://i-seo.su/js/common.js"
+      ],
+      "label": "homepage",
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ]
+    },
+    {
+      "href": "https://i-seo.su/services/seo.html",
+      "forms": [
+        {
+          "id": "calculator__FORM",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": null,
+          "send_type": null,
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "radio_st_01",
+            "radio_st_01",
+            "radio_st_01",
+            "radio_st_01",
+            "radio_st_01",
+            "radio_st_02",
+            "radio_st_02",
+            "radio_st_02",
+            "radio_st_02",
+            "radio_st_02",
+            "radio_st_03",
+            "radio_st_03",
+            "radio_st_03",
+            "radio_st_03",
+            "radio_st_03",
+            "radio_st_04",
+            "radio_st_04",
+            "radio_st_04",
+            "radio_st_04",
+            "radio_st_05",
+            "radio_st_05",
+            "radio_st_05",
+            "radio_st_05",
+            "calc_name",
+            "calc_phone",
+            "calc_site",
+            "cf_agree11",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "calc_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "calc_phone",
+              "id": "calc_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "callback__FORM_tariff_calc",
+          "action": "#",
+          "method": "post",
+          "className": "tariff-calc-request",
+          "send_id": "callback__FORM_tariff_calc_send",
+          "send_type": "button",
+          "data_root": "y",
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "tariff_calc_cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "",
+              "type": "hidden",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "page__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "page__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "pf_name",
+            "pf_contact",
+            "pf_phone",
+            "pf_site",
+            "pf_comment",
+            "cf_agree21",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "pf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "pf_contact",
+              "id": "",
+              "type": "hidden",
+              "tag": "INPUT"
+            },
+            {
+              "name": "pf_phone",
+              "id": "pf_contact",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "callback__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "callback__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree1",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "bonus__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "bonus__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "bf_name",
+            "bf_phone",
+            "bf_comment",
+            "cf_agree2",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [],
+          "phone_contact": [
+            {
+              "name": "bf_phone",
+              "id": "bf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "audit__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "audit__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "af_name",
+            "af_phone",
+            "af_site",
+            "af_comment",
+            "cf_agree3",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "af_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "af_phone",
+              "id": "af_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_1__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_1__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree4",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_2__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_2__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree5",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_3__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_3__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree6",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_4__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_4__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree7",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        }
+      ],
+      "triggers": [
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        },
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        },
+        {
+          "href": "#audit__FORM_popup",
+          "text": "Заказать аудит"
+        },
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Хочу также"
+        }
+      ],
+      "calc": {
+        "tariff_wrap": true,
+        "tariff_submit": true,
+        "tariff_request": true,
+        "stage": true
+      },
+      "handlers": [
+        {
+          "id": "page__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/page__FORM.php"
+          ]
+        },
+        {
+          "id": "callback__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "callback__FORM.php"
+          ]
+        },
+        {
+          "id": "bonus__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "bonus__FORM.php"
+          ]
+        },
+        {
+          "id": "audit__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/audit__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_1__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/tariff_1__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_2__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/tariff_2__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_3__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/tariff_3__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_4__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/tariff_4__FORM.php"
+          ]
+        }
+      ],
+      "common_js": [
+        "https://i-seo.su/js/common.js"
+      ],
+      "label": "seo_hub",
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ]
+    },
+    {
+      "href": "https://i-seo.su/tariff-calc",
+      "forms": [
+        {
+          "id": "callback__FORM_tariff_calc",
+          "action": "#",
+          "method": "post",
+          "className": "tariff-calc-request",
+          "send_id": "callback__FORM_tariff_calc_send",
+          "send_type": "button",
+          "data_root": "y",
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "tariff_calc_cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "",
+              "type": "hidden",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "page__FORM_info",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "page__FORM_send_info",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "pf_name",
+            "pf_contact",
+            "pf_phone",
+            "pf_site",
+            "pf_comment",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "pf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "pf_contact",
+              "id": "pf_contact",
+              "type": null,
+              "tag": "SELECT"
+            },
+            {
+              "name": "pf_phone",
+              "id": "pf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "callback__FORM_info",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "callback__FORM_send_info",
+          "send_type": "submit",
+          "data_root": "y",
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "сf_contact",
+            "cf_phone",
+            "cf_site",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "сf_contact",
+              "id": "сf_contact",
+              "type": null,
+              "tag": "SELECT"
+            },
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "audit__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "audit__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": "y",
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "af_name",
+            "af_phone",
+            "af_site",
+            "af_comment",
+            "cf_agree3",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "af_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "af_phone",
+              "id": "af_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_1__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_1__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": "y",
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree4",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_2__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_2__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": "y",
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree5",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_3__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_3__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": "y",
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree6",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_4__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_4__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": "y",
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree7",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        }
+      ],
+      "triggers": [
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        },
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        }
+      ],
+      "calc": {
+        "tariff_wrap": true,
+        "tariff_submit": true,
+        "tariff_request": true,
+        "stage": false
+      },
+      "handlers": [
+        {
+          "id": "page__FORM_send_info",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "/page__FORM.php"
+          ]
+        },
+        {
+          "id": "callback__FORM_send_info",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "/callback__FORM.php"
+          ]
+        },
+        {
+          "id": "audit__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/audit__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_1__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/tariff_1__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_2__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/tariff_2__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_3__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/tariff_3__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_4__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/tariff_4__FORM.php"
+          ]
+        }
+      ],
+      "common_js": [
+        "https://i-seo.su/js/common.js?ver=1788965801"
+      ],
+      "label": "tariff_calc",
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ]
+    },
+    {
+      "href": "https://i-seo.su/services/seo/prodvizhenie-sajta-restorana.html",
+      "forms": [
+        {
+          "id": "callback__FORM_tariff_calc",
+          "action": "#",
+          "method": "post",
+          "className": "tariff-calc-request",
+          "send_id": "callback__FORM_tariff_calc_send",
+          "send_type": "button",
+          "data_root": "y",
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "tariff_calc_cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "",
+              "type": "hidden",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "calculator__FORM",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": null,
+          "send_type": null,
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "radio_st_01",
+            "radio_st_01",
+            "radio_st_01",
+            "radio_st_01",
+            "radio_st_01",
+            "radio_st_02",
+            "radio_st_02",
+            "radio_st_02",
+            "radio_st_02",
+            "radio_st_02",
+            "radio_st_03",
+            "radio_st_03",
+            "radio_st_03",
+            "radio_st_03",
+            "radio_st_03",
+            "radio_st_04",
+            "radio_st_04",
+            "radio_st_04",
+            "radio_st_04",
+            "radio_st_05",
+            "radio_st_05",
+            "radio_st_05",
+            "radio_st_05",
+            "calc_name",
+            "calc_phone",
+            "calc_site",
+            "cf_agree11",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "calc_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "calc_phone",
+              "id": "calc_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "page__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "page__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "pf_name",
+            "pf_contact",
+            "pf_phone",
+            "pf_site",
+            "pf_comment",
+            "cf_agree21",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "pf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "pf_contact",
+              "id": "",
+              "type": "hidden",
+              "tag": "INPUT"
+            },
+            {
+              "name": "pf_phone",
+              "id": "pf_contact",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "callback__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "callback__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree1",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "bonus__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "bonus__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "bf_name",
+            "bf_phone",
+            "bf_comment",
+            "cf_agree2",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [],
+          "phone_contact": [
+            {
+              "name": "bf_phone",
+              "id": "bf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "audit__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "audit__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "af_name",
+            "af_phone",
+            "af_site",
+            "af_comment",
+            "cf_agree3",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "af_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "af_phone",
+              "id": "af_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_1__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_1__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree4",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_2__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_2__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree5",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_3__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_3__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree6",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_4__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_4__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree7",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        }
+      ],
+      "triggers": [
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        },
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        },
+        {
+          "href": "#audit__FORM_popup",
+          "text": "Заказать аудит"
+        },
+        {
+          "href": "#tariff_1__FORM_popup",
+          "text": "Заказать"
+        },
+        {
+          "href": "#tariff_2__FORM_popup",
+          "text": "Заказать"
+        },
+        {
+          "href": "#tariff_3__FORM_popup",
+          "text": "Заказать"
+        },
+        {
+          "href": "#tariff_4__FORM_popup",
+          "text": "Заказать"
+        },
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Хочу также"
+        },
+        {
+          "href": "#bonus__FORM_popup",
+          "text": "Получить бонус"
+        },
+        {
+          "href": "#bonus__FORM_popup",
+          "text": "Получить бонус"
+        },
+        {
+          "href": "#bonus__FORM_popup",
+          "text": "Получить бонус"
+        },
+        {
+          "href": "#bonus__FORM_popup",
+          "text": "Получить бонус"
+        },
+        {
+          "href": "#audit__FORM_popup",
+          "text": "Заказать аудит"
+        }
+      ],
+      "calc": {
+        "tariff_wrap": true,
+        "tariff_submit": true,
+        "tariff_request": true,
+        "stage": true
+      },
+      "handlers": [
+        {
+          "id": "page__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/page__FORM.php"
+          ]
+        },
+        {
+          "id": "callback__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "callback__FORM.php"
+          ]
+        },
+        {
+          "id": "bonus__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "bonus__FORM.php"
+          ]
+        },
+        {
+          "id": "audit__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/audit__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_1__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/tariff_1__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_2__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/tariff_2__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_3__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/tariff_3__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_4__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/tariff_4__FORM.php"
+          ]
+        }
+      ],
+      "common_js": [
+        "https://i-seo.su/js/common.js"
+      ],
+      "label": "nested_seo",
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ]
+    },
+    {
+      "href": "https://i-seo.su/services/seo/prodvizhenie-v-sankt-peterburge.html",
+      "forms": [
+        {
+          "id": "callback__FORM_tariff_calc",
+          "action": "#",
+          "method": "post",
+          "className": "tariff-calc-request",
+          "send_id": "callback__FORM_tariff_calc_send",
+          "send_type": "button",
+          "data_root": "y",
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "tariff_calc_cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "",
+              "type": "hidden",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "calculator__FORM",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": null,
+          "send_type": null,
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "radio_st_01",
+            "radio_st_01",
+            "radio_st_01",
+            "radio_st_01",
+            "radio_st_01",
+            "radio_st_02",
+            "radio_st_02",
+            "radio_st_02",
+            "radio_st_02",
+            "radio_st_02",
+            "radio_st_03",
+            "radio_st_03",
+            "radio_st_03",
+            "radio_st_03",
+            "radio_st_03",
+            "radio_st_04",
+            "radio_st_04",
+            "radio_st_04",
+            "radio_st_04",
+            "radio_st_05",
+            "radio_st_05",
+            "radio_st_05",
+            "radio_st_05",
+            "calc_name",
+            "calc_phone",
+            "calc_site",
+            "cf_agree11",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "calc_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "calc_phone",
+              "id": "calc_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "page__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "page__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "pf_name",
+            "pf_contact",
+            "pf_phone",
+            "pf_site",
+            "pf_comment",
+            "cf_agree21",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "pf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "pf_contact",
+              "id": "",
+              "type": "hidden",
+              "tag": "INPUT"
+            },
+            {
+              "name": "pf_phone",
+              "id": "pf_contact",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "callback__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "callback__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree1",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "bonus__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "bonus__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "bf_name",
+            "bf_phone",
+            "bf_comment",
+            "cf_agree2",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [],
+          "phone_contact": [
+            {
+              "name": "bf_phone",
+              "id": "bf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "audit__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "audit__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "af_name",
+            "af_phone",
+            "af_site",
+            "af_comment",
+            "cf_agree3",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "af_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "af_phone",
+              "id": "af_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_1__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_1__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree4",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_2__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_2__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree5",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_3__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_3__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree6",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_4__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_4__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree7",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        }
+      ],
+      "triggers": [
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        },
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        },
+        {
+          "href": "#audit__FORM_popup",
+          "text": "Заказать аудит"
+        },
+        {
+          "href": "#tariff_1__FORM_popup",
+          "text": "Заказать"
+        },
+        {
+          "href": "#tariff_2__FORM_popup",
+          "text": "Заказать"
+        },
+        {
+          "href": "#tariff_3__FORM_popup",
+          "text": "Заказать"
+        },
+        {
+          "href": "#tariff_4__FORM_popup",
+          "text": "Заказать"
+        },
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Хочу также"
+        },
+        {
+          "href": "#bonus__FORM_popup",
+          "text": "Получить бонус"
+        },
+        {
+          "href": "#bonus__FORM_popup",
+          "text": "Получить бонус"
+        },
+        {
+          "href": "#bonus__FORM_popup",
+          "text": "Получить бонус"
+        },
+        {
+          "href": "#bonus__FORM_popup",
+          "text": "Получить бонус"
+        },
+        {
+          "href": "#audit__FORM_popup",
+          "text": "Заказать аудит"
+        }
+      ],
+      "calc": {
+        "tariff_wrap": true,
+        "tariff_submit": true,
+        "tariff_request": true,
+        "stage": true
+      },
+      "handlers": [
+        {
+          "id": "page__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/page__FORM.php"
+          ]
+        },
+        {
+          "id": "callback__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "callback__FORM.php"
+          ]
+        },
+        {
+          "id": "bonus__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "bonus__FORM.php"
+          ]
+        },
+        {
+          "id": "audit__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/audit__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_1__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/tariff_1__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_2__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/tariff_2__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_3__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/tariff_3__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_4__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/tariff_4__FORM.php"
+          ]
+        }
+      ],
+      "common_js": [
+        "https://i-seo.su/js/common.js"
+      ],
+      "label": "city",
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ]
+    },
+    {
+      "href": "https://i-seo.su/services/seo/prodvizhenie-v-ssha.html",
+      "forms": [
+        {
+          "id": "callback__FORM_tariff_calc",
+          "action": "#",
+          "method": "post",
+          "className": "tariff-calc-request",
+          "send_id": "callback__FORM_tariff_calc_send",
+          "send_type": "button",
+          "data_root": "y",
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "tariff_calc_cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "",
+              "type": "hidden",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "calculator__FORM",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": null,
+          "send_type": null,
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "radio_st_01",
+            "radio_st_01",
+            "radio_st_01",
+            "radio_st_01",
+            "radio_st_01",
+            "radio_st_02",
+            "radio_st_02",
+            "radio_st_02",
+            "radio_st_02",
+            "radio_st_02",
+            "radio_st_03",
+            "radio_st_03",
+            "radio_st_03",
+            "radio_st_03",
+            "radio_st_03",
+            "radio_st_04",
+            "radio_st_04",
+            "radio_st_04",
+            "radio_st_04",
+            "radio_st_05",
+            "radio_st_05",
+            "radio_st_05",
+            "radio_st_05",
+            "calc_name",
+            "calc_phone",
+            "calc_site",
+            "cf_agree11",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "calc_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "calc_phone",
+              "id": "calc_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "page__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "page__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "pf_name",
+            "pf_contact",
+            "pf_phone",
+            "pf_site",
+            "pf_comment",
+            "cf_agree21",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "pf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "pf_contact",
+              "id": "",
+              "type": "hidden",
+              "tag": "INPUT"
+            },
+            {
+              "name": "pf_phone",
+              "id": "pf_contact",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "callback__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "callback__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree1",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "bonus__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "bonus__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "bf_name",
+            "bf_phone",
+            "bf_comment",
+            "cf_agree2",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [],
+          "phone_contact": [
+            {
+              "name": "bf_phone",
+              "id": "bf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "audit__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "audit__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "af_name",
+            "af_phone",
+            "af_site",
+            "af_comment",
+            "cf_agree3",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "af_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "af_phone",
+              "id": "af_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_1__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_1__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree4",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_2__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_2__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree5",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_3__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_3__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree6",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_4__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_4__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree7",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        }
+      ],
+      "triggers": [
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        },
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        },
+        {
+          "href": "#audit__FORM_popup",
+          "text": "Заказать аудит"
+        },
+        {
+          "href": "#tariff_1__FORM_popup",
+          "text": "Заказать"
+        },
+        {
+          "href": "#tariff_2__FORM_popup",
+          "text": "Заказать"
+        },
+        {
+          "href": "#tariff_3__FORM_popup",
+          "text": "Заказать"
+        },
+        {
+          "href": "#tariff_4__FORM_popup",
+          "text": "Заказать"
+        },
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Хочу также"
+        },
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Хочу также"
+        },
+        {
+          "href": "#bonus__FORM_popup",
+          "text": "Получить бонус"
+        },
+        {
+          "href": "#bonus__FORM_popup",
+          "text": "Получить бонус"
+        },
+        {
+          "href": "#bonus__FORM_popup",
+          "text": "Получить бонус"
+        },
+        {
+          "href": "#bonus__FORM_popup",
+          "text": "Получить бонус"
+        },
+        {
+          "href": "#audit__FORM_popup",
+          "text": "Заказать аудит"
+        }
+      ],
+      "calc": {
+        "tariff_wrap": true,
+        "tariff_submit": true,
+        "tariff_request": true,
+        "stage": true
+      },
+      "handlers": [
+        {
+          "id": "page__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/page__FORM.php"
+          ]
+        },
+        {
+          "id": "callback__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "callback__FORM.php"
+          ]
+        },
+        {
+          "id": "bonus__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "bonus__FORM.php"
+          ]
+        },
+        {
+          "id": "audit__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/audit__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_1__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/tariff_1__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_2__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/tariff_2__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_3__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/tariff_3__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_4__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/tariff_4__FORM.php"
+          ]
+        }
+      ],
+      "common_js": [
+        "https://i-seo.su/js/common.js"
+      ],
+      "label": "usa",
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ]
+    },
+    {
+      "href": "https://i-seo.su/webinar-seo-podryadchik.html",
+      "forms": [
+        {
+          "id": "page__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "page__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "pf_name",
+            "pf_contact",
+            "pf_phone",
+            "pf_site",
+            "pf_comment",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "pf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "pf_contact",
+              "id": "",
+              "type": "hidden",
+              "tag": "INPUT"
+            },
+            {
+              "name": "pf_phone",
+              "id": "pf_contact",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "callback__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "callback__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree1",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "bonus__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "bonus__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "bf_name",
+            "bf_phone",
+            "bf_comment",
+            "cf_agree2",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [],
+          "phone_contact": [
+            {
+              "name": "bf_phone",
+              "id": "bf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "audit__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "audit__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "af_name",
+            "af_phone",
+            "af_site",
+            "af_comment",
+            "cf_agree3",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "af_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "af_phone",
+              "id": "af_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_1__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_1__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree4",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_2__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_2__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree5",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_3__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_3__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree6",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_4__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_4__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree7",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        }
+      ],
+      "triggers": [
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        },
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        }
+      ],
+      "calc": {
+        "tariff_wrap": false,
+        "tariff_submit": false,
+        "tariff_request": false,
+        "stage": false
+      },
+      "handlers": [
+        {
+          "id": "page__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/page__FORM.php"
+          ]
+        },
+        {
+          "id": "callback__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "callback__FORM.php"
+          ]
+        },
+        {
+          "id": "bonus__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "bonus__FORM.php"
+          ]
+        },
+        {
+          "id": "audit__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/audit__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_1__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/tariff_1__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_2__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/tariff_2__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_3__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/tariff_3__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_4__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/tariff_4__FORM.php"
+          ]
+        }
+      ],
+      "common_js": [
+        "https://i-seo.su/js/common.js"
+      ],
+      "label": "webinar",
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ]
+    },
+    {
+      "href": "https://i-seo.su/blog.html",
+      "forms": [
+        {
+          "id": "page__FORM_info",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "page__FORM_send_info",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": false,
+          "honeypot": false,
+          "names": [
+            "pf_name",
+            "pf_contact",
+            "pf_phone",
+            "pf_site",
+            "pf_comment"
+          ],
+          "site_required": [
+            {
+              "name": "pf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "pf_contact",
+              "id": "",
+              "type": "hidden",
+              "tag": "INPUT"
+            },
+            {
+              "name": "pf_phone",
+              "id": "pf_contact",
+              "type": "tel",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "callback__FORM_info",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "callback__FORM_send_info",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": false,
+          "honeypot": false,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        }
+      ],
+      "triggers": [
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        },
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        }
+      ],
+      "calc": {
+        "tariff_wrap": false,
+        "tariff_submit": false,
+        "tariff_request": false,
+        "stage": false
+      },
+      "handlers": [
+        {
+          "id": "page__FORM_send_info",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "/page__FORM.php"
+          ]
+        },
+        {
+          "id": "callback__FORM_send_info",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "/callback__FORM.php"
+          ]
+        }
+      ],
+      "common_js": [
+        "https://i-seo.su/js/common.js"
+      ],
+      "label": "blog_html",
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ]
+    },
+    {
+      "href": "https://i-seo.su/blog",
+      "forms": [
+        {
+          "id": "page__FORM_info",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "page__FORM_send_info",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "pf_name",
+            "pf_contact",
+            "pf_phone",
+            "pf_site",
+            "pf_comment",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "pf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "pf_contact",
+              "id": "pf_contact",
+              "type": null,
+              "tag": "SELECT"
+            },
+            {
+              "name": "pf_phone",
+              "id": "pf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "callback__FORM_info",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "callback__FORM_send_info",
+          "send_type": "submit",
+          "data_root": "y",
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "сf_contact",
+            "cf_phone",
+            "cf_site",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "сf_contact",
+              "id": "сf_contact",
+              "type": null,
+              "tag": "SELECT"
+            },
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "audit__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "audit__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": "y",
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "af_name",
+            "af_phone",
+            "af_site",
+            "af_comment",
+            "cf_agree3",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "af_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "af_phone",
+              "id": "af_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_1__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_1__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": "y",
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree4",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_2__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_2__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": "y",
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree5",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_3__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_3__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": "y",
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree6",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_4__FORM_seo",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_4__FORM_send_seo",
+          "send_type": "submit",
+          "data_root": "y",
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "cf_agree7",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        }
+      ],
+      "triggers": [
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        },
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        }
+      ],
+      "calc": {
+        "tariff_wrap": false,
+        "tariff_submit": false,
+        "tariff_request": false,
+        "stage": false
+      },
+      "handlers": [
+        {
+          "id": "page__FORM_send_info",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "/page__FORM.php"
+          ]
+        },
+        {
+          "id": "callback__FORM_send_info",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "/callback__FORM.php"
+          ]
+        },
+        {
+          "id": "audit__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/audit__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_1__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/tariff_1__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_2__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/tariff_2__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_3__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/tariff_3__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_4__FORM_send_seo",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": true,
+          "urls": [
+            "/tariff_4__FORM.php"
+          ]
+        }
+      ],
+      "common_js": [
+        "https://i-seo.su/js/common.js?ver=1788965801"
+      ],
+      "label": "blog_wp",
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ]
+    },
+    {
+      "href": "https://i-seo.su/cases.html",
+      "forms": [
+        {
+          "id": "page__FORM_cases",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "page__FORM_send_cases",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "pf_name",
+            "pf_contact",
+            "pf_phone",
+            "pf_site",
+            "pf_comment",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "pf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "pf_contact",
+              "id": "pf_contact",
+              "type": null,
+              "tag": "SELECT"
+            },
+            {
+              "name": "pf_phone",
+              "id": "pf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "callback__FORM_cases",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "callback__FORM_send_cases",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_ontact",
+            "cf_phone",
+            "cf_site",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "audit__FORM_cases",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "audit__FORM_send_cases",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "af_name",
+            "af_ontact",
+            "af_phone",
+            "af_email",
+            "af_site",
+            "af_coast",
+            "af_comment",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "af_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "af_phone",
+              "id": "af_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        }
+      ],
+      "triggers": [
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        },
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        },
+        {
+          "href": "#audit__FORM_popup",
+          "text": "Заказать аудит"
+        }
+      ],
+      "calc": {
+        "tariff_wrap": false,
+        "tariff_submit": false,
+        "tariff_request": false,
+        "stage": false
+      },
+      "handlers": [
+        {
+          "id": "page__FORM_send_cases",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "page__FORM.php"
+          ]
+        },
+        {
+          "id": "callback__FORM_send_cases",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "callback__FORM.php"
+          ]
+        },
+        {
+          "id": "audit__FORM_send_cases",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "audit__FORM.php"
+          ]
+        }
+      ],
+      "common_js": [
+        "https://i-seo.su/js/common.js"
+      ],
+      "label": "cases",
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ]
+    },
+    {
+      "href": "https://i-seo.su/contacts.html",
+      "forms": [
+        {
+          "id": "page__FORM_info",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "page__FORM_send_info",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "pf_name",
+            "pf_contact",
+            "pf_phone",
+            "pf_site",
+            "pf_comment",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "pf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "pf_contact",
+              "id": "pf_contact",
+              "type": null,
+              "tag": "SELECT"
+            },
+            {
+              "name": "pf_phone",
+              "id": "pf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "callback__FORM_info",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "callback__FORM_send_info",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_ontact",
+            "cf_phone",
+            "cf_site",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "audit__FORM_info",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "audit__FORM_send_info",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "af_name",
+            "af_ontact",
+            "af_phone",
+            "af_email",
+            "af_site",
+            "af_coast",
+            "af_comment",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "af_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "af_phone",
+              "id": "af_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        }
+      ],
+      "triggers": [
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        },
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        }
+      ],
+      "calc": {
+        "tariff_wrap": false,
+        "tariff_submit": false,
+        "tariff_request": false,
+        "stage": false
+      },
+      "handlers": [
+        {
+          "id": "page__FORM_send_info",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "/page__FORM.php"
+          ]
+        },
+        {
+          "id": "callback__FORM_send_info",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "/callback__FORM.php"
+          ]
+        },
+        {
+          "id": "audit__FORM_send_info",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "audit__FORM.php"
+          ]
+        }
+      ],
+      "common_js": [
+        "https://i-seo.su/js/common.js"
+      ],
+      "label": "contacts",
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ]
+    },
+    {
+      "href": "https://i-seo.su/career.html",
+      "forms": [
+        {
+          "id": "callback__FORM_info",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "callback__FORM_send_info",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_ontact",
+            "cf_phone",
+            "cf_site",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "audit__FORM_info",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "audit__FORM_send_info",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "af_name",
+            "af_ontact",
+            "af_phone",
+            "af_email",
+            "af_site",
+            "af_coast",
+            "af_comment",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "af_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "af_phone",
+              "id": "af_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "career__FORM_info",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "career__FORM_send_info",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_ontact",
+            "cf_phone",
+            "cf_file",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        }
+      ],
+      "triggers": [
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        },
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        },
+        {
+          "href": "#career__FORM_popup",
+          "text": "Хочу в команду"
+        },
+        {
+          "href": "#career__FORM_popup",
+          "text": ""
+        },
+        {
+          "href": "#career__FORM_popup",
+          "text": "Подробнее"
+        },
+        {
+          "href": "#career__FORM_popup",
+          "text": ""
+        },
+        {
+          "href": "#career__FORM_popup",
+          "text": "Подробнее"
+        },
+        {
+          "href": "#career__FORM_popup",
+          "text": ""
+        },
+        {
+          "href": "#career__FORM_popup",
+          "text": "Подробнее"
+        }
+      ],
+      "calc": {
+        "tariff_wrap": false,
+        "tariff_submit": false,
+        "tariff_request": false,
+        "stage": false
+      },
+      "handlers": [
+        {
+          "id": "callback__FORM_send_info",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "/callback__FORM.php"
+          ]
+        },
+        {
+          "id": "audit__FORM_send_info",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "audit__FORM.php"
+          ]
+        },
+        {
+          "id": "career__FORM_send_info",
+          "click_count": 0,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": []
+        }
+      ],
+      "common_js": [
+        "https://i-seo.su/js/common.js"
+      ],
+      "label": "career",
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ]
+    },
+    {
+      "href": "https://i-seo.su/partners.html",
+      "forms": [
+        {
+          "id": "partners_page__FORM_info",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "partners_page__FORM_send_info",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "pf_name",
+            "pf_site",
+            "pf_comment",
+            "pt_contact",
+            "pt_phone",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "pf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "pt_contact",
+              "id": "pt_contact",
+              "type": null,
+              "tag": "SELECT"
+            },
+            {
+              "name": "pt_phone",
+              "id": "pt_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "partners__FORM_info",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "partners__FORM_send_info",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "pf_name",
+            "pf_site",
+            "pf_comment",
+            "pt_contact",
+            "pt_phone",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "pf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "pt_contact",
+              "id": "pt_contact",
+              "type": null,
+              "tag": "SELECT"
+            },
+            {
+              "name": "pt_phone",
+              "id": "pt_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        }
+      ],
+      "triggers": [
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        },
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        },
+        {
+          "href": "#partners__FORM_popup",
+          "text": "Стать партнёром"
+        },
+        {
+          "href": "#partners__FORM_popup",
+          "text": "Рекомендовать"
+        },
+        {
+          "href": "#partners__FORM_popup",
+          "text": ""
+        },
+        {
+          "href": "#partners__FORM_popup",
+          "text": ""
+        },
+        {
+          "href": "#partners__FORM_popup",
+          "text": ""
+        },
+        {
+          "href": "#partners__FORM_popup",
+          "text": ""
+        }
+      ],
+      "calc": {
+        "tariff_wrap": false,
+        "tariff_submit": false,
+        "tariff_request": false,
+        "stage": false
+      },
+      "handlers": [
+        {
+          "id": "partners_page__FORM_send_info",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "partners__FORM.php"
+          ]
+        },
+        {
+          "id": "partners__FORM_send_info",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "partners__FORM.php"
+          ]
+        }
+      ],
+      "common_js": [
+        "https://i-seo.su/js/common.js"
+      ],
+      "label": "partners",
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ]
+    },
+    {
+      "href": "https://i-seo.su/reviews.html",
+      "forms": [
+        {
+          "id": "review_page__FORM_info",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "review_page__FORM_send_info",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "rf_name",
+            "rf_ontact",
+            "rf_phone",
+            "rf_comment",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [],
+          "phone_contact": [
+            {
+              "name": "rf_phone",
+              "id": "rf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "page__FORM_info",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "page__FORM_send_info",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "pf_name",
+            "pf_contact",
+            "pf_phone",
+            "pf_site",
+            "pf_comment",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "pf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "pf_contact",
+              "id": "pf_contact",
+              "type": null,
+              "tag": "SELECT"
+            },
+            {
+              "name": "pf_phone",
+              "id": "pf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "callback__FORM_info",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "callback__FORM_send_info",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_ontact",
+            "cf_phone",
+            "cf_site",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "review__FORM_info",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "review__FORM_send_info",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "rf_name",
+            "rf_ontact",
+            "rf_phone",
+            "rf_comment",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [],
+          "phone_contact": [
+            {
+              "name": "rf_phone",
+              "id": "rf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        }
+      ],
+      "triggers": [
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        },
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        },
+        {
+          "href": "#review__FORM_popup",
+          "text": "Оставить отзыв"
+        }
+      ],
+      "calc": {
+        "tariff_wrap": false,
+        "tariff_submit": false,
+        "tariff_request": false,
+        "stage": false
+      },
+      "handlers": [
+        {
+          "id": "review_page__FORM_send_info",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "review__FORM.php"
+          ]
+        },
+        {
+          "id": "page__FORM_send_info",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "/page__FORM.php"
+          ]
+        },
+        {
+          "id": "callback__FORM_send_info",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "/callback__FORM.php"
+          ]
+        },
+        {
+          "id": "review__FORM_send_info",
+          "click_count": 0,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": []
+        }
+      ],
+      "common_js": [
+        "https://i-seo.su/js/common.js"
+      ],
+      "label": "reviews",
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ]
+    },
+    {
+      "href": "https://i-seo.su/bonuses.html",
+      "forms": [
+        {
+          "id": "bonus__FORM",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "bonus__FORM_send",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "bf_name",
+            "bf_contact",
+            "bf_phone",
+            "bf_comment",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [],
+          "phone_contact": [
+            {
+              "name": "bf_contact",
+              "id": "bf_contact",
+              "type": null,
+              "tag": "SELECT"
+            },
+            {
+              "name": "bf_phone",
+              "id": "bf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "bonus__FORM_1",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "bonus__FORM_send_1",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "bf_name",
+            "bf_contact",
+            "bf_phone",
+            "bf_comment",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [],
+          "phone_contact": [
+            {
+              "name": "bf_contact",
+              "id": "bf_contact",
+              "type": null,
+              "tag": "SELECT"
+            },
+            {
+              "name": "bf_phone",
+              "id": "bf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "bonus__FORM_2",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "bonus__FORM_send_2",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "bf_name",
+            "bf_contact",
+            "bf_phone",
+            "bf_comment",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [],
+          "phone_contact": [
+            {
+              "name": "bf_contact",
+              "id": "bf_contact",
+              "type": null,
+              "tag": "SELECT"
+            },
+            {
+              "name": "bf_phone",
+              "id": "bf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "bonus__FORM_3",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "bonus__FORM_send_3",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "bf_name",
+            "bf_contact",
+            "bf_phone",
+            "bf_comment",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [],
+          "phone_contact": [
+            {
+              "name": "bf_contact",
+              "id": "bf_contact",
+              "type": null,
+              "tag": "SELECT"
+            },
+            {
+              "name": "bf_phone",
+              "id": "bf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "bonus__FORM_4",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "bonus__FORM_send_4",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "bf_name",
+            "bf_contact",
+            "bf_phone",
+            "bf_comment",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [],
+          "phone_contact": [
+            {
+              "name": "bf_contact",
+              "id": "bf_contact",
+              "type": null,
+              "tag": "SELECT"
+            },
+            {
+              "name": "bf_phone",
+              "id": "bf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "bonus__FORM_5",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "bonus__FORM_send_5",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "bf_name",
+            "bf_contact",
+            "bf_phone",
+            "bf_comment",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [],
+          "phone_contact": [
+            {
+              "name": "bf_contact",
+              "id": "bf_contact",
+              "type": null,
+              "tag": "SELECT"
+            },
+            {
+              "name": "bf_phone",
+              "id": "bf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "bonus__FORM_6",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "bonus__FORM_send_6",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "bf_name",
+            "bf_contact",
+            "bf_phone",
+            "bf_comment",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [],
+          "phone_contact": [
+            {
+              "name": "bf_contact",
+              "id": "bf_contact",
+              "type": null,
+              "tag": "SELECT"
+            },
+            {
+              "name": "bf_phone",
+              "id": "bf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "callback__FORM_info",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "callback__FORM_send_info",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_contact",
+            "cf_phone",
+            "cf_site",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": null,
+              "tag": "SELECT"
+            },
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "audit__FORM_info",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "audit__FORM_send_info",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "af_name",
+            "af_contact",
+            "af_phone",
+            "af_contact",
+            "af_email",
+            "af_site",
+            "af_coast",
+            "af_comment",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "af_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "af_contact",
+              "id": "af_contact",
+              "type": null,
+              "tag": "SELECT"
+            },
+            {
+              "name": "af_phone",
+              "id": "af_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "af_contact",
+              "id": "af_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        }
+      ],
+      "triggers": [
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        },
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        },
+        {
+          "href": "#bonus__FORM_popup",
+          "text": "Получить бонус"
+        },
+        {
+          "href": "#bonus__FORM_popup_1",
+          "text": "Получить бонус"
+        },
+        {
+          "href": "#bonus__FORM_popup_2",
+          "text": "Получить бонус"
+        },
+        {
+          "href": "#bonus__FORM_popup_3",
+          "text": "Получить бонус"
+        },
+        {
+          "href": "#bonus__FORM_popup_4",
+          "text": "Получить бонус"
+        },
+        {
+          "href": "#bonus__FORM_popup_5",
+          "text": "Получить бонус"
+        },
+        {
+          "href": "#bonus__FORM_popup_6",
+          "text": "Получить бонус"
+        }
+      ],
+      "calc": {
+        "tariff_wrap": false,
+        "tariff_submit": false,
+        "tariff_request": false,
+        "stage": false
+      },
+      "handlers": [
+        {
+          "id": "bonus__FORM_send",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "bonus__FORM.php"
+          ]
+        },
+        {
+          "id": "bonus__FORM_send_1",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "bonus__FORM.php"
+          ]
+        },
+        {
+          "id": "bonus__FORM_send_2",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "bonus__FORM.php"
+          ]
+        },
+        {
+          "id": "bonus__FORM_send_3",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "bonus__FORM.php"
+          ]
+        },
+        {
+          "id": "bonus__FORM_send_4",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "bonus__FORM.php"
+          ]
+        },
+        {
+          "id": "bonus__FORM_send_5",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "bonus__FORM.php"
+          ]
+        },
+        {
+          "id": "bonus__FORM_send_6",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "bonus__FORM.php"
+          ]
+        },
+        {
+          "id": "callback__FORM_send_info",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "/callback__FORM.php"
+          ]
+        },
+        {
+          "id": "audit__FORM_send_info",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "audit__FORM.php"
+          ]
+        }
+      ],
+      "common_js": [
+        "https://i-seo.su/js/common.js"
+      ],
+      "label": "bonuses",
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ]
+    },
+    {
+      "href": "https://i-seo.su/services/adv/google-adwords.html",
+      "forms": [
+        {
+          "id": "calculator__FORM_adv",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": null,
+          "send_type": null,
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "radio_st_01",
+            "radio_st_01",
+            "radio_st_01",
+            "radio_st_01",
+            "radio_st_01",
+            "calc_quest_1_01",
+            "calc_quest_2_01",
+            "calc_quest_3_01",
+            "calc_quest_1_02",
+            "calc_quest_2_02",
+            "calc_quest_3_02",
+            "calc_quest_1_03",
+            "calc_quest_2_03",
+            "calc_quest_3_03",
+            "calc_name",
+            "calc_phone",
+            "calc_site",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "calc_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "calc_phone",
+              "id": "calc_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "page__FORM_adv",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "page__FORM_send_adv",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "pf_name",
+            "pf_contact",
+            "pf_phone",
+            "pf_site",
+            "pf_comment",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "pf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "pf_contact",
+              "id": "",
+              "type": "hidden",
+              "tag": "INPUT"
+            },
+            {
+              "name": "pf_phone",
+              "id": "pf_contact",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "callback__FORM_adv",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "callback__FORM_send_adv",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "bonus__FORM_adv",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "bonus__FORM_send_adv",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "bf_name",
+            "bf_phone",
+            "bf_comment",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [],
+          "phone_contact": [
+            {
+              "name": "bf_phone",
+              "id": "bf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "audit__FORM_adv",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "audit__FORM_send_adv",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "af_name",
+            "af_phone",
+            "af_site",
+            "af_comment",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "af_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "af_phone",
+              "id": "af_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_1__FORM_adv",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_1__FORM_send_adv",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_2__FORM_adv",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_2__FORM_send_adv",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_3__FORM_adv",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_3__FORM_send_adv",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        },
+        {
+          "id": "tariff_4__FORM_adv",
+          "action": "#",
+          "method": "post",
+          "className": "",
+          "send_id": "tariff_4__FORM_send_adv",
+          "send_type": "submit",
+          "data_root": null,
+          "consent": true,
+          "honeypot": true,
+          "names": [
+            "cf_name",
+            "cf_phone",
+            "cf_contact",
+            "cf_site",
+            "personal_data_consent",
+            "contact_company_url",
+            "iseo_ft",
+            "iseo_fs",
+            "iseo_fid"
+          ],
+          "site_required": [
+            {
+              "name": "cf_site",
+              "required": false
+            }
+          ],
+          "phone_contact": [
+            {
+              "name": "cf_phone",
+              "id": "cf_phone",
+              "type": "tel",
+              "tag": "INPUT"
+            },
+            {
+              "name": "cf_contact",
+              "id": "cf_contact",
+              "type": "text",
+              "tag": "INPUT"
+            },
+            {
+              "name": "contact_company_url",
+              "id": "",
+              "type": "text",
+              "tag": "INPUT"
+            }
+          ]
+        }
+      ],
+      "triggers": [
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        },
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Связаться"
+        },
+        {
+          "href": "#audit__FORM_popup",
+          "text": "Заказать аудит"
+        },
+        {
+          "href": "#tariff_1__FORM_popup",
+          "text": "Заказать"
+        },
+        {
+          "href": "#tariff_2__FORM_popup",
+          "text": "Заказать"
+        },
+        {
+          "href": "#tariff_3__FORM_popup",
+          "text": "Заказать"
+        },
+        {
+          "href": "#tariff_4__FORM_popup",
+          "text": "Заказать"
+        },
+        {
+          "href": "#callback__FORM_popup",
+          "text": "Хочу также"
+        },
+        {
+          "href": "#bonus__FORM_popup",
+          "text": "Получить бонус"
+        },
+        {
+          "href": "#bonus__FORM_popup",
+          "text": "Получить бонус"
+        },
+        {
+          "href": "#bonus__FORM_popup",
+          "text": "Получить бонус"
+        },
+        {
+          "href": "#bonus__FORM_popup",
+          "text": "Получить бонус"
+        },
+        {
+          "href": "#audit__FORM_popup",
+          "text": "Заказать аудит"
+        }
+      ],
+      "calc": {
+        "tariff_wrap": false,
+        "tariff_submit": false,
+        "tariff_request": false,
+        "stage": true
+      },
+      "handlers": [
+        {
+          "id": "page__FORM_send_adv",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "page__FORM.php"
+          ]
+        },
+        {
+          "id": "callback__FORM_send_adv",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "callback__FORM.php"
+          ]
+        },
+        {
+          "id": "bonus__FORM_send_adv",
+          "click_count": 0,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": []
+        },
+        {
+          "id": "audit__FORM_send_adv",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "audit__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_1__FORM_send_adv",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "tariff_1__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_2__FORM_send_adv",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "tariff_2__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_3__FORM_send_adv",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "tariff_3__FORM.php"
+          ]
+        },
+        {
+          "id": "tariff_4__FORM_send_adv",
+          "click_count": 1,
+          "preventDefault_call": false,
+          "return_false": false,
+          "urls": [
+            "tariff_4__FORM.php"
+          ]
+        }
+      ],
+      "common_js": [
+        "https://i-seo.su/js/common.js"
+      ],
+      "label": "adv_nested",
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ]
+    }
+  ],
+  "calculators": [
+    {
+      "label": "seo_calc",
+      "url": "https://i-seo.su/services/seo.html",
+      "clicked": true,
+      "before": {
+        "form": true,
+        "consent": true,
+        "names": [
+          "cf_name",
+          "cf_phone",
+          "cf_contact",
+          "cf_site",
+          "personal_data_consent",
+          "contact_company_url",
+          "iseo_ft",
+          "iseo_fs",
+          "iseo_fid"
+        ],
+        "result_visible": false,
+        "request_display": "block"
+      },
+      "after": {
+        "result_text": "РЕКОМЕНДУЕМЫЙ ТАРИФ\n\nСТАНДАРТ\n\n64 000 ₽/мес",
+        "result_display": "flex",
+        "request_display": "block",
+        "form_visible": true,
+        "consent": true
+      },
+      "posts": [
+        {
+          "url": "https://lpt-crm.online/track",
+          "method": "POST"
+        },
+        {
+          "url": "https://lpt-crm.online/track",
+          "method": "POST"
+        },
+        {
+          "url": "https://mc.yandex.ru/watch/54287016/1?page-url=https%3A%2F%2Fi-seo.su%2Fservices%2Fseo.html&charset=utf-8&uah=chu%0A%22Chromium%22%3Bv%3D%22148%22%2C%22HeadlessChrome%22%3Bv%3D%22148%22%2C%22Not%2FA)Brand%22%3Bv%3D%2299%22%0Acha%0Ax86%0Achb%0A64%0Achf%0A148.0.7778.96%0Achl%0A%22Chromium%22%3Bv%3D%22148.0.7778.96%22%2C%22HeadlessChrome%22%3Bv%3D%22148.0.7778.96%22%2C%22Not%2FA)Brand%22%3Bv%3D%2299.0.0.0%22%0Achm%0A%3F0%0Achp%0AWindows&hidv2=5270344740750229622&hittoken=1788971969_a264d6b6118c70021debb36dde066e9b8d0146d97972257968b21325c4e6cb34&browser-info=pa%3A1%3Aar%3A1%3Avf%3Ajeu2ees5yibfy9j2whppqcz54tcee7%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru%3Av%3A2650%3Acn%3A1%3Adp%3A1%3Als%3A616864757091%3Ahid%3A253238418%3Az%3A420%3Ai%3A20260909233930%3Aet%3A1788971970%3Ac%3A1%3Arn%3A503826415%3Arqn%3A2%3Au%3A1788971970199357357%3Aw%3A1440x900%3As%3A1440x900x24%3Ask%3A1%3Awv%3A2%3Aco%3A0%3Ahdl%3A1%3Antf%3A1%3Ans%3A1788971968045%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1788971970&t=gdpr(14)mc(p-1)clc(0-0-0)rqnt(2)aw(1)rcm(1)cdl(na)eco(42009092)wdv(1)wds(1)wdo(0)wdd(0)wdi(1)ti(0)&force-urlencoded=1&site-info=%7B%22ipaddress%22%3A%2246.181.159.198%22%7D",
+          "method": "POST"
+        },
+        {
+          "url": "https://mc.yandex.ru/watch/54287016/1?page-url=btn%3A%2F%2Fi-seo.su%2F%3Fp%3DAA13A1A4AA%25C2%2589%26c%3D164806628&page-ref=https%3A%2F%2Fi-seo.su%2Fservices%2Fseo.html&charset=utf-8&uah=chu%0A%22Chromium%22%3Bv%3D%22148%22%2C%22HeadlessChrome%22%3Bv%3D%22148%22%2C%22Not%2FA)Brand%22%3Bv%3D%2299%22%0Acha%0Ax86%0Achb%0A64%0Achf%0A148.0.7778.96%0Achl%0A%22Chromium%22%3Bv%3D%22148.0.7778.96%22%2C%22HeadlessChrome%22%3Bv%3D%22148.0.7778.96%22%2C%22Not%2FA)Brand%22%3Bv%3D%2299.0.0.0%22%0Achm%0A%3F0%0Achp%0AWindows&hidv2=5270344740750229622&hittoken=1788971969_a264d6b6118c70021debb36dde066e9b8d0146d97972257968b21325c4e6cb34&browser-info=ar%3A1%3Avf%3Ajeu2ees5yibfy9j2whppqcz54tcee7%3Afu%3A3%3Aen%3Autf-8%3Ala%3Aru%3Av%3A2650%3Acn%3A1%3Adp%3A1%3Als%3A616864757091%3Ahid%3A253238418%3Az%3A420%3Ai%3A20260909233932%3Aet%3A1788971972%3Ac%3A1%3Arn%3A479428391%3Arqn%3A3%3Au%3A1788971970199357357%3Aw%3A1440x900%3As%3A1440x900x24%3Ask%3A1%3Awv%3A2%3Ads%3A%2C%2C%2C%2C%2C%2C%2C%2C%2C2494%2C2494%2C2%2C%3Aco%3A0%3Ahdl%3A1%3Antf%3A1%3Aeu%3A0%3Ans%3A1788971968045%3Amdd%3A1%3Aadb%3A2%3App%3A3629563401%3Arqnl%3A1%3Ast%3A1788971972%3At%3A%D0%97%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20SEO%20%D0%BF%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%81%D0%B0%D0%B9%D1%82%D0%BE%D0%B2%20%D0%B2%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B5%20%E2%80%94%20%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BE%D0%BF%D1%82%D0%B8%D0%BC%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%20%7C%20INTLSEO&t=gdpr(14)mc(p-1)clc(0-0-0)rqnt(3)aw(1)rcm(1)csu(0)cdl(na)eco(42009092)prs(2)cac(2)cae(2)wss(2)w2s(16)evt(166)wdv(1)wds(1)wdo(0)wdd(0)wdi(1)ti(0)&force-urlencoded=1&site-info=%7B%22__ym%22%3A%7B%22ite%22%3A1%7D%7D",
+          "method": "POST"
+        }
+      ]
+    },
+    {
+      "label": "tariff_calc",
+      "url": "https://i-seo.su/tariff-calc",
+      "clicked": true,
+      "before": {
+        "form": true,
+        "consent": true,
+        "names": [
+          "cf_name",
+          "cf_phone",
+          "cf_contact",
+          "cf_site",
+          "personal_data_consent",
+          "contact_company_url",
+          "iseo_ft",
+          "iseo_fs",
+          "iseo_fid"
+        ],
+        "result_visible": false,
+        "request_display": "block"
+      },
+      "after": {
+        "result_text": "РЕКОМЕНДУЕМЫЙ ТАРИФ\n\nСТАНДАРТ\n\n64 000 ₽/мес",
+        "result_display": "flex",
+        "request_display": "block",
+        "form_visible": true,
+        "consent": true
+      },
+      "posts": [
+        {
+          "url": "https://lpt-crm.online/track",
+          "method": "POST"
+        },
+        {
+          "url": "https://mc.yandex.ru/watch/54287016/1?page-url=https%3A%2F%2Fi-seo.su%2Ftariff-calc&charset=utf-8&uah=chu%0A%22Chromium%22%3Bv%3D%22148%22%2C%22HeadlessChrome%22%3Bv%3D%22148%22%2C%22Not%2FA)Brand%22%3Bv%3D%2299%22%0Acha%0Ax86%0Achb%0A64%0Achf%0A148.0.7778.96%0Achl%0A%22Chromium%22%3Bv%3D%22148.0.7778.96%22%2C%22HeadlessChrome%22%3Bv%3D%22148.0.7778.96%22%2C%22Not%2FA)Brand%22%3Bv%3D%2299.0.0.0%22%0Achm%0A%3F0%0Achp%0AWindows&hidv2=5270346343463256271&hittoken=1788971975_727bb2f68cf6150c1ccf0c3b9e3f7ff4bc0cda108f592bc0e70c6f0473c73179&browser-info=pa%3A1%3Aar%3A1%3Avf%3Ajeu2ees5yibfy9j2whppqcz54tcee7%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru%3Av%3A2650%3Acn%3A1%3Adp%3A1%3Als%3A1408361819884%3Ahid%3A219539840%3Az%3A420%3Ai%3A20260909233936%3Aet%3A1788971976%3Ac%3A1%3Arn%3A64144243%3Arqn%3A2%3Au%3A1788971976197508271%3Aw%3A1440x900%3As%3A1440x900x24%3Ask%3A1%3Awv%3A2%3Ads%3A%2C%2C%2C%2C%2C%2C%2C%2C%2C1992%2C1992%2C2%2C%3Aco%3A0%3Ahdl%3A1%3Antf%3A1%3Ans%3A1788971974369%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1788971976&t=gdpr(14)mc(p-1)clc(0-0-0)rqnt(2)aw(1)rcm(1)cdl(na)eco(42009092)wdv(1)wds(1)wdo(0)wdd(0)wdi(1)ti(0)&force-urlencoded=1&site-info=%7B%22ipaddress%22%3A%2246.181.159.198%22%7D",
+          "method": "POST"
+        },
+        {
+          "url": "https://lpt-crm.online/track",
+          "method": "POST"
+        },
+        {
+          "url": "https://mc.yandex.ru/watch/54287016/1?page-url=btn%3A%2F%2Fi-seo.su%2F%3Fp%3DAA13A1A1AAA1%257F%26c%3D164806628&page-ref=https%3A%2F%2Fi-seo.su%2Ftariff-calc&charset=utf-8&uah=chu%0A%22Chromium%22%3Bv%3D%22148%22%2C%22HeadlessChrome%22%3Bv%3D%22148%22%2C%22Not%2FA)Brand%22%3Bv%3D%2299%22%0Acha%0Ax86%0Achb%0A64%0Achf%0A148.0.7778.96%0Achl%0A%22Chromium%22%3Bv%3D%22148.0.7778.96%22%2C%22HeadlessChrome%22%3Bv%3D%22148.0.7778.96%22%2C%22Not%2FA)Brand%22%3Bv%3D%2299.0.0.0%22%0Achm%0A%3F0%0Achp%0AWindows&hidv2=5270346343463256271&hittoken=1788971975_727bb2f68cf6150c1ccf0c3b9e3f7ff4bc0cda108f592bc0e70c6f0473c73179&browser-info=ar%3A1%3Avf%3Ajeu2ees5yibfy9j2whppqcz54tcee7%3Afu%3A3%3Aen%3Autf-8%3Ala%3Aru%3Av%3A2650%3Acn%3A1%3Adp%3A1%3Als%3A1408361819884%3Ahid%3A219539840%3Az%3A420%3Ai%3A20260909233938%3Aet%3A1788971978%3Ac%3A1%3Arn%3A667656481%3Arqn%3A3%3Au%3A1788971976197508271%3Aw%3A1440x900%3As%3A1440x900x24%3Ask%3A1%3Awv%3A2%3Aco%3A0%3Ahdl%3A1%3Antf%3A1%3Aeu%3A0%3Ans%3A1788971974369%3Amdd%3A1%3Aadb%3A2%3App%3A3629563401%3Arqnl%3A1%3Ast%3A1788971978%3At%3A%D0%9A%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80%20%D1%82%D0%B0%D1%80%D0%B8%D1%84%D0%BE%D0%B2%20-%20INTLSEO%20Studio&t=gdpr(14)mc(p-1)clc(0-0-0)rqnt(3)aw(1)rcm(1)csu(0)cdl(na)eco(42009092)prs(2)cac(2)cae(2)wss(2)w2s(15)evt(224)wdv(1)wds(1)wdo(0)wdd(0)wdi(1)ti(0)&force-urlencoded=1&site-info=%7B%22__ym%22%3A%7B%22ite%22%3A1%7D%7D",
+          "method": "POST"
+        }
+      ]
+    }
+  ],
+  "derived_defects": [
+    {
+      "id": "RELATIVE_URL",
+      "page": "seo_hub",
+      "handler": "callback__FORM_send_seo",
+      "urls": [
+        "callback__FORM.php"
+      ],
+      "href": "https://i-seo.su/services/seo.html"
+    },
+    {
+      "id": "RELATIVE_URL",
+      "page": "seo_hub",
+      "handler": "bonus__FORM_send_seo",
+      "urls": [
+        "bonus__FORM.php"
+      ],
+      "href": "https://i-seo.su/services/seo.html"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "seo_hub",
+      "handler": "bonus__FORM_send_seo"
+    },
+    {
+      "id": "CYRILLIC_NAME",
+      "page": "tariff_calc",
+      "form": "callback__FORM_info",
+      "name": "сf_contact"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "tariff_calc",
+      "handler": "page__FORM_send_info"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "tariff_calc",
+      "handler": "callback__FORM_send_info"
+    },
+    {
+      "id": "RELATIVE_URL",
+      "page": "nested_seo",
+      "handler": "callback__FORM_send_seo",
+      "urls": [
+        "callback__FORM.php"
+      ],
+      "href": "https://i-seo.su/services/seo/prodvizhenie-sajta-restorana.html"
+    },
+    {
+      "id": "RELATIVE_URL",
+      "page": "nested_seo",
+      "handler": "bonus__FORM_send_seo",
+      "urls": [
+        "bonus__FORM.php"
+      ],
+      "href": "https://i-seo.su/services/seo/prodvizhenie-sajta-restorana.html"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "nested_seo",
+      "handler": "bonus__FORM_send_seo"
+    },
+    {
+      "id": "RELATIVE_URL",
+      "page": "city",
+      "handler": "callback__FORM_send_seo",
+      "urls": [
+        "callback__FORM.php"
+      ],
+      "href": "https://i-seo.su/services/seo/prodvizhenie-v-sankt-peterburge.html"
+    },
+    {
+      "id": "RELATIVE_URL",
+      "page": "city",
+      "handler": "bonus__FORM_send_seo",
+      "urls": [
+        "bonus__FORM.php"
+      ],
+      "href": "https://i-seo.su/services/seo/prodvizhenie-v-sankt-peterburge.html"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "city",
+      "handler": "bonus__FORM_send_seo"
+    },
+    {
+      "id": "RELATIVE_URL",
+      "page": "usa",
+      "handler": "callback__FORM_send_seo",
+      "urls": [
+        "callback__FORM.php"
+      ],
+      "href": "https://i-seo.su/services/seo/prodvizhenie-v-ssha.html"
+    },
+    {
+      "id": "RELATIVE_URL",
+      "page": "usa",
+      "handler": "bonus__FORM_send_seo",
+      "urls": [
+        "bonus__FORM.php"
+      ],
+      "href": "https://i-seo.su/services/seo/prodvizhenie-v-ssha.html"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "usa",
+      "handler": "bonus__FORM_send_seo"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "webinar",
+      "handler": "bonus__FORM_send_seo"
+    },
+    {
+      "id": "NO_CONSENT",
+      "page": "blog_html",
+      "form": "page__FORM_info",
+      "url": "https://i-seo.su/blog.html"
+    },
+    {
+      "id": "NO_CONSENT",
+      "page": "blog_html",
+      "form": "callback__FORM_info",
+      "url": "https://i-seo.su/blog.html"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "blog_html",
+      "handler": "page__FORM_send_info"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "blog_html",
+      "handler": "callback__FORM_send_info"
+    },
+    {
+      "id": "CYRILLIC_NAME",
+      "page": "blog_wp",
+      "form": "callback__FORM_info",
+      "name": "сf_contact"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "blog_wp",
+      "handler": "page__FORM_send_info"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "blog_wp",
+      "handler": "callback__FORM_send_info"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "cases",
+      "handler": "page__FORM_send_cases"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "cases",
+      "handler": "callback__FORM_send_cases"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "cases",
+      "handler": "audit__FORM_send_cases"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "contacts",
+      "handler": "page__FORM_send_info"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "contacts",
+      "handler": "callback__FORM_send_info"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "contacts",
+      "handler": "audit__FORM_send_info"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "career",
+      "handler": "callback__FORM_send_info"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "career",
+      "handler": "audit__FORM_send_info"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "career",
+      "handler": "career__FORM_send_info"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "partners",
+      "handler": "partners_page__FORM_send_info"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "partners",
+      "handler": "partners__FORM_send_info"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "reviews",
+      "handler": "review_page__FORM_send_info"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "reviews",
+      "handler": "page__FORM_send_info"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "reviews",
+      "handler": "callback__FORM_send_info"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "reviews",
+      "handler": "review__FORM_send_info"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "bonuses",
+      "handler": "bonus__FORM_send"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "bonuses",
+      "handler": "bonus__FORM_send_1"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "bonuses",
+      "handler": "bonus__FORM_send_2"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "bonuses",
+      "handler": "bonus__FORM_send_3"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "bonuses",
+      "handler": "bonus__FORM_send_4"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "bonuses",
+      "handler": "bonus__FORM_send_5"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "bonuses",
+      "handler": "bonus__FORM_send_6"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "bonuses",
+      "handler": "callback__FORM_send_info"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "bonuses",
+      "handler": "audit__FORM_send_info"
+    },
+    {
+      "id": "RELATIVE_URL",
+      "page": "adv_nested",
+      "handler": "page__FORM_send_adv",
+      "urls": [
+        "page__FORM.php"
+      ],
+      "href": "https://i-seo.su/services/adv/google-adwords.html"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "adv_nested",
+      "handler": "page__FORM_send_adv"
+    },
+    {
+      "id": "RELATIVE_URL",
+      "page": "adv_nested",
+      "handler": "callback__FORM_send_adv",
+      "urls": [
+        "callback__FORM.php"
+      ],
+      "href": "https://i-seo.su/services/adv/google-adwords.html"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "adv_nested",
+      "handler": "callback__FORM_send_adv"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "adv_nested",
+      "handler": "bonus__FORM_send_adv"
+    },
+    {
+      "id": "RELATIVE_URL",
+      "page": "adv_nested",
+      "handler": "audit__FORM_send_adv",
+      "urls": [
+        "audit__FORM.php"
+      ],
+      "href": "https://i-seo.su/services/adv/google-adwords.html"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "adv_nested",
+      "handler": "audit__FORM_send_adv"
+    },
+    {
+      "id": "RELATIVE_URL",
+      "page": "adv_nested",
+      "handler": "tariff_1__FORM_send_adv",
+      "urls": [
+        "tariff_1__FORM.php"
+      ],
+      "href": "https://i-seo.su/services/adv/google-adwords.html"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "adv_nested",
+      "handler": "tariff_1__FORM_send_adv"
+    },
+    {
+      "id": "RELATIVE_URL",
+      "page": "adv_nested",
+      "handler": "tariff_2__FORM_send_adv",
+      "urls": [
+        "tariff_2__FORM.php"
+      ],
+      "href": "https://i-seo.su/services/adv/google-adwords.html"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "adv_nested",
+      "handler": "tariff_2__FORM_send_adv"
+    },
+    {
+      "id": "RELATIVE_URL",
+      "page": "adv_nested",
+      "handler": "tariff_3__FORM_send_adv",
+      "urls": [
+        "tariff_3__FORM.php"
+      ],
+      "href": "https://i-seo.su/services/adv/google-adwords.html"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "adv_nested",
+      "handler": "tariff_3__FORM_send_adv"
+    },
+    {
+      "id": "RELATIVE_URL",
+      "page": "adv_nested",
+      "handler": "tariff_4__FORM_send_adv",
+      "urls": [
+        "tariff_4__FORM.php"
+      ],
+      "href": "https://i-seo.su/services/adv/google-adwords.html"
+    },
+    {
+      "id": "NO_PREVENTDEFAULT",
+      "page": "adv_nested",
+      "handler": "tariff_4__FORM_send_adv"
+    }
+  ]
+}

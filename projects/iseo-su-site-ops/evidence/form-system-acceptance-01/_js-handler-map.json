@@ -1,0 +1,2625 @@
+{
+  "ts": "2026-09-09T16:33:55Z",
+  "source": "X:\\AI MARS\\projects\\iseo-su-site-ops\\production-source\\js\\common.js",
+  "handler_count": 64,
+  "relative_urls": [
+    {
+      "selector": "#callback__FORM_send",
+      "event_arg": "e",
+      "preventDefault_token": true,
+      "preventDefault_call": true,
+      "return_false": false,
+      "urls": [
+        "callback__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "callback__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#callback__FORM"
+      ],
+      "offset": 25286,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#audit__FORM_send",
+      "event_arg": "e",
+      "preventDefault_token": true,
+      "preventDefault_call": true,
+      "return_false": false,
+      "urls": [
+        "audit__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "audit__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#audit__FORM"
+      ],
+      "offset": 26397,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#page__FORM_send",
+      "event_arg": "e",
+      "preventDefault_token": true,
+      "preventDefault_call": true,
+      "return_false": false,
+      "urls": [
+        "page__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "page__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#page__FORM"
+      ],
+      "offset": 27452,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#audit__FORM_send_info",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "audit__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "audit__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#audit__FORM_info"
+      ],
+      "offset": 30501,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#bonus__FORM_send",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "bonus__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "bonus__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#bonus__FORM"
+      ],
+      "offset": 32128,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#bonus__FORM_send_seo",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "bonus__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "bonus__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#bonus__FORM_seo"
+      ],
+      "offset": 33126,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#bonus__FORM_send_1",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "bonus__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "bonus__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#bonus__FORM_1"
+      ],
+      "offset": 34216,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#bonus__FORM_send_2",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "bonus__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "bonus__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#bonus__FORM_2"
+      ],
+      "offset": 35303,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#bonus__FORM_send_3",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "bonus__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "bonus__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#bonus__FORM_3"
+      ],
+      "offset": 36390,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#bonus__FORM_send_4",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "bonus__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "bonus__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#bonus__FORM_4"
+      ],
+      "offset": 37477,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#bonus__FORM_send_5",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "bonus__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "bonus__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#bonus__FORM_5"
+      ],
+      "offset": 38564,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#bonus__FORM_send_6",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "bonus__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "bonus__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#bonus__FORM_6"
+      ],
+      "offset": 39651,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#career__FORM_send",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "career__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "career__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#career__FORM"
+      ],
+      "offset": 40712,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#review_page__FORM_send",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "review__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "review__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#review_page__FORM"
+      ],
+      "offset": 41691,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#review_page__FORM_send_info",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "review__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "review__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#review_page__FORM_info"
+      ],
+      "offset": 42690,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#review__FORM_send",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "review__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "review__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#review__FORM"
+      ],
+      "offset": 43787,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#partners_page__FORM_send",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "partners__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "partners__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#partners_page__FORM"
+      ],
+      "offset": 44768,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#partners__FORM_send",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "partners__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "partners__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#partners__FORM"
+      ],
+      "offset": 45857,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#partners__FORM_send_info",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "partners__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "partners__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#partners__FORM_info"
+      ],
+      "offset": 46846,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#partners_page__FORM_send_info",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "partners__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "partners__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#partners_page__FORM_info"
+      ],
+      "offset": 47856,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#callback__FORM_send_cases",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "callback__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "callback__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#callback__FORM_cases"
+      ],
+      "offset": 48903,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#audit__FORM_send_cases",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "audit__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "audit__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#audit__FORM_cases"
+      ],
+      "offset": 49709,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#page__FORM_send_cases",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "page__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "page__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#page__FORM_cases"
+      ],
+      "offset": 50532,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#callback__FORM_send_services",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "callback__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "callback__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#callback__FORM_services"
+      ],
+      "offset": 51285,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#audit__FORM_send_services",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "audit__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "audit__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#audit__FORM_services"
+      ],
+      "offset": 52106,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#page__FORM_send_services",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "page__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "page__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#page__FORM_services"
+      ],
+      "offset": 52944,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#callback__FORM_send_seo",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "callback__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "callback__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#callback__FORM_seo"
+      ],
+      "offset": 53725,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#callback__FORM_send_adv",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "callback__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "callback__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#callback__FORM_adv"
+      ],
+      "offset": 60009,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#audit__FORM_send_adv",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "audit__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "audit__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#audit__FORM_adv"
+      ],
+      "offset": 60816,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#page__FORM_send_adv",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "page__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "page__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#page__FORM_adv"
+      ],
+      "offset": 61640,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_1__FORM_send_adv",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_1__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_1__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_1__FORM_adv"
+      ],
+      "offset": 62363,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_2__FORM_send_adv",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_2__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_2__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_2__FORM_adv"
+      ],
+      "offset": 63170,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_3__FORM_send_adv",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_3__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_3__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_3__FORM_adv"
+      ],
+      "offset": 63981,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_4__FORM_send_adv",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_4__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_4__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_4__FORM_adv"
+      ],
+      "offset": 64784,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#callback__FORM_send_audit",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "callback__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "callback__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#callback__FORM_audit"
+      ],
+      "offset": 65636,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#audit__FORM_send_audit",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "audit__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "audit__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#audit__FORM_audit"
+      ],
+      "offset": 66453,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#page__FORM_send_audit",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "page__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "page__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#page__FORM_audit"
+      ],
+      "offset": 67287,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_1__FORM_send_audit",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_1__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_1__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_1__FORM_audit"
+      ],
+      "offset": 68020,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_2__FORM_send_audit",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_2__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_2__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_2__FORM_audit"
+      ],
+      "offset": 68837,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_3__FORM_send_audit",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_3__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_3__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_3__FORM_audit"
+      ],
+      "offset": 69658,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_4__FORM_send_audit",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_4__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_4__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_4__FORM_audit"
+      ],
+      "offset": 70471,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#callback__FORM_send_develop",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "callback__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "callback__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#callback__FORM_develop"
+      ],
+      "offset": 71339,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#audit__FORM_send_develop",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "audit__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "audit__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#audit__FORM_develop"
+      ],
+      "offset": 72162,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#page__FORM_send_develop",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "page__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "page__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#page__FORM_develop"
+      ],
+      "offset": 73002,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_1__FORM_send_develop",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_1__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_1__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_1__FORM_develop"
+      ],
+      "offset": 73741,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_2__FORM_send_develop",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_2__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_2__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_2__FORM_develop"
+      ],
+      "offset": 74564,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_3__FORM_send_develop",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_3__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_3__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_3__FORM_develop"
+      ],
+      "offset": 75391,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_4__FORM_send_develop",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_4__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_4__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_4__FORM_develop"
+      ],
+      "offset": 76210,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#callback__FORM_send_serm",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "callback__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "callback__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#callback__FORM_serm"
+      ],
+      "offset": 77067,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#audit__FORM_send_serm",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "audit__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "audit__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#audit__FORM_serm"
+      ],
+      "offset": 77879,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#page__FORM_send_serm",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "page__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "page__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#page__FORM_serm"
+      ],
+      "offset": 78708,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_1__FORM_send_serm",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_1__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_1__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_1__FORM_serm"
+      ],
+      "offset": 79436,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_2__FORM_send_serm",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_2__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_2__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_2__FORM_serm"
+      ],
+      "offset": 80248,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_3__FORM_send_serm",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_3__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_3__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_3__FORM_serm"
+      ],
+      "offset": 81064,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_4__FORM_send_serm",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_4__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_4__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_4__FORM_serm"
+      ],
+      "offset": 81872,
+      "type_submit_risk": true
+    }
+  ],
+  "root_relative_urls": [
+    {
+      "selector": "#callback__FORM_tariff_calc_send",
+      "event_arg": "e",
+      "preventDefault_token": true,
+      "preventDefault_call": true,
+      "return_false": false,
+      "urls": [
+        "/callback__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "/callback__FORM.php"
+        ]
+      ],
+      "serialize_targets": [],
+      "offset": 29337,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#page__FORM_send_info",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "/page__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "/page__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#page__FORM_info"
+      ],
+      "offset": 31319,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#page__FORM_send_seo",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "/page__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "/page__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#page__FORM_seo"
+      ],
+      "offset": 55489,
+      "type_submit_risk": true
+    }
+  ],
+  "missing_preventDefault_call": [
+    "#callback__FORM_send_info",
+    "#audit__FORM_send_info",
+    "#page__FORM_send_info",
+    "#bonus__FORM_send",
+    "#bonus__FORM_send_seo",
+    "#bonus__FORM_send_1",
+    "#bonus__FORM_send_2",
+    "#bonus__FORM_send_3",
+    "#bonus__FORM_send_4",
+    "#bonus__FORM_send_5",
+    "#bonus__FORM_send_6",
+    "#career__FORM_send",
+    "#review_page__FORM_send",
+    "#review_page__FORM_send_info",
+    "#review__FORM_send",
+    "#partners_page__FORM_send",
+    "#partners__FORM_send",
+    "#partners__FORM_send_info",
+    "#partners_page__FORM_send_info",
+    "#callback__FORM_send_cases",
+    "#audit__FORM_send_cases",
+    "#page__FORM_send_cases",
+    "#callback__FORM_send_services",
+    "#audit__FORM_send_services",
+    "#page__FORM_send_services",
+    "#callback__FORM_send_seo",
+    "#audit__FORM_send_seo",
+    "#page__FORM_send_seo",
+    "#tariff_1__FORM_send_seo",
+    "#tariff_2__FORM_send_seo",
+    "#tariff_3__FORM_send_seo",
+    "#tariff_4__FORM_send_seo",
+    "#callback__FORM_send_adv",
+    "#audit__FORM_send_adv",
+    "#page__FORM_send_adv",
+    "#tariff_1__FORM_send_adv",
+    "#tariff_2__FORM_send_adv",
+    "#tariff_3__FORM_send_adv",
+    "#tariff_4__FORM_send_adv",
+    "#callback__FORM_send_audit",
+    "#audit__FORM_send_audit",
+    "#page__FORM_send_audit",
+    "#tariff_1__FORM_send_audit",
+    "#tariff_2__FORM_send_audit",
+    "#tariff_3__FORM_send_audit",
+    "#tariff_4__FORM_send_audit",
+    "#callback__FORM_send_develop",
+    "#audit__FORM_send_develop",
+    "#page__FORM_send_develop",
+    "#tariff_1__FORM_send_develop",
+    "#tariff_2__FORM_send_develop",
+    "#tariff_3__FORM_send_develop",
+    "#tariff_4__FORM_send_develop",
+    "#callback__FORM_send_serm",
+    "#audit__FORM_send_serm",
+    "#page__FORM_send_serm",
+    "#tariff_1__FORM_send_serm",
+    "#tariff_2__FORM_send_serm",
+    "#tariff_3__FORM_send_serm",
+    "#tariff_4__FORM_send_serm"
+  ],
+  "calc": {
+    "index": 21696,
+    "snippet": "$('.calculator_stage__btns .submit').click(function(e){\n\t\te.preventDefault;\t\t\n\t\tvar isSelected = $('.calculator_stage:visible input[type=\"radio\"]:checked').length;\n\t\tvar numSelect = $('.calculator_sta",
+    "calc_submit_selector": ".calculator_stage__btns .submit",
+    "preventDefault_bug": true
+  },
+  "handlers": [
+    {
+      "selector": "#callback__FORM_send",
+      "event_arg": "e",
+      "preventDefault_token": true,
+      "preventDefault_call": true,
+      "return_false": false,
+      "urls": [
+        "callback__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "callback__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#callback__FORM"
+      ],
+      "offset": 25286,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#audit__FORM_send",
+      "event_arg": "e",
+      "preventDefault_token": true,
+      "preventDefault_call": true,
+      "return_false": false,
+      "urls": [
+        "audit__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "audit__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#audit__FORM"
+      ],
+      "offset": 26397,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#page__FORM_send",
+      "event_arg": "e",
+      "preventDefault_token": true,
+      "preventDefault_call": true,
+      "return_false": false,
+      "urls": [
+        "page__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "page__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#page__FORM"
+      ],
+      "offset": 27452,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#callback__FORM_send_info",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [],
+      "root_ternary": [
+        [
+          "/callback__FORM.php",
+          "callback__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#callback__FORM_info"
+      ],
+      "offset": 28382,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#callback__FORM_tariff_calc_send",
+      "event_arg": "e",
+      "preventDefault_token": true,
+      "preventDefault_call": true,
+      "return_false": false,
+      "urls": [
+        "/callback__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "/callback__FORM.php"
+        ]
+      ],
+      "serialize_targets": [],
+      "offset": 29337,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#audit__FORM_send_info",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "audit__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "audit__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#audit__FORM_info"
+      ],
+      "offset": 30501,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#page__FORM_send_info",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "/page__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "/page__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#page__FORM_info"
+      ],
+      "offset": 31319,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#bonus__FORM_send",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "bonus__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "bonus__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#bonus__FORM"
+      ],
+      "offset": 32128,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#bonus__FORM_send_seo",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "bonus__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "bonus__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#bonus__FORM_seo"
+      ],
+      "offset": 33126,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#bonus__FORM_send_1",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "bonus__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "bonus__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#bonus__FORM_1"
+      ],
+      "offset": 34216,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#bonus__FORM_send_2",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "bonus__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "bonus__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#bonus__FORM_2"
+      ],
+      "offset": 35303,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#bonus__FORM_send_3",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "bonus__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "bonus__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#bonus__FORM_3"
+      ],
+      "offset": 36390,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#bonus__FORM_send_4",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "bonus__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "bonus__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#bonus__FORM_4"
+      ],
+      "offset": 37477,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#bonus__FORM_send_5",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "bonus__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "bonus__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#bonus__FORM_5"
+      ],
+      "offset": 38564,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#bonus__FORM_send_6",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "bonus__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "bonus__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#bonus__FORM_6"
+      ],
+      "offset": 39651,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#career__FORM_send",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "career__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "career__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#career__FORM"
+      ],
+      "offset": 40712,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#review_page__FORM_send",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "review__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "review__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#review_page__FORM"
+      ],
+      "offset": 41691,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#review_page__FORM_send_info",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "review__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "review__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#review_page__FORM_info"
+      ],
+      "offset": 42690,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#review__FORM_send",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "review__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "review__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#review__FORM"
+      ],
+      "offset": 43787,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#partners_page__FORM_send",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "partners__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "partners__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#partners_page__FORM"
+      ],
+      "offset": 44768,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#partners__FORM_send",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "partners__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "partners__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#partners__FORM"
+      ],
+      "offset": 45857,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#partners__FORM_send_info",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "partners__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "partners__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#partners__FORM_info"
+      ],
+      "offset": 46846,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#partners_page__FORM_send_info",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "partners__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "partners__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#partners_page__FORM_info"
+      ],
+      "offset": 47856,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#callback__FORM_send_cases",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "callback__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "callback__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#callback__FORM_cases"
+      ],
+      "offset": 48903,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#audit__FORM_send_cases",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "audit__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "audit__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#audit__FORM_cases"
+      ],
+      "offset": 49709,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#page__FORM_send_cases",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "page__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "page__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#page__FORM_cases"
+      ],
+      "offset": 50532,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#callback__FORM_send_services",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "callback__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "callback__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#callback__FORM_services"
+      ],
+      "offset": 51285,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#audit__FORM_send_services",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "audit__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "audit__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#audit__FORM_services"
+      ],
+      "offset": 52106,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#page__FORM_send_services",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "page__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "page__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#page__FORM_services"
+      ],
+      "offset": 52944,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#callback__FORM_send_seo",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "callback__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "callback__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#callback__FORM_seo"
+      ],
+      "offset": 53725,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#audit__FORM_send_seo",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [],
+      "root_ternary": [
+        [
+          "/audit__FORM.php",
+          "audit__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#audit__FORM_seo"
+      ],
+      "offset": 54558,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#page__FORM_send_seo",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "/page__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "/page__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#page__FORM_seo"
+      ],
+      "offset": 55489,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_1__FORM_send_seo",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [],
+      "root_ternary": [
+        [
+          "/tariff_1__FORM.php",
+          "tariff_1__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_1__FORM_seo"
+      ],
+      "offset": 56239,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_2__FORM_send_seo",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [],
+      "root_ternary": [
+        [
+          "/tariff_2__FORM.php",
+          "tariff_2__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_2__FORM_seo"
+      ],
+      "offset": 57168,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_3__FORM_send_seo",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [],
+      "root_ternary": [
+        [
+          "/tariff_3__FORM.php",
+          "tariff_3__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_3__FORM_seo"
+      ],
+      "offset": 58101,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_4__FORM_send_seo",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [],
+      "root_ternary": [
+        [
+          "/tariff_4__FORM.php",
+          "tariff_4__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_4__FORM_seo"
+      ],
+      "offset": 59026,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#callback__FORM_send_adv",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "callback__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "callback__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#callback__FORM_adv"
+      ],
+      "offset": 60009,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#audit__FORM_send_adv",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "audit__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "audit__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#audit__FORM_adv"
+      ],
+      "offset": 60816,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#page__FORM_send_adv",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "page__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "page__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#page__FORM_adv"
+      ],
+      "offset": 61640,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_1__FORM_send_adv",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_1__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_1__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_1__FORM_adv"
+      ],
+      "offset": 62363,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_2__FORM_send_adv",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_2__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_2__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_2__FORM_adv"
+      ],
+      "offset": 63170,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_3__FORM_send_adv",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_3__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_3__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_3__FORM_adv"
+      ],
+      "offset": 63981,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_4__FORM_send_adv",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_4__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_4__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_4__FORM_adv"
+      ],
+      "offset": 64784,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#callback__FORM_send_audit",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "callback__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "callback__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#callback__FORM_audit"
+      ],
+      "offset": 65636,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#audit__FORM_send_audit",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "audit__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "audit__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#audit__FORM_audit"
+      ],
+      "offset": 66453,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#page__FORM_send_audit",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "page__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "page__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#page__FORM_audit"
+      ],
+      "offset": 67287,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_1__FORM_send_audit",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_1__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_1__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_1__FORM_audit"
+      ],
+      "offset": 68020,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_2__FORM_send_audit",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_2__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_2__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_2__FORM_audit"
+      ],
+      "offset": 68837,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_3__FORM_send_audit",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_3__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_3__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_3__FORM_audit"
+      ],
+      "offset": 69658,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_4__FORM_send_audit",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_4__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_4__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_4__FORM_audit"
+      ],
+      "offset": 70471,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#callback__FORM_send_develop",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "callback__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "callback__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#callback__FORM_develop"
+      ],
+      "offset": 71339,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#audit__FORM_send_develop",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "audit__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "audit__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#audit__FORM_develop"
+      ],
+      "offset": 72162,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#page__FORM_send_develop",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "page__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "page__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#page__FORM_develop"
+      ],
+      "offset": 73002,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_1__FORM_send_develop",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_1__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_1__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_1__FORM_develop"
+      ],
+      "offset": 73741,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_2__FORM_send_develop",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_2__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_2__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_2__FORM_develop"
+      ],
+      "offset": 74564,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_3__FORM_send_develop",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_3__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_3__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_3__FORM_develop"
+      ],
+      "offset": 75391,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_4__FORM_send_develop",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_4__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_4__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_4__FORM_develop"
+      ],
+      "offset": 76210,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#callback__FORM_send_serm",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "callback__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "callback__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#callback__FORM_serm"
+      ],
+      "offset": 77067,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#audit__FORM_send_serm",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "audit__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "audit__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#audit__FORM_serm"
+      ],
+      "offset": 77879,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#page__FORM_send_serm",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "page__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "page__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#page__FORM_serm"
+      ],
+      "offset": 78708,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_1__FORM_send_serm",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_1__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_1__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_1__FORM_serm"
+      ],
+      "offset": 79436,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_2__FORM_send_serm",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_2__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_2__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_2__FORM_serm"
+      ],
+      "offset": 80248,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_3__FORM_send_serm",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_3__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_3__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_3__FORM_serm"
+      ],
+      "offset": 81064,
+      "type_submit_risk": true
+    },
+    {
+      "selector": "#tariff_4__FORM_send_serm",
+      "event_arg": "",
+      "preventDefault_token": false,
+      "preventDefault_call": false,
+      "return_false": false,
+      "urls": [
+        "tariff_4__FORM.php"
+      ],
+      "root_ternary": [
+        [
+          "",
+          "tariff_4__FORM.php"
+        ]
+      ],
+      "serialize_targets": [
+        "#tariff_4__FORM_serm"
+      ],
+      "offset": 81872,
+      "type_submit_risk": true
+    }
+  ]
+}

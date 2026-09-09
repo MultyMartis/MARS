@@ -1,0 +1,102 @@
+{
+  "started_utc": "2026-09-09T18:23:38Z",
+  "browser": [
+    {
+      "label": "career",
+      "url": "https://i-seo.su/career.html",
+      "request_url": "https://i-seo.su/career__FORM.php",
+      "http": 200,
+      "body": "true",
+      "success_ui": true,
+      "page_reload": false,
+      "nav_count": 1,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ],
+      "wrong_endpoint": false,
+      "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-system-acceptance-01\\screenshots\\accept-career.png",
+      "pass": true
+    },
+    {
+      "label": "reviews",
+      "url": "https://i-seo.su/reviews.html",
+      "request_url": "https://i-seo.su/review__FORM.php",
+      "http": 200,
+      "body": "true",
+      "success_ui": true,
+      "page_reload": false,
+      "nav_count": 1,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 409 ()"
+        }
+      ],
+      "wrong_endpoint": false,
+      "screenshot": "X:\\AI MARS\\projects\\iseo-su-site-ops\\evidence\\form-system-acceptance-01\\screenshots\\accept-reviews.png",
+      "pass": true
+    }
+  ],
+  "cfg_before": {
+    "test_mode": "false",
+    "prod_has_nikel": true,
+    "prod_has_im_work": false,
+    "test_has_im_work": true,
+    "nail_typo": false,
+    "hmac_secret_null": true,
+    "honeypot_field": true,
+    "min_fill_seconds": true,
+    "rate_limit_burst_max": true,
+    "duplicate_window": true,
+    "consent_guard_hint": false
+  },
+  "crash": "Locator.click: Element is not visible\nCall log:\n  - waiting for locator(\"#tariff_1__FORM_send_seo\").first\n    - locator resolved to <button type=\"submit\" id=\"tariff_1__FORM_send_seo\">Отправить</button>\n  - attempting click action\n    - scrolling into view if needed\n",
+  "cfg_final": {
+    "test_mode": "false",
+    "prod_has_nikel": true,
+    "prod_has_im_work": false,
+    "test_has_im_work": true,
+    "nail_typo": false,
+    "hmac_secret_null": true,
+    "honeypot_field": true,
+    "min_fill_seconds": true,
+    "rate_limit_burst_max": true,
+    "duplicate_window": true,
+    "consent_guard_hint": false
+  },
+  "finished_utc": "2026-09-09T18:24:56Z",
+  "summary": {
+    "pass": [
+      [
+        "career",
+        "true",
+        true,
+        true,
+        "https://i-seo.su/career__FORM.php",
+        null
+      ],
+      [
+        "reviews",
+        "true",
+        true,
+        true,
+        "https://i-seo.su/review__FORM.php",
+        null
+      ]
+    ],
+    "test_mode_final": "false",
+    "prod_has_nikel": true,
+    "prod_has_im_work": false
+  }
+}
