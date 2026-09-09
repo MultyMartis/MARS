@@ -236,6 +236,16 @@ PHP lint OK. LF/CRLF not rewritten beyond the edited sources.
 - Closeout commit: `CLOSEOUT_PENDING`
 - Worktree: `X:\AI MARS\worktrees\fp0002-blog-hub-announcement-01` (`wave/fp0002-blog-hub-announcement-01`)
 
+### 18.1 Follow-up — SHA recording (2026-09-09 knowledge closeout)
+
+A commit cannot contain its own SHA. The original `CLOSEOUT_PENDING` line above is the **wave-time placeholder**, not unfinished work.
+
+SHA-recording follow-up (already on canonical origin):
+
+- `33d13bed6e4686809ac23ddd463ca4eae62f68df` — `docs(fp0002): record blog hub announcement field git SHA.`
+
+Wave implementation remains `074777b544e810d7ab9894987fd1983d1c6afab1`. Do not rewrite Git history to backfill §18.
+
 ---
 
 ## 19. Residuals

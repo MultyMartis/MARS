@@ -1,99 +1,95 @@
 # FP-0002 — NEXT WEB-GPT HANDOFF
 
+Compact current-ops brief for the next Web-GPT / Cursor agent. Historical wave detail stays in `REPORTS/`. Do **not** dump chronology here.
+
 ## Project
 - name: **FP-0002 / Шпиговский**
-- production domain: `https://shpigovsky.ru/`
+- production: `https://shpigovsky.ru/`
 - phase: **PRODUCTION / MAINTENANCE — STABLE**
+- latest production core: **`0.3.32-blog-hub-announcement-01`**
+- this file: knowledge + workspace closeout (docs/Git only; **no production mutation**)
 
-## Current Production State
-- runtime/core: WordPress; current production status tracks core **`0.3.32-blog-hub-announcement-01`**
-- blog hub card preview: ACF **`article_hub_announcement`** (`Анонс статьи для хаба`) owns `/blog/` card text; empty → native `get_the_excerpt()` fallback. Article hero Lead remains **`article_lead`**. Do not copy Hub announcement into SEO/OG/Schema.
-- structured data: **JSON-LD LIVE** — `shpigovsky-core` module `structured-data.schema-org` (single head script, `@graph`, stable `@id`)
-- open graph: **LIVE** — `shpigovsky-core` module `open-graph.meta` (single `<meta property="og:*">` owner; SEO title/description reused; separate from JSON-LD)
-- specialists hub: Page `#1030` `/specialisty/` uses `Specialists Hub` template (CPT cards via existing helper)
-- indexing: **OPEN — human-approved**; P18G guard active; watchdog active
-- robots: **Olya-approved robots policy active**; physical `/robots.txt` is editorial/SEO-owned and must stay separate from global indexing state
-- forms: active
-- SMTP: verified / active
-- anti-spam: native first-party anti-spam active; **no external CAPTCHA**
-- privacy: privacy/cookie consent active
-- analytics: Yandex Metrika consent-gated; form goals consent-gated
-- Dashboard: compact/current client-facing Dashboard UX active
-- deprecated path: `/specyalisty/` → 301 to `/specialisty/` (JSON-LD uses canonical `/specialisty/` only)
+## Fetch-current-origin rule
 
-## Authority Rules
-- canonical Git truth: `origin/mars/canonical-post-recovery`
-- production DB/editorial truth: current production admin/editorial state
-- Olya robots truth: do not replace Olya robots with generic templates
-- human indexability: do not auto-close indexing; explicit human command only
-- local secrets: retain required local-only runtime/secret files; do not commit them
-- dirty-main safety: no broad git cleanup on shared dirty main; future work should start from a fresh clean worktree
+1. `git fetch origin mars/canonical-post-recovery`
+2. Record **current** `origin/mars/canonical-post-recovery` full SHA
+3. Do **not** treat any SHA in this file as a permanent recovery authority
+4. Shared main `X:\AI MARS` may hold **FOREIGN WIP** — never clean/reset/stash/checkout-over it
 
-## Canonical Paths
-- FP-0002 project locus:
-  - `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/`
-- current open items:
-  - `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md`
-- current baseline:
-  - `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/BASELINE-FP-0002-PRODUCTION-MAINTENANCE-STABLE.md`
-- robots ownership/runbook:
-  - `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/DOCS/OPERATIONS-INDEXING-ROBOTS-OWNERSHIP-v1.md`
-- structured data report:
-  - `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-PROD-YANDEX-SCHEMA-ORG-01.md`
-- open graph report:
-  - `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-GLOBAL-OPEN-GRAPH-META-01.md`
-- blog hub announcement field report:
-  - `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-BLOG-HUB-DEDICATED-ANNOUNCEMENT-FIELD-01.md`
-- source/runtime authority:
-  - `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/SOURCE-AUTHORITY.md`
+## Exact next-wave startup pattern
 
-## Current Git Recovery Point
-- canonical branch: `origin/mars/canonical-post-recovery`
-- latest blog hub announcement wave commit:
-  - `074777b544e810d7ab9894987fd1983d1c6afab1` — dedicated Blog Hub card announcement field + evidence
-- matching closeout report:
-  - `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-BLOG-HUB-DEDICATED-ANNOUNCEMENT-FIELD-01.md`
-- prior open graph wave commit:
-  - `9fe3790aceba040d8e0c0d307a65bd5980d87f01` — Open Graph module + production evidence + report
-- prior schema wave commits:
-  - `fc39a5a922c398824306574b701ac7bf9860a698` — structured-data implementation + evidence
-  - `bdf295a8` — report git SHA closeout (tip at push time)
+```text
+CURRENT ORIGIN
+→ FRESH PRODUCTION TRUTH (read-only intake)
+→ CURRENT OLYA / ADMIN TRUTH
+→ NEW CLEAN WORKTREE from origin/mars/canonical-post-recovery
+→ bounded charter
+```
 
-## Mandatory Maintenance Workflow
-fresh intake
-→ bounded task
-→ exact deploy
-→ validation
-→ parity check
-→ selective Git checkpoint
+Do not reuse completed FP-0002 wave worktrees. Do not implement from a dirty shared main.
 
-## Important Safeguards
-- never overwrite Olya editorial DB state
-- never replace Olya robots policy
+## Current source / editorial / runtime truth model
+
+| Layer | Owner |
+|-------|--------|
+| Git source | `origin/mars/canonical-post-recovery` after fetch |
+| Editorial / Admin DB | **Olya and other legitimate Admin changes = production truth** — not “drift” by default |
+| Runtime files on host | last accepted deploy of current core |
+| Robots.txt | **Olya SEO policy**; hashes in reports are evidence only; live file always wins |
+| Indexing (`blog_public`) | **human-owned**; OPEN as of last accepted state; never a technical safety switch |
+
+## Current production baseline (compact)
+
+- specialists hub canonical: `https://shpigovsky.ru/specialisty/` (Page `#1030`, template `specialists-hub.php`, automatic CPT listing, existing card styles, reusable blocks, Admin enable/disable, breadcrumbs **intentionally absent**, `has_archive=false`)
+- specialist singles: `/specialisty/{slug}/`
+- `/specyalisty/`: **DEPRECATED / REDIRECT-ONLY / HISTORICAL**
+- SEO title + Meta Description: **editor-owned source truth**; one SEO owner; output across supported public entity/template types
+- Open Graph: one owner `open-graph.meta`; reuses SEO title/description + canonical URL; page-aware image; `og:type=article` on articles else safe `website`; **separate from SEO meta and Schema.org**
+- Schema.org: one owner `structured-data.schema-org`; Yandex-oriented JSON-LD `@graph`; truthful types (`MedicalClinic`, branches, WebPage/ContactPage/CollectionPage/Service/Person/Article, ItemList, BreadcrumbList where appropriate); **no** fake Product/Offer/ratings/Physician; no manual JSON-LD UI; authenticated Yandex validator **not yet evidenced**
+- Contacts maps: **full Yandex Constructor code** remains Admin input; map render restored; per-row scroll toggle; default/legacy = **false**; frontend normalization; **no global unsafe script allowance**
+- Blog Hub: dedicated `article_hub_announcement` (`Анонс статьи для хаба`) → `get_the_excerpt()` fallback; `article_lead` remains article **hero** owner; SEO/OG/Schema descriptions remain separate; native Excerpt is legacy fallback only
+- forms / SMTP / native anti-spam / privacy / consent-gated Metrika: **ACTIVE** as previously accepted
+- P18G indexing guard + watchdog: **ACTIVE**
+
+## Known protected systems
+
+Do not mutate unless a new charter names them: WordPress content, Olya editorial state, robots, indexing, forms, SMTP, maps, schema, Open Graph, specialist/blog/SEO fields, redirects, production files. Olya remains active in Admin.
+
+## Current open items
+
+See `REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md`. Remaining items are **OPERATOR / EXTERNAL / OPTIONAL** (GSC/Yandex sitemap UI, legal sign-off, retention, anti-spam tuning from real spam, legal Disallow vs noindex, optional authenticated Yandex Schema validator, optional Facebook OG debugger). Completed technical waves are **CLOSED**.
+
+## Canonical paths
+
+- project: `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/`
+- status: `PROJECT-STATUS.md`
+- open items: `REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md`
+- robots runbook: `DOCS/OPERATIONS-INDEXING-ROBOTS-OWNERSHIP-v1.md`
+- 2026-08-24 snapshot baseline (not current core): `REPORTS/BASELINE-FP-0002-PRODUCTION-MAINTENANCE-STABLE.md`
+- this closeout: `REPORTS/REPORT-FP-0002-KNOWLEDGE-PROMOTION-FINAL-WORKSPACE-CLOSEOUT-01.md`
+
+## Current Git recovery point (historical-at-write; fetch first)
+
+- branch: `origin/mars/canonical-post-recovery`
+- blog hub implementation: `074777b544e810d7ab9894987fd1983d1c6afab1`
+- blog hub SHA-recording follow-up (closes `CLOSEOUT_PENDING` in that report): `33d13bed6e4686809ac23ddd463ca4eae62f68df`
+- knowledge/workspace closeout: **this wave’s commit after push** — fetch origin for the tip
+
+## Important safeguards
+
+- never overwrite Olya editorial DB
+- never replace Olya robots with generic templates
 - never auto-close indexing
-- no broad dirty-main git operations
+- no `git add .` / `git add -A` / `git commit -a` / `git clean` / `git reset --hard` on shared main
 - no external CAPTCHA currently
-- spam filtering before lead persistence
-- structured data must derive from Admin-owned fields — no manual JSON-LD editing UI
+- structured data and OG must stay separate technical owners; SEO fields may feed both
+- trusted Admin embeds: narrow handling only — never global script allowlists
 
-## Known Non-Blocking Items
-- Google Search Console sitemap submission
-- Yandex Webmaster sitemap submission
-- optional authenticated Yandex structured-data validator pass on live URLs
-- optional external Facebook/Meta OG debugger pass on live URLs
-- optional legal sign-off on Cookie Policy
-- optional `lead_retention_days=730` policy alignment
-- optional anti-spam tuning only from real spam evidence
-- normal future SEO/content/feature work
+## Where to read first
 
-## Where To Read First
-1. `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/PROJECT-STATUS.md`
-2. `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-BLOG-HUB-DEDICATED-ANNOUNCEMENT-FIELD-01.md`
-3. `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-GLOBAL-OPEN-GRAPH-META-01.md`
-4. `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-PROD-YANDEX-SCHEMA-ORG-01.md`
-5. `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md`
-6. `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/BASELINE-FP-0002-PRODUCTION-MAINTENANCE-STABLE.md`
+1. this handoff
+2. `PROJECT-STATUS.md`
+3. `REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md`
+4. wave report **only** if the new task touches that subsystem
 
-## Historical Evidence
-Deep historical P07–P18 reports remain preserved in `REPORTS/` and `REPORTS/evidence/`.
-Do not replay the full history for normal maintenance. Only drill into old reports when the current baseline/open-items/handoff files are insufficient for the specific task.
+Historical P07–P18 and V9 reports remain in `REPORTS/` / `WORDPRESS/`. Do not replay them for normal maintenance.

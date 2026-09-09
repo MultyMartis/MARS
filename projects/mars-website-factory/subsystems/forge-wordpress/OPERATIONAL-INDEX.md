@@ -4,7 +4,7 @@
 **Parent:** [MARS Website Factory](../../OPERATIONAL-INDEX.md)  
 **Lane:** B — Website Factory architecture and documentation
 
-**Production knowledge brain (2026-08-20):** FP-0002 / Шпиговский is a **PRODUCTION / MAINTENANCE — STABLE** reference case (`https://shpigovsky.ru/`, core `0.3.24-antispam`). How to build the next WordPress site: [knowledge/README.md](knowledge/README.md) · [assimilation index](knowledge/FP-0002-KNOWLEDGE-ASSIMILATION-INDEX.md) · [BLUEPRINT](standards/FORGE-WORDPRESS-PRODUCTION-WEBSITE-BLUEPRINT-v1.md) · [CMS ARCHITECTURE](standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md) · [starter checklist](templates/FORGE-WORDPRESS-NEW-SITE-STARTER-CHECKLIST-v1.md). This does **not** claim AG-WP-001 is production-ready and does **not** mutate live FP-0002.
+**Production knowledge brain (2026-09-09):** FP-0002 / Шпиговский is a **PRODUCTION / MAINTENANCE — STABLE** live reference case (`https://shpigovsky.ru/`; production core tracks **`0.3.32-blog-hub-announcement-01`** — fetch project `PROJECT-STATUS.md` / origin for current). How to build the next WordPress site: [knowledge/README.md](knowledge/README.md) · [assimilation index](knowledge/FP-0002-KNOWLEDGE-ASSIMILATION-INDEX.md) · [BLUEPRINT](standards/FORGE-WORDPRESS-PRODUCTION-WEBSITE-BLUEPRINT-v1.md) · [CMS ARCHITECTURE](standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md) · [starter checklist](templates/FORGE-WORDPRESS-NEW-SITE-STARTER-CHECKLIST-v1.md). This does **not** claim AG-WP-001 is production-ready and does **not** mutate live FP-0002.
 
 ---
 
@@ -70,6 +70,8 @@ Client pilot: FP-0002 V9-06D.6 template integration planning PASS; D.5 routes HT
 | **Production knowledge hub (next site)** | [knowledge/README.md](knowledge/README.md) |
 | **Live operator Dashboard / indexing gate** | [DEFINITION-OF-DONE](standards/FORGE-WORDPRESS-DEFINITION-OF-DONE-v1.md) (status panel is DoD) · [SEARCH-INDEXING-CONTROL](standards/FORGE-WORDPRESS-SEARCH-INDEXING-CONTROL-STANDARD-v1.md) · [FORMS-AND-SMTP](standards/FORGE-WORDPRESS-FORMS-AND-SMTP-STANDARD-v1.md) (`noreply@<domain>`) |
 | **Admin feature discoverability** | [ADMIN-UX](standards/FORGE-WORDPRESS-ADMIN-UX-STANDARD-v1.md) §10.7 · [DoD](standards/FORGE-WORDPRESS-DEFINITION-OF-DONE-v1.md) · AP-029 |
+| **SEO / OG / Schema owners** | [SEO-AND-SITEMAP](standards/FORGE-WORDPRESS-SEO-AND-SITEMAP-STANDARD-v1.md) §5–6 · AP-030–032 |
+| **Trusted Admin embeds** | [CODING-AND-SECURITY](standards/FORGE-WORDPRESS-CODING-AND-SECURITY-STANDARD-v1.md) §4.1 · AP-033 |
 | **CMS / editable architecture (P1b)** | [standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md](standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md) |
 | **Contracts register** | [registries/FORGE-WORDPRESS-CONTRACTS-AND-STANDARDS-REGISTER-v1.md](registries/FORGE-WORDPRESS-CONTRACTS-AND-STANDARDS-REGISTER-v1.md) |
 | **Tool registry** | [registries/FORGE-WORDPRESS-TOOL-REGISTRY-v1.md](registries/FORGE-WORDPRESS-TOOL-REGISTRY-v1.md) |
@@ -224,7 +226,7 @@ WPilot does **not** own theme/content architecture.
 
 ## First probable pilot / production reference
 
-**FP-0002 — Shpigovsky.ru** is the first WP Forge **production reference implementation** (temporary production host; P17-FU02 pre-cutover PASS; NS switch remains operator-owned). Foundation admission notes (V9-06B.2 ACF, etc.) remain historical evidence under [projects/fp-0002/](projects/fp-0002/). **Do not** treat the 2026-07-04 freeze block “WordPress implementation NOT STARTED” as current product truth. Operating knowledge: [knowledge/README.md](knowledge/README.md). LOC-ZONE: `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/`.
+**FP-0002 — Shpigovsky.ru** (`https://shpigovsky.ru/`) is the first WP Forge **live production reference**. NS cutover and launch are **historical / complete**. Current ops: **PRODUCTION / MAINTENANCE — STABLE** (core generation: see project `PROJECT-STATUS.md`; as of 2026-09-09 `0.3.32-blog-hub-announcement-01`). Foundation admission notes (V9-06B.2 ACF, etc.) remain historical evidence under [projects/fp-0002/](projects/fp-0002/). **Do not** treat the 2026-07-04 freeze block “WordPress implementation NOT STARTED” as current product truth — that freeze is a **labeled historical** FW-07C record, not live status. Operating knowledge: [knowledge/README.md](knowledge/README.md). LOC-ZONE: `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/`.
 
 ---
 

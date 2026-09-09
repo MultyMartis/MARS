@@ -6,6 +6,8 @@
 
 Client-specific values are omitted. Evidence paths are under `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/`.
 
+**Current production URL note (2026-09, not a harvest rewrite):** specialist hub canonical is `/specialisty/`; `/specyalisty/` is redirect-only. Rows below that mention the historical rewrite slug describe P11-era implementation. The reusable method remains: hub **Page** + CPT **singles**, `has_archive=false`.
+
 ---
 
 ## 1. WordPress content architecture

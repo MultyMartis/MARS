@@ -108,7 +108,8 @@ Silent duplicate output is a **BLOCKER**.
 | Forms | Forge handler **or** CF7/Fluent — not two AJAX owners on one form | |
 | Redirects | one redirect plugin **or** server/Forge manifest | |
 | Cache / minify | [PERFORMANCE-BASELINE](FORGE-WORDPRESS-PERFORMANCE-BASELINE-v1.md) | |
-| Schema | one JSON-LD owner | |
+| Schema | one JSON-LD owner | WAD if SEO plugin also emits JSON-LD — disable one (AP-031) |
+| Open Graph | one OG owner | Same: SEO plugin OG **or** Forge OG — not both |
 | Analytics injection | Site Settings empty-safe **or** GTM plugin — not both | |
 | Image optimization | one | |
 
@@ -147,4 +148,4 @@ WPilot plugin is **not** a substitute for project functionality plugin.
 
 ---
 
-*Plugin governance standard v1.1 — register mandatory; one-owner collisions explicit.*
+*Plugin governance standard v1.2 — Schema + Open Graph one-owner rows (AP-031).*

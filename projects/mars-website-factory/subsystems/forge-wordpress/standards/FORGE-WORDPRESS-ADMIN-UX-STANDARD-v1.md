@@ -198,6 +198,17 @@ Required sequence: REGISTERED → VISIBLE → ACCESSIBLE → EDITABLE → SAVE/R
 
 When attaching a custom `add_submenu_page()` under an ACF options parent with `redirect => true`, use the **resolved visible** WordPress parent slug (first child), and register **after** ACF’s `admin_menu` (typically priority 99). Do not treat `acf_get_options_page($logical)['menu_slug']` as the visible parent — inspect `acf_get_options_pages()` / `$menu` after ACF runs (AP-029).
 
+### 10.8 Third-party Admin extension compatibility
+
+After dependency updates, a third-party Admin extension (example: ACFE field renderer vs ACF private/internal properties) may fatally error in wp-admin.
+
+Prefer a **bounded compatibility shim in the project/core plugin** over:
+
+- hiding PHP fatals / notices to “make Admin look fine”;
+- broad surgery or an unmaintained fork of the third-party plugin.
+
+Keep the shim scoped until a **tested** upstream upgrade replaces it (AP-034). Evidence: FP-0002 Specialists Hub Admin enable/disable UX.
+
 ---
 
-*Admin UX standard v1.3 — client-facing vs internal dashboard widget split (P18J). CMS pack: [EDITOR UX](FORGE-WORDPRESS-EDITOR-UX-STANDARD-v1.md).*
+*Admin UX standard v1.4 — Admin extension compatibility shim (AP-034). CMS pack: [EDITOR UX](FORGE-WORDPRESS-EDITOR-UX-STANDARD-v1.md).*

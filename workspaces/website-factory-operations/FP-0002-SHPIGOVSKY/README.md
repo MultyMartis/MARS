@@ -41,9 +41,9 @@ This workspace is the **operational foundation** for the Factory track — not s
 
 ## Current phase
 
-**PRODUCTION / MAINTENANCE — STABLE** (2026-08-24).
+**PRODUCTION / MAINTENANCE — STABLE** (current ops 2026-09-09).
 
-Live site: `https://shpigovsky.ru/`. Core `0.3.25-olya-robots`. Indexing **OPEN — HUMAN-APPROVED**. Olya-approved robots policy is active and separate from global indexability state. See [PROJECT-STATUS.md](PROJECT-STATUS.md) and [REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md](REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md).
+Live site: `https://shpigovsky.ru/`. Current production core tracks **`0.3.32-blog-hub-announcement-01`**. Indexing **OPEN — HUMAN-APPROVED**. Olya-approved robots policy is active and separate from global indexability state. Specialists hub: `/specialisty/` (old `/specyalisty/` is redirect-only). See [PROJECT-STATUS.md](PROJECT-STATUS.md) and [REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md](REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md).
 
 Access contour: [DOCS/PRODUCTION/FP-0002-MARS-PRODUCTION-CONNECTION-PROFILE-v1.md](DOCS/PRODUCTION/FP-0002-MARS-PRODUCTION-CONNECTION-PROFILE-v1.md).
 

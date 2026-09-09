@@ -61,6 +61,17 @@
 | **Debug** | `WP_DEBUG` off on production; no `var_dump` in release |
 | **Dependencies** | Composer lock; known CVE check WV4 |
 
+### 4.1 Trusted Admin-owned third-party embeds
+
+When an **Admin-owned** field stores a vendor embed (maps constructor, similar trusted widgets):
+
+- Keep the vendor payload as the editor input model if that is the product contract.
+- Sanitize and **normalize presentation parameters** at the **output boundary** (e.g. scroll/zoom flags).
+- Do **not** globally allow `<script>` in `wp_kses` / site-wide HTML policy because one field needs it (AP-033).
+- Scope allowlists to that field’s render path only.
+
+Evidence: FP-0002 Contacts Yandex Constructor + per-row scroll toggle (default/legacy off).
+
 ---
 
 ## 5. Generated code review
@@ -116,4 +127,4 @@ Deferred tooling: FW-03.
 
 ---
 
-*Coding and security standard v1 — proportional studio baseline.*
+*Coding and security standard v1.1 — trusted Admin embeds §4.1 (AP-033).*

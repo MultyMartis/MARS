@@ -1,7 +1,7 @@
 # FP-0002 → WP Forge knowledge assimilation index
 
-**Date:** 2026-08-20  
-**Source case:** FP-0002 Shpigovsky production (P07–P18I + production-maintenance through native anti-spam v1 + workspace stabilization)  
+**Date:** 2026-09-09  
+**Source case:** FP-0002 Shpigovsky production (P07–P18I + production-maintenance through Blog Hub announcement + knowledge closeout)  
 **Purpose:** Map each reusable lesson to a canonical WP Forge document. Agents should follow the **canonical** column, not the report archive.
 
 **Project reports remain evidence.** They are not the operating brain.
@@ -35,7 +35,12 @@
 | TLS/transport or wrong-auth probe ≠ runtime outage; classify INVALID EVIDENCE; replace with correct probe | G / E | **WPILOT-002** · **WPILOT-003** (`TRANSPORT_ERROR` / `AUTH_ERROR` / `VALID_RUNTIME_RESPONSE`) |
 | Dirty monorepo foreign WIP ≠ project Git tail; clean worktree + remote authority | C | [GIT-SOP](../runbooks/FORGE-WORDPRESS-GIT-SOP-v1.md) · GIT-WORKFLOW |
 | Child Pages used for staff-like entities; later CPT `specialist` | A / G | [CONTENT-MODEL-CPT-STANDARD](../standards/FORGE-WORDPRESS-CONTENT-MODEL-CPT-STANDARD-v1.md) · [CMS-ARCHITECTURE](../standards/FORGE-WORDPRESS-CMS-ARCHITECTURE-STANDARD-v1.md) |
-| Preserve IDs/URLs when changing post type; hub page + CPT singles | A / D | same + [ENVIRONMENT-MIGRATION](../runbooks/FORGE-WORDPRESS-ENVIRONMENT-MIGRATION-STANDARD-v1.md) |
+| Preserve IDs/URLs when changing post type; hub page + CPT singles (`has_archive=false`) | A / D | same + [ENVIRONMENT-MIGRATION](../runbooks/FORGE-WORDPRESS-ENVIRONMENT-MIGRATION-STANDARD-v1.md) |
+| Distinct frontend surfaces need dedicated editorial fields (hero ≠ hub card ≠ SEO ≠ OG ≠ Schema) | A / E | [ACF-FIELD-MODELING](../standards/FORGE-WORDPRESS-ACF-FIELD-MODELING-STANDARD-v1.md) · AP-030 |
+| One SEO truth may feed OG and Schema; each remains a separate technical owner | A | [SEO-AND-SITEMAP](../standards/FORGE-WORDPRESS-SEO-AND-SITEMAP-STANDARD-v1.md) §5 · AP-031 |
+| Truthful JSON-LD; no fake Product/Offer/ratings/Physician; semantic-valid ≠ Yandex special support | A / G | [SEO-AND-SITEMAP](../standards/FORGE-WORDPRESS-SEO-AND-SITEMAP-STANDARD-v1.md) §6 · AP-032 |
+| Trusted Admin embeds: narrow output path; no global script allowlist | A / G | [CODING-AND-SECURITY](../standards/FORGE-WORDPRESS-CODING-AND-SECURITY-STANDARD-v1.md) §4.1 · AP-033 |
+| Third-party Admin extension breakage → bounded shim, not plugin surgery | E / G | [ADMIN-UX](../standards/FORGE-WORDPRESS-ADMIN-UX-STANDARD-v1.md) §10.8 · AP-034 |
 | Duplicate custom permalink UI vs native WP slug row | G | [ANTI-PATTERN-REGISTRY](../standards/FORGE-WORDPRESS-ANTI-PATTERN-REGISTRY-v1.md) AP-002 · CPT standard |
 | Site Settings as one SoT for header/footer/mobile/contacts | A / E | [SITE-SETTINGS-STANDARD](../standards/FORGE-WORDPRESS-SITE-SETTINGS-STANDARD-v1.md) · [GLOBAL-SETTINGS-OWNERSHIP](../standards/FORGE-WORDPRESS-GLOBAL-SETTINGS-OWNERSHIP-STANDARD-v1.md) |
 | Social: type + URL + visibility; registry icons; empty → no render | B / E / F | [SOCIAL-CONTACT-MODULE-SPEC](../standards/FORGE-WORDPRESS-SOCIAL-CONTACT-MODULE-SPEC-v1.md) |
@@ -108,6 +113,9 @@
 | P23 | Client dashboard attribution + Russian form mail UX | dashboard/mail polish on canonical |
 | Anti-spam v1 | Native layered form anti-spam; no external CAPTCHA | `REPORT-FP-0002-PROD-MAINT-NATIVE-ANTISPAM-V1.md` |
 | Maint stabilize | Workspace/Git/MARS closeout; zero FP-0002 Git tails | `REPORT-FP-0002-PROD-MAINT-WORKSPACE-STABILIZATION.md` |
+| Specialists Hub + Admin UX + polish + URL `/specialisty/` | Page hub + CPT singles; ACFE shim; canonical spelling | `REPORT-FP-0002-PROD-MAINT-SPECIALISTS-*` (2026-09) |
+| SEO meta / OG / Schema / maps / Blog Hub announcement | Separate owners; SEO feeds consumers | `REPORT-FP-0002-*OPEN-GRAPH*`, `*YANDEX-SCHEMA*`, `*BLOG-HUB*`, specialists-nav-seo-maps |
+| Knowledge promotion closeout | Docs/Forge/Git tails only | `REPORT-FP-0002-KNOWLEDGE-PROMOTION-FINAL-WORKSPACE-CLOSEOUT-01.md` |
 
 Earlier V9 Admin-parity / ACF SoT / operator-CSS canon work remains valid foundation (Experience Pack Phase 1–2). It is **historical**; production operations above supersede it for launch.
 
@@ -118,7 +126,7 @@ Earlier V9 Admin-parity / ACF SoT / operator-CSS canon work remains valid founda
 | Item | Why not canonical default |
 |------|---------------------------|
 | Medical service tree, alcohol/program copy | Client content (I) |
-| Hub slug `specyalisty` spelling | Client URL contract (I) |
+| Hub slug `specyalisty` (historical P11 spelling) | Client URL contract (I); **current** canonical is `/specialisty/` with `/specyalisty/` redirect-only |
 | Lifebuoy decorative asset | Visual brand (I/J) |
 | Exact 7 legacy 301 paths | Client IA (I); **method** is reusable |
 | Beget + REG.RU hosting pair | Provider-specific (I); **NS vs A-record** rule is reusable |
@@ -135,4 +143,4 @@ Earlier V9 Admin-parity / ACF SoT / operator-CSS canon work remains valid founda
 | Website Factory knowledge map | WP Forge production brain |
 | Experience Pack INDEX | Points here (brain upgrade done) |
 
-*Assimilation index — 2026-08-20 (maintenance closeout).*
+*Assimilation index — 2026-09-09 (knowledge promotion closeout).*

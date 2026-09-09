@@ -1,6 +1,6 @@
 # WP Forge production knowledge hub
 
-**Status:** ACTIVE (2026-08-18)  
+**Status:** ACTIVE (2026-09-09)  
 **Case that produced this pack:** FP-0002 Shpigovsky — production reference, not a second documentation tree.  
 **Not:** runtime, orchestration, a shipped module library, or a claim that every FP-0002 module is a universal default.
 
@@ -32,6 +32,11 @@ Do **not** reopen the full Shpigovsky chronology unless evidence is required.
 | Is an Admin feature actually usable? | Same DoD discoverability sequence · [ADMIN-UX](../standards/FORGE-WORDPRESS-ADMIN-UX-STANDARD-v1.md) §10.7 · AP-029 |
 | How do we open/close search indexing? | [SEARCH-INDEXING-CONTROL](../standards/FORGE-WORDPRESS-SEARCH-INDEXING-CONTROL-STANDARD-v1.md) |
 | SEO robots vs OPEN/CLOSED ownership | [ROBOTS-OWNERSHIP-LESSONS](FORGE-WORDPRESS-ROBOTS-OWNERSHIP-LESSONS-v1.md) |
+| Hero vs hub-card vs SEO vs OG vs Schema field owners | [ACF-FIELD-MODELING](../standards/FORGE-WORDPRESS-ACF-FIELD-MODELING-STANDARD-v1.md) §2 SEO · AP-030 |
+| SEO fields feeding OG / Schema without duplicate writers | [SEO-AND-SITEMAP](../standards/FORGE-WORDPRESS-SEO-AND-SITEMAP-STANDARD-v1.md) §5–6 · [PLUGIN GOVERNANCE](../standards/FORGE-WORDPRESS-PLUGIN-GOVERNANCE-STANDARD-v1.md) §5.2 · AP-031 |
+| Truthful JSON-LD / Yandex Schema discipline | [SEO-AND-SITEMAP](../standards/FORGE-WORDPRESS-SEO-AND-SITEMAP-STANDARD-v1.md) §6 · AP-032 |
+| Trusted Admin third-party embeds (maps) | [CODING-AND-SECURITY](../standards/FORGE-WORDPRESS-CODING-AND-SECURITY-STANDARD-v1.md) §4.1 · AP-033 |
+| Admin plugin compatibility shim vs fork | [ADMIN-UX](../standards/FORGE-WORDPRESS-ADMIN-UX-STANDARD-v1.md) §10.8 · AP-034 |
 | Which modules exist | [MODULE-CATALOG](../registries/FORGE-WORDPRESS-MODULE-CATALOG-v1.md) |
 
 ---
@@ -73,4 +78,4 @@ FP-0002 evidence lives under `workspaces/website-factory-operations/FP-0002-SHPI
 
 CMS architecture templates live under [`templates/`](../templates/) (`CONTENT-ENTITY-MAP`, `FIELD-OWNERSHIP-MAP`, `PAGE-EDITABILITY-MAP`, `SITE-SETTINGS-MAP`, `RELATIONSHIP-MAP`, `COMPONENT-DATA-CONTRACT`, `ADMIN-INFORMATION-ARCHITECTURE`, `EDITOR-WORKFLOW-ACCEPTANCE-CHECKLIST`, `DESIGN-TO-CMS-MAPPING-WORKSHEET`, `CMS-MIGRATION-PLAN`).
 
-*WP Forge knowledge hub — 2026-08-20 (FP-0002 maintenance closeout: native anti-spam + indexing human-ownership + clean-worktree Git discipline mapped in assimilation index; FORM-SPAM already in FORMS-AND-SMTP §15). One production case in PRODUCTION / MAINTENANCE. Second-project validation still required where marked J.*
+*WP Forge knowledge hub — 2026-09-09 (FP-0002 knowledge promotion: dedicated editorial surfaces, SEO→OG/Schema consumers, Yandex Schema discipline, trusted embeds, Admin compatibility shims). One production case in PRODUCTION / MAINTENANCE — STABLE. Second-project validation still required where marked J.*

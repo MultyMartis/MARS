@@ -83,6 +83,8 @@ Do not re-declare contact fields on header/footer groups.
 
 Do not duplicate SEO between generic Page settings and a module settings screen (AP-017). Fallback: title ← post title; description ← excerpt/lead truncated. See [SEO STANDARD](FORGE-WORDPRESS-SEO-AND-SITEMAP-STANDARD-v1.md).
 
+**Dedicated surface owners:** hero lead, listing-hub card teaser, SEO meta description, Open Graph description, and Schema.org description may share **documented fallbacks**, but must not overload one ambiguous field as the silent owner of every surface (AP-030). Project example (not universal field-name law): FP-0002 Blog Hub uses a dedicated hub-card field; article hero lead stays separate.
+
 ---
 
 ## 3. Machine naming
@@ -286,4 +288,4 @@ Templates should not duplicate fallback chains. One normalization owner per cros
 
 ---
 
-*FW-S-23 v1.1 — field modeling. Schema in Git. Editors see labels, not keys. Boolean three-state in §6.1.*
+*FW-S-23 v1.2 — dedicated editorial surface owners (AP-030). Schema in Git. Editors see labels, not keys. Boolean three-state in §6.1.*

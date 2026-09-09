@@ -4,7 +4,9 @@
 **Established:** 2026-08-24  
 **Supersedes for “current ops truth”:** post-anti-spam maintenance closeout (does **not** rewrite historical P18I baseline text)  
 **Domain:** https://shpigovsky.ru/  
-**Core version:** `0.3.25-olya-robots`
+**Core version (this snapshot):** `0.3.25-olya-robots`
+
+**Current ops (not this snapshot):** see `PROJECT-STATUS.md`. Production core as of 2026-09-09 tracks **`0.3.32-blog-hub-announcement-01`**. Values below remain the **2026-08-24** snapshot and must not be copied as current core, robots hash, or URL contract.
 
 ---
 
@@ -25,7 +27,7 @@
 | Public HTTP | **200** |
 | `home` / `siteurl` | `https://shpigovsky.ru` |
 | Theme | Shpigovsky |
-| Core plugin | `0.3.25-olya-robots` (current production status) |
+| Core plugin | `0.3.25-olya-robots` (snapshot 2026-08-24 — not current; see PROJECT-STATUS) |
 | WPilot | installed; `write_enabled=false` |
 
 ---

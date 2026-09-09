@@ -480,6 +480,61 @@ Each ID is reusable. Client facts are generalized.
 | Prevention | Use `TRANSPORT_ERROR` · `AUTH_ERROR` · `APPLICATION_ERROR` · `VALID_RUNTIME_RESPONSE` |
 | Evidence | FP-0002 PROD-MAINT workspace stabilization evidence pack |
 
+## AP-030 — One ambiguous field overloaded by multiple frontend surfaces
+
+| | |
+|--|--|
+| Symptom | Hero lead, listing-card teaser, SEO description, OG description, and Schema description fight over the same textarea |
+| Cause | “One excerpt is enough” |
+| Risk | Editors break one surface while fixing another; fallback chains become accidental owners |
+| Prevention | Explicit ownership + precedence per surface; share **fallback inputs** only when documented |
+| Replacement | [ACF FIELD MODELING](FORGE-WORDPRESS-ACF-FIELD-MODELING-STANDARD-v1.md) §2 SEO + dedicated-surface fields · [SEO STANDARD](FORGE-WORDPRESS-SEO-AND-SITEMAP-STANDARD-v1.md) §5–6 |
+| Evidence | FP-0002 Blog Hub `article_hub_announcement` vs `article_lead` vs SEO/OG/Schema (2026-09) |
+
+## AP-031 — Duplicate SEO / Open Graph / Schema.org output owners
+
+| | |
+|--|--|
+| Symptom | Two `<title>` writers, two OG blocks, or two JSON-LD graphs on the same page |
+| Cause | SEO plugin + custom head + theme dump; OG treated as “just meta”; Schema treated as “just more meta” |
+| Risk | Conflicting crawler signals; invalid JSON-LD; unmaintainable head |
+| Prevention | One editor-owned SEO truth may **feed** OG and Schema; each output layer stays a **separate technical owner** |
+| Replacement | [PLUGIN GOVERNANCE](FORGE-WORDPRESS-PLUGIN-GOVERNANCE-STANDARD-v1.md) §5.2 · [SEO STANDARD](FORGE-WORDPRESS-SEO-AND-SITEMAP-STANDARD-v1.md) |
+| Evidence | FP-0002 SEO meta + `open-graph.meta` + `structured-data.schema-org` |
+
+## AP-032 — Fabricated Schema.org types for richer SERP appearance
+
+| | |
+|--|--|
+| Symptom | Product/Offer, aggregateRating, or Physician markup without a truthful entity |
+| Cause | Copying generic “medical SEO” snippets; hoping Yandex special support appears |
+| Risk | Policy violation; validator FAIL; medical/legal exposure |
+| Prevention | Truthful page/entity type; stable `@id`; distinguish semantic-valid JSON-LD from **Yandex explicit special support** |
+| Replacement | [SEO STANDARD](FORGE-WORDPRESS-SEO-AND-SITEMAP-STANDARD-v1.md) §6 |
+| Evidence | FP-0002 Yandex Schema.org wave — no fake Product/Offer/ratings/Physician |
+
+## AP-033 — Global script allowlist for a trusted Admin embed
+
+| | |
+|--|--|
+| Symptom | `script` globally allowed in `wp_kses` / CSP because one Yandex/map/widget field needs it |
+| Cause | Treating “trusted third party” as site-wide HTML policy |
+| Risk | Any rich-text or compromised Admin field becomes an XSS vector |
+| Prevention | Narrowly scoped embed field; sanitize/normalize at **output boundary**; no global unsafe script allowance |
+| Replacement | [CODING AND SECURITY](FORGE-WORDPRESS-CODING-AND-SECURITY-STANDARD-v1.md) §4.1 |
+| Evidence | FP-0002 Contacts Yandex Constructor maps + per-row scroll toggle |
+
+## AP-034 — Broad plugin surgery instead of a bounded compatibility shim
+
+| | |
+|--|--|
+| Symptom | After ACF/ACFE (or similar) updates, Admin checkboxes/renderers fatally error; agents fork or hide notices |
+| Cause | Private API breakage treated as a reason to rewrite the third-party plugin |
+| Risk | Unmaintainable forks; missed security updates; hidden fatals |
+| Prevention | Bounded project/core shim until a tested upstream upgrade; do not hide fatals |
+| Replacement | [ADMIN UX](FORGE-WORDPRESS-ADMIN-UX-STANDARD-v1.md) §10.8 |
+| Evidence | FP-0002 Specialists Hub Admin UX — ACFE checkbox vs ACF private properties |
+
 ---
 
 ## CMS modeling namespace (`AP-CMS-*`)
@@ -507,4 +562,4 @@ Do **not** reuse AP-001–021 numbers. Full entries: [CMS-ANTI-PATTERNS](FORGE-W
 
 ---
 
-*FW-S-21 v1.6 — prior AP/INDEX/OBSERVABILITY entries + **WPILOT-001–003** (auth/probe evidence discipline) + AP-CMS-001–016 index. Add IDs; do not reuse numbers.*
+*FW-S-21 v1.7 — AP-030–034 (editorial-field ownership, SEO/OG/Schema owners, truthful Schema, trusted embeds, Admin compatibility shim). Add IDs; do not reuse numbers.*
