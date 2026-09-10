@@ -146,11 +146,41 @@ Each entry:
 | **replacement_truth** | Canonical model = one VLESS identity per device; legacy **RETIRED**. |
 | **source_refs** | P3-PER-DEVICE; P3-LEGACY-RETIREMENT-CLOSEOUT-01 |
 
+### SC-013 — v2rayN is the preferred / default Windows VPN workstation client
+
+| Field | Value |
+|-------|-------|
+| **old_claim** | Daily-driver Windows VPN client for this operator workstation is v2rayN / Xray TUN (or “current preferred Windows client post-v2rayN issues = SAFE UNKNOWN”). |
+| **status** | **SUPERSEDED** as preferred daily driver |
+| **new_evidence** | Repeated v2rayN TUN/TCP/Cursor-stall episodes; Clash Verge 2.5.2 / Mihomo v1.19.29 introduced as independent A/B; FriendHosting worked in Clash; VEESP restored on Clash after TUN stack System; unified dual-node profile exists. |
+| **replacement_truth** | Preferred **candidate** Windows client = **Clash Verge Rev / Mihomo TUN System**. v2rayN retained as **fallback only** (autostart OFF). Final soak **PENDING**. Do not uninstall v2rayN yet. |
+| **source_refs** | `CLASH-VERGE-WINDOWS-OPERATOR-BASELINE-v1.md`; `reports/WINDOWS-VPN-CLIENT-MIGRATION-CLASH-VERGE-CLOSURE-01.md`; `reports/WINDOWS-CURSOR-V2RAYN-GOOD-BAD-MULTI-MARKER-ANALYSIS-11.md` |
+
+### SC-014 — Clash TUN stack gVisor is the standing VEESP-compatible baseline
+
+| Field | Value |
+|-------|-------|
+| **old_claim** | Keep Clash TUN stack **gVisor** as the working/leave-alone baseline (settings audit 01 P3: change stack only if gVisor shows a real UDP/perf issue). |
+| **status** | **SUPERSEDED** for **VEESP via Mihomo on this workstation** |
+| **new_evidence** | VEESP on Mihomo gVisor: repeated `context deadline exceeded` despite UUID/transport MATCH, YAML SEMANTIC_MATCH, hostname/IP and self-route tests failing to fix, and server-side MCA-ONE sighting. Operator change **gVisor → System** restored VEESP ~100 ms class alongside FriendHosting. |
+| **replacement_truth** | Current preferred TUN stack = **System**. `gVisor` is **not approved for VEESP** at this time. **Do not** claim gVisor is universally broken — FriendHosting worked on gVisor. Hypothesis: `MIHOMO_GVISOR_VEESP_PATH_COMPATIBILITY_ISSUE = STRONGLY_SUPPORTED`. Acceptance: **PROVISIONALLY ACCEPTED — SYSTEM STACK** · **FINAL SOAK PENDING**. |
+| **source_refs** | `CLASH-VERGE-WINDOWS-OPERATOR-BASELINE-v1.md`; `reports/WINDOWS-VPN-CLIENT-MIGRATION-CLASH-VERGE-CLOSURE-01.md`; `reports/CLASH-VERGE-RUNTIME-FAILURE-AUDIT-02.md`; `reports/VEESP-SERVER-SIDE-MIHOMO-COMPATIBILITY-AUDIT-01.md` |
+
+### SC-015 — VEESP Mihomo timeout was a YAML / credential / server-inbound mismatch
+
+| Field | Value |
+|-------|-------|
+| **old_claim** | VEESP Clash timeouts were caused by stale UUID, wrong transport YAML, hostname vs IP, self-route TUN loop, or a dead VEESP inbound. |
+| **status** | **SUPERSEDED / REJECTED** as root-cause class |
+| **new_evidence** | Live UUID/transport MATCH; stanza vs URI SEMANTIC_MATCH; hostname and self-route A/B did not restore gVisor-era VEESP; live Xray saw a normal MCA-ONE session during client `context deadline exceeded`. |
+| **replacement_truth** | Remaining supported class is **client-side Mihomo / TUN-stack compatibility with VEESP** (gVisor strongly implicated). YAML translation is **not** the root cause. |
+| **source_refs** | `reports/VEESP-3XUI-CLASH-SUBSCRIPTION-AUDIT-01.md`; `reports/VEESP-VLESS-MIHOMO-STANZA-DIFFERENTIAL-AUDIT-01.md`; `reports/VEESP-SERVER-SIDE-MIHOMO-COMPATIBILITY-AUDIT-01.md` |
+
 ---
 
 ## 3. Count
 
-**Active superseded entries in this register:** **12** (SC-001 … SC-012).
+**Active superseded entries in this register:** **15** (SC-001 … SC-015).
 
 Wave-local superseded counts inside older reports remain historical; this register is the **canonical** consolidation point going forward.
 
@@ -169,8 +199,10 @@ Wave-local superseded counts inside older reports remain historical; this regist
 
 - [CONTROL-EVIDENCE-METHODOLOGY-v1.md](CONTROL-EVIDENCE-METHODOLOGY-v1.md)  
 - [REAL-WORKLOAD-ACCEPTANCE-DOCTRINE-v1.md](REAL-WORKLOAD-ACCEPTANCE-DOCTRINE-v1.md)  
-- [reports/MARS-SERVER-OPS-VPN-CASE-STUDY-CLOSEOUT-01.md](reports/MARS-SERVER-OPS-VPN-CASE-STUDY-CLOSEOUT-01.md)
+- [reports/MARS-SERVER-OPS-VPN-CASE-STUDY-CLOSEOUT-01.md](reports/MARS-SERVER-OPS-VPN-CASE-STUDY-CLOSEOUT-01.md)  
+- [CLASH-VERGE-WINDOWS-OPERATOR-BASELINE-v1.md](CLASH-VERGE-WINDOWS-OPERATOR-BASELINE-v1.md)  
+- [reports/WINDOWS-VPN-CLIENT-MIGRATION-CLASH-VERGE-CLOSURE-01.md](reports/WINDOWS-VPN-CLIENT-MIGRATION-CLASH-VERGE-CLOSURE-01.md)
 
 ---
 
-*Superseded Conclusions Register v1 · FriendHosting documentation consolidation 01 · 2026-08-30.*
+*Superseded Conclusions Register v1 · FriendHosting documentation consolidation 01 · 2026-08-30 · Windows Clash Verge entries SC-013…SC-015 · 2026-09-11.*

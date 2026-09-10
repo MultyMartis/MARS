@@ -15,11 +15,16 @@ One place for how FriendHosting VPN, operator panel, and certificate issuance re
 ## 2. Primary VPN path (clients)
 
 ```text
-Device (Windows / phone)
-  → v2rayN (or compatible) / TUN or system proxy
+Device (Windows workstation)
+  → Clash Verge Rev / Mihomo TUN System (preferred candidate client; v2rayN = fallback only)
   → metacode-cloud.com:8443
   → Xray (VLESS + TLS + RAW/TCP)
   → Internet egress (public IP 92.42.99.126)
+
+Device (phone / other)
+  → compatible VLESS client (per-device identity)
+  → metacode-cloud.com:8443
+  → Xray (VLESS + TLS + RAW/TCP)
 ```
 
 | Property | Value |
@@ -104,7 +109,8 @@ Do **not** put RAW Xray on `:443` while nginx owns that port.
 - Port map: [FRIENDHOSTING-DE-PORT-SERVICE-MAP-v1.md](FRIENDHOSTING-DE-PORT-SERVICE-MAP-v1.md)  
 - Security: [FRIENDHOSTING-DE-SECURITY-POSTURE-v1.md](FRIENDHOSTING-DE-SECURITY-POSTURE-v1.md)  
 - Inventory: [../../SERVER-INVENTORY-v1.md](../../SERVER-INVENTORY-v1.md)
+- Windows client baseline: [../../CLASH-VERGE-WINDOWS-OPERATOR-BASELINE-v1.md](../../CLASH-VERGE-WINDOWS-OPERATOR-BASELINE-v1.md)
 
 ---
 
-*Architecture v1 · 2026-08-30.*
+*Architecture v1 · 2026-08-30 · Windows Clash Verge path note 2026-09-11.*

@@ -108,7 +108,27 @@ State **where** secrets live and **how** to restore them.
 
 ---
 
-## 8. FriendHosting operator defaults
+## 8. Windows VPN workstation client (2026-09)
+
+Preferred **candidate** client on the operator Windows PC:
+
+| Item | Standing |
+|------|----------|
+| Client | **Clash Verge Rev 2.5.2** + **Mihomo v1.19.29** |
+| TUN | ON · stack **System** · Auto Route ON · Strict Route OFF |
+| System Proxy / UI DNS overlay | **OFF** / **OFF** |
+| Profile | unified `X:\AI MARS\local\infrastructure\CLASH-VERGE-WINDOWS\mars-vpn-windows.yaml` (gitignored) |
+| Switching | inside group `MARS-VPN` (`FRIENDHOSTING-DE` / `VEESP-NL`) — do **not** swap whole YAML files |
+| gVisor | **Not approved for VEESP** (`MIHOMO_GVISOR_VEESP_PATH_COMPATIBILITY_ISSUE = STRONGLY_SUPPORTED`). Not a claim that gVisor is universally broken. |
+| v2rayN | **Fallback only**; autostart OFF; never run both TUN stacks |
+| Acceptance | **PROVISIONALLY ACCEPTED — SYSTEM STACK** · **FINAL SOAK PENDING** |
+| Authority | [CLASH-VERGE-WINDOWS-OPERATOR-BASELINE-v1.md](CLASH-VERGE-WINDOWS-OPERATOR-BASELINE-v1.md) |
+
+Do **not** promote `PROCESS-NAME,Cursor.exe,FRIENDHOSTING-DE` to baseline. Do **not** put local Clash YAML secrets in Git.
+
+---
+
+## 9. FriendHosting operator defaults
 
 - Prefer 3X-UI native QR/copy-link for device provisioning  
 - One VLESS identity per device  
@@ -118,11 +138,12 @@ State **where** secrets live and **how** to restore them.
 
 ---
 
-## 9. Related maturity
+## 10. Related maturity
 
 [SERVER-OPS-CAPABILITY-MATURITY-v1.md](SERVER-OPS-CAPABILITY-MATURITY-v1.md)  
-[SERVER-OPS-WIDER-ROADMAP-v1.md](SERVER-OPS-WIDER-ROADMAP-v1.md)
+[SERVER-OPS-WIDER-ROADMAP-v1.md](SERVER-OPS-WIDER-ROADMAP-v1.md)  
+[CLASH-VERGE-WINDOWS-OPERATOR-BASELINE-v1.md](CLASH-VERGE-WINDOWS-OPERATOR-BASELINE-v1.md)
 
 ---
 
-*Agent knowledge pack v1 · documentation only · 2026-08-30.*
+*Agent knowledge pack v1 · documentation only · 2026-08-30 · Windows Clash Verge note 2026-09-11.*

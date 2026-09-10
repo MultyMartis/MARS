@@ -23,7 +23,8 @@ Prefer **independent controls** and **one-variable changes** over multi-knob con
 
 **Why three controls beat endless config edits:**
 
-- Holds the Windows/v2rayN/TUN/client-core stack constant while changing endpoint.  
+- Holds the Windows client / TUN stack constant while changing endpoint.  
+  Historical VPN case used v2rayN/Xray TUN as that constant. **From 2026-09** the preferred **candidate** Windows workstation client is Clash Verge / Mihomo TUN **System**; v2rayN remains fallback. See [CLASH-VERGE-WINDOWS-OPERATOR-BASELINE-v1.md](CLASH-VERGE-WINDOWS-OPERATOR-BASELINE-v1.md).  
 - Distinguishes **global client failure** from **endpoint/provider/path failure**.  
 - Prevents premature Reality/WS/gRPC/BBR/MTU experiments when acceptance already fails at application layer.
 
@@ -118,8 +119,9 @@ Exact mechanism remains **UNPROVEN** until evidence truly isolates it.
 - [CHANGE-RISK-MODEL-v1.md](CHANGE-RISK-MODEL-v1.md)  
 - [VPS-PROVIDER-SELECTION-RUNBOOK-v1.md](VPS-PROVIDER-SELECTION-RUNBOOK-v1.md)  
 - [SERVER-OPS-AGENT-KNOWLEDGE-v1.md](SERVER-OPS-AGENT-KNOWLEDGE-v1.md)  
+- [CLASH-VERGE-WINDOWS-OPERATOR-BASELINE-v1.md](CLASH-VERGE-WINDOWS-OPERATOR-BASELINE-v1.md)  
 - [reports/MARS-SERVER-OPS-VPN-CASE-STUDY-CLOSEOUT-01.md](reports/MARS-SERVER-OPS-VPN-CASE-STUDY-CLOSEOUT-01.md)
 
 ---
 
-*Control & Evidence Methodology v1 · FriendHosting third-control update · documentation only.*
+*Control & Evidence Methodology v1 · FriendHosting third-control update · Windows Clash Verge candidate stack 2026-09-11 · documentation only.*

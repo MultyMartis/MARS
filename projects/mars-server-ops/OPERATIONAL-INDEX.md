@@ -67,6 +67,7 @@ No live server is owned by the repository.
 | **VEESP final full operational backup 01** | **PASS** (2026-08-30) | Preferred stamp `veesp-final-operational-20260830T184024Z`; remote+local SHA match; restore CONFIRMED; bare-metal NOT EXERCISED — [FINAL-FULL-OPERATIONAL-BACKUP-01](reports/MARS-SERVER-OPS-VEESP-FINAL-FULL-OPERATIONAL-BACKUP-01.md) |
 | **VEESP next** | **STABLE / ACCEPTED CURRENT VPN WORKLOAD** · soak **T0 PASS_WITH_RESIDUALS** · long-term soak **NOT YET PROVEN** | Next: T+24h checkpoint; P4 `:24443` DEFERRED; first non-VPN workload planning |
 | **Dual-node soak / lightweight monitoring 01** | **T0 COMPLETE** (2026-08-30) | Tool + runbook; evidence [DUAL-NODE-SOAK-MONITORING-T0-01](evidence/DUAL-NODE-SOAK-MONITORING-T0-01/); report [DUAL-NODE-SOAK-MONITORING-T0-01](reports/MARS-SERVER-OPS-DUAL-NODE-SOAK-MONITORING-T0-01.md) — combined **PASS_WITH_RESIDUALS** · `SOAK_T0_PASS` |
+| **Windows Clash Verge client baseline 01** | **PROVISIONALLY ACCEPTED — SYSTEM STACK** (2026-09-11) · **FINAL SOAK PENDING** | Preferred candidate Windows VPN client = Clash Verge Rev 2.5.2 / Mihomo v1.19.29 TUN **System**; unified FH+VEESP profile; v2rayN fallback only; gVisor **not** approved for VEESP — [CLASH-VERGE-WINDOWS-OPERATOR-BASELINE-v1.md](CLASH-VERGE-WINDOWS-OPERATOR-BASELINE-v1.md); closure [WINDOWS-VPN-CLIENT-MIGRATION-CLASH-VERGE-CLOSURE-01](reports/WINDOWS-VPN-CLIENT-MIGRATION-CLASH-VERGE-CLOSURE-01.md) |
 
 **Managed assets / controls:** see [SERVER-INVENTORY-v1.md](SERVER-INVENTORY-v1.md)
 
@@ -79,7 +80,7 @@ No live server is owned by the repository.
 
 **Server B (AdminVPS) residual:** [SERVER-B-PLANNING](assets/SERVER-B-PLANNING/README.md) — assigned IP **REJECTED** for direct entry; support case remains available; **not** the active VPN build path while FriendHosting/VEESP carry accepted VPN workload.
 
-**Core Run / next operator action (VPN track):** FriendHosting remains **OPERATIONALLY ACCEPTED — CURRENT VPN WORKLOAD** (soak **T0 PASS_WITH_RESIDUALS**; long-term soak **NOT YET PROVEN**; **not** PRODUCTION_ACCEPTED). VEESP is **STABLE / ACCEPTED CURRENT VPN WORKLOAD** with documented panel residuals, preferred final backup `20260830T184024Z`, and soak **T0 PASS_WITH_RESIDUALS**. **Next:** T+24h soak checkpoint · then T+72h / T+7d · begin planning first non-VPN Server Ops workload (Docker deploy/restore lab). P4 `:24443` **DEFERRED**. Wider Server Ops: [SERVER-OPS-WIDER-ROADMAP-v1.md](SERVER-OPS-WIDER-ROADMAP-v1.md). Monitoring: [VPN-NODES-LIGHTWEIGHT-MONITORING-v1.md](runbooks/VPN-NODES-LIGHTWEIGHT-MONITORING-v1.md).
+**Core Run / next operator action (VPN track):** FriendHosting remains **OPERATIONALLY ACCEPTED — CURRENT VPN WORKLOAD** (soak **T0 PASS_WITH_RESIDUALS**; long-term soak **NOT YET PROVEN**; **not** PRODUCTION_ACCEPTED). VEESP is **STABLE / ACCEPTED CURRENT VPN WORKLOAD** with documented panel residuals, preferred final backup `20260830T184024Z`, and soak **T0 PASS_WITH_RESIDUALS**. **Windows workstation client:** Clash Verge is the **preferred candidate** (**PROVISIONALLY ACCEPTED — SYSTEM STACK**; **FINAL SOAK PENDING**); v2rayN is fallback only — [CLASH-VERGE-WINDOWS-OPERATOR-BASELINE-v1.md](CLASH-VERGE-WINDOWS-OPERATOR-BASELINE-v1.md). **Next:** long-duration Clash/System soak · then T+24h / T+72h / T+7d node soak checkpoints · begin planning first non-VPN Server Ops workload (Docker deploy/restore lab). P4 `:24443` **DEFERRED**. Wider Server Ops: [SERVER-OPS-WIDER-ROADMAP-v1.md](SERVER-OPS-WIDER-ROADMAP-v1.md). Monitoring: [VPN-NODES-LIGHTWEIGHT-MONITORING-v1.md](runbooks/VPN-NODES-LIGHTWEIGHT-MONITORING-v1.md).
 
 **Canonical methodology / knowledge:**
 
@@ -92,6 +93,8 @@ No live server is owned by the repository.
 - [assets/FRIENDHOSTING-DE/](assets/FRIENDHOSTING-DE/README.md)
 - [runbooks/VPN-NODES-LIGHTWEIGHT-MONITORING-v1.md](runbooks/VPN-NODES-LIGHTWEIGHT-MONITORING-v1.md)
 - [reports/MARS-SERVER-OPS-DUAL-NODE-SOAK-MONITORING-T0-01.md](reports/MARS-SERVER-OPS-DUAL-NODE-SOAK-MONITORING-T0-01.md)
+- [CLASH-VERGE-WINDOWS-OPERATOR-BASELINE-v1.md](CLASH-VERGE-WINDOWS-OPERATOR-BASELINE-v1.md)
+- [reports/WINDOWS-VPN-CLIENT-MIGRATION-CLASH-VERGE-CLOSURE-01.md](reports/WINDOWS-VPN-CLIENT-MIGRATION-CLASH-VERGE-CLOSURE-01.md)
 
 ---
 
@@ -212,6 +215,8 @@ Server Ops **does not** own and **must not** claim:
 | [assets/FRIENDHOSTING-DE/](assets/FRIENDHOSTING-DE/README.md) | FriendHosting canonical infrastructure pack |
 | [reports/MARS-SERVER-OPS-VPN-CASE-STUDY-CLOSEOUT-01.md](reports/MARS-SERVER-OPS-VPN-CASE-STUDY-CLOSEOUT-01.md) | VPN investigation knowledge closeout |
 | [reports/MARS-SERVER-OPS-FRIENDHOSTING-DOCUMENTATION-KNOWLEDGE-CONSOLIDATION-01.md](reports/MARS-SERVER-OPS-FRIENDHOSTING-DOCUMENTATION-KNOWLEDGE-CONSOLIDATION-01.md) | FriendHosting documentation consolidation |
+| [CLASH-VERGE-WINDOWS-OPERATOR-BASELINE-v1.md](CLASH-VERGE-WINDOWS-OPERATOR-BASELINE-v1.md) | **Windows VPN workstation client** — Clash Verge / Mihomo System TUN · **PROVISIONALLY ACCEPTED — SYSTEM STACK** · **FINAL SOAK PENDING** |
+| [reports/WINDOWS-VPN-CLIENT-MIGRATION-CLASH-VERGE-CLOSURE-01.md](reports/WINDOWS-VPN-CLIENT-MIGRATION-CLASH-VERGE-CLOSURE-01.md) | v2rayN → Clash Verge migration closure |
 
 ---
 
@@ -219,6 +224,7 @@ Server Ops **does not** own and **must not** claim:
 
 **Require separate charters** (not claimed implemented):
 
+- Windows Clash Verge / System TUN long soak; process-DIRECT rule migration; IPv6 overlay review; optional 3X-UI Clash subscription; AlphaVPS client integration; v2rayN retirement decision — see [CLASH-VERGE-WINDOWS-OPERATOR-BASELINE-v1.md](CLASH-VERGE-WINDOWS-OPERATOR-BASELINE-v1.md) §14  
 - FriendHosting soak / lightweight monitoring  
 - FriendHosting P4 reserve `:24443` (DEFERRED)  
 - FriendHosting bare-metal DR drill  
@@ -254,4 +260,4 @@ See [SERVER-OPS-WIDER-ROADMAP-v1.md](SERVER-OPS-WIDER-ROADMAP-v1.md).
 
 ---
 
-*Operational Index · FriendHosting OPERATIONALLY ACCEPTED — CURRENT VPN WORKLOAD · VEESP STABLE / ACCEPTED CURRENT VPN WORKLOAD · dual-node soak T0 PASS_WITH_RESIDUALS · long-term soak NOT YET PROVEN · EQVPS negative control · AdminVPS IP rejection residual · no autonomous runtime claimed.*
+*Operational Index · FriendHosting OPERATIONALLY ACCEPTED — CURRENT VPN WORKLOAD · VEESP STABLE / ACCEPTED CURRENT VPN WORKLOAD · Windows Clash Verge PROVISIONALLY ACCEPTED — SYSTEM STACK · FINAL SOAK PENDING · dual-node soak T0 PASS_WITH_RESIDUALS · long-term soak NOT YET PROVEN · EQVPS negative control · AdminVPS IP rejection residual · no autonomous runtime claimed.*

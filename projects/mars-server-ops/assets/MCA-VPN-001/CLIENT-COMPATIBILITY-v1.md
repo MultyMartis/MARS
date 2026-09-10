@@ -1,6 +1,6 @@
 # Client Compatibility v1 — MCA-VPN-001
 
-**Status:** Historical client notes — **not** live client inventory  
+**Status:** Historical notes + current Windows Clash Verge candidate pointer — **not** a live device inventory  
 **Scope:** Documented client behaviour and future dual-profile requirement
 
 ---
@@ -24,6 +24,19 @@
 | Second TUN enable | Worked |
 
 **Classification:** CONFIRMED HISTORICAL — client-side UX issue; contributed to search for alternatives.
+
+**Current workstation posture (2026-09-11):** v2rayN is **not** the preferred daily driver. See [CLASH-VERGE-WINDOWS-OPERATOR-BASELINE-v1.md](../../CLASH-VERGE-WINDOWS-OPERATOR-BASELINE-v1.md). Unified Clash profile covers VEESP + FriendHosting via group `MARS-VPN`. Do not run v2rayN TUN and Clash TUN together.
+
+### Windows — Clash Verge (current preferred candidate, 2026-09)
+
+| Fact | Detail | Confidence |
+|------|--------|------------|
+| Preferred candidate client | **Clash Verge Rev 2.5.2** / **Mihomo v1.19.29** TUN **System** | HIGH (operator A/B + gVisor→System result) |
+| Acceptance | **PROVISIONALLY ACCEPTED — SYSTEM STACK** · **FINAL SOAK PENDING** | — |
+| Unified profile | `X:\AI MARS\local\infrastructure\CLASH-VERGE-WINDOWS\mars-vpn-windows.yaml` (gitignored) | HIGH |
+| Authority | `X:\AI MARS\projects\mars-server-ops\CLASH-VERGE-WINDOWS-OPERATOR-BASELINE-v1.md` | — |
+
+**Classification:** CURRENT CANDIDATE BASELINE — not a claim of final soak-proven stability.
 
 ---
 
@@ -75,15 +88,15 @@ Do **not** store in this repository:
 | Exact subscription format/token | SAFE UNKNOWN |
 | Number of active clients | SAFE UNKNOWN |
 | iOS / macOS / Linux clients in use | SAFE UNKNOWN |
-| Current preferred Windows client post-v2rayN issues | SAFE UNKNOWN |
 
 ---
 
 ## Related documents
 
+- [CLASH-VERGE-WINDOWS-OPERATOR-BASELINE-v1.md](../../CLASH-VERGE-WINDOWS-OPERATOR-BASELINE-v1.md)
 - [SERVER-B-CLONE-BASELINE-v1.md](SERVER-B-CLONE-BASELINE-v1.md)
 - [INCIDENT-HISTORY-v1.md](INCIDENT-HISTORY-v1.md) — Incident E (v2rayN)
 
 ---
 
-*Client Compatibility v1 · historical + planning · no client secrets.*
+*Client Compatibility v1 · historical + planning · Windows Clash Verge pointer 2026-09-11 · no client secrets.*
