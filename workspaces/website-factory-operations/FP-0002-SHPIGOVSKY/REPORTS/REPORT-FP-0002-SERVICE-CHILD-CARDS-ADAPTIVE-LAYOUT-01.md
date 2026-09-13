@@ -17,9 +17,9 @@ Residuals are non-blocking:
 | Role | SHA |
 |------|-----|
 | Start origin tip (fetched) | `9aa466b868fdb5d4f4aa717eb532feb09b14cd70` |
-| Implementation commit | 29c5abbefb0b6da289320a08bca5a133cd350b4b |
-| Docs/closeout | same commit unless split |
-| Final canonical origin tip | 29c5abbefb0b6da289320a08bca5a133cd350b4b |
+| Implementation commit | `29c5abbefb0b6da289320a08bca5a133cd350b4b` |
+| Docs/closeout | `4d2f85b3c89d316782a6f4c5e95872e942e8600f` |
+| Final canonical origin tip | `4d2f85b3c89d316782a6f4c5e95872e942e8600f` |
 
 ## 3. Fresh production intake
 
