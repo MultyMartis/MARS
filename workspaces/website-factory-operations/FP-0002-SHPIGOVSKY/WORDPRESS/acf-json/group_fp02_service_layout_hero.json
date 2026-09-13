@@ -156,7 +156,7 @@
             "name": "service_child_services_heading",
             "aria-label": "",
             "type": "text",
-            "instructions": "Если пусто — используется «Направления внутри услуги».",
+            "instructions": "Если пусто — используется «Состояния, которые мы лечим».",
             "required": 0,
             "conditional_logic": [
                 [
@@ -173,7 +173,7 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "Направления внутри услуги"
+            "placeholder": "Состояния, которые мы лечим"
         },
         {
             "key": "field_fp02_service_category_section_lead",
@@ -300,5 +300,5 @@
     "active": true,
     "description": "FP-0002 V9-06E46-FIX01: service layout (role\/template) + hub\/catalog flags. Hero separated to group_fp02_service_hero.",
     "show_in_rest": 0,
-    "modified": 1784040457
+    "modified": 1789314363
 }

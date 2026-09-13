@@ -2,7 +2,8 @@
 /**
  * Template part: service/child-services.php
  *
- * Tile grid of direct child services — shown before FAQ on service stack.
+ * Adaptive tile grid of direct child services — shown before FAQ on service stack.
+ * Featured card (optional): first child in canonical order with a valid service-owned image.
  *
  * @package Shpigovsky
  */
@@ -25,6 +26,57 @@ if ( empty( $children ) ) {
 
 $heading    = shpigovsky_get_service_child_services_heading( $post_id );
 $heading_id = 'service-child-services-heading';
+
+$cards = array();
+
+foreach ( $children as $child ) {
+	if ( ! $child instanceof WP_Post ) {
+		continue;
+	}
+
+	$title = get_the_title( $child );
+	$url   = get_permalink( $child );
+	$text  = '';
+
+	if ( function_exists( 'shpigovsky_get_service_mini_description' ) ) {
+		$text = shpigovsky_get_service_mini_description( $child->ID );
+	} else {
+		$text = shpigovsky_get_service_field( $child->ID, 'service_short_description' );
+		$text = is_string( $text ) ? trim( $text ) : '';
+	}
+
+	$image = shpigovsky_get_service_child_card_image_url( $child->ID );
+
+	if ( '' === $title || ! is_string( $url ) || '' === $url ) {
+		continue;
+	}
+
+	$cards[] = array(
+		'title' => $title,
+		'url'   => $url,
+		'text'  => is_string( $text ) ? trim( $text ) : '',
+		'image' => is_string( $image ) ? $image : '',
+	);
+}
+
+if ( empty( $cards ) ) {
+	return;
+}
+
+$featured_index = null;
+
+foreach ( $cards as $index => $card ) {
+	if ( '' !== $card['image'] ) {
+		$featured_index = $index;
+		break;
+	}
+}
+
+$grid_classes = array( 'service-child-services__grid' );
+
+if ( null !== $featured_index ) {
+	$grid_classes[] = 'service-child-services__grid--has-featured';
+}
 ?>
 <section
 	data-reveal
@@ -37,37 +89,38 @@ $heading_id = 'service-child-services-heading';
 			<?php echo esc_html( $heading ); ?>
 		</h2>
 
-		<div class="service-child-services__grid">
-			<?php foreach ( $children as $child ) : ?>
+		<div class="<?php echo esc_attr( implode( ' ', $grid_classes ) ); ?>">
+			<?php foreach ( $cards as $index => $card ) : ?>
 				<?php
-				if ( ! $child instanceof WP_Post ) {
-					continue;
+				$is_featured = ( null !== $featured_index && $index === $featured_index );
+				$has_image   = '' !== $card['image'];
+				$has_text    = '' !== $card['text'];
+
+				$card_classes = array( 'service-child-services__card' );
+
+				if ( $is_featured ) {
+					$card_classes[] = 'service-child-services__card--featured';
 				}
 
-				$title = get_the_title( $child );
-				$url   = get_permalink( $child );
-				$text  = '';
-
-				if ( function_exists( 'shpigovsky_get_service_mini_description' ) ) {
-					$text = shpigovsky_get_service_mini_description( $child->ID );
+				if ( $has_image ) {
+					$card_classes[] = 'service-child-services__card--has-image';
 				} else {
-					$text = shpigovsky_get_service_field( $child->ID, 'service_short_description' );
-					$text = is_string( $text ) ? trim( $text ) : '';
+					$card_classes[] = 'service-child-services__card--no-image';
 				}
 
-				$image = shpigovsky_get_service_child_card_image_url( $child->ID );
-
-				if ( '' === $title || ! is_string( $url ) || '' === $url ) {
-					continue;
+				if ( $has_text ) {
+					$card_classes[] = 'service-child-services__card--has-text';
+				} else {
+					$card_classes[] = 'service-child-services__card--compact';
 				}
 				?>
-				<article class="service-child-services__card">
-					<a class="service-child-services__card-link" href="<?php echo esc_url( $url ); ?>">
-						<?php if ( '' !== $image ) : ?>
+				<article class="<?php echo esc_attr( implode( ' ', $card_classes ) ); ?>">
+					<a class="service-child-services__card-link" href="<?php echo esc_url( $card['url'] ); ?>">
+						<?php if ( $has_image ) : ?>
 							<span class="service-child-services__card-media" aria-hidden="true">
 								<img
 									class="service-child-services__card-image"
-									src="<?php echo esc_url( $image ); ?>"
+									src="<?php echo esc_url( $card['image'] ); ?>"
 									alt=""
 									loading="lazy"
 									decoding="async"
@@ -75,9 +128,9 @@ $heading_id = 'service-child-services-heading';
 							</span>
 						<?php endif; ?>
 						<span class="service-child-services__card-body">
-							<span class="service-child-services__card-title"><?php echo esc_html( $title ); ?></span>
-							<?php if ( '' !== $text ) : ?>
-								<span class="service-child-services__card-text"><?php echo esc_html( $text ); ?></span>
+							<span class="service-child-services__card-title"><?php echo esc_html( $card['title'] ); ?></span>
+							<?php if ( $has_text ) : ?>
+								<span class="service-child-services__card-text"><?php echo esc_html( $card['text'] ); ?></span>
 							<?php endif; ?>
 						</span>
 					</a>

@@ -357,9 +357,9 @@ final class FieldGroups implements ModuleInterface {
 					'service_child_services_heading',
 					'text',
 					array(
-						'instructions'      => __( 'Если пусто — используется «Направления внутри услуги».', 'shpigovsky-core' ),
+						'instructions'      => __( 'Если пусто — используется «Состояния, которые мы лечим».', 'shpigovsky-core' ),
 						'default_value'     => '',
-						'placeholder'       => __( 'Направления внутри услуги', 'shpigovsky-core' ),
+						'placeholder'       => __( 'Состояния, которые мы лечим', 'shpigovsky-core' ),
 						'conditional_logic' => array(
 							array(
 								array(

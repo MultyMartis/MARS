@@ -474,7 +474,7 @@ function shpigovsky_get_service_child_services_heading( $post_id ) {
 		return $heading;
 	}
 
-	return __( 'Направления внутри услуги', 'shpigovsky' );
+	return __( 'Состояния, которые мы лечим', 'shpigovsky' );
 }
 
 /**

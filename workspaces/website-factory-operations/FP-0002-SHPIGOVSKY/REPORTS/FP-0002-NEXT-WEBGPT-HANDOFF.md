@@ -6,8 +6,9 @@ Compact current-ops brief for the next Web-GPT / Cursor agent. Historical wave d
 - name: **FP-0002 / Шпиговский**
 - production: `https://shpigovsky.ru/`
 - phase: **PRODUCTION / MAINTENANCE — STABLE**
-- latest production core: **`0.3.32-blog-hub-announcement-01`**
-- this file: knowledge + workspace closeout (docs/Git only; **no production mutation**)
+- latest production core: **`0.3.32-blog-hub-announcement-01`** (child-cards wave did not bump core)
+- latest UI maintenance: service child-cards adaptive layout LIVE — report `REPORT-FP-0002-SERVICE-CHILD-CARDS-ADAPTIVE-LAYOUT-01.md`
+- this file: current-ops handoff after child-cards adaptive layout wave
 
 ## Fetch-current-origin rule
 
@@ -48,6 +49,7 @@ Do not reuse completed FP-0002 wave worktrees. Do not implement from a dirty sha
 - Schema.org: one owner `structured-data.schema-org`; Yandex-oriented JSON-LD `@graph`; truthful types (`MedicalClinic`, branches, WebPage/ContactPage/CollectionPage/Service/Person/Article, ItemList, BreadcrumbList where appropriate); **no** fake Product/Offer/ratings/Physician; no manual JSON-LD UI; authenticated Yandex validator **not yet evidenced**
 - Contacts maps: **full Yandex Constructor code** remains Admin input; map render restored; per-row scroll toggle; default/legacy = **false**; frontend normalization; **no global unsafe script allowance**
 - Blog Hub: dedicated `article_hub_announcement` (`Анонс статьи для хаба`) → `get_the_excerpt()` fallback; `article_lead` remains article **hero** owner; SEO/OG/Schema descriptions remain separate; native Excerpt is legacy fallback only
+- Service child tiles (service-role stack): scoped adaptive grid; default heading **`Состояния, которые мы лечим`** when ACF `service_child_services_heading` empty; optional deterministic featured image card = first child with service-owned image
 - forms / SMTP / native anti-spam / privacy / consent-gated Metrika: **ACTIVE** as previously accepted
 - P18G indexing guard + watchdog: **ACTIVE**
 
@@ -66,11 +68,13 @@ See `REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md`. Remaining items are 
 - open items: `REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md`
 - robots runbook: `DOCS/OPERATIONS-INDEXING-ROBOTS-OWNERSHIP-v1.md`
 - 2026-08-24 snapshot baseline (not current core): `REPORTS/BASELINE-FP-0002-PRODUCTION-MAINTENANCE-STABLE.md`
-- this closeout: `REPORTS/REPORT-FP-0002-KNOWLEDGE-PROMOTION-FINAL-WORKSPACE-CLOSEOUT-01.md`
+- child-cards layout: `REPORTS/REPORT-FP-0002-SERVICE-CHILD-CARDS-ADAPTIVE-LAYOUT-01.md`
+- prior knowledge closeout: `REPORTS/REPORT-FP-0002-KNOWLEDGE-PROMOTION-FINAL-WORKSPACE-CLOSEOUT-01.md`
 
 ## Current Git recovery point (historical-at-write; fetch first)
 
 - branch: `origin/mars/canonical-post-recovery`
+- child-cards adaptive layout: *(filled after push — fetch origin)*
 - blog hub implementation: `074777b544e810d7ab9894987fd1983d1c6afab1`
 - blog hub SHA-recording follow-up (closes `CLOSEOUT_PENDING` in that report): `33d13bed6e4686809ac23ddd463ca4eae62f68df`
 - knowledge/workspace closeout: `55ee8ba8fc4bf6ca469f9f09038502af48839e3e` (SHA-recording follow-up is a later tip — fetch origin)
@@ -89,7 +93,8 @@ See `REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md`. Remaining items are 
 
 1. this handoff
 2. `PROJECT-STATUS.md`
-3. `REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md`
-4. wave report **only** if the new task touches that subsystem
+3. `REPORTS/REPORT-FP-0002-SERVICE-CHILD-CARDS-ADAPTIVE-LAYOUT-01.md` (if touching service child tiles)
+4. `REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md`
+5. wave report **only** if the new task touches that subsystem
 
 Historical P07–P18 and V9 reports remain in `REPORTS/` / `WORDPRESS/`. Do not replay them for normal maintenance.
