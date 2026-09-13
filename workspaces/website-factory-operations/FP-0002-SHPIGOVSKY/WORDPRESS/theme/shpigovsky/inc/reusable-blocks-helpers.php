@@ -1213,3 +1213,53 @@ function shpigovsky_get_rehab_requirements_cta_phone() {
 		'href'    => $href,
 	);
 }
+
+/**
+ * ACF options context for reusable service approach cards.
+ *
+ * Owner: Настройки сайта → Подход к лечению — карточки
+ * Storage post_id: fp02-block-approach-cards
+ *
+ * @return string
+ */
+function shpigovsky_get_approach_cards_block_context() {
+	return 'fp02-block-approach-cards';
+}
+
+/**
+ * Load reusable/global approach cards (title/text).
+ *
+ * @return array<int, array{title:string,text:string}>
+ */
+function shpigovsky_get_reusable_approach_cards() {
+	$rows = array();
+
+	if ( function_exists( 'get_field' ) ) {
+		$candidate = get_field( 'reusable_approach_cards', shpigovsky_get_approach_cards_block_context() );
+		if ( is_array( $candidate ) && ! empty( $candidate ) ) {
+			$rows = $candidate;
+		}
+	}
+
+	if ( empty( $rows ) ) {
+		return array();
+	}
+
+	$out = array();
+	foreach ( $rows as $row ) {
+		if ( ! is_array( $row ) ) {
+			continue;
+		}
+		$title = isset( $row['title'] ) ? trim( (string) $row['title'] ) : '';
+		$text  = isset( $row['text'] ) ? trim( (string) $row['text'] ) : '';
+		if ( '' === $title && '' === $text ) {
+			continue;
+		}
+		$out[] = array(
+			'title' => $title,
+			'text'  => $text,
+		);
+	}
+
+	return $out;
+}

@@ -710,6 +710,8 @@ function shpigovsky_sanitize_approach_card_text( $title, $text ) {
  * Canonical Admin SoT: ACF repeater `section_approach_cards`.
  * Recovers broken count / 1-based orphan rows / accidental serialized blobs.
  *
+ * Does NOT apply reusable fallback — use shpigovsky_get_effective_service_approach_cards().
+ *
  * @param int $post_id Service ID.
  * @return array<int, array{title:string,text:string}>
  */
@@ -763,6 +765,115 @@ function shpigovsky_get_section_approach_cards( $post_id ) {
 	}
 
 	return $out;
+}
+
+/**
+ * Normalize raw approach-card rows (title/text) for service-general path.
+ *
+ * @param mixed $rows Raw repeater rows.
+ * @return array<int, array{title:string,text:string}>
+ */
+function shpigovsky_normalize_approach_card_rows( $rows ) {
+	$cards = array();
+
+	if ( ! is_array( $rows ) || empty( $rows ) ) {
+		return $cards;
+	}
+
+	if ( function_exists( 'shpigovsky_has_meaningful_repeater_rows' ) && ! shpigovsky_has_meaningful_repeater_rows( $rows, array( 'title', 'text' ) ) ) {
+		return $cards;
+	}
+
+	foreach ( $rows as $row ) {
+		if ( ! is_array( $row ) ) {
+			continue;
+		}
+		$title = isset( $row['title'] ) ? trim( (string) $row['title'] ) : '';
+		$text  = isset( $row['text'] ) ? trim( (string) $row['text'] ) : '';
+		if ( '' === $title && '' === $text ) {
+			continue;
+		}
+		$cards[] = array(
+			'title' => $title,
+			'text'  => function_exists( 'shpigovsky_sanitize_approach_card_text' )
+				? shpigovsky_sanitize_approach_card_text( $title, $text )
+				: $text,
+		);
+	}
+
+	return $cards;
+}
+
+/**
+ * Card-level resolver for service approach cards.
+ *
+ * Precedence (visibility toggle owned by caller / section gate):
+ * - local cards non-empty → local exactly
+ * - local empty → reusable/global approach cards
+ *
+ * Does not rewrite local meta. Does not force whole-section global ownership.
+ *
+ * @param int    $post_id Service ID.
+ * @param string $scope   `section` (Раздел) or `general` (Услуга).
+ * @return array{cards:array<int, array{title:string,text:string}>,source:string}
+ */
+function shpigovsky_get_effective_service_approach_cards( $post_id, $scope = 'section' ) {
+	$post_id = absint( $post_id );
+	$scope   = ( 'general' === $scope ) ? 'general' : 'section';
+	$local   = array();
+
+	if ( 'section' === $scope ) {
+		$local = shpigovsky_get_section_approach_cards( $post_id );
+	} else {
+		$raw   = function_exists( 'shpigovsky_get_general_field_raw' )
+			? shpigovsky_get_general_field_raw( $post_id, 'service_general_approach_cards' )
+			: null;
+		$local = shpigovsky_normalize_approach_card_rows( $raw );
+
+		if ( empty( $local ) ) {
+			// Orphan recovery for service-general repeater meta.
+			$found = array();
+			for ( $i = 0; $i <= 6; $i++ ) {
+				$title = get_post_meta( $post_id, 'service_general_approach_cards_' . $i . '_title', true );
+				$text  = get_post_meta( $post_id, 'service_general_approach_cards_' . $i . '_text', true );
+				$title = is_string( $title ) ? trim( $title ) : '';
+				$text  = is_string( $text ) ? trim( $text ) : '';
+				if ( '' === $title && '' === $text ) {
+					continue;
+				}
+				$found[] = array(
+					'title' => $title,
+					'text'  => function_exists( 'shpigovsky_sanitize_approach_card_text' )
+						? shpigovsky_sanitize_approach_card_text( $title, $text )
+						: $text,
+				);
+			}
+			$local = $found;
+		}
+	}
+
+	if ( ! empty( $local ) ) {
+		return array(
+			'cards'  => $local,
+			'source' => 'local',
+		);
+	}
+
+	$reusable = function_exists( 'shpigovsky_get_reusable_approach_cards' )
+		? shpigovsky_get_reusable_approach_cards()
+		: array();
+
+	if ( ! empty( $reusable ) ) {
+		return array(
+			'cards'  => $reusable,
+			'source' => 'reusable',
+		);
+	}
+
+	return array(
+		'cards'  => array(),
+		'source' => 'none',
+	);
 }
 
 /**

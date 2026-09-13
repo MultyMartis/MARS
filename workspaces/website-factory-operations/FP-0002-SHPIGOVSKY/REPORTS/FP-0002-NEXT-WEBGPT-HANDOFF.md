@@ -6,7 +6,7 @@
 - phase: **PRODUCTION / MAINTENANCE — STABLE**
 
 ## Current Production State
-- runtime/core: WordPress; recent maintenance includes stages reusable-fallback repair (2026-09-14)
+- runtime/core: WordPress; recent maintenance includes approach-cards reusable fallback (2026-09-14) after stages reusable-fallback repair
 - structured data: **JSON-LD LIVE** — `shpigovsky-core` module `structured-data.schema-org`
 - open graph: **LIVE** — `shpigovsky-core` module `open-graph.meta`
 - specialists hub: Page `#1030` `/specialisty/` uses `Specialists Hub` template
@@ -23,6 +23,24 @@
   - `assets/css/service-child-services.css`
 - **DO NOT** overwrite from origin, delete worktree/branch, or fold into unrelated commits until separately approved.
 
+## Service approach cards / reusable-block precedence (MANDATORY)
+Applies to subdivision Admin block **«7. Наш подход к лечению» → Карточки подхода** (`section_approach_cards`) and service-general cards (`service_general_approach_cards`):
+
+```text
+OFF  → hide approach block entirely (no reusable fallback)
+ON + LOCAL CARDS → local cards exactly
+ON + LOCAL CARDS EMPTY → reusable approach cards
+  (Настройки сайта → Подход к лечению — карточки / fp02-block-approach-cards)
+
+LOCAL EDITORIAL VALUES ARE NEVER AUTOMATICALLY OVERWRITTEN BY GLOBAL DEFAULTS.
+```
+
+- Resolver: `shpigovsky_get_effective_service_approach_cards( $post_id, 'section'|'general' )`
+- Reusable helper: `shpigovsky_get_reusable_approach_cards()`
+- Do **not** bulk-copy reusable cards into local service meta
+- Placeholder layout (Заглушка): Admin may still show approach fields, but FE stack does not render approach — change layout to Раздел/Услуга if FE approach is required
+- Report: `REPORTS/REPORT-FP-0002-SERVICE-APPROACH-CARDS-RENDER-REUSABLE-FALLBACK-01.md`
+
 ## Service stages / reusable-block precedence (MANDATORY)
 Applies to subdivision Admin block **«6. Этапы / что нужно для лечения»** (`section_stages_*`) and service-general stages (`service_general_stages_*`):
 
@@ -38,7 +56,6 @@ ON + local empty → reusable Comfort Requirements
 - Do **not** “fix” empty services by duplicating reusable copy into local ACF
 - Genotyping fixture: `#1889` `/uslugi/genotipirovenie/` (slug spelling `genotipirovenie`); keep local empty to exercise fallback
 - Report: `REPORTS/REPORT-FP-0002-SERVICE-STAGES-REUSABLE-BLOCK-FALLBACK-REPAIR-01.md`
-
 ## Authority Rules
 - canonical Git truth: `origin/mars/canonical-post-recovery`
 - production DB/editorial truth: current production admin/editorial state
@@ -77,6 +94,7 @@ fresh intake → bounded task → exact deploy → validation → parity check �
 
 ## Where To Read First
 1. `PROJECT-STATUS.md`
-2. `REPORTS/REPORT-FP-0002-SERVICE-STAGES-REUSABLE-BLOCK-FALLBACK-REPAIR-01.md`
-3. `REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md`
-4. `REPORTS/BASELINE-FP-0002-PRODUCTION-MAINTENANCE-STABLE.md`
+2. `REPORTS/REPORT-FP-0002-SERVICE-APPROACH-CARDS-RENDER-REUSABLE-FALLBACK-01.md`
+3. `REPORTS/REPORT-FP-0002-SERVICE-STAGES-REUSABLE-BLOCK-FALLBACK-REPAIR-01.md`
+4. `REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md`
+5. `REPORTS/BASELINE-FP-0002-PRODUCTION-MAINTENANCE-STABLE.md`

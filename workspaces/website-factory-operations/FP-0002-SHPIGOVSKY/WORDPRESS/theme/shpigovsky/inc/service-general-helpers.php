@@ -291,10 +291,13 @@ function shpigovsky_get_general_signs_copy( $post_id ) {
 }
 
 /**
- * Approach copy from ACF; alcohol emergency if empty on alcohol page.
+ * Approach copy from ACF; card-level reusable fallback; alcohol emergency if still empty.
+ *
+ * Visibility toggle (service_general_approach_visible) is owned by the template caller:
+ * OFF → do not call / render nothing; ON → resolve best available card source.
  *
  * @param int $post_id Service ID.
- * @return array{heading:string,highlight:string,intro:string,cards:array<int,array{title:string,text:string}>,more_label:string,more_url:string}|null
+ * @return array{heading:string,highlight:string,intro:string,cards:array<int,array{title:string,text:string}>,more_label:string,more_url:string,cards_source?:string}|null
  */
 function shpigovsky_get_general_approach_copy( $post_id ) {
 	$demo = function_exists( 'shpigovsky_get_v9_alcohol_leaf_approach_copy' )
@@ -306,52 +309,54 @@ function shpigovsky_get_general_approach_copy( $post_id ) {
 			'cards'     => array(),
 		);
 
-	$heading   = shpigovsky_get_general_field( $post_id, 'service_general_approach_heading' );
-	$highlight = shpigovsky_get_general_field( $post_id, 'service_general_approach_highlight' );
-	$intro     = shpigovsky_get_general_field( $post_id, 'service_general_approach_intro' );
+	$heading    = shpigovsky_get_general_field( $post_id, 'service_general_approach_heading' );
+	$highlight  = shpigovsky_get_general_field( $post_id, 'service_general_approach_highlight' );
+	$intro      = shpigovsky_get_general_field( $post_id, 'service_general_approach_intro' );
 	$more_label = shpigovsky_get_general_field( $post_id, 'service_general_approach_more_label' );
 	$more_url   = shpigovsky_get_general_field( $post_id, 'service_general_approach_more_url' );
-	$rows       = shpigovsky_get_general_field_raw( $post_id, 'service_general_approach_cards' );
-	$cards      = array();
 
-	if ( is_array( $rows ) && function_exists( 'shpigovsky_has_meaningful_repeater_rows' ) && shpigovsky_has_meaningful_repeater_rows( $rows, array( 'title', 'text' ) ) ) {
-		foreach ( $rows as $row ) {
-			if ( ! is_array( $row ) ) {
-				continue;
-			}
-			$title = isset( $row['title'] ) ? trim( (string) $row['title'] ) : '';
-			$text  = isset( $row['text'] ) ? trim( (string) $row['text'] ) : '';
-			if ( '' === $title && '' === $text ) {
-				continue;
-			}
-			$cards[] = array(
-				'title' => $title,
-				'text'  => function_exists( 'shpigovsky_sanitize_approach_card_text' )
-					? shpigovsky_sanitize_approach_card_text( $title, $text )
-					: $text,
-			);
-		}
-	}
+	$resolved = function_exists( 'shpigovsky_get_effective_service_approach_cards' )
+		? shpigovsky_get_effective_service_approach_cards( $post_id, 'general' )
+		: array(
+			'cards'  => array(),
+			'source' => 'none',
+		);
+	$cards        = isset( $resolved['cards'] ) && is_array( $resolved['cards'] ) ? $resolved['cards'] : array();
+	$cards_source = isset( $resolved['source'] ) ? (string) $resolved['source'] : 'none';
 
-	$has_acf = '' !== $heading || '' !== $highlight || '' !== $intro || ! empty( $cards );
+	$has_local_chrome = '' !== $heading || '' !== $highlight || '' !== $intro || 'local' === $cards_source;
+	$is_alcohol       = function_exists( 'shpigovsky_is_known_alcohol_service_page' ) && shpigovsky_is_known_alcohol_service_page( $post_id );
 
-	if ( ! $has_acf ) {
-		if ( function_exists( 'shpigovsky_is_known_alcohol_service_page' ) && shpigovsky_is_known_alcohol_service_page( $post_id ) ) {
-			$demo['more_label'] = __( 'подробнее', 'shpigovsky' );
-			$demo['more_url']   = home_url( '/o-centre/programma-lecheniya/' );
+	if ( ! $has_local_chrome && empty( $cards ) ) {
+		if ( $is_alcohol ) {
+			$demo['more_label']   = __( 'подробнее', 'shpigovsky' );
+			$demo['more_url']     = home_url( '/o-centre/programma-lecheniya/' );
+			$demo['cards_source'] = 'emergency';
 			return $demo;
 		}
 
 		return null;
 	}
 
+	if ( empty( $cards ) && $is_alcohol && isset( $demo['cards'] ) && is_array( $demo['cards'] ) ) {
+		$cards        = $demo['cards'];
+		$cards_source = 'emergency';
+	}
+
+	if ( empty( $cards ) && ! $has_local_chrome ) {
+		return null;
+	}
+
+	$fill_demo = $has_local_chrome || $is_alcohol;
+
 	return array(
-		'heading'    => '' !== $heading ? $heading : (string) ( $demo['heading'] ?? '' ),
-		'highlight'  => '' !== $highlight ? $highlight : (string) ( $demo['highlight'] ?? '' ),
-		'intro'      => '' !== $intro ? $intro : (string) ( $demo['intro'] ?? '' ),
-		'cards'      => ! empty( $cards ) ? $cards : ( isset( $demo['cards'] ) && is_array( $demo['cards'] ) ? $demo['cards'] : array() ),
-		'more_label' => '' !== $more_label ? $more_label : __( 'подробнее', 'shpigovsky' ),
-		'more_url'   => '' !== $more_url ? $more_url : home_url( '/o-centre/programma-lecheniya/' ),
+		'heading'      => '' !== $heading ? $heading : ( $fill_demo ? (string) ( $demo['heading'] ?? '' ) : '' ),
+		'highlight'    => '' !== $highlight ? $highlight : ( $fill_demo ? (string) ( $demo['highlight'] ?? '' ) : '' ),
+		'intro'        => '' !== $intro ? $intro : ( $fill_demo ? (string) ( $demo['intro'] ?? '' ) : '' ),
+		'cards'        => $cards,
+		'more_label'   => '' !== $more_label ? $more_label : __( 'подробнее', 'shpigovsky' ),
+		'more_url'     => '' !== $more_url ? $more_url : home_url( '/o-centre/programma-lecheniya/' ),
+		'cards_source' => $cards_source,
 	);
 }
 

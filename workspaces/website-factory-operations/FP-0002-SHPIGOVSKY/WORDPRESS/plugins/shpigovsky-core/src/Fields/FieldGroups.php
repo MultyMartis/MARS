@@ -210,6 +210,7 @@ final class FieldGroups implements ModuleInterface {
 			self::block_comfort_intro(),
 			self::block_comfort_gallery(),
 			self::block_comfort_requirements(),
+			self::block_approach_cards(),
 		);
 	}
 
@@ -3849,6 +3850,49 @@ final class FieldGroups implements ModuleInterface {
 				self::field( 'field_fp02_rehab_requirements_photo_height', 'Требования — высота фото', 'rehab_requirements_photo_height', 'number', array( 'min' => 0 ) ),
 			),
 			self::location( 'options_page', '==', 'fp02-block-comfort-requirements' )
+		);
+	}
+
+	/**
+	 * Reusable block — service approach cards (card-level fallback for service pages).
+	 *
+	 * Owner: Настройки сайта → Подход к лечению — карточки
+	 * Storage: fp02-block-approach-cards
+	 *
+	 * @return array<string, mixed>
+	 */
+	private static function block_approach_cards() {
+		return self::group(
+			'group_fp02_block_approach_cards',
+			'Reusable Block — Approach Cards',
+			array(
+				self::field(
+					'field_fp02_reusable_approach_cards_notice',
+					'Подход к лечению — карточки',
+					'reusable_approach_cards_notice',
+					'message',
+					array(
+						'message' => 'Используются на страницах услуг, где блок «Наш подход» включён, но локальные карточки подхода не заполнены. Локальные карточки на странице услуги, если заполнены, всегда имеют приоритет и не перезаписываются этими значениями.',
+					)
+				),
+				self::repeater(
+					'field_fp02_reusable_approach_cards',
+					'Карточки подхода',
+					'reusable_approach_cards',
+					6,
+					array(
+						self::field( 'field_fp02_reusable_approach_card_title', 'Заголовок', 'title', 'text' ),
+						self::field( 'field_fp02_reusable_approach_card_text', 'Текст', 'text', 'textarea', array( 'rows' => 3 ) ),
+					),
+					0,
+					array(
+						'instructions' => 'Короткий заголовок и один абзац на карточку. Без медицинских гарантий и без SEO-набивки. До 6 карточек.',
+						'layout'       => 'row',
+						'button_label' => 'Добавить карточку',
+					)
+				),
+			),
+			self::location( 'options_page', '==', 'fp02-block-approach-cards' )
 		);
 	}
 

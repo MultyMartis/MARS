@@ -61,6 +61,11 @@ final class OptionsPage implements ModuleInterface {
 	public const COMFORT_REQUIREMENTS_SLUG  = 'fp02-block-comfort-requirements';
 
 	/**
+	 * Reusable approach cards options slug / ACF storage post_id.
+	 */
+	public const APPROACH_CARDS_SLUG = 'fp02-block-approach-cards';
+
+	/**
 	 * {@inheritdoc}
 	 */
 	public static function id() {
@@ -270,6 +275,11 @@ final class OptionsPage implements ModuleInterface {
 				'post_id'    => self::COMFORT_STORAGE_POST_ID,
 			),
 			array(
+				'menu_title' => __( 'Подход к лечению — карточки', 'shpigovsky-core' ),
+				'menu_slug'  => self::APPROACH_CARDS_SLUG,
+				'post_id'    => self::APPROACH_CARDS_SLUG,
+			),
+			array(
 				'menu_title' => __( 'Требования и преимущества', 'shpigovsky-core' ),
 				'menu_slug'  => 'fp02-block-advantages',
 			),
@@ -347,7 +357,8 @@ final class OptionsPage implements ModuleInterface {
 				'fp02-block-header',
 				'fp02-block-footer',
 			),
-			self::get_comfort_split_slugs()
+			self::get_comfort_split_slugs(),
+			array( self::APPROACH_CARDS_SLUG )
 		);
 	}
 

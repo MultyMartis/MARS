@@ -74,9 +74,15 @@ $staff = function_exists( 'shpigovsky_section_image_or_asset_prefer' )
 		443
 	);
 
-$cards = function_exists( 'shpigovsky_get_section_approach_cards' )
-	? shpigovsky_get_section_approach_cards( $post_id )
-	: shpigovsky_section_normalize_title_text_rows( shpigovsky_get_section_field_raw( $post_id, 'section_approach_cards' ) );
+$resolved = function_exists( 'shpigovsky_get_effective_service_approach_cards' )
+	? shpigovsky_get_effective_service_approach_cards( $post_id, 'section' )
+	: array(
+		'cards'  => function_exists( 'shpigovsky_get_section_approach_cards' )
+			? shpigovsky_get_section_approach_cards( $post_id )
+			: shpigovsky_section_normalize_title_text_rows( shpigovsky_get_section_field_raw( $post_id, 'section_approach_cards' ) ),
+		'source' => 'local',
+	);
+$cards = isset( $resolved['cards'] ) && is_array( $resolved['cards'] ) ? $resolved['cards'] : array();
 ?>
 <section data-reveal class="service-subdivision-team-stats-v1" id="service-subdivision-approach" aria-labelledby="service-subdivision-approach-heading">
 	<div class="container service-subdivision-team-stats-v1__container">
