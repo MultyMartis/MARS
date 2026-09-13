@@ -201,7 +201,11 @@ Exact deployed files MATCH worktree source (SHA):
 
 ## 18. Git
 
-Selective commit of this repair only (see closeout). Pending multi-image files **not** staged.
+- Commit: `39e9cd4e1bf930e5858ea0e9665e23e8b5a0cb7c`
+- Pushed to: `origin/mars/canonical-post-recovery`
+- Message: `fix(fp0002): restore stages reusable Comfort Requirements fallback`
+- Staged paths: this repair’s theme/plugin files + report/handoff/PROJECT-STATUS + evidence JSON/PNG only
+- Pending multi-image files **not** staged
 
 ---
 
