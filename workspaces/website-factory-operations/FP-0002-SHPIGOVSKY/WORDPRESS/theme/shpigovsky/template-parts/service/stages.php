@@ -2,7 +2,8 @@
 /**
  * Template part: service/stages.php
  *
- * Subdivision stages: ACF SoT (V9-06E50). No normal hardcoded demo inject when empty.
+ * Subdivision stages: local section ACF → reusable Comfort Requirements fallback.
+ * Leaf stages: legacy Structured Sections repeater (unchanged).
  *
  * @package Shpigovsky
  */
@@ -36,40 +37,30 @@ if ( 'subdivision' === $variant ) {
 	$support_wrap  = '';
 }
 
-if ( 'subdivision' === $variant ) {
-	$stages = shpigovsky_get_section_stages_items( $post_id );
-} elseif ( empty( $stages ) ) {
-	return;
-}
-
 $stages_heading  = '';
 $stages_lead     = '';
 $support_heading = '';
 $support_items   = array();
 
 if ( 'subdivision' === $variant ) {
-	$stages_heading  = shpigovsky_section_text( $post_id, 'section_stages_heading', '' );
-	$stages_lead     = shpigovsky_section_text( $post_id, 'section_stages_lead', '' );
-	$support_heading = shpigovsky_section_text( $post_id, 'section_stages_support_heading', '' );
+	$model = function_exists( 'shpigovsky_get_section_stages_copy' )
+		? shpigovsky_get_section_stages_copy( $post_id )
+		: null;
 
-	$support_rows = shpigovsky_get_section_field_raw( $post_id, 'section_stages_support_items' );
-	if ( is_array( $support_rows ) && ! empty( $support_rows ) ) {
-		foreach ( $support_rows as $row ) {
-			if ( ! is_array( $row ) ) {
-				continue;
-			}
-			$text = isset( $row['text'] ) ? trim( (string) $row['text'] ) : '';
-			if ( '' !== $text ) {
-				$support_items[] = $text;
-			}
-		}
+	if ( ! is_array( $model ) || ( empty( $model['steps'] ) && '' === (string) ( $model['heading'] ?? '' ) && '' === (string) ( $model['lead'] ?? '' ) ) ) {
+		return;
 	}
-} else {
-	$stages_heading = __( 'Что нужно для прохождения реабилитации и лечения', 'shpigovsky' );
-}
 
-if ( 'subdivision' === $variant && empty( $stages ) && '' === $stages_heading && '' === $stages_lead ) {
-	return;
+	$stages_heading  = isset( $model['heading'] ) ? (string) $model['heading'] : '';
+	$stages_lead     = isset( $model['lead'] ) ? (string) $model['lead'] : '';
+	$support_heading = isset( $model['support_heading'] ) ? (string) $model['support_heading'] : '';
+	$stages          = isset( $model['steps'] ) && is_array( $model['steps'] ) ? $model['steps'] : array();
+	$support_items   = isset( $model['support_items'] ) && is_array( $model['support_items'] ) ? $model['support_items'] : array();
+} else {
+	if ( empty( $stages ) ) {
+		return;
+	}
+	$stages_heading = __( 'Что нужно для прохождения реабилитации и лечения', 'shpigovsky' );
 }
 ?>
 <section data-reveal class="<?php echo esc_attr( $section_class ); ?>" id="<?php echo esc_attr( $section_id ); ?>" aria-labelledby="<?php echo esc_attr( $heading_id ); ?>">

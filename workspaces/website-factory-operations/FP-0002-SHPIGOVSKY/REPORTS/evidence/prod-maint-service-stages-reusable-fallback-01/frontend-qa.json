@@ -1,0 +1,49 @@
+{
+  "ts": "2026-09-13T18:29:11.946947+00:00",
+  "pages": {
+    "genotipirovenie": {
+      "url": "https://shpigovsky.ru/uslugi/genotipirovenie/",
+      "status": 200,
+      "markers": {
+        "has_service_leaf_start": false,
+        "has_heading_requirements": false,
+        "has_step_contact": false,
+        "has_support": false,
+        "count_service_leaf_start": 0,
+        "robots_meta": [
+          "<meta name='robots' content='max-image-preview:large' />"
+        ],
+        "og_title": [
+          "<meta property=\"og:title\" content=\"Анализ особенностей системы регуляции настроения — Шпиговский Дом\" />"
+        ],
+        "schema_graph": true
+      },
+      "snippet": "",
+      "sha256": "302360b5ec8ad2712a36f3d38763bdb44b44e7923f1eaf85f1d26743cba98f0e"
+    },
+    "home": {
+      "url": "https://shpigovsky.ru/",
+      "status": 200,
+      "markers": {
+        "has_service_leaf_start": false,
+        "has_heading_requirements": false,
+        "has_step_contact": true,
+        "has_support": true,
+        "count_service_leaf_start": 0,
+        "robots_meta": [
+          "<meta name='robots' content='max-image-preview:large' />"
+        ],
+        "og_title": [
+          "<meta property=\"og:title\" content=\"Центр профилактики и лечения зависимостей — Шпиговский Дом\" />"
+        ],
+        "schema_graph": true
+      },
+      "snippet": "",
+      "sha256": "ff771444cdce3140d6411b611ee8a30b6ef3e327e97d68881fa1ada8fbe7465e"
+    },
+    "alcohol": {
+      "url": "https://shpigovsky.ru/uslugi/zavisimosti/lechenie-alkogolnoj-zavisimosti/",
+      "error": "HTTP Error 404: Not Found"
+    }
+  }
+}

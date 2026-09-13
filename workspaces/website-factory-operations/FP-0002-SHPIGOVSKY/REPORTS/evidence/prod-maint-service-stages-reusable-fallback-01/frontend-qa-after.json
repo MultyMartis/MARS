@@ -1,0 +1,52 @@
+{
+  "geno": {
+    "status": 200,
+    "subdivision_stages_id": true,
+    "leaf_stages_id": false,
+    "heading": true,
+    "step_goals": true,
+    "support": true,
+    "count_subdivision": 10,
+    "count_leaf": 0,
+    "robots_meta": [
+      "<meta name='robots' content='max-image-preview:large' />"
+    ],
+    "og": 10,
+    "schema": true
+  },
+  "alcohol": {
+    "status": 200,
+    "subdivision_stages_id": false,
+    "leaf_stages_id": true,
+    "heading": true,
+    "step_goals": true,
+    "support": true,
+    "count_subdivision": 0,
+    "count_leaf": 4,
+    "robots_meta": [
+      "<meta name='robots' content='max-image-preview:large' />"
+    ],
+    "og": 9,
+    "schema": true
+  },
+  "home": {
+    "status": 200,
+    "subdivision_stages_id": false,
+    "leaf_stages_id": false,
+    "heading": true,
+    "step_goals": true,
+    "support": true,
+    "count_subdivision": 0,
+    "count_leaf": 0,
+    "robots_meta": [
+      "<meta name='robots' content='max-image-preview:large' />"
+    ],
+    "og": 10,
+    "schema": true
+  },
+  "robots": {
+    "status": 200,
+    "head": "User-agent: Yandex\nAllow: /wp-sitemap.xml\nAllow: */uploads\nAllow: /*/*.js\nAllow: /*/*.css\nAllow: /*/*.webp\nAllow: /*/*.woff\nAllow: /*/*.woff2\nAllow: /*/*.ttf\nAllow: /wp-*.png\nAllow: /wp-*.jpg\nAllow: /wp-*.jpeg\nAllow: /wp-*.gif\nAllow: /wp-*.svg\nAllow: /wp-admin/admin-ajax.php\nDisallow: /cgi-bin\nDisallow: /?\nDisallow: /wp/\nDisallow: *?s=\nDisallow: *&s=\nDisallow: /search/\nDisallow: /author/\nDisallow:",
+    "len": 2921
+  }
+}

@@ -1,100 +1,82 @@
 # FP-0002 — NEXT WEB-GPT HANDOFF
 
-Compact current-ops brief for the next Web-GPT / Cursor agent. Historical wave detail stays in `REPORTS/`. Do **not** dump chronology here.
-
 ## Project
 - name: **FP-0002 / Шпиговский**
-- production: `https://shpigovsky.ru/`
+- production domain: `https://shpigovsky.ru/`
 - phase: **PRODUCTION / MAINTENANCE — STABLE**
-- latest production core: **`0.3.32-blog-hub-announcement-01`** (child-cards wave did not bump core)
-- latest UI maintenance: service child-cards adaptive layout LIVE — report `REPORT-FP-0002-SERVICE-CHILD-CARDS-ADAPTIVE-LAYOUT-01.md`
-- this file: current-ops handoff after child-cards adaptive layout wave
 
-## Fetch-current-origin rule
+## Current Production State
+- runtime/core: WordPress; recent maintenance includes stages reusable-fallback repair (2026-09-14)
+- structured data: **JSON-LD LIVE** — `shpigovsky-core` module `structured-data.schema-org`
+- open graph: **LIVE** — `shpigovsky-core` module `open-graph.meta`
+- specialists hub: Page `#1030` `/specialisty/` uses `Specialists Hub` template
+- indexing: **OPEN — human-approved**; P18G guard active; watchdog active
+- robots: **Olya-approved robots policy active**; physical `/robots.txt` is editorial/SEO-owned
+- forms / SMTP / anti-spam / privacy / Metrika: active as previously established
 
-1. `git fetch origin mars/canonical-post-recovery`
-2. Record **current** `origin/mars/canonical-post-recovery` full SHA
-3. Do **not** treat any SHA in this file as a permanent recovery authority
-4. Shared main `X:\AI MARS` may hold **FOREIGN WIP** — never clean/reset/stash/checkout-over it
+## Critical active pending wave (NOT this repair)
+- **FP-0002 SERVICE CHILD-CARDS MULTI-IMAGE ADAPTIVE COMPOSITION 02**
+- worktree: `X:\AI MARS STORAGE\worktrees\fp0002-service-child-cards-multi-image-02`
+- branch: `wave/fp0002-service-child-cards-multi-image-02`
+- uncommitted production delta still live in:
+  - `template-parts/service/child-services.php`
+  - `assets/css/service-child-services.css`
+- **DO NOT** overwrite from origin, delete worktree/branch, or fold into unrelated commits until separately approved.
 
-## Exact next-wave startup pattern
+## Service stages / reusable-block precedence (MANDATORY)
+Applies to subdivision Admin block **«6. Этапы / что нужно для лечения»** (`section_stages_*`) and service-general stages (`service_general_stages_*`):
 
 ```text
-CURRENT ORIGIN
-→ FRESH PRODUCTION TRUTH (read-only intake)
-→ CURRENT OLYA / ADMIN TRUTH
-→ NEW CLEAN WORKTREE from origin/mars/canonical-post-recovery
-→ bounded charter
+OFF  → hide block entirely (no reusable fallback)
+ON + local meaningful content → local service content wins
+ON + local empty → reusable Comfort Requirements
+                 (Настройки сайта → Повторяемые блоки → fp02-block-comfort-requirements)
 ```
 
-Do not reuse completed FP-0002 wave worktrees. Do not implement from a dirty shared main.
+- Reusable helpers: `rehab_requirements_*` via `shpigovsky_get_rehab_requirements_*`
+- Resolvers: `shpigovsky_get_section_stages_copy()`, `shpigovsky_get_general_stages_copy()`, bridge `shpigovsky_get_stages_copy_from_reusable_requirements()`
+- Do **not** “fix” empty services by duplicating reusable copy into local ACF
+- Genotyping fixture: `#1889` `/uslugi/genotipirovenie/` (slug spelling `genotipirovenie`); keep local empty to exercise fallback
+- Report: `REPORTS/REPORT-FP-0002-SERVICE-STAGES-REUSABLE-BLOCK-FALLBACK-REPAIR-01.md`
 
-## Current source / editorial / runtime truth model
+## Authority Rules
+- canonical Git truth: `origin/mars/canonical-post-recovery`
+- production DB/editorial truth: current production admin/editorial state
+- Olya robots truth: do not replace Olya robots with generic templates
+- human indexability: do not auto-close indexing; explicit human command only
+- dirty-main safety: no broad git cleanup on shared dirty main; future work should start from a fresh clean worktree
+- while multi-image delta is pending: origin alone is **not** complete live source truth for child-card files
 
-| Layer | Owner |
-|-------|--------|
-| Git source | `origin/mars/canonical-post-recovery` after fetch |
-| Editorial / Admin DB | **Olya and other legitimate Admin changes = production truth** — not “drift” by default |
-| Runtime files on host | last accepted deploy of current core |
-| Robots.txt | **Olya SEO policy**; hashes in reports are evidence only; live file always wins |
-| Indexing (`blog_public`) | **human-owned**; OPEN as of last accepted state; never a technical safety switch |
-
-## Current production baseline (compact)
-
-- specialists hub canonical: `https://shpigovsky.ru/specialisty/` (Page `#1030`, template `specialists-hub.php`, automatic CPT listing, existing card styles, reusable blocks, Admin enable/disable, breadcrumbs **intentionally absent**, `has_archive=false`)
-- specialist singles: `/specialisty/{slug}/`
-- `/specyalisty/`: **DEPRECATED / REDIRECT-ONLY / HISTORICAL**
-- SEO title + Meta Description: **editor-owned source truth**; one SEO owner; output across supported public entity/template types
-- Open Graph: one owner `open-graph.meta`; reuses SEO title/description + canonical URL; page-aware image; `og:type=article` on articles else safe `website`; **separate from SEO meta and Schema.org**
-- Schema.org: one owner `structured-data.schema-org`; Yandex-oriented JSON-LD `@graph`; truthful types (`MedicalClinic`, branches, WebPage/ContactPage/CollectionPage/Service/Person/Article, ItemList, BreadcrumbList where appropriate); **no** fake Product/Offer/ratings/Physician; no manual JSON-LD UI; authenticated Yandex validator **not yet evidenced**
-- Contacts maps: **full Yandex Constructor code** remains Admin input; map render restored; per-row scroll toggle; default/legacy = **false**; frontend normalization; **no global unsafe script allowance**
-- Blog Hub: dedicated `article_hub_announcement` (`Анонс статьи для хаба`) → `get_the_excerpt()` fallback; `article_lead` remains article **hero** owner; SEO/OG/Schema descriptions remain separate; native Excerpt is legacy fallback only
-- Service child tiles (service-role stack): scoped adaptive grid; default heading **`Состояния, которые мы лечим`** when ACF `service_child_services_heading` empty; optional deterministic featured image card = first child with service-owned image
-- forms / SMTP / native anti-spam / privacy / consent-gated Metrika: **ACTIVE** as previously accepted
-- P18G indexing guard + watchdog: **ACTIVE**
-
-## Known protected systems
-
-Do not mutate unless a new charter names them: WordPress content, Olya editorial state, robots, indexing, forms, SMTP, maps, schema, Open Graph, specialist/blog/SEO fields, redirects, production files. Olya remains active in Admin.
-
-## Current open items
-
-See `REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md`. Remaining items are **OPERATOR / EXTERNAL / OPTIONAL** (GSC/Yandex sitemap UI, legal sign-off, retention, anti-spam tuning from real spam, legal Disallow vs noindex, optional authenticated Yandex Schema validator, optional Facebook OG debugger). Completed technical waves are **CLOSED**.
-
-## Canonical paths
-
-- project: `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/`
-- status: `PROJECT-STATUS.md`
+## Canonical Paths
+- FP-0002 project locus: `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/`
 - open items: `REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md`
-- robots runbook: `DOCS/OPERATIONS-INDEXING-ROBOTS-OWNERSHIP-v1.md`
-- 2026-08-24 snapshot baseline (not current core): `REPORTS/BASELINE-FP-0002-PRODUCTION-MAINTENANCE-STABLE.md`
-- child-cards layout: `REPORTS/REPORT-FP-0002-SERVICE-CHILD-CARDS-ADAPTIVE-LAYOUT-01.md`
-- prior knowledge closeout: `REPORTS/REPORT-FP-0002-KNOWLEDGE-PROMOTION-FINAL-WORKSPACE-CLOSEOUT-01.md`
+- baseline: `REPORTS/BASELINE-FP-0002-PRODUCTION-MAINTENANCE-STABLE.md`
+- robots ownership: `DOCS/OPERATIONS-INDEXING-ROBOTS-OWNERSHIP-v1.md`
+- source/runtime authority: `WORDPRESS/SOURCE-AUTHORITY.md`
 
-## Current Git recovery point (historical-at-write; fetch first)
+## Mandatory Maintenance Workflow
+fresh intake → bounded task → exact deploy → validation → parity check → selective Git checkpoint
 
-- branch: `origin/mars/canonical-post-recovery`
-- child-cards adaptive layout: 29c5abbefb0b6da289320a08bca5a133cd350b4b
-- blog hub implementation: `074777b544e810d7ab9894987fd1983d1c6afab1`
-- blog hub SHA-recording follow-up (closes `CLOSEOUT_PENDING` in that report): `33d13bed6e4686809ac23ddd463ca4eae62f68df`
-- knowledge/workspace closeout: `55ee8ba8fc4bf6ca469f9f09038502af48839e3e` (SHA-recording follow-up is a later tip — fetch origin)
-
-## Important safeguards
-
-- never overwrite Olya editorial DB
-- never replace Olya robots with generic templates
+## Important Safeguards
+- never overwrite Olya editorial DB state
+- never replace Olya robots policy
 - never auto-close indexing
-- no `git add .` / `git add -A` / `git commit -a` / `git clean` / `git reset --hard` on shared main
-- no external CAPTCHA currently
-- structured data and OG must stay separate technical owners; SEO fields may feed both
-- trusted Admin embeds: narrow handling only — never global script allowlists
+- no broad dirty-main git operations
+- preserve pending multi-image production delta until its own closeout
+- structured data / OG must derive from Admin-owned fields
 
-## Where to read first
+## Known Non-Blocking Items
+- Google Search Console sitemap submission
+- Yandex Webmaster sitemap submission
+- optional authenticated Yandex structured-data validator pass
+- optional external Facebook/Meta OG debugger pass
+- optional legal sign-off on Cookie Policy
+- optional `lead_retention_days=730` policy alignment
+- optional anti-spam tuning only from real spam evidence
+- commit/push of pending multi-image child-card wave (separate operator approval)
 
-1. this handoff
-2. `PROJECT-STATUS.md`
-3. `REPORTS/REPORT-FP-0002-SERVICE-CHILD-CARDS-ADAPTIVE-LAYOUT-01.md` (if touching service child tiles)
-4. `REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md`
-5. wave report **only** if the new task touches that subsystem
-
-Historical P07–P18 and V9 reports remain in `REPORTS/` / `WORDPRESS/`. Do not replay them for normal maintenance.
+## Where To Read First
+1. `PROJECT-STATUS.md`
+2. `REPORTS/REPORT-FP-0002-SERVICE-STAGES-REUSABLE-BLOCK-FALLBACK-REPAIR-01.md`
+3. `REPORTS/OPEN-ITEMS-FP-0002-PRODUCTION-MAINTENANCE.md`
+4. `REPORTS/BASELINE-FP-0002-PRODUCTION-MAINTENANCE-STABLE.md`

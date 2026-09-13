@@ -416,15 +416,97 @@ function shpigovsky_get_general_program_copy( $post_id ) {
 }
 
 /**
- * Stages copy from ACF; alcohol emergency if empty on alcohol page.
+ * Stages model from reusable Comfort Requirements block (site settings).
+ *
+ * Owner: admin.php?page=fp02-block-comfort-requirements
+ * Fields: rehab_requirements_*.
+ *
+ * @return array{heading:string,lead:string,steps:array<int,array{title:string,text:string}>,support_heading:string,support_items:string[],source:string}|null
+ */
+function shpigovsky_get_stages_copy_from_reusable_requirements() {
+	if ( ! function_exists( 'shpigovsky_get_rehab_requirements_steps' ) ) {
+		return null;
+	}
+
+	$default_heading = 'Что нужно для прохождения реабилитации и лечения';
+	$default_intro   = 'Мы гарантируем конфиденциальность, уважение к личности, поддержание комфортной, психологически безопасной атмосферы.';
+	$default_support = 'Поддержка осуществляется на всех этапах:';
+
+	$heading = function_exists( 'shpigovsky_get_rehab_requirements_scalar' )
+		? shpigovsky_get_rehab_requirements_scalar( 'rehab_requirements_heading', $default_heading )
+		: $default_heading;
+	$lead    = function_exists( 'shpigovsky_get_rehab_requirements_scalar' )
+		? shpigovsky_get_rehab_requirements_scalar( 'rehab_requirements_intro', $default_intro )
+		: $default_intro;
+	$steps   = shpigovsky_get_rehab_requirements_steps();
+	$support_heading = function_exists( 'shpigovsky_get_rehab_requirements_scalar' )
+		? shpigovsky_get_rehab_requirements_scalar( 'rehab_requirements_support_heading', $default_support )
+		: $default_support;
+	$support_items = function_exists( 'shpigovsky_get_rehab_requirements_support_items' )
+		? shpigovsky_get_rehab_requirements_support_items()
+		: array();
+
+	if ( ! is_array( $steps ) || empty( $steps ) ) {
+		return null;
+	}
+
+	$normalized_steps = array();
+	foreach ( $steps as $step ) {
+		if ( ! is_array( $step ) ) {
+			continue;
+		}
+		$title = isset( $step['title'] ) ? trim( (string) $step['title'] ) : '';
+		$text  = isset( $step['text'] ) ? trim( (string) $step['text'] ) : '';
+		if ( '' === $title && '' === $text ) {
+			continue;
+		}
+		$normalized_steps[] = array(
+			'title' => $title,
+			'text'  => $text,
+		);
+	}
+
+	if ( empty( $normalized_steps ) ) {
+		return null;
+	}
+
+	$normalized_support = array();
+	if ( is_array( $support_items ) ) {
+		foreach ( $support_items as $item ) {
+			$text = trim( (string) $item );
+			if ( '' !== $text ) {
+				$normalized_support[] = $text;
+			}
+		}
+	}
+
+	return array(
+		'heading'         => trim( (string) $heading ),
+		'lead'            => trim( (string) $lead ),
+		'steps'           => $normalized_steps,
+		'support_heading' => trim( (string) $support_heading ),
+		'support_items'   => $normalized_support,
+		'source'          => 'reusable_requirements',
+	);
+}
+
+/**
+ * Stages copy precedence for service singles:
+ * 1) local service ACF when meaningful content exists (field-level fill from reusable for empties);
+ * 2) reusable Comfort Requirements block when local is empty;
+ * 3) alcohol-only theme emergency last.
+ *
+ * Visibility toggle (service_general_stages_visible) is owned by the template caller:
+ * OFF → do not call this helper / render nothing; ON → resolve best available content.
  *
  * @param int $post_id Service ID.
- * @return array{heading:string,lead:string,steps:array<int,array{title:string,text:string}>,support_heading:string,support_items:string[]}|null
+ * @return array{heading:string,lead:string,steps:array<int,array{title:string,text:string}>,support_heading:string,support_items:string[],source?:string}|null
  */
 function shpigovsky_get_general_stages_copy( $post_id ) {
 	$demo = function_exists( 'shpigovsky_get_v9_alcohol_leaf_stages_copy' )
 		? shpigovsky_get_v9_alcohol_leaf_stages_copy()
 		: null;
+	$reusable = shpigovsky_get_stages_copy_from_reusable_requirements();
 
 	$heading         = shpigovsky_get_general_field( $post_id, 'service_general_stages_heading' );
 	$lead            = shpigovsky_get_general_field( $post_id, 'service_general_stages_lead' );
@@ -464,9 +546,13 @@ function shpigovsky_get_general_stages_copy( $post_id ) {
 		}
 	}
 
-	$has_acf = '' !== $heading || '' !== $lead || ! empty( $steps ) || '' !== $support_heading || ! empty( $support_items );
+	$has_local = '' !== $heading || '' !== $lead || ! empty( $steps ) || '' !== $support_heading || ! empty( $support_items );
 
-	if ( ! $has_acf ) {
+	if ( ! $has_local ) {
+		if ( is_array( $reusable ) && ! empty( $reusable['steps'] ) ) {
+			return $reusable;
+		}
+
 		if ( $demo && function_exists( 'shpigovsky_is_known_alcohol_service_page' ) && shpigovsky_is_known_alcohol_service_page( $post_id ) ) {
 			return $demo;
 		}
@@ -474,12 +560,35 @@ function shpigovsky_get_general_stages_copy( $post_id ) {
 		return null;
 	}
 
+	$fill_heading         = is_array( $reusable ) ? (string) ( $reusable['heading'] ?? '' ) : '';
+	$fill_lead            = is_array( $reusable ) ? (string) ( $reusable['lead'] ?? '' ) : '';
+	$fill_support_heading = is_array( $reusable ) ? (string) ( $reusable['support_heading'] ?? '' ) : '';
+	$fill_steps           = ( is_array( $reusable ) && isset( $reusable['steps'] ) && is_array( $reusable['steps'] ) ) ? $reusable['steps'] : array();
+	$fill_support_items   = ( is_array( $reusable ) && isset( $reusable['support_items'] ) && is_array( $reusable['support_items'] ) ) ? $reusable['support_items'] : array();
+
+	if ( '' === $fill_heading ) {
+		$fill_heading = (string) ( $demo['heading'] ?? '' );
+	}
+	if ( '' === $fill_lead ) {
+		$fill_lead = (string) ( $demo['lead'] ?? '' );
+	}
+	if ( '' === $fill_support_heading ) {
+		$fill_support_heading = (string) ( $demo['support_heading'] ?? '' );
+	}
+	if ( empty( $fill_steps ) && isset( $demo['steps'] ) && is_array( $demo['steps'] ) ) {
+		$fill_steps = $demo['steps'];
+	}
+	if ( empty( $fill_support_items ) && isset( $demo['support_items'] ) && is_array( $demo['support_items'] ) ) {
+		$fill_support_items = $demo['support_items'];
+	}
+
 	return array(
-		'heading'         => '' !== $heading ? $heading : (string) ( $demo['heading'] ?? '' ),
-		'lead'            => '' !== $lead ? $lead : (string) ( $demo['lead'] ?? '' ),
-		'steps'           => ! empty( $steps ) ? $steps : ( isset( $demo['steps'] ) && is_array( $demo['steps'] ) ? $demo['steps'] : array() ),
-		'support_heading' => '' !== $support_heading ? $support_heading : (string) ( $demo['support_heading'] ?? '' ),
-		'support_items'   => ! empty( $support_items ) ? $support_items : ( isset( $demo['support_items'] ) && is_array( $demo['support_items'] ) ? $demo['support_items'] : array() ),
+		'heading'         => '' !== $heading ? $heading : $fill_heading,
+		'lead'            => '' !== $lead ? $lead : $fill_lead,
+		'steps'           => ! empty( $steps ) ? $steps : $fill_steps,
+		'support_heading' => '' !== $support_heading ? $support_heading : $fill_support_heading,
+		'support_items'   => ! empty( $support_items ) ? $support_items : $fill_support_items,
+		'source'          => 'local',
 	);
 }
 

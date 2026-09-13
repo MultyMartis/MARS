@@ -460,7 +460,7 @@ function shpigovsky_get_section_program_intro_demo_fallback() {
 }
 
 /**
- * Subdivision stages items: section repeater → Structured Sections stages → empty.
+ * Subdivision stages items: section repeater → Structured Sections stages → reusable Comfort Requirements → empty.
  *
  * V9-06E50: theme hardcoded stage demos are emergency-only, not normal SoT.
  *
@@ -484,7 +484,86 @@ function shpigovsky_get_section_stages_items( $post_id ) {
 		}
 	}
 
+	if ( function_exists( 'shpigovsky_get_stages_copy_from_reusable_requirements' ) ) {
+		$reusable = shpigovsky_get_stages_copy_from_reusable_requirements();
+		if ( is_array( $reusable ) && ! empty( $reusable['steps'] ) && is_array( $reusable['steps'] ) ) {
+			return $reusable['steps'];
+		}
+	}
+
 	return array();
+}
+
+/**
+ * Subdivision stages model precedence:
+ * 1) local section ACF (+ legacy Structured stages items) when meaningful;
+ * 2) reusable Comfort Requirements when local empty;
+ * 3) null when nothing available.
+ *
+ * Visibility toggle (section_stages_visible) is owned by subdivision-stack:
+ * OFF → do not render; ON → resolve best available content.
+ *
+ * @param int $post_id Service ID.
+ * @return array{heading:string,lead:string,steps:array<int,array{title:string,text:string}>,support_heading:string,support_items:string[],source:string}|null
+ */
+function shpigovsky_get_section_stages_copy( $post_id ) {
+	$post_id = absint( $post_id );
+	if ( $post_id <= 0 ) {
+		return null;
+	}
+
+	$reusable = function_exists( 'shpigovsky_get_stages_copy_from_reusable_requirements' )
+		? shpigovsky_get_stages_copy_from_reusable_requirements()
+		: null;
+
+	$heading         = shpigovsky_get_section_field( $post_id, 'section_stages_heading' );
+	$lead            = shpigovsky_get_section_field( $post_id, 'section_stages_lead' );
+	$support_heading = shpigovsky_get_section_field( $post_id, 'section_stages_support_heading' );
+
+	// Local/legacy steps only (do not recurse into reusable via get_section_stages_items).
+	$steps = shpigovsky_section_normalize_stages_items(
+		shpigovsky_get_section_field_raw( $post_id, 'section_stages_items' )
+	);
+	if ( empty( $steps ) && function_exists( 'shpigovsky_get_service_repeater' ) ) {
+		$legacy = shpigovsky_get_service_repeater( $post_id, 'stages' );
+		$steps  = shpigovsky_section_normalize_title_text_rows( $legacy );
+	}
+
+	$support_items = array();
+	$support_rows  = shpigovsky_get_section_field_raw( $post_id, 'section_stages_support_items' );
+	if ( is_array( $support_rows ) ) {
+		foreach ( $support_rows as $row ) {
+			$text = is_array( $row ) && isset( $row['text'] ) ? trim( (string) $row['text'] ) : '';
+			if ( '' !== $text ) {
+				$support_items[] = $text;
+			}
+		}
+	}
+
+	$has_local = '' !== $heading || '' !== $lead || ! empty( $steps ) || '' !== $support_heading || ! empty( $support_items );
+
+	if ( ! $has_local ) {
+		if ( is_array( $reusable ) && ! empty( $reusable['steps'] ) ) {
+			return $reusable;
+		}
+
+		return null;
+	}
+
+	$fill_heading         = is_array( $reusable ) ? (string) ( $reusable['heading'] ?? '' ) : '';
+	$fill_lead            = is_array( $reusable ) ? (string) ( $reusable['lead'] ?? '' ) : '';
+	$fill_support_heading = is_array( $reusable ) ? (string) ( $reusable['support_heading'] ?? '' ) : '';
+	$fill_steps           = ( is_array( $reusable ) && isset( $reusable['steps'] ) && is_array( $reusable['steps'] ) ) ? $reusable['steps'] : array();
+	$fill_support_items   = ( is_array( $reusable ) && isset( $reusable['support_items'] ) && is_array( $reusable['support_items'] ) ) ? $reusable['support_items'] : array();
+
+	return array(
+		'heading'         => '' !== $heading ? $heading : $fill_heading,
+		'lead'            => '' !== $lead ? $lead : $fill_lead,
+		'steps'           => ! empty( $steps ) ? $steps : $fill_steps,
+		'support_heading' => '' !== $support_heading ? $support_heading : $fill_support_heading,
+		'support_items'   => ! empty( $support_items ) ? $support_items : $fill_support_items,
+		'source'          => 'local',
+	);
 }
 
 /**

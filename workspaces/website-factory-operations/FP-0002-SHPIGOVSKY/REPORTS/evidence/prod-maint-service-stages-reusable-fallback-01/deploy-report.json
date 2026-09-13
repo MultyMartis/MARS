@@ -1,0 +1,21 @@
+{
+  "ts": "2026-09-13T18:27:42.622655+00:00",
+  "host": "shpigovsky.beget.tech",
+  "uploads": [
+    {
+      "remote": "/home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/service-general-helpers.php",
+      "local": "X:\\AI MARS STORAGE\\worktrees\\fp0002-service-stages-reusable-fallback-01\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\inc\\service-general-helpers.php",
+      "before_sha256": "b4ac89d7d9e67d7cfabe3c06b3f9ab617863b512b3e0bf210936e73b8eb74293",
+      "after_sha256": "3b64286bfc1c0db1c7bcad74ae04e59332b0cd10182af64b61cc31aa4198361a",
+      "local_sha256": "3b64286bfc1c0db1c7bcad74ae04e59332b0cd10182af64b61cc31aa4198361a",
+      "deploy_match": true,
+      "changed": true,
+      "prod_after": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-maint-service-stages-reusable-fallback-01\\prod-after\\__home__s__shpigovsky__shpigovsky.ru__public_html__wp-content__themes__shpigovsky__inc__service-general-helpers.php",
+      "layer_b_baseline": "X:\\AI MARS STORAGE\\deployment-packs\\fp-0002\\prod-maint-service-stages-reusable-fallback-01\\prod-before\\wp-content__themes__shpigovsky__inc__service-general-helpers.php"
+    }
+  ],
+  "php_lint": {
+    "stdout": "Errors parsing /home/s/shpigovsky/shpigovsky.ru/public_html/wp-content/themes/shpigovsky/inc/service-general-helpers.php",
+    "stderr": ""
+  }
+}
