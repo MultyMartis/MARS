@@ -138,7 +138,12 @@ Selective staging only; commit + push authorized; dirty shared main untouched.
 
 ## 19. Workspace cleanup
 
-*(filled after cleanup)*
+WAVE WORKTREE = REMOVED (`X:\AI MARS STORAGE\worktrees\fp0002-service-child-cards-layout-01`)  
+WAVE BRANCH = REMOVED (`wave/fp0002-service-child-cards-layout-01`)  
+UNPUSHED WAVE COMMITS = 0  
+STAGED WAVE FILES = 0  
+TEMP RESIDUE = 0 (wave helper scripts deleted before worktree remove)  
+SHARED MAIN FOREIGN WIP = UNTOUCHED
 
 ## 20. Residuals
 
